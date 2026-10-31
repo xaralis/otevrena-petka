@@ -65,6 +65,7 @@
     {% if v.part %}{{ v.part }}{% elif v.subject %}{{ v.subject|capitalize }}{% else %}Hlasování o celém usnesení{% endif %}
     <span class="vote-out o-{{ v.outcome or 'none' }}">{% if v.outcome == 'prijato' %}prošlo{% elif v.outcome == 'neprijato' %}neprošlo{% else %}nejasné{% endif %}</span>
   </p>
+  {% if v.part and v.motion_text %}<blockquote class="part-text">{{ v.motion_text }}</blockquote>{% endif %}
   {% if v.ballots_status == 'complete' %}
   {% set sorted = v.ballots|sort(attribute='name')|list %}
   <div class="seats seats-l" style="--n: {{ total }}; --q: {{ v.quorum }}" role="img" aria-label="{{ v.n_pro }} pro, {{ v.n_proti }} proti, {{ v.n_zdrzel }} se zdrželo; potřeba {{ v.quorum }} z {{ total }}">

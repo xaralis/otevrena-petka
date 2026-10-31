@@ -316,3 +316,7 @@ footer p { max-width: 80ch; }
 @media (min-width: 601px) {
   .sentence select, .sentence input { height: 1.75em; vertical-align: baseline; line-height: 1.2; }
 }
+
+.part-text { margin: .1rem 0 .8rem; font-size: .95rem; max-width: 68ch; }
+.part-preview { display: block; color: var(--muted); font-size: .85rem; line-height: 1.4; margin-top: .15rem; }
+.parts-summary li { align-items: start; }

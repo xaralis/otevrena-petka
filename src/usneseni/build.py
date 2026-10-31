@@ -147,6 +147,7 @@ def build(doc: dict, text: str, parsed: dict, accepted_issues: frozenset[str] = 
     quorum = SEATS[body] // 2 + 1
 
     # votes
+    vote_line_starts = {v["line"] for v in parsed["votes"]} | {v["last_line"] for v in parsed["votes"]}
     vote_lines: set[int] = set()  # whole-resolution vote lines, cut from resolution text
     votes = []
     for i, v in enumerate(sorted(parsed["votes"], key=lambda v: v["line"]), 1):
@@ -181,6 +182,8 @@ def build(doc: dict, text: str, parsed: dict, accepted_issues: frozenset[str] = 
         motion = None
         if v["motion_first_line"] and v["motion_last_line"]:
             motion = clean_block(lines[v["motion_first_line"] - 1:v["motion_last_line"]])
+        elif v["part"]:
+            motion = _part_text(lines, v["line"], vote_line_starts)
         votes.append({
             "seq": i, "line": v["line"], "raw": ws(raw),
             "resolution": normalize_number(v["resolution"], body) if v["resolution"] else None,
@@ -242,6 +245,29 @@ def build(doc: dict, text: str, parsed: dict, accepted_issues: frozenset[str] = 
         agenda_items=agenda, resolutions=resolutions, votes=votes, members=people,
         issues=issues, model_notes=parsed.get("notes", []),
     )
+
+
+_ITEM_START = re.compile(r"^\s*(\d+\.|[a-z]\)|[IVX]+\.)\s")
+
+
+def _part_text(lines: list[str], vote_line: int, vote_lines: set[int], max_back: int = 40) -> str | None:
+    """Verbatim text of the point(s) a part-vote was about: the numbered items directly above
+    the vote line ("3. Schvaluje rozpočtové opatření …"), back to the lead-in sentence
+    ("Zastupitelstvo … V:"), a blank line or the previous vote. None when no numbered item is
+    found – better nothing than a guess."""
+    end = vote_line - 1
+    earliest = None
+    n = end
+    while n >= 1 and end - n < max_back:
+        text = lines[n - 1]
+        if not text.strip() or n in vote_lines:
+            break
+        if _ITEM_START.match(text):
+            earliest = n
+        elif text.rstrip().endswith(":") and earliest is not None:
+            break  # lead-in sentence of the list
+        n -= 1
+    return clean_block(lines[earliest - 1:end]) or None if earliest else None
 
 
 def _ballots(v: dict, counts: dict, here: set[str], everyone: list[str], att: dict):
