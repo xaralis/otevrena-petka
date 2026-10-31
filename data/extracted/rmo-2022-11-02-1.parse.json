@@ -1,0 +1,643 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "101fdcc82b779f499f82846b5a04150b9034789ec2d0f8662f2a94aa12956817",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 1,
+   "kind": "radne",
+   "date": "2022-11-02",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Zřízení komisí Rady městského obvodu Pardubice V",
+    "line": 96,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Stanovení měsíční odměny starostovi MO Pardubice V",
+    "line": 122,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Peněžité dary předsedům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 130,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Stanovení počtu zaměstnanců ÚMO Pardubice V k 3. 11. 2022",
+    "line": 139,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Smluvní cena inzerce v Pardubické 5",
+    "line": 153,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozhodnutí zadavatele – Dodatek č. 1 u zakázky malého rozsahu: Rekonstrukce chodníku Dražkovice – východ",
+    "line": 161,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Diskuse, závěr",
+    "line": 172,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "1/2022 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 93,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "2/2022 R",
+    "agenda_no": "2",
+    "first_line": 100,
+    "last_line": 119,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "3/2022 R",
+    "agenda_no": "3",
+    "first_line": 125,
+    "last_line": 127,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "4/2022 R",
+    "agenda_no": "4",
+    "first_line": 133,
+    "last_line": 135,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "5/2022 R",
+    "agenda_no": "5",
+    "first_line": 142,
+    "last_line": 149,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "6/2022 R",
+    "agenda_no": "6",
+    "first_line": 156,
+    "last_line": 158,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "7/2022 R",
+    "agenda_no": "7",
+    "first_line": 165,
+    "last_line": 169,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 94,
+    "last_line": 94,
+    "resolution": "1/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "2/2022 R",
+    "part": "Ing. Milan Randák – předseda Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 104,
+    "last_line": 104,
+    "resolution": "2/2022 R",
+    "part": "Mgr. Pavlína Parchanská – členka Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 105,
+    "last_line": 105,
+    "resolution": "2/2022 R",
+    "part": "Michaela Štěpánková – členka Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "2/2022 R",
+    "part": "Mgr. Miloš Adamů, MBA – člen Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 107,
+    "last_line": 107,
+    "resolution": "2/2022 R",
+    "part": "JUDr. Michal Bouška – člen Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 108,
+    "last_line": 108,
+    "resolution": "2/2022 R",
+    "part": "Zuzana Macháčková – členka Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 109,
+    "last_line": 109,
+    "resolution": "2/2022 R",
+    "part": "Ing. Jiří Janoš – člen Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 112,
+    "last_line": 112,
+    "resolution": "2/2022 R",
+    "part": "Ing. Jakub Kutílek – předseda Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "2/2022 R",
+    "part": "Ing. Pavol Škuliga – člen Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 115,
+    "last_line": 115,
+    "resolution": "2/2022 R",
+    "part": "Michal Scholze – člen Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "2/2022 R",
+    "part": "Bc. Petr Dufek – člen Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 117,
+    "last_line": 117,
+    "resolution": "2/2022 R",
+    "part": "Šárka Hošková – členka Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "2/2022 R",
+    "part": "Martin Štefek – člen Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 119,
+    "last_line": 119,
+    "resolution": "2/2022 R",
+    "part": "Ing. Petr Netolický – člen Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 120,
+    "last_line": 120,
+    "resolution": "2/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 128,
+    "last_line": 128,
+    "resolution": "3/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 136,
+    "last_line": 136,
+    "resolution": "4/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 151,
+    "last_line": 151,
+    "resolution": "5/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 159,
+    "last_line": 159,
+    "resolution": "6/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 170,
+    "last_line": 170,
+    "resolution": "7/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení č. 5/2022 R uvádí „dnem 3. 7. 2022“ (ř. 142), ačkoli název bodu zní „k 3. 11. 2022“ (ř. 140). Datum je zřejmě chybné.",
+   "Usnesení č. 2/2022 R: ve znění zůstávají i neschválení kandidáti, Ing. Jiří Janoš (ř. 109) a Ing. Petr Netolický (ř. 119), přestože se o nich výslovně píše „nebyl schválen“. Výčet členů v bodu 2 končí čárkou (ř. 119), takže není jasné, zda je znění úplné.",
+   "Usnesení č. 2/2022 R: vedle dílčích hlasování o jednotlivých osobách je na ř. 120 i souhrnné hlasování o celém usnesení (5-0-0)."
+  ]
+ }
+}

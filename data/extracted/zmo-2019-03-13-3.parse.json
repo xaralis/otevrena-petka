@@ -1,0 +1,447 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "c8ad864562a4c3397057b1a37b61522a78cf3ef3115e93d298b05545b74af1ee",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 3,
+   "kind": "radne",
+   "date": "2019-03-13",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Karolina Štefková",
+    "Bc. Petra Prusáková",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Ing. Jiří Janoš",
+    "Evžen Erban",
+    "Ing. Jiří Hájek",
+    "Petr Hemský",
+    "Ing. Petr Netolický",
+    "Pavel Studnička",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Ing. Aneta Jelínková"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "1.",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 62,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Janoš",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "2.",
+    "title": "Program rozvoje MO Pardubice V – plnění za rok 2018",
+    "line": 94,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Milan Randák",
+     "Ing. Jiří Janoš"
+    ]
+   },
+   {
+    "no": "3.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 123,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 135,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Janoš"
+    ]
+   },
+   {
+    "no": "5.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2019",
+    "line": 151,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "6.",
+    "title": "Návrh 1. změny rozpočtu MO Pardubice V na r. 2019",
+    "line": 173,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Výroční zpráva o činnosti FV ZMO Pardubice V",
+    "line": 187,
+    "speakers": []
+   },
+   {
+    "no": "IV.",
+    "title": "Různé",
+    "line": 198,
+    "speakers": [
+     "Bc. Petra Prusáková",
+     "Jiří Rejda, DiS.",
+     "Ing. Petr Netolický",
+     "Ing. Jiří Hájek",
+     "Petr Hemský",
+     "Ing. Jiří Janoš",
+     "Evžen Erban",
+     "Ing. Filip Vařecha",
+     "Ing. Milan Randák"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "17/2019 Z",
+    "agenda_no": "1.",
+    "first_line": 90,
+    "last_line": 91,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "18/2019 Z",
+    "agenda_no": "2.",
+    "first_line": 110,
+    "last_line": 112,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "19/2019 Z",
+    "agenda_no": "2.",
+    "first_line": 119,
+    "last_line": 120,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "20/2019 Z",
+    "agenda_no": "3.",
+    "first_line": 130,
+    "last_line": 132,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "21/2019 Z",
+    "agenda_no": "4.",
+    "first_line": 145,
+    "last_line": 148,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "22/2019 Z",
+    "agenda_no": "5.",
+    "first_line": 168,
+    "last_line": 170,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "23/2019 Z",
+    "agenda_no": "6.",
+    "first_line": 181,
+    "last_line": 184,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "24/2019 Z",
+    "agenda_no": "7.",
+    "first_line": 194,
+    "last_line": 195,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "zařazení bodu č. 8 Odborné provádění redukčních řezů na území MO Pardubice V na program",
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": 38,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 11,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Vařecha",
+      "Ing. Hájek",
+      "Ing. Netolický"
+     ],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 47,
+    "motion_last_line": 55,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 92,
+    "last_line": 92,
+    "resolution": "17/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 113,
+    "last_line": 115,
+    "resolution": "18/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 6,
+    "zdrzel": 7,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. F. Vařecha"
+     ],
+     "proti": [
+      "Ing. J. Janoš",
+      "Ing. J. Kňava",
+      "J. Rejda, DiS.",
+      "Ing. J. Hájek",
+      "Ing. P. Netolický",
+      "P. Hemský"
+     ],
+     "zdrzel": [
+      "Ing. M. Randák",
+      "E. Erban",
+      "Bc. J. Nadrchal",
+      "F. Šťastný",
+      "K. Štefková",
+      "Bc. P. Prusáková",
+      "P. Studnička"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 121,
+    "last_line": 121,
+    "resolution": "19/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 133,
+    "last_line": 133,
+    "resolution": "20/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 149,
+    "last_line": 149,
+    "resolution": "21/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 171,
+    "last_line": 171,
+    "resolution": "22/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 185,
+    "last_line": 185,
+    "resolution": "23/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 196,
+    "last_line": 196,
+    "resolution": "24/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení č. 18/2019 Z (návrh Ing. Vařechy) získalo jen 1 hlas pro (7 se zdrželo, 6 bylo proti), a přesto má číslo usnesení. Výsledek hlasování text neuvádí.",
+   "U návrhu Ing. Vařechy na zařazení bodu č. 8 (ř. 40) text neuvádí výsledek; při 3 hlasech pro ze 14 nebyl návrh zřejmě přijat.",
+   "Starosta navrhl projednat zprávu č. 7 (Program rozvoje) hned po zprávě č. 1. Hlasovaný seznam programu už je ale přečíslovaný (Program rozvoje je bod 2), takže číslování v návrhu nesedí s číslováním ve schváleném programu.",
+   "Nadpis bodu 5 uvádí „k 31. 12. 2019“, usnesení č. 22/2019 Z ale mluví o rozboru k 31. 12. 2018.",
+   "Usnesení č. 19/2019 Z uvádí aktualizaci Programu rozvoje „k 1. 1. 2018“, pravděpodobně má jít o 1. 1. 2019.",
+   "Bod 3 se v nadpisu jmenuje Kontrola plnění usnesení RMO, usnesení č. 20/2019 Z ale schvaluje „zprávu Kontrolního výboru“.",
+   "Bod V. Závěr je v programu, v textu zápisu se ale samostatně neprojednává."
+  ]
+ }
+}

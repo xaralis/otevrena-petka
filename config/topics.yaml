@@ -1,0 +1,38 @@
+# Fixed topic list for resolutions. Enrichment may only pick from these ids; the web and
+# MCP filter on them. Change the list deliberately – old meetings keep their old topics
+# until re-enriched.
+topics:
+  majetek-pozemky: Majetek a pozemky (prodej, nájem, výpůjčka, věcná břemena)
+  rozpocet: Rozpočet a hospodaření
+  dotace: Dotace, granty a dary
+  investice: Investice, stavby a projekty
+  zakazky: Veřejné zakázky a smlouvy s dodavateli
+  doprava: Doprava, komunikace a parkování
+  zelen: Zeleň, stromy a životní prostředí
+  cistota: Úklid, odpady a údržba veřejného prostranství
+  hriste-sport: Hřiště, sport a volný čas
+  skolstvi: Školství a mládež
+  kultura-akce: Kultura, společenské akce a zpravodaj
+  socialni: Sociální oblast, senioři a zdraví
+  bezpecnost: Bezpečnost a pořádek
+  uzemni-planovani: Územní plánování a rozvoj obvodu
+  bydleni: Bydlení a byty
+  organizace: Organizace úřadu, odměny a personální věci
+  komise-vybory: Komise, výbory a jejich členové
+  kontrola: Kontrola plnění usnesení a audit
+  vztahy-mesto: Vztahy s městem Pardubice a stanoviska k jeho záměrům
+  vyhlasky-pravidla: Vyhlášky, směrnice a pravidla
+  ostatni: Ostatní
+kinds:
+  stanovisko: Stanovisko obvodu k žádosti/záměru města (souhlas/nesouhlas)
+  majetek: Majetková dispozice obvodu (nájem, výpůjčka, věcné břemeno, prodej)
+  rozpoctove-opatreni: Rozpočtové opatření nebo změna rozpočtu
+  rozpocet: Rozpočet, závěrečný účet, rozbor hospodaření
+  dotace: Poskytnutí nebo přijetí dotace, daru
+  zakazka: Zadání nebo výsledek veřejné zakázky, dodatek, smlouva s dodavatelem
+  personalni: Volba, jmenování, odvolání, odměny
+  organizacni: Program, komise, jednací řád, organizace úřadu
+  koncepce: Strategie, program rozvoje, koncepce, pravidla
+  zprava: Vzetí zprávy na vědomí
+  ukol: Uložení úkolu
+  jine: Jiné
