@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from "_macros.html" import badge, vote %}
+{% block title %}{{ m.number }}. jednání {{ BODY[m.body] }} {{ m.date|d }}{% endblock %}
+{% block main %}
+<h1>{{ m.number }}. {{ {'radne':'řádné','mimoradne':'mimořádné','ustavujici':'ustavující'}[m.kind] }} jednání {{ 'Zastupitelstva' if m.body == 'zmo' else 'Rady' }} MO Pardubice V</h1>
+<p class="lead">{{ m.date|d }}{% if m.place %}, {{ m.place }}{% endif %} · <a href="{{ m.source_url }}">zápis (PDF)</a> · <a href="/pdf/{{ m.id }}.pdf">archivní kopie</a></p>
+{% if m.status != 'ok' %}<p class="warn">Zpracování tohoto jednání čeká na ruční kontrolu – údaje mohou být neúplné.</p>{% endif %}
+<p><b>Přítomni:</b> {% for x in m.present %}<a href="/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}
+{% if m.excused %}<br><b>Omluveni:</b> {% for x in m.excused %}<a href="/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}{% endif %}
+{% if m.absent %}<br><b>Nepřítomni:</b> {% for x in m.absent %}<a href="/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}{% endif %}</p>
+<h2>Usnesení</h2>
+{% for r in m.resolutions %}
+<article class="hit"><div class="meta">{{ badge(r.status) }} <a class="num" href="/usneseni/{{ r.uid }}">{{ r.number }}</a>{% if r.agenda_no %} · bod {{ r.agenda_no }}{% endif %}</div>
+<h3><a href="/usneseni/{{ r.uid }}">{{ r.title or r.agenda_title or r.number }}</a></h3><p>{{ r.summary or r.text_start }}</p></article>
+{% endfor %}
+{% if m.other_votes %}<h2>Další hlasování</h2><p class="muted">Program, procedurální návrhy a návrhy, které nedostaly číslo usnesení.</p>
+{% for v in m.other_votes %}{{ vote(v) }}{% if v.motion_text %}<blockquote>{{ v.motion_text }}</blockquote>{% endif %}{% if v.proposer %}<p class="muted">Navrhl: {{ v.proposer }}</p>{% endif %}{% endfor %}{% endif %}
+{% if m.agenda|selectattr('discussion')|list %}<h2>Rozprava (odvozené shrnutí)</h2>
+<dl class="agenda">{% for a in m.agenda if a.discussion %}<dt>{{ a.no }} {{ a.title }}</dt><dd>{{ a.discussion }}</dd>{% endfor %}</dl>{% endif %}
+{% endblock %}

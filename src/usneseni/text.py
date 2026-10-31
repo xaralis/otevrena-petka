@@ -42,6 +42,9 @@ def strip_titles(name: str) -> list[str]:
     return out
 
 
+PAGE_FOOTER = re.compile(r"^Stránka\s+\d+\s+z\s+\d+$")
+
+
 def clean_block(lines: list[str]) -> str:
     """Turn a slice of `pdftotext -layout` lines into readable text.
 
@@ -51,6 +54,8 @@ def clean_block(lines: list[str]) -> str:
     out: list[str] = []
     for raw in lines:
         line = raw.strip()
+        if PAGE_FOOTER.match(line):
+            continue
         if not line:
             if out and out[-1] != "":
                 out.append("")

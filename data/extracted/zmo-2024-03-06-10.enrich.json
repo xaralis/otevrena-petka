@@ -1,0 +1,271 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6b8fdce085e6a3f970213c215bc2c4bf0c8d18dc280c4d0fe1828c35938f097e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "85/2024 Z",
+    "title": "Zpráva o činnosti starosty od jednání zastupitelstva 20. 12. 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu starosty o jeho činnosti od posledního jednání zastupitelstva dne 20. 12. 2023.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "86/2024 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady. Z evidence vyřazuje splněná usnesení 92/2023 R, 94/2023 R – 100/2023 R a 102/2024 R – 103/2024 R, v evidenci ponechává usnesení 30/2023 R a 31/2023 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení",
+     "vyřazení usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "87/2024 Z",
+    "title": "Vyřazení usnesení 95/2010 Z z evidence",
+    "summary": "Zastupitelstvo na základě samostatného hlasování vyřazuje z evidence usnesení č. 95/2010 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "evidence usnesení",
+     "vyřazení usnesení",
+     "95/2010 Z"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "88/2024 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení 67/2020 Z, 72/2023 Z a 74 – 84/2023 Z, v evidenci ponechává usnesení 75/2009 Z, 27/2019 Z, 142/2022 Z, 23/2023 Z a 66/2023 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení",
+     "vyřazení usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "89/2024 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 12. 2023",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 12. 2023 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření 2023",
+     "plnění rozpočtu",
+     "čerpání rozpočtu",
+     "výdaje"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "90/2024 Z",
+    "title": "1. změna rozpočtu na rok 2024 a participativní rozpočet do 1 mil. Kč",
+    "summary": "Zastupitelstvo bere na vědomí komentář a informace k 1. změně rozpočtu na rok 2024 a schvaluje rozpočtová opatření uvedená v bodech 1–14 důvodové zprávy. Zároveň souhlasí s vyhlášením výzvy občanům k podávání návrhů projektů v rámci participativního rozpočtu a zavazuje se po veřejném hlasování vyčlenit na vybrané projekty až 1 mil. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2024",
+     "participativní rozpočet",
+     "návrhy občanů",
+     "veřejné hlasování"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1 mil. Kč"
+    ]
+   },
+   {
+    "number": "91/2024 Z",
+    "title": "Odvolání Mgr. Daniela Přibyla z finančního výboru; volba Ing. Jakuba Kutílka",
+    "summary": "Zastupitelstvo hlasovalo odděleně o odvolání člena Finančního výboru Zastupitelstva MO Pardubice V ke dni 6. 3. 2024 a o volbě nového člena výboru ke dni 7. 3. 2024.",
+    "keywords": [
+     "finanční výbor",
+     "odvolání člena výboru",
+     "volba člena výboru",
+     "členové výborů"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "92/2024 Z",
+    "title": "Změna členů finančního výboru – Ing. Simona Mokrá, Ing. Miloš Vendolský, Martina Tomanová",
+    "summary": "Zastupitelstvo hlasovalo o odvolání členky Finančního výboru ZMO Pardubice V ke dni 6. 3. 2024 a o volbě nového člena ke dni 7. 3. 2024; samostatně pak o doplňujícím návrhu na volbu další členky výboru ke dni 7. 3. 2024.",
+    "keywords": [
+     "finanční výbor",
+     "odvolání člena výboru",
+     "volba člena výboru",
+     "členové výborů"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "93/2024 Z",
+    "title": "Poptání projektů a investiční záměry 2024 – vnitroblok Pichlova, chodníky, kontejnerové stání",
+    "summary": "Zastupitelstvo schvaluje poptání projekčních prací na stavební úpravy vnitrobloku Pichlova – Rokycanova – K Višňovce, komunikaci a chodník v Dražkovicích čp. 153 – čp. 174 a chodník v ul. Sokolovská od čp. 2065 k ul. Josefa Ressla. K realizaci v roce 2024 schvaluje kontejnerové stání Pichlova x Rokycanova, opravu chodníku v ul. Lexova (západní strana) a rekonstrukci chodníku v ul. Boženy Němcové.",
+    "keywords": [
+     "projektová dokumentace",
+     "investiční záměry",
+     "chodník",
+     "vnitroblok",
+     "kontejnerové stání",
+     "oprava chodníku",
+     "rekonstrukce chodníku",
+     "Dražkovice"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "jine",
+    "places": [
+     "ul. Pichlova",
+     "ul. Rokycanova",
+     "ul. K Višňovce",
+     "Dražkovice čp. 153 – čp. 174",
+     "ul. Sokolovská čp. 2065",
+     "ul. Josefa Ressla",
+     "ul. Lexova",
+     "ul. Wolkerova",
+     "ul. Kpt. Nálepky",
+     "ul. Boženy Němcové",
+     "ul. Češkova",
+     "ul. Rožkova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "94/2024 Z",
+    "title": "Výroční zpráva o činnosti finančního výboru za rok 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2023.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "zpráva o činnosti výboru",
+     "2023"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. Jakub Kutílek upozornil, že na webu chybí aktualizovaný program rozvoje od 1. 1. 2024 a příloha k usnesení z listopadu 2023, a ptal se na jednání k územní studii Stará vojenská plovárna. Starosta Jiří Rejda, DiS. vysvětlil, že jednání o studii vede magistrát, a podněty zastupitelů je třeba směřovat tam."
+   },
+   {
+    "no": "2.",
+    "discussion": "Zprávu kontrolního výboru předložil Ing. Pavel Bergman. Ing. Jakub Kutílek k usnesení 31/2023 souhlasil s ponecháním v evidenci s tím, že navrhne revokaci; Ing. Petr Netolický upozornil, že návrhy 93/2023 R a 101/2023 R nebyly radou schváleny, a proto je výbor nenavrhuje formálně vyřazovat."
+   },
+   {
+    "no": "3.",
+    "discussion": "Ing. Jakub Kutílek požádal o samostatné hlasování o vyřazení usnesení 95/2010 Z, protože podle něj úkol nebyl splněn a usnesení má zůstat v evidenci."
+   },
+   {
+    "no": "4.",
+    "discussion": "Ing. Lic. Jaroslav Kňava uvedl, že finanční výbor nebyl usnášeníschopný. Ing. Jakub Kutílek upozornil na nízké čerpání v kapitole životního prostředí (transfer 21,5 mil. Kč, čerpáno 12 mil. Kč) a vnitřní dluh v péči o stromy; Ing. Filip Vařecha a JUDr. Bc. Jakub Jeřábek se ptali na zapojení nevyčerpaných prostředků a na skladbu výdajů (56,2 % rozpočtovaných výdajů), na což odpověděl úřad."
+   },
+   {
+    "no": "5.",
+    "discussion": "Jiří Rejda, DiS. navrhl samostatné hlasování o bodu 3 (rozpočtové opatření k integrované strategii urbanistického rozvoje), který rada neschválila, a prostředky zapojit do rezervy. Bc. Jan Nadrchal se ptal, zda má strategie nahradit Program rozvoje obvodu (Ing. Jakub Kutílek potvrdil), a upozornil na jeho zakotvení ve Statutu města."
+   },
+   {
+    "no": "6.",
+    "discussion": "Ing. Jakub Kutílek poděkoval odvolávanému členovi finančního výboru a jako nového nominanta klubu „Piráti a Zelení: 42projektu.cz“ uvedl sebe. Jiří Rejda, DiS. navrhl hlasovat o každém bodu zvlášť."
+   },
+   {
+    "no": "7.",
+    "discussion": "Mgr. Miloš Adamů, MBA. předložil návrh na odvolání a volbu člena finančního výboru kvůli přestěhování dosavadní členky. Ing. Jakub Kutílek a Ing. Filip Vařecha měli výhrady k důvodové zprávě a k odvolávání rezignující členky; JUDr. Bc. Jakub Jeřábek upozornil na požadavek lichého počtu členů výboru, načež Jiří Rejda, DiS. navrhl doplnit volbu další členky a Bc. Jan Nadrchal se ptal na důsledky sudého počtu. Ing. Jakub Kutílek požádal o samostatné hlasování o doplněném bodu 3."
+   },
+   {
+    "no": "8.",
+    "discussion": "Ing. Jakub Kutílek požádal o samostatné hlasování o opravě chodníku v ul. Lexova a rekonstrukci chodníku v ul. Boženy Němcové a k jednotlivým akcím dal podněty (obytná zóna v Dražkovicích, chodník k tělocvičně, dešťové záhony, nesouhlas se zásobovacími stáními v ul. Lexova). Bc. Jan Nadrchal nepodpořil parkovací stání pro zásobování u zastávky MHD Lexova; Bc. Petr Dufek uvedl, že situaci s radními prověřil na místě."
+   },
+   {
+    "no": "10.",
+    "discussion": "Starosta Jiří Rejda, DiS. reagoval na demonstraci Iniciativy za zeleň a její výlepy, k věci se vyjádřili také Ing. Lic. Jaroslav Kňava, Ing. Milan Randák, Bc. Petr Dufek, Ing. Jakub Kutílek a Ing. Filip Vařecha; Ing. Jakub Kutílek požádal úřad o návrh opatření ke zlepšení péče o zeleň. Ing. Petr Netolický žádal řešení náletových dřevin v ul. K Dolíčku, JUDr. Bc. Jakub Jeřábek se ptal na dopravní režim při rekonstrukci ul. K Vápence (odpověděl Bc. Jan Nadrchal) a Ing. Jakub Kutílek na přemístění kontejnerového stání v ul. Bacháčkova."
+   }
+  ]
+ }
+}

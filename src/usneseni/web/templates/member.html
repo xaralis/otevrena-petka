@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ m.name }} – hlasování{% endblock %}
+{% block main %}
+<h1>{{ m.name }}</h1>
+<p class="lead">{% for t in m.terms %}{{ t.term }}: {{ t.list }}{% if t.in_rada %}, člen rady{% endif %}{{ '; ' if not loop.last }}{% endfor %}</p>
+<h2>Docházka</h2>
+<table class="list"><thead><tr><th>Období</th><th>Orgán</th><th>Přítomen</th><th>Omluven</th><th>Nepřítomen</th></tr></thead><tbody>
+{% for a in m.attendance %}<tr><td>{{ a.term }}</td><td>{{ BODY[a.body] }}</td><td>{{ a.present }}</td><td>{{ a.excused }}</td><td>{{ a.absent }}</td></tr>{% endfor %}</tbody></table>
+<h2>Hlasování</h2>
+<p><a href="?odlisne=0" class="{{ 'on' if not odlisne }}">všechna</a> · <a href="?odlisne=1" class="{{ 'on' if odlisne }}">jen kde hlasoval jinak, než jak hlasování dopadlo</a></p>
+<table class="list votes"><thead><tr><th>Datum</th><th>Usnesení / předmět</th><th>Hlasoval</th><th>Výsledek</th></tr></thead><tbody>
+{% for v in votes %}<tr><td>{{ v.date|d }}</td><td>{% if v.uid %}<a href="/usneseni/{{ v.uid }}">{{ v.number }}</a> {{ v.title or '' }}{% else %}{{ v.subject or '' }}{% endif %}{% if v.part %} <small>({{ v.part }})</small>{% endif %}</td>
+<td class="b-{{ v.choice }}">{{ CHOICE[v.choice] }}{% if v.provenance == 'inferred' %}*{% endif %}</td><td>{{ 'přijato' if v.outcome == 'prijato' else ('nepřijato' if v.outcome == 'neprijato' else '?') }} {{ v.n_pro }}/{{ v.n_proti }}/{{ v.n_zdrzel }}</td></tr>
+{% else %}<tr><td colspan="4">Žádná hlasování.</td></tr>{% endfor %}</tbody></table>
+<p class="legend">* odvozeno z prezence a jmenovitých menšinových hlasů</p>
+{% endblock %}

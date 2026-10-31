@@ -1,0 +1,213 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "101fdcc82b779f499f82846b5a04150b9034789ec2d0f8662f2a94aa12956817",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "1/2022 R",
+    "title": "Stanovisko k pozemkovým žádostem: věcné břemeno ČEZ, výpůjčky v Dražkovicích a u DDM ALFA, Do Zahrádek",
+    "summary": "Rada souhlasí se zřízením věcného břemene pro kabelové vedení NN a rozpojovací pilíř společnosti ČEZ Distribuce u ul. S. K. Neumanna, se změnou vypůjčitele a prodávajícího u pozemku p. p. č. 514 v k. ú. Dražkovice na společnost Bydlení Dražkovice s.r.o. a se změnou záboru výpůjčky pozemků pro komunitní zahradu DDM ALFA Pardubice-Polabiny. Dále souhlasí s nájmem a následným bezúplatným převodem pozemku p. p. č. 38/71 v k. ú. Nové Jesenčany od Státního pozemkového úřadu na město kvůli stavebním úpravám komunikace v ul. Do Zahrádek.",
+    "keywords": [
+     "věcné břemeno",
+     "kabelové vedení",
+     "výpůjčka pozemku",
+     "komunitní zahrada",
+     "Dražkovice",
+     "Do Zahrádek",
+     "bezúplatný převod",
+     "nájem pozemku",
+     "stanovisko pozemkové komise",
+     "místní komunikace"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "S. K. Neumanna st. č. 1491/1",
+     "Dražkovice",
+     "Pardubice-Polabiny",
+     "Družby 334",
+     "Nové Jesenčany",
+     "ul. Do Zahrádek"
+    ],
+    "parcels": [
+     "p. p. č. 3783/1, k. ú. Pardubice",
+     "p. p. č. 2568/4, k. ú. Pardubice",
+     "p. p. č. 2568/7, k. ú. Pardubice",
+     "st. p. č. 8191, k. ú. Pardubice",
+     "p. p. č. 514, k. ú. Dražkovice",
+     "p. p. č. 151/3, k. ú. Dražkovice",
+     "p. p. č. 2306/4, k. ú. Pardubice",
+     "p. p. č. 2306/17, k. ú. Pardubice",
+     "p. p. č. 38/71, k. ú. Nové Jesenčany"
+    ],
+    "organizations": [
+     "ČEZ Distribuce, a. s.",
+     "Pozemky DRAŽKOVICE II. s.r.o.",
+     "Bydlení Dražkovice s.r.o.",
+     "Dům dětí a mládeže ALFA Pardubice-Polabiny",
+     "Pardubická KOZA z. s.",
+     "Státní pozemkový úřad",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "2/2022 R",
+    "title": "Zřízení komise pro školství, kulturu, sport a mládež a komise pro strategii a rozvoj obvodu",
+    "summary": "Rada zřizuje k 1. 12. 2022 Komisi pro školství, kulturu, sport a mládež a Komisi pro strategii a rozvoj obvodu, životní prostředí a dopravu a jmenuje jejich předsedy a členy, o každém hlasovala zvlášť. V každé komisi jeden navržený člen nebyl schválen.",
+    "keywords": [
+     "komise rady",
+     "zřízení komisí",
+     "jmenování členů komise",
+     "předseda komise",
+     "komise pro školství",
+     "komise pro strategii a rozvoj",
+     "životní prostředí",
+     "doprava"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro školství, kulturu, sport a mládež",
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "3/2022 R",
+    "title": "Měsíční odměna starostovi MO Pardubice V",
+    "summary": "Rada schvaluje ode dne zvolení měsíční odměnu starostovi městského obvodu podle nařízení vlády č. 318/2017 Sb., o výši odměn členů zastupitelstev.",
+    "keywords": [
+     "odměna starosty",
+     "starosta",
+     "měsíční odměna",
+     "nařízení vlády 318/2017 Sb."
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "4/2022 R",
+    "title": "Peněžité dary předsedům komisí, kteří nejsou členy zastupitelstva",
+    "summary": "Rada schvaluje vyplácení peněžních darů předsedům komisí rady, kteří nejsou členy zastupitelstva, ve výši 1.000,- Kč měsíčně od 1. 12. 2022 po dobu výkonu funkce, mimo červenec a srpen.",
+    "keywords": [
+     "peněžitý dar",
+     "předseda komise",
+     "odměna",
+     "nečlen zastupitelstva",
+     "komise rady"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1.000,- Kč měsíčně"
+    ]
+   },
+   {
+    "number": "5/2022 R",
+    "title": "Počet zaměstnanců úřadu: nová místa referenta a pracovníka VPP, celkem 30",
+    "summary": "Rada zřizuje na dobu určitou místo referenta odboru sekretariátu starosty a stálé místo pracovníka veřejně prospěšných prací u skupiny drobné údržby a stanoví celkový počet zaměstnanců úřadu městského obvodu na 30.",
+    "keywords": [
+     "počet zaměstnanců",
+     "úřad městského obvodu",
+     "referent",
+     "veřejně prospěšné práce",
+     "VPP",
+     "drobná údržba",
+     "pracovní místa"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V",
+     "ÚP Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "6/2022 R",
+    "title": "Dlouhodobá inzerce Kamenictví Kůrka v Pardubické 5 za smluvní cenu",
+    "summary": "Rada souhlasí s půlstránkovou inzercí firmy Kamenictví Kůrka ve zpravodaji Pardubická 5 od prosince 2022 do října 2026 (16 čísel) za smluvní cenu 2.600,- Kč bez DPH za číslo.",
+    "keywords": [
+     "inzerce",
+     "Pardubická 5",
+     "zpravodaj",
+     "smluvní cena",
+     "reklama",
+     "Kamenictví Kůrka"
+    ],
+    "topics": [
+     "kultura-akce"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kamenictví Kůrka"
+    ],
+    "amounts": [
+     "2.600,- Kč bez DPH za jedno číslo"
+    ]
+   },
+   {
+    "number": "7/2022 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo – rekonstrukce chodníku Dražkovice-východ",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo se společností ROCKY STAVBY COMPANY s. r. o. na rekonstrukci chodníku Dražkovice – východ, kterým se po započtení méněprací snižuje cena díla.",
+    "keywords": [
+     "dodatek ke smlouvě",
+     "smlouva o dílo",
+     "rekonstrukce chodníku",
+     "chodník",
+     "Dražkovice",
+     "méněpráce",
+     "zakázka malého rozsahu"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY s. r. o."
+    ],
+    "amounts": [
+     "2.093.196,68 Kč bez DPH",
+     "2.254.409,16 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

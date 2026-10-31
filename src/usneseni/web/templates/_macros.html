@@ -1,0 +1,33 @@
+{% macro badge(status) -%}
+<span class="badge s-{{ status }}">{{ STATUS[status] }}</span>
+{%- endmacro %}
+{% macro vote(v) -%}
+<div class="vote">
+  <div class="vote-head">
+    {% if v.part %}<span class="part">{{ v.part }}</span>{% endif %}
+    {% if v.subject %}<span class="part">{{ v.subject }}</span>{% endif %}
+    <span class="counts">
+      <span class="c-pro">pro {{ v.n_pro }}</span> ·
+      <span class="c-proti">proti {{ v.n_proti }}</span> ·
+      <span class="c-zdrzel">zdržel se {{ v.n_zdrzel }}</span>
+      {% if v.n_nehlasoval is not none %} · nehlasoval {{ v.n_nehlasoval }}{% endif %}
+    </span>
+    <span class="outcome o-{{ v.outcome or 'none' }}">{% if v.outcome == 'prijato' %}přijato{% elif v.outcome == 'neprijato' %}nepřijato{% else %}nejasné{% endif %}</span>
+    <span class="muted">přítomno {{ v.n_present }}, potřeba {{ v.quorum }}</span>
+  </div>
+  {% if v.ballots %}
+  <ul class="ballots">
+    {% for b in v.ballots %}
+    <li class="b-{{ b.choice }}{% if b.provenance != 'named' %} inferred{% endif %}" title="{{ 'jmenovitě v zápisu' if b.provenance == 'named' else ('podle prezence' if b.provenance == 'attendance' else 'odvozeno z prezence a jmenovitých menšinových hlasů') }}">
+      <a href="/clenove/{{ b.member_id }}">{{ b.name }}</a>{% if b.list %} <small>{{ b.list }}</small>{% endif %}
+      <em>{{ CHOICE[b.choice] }}{% if b.provenance == 'inferred' %}*{% endif %}</em>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if v.ballots_status == 'partial' %}<p class="note">Jmenovitě jsou uvedeni jen někteří, hlasy ostatních nelze z&nbsp;zápisu spolehlivě určit.</p>{% endif %}
+  {% else %}
+  <p class="note">Zápis neuvádí jména a hlasy jednotlivých členů z&nbsp;něj nelze spolehlivě odvodit – jen součty.</p>
+  {% endif %}
+  <details class="raw"><summary>Zápis hlasování</summary><code>{{ v.raw }}</code></details>
+</div>
+{%- endmacro %}

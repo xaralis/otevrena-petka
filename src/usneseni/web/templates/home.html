@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% from "_macros.html" import badge %}
+{% block main %}
+<section class="hero">
+  <h1>Co rozhodlo zastupitelstvo a rada Pardubic&nbsp;V</h1>
+  <p class="lead">{{ stats.resolutions }} usnesení z {{ stats.meetings }} jednání ({{ stats.first_date|d }} – {{ stats.last_date|d }}), {{ stats.not_passed }} z nich neprošlo celé. Hledejte běžnými slovy – „kácení stromů na Dukle“, „parkování Polabiny“, „dotace pro spolky“.</p>
+  <form class="search" method="get" action="/">
+    <input type="search" name="q" value="{{ q }}" placeholder="Co hledáte?" autofocus>
+    <button>Hledat</button>
+    <details class="filters" {% if f.organ or f.rok or f.tema or f.druh or f.stav or f.clen %}open{% endif %}>
+      <summary>Filtry</summary>
+      <div class="grid">
+        <label>Orgán <select name="organ"><option value="">oba</option><option value="zmo" {{ 'selected' if f.organ=='zmo' }}>Zastupitelstvo</option><option value="rmo" {{ 'selected' if f.organ=='rmo' }}>Rada</option></select></label>
+        <label>Rok <select name="rok"><option value="">všechny</option>{% for y in years %}<option {{ 'selected' if f.rok==y }}>{{ y }}</option>{% endfor %}</select></label>
+        <label>Téma <select name="tema"><option value="">všechna</option>{% for k, t in vocab.topics.items() %}<option value="{{ k }}" {{ 'selected' if f.tema==k }}>{{ t }}</option>{% endfor %}</select></label>
+        <label>Druh <select name="druh"><option value="">všechny</option>{% for k, t in vocab.kinds.items() %}<option value="{{ k }}" {{ 'selected' if f.druh==k }}>{{ t }}</option>{% endfor %}</select></label>
+        <label>Výsledek <select name="stav"><option value="">jakýkoli</option>{% for k, t in STATUS.items() %}<option value="{{ k }}" {{ 'selected' if f.stav==k }}>{{ t|lower }}</option>{% endfor %}</select></label>
+        <label>Člen hlasoval <span class="pair"><input name="clen" value="{{ f.clen }}" placeholder="příjmení"><select name="volba"><option value="">jakkoli</option>{% for k in ['pro','proti','zdrzel','nehlasoval'] %}<option value="{{ k }}" {{ 'selected' if f.volba==k }}>{{ CHOICE[k] }}</option>{% endfor %}</select></span></label>
+        <label>Režim <select name="rezim"><option value="hybrid">slova + význam</option><option value="fulltext" {{ 'selected' if rezim=='fulltext' }}>jen slova</option>{% if semantic %}<option value="semantic" {{ 'selected' if rezim=='semantic' }}>jen význam</option>{% endif %}</select></label>
+      </div>
+    </details>
+  </form>
+</section>
+
+<section class="results">
+  {% if q %}<p class="muted">{{ info.total }} výsledků{% if info.mode == 'fulltext' and rezim != 'fulltext' %} (hledání podle významu teď není dostupné, jen podle slov){% endif %}</p>
+  {% else %}<h2>Nejnovější usnesení</h2>{% endif %}
+  {% for h in hits %}{% set r = h.row %}
+  <article class="hit">
+    <div class="meta">{{ badge(r.status) }} <a href="/usneseni/{{ r.uid }}" class="num">{{ r.number }}</a> · {{ BODY[r.body] }} · {{ r.date|d }}</div>
+    <h3><a href="/usneseni/{{ r.uid }}">{{ r.title or r.agenda_title or r.number }}</a></h3>
+    <p>{{ r.summary or r.text_start }}</p>
+    {% if r.keywords %}<p class="tags">{% for k in r.keywords[:6] %}<span>{{ k }}</span>{% endfor %}</p>{% endif %}
+  </article>
+  {% else %}
+  <p class="empty">Nic nenalezeno. To neznamená, že se o věci nejednalo – zkuste jiná slova nebo méně filtrů.</p>
+  {% endfor %}
+  {% set pages = ((info.total or 0) / per)|round(0, 'ceil')|int %}
+  {% if pages > 1 %}<nav class="pager">
+    {% if strana > 1 %}<a href="?{{ request.query_params|string|replace('strana='~strana, '') }}&strana={{ strana-1 }}">← novější</a>{% endif %}
+    <span>{{ strana }} / {{ pages }}</span>
+    {% if strana < pages %}<a href="?{{ request.query_params|string|replace('strana='~strana, '') }}&strana={{ strana+1 }}">další →</a>{% endif %}
+  </nav>{% endif %}
+</section>
+{% endblock %}

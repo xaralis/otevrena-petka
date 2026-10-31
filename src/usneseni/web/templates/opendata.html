@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Otevřená data, API a MCP{% endblock %}
+{% block main %}
+<h1>Otevřená data, API a MCP</h1>
+<p class="lead">Všechna data jsou volně k použití pod licencí <a href="https://creativecommons.org/licenses/by/4.0/deed.cs">CC BY 4.0</a>. Aktualizují se automaticky po zveřejnění nového zápisu (poslední: {{ stats.last_date|d }}).</p>
+<h2>Soubory</h2>
+<ul class="files">{% for f in files %}<li><a href="/opendata/{{ f }}">{{ f }}</a></li>{% endfor %}</ul>
+<p><code>datapackage.json</code> popisuje soubory ve formátu <a href="https://datapackage.org/">Frictionless Data Package</a>. Surové výstupy zpracování po jednotlivých jednáních: <a href="/opendata-extracted.txt">seznam</a> (<code>/opendata/extracted/&lt;id&gt;.parse.json</code>). Historie dat je v <a href="https://github.com/xaralis/usneseni-mo5/tree/main/data">gitu</a>.</p>
+<h2>REST API</h2>
+<p>Dokumentace OpenAPI: <a href="/api/docs">/api/docs</a>. Například:</p>
+<pre>curl '{{ base }}/api/v1/resolutions?q=parkování&amp;body=rmo&amp;status=neprijato'
+curl '{{ base }}/api/v1/resolutions/154-2025-z'
+curl '{{ base }}/api/v1/members/filip-varecha/votes?dissent_only=true'</pre>
+<h2>MCP pro Claude a další asistenty</h2>
+<p>MCP server (streamable HTTP, bez přihlášení, jen čtení): <code>{{ base }}/mcp</code></p>
+<pre>claude mcp add --transport http usneseni-mo5 {{ base }}/mcp</pre>
+<p>V Claude.ai: Nastavení → Konektory → Přidat vlastní konektor → URL výše. Nástroje: <code>hledej_usneseni</code>, <code>usneseni_detail</code>, <code>jednani</code>, <code>clenove</code>, <code>hlasovani_clena</code>, <code>statistika</code>.</p>
+<h2 id="metodika">Metodika</h2>
+<ul class="method">
+<li>Zdrojem jsou PDF „Usnesení (a zápis)“ zveřejněná městem na pardubice.eu od roku 2018 pro zastupitelstvo (ZMO) i radu (RMO). Každý den se kontroluje, zda nepřibyl nový.</li>
+<li>Strukturu zápisu (body, usnesení, hlasování, prezenci) čte jazykový model Claude; <b>znění usnesení se ale přebírá doslova z PDF</b> podle čísel řádků a počty hlasů se strojově kontrolují proti hlasovacímu řádku v zápisu. Jednání, kde kontrola něco nesedí, se označí k ruční kontrole.</li>
+<li><b>Číslo usnesení neznamená, že bylo přijato.</b> Výsledek se určuje z hlasování: přijato je, pokud pro hlasovala nadpoloviční většina všech členů (zastupitelstvo 8 z 15, rada 3 ze 5). Pokud zápis výslovně uvádí „bylo / nebylo přijato“ a nesouhlasí to, jednání jde ke kontrole.</li>
+<li><b>Hlasy jednotlivých členů:</b> zápisy MO V jmenovitě uvádějí jen ty, kdo hlasovali jinak než většina (případně nikoho). Hlas ostatních odvozujeme: přítomní (podle prezence a zmínek o příchodech a odchodech) minus jmenovaní = hlasovali pro zbývající možnost, pokud to přesně odpovídá součtu. Takový hlas je označen hvězdičkou / <code>provenance=inferred</code>. Pokud součty nesedí nebo chybí jména u více možností, uvádíme jen součty.</li>
+<li>Název, shrnutí, klíčová slova, témata a rozprava jsou <b>odvozené</b> modelem a slouží k hledání. Částky se jen opisují, nesčítají.</li>
+<li>Jména fyzických osob, která město v textech anonymizuje („xxxx“), nedoplňujeme.</li>
+</ul>
+{% endblock %}

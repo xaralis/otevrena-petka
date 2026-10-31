@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "_macros.html" import badge, vote %}
+{% block title %}{{ r.number }} – {{ r.title or 'usnesení' }}{% endblock %}
+{% block main %}
+<article class="resolution">
+  <p class="crumbs"><a href="/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. {{ 'mimořádné ' if r.meeting_kind == 'mimoradne' }}jednání {{ 'ZMO' if r.body == 'zmo' else 'RMO' }} {{ r.date|d }}</a>{% if r.agenda_title %} · bod {{ r.agenda_no }} {{ r.agenda_title }}{% endif %}</p>
+  <h1><span class="num">{{ r.number }}</span> {{ r.title or '' }}</h1>
+  <p>{{ badge(r.status) }}
+    {% if r.status == 'neprijato' %}<span class="explain">Návrh dostal číslo usnesení, ale v hlasování neprošel.</span>{% endif %}
+    {% if r.status == 'castecne' %}<span class="explain">Některé části prošly, jiné ne – viz hlasování níže.</span>{% endif %}
+    {% if r.status == 'neovereno' %}<span class="explain">Výsledek nejde ze zápisu jednoznačně určit.</span>{% endif %}
+  </p>
+  {% if r.summary %}<div class="derived"><span class="label">Shrnutí (odvozené)</span><p>{{ r.summary }}</p>
+    {% if r.keywords %}<p class="tags">{% for k in r.keywords %}<a href="/?q={{ k|urlencode }}">{{ k }}</a>{% endfor %}</p>{% endif %}
+    {% if r.topics %}<p class="topics">{% for t in r.topics %}<a href="/?tema={{ t }}">{{ vocab.topics[t] }}</a>{% endfor %}</p>{% endif %}
+  </div>{% endif %}
+  <h2>Znění usnesení</h2>
+  <div class="text">{{ r.text }}</div>
+  {% if r.responsible or r.deadline %}<p class="muted">{% if r.responsible %}Zodpovídá: {{ r.responsible }}{% endif %}{% if r.deadline %} · Termín: {{ r.deadline }}{% endif %}</p>{% endif %}
+  {% if r.places or r.parcels or r.organizations or r.amounts %}
+  <dl class="entities">
+    {% if r.places %}<dt>Místa</dt><dd>{{ r.places|join(', ') }}</dd>{% endif %}
+    {% if r.parcels %}<dt>Pozemky</dt><dd>{{ r.parcels|join('; ') }}</dd>{% endif %}
+    {% if r.organizations %}<dt>Organizace</dt><dd>{{ r.organizations|join(', ') }}</dd>{% endif %}
+    {% if r.amounts %}<dt>Částky</dt><dd>{{ r.amounts|join('; ') }}</dd>{% endif %}
+  </dl>{% endif %}
+  <h2>Hlasování</h2>
+  {% for v in r.votes %}{{ vote(v) }}{% else %}<p class="note">K usnesení se v zápisu nenašlo hlasování.</p>{% endfor %}
+  <p class="legend">* odvozeno: zápis jmenovitě uvádí jen menšinové hlasy, ostatní přítomní hlasovali podle součtů. <a href="/otevrena-data#metodika">Jak to počítáme</a></p>
+  <p class="source">Zdroj: <a href="{{ r.source_url }}">{{ r.source_title }}</a> · <a href="/pdf/{{ r.meeting_id }}.pdf">archivní kopie PDF</a> · <a href="/api/v1/resolutions/{{ r.uid }}">JSON</a></p>
+</article>
+{% endblock %}

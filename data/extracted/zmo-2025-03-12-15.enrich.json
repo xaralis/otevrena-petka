@@ -1,0 +1,268 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "0775b2e2cd1ce1f54cb03759143f1d3c406affcdfd4ae957ba07c98382bbae4d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "122/2025 Z",
+    "title": "Zpráva o činnosti starosty od jednání 18. 12. 2024",
+    "summary": "Zastupitelstvo bere na vědomí zprávu starosty o jeho činnosti od posledního jednání zastupitelstva dne 18. 12. 2024.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelstvu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "123/2025 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady obvodu. Z evidence vyřazuje splněná usnesení č. 173/2024 R – 185/2024 R a 187/2025 – 192/2025 R, v evidenci ponechává usnesení č. 137/2024 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "124/2025 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení č. 114/2024 Z – 120/2024 Z, v evidenci ponechává mj. usnesení č. 75/2009 Z, 23/2023 Z, 103/2024 Z a 121/2024 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "125/2025 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 12. 2024",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 12. 2024 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2024",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "126/2025 Z",
+    "title": "1. změna rozpočtu na rok 2025 a limit dárků z akcí knihovny",
+    "summary": "Zastupitelstvo bere na vědomí komentář k 1. změně rozpočtu na rok 2025 včetně rozpočtu sociálního fondu a schvaluje rozpočtová opatření v bodech 1–14 důvodové zprávy. Zároveň souhlasí, že drobné dárky pro občany z položky akcí pořádaných knihovnou (kapitola 34) budou mít hodnotu do 200 Kč na osobu.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2025",
+     "sociální fond",
+     "knihovna",
+     "drobné dárky"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "knihovna"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "200,-- Kč vč. na osobu"
+    ]
+   },
+   {
+    "number": "127/2025 Z",
+    "title": "Výroční zpráva Finančního výboru za rok 2024",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2024.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "činnost výboru",
+     "rok 2024"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "128/2025 Z",
+    "title": "Záměr poptat projekty vnitrobloků Jiránkova, K Blahobytu a chodníků Staňkova",
+    "summary": "Zastupitelstvo schvaluje záměr poptat projekční práce na stavební úpravy vnitrobloků Jiránkova č. p. 2101–2104 a 2089–2091 a K Blahobytu č. p. 2482–2484 a na chodníky v ulici Staňkova v úseku Jana Palacha – Čs. armády včetně zvýšených křižovatek s ulicemi Češkova a V Ráji.",
+    "keywords": [
+     "projekční práce",
+     "projektová dokumentace",
+     "vnitroblok",
+     "chodníky",
+     "zvýšená křižovatka",
+     "Jiránkova",
+     "K Blahobytu",
+     "Staňkova",
+     "investiční záměry"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Jiránkova č.p. 2101-2104 a 2089-2091",
+     "K Blahobytu č.p. 2482-2484",
+     "ul. Staňkova",
+     "ul. Jana Palacha",
+     "Čs. armády",
+     "ul. Češkova",
+     "V Ráji"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "129/2025 Z",
+    "title": "Nesouhlas s přestavbou administrativní budovy na kostel s farou v ul. Boženy Němcové",
+    "summary": "Zastupitelstvo nesouhlasí se záměrem stavebních úprav a nástavby administrativní budovy na kostel s farou v ulici Boženy Němcové a ukládá starostovi uplatnit v řízení o závazném stanovisku námitky. Námitky se týkají nárůstu dopravy, zhoršení parkování, hluku, veřejného pořádku a nedostatečné kapacity lokality při náboženských akcích.",
+    "keywords": [
+     "kostel",
+     "fara",
+     "Boženy Němcové",
+     "námitky",
+     "závazné stanovisko",
+     "stavební řízení",
+     "parkování",
+     "hluk",
+     "veřejný pořádek",
+     "nesouhlas"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "doprava",
+     "bezpecnost"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ulice Boženy Němcové"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "130/2025 Z",
+    "title": "Pravidla participativního rozpočtu pro rok 2025",
+    "summary": "Zastupitelstvo schvaluje Pravidla participativního rozpočtu městského obvodu Pardubice V pro rok 2025 s platností od 31. 3. 2025.",
+    "keywords": [
+     "participativní rozpočet",
+     "pravidla",
+     "projekty občanů",
+     "hlasování občanů",
+     "rok 2025"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "II.",
+    "discussion": "Ing. Pavel Bergman předložil na začátku jednání dodatek ke kontrole plnění usnesení rady; zastupitelé ho zařadili do programu před zprávu č. 2."
+   },
+   {
+    "no": "1.",
+    "discussion": "JUDr. Bc. Jakub Jeřábek se ptal na zavádění parkovacích zón v obvodu. Ing. Jakub Kutílek popsal rozpracovaný návrh dopravního značení a Bc. Jan Nadrchal uvedl, že se zóny v obvodu mají spustit až po dokončení parkovacího domu na Vápence."
+   },
+   {
+    "no": "2.",
+    "discussion": "Ing. Filip Vařecha a JUDr. Bc. Jakub Jeřábek nesouhlasili s formulací usnesení k dodatku, Bc. Jan Nadrchal navrhl zrušit usnesení č. 137/2024 R a Ing. Petr Netolický ho navrhl ponechat ve sledování. Starosta Jiří Rejda, DiS. přislíbil předložit záležitost ZŠ Benešovo náměstí samostatně, Bc. Nadrchal návrh vzal zpět a Ing. Pavel Bergman bod stáhl."
+   },
+   {
+    "no": "3.",
+    "discussion": "Ing. Jakub Kutílek se ptal, proč rada nesouhlasí se žádostí ČEZ o věcné břemeno (usnesení 191/2025 R); starosta Jiří Rejda, DiS. vysvětlil, že by šlo o zásah do nově upraveného místa."
+   },
+   {
+    "no": "4.",
+    "discussion": "Bc. Jan Nadrchal navrhl vyřadit z evidence usnesení č. 103/2024 Z. Ing. Jakub Kutílek upozornil, že záměry z usnesení č. 121/2024 Z a 103/2024 Z zatím realizovány nejsou, a Ing. Filip Vařecha informoval o úpravě usnesení č. 23/2023 Z kvůli nové terminologii stavebního zákona."
+   },
+   {
+    "no": "5.",
+    "discussion": "Ing. Filip Vařecha se ptal na kapitolu 14 – Zpravodaj; odpověděla pracovnice úřadu."
+   },
+   {
+    "no": "6.",
+    "discussion": "Ing. Lic. Jaroslav Kňava informoval o záměru knihovny mít vlastní webové stránky. Ing. Pavel Bergman se ptal na položku výdajů na krajské volby, kterou vysvětlila pracovnice úřadu."
+   },
+   {
+    "no": "8.",
+    "discussion": "Ing. Filip Vařecha navrhl prodloužit opravu chodníku v ulici Staňkova až k ulici Čs. armády, podpořil ho Ing. Petr Netolický; Bc. Jan Nadrchal, Bc. Petr Dufek a Ing. Jakub Kutílek diskutovali rozsah a etapizaci. Starosta Jiří Rejda, DiS. usnesení upravil na úsek po ulici Čs. armády."
+   },
+   {
+    "no": "9.",
+    "discussion": "Ing. Jakub Kutílek, Bc. Jan Nadrchal, Ing. Filip Vařecha a JUDr. Bc. Jakub Jeřábek diskutovali o záměru kostela, zkušenostech z obvodu Pardubice VI a dostatečnosti informací; tajemník úřadu popsal akce ve Svítkově. Ing. Lic. Jaroslav Kňava předložil doplněný návrh usnesení s námitkami."
+   },
+   {
+    "no": "10.",
+    "discussion": "JUDr. Bc. Jakub Jeřábek by v participativním rozpočtu zohledňoval jen kladné hlasy. Ing. Filip Vařecha vysvětlil, že záporné hlasy jsou volitelné, a Ing. Lic. Jaroslav Kňava se jim nebránil."
+   },
+   {
+    "no": "11.",
+    "discussion": "Ing. Petr Netolický se ptal na parkování zaměstnanců u Palachovky a JUDr. Bc. Jakub Jeřábek na soudní spory obvodu, které podle tajemníka směřují ke smíru. Starosta Jiří Rejda, DiS. ohlásil na duben mimořádné jednání zastupitelstva."
+   }
+  ]
+ }
+}

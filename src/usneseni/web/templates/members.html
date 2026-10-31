@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Členové ZMO a RMO Pardubice V{% endblock %}
+{% block main %}
+<h1>Členové</h1>
+{% for term, group in members|groupby('term')|reverse %}
+<h2>Volební období {{ term }}</h2>
+<table class="list"><thead><tr><th>Člen</th><th>Kandidátka</th><th></th><th>Hlasování</th></tr></thead><tbody>
+{% for m in group %}<tr><td><a href="/clenove/{{ m.id }}">{{ m.name }}</a></td><td>{{ m.list }}</td><td>{% if m.in_rada %}rada{% endif %}{% if not m.elected %} náhradník{% endif %}</td><td>{{ m.n_ballots }}</td></tr>{% endfor %}
+</tbody></table>
+{% endfor %}
+{% endblock %}

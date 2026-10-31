@@ -1,0 +1,686 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "6b8fdce085e6a3f970213c215bc2c4bf0c8d18dc280c4d0fe1828c35938f097e",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 10,
+   "kind": "radne",
+   "date": "2024-03-06",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Bc. Petr Dufek",
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Bc. Jan Nadrchal",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Ing. Lic. Jaroslav Kňava",
+    "Jiří Havrda",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [
+    "Michal Hrabák"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 100,
+    "name": "Ing. Lic. Jaroslav Kňava",
+    "event": "arrive"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 52,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "2.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 68,
+    "speakers": [
+     "Ing. Pavel Bergman",
+     "Ing. Jakub Kutílek",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "3.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 89,
+    "speakers": [
+     "Ing. Pavel Bergman",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "4.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2023",
+    "line": 117,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "JUDr. Bc. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "5.",
+    "title": "1. změna rozpočtu MO Pardubice V na r. 2024",
+    "line": 143,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "6.",
+    "title": "Odvolání a volba člena Finančního výboru Zastupitelstva MO Pardubice V",
+    "line": 186,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "7.",
+    "title": "Odvolání a volba člena Finančního výboru Zastupitelstva MO Pardubice V",
+    "line": 212,
+    "speakers": [
+     "Mgr. Miloš Adamů, MBA.",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "8.",
+    "title": "Schválení zpracování PD a investičních záměrů",
+    "line": 247,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Bc. Jan Nadrchal",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "9.",
+    "title": "Výroční zpráva o činnosti Finančního výboru ZMO Pardubice V za r. 2023",
+    "line": 291,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "10.",
+    "title": "Diskuse, závěr",
+    "line": 306,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Milan Randák",
+     "Bc. Petr Dufek",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Bc. Jan Nadrchal",
+     "Mgr. Miloš Adamů, MBA."
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "85/2024 Z",
+    "agenda_no": "1.",
+    "first_line": 63,
+    "last_line": 64,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "86/2024 Z",
+    "agenda_no": "2.",
+    "first_line": 81,
+    "last_line": 85,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "87/2024 Z",
+    "agenda_no": "3.",
+    "first_line": 101,
+    "last_line": 101,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "88/2024 Z",
+    "agenda_no": "3.",
+    "first_line": 109,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "89/2024 Z",
+    "agenda_no": "4.",
+    "first_line": 137,
+    "last_line": 139,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "90/2024 Z",
+    "agenda_no": "5.",
+    "first_line": 172,
+    "last_line": 182,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "91/2024 Z",
+    "agenda_no": "6.",
+    "first_line": 197,
+    "last_line": 209,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "92/2024 Z",
+    "agenda_no": "7.",
+    "first_line": 236,
+    "last_line": 244,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "93/2024 Z",
+    "agenda_no": "8.",
+    "first_line": 276,
+    "last_line": 288,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "94/2024 Z",
+    "agenda_no": "9.",
+    "first_line": 299,
+    "last_line": 300,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu jednání",
+    "proposer": null,
+    "motion_first_line": 33,
+    "motion_last_line": 43,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "85/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "86/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "87/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Jakub Kutílek",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 2,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha"
+     ],
+     "zdrzel": [
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "88/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 140,
+    "last_line": 140,
+    "resolution": "89/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 166,
+    "last_line": 167,
+    "resolution": "90/2024 Z",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 2,
+    "proti": 6,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "proti": [
+      "Mgr. Miloš Adamů, MBA.",
+      "Jiří Havrda",
+      "Evžen Erban",
+      "Jiří Rejda, Dis.",
+      "Ing. Milan Randák",
+      "Karolina Štefková"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 183,
+    "last_line": 183,
+    "resolution": "90/2024 Z",
+    "part": "body 1, 2 a 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 200,
+    "last_line": 201,
+    "resolution": "91/2024 Z",
+    "part": "bod 1 – odvolání Mgr. Daniela Přibyla z FV",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 208,
+    "last_line": 209,
+    "resolution": "91/2024 Z",
+    "part": "bod 2 – volba Ing. Jakuba Kutílka členem FV",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 6,
+    "proti": 6,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Milan Randák",
+      "Mgr. Miloš Adamů, MBA.",
+      "Jiří Rejda, DiS.",
+      "Evžen Erban",
+      "Karolina Štefková",
+      "Bc. Petr Dufek"
+     ],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "Jiří Havrda"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 239,
+    "last_line": 239,
+    "resolution": "92/2024 Z",
+    "part": "body 1 a 2 – odvolání Ing. Simony Mokré, volba Ing. Miloše Vendolského do FV",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 243,
+    "last_line": 244,
+    "resolution": "92/2024 Z",
+    "part": "bod 3 – volba Martiny Tomanové členkou FV",
+    "subject": null,
+    "proposer": "Ing. Jiří Rejda",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 7,
+    "proti": 1,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha"
+     ],
+     "zdrzel": [
+      "Ing. Filip Kutílek",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Petr Netolický",
+      "Jiří Havrda",
+      "Bc. Jan Nadrchal",
+      "Mgr. Miloš Adamů"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 283,
+    "last_line": 283,
+    "resolution": "93/2024 Z",
+    "part": "bod 1 a bod 2 – Kontejnerové stání Pichlova x Rokycanova",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 286,
+    "last_line": 286,
+    "resolution": "93/2024 Z",
+    "part": "bod 2 – Oprava povrchu chodníku ul. Lexova od ul. Wolkerova po ul. Kpt. Nálepky – západní strana",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 288,
+    "last_line": 288,
+    "resolution": "93/2024 Z",
+    "part": "bod 2 – Rekonstrukce povrchu chodníku ul. Boženy Němcové od ul. Češkova po ul. Rožkova",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 301,
+    "last_line": 301,
+    "resolution": "94/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 368,
+    "last_line": 368,
+    "resolution": null,
+    "part": null,
+    "subject": "prodloužení diskuse",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 10,
+    "proti": 1,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Milan Randák"
+     ],
+     "zdrzel": [
+      "Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Ing. Lic. Jaroslav Kňava je v ř. 12 i 15 uveden jako přítomen i omluven 'po část jednání'; o pozdním příchodu mluví až v diskusi (ř. 325). Podle počtů hlasů (13 do usnesení 86/2024 Z, 14 od usnesení 87/2024 Z) dorazil mezi ř. 86 a 102 – příchod zapsán k ř. 100.",
+   "ř. 42: bod programu 10 'Informativní zpráva – krajinářský návrh Dražkovice' v zápisu není projednán; jako bod 10 je projednána 'Diskuse, závěr' (ř. 306).",
+   "ř. 243: mezi zdrženími je uveden 'Ing. Filip Kutílek' – zřejmě Ing. Jakub Kutílek (Ing. Filip Vařecha je uveden jako proti).",
+   "ř. 166–168: bod 3 návrhu usnesení k 1. změně rozpočtu hlasován samostatně a nepřijat; usnesení 90/2024 Z obsahuje jen body 1, 2 a 4.",
+   "ř. 368: hlasování o prodloužení diskuse má jen 12 hlasů (10+1+1) při 14 přítomných.",
+   "ř. 84: v usnesení o kontrole usnesení RMO jsou uvedena čísla 102/2024 R – 103/2024 R (ostatní 2023)."
+  ]
+ }
+}

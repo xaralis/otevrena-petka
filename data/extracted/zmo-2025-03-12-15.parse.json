@@ -1,0 +1,533 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "0775b2e2cd1ce1f54cb03759143f1d3c406affcdfd4ae957ba07c98382bbae4d",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 15,
+   "kind": "radne",
+   "date": "2025-03-12",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "Bc. Petr Dufek",
+    "Ing. Filip Vařecha",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Michal Hrabák",
+    "Ing. Lic. Jaroslav Kňava",
+    "Bc. Jan Nadrchal",
+    "Karolina Štefková"
+   ],
+   "excused": [
+    "Petr Šmeral"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 328,
+    "name": "Bc. Petr Dufek",
+    "event": "leave"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": [
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "1.",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 78,
+    "speakers": [
+     "JUDr. Bc. Jakub Jeřábek",
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "2.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V - dodatek",
+    "line": 106,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Pavel Bergman",
+     "Bc. Jan Nadrchal",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Jiří Rejda, DiS.",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "3.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 130,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "4.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 149,
+    "speakers": [
+     "Bc. Jan Nadrchal",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "5.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2024",
+    "line": 178,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "6.",
+    "title": "1. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 193,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "7.",
+    "title": "Výroční zpráva o činnosti FV ZMO Pardubice V za rok 2024",
+    "line": 223,
+    "speakers": []
+   },
+   {
+    "no": "8.",
+    "title": "Schválení investičních akcí a investičních záměrů",
+    "line": 235,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Bc. Jan Nadrchal",
+     "Bc. Petr Dufek",
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "9.",
+    "title": "Stavební úpravy a nástavba administrativní budovy na kostel s farou v ulici Boženy Němcové v Pardubicích",
+    "line": 265,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Bc. Jan Nadrchal",
+     "Ing. Filip Vařecha",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "10.",
+    "title": "Pravidla Participativního rozpočtu MO Pardubice V pro rok 2025",
+    "line": 307,
+    "speakers": [
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Filip Vařecha",
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "11.",
+    "title": "Diskuse, závěr",
+    "line": 331,
+    "speakers": [
+     "Ing. Petr Netolický",
+     "Bc. Jan Nadrchal",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Jiří Rejda, DiS."
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "122/2025 Z",
+    "agenda_no": "1.",
+    "first_line": 99,
+    "last_line": 100,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "123/2025 Z",
+    "agenda_no": "3.",
+    "first_line": 141,
+    "last_line": 145,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "124/2025 Z",
+    "agenda_no": "4.",
+    "first_line": 170,
+    "last_line": 174,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "125/2025 Z",
+    "agenda_no": "5.",
+    "first_line": 187,
+    "last_line": 189,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "126/2025 Z",
+    "agenda_no": "6.",
+    "first_line": 206,
+    "last_line": 219,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "127/2025 Z",
+    "agenda_no": "7.",
+    "first_line": 230,
+    "last_line": 231,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "128/2025 Z",
+    "agenda_no": "8.",
+    "first_line": 253,
+    "last_line": 258,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "129/2025 Z",
+    "agenda_no": "9.",
+    "first_line": 284,
+    "last_line": 302,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "130/2025 Z",
+    "agenda_no": "10.",
+    "first_line": 325,
+    "last_line": 327,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 33,
+    "last_line": 33,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise (Michal Hrabák, Bc. Jan Nadrchal, Karolina Štefková) a ověřovatelé (Evžen Erban, JUDr. Bc. Jakub Jeřábek)",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 31,
+    "motion_last_line": 32,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": null,
+    "part": null,
+    "subject": "zařazení materiálu „Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V – dodatek“ do programu a jeho předřazení před zprávu č. 2",
+    "proposer": "Ing. Pavel Bergman",
+    "motion_first_line": 53,
+    "motion_last_line": 56,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 60,
+    "motion_last_line": 71,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": "122/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 146,
+    "last_line": 146,
+    "resolution": "123/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 175,
+    "last_line": 175,
+    "resolution": "124/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Bc. Jan Nadrchal"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 190,
+    "last_line": 190,
+    "resolution": "125/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 220,
+    "last_line": 220,
+    "resolution": "126/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 232,
+    "last_line": 232,
+    "resolution": "127/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 259,
+    "last_line": 259,
+    "resolution": "128/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 303,
+    "last_line": 304,
+    "resolution": "129/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Lic. Jaroslav Kňava",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha",
+      "Karolina Štefková"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 328,
+    "last_line": 328,
+    "resolution": "130/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Milan Randák"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "Bod 2 (Kontrola plnění usnesení RMO – dodatek, ř. 106–128) byl předkladatelem stažen bez hlasování; návrh Bc. Nadrchala na zrušení usnesení č. 137/2024 R (ř. 123–125) byl vzat zpět.",
+   "Bod 4 (ř. 153–155): Bc. Jan Nadrchal navrhuje jako pozměňující návrh vyřazení usnesení č. 103/2024 Z z evidence; o návrhu se podle zápisu nehlasovalo a přijaté usnesení č. 124/2025 Z jej ponechává v evidenci.",
+   "Program (ř. 41 a 64) uvádí rozbor hospodaření „k 30. 12. 2024“, nadpis bodu 5 (ř. 179) a usnesení č. 125/2025 Z uvádějí „k 31. 12. 2024“.",
+   "Usnesení č. 123/2025 Z (ř. 144) uvádí rozsah „187/2025 - 192/2025 R“ – u první hodnoty chybí označení R.",
+   "Hlasování o usnesení č. 130/2025 Z (ř. 328): jméno zdrženého (Ing. Milan Randák) není v závorce; Bc. Petr Dufek odešel v 18:05, hlasovalo 13 přítomných."
+  ]
+ }
+}

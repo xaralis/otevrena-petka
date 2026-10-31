@@ -14,6 +14,8 @@ Pokud `data/text/<ID>.txt` neexistuje (sken bez textové vrstvy), přečti
 
 ## 1. Struktura (parse)
 
+Pokud `uv run usneseni status | grep <ID>` už ukazuje `parse=y`, krok 1 přeskoč.
+
 1. `uv run usneseni agent-prepare-parse <ID>` vytvoří ve `work/<ID>/`:
    `parse-system.md` (instrukce), `parse-schema.json` (JSON schéma), `numbered.txt` (text
    s čísly řádků).

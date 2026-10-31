@@ -1,0 +1,211 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "c8ad864562a4c3397057b1a37b61522a78cf3ef3115e93d298b05545b74af1ee",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "17/2019 Z",
+    "title": "Zpráva o činnosti starosty od jednání 19. 12. 2018",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu Pardubice V od posledního jednání zastupitelstva dne 19. 12. 2018.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty",
+     "vzetí na vědomí"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "18/2019 Z",
+    "title": "Seminář k protihlukovým opatřením podél I/37 u Dukelského lesoparku",
+    "summary": "Návrh ukládá starostovi zorganizovat seminář zastupitelstva, zástupců Ředitelství silnic a dálnic a dalších aktérů k protihlukovým opatřením podél silnice I/37 v oblasti Dukelského lesoparku.",
+    "keywords": [
+     "protihluková opatření",
+     "hluk",
+     "silnice I/37",
+     "Dukelský lesopark",
+     "lesopark Dukla",
+     "ŘSD",
+     "seminář",
+     "protihluková stěna"
+    ],
+    "topics": [
+     "doprava",
+     "zelen"
+    ],
+    "kind": "ukol",
+    "places": [
+     "silnice I/37",
+     "Dukelský lesopark"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ŘSD"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "19/2019 Z",
+    "title": "Vyhodnocení plnění Programu rozvoje MO Pardubice V za rok 2018 a jeho aktualizace",
+    "summary": "Zastupitelstvo schvaluje vyhodnocení plnění úkolů Programu rozvoje městského obvodu Pardubice V za rok 2018 a jeho aktualizaci (v textu uvedeno „k 1. 1. 2018“).",
+    "keywords": [
+     "program rozvoje",
+     "strategie",
+     "vyhodnocení plnění",
+     "aktualizace programu rozvoje",
+     "rozvoj obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "20/2019 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení 8/2018 R – 24/2018 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady městského obvodu a vyřazuje z evidence sledování splněná usnesení 8/2018 R až 24/2018 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "21/2019 Z",
+    "title": "Zpráva Kontrolního výboru o plnění usnesení zastupitelstva",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z kontroly splněná usnesení 7/2018 Z až 16/2018 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z a 35/2015 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "22/2019 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2018",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 12. 2018 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2018",
+     "finance",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "23/2019 Z",
+    "title": "1. změna rozpočtu na rok 2019 a rozpočet sociálního fondu",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje 1. změnu rozpočtu městského obvodu Pardubice V na rok 2019, rozpočet sociálního fondu na rok 2019 a rozpočtová opatření uvedená v komentáři k návrhu.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2019",
+     "rozpočtové opatření",
+     "sociální fond",
+     "rozpočet obvodu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "24/2019 Z",
+    "title": "Zpráva o činnosti Finančního výboru za rok 2018",
+    "summary": "Zastupitelstvo bere na vědomí výroční zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2018.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "činnost výboru",
+     "rok 2018"
+    ],
+    "topics": [
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva MO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "II.",
+    "discussion": "Ing. Filip Vařecha navrhl zařadit na program bod „Odborné provádění redukčních řezů na území MO Pardubice V“; návrh nezískal dostatek hlasů (pro 3, zdrželo se 11). Starosta Jiří Rejda navrhl projednat Program rozvoje hned po zprávě starosty kvůli přítomnosti členky strategické komise."
+   },
+   {
+    "no": "1.",
+    "discussion": "Ing. Filip Vařecha se ptal na porady a jednání starosty, mj. na kácení topolů na žádost letiště (lokalita K Dolíčku), prodej nebytových prostor městem, rekonstrukci ulice S. K. Neumanna a elektrárnu Chvaletice; k prodeji nebytů Ing. Jiří Janoš uvedl, že rada s prodejem nesouhlasí a žádá o jejich převedení do správy obvodu. Ing. Jiří Hájek se ptal na závěry Kolegia starostů a kompenzace – starosta uvedl, že obvod přijde o 2.500.000,- Kč, kompenzované dotacemi – a na jednání o úpravě prostranství před ZŠ Benešovo náměstí."
+   },
+   {
+    "no": "2.",
+    "discussion": "Ing. Hana Demlová podala podnět, aby návrhy usnesení šly nejprve strategické komisi. Ing. Filip Vařecha se ptal, proč ZŠ Benešovo náměstí nemá veřejně přístupné hřiště a na statistiku zásahů městské policie, a navrhl usnesení o semináři k protihlukovým opatřením u Dukelského lesoparku; k hřišti diskutovali také Ing. Milan Randák a Ing. Jiří Janoš."
+   },
+   {
+    "no": "4.",
+    "discussion": "Ing. Filip Vařecha navrhl zrušit usnesení č. 95/2010 Z jako bezpředmětné; Ing. Jiří Janoš nesouhlasil a vysvětlil, proč ho ponechat ve sledování."
+   },
+   {
+    "no": "5.",
+    "discussion": "Ing. Filip Vařecha se ptal na cenu dohledu nad veřejnými zakázkami (šlo o dohled projektanta) a na místa a ujmutí hromadné výsadby. Ing. Jiří Hájek se ptal na zásobník projektových akcí a vyzval zastupitele k podávání návrhů; starosta vyzval k zaslání návrhů investic do konce března."
+   },
+   {
+    "no": "IV.",
+    "discussion": "Bc. Petra Prusáková se ptala na cenu kamer. Ing. Petr Netolický za Místní komisi Jesničánky upozornil na nevyřešené podněty (zrcadlo, pletivo, jednosměrná ulice Holcova, nedostatečné zóny 30), Ing. Jiří Hájek žádal žluté pruhy před vjezdy kvůli parkování na Višňovce, Ing. Filip Vařecha se ptal na veřejný kalendář starosty a Ing. Milan Randák upozornil na dopravu po propojení JV obchvatu, žádal semafor na křižovatce Lexova – Teplého a přípravu občanů na kácení stromů kvůli suchu. Starosta informoval o zařazení obvodu do rezidentního parkování a o hlukové zátěži z letiště, včetně přesunu provozu Gripenů do Pardubic v letech 2023–2024."
+   }
+  ]
+ }
+}
