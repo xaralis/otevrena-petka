@@ -298,3 +298,21 @@ footer p { max-width: 80ch; }
 .band .no-big.no-amended::after { content: "zčásti zrušeno"; }
 .band .no-big.no-castecne.no-amended::after { content: "zčásti, zčásti zrušeno"; }
 .band .no-big + h1 { margin-top: .6rem; }
+
+/* filter sentence: inline words on wide screens, labelled rows on phones */
+.sentence .m { display: none; }
+.sentence .seg { white-space: nowrap; }
+.sentence .seg-who input { width: 9.5em; }
+@media (max-width: 600px) {
+  .sentence p { display: grid; gap: .55rem; line-height: 1.4; }
+  .sentence .w { display: none; }
+  .sentence .m { display: block; font-size: .9rem; color: var(--muted); }
+  .sentence .seg { display: grid; grid-template-columns: 5.2rem minmax(0, 1fr); align-items: center; white-space: normal; }
+  .sentence .seg-who { grid-template-columns: 5.2rem minmax(0, 1fr) minmax(0, 7rem); gap: .5rem; }
+  .sentence select, .sentence input, .sentence .seg-who input { width: 100%; max-width: none; min-height: 2.75rem; }
+  .sentence .seg-go { grid-template-columns: 1fr auto; gap: 1rem; margin-top: .3rem; }
+  .sentence button { margin: 0; width: 100%; min-height: 2.9rem; }
+}
+@media (min-width: 601px) {
+  .sentence select, .sentence input { height: 1.75em; vertical-align: baseline; line-height: 1.2; }
+}
