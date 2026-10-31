@@ -265,7 +265,7 @@ footer p { max-width: 80ch; }
   .search { flex-direction: column; align-items: stretch; }
   .sentence p { line-height: 2.2; font-size: 1rem; }
   .row { padding: 1rem .8rem; }
-  .seats-l { --gap: 2px; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); width: 100%; }
+  .seats-l { --gap: 2px; grid-template-columns: repeat(var(--n), minmax(0, 2.35rem)); }
   .seats-l i { font-size: 0; border-radius: 2px; }
   .switch { display: flex; flex-direction: column; }
   .switch a + a { border-top: 2px solid var(--ink); }
@@ -287,3 +287,14 @@ footer p { max-width: 80ch; }
 .party .muted { font-weight: 400; font-size: .9rem; }
 .seats-l.bare .t-proti { background: linear-gradient(#fff, #fff) center / 50% 3px no-repeat, var(--red); }
 .seats-l.bare .t-off { background: radial-gradient(circle, var(--field) 0 2.5px, transparent 3px); }
+
+/* big number in the band: underlines collide with the h1 below, so partial states are
+   said in a quiet suffix instead (the strike for "not passed" stays – it sits mid-glyph) */
+.band .no-big.no-castecne, .band .no-big.no-amended { text-decoration: none; }
+.band .no-big.no-castecne::after, .band .no-big.no-amended::after {
+  font-size: .32em; font-weight: 600; letter-spacing: 0; margin-left: .6em; vertical-align: .55em;
+  padding: .15em .5em; border: 2px solid rgba(255,255,255,.85); border-radius: 3px; }
+.band .no-big.no-castecne::after { content: "prošlo zčásti"; }
+.band .no-big.no-amended::after { content: "zčásti zrušeno"; }
+.band .no-big.no-castecne.no-amended::after { content: "zčásti, zčásti zrušeno"; }
+.band .no-big + h1 { margin-top: .6rem; }

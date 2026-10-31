@@ -8,9 +8,9 @@
       <label for="q" class="sr">Hledat v usneseních</label>
       <input id="q" type="search" name="q" value="{{ q }}" placeholder="Napište, co hledáte" autocomplete="off" {% if not q %}autofocus{% endif %}>
       <button type="submit">Hledat</button>
-      {% for k, val in f.items() if val %}<input type="hidden" name="{{ k }}" value="{{ val }}">{% endfor %}
+      {% for k, val in f.items() if val and not (k == 'stav' and val == 'usneseni') %}<input type="hidden" name="{{ k }}" value="{{ val }}">{% endfor %}
       {% if rezim != 'hybrid' %}<input type="hidden" name="rezim" value="{{ rezim }}">{% endif %}
-      {% if razeni == 'datum' %}<input type="hidden" name="razeni" value="datum">{% endif %}
+      {% if razeni != 'datum' %}<input type="hidden" name="razeni" value="{{ razeni }}">{% endif %}
     </form>
     {% if not q %}<p class="band-lead">Třeba <a href="/?q=parkov%C3%A1n%C3%AD+Polabiny">parkování v Polabinách</a>, <a href="/?q=dotace+pro+spolky">dotace pro spolky</a>, <a href="/?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/?q=prodej+pozemku">prodej pozemku</a>. Hledá se podle slov i podle smyslu, v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích od roku {{ stats.first_date.year if stats.first_date else 2018 }}.</p>{% endif %}
   </div>
@@ -19,13 +19,13 @@
 {% block main %}
 <form class="sentence" method="get" action="/" aria-label="Filtry">
   <input type="hidden" name="q" value="{{ q }}">
-  {% if razeni == 'datum' %}<input type="hidden" name="razeni" value="datum">{% endif %}
+  {% if razeni != 'datum' %}<input type="hidden" name="razeni" value="{{ razeni }}">{% endif %}
   <p>
     Ukázat usnesení
     <select name="organ" aria-label="Orgán"><option value="">zastupitelstva i rady</option><option value="zmo" {{ 'selected' if f.organ=='zmo' }}>jen zastupitelstva</option><option value="rmo" {{ 'selected' if f.organ=='rmo' }}>jen rady</option></select>
     z
     <select name="rok" aria-label="Rok"><option value="">kteréhokoli roku</option>{% for y in years %}<option value="{{ y }}" {{ 'selected' if f.rok==y }}>roku {{ y }}</option>{% endfor %}</select>,
-    <select name="stav" aria-label="Výsledek"><option value="">včetně nepřijatých návrhů</option><option value="prijato" {{ 'selected' if f.stav=='prijato' }}>jen přijatá</option><option value="castecne" {{ 'selected' if f.stav=='castecne' }}>jen přijatá zčásti</option><option value="neprijato" {{ 'selected' if f.stav=='neprijato' }}>jen nepřijaté návrhy</option></select>,
+    <select name="stav" aria-label="Výsledek"><option value="usneseni" {{ 'selected' if f.stav=='usneseni' }}>jen platně přijatá</option><option value="vse" {{ 'selected' if f.stav=='vse' }}>včetně nepřijatých návrhů</option><option value="prijato" {{ 'selected' if f.stav=='prijato' }}>jen přijatá celá</option><option value="castecne" {{ 'selected' if f.stav=='castecne' }}>jen přijatá zčásti</option><option value="neprijato" {{ 'selected' if f.stav=='neprijato' }}>jen nepřijaté návrhy</option></select>,
     <select name="tema" aria-label="Téma"><option value="">na jakékoli téma</option>{% for k, t in vocab.topics.items() %}<option value="{{ k }}" {{ 'selected' if f.tema==k }}>{{ t|lower }}</option>{% endfor %}</select>
     <span class="nowrap">a kde
     <input name="clen" value="{{ f.clen }}" placeholder="kdokoli (příjmení)" aria-label="Příjmení člena" size="12" list="clenove">
@@ -33,7 +33,7 @@
     hlasoval
     <select name="volba" aria-label="Jak hlasoval"><option value="">jakkoli</option><option value="pro" {{ 'selected' if f.volba=='pro' }}>pro</option><option value="proti" {{ 'selected' if f.volba=='proti' }}>proti</option><option value="zdrzel" {{ 'selected' if f.volba=='zdrzel' }}>zdržel se</option></select>.</span>
     <button type="submit">Ukázat</button>
-    {% if f.values()|select|list %}<a href="/?q={{ q|urlencode }}">Zrušit výběr</a>{% endif %}
+    {% if f.organ or f.rok or f.tema or f.druh or f.clen or f.volba or f.stav != 'usneseni' %}<a href="/?q={{ q|urlencode }}">Zrušit výběr</a>{% endif %}
   </p>
 </form>
 
@@ -42,7 +42,7 @@
     {% if q %}{{ info.total }} {{ 'usnesení odpovídá' if info.total != 1 else 'usnesení odpovídá' }} „{{ q }}“{% else %}Nejnovější usnesení{% endif %}
   </h2>
   {% if hits %}{{ legend() }}<p class="note">Políčko = jedno místo v zastupitelstvu (15) nebo radě (5). Názvy a texty v přehledu jsou strojová shrnutí, závazné je znění v detailu.</p>{% endif %}
-  {% if q and hits %}<p class="order">Seřazeno {% if razeni == 'datum' %}od nejnovějších. <a href="?{{ request.query_params|string|replace('&razeni=datum', '') }}">Seřadit podle shody</a>{% else %}podle shody s dotazem. <a href="?{{ request.query_params }}&razeni=datum">Seřadit od nejnovějších</a>{% endif %}</p>{% endif %}
+  {% if q and hits %}<p class="order">Seřazeno {% if razeni == 'datum' %}od nejnovějších. <a href="?{{ request.query_params|string|replace('&razeni=datum', '') }}&razeni=shoda">Seřadit podle shody s dotazem</a>{% else %}podle shody s dotazem. <a href="?{{ request.query_params|string|replace('&razeni=shoda', '') }}&razeni=datum">Seřadit od nejnovějších</a>{% endif %}</p>{% endif %}
   {% if q and info.mode == 'fulltext' and rezim != 'fulltext' %}<p class="note">Hledání podle smyslu teď neběží, výsledky jsou jen podle slov.</p>{% endif %}
   {% if hits %}
   <ol class="rows">{% for h in hits %}{{ row(h.row) }}{% endfor %}</ol>

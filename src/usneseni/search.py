@@ -12,6 +12,7 @@ from . import db, embed
 from .text import fold
 
 RRF_K = 60
+SEMANTIC_DATE_TOP = 20
 
 
 @dataclass
@@ -23,7 +24,7 @@ class Filters:
     date_to: str | None = None
     topic: str | None = None
     kind: str | None = None
-    status: str | None = None      # prijato | neprijato | castecne | neovereno
+    status: str | None = None      # prijato | neprijato | castecne | neovereno | usneseni (= not neprijato)
     member: str | None = None      # member id …
     member_choice: str | None = None  # … voted pro | proti | zdrzel | nehlasoval
 
@@ -43,7 +44,9 @@ class Filters:
             w.append("%s = ANY(r.topics)"); p.append(self.topic)
         if self.kind:
             w.append("r.kind = %s"); p.append(self.kind)
-        if self.status:
+        if self.status == "usneseni":  # real resolutions: a rejected proposal is not one
+            w.append("r.status <> 'neprijato'")
+        elif self.status:
             w.append("r.status = %s"); p.append(self.status)
         if self.member:
             w.append("""EXISTS (SELECT 1 FROM votes v JOIN ballots b ON b.vote_id = v.id
@@ -158,6 +161,9 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             h.semantic_rank = rank
         ranked = sorted(scores.values(), key=lambda h: -h.score)
         if newest_first and ranked:
+            # by date, only what clearly matches: every word match plus the closest by meaning
+            # (the vector side always returns neighbours, relevant or not)
+            ranked = [h for h in ranked if h.fulltext_rank or (h.semantic_rank or 999) <= SEMANTIC_DATE_TOP]
             dates = {r["uid"]: (r["date"], r["seq"]) for r in conn.execute(
                 "SELECT uid, date, seq FROM resolutions WHERE uid = ANY(%s)", ([h.uid for h in ranked],))}
             ranked.sort(key=lambda h: (dates[h.uid][0], -dates[h.uid][1]), reverse=True)

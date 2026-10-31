@@ -56,7 +56,7 @@ tpl.env.filters["initials"] = _initials
 
 def _filters(organ, rok, tema, druh, stav, clen, volba) -> search.Filters:
     return search.Filters(body=organ or None, year=rok, topic=tema or None, kind=druh or None,
-                          status=stav or None, member=(queries.find_member(clen) if clen else None),
+                          status=None if stav == "vse" else (stav or None), member=(queries.find_member(clen) if clen else None),
                           member_choice=volba or None)
 
 
@@ -66,6 +66,9 @@ def _filters(organ, rok, tema, druh, stav, clen, volba) -> search.Filters:
 def home(request: Request, q: str = "", rezim: str = "hybrid", organ: str = "",
          rok: str = "", tema: str = "", druh: str = "", stav: str = "",
          clen: str = "", volba: str = "", strana: str = "1", razeni: str = ""):
+    # defaults: only real resolutions (not rejected proposals), newest first
+    stav = stav or "usneseni"
+    razeni = razeni or "datum"
     # empty <select> options arrive as "" – treat anything non-numeric as "any year"
     rok = int(rok) if rok.strip().isdigit() else None
     strana = max(1, int(strana)) if strana.strip().isdigit() else 1
