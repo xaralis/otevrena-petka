@@ -1,0 +1,451 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "44dc1d5faa5c6b8917cb474c189926e599b4cd1f554dbd5f9a59605980c1320f",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 13,
+   "kind": "radne",
+   "date": "2021-06-23",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Pavel Studnička",
+    "Bc. Petra Prusáková",
+    "Karolina Štefková",
+    "Ing. Jiří Janoš",
+    "Ing. Petr Netolický",
+    "Ing. Jiří Hájek",
+    "Anna Gudrun Vavrečková"
+   ],
+   "excused": [
+    "Petr Hemský",
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 37,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Petice – Revize projektu „revitalizace vnitrobloku H“",
+    "line": 66,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 99,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Hájek",
+     "Bc. Jan Nadrchal",
+     "Ing. Petr Netolický",
+     "Karolina Štefková",
+     "Anna Gudrun Vavrečková"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 159,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 172,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Hájek",
+     "Ing. Jiří Janoš",
+     "Ing. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Kontrola přístupu ÚMO Pardubice V k poskytování informací dle zák. č. 106/1999 Sb., o svobodném přístupu k informacím za období 4 Q 2020 – 2 Q 2021",
+    "line": 195,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2021",
+    "line": 207,
+    "speakers": [
+     "Anna Gudrun Vavrečková",
+     "Ing. Filip Vařecha",
+     "Ing. Jaroslav Kňava",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Závěrečný účet MO Pardubice V za rok 2020",
+    "line": 238,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2020",
+    "line": 260,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na rok 2021",
+    "line": 274,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Anna Gudrun Vavrečková",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Diskuse",
+    "line": 300,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Hájek",
+     "Ing. Petr Netolický",
+     "Ing. Jaroslav Kňava",
+     "Anna Gudrun Vavrečková"
+    ]
+   },
+   {
+    "no": "IV.",
+    "title": "Závěr",
+    "line": 358,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "114/2021 Z",
+    "agenda_no": "5",
+    "first_line": 94,
+    "last_line": 95,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "115/2021 Z",
+    "agenda_no": "1",
+    "first_line": 153,
+    "last_line": 154,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "116/2021 Z",
+    "agenda_no": "2",
+    "first_line": 166,
+    "last_line": 168,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "117/2021 Z",
+    "agenda_no": "3",
+    "first_line": 187,
+    "last_line": 191,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "118/2021 Z",
+    "agenda_no": "4",
+    "first_line": 202,
+    "last_line": 203,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "119/2021 Z",
+    "agenda_no": "6",
+    "first_line": 233,
+    "last_line": 234,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "120/2021 Z",
+    "agenda_no": "7",
+    "first_line": 245,
+    "last_line": 256,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "121/2021 Z",
+    "agenda_no": "8",
+    "first_line": 267,
+    "last_line": 270,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "122/2021 Z",
+    "agenda_no": "9",
+    "first_line": 293,
+    "last_line": 296,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": null,
+    "part": null,
+    "subject": "změna pořadí projednávaných zpráv – předřazení bodu 5 (petice vnitroblok H) před bod 1",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 56,
+    "motion_last_line": 58,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 96,
+    "last_line": 96,
+    "resolution": "114/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 155,
+    "last_line": 155,
+    "resolution": "115/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 169,
+    "last_line": 169,
+    "resolution": "116/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 192,
+    "last_line": 192,
+    "resolution": "117/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jiří Janoš"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 204,
+    "last_line": 204,
+    "resolution": "118/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 235,
+    "last_line": 235,
+    "resolution": "119/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 257,
+    "last_line": 257,
+    "resolution": "120/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 271,
+    "last_line": 271,
+    "resolution": "121/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 297,
+    "last_line": 297,
+    "resolution": "122/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Hlasování o schválení programu jako celku není v zápisu uvedeno; ř. 59 zachycuje jen hlasování o změně pořadí (předřazení bodu 5)."
+  ]
+ }
+}

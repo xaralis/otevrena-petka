@@ -1,0 +1,245 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "78d0270265c7373e7ebe864afb3400cfeb65c4125b0a5152eaef2d74e5facc90",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 11,
+   "kind": "mimoradne",
+   "date": "2024-06-11",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Ing. Lic. Jaroslav Kňava",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Bc. Petr Dufek",
+    "Jiří Havrda",
+    "Mgr. Miloš Adamů, MBA.",
+    "Michal Hrabák"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 137,
+    "name": "Ing. Milan Randák",
+    "event": "leave"
+   },
+   {
+    "line": 137,
+    "name": "Ing. Lic. Jaroslav Kňava",
+    "event": "leave"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Návrh obecně závazné vyhlášky, kterou se mění obecně závazná vyhláška č. 4/2019, kterou se vydává Statut města Pardubic",
+    "line": 49,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "2.",
+    "title": "Diskuse, závěr",
+    "line": 123,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "95/2024 Z",
+    "agenda_no": "1.",
+    "first_line": 71,
+    "last_line": 119,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 41,
+    "last_line": 41,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 40,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "95/2024 Z",
+    "part": "bod 1)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "95/2024 Z",
+    "part": "bod 2)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 111,
+    "last_line": 111,
+    "resolution": "95/2024 Z",
+    "part": "bod 3)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 119,
+    "last_line": 119,
+    "resolution": "95/2024 Z",
+    "part": "bod 4)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 7,
+    "proti": 1,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Jakub Kutílek"
+     ],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 140,
+    "last_line": 141,
+    "resolution": null,
+    "part": null,
+    "subject": "prodloužení času na další diskusi",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 1,
+    "proti": 5,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Pavel Bergman"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Petr Netolický",
+      "Bc. Jan Nadrchal",
+      "JUDr. Bc. Jakub Jeřábek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 13–15: Ing. Milan Randák, Ing. Lic. Jaroslav Kňava a Bc. Jan Nadrchal jsou uvedeni jako přítomní „po část jednání“; text uvádí jen odchod Randáka a Kňavy (ř. 137), příchod/odchod Nadrchala nezmiňuje.",
+   "ř. 41: schválení programu 9 hlasy (Pro 9, zdržel se 0, proti 0), při dílčích hlasováních o usnesení 95/2024 Z (ř. 78–119) hlasovalo 10 členů; v seznamu přítomných je 11 jmen, ale žádný příchod během jednání zapsán není.",
+   "Usnesení 95/2024 Z bylo hlasováno jen po bodech 1)–4) (bod 4 nepřijat, ř. 120); hlasování o usnesení jako celku v textu není.",
+   "ř. 140–142: hlasování o prodloužení diskuse (Pro 1, zdržel se 3, proti 5) bez výslovného výsledku; text jen uvádí, že diskuse byla ukončena."
+  ]
+ }
+}

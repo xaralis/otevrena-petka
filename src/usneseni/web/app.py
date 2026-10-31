@@ -44,6 +44,16 @@ def _date(d) -> str:
 tpl.env.filters["d"] = _date
 
 
+def _initials(name: str) -> str:
+    """'Ing. Lic. Jaroslav Kňava' -> 'JK', 'Jiří Rejda, DiS.' -> 'JR' (tile labels)."""
+    from ..text import strip_titles
+    t = strip_titles(name)
+    return (t[0][0] + t[-1][0]) if len(t) > 1 else (t[0][:2] if t else "?")
+
+
+tpl.env.filters["initials"] = _initials
+
+
 def _filters(organ, rok, tema, druh, stav, clen, volba) -> search.Filters:
     return search.Filters(body=organ or None, year=rok, topic=tema or None, kind=druh or None,
                           status=stav or None, member=(queries.find_member(clen) if clen else None),
@@ -55,15 +65,18 @@ def _filters(organ, rok, tema, druh, stav, clen, volba) -> search.Filters:
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request, q: str = "", rezim: str = "hybrid", organ: str = "",
          rok: int | None = None, tema: str = "", druh: str = "", stav: str = "",
-         clen: str = "", volba: str = "", strana: int = 1):
+         clen: str = "", volba: str = "", strana: int = 1, razeni: str = ""):
     f = _filters(organ, rok, tema, druh, stav, clen, volba)
     per = 20
-    hits, info = search.search(q, rezim, f, limit=per, offset=(strana - 1) * per)
+    hits, info = search.search(q, rezim, f, limit=per, offset=(strana - 1) * per,
+                               newest_first=razeni == "datum")
     return tpl.TemplateResponse(request, "home.html", {
+        "razeni": razeni,
         "q": q, "rezim": rezim, "hits": hits, "info": info, "stats": queries.stats(),
         "f": {"organ": organ, "rok": rok, "tema": tema, "druh": druh, "stav": stav,
               "clen": clen, "volba": volba},
         "vocab": vocab(), "strana": strana, "per": per, "semantic": embed.enabled(),
+        "member_names": queries.member_surnames(),
         "years": list(range(2018, (queries.stats()["last_date"] or _today()).year + 1))[::-1],
     })
 
@@ -105,7 +118,7 @@ def member_page(request: Request, mid: str, odlisne: bool = False):
     m = queries.member(mid)
     if not m:
         raise HTTPException(404)
-    votes = queries.member_votes(mid, dissent_only=odlisne, limit=200)
+    votes = queries.member_votes(mid, dissent_only=odlisne, procedural=False, limit=300)
     return tpl.TemplateResponse(request, "member.html", {"m": m, "votes": votes, "odlisne": odlisne})
 
 

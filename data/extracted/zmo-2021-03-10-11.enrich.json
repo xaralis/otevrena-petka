@@ -1,0 +1,293 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3649fffdded745716e0dd41da1ed3a61ca33cfebce8268845b70f5a0474afea5",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "101/2021 Z",
+    "title": "Předkládání studií a projektů investic od 500 000 Kč zastupitelstvu ke schválení",
+    "summary": "Zastupitelstvo ukládá starostovi předkládat mu ke schválení výstupy předprojektové přípravy (studie, analýzy, návrhy stavby) před zahájením projekčních prací a finální podobu projektů před vypsáním veřejné zakázky. Týká se všech významných investičních akcí s předpokládanou částkou realizace od 500.000 Kč včetně.",
+    "keywords": [
+     "investiční akce",
+     "studie",
+     "projektová dokumentace",
+     "předprojektová příprava",
+     "veřejná zakázka",
+     "schvalování projektů",
+     "kontrola investic"
+    ],
+    "topics": [
+     "investice",
+     "zakazky"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "500.000, - Kč včetně"
+    ]
+   },
+   {
+    "number": "102/2021 Z",
+    "title": "Zrušení dvou parkovacích bloků v projektu revitalizace vnitrobloku H",
+    "summary": "Zastupitelstvo ukládá starostovi zrušit v projektu revitalizace tzv. vnitrobloku H dva parkovací bloky – u ulice kpt. Nálepky a u točny trolejbusů – podle přiloženého nákresu. Změna se má provést upřesněním zadávacích podmínek v probíhajícím zadávacím řízení podle § 129 odst. 7 zákona o zadávání veřejných zakázek.",
+    "keywords": [
+     "vnitroblok H",
+     "revitalizace vnitrobloku",
+     "parkování",
+     "parkovací místa",
+     "kpt. Nálepky",
+     "točna trolejbusů",
+     "zadávací podmínky",
+     "zeleň"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zakazky"
+    ],
+    "kind": "ukol",
+    "places": [
+     "vnitroblok H",
+     "kpt. Nálepky",
+     "točna trolejbusů"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "103/2021 Z",
+    "title": "Zpráva o činnosti starosty od jednání 16. 12. 2020",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 16. 12. 2020.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "104/2021 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení 155–165/2020 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení Rady MO Pardubice V a vyřazuje ze sledování splněná usnesení 155/2020 R až 165/2020 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "105/2021 Z",
+    "title": "Zpráva kontrolního výboru o plnění usnesení zastupitelstva",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z evidence splněná usnesení 76/2020 Z, 88/2020 Z, 89/2020 Z a 91–100/2020 Z a ponechává v evidenci usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 47/2019 Z, 67/2020 Z, 76/2020 Z a 90/2020 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "106/2021 Z",
+    "title": "Zpráva kontrolního výboru o kontrole dohod DPP a DPČ",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole smluvních vztahů – dohod o provedení práce a dohod o pracovní činnosti.",
+    "keywords": [
+     "kontrolní výbor",
+     "DPP",
+     "DPČ",
+     "dohoda o provedení práce",
+     "dohoda o pracovní činnosti",
+     "smluvní vztahy"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "107/2021 Z",
+    "title": "Vyhodnocení Programu rozvoje obvodu za rok 2020 a úprava jeho bodů",
+    "summary": "Zastupitelstvo schvaluje vyhodnocení plnění Programu rozvoje MO Pardubice V za rok 2020, vyřazuje bod o zveřejňování termínů odvozu listí ve zpravodaji a doplňuje body o podpoře „zelených střech“, důraznějším postihu za znečišťování veřejných ploch a o novém dopravním řešení rozvoje oblasti Vápenky. Ten má chránit sídliště Dukla před zahuštěním provozu a požaduje plné dokončení sjezdu z komunikace I/37 do průmyslové zóny Vápenka.",
+    "keywords": [
+     "program rozvoje",
+     "strategie obvodu",
+     "zelené střechy",
+     "znečišťování veřejných ploch",
+     "psí exkrementy",
+     "černé skládky",
+     "Vápenka",
+     "sídliště Dukla",
+     "nákladní doprava",
+     "sjezd z I/37"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "doprava",
+     "cistota"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Vápenka",
+     "průmyslová zóna Vápenka",
+     "ul. Letecká",
+     "K Vápence",
+     "Pražská",
+     "sídliště Dukla",
+     "komunikace I/37"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "108/2021 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 12. 2020",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření MO Pardubice V k 31. 12. 2020 uvedený v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2020",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "109/2021 Z",
+    "title": "1. změna rozpočtu a rozpočtu sociálního fondu na rok 2021",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje 1. změnu rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2021 podle tabulkové části zprávy spolu s rozpočtovými opatřeními uvedenými v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2021",
+     "sociální fond",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "110/2021 Z",
+    "title": "Výroční zpráva Finančního výboru za rok 2020",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru Zastupitelstva MO Pardubice V za rok 2020.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "činnost výboru",
+     "rok 2020"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "111/2021 Z",
+    "title": "Rozšíření Finančního výboru ze 7 na 9 členů",
+    "summary": "Zastupitelstvo schvaluje rozšíření Finančního výboru ZMO Pardubice V ze 7 na 9 členů. Nová místa připadají dvěma stranám, které ve výboru dosud neměly zastoupení – Komunistické straně Čech a Moravy a Koalici pro Pardubice, které navrhují po jednom kandidátovi.",
+    "keywords": [
+     "finanční výbor",
+     "rozšíření výboru",
+     "počet členů",
+     "členové výboru",
+     "zastoupení stran"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V",
+     "Komunistická strana Čech a Moravy",
+     "Koalice pro Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Filip Šťastný a Jiří Hájek se ptali na jednání o objektu „Bobr“, Filip Vařecha na připomínku Karantény a připomínky OHA k náměstí Dukelských hrdinů, Jiří Hájek se nabídl jako člen pracovní skupiny ke Karanténě. Filip Vařecha navrhl snížit počet parkovacích míst ve vnitrobloku H ze 135 na 65 ve prospěch zeleně a podal dva návrhy usnesení (zrušení dvou parkovacích bloků a vyznačení parkovacích stání, který nebyl přijat); starosta Jiří Rejda kritizoval pozdní námitky, Jan Nadrchal navrhl předkládat studie a projekty investic od 500.000 Kč zastupitelstvu a předseda strategické komise obhajoval navržený počet míst. Starosta dále informoval o žádosti spolku Koza z. s. o komunitní zahradu, přemístění bezpečnostní kamery a nezájmu SVJ o zřízení grilovišť."
+   },
+   {
+    "no": "2",
+    "discussion": "Filip Vařecha se ptal na usnesení rady 170/2021 o vkladu nebytového prostoru do rozvojového fondu, kvůli kterému obvod nebude moci ovlivnit jeho využití. Jan Nadrchal a Jiří Hájek vysvětlili, že nebytové prostory spravuje město a obvod může dávat jen doporučení."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Janoš se ptal, proč se navrhuje vyřadit bod 1/2 o přestavbě křižovatky Jana Palacha – Teplého – Pichlova, a navrhl změnu usnesení, aby bod v programu zůstal. Filip Vařecha a předseda strategické komise diskutovali o procesu projednání materiálu v komisi."
+   },
+   {
+    "no": "7",
+    "discussion": "Filip Vařecha se ptal na čerpání rozpočtu na společenské akce a dopad propadu DPH; úřednice odpověděla, že zatím nic čerpáno nebylo a s propadem se počítá, Jaroslav Kňava doplnil, že jde o finanční rezervu. Filip Šťastný se ptal na rušení akcí kvůli pandemii a Petr Netolický navrhl zrušit přípravy Májových slavností kvůli epidemii COVID, návrh nebyl přijat."
+   },
+   {
+    "no": "9",
+    "discussion": "Petr Netolický navrhl navýšit počet členů finančního výboru a doobsadit ho za Koalici pro Pardubice a KSČM. Jaroslav Kňava, Jan Nadrchal a Filip Vařecha se shodli, že každá strana či koalice v zastupitelstvu má mít ve výboru zástupce."
+   },
+   {
+    "no": "10",
+    "discussion": "Jiří Hájek navrhl online jednání zastupitelstva. Filip Vařecha se ptal na financování hřiště Pod Vinicí investorem a na projekt „Zóna 30“ na Višňovce, Anna Gudrun Vavrečková na granty na výsadbu zeleně a Pavel Studnička na otevření sportoviště v Raisově ulici pro veřejnost; starosta odpověděl, že investor zaplatí cyklostezku, Zóna 30 je pozastavena a sportoviště bude veřejné."
+   }
+  ]
+ }
+}

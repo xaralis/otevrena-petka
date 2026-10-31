@@ -1,0 +1,232 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "fe7e6d9eca8caeb7afa3467ec26635a62a61423d8c836af7cdcc7622f4a2a4fd",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "114/2024 Z",
+    "title": "Rozpočet MO Pardubice V na rok 2025 a pravidla pro rozpočtová opatření",
+    "summary": "Zastupitelstvo schvaluje rozpočet obvodu a rozpočet sociálního fondu na rok 2025 včetně úpravy provedené na jednání (zapojení nevyčerpaných prostředků z roku 2024 a navýšení položek na stavební úpravy vnitrobloku Pichlova – S. K. Neumanna – K Višňovce). Svěřuje radě pravomoc provádět v roce 2025 vymezená rozpočtová opatření, stanoví limity hodnoty dárků a propagačních předmětů a schvaluje novou směrnici č. 7/2024 o hospodaření se sociálním fondem.",
+    "keywords": [
+     "rozpočet 2025",
+     "schválení rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "směrnice č. 7/2024",
+     "vnitroblok Pichlova",
+     "dárky jubilantům",
+     "propagační předměty"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [
+     "vnitroblok Pichlova – S. K. Neumanna – K Višňovce"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "finanční výbor ZMO Pardubice V",
+     "odbor ekonomický"
+    ],
+    "amounts": [
+     "2 800 tis. Kč",
+     "2 650 tis. Kč",
+     "150 tis. Kč",
+     "300 tis. Kč",
+     "200 tis. Kč",
+     "1 000,-- Kč",
+     "200,- Kč",
+     "500,-- Kč"
+    ]
+   },
+   {
+    "number": "115/2024 Z",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na roky 2024–2028",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje návrh střednědobého výhledu rozpočtu městského obvodu na roky 2024–2028 uvedený v tabulkové části zprávy.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2024–2028",
+     "finanční plánování",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "116/2024 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2024",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 30. 11. 2024 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2024",
+     "čerpání rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "117/2024 Z",
+    "title": "4. změna rozpočtu MO Pardubice V na rok 2024",
+    "summary": "Zastupitelstvo bere na vědomí komentář a doplňující informace ke 4. změně rozpočtu na rok 2024 včetně sociálního fondu a schvaluje rozpočtová opatření uvedená v bodech 1–29 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2024",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "118/2024 Z",
+    "title": "Zpráva o činnosti starosty od jednání 25. 9. 2024",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu od posledního jednání zastupitelstva 25. 9. 2024.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "119/2024 Z",
+    "title": "Kontrola plnění usnesení Rady MO Pardubice V – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady. Z evidence vyřazuje splněná usnesení 156/2024 R a 158/2024 R – 172/2024 R; v evidenci ponechává usnesení 137/2024 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "Kontrolní výbor",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "120/2024 Z",
+    "title": "Kontrola plnění usnesení Zastupitelstva MO Pardubice V – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení 106/2024 Z – 112/2024 Z; v evidenci ponechává usnesení 66/2023 Z, 75/2009 Z, 27/2019 Z, 142/2022 Z, 23/2023 Z, 103/2024 Z a 113/2024 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "Kontrolní výbor",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "121/2024 Z",
+    "title": "Investiční záměry k realizaci v roce 2025",
+    "summary": "Zastupitelstvo schvaluje investiční záměry k realizaci v roce 2025: stavební úpravy vnitrobloku Pichlova – Rokycanova – K Višňovce, komunikaci a chodník v Dražkovicích (čp. 153 – čp. 174), chodník v Sokolovské ulici od čp. 2065 k ulici Josefa Ressla, revitalizaci parkových částí náměstí Dukelských hrdinů a opravu povrchů ve Wolkerově ulici.",
+    "keywords": [
+     "investiční záměry",
+     "investice 2025",
+     "vnitroblok Pichlova",
+     "Dražkovice",
+     "chodník Sokolovská",
+     "náměstí Dukelských hrdinů",
+     "revitalizace parku",
+     "Wolkerova",
+     "oprava chodníků",
+     "oprava komunikací"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "vnitroblok ul. Pichlova – Rokycanova – K Višňovce",
+     "Dražkovice čp. 153 – čp. 174",
+     "ul. Sokolovská",
+     "ul. Josefa Ressla",
+     "nám. Dukelských hrdinů",
+     "ul. Wolkerova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek s Ing. Filipem Vařechou žádali samostatné hlasování o položkách revitalizace parkových částí náměstí Dukelských hrdinů a dětského hřiště Bobr; samostatná hlasování neproběhla, protože návrhová komise nedostala hlasovatelné znění. JUDr. Bc. Jakub Jeřábek se ptal na právní zastoupení obvodu v soudních řízeních a na plošné zvýšení odměn o 5 %. Ing. Filip Vařecha poděkoval za položku participativního rozpočtu."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Filip Vařecha by preferoval výhled vycházející z plánovaných investičních akcí místo přenásobení dosavadních čísel inflací. JUDr. Bc. Jakub Jeřábek se ptal na termínované vklady; úřad odpověděl, že byly v listopadu 2024 zrušeny."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Jakub Kutílek upozornil na čerpání položek péče o zeleň, prvky a hřiště ve vztahu k navrhovanému snížení o 600 tis. Kč; starosta vysvětlil navýšení položek v průběhu roku. Ing. Filip Vařecha uvedl, že navýšení souviselo s řešením Arboreta. Ing. Petr Netolický ocenil vyčerpání položky na opravy a údržbu komunikací a navrhl ji příště posílit."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Petr Netolický se ptal na podklady k parkování projednávanému v komisi pro dopravu; starosta uvedl, že informace zastupitelé dostanou, až budou k dispozici."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Jakub Kutílek s odkazem na dopis spolku Chráníme stromy navrhl doplnit k revitalizaci náměstí Dukelských hrdinů zpracování projektu ochrany dřevin před vypsáním zakázky a podpořil ho Ing. Filip Vařecha. Starosta a Michal Hrabák v projektu problém neviděli, úřad upozornil na možné zdržení a koordinaci s opravou chodníku v Lexově ulici. Pozměňovací návrh nebyl přijat (pro 6, proti 3, zdrželi se 4) a schváleno bylo původní znění."
+   },
+   {
+    "no": "9",
+    "discussion": "JUDr. Bc. Jakub Jeřábek se ptal, proč v návrhu usnesení chybí kontrola vypořádání stížností, připomínek a petic občanů; po přestávce byl tento bod do návrhu doplněn. Návrh plánu činnosti Kontrolního výboru nebyl přijat (pro 5, zdrželo se 8)."
+   }
+  ]
+ }
+}

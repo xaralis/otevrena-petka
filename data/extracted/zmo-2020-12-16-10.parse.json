@@ -1,0 +1,630 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "2dfab52604673b748f0f65c0d3bbf8a9f02bc4ac83652b41f9911945b03d4e3a",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 10,
+   "kind": "radne",
+   "date": "2020-12-16",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Pavel Studnička",
+    "Ing. Milan Randák",
+    "Bc. Petra Prusáková",
+    "Karolina Štefková",
+    "Ing. Jiří Janoš",
+    "Ing. Petr Netolický",
+    "Ing. Jiří Hájek"
+   ],
+   "excused": [
+    "Martin Merhout",
+    "Petr Hemský"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 25,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 53,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek",
+     "Ing. Petr Netolický",
+     "Bc. Jan Nadrchal",
+     "Evžen Erban",
+     "Ing. Jiří Janoš",
+     "Pavel Studnička",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 132,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 145,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Kontrola dokončených investičních akcí",
+    "line": 165,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Bc. Jan Nadrchal",
+     "Ing. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Schválení plánu činnosti Kontrolního výboru ZMO Pardubice V na rok 2021",
+    "line": 183,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2020",
+    "line": 194,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Návrh 4. změny rozpočtu MO Pardubice V na r. 2020",
+    "line": 215,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2021",
+    "line": 229,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Ing. Jiří Hájek",
+     "Pavel Studnička",
+     "Ing. Jiří Janoš"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Aktualizace střednědobého výhledu rozpočtu MO Pardubice V na r. 2020-2023",
+    "line": 344,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Prodloužení termínu plnění usnesení č. 76/2020 Z (Rychlá opatření proti suchu)",
+    "line": 361,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "11",
+    "title": "Diskuse",
+    "line": 371,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek",
+     "Bc. Jan Nadrchal",
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Janoš",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "IV",
+    "title": "Závěr",
+    "line": 396,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "88/2020 Z",
+    "agenda_no": "1",
+    "first_line": 108,
+    "last_line": 111,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "89/2020 Z",
+    "agenda_no": "1",
+    "first_line": 116,
+    "last_line": 119,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "90/2020 Z",
+    "agenda_no": "1",
+    "first_line": 123,
+    "last_line": 124,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "91/2020 Z",
+    "agenda_no": "1",
+    "first_line": 128,
+    "last_line": 129,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "92/2020 Z",
+    "agenda_no": "2",
+    "first_line": 140,
+    "last_line": 142,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "93/2020 Z",
+    "agenda_no": "3",
+    "first_line": 158,
+    "last_line": 162,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "94/2020 Z",
+    "agenda_no": "4",
+    "first_line": 179,
+    "last_line": 180,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "95/2020 Z",
+    "agenda_no": "5",
+    "first_line": 190,
+    "last_line": 191,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "96/2020 Z",
+    "agenda_no": "6",
+    "first_line": 210,
+    "last_line": 212,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "97/2020 Z",
+    "agenda_no": "7",
+    "first_line": 223,
+    "last_line": 226,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "98/2020 Z",
+    "agenda_no": "8",
+    "first_line": 252,
+    "last_line": 341,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "99/2020 Z",
+    "agenda_no": "9",
+    "first_line": 356,
+    "last_line": 358,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "100/2020 Z",
+    "agenda_no": "10",
+    "first_line": 367,
+    "last_line": 368,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí (programu)",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 112,
+    "last_line": 113,
+    "resolution": "88/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 2,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. M. Randák",
+      "K. Štefková"
+     ],
+     "zdrzel": [
+      "P. Studnička",
+      "Ing. J. Kňava",
+      "Ing. Jiří Janoš",
+      "F. Šťastný",
+      "J. Rejda, DiS.",
+      "Bc. P. Prusáková"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 120,
+    "last_line": 120,
+    "resolution": "89/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 2,
+    "proti": 2,
+    "zdrzel": 9,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. J. Hájek",
+      "Ing. P. Netolický"
+     ],
+     "proti": [
+      "Ing. M. Randák",
+      "F. Šťastný"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 125,
+    "last_line": 125,
+    "resolution": "90/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. J. Kňava",
+      "Ing. M. Randák",
+      "P. Studnička",
+      "E. Erban"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 130,
+    "last_line": 130,
+    "resolution": "91/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 143,
+    "last_line": 143,
+    "resolution": "92/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 163,
+    "last_line": 163,
+    "resolution": "93/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 181,
+    "last_line": 181,
+    "resolution": "94/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. J. Hájek",
+      "Ing. P. Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 192,
+    "last_line": 192,
+    "resolution": "95/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 213,
+    "last_line": 213,
+    "resolution": "96/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. F. Vařecha"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 227,
+    "last_line": 227,
+    "resolution": "97/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 342,
+    "last_line": 342,
+    "resolution": "98/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. F. Vařecha"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 359,
+    "last_line": 359,
+    "resolution": "99/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. J. Janoš"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 369,
+    "last_line": 369,
+    "resolution": "100/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 48: hlasování o programu uvádí Pro 15, ale přítomno bylo 13 členů (ř. 31), 2 omluveni (ř. 16).",
+   "ř. 342: u usnesení 98/2020 Z hlasovalo jen 12 členů (11+0+1), ač bylo přítomno 13; odchod není zaznamenán.",
+   "ř. 112–113 a 120: usnesení 88/2020 Z (Pro 5) a 89/2020 Z (Pro 2) mají číslo, ale nezískala nadpoloviční většinu; text výsledek neuvádí.",
+   "ř. 111: znění usnesení 88/2020 Z končí uvozovkou bez úvodní uvozovky."
+  ]
+ }
+}

@@ -1,0 +1,268 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "472a27a83de7a7adb19bc4672631ad46bcc22e3f3a9f2975b371e4909d8c12a4",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "78/2020 Z",
+    "title": "Zpráva o činnosti starosty od jednání 24. 6. 2020",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty za období od posledního jednání ZMO Pardubice V dne 24. 6. 2020.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty",
+     "zastupitelstvo"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "79/2020 Z",
+    "title": "Kontrola plnění usnesení RMO – vyřazení usnesení 118/2020 R až 133/2020 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o kontrole plnění usnesení Rady městského obvodu a vyřazuje z evidence sledování splněná usnesení 118/2020 R – 133/2020 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "Rada městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "80/2020 Z",
+    "title": "Kontrola plnění usnesení ZMO – vyřazení splněných a ponechání sledovaných",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení ZMO, vyřazuje z evidence splněná usnesení 46/2019 Z, 68/2020 Z – 75/2020 Z a 77/2020 Z a ponechává v evidenci usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 47/2019 Z, 67/2020 Z a 76/2020 Z. V rozpravě se řešilo usnesení 46/2019 Z o veřejném grilovišti.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "vyřazení z evidence",
+     "griloviště",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "81/2020 Z",
+    "title": "Kontrola vyřizování stížností, petic a připomínek občanů 3 Q 2019 – 3 Q 2020",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole vyjádření ke stížnostem, peticím a připomínkám občanů na chod ÚMO Pardubice V za období 3 Q 2019 – 3 Q 2020.",
+    "keywords": [
+     "stížnosti",
+     "petice",
+     "připomínky občanů",
+     "kontrolní výbor",
+     "úřad městského obvodu",
+     "kontrola"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "82/2020 Z",
+    "title": "Kontrola poskytování informací podle zákona č. 106/1999 Sb. – bez pochybení",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole přístupu ÚMO Pardubice V k poskytování informací podle zákona o svobodném přístupu k informacím za období 2 Q 2019 – 3 Q 2020; nebyla zjištěna žádná pochybení.",
+    "keywords": [
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "žádosti o informace",
+     "kontrolní výbor",
+     "kontrola úřadu"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "83/2020 Z",
+    "title": "Odvolání a volba člena finančního výboru",
+    "summary": "Zastupitelstvo odvolává k 30. 9. 2020 na vlastní žádost členku finančního výboru ZMO a s účinností od 1. 10. 2020 volí nového člena finančního výboru.",
+    "keywords": [
+     "finanční výbor",
+     "člen výboru",
+     "odvolání",
+     "volba",
+     "personální změna"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "84/2020 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2020",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 8. 2020 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet",
+     "plnění rozpočtu",
+     "31. 8. 2020"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "85/2020 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2019",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic dne 18. 6. 2020 schválilo účetní závěrku statutárního města Pardubic za rok 2019 včetně městských obvodů, sestavenou k 31. 12. 2019.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2019",
+     "statutární město Pardubice",
+     "městské obvody",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "86/2020 Z",
+    "title": "3. změna rozpočtu na rok 2020 a přesun 150 tis. Kč na osvětlení a výzdobu",
+    "summary": "Zastupitelstvo schvaluje 3. změnu rozpočtu obvodu a rozpočtu sociálního fondu na rok 2020 a rozpočtová opatření z komentáře zprávy. Součástí je úprava provedená na jednání – přesun 150 tis. Kč v kapitole 15 – životní prostředí z položky investice na položku osvětlení a výzdoba.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "přesun financí",
+     "osvětlení",
+     "výzdoba",
+     "životní prostředí",
+     "rozpočet 2020"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "150 tis. Kč"
+    ]
+   },
+   {
+    "number": "87/2020 Z",
+    "title": "Úprava plánu činnosti Kontrolního výboru na rok 2020 – kontrola investičních akcí",
+    "summary": "Zastupitelstvo schvaluje úpravu plánu činnosti Kontrolního výboru ZMO na rok 2020, kterou se doplňuje kontrola všech investičních akcí za rok 2020 ve 4. čtvrtletí 2020.",
+    "keywords": [
+     "kontrolní výbor",
+     "plán činnosti",
+     "kontrola investic",
+     "investiční akce",
+     "plán kontrol"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory",
+     "investice"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Filip Šťastný se ptal na jednání o prodeji objektu Bobr, o který mají zájem dva zájemci. Ing. Filip Vařecha se ptal na jednání se zástupcem firmy Black Bird Real Estate k výstavbě na ul. S. K. Neumanna (starosta oznámil veřejné jednání pro občany 5. 10. 2020) a na plánovací smlouvu a její časový průběh."
+   },
+   {
+    "no": "2",
+    "discussion": "Martin Merhout se ptal na nově vytvořené pracovní místo referentky na OIS; tajemník odpověděl, že bylo vypsáno řádné výběrové řízení."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha upozornil na nesrovnalost v usnesení 46/2019 Z o veřejném grilovišti; starosta Jiří Rejda, DiS. se závěry kontrolního výboru nesouhlasil. K věci se vyjádřili i Ing. Milan Randák a Ing. Jiří Hájek, starosta poté navrhl nové znění usnesení."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Jaroslav Kňava se ptal na odměnu nově zvoleného člena finančního výboru. Ing. Milan Randák se ptal, zda by členem nemohl být někdo z obvodu; Ing. Filip Vařecha vysvětlil, že kandidát vzešel z výběrového řízení Pirátské strany a do obvodu se bude stěhovat."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha se ptal na opravu mobiliáře v lesoparku na Dukle; podle tajemníka oprava probíhá, Ing. Milan Randák to potvrdil."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Filip Vařecha navrhl o přesunu financí nehlasovat a šetřit; starosta přesun obhájil odkazem na financování vnitrobloku „H“ a dotaci na pumptrackovou dráhu, podpořili ho Bc. Jan Nadrchal a Ing. Milan Randák. Ing. Jiří Janoš vysvětlil účel přesunu Ing. Jiřímu Hájkovi."
+   },
+   {
+    "no": "11",
+    "discussion": "Starosta informoval o rozmístění kamerových bodů, plánovaných akcích a problémech rekonstrukce ulice Na Spravedlnosti. Ing. Jiří Hájek se ptal na povrch ulice Na Spravedlnosti přes zimu, semafory na křižovatkách Pichlova, Na Spravedlnosti a S. K. Neumanna, cyklostezku Dražkovice – Mikulovice a protihlukové stěny u železnice; Ing. Filip Vařecha na koordinaci výstavby na ul. S. K. Neumanna s městem a MO Pardubice IV a na nepřítomnost úřednice na jednání; Martin Merhout na náhradní výsadbu po kácení v ulici K Vápence. Ing. Milan Randák poděkoval za akci Pohádková cesta."
+   }
+  ]
+ }
+}

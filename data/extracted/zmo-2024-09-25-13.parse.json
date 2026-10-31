@@ -1,0 +1,735 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "829953dd342dc5e20e37e3c2e6455c07ced661818e5e10e03d8b68a06ff140c8",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 13,
+   "kind": "radne",
+   "date": "2024-09-25",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "Karolina Štefková",
+    "Bc. Petr Dufek",
+    "Ing. Filip Vařecha",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Mgr. Miloš Adamů, MBA.",
+    "Michal Hrabák",
+    "Petr Šmeral"
+   ],
+   "excused": [
+    "Ing. Lic. Jaroslav Kňava"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 382,
+    "name": "Ing. Milan Randák",
+    "event": "leave"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 83,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Bc. Petr Dufek",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 169,
+    "speakers": [
+     "Ing. Pavel Bergman",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "JUDr. Bc. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 195,
+    "speakers": [
+     "Ing. Pavel Bergman",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2024",
+    "line": 225,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "3. změna rozpočtu MO Pardubice V na r. 2024",
+    "line": 243,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Informace o schválení účetní závěrky za r. 2023 sestavené k 31. 12. 2023",
+    "line": 286,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Dar do veřejné sbírky a související rozpočtové opatření",
+    "line": 302,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Milan Randák",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Odvolání člena Kontrolního výboru Zastupitelstva MO Pardubice V",
+    "line": 329,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Program rozvoje městského obvodu Pardubice V",
+    "line": 343,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Diskuse, závěr",
+    "line": 367,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "106/2024 Z",
+    "agenda_no": "1",
+    "first_line": 164,
+    "last_line": 165,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "107/2024 Z",
+    "agenda_no": "2",
+    "first_line": 178,
+    "last_line": 182,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "108/2024 Z",
+    "agenda_no": "3",
+    "first_line": 216,
+    "last_line": 221,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "109/2024 Z",
+    "agenda_no": "4",
+    "first_line": 238,
+    "last_line": 239,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "110/2024 Z",
+    "agenda_no": "5",
+    "first_line": 260,
+    "last_line": 283,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "111/2024 Z",
+    "agenda_no": "6",
+    "first_line": 296,
+    "last_line": 298,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "112/2024 Z",
+    "agenda_no": "8",
+    "first_line": 336,
+    "last_line": 339,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "113/2024 Z",
+    "agenda_no": "9",
+    "first_line": 350,
+    "last_line": 363,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 34,
+    "last_line": 34,
+    "resolution": null,
+    "part": null,
+    "subject": "jmenování zapisovatele, návrhové komise a ověřovatelů",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 41,
+    "last_line": 41,
+    "resolution": null,
+    "part": null,
+    "subject": "zařazení bodu vystoupení občanů",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 40,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 64,
+    "last_line": 66,
+    "resolution": null,
+    "part": null,
+    "subject": "návrh Ing. Netolického na stažení bodu č. 8 – Odvolání člena Kontrolního výboru",
+    "proposer": "Ing. Petr Netolický",
+    "motion_first_line": 63,
+    "motion_last_line": 64,
+    "procedural": true,
+    "pro": 4,
+    "proti": 7,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Petr Netolický",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Pavel Bergman",
+      "Bc. Petr Dufek",
+      "Michal Hrabák"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 71,
+    "last_line": 72,
+    "resolution": null,
+    "part": null,
+    "subject": "zařazení bodu „Vyvození odpovědnosti za porušení zákona o zadávání veřejných zakázek“ do programu",
+    "proposer": null,
+    "motion_first_line": 69,
+    "motion_last_line": 70,
+    "procedural": true,
+    "pro": 4,
+    "proti": 8,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Petr Netolický",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Bc. Jan Nadrchal",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení původního programu jednání",
+    "proposer": null,
+    "motion_first_line": 75,
+    "motion_last_line": 75,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 155,
+    "last_line": 156,
+    "resolution": null,
+    "part": null,
+    "subject": "doplňující usnesení: odvolání starosty Jiřího Rejdy, DiS. z funkce starosty MO Pardubice V",
+    "proposer": "Ing. Petr Netolický",
+    "motion_first_line": 152,
+    "motion_last_line": 153,
+    "procedural": false,
+    "pro": 4,
+    "proti": 8,
+    "zdrzel": 1,
+    "nehlasoval": 1,
+    "names": {
+     "pro": [
+      "Ing. Petr Netolický",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": [
+      "Bc. Jan Nadrchal"
+     ]
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 166,
+    "last_line": 166,
+    "resolution": "106/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 192,
+    "last_line": 192,
+    "resolution": "107/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 222,
+    "last_line": 222,
+    "resolution": "108/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 240,
+    "last_line": 240,
+    "resolution": "109/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 264,
+    "last_line": 264,
+    "resolution": "110/2024 Z",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 1,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha"
+     ],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 271,
+    "last_line": 272,
+    "resolution": "110/2024 Z",
+    "part": "bod 2 – rozpočtové opatření v bodě 14 důvodové zprávy",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "JUDr. Bc. Jakub Jeřábek"
+     ],
+     "zdrzel": [
+      "Ing. Pavel Bergman",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 275,
+    "last_line": 276,
+    "resolution": "110/2024 Z",
+    "part": "bod 2 – rozpočtové opatření v bodě 25 důvodové zprávy",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "zdrzel": [
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 279,
+    "last_line": 280,
+    "resolution": "110/2024 Z",
+    "part": "bod 2 – rozpočtové opatření v bodě 26 důvodové zprávy",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "zdrzel": [
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 283,
+    "last_line": 283,
+    "resolution": "110/2024 Z",
+    "part": "bod 2 – rozpočtová opatření v bodech 1-13, 15-24, 27-29 důvodové zprávy",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 299,
+    "last_line": 299,
+    "resolution": "111/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 324,
+    "last_line": 326,
+    "resolution": null,
+    "part": null,
+    "subject": "dar 20.000 Kč do veřejné sbírky ZŠ a Praktické školy SVÍTÁNÍ, o.p.s. na svozový autobus a související rozpočtové opatření",
+    "proposer": null,
+    "motion_first_line": 313,
+    "motion_last_line": 323,
+    "procedural": false,
+    "pro": 5,
+    "proti": 4,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Bc. Jan Nadrchal"
+     ],
+     "proti": [
+      "Jiří Rejda, DiS.",
+      "Ing. Milan Randák",
+      "Karolina Štefková",
+      "Michal Hrabák"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 340,
+    "last_line": 340,
+    "resolution": "112/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 364,
+    "last_line": 364,
+    "resolution": "113/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "ř. 39-41: hlasovalo se o zařazení bodu vystoupení občanů (14-0-0), ale ve schváleném programu (ř. 46-58) takový bod není.",
+   "ř. 60 a ř. 76: program schvalován dvakrát (před a po hlasování o stažení bodu 8 a zařazení nového bodu).",
+   "ř. 63-67: u návrhu na stažení bodu 8 text neuvádí výslovně výsledek, jen „Bod č. 8 tedy zůstává“.",
+   "ř. 183-191: do znění usnesení 107/2024 Z je vložen text diskuse (Kutílek, Vařecha, Jeřábek); rozsah usnesení uveden jen ř. 178-182.",
+   "ř. 313-327: návrh usnesení o daru do veřejné sbírky (bod 7) nemá číslo usnesení a nebyl přijat (5-4-5).",
+   "ř. 240 a 283: zdvojené závorky „((“ v seznamu jmen."
+  ]
+ }
+}

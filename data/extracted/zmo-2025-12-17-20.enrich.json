@@ -1,0 +1,352 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "88a22dd41f71476d362a05261dc10f7beb5dc47847b47d6fd21333f3d4f836f6",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "154/2025 Z",
+    "title": "Zpráva o činnosti starosty od jednání zastupitelstva 24. 9. 2025",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty za období od posledního jednání zastupitelstva dne 24. 9. 2025.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "155/2025 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu kontrolního výboru o plnění usnesení rady MO, vyřazuje z evidence splněná usnesení (např. č. 199/2025 R, 212/2025 R, 248/2025 R – 252/2025 R) a ponechává v evidenci usnesení č. 235/2025 R, 239/2025 R, 246/2025 R a 247/2025 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "156/2025 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z evidence splněná usnesení č. 66/2023 Z a č. 147/2025 Z – č. 152/2025 Z a ponechává v evidenci mj. usnesení č. 75/2009 Z, 27/2019 Z, 142/2022 Z a 153/2025 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "157/2025 Z",
+    "title": "5. změna rozpočtu MO Pardubice V na rok 2025",
+    "summary": "Zastupitelstvo bere na vědomí komentář k 5. změně rozpočtu na rok 2025 včetně rozpočtu sociálního fondu a schvaluje rozpočtová opatření uvedená v bodech 1–22 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2025",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "158/2025 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2025",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 30. 11. 2025 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2025"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "159/2025 Z",
+    "title": "Rozpočet MO Pardubice V na rok 2026 a pravomoci rady k rozpočtovým opatřením",
+    "summary": "Zastupitelstvo schvaluje rozpočet obvodu a sociálního fondu na rok 2026 s úpravami provedenými na jednání (zvýšení daňových příjmů z DPH a rezervy rozpočtu o 3 740,4 tis. Kč) a svěřuje radě pravomoc provádět vymezená rozpočtová opatření. Dále schvaluje příspěvek na provoz 128,72 tis. Kč pro DDM Alfa na akce obvodu, plán společenských akcí na rok 2026, limity drobných dárků a propagačních předmětů a směrnici č. 7/2025 o hospodaření se sociálním fondem.",
+    "keywords": [
+     "rozpočet 2026",
+     "schválení rozpočtu",
+     "rozpočtová opatření",
+     "sociální fond",
+     "plán společenských akcí",
+     "příspěvek na provoz",
+     "drobné dárky",
+     "propagační předměty",
+     "směrnice č. 7/2025"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [
+     "DDM Alfa, Družby, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "DDM Alfa, Družby, Pardubice"
+    ],
+    "amounts": [
+     "1 544 tis. Kč",
+     "1 436,5 tis. Kč",
+     "759,9 tis. Kč",
+     "3 740,4 tis. Kč",
+     "300 tis. Kč",
+     "200 tis. Kč",
+     "128,72 tis. Kč",
+     "35 tis. Kč",
+     "40,6 tis. Kč",
+     "45 tis. Kč",
+     "3,2 tis. Kč",
+     "4,92 tis. Kč",
+     "0,96 tis. Kč",
+     "3,96 tis. Kč",
+     "1 000,-- Kč",
+     "300,- Kč",
+     "500,-- Kč",
+     "300,-- Kč"
+    ]
+   },
+   {
+    "number": "160/2025 Z",
+    "title": "Pravidla pro příspěvky na provoz příspěvkovým organizacím města od 1. 1. 2026",
+    "summary": "Zastupitelstvo schvaluje pravidla pro poskytování příspěvků na provoz příspěvkovým organizacím města z rozpočtu obvodu platná od 1. 1. 2026 včetně vzoru žádosti o příspěvek a vzoru vypořádání příspěvku.",
+    "keywords": [
+     "příspěvek na provoz",
+     "příspěvkové organizace",
+     "pravidla",
+     "žádost o příspěvek",
+     "vypořádání příspěvku"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "161/2025 Z",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na roky 2025–2029",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje střednědobý výhled rozpočtu obvodu na roky 2025–2029 včetně úpravy předložené přímo na jednání 17. 12. 2025.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "rozpočet 2025–2029"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "162/2025 Z",
+    "title": "Prověření variant projektu prodloužení stezky u Chrudimky",
+    "summary": "Zastupitelstvo schvaluje zadání projekčních prací na prověření variant akce „PD Prodloužení stezky u Chrudimky“ podle předložené nabídky a požaduje, aby výsledek prověření byl předložen zastupitelstvu.",
+    "keywords": [
+     "stezka u Chrudimky",
+     "cyklostezka",
+     "projektová dokumentace",
+     "projekční práce",
+     "prověření variant"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "stezka u Chrudimky"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "43.560,- Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "163/2025 Z",
+    "title": "Investiční záměry k realizaci v roce 2026",
+    "summary": "Zastupitelstvo schvaluje k realizaci v roce 2026 investiční záměry: chodníky v ulici U Krematoria, křižovatku ulic Devotyho a Železničního pluku a vybudování prokořenitelných prostorů s výsadbou před KD Dukla.",
+    "keywords": [
+     "investiční akce",
+     "chodníky",
+     "křižovatka",
+     "výsadba stromů",
+     "prokořenitelné prostory",
+     "investice 2026"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "ul. U Krematoria",
+     "Nemošická",
+     "Mikulovická",
+     "Devotyho",
+     "Železničního pluku",
+     "KD Dukla"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "164/2025 Z",
+    "title": "Podněty obyvatel k úpravám komunikace Dražkovice č.p. 153 – č.p. 174",
+    "summary": "Zastupitelstvo bere na vědomí podněty a stížnosti obyvatel na provedené stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174 z dopisu ze dne 29. 8. 2025, projednané na zasedání 24. 9. 2025.",
+    "keywords": [
+     "Dražkovice",
+     "stížnosti obyvatel",
+     "podněty občanů",
+     "rekonstrukce komunikace",
+     "stavební úpravy silnice"
+    ],
+    "topics": [
+     "doprava",
+     "investice"
+    ],
+    "kind": "zprava",
+    "places": [
+     "Dražkovice",
+     "komunikace Dražkovice č.p. 153 – č.p. 174"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "165/2025 Z",
+    "title": "Prověření dodatečných stavebních úprav komunikace Dražkovice č.p. 153 – č.p. 174",
+    "summary": "Zastupitelstvo ukládá předložit prověření možných dodatečných stavebních úprav komunikace Dražkovice č.p. 153 – č.p. 174 s odhadem nákladů, zejména odvodňovacích žlabů, sjezdů na pozemky, parkovacích stání na úkor chodníku, odtoku srážkových vod do zeleně a zavedení obytné zóny.",
+    "keywords": [
+     "Dražkovice",
+     "odvodnění",
+     "sjezdy na pozemky",
+     "parkování",
+     "parkovací stání",
+     "dešťová voda",
+     "obytná zóna",
+     "úpravy komunikace"
+    ],
+    "topics": [
+     "doprava",
+     "investice"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Dražkovice",
+     "komunikace Dražkovice č.p. 153 – č.p. 174"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek se ptal na vývoj jednání o skateparku, Arboretu a dětském hřišti Višňovka, Ing. Filip Vařecha na zásady spolupráce města s investory ve vztahu k výstavbě za Kauflandem. Starosta Jiří Rejda, DiS. odpověděl, že skatepark na území obvodu nebude, Arboretum má přejít do správy Služeb města Pardubic a v lokalitě za Autoforem obvod uplatnil požadavky; Bc. Jan Nadrchal doplnil, že pro lokalitu Auto fórum podepisoval smlouvu o spolupráci."
+   },
+   {
+    "no": "2",
+    "discussion": "Zprávu kontrolního výboru představil jeho předseda Ing. Pavel Bergman. Ing. Jakub Jeřábek se ptal, zda je Petr Šmeral členem kontrolního výboru; ten se omluvil, že na jednání výboru nechodil, a nabídl vrácení odměny za tyto měsíce."
+   },
+   {
+    "no": "3",
+    "discussion": "Zprávu představil předseda kontrolního výboru Ing. Pavel Bergman. Ing. Jakub Kutílek upozornil, že usnesení 153/2025 Z bylo přijato v jiném bodě, než je uvedeno."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Jakub Kutílek upozornil na nevyčerpanou částku 1.860.000 Kč na zeleň, prvky a hřiště."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha se ptal, proč v kapitole 27 – doprava nebude dočerpán zhruba 1 milion Kč. Starosta Jiří Rejda, DiS. odpověděl, že položky byly nadhodnoceny kvůli rezervě."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Jakub Kutílek upozornil na nulové kolonky u investičních akcí, Ing. Filip Vařecha a Ing. Petr Netolický se ptali, zda postačí 790 tis. Kč na opravy silnic po zimě, a Ing. Filip Vařecha také na navýšení odměn zastupitelů. Starosta Jiří Rejda, DiS. uvedl, že rozpočet se zpřesní v první změně rozpočtu na rok 2026; na dotaz Ing. Jakuba Jeřábka k položce soudní řízení 300 tis. Kč úřad odpověděl, že jde o rezervu."
+   },
+   {
+    "no": "9",
+    "discussion": "Pracovník úřadu informoval o nabídce na další projekční práce za cca 116 tis. Kč. Ing. Jakub Kutílek podpořil smysl stavby pro propojení stezky u Chrudimky a navrhl usnesení o prověření obou variant."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Jakub Kutílek požádal, aby zastupitelé před vydáním stavebního povolení dostali informaci a finální verzi projektu e-mailem."
+   },
+   {
+    "no": "11",
+    "discussion": "Předkladatel Ing. Jakub Kutílek popsal nedostatky zjištěné při pochůzce s obyvateli 7. 12. 2025 a navrhl usnesení o čtyřech částech. Michal Hrabák navrhl věc nejprve projednat s úředníky, Ing. Petr Netolický oddělené hlasování a starosta Jiří Rejda, DiS. přípravu ve strategické komisi; občan uvedl, že jeho žádost u odboru dopravy magistrátu byla zamítnuta. Části III. (změna pravidel pro schvalování investičních záměrů) a IV. (žádost o místní úpravu provozu) nebyly přijaty."
+   },
+   {
+    "no": "12",
+    "discussion": "Ing. Jakub Kutílek předložil návrh na zavedení zóny placeného parkování a revizi dopravního značení na jihu obvodu. Starosta Jiří Rejda, DiS. a Bc. Jan Nadrchal požadovali nejprve veřejná projednání a dostavbu parkovacího domu na Vápence, Ing. Jakub Jeřábek podpořil veřejné projednání a Ing. Petr Netolický zdůraznil ochranu parkování rezidentů. Návrh nebyl přijat."
+   },
+   {
+    "no": "13",
+    "discussion": "Občan požádal o přejmenování ulice Gorkého; Michal Hrabák upozornil na dopady na obyvatele, Ing. Jakub Jeřábek má materiál předložit na příští zastupitelstvo, Ing. Petr Netolický navrhl petici, starosta Jiří Rejda, DiS. navrhl místo přejmenování pamětní desku a Evžen Erban a Bc. Petr Dufek pojmenování nové ulice. Ing. Filip Vařecha se ptal na úpravu dopravního značení v ulici Staňkova a Michal Hrabák informoval o náboru městské policie na pomoc u přechodů u škol."
+   }
+  ]
+ }
+}

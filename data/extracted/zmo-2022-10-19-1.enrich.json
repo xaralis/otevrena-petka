@@ -1,0 +1,289 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e148ffb6ef22482e6933538aed2fcf56ce606816cad9bf66aebebb161136b6c5",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "1/2022 Z",
+    "title": "Volba starosty a místostarosty MO Pardubice V",
+    "summary": "Zastupitelstvo na ustavujícím jednání volí starostu a místostarostu městského obvodu Pardubice V pro nové volební období.",
+    "keywords": [
+     "volba starosty",
+     "volba místostarosty",
+     "starosta",
+     "místostarosta",
+     "ustavující zastupitelstvo",
+     "vedení obvodu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "2/2022 Z",
+    "title": "Volba dalších členů Rady MO Pardubice V",
+    "summary": "Zastupitelstvo volí tři další členy Rady městského obvodu Pardubice V; o každém kandidátovi se hlasovalo samostatně.",
+    "keywords": [
+     "volba členů rady",
+     "rada městského obvodu",
+     "radní",
+     "ustavující zastupitelstvo",
+     "složení rady"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Rada MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "3/2022 Z",
+    "title": "Zřízení finančního a kontrolního výboru, volba předsedů a členů",
+    "summary": "Zastupitelstvo od 1. 11. 2022 zřizuje finanční a kontrolní výbor, každý se sedmi členy, a volí jejich předsedy a členy; o každé osobě se hlasovalo samostatně.",
+    "keywords": [
+     "finanční výbor",
+     "kontrolní výbor",
+     "výbory zastupitelstva",
+     "zřízení výborů",
+     "předseda výboru",
+     "členové výborů",
+     "volba"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "finanční výbor ZMO Pardubice V",
+     "kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "4/2022 Z",
+    "title": "Měsíční odměna místostarosty 15.000 Kč (protinávrh)",
+    "summary": "Protinávrh na stanovení měsíční odměny neuvolněnému místostarostovi MO Pardubice V ve výši 15.000 Kč od 1. 11. 2022.",
+    "keywords": [
+     "odměna místostarosty",
+     "odměny zastupitelů",
+     "neuvolněný místostarosta",
+     "protinávrh",
+     "měsíční odměna"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": [
+     "15.000,- Kč"
+    ]
+   },
+   {
+    "number": "5/2022 Z",
+    "title": "Měsíční odměny předsedům a členům výborů zastupitelstva",
+    "summary": "Stanovení měsíčních odměn od 1. 11. 2022 předsedům výborů ZMO Pardubice V (4.000 Kč) a členům výborů (3.400 Kč); o obou částkách se hlasovalo zvlášť.",
+    "keywords": [
+     "odměny členům výborů",
+     "odměna předsedy výboru",
+     "finanční výbor",
+     "kontrolní výbor",
+     "měsíční odměna"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": [
+     "4.000,- Kč",
+     "3.400,- Kč"
+    ]
+   },
+   {
+    "number": "6/2022 Z",
+    "title": "Měsíční odměna místostarosty 25.680 Kč",
+    "summary": "Stanovení měsíční odměny neuvolněnému místostarostovi MO Pardubice V ve výši 25.680 Kč od 1. 11. 2022.",
+    "keywords": [
+     "odměna místostarosty",
+     "neuvolněný místostarosta",
+     "odměny zastupitelů",
+     "měsíční odměna"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": [
+     "25.680,- Kč"
+    ]
+   },
+   {
+    "number": "7/2022 Z",
+    "title": "Měsíční odměna členům zastupitelstva 2.000 Kč",
+    "summary": "Stanovení měsíční odměny neuvolněnému členovi Zastupitelstva MO Pardubice V ve výši 2.000 Kč od 1. 11. 2022.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění zastupitelé",
+     "měsíční odměna",
+     "člen zastupitelstva"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": [
+     "2.000,- Kč"
+    ]
+   },
+   {
+    "number": "8/2022 Z",
+    "title": "Měsíční odměna členům rady 5.000 Kč",
+    "summary": "Stanovení měsíční odměny členovi Rady MO Pardubice V ve výši 5.000 Kč od 1. 11. 2022.",
+    "keywords": [
+     "odměna radních",
+     "člen rady",
+     "měsíční odměna",
+     "odměny zastupitelů"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Rada MO Pardubice V"
+    ],
+    "amounts": [
+     "5.000,- Kč"
+    ]
+   },
+   {
+    "number": "9/2022 Z",
+    "title": "Měsíční odměna předsedům komisí rady 3.210 Kč",
+    "summary": "Stanovení měsíční odměny předsedovi komise Rady MO Pardubice V ve výši 3.210 Kč od 1. 11. 2022.",
+    "keywords": [
+     "odměna předsedy komise",
+     "komise rady",
+     "měsíční odměna",
+     "odměny"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Rada MO Pardubice V"
+    ],
+    "amounts": [
+     "3.210,- Kč"
+    ]
+   },
+   {
+    "number": "10/2022 Z",
+    "title": "Měsíční odměna členům komisí rady 2.675 Kč",
+    "summary": "Stanovení měsíční odměny členovi komise Rady MO Pardubice V ve výši 2.675 Kč od 1. 11. 2022.",
+    "keywords": [
+     "odměna členů komise",
+     "komise rady",
+     "měsíční odměna",
+     "odměny"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Rada MO Pardubice V"
+    ],
+    "amounts": [
+     "2.675,- Kč"
+    ]
+   },
+   {
+    "number": "11/2022 Z",
+    "title": "Termíny jednání rady a zastupitelstva na roky 2022 a 2023",
+    "summary": "Zastupitelstvo schvaluje harmonogram jednání Rady a Zastupitelstva MO Pardubice V od 2. 11. 2022 do 20. 12. 2023; zastupitelstvo zasedá 21. 12. 2022, 22. 2., 26. 4., 28. 6., 6. 9., 8. 11. a 20. 12. 2023.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram",
+     "jednání rady",
+     "jednání zastupitelstva",
+     "zasedání",
+     "kalendář"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Rada MO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "7.",
+    "discussion": "Starosta Jiří Rejda, DiS., navrhl odměnu místostarosty 25.680 Kč, ostatním zastupitelům 2.000 Kč a radním 5.000 Kč. Ing. Jakub Kutílek a Ing. Filip Vařecha zpochybnili výši odměny místostarosty vzhledem k rozsahu jeho práce (odpovídali místostarosta Evžen Erban, starosta a tajemník úřadu) a Ing. Vařecha navrhl odměnu 15.000 Kč a samostatné hlasování; Ing. Lic. Jaroslav Kňava navrhl zvýšit odměny předsedům a členům výborů na 4.000 a 3.400 Kč. Vystoupili také Bc. Petr Dufek a Mgr. Miloš Adamů, MBA; na žádost Ing. Kutílka a JUDr. Bc. Jakuba Jeřábka se o jednotlivých odměnách hlasovalo samostatně."
+   },
+   {
+    "no": "8.",
+    "discussion": "Ing. Milan Randák se ptal, zda se s vyšším počtem jednání zastupitelstva zvýší i počet jednání finančního a kontrolního výboru; starosta odpověděl, že ano, protože výbory jsou navázány na jednání zastupitelstva."
+   },
+   {
+    "no": "10.",
+    "discussion": "Ing. Jakub Kutílek se ptal na odměny pro nečleny zastupitelstva a na termín ustavení komisí rady (tajemník a starosta: odměny v prosinci, komise 2. 11. 2022). Ing. Milan Randák apeloval na obnovu vodorovného dopravního značení a Karolina Štefková upozornila na plot a vjezd poškozený při opravě chodníků v Dražkovicích; úřad vyzval poškozené občany k zaslání podnětů. Ing. Lic. Jaroslav Kňava za SPOLU ohlásil konstruktivní opozici, starosta vyzval zastupitele k zaslání volebních bodů."
+   }
+  ]
+ }
+}

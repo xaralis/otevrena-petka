@@ -1,0 +1,960 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e148ffb6ef22482e6933538aed2fcf56ce606816cad9bf66aebebb161136b6c5",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 1,
+   "kind": "ustavujici",
+   "date": "2022-10-19",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Mgr. Miloš Adamů, MBA",
+    "Ing. Pavel Bergman",
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Jiří Havrda",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Ing. Lic. Jaroslav Kňava",
+    "Ing. Jakub Kutílek",
+    "Bc. Jan Nadrchal",
+    "Ing. Petr Netolický",
+    "Bc. Petra Prusáková",
+    "Ing. Milan Randák",
+    "Jiří Rejda, DiS.",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 42,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 56,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Složení slibu členů zastupitelstva MO Pardubice V",
+    "line": 60,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Jmenování ověřitelů zápisu a návrhové komise",
+    "line": 66,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Volba starosty a místostarosty MO Pardubice V",
+    "line": 71,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Volba dalších členů rady MO Pardubice V",
+    "line": 115,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Zřízení výborů Zastupitelstva MO Pardubice V, volba předsedů a členů výborů",
+    "line": 145,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Stanovení měsíčních odměn neuvolněným členům zastupitelstva městského obvodu Pardubice V",
+    "line": 220,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Evžen Erban",
+     "Ing. Filip Vařecha",
+     "Ing. Lic. Jaroslav Kňava",
+     "Bc. Petr Dufek",
+     "Mgr. Miloš Adamů, MBA",
+     "JUDr. Bc. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "8.",
+    "title": "Stanovení termínů jednání RMO a ZMO Pardubice V na rok 2022 a 2023",
+    "line": 326,
+    "speakers": [
+     "Ing. Milan Randák",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "10.",
+    "title": "Diskuse, závěr",
+    "line": 344,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Ing. Milan Randák",
+     "Karolina Štefková",
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "1/2022 Z",
+    "agenda_no": "4.",
+    "first_line": 104,
+    "last_line": 112,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "2/2022 Z",
+    "agenda_no": "5.",
+    "first_line": 132,
+    "last_line": 142,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "3/2022 Z",
+    "agenda_no": "6.",
+    "first_line": 178,
+    "last_line": 217,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "4/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 282,
+    "last_line": 283,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "5/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 289,
+    "last_line": 294,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "6/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 299,
+    "last_line": 300,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "7/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 306,
+    "last_line": 307,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "8/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 311,
+    "last_line": 312,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "9/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 316,
+    "last_line": 317,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "10/2022 Z",
+    "agenda_no": "7.",
+    "first_line": 321,
+    "last_line": 322,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "11/2022 Z",
+    "agenda_no": "8.",
+    "first_line": 333,
+    "last_line": 341,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 50,
+    "last_line": 50,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 107,
+    "last_line": 108,
+    "resolution": "1/2022 Z",
+    "part": "bod 1 – Jiří Rejda, DiS. – starosta",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 1,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha"
+     ],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 111,
+    "last_line": 112,
+    "resolution": "1/2022 Z",
+    "part": "bod 2 – Evžen Erban – místostarosta",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 136,
+    "resolution": "2/2022 Z",
+    "part": "bod 1 – Ing. Milan Randák – člen rady",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 138,
+    "last_line": 139,
+    "resolution": "2/2022 Z",
+    "part": "bod 2 – Bc. Petr Dufek – člen rady",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 141,
+    "last_line": 142,
+    "resolution": "2/2022 Z",
+    "part": "bod 3 – Mgr. Miloš Adamů, MBA – člen rady",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek",
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 181,
+    "last_line": 181,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 a) – Ing. Jaroslav Kňava – předseda finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Pavel Bergman"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 184,
+    "last_line": 184,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 b) – Karolina Štefková – člen finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 186,
+    "last_line": 186,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 b) – Bc. Petra Prusáková – člen finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 188,
+    "last_line": 188,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 b) – Mgr. Daniel Přibyl – člen finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 190,
+    "last_line": 190,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 b) – Petr Hemský – člen finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 192,
+    "last_line": 192,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 b) – Ing. Simona Mokrá – člen finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 194,
+    "last_line": 194,
+    "resolution": "3/2022 Z",
+    "part": "bod 1 b) – Josef Talácko – člen finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 198,
+    "last_line": 198,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 a) – Ing. Filip Vařecha – předseda kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Milan Randák"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 201,
+    "last_line": 201,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – Jiří Havrda – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 204,
+    "last_line": 205,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – Ing. Petr Netolický – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 8,
+    "proti": 2,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Milan Randák",
+      "Bc. Petra Prusáková"
+     ],
+     "zdrzel": [
+      "Jiří Rejda DiS.",
+      "Jiří Havrda",
+      "Karolína Štefková",
+      "Evžen Erban",
+      "Mgr. Miloš Adamů, MBA."
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 207,
+    "last_line": 209,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – Ing. Lic. Jaroslav Kňava – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 7,
+    "proti": 0,
+    "zdrzel": 8,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Bc. Jan Nadrchal",
+      "Ing. Lic. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Petr Netolický",
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha",
+      "Ing. Pavel Bergman",
+      "Mgr. Miloš Adamů, MBA."
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 211,
+    "last_line": 211,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – JUDr. Bc. Jakub Jeřábek – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 213,
+    "last_line": 213,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – Ing. Pavel Bergman – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 215,
+    "last_line": 215,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – Evžen Erban – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 217,
+    "last_line": 217,
+    "resolution": "3/2022 Z",
+    "part": "bod 2 b) – Mgr. Dominik Barták – člen kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 284,
+    "last_line": 284,
+    "resolution": "4/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 2,
+    "proti": 13,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 291,
+    "last_line": 291,
+    "resolution": "5/2022 Z",
+    "part": "odměna předsedům výborů 4.000,- Kč",
+    "subject": null,
+    "proposer": "Ing. Lic. Jaroslav Kňava",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Jiří Havrda",
+      "Karolína Štefková"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 293,
+    "last_line": 294,
+    "resolution": "5/2022 Z",
+    "part": "odměna členům výborů 3.400,- Kč",
+    "subject": null,
+    "proposer": "Ing. Lic. Jaroslav Kňava",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Bc. Petr Dufek",
+      "Ing. Filip Vařecha",
+      "Jiří Havrda",
+      "Karolína Štefková",
+      "Ing. Milan Randák"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 301,
+    "last_line": 302,
+    "resolution": "6/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 1,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha"
+     ],
+     "zdrzel": [
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Pavel Bergman",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 308,
+    "last_line": 308,
+    "resolution": "7/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 313,
+    "last_line": 313,
+    "resolution": "8/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 318,
+    "last_line": 318,
+    "resolution": "9/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 323,
+    "last_line": 323,
+    "resolution": "10/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 342,
+    "last_line": 342,
+    "resolution": "11/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 131: značka usnesení „(usnesení 2/2022 Z)“ je bez „č.“.",
+   "ř. 332: značka „(usnesení č. 112022 Z)“ – chybí lomítko; podle pořadí jde o usnesení 11/2022 Z (stejně i v PDF).",
+   "ř. 343: závěrečný bod je číslován „10.“, ačkoli návrh pořadí (ř. 39) ho uvádí jako bod 9.; bod 9 v dokumentu není.",
+   "ř. 85, 101, 127–129: výsledky veřejné volby („zvolen 10/9 hlasy“) uvedeny slovně; vlastní hlasovací řádky jsou u usnesení 1/2022 Z a 2/2022 Z.",
+   "ř. 207–209: volba Ing. Lic. Jaroslava Kňavy členem kontrolního výboru – pro 7, zdržel se 8 z 15 přítomných; text výsledek výslovně neuvádí.",
+   "ř. 281–284: usnesení 4/2022 Z (protinávrh Ing. Filipa Vařechy, odměna místostarostovi 15.000 Kč) – pro 2, proti 13; má číslo usnesení, ale text výsledek výslovně neuvádí; následně přijato 6/2022 Z (25.680 Kč).",
+   "ř. 313: překlep „Pro 15,0 proti 0“.",
+   "ř. 198, 291: „zdržel 1“ / „zdržel 3“ bez „se“."
+  ]
+ }
+}

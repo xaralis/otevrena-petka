@@ -1,0 +1,391 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "b4dd032a23f7a9b2ab483473ef583c26a5040f6214fbfeae5c6aed06ce0b680d",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 14,
+   "kind": "radne",
+   "date": "2021-09-22",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Bc. Petra Prusáková",
+    "Karolina Štefková",
+    "Ing. Jiří Janoš",
+    "Ing. Petr Netolický",
+    "Ing. Jiří Hájek",
+    "Anna Gudrun-Vavrečková",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Pavel Studnička",
+    "Petr Hemský"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Revize obecně závazné vyhlášky č. 4/2021, o veřejném pořádku",
+    "line": 56,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Janoš",
+     "Ing. Petr Netolický",
+     "Ing. Milan Randák",
+     "Ing. Jiří Hájek",
+     "Bc. Jan Nadrchal",
+     "Filip Šťastný",
+     "Ing. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 128,
+    "speakers": [
+     "Ing. Jiří Hájek",
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Karolina Štefková",
+     "Ing. Milan Randák",
+     "Anna Gudrun-Vavrečková",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 191,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení",
+    "line": 204,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Kontrola vyjádření ke stížnostem, peticím a připomínkám občanů na chod ÚMO Pardubice V za období 4 Q 2020 – 3 Q 2021",
+    "line": 217,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2021",
+    "line": 230,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Informace o schválení účetní závěrky za r. 2020 sestavené k 31. 12. 2020",
+    "line": 242,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2021",
+    "line": 255,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Janoš",
+     "Ing. Jaroslav Kňava",
+     "Bc. Jan Nadrchal",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Diskuse",
+    "line": 284,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek",
+     "Bc. Jan Nadrchal",
+     "Ing. Jaroslav Kňava",
+     "Ing. Petr Netolický",
+     "Anna Gudrun-Vavrečková",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "IV.",
+    "title": "Závěr",
+    "line": 327,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "123/2021 Z",
+    "agenda_no": "1",
+    "first_line": 186,
+    "last_line": 187,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "124/2021 Z",
+    "agenda_no": "2",
+    "first_line": 198,
+    "last_line": 200,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "125/2021 Z",
+    "agenda_no": "3",
+    "first_line": 211,
+    "last_line": 213,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "126/2021 Z",
+    "agenda_no": "4",
+    "first_line": 225,
+    "last_line": 226,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "127/2021 Z",
+    "agenda_no": "5",
+    "first_line": 237,
+    "last_line": 238,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "128/2021 Z",
+    "agenda_no": "6",
+    "first_line": 249,
+    "last_line": 251,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "129/2021 Z",
+    "agenda_no": "7",
+    "first_line": 276,
+    "last_line": 279,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 50,
+    "last_line": 50,
+    "resolution": null,
+    "part": null,
+    "subject": "změna pořadí projednávání – zpráva č. 8 jako první před zprávou č. 1",
+    "proposer": null,
+    "motion_first_line": 48,
+    "motion_last_line": 49,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 188,
+    "last_line": 188,
+    "resolution": "123/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 201,
+    "last_line": 201,
+    "resolution": "124/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 214,
+    "last_line": 214,
+    "resolution": "125/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 227,
+    "last_line": 227,
+    "resolution": "126/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 239,
+    "last_line": 239,
+    "resolution": "127/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 252,
+    "last_line": 252,
+    "resolution": "128/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 280,
+    "last_line": 280,
+    "resolution": "129/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Anna Gudrun-Vavrečková"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 227 a ř. 252: u usnesení 126/2021 Z a 128/2021 Z uvedeno „Pro 14“, ale přítomno je 13 členů (ř. 12-14, 31) a žádný příchod není zaznamenán; ostatní hlasování mají 13.",
+   "ř. 252: u usnesení 128/2021 Z chybí počet „zdrželo se“ (řádek končí „zdrželo se“); zapsáno 0.",
+   "ř. 125: bod 8 (revize OZV č. 4/2021) předkladatel stáhl, nehlasovalo se o něm.",
+   "ř. 186-187: usnesení 123/2021 Z bere na vědomí zprávu starosty od posledního jednání ZMO „dne 10. 3. 2021“, ale poslední předchozí jednání ZMO bylo 23. 6. 2021 (zjevně okopírované datum).",
+   "ř. 198-200 vs. ř. 211-213: usnesení 124/2021 Z (bod 2, kontrola usnesení RMO) i 125/2021 Z (bod 3, kontrola usnesení ZMO) mají téměř shodné znění; 125/2021 Z vyřazuje usnesení „155/2020 R – 165/2020 R“, tj. usnesení rady, ačkoli bod se týká usnesení ZMO."
+  ]
+ }
+}

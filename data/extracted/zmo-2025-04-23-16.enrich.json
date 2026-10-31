@@ -1,0 +1,171 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "4366084f6e598d2d439a2789439ff64e13bd5c4a347c468daf446891dd948b72",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "131/2025 Z",
+    "title": "Smír ve sporu s firmou M-STAV CZ s.r.o. o pokutu za prodlení s předáním díla",
+    "summary": "Zastupitelstvo schválilo uzavření smíru ve sporu mezi městským obvodem a firmou M-STAV CZ s.r.o. Výše uplatněné pokuty za prodlení s předáním díla se stanovuje na 425.000 Kč.",
+    "keywords": [
+     "smír",
+     "spor",
+     "M-STAV CZ",
+     "smluvní pokuta",
+     "pokuta za prodlení",
+     "předání díla",
+     "zhotovitel",
+     "soudní spor"
+    ],
+    "topics": [
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "M-STAV CZ s.r.o."
+    ],
+    "amounts": [
+     "425.000,- Kč"
+    ]
+   },
+   {
+    "number": "132/2025 Z",
+    "title": "Záměr poptat projekční práce na akci „Prostor u ZŠ Benešovo náměstí“",
+    "summary": "Zastupitelstvo schválilo záměr poptat projekční práce na investiční akci „Prostor u ZŠ Benešovo náměstí“, tedy úpravu veřejného prostranství před základní školou.",
+    "keywords": [
+     "projekční práce",
+     "projektová dokumentace",
+     "ZŠ Benešovo náměstí",
+     "veřejné prostranství",
+     "Benešovo náměstí",
+     "Višňovka",
+     "úprava prostoru před školou",
+     "investiční akce"
+    ],
+    "topics": [
+     "investice",
+     "skolstvi"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Benešovo náměstí",
+     "prostor u ZŠ Benešovo náměstí"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ZŠ Benešovo náměstí"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "133/2025 Z",
+    "title": "Zřizovací listina knihovny MO Pardubice V",
+    "summary": "Zastupitelstvo schválilo s účinností od 23. 4. 2025 zřizovací listinu knihovny městského obvodu Pardubice V.",
+    "keywords": [
+     "knihovna",
+     "zřizovací listina",
+     "knihovna MO Pardubice V",
+     "obvodní knihovna",
+     "kultura"
+    ],
+    "topics": [
+     "kultura-akce",
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "knihovna MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "134/2025 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 3. 2025",
+    "summary": "Zastupitelstvo schválilo rozbor hospodaření městského obvodu Pardubice V k 31. 3. 2025 uvedený v tabulkové části zprávy a vzalo na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čtvrtletí",
+     "31. 3. 2025",
+     "plnění rozpočtu",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "135/2025 Z",
+    "title": "2. změna rozpočtu obvodu na rok 2025 a příspěvky školám a školkám na akce",
+    "summary": "Zastupitelstvo vzalo na vědomí komentář k 2. změně rozpočtu na rok 2025 včetně sociálního fondu a schválilo rozpočtová opatření z bodů 1–4 důvodové zprávy. Dále schválilo přesuny z položky příspěvků příspěvkovým organizacím v kapitole 33 na účelově vázané příspěvky na provoz pro mateřské školy Sluníčko, Kamarád, Višňovka a Motýlek, DDM Alfa, ZŠ Benešovo náměstí a ZŠ J. Ressla na akce dle přílohy č. 2 zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2025",
+     "sociální fond",
+     "příspěvek na provoz",
+     "mateřské školy",
+     "školky",
+     "základní školy",
+     "DDM Alfa",
+     "příspěvkové organizace"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Gorkého",
+     "Teplého",
+     "Benešovo náměstí",
+     "Družby",
+     "J. Ressla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MŠ Sluníčko, Gorkého",
+     "MŠ Kamarád, Teplého",
+     "MŠ Višňovka, Benešovo nám.",
+     "DDM Alfa, Družby",
+     "ZŠ Benešovo náměstí",
+     "ZŠ J. Ressla",
+     "MŠ Motýlek, J. Ressla"
+    ],
+    "amounts": [
+     "13,65 tis. Kč",
+     "12,5 tis. Kč",
+     "17 tis. Kč",
+     "13,5 tis. Kč",
+     "11,5 tis. Kč",
+     "5 tis. Kč",
+     "18,35 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "2",
+    "discussion": "Ing. Jakub Kutílek navrhl vybrat projektanta prostoru před ZŠ Benešovo náměstí soutěží o návrh ve spolupráci s OHA a školou a předložil pozměněné usnesení, které později stáhl. Jiří Rejda, DiS. upozornil na potřeby školy včetně obratiště autobusů, Ing. Filip Vařecha navrhl anketu přes Munipolis a Michal Hrabák zdůraznil slovo školy; Bc. Jan Nadrchal se ptal na prostředky a navrhl kompromis – vysoutěžit projektanta, který předloží 3–4 varianty k výběru zastupitelstvem."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Jakub Kutílek ocenil fungování a rozvoj knihovny obvodu."
+   },
+   {
+    "no": "6",
+    "discussion": "Starosta Jiří Rejda, DiS. informoval o projektové dokumentaci rekonstrukce Dopravního hřiště (mj. pumptrack, nová signalizace, zrušení minigolfu). Ing. Lic. Jaroslav Kňava se ptal na světelnou signalizaci v ulici Teplého. Ing. Filip Vařecha se ptal na prostor bývalého Bobra a navrhl sbírat nápady občanů; Bc. Jan Nadrchal informoval o jednání s ŘSD ohledně rozšíření komunikace."
+   }
+  ]
+ }
+}

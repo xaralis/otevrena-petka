@@ -1,0 +1,244 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "678153567564fbe8929f693dba82900d14a2f00270e4bf405933f08079a0ad43",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "53/2023 Z",
+    "title": "Zpráva o činnosti starosty od jednání 28. 6. 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu za období od posledního jednání zastupitelstva dne 28. 6. 2023.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "54/2023 Z",
+    "title": "Snížení smluvní pokuty firmě M-STAV CZ s.r.o. z 725.000 Kč na 362.500 Kč",
+    "summary": "Návrh na snížení pohledávky obvodu – smluvní pokuty za společností M-STAV CZ s.r.o. (IČ 27557235) z 725.000 Kč na polovinu, tedy 362.500 Kč.",
+    "keywords": [
+     "smluvní pokuta",
+     "pohledávka",
+     "snížení pokuty",
+     "M-STAV CZ",
+     "prodlení zhotovitele",
+     "stavební zakázka"
+    ],
+    "topics": [
+     "zakazky",
+     "rozpocet"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "M-STAV CZ s.r.o."
+    ],
+    "amounts": [
+     "725.000,- Kč",
+     "362.500 ,- Kč"
+    ]
+   },
+   {
+    "number": "55/2023 Z",
+    "title": "Zrušení usnesení č. 101/2021 Z ze dne 10. 3. 2021",
+    "summary": "Návrh na zrušení dřívějšího usnesení zastupitelstva č. 101/2021 Z ze dne 10. 3. 2021.",
+    "keywords": [
+     "zrušení usnesení",
+     "usnesení 101/2021 Z",
+     "revokace"
+    ],
+    "topics": [
+     "vyhlasky-pravidla"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "56/2023 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 7. 2023",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 7. 2023 v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "57/2023 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2022",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic dne 19. 6. 2023 schválilo účetní závěrku statutárního města Pardubice včetně městských obvodů za rok 2022 sestavenou k 31. 12. 2022.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2022",
+     "statutární město Pardubice",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "58/2023 Z",
+    "title": "4. změna rozpočtu obvodu na rok 2023 a úprava plánu společenských akcí",
+    "summary": "Zastupitelstvo bere na vědomí komentář a podklady ke 4. změně rozpočtu na rok 2023 a schvaluje rozpočtová opatření v bodech 1–16 důvodové zprávy. Dále schvaluje úpravu plánu společenských akcí – prodloužení termínu akce Setkání se seniory do prosince 2023 a navýšení částky na tuto akci o 10 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2023",
+     "Setkání se seniory",
+     "plán společenských akcí",
+     "senioři"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "socialni"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   },
+   {
+    "number": "59/2023 Z",
+    "title": "Zpráva o výsledku zakázky „Relaxační zóna Stará plovárna“",
+    "summary": "Návrh na vzetí na vědomí zprávy o průběhu a výsledku zadávacího řízení na nadlimitní veřejnou zakázku „Relaxační zóna Stará plovárna“.",
+    "keywords": [
+     "Relaxační zóna Stará plovárna",
+     "Stará plovárna",
+     "veřejná zakázka",
+     "výběrové řízení",
+     "zadávací řízení",
+     "relaxační zóna"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "hriste-sport"
+    ],
+    "kind": "zprava",
+    "places": [
+     "Stará plovárna"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "60/2023 Z",
+    "title": "Zúžení záměru projektu oprav chodníků v ulici Wolkerova bez vnitrobloků",
+    "summary": "Zastupitelstvo ruší záměr poptat projekční práce na opravu povrchu chodníků v ulici Wolkerova od ulice Lexova po lesopark včetně nezrekonstruovaných vnitrobloků, přijatý usnesením č. 36/2023 Z. Místo toho schvaluje záměr poptat projekční práce na opravu chodníků v téže trase bez vnitrobloků.",
+    "keywords": [
+     "oprava chodníků",
+     "chodníky",
+     "projektová dokumentace",
+     "projekční práce",
+     "Wolkerova",
+     "vnitrobloky",
+     "revokace usnesení"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Wolkerova",
+     "ul. Lexova",
+     "lesopark"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "61/2023 Z",
+    "title": "Finální podoba projektu Zpevnění komunikace Lesopark",
+    "summary": "Zastupitelstvo schvaluje finální podobu projektové dokumentace investiční akce Zpevnění komunikace Lesopark.",
+    "keywords": [
+     "Zpevnění komunikace Lesopark",
+     "lesopark",
+     "projektová dokumentace",
+     "komunikace",
+     "investiční akce"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Lesopark"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "I",
+    "discussion": "Občanky upozornily na nedostatky v údržbě zeleně a komunikaci obvodu, jedna nabídla péči o pozemek u komunitní zahrady ve spolupráci s Nadací VIA. Ing. Filip Vařecha označil odpověď úřadu za neprofesionální, navrhl restart vztahů a vyjádřil podezření z dělení zakázek, Ing. Jakub Kutílek slíbil zaměřit se příští rok na zeleň a JUDr. Bc. Jakub Jeřábek navrhl svolat jednání zastupitelů k zeleni; Ing. Petr Netolický se ptal na pozemek na konci ulice K Dolíčku. Před schválením programu stáhli předkladatelé Ing. Filip Vařecha, Jiří Rejda, DiS. a Ing. Jakub Kutílek několik zpráv."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na dopravní hřiště a kontrolu peněz poskytovaných městské policii, Ing. Jakub Kutílek na objekt Bobr. Bc. Jan Nadrchal doplnil, že demolice Bobra bude stát asi 12 mil. Kč, a navrhl vysadit stromy pro zastínění dopravního hřiště."
+   },
+   {
+    "no": "2",
+    "discussion": "Majitel firmy M-STAV CZ žádal o snížení smluvní pokuty. Ing. Milan Randák navrhl bod stáhnout, Bc. Jan Nadrchal, Ing. Petr Netolický a Ing. Pavel Bergman se vyslovili spíše proti snížení s odkazem na smlouvu a problémy firmy jinde; JUDr. Bc. Jakub Jeřábek vysvětlil postup případného soudního sporu. Starosta dal hlasovat o snížení pokuty na polovinu."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha žádal ponechat usnesení č. 101/2021 Z v platnosti, dokud se zastupitelé neshodnou na jeho nové podobě; starosta navrhl společné jednání 20. 9. 2023."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Jakub Kutílek se ptal na divadelní představení, Ing. Milan Randák odpověděl, že první se bude konat 12. 10. 2023."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Jakub Kutílek se ptal na rozhodnutí rady a žádal zvážit nepodepsání smlouvy. Ing. Filip Vařecha považoval zadávací řízení za nestandardní a šité na konkrétní firmu a ohlásil podnět ÚOHS; Ing. Petr Netolický se ptal, proč nebylo naplněno usnesení č. 101/2021 Z, JUDr. Bc. Jakub Jeřábek na poptávku projektové dokumentace. Bc. Petr Dufek uvedl, že oslovená místní firma nabídku nepodala, a Karolina Štefková, že finanční výbor částku na realizaci schválil."
+   },
+   {
+    "no": "10",
+    "discussion": "Ředitelka komunitního centra KALYNA představila jeho činnost pro občany z Ukrajiny a požádala o propagaci a finanční pomoc. Ing. Petr Netolický upozornil na opravu obrubníků při opravě chodníků v Raisově ulici, Bc. Petr Dufek na parkování obytných přívěsů a nákladních vozidel v ulici Demokratické mládeže."
+   }
+  ]
+ }
+}

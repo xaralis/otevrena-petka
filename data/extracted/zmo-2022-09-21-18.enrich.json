@@ -1,0 +1,219 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "8f9eb357bfc6ba917526e8fec3facc42a495fccce6ef2fc70322a6daf318a737",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "161/2022 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 22. 6. 2022",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu od posledního jednání zastupitelstva dne 22. 6. 2022.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "starosta"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "162/2022 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení usnesení 293/2022 R až 312/2022 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady městského obvodu a vyřazuje splněná usnesení 293/2022 R – 312/2022 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "163/2022 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení 151/2022 Z až 160/2022 Z",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje splněná usnesení 151/2022 Z – 160/2022 Z z evidence a ponechává ve sledování usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z, 101/2021 Z a 142/2022 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "nesplněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "164/2022 Z",
+    "title": "Zpráva o vyřizování stížností, petic a připomínek občanů za 4. Q 2021 – 3. Q 2022",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole vyjádření ke stížnostem, peticím a připomínkám občanů na chod úřadu městského obvodu za období 4. čtvrtletí 2021 – 3. čtvrtletí 2022.",
+    "keywords": [
+     "stížnosti",
+     "petice",
+     "připomínky občanů",
+     "kontrolní výbor",
+     "úřad městského obvodu"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "165/2022 Z",
+    "title": "Mimořádná odměna členovi zastupitelstva za zajištění videopřenosů z jednání ZMO",
+    "summary": "Návrh na poskytnutí mimořádné odměny členovi zastupitelstva za zajištění videopřenosů z jednání zastupitelstva městského obvodu ve volebním období 2018 – 2022.",
+    "keywords": [
+     "mimořádná odměna",
+     "odměna zastupiteli",
+     "videopřenosy",
+     "přenos jednání zastupitelstva",
+     "volební období 2018–2022"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "7.490,- Kč"
+    ]
+   },
+   {
+    "number": "166/2022 Z",
+    "title": "Rozbor hospodaření městského obvodu k 31. 8. 2022",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 8. 2022 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu",
+     "rozpočet 2022"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "167/2022 Z",
+    "title": "Rozbor hospodaření k 31. 5. 2022 (k bodu účetní závěrka za rok 2021)",
+    "summary": "Usnesení přijaté k bodu o informaci o schválení účetní závěrky za rok 2021 sestavené k 31. 12. 2021 zní na schválení rozboru hospodaření městského obvodu k 31. 5. 2022 uvedeného v tabulkové části zprávy a vzetí komentáře k němu na vědomí.",
+    "keywords": [
+     "účetní závěrka 2021",
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "168/2022 Z",
+    "title": "3. změna rozpočtu na rok 2022 a obnovení termínovaného vkladu 10 mil. Kč",
+    "summary": "Zastupitelstvo bere na vědomí komentář ke 3. změně rozpočtu na rok 2022, schvaluje rozpočtová opatření uvedená v bodech 1–15 důvodové zprávy a schvaluje obnovení tříměsíčního termínovaného vkladu u Československé obchodní banky, a. s. na další tři měsíce.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2022",
+     "termínovaný vklad",
+     "ČSOB",
+     "volné finanční prostředky"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": [
+     "10 mil. Kč"
+    ]
+   },
+   {
+    "number": "169/2022 Z",
+    "title": "Zpráva o činnosti Finančního výboru",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V.",
+    "keywords": [
+     "finanční výbor",
+     "zpráva o činnosti",
+     "výbor zastupitelstva"
+    ],
+    "topics": [
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání o koncepci sportovně relaxačního parku na Vinici (záměr bude předložen zastupitelstvu města) a na koordinační jednání k problematice cizinců na území města, které se obvodu týká jen okrajově."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Jiří Janoš požádal, aby se usnesení vyřazovala ze sledování až po uplynutí termínu. Ing. Petr Netolický se ptal na směrnici k vymáhání místních poplatků; úřad vysvětlil, že jde o vnitřní směrnici, kterou lze na požádání nahlédnout."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Filip Vařecha ohlásil, že se zdrží hlasování, navrhl, aby videopřenosy do budoucna zajišťoval obvod, a uvedl, že případnou odměnu předá SKP Centru. Bc. Petr Dufek upozornil, že přenosy běžely přes facebookovou stránku Pirátů a zastupitelstvo by mělo pořizování přenosů odhlasovat; Ing. Jaroslav Kňava navrhl výběrové řízení na provozovatele videopřenosů."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha kladně hodnotil čerpání rozpočtu v kapitole doprava a ptal se na výsadby zeleně; úřad odpověděl, že se ještě bude čerpat na podzimní výsadby."
+   }
+  ]
+ }
+}

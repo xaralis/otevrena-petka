@@ -1,0 +1,500 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "fe7e6d9eca8caeb7afa3467ec26635a62a61423d8c836af7cdcc7622f4a2a4fd",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 14,
+   "kind": "radne",
+   "date": "2024-12-18",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "Bc. Petr Dufek",
+    "Ing. Filip Vařecha",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Michal Hrabák",
+    "Petr Šmeral",
+    "Ing. Lic. Jaroslav Kňava"
+   ],
+   "excused": [
+    "Bc. Jan Nadrchal",
+    "Karolina Štefková"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "1",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2025",
+    "line": 57,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Jakub Kutílek",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2024-2028",
+    "line": 199,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "JUDr. Bc. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2024",
+    "line": 227,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "4. změna rozpočtu MO Pardubice V na r. 2024",
+    "line": 259,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 277,
+    "speakers": [
+     "Ing. Petr Netolický",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 294,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 314,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení investičních akcí a investičních záměrů",
+    "line": 331,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Bc. Petr Dufek",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Milan Randák",
+     "Michal Hrabák",
+     "Evžen Erban",
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Plán činnosti Kontrolního výboru ZMO Pardubice V na rok 2025",
+    "line": 421,
+    "speakers": [
+     "JUDr. Bc. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Diskuse, závěr",
+    "line": 452,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "114/2024 Z",
+    "agenda_no": "1",
+    "first_line": 86,
+    "last_line": 193,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "115/2024 Z",
+    "agenda_no": "2",
+    "first_line": 220,
+    "last_line": 222,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "116/2024 Z",
+    "agenda_no": "3",
+    "first_line": 248,
+    "last_line": 250,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "117/2024 Z",
+    "agenda_no": "4",
+    "first_line": 267,
+    "last_line": 272,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "118/2024 Z",
+    "agenda_no": "5",
+    "first_line": 288,
+    "last_line": 289,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "119/2024 Z",
+    "agenda_no": "6",
+    "first_line": 302,
+    "last_line": 306,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "120/2024 Z",
+    "agenda_no": "7",
+    "first_line": 322,
+    "last_line": 326,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "121/2024 Z",
+    "agenda_no": "8",
+    "first_line": 407,
+    "last_line": 416,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 32,
+    "last_line": 32,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise a ověřovatelé zápisu",
+    "proposer": null,
+    "motion_first_line": 30,
+    "motion_last_line": 31,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu jednání",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 195,
+    "last_line": 195,
+    "resolution": "114/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 223,
+    "last_line": 223,
+    "resolution": "115/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 251,
+    "last_line": 251,
+    "resolution": "116/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 273,
+    "last_line": 273,
+    "resolution": "117/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 290,
+    "last_line": 290,
+    "resolution": "118/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 310,
+    "last_line": 310,
+    "resolution": "119/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 327,
+    "last_line": 327,
+    "resolution": "120/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 398,
+    "last_line": 401,
+    "resolution": null,
+    "part": null,
+    "subject": "pozměňovací návrh Ing. Jakuba Kutílka k bodu 1 d) (revitalizace parkových částí nám. Dukelských hrdinů – projekt ochrany dřevin před vypsáním zakázky)",
+    "proposer": "Ing. Jakub Kutílek",
+    "motion_first_line": 393,
+    "motion_last_line": 397,
+    "procedural": false,
+    "pro": 6,
+    "proti": 3,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Milan Randák",
+      "Ing. Filip Vařecha",
+      "Ing. Petr Netolický",
+      "Ing. Pavel Bergman",
+      "Ing. Jakub Kutílek",
+      "JUDr. Bc. Jakub Jeřábek"
+     ],
+     "proti": [
+      "Michal Hrabák",
+      "Evžen Erban",
+      "Petr Šmeral"
+     ],
+     "zdrzel": [
+      "Jiří Rejda, DiS.",
+      "Bc. Petr Dufek",
+      "Mgr. Miloš Adamů, MBA.",
+      "Ing. Lic. Jaroslav Kňava"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 417,
+    "last_line": 417,
+    "resolution": "121/2024 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 448,
+    "last_line": 449,
+    "resolution": null,
+    "part": null,
+    "subject": "plán činnosti Kontrolního výboru ZMO Pardubice V na rok 2025 (pověření kontrolními úkoly)",
+    "proposer": null,
+    "motion_first_line": 433,
+    "motion_last_line": 447,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 8,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek",
+      "Ing. Pavel Bergman",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Petr Netolický"
+     ],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   }
+  ],
+  "notes": [
+   "ř. 433–450: návrh usnesení k bodu 9 (plán činnosti Kontrolního výboru na rok 2025) nemá číslo usnesení a nebyl přijat (pro 5, zdrželo se 8).",
+   "ř. 391–402: pozměňovací návrh Ing. Jakuba Kutílka k bodu 1 d) investičních záměrů nebyl přijat; poté přijato původní znění (usnesení č. 121/2024 Z)."
+  ]
+ }
+}

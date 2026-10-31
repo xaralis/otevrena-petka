@@ -1,0 +1,65 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "2f47136e67112ce917749e8298917325d0bdc47d15b63f7c54089a0172239845",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "112/2021 Z",
+    "title": "Zrušení usnesení č. 102/2021 Z o projektu revitalizace vnitrobloku H",
+    "summary": "Zastupitelstvo ruší své usnesení č. 102/2021 Z ze dne 10. 3. 2021. Podle rozpravy se týkalo projektu revitalizace tzv. vnitrobloku H na sídlišti Dukla s parkovacími místy, jehož zadávací řízení již probíhalo, a v přijaté podobě bylo podle tajemníka nesplnitelné.",
+    "keywords": [
+     "zrušení usnesení",
+     "vnitroblok H",
+     "revitalizace vnitrobloku",
+     "parkování",
+     "parkovací místa",
+     "sídliště Dukla",
+     "veřejná zakázka"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [
+     "vnitroblok H",
+     "sídliště Dukla"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "113/2021 Z",
+    "title": "Volba dvou nových členů finančního výboru",
+    "summary": "Zastupitelstvo volí podle § 84 odst. 2 písm. l) zákona o obcích dva nové členy finančního výboru zastupitelstva městského obvodu Pardubice V.",
+    "keywords": [
+     "finanční výbor",
+     "volba členů výboru",
+     "členové výboru",
+     "výbory zastupitelstva"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Starosta Jiří Rejda hájil projekt revitalizace vnitrobloku H s parkovacími místy (4 roky příprav, probíhající soutěž, koordinace s Vak) a žádal zrušení usnesení č. 102/2021 Z; Ing. Filip Vařecha navrhl protinávrh uložit starostovi zrušit dva parkovací bloky (u kpt. Nálepky a točny trolejbusů) formou vysvětlení zadávací dokumentace, který nebyl přijat. Ing. Jaroslav Kňava, Ing. Milan Randák a Evžen Erban podpořili realizaci parkoviště, Ing. Petr Netolický namítal, že projekt nebyl dostatečně projednán v zastupitelstvu a komisích, a tajemník uvedl, že změna projektu by trvala min. 5 pracovních dnů a stála cca 34.000,- Kč."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Petr Netolický jako předkladatel se omluvil za neúplnost usnesení předloženého na minulém jednání."
+   }
+  ]
+ }
+}

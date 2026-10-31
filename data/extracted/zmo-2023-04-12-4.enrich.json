@@ -1,0 +1,49 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "4fb84584dfe32da0719a276dbe035adedc4b265939309ec26690b49b012f5b8e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "35/2023 Z",
+    "title": "Stanovisko ke změně Statutu města Pardubic – poplatek z pobytu a kácení dřevin",
+    "summary": "Zastupitelstvo projednalo návrh obecně závazné vyhlášky, kterou se mění vyhláška č. 4/2019 – Statut města Pardubic, a hlasovalo o třech bodech zvlášť. Bod a) vyjadřuje souhlas s tím, aby správu místního poplatku z pobytu vykonával Magistrát města Pardubic; bod b) žádá převedení povolování kácení dřevin a ukládání náhradní výsadby na orgány městských obvodů a bod c) souhlasí se zněním vyhlášky po zapracování připomínek k čl. 1 bodu 3 a čl. 2.",
+    "keywords": [
+     "Statut města Pardubic",
+     "obecně závazná vyhláška",
+     "poplatek z pobytu",
+     "místní poplatek",
+     "kácení stromů",
+     "kácení dřevin",
+     "náhradní výsadba",
+     "přenesená působnost",
+     "magistrát",
+     "ochrana přírody"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "vyhlasky-pravidla",
+     "zelen"
+    ],
+    "kind": "stanovisko",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice",
+     "Magistrát města Pardubic"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek nesouhlasil se zachováním kompetence povolovat kácení dřevin a ukládat náhradní výsadbu u obvodů, protože ji magistrát jako obec s rozšířenou působností zvládne; Ing. Lic. Jaroslav Kňava se domníval, že magistrát na to nemá personální kapacitu. Ing. Pavel Bergman žádal vysvětlení účelu převodu správy poplatku z pobytu – starosta Jiří Rejda, DiS. uvedl, že výtěžek bude magistrát používat na posílení kultury a cestovního ruchu, tajemník doplnil, že souhlas lze kdykoliv odebrat. Bc. Petr Dufek se ptal, co se stane, pokud některý obvod souhlas neschválí – podle starosty se pak poplatek vybírat nebude."
+   },
+   {
+    "no": "2",
+    "discussion": "Starosta Jiří Rejda, DiS. informoval o jednání s Českou poštou, podle něhož pošta v ulici Jana Palacha zůstane zachována jako jediná na území obvodu."
+   }
+  ]
+ }
+}

@@ -1,0 +1,483 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "0bcb6607c183f1b354c58082b0bae43190315e558476fc4ce7b5fc1d00298e8e",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 6,
+   "kind": "radne",
+   "date": "2023-06-28",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Bc. Petra Prusáková",
+    "Ing. Lic. Jaroslav Kňava",
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Jan Nadrchal",
+    "Jiří Havrda",
+    "Ing. Petr Netolický"
+   ],
+   "excused": [
+    "JUDr. Bc. Jakub Jeřábek"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 13,
+    "name": "Bc. Petra Prusáková",
+    "event": "arrive"
+   },
+   {
+    "line": 15,
+    "name": "Bc. Jan Nadrchal",
+    "event": "arrive"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 58,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 80,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 107,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 124,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jakub Kutílek",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2023",
+    "line": 148,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Závěrečný účet MO Pardubice V za rok 2022",
+    "line": 165,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2022",
+    "line": 184,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na rok 2023",
+    "line": 197,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Milan Randák",
+     "Bc. Jan Nadrchal",
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Schválení zpracování PD, investičních akcí a investičních záměrů",
+    "line": 226,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Schválení finální podoby PD kontejnerového stání Pichlova – Rokycanova v Pardubicích",
+    "line": 243,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Rozhodnutí o pohledávce za firmou M-STAV CZ s.r.o.",
+    "line": 258,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "11",
+    "title": "Diskuse, závěr",
+    "line": 269,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Petr Netolický",
+     "Bc. Petr Dufek"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "44/2023 Z",
+    "agenda_no": "1",
+    "first_line": 101,
+    "last_line": 102,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "45/2023 Z",
+    "agenda_no": "2",
+    "first_line": 118,
+    "last_line": 121,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "46/2023 Z",
+    "agenda_no": "3",
+    "first_line": 141,
+    "last_line": 145,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "47/2023 Z",
+    "agenda_no": "4",
+    "first_line": 161,
+    "last_line": 162,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "48/2023 Z",
+    "agenda_no": "5",
+    "first_line": 171,
+    "last_line": 180,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "49/2023 Z",
+    "agenda_no": "6",
+    "first_line": 191,
+    "last_line": 194,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "50/2023 Z",
+    "agenda_no": "7",
+    "first_line": 214,
+    "last_line": 223,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "51/2023 Z",
+    "agenda_no": "8",
+    "first_line": 233,
+    "last_line": 235,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "52/2023 Z",
+    "agenda_no": "10",
+    "first_line": 252,
+    "last_line": 255,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 61,
+    "motion_last_line": 73,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 103,
+    "last_line": 103,
+    "resolution": "44/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 122,
+    "last_line": 122,
+    "resolution": "45/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 146,
+    "last_line": 146,
+    "resolution": "46/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 163,
+    "last_line": 163,
+    "resolution": "47/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 181,
+    "last_line": 181,
+    "resolution": "48/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 195,
+    "last_line": 195,
+    "resolution": "49/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 224,
+    "last_line": 224,
+    "resolution": "50/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 236,
+    "last_line": 236,
+    "resolution": "51/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 239,
+    "last_line": 240,
+    "resolution": null,
+    "part": null,
+    "subject": "změna pořadí: projednání zprávy č. 10 před zprávou č. 9",
+    "proposer": null,
+    "motion_first_line": 238,
+    "motion_last_line": 241,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 256,
+    "last_line": 256,
+    "resolution": "52/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 13–19: Bc. Petra Prusáková (přišla 17:07) a Bc. Jan Nadrchal (přišel 18:03) jsou v seznamu Přítomni a zároveň v Omluven „po část jednání“; uvedeni jen mezi přítomnými s příchodem. Přesný okamžik příchodu text neuvádí – podle počtů hlasů (program pro 12, usn. 44–49/2023 Z pro 13, od usn. 50/2023 Z pro 14) přišla Prusáková po schválení programu a Nadrchal během bodu 7 (vystupuje v diskusi na ř. 203).",
+   "ř. 73: „Stezka k vojenské nemocnici „Karanténě““ je k programu připojena bez čísla bodu; projednáno zřejmě v bodu 11 (ř. 271).",
+   "ř. 260–267: bod 9 byl starostou stažen, nehlasovalo se o něm."
+  ]
+ }
+}

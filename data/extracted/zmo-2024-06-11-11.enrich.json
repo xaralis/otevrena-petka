@@ -1,0 +1,56 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "78d0270265c7373e7ebe864afb3400cfeb65c4125b0a5152eaef2d74e5facc90",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "95/2024 Z",
+    "title": "Stanovisko k návrhu změny Statutu města Pardubic s připomínkami obvodu",
+    "summary": "Zastupitelstvo projednalo návrh obecně závazné vyhlášky, kterou se mění vyhláška č. 4/2019 – Statut města Pardubic, a souhlasí s jeho zněním po zapracování připomínek, o nichž se hlasovalo samostatně. Připomínky se týkají stanovisek obvodu k investičním a koncepčním záměrům města, provozu a údržby Císařského náhonu, vodních ploch a vodních prvků, odstraňování vraků, překážek a reklamních zařízení z místních komunikací a rozhodování o připojení místních komunikací.",
+    "keywords": [
+     "Statut města Pardubic",
+     "obecně závazná vyhláška",
+     "rozdělení kompetencí",
+     "Císařský náhon",
+     "vodní plochy",
+     "fontány a pítka",
+     "odstraňování vraků",
+     "reklamní zařízení",
+     "připojení místních komunikací",
+     "stanoviska k záměrům města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "vyhlasky-pravidla",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Císařský náhon",
+     "rybníček v Drozdicích",
+     "jezero Bajkal",
+     "vodní plocha na Čičáku",
+     "rybníček v Ohrazenicích",
+     "požární nádrž v Doubravicích"
+    ],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice",
+     "stavební úřad"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. Jakub Kutílek připomněl roli obvodu jako vlastníka pozemků při řízení o kácení dřevin a apeloval na svědomitý výkon této pravomoci; k připomínce č. 4 o připojování místních komunikací se vyjádřil negativně s tím, že tato řízení má vést odbor dopravy magistrátu, a požádal o samostatné hlasování o bodu 4. Dále diskutovali JUDr. Bc. Jakub Jeřábek, Ing. Filip Vařecha, Ing. Petr Netolický a Ing. Pavel Bergman, na některé příspěvky odpovídal tajemník."
+   },
+   {
+    "no": "2.",
+    "discussion": "Občan se ptal na noční lety na pardubickém letišti a podle něj porušované podmínky územního rozhodnutí o ochranném hlukovém pásmu; Ing. Jakub Kutílek doporučil obrátit se na příslušné orgány (stavební úřad magistrátu, orgány řešící noční klid, Zastupitelstvo města Pardubic či Pardubického kraje jako akcionáře provozovatele letiště), protože ZMO takovým orgánem není. Ing. Filip Vařecha si vyžádal podklady a starosta Jiří Rejda, DiS. požádal občana o jejich zaslání všem zastupitelům; návrh na prodloužení času na diskusi nezískal dostatek hlasů."
+   }
+  ]
+ }
+}

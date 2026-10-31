@@ -1,0 +1,257 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "10691810d82e7fd4028ee3c324ad7cc60500d98b4d8cf685a999fe77fcf73d3c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "25/2019 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 13. 3. 2019",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty MO Pardubice V za období od posledního jednání zastupitelstva dne 13. 3. 2019.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "starosta",
+     "zpráva o činnosti"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "26/2019 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení usnesení 25/2019 R až 57/2019 R z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o kontrole plnění usnesení Rady MO Pardubice V a vyřazuje splněná usnesení 25/2019 R – 57/2019 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "27/2019 Z",
+    "title": "Uložení zveřejňovat a aktualizovat projektový zásobník na webu obvodu",
+    "summary": "Zastupitelstvo ukládá starostovi zveřejnit a udržovat aktuální projektový zásobník na webu MO Pardubice V a pravidelně informovat zastupitelstvo o jeho změnách. Usnesení nahrazuje usnesení č. 35/2015 Z.",
+    "keywords": [
+     "projektový zásobník",
+     "investiční projekty",
+     "web obvodu",
+     "zveřejnění",
+     "informování zastupitelstva",
+     "úkol starostovi"
+    ],
+    "topics": [
+     "investice",
+     "kontrola"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "28/2019 Z",
+    "title": "Kontrola plnění usnesení ZMO – vyřazení splněných usnesení z kontroly",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z kontroly splněná usnesení 35/2015 Z a 17/2019 Z – 24/2019 Z a v evidenci ponechává usnesení 75/2009 Z a 95/2010 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "kontrolní výbor",
+     "vyřazení z kontroly",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "29/2019 Z",
+    "title": "Kontrola dokončených investičních akcí a výběrových řízení 2016–2018",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole dokončených investičních akcí a souvisejících výběrových řízení za období 2016–2018; nebyla zjištěna žádná pochybení.",
+    "keywords": [
+     "kontrola investic",
+     "investiční akce",
+     "výběrová řízení",
+     "veřejné zakázky",
+     "kontrolní výbor",
+     "2016–2018"
+    ],
+    "topics": [
+     "kontrola",
+     "investice",
+     "zakazky"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "30/2019 Z",
+    "title": "Kontrola poskytování informací podle zákona č. 106/1999 Sb. (1Q 2017 – 1Q 2019)",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole přístupu úřadu městského obvodu k poskytování informací podle zákona o svobodném přístupu k informacím za období 1. čtvrtletí 2017 – 1. čtvrtletí 2019; nebyla zjištěna žádná pochybení.",
+    "keywords": [
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "žádosti o informace",
+     "kontrolní výbor",
+     "kontrola úřadu"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "31/2019 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2018 a finanční vypořádání",
+    "summary": "Zastupitelstvo souhlasí s celoročním hospodařením obvodu v roce 2018 bez výhrad, bere na vědomí komentáře a přílohy závěrečného účtu a schvaluje finanční vypořádání za rok 2018 včetně sociálního fondu, aktuální rozpočet na rok 2019 a související rozpočtová opatření. Částka vypořádání s městem je schválena s podmínkou schválení Zastupitelstvem města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2018",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočet 2019",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "32/2019 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2019",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 5. 2019 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "2019"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "33/2019 Z",
+    "title": "2. změna rozpočtu MO Pardubice V na rok 2019",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje návrh 2. změny rozpočtu na rok 2019 a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2019",
+     "rozpočtové opatření",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "34/2019 Z",
+    "title": "Informace o schvalování účetní závěrky města k 31. 12. 2018",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2018 schválí zastupitelstvo města na červnovém jednání; informaci o jejím schválení obdrží na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "2018",
+     "schválení účetní závěrky",
+     "zastupitelstvo města"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. Aneta Jelínková se ptala na důležité body a výsledky jednání starosty, Ing. Jaroslav Kňava na jednání s VAK Pardubice o pracích v Mikulovické ulici a Ing. Petr Netolický na dny bez uvedené činnosti ve zprávě. Ing. Milan Randák poděkoval zastupitelům, kteří se účastnili akcí obvodu."
+   },
+   {
+    "no": "2.",
+    "discussion": "Ing. Filip Vařecha jako předseda kontrolního výboru neměl výhrady. Ing. Petr Netolický se ptal, proč rada usnesením č. 58/2019 zamítla žádost; starosta Jiří Rejda, DiS. odpověděl, že se firma výpůjčkou pozemků snažila vyhnout poplatku za zábor veřejného prostranství."
+   },
+   {
+    "no": "3.",
+    "discussion": "Ing. Filip Vařecha navrhl vyřadit ze sledování usnesení č. 35/2015 Z o pravidelném informování o projektech oprav komunikací. Ing. Jiří Hájek navrhl místo něj nové usnesení o zveřejňování projektového zásobníku na webu, Ing. Vařecha návrh podpořil."
+   },
+   {
+    "no": "4.",
+    "discussion": "Ing. Filip Vařecha konstatoval, že kontrolní výbor nezjistil nedostatky. Starosta Jiří Rejda, DiS. se ptal Ing. Petra Netolického, kdy a jak kontroloval výběrové řízení na ulici Na Záboří; ten odpověděl, že kontrolu provedl v květnu po odstranění nedostatků."
+   },
+   {
+    "no": "7.",
+    "discussion": "Ing. Jiří Hájek se ptal na počítačové kurzy; starosta odpověděl, že jeden kurz proběhl a další dva proběhnou na podzim."
+   },
+   {
+    "no": "8.",
+    "discussion": "Ing. Petr Netolický se ptal na nulové čerpání výdajů na projektové dokumentace, Ing. Filip Vařecha na to, zda bude čerpání vyšší než loňských 7 %. Starosta odpověděl, že dokumentace zatím nebyly fakturovány a čerpání bude nejméně kolem 50 %."
+   },
+   {
+    "no": "IV.",
+    "discussion": "Občané vznesli dotazy k petici z Devotyho 2445 ohledně úpravy vnitrobloku a parkování a k chybějící komunikaci s obyvateli; Ing. Filip Vařecha navrhl oslovovat dotčené obyvatele poštou, Bc. Jan Nadrchal upozornil, že zjišťování požadavků občanů prodlužuje projektovou přípravu, a Ing. Aneta Jelínková se ptala na komunikaci k vnitrobloku „H“ a na přesun letounů Gripen z Čáslavi. Ing. Petr Netolický za Komisi Jesničánky požadoval přítomnost předsedy strategické komise na příštím jednání a Ing. Jiří Hájek žádal pořádek na chodnících kolem staveniště Babylon v ulici Na Spravedlnosti."
+   }
+  ]
+ }
+}

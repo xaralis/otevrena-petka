@@ -1,0 +1,533 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "10c21c83f5bf7bb78dda57fcd6aaf1bf5789994ba176193018b4f2f4a1ebd442",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 18,
+   "kind": "radne",
+   "date": "2025-09-24",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jakub Kutílek",
+    "Bc. Petr Dufek",
+    "Ing. Filip Vařecha",
+    "Evžen Erban",
+    "Michal Hrabák",
+    "Bc. Jan Nadrchal",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Petr Šmeral"
+   ],
+   "excused": [
+    "Ing. Lic. Jaroslav Kňava",
+    "Karolina Štefková"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 58,
+    "name": "Ing. Pavel Bergman",
+    "event": "arrive"
+   },
+   {
+    "line": 407,
+    "name": "Bc. Jan Nadrchal",
+    "event": "leave"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 26,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "–",
+    "title": "Vystoupení občanů",
+    "line": 70,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Michal Hrabák"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Výstavba bytových domů „REZIDENČNÍ BYDLENÍ ČACKÉ“ ve čtvrti Nové Jesenčany",
+    "line": 109,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal",
+     "Ing. Milan Randák",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 185,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Bc. Jan Nadrchal",
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 233,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Pavel Bergman",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 257,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2025",
+    "line": 276,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Informace o schválení účetní závěrky za r. 2024 sestavené k 31. 12. 2024",
+    "line": 306,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "6",
+    "title": "4. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 324,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Informace o stavu projekčních prací na akci „PD Prodloužení stezky u Chrudimky“",
+    "line": 383,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Schválení investičních akcí a investičních záměrů",
+    "line": 387,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Bc. Jan Nadrchal",
+     "Ing. Filip Vařecha",
+     "Michal Hrabák",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Diskuse, závěr",
+    "line": 428,
+    "speakers": [
+     "Ing. Milan Randák",
+     "Ing. Petr Netolický",
+     "Ing. Pavel Bergman",
+     "Jiří Rejda, DiS.",
+     "Bc. Petr Dufek",
+     "Ing. Filip Vařecha"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "146/2025 Z",
+    "agenda_no": "9",
+    "first_line": 151,
+    "last_line": 181,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "147/2025 Z",
+    "agenda_no": "1",
+    "first_line": 228,
+    "last_line": 229,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "148/2025 Z",
+    "agenda_no": "2",
+    "first_line": 248,
+    "last_line": 253,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "149/2025 Z",
+    "agenda_no": "3",
+    "first_line": 266,
+    "last_line": 272,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "150/2025 Z",
+    "agenda_no": "4",
+    "first_line": 301,
+    "last_line": 302,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "151/2025 Z",
+    "agenda_no": "5",
+    "first_line": 318,
+    "last_line": 320,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "152/2025 Z",
+    "agenda_no": "6",
+    "first_line": 339,
+    "last_line": 379,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "153/2025 Z",
+    "agenda_no": "8",
+    "first_line": 413,
+    "last_line": 424,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 32,
+    "last_line": 32,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise (Bc. Petr Dufek, Bc. Jan Nadrchal, Ing. Filip Vařecha) a ověřovatelé zápisu (Evžen Erban, Ing. Jakub Kutílek)",
+    "proposer": null,
+    "motion_first_line": 30,
+    "motion_last_line": 31,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": null,
+    "part": null,
+    "subject": "zařazení bodu Vystoupení občanů na začátek programu",
+    "proposer": null,
+    "motion_first_line": 53,
+    "motion_last_line": 55,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu (stažení bodu 7, předřazení bodu 9 za Vystoupení občanů)",
+    "proposer": null,
+    "motion_first_line": 58,
+    "motion_last_line": 63,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 182,
+    "last_line": 182,
+    "resolution": "146/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 230,
+    "last_line": 230,
+    "resolution": "147/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 254,
+    "last_line": 254,
+    "resolution": "148/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 273,
+    "last_line": 273,
+    "resolution": "149/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 303,
+    "last_line": 303,
+    "resolution": "150/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 321,
+    "last_line": 321,
+    "resolution": "151/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 380,
+    "last_line": 380,
+    "resolution": "152/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 416,
+    "last_line": 416,
+    "resolution": "153/2025 Z",
+    "part": "Záměr poptání projekčních prací – Rekonstrukce chodníků ul. Dražkovická a Raisova",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 425,
+    "last_line": 425,
+    "resolution": "153/2025 Z",
+    "part": "Investiční záměr – Stavební úpravy DH ve vnitrobloku ul. S. K. Neumanna č.p. 2504-2506",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "ř. 15: Ing. Pavel Bergman „přišel během schvalování programu“; hlasování na ř. 32 a 56 mají 12 hlasů, na ř. 64 už 13, proto je jeho příchod zapsán na ř. 58 (mezi hlasováními).",
+   "ř. 165–168: bod b) usnesení 146/2025 Z obsahuje zkomolený text – začátek bodu c) ukončený „)“ a za ním zopakované znění bodu a); ř. 178–179: písmeno g) je v usnesení uvedeno dvakrát.",
+   "ř. 247: číslo usnesení „(usnesení č. 148/2025 Z))“ s nadbytečnou závorkou.",
+   "ř. 187, 236, 237: „Ing. Jakub Jeřábek“, v prezenci (ř. 15) „JUDr. Bc. Jakub Jeřábek“.",
+   "ř. 412–426: o usnesení 153/2025 Z se hlasovalo po částech (ř. 416 a 425); ř. 407 Bc. Jan Nadrchal odešel, obě hlasování mají 12 hlasujících.",
+   "ř. 58–59, 385: bod 7 byl stažen z programu, nehlasovalo se o něm."
+  ]
+ }
+}

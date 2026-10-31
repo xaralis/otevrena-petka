@@ -102,12 +102,17 @@ def match(raw: str, pool: list[str]) -> str | None:
         return None
     last = fold(tokens[-1])
     given = [fold(t).rstrip(".") for t in tokens[:-1]]
-    cands = [mid for mid in pool if fold(members[mid].last) == last] if pool else []
+    # compare the last word of the surname: volby.cz splits double names inconsistently
+    # ("Anna Gudrun" + "Vavrečková" in 2018, "Anna" + "Gudrun Vavrečková" in 2022)
+    known = [mid for mid in pool if mid in members]
+    surname = {mid: fold(members[mid].last).split()[-1] for mid in known}
+    cands = [mid for mid in known if surname[mid] == last]
     if not cands:
-        cands = [mid for mid in pool if len(last) > 4 and _edit1(fold(members[mid].last), last)]
+        cands = [mid for mid in known if len(last) > 4 and _edit1(surname[mid], last)]
     if len(cands) > 1 and given:
         g = given[0]
-        cands = [mid for mid in cands if fold(members[mid].first).startswith(g)]
+        cands = [mid for mid in cands
+                 if fold(members[mid].first).startswith(g) or fold(members[mid].name).startswith(g)]
     return cands[0] if len(cands) == 1 else None
 
 

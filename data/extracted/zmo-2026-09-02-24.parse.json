@@ -1,0 +1,436 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "fde09289d694b841131cee4b22369fc0d7277fef780427a5af854b6433b9dfd6",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 24,
+   "kind": "radne",
+   "date": "2026-09-02",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Ing. Pavel Bergman",
+    "Ing. Lic. Jaroslav Kňava",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Petr Šmeral",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek",
+    "Bc. Kateřina Valášek Fialová",
+    "Ing. Petr Netolický"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA.",
+    "Michal Hrabák"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 206,
+    "name": "Bc. Jan Nadrchal",
+    "event": "arrive"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 38,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 74,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 102,
+    "speakers": [
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 123,
+    "speakers": [
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Schválení aktualizovaných postupů knihovny MO Pardubice V",
+    "line": 142,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Informace o schválení účetní závěrky za r. 2025 sestavené k 31. 12. 2025",
+    "line": 155,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Zpráva o činnosti Finančního výboru ZMO Pardubice V ve volebním období 2022 - 2026",
+    "line": 171,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 7. 2026",
+    "line": 187,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "4. změna rozpočtu MO Pardubice V na r. 2026",
+    "line": 208,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Diskuse, závěr",
+    "line": 282,
+    "speakers": [
+     "Karolina Štefková",
+     "Jiří Rejda, DiS.",
+     "Ing. Pavel Bergman",
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Petr Netolický",
+     "Ing. Filip Vařecha",
+     "Bc. Petr Dufek",
+     "Ing. Milan Randák"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "183/2026 Z",
+    "agenda_no": "1",
+    "first_line": 97,
+    "last_line": 98,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "184/2026 Z",
+    "agenda_no": "2",
+    "first_line": 114,
+    "last_line": 119,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "185/2026 Z",
+    "agenda_no": "3",
+    "first_line": 131,
+    "last_line": 138,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "186/2026 Z",
+    "agenda_no": "4",
+    "first_line": 150,
+    "last_line": 151,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "187/2026 Z",
+    "agenda_no": "5",
+    "first_line": 165,
+    "last_line": 167,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "188/2026 Z",
+    "agenda_no": "6",
+    "first_line": 182,
+    "last_line": 183,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "189/2026 Z",
+    "agenda_no": "7",
+    "first_line": 202,
+    "last_line": 203,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "190/2026 Z",
+    "agenda_no": "8",
+    "first_line": 222,
+    "last_line": 278,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 36,
+    "last_line": 36,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise (Ing. Filip Vařecha, JUDr. Bc. Jakub Jeřábek, Ing. Lic. Jaroslav Kňava) a ověřovatelé (Ing. Petr Netolický, Bc. Petr Dufek)",
+    "proposer": null,
+    "motion_first_line": 33,
+    "motion_last_line": 35,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 68,
+    "last_line": 68,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 58,
+    "motion_last_line": 67,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 99,
+    "last_line": 99,
+    "resolution": "183/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 120,
+    "last_line": 120,
+    "resolution": "184/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 139,
+    "last_line": 139,
+    "resolution": "185/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 152,
+    "last_line": 152,
+    "resolution": "186/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 168,
+    "last_line": 168,
+    "resolution": "187/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 184,
+    "last_line": 184,
+    "resolution": "188/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Bc. Kateřina Valášek Fialová"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 204,
+    "last_line": 204,
+    "resolution": "189/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 279,
+    "last_line": 279,
+    "resolution": "190/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "ř. 15 a 20: Bc. Jan Nadrchal je uveden zároveň mezi přítomnými („od 17:35 hod.“) i omluvenými („přišel v 17:35 hod.“); veden jako přítomný s příchodem.",
+   "ř. 206: příchod Bc. Jana Nadrchala v 17:35 je zapsán až za hlasováním o usnesení 189/2026 Z (ř. 204), ale text uvádí, že k tomuto bodu již hlasoval (pro 13)."
+  ]
+ }
+}

@@ -1,0 +1,336 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "2af5250d7ab1674cca4b8866a569ab31067c7afc4044fa98fddc642200b51e4f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "35/2019 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 26. 6. 2019",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 26. 6. 2019.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "36/2019 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení 58–77/2019 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady a vyřazuje z evidence sledování splněná usnesení 58/2019 R až 77/2019 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "37/2019 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných a ponechání ve sledování",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z kontroly vyřazuje splněná usnesení 25/2019 Z – 26/2019 Z a 28/2019 Z – 34/2019 Z, v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z a 27/2019 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "kontrolní výbor",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "38/2019 Z",
+    "title": "Zpráva Kontrolního výboru o vyřizování stížností a petic 3 Q 2017 – 3 Q 2019",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole vyjádření ke stížnostem, peticím a připomínkám občanů na chod úřadu městského obvodu za období 3 Q 2017 – 3 Q 2019.",
+    "keywords": [
+     "stížnosti",
+     "petice",
+     "připomínky občanů",
+     "kontrolní výbor",
+     "vyřizování stížností"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "39/2019 Z",
+    "title": "Výzva Radě města k pracovní skupině ke změně Statutu města Pardubic",
+    "summary": "Návrh vyzývá Radu města Pardubice, aby vytvořila pracovní skupinu ke změně Statutu města ze zástupců politických klubů, obvodů a dalších zástupců města, a aby do jejího projednání předkládala zastupitelstvu města jen změny Statutu vyžadované změnou legislativy.",
+    "keywords": [
+     "Statut města Pardubic",
+     "pracovní skupina",
+     "změna statutu",
+     "kompetence obvodů",
+     "Rada města Pardubic"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "stanovisko",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada města Pardubic",
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "40/2019 Z",
+    "title": "Stanovisko k návrhu nového Statutu města Pardubic s připomínkami",
+    "summary": "Zastupitelstvo projednalo návrh obecně závazné vyhlášky, kterou se vydává Statut města Pardubic, a schvaluje jeho znění s řadou připomínek. Nesouhlasí mj. se změnami lhůty v čl. 23, s odebráním vlastnických práv při uzavírkách a vyhrazeném parkování v zóně placeného stání a s úpravou pasportu zeleně; navrhuje přednostní právo obvodu na nebytové prostory města a doplnění kompetencí obvodů ve školství, kulturních akcích a vydávání zpravodaje.",
+    "keywords": [
+     "Statut města Pardubic",
+     "obecně závazná vyhláška",
+     "připomínky ke statutu",
+     "kompetence obvodů",
+     "pasport zeleně",
+     "zóna placeného stání",
+     "nebytové prostory",
+     "školy",
+     "zpravodaj"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "stanovisko",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "41/2019 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2019",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 8. 2019 v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2019",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "42/2019 Z",
+    "title": "3. změna rozpočtu na rok 2019 a rozpočtu sociálního fondu",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje 3. změnu rozpočtu městského obvodu na rok 2019 a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2019",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "43/2019 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2018",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic dne 20. 6. 2019 schválilo účetní závěrku statutárního města Pardubic za rok 2018 včetně městských obvodů, sestavenou k 31. 12. 2018.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2018",
+     "hospodaření města"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "44/2019 Z",
+    "title": "Nový jednací řád Zastupitelstva MO Pardubice V",
+    "summary": "Zastupitelstvo schvaluje nový jednací řád, který plně nahrazuje jednací řád z roku 2002, a ukládá tajemníkovi úřadu zpracovat a udržovat výtah z jednacího řádu pro veřejnost na webových stránkách obvodu.",
+    "keywords": [
+     "jednací řád",
+     "jednání zastupitelstva",
+     "pravidla jednání",
+     "výtah pro veřejnost",
+     "webové stránky"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "45/2019 Z",
+    "title": "Měsíční odměna 400 Kč pro člena výboru, který není zastupitelem",
+    "summary": "Zastupitelstvo schvaluje od 25. 9. 2019 měsíční odměnu za funkci člena kontrolního nebo finančního výboru pro osobu, která není členem zastupitelstva obvodu.",
+    "keywords": [
+     "odměna člena výboru",
+     "finanční výbor",
+     "kontrolní výbor",
+     "peněžní plnění",
+     "nečlen zastupitelstva"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "400,- Kč"
+    ]
+   },
+   {
+    "number": "46/2019 Z",
+    "title": "Podklady k výběrovému řízení na veřejné griloviště předložit radě",
+    "summary": "Zastupitelstvo pověřuje starostu, aby veškeré podklady pro připravované výběrové řízení na veřejné griloviště předložil ke schválení radě obvodu ještě před jeho vypsáním.",
+    "keywords": [
+     "veřejné griloviště",
+     "grilování",
+     "výběrové řízení",
+     "veřejná zakázka",
+     "rada obvodu"
+    ],
+    "topics": [
+     "zakazky",
+     "hriste-sport"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "47/2019 Z",
+    "title": "Jednání s městem o dopravních opatřeních v ulici Na Spravedlnosti a okolí",
+    "summary": "Zastupitelstvo pověřuje starostu jednáním s Radou města Pardubic o urychlení přípravy dopravních opatření v ulicích Na Spravedlnosti, S. K. Neumanna, Pichlova a K Vinici.",
+    "keywords": [
+     "dopravní opatření",
+     "doprava",
+     "Na Spravedlnosti",
+     "S. K. Neumanna",
+     "Pichlova",
+     "K Vinici",
+     "Rada města Pardubic"
+    ],
+    "topics": [
+     "doprava",
+     "vztahy-mesto"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Na Spravedlnosti",
+     "S. K. Neumanna",
+     "Pichlova",
+     "K Vinici"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rada města Pardubic"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. Filip Vařecha se ptal na změny v projektu Dukly sportovní, na schůzku s OHA ke cyklostezce Dražkovice a na opatření proti parkování při Velké pardubické; starosta Jiří Rejda, DiS. odpověděl, že bude zkušebně zaveden zákaz vjezdu a posílena městská policie. Ing. Jiří Hájek se ptal na prohlídku nebytových prostor v ulici A. Krause (obvod hledá prostory pro knihovnu a klub seniorů) a na ocenění starosty od armády."
+   },
+   {
+    "no": "4.",
+    "discussion": "Ing. Filip Vařecha jako předseda kontrolního výboru uvedl, že výbor nezjistil pochybení, jen jedna petice podaná datovou schránkou chyběla v evidenci a byla zodpovězena poštou. Ing. Milan Randák kritizoval řízení kontrolního výboru, kde se dohodnuté věci mění e-mailem, a navrhl vypracovat statut výboru. Diskutovali dále Ing. Jaroslav Kňava, Petr Hemský a Ing. Petr Netolický."
+   },
+   {
+    "no": "5.",
+    "discussion": "Ing. Filip Vařecha kritizoval tlak magistrátu na přijetí Statutu a navrhl dvě usnesení o pracovní skupině ke změně Statutu. Ing. Jiří Hájek se ptal, jak bude starosta hlasovat o Statutu na zastupitelstvu města; starosta to podle svých slov nemohl zatím sdělit. Ing. Jaroslav Kňava varoval, že změny Statutu odebírají obvodům kompetence, a navrhl případně svolat mimořádné zastupitelstvo."
+   },
+   {
+    "no": "6.",
+    "discussion": "Ing. Jiří Hájek se ptal na navýšení částky na bezpečnostní kamery a na PC kurzy. Ing. Filip Vařecha se ptal na reklamaci stavebních prací v ulici Holcova; úřad odpověděl, že fotografie vznikly před opravou a dílo je převzaté."
+   },
+   {
+    "no": "7.",
+    "discussion": "Ing. Petr Netolický se ptal, kdo navrhl rozpočtovou položku na veřejná griloviště; starosta uvedl, že ji schválil finanční výbor a vysoká cena je odhadem pro antivandalové provedení. Ing. Filip Vařecha žádal o podklady; diskutovali dále Ing. Jiří Hájek a Ing. Jaroslav Kňava. Jednání bylo poté na 5 minut přerušeno."
+   },
+   {
+    "no": "9.",
+    "discussion": "Ing. Filip Vařecha představil nový jednací řád – zveřejňování materiálů s předstihem i pro občany, možnost veřejnosti vystoupit hned se svým návrhem a krátké shrnutí pro občany. Starosta poděkoval České pirátské straně za spolupráci."
+   },
+   {
+    "no": "10.",
+    "discussion": "Ing. Jaroslav Kňava se ptal, od kdy bývalá zastupitelka a členka finančního výboru nebydlí v obvodu, a nesouhlasil s tím, aby ve výboru zůstala. Ing. Milan Randák navrhl odměnu 400 Kč měsíčně; Ing. Filip Vařecha podpořil její setrvání ve výboru."
+   },
+   {
+    "no": "IV.",
+    "discussion": "Ing. Petr Netolický navrhl usnesení o předložení podkladů k výběrovému řízení na griloviště radě a Ing. Jiří Hájek usnesení o jednání s městem o dopravních opatřeních. Ing. Filip Vařecha kritizoval fungování strategické komise a ptal se na rekonstrukci ulice S. K. Neumanna a revitalizaci nám. Dukelských hrdinů; diskutovali Ing. Milan Randák, Bc. Jan Nadrchal a Ing. Jaroslav Kňava. Starosta požádal Českou pirátskou stranu o kalkulaci videopřenosů ze zastupitelstva."
+   }
+  ]
+ }
+}

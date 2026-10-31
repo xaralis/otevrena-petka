@@ -1,0 +1,223 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b1b8a7b2cb369e9a81c519d302ca2a4e2420e4b158145ba80624c2044586f29f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "36/2023 Z",
+    "title": "Záměr projekčních prací na investiční akce a investiční záměry k realizaci v roce 2023",
+    "summary": "Zastupitelstvo schvaluje záměr poptat projekční práce na investiční akce – zvětšené kontejnerové stání Pichlova x Rokycanova, zpevnění cesty v lesoparku od ZŠ Josefa Ressla, opravy chodníků v ulicích Lexova a Wolkerova a Relaxační zónu Stará plovárna. Současně schvaluje investiční záměry k realizaci v roce 2023: opravy parkovacích ploch v Jiránkově ulici, rekonstrukce chodníků v ulicích Raisova a Široká a stavební úpravy komunikace a chodníku v ulici Na Záboří.",
+    "keywords": [
+     "projektová dokumentace",
+     "investiční akce",
+     "kontejnerové stání",
+     "oprava chodníku",
+     "parkoviště",
+     "lesopark",
+     "Relaxační zóna Stará plovárna",
+     "Jiránkova",
+     "Wolkerova",
+     "Na Záboří"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "cistota"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Pichlova",
+     "Rokycanova",
+     "lesopark",
+     "ZŠ Josefa Ressla",
+     "Lexova",
+     "Wolkerova",
+     "Kpt. Nálepky",
+     "Stará plovárna",
+     "Jiránkova",
+     "Raisova",
+     "Široká",
+     "Na Záboří"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "37/2023 Z",
+    "title": "2. změna rozpočtu MO Pardubice V na rok 2023",
+    "summary": "Zastupitelstvo bere na vědomí komentář a doplňující informace k 2. změně rozpočtu na rok 2023 a schvaluje rozpočtová opatření uvedená v bodech 1–7 důvodové zprávy. Zároveň schvaluje úpravu plánu společenských akcí – zvýšení částky na akci Ochutnávka svatomartinského vína o 40 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2023",
+     "plán společenských akcí",
+     "Ochutnávka svatomartinského vína"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "40 tis. Kč"
+    ]
+   },
+   {
+    "number": "38/2023 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 3. 2023",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 3. 2023 uvedený v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čtvrtletí",
+     "1. čtvrtletí 2023",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "39/2023 Z",
+    "title": "Zpráva o činnosti starosty od jednání 22. 2. 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 22. 2. 2023.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelům"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "40/2023 Z",
+    "title": "Kontrola plnění usnesení Rady MO Pardubice V",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady; vyřazuje z evidence splněná usnesení 22/2023 R – 29/2023 R a 32/2023 R – 35/2023 R a v evidenci ponechává usnesení 30/2023 R a 31/2023 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "41/2023 Z",
+    "title": "Kontrola plnění usnesení Zastupitelstva MO Pardubice V",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva; vyřazuje z evidence splněná usnesení 24/2023 Z – 34/2023 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z, 101/2021 Z, 142/2022 Z, 16/2022 Z a 23/2023 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "42/2023 Z",
+    "title": "Kontrola poskytování informací úřadem podle zákona 106/1999 Sb.",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole přístupu ÚMO Pardubice V k poskytování informací podle zákona o svobodném přístupu k informacím za období 3. Q 2022 – 1. Q 2023; nebyla zjištěna žádná pochybení.",
+    "keywords": [
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "žádosti o informace",
+     "Kontrolní výbor",
+     "kontrola úřadu"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "43/2023 Z",
+    "title": "Živý přenos a audiovizuální záznam z jednání zastupitelstva",
+    "summary": "Souhlas zastupitelstva s pořizováním živého audiovizuálního přenosu a audiovizuálního záznamu z jednání Zastupitelstva městského obvodu Pardubice V.",
+    "keywords": [
+     "živý přenos",
+     "audiovizuální záznam",
+     "videozáznam",
+     "nahrávání jednání",
+     "zastupitelstvo",
+     "transparentnost"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek nesouhlasil s rozšířením kontejnerového stání Pichlova x Rokycanova, navrhl řešit v ul. Wolkerova oba chodníky s komunikací najednou a požádal o oddělené hlasování; Bc. Petr Dufek a starosta Jiří Rejda, DiS. hájili postupnou opravu a Ing. Milan Randák požadoval oslovit dotčená SVJ. Ing. Filip Vařecha se ptal na konkrétní záměr u „vojenské plovárny“ a na dřívější územní studii, starosta popsal vizi dvou relaxačně sportovních zón."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Filip Vařecha zpochybnil schválení vyšší částky na záměr, o němž zastupitelé nemají bližší informace, a žádal podklady na příští jednání; Ing. Jaroslav Kňava a starosta Jiří Rejda, DiS. návrh hájili a starosta slíbil zaslat vizualizaci. JUDr. Bc. Jakub Jeřábek se ptal, zda jsou volné prostředky obvodu na termínovaném vkladu, úřad to potvrdil."
+   },
+   {
+    "no": "4",
+    "discussion": "Zastupitelé poděkovali starostovi za podrobnou zprávu o jeho činnosti."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Jakub Kutílek se ptal na pozemky v k. ú. Dražkovice ve vztahu ke „Krajinářskému návrhu Dražkovice“, na usnesení č. 26/2023 Z o prodeji nebytových prostor, s jehož kladným stanoviskem nesouhlasil, a na získání parcely v ul. Na Spravedlnosti. K prodeji nebytových prostor se vyjádřili Ing. Jaroslav Kňava, Evžen Erban a Bc. Petr Dufek; starosta Jiří Rejda, DiS. slíbil zaslat dřívější usnesení zastupitelstva k nebytovým prostorům."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha jménem klubu podpořil pořizování záznamů, ale nesouhlasil s cenou 13.000,- Kč a navrhl zajistit záznam levněji, např. samostatnou osobou na DPČ; tajemník úřadu vysvětlil, jak byla cena poptána."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Jakub Kutílek upozornil na územní řízení o nové trafostanici ČEZ ve veřejné zeleni na Zborovském náměstí u Salesiánů a přednesl svou námitku; Bc. Jan Nadrchal navrhl umístění na městském pozemku za kontejnery a JUDr. Bc. Jakub Jeřábek doporučil podat námitku na stavební úřad. Do diskuse se zapojili i Ing. Filip Vařecha, Ing. Milan Randák a Ing. Pavel Bergman; starosta Jiří Rejda, DiS. podá námitku a sejde se se Salesiány."
+   }
+  ]
+ }
+}

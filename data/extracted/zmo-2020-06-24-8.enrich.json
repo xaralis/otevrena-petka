@@ -1,0 +1,264 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "f2f7b1600f8a989bd5086cd18a081ec6697c93b721d70dc2d345d5697f106262",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "68/2020 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 11. 3. 2020",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty MO Pardubice V za období od posledního jednání zastupitelstva dne 11. 3. 2020.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "jednání starosty",
+     "informace zastupitelům"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "69/2020 Z",
+    "title": "Kontrola plnění usnesení RMO – vyřazení splněných usnesení 105–117/2020 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady obvodu a vyřazuje z evidence sledování splněná usnesení 105/2020 R až 117/2020 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "70/2020 Z",
+    "title": "Kontrola plnění usnesení ZMO – vyřazení 58–66/2020 Z, ostatní ponechána v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z kontroly splněná usnesení 58/2020 Z až 66/2020 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 46/2019 Z, 47/2019 Z a 67/2020 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "kontrolní výbor",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "71/2020 Z",
+    "title": "Zpráva Kontrolního výboru o kontrole smluvních vztahů (DPP, DPČ)",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole smluvních vztahů obvodu – dohod o provedení práce a dohod o pracovní činnosti.",
+    "keywords": [
+     "kontrolní výbor",
+     "kontrola smluv",
+     "dohoda o provedení práce",
+     "DPP",
+     "dohoda o pracovní činnosti",
+     "DPČ",
+     "pověřenec GDPR"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "72/2020 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2019 a finanční vypořádání",
+    "summary": "Zastupitelstvo souhlasí s celoročním hospodařením obvodu v roce 2019 bez výhrad, bere na vědomí komentáře a přílohy závěrečného účtu a schvaluje finanční vypořádání za rok 2019 včetně sociálního fondu, aktuální rozpočet na rok 2020 a související rozpočtová opatření. Částku finančního vypořádání mezi městem a obvodem schvaluje s podmínkou, že ji schválí i Zastupitelstvo města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2019",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočet 2020",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "73/2020 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2020",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 5. 2020 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu",
+     "rozpočet 2020"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "74/2020 Z",
+    "title": "2. změna rozpočtu na rok 2020 a snížení rozpočtu na Slavnost MO Pardubice V",
+    "summary": "Zastupitelstvo schvaluje 2. změnu rozpočtu obvodu a rozpočtu sociálního fondu na rok 2020 a související rozpočtová opatření. Zároveň upravuje plán společenských akcí na rok 2020 snížením rozpočtované částky na Slavnost MO Pardubice V o 225,6 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "rozpočet 2020"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "225,6 tis. Kč"
+    ]
+   },
+   {
+    "number": "75/2020 Z",
+    "title": "Informace o schválení účetní závěrky k 31. 12. 2019 zastupitelstvem města",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2019 schválí zastupitelstvo města na červnovém jednání; informaci o jejím schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2019",
+     "zastupitelstvo města",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "76/2020 Z",
+    "title": "Pracovní skupina pro směrnici o péči a údržbě zeleně",
+    "summary": "Zastupitelstvo ukládá starostovi svolat do 31. 12. 2020 pracovní skupinu z úředníků, zastupitelů a odborné veřejnosti (za každý politický subjekt nejvýše jedna osoba), která vytvoří směrnici o péči a údržbě zeleně. Usnesení vzešlo z projednání bodu Rychlá opatření proti suchu.",
+    "keywords": [
+     "péče o zeleň",
+     "údržba zeleně",
+     "směrnice",
+     "pracovní skupina",
+     "sucho",
+     "opatření proti suchu"
+    ],
+    "topics": [
+     "zelen",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "77/2020 Z",
+    "title": "Ztotožnění se závěry strategické komise k územní studii S. K. Neumanna",
+    "summary": "Návrh, aby se zastupitelstvo plně ztotožnilo se závěry Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V ze dne 15. 6. 2020 k územní studii S. K. Neumanna s poukazem na problémy zeleně, občanské vybavenosti a dopravy.",
+    "keywords": [
+     "územní studie S. K. Neumanna",
+     "S. K. Neumanna",
+     "strategická komise",
+     "developerský projekt",
+     "zeleň",
+     "občanská vybavenost",
+     "doprava"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "komise-vybory",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ulice S. K. Neumanna"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Martin Merhout se ptal na jednání o prodeji objektu Bobr. Ing. Filip Vařecha se ptal na střelnici Vinice, kácení dřevin u Terminálu JIH v ul. K Vápence a koordinaci rekonstrukce ul. Na Spravedlnosti; Ing. Petr Netolický na účast starosty na jednáních strategické komise k územní studii S. K. Neumanna. Ing. Jiří Hájek se ptal na petici proti kácení lip v Pichlově ulici, předzahrádky, autovraky a termín křižovatky ul. S. K. Neumanna a Na Spravedlnosti."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha jako předseda kontrolního výboru informoval, že při kontrole DPP a DPČ byla zjištěna chyba ve výkazu pověřence GDPR (chyběl počet odpracovaných hodin). Do diskuse se zapojili Ing. Milan Randák a Ing. Petr Netolický."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha se ptal na opravu mobiliáře v lesoparku Dukla, harmonogram přesunu knihovny v ul. J. Ressla a čerpání položky projektové dokumentace; starosta uvedl, že oprava a výběr projektanta se zpozdily kvůli nouzovému stavu."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha se ptal na připravenost rozpočtu na propad příjmů kvůli nouzovému stavu; úřad odpověděl, že je připravena rezerva, a zazněla informace o příslibu města na 7 mil. Kč na projekt H."
+   },
+   {
+    "no": "9",
+    "discussion": "Bc. Jan Nadrchal považoval navržená usnesení Ing. Filipa Vařechy k rychlým opatřením proti suchu za právně nesprávně sepsaná; starosta se vyslovil principiálně pro opatření s tím, že některé kroky již probíhají. Po diskusi Ing. Filip Vařecha zprávu stáhl a Bc. Jan Nadrchal předložil usnesení o pracovní skupině pro směrnici o péči o zeleň."
+   },
+   {
+    "no": "IV",
+    "discussion": "Ing. Filip Vařecha se ptal, zda vedení obvodu zná a přijme postup navržený strategickou komisí k územní studii S. K. Neumanna, a kritizoval článek developera ve zpravodaji. Ing. Petr Netolický navrhl nové usnesení k územní studii, Ing. Jiří Hájek navrhl otevřenou diskusi s občany; na návrh Bc. Jana Nadrchala bylo hlasování o usnesení Ing. Netolického umožněno."
+   }
+  ]
+ }
+}

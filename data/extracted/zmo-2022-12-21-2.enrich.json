@@ -1,0 +1,306 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "4dd88afeb5664424728a11a2029b08dd9dcc2c6d16fa78ba6436add67adbc703",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "12/2022 Z",
+    "title": "Zpráva o činnosti starosty od jednání 19. 10. 2022",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty MO Pardubice V za období od posledního jednání zastupitelstva dne 19. 10. 2022.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelstvu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "13/2022 Z",
+    "title": "Plán činnosti Kontrolního výboru na rok 2023",
+    "summary": "Zastupitelstvo schvaluje plán činnosti Kontrolního výboru ZMO Pardubice V na rok 2023 rozdělený do šesti kontrol: kromě pravidelné kontroly plnění usnesení RMO a ZMO jde o kontrolu smluvních vztahů (DPP, DPČ), poskytování informací podle zákona č. 106/1999 Sb., vyřizování stížností a petic, zadávacích řízení veřejných zakázek a obsahu webových stránek obvodu. Plán bude průběžně doplňován o úkoly uložené zastupitelstvem.",
+    "keywords": [
+     "kontrolní výbor",
+     "plán kontrol 2023",
+     "kontrola plnění usnesení",
+     "dohody o provedení práce",
+     "svobodný přístup k informacím",
+     "stížnosti a petice",
+     "veřejné zakázky",
+     "webové stránky obvodu"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "14/2022 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2022",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření MO Pardubice V k 30. 11. 2022 uvedený v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu 2022"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "15/2022 Z",
+    "title": "4. změna rozpočtu MO Pardubice V na rok 2022",
+    "summary": "Zastupitelstvo bere na vědomí komentář ke 4. změně rozpočtu na rok 2022 a schvaluje rozpočtová opatření v bodech 1–24 důvodové zprávy. Navíc schvaluje opatření předložené přímo na jednání – přesun 208,3 tis. Kč u položky rekonstrukce části chodníku Dražkovice – východ z kapitálových do běžných výdajů v kapitole doprava.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2022",
+     "chodník Dražkovice",
+     "rekonstrukce chodníku",
+     "kapitálové výdaje"
+    ],
+    "topics": [
+     "rozpocet",
+     "doprava"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "208,3 tis. Kč"
+    ]
+   },
+   {
+    "number": "16/2022 Z",
+    "title": "Úkol radě sestavit střednědobý a dlouhodobý plán investic",
+    "summary": "Zastupitelstvo ukládá Radě MO Pardubice V sestavit střednědobý a dlouhodobý plán investic obvodu, který pokryje významnou část nevyužitých prostředků v rezervě rozpočtu. Kontrolní termín je jednání zastupitelstva 28. 6. 2023.",
+    "keywords": [
+     "plán investic",
+     "střednědobý plán investic",
+     "dlouhodobý plán investic",
+     "rezerva rozpočtu",
+     "investice obvodu",
+     "úkol radě"
+    ],
+    "topics": [
+     "investice",
+     "rozpocet"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "17/2022 Z",
+    "title": "Rozpočet MO Pardubice V na rok 2023 a pravidla hospodaření",
+    "summary": "Zastupitelstvo schvaluje rozpočet MO Pardubice V a rozpočet sociálního fondu na rok 2023, včetně úpravy na jednání, která přesouvá 4 200 tis. Kč z rezervy na stavební úpravy vnitrobloku Wolkerova. Svěřuje radě pravomoc provádět vymezená rozpočtová opatření a stanoví pravidla pro rozpis rozpočtu, technické přesuny, plán společenských akcí, dárky občanům a jubilantům a propagační předměty. Schvaluje také směrnici č. 7/2022-1 – Pravidla hospodaření se sociálním fondem, která k 31. 12. 2022 ruší směrnici č. 7/2022.",
+    "keywords": [
+     "rozpočet 2023",
+     "sociální fond",
+     "vnitroblok Wolkerova",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice č. 7/2022-1"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "investice"
+    ],
+    "kind": "rozpocet",
+    "places": [
+     "vnitroblok Wolkerova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "odbor ekonomický",
+     "finanční výbor"
+    ],
+    "amounts": [
+     "4 200 tis. Kč",
+     "300 tis. Kč vč.",
+     "1 000,-- Kč vč. na osobu",
+     "200,- Kč vč.",
+     "1 000,-- Kč vč",
+     "500,-- Kč vč."
+    ]
+   },
+   {
+    "number": "18/2022 Z",
+    "title": "Aktualizace střednědobého výhledu rozpočtu na roky 2022–2025",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje aktualizovaný střednědobý výhled rozpočtu MO Pardubice V na roky 2022–2025 uvedený v tabulkové části zprávy.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2022–2025"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "19/2022 Z",
+    "title": "Sčítání odměn neuvolněných zastupitelů při souběhu funkcí",
+    "summary": "Zastupitelstvo schvaluje od 1. 1. 2023 sčítání odměn neuvolněných členů zastupitelstva v případě souběhu funkcí podle § 74 odst. 3 zákona č. 99/2017 Sb.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění zastupitelé",
+     "souběh funkcí",
+     "sčítání odměn"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "20/2022 Z",
+    "title": "Odměna členům výborů, kteří nejsou zastupiteli",
+    "summary": "Zastupitelstvo schvaluje od 1. 1. 2023 měsíční odměnu 1400 Kč za funkci člena kontrolního nebo finančního výboru osobám, které nejsou členy zastupitelstva.",
+    "keywords": [
+     "odměna členům výborů",
+     "kontrolní výbor",
+     "finanční výbor",
+     "nečlenové zastupitelstva",
+     "měsíční odměna"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": [
+     "1400 Kč"
+    ]
+   },
+   {
+    "number": "21/2022 Z",
+    "title": "Odměna členům komisí rady, kteří nejsou zastupiteli",
+    "summary": "Zastupitelstvo schvaluje od 1. 1. 2023 měsíční odměnu 700 Kč za funkci člena komise rady osobám, které nejsou členy zastupitelstva.",
+    "keywords": [
+     "odměna členům komisí",
+     "komise rady",
+     "nečlenové zastupitelstva",
+     "měsíční odměna"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "700,- Kč"
+    ]
+   },
+   {
+    "number": "22/2022 Z",
+    "title": "Změna složení Kontrolního výboru",
+    "summary": "Zastupitelstvo k 21. 12. 2022 revokuje usnesení č. 3/2022 Z v části volby jednoho člena kontrolního výboru (místostarosta nemůže být členem výboru) a volí do Kontrolního výboru ZMO Pardubice V nového člena.",
+    "keywords": [
+     "kontrolní výbor",
+     "revokace usnesení",
+     "volba člena výboru",
+     "odvolání člena výboru",
+     "změna složení výboru"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek požádal místostarostu Evžena Erbana o předkládání zpráv o jeho činnosti a ptal se na jednání ke Zborovskému náměstí a k nadaci pro rozvoj města. Ing. Filip Vařecha se ptal na jednání se SKP, s odborem OMI k házenkářskému hřišti, s primátorem k lokalitám Na Spravedlnosti a S. K. Neumanna a k rozšíření stání na bioodpad; starosta Jiří Rejda, DiS. odpovídal."
+   },
+   {
+    "no": "2",
+    "discussion": "Starosta Jiří Rejda, DiS. požádal o vyškrtnutí a bližší specifikaci kontroly zákonnosti vynakládání prostředků (3/2023), Ing. Filip Vařecha jako předseda KV návrh přijal. JUDr. Bc. Jakub Jeřábek uvedl, že bod upřesní podle metodiky ministerstva vnitra."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha upozornil na dlouhodobě vysokou rezervu rozpočtu a uvedl, že prostředky by měly jít do investičního rozvoje obvodu."
+   },
+   {
+    "no": "4",
+    "discussion": "Úřad upozornil na zprávu předloženou na stůl."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Jakub Kutílek se ptal na dofinancování investic s nulovými řádky (vnitrobloky Wolkerova, chodníky Na Záboří, parkoviště Jiránkova). Ing. Filip Vařecha navrhl usnesení o střednědobém a dlouhodobém plánu investic, ke staré vojenské plovárně přijal místo usnesení příslib starosty a ptal se na výdaje na IT; Ing. Lic. Jaroslav Kňava, Evžen Erban a Bc. Petr Dufek diskutovali o úloze strategické komise a rady. JUDr. Bc. Jakub Jeřábek se ptal na uložení termínovaného vkladu."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha navrhl odměnu 1.400 Kč."
+   },
+   {
+    "no": "9",
+    "discussion": "Starosta poděkoval předkladateli Ing. Jakubu Kutílkovi za zpracování zprávy."
+   },
+   {
+    "no": "10",
+    "discussion": "JUDr. Bc. Jakub Jeřábek vysvětlil, že místostarosta nemůže být členem výboru, a proto je navržena revokace usnesení č. 3/2022 Z."
+   },
+   {
+    "no": "11",
+    "discussion": "Ing. Lic. Jaroslav Kňava se ptal na videozáznamy jednání a obsazení komisí, Ing. Petr Netolický na opravu komunikace po akci VAK Pardubice a na petici proti výstavbě bytových domů v ulicích Čacká a K Dolíčku. Evžen Erban upozornil na problém s dopravní obslužností po úpravě chodníků, JUDr. Bc. Jakub Jeřábek na nedostatek parkování v ulici B. V. Kunětické; starosta odpověděl, že parkovací zóny řeší město."
+   }
+  ]
+ }
+}

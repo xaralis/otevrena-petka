@@ -1,0 +1,462 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "9f6645372c7992b1b6bfbdeea5a85ee143ac550dabf28a471efcb5b264fe3748",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 21,
+   "kind": "radne",
+   "date": "2026-03-11",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Milan Randák",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Michal Hrabák",
+    "Ing. Pavel Bergman",
+    "Petr Šmeral",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Lic. Jaroslav Kňava"
+   ],
+   "excused": [
+    "Bc. Petr Dufek",
+    "Ing. Jakub Kutílek",
+    "Ing. Petr Netolický"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 45,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V",
+    "line": 65,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 82,
+    "speakers": [
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 99,
+    "speakers": [
+     "Ing. Pavel Bergman"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Změna v zadání projekčních prací na akci „PD Prodloužení stezky u Chrudimky“",
+    "line": 121,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2025",
+    "line": 135,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Výroční zpráva o činnosti Finančního výboru ZMO Pardubice V za r. 2025",
+    "line": 160,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "1. změna rozpočtu MO Pardubice V na r. 2026",
+    "line": 172,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Pojmenování veřejných prostranství, přejmenování ulice Gorkého",
+    "line": 277,
+    "speakers": [
+     "JUDr. Bc. Jakub Jeřábek",
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal",
+     "Mgr. Miloš Adamů, MBA.",
+     "Ing. Filip Vařecha",
+     "Evžen Erban",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Diskuse, závěr",
+    "line": 309,
+    "speakers": [
+     "Bc. Jan Nadrchal",
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Michal Hrabák"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "166/2026 Z",
+    "agenda_no": "1",
+    "first_line": 77,
+    "last_line": 78,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "167/2026 Z",
+    "agenda_no": "2",
+    "first_line": 89,
+    "last_line": 95,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "168/2026 Z",
+    "agenda_no": "3",
+    "first_line": 109,
+    "last_line": 117,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "169/2026 Z",
+    "agenda_no": "4",
+    "first_line": 129,
+    "last_line": 131,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "170/2026 Z",
+    "agenda_no": "5",
+    "first_line": 151,
+    "last_line": 153,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "171/2026 Z",
+    "agenda_no": "6",
+    "first_line": 167,
+    "last_line": 168,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "172/2026 Z",
+    "agenda_no": "7",
+    "first_line": 187,
+    "last_line": 273,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 35,
+    "last_line": 35,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise a ověřovatelé",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 31,
+    "motion_last_line": 34,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu a pořadí materiálů",
+    "proposer": null,
+    "motion_first_line": 48,
+    "motion_last_line": 59,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 79,
+    "last_line": 79,
+    "resolution": "166/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 96,
+    "last_line": 96,
+    "resolution": "167/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "168/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "169/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 154,
+    "last_line": 154,
+    "resolution": "170/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 169,
+    "last_line": 169,
+    "resolution": "171/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 274,
+    "last_line": 274,
+    "resolution": "172/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 296,
+    "last_line": 296,
+    "resolution": null,
+    "part": null,
+    "subject": "bod I. návrhu k bodu 8: souhlas s přejmenováním ulice Gorkého na ulici „Jiřího Bartošky“ a doporučení ZM Pardubic schválit název",
+    "proposer": "JUDr. Bc. Jakub Jeřábek",
+    "motion_first_line": 290,
+    "motion_last_line": 295,
+    "procedural": false,
+    "pro": 1,
+    "proti": 9,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Jakub Jeřábek"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 305,
+    "last_line": 306,
+    "resolution": null,
+    "part": null,
+    "subject": "bod II. návrhu k bodu 8: žádost, aby ZM Pardubic přijalo transparentní pravidla pro pojmenování veřejných prostranství vč. místopisné komise",
+    "proposer": "JUDr. Bc. Jakub Jeřábek",
+    "motion_first_line": 300,
+    "motion_last_line": 304,
+    "procedural": false,
+    "pro": 7,
+    "proti": 1,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Karolina Štefková"
+     ],
+     "zdrzel": [
+      "Jiří Rejda, Dis.",
+      "Mgr. Miloš Adamů, MBA.",
+      "Ing. Milan Randák",
+      "Michal Hrabák"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   }
+  ],
+  "notes": [
+   "ř. 296, 124, 146: JUDr. Bc. Jakub Jeřábek (ř. 16) je v diskusi a u hlasování uveden jako „Ing. Jakub Jeřábek“.",
+   "ř. 305: „Jiří Rejda, Dis.“ místo „DiS.“.",
+   "Bod 8 (ř. 290–307): oba body návrhu (I. a II.) byly hlasovány samostatně a nebyly přijaty; nemají číslo usnesení."
+  ]
+ }
+}

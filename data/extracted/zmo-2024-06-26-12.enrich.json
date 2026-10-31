@@ -1,0 +1,276 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5f8c4a3c288d5908d2e2a3c5e6ece3ad8b8a44983e6602d5745a5691193bf4b5",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "96/2024 Z",
+    "title": "Zpráva o činnosti starosty od jednání zastupitelstva 6. 3. 2024",
+    "summary": "Zastupitelstvo bere na vědomí zprávu starosty o jeho činnosti od posledního jednání zastupitelstva dne 6. 3. 2024.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "97/2024 Z",
+    "title": "Zápis z procházky a informace z kontroly SFŽP ke stavu zeleně v Arboretu Dukla",
+    "summary": "Návrh vzít na vědomí zápis z procházky ze dne 26. 2. 2024, vyhotovený iniciativou Za Zelenější Duklu a okolí, a informace z kontroly Státního fondu životního prostředí ČR provedené dne 7. 5. 2024. Usnesení se týká stavu zeleně v Arboretu Dukla.",
+    "keywords": [
+     "Arboretum Dukla",
+     "stav zeleně",
+     "péče o zeleň",
+     "stromy",
+     "kontrola SFŽP",
+     "Za Zelenější Duklu a okolí",
+     "Dukla"
+    ],
+    "topics": [
+     "zelen",
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [
+     "Arboretum Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Za Zelenější Duklu a okolí",
+     "Státní fond životního prostředí ČR"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "98/2024 Z",
+    "title": "Volba člena Finančního výboru zastupitelstva",
+    "summary": "Zastupitelstvo volí s účinností od 27. 6. 2024 nového člena Finančního výboru Zastupitelstva městského obvodu Pardubice V.",
+    "keywords": [
+     "finanční výbor",
+     "volba člena výboru",
+     "člen finančního výboru",
+     "výbor zastupitelstva"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "99/2024 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 5. 2024",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 5. 2024 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2024"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "100/2024 Z",
+    "title": "Závěrečný účet obvodu za rok 2023 a finanční vypořádání",
+    "summary": "Zastupitelstvo souhlasí s celoročním hospodařením obvodu v roce 2023 bez výhrad, bere na vědomí komentáře a přílohy závěrečného účtu a schvaluje finanční vypořádání za rok 2023 včetně sociálního fondu. Schvaluje také rozpočtová opatření navržená v rámci závěrečného účtu (body 1–5 šesté části důvodové zprávy).",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2023",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "101/2024 Z",
+    "title": "2. změna rozpočtu 2024 a přesuny z rezervy na zeleň a opravy komunikací",
+    "summary": "Zastupitelstvo bere na vědomí komentář ke 2. změně rozpočtu na rok 2024 a schvaluje rozpočtová opatření v bodech 1–9 důvodové zprávy. Dále schvaluje dvě rozpočtová opatření předložená přímo na jednání: přesun 1 750 tis. Kč z rezervy na péči o zeleň, prvky a hřiště (kapitola 15 – životní prostředí) a přesun 1 000 tis. Kč z rezervy na opravy a údržbu komunikací včetně dopravního značení a kanalizace (kapitola 27 – doprava).",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rezerva rozpočtu",
+     "péče o zeleň",
+     "hřiště",
+     "opravy komunikací",
+     "údržba silnic",
+     "dopravní značení"
+    ],
+    "topics": [
+     "rozpocet",
+     "zelen",
+     "doprava"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1 750 tis. Kč",
+     "1 000 tis. Kč"
+    ]
+   },
+   {
+    "number": "102/2024 Z",
+    "title": "Informace o schválení účetní závěrky města k 31. 12. 2023",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2023 schválí zastupitelstvo města na červnovém jednání; informaci o jejím schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2023",
+     "zastupitelstvo města"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "103/2024 Z",
+    "title": "Poptání projekčních prací na pět investičních akcí",
+    "summary": "Zastupitelstvo schvaluje záměr poptat projekční práce na chodníky v ulici U Krematoria (úsek Nemošická – Mikulovická), výsadby v předprostoru KD Dukla s prokořenitelnými prostory, opravu psího výběhu u Lesoparku Dukla, průjezd pod mostem na Vinici a úpravu křižovatky Devotyho × Železničního pluku.",
+    "keywords": [
+     "projektová dokumentace",
+     "projekční práce",
+     "chodníky",
+     "psí výběh",
+     "výsadba stromů",
+     "křižovatka",
+     "investiční záměry",
+     "U Krematoria",
+     "Lesopark Dukla",
+     "Vinice"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. U Krematoria",
+     "Nemošická",
+     "Mikulovická",
+     "KD Dukla",
+     "Lesopark Dukla",
+     "most na Vinici",
+     "křižovatka Devotyho × Železničního pluku"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "104/2024 Z",
+    "title": "Stížnost na činnost městského obvodu",
+    "summary": "Návrh vzít na vědomí stížnost na činnost Městského obvodu Pardubice V.",
+    "keywords": [
+     "stížnost",
+     "činnost úřadu",
+     "úřad městského obvodu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Městský obvod Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "105/2024 Z",
+    "title": "Zastavení projektu parkovacích míst v ulici Artura Krause",
+    "summary": "Zastupitelstvo bere na vědomí zastavení projekčních prací na záměru „Vybudování parkovacích míst na severní straně ul. Artura Krause“.",
+    "keywords": [
+     "parkování",
+     "parkovací místa",
+     "Artura Krause",
+     "projekční práce",
+     "zastavení projektu"
+    ],
+    "topics": [
+     "doprava",
+     "investice"
+    ],
+    "kind": "zprava",
+    "places": [
+     "ul. Artura Krause"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání starosty 27. 3. (JV obchvat), 3. 4. (s investory, navrhl je pozvat na zastupitelstvo) a 20. 5. (hasičské jednotky); Ing. Jakub Kutílek a Ing. Petr Netolický se ptali na jednání ke Staré vojenské plovárně a s firmami Chládek a Tintěra a CFIG. Starosta Jiří Rejda, DiS. vysvětlil, že šlo mj. o firmu IMOS Pardubice, stavbu Vápenka – Teplého a záměry týkající se zeleně, a firmu osloví k prezentaci projektu."
+   },
+   {
+    "no": "2.",
+    "discussion": "Ing. Jakub Kutílek předložil zprávu o stavu zeleně v Arboretu Dukla a připomněl své požadavky na navýšení financí a personálu odboru životního prostředí. Ing. Pavel Bergman vyjádřil se zprávou nesouhlas a dosadbu v létě považuje za zbytečný výdaj; Ing. Milan Randák se ptal na způsob hlasování a Ing. Filip Vařecha návrh podpořil včetně vyššího objemu financí na zeleň."
+   },
+   {
+    "no": "3.",
+    "discussion": "Ing. Filip Vařecha předložil alternativní návrh na volbu Stanislava Kláta, aby jejich klub měl zástupce ve výboru, a Ing. Jakub Kutílek podal protinávrh se svou kandidaturou. Ing. Lic. Jaroslav Kňava a Ing. Petr Netolický představili původní kandidátku jako odbornici na finance, JUDr. Bc. Jakub Jeřábek se ptal na profesi pana Kláta; starosta uzavřel, že bude nahrazen jen jeden člen výboru."
+   },
+   {
+    "no": "4.",
+    "discussion": "Ing. Filip Vařecha se ptal na transfer městu na revitalizaci dopravního hřiště; JUDr. Bc. Jakub Jeřábek na hřiště U Bobra a správní řízení k zakázce na dinosaura, Ing. Jakub Kutílek žádal o písemnosti k tomuto řízení. Starosta vysvětlil, že transfer byl zastaven, pozemek U Bobra byl předán k demolici a tajemník uvedl, že proti příkazu ÚOHS byl podán odpor."
+   },
+   {
+    "no": "6.",
+    "discussion": "Navržená usnesení vysvětlila úřednice a Ing. Lic. Jaroslav Kňava návrh přesunu peněz na opravy komunikací; diskutovali JUDr. Bc. Jakub Jeřábek, Ing. Petr Netolický, Evžen Erban a Ing. Filip Vařecha, podle něhož se mají komunikace opravovat v celé šíři. Ing. Jakub Kutílek navrhl hlasovat o bodech 3 a 4 samostatně."
+   },
+   {
+    "no": "8.",
+    "discussion": "Starosta Jiří Rejda, DiS. uvedl, že byly přečíslovány přílohy a řádky; Ing. Jakub Kutílek požádal o podporu čtyř doplněných bodů projednaných ve strategické komisi."
+   },
+   {
+    "no": "9.",
+    "discussion": "Ing. Filip Vařecha upozornil, že předložený materiál neobsahuje reakci obvodu na stížnost, a citoval jednací řád; Ing. Petr Netolický se ptal na zkratku „MPO V“, kterou starosta označil za překlep."
+   },
+   {
+    "no": "11.",
+    "discussion": "Občané kritizovali péči o zeleň v Arboretu Dukla a ulicích Češkova, Bacháčkova, Gorkého a Lexova, zálivku, seče a zrušení kontejnerového stání v Bacháčkově ulici. Ing. Lic. Jaroslav Kňava hájil kontrolu práce dodavatelů úřadem, Ing. Filip Vařecha a Ing. Jakub Kutílek upozornili na jiná kritéria výběrových řízení a možnost zadání in-house Službám města Pardubic a Ing. Vařecha navrhl GPS lokátory pro kontrolu zálivky; Ing. Pavel Bergman přislíbil po 15. 7. 2024 prohlídku v ulici Češkova. Ing. Filip Vařecha se ptal také na komunikaci v lokalitě IP Stavu a odkaz na participativní rozpočet, Bc. Jan Nadrchal odpověděl na dotaz k parkování v ulici Kpt. Nálepky."
+   }
+  ]
+ }
+}

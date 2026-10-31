@@ -1,0 +1,312 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "895d2e35c1a71fd982339e50578ec4e5f56b6c05cd201f2af6fb122516f64ecf",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "140/2022 Z",
+    "title": "Zrušení usnesení z roku 2016 a doporučení městu ponechat si všechny nebytové prostory",
+    "summary": "Pozměňující návrh, který měl zrušit usnesení č. 45/2016 Z o prodeji nebytových prostor a doporučit Statutárnímu městu Pardubice ponechat všechny stávající nebytové prostory na území obvodu ve vlastnictví města.",
+    "keywords": [
+     "nebytové prostory",
+     "prodej nebytových prostor",
+     "privatizace",
+     "obchody",
+     "občanská vybavenost",
+     "zrušení usnesení",
+     "doporučení městu",
+     "pozměňující návrh"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "141/2022 Z",
+    "title": "Zrušení usnesení z roku 2016 a doporučení městu neprodávat pronajaté nebytové prostory",
+    "summary": "Pozměňující návrh, který měl zrušit usnesení č. 45/2016 Z a doporučit Statutárnímu městu Pardubice ponechat ve vlastnictví města nebytové prostory s existujícím nájmem a prostory, o které není zájem déle než 12 měsíců, nabídnout k prodeji nejprve SVJ a poté ve veřejné dražbě.",
+    "keywords": [
+     "nebytové prostory",
+     "prodej nebytových prostor",
+     "nájemci",
+     "SVJ",
+     "veřejná dražba",
+     "občanská vybavenost",
+     "zrušení usnesení",
+     "pozměňující návrh"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "142/2022 Z",
+    "title": "Doporučený postup města při prodeji nebytových prostor na území obvodu",
+    "summary": "Ruší usnesení č. 45/2016 Z a doporučuje Statutárnímu městu Pardubice při prodeji nebytových jednotek na území obvodu nabídnout je nejprve stávajícím nájemcům za odhadní cenu, při nezájmu ponechat nájem do ukončení jejich podnikání. Prázdné prostory nabídnout za odhadní cenu společenství vlastníků v domě a teprve poté prodat ve veřejné dražbě.",
+    "keywords": [
+     "nebytové prostory",
+     "prodej nebytových prostor",
+     "nájemci",
+     "odhadní cena",
+     "SVJ",
+     "společenství vlastníků",
+     "veřejná dražba",
+     "privatizace",
+     "obchody",
+     "zrušení usnesení"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "143/2022 Z",
+    "title": "Zpráva o činnosti starosty od jednání 15. 12. 2021",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 15. 12. 2021.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelstvu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "144/2022 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení 226/2021 R až 244/2021 R",
+    "summary": "Schvaluje zprávu Kontrolního výboru o plnění usnesení rady městského obvodu a vyřazuje z evidence splněná usnesení 226/2021 R až 244/2021 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "145/2022 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných a ponechání sledovaných",
+    "summary": "Schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z evidence splněná usnesení 130/2021 Z až 139/2021 Z a ponechává ve sledování usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z a 101/2021 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "vyřazení z evidence",
+     "sledovaná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "146/2022 Z",
+    "title": "Zpráva Kontrolního výboru o kontrole dohod DPP a DPČ",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole smluvních vztahů – dohod o provedení práce a dohod o pracovní činnosti.",
+    "keywords": [
+     "kontrola smluvních vztahů",
+     "DPP",
+     "DPČ",
+     "dohoda o provedení práce",
+     "dohoda o pracovní činnosti",
+     "kontrolní výbor"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "147/2022 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 12. 2021",
+    "summary": "Schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 12. 2021 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rok 2021",
+     "čerpání rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "148/2022 Z",
+    "title": "Výroční zpráva Finančního výboru za rok 2021",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru zastupitelstva za rok 2021.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "činnost výboru",
+     "rok 2021"
+    ],
+    "topics": [
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "149/2022 Z",
+    "title": "1. změna rozpočtu obvodu na rok 2022 a úprava plánu společenských akcí",
+    "summary": "Bere na vědomí komentář a informace k 1. změně rozpočtu na rok 2022 a schvaluje rozpočtová opatření č. 1–12. Zároveň zvyšuje plánovanou částku na Slavnost MO Pardubice V o 40 tis. Kč a na akci Pohádková cesta o 20 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2022",
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "Pohádková cesta",
+     "slavnosti obvodu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "40 tis. Kč",
+     "20 tis. Kč"
+    ]
+   },
+   {
+    "number": "150/2022 Z",
+    "title": "Podpora Ukrajiny a věcný dar humanitární pomoci do 100.000 Kč",
+    "summary": "Zastupitelstvo vyjadřuje podporu nezávislosti a územní celistvosti Ukrajiny a odsuzuje ruskou invazi. Schvaluje věcný dar humanitární pomoci pro občany Ukrajiny do 100.000 Kč předaný do městského centra pomoci v Milheimově ulici a související rozpočtové opatření č. 16 – přesun z rezervy rozpočtu.",
+    "keywords": [
+     "Ukrajina",
+     "humanitární pomoc",
+     "rezoluce",
+     "válka na Ukrajině",
+     "uprchlíci",
+     "věcný dar",
+     "rozpočtové opatření",
+     "sbírka"
+    ],
+    "topics": [
+     "socialni",
+     "dotace",
+     "rozpocet"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Milheimova ulice",
+     "areál Vodovodů a kanalizací Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice",
+     "Vodovody a kanalizace Pardubice"
+    ],
+    "amounts": [
+     "100.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Předkladatelé Ing. Petr Netolický a Ing. Filip Vařecha navrhli přísnější usnesení proti prodeji městských nebytových prostor (Dukla, Višňovka), o nichž se vedla petice; primátor uvedl, že město žádný prodej neschválilo, a k věci hovořili nájemci a občané. Starosta Jiří Rejda, DiS. a Ing. Jaroslav Kňava podpořili usnesení navržené radou obvodu, diskutovali také Bc. Jan Nadrchal, Bc. Petr Dufek a Ing. Milan Randák. Předkladatelé svůj návrh nahradili dvěma pozměňujícími návrhy, které nebyly přijaty, a schváleno bylo usnesení podle rady."
+   },
+   {
+    "no": "2",
+    "discussion": "Anna Gudrun Vavrečková, Ing. Filip Vařecha a Bc. Petr Dufek se ptali na jednotlivá jednání starosty (městská policie, ulice Pod Břízkami, areál TGM, ulice Wolkerova); Bc. Petr Dufek navrhl parkování v areálu kasáren TGM při Velké pardubické a Zlaté přilbě. Ing. Petr Netolický se ptal na petici za omezení rychlosti v ulici Demokratické mládeže."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha upozornil na nízké čerpání zejména v kapitole Doprava; odpovídali Ing. Jaroslav Kňava, Bc. Jan Nadrchal, Ing. Petr Netolický a Bc. Petr Dufek."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha se ptal na hlasování ve finančním výboru, na rozpočtová opatření č. 7 a 8 (chodníky v Dražkovicích) a č. 11 (zvýšení položky na Slavnosti MO o 40.000 Kč). Bc. Jan Nadrchal vysvětlil novou položku na krajinářskou studii Dražkovice."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Milan Randák a Ing. Filip Vařecha navrhli zvýšit humanitární pomoc z 50.000 Kč na 100.000 Kč, Bc. Jan Nadrchal požádal o průběžné poskytování pomoci. Starosta a Bc. Jan Nadrchal informovali o možném umístění uprchlíků, Ing. Milan Randák žádal informaci o použití pomoci."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Filip Vařecha se ptal na program rozvoje, provozovnu „Polívkárna“ a veřejné projednání studie S. K. Neumanna; Bc. Petr Dufek na revitalizaci prostoru bývalé tržnice na náměstí Dukelských hrdinů. Bc. Jan Nadrchal informoval o novém separačním dvoru na Staré poště od dubna 2022 a o petici proti spalovně."
+   }
+  ]
+ }
+}

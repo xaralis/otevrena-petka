@@ -1,0 +1,178 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b4dd032a23f7a9b2ab483473ef583c26a5040f6214fbfeae5c6aed06ce0b680d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "123/2021 Z",
+    "title": "Zpráva o činnosti starosty od posledního jednání ZMO",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu Pardubice V od posledního jednání zastupitelstva (v textu uvedeno 10. 3. 2021).",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty",
+     "jednání zastupitelstva"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "124/2021 Z",
+    "title": "Zpráva Kontrolního výboru – vyřazení splněných usnesení rady 194/2021 R – 208/2021 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady městského obvodu a vyřazuje splněná usnesení 194/2021 R – 208/2021 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení rady",
+     "splněná usnesení",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "125/2021 Z",
+    "title": "Zpráva Kontrolního výboru – vyřazení splněných usnesení 155/2020 R – 165/2020 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění přijatých usnesení a vyřazuje splněná usnesení 155/2020 R – 165/2020 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "splněná usnesení",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "126/2021 Z",
+    "title": "Zpráva Kontrolního výboru o vyřizování stížností, petic a připomínek občanů",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru ke kontrole vyjádření ke stížnostem, peticím a připomínkám občanů na chod ÚMO Pardubice V za období 4. čtvrtletí 2020 až 3. čtvrtletí 2021.",
+    "keywords": [
+     "stížnosti",
+     "petice",
+     "připomínky občanů",
+     "Kontrolní výbor",
+     "chod úřadu",
+     "kontrola"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "127/2021 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2021",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 8. 2021 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2021"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "128/2021 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2020",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic dne 24. 6. 2021 schválilo účetní závěrku statutárního města Pardubic za rok 2020 včetně městských obvodů, sestavenou k 31. 12. 2020.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2020",
+     "Zastupitelstvo města Pardubic",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "129/2021 Z",
+    "title": "3. změna rozpočtu MO Pardubice V a sociálního fondu na rok 2021",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje 3. změnu rozpočtu městského obvodu Pardubice V a rozpočtu sociálního fondu na rok 2021 podle tabulkové části zprávy včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "3. změna rozpočtu",
+     "rozpočet 2021",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha předložil revizi vyhlášky o veřejném pořádku, která by zákaz konzumace alkoholu omezila na okolí škol, školek, hřišť a frekventovaných míst; velitel městské policie hájil plošný zákaz. Starosta Jiří Rejda, DiS., Ing. Jiří Janoš, Ing. Milan Randák, Ing. Jiří Hájek, Filip Šťastný a Bc. Jan Nadrchal se k revizi stavěli kriticky nebo navrhovali zákaz rozšířit, Ing. Petr Netolický revizi podpořil. Na návrh Ing. Jaroslava Kňavy předkladatel zprávu stáhl."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Jiří Hájek se ptal na herní prvky v Dražkovicích, stížnosti na driftování na Vinici, budoucnost areálu v Dražkovicích a studii lokality S. K. Neumanna; Ing. Filip Vařecha na vytipovaná místa pro herní prvky, boxy zásilkovny, griloviště v Jesničánkách a areál kasáren. Ing. Milan Randák se ptal na poradu s městskou policií a akce 11. 9., Anna Gudrun Vavrečková na malované mapy a útulek."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha se ptal na rozpočtová opatření k vánočnímu stromu, betlému a přesunu 300 tis. v opatření č. 22, který považoval za přestřelený; odpovídali starosta a Ing. Jiří Janoš, k tématu se vyjádřili Ing. Jaroslav Kňava a Bc. Jan Nadrchal. Ing. Petr Netolický se ptal na opatření č. 21 ke komunikaci Do Zahrádek."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Filip Vařecha kritizoval podklady pro finanční výbor a ptal se na ulici Do Zahrádek; Ing. Jiří Hájek otevřel záměr polní cesty mezi Dražkovicemi a Nemošicemi. Anna Gudrun Vavrečková se ptala na výlohy knihovny v domě SVJ a Ing. Milan Randák na skutečné bydliště Ing. Jiřího Hájka."
+   }
+  ]
+ }
+}

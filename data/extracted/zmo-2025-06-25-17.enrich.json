@@ -1,0 +1,301 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e62e485c9551c0d745c2ab47fac4c4fb894bfa5b1fd60bf8cd84a4de93898596",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "136/2025 Z",
+    "title": "Námitky obvodu proti výstavbě bytových domů „REZIDENČNÍ BYDLENÍ ČACKÉ“ v Nových Jesenčanech",
+    "summary": "Zastupitelstvo uložilo tajemníkovi úřadu bezodkladně informovat zastupitele o každém zahájeném stavebním řízení na území obvodu. Starostovi uložilo, aby v řízení o povolení záměru „REZIDENČNÍ BYDLENÍ ČACKÉ“ nebo jiného záměru na parcelách 2/1, 3/1 a 4/2 v k. ú. Nové Jesenčany uplatnil jako účastník řízení námitky – nárůst dopravy a hluku, nedostatek parkování, změna rázu čtvrti, rozpor s územním plánem pro plochu X/29 (podlažnost 2NP, zastavěnost 0,4) a riziko narušení podloží a ztráty vody ve studních.",
+    "keywords": [
+     "REZIDENČNÍ BYDLENÍ ČACKÉ",
+     "bytové domy",
+     "Nové Jesenčany",
+     "Čacké",
+     "námitky",
+     "řízení o povolení záměru",
+     "stavební zákon",
+     "územní plán",
+     "plocha X/29",
+     "účastník řízení"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "bydleni",
+     "doprava"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Nové Jesenčany",
+     "k. ú. Nové Jesenčany",
+     "plocha X/29"
+    ],
+    "parcels": [
+     "2/1",
+     "3/1",
+     "4/2"
+    ],
+    "organizations": [
+     "Úřad městského obvodu Pardubice V",
+     "stavební úřad"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "137/2025 Z",
+    "title": "Zpráva o činnosti starosty od jednání 12. 3. 2025",
+    "summary": "Zastupitelstvo vzalo na vědomí zprávu o činnosti starosty městského obvodu Pardubice V od posledního jednání zastupitelstva dne 12. 3. 2025.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty",
+     "zpráva o činnosti"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "138/2025 Z",
+    "title": "Kontrola plnění usnesení rady obvodu",
+    "summary": "Zastupitelstvo schválilo zprávu Kontrolního výboru o plnění usnesení Rady MO Pardubice V. Splněná usnesení č. 137/2024 R, 193/2025 R – 198/2025 R, 200/2025 R – 209/2025 R, 211/2025 R, 213/2025 R a 214/2025 R vyřadilo z evidence, usnesení č. 199/2025 R, 210/2025 R a 212/2025 R v evidenci ponechalo.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení rady",
+     "RMO",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "139/2025 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva obvodu",
+    "summary": "Zastupitelstvo schválilo zprávu Kontrolního výboru o plnění usnesení Zastupitelstva MO Pardubice V. Splněná usnesení č. 122/2025 Z – 127/2025 Z, 130/2025 Z, 131/2025 Z a 133/2025 Z – 135/2025 Z vyřadilo z evidence; v evidenci ponechalo mimo jiné usnesení č. 75/2009 Z, 27/2019 Z, 142/2022 Z, 128/2025 Z, 129/2025 Z a 132/2025 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení zastupitelstva",
+     "ZMO",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "140/2025 Z",
+    "title": "Záměr poptat projekční práce na „Stezku v parku Na Vinici“",
+    "summary": "Zastupitelstvo schválilo záměr poptat projekční práce na investiční akci „Stezka v parku Na Vinici“.",
+    "keywords": [
+     "Stezka v parku Na Vinici",
+     "park Na Vinici",
+     "Na Vinici",
+     "stezka",
+     "chodník v parku",
+     "projekční práce",
+     "projektová dokumentace",
+     "investiční akce"
+    ],
+    "topics": [
+     "investice",
+     "zelen"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "park Na Vinici"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "141/2025 Z",
+    "title": "Závěrečný účet obvodu za rok 2024",
+    "summary": "Zastupitelstvo projednalo závěrečný účet MO Pardubice V za rok 2024 a souhlasilo s celoročním hospodařením bez výhrad. Vzalo na vědomí komentáře a tabulky z důvodové zprávy a schválilo finanční vypořádání za rok 2024 včetně sociálního fondu a rozpočtová opatření č. 1–8 navržená v rámci závěrečného účtu.",
+    "keywords": [
+     "závěrečný účet",
+     "rok 2024",
+     "hospodaření bez výhrad",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "142/2025 Z",
+    "title": "Informace o schvalování účetní závěrky města k 31. 12. 2024",
+    "summary": "Zastupitelstvo vzalo na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2024 schválí v červnu Zastupitelstvo města Pardubic. Informaci o jejím schválení dostane zastupitelstvo obvodu na příštím jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "31. 12. 2024",
+     "zastupitelstvo města",
+     "městské obvody",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "143/2025 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 5. 2025",
+    "summary": "Zastupitelstvo schválilo rozbor hospodaření městského obvodu Pardubice V k 31. 5. 2025 uvedený v tabulkové části zprávy a vzalo na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "31. 5. 2025",
+     "plnění rozpočtu",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "144/2025 Z",
+    "title": "3. změna rozpočtu obvodu na rok 2025 a příspěvky školkám a DDM Alfa na akce",
+    "summary": "Zastupitelstvo vzalo na vědomí komentář ke 3. změně rozpočtu na rok 2025 a schválilo rozpočtová opatření č. 1–12 včetně sociálního fondu. Schválilo přesuny peněz na příspěvky na provoz účelově vázané na akce pro MŠ Kamarád, MŠ Jesničánky a DDM Alfa (Počítačový kurz, Setkání se seniory, Komunitní setkávání, Cestovatelská beseda, Pasování na čtenáře) a doplnění plánu společenských akcí na rok 2025 o rozpočtové položky.",
+    "keywords": [
+     "změna rozpočtu",
+     "3. změna rozpočtu",
+     "rozpočtová opatření",
+     "příspěvek na provoz",
+     "MŠ Kamarád",
+     "MŠ Jesničánky",
+     "DDM Alfa",
+     "společenské akce",
+     "setkání se seniory",
+     "plán společenských akcí"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Teplého",
+     "Raisova",
+     "Družby"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MŠ Kamarád, Teplého",
+     "MŠ Jesničánky, Raisova",
+     "DDM Alfa, Družby"
+    ],
+    "amounts": [
+     "12 tis. Kč",
+     "7,9 tis. Kč",
+     "120 tis. Kč",
+     "35 tis. Kč",
+     "40 tis. Kč",
+     "45 tis. Kč",
+     "3,2 tis. Kč",
+     "3,36 tis. Kč"
+    ]
+   },
+   {
+    "number": "145/2025 Z",
+    "title": "Plnění Programu rozvoje obvodu za rok 2024 a jeho úpravy",
+    "summary": "Zastupitelstvo vzalo na vědomí plnění Programu rozvoje MO Pardubice V za rok 2024 a schválilo úpravy Programu rozvoje podle doporučení komise.",
+    "keywords": [
+     "Program rozvoje",
+     "program rozvoje obvodu",
+     "plnění programu rozvoje",
+     "rok 2024",
+     "strategie",
+     "rozvoj obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "9",
+    "discussion": "Ing. Petr Netolický upozornil na změnu stavebního zákona (řízení o povolení záměru místo územního řízení) a Bc. Jan Nadrchal uvedl, že investor žádost ze stavebního úřadu stáhl. Občané popsali dopady dřívější výstavby laboratoří (poškozená silnice, hluk, popraskaný dům), problémy s kanalizací a propustí a obavu z další výstavby IP STAVu; starosta Jiří Rejda slíbil prověření propustě."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek se ptal na otevření Palachovky, kultivaci chodníku a předzahrádku zasahující na pozemek obvodu. JUDr. Bc. Jakub Jeřábek se ptal na dopravní hřiště a Ing. Filip Vařecha na cyklostezku Dražkovice – Nemošice; starosta Jiří Rejda odpověděl, že ke stezce bude svolána schůzka a pak zpráva do zastupitelstva."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Filip Vařecha upozornil, že výkon předsedy Ing. Pavla Bergmana není dlouhodobě uspokojivý."
+   },
+   {
+    "no": "3",
+    "discussion": "JUDr. Bc. Jakub Jeřábek se ptal na smír s firmou M-STAV a na projekční práce u ZŠ Benešovo náměstí; úřad odpověděl, že smír je uzavřen a projekční práce ještě nejsou zadány, protože se teprve schvalují peníze."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha se ptal na pěší spojky mezi domy K Vinici a Na Vinici do parku a zda platí příslib IP STAVu; starosta Jiří Rejda odpověděl, že se se spojkami počítá a do pozemkové komise jde směna pozemků."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha se ptal na kamery v rozpočtových opatřeních 10 a 11, jejich rozmístění a nakládání se záznamy; starosta Jiří Rejda slíbil poslat rozmístění kamer a Bc. Jan Nadrchal uvedl, že záznamy uchovává Městská policie 30 dní. Bc. Jan Nadrchal se dále ptal na kapacitu knihovny a Ing. Petr Netolický navrhl rekonstrukci obrubníků v ulici Lexova."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Jakub Kutílek jako předkladatel vysvětlil tabulky. Ing. Filip Vařecha kritizoval koncepci programu rozvoje a nejasnou odpovědnost u bodů, např. sečí; tajemník úřadu odpověděl, že termíny sečí závisí na počasí."
+   },
+   {
+    "no": "11",
+    "discussion": "Bc. Jan Nadrchal upozornil na zarůstání zastávky v ulici Lexova a Ing. Filip Vařecha na nebezpečné přecházení ulice Staňkova u křižovatky s Čs. armády. Ing. Jakub Kutílek chce s náměstky jednat o podnětu na „školní ulici“ Staňkova a Bc. Petr Dufek navrhl, aby místo hlídali strážníci Městské policie."
+   }
+  ]
+ }
+}

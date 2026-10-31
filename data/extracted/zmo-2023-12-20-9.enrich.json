@@ -1,0 +1,299 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7a9f00ba2e9d4d1a0f1a515d2c293152d24e2d7e98ff6bb0c96c2d6cd9027d16",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "74/2023 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2023",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 30. 11. 2023 podle tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2023",
+     "plnění rozpočtu",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "75/2023 Z",
+    "title": "6. změna rozpočtu MO Pardubice V na rok 2023",
+    "summary": "Zastupitelstvo bere na vědomí komentář a doplňující informace k 6. změně rozpočtu na rok 2023 a schvaluje rozpočtová opatření uvedená v bodech 1–15 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2023",
+     "6. změna rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "76/2023 Z",
+    "title": "Rozpočet MO Pardubice V a sociálního fondu na rok 2024 a pravomoci rady k rozpočtovým opatřením",
+    "summary": "Zastupitelstvo schvaluje rozpočet obvodu a rozpočet sociálního fondu na rok 2024 včetně přesunu 500 tis. Kč z rezervy na rekonstrukci parkovacích ploch v ulici Jiránkova 2209–2211, svěřuje radě pravomoc provádět vymezená rozpočtová opatření a ukončit či snížit termínovaný vklad 13 mil. Kč. Dále stanoví pravidla pro společenské akce, dárky jubilantům a propagační předměty a schvaluje směrnici č. 7/2023-1 o hospodaření se sociálním fondem.",
+    "keywords": [
+     "rozpočet 2024",
+     "sociální fond",
+     "rozpočtová opatření",
+     "rezerva rozpočtu",
+     "parkování Jiránkova",
+     "termínovaný vklad",
+     "společenské akce",
+     "životní jubilea",
+     "propagační předměty",
+     "směrnice 7/2023-1"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "doprava"
+    ],
+    "kind": "rozpocet",
+    "places": [
+     "ul. Jiránkova 2209-2211"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "500 tis. Kč",
+     "300 tis. Kč",
+     "13 mil. Kč",
+     "1 000,-- Kč",
+     "200,- Kč",
+     "500,-- Kč"
+    ]
+   },
+   {
+    "number": "77/2023 Z",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na roky 2023–2026",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje návrh střednědobého výhledu rozpočtu městského obvodu na období 2023–2026 podle tabulkové části zprávy.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2023-2026",
+     "finanční plánování"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "78/2023 Z",
+    "title": "Zpráva o činnosti starosty od jednání 8. 11. 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 8. 11. 2023.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "79/2023 Z",
+    "title": "Vyřazení usnesení rady č. 52/2023 R (obchvat, protihluková opatření) z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru a samostatně vyřazuje z evidence jako splněné usnesení rady č. 52/2023 R, které se týkalo jednání o opatřeních proti hluku a světlu u jihovýchodního obchvatu.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "vyřazení z evidence",
+     "52/2023 R",
+     "jihovýchodní obchvat",
+     "protihluková opatření",
+     "kontrolní výbor"
+    ],
+    "topics": [
+     "kontrola",
+     "doprava"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "80/2023 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných a ponechání 30/2023 R a 31/2023 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady, vyřazuje z evidence splněná usnesení 49/2023 R – 91/2023 R uvedená ve výčtu a v evidenci ponechává usnesení 30/2023 R a 31/2023 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "vyřazení z evidence",
+     "kontrolní výbor",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "81/2023 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných a ponechání v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z evidence splněná usnesení (např. 101/2021 Z, 44/2023 Z – 52/2023 Z) a v evidenci ponechává mimo jiné 75/2009 Z, 66/2023 Z a 72/2023 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "vyřazení z evidence",
+     "kontrolní výbor",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "82/2023 Z",
+    "title": "Plán činnosti Kontrolního výboru na rok 2024",
+    "summary": "Zastupitelstvo schvaluje plán činnosti Kontrolního výboru na rok 2024 v rozsahu kontrol plnění usnesení rady a zastupitelstva za předešlé období, podle návrhu předloženého starostou.",
+    "keywords": [
+     "kontrolní výbor",
+     "plán činnosti",
+     "plán kontrol 2024",
+     "kontrola plnění usnesení"
+    ],
+    "topics": [
+     "komise-vybory",
+     "kontrola"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "83/2023 Z",
+    "title": "Odvolání předsedy Kontrolního výboru a jeho volba členem výboru",
+    "summary": "Zastupitelstvo ke dni 20. 12. 2023 odvolává předsedu Kontrolního výboru zastupitelstva z funkce a volí jej členem tohoto výboru.",
+    "keywords": [
+     "kontrolní výbor",
+     "odvolání předsedy",
+     "předseda kontrolního výboru",
+     "volba člena výboru"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "84/2023 Z",
+    "title": "Volba nového předsedy Kontrolního výboru",
+    "summary": "Zastupitelstvo volí nového předsedu Kontrolního výboru zastupitelstva; v usnesení je uvedeno datum 21. 12. 2023.",
+    "keywords": [
+     "kontrolní výbor",
+     "volba předsedy",
+     "předseda kontrolního výboru"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "I",
+    "discussion": "Starosta Jiří Rejda, DiS. informoval o žádosti veřejnosti o vystoupení; návrh na zařazení bodu „vystoupení občanů“ do programu nebyl přijat, poté byl program doplněn a přečíslován."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha a Ing. Jakub Kutílek předložili návrhy svého klubu na zařazení projektů do rozpočtu (chodníkové hry, participativní rozpočet, strategie rozvoje, architektonická soutěž na Zborovské náměstí) a Ing. Vařecha nesouhlasil s navýšením na Zelený čtvrtek. Starosta Jiří Rejda, DiS., Ing. Lic. Jaroslav Kňava a Bc. Petr Dufek žádali nejprve projednání ve finančním výboru, Bc. Jan Nadrchal navrhl stažení bodu Zborovské náměstí a JUDr. Bc. Jakub Jeřábek se ptal na dopravní hřiště a kontejnerová stání. Ing. Vařecha nakonec své návrhy stáhl."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Jakub Kutílek se ptal na propad investic ve výhledu, vysvětlila vedoucí ekonomického odboru."
+   },
+   {
+    "no": "5",
+    "discussion": "Občanky a občané upozorňovali na stav zeleně a stromů zejména v Arboretu, v ulicích Češkova, V Ráji a Teplého, ptali se na odpovědnost za péči, pasport a koncepci zeleně a na výběrová řízení na údržbu; odpovídali starosta, tajemník a úředníci a část dotazů bude zodpovězena písemně. Bc. Jan Nadrchal vysvětlil pasport zeleně, Bc. Petr Dufek a Ing. Lic. Jaroslav Kňava se ptali a Ing. Filip Vařecha se vyjádřil k výběrovým řízením. Návrh na prodloužení diskuse o 45 minut nebyl přijat."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Jakub Kutílek se ptal na setkání starostů ke statutu a zeleni. Ing. Petr Netolický vyzval starostu k obchůzce obvodu s občany kvůli zeleni, Evžen Erban doporučil přizvat odborníky a Ing. Filip Vařecha zpochybnil práci dodavatele údržby zeleně."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha za Kontrolní výbor navrhl ponechat v evidenci usnesení 30/2023 R a 31/2023 R. Ing. Jakub Kutílek se ptal na plnění usnesení 52/2023 R o protihlukových opatřeních u obchvatu a navrhl o jeho vyřazení hlasovat samostatně; Bc. Jan Nadrchal, Ing. Petr Netolický a Bc. Petr Dufek uvedli, že opatření byla zamítnuta a rozhodnutí vydána."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha upozornil na nedostatky v zápisu z 8. 11. 2023 a souhlasil s vypuštěním již splněných bodů 3 a 4 návrhu usnesení. Ing. Petr Netolický upozornil, že v zápisu chybí pravidla k usnesení 66/2023 Z."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Filip Vařecha a JUDr. Bc. Jakub Jeřábek za Kontrolní výbor otevřeli otázku dělení zakázek na údržbu zeleně a aktivního oslovování firem, Bc. Jan Nadrchal doporučil elektronické podávání nabídek a varoval před oslovováním firem, Ing. Pavel Bergman upozornil na málo uchazečů. Starosta Jiří Rejda, DiS. vytkl Kontrolnímu výboru nedodržování zákona o obcích. Návrhy na vzetí zprávy na vědomí a na zadání právního rozboru nebyly přijaty."
+   },
+   {
+    "no": "10",
+    "discussion": "Starosta Jiří Rejda, DiS. předložil vlastní návrh usnesení omezující plán na kontroly plnění usnesení. Ing. Lic. Jaroslav Kňava se ptal, jaké úkony finančního výboru by se kontrolovaly, Ing. Filip Vařecha a Ing. Petr Netolický odpověděli."
+   },
+   {
+    "no": "11",
+    "discussion": "Starosta Jiří Rejda, DiS. navrhl odvolání předsedy Kontrolního výboru pro neplnění povinností a zvolení Ing. Pavla Bergmana. Ing. Jakub Kutílek navrhl hlasovat jednotlivě a jako předsedu navrhl JUDr. Bc. Jakuba Jeřábka, s čímž vyslovili souhlas Ing. Lic. Jaroslav Kňava a Ing. Pavel Bergman; jeho návrh nebyl přijat."
+   },
+   {
+    "no": "12",
+    "discussion": "Ing. Filip Vařecha požádal o posunutí výběrových řízení na pozdější odpolední hodiny, protože se jich z pracovních důvodů nemůže účastnit."
+   }
+  ]
+ }
+}

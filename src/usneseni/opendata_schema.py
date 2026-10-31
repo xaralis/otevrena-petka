@@ -44,8 +44,8 @@ TABLES = {
         ],
     },
     "resolutions": {
-        "title": "Usnesení",
-        "description": "Číslované usnesení. Číslo neznamená přijetí – rozhoduje `status`.",
+        "title": "Usnesení a nepřijaté návrhy",
+        "description": "Číslované záznamy ze zápisu. Status `neprijato` = nepřijatý návrh: nezískal většinu, takže nejde o usnesení, i když mu zápis přidělil číslo.",
         "primaryKey": ["uid"],
         "foreignKeys": [{"fields": ["meeting_id"], "reference": {"resource": "meetings", "fields": ["id"]}}],
         "fields": [
@@ -56,7 +56,7 @@ TABLES = {
             f("date", "date", "Datum jednání.", required=True),
             f("agenda_no", "string", "Číslo bodu programu."),
             f("agenda_title", "string", "Název bodu programu."),
-            f("status", "string", "Výsledek: prijato; neprijato (dostalo číslo, ale neprošlo); castecne (část bodů prošla); neovereno (nelze určit ze zápisu).", enum=STATUS, required=True),
+            f("status", "string", "Výsledek: prijato; neprijato (nepřijatý návrh – není usnesením, i když má číslo ze zápisu); castecne (část bodů prošla); neovereno (nelze určit ze zápisu).", enum=STATUS, required=True),
             f("text", "string", "Doslovné znění usnesení ze zápisu.", required=True),
             f("responsible", "string", "Zodpovídá (řádek Z:)."),
             f("deadline", "string", "Termín (řádek T:)."),

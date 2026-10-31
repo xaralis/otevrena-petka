@@ -1,0 +1,271 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "44dc1d5faa5c6b8917cb474c189926e599b4cd1f554dbd5f9a59605980c1320f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "114/2021 Z",
+    "title": "Petice „Revize projektu revitalizace vnitrobloku H“ – vzetí na vědomí",
+    "summary": "Zastupitelstvo bere na vědomí petici požadující revizi projektu revitalizace vnitrobloku H. Podle informace starosty došlo se zástupci petičního výboru ke kompromisu – přesun kontejnerového stání, zatravňovací dlažba místo asfaltu na parkovištích a menší počet nově navrhovaných parkovacích míst.",
+    "keywords": [
+     "petice",
+     "vnitroblok H",
+     "revitalizace vnitrobloku",
+     "parkování",
+     "parkovací místa",
+     "zatravňovací dlažba",
+     "kontejnerové stání",
+     "zeleň"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "zprava",
+    "places": [
+     "vnitroblok H"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "115/2021 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 10. 3. 2021",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva 10. 3. 2021. V rozpravě se probíraly mj. rezidentní parkování, možné umístění útulku pro psy v objektu „Bobr“, revitalizace parků na Dukelském náměstí, kasárna TGM, cyklostezka Dražkovice – Mikulovice, seniorská obálka a připomínka Karantény.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "rezidentní parkování",
+     "útulek pro psy",
+     "Bobr",
+     "Dukelské náměstí",
+     "kasárna TGM",
+     "cyklostezka Dražkovice – Mikulovice",
+     "seniorská obálka",
+     "Karanténa"
+    ],
+    "topics": [
+     "organizace",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [
+     "objekt „Bobr“",
+     "Dukelské náměstí",
+     "kasárna TGM",
+     "Dražkovice",
+     "Mikulovice",
+     "ul. Na Spravedlnosti"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Highway Design",
+     "ZŠ J. Ressla",
+     "Magistrát města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "116/2021 Z",
+    "title": "Kontrola plnění usnesení RMO – vyřazení splněných usnesení 155/2020 R – 165/2020 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady obvodu a vyřazuje z evidence sledování splněná usnesení 155/2020 R až 165/2020 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "117/2021 Z",
+    "title": "Zpráva Kontrolního výboru o plnění usnesení ZMO – vyřazení a ponechání v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z evidence splněná usnesení 47/2019 Z a 102/2021 Z – 113/2021 Z a ponechává v evidenci usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z, 90/2020 Z a 101/2021 Z. Usnesení 47/2019 Z se týkalo dopravních opatření v ulicích Na Spravedlnosti, S. K. Neumanna, Pichlova a K Vinici.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "dopravní opatření",
+     "Na Spravedlnosti",
+     "S. K. Neumanna",
+     "Pichlova",
+     "K Vinici"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [
+     "ul. Na Spravedlnosti",
+     "ul. S. K. Neumanna",
+     "ul. Pichlova",
+     "ul. K Vinici"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "118/2021 Z",
+    "title": "Kontrola poskytování informací podle zákona č. 106/1999 Sb. za 4Q 2020 – 2Q 2021",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole přístupu úřadu městského obvodu k poskytování informací podle zákona o svobodném přístupu k informacím za období 4. čtvrtletí 2020 – 2. čtvrtletí 2021. Kontrola nezjistila žádná pochybení.",
+    "keywords": [
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "infozákon",
+     "poskytování informací",
+     "kontrolní výbor",
+     "kontrola úřadu"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "119/2021 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2021",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 5. 2021 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu",
+     "storno poplatky",
+     "rozpočet 2021"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "120/2021 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2020 a finanční vypořádání",
+    "summary": "Zastupitelstvo souhlasí s celoročním hospodařením obvodu v roce 2020 bez výhrad, bere na vědomí komentáře, tabulky a přílohy závěrečného účtu a schvaluje finanční vypořádání za rok 2020 včetně sociálního fondu, upravený rozpočet na rok 2021 a související rozpočtová opatření. Částku finančního vypořádání mezi městem a obvodem schvaluje s podmínkou, že ji schválí také Zastupitelstvo města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2020",
+     "finanční vypořádání",
+     "sociální fond",
+     "upravený rozpočet 2021",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "121/2021 Z",
+    "title": "Účetní závěrka k 31. 12. 2020 – informace o schválení zastupitelstvem města",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2020 schválí zastupitelstvo města na červnovém jednání. Informaci o jejím schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2020",
+     "schválení účetní závěrky",
+     "zastupitelstvo města"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "122/2021 Z",
+    "title": "2. změna rozpočtu MO Pardubice V na rok 2021",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje návrh 2. změny rozpočtu obvodu a rozpočtu sociálního fondu na rok 2021 včetně rozpočtových opatření uvedených v komentáři. V rozpravě šlo mj. o monitorovací stanici ČHMÚ, rozšíření strukturované kabeláže úřadu a navýšení rozpočtu rekonstrukce knihovny.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2021",
+     "sociální fond",
+     "monitorovací stanice",
+     "strukturovaná kabeláž",
+     "rekonstrukce knihovny"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "knihovna"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ČHMÚ"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "5",
+    "discussion": "Zástupce petičního výboru poděkoval za možnost vyjádřit se, další občan podpořil navýšení počtu parkovacích míst. Ing. Jaroslav Kňava zdůraznil potřebu souladu zeleně a parkování, Ing. Filip Vařecha ocenil kompromis a vyzval k projednávání záměrů s občany už na začátku projektu, např. u náměstí Dukelských hrdinů."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na rezidentní parkování, studii umístění útulku pro psy v objektu „Bobr“ (požadoval veřejné projednání), revitalizaci parků na Dukelském náměstí, kasárna TGM a cyklostezku Dražkovice – Mikulovice; Ing. Jiří Hájek a Ing. Petr Netolický se ptali na dopady parkování a zapojení zastupitelů obvodu do řešení útulku. Karolina Štefková se ptala na seniorskou obálku, Anna Gudrun Vavrečková na administrativní centrum v ul. Na Spravedlnosti a připomínku Karantény; Ing. Jiří Hájek žádal o členství v pracovní skupině ke Karanténě."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha vysvětlil vyřazení usnesení 47/2019 Z o dopravních opatřeních; Ing. Jiří Hájek a Ing. Jiří Janoš nesouhlasili, protože se týká i ulic S. K. Neumanna, Pichlova a K Vinici. Ing. Jaroslav Kňava trval na navrženém usnesení, nový návrh předložen nebyl."
+   },
+   {
+    "no": "6",
+    "discussion": "Anna Gudrun Vavrečková se ptala na odstranění oplocení kontejnerového stání v ul. Sokolovská, Ing. Filip Vařecha na nízké čerpání položek doprava a životní prostředí a na storno poplatky za neuskutečněné akce. Ing. Jaroslav Kňava storno poplatky vysvětlil nutností dlouhodobého plánování akcí, Ing. Jiří Hájek navrhl je do budoucna ve smlouvách nesjednávat."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Filip Vařecha se ptal na rozpočtové opatření k platbě za monitorovací stanici (smlouva s ČHMÚ vypovězena, náklady nově hradí ČHMÚ) a na rozšíření strukturované kabeláže úřadu. Anna Gudrun Vavrečková se ptala na navýšení rozpočtu rekonstrukce knihovny, podle starosty kvůli dovybavení."
+   },
+   {
+    "no": "10",
+    "discussion": "Host kritizoval projektové dokumentace ul. Do Zahrádek a Na Záboří a navrhl řešit Do Zahrádek jako obytnou zónu; Ing. Jiří Hájek souhlasil, že červené sloupky tam nepatří. Ing. Filip Vařecha se ptal na griloviště v Jesničánkách, zachování průchodu od DH Pod Vinicí přes staveniště IP Stav a na vyhlášku o zákazu konzumace alkoholu (navrhl vymezit lokality podle potřeby), Anna Gudrun Vavrečková na pracovní skupinu pro zeleň. Ing. Jiří Hájek žádal zprávy o činnosti komisí RMO a upozornil na vandalismus u cyklostezky u letiště, Ing. Petr Netolický hájil fungování MK Jesničánky a ptal se na dopad vystoupení Ing. Milana Randáka z hnutí ANO na radu, Ing. Jaroslav Kňava upozornil na vyvrácený panel v lesoparku."
+   }
+  ]
+ }
+}

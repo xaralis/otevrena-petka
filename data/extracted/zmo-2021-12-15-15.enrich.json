@@ -1,0 +1,262 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "d7b7e348f1551de9201bde5e7e6e4b48624d8a243b1cb0e578b9ee6213031caf",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "130/2021 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 22. 9. 2021",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání ZMO Pardubice V dne 22. 9. 2021.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "131/2021 Z",
+    "title": "Zpráva Kontrolního výboru o plnění usnesení RMO, vyřazení 209/2021 R – 225/2021 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení Rady MO Pardubice V a vyřazuje z evidence sledování splněná usnesení 209/2021 R až 225/2021 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "Kontrolní výbor",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "132/2021 Z",
+    "title": "Zpráva Kontrolního výboru o plnění usnesení ZMO, vyřazení a ponechání v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení ZMO, vyřazuje z evidence splněná usnesení 90/2020 Z a 123/2021 Z – 129/2021 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z a 101/2021 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "Kontrolní výbor",
+     "vyřazení z evidence",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "133/2021 Z",
+    "title": "Kontrola investičních akcí za rok 2021 bez zjištěných pochybení",
+    "summary": "Kontrolní výbor konstatuje, že při kontrole investičních akcí za rok 2021 (mj. vydávání informačních novin, doplnění písku v pískovištích, stříhání živých plotů, novostavba dětského hřiště K Vinici, zálivka zeleně, změna užívání provozovny na knihovnu v ulici Josefa Ressla 2278, náhradní výsadba dřevin) nebyla zjištěna žádná pochybení a vše proběhlo v souladu se zákonem.",
+    "keywords": [
+     "kontrola investičních akcí",
+     "výběrová řízení",
+     "dětské hřiště K Vinici",
+     "knihovna",
+     "pískoviště",
+     "živé ploty",
+     "náhradní výsadba",
+     "zálivka zeleně",
+     "informační noviny"
+    ],
+    "topics": [
+     "kontrola",
+     "investice",
+     "zakazky"
+    ],
+    "kind": "zprava",
+    "places": [
+     "K Vinici",
+     "Josefa Ressla 2278"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "134/2021 Z",
+    "title": "Plán činnosti Kontrolního výboru na rok 2022",
+    "summary": "Zastupitelstvo schvaluje předložený plán činnosti Kontrolního výboru ZMO Pardubice V na rok 2022.",
+    "keywords": [
+     "plán činnosti",
+     "Kontrolní výbor",
+     "kontrolní výbor 2022"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "135/2021 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2021",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 30. 11. 2021 uvedený v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu 2021"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "136/2021 Z",
+    "title": "4. změna rozpočtu a rozpočtu sociálního fondu na rok 2021",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje 4. změnu rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2021 uvedenou v tabulkové části zprávy, včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "rozpočet 2021",
+     "sociální fond",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "137/2021 Z",
+    "title": "Rozpočet MO Pardubice V na rok 2022 a pravidla hospodaření",
+    "summary": "Zastupitelstvo schvaluje rozpočet MO Pardubice V a rozpočet sociálního fondu na rok 2022, svěřuje Radě MO pravomoc provádět vymezená rozpočtová opatření a stanoví pravidla pro rozpis rozpočtu, technické přesuny, plán společenských akcí, dárky jubilantům a propagační předměty. Zároveň schvaluje směrnici č. 7/2021 – Pravidla hospodaření se sociálním fondem, která ruší směrnici č. 7/2019.",
+    "keywords": [
+     "rozpočet 2022",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice č. 7/2021",
+     "rozpočtová pravidla"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "odbor ekonomický"
+    ],
+    "amounts": [
+     "200 tis. Kč vč.",
+     "500,-- Kč vč. na osobu",
+     "200,- Kč vč.",
+     "500,-- Kč vč."
+    ]
+   },
+   {
+    "number": "138/2021 Z",
+    "title": "Aktualizace střednědobého výhledu rozpočtu na roky 2021–2024",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje aktualizovaný střednědobý výhled rozpočtu MO Pardubice V na roky 2021–2024 uvedený v tabulkové části zprávy.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2021–2024"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "139/2021 Z",
+    "title": "Odvolání a volba členů finančního a kontrolního výboru",
+    "summary": "Zastupitelstvo odvolává ke dni 16. 12. 2021 člena finančního výboru a člena kontrolního výboru a na jejich místa ke dni 17. 12. 2021 volí nové členy z řad zastupitelů.",
+    "keywords": [
+     "odvolání člena výboru",
+     "volba člena výboru",
+     "finanční výbor",
+     "kontrolní výbor",
+     "změna složení výborů"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V",
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání o odtazích vozidel, termín dokončení stavby vnitrobloku „H“ firmou MIROS, postoj k úpravám ulice 17. listopadu a studii JZ obchvatu. Anna Gudrun Vavrečková se ptala na jednání k hazardu, koordinační jednání k TGM a jednání výboru městských částí SMO; starosta Jiří Rejda, DiS. odpovídal."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha navrhl vyřadit z evidence usnesení č. 90/2020 týkající se objektu Bobr – útulek, protože bylo vyřešeno demolicí objektu."
+   },
+   {
+    "no": "9",
+    "discussion": "Anna Gudrun Vavrečková a Ing. Filip Vařecha se ptali na hřiště v ulici Dražkovická (hrubý odhad 1,6 mil. Kč) a seznámení zastupitelstva s projekty nad 500 tis. Kč; Ing. Vařecha se dále ptal na projekty Jiránkova a Dražkovice Sever (2. etapa) a navrhl zvážit změnu dodavatele sečí. Starosta odpověděl k projektům i k nabídce Služeb města na seče, Ing. Jaroslav Kňava uvedl, že materiály projednal finanční výbor."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Filip Vařecha požadoval aktualizaci projektového zásobníku, Ing. Petr Netolický se ptal na důvod navýšení meziročních příjmů o 8 %; úřad odpověděl, že vychází z odhadů města."
+   },
+   {
+    "no": "11",
+    "discussion": "Ing. Petr Netolický se ptal, proč nebyl do výboru navržen člen podle návrhu uskupení Pardubáci; starosta odpověděl, že návrh byl podán za volební stranu, která nemá v ZMO zastupitele."
+   },
+   {
+    "no": "12",
+    "discussion": "Ing. Filip Vařecha kritizoval nedostatečný stav projektového zásobníku a požadoval, aby PD Wolkerova byla řádným bodem jednání; Bc. Petr Dufek vyzval zastupitele k zasílání podnětů strategické komisi. Bc. Jan Nadrchal požádal o otištění souhrnné zprávy o plánech v ulici Wolkerova ve Zpravodaji, vyjádřili se také Evžen Erban, Ing. Jaroslav Kňava, Ing. Jiří Janoš a Ing. Petr Netolický."
+   }
+  ]
+ }
+}

@@ -63,8 +63,18 @@ def meeting(mid: str) -> dict | None:
         m["agenda"] = conn.execute(
             "SELECT * FROM agenda_items WHERE meeting_id = %s ORDER BY seq", (mid,)).fetchall()
         m["resolutions"] = conn.execute(
-            """SELECT uid, number, title, status, agenda_no, agenda_title, summary, left(text, 300) AS text_start
-               FROM resolutions WHERE meeting_id = %s ORDER BY seq""", (mid,)).fetchall()
+            """SELECT r.uid, r.number, r.body, r.title, r.status, r.agenda_no, r.agenda_title, r.summary,
+                 left(r.text, 300) AS text_start, (SELECT json_build_object('pro', v.n_pro, 'proti', v.n_proti, 'zdrzel', v.n_zdrzel,
+                'nehl', coalesce(v.n_nehlasoval, 0), 'quorum', v.quorum, 'present', v.n_present,
+                'parts', (SELECT count(*) FROM votes p WHERE p.resolution_uid = r.uid AND p.part IS NOT NULL),
+                'whole', v.part IS NULL,
+                'parts_ok', (SELECT count(*) FROM votes p WHERE p.resolution_uid = r.uid AND p.part IS NOT NULL AND p.outcome = 'prijato'))
+              FROM votes v WHERE v.resolution_uid = r.uid
+              ORDER BY (v.part IS NULL) DESC, v.seq DESC LIMIT 1) AS mainvote,
+                 (SELECT string_agg(x.type || ':' || x.scope || ':' || s.number, ';')
+                    FROM resolution_relations x JOIN resolutions s ON s.uid = x.source_uid
+                   WHERE x.target_uid = r.uid AND x.effective) AS revoked_by
+               FROM resolutions r WHERE r.meeting_id = %s ORDER BY r.seq""", (mid,)).fetchall()
         m["other_votes"] = _votes(conn, "v.meeting_id = %s AND v.resolution_uid IS NULL", mid)
         return m
 
@@ -73,8 +83,9 @@ def meetings(body: str | None = None, year: int | None = None) -> list[dict]:
     with db.pool().connection() as conn:
         return conn.execute(
             """SELECT m.id, m.body, m.number, m.kind, m.date, m.status, m.term,
-                 (SELECT count(*) FROM resolutions r WHERE r.meeting_id = m.id) AS n_resolutions,
-                 (SELECT count(*) FROM resolutions r WHERE r.meeting_id = m.id AND r.status <> 'prijato') AS n_not_passed
+                 (SELECT count(*) FROM resolutions r WHERE r.meeting_id = m.id AND r.status <> 'neprijato') AS n_resolutions,
+                 (SELECT count(*) FROM resolutions r WHERE r.meeting_id = m.id AND r.status = 'neprijato') AS n_rejected,
+                 (SELECT count(*) FROM resolutions r WHERE r.meeting_id = m.id AND r.status = 'castecne') AS n_partial
                FROM meetings m
                WHERE (%s::text IS NULL OR m.body = %s) AND (%s::int IS NULL OR extract(year FROM m.date) = %s)
                ORDER BY m.date DESC, m.body""", (body, body, year, year)).fetchall()
@@ -117,7 +128,7 @@ def member(mid: str) -> dict | None:
 
 
 def member_votes(mid: str, *, dissent_only: bool = False, choice: str | None = None,
-                 limit: int = 50, offset: int = 0) -> list[dict]:
+                 procedural: bool = True, limit: int = 50, offset: int = 0) -> list[dict]:
     """A member's ballots with the resolution; dissent = voted differently than the outcome."""
     with db.pool().connection() as conn:
         return conn.execute(
@@ -128,10 +139,18 @@ def member_votes(mid: str, *, dissent_only: bool = False, choice: str | None = N
                LEFT JOIN resolutions r ON r.uid = v.resolution_uid
                WHERE b.member_id = %s AND b.choice NOT IN ('omluven', 'nepritomen')
                  AND (%s::text IS NULL OR b.choice = %s)
+                 AND (%s OR NOT v.procedural)
                  AND (NOT %s OR (v.outcome = 'prijato' AND b.choice <> 'pro')
                               OR (v.outcome = 'neprijato' AND b.choice = 'pro'))
                ORDER BY mt.date DESC, v.seq LIMIT %s OFFSET %s""",
-            (mid, choice, choice, dissent_only, limit, offset)).fetchall()
+            (mid, choice, choice, procedural, dissent_only, limit, offset)).fetchall()
+
+
+def member_surnames() -> list[str]:
+    with db.pool().connection() as conn:
+        return [r["last_name"] for r in conn.execute(
+            """SELECT DISTINCT m.last_name FROM members m
+               WHERE EXISTS (SELECT 1 FROM ballots b WHERE b.member_id = m.id) ORDER BY 1""")]
 
 
 def find_member(name_or_id: str) -> str | None:
@@ -155,7 +174,8 @@ def stats() -> dict:
     with db.pool().connection() as conn:
         return conn.execute(
             """SELECT (SELECT count(*) FROM meetings) AS meetings,
-                      (SELECT count(*) FROM resolutions) AS resolutions,
+                      (SELECT count(*) FROM resolutions WHERE status <> 'neprijato') AS resolutions,
+                      (SELECT count(*) FROM resolutions WHERE status = 'neprijato') AS rejected,
                       (SELECT count(*) FROM resolutions WHERE status <> 'prijato') AS not_passed,
                       (SELECT count(*) FROM votes) AS votes,
                       (SELECT count(*) FROM ballots WHERE provenance <> 'attendance') AS ballots,

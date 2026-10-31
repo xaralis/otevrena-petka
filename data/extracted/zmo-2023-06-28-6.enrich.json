@@ -1,0 +1,247 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "0bcb6607c183f1b354c58082b0bae43190315e558476fc4ce7b5fc1d00298e8e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "44/2023 Z",
+    "title": "Zpráva o činnosti starosty od jednání 26. 4. 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 26. 4. 2023.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelům"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "45/2023 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení 36–48/2023 R z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady. Z evidence vyřazuje splněná usnesení 36/2023 R – 48/2023 R a v evidenci ponechává usnesení 30/2023 R a 31/2023 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "46/2023 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení 36–43/2023 Z z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení 36/2023 Z – 43/2023 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z, 101/2021 Z, 142/2022 Z, 16/2022 Z a 23/2023 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "47/2023 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 5. 2023",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření MO Pardubice V k 31. 5. 2023 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "48/2023 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2022",
+    "summary": "Zastupitelstvo projednalo závěrečný účet za rok 2022 a souhlasí s celoročním hospodařením obvodu bez výhrad. Schvaluje finanční vypořádání za rok 2022 včetně vypořádání sociálního fondu a rozpočtová opatření v rámci závěrečného účtu (body 1–13 6. části důvodové zprávy).",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2022",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "49/2023 Z",
+    "title": "Informace o schválení účetní závěrky k 31. 12. 2022 zastupitelstvem města",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2022 schválí zastupitelstvo města na červnovém jednání. Informaci o jejím schválení obdrží na nejbližším příštím jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "2022",
+     "zastupitelstvo města",
+     "statutární město Pardubice"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "50/2023 Z",
+    "title": "3. změna rozpočtu na rok 2023 a nové akce Setkání se seniory a Divadelní představení",
+    "summary": "Zastupitelstvo schvaluje rozpočtová opatření 3. změny rozpočtu na rok 2023 (body 1–9 důvodové zprávy) a bere na vědomí komentář a informativní tabulky. Do plánu společenských akcí na rok 2023 zařazuje nové akce Setkání se seniory a Divadelní představení.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "plán společenských akcí",
+     "Setkání se seniory",
+     "Divadelní představení",
+     "divadlo"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "socialni"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč",
+     "100 tis. Kč"
+    ]
+   },
+   {
+    "number": "51/2023 Z",
+    "title": "Záměr poptat projekt rekonstrukce chodníků v ulici Boženy Němcové",
+    "summary": "Zastupitelstvo schvaluje záměr poptat projekční práce na oboustrannou rekonstrukci povrchu chodníků v ulici Boženy Němcové v úseku od ulice Češkova po ulici Rožkova.",
+    "keywords": [
+     "projektová dokumentace",
+     "rekonstrukce chodníků",
+     "chodník",
+     "Boženy Němcové",
+     "investiční akce"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Boženy Němcové",
+     "ul. Češkova",
+     "ul. Rožkova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "52/2023 Z",
+    "title": "Finální podoba projektu kontejnerového stání Pichlova x Rokycanova",
+    "summary": "Zastupitelstvo schvaluje finální podobu projektu zvětšeného kontejnerového stání na rohu ulic Pichlova a Rokycanova pro kontejnery na komunální i separovaný odpad (celkem asi 26 kontejnerů).",
+    "keywords": [
+     "kontejnerové stání",
+     "kontejnery",
+     "separovaný odpad",
+     "komunální odpad",
+     "Pichlova",
+     "Rokycanova",
+     "projektová dokumentace"
+    ],
+    "topics": [
+     "cistota",
+     "investice"
+    ],
+    "kind": "jine",
+    "places": [
+     "Pichlova",
+     "Rokycanova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "I",
+    "discussion": "Občané se ptali na kasino, rezidenční bydlení v ulici Čacké, možné černé stavby v zahrádkářské kolonii v Konečné ulici, stavbu firmy ALS, odstavené auto na Benešově náměstí a poškozené sloupky na sítě na hřišti v Jesničánkách. Odpovídal starosta Jiří Rejda, DiS.; Ing. Petr Netolický prověří podnět na stavebním úřadu a Jiří Havrda věc s autem na městské policii."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání o staré vojenské plovárně a revitalizaci Chrudimky (žádal pozvat zástupkyni OHA MmP na příští zastupitelstvo) a na dopravní hřiště. Ing. Petr Netolický se ptal na zastávku MHD na náměstí Dukelských hrdinů a Ing. Jakub Kutílek na zeleň v Dražkovicích; odpovídal starosta Jiří Rejda, DiS."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Filip Vařecha uvedl, že kontrolní výbor považuje usnesení 31/2023 R (body 2 a 3) za nesplněné. Ing. Jakub Kutílek se vyjádřil k jeho plnění."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha se ptal na plnění usnesení 16/2022 Z; navrhované jiné usnesení po vysvětlení tajemníka nepředložil. Ing. Jakub Kutílek namítl, že nepřijaté usnesení 43/2023 by nemělo být ve zprávě, a Ing. Petr Netolický se ptal na zveřejnění plánu střednědobých a dlouhodobých investic."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha se ptal, kdy začne demolice objektu „Bobr“ v lesoparku; starosta Jiří Rejda, DiS. odpověděl, že nebyl přizván k přípravě projektu a chtěl by zachovat stávající sítě."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha se ptal na nové akce Divadelní představení a Setkání se seniory; vysvětloval starosta Jiří Rejda, DiS., doplnil Ing. Milan Randák. Bc. Jan Nadrchal navrhl oslovit odbor kultury magistrátu, dále diskutovali Ing. Lic. Jaroslav Kňava a Ing. Pavel Bergman."
+   },
+   {
+    "no": "9",
+    "discussion": "Po rozsáhlé diskusi starosta Jiří Rejda, DiS. zprávu stáhl, protože se majitel firmy M-STAV CZ s.r.o. nedostavil; bude znovu vyzván a zpráva předložena na zastupitelstvu 6. 9. 2023."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Jakub Kutílek označil projektovou dokumentaci za nedostatečnou (pouze zákres do mapy) a navrhl další úpravy včetně rozšíření chodníku; odpovídal pracovník úřadu."
+   },
+   {
+    "no": "11",
+    "discussion": "Starosta Jiří Rejda, DiS. představil studii „Karanténa“. Ing. Petr Netolický se ptal, jak bude starosta hlasovat o navržené výstavbě v ulici Čacké, a Bc. Petr Dufek na otevření kasina."
+   }
+  ]
+ }
+}

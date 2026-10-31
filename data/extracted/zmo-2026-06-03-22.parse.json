@@ -1,0 +1,535 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "9c4c2be7c3242f24fd56fa6d9ee8e2e58d9485f7ea63e977ae470de166b40200",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 22,
+   "kind": "radne",
+   "date": "2026-06-03",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Milan Randák",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Michal Hrabák",
+    "Ing. Pavel Bergman",
+    "Petr Šmeral",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Lic. Jaroslav Kňava",
+    "Bc. Petr Dufek",
+    "Bc. Kateřina Valášek Fialová",
+    "Ing. Petr Netolický"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 44,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "1",
+    "title": "Návrh řešení úprav komunikace Dražkovice č.p. 153 – č.p. 174",
+    "line": 70,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Zpráva o činnosti starosty MO Pardubice V",
+    "line": 107,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Mgr. Miloš Adamů, MBA."
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 128,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 147,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Schválení investičních akcí a investičních záměrů",
+    "line": 169,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Stavební úpravy a nástavba administrativní budovy na multifunkční objekt v ul. Boženy Němcové",
+    "line": 196,
+    "speakers": [
+     "Bc. Jan Nadrchal",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Schválení pravidel participativního rozpočtu městského obvodu pro rok 2026",
+    "line": 213,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 4. 2026",
+    "line": 229,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "2. změna rozpočtu MO Pardubice V na r. 2026",
+    "line": 246,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2025",
+    "line": 266,
+    "speakers": []
+   },
+   {
+    "no": "11",
+    "title": "Diskuse, závěr",
+    "line": 281,
+    "speakers": [
+     "Ing. Petr Netolický",
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Bc. Petr Dufek"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "173/2026 Z",
+    "agenda_no": "2",
+    "first_line": 123,
+    "last_line": 124,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "174/2026 Z",
+    "agenda_no": "3",
+    "first_line": 135,
+    "last_line": 143,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "175/2026 Z",
+    "agenda_no": "4",
+    "first_line": 154,
+    "last_line": 165,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "176/2026 Z",
+    "agenda_no": "5",
+    "first_line": 187,
+    "last_line": 192,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "177/2026 Z",
+    "agenda_no": "7",
+    "first_line": 223,
+    "last_line": 224,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "178/2026 Z",
+    "agenda_no": "8",
+    "first_line": 241,
+    "last_line": 242,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "179/2026 Z",
+    "agenda_no": "9",
+    "first_line": 254,
+    "last_line": 259,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "180/2026 Z",
+    "agenda_no": "10",
+    "first_line": 274,
+    "last_line": 277,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 34,
+    "last_line": 34,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise a ověřovatelé zápisu",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 31,
+    "motion_last_line": 33,
+    "procedural": true,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu s předřazením bodu č. 4 (Dražkovice) na první místo",
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": 47,
+    "motion_last_line": 63,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Milan Randák"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": null,
+    "part": null,
+    "subject": "protinávrh Ing. Filipa Vařechy: zadání projekčních prací na úpravu komunikace Dražkovice č.p. 153 – č.p. 174 s prověřením a porovnáním více variant řešení",
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": 90,
+    "motion_last_line": 94,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 12,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Lic. Jaroslav Kňava",
+      "Ing. Petr Netolický",
+      "Ing. Filip Vařecha"
+     ],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": null,
+    "part": null,
+    "subject": "původní návrh: zadání projekčních prací na úpravu komunikace Dražkovice č.p. 153 – č.p. 174 dle předloženého návrhu úprav",
+    "proposer": null,
+    "motion_first_line": 99,
+    "motion_last_line": 100,
+    "procedural": false,
+    "pro": 0,
+    "proti": 1,
+    "zdrzel": 14,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Pavel Bergman"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 125,
+    "last_line": 125,
+    "resolution": "173/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 144,
+    "last_line": 144,
+    "resolution": "174/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 166,
+    "last_line": 166,
+    "resolution": "175/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": 1,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": [
+      "Bc. Jan Nadrchal"
+     ]
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 193,
+    "last_line": 193,
+    "resolution": "176/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 205,
+    "last_line": 206,
+    "resolution": null,
+    "part": null,
+    "subject": "souhlas se záměrem stavebních úprav a nástavby administrativní budovy na multifunkční objekt v ul. Boženy Němcové",
+    "proposer": null,
+    "motion_first_line": 203,
+    "motion_last_line": 204,
+    "procedural": false,
+    "pro": 0,
+    "proti": 10,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Milan Randák",
+      "Ing. Jakub Jeřábek",
+      "Ing. Petr Netolický",
+      "Karolina Štefková",
+      "Ing. Lic. Jaroslav Kňava"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 225,
+    "last_line": 226,
+    "resolution": "177/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Milan Randák",
+      "Michal Hrabák",
+      "Karolina Štefková"
+     ],
+     "zdrzel": [
+      "Bc. Petr Dufek",
+      "Bc. Jan Nadrchal"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 243,
+    "last_line": 243,
+    "resolution": "178/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 260,
+    "last_line": 261,
+    "resolution": "179/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 1,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Petr Netolický"
+     ],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Jeřábek",
+      "Bc. Kateřina Valášek Fialová",
+      "Ing. Pavel Bergman"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 278,
+    "last_line": 278,
+    "resolution": "180/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "ř. 205 a 260: u hlasování je uveden „Ing. Jakub Jeřábek“, v prezenci (ř. 16) a u ověřovatelů (ř. 32, 301) „JUDr. Bc. Jakub Jeřábek“ – zřejmě táž osoba, titul v dokumentu nejednotný.",
+   "ř. 34: hlasování o návrhové komisi a ověřovatelích (15 pro) proběhlo podle pořadí textu před oznámením (ř. 36–38), že Bc. Kateřina Valášek Fialová složila slib zastupitele; výsledek hlasování není výslovně uveden.",
+   "ř. 47–61 vs. ř. 70–282: v programu je bod Dražkovice č. 4 a Zpráva starosty č. 1; po předřazení (ř. 63) jsou body v projednání přečíslovány (Dražkovice = 1, Zpráva starosty = 2, kontroly plnění = 3 a 4).",
+   "ř. 95–102 a 203–207: v bodech 1 a 6 nebylo přijato žádné usnesení, proto nemají číslo usnesení."
+  ]
+ }
+}

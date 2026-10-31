@@ -1,0 +1,187 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "4fb84584dfe32da0719a276dbe035adedc4b265939309ec26690b49b012f5b8e",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 4,
+   "kind": "mimoradne",
+   "date": "2023-04-12",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Ing. Petr Netolický",
+    "Bc. Petra Prusáková",
+    "Ing. Lic. Jaroslav Kňava",
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek"
+   ],
+   "excused": [
+    "JUDr. Bc. Jakub Jeřábek",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Jan Nadrchal",
+    "Jiří Havrda"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Návrh obecně závazné vyhlášky, kterou se mění obecně závazná vyhláška č. 4/2019, kterou se vydává Statut města Pardubic",
+    "line": 47,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Pavel Bergman",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Diskuse, závěr",
+    "line": 101,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "35/2023 Z",
+    "agenda_no": "1",
+    "first_line": 70,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 41,
+    "last_line": 41,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 8,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "35/2023 Z",
+    "part": "bod a)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 8,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Pavel Bergman"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 86,
+    "resolution": "35/2023 Z",
+    "part": "bod b)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 6,
+    "proti": 1,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Jakub Kutílek"
+     ],
+     "zdrzel": [
+      "Ing. Pavel Bergman",
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 98,
+    "last_line": 99,
+    "resolution": "35/2023 Z",
+    "part": "bod c)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Pavel Bergman",
+      "Ing. Petr Netolický",
+      "Ing. Jakub Kutílek",
+      "Ing. Lic. Jaroslav Kňava"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   }
+  ],
+  "notes": [
+   "ř. 13: Ing. Petr Netolický je uveden jako přítomný „po část jednání“, bez zmínky o příchodu; hlasování o programu (ř. 41) má 8 hlasů, hlasování o bodech usnesení 35/2023 Z (ř. 78, 85, 98) po 9 hlasech – Netolický zřejmě přišel po schválení programu.",
+   "Usnesení 35/2023 Z se hlasovalo po bodech: a) 8 pro (přijato, výsledek v textu výslovně neuveden), b) a c) výslovně „návrh nebyl přijat“."
+  ]
+ }
+}

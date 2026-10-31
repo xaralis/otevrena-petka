@@ -1,0 +1,191 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "3b6632048d204b944b8b71343de43b1140424b7e9d456560de0e5403a220ad48",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 23,
+   "kind": "mimoradne",
+   "date": "2026-06-24",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Michal Hrabák",
+    "Ing. Pavel Bergman",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Lic. Jaroslav Kňava"
+   ],
+   "excused": [
+    "JUDr. Bc. Jakub Jeřábek",
+    "Petr Šmeral",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "absent": [
+    "Bc. Kateřina Valášek Fialová",
+    "Ing. Petr Netolický"
+   ]
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 41,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Závěrečný účet MO Pardubice V za rok 2025",
+    "line": 55,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "3. změna rozpočtu MO Pardubice V na r. 2026",
+    "line": 74,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Diskuse, závěr",
+    "line": 122,
+    "speakers": [
+     "Michal Hrabák",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "Jiří Rejda, DiS.",
+     "Karolina Štefková"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "181/2026 Z",
+    "agenda_no": "1",
+    "first_line": 62,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "182/2026 Z",
+    "agenda_no": "2",
+    "first_line": 79,
+    "last_line": 117,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 37,
+    "last_line": 37,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise a ověřovatelé zápisu",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 34,
+    "motion_last_line": 36,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 43,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "181/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "182/2026 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": []
+ }
+}

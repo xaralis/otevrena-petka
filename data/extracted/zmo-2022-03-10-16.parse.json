@@ -1,0 +1,533 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "895d2e35c1a71fd982339e50578ec4e5f56b6c05cd201f2af6fb122516f64ecf",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 16,
+   "kind": "radne",
+   "date": "2022-03-10",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Bc. Petra Prusáková",
+    "Ing. Jiří Janoš",
+    "Ing. Petr Netolický",
+    "Anna Gudrun-Vavrečková",
+    "Ing. Milan Randák",
+    "František Just",
+    "Bc. Petr Dufek",
+    "Jiří Havrda",
+    "Karolina Štefková"
+   ],
+   "excused": [
+    "Petr Hemský"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 39,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Prodej nebytových prostor v majetku města Pardubice na území MO Pardubice V",
+    "line": 55,
+    "speakers": [
+     "Ing. Petr Netolický",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Bc. Jan Nadrchal",
+     "Bc. Petr Dufek",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 286,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Anna Gudrun-Vavrečková",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "Bc. Petr Dufek",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 322,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení",
+    "line": 335,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Kontrola smluvních vztahů (DPP, DPČ)",
+    "line": 350,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2021",
+    "line": 362,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jaroslav Kňava",
+     "Bc. Jan Nadrchal",
+     "Ing. Petr Netolický",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Výroční zpráva o činnosti Finančního výboru ZMO Pardubice V za r. 2021",
+    "line": 377,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "1. změna rozpočtu MO Pardubice V na r. 2022",
+    "line": 389,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jaroslav Kňava",
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Rezoluce na podporu nezávislosti Ukrajiny, poskytnutí humanitární pomoci a související návrh rozpočtového opatření",
+    "line": 416,
+    "speakers": [
+     "Ing. Milan Randák",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Diskuse",
+    "line": 447,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Bc. Petr Dufek",
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "IV",
+    "title": "Závěr",
+    "line": 488,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "140/2022 Z",
+    "agenda_no": "1",
+    "first_line": 248,
+    "last_line": 250,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "141/2022 Z",
+    "agenda_no": "1",
+    "first_line": 256,
+    "last_line": 262,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "142/2022 Z",
+    "agenda_no": "1",
+    "first_line": 272,
+    "last_line": 282,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "143/2022 Z",
+    "agenda_no": "2",
+    "first_line": 317,
+    "last_line": 318,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "144/2022 Z",
+    "agenda_no": "3",
+    "first_line": 329,
+    "last_line": 331,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "145/2022 Z",
+    "agenda_no": "4",
+    "first_line": 342,
+    "last_line": 346,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "146/2022 Z",
+    "agenda_no": "5",
+    "first_line": 357,
+    "last_line": 358,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "147/2022 Z",
+    "agenda_no": "6",
+    "first_line": 372,
+    "last_line": 373,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "148/2022 Z",
+    "agenda_no": "7",
+    "first_line": 384,
+    "last_line": 385,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "149/2022 Z",
+    "agenda_no": "8",
+    "first_line": 404,
+    "last_line": 412,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "150/2022 Z",
+    "agenda_no": "9",
+    "first_line": 429,
+    "last_line": 443,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 52,
+    "last_line": 52,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 41,
+    "motion_last_line": 51,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 251,
+    "last_line": 252,
+    "resolution": "140/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 9,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Anna Gudrun-Vavrečková",
+      "Ing. Petr Netolický",
+      "František Just"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jiří Janoš"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 264,
+    "last_line": 265,
+    "resolution": "141/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 9,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Anna Gudrun-Vavrečková",
+      "Ing. Petr Netolický"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "František Just",
+      "Ing. Jiří Janoš"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 283,
+    "last_line": 283,
+    "resolution": "142/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 319,
+    "last_line": 319,
+    "resolution": "143/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 332,
+    "last_line": 332,
+    "resolution": "144/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 347,
+    "last_line": 347,
+    "resolution": "145/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 359,
+    "last_line": 359,
+    "resolution": "146/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 374,
+    "last_line": 374,
+    "resolution": "147/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 386,
+    "last_line": 386,
+    "resolution": "148/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 413,
+    "last_line": 413,
+    "resolution": "149/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 444,
+    "last_line": 444,
+    "resolution": "150/2022 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 52: u hlasování o programu chybí počet zdržených („zdrželo se“ bez čísla); zapsáno 0 (14 přítomných = 14 pro).",
+   "ř. 12–16: Evžen Erban je uveden mezi přítomnými i omluvenými („po část jednání“); čas příchodu/odchodu text neuvádí.",
+   "ř. 34–36: hlasování o změně pořadí bodů (původní bod 9 jako bod 1) je zmíněno bez počtů hlasů.",
+   "Počty hlasujících kolísají (14, 13, 12, 13, 14) bez zaznamenaných příchodů/odchodů členů.",
+   "ř. 256–257: body usnesení 141/2022 Z jsou číslovány „3.“ a „2.“.",
+   "ř. 142: starosta uvádí 15 zastupitelů MO; přítomno 14, omluven Petr Hemský.",
+   "Jméno Anna Gudrun Vavrečková zapsáno jako „Anna Gudrun-Vavrečková“ (jako v dřívějších jednáních), aby se spárovalo s registrem, kde je příjmení „Gudrun Vavrečková“; v textu je bez spojovníku."
+  ]
+ }
+}

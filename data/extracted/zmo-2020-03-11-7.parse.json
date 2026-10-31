@@ -1,0 +1,480 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "da7979ba3a3c205a2d1209b6533f4550916e2922f269afaccc5c8acc3fffa2a7",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 7,
+   "kind": "radne",
+   "date": "2020-03-11",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Ing. Jiří Hájek",
+    "Pavel Studnička",
+    "Ing. Milan Randák",
+    "Martin Merhout",
+    "Ing. Petr Netolický",
+    "Bc. Petra Prusáková",
+    "Karolina Štefková"
+   ],
+   "excused": [
+    "Petr Hemský",
+    "Ing. Jiří Janoš"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 70,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Martin Merhout",
+     "Ing. Jiří Hájek",
+     "Ing. Milan Randák",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 117,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 128,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Kontrola dokončených investičních akcí za rok 2019",
+    "line": 143,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Statut a jednací řád Kontrolního výboru Zastupitelstva městského obvodu Pardubice V",
+    "line": 158,
+    "speakers": [
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2019",
+    "line": 173,
+    "speakers": [
+     "Ing. Jiří Hájek",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Návrh 1. změny rozpočtu MO Pardubice V na r. 2020",
+    "line": 193,
+    "speakers": [
+     "Ing. Jiří Hájek",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "Výroční zpráva o činnosti Finančního výboru ZMO Pardubice V za r. 2019",
+    "line": 237,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Program rozvoje městského obvodu Pardubice V – plnění za rok 2019",
+    "line": 248,
+    "speakers": []
+   },
+   {
+    "no": "IV.",
+    "title": "Různé – Diskuze",
+    "line": 266,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Hájek",
+     "Filip Šťastný",
+     "Ing. Jaroslav Kňava",
+     "Ing. Petr Netolický",
+     "Ing. Milan Randák",
+     "Evžen Erban",
+     "Bc. Jan Nadrchal",
+     "Jiří Rejda, DiS."
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "58/2020 Z",
+    "agenda_no": "1",
+    "first_line": 113,
+    "last_line": 114,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "59/2020 Z",
+    "agenda_no": "2",
+    "first_line": 123,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "60/2020 Z",
+    "agenda_no": "3",
+    "first_line": 136,
+    "last_line": 140,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "61/2020 Z",
+    "agenda_no": "4",
+    "first_line": 153,
+    "last_line": 155,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "62/2020 Z",
+    "agenda_no": "5",
+    "first_line": 169,
+    "last_line": 170,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "63/2020 Z",
+    "agenda_no": "6",
+    "first_line": 188,
+    "last_line": 190,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "64/2020 Z",
+    "agenda_no": "7",
+    "first_line": 214,
+    "last_line": 216,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "65/2020 Z",
+    "agenda_no": "7",
+    "first_line": 222,
+    "last_line": 234,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "66/2020 Z",
+    "agenda_no": "8",
+    "first_line": 244,
+    "last_line": 245,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "67/2020 Z",
+    "agenda_no": "9",
+    "first_line": 256,
+    "last_line": 263,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 49,
+    "last_line": 49,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 115,
+    "last_line": 115,
+    "resolution": "58/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "59/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 141,
+    "last_line": 141,
+    "resolution": "60/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 156,
+    "last_line": 156,
+    "resolution": "61/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 171,
+    "last_line": 171,
+    "resolution": "62/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 191,
+    "last_line": 191,
+    "resolution": "63/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 217,
+    "last_line": 218,
+    "resolution": "64/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 2,
+    "proti": 7,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. F. Vařecha",
+      "M. Merhout"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Ing. J. Kňava",
+      "Ing. J. Hájek",
+      "Ing. P. Netolický",
+      "P. Studnička"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 235,
+    "last_line": 235,
+    "resolution": "65/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 246,
+    "last_line": 246,
+    "resolution": "66/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 264,
+    "last_line": 264,
+    "resolution": "67/2020 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 143-155: bod 4 „Kontrola dokončených investičních akcí za rok 2019“, ale znění usnesení 61/2020 Z schvaluje „rozbor hospodaření MO Pardubice V k 30. 11. 2019“ – zjevně okopírované znění patřící k bodu 6.",
+   "ř. 174 vs. ř. 188-189: bod 6 se jmenuje „Rozbor hospodaření … k 30. 11. 2019“, usnesení 63/2020 Z schvaluje rozbor „k 31. 12. 2019“.",
+   "ř. 217-218: u usnesení 64/2020 Z (protinávrh Ing. Vařechy, pro 2, proti 7, zdržel se 4) dokument neuvádí výsledek; 2 hlasy z 15 členů nejsou většina.",
+   "ř. 261-263: řádky „Odpovídá / Termín / Kontrolní termín“ u usnesení 67/2020 Z jsou součástí doplňovaného bodu Programu rozvoje, nikoli Z:/T: usnesení.",
+   "ř. 309: „Pan Erben“ – v prezenci je Evžen Erban (ř. 15, 312)."
+  ]
+ }
+}

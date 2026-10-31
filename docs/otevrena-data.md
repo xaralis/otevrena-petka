@@ -57,14 +57,14 @@ meetings 1 ── n resolutions 1 ── n votes 1 ── n ballots n ── 1 m
 `present`/`excused`/`absent` (id členů), `status` (`ok`/`needs_review` – jen pro tento
 projekt, úřad ho nepotřebuje).
 
-**resolutions** – usnesení: `uid`, `number`, `meeting_id`, `body`, `date`, `agenda_no`,
+**resolutions** – usnesení a nepřijaté návrhy, kterým zápis přidělil číslo: `uid`, `number`, `meeting_id`, `body`, `date`, `agenda_no`,
 `agenda_title`, `text` (doslovné znění), `responsible` (Z:), `deadline` (T:), `verbs`
 (rozhodovací slovesa) a **`status`**:
 
 | status | význam |
 |---|---|
 | `prijato` | usnesení prošlo |
-| `neprijato` | **dostalo číslo, ale v hlasování neprošlo** – zápisy MO V to dělají |
+| `neprijato` | **nepřijatý návrh** – nezískal většinu, takže podle zákona o obcích nejde o usnesení; zápisy MO V mu přesto přidělují číslo, proto ho evidujeme pod ním |
 | `castecne` | o částech se hlasovalo zvlášť a některé neprošly |
 | `neovereno` | ze zápisu nelze výsledek určit (např. chybí hlasovací řádek) |
 
@@ -119,7 +119,8 @@ neúspěšný návrh na revokaci nic neruší).
    `ballots`, `members` (a `relations`) jako CSV podle tohoto schématu, ideálně ze stejného
    podkladu, ze kterého vzniká zápis. PDF zůstává úředním dokumentem.
 3. **Výsledek u každého hlasování výslovně** („usnesení bylo / nebylo přijato“) a číslo
-   usnesení **jen přijatým** usnesením; nepřijaté návrhy evidovat jako hlasování bez čísla.
+   usnesení **jen přijatým** usnesením. Návrh, který nezískal většinu, není usnesení – patří
+   jen mezi hlasování (`votes`) bez čísla.
 4. **Rušení a změny vyznačit strukturovaně** – u usnesení, které ruší nebo mění jiné, uvést
    číslo dotčeného usnesení a rozsah (celé / body).
 5. **Stabilní identifikátory** podle tabulky výše a **licence CC BY 4.0** (nebo CC0).

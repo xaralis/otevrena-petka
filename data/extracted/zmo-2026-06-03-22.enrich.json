@@ -1,0 +1,221 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "9c4c2be7c3242f24fd56fa6d9ee8e2e58d9485f7ea63e977ae470de166b40200",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "173/2026 Z",
+    "title": "Zpráva o činnosti starosty od 11. 3. 2026",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu Pardubice V za období od posledního jednání zastupitelstva dne 11. 3. 2026.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "starosta",
+     "informace o jednáních"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "174/2026 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru ZMO Pardubice V o plnění usnesení rady městského obvodu. Splněná usnesení RMO z let 2025 a 2026 (např. č. 235/2025 R až 284/2026 R) vyřazuje z evidence a usnesení č. 257/2025 R, 261/2025 R a 276/2026 R v evidenci ponechává.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "RMO",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "175/2026 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru ZMO Pardubice V o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení č. 162/2025 Z, 166/2026 Z až 168/2026 Z a 170/2026 Z až 172/2026 Z, další usnesení (např. č. 75/2009 Z, 165/2025 Z, 169/2025 Z) ponechává v evidenci.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "ZMO",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "176/2026 Z",
+    "title": "Investiční záměry: vnitroblok Jiránkova, dětské hřiště za OK Centrem, vnitroblok K Blahobytu",
+    "summary": "Zastupitelstvo schvaluje záměr poptat projekční práce na stavební úpravy vnitrobloku v ulici Jiránkova 2249–2251. Dále schvaluje investiční záměry k realizaci v roce 2026: stavební úpravy dětského hřiště za OK Centrem a stavební úpravy vnitrobloku K Blahobytu č.p. 2482–2484.",
+    "keywords": [
+     "investiční záměr",
+     "investiční akce",
+     "projekční práce",
+     "vnitroblok",
+     "dětské hřiště",
+     "Jiránkova",
+     "K Blahobytu",
+     "OK Centrum",
+     "revitalizace vnitrobloku"
+    ],
+    "topics": [
+     "investice",
+     "hriste-sport"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Jiránkova 2249–2251",
+     "OK Centrum",
+     "K Blahobytu č.p. 2482-2484"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "177/2026 Z",
+    "title": "Pravidla participativního rozpočtu městského obvodu pro rok 2026",
+    "summary": "Zastupitelstvo schvaluje Pravidla participativního rozpočtu městského obvodu Pardubice V pro rok 2026, která jsou přílohou zprávy.",
+    "keywords": [
+     "participativní rozpočet",
+     "pravidla",
+     "občanské projekty",
+     "projekty občanů",
+     "rozpočet 2026"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "178/2026 Z",
+    "title": "Rozbor hospodaření městského obvodu k 30. 4. 2026",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 30. 4. 2026 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2026",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "179/2026 Z",
+    "title": "2. změna rozpočtu městského obvodu na rok 2026",
+    "summary": "Zastupitelstvo bere na vědomí komentář ke 2. změně rozpočtu na rok 2026 včetně rozpočtu sociálního fondu a k navrženým rozpočtovým opatřením. Schvaluje rozpočtová opatření v rámci 2. změny rozpočtu uvedená v bodech č. 1–14 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2026",
+     "sociální fond",
+     "2. změna rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "180/2026 Z",
+    "title": "Informace o schvalování účetní závěrky k 31. 12. 2025",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2025 schválí zastupitelstvo města na červnovém jednání. Informaci o jejím schválení obdrží zastupitelstvo obvodu na nejbližším příštím jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2025",
+     "hospodaření",
+     "zastupitelstvo města",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "II",
+    "discussion": "Ing. Filip Vařecha požádal o předřazení bodu Návrh řešení úprav komunikace Dražkovice č.p. 153 – č.p. 174 na první místo programu."
+   },
+   {
+    "no": "1",
+    "discussion": "Občan z veřejnosti popsal jednání občanů s projektantem a dodavatelem stavby a předal starostovi stanoviska a dokumenty; starosta Jiří Rejda, DiS. se ptal, proč občané komunikují přímo s projektantem obvodu. Ing. Filip Vařecha předložil vlastní návrh usnesení s porovnáním více variant řešení včetně obytné zóny; Jiří Rejda, DiS. uvedl, že obytnou zónu v prvním návrhu zamítla Policie ČR. Protinávrh ani původní návrh usnesení nebyly přijaty."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání s ŘSD o jihovýchodním obchvatu a na zahájení stavby parkovacího domu Vápenka. Ing. Petr Netolický se ptal na výsledky semifinále sportovních her, na což starosta ani Mgr. Miloš Adamů, MBA. neznali odpověď."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Filip Vařecha se ptal, zda je u vnitrobloku Jiránkova 2249–2251 vyřešené parkování po vypovězení nájemní smlouvy SVJ a zda návrh odpovídá okolí. Diskutovala se údržba a záruční lhůty dětského hřiště za OK Centrem, ke kterým se vyjádřil starosta Jiří Rejda, DiS.; občanka se ptala na vypovězení smlouvy, které starosta zdůvodnil připravovanými zónami parkování."
+   },
+   {
+    "no": "6",
+    "discussion": "Bc. Jan Nadrchal konstatoval, že jde o stejný projekt jako dříve, pouze přejmenovaný, a Ing. Filip Vařecha s ním souhlasil. Návrh usnesení nebyl přijat."
+   },
+   {
+    "no": "7",
+    "discussion": "Zprávu předložil Ing. Filip Vařecha. Bc. Jan Nadrchal navrhl omezit podávání projektů na obyvatele obvodu a umožnit výběr ze zásobníku realizovatelných projektů; Ing. Milan Randák navrhl pravidla zjednodušit kvůli lidem bez přístupu k internetu."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha kritizoval pomalé tempo oprav silnice a chodníků ve Wolkerově ulici; úřad uvedl termíny nástupu firmy od 1. 8. a 1. 9. 2026 s dokončením do konce listopadu a realizaci prokořenitelných prostor před DK Dukla na podzim 2026."
+   },
+   {
+    "no": "11",
+    "discussion": "Ing. Petr Netolický se ptal, proč jsou v materiálech ke změně rozpočtu začerněná místa; starosta odpověděl, že kvůli GDPR. Ing. Filip Vařecha navrhl umisťovat na akce obvodu kasičku na dobročinný účel, Jiří Rejda, DiS. upozornil na náročnost sbírky a Bc. Petr Dufek požádal, aby výtěžek šel organizaci se sídlem v obvodu."
+   }
+  ]
+ }
+}

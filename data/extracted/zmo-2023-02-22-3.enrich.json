@@ -1,0 +1,327 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "12692afc8f1c27424b87347882a5418e34cc9cb44ecd1c87ca376ed9a092c0d6",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "23/2023 Z",
+    "title": "Informování o územních řízeních a námitky proti projektu „REZIDENČNÍ BYDLENÍ ČACKÉ“",
+    "summary": "Tajemníkovi se trvale ukládá informovat všechny zastupitele o zahájených územních řízeních na území obvodu. Starostovi se ukládá uplatnit jako účastník územního řízení k projektu „REZIDENČNÍ BYDLENÍ ČACKÉ“ námitky – nárůst dopravy a nedostatek parkování, hluková zátěž, změna rázu čtvrti rodinných domů, nesoulad s územním plánem pro plochu X/29 (podlažnost, zastavěnost) a riziko ztráty vody ve studních.",
+    "keywords": [
+     "REZIDENČNÍ BYDLENÍ ČACKÉ",
+     "bytové domy",
+     "územní řízení",
+     "námitky",
+     "Čacké",
+     "Nové Jesenčany",
+     "parkování",
+     "územní plán",
+     "developer",
+     "studny"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "bydleni",
+     "doprava"
+    ],
+    "kind": "ukol",
+    "places": [
+     "ul. Čacké",
+     "Nové Jesenčany",
+     "plocha X/29"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "24/2023 Z",
+    "title": "Zpráva o činnosti starosty od 21. 12. 2022",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva 21. 12. 2022.",
+    "keywords": [
+     "zpráva o činnosti starosty",
+     "starosta",
+     "činnost starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "25/2023 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady a vyřazuje z evidence sledování splněná usnesení 313/2022 R – 325/2022 R a 1/2023 R – 21/2023 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "26/2023 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení a ponechání v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení 161/2022 Z – 169/2022 Z, 1/2022 Z – 15/2022 Z a 17/2022 Z – 22/2022 Z a v evidenci ponechává mj. usnesení 75/2009 Z, 101/2021 Z a 142/2022 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "27/2023 Z",
+    "title": "Zpráva Kontrolního výboru o kontrole smluvních vztahů (DPP, DPČ)",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole smluvních vztahů – dohod o provedení práce a dohod o pracovní činnosti.",
+    "keywords": [
+     "kontrolní výbor",
+     "DPP",
+     "DPČ",
+     "dohody o provedení práce",
+     "smluvní vztahy"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "28/2023 Z",
+    "title": "Nový plán činnosti Kontrolního výboru na rok 2023",
+    "summary": "Zastupitelstvo ruší své usnesení 13/2022 Z z 21. 12. 2022 a schvaluje nový plán činnosti Kontrolního výboru na rok 2023. Plán kromě pravidelné kontroly plnění usnesení zahrnuje kontrolu DPP a DPČ, poskytování informací podle zákona č. 106/1999 Sb., výdajů na investiční akce, vyřizování stížností a petic a obsahu webových stránek.",
+    "keywords": [
+     "plán činnosti",
+     "kontrolní výbor",
+     "revokace",
+     "2023",
+     "investiční akce",
+     "stížnosti a petice",
+     "webové stránky"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "29/2023 Z",
+    "title": "Zadání projektové dokumentace na rekonstrukce komunikací, chodníků a parkovišť",
+    "summary": "Zastupitelstvo schvaluje zadání projektové dokumentace na rekonstrukci komunikace v Dražkovicích u MŠ, chodníků na severní straně ulic Raisova a Široká a parkovacích ploch v ul. Jiránkova 2209–2211.",
+    "keywords": [
+     "projektová dokumentace",
+     "rekonstrukce chodníku",
+     "rekonstrukce komunikace",
+     "parkoviště",
+     "Dražkovice",
+     "Raisova",
+     "Široká",
+     "Jiránkova"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice u MŠ",
+     "ul. Raisova",
+     "ul. Široká",
+     "ul. Jiránkova 2209-2211"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "30/2023 Z",
+    "title": "Odměna předsedovi komise rady, který není zastupitelem",
+    "summary": "Zastupitelstvo stanovuje od 1. 3. 2023 měsíční odměnu za funkci předsedy komise rady pro osobu, která není členem zastupitelstva, ve výši 1.000,- Kč po dobu trvání funkce, s výjimkou července a srpna.",
+    "keywords": [
+     "odměna",
+     "předseda komise",
+     "komise rady",
+     "neuvolněný",
+     "nečlen zastupitelstva"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "31/2023 Z",
+    "title": "Výroční zpráva Finančního výboru za rok 2022",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru zastupitelstva za rok 2022.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "2022"
+    ],
+    "topics": [
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "32/2023 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 12. 2022",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 12. 2022 v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření",
+     "2022",
+     "čerpání rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "33/2023 Z",
+    "title": "Nová směrnice o sociálním fondu a spořicí účet u ČSOB",
+    "summary": "Zastupitelstvo schvaluje směrnici č. 7/2023 Pravidla hospodaření se sociálním fondem, která ruší dosavadní směrnici č. 7/2022-1. Souhlasí se zřízením spořicího účtu sociálního fondu u Československé obchodní banky, a. s., a s převody mezi ním a běžným účtem fondu prováděnými pracovníky úřadu.",
+    "keywords": [
+     "sociální fond",
+     "směrnice č. 7/2023",
+     "spořicí účet",
+     "ČSOB",
+     "pravidla hospodaření"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "rozpocet",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "34/2023 Z",
+    "title": "1. změna rozpočtu na rok 2023 a termínovaný vklad 13 mil. Kč",
+    "summary": "Zastupitelstvo bere na vědomí komentář k 1. změně rozpočtu na rok 2023 a schvaluje rozpočtová opatření v bodech 1–5 a 9–15 a zvlášť v bodech 6–8 důvodové zprávy. Dále schvaluje zřízení termínovaného vkladu 13 mil. Kč na tři měsíce u Československé obchodní banky, a. s., s opakovanou obnovou nejdéle do prosince 2023.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2023",
+     "termínovaný vklad",
+     "ČSOB",
+     "vojenská plovárna",
+     "dětské dopravní hřiště"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": [
+     "13 mil. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Zpracovatel zprávy Ing. Petr Netolický představil výhrady k záměru výstavby bytových domů v ul. Čacké; občané a petiční výbor upozorňovali na dopravu, parkování, kanalizaci, studny, kapacitu škol a změnu rázu čtvrti. Ing. Filip Vařecha žádal vysvětlení, jak úřad vyřizuje petice a vydává stanoviska, JUDr. Bc. Jakub Jeřábek upozornil na možnost podat námitky v územním řízení a Bc. Petr Dufek navrhl pozvat developera; Evžen Erban, Ing. Milan Randák, Ing. Jakub Kutílek a starosta se k záměru rovněž vyjádřili."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Pavel Bergman a Ing. Filip Vařecha žádali podrobnější zprávu o činnosti starosty, Ing. Jakub Kutílek se ptal na činnost místostarosty, který odmítl psát vlastní zprávu. Ing. Milan Randák navrhl prezentovat zprávu o činnosti starosty jinou formou mimo jednání, Ing. Petr Netolický upozornil na ztrátu kontroly nad starostou."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha jako předseda kontrolního výboru uvedl, že výbor nenašel chyby, jen upozornil na odměny členům komise schválené radou místo zastupitelstva. Ing. Petr Netolický se ptal na objekt „bobr“, starosta odpověděl, že je ve špatném stavu a vznikl záměr demolice."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha za kontrolní výbor navrhl vytvořit centrální přehled platných a neplatných usnesení a doplnit projektový zásobník o údaje o schválení a fázi projektů."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Filip Vařecha upozornil na nevhodný formát dohody o pracovní činnosti se zmocněncem pro ochranu osobních údajů. JUDr. Bc. Jakub Jeřábek se ptal na výši a formu jeho odměny; tajemník uvedl paušál 7 tisíc Kč měsíčně."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Filip Vařecha se ptal na nízké čerpání rozpočtové položky č. 27 a na rezervace; vedoucí ekonomického odboru vysvětlila, že jde o dosud neproplacené smlouvy a objednávky."
+   },
+   {
+    "no": "12",
+    "discussion": "Ing. Jakub Kutílek požádal o oddělené hlasování o rozpočtových opatřeních 6–8 (vojenská plovárna, dětské dopravní hřiště), protože je neprojednala strategická komise. Ing. Filip Vařecha se ptal na výběr banky pro termínovaný vklad a Ing. Pavel Bergman upozornil, že náklady dopravních hřišť může nově nést Ministerstvo dopravy."
+   },
+   {
+    "no": "13",
+    "discussion": "Ing. Jakub Kutílek apeloval na elektronickou distribuci materiálů a jejich ukládání na web, Ing. Filip Vařecha se ptal na slíbený přenos jednání a na dřívější zasílání materiálů školské komise. Ing. Petr Netolický se ptal na kanalizaci v ul. K Dolíčku a povrchy komunikace, Bc. Petr Dufek navrhl pozvat na další jednání developera projektu v ul. Čacké."
+   }
+  ]
+ }
+}

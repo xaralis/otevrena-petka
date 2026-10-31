@@ -1,0 +1,441 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "b1b8a7b2cb369e9a81c519d302ca2a4e2420e4b158145ba80624c2044586f29f",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 5,
+   "kind": "radne",
+   "date": "2023-04-26",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Bc. Petra Prusáková",
+    "Ing. Lic. Jaroslav Kňava",
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Ing. Jakub Kutílek",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Karolina Štefková",
+    "Ing. Filip Vařecha",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Jan Nadrchal",
+    "Jiří Havrda"
+   ],
+   "excused": [
+    "Ing. Petr Netolický"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Schválení zpracování PD, investičních akcí a investičních záměrů",
+    "line": 59,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Bc. Jan Nadrchal",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Bc. Petr Dufek",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na rok 2023",
+    "line": 137,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "JUDr. Bc. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 3. 2023",
+    "line": 174,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 187,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 201,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Evžen Erban",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 245,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Kontrola přístupu ÚMO Pardubice V k poskytování informací dle zák. č. 106/1999 Sb., o svobodném přístupu k informacím za období 3 Q 2022 – 1 Q 2023",
+    "line": 262,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Živý audiovizuální přenos a audiovizuální záznam z jednání zastupitelstva",
+    "line": 279,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "9",
+    "title": "Diskuse, závěr",
+    "line": 301,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal",
+     "Ing. Milan Randák",
+     "JUDr. Bc. Jakub Jeřábek",
+     "Ing. Pavel Bergman"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "36/2023 Z",
+    "agenda_no": "1",
+    "first_line": 109,
+    "last_line": 133,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "37/2023 Z",
+    "agenda_no": "2",
+    "first_line": 162,
+    "last_line": 170,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "38/2023 Z",
+    "agenda_no": "3",
+    "first_line": 182,
+    "last_line": 183,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "39/2023 Z",
+    "agenda_no": "4",
+    "first_line": 196,
+    "last_line": 197,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "40/2023 Z",
+    "agenda_no": "5",
+    "first_line": 237,
+    "last_line": 241,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "41/2023 Z",
+    "agenda_no": "6",
+    "first_line": 254,
+    "last_line": 258,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "42/2023 Z",
+    "agenda_no": "7",
+    "first_line": 274,
+    "last_line": 275,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "43/2023 Z",
+    "agenda_no": "8",
+    "first_line": 294,
+    "last_line": 295,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 48,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "36/2023 Z",
+    "part": "bod 1 – kontejnerové stání Pichlova x Rokycanova",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 134,
+    "last_line": 134,
+    "resolution": "36/2023 Z",
+    "part": "zbytek usnesení (bez kontejnerového stání Pichlova x Rokycanova)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 171,
+    "last_line": 171,
+    "resolution": "37/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 184,
+    "last_line": 184,
+    "resolution": "38/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 198,
+    "last_line": 198,
+    "resolution": "39/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 242,
+    "last_line": 242,
+    "resolution": "40/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 259,
+    "last_line": 259,
+    "resolution": "41/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 296,
+    "last_line": 298,
+    "resolution": "43/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Jakub Kutílek",
+      "Ing. Pavel Bergman",
+      "Ing. Jaroslav Kňava",
+      "JUDr. Bc. Jakub Jeřábek",
+      "Ing. Filip Vařecha"
+     ],
+     "proti": [
+      "Ing. Milan Randák",
+      "Karolina Štefková",
+      "Mgr. Miloš Adamů, MBA."
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 276,
+    "last_line": 276,
+    "resolution": "42/2023 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 54: hlasování o programu je až za větou „Program jednání byl schválen.“ (ř. 50) a za zalomením stránky",
+   "36/2023 Z se hlasovalo odděleně (žádost Ing. Kutílka, ř. 71): kontejnerové stání Pichlova x Rokycanova ř. 114 (11-0-3), zbytek usnesení ř. 134 (14-0-0)",
+   "ř. 259: 41/2023 Z má součet hlasů 13 (13-0-0), přítomno 14, žádný odchod není uveden",
+   "ř. 296–298: 43/2023 Z má součet hlasů 10 (5-3-2), přítomno 14, žádný odchod není uveden; jména zdržujících se neuvedena; pro 5 je méně než nadpoloviční většina 15členného ZMO a výsledek hlasování text neuvádí"
+  ]
+ }
+}

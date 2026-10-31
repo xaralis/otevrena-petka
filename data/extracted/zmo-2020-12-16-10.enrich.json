@@ -1,0 +1,342 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "2dfab52604673b748f0f65c0d3bbf8a9f02bc4ac83652b41f9911945b03d4e3a",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "88/2020 Z",
+    "title": "Žádost o opakované kontroly parkování v Zóně 30 Jesničánky",
+    "summary": "Ukládá starostovi požádat Městskou policii Pardubice, aby důsledně a opakovaně kontrolovala parkování vozidel v Zóně 30 Jesničánky, zejména u vjezdů do zóny z Chrudimské ulice (křižovatky s ulicemi Široká, Na Záboří, Raisova a Čacké). Termín do 15. 1. 2021.",
+    "keywords": [
+     "parkování",
+     "kontrola parkování",
+     "městská policie",
+     "Zóna 30",
+     "Jesničánky",
+     "Chrudimská",
+     "křižovatky",
+     "špatné parkování"
+    ],
+    "topics": [
+     "doprava",
+     "bezpecnost"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Zóna 30 Jesničánky",
+     "ulice Chrudimská",
+     "ulice Široká",
+     "ulice Na Záboří",
+     "ulice Raisova",
+     "ulice Čacké"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Městská policie Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "89/2020 Z",
+    "title": "Žádost o kontroly parkování v Zóně 30 Jesničánky (původní znění)",
+    "summary": "Ukládá starostovi požádat Městskou policii Pardubice, aby důsledně kontrolovala parkování vozidel v Zóně 30 Jesničánky, zejména u vjezdů do zóny z Chrudimské ulice (křižovatky s ulicemi Široká, Na Záboří, Raisova a Čacké). Termín do 15. 1. 2021.",
+    "keywords": [
+     "parkování",
+     "kontrola parkování",
+     "městská policie",
+     "Zóna 30",
+     "Jesničánky",
+     "Chrudimská",
+     "místní komise Jesničánky"
+    ],
+    "topics": [
+     "doprava",
+     "bezpecnost"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Zóna 30 Jesničánky",
+     "ulice Chrudimská",
+     "ulice Široká",
+     "ulice Na Záboří",
+     "ulice Raisova",
+     "ulice Čacké"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Městská policie Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "90/2020 Z",
+    "title": "Vyhrazení rozhodnutí o budoucím využití objektu Bobr v Dukelském lesoparku",
+    "summary": "Zastupitelstvo si vyhrazuje pravomoc rozhodnout o konečném stanovisku městského obvodu k budoucímu využití tzv. objektu Bobr na území dukelského lesoparku.",
+    "keywords": [
+     "objekt Bobr",
+     "Bobr",
+     "dukelský lesopark",
+     "Dukla",
+     "vyhrazení pravomoci",
+     "psí útulek",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "organizacni",
+    "places": [
+     "objekt Bobr",
+     "dukelský lesopark"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "91/2020 Z",
+    "title": "Zpráva o činnosti starosty od 23. 9. 2020",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 23. 9. 2020.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "92/2020 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení usnesení 134/2020 R až 154/2020 R",
+    "summary": "Schvaluje zprávu Kontrolního výboru o plnění usnesení rady a vyřazuje z evidence sledování splněná usnesení 134/2020 R až 154/2020 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "93/2020 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení 78/2020 Z až 87/2020 Z",
+    "summary": "Schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z evidence splněná usnesení 78/2020 Z až 87/2020 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 47/2019 Z, 67/2020 Z a 76/2020 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "94/2020 Z",
+    "title": "Zpráva kontrolního výboru o kontrole dokončených investičních akcí",
+    "summary": "Zastupitelstvo bere na vědomí zprávu kontrolního výboru ke kontrole dokončených investičních akcí v předloženém znění.",
+    "keywords": [
+     "kontrolní výbor",
+     "investiční akce",
+     "kontrola investic",
+     "dokončené stavby",
+     "griloviště"
+    ],
+    "topics": [
+     "kontrola",
+     "investice"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "95/2020 Z",
+    "title": "Plán činnosti Kontrolního výboru na rok 2021",
+    "summary": "Schvaluje předložený plán činnosti Kontrolního výboru ZMO Pardubice V na rok 2021.",
+    "keywords": [
+     "kontrolní výbor",
+     "plán činnosti",
+     "plán kontrol",
+     "2021"
+    ],
+    "topics": [
+     "komise-vybory",
+     "kontrola"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "96/2020 Z",
+    "title": "Rozbor hospodaření obvodu k 30. 11. 2020",
+    "summary": "Schvaluje rozbor hospodaření městského obvodu Pardubice V k 30. 11. 2020 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "2020"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "97/2020 Z",
+    "title": "4. změna rozpočtu obvodu a sociálního fondu na rok 2020",
+    "summary": "Schvaluje 4. změnu rozpočtu městského obvodu a rozpočtu sociálního fondu na rok 2020 podle tabulkové části zprávy a rozpočtová opatření uvedená v komentáři; komentář bere na vědomí.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "rozpočet 2020"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "98/2020 Z",
+    "title": "Rozpočet obvodu na rok 2021 a pravidla pro rozpočtová opatření",
+    "summary": "Schvaluje rozpočet městského obvodu a sociálního fondu na rok 2021 a svěřuje radě pravomoc provádět vymezená rozpočtová opatření (dotace a dary z rezerv, přesuny do 200 tis. Kč na položce, účelové transfery, dotace z ÚP, dary na společenské akce). Dále stanovuje pravidla pro rozpis rozpočtu, technické přesuny, hrazení společenských akcí, hodnotu dárků jubilantům a občanům a propagačních předmětů; hospodaření se sociálním fondem se řídí směrnicí č. 7/2019.",
+    "keywords": [
+     "rozpočet 2021",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "společenské akce",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice 7/2019"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "200 tis. Kč",
+     "500,-- Kč",
+     "200,- Kč"
+    ]
+   },
+   {
+    "number": "99/2020 Z",
+    "title": "Aktualizace střednědobého výhledu rozpočtu na roky 2020–2023",
+    "summary": "Schvaluje aktualizovaný střednědobý výhled rozpočtu městského obvodu Pardubice V na roky 2020–2023 podle tabulkové části zprávy a bere na vědomí komentář k aktualizaci.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2020–2023",
+     "plánování financí"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "100/2020 Z",
+    "title": "Prodloužení termínu usnesení 76/2020 Z (rychlá opatření proti suchu)",
+    "summary": "Prodlužuje termín plnění usnesení č. 76/2020 Z o rychlých opatřeních proti suchu do 10. 3. 2021.",
+    "keywords": [
+     "sucho",
+     "opatření proti suchu",
+     "prodloužení termínu",
+     "usnesení 76/2020 Z",
+     "zeleň",
+     "zálivka"
+    ],
+    "topics": [
+     "zelen",
+     "kontrola"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na jednotlivé schůzky starosty (projektový tým TGM–Hůrka, budoucnost objektu Bobr, jednání s investorem výstavby na S. K. Neumanna) a navrhl usnesení o vyhrazení rozhodnutí o objektu Bobr, které podpořil Ing. Jiří Hájek. Ing. Petr Netolický předložil návrhy místní komise Jesničánky na kontroly rychlosti a parkování městskou policií; starosta Jiří Rejda, DiS. je označil za bezpředmětné, Pavel Studnička za precedentní, Ing. Jiří Hájek navrhl doplnit slovo „opakovaně“ a Ing. Netolický nakonec návrh ke kontrole rychlosti stáhl."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha uvedl, že radě nebyla předložena informativní zpráva o grilovišti. Ing. Petr Netolický nesouhlasil s usnesením navrženým kontrolním výborem a navrhl vlastní, Bc. Jan Nadrchal navrhl usnesení upravit na vzetí zprávy na vědomí a Ing. Jaroslav Kňava upozornil, že kontrolní výbor Netolického návrh dříve neakceptoval."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha se ptal, proč bylo nakoupeno zboží na zrušené kulturní akce (Svatomartinské víno, Rozsvěcení stromečku, vánoční punč); starosta odpověděl, že se nakupuje s předstihem a zboží bude použito v příštím roce."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání s developerem o spoluúčasti na hřišti Pod Vinicí, kritizoval nedostatečné plánování budoucích výdajů a navrhl sadu usnesení a doplnění projektového zásobníku; úřednice návrhy nedoporučila. Ing. Jiří Hájek navrhl návrhy stáhnout a projednat ve finančním výboru, diskutovali i Ing. Petr Netolický, Ing. Jaroslav Kňava, Pavel Studnička a Ing. Jiří Janoš; Ing. Vařecha své návrhy stáhl. Občan se ptal na připravenost obvodu na výpadek financí."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Filip Vařecha se ptal, zda obvod počítá s nižšími příjmy (snížení daní, zrušení superhrubé mzdy); bylo odpovězeno, že pokles příjmů je zohledněn a obvod má rezervu."
+   },
+   {
+    "no": "11",
+    "discussion": "Ing. Jiří Hájek se ptal na dopravu při opravě nadjezdu k nemocnici a navrhl pietní místo připomínající „Karanténu“, což podpořil Bc. Jan Nadrchal. Ing. Filip Vařecha se ptal na výsledky opatření proti suchu a na seče o sobotách, Ing. Jiří Janoš doplnil retenční nádrže v investiční akci „H“. Ing. Petr Netolický se ptal na balíčky pro jubilanty a na záměry s nebytovými prostory v ulici A. Krause."
+   }
+  ]
+ }
+}

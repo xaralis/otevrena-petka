@@ -1,0 +1,312 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "4366084f6e598d2d439a2789439ff64e13bd5c4a347c468daf446891dd948b72",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 16,
+   "kind": "mimoradne",
+   "date": "2025-04-23",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jakub Kutílek",
+    "Bc. Petr Dufek",
+    "Ing. Filip Vařecha",
+    "Evžen Erban, MBA.",
+    "Michal Hrabák",
+    "Ing. Lic. Jaroslav Kňava",
+    "Bc. Jan Nadrchal",
+    "Karolina Štefková",
+    "Petr Šmeral"
+   ],
+   "excused": [
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů",
+    "Ing. Pavel Bergman",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí o smíru s firmou M-STAV CZ s.r.o.",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Schválení projekčních prací na investiční akci",
+    "line": 67,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal",
+     "Michal Hrabák"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Schválení Zřizovací listiny knihovny MO Pardubice V",
+    "line": 116,
+    "speakers": [
+     "Ing. Jakub Kutílek"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 3. 2025",
+    "line": 129,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "2. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 143,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Diskuse, závěr",
+    "line": 194,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Bc. Jan Nadrchal"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "131/2025 Z",
+    "agenda_no": "1",
+    "first_line": 60,
+    "last_line": 63,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "132/2025 Z",
+    "agenda_no": "2",
+    "first_line": 110,
+    "last_line": 111,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "133/2025 Z",
+    "agenda_no": "3",
+    "first_line": 124,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "134/2025 Z",
+    "agenda_no": "4",
+    "first_line": 138,
+    "last_line": 139,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "135/2025 Z",
+    "agenda_no": "5",
+    "first_line": 157,
+    "last_line": 190,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 34,
+    "last_line": 34,
+    "resolution": null,
+    "part": null,
+    "subject": "zapisovatelka, návrhová komise a ověřovatelé",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 30,
+    "motion_last_line": 33,
+    "procedural": true,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu a pořadí materiálů",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "131/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 113,
+    "last_line": 113,
+    "resolution": "132/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "133/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 140,
+    "last_line": 140,
+    "resolution": "134/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 8,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 191,
+    "last_line": 191,
+    "resolution": "135/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "ř. 126: u hlasování o usnesení 133/2025 Z chybí počet zdržel se („Pro 10, proti 0, zdržel se“); doplněno 0, protože přítomno bylo 10 členů",
+   "ř. 76 a 105: Ing. Jakub Kutílek předal pozměněné znění usnesení k bodu 2 a poté ho stáhl; hlasovalo se jen o původním návrhu",
+   "ř. 109: číslo usnesení „(usnesení č. 132/2025 Z))“ s nadbytečnou závorkou"
+  ]
+ }
+}

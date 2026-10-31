@@ -90,11 +90,18 @@ COLUMNS = """r.uid, r.number, r.body, r.date, r.meeting_id, r.status, r.title, r
              r.agenda_title, r.topics, r.kind, r.keywords, left(r.text, 400) AS text_start,
              (SELECT string_agg(x.type || ':' || x.scope || ':' || s.number, ';')
                 FROM resolution_relations x JOIN resolutions s ON s.uid = x.source_uid
-               WHERE x.target_uid = r.uid AND x.effective) AS revoked_by"""
+               WHERE x.target_uid = r.uid AND x.effective) AS revoked_by,
+             (SELECT json_build_object('pro', v.n_pro, 'proti', v.n_proti, 'zdrzel', v.n_zdrzel,
+                'nehl', coalesce(v.n_nehlasoval, 0), 'quorum', v.quorum, 'present', v.n_present,
+                'parts', (SELECT count(*) FROM votes p WHERE p.resolution_uid = r.uid AND p.part IS NOT NULL),
+                'whole', v.part IS NULL,
+                'parts_ok', (SELECT count(*) FROM votes p WHERE p.resolution_uid = r.uid AND p.part IS NOT NULL AND p.outcome = 'prijato'))
+              FROM votes v WHERE v.resolution_uid = r.uid
+              ORDER BY (v.part IS NULL) DESC, v.seq DESC LIMIT 1) AS mainvote"""
 
 
 def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: int = 20,
-           offset: int = 0) -> tuple[list[Hit], dict]:
+           offset: int = 0, newest_first: bool = False) -> tuple[list[Hit], dict]:
     """Returns hits and info {mode_used, semantic_available, total_fulltext}."""
     f = filters or Filters()
     where, params = f.sql()
@@ -148,6 +155,10 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             h.score += 1 / (RRF_K + rank)
             h.semantic_rank = rank
         ranked = sorted(scores.values(), key=lambda h: -h.score)
+        if newest_first and ranked:
+            dates = {r["uid"]: (r["date"], r["seq"]) for r in conn.execute(
+                "SELECT uid, date, seq FROM resolutions WHERE uid = ANY(%s)", ([h.uid for h in ranked],))}
+            ranked.sort(key=lambda h: (dates[h.uid][0], -dates[h.uid][1]), reverse=True)
         info["total"] = len(ranked)
         page = ranked[offset:offset + limit]
         if page:

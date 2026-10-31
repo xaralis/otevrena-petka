@@ -1,0 +1,219 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "2f47136e67112ce917749e8298917325d0bdc47d15b63f7c54089a0172239845",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 12,
+   "kind": "mimoradne",
+   "date": "2021-03-18",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Pavel Studnička",
+    "Ing. Milan Randák",
+    "Bc. Petra Prusáková",
+    "Karolina Štefková",
+    "Ing. Petr Netolický",
+    "Petr Hemský",
+    "Anna Gudrun Vavrečková"
+   ],
+   "excused": [
+    "Ing. Jiří Janoš",
+    "Ing. Jiří Hájek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zrušení usnesení č. 102/2021 Z ze dne 10. 3. 2021",
+    "line": 43,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Jaroslav Kňava",
+     "Ing. Milan Randák",
+     "Ing. Petr Netolický",
+     "Evžen Erban",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Volba nových členů finančního výboru",
+    "line": 176,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Diskuse",
+    "line": 188,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Závěr",
+    "line": 192,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "112/2021 Z",
+    "agenda_no": "1",
+    "first_line": 171,
+    "last_line": 171,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "113/2021 Z",
+    "agenda_no": "2",
+    "first_line": 183,
+    "last_line": 184,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 37,
+    "last_line": 37,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí (programu)",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 36,
+    "procedural": true,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 165,
+    "last_line": 167,
+    "resolution": null,
+    "part": null,
+    "subject": "protinávrh Ing. Filipa Vařechy: zrušit usnesení č. 102/2021 Z a nahradit jej uložením starostovi zrušit dva parkovací bloky v projektu revitalizace vnitrobloku H",
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": 156,
+    "motion_last_line": 164,
+    "procedural": false,
+    "pro": 3,
+    "proti": 6,
+    "zdrzel": 3,
+    "nehlasoval": 1,
+    "names": {
+     "pro": [
+      "Ing. Filip Vařecha",
+      "Anna Gudrun Vavrečková",
+      "Ing. Petr Netolický"
+     ],
+     "proti": [],
+     "zdrzel": [
+      "Evžen Erban",
+      "Filip Šťastný",
+      "Pavel Studnička"
+     ],
+     "nehlasoval": [
+      "Bc. Jan Nadrchal"
+     ]
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 172,
+    "last_line": 173,
+    "resolution": "112/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 8,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": 1,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Anna Gudrun Vavrečková",
+      "Ing. Petr Netolický",
+      "Filip Šťastný"
+     ],
+     "nehlasoval": [
+      "Bc. Jan Nadrchal"
+     ]
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 185,
+    "last_line": 185,
+    "resolution": "113/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 9: v záhlaví je datum 18. března 2020, ale jednání proběhlo 18. 3. 2021 (ř. 62, 196, ruší usnesení ze dne 10. 3. 2021).",
+   "ř. 11–13 vs. ř. 29: seznam přítomných obsahuje 13 jmen (2 omluveni, ř. 15), ale text konstatuje přítomnost 14 členů.",
+   "ř. 185: usnesení 113/2021 Z má Pro 14, ačkoli podle seznamu bylo přítomno 13 členů a ostatní hlasování (ř. 37, 165–166, 172–173) mají součet 13; příchod dalšího člena není zaznamenán.",
+   "ř. 172: usnesení 112/2021 Z (Pro 8 ze 13 přítomných, 15 členů) – text výslovně neuvádí, zda bylo přijato."
+  ]
+ }
+}

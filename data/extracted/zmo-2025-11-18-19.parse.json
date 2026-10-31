@@ -1,0 +1,195 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "51720cb93447ed0e6b2b12294c04e9d3016a3971f1c9272f39f2e1952209a5ea",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 19,
+   "kind": "mimoradne",
+   "date": "2025-11-18",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jakub Kutílek",
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Ing. Lic. Jaroslav Kňava",
+    "Karolina Štefková",
+    "Ing. Petr Netolický"
+   ],
+   "excused": [
+    "Ing. Filip Vařecha",
+    "JUDr. Bc. Jakub Jeřábek",
+    "Michal Hrabák"
+   ],
+   "absent": [
+    "Ing. Pavel Bergman",
+    "Petr Šmeral"
+   ]
+  },
+  "presence_events": [
+   {
+    "line": 50,
+    "name": "Ing. Petr Netolický",
+    "event": "arrive"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 40,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Návrh změny obecně závazné vyhlášky statutárního města Pardubice č. 4/2019, kterou se vydává Statut města Pardubice – změna podílu z rozpočtového určení daní na školství",
+    "line": 57,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Lic. Jaroslav Kňava",
+     "Bc. Jan Nadrchal",
+     "Mgr. Miloš Adamů, MBA.",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Diskuse, závěr",
+    "line": 190,
+    "speakers": [
+     "Ing. Milan Randák",
+     "Ing. Lic. Jaroslav Kňava",
+     "Bc. Jan Nadrchal",
+     "Ing. Jakub Kutílek",
+     "Bc. Petr Dufek"
+    ]
+   }
+  ],
+  "resolutions": [],
+  "votes": [
+   {
+    "line": 38,
+    "last_line": 38,
+    "resolution": null,
+    "part": null,
+    "subject": "návrhová komise a ověřovatelé zápisu",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 35,
+    "motion_last_line": 37,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 43,
+    "motion_last_line": 46,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 177,
+    "last_line": 179,
+    "resolution": null,
+    "part": null,
+    "subject": "pozměňovací návrh: ZMO nesouhlasí s návrhem změny OZV č. 4/2019 (Statut) a požaduje zapracovat změny koeficientů a podílů pro městské obvody",
+    "proposer": null,
+    "motion_first_line": 97,
+    "motion_last_line": 176,
+    "procedural": false,
+    "pro": 2,
+    "proti": 4,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Jakub Kutílek",
+      "Jiří Rejda, DiS."
+     ],
+     "proti": [
+      "Ing. Milan Randák",
+      "Mgr. Miloš Adamů, MBA.",
+      "Karolina Štefková",
+      "Bc. Jan Nadrchal"
+     ],
+     "zdrzel": [
+      "Ing. Lic. Jaroslav Kňava",
+      "Evžen Erban",
+      "Ing. Petr Netolický",
+      "Bc. Petr Dufek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 187,
+    "last_line": 187,
+    "resolution": null,
+    "part": null,
+    "subject": "původní návrh: ZMO souhlasí se změnou OZV č. 4/2019 (Statut města Pardubice)",
+    "proposer": null,
+    "motion_first_line": 184,
+    "motion_last_line": 186,
+    "procedural": false,
+    "pro": 7,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek",
+      "Ing. Lic. Jaroslav Kňava",
+      "Jiří Rejda, DiS."
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   }
+  ],
+  "notes": [
+   "Dokument neobsahuje žádné číslované usnesení; obě věcná hlasování (ř. 177–179 a ř. 187) skončila nepřijetím.",
+   "ř. 187–188: původní návrh získal 7 hlasů pro z 10 přítomných, ale nebyl přijat – pro přijetí je třeba nadpoloviční většina všech 15 členů ZMO (8).",
+   "ř. 35–38: hlasování o návrhové komisi a ověřovatelích nemá výslovně uvedený výsledek."
+  ]
+ }
+}

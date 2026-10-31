@@ -1,0 +1,216 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "829953dd342dc5e20e37e3c2e6455c07ced661818e5e10e03d8b68a06ff140c8",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "106/2024 Z",
+    "title": "Zpráva o činnosti starosty od jednání 26. 6. 2024",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu za období od posledního jednání zastupitelstva 26. 6. 2024.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "107/2024 Z",
+    "title": "Kontrola plnění usnesení Rady MO Pardubice V – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady. Z evidence vyřazuje splněná usnesení 30/2023 R – 31/2023 R, 104/2024 R – 136/2024 R, 138/2024 R – 155/2024 R a 157/2024 R; v evidenci ponechává usnesení 137/2024 R a 156/2024 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "Kontrolní výbor",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "Rada MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "108/2024 Z",
+    "title": "Kontrola plnění usnesení Zastupitelstva MO Pardubice V – vyřazení splněných usnesení",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení 85/2024 Z – 102/2024 Z a 104–105/2024 Z; v evidenci ponechává usnesení 66/2024 Z, 75/2009 Z, 27/2019 Z, 142/2022 Z, 23/2023 Z a 103/2024 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "Kontrolní výbor",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "109/2024 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2024",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 8. 2024 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2024",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "110/2024 Z",
+    "title": "3. změna rozpočtu MO Pardubice V na rok 2024",
+    "summary": "Zastupitelstvo bere na vědomí komentář a informativní tabulky k 3. změně rozpočtu na rok 2024 a schvaluje rozpočtová opatření navržená v rámci této změny (body 1–29 důvodové zprávy, o bodech 14, 25 a 26 se hlasovalo zvlášť).",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2024",
+     "3. změna rozpočtu",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "111/2024 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2023",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic 24. 6. 2024 schválilo účetní závěrku Statutárního města Pardubice včetně městských obvodů za rok 2023 sestavenou k 31. 12. 2023.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2023",
+     "hospodaření",
+     "Zastupitelstvo města Pardubic"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice",
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "112/2024 Z",
+    "title": "Rezignace a volba člena Kontrolního výboru",
+    "summary": "Zastupitelstvo bere na vědomí rezignaci člena Kontrolního výboru ke dni 17. 9. 2024 a ke dni 25. 9. 2024 volí nového člena Kontrolního výboru ZMO Pardubice V.",
+    "keywords": [
+     "Kontrolní výbor",
+     "člen výboru",
+     "rezignace",
+     "volba člena",
+     "složení výboru"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "113/2024 Z",
+    "title": "Plnění Programu rozvoje MO Pardubice V za rok 2023 a úpravy bodů programu",
+    "summary": "Zastupitelstvo bere na vědomí plnění Programu rozvoje městského obvodu za rok 2023 a stanoví, které body zachovat či upravit – mj. dosazování stromů a keřů kolem silnic a cest, čištění komunikací, frekvence velkoobjemových kontejnerů, veřejná prostranství a dopravní body včetně napojení z I/37; odkazy na místní komise nahrazuje komisemi rady a bod 8/3 vyřazuje.",
+    "keywords": [
+     "program rozvoje",
+     "strategie obvodu",
+     "zeleň",
+     "výsadba stromů",
+     "čištění komunikací",
+     "velkoobjemové kontejnery",
+     "veřejná prostranství",
+     "doprava",
+     "rekonstrukce komunikací",
+     "I/37"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "zelen",
+     "doprava"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "I/37"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha v bodu otevřel případ zakázky na hřiště Stegosaurus, za niž ÚOHS uložil obvodu pokutu, a Ing. Petr Netolický navrhl odvolat starostu Jiřího Rejdu, DiS. z funkce (návrh nebyl přijat); Bc. Jan Nadrchal a JUDr. Bc. Jakub Jeřábek se k postupu vyjádřili. Bc. Petr Dufek se ptal na stav dopravního hřiště a váhu stanoviska obvodu, odpovídal starosta. Zastupitelé opozice požadovali sdělit identitu anonymního dárce, který uhradil část pokuty."
+   },
+   {
+    "no": "2",
+    "discussion": "Kontrolní výbor navrhl požadovat vysvětlení osoby dárce. Ing. Jakub Kutílek upozornil, že nepřijatá usnesení rady by neměla být číslována, Ing. Filip Vařecha a JUDr. Bc. Jakub Jeřábek požadovali, aby zastupitelé znali identitu dárce."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Jakub Kutílek a Ing. Filip Vařecha upozornili na evidenci neschválených usnesení jako usnesení. Ing. Petr Netolický a Ing. Pavel Bergman žádali zveřejnit „Pravidla pro schvalování veřejných zakázek“ na webu obvodu; tajemník úřadu to přislíbil."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha navrhl řešit budoucí hřiště u Bobra společně s dopravním hřištěm; starosta s koncepčním propojením souhlasil."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Jakub Kutílek nesouhlasil s komentářem k rozhodnutí ÚOHS, s darem neznámého původu a s body 25 a 26 (stavební úpravy na náměstí Dukelských hrdinů); Ing. Filip Vařecha se ptal na přesun peněz z divadelních představení na Pohádkovou cestu. Bc. Jan Nadrchal reagoval na Ing. Kutílka a Ing. Petr Netolický navrhl o bodech 14, 25 a 26 hlasovat zvlášť."
+   },
+   {
+    "no": "7",
+    "discussion": "Starosta uvedl, že dar nedoporučil finanční výbor ani rada. Ing. Milan Randák popsal dotace, které škola Svítání dostává, Ing. Jakub Kutílek sbírku na svozový autobus podpořil."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Filip Vařecha se ptal na systém sečí trávy na výzvu, odpovídala pracovnice úřadu. Ing. Petr Netolický žádal opravu podchodu v ulici K Dolíčku a ptal se na neschválenou směnu pozemků se společností Tesla; starosta uvedl, že obvod jen doporučuje a rozhoduje město."
+   }
+  ]
+ }
+}

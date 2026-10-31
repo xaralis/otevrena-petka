@@ -1,0 +1,266 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "98b41afbe1f87ffb2f371168d8f80bbbec11fd9ec4e863296de35dd1fdf60b80",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "48/2019 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 25. 9. 2019",
+    "summary": "Zastupitelstvo bere na vědomí zprávu starosty o jeho činnosti od posledního jednání zastupitelstva dne 25. 9. 2019.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "49/2019 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení usnesení 78/2019 R až 93/2019 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady obvodu a vyřazuje splněná usnesení 78/2019 R až 93/2019 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "Rada městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "50/2019 Z",
+    "title": "Zpráva Kontrolního výboru o plnění usnesení zastupitelstva",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z kontroly splněná usnesení 35/2019 Z až 45/2019 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 46/2019 Z a 47/2019 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "51/2019 Z",
+    "title": "Rozbor hospodaření obvodu k 30. 11. 2019",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 30. 11. 2019 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2019"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "52/2019 Z",
+    "title": "4. změna rozpočtu a rozpočtu sociálního fondu na rok 2019",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje 4. změnu rozpočtu obvodu a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2019",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "53/2019 Z",
+    "title": "Rozpočet obvodu na rok 2020 a pravidla pro rozpočtová opatření",
+    "summary": "Zastupitelstvo schvaluje rozpočet obvodu a rozpočet sociálního fondu na rok 2020 a svěřuje radě pravomoc provádět vymezená rozpočtová opatření (např. přesuny do 200 tis. Kč na položce). Dále stanoví pravidla pro rozpis rozpočtu, plán společenských akcí, dárky jubilantům a propagační předměty a schvaluje směrnici č. 7/2019 o hospodaření se sociálním fondem, která ruší směrnici č. 7/2018.",
+    "keywords": [
+     "rozpočet 2020",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice č. 7/2019"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "ÚP"
+    ],
+    "amounts": [
+     "200 tis. Kč",
+     "200,- Kč",
+     "500,-- Kč"
+    ]
+   },
+   {
+    "number": "54/2019 Z",
+    "title": "Střednědobý výhled rozpočtu na roky 2020–2023",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje střednědobý výhled rozpočtu městského obvodu Pardubice V na roky 2020–2023.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "rozpočet 2020–2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "55/2019 Z",
+    "title": "Plán činnosti Kontrolního výboru na rok 2020",
+    "summary": "Zastupitelstvo bere na vědomí plán činnosti Kontrolního výboru ZMO Pardubice V na rok 2020 (znění bylo upraveno ze „schvaluje“ na „bere na vědomí“).",
+    "keywords": [
+     "kontrolní výbor",
+     "plán činnosti",
+     "plán kontrol 2020"
+    ],
+    "topics": [
+     "komise-vybory",
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "56/2019 Z",
+    "title": "Úkol starostovi prosazovat jednotná pravidla odměn zastupitelů napříč obvody",
+    "summary": "Návrh usnesení ukládá starostovi prosazovat na kolegiu starostů Pardubic jednotný mechanismus stanovení odměn neuvolněných členů zastupitelstev městských obvodů a jednotný přístup k jejich úpravám při novelizaci nařízení vlády.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění členové zastupitelstva",
+     "kolegium starostů",
+     "jednotný postup obvodů"
+    ],
+    "topics": [
+     "organizace",
+     "vztahy-mesto"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "kolegium starostů Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "57/2019 Z",
+    "title": "Měsíční odměny neuvolněným členům zastupitelstva od 1. 1. 2020",
+    "summary": "Návrh usnesení stanoví od 1. 1. 2020 měsíční odměny místostarostovi a dalším neuvolněným členům zastupitelstva podle funkcí (člen zastupitelstva, rady, předseda a člen výboru, předseda a člen komise rady), které se při souběhu funkcí sčítají.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění členové zastupitelstva",
+     "odměna místostarosty",
+     "navýšení odměn"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "23.540,- Kč",
+     "1.177,- Kč",
+     "4.708,- Kč",
+     "4.120,- Kč",
+     "3.531,- Kč",
+     "2.943,- Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na sběr plastových víček a na stav jednání o ulici Na Spravedlnosti, Pavel Studnička na projekt „K Vápence“ s lávkou a Martin Merhout na kamerový systém a povrch sportoviště SK Jesničánky. Starosta Jiří Rejda, DiS. odpovídal."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Filip Vařecha jako předseda kontrolního výboru upozornil na usnesení 45/2019 R, kde podle něj neměla být u zadání projektové dokumentace náměstí Dukelských hrdinů použita výjimka z interní směrnice."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Jiří Janoš měl připomínku k usnesení 45/2019 Z."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha se ptal na nízké čerpání peněz na projektové dokumentace, starosta vysvětlil nutnost aktualizace starých projektů na příkladu parkoviště v ulici Artura Krause. Ing. Jiří Hájek se starostou souhlasil, Ing. Milan Randák se ptal na důvod změny projektu."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha se ptal na navýšení projektu H a na dětské hřiště Pod Vinicí, které podle něj mohl postavit developer; Ing. Jiří Hájek upřesnil, že to řeší město. Martin Merhout se ptal na položku výpočetní technika."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Jiří Janoš navrhl, aby kontrolní výbor plnil úkoly podle zadání zastupitelstva, Ing. Jaroslav Kňava nesouhlasil. Ing. Milan Randák a Bc. Jan Nadrchal navrhli změnit „schvaluje“ na „bere na vědomí“."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Filip Vařecha nesouhlasil se zvýšením odměn a navrhl vlastní usnesení o jednotném postupu obvodů; Ing. Milan Randák byl také proti navyšování, Ing. Jaroslav Kňava a Evžen Erban se zvýšením souhlasili. Starosta uvedl, že dříve usiloval o srovnání odměn mezi obvody."
+   },
+   {
+    "no": "Informativní zpráva",
+    "discussion": "Ing. Filip Vařecha jako předkladatel odpovídal na dotazy k videozáznamu a videopřenosu jednání; Ing. Jiří Hájek uvedl, že nechce být na Facebooku, diskutovali také Evžen Erban, Ing. Milan Randák a Jiří Rejda, DiS."
+   },
+   {
+    "no": "IV.",
+    "discussion": "Občan požadoval nápravu situace v zóně 30 v Jesničánkách kvůli parkovacím místům, Bc. Jan Nadrchal ho pozval na jednání místní komise. Člen místní komise Dražkovice kritizoval fungování místních komisí, diskutovali Ing. Jaroslav Kňava, Ing. Filip Vařecha, Ing. Jiří Janoš, Ing. Milan Randák a Filip Šťastný. Občan upozornil na znečištění potoka v Dražkovicích, Ing. Jiří Janoš nabídl pomoc."
+   }
+  ]
+ }
+}

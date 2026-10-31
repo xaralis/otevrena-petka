@@ -30,7 +30,8 @@ Zdrojem jsou PDF „Usnesení (a zápis)“ zveřejněná na
    se pak **vyřízne z PDF**, model ho nepřepisuje.
 3. `build` (deterministické) – kontrola počtů hlasů proti hlasovacímu řádku, kontrola, že žádné
    číslo usnesení z textu nechybí, **výsledek podle kvora** (nadpoloviční většina všech členů:
-   ZMO 8 z 15, RMO 3 z 5) – číslo usnesení neznamená, že prošlo – a rekonstrukce hlasů členů.
+   ZMO 8 z 15, RMO 3 z 5). Návrh, který neprošel, není usnesení, i když mu zápis dal číslo –
+   vedeme ho jako nepřijatý návrh. Pak rekonstrukce hlasů členů.
    Cokoli nesedí, označí jednání k ruční kontrole.
 4. `enrich` – model doplní název, shrnutí, klíčová slova, témata a entity (označeno jako odvozené).
 5. `load` / `embed` / `export` – Postgres + pgvector, embeddingy, CSV/JSON + `datapackage.json`.

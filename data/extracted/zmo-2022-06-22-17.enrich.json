@@ -1,0 +1,251 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e012a5544e14daf92db48d5c29494f8dcfe92e5c0e8716eb1504f865a47ad86e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "151/2022 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 10. 3. 2022",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty MO Pardubice V za období od posledního jednání zastupitelstva dne 10. 3. 2022.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty",
+     "bere na vědomí"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "152/2022 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení 245–292/2022 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru ZMO Pardubice V o plnění usnesení rady a vyřazuje z evidence sledování splněná usnesení 245/2022 R až 292/2022 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "153/2022 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení a ponechání v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení ZMO, vyřazuje z evidence splněná usnesení 140/2022 Z, 141/2022 Z a 143/2022 Z až 150/2022 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 67/2020 Z, 76/2020 Z, 101/2021 Z a 142/2022 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "vyřazení z evidence",
+     "ponechání v evidenci"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "154/2022 Z",
+    "title": "Kontrola poskytování informací podle zákona č. 106/1999 Sb. (3Q 2021 – 2Q 2022)",
+    "summary": "Zastupitelstvo bere na vědomí zprávu Kontrolního výboru o kontrole přístupu ÚMO Pardubice V k poskytování informací podle zákona o svobodném přístupu k informacím za období 3. čtvrtletí 2021 až 2. čtvrtletí 2022; nebyla zjištěna žádná pochybení.",
+    "keywords": [
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "infozákon",
+     "kontrolní výbor",
+     "kontrola úřadu"
+    ],
+    "topics": [
+     "kontrola",
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "155/2022 Z",
+    "title": "Plnění úkolů Programu rozvoje MO Pardubice V za rok 2021",
+    "summary": "Zastupitelstvo schvaluje upravené znění plnění úkolů Programu rozvoje městského obvodu Pardubice V za rok 2021. Usnesení bylo hlasováno ve znění navrženém v rozpravě.",
+    "keywords": [
+     "program rozvoje",
+     "plnění úkolů",
+     "strategická komise",
+     "rozvoj obvodu",
+     "2021"
+    ],
+    "topics": [
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "156/2022 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2021 – hospodaření bez výhrad",
+    "summary": "Zastupitelstvo projednalo závěrečný účet za rok 2021 a souhlasí s celoročním hospodařením obvodu bez výhrad. Bere na vědomí komentáře a přílohy, schvaluje finanční vypořádání za rok 2021 včetně sociálního fondu a rozpočtová opatření č. 1–9 navržená v rámci závěrečného účtu.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2021",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření",
+     "bez výhrad"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "157/2022 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2022",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 5. 2022 uvedený v tabulkové části zprávy a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "čerpání rozpočtu",
+     "hospodaření obvodu",
+     "2022"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "158/2022 Z",
+    "title": "2. změna rozpočtu na rok 2022, spořicí účet a termínovaný vklad u ČSOB",
+    "summary": "Zastupitelstvo schvaluje rozpočtová opatření č. 1–23 v rámci 2. změny rozpočtu na rok 2022 a bere na vědomí komentář k nim. Souhlasí se zřízením spořicího účtu u Československé obchodní banky, a. s., a schvaluje termínovaný vklad 10 mil. Kč na tři měsíce u téže banky.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "spořicí účet",
+     "termínovaný vklad",
+     "ČSOB",
+     "volné finanční prostředky"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": [
+     "10 mil. Kč"
+    ]
+   },
+   {
+    "number": "159/2022 Z",
+    "title": "Směrnice č. 7/2022 – pravidla hospodaření se sociálním fondem",
+    "summary": "Zastupitelstvo schvaluje směrnici č. 7/2022: Pravidla hospodaření se sociálním fondem MO Pardubice V, kterou se k 22. 6. 2022 ruší dosavadní směrnice č. 7/2021 schválená 15. 12. 2021.",
+    "keywords": [
+     "sociální fond",
+     "směrnice",
+     "pravidla hospodaření",
+     "zrušení směrnice"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "160/2022 Z",
+    "title": "Informace o schvalování účetní závěrky města k 31. 12. 2021",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2021 schválí Zastupitelstvo města Pardubic na červnovém jednání; informaci o schválení obdrží zastupitelstvo obvodu na příštím jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "schválení účetní závěrky",
+     "zastupitelstvo města",
+     "2021"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. Filip Vařecha se ptal na rozšíření kamerového systému, křižovatku Chrudimská – Nemošická a pracovní skupinu k ulici S. K. Neumanna; odpovídali starosta Jiří Rejda, DiS., a Bc. Jan Nadrchal, do diskuse se zapojili Bc. Petr Dufek, Ing. Jiří Janoš a Ing. Petr Netolický. Anna Gudrun Vavrečková se ptala na budoucnost Staré vojenské plovárny, o kterou zájemce o nájem ztratil zájem."
+   },
+   {
+    "no": "3.",
+    "discussion": "Ing. Jiří Janoš navrhl ponechat usnesení č. 142/2022 v evidenci, Bc. Jan Nadrchal navrhl zapracovat je do plánu rozvoje; k tématu se vyjádřili i Ing. Filip Vařecha a tajemník úřadu."
+   },
+   {
+    "no": "5.",
+    "discussion": "Bc. Petr Dufek představil aktualizaci programu rozvoje. Ing. Filip Vařecha navrhl rozdělit usnesení na dvě části a oslovit firmu k přepracování programu, svůj návrh pak stáhl; hlasovalo se o usnesení ve znění navrženém Ing. Jiřím Janošem. František Just se ptal, kde je program rozvoje k dohledání."
+   },
+   {
+    "no": "7.",
+    "discussion": "Ing. Filip Vařecha se ptal, zda bude vyčerpán rozpočet na dopravu (zatím 6,7 %); starosta odpověděl, že další opravy jsou vysoutěženy a v čerpání se ještě neprojevily."
+   },
+   {
+    "no": "8.",
+    "discussion": "Ing. Filip Vařecha se ptal na rozpočtová opatření ke knihovně a na statistiku jejího využití, Ing. Petr Netolický na vyčerpání navýšeného rozpočtu na dopravu; odpovídali starosta a pracovnice úřadu."
+   },
+   {
+    "no": "11.",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání s občany k lokalitě S. K. Neumanna a představil své návrhy projektů; Ing. Petr Netolický upozornil na chybějící obnovu vodorovného značení zóny 30 v Jesničánkách a Bc. Petr Dufek vyzval k podnětům z místních komisí. Ing. Jaroslav Kňava otevřel otevřený dopis provozovatele stánku rychlého občerstvení („polívkárny“), k němuž se vyjádřili i Evžen Erban, Ing. Filip Vařecha, Bc. Petr Dufek, Ing. Petr Netolický a Bc. Jan Nadrchal."
+   }
+  ]
+ }
+}

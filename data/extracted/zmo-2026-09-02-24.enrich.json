@@ -1,0 +1,237 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "fde09289d694b841131cee4b22369fc0d7277fef780427a5af854b6433b9dfd6",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "183/2026 Z",
+    "title": "Zpráva o činnosti starosty od jednání 3. 6. 2026",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu od posledního jednání zastupitelstva dne 3. 6. 2026.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty",
+     "zpráva o činnosti"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "184/2026 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení Rady MO Pardubice V. Splněná usnesení č. 276/2026 R, 285–289/2026 R a 293–299/2026 R vyřazuje z evidence, usnesení č. 257/2025 R, 261/2025 R a 290–292/2026 R ponechává v evidenci.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "Kontrolní výbor",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "185/2026 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení ZMO Pardubice V. Splněná usnesení č. 163/2025 Z, 173–175/2026 Z a 177–182/2026 Z vyřazuje z evidence, dalších 15 usnesení (mj. č. 75/2009 Z, 27/2019 Z a 136/2025 Z kvůli povinnosti informovat) ponechává v evidenci.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "Kontrolní výbor",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "186/2026 Z",
+    "title": "Schválení dokumentu „Postupy 2026 knihovny MO Pardubice V“",
+    "summary": "Zastupitelstvo schvaluje s účinností od 2. 9. 2026 aktualizovaný dokument „Postupy 2026 knihovny MO Pardubice V“, který upravuje postupy obvodní knihovny.",
+    "keywords": [
+     "knihovna",
+     "postupy knihovny",
+     "pravidla knihovny",
+     "Postupy 2026",
+     "obvodní knihovna"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "knihovna MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "187/2026 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2025",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic dne 29. 6. 2026 schválilo účetní závěrku statutárního města Pardubice včetně městských obvodů za rok 2025 sestavenou k 31. 12. 2025.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2025",
+     "hospodaření",
+     "Zastupitelstvo města Pardubic",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "188/2026 Z",
+    "title": "Zpráva o činnosti Finančního výboru ve volebním období 2022–2026",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru Zastupitelstva MO Pardubice V za volební období 2022–2026.",
+    "keywords": [
+     "Finanční výbor",
+     "zpráva výboru",
+     "volební období 2022–2026",
+     "činnost výboru"
+    ],
+    "topics": [
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "189/2026 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 7. 2026",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření MO Pardubice V k 31. 7. 2026 v rozsahu tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "31. 7. 2026",
+     "rozpočet 2026"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "190/2026 Z",
+    "title": "4. změna rozpočtu MO Pardubice V na rok 2026 a příspěvky školám",
+    "summary": "Zastupitelstvo bere na vědomí komentář ke 4. změně rozpočtu na rok 2026 a schvaluje rozpočtová opatření v bodech 1–21 důvodové zprávy včetně sociálního fondu. Současně snižuje účelový příspěvek SVČ ALFA o 1,32 tis. Kč, poskytuje účelové příspěvky na provoz na akce základním a mateřským školám (ZŠ Benešovo náměstí, ZŠ Waldorfská, MŠ Kamarád, MŠ Sluníčko, MŠ Jesničánky, MŠ Benešovo náměstí) a přesouvá 6 tis. Kč na webové stránky knihovny z kapitálových do běžných výdajů.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2026",
+     "příspěvek na provoz",
+     "školy",
+     "mateřské školy",
+     "SVČ ALFA",
+     "sociální fond",
+     "webové stránky knihovny",
+     "Pasování na čtenáře"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Benešovo náměstí 590, Pardubice",
+     "Teplého 2100, Pardubice",
+     "Gorkého 1521, Pardubice",
+     "Raisova 226, Pardubice",
+     "Gorkého 867, Pardubice",
+     "Benešovo náměstí 2115, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Středisko volného času ALFA Pardubice",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Mateřská škola Kamarád Pardubice",
+     "Mateřská škola Sluníčko Pardubice",
+     "Mateřská škola Pardubice-Jesničánky",
+     "Základní škola Waldorfská Pardubice",
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "knihovna MO Pardubice V"
+    ],
+    "amounts": [
+     "1,32 tis. Kč",
+     "12 tis. Kč",
+     "5 tis. Kč",
+     "6,72 tis. Kč",
+     "6 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "II",
+    "discussion": "Před schválením programu vystoupil občan k cyklistické infrastruktuře – cyklopruhům v ulici Lexova a na náměstí Dukelských hrdinů, napojení cyklostezky Dražkovice – Jesničánky na ulici Chrudimská a sdíleným kolům. Starosta Jiří Rejda, DiS. odpověděl, že vznikla stezka Jesničánky – Dražkovice a řada cyklopruhů, sdílená kola řeší magistrát s dopravním podnikem a komunikace od MARA je krajská."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na systém Door to Door (rozdávání odpadních nádob v září pro Jesničánky a Dražkovice) a na zazelenění ulice Jana Palacha, které má vyprojektovat CFIG. Ing. Petr Netolický se ptal na rekonstrukci ulice Pod Břízkami a na rozmístění parkovacích automatů na Dukle a Višňovce; starosta odpověděl, že šlo o první koordinační jednání a místa automatů se přezkoumají."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha oznámil, že se zdrží hlasování, protože Zelení a Piráti nemají ve výboru zástupce. Ing. Lic. Jaroslav Kňava požádal o zveřejnění zprávy ve zpravodaji Pardubická 5."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha se ptal na investice – prokořenitelné prostory před DK Dukla (mírný posun kvůli opravě projektu), harmonogram rekonstrukce ulice Wolkerova (nová firma slibuje dokončení do Vánoc) a dopravní hřiště, které je na straně OMI."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Filip Vařecha se ptal na princip příspěvků na provoz škol; odpověděla úřednice úřadu."
+   },
+   {
+    "no": "9",
+    "discussion": "Karolina Štefková navrhla požádat krajskou hygienickou stanici o měření Gripenů. Bc. Petr Dufek upozornil na topoly a cedule v ulici Staňkova a navrhl revizi stromořadí (úřad zajistí dendrologický posudek), Ing. Petr Netolický na špatný stav ulice Čacká. Ing. Pavel Bergman, Ing. Lic. Jaroslav Kňava, Ing. Filip Vařecha a Ing. Milan Randák poděkovali za spolupráci; Ing. Lic. Kňava a Ing. Randák se loučili s politikou."
+   }
+  ]
+ }
+}

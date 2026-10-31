@@ -1,0 +1,331 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "29207a3d6a7cd86c0475d966a18519bd49975124bcdee2218a352cc9d764753d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "62/2023 Z",
+    "title": "Zpráva o činnosti starosty od 6. 9. 2023",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 6. 9. 2023.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelstvu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "63/2023 Z",
+    "title": "Kontrola plnění usnesení rady – zpráva kontrolního výboru",
+    "summary": "Zastupitelstvo schvaluje zprávu kontrolního výboru o plnění usnesení rady. Z evidence vyřazuje splněná usnesení 61/2023 R a 68/2023 R–82/2023 R, v evidenci ponechává usnesení 30/2023 R a 31/2023 R.",
+    "keywords": [
+     "kontrolní výbor",
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "64/2023 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – zpráva kontrolního výboru",
+    "summary": "Zastupitelstvo schvaluje zprávu kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje sedm splněných usnesení (mj. 16/2022 Z a 53/2023 Z–61/2023 Z), v evidenci ponechává sedm usnesení včetně 75/2009 Z, 101/2021 Z a 23/2023 Z.",
+    "keywords": [
+     "kontrolní výbor",
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "65/2023 Z",
+    "title": "Zpráva kontrolního výboru o kontrole webových stránek obvodu",
+    "summary": "Zastupitelstvo schvaluje zprávu kontrolního výboru o kontrole obsahu webových stránek MO Pardubice V.",
+    "keywords": [
+     "kontrolní výbor",
+     "webové stránky",
+     "web obvodu",
+     "informování občanů",
+     "kontrola"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "66/2023 Z",
+    "title": "Nová Pravidla pro schvalování investičních záměrů, zrušení usnesení 101/2021 Z",
+    "summary": "Zastupitelstvo ruší usnesení č. 101/2021 Z ze dne 10. 3. 2021 a schvaluje Pravidla pro schvalování investičních záměrů v zastupitelstvu městského obvodu.",
+    "keywords": [
+     "pravidla pro investiční záměry",
+     "investiční záměry",
+     "schvalování investic",
+     "zrušení usnesení",
+     "101/2021 Z",
+     "limit pro schvalování zastupitelstvem"
+    ],
+    "topics": [
+     "investice",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "67/2023 Z",
+    "title": "Vyhodnocení plnění Programu rozvoje obvodu za rok 2022",
+    "summary": "Zastupitelstvo schvaluje vyhodnocení plnění úkolů Programu rozvoje MO Pardubice V za rok 2022.",
+    "keywords": [
+     "program rozvoje",
+     "plnění programu rozvoje",
+     "vyhodnocení",
+     "rok 2022",
+     "strategie obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "68/2023 Z",
+    "title": "Program rozvoje obvodu č. 2024/01 s účinností od 1. 1. 2024",
+    "summary": "Zastupitelstvo schvaluje aktualizovaný Program rozvoje městského obvodu Pardubice V č. 2024/01 s účinností od 1. 1. 2024.",
+    "keywords": [
+     "program rozvoje",
+     "aktualizace programu rozvoje",
+     "2024/01",
+     "strategie obvodu",
+     "rozvoj obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "69/2023 Z",
+    "title": "Rozbor hospodaření obvodu k 30. 9. 2023",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření MO Pardubice V k 30. 9. 2023 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu",
+     "rozpočet 2023",
+     "3. čtvrtletí"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "70/2023 Z",
+    "title": "Záměr poptat projekt parkovacích míst v ulici Artura Krause",
+    "summary": "Zastupitelstvo schvaluje záměr poptání projekčních prací na investiční akci Vybudování parkovacích míst na severní straně ulice Artura Krause.",
+    "keywords": [
+     "parkování",
+     "parkovací místa",
+     "ulice Artura Krause",
+     "projektová dokumentace",
+     "projekční práce",
+     "investiční záměr"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Artura Krause"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "71/2023 Z",
+    "title": "Projekt chodníků v ul. Boženy Němcové a investiční záměry na rok 2024",
+    "summary": "Zastupitelstvo schvaluje finální podobu projektu rekonstrukce povrchu chodníků v ulici Boženy Němcové od ulice Češkova po ulici Rožkova. Dále schvaluje investiční záměry k realizaci v roce 2024: zpevnění komunikace v Lesoparku, komunikaci v Dražkovicích u MŠ a stavební úpravy vnitrobloku ulic Pichlova – S. K. Neumanna – K Višňovce – Železničního pluku.",
+    "keywords": [
+     "rekonstrukce chodníků",
+     "chodník Boženy Němcové",
+     "investiční záměry 2024",
+     "Lesopark",
+     "komunikace Dražkovice",
+     "vnitroblok Pichlova",
+     "stavební úpravy vnitrobloku",
+     "silnice"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "ul. Boženy Němcové",
+     "ul. Češkova",
+     "ul. Rožkova",
+     "Lesopark",
+     "Dražkovice",
+     "MŠ Dražkovice",
+     "ul. Pichlova",
+     "S. K. Neumanna",
+     "K Višňovce",
+     "Železničního pluku"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "72/2023 Z",
+    "title": "5. změna rozpočtu na rok 2023 a termínované vklady u ČSOB",
+    "summary": "Zastupitelstvo bere na vědomí komentář k 5. změně rozpočtu na rok 2023 a schvaluje rozpočtová opatření č. 1–22. Dále schvaluje dvojí obnovení tříměsíčního termínovaného vkladu 13 mil. Kč a zřízení ročního termínovaného vkladu 6 mil. Kč u Československé obchodní banky včetně souvisejícího rozpočtového opatření ve financování.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2023",
+     "termínovaný vklad",
+     "ČSOB",
+     "financování"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s., pobočka Pardubice"
+    ],
+    "amounts": [
+     "13 mil. Kč",
+     "6 mil. Kč"
+    ]
+   },
+   {
+    "number": "73/2023 Z",
+    "title": "Výměna člena Finančního výboru zastupitelstva",
+    "summary": "Zastupitelstvo dnem 8. 11. 2023 odvolává jednu členku Finančního výboru ZMO Pardubice V a volí do výboru nového člena.",
+    "keywords": [
+     "finanční výbor",
+     "odvolání člena výboru",
+     "volba člena výboru",
+     "složení výboru"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "I",
+    "discussion": "Starosta Jiří Rejda, DiS. oznámil rezignaci jedné zastupitelky a nástup náhradníka Michala Hrabáka, který složil slib. Ing. Filip Vařecha upozornil na chybu v zápisu předchozího jednání u usnesení č. 56/2023 Z."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Kutílek se ptal na jednání o staré vojenské plovárně a revitalizaci Chrudimky, Ing. Filip Vařecha požadoval podrobnější rozepsání činnosti starosty a ptal se na jednání se starostou MO Pardubice VII. Občanku, která chtěla diskutovat, starosta odkázal na bod Diskuse."
+   },
+   {
+    "no": "2",
+    "discussion": "Předseda kontrolního výboru Ing. Filip Vařecha komentoval usnesení ponechaná v evidenci (komunikace v lesoparku, krajinářský návrh Dražkovice) a nespokojenost s plněním plánu investic; Ing. Jakub Kutílek vysvětlil postup ke krajinářskému návrhu Dražkovic. Ing. Milan Randák se ptal na stažení zpráv z minulého jednání."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Filip Vařecha uvedl, že nepřijatá usnesení nemají mít číslo usnesení, a upozornil na chybu v usnesení č. 56/2023 Z; připojili se Ing. Petr Netolický a JUDr. Bc. Jakub Jeřábek. Tajemník vysvětlil dosavadní evidenci nepřijatých usnesení."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha doporučil doplnit web obvodu o informace o přistavování velkoobjemových kontejnerů, sekci investičních akcí a aktuality."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Jakub Kutílek žádal pravidla neschválit a slíbil předložit vlastní návrh, Ing. Filip Vařecha a JUDr. Bc. Jakub Jeřábek kritizovali zvýšení limitu z 500.000 Kč na 2 mil. Kč; Ing. Pavel Bergman limit nerozporoval, ale upozornil na zákon o veřejných zakázkách. Bc. Jan Nadrchal požádal o přestávku, Ing. Petr Netolický se přiklonil k drobné úpravě."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Jakub Kutílek představil svůj návrh aktualizace programu rozvoje s adresnou odpovědností, starosta tabulku přečísloval a předložil nový návrh usnesení. Ing. Filip Vařecha podpořil adresnou odpovědnost, Ing. Pavel Bergman nesouhlasil s vyřazením bodu o propojení částí města a dopravní studii Jesničánek."
+   },
+   {
+    "no": "8",
+    "discussion": "JUDr. Bc. Jakub Jeřábek se ptal na nízké čerpání investic (34 %), vedoucí ekonomického odboru vysvětlila úspory a přesun akcí do dalšího roku. Ing. Filip Vařecha se ptal na situaci kolem dopravního hřiště a chtěl být informován o dalším postupu."
+   },
+   {
+    "no": "9",
+    "discussion": "Ing. Jakub Kutílek požádal o samostatné hlasování o parkovacích místech v ulici Artura Krause a spolu s Ing. Filipem Vařechou je považoval za zbytečná; Ing. Pavel Bergman a Ing. Petr Netolický kritizovali chybějící náklady a důvodovou zprávu. Ing. Lic. Jaroslav Kňava, Ing. Milan Randák a Bc. Petr Dufek parkovací místa hájili, Bc. Jan Nadrchal žádal konzultovat zadání PD s odborem dopravy; dotazy vznesli i občané."
+   },
+   {
+    "no": "10",
+    "discussion": "JUDr. Bc. Jakub Jeřábek a Ing. Filip Vařecha se ptali na podmínky úročení termínovaných vkladů; vedoucí ekonomického odboru vysvětlila 22 rozpočtových opatření."
+   },
+   {
+    "no": "12",
+    "discussion": "Občané se ptali na Arboretum, péči o zeleň, kácení vrby u ZŠ Staňkova, kontejnerová stání a výstavbu ZŠ; projektant a investor představili výstavbu bytových domů v ulici Čacké, s níž Bc. Jan Nadrchal a Ing. Filip Vařecha nesouhlasili a Ing. Petr Netolický a JUDr. Bc. Jakub Jeřábek ji kriticky komentovali. Ing. Jakub Kutílek se ptal na havarijní most Červeňák, Ing. Pavel Bergman poděkoval za řešení dopravy u krematoria a zastupitelstvo hlasovalo o prodloužení diskuse."
+   }
+  ]
+ }
+}

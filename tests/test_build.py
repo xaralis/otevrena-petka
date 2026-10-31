@@ -94,3 +94,8 @@ def test_revocation_links():
         [{"type": "rusi", "target": "39/2023 R", "scope": "cast", "detail": "bod 6, 16 a 17"}]
     assert links("Rada ruší své usnesení č. 229/2021 ze dne 25.11.2021", "rmo")[0]["target"] == "229/2021 R"
     assert links("kterou se k datu 31. 12. 2018 ruší směrnice č. 7-1/2015", "rmo") == []
+
+
+def test_double_surname_across_terms():
+    term = members.term_for(dt.date(2021, 3, 10))
+    assert members.resolve_attendee("Anna Gudrun Vavrečková", term) == "anna-gudrun-vavreckova"

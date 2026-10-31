@@ -3,26 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% block title %}Usnesení MO Pardubice V{% endblock %}</title>
-<meta name="description" content="Prohledávatelná databáze usnesení a hlasování Zastupitelstva a Rady městského obvodu Pardubice V. Otevřená data, API a MCP.">
-<link rel="stylesheet" href="/static/style.css?v=1">
+<title>{% block title %}Usnesení Pardubice V{% endblock %}</title>
+<meta name="description" content="Co rozhodlo zastupitelstvo a rada městského obvodu Pardubice V a kdo jak hlasoval. Vyhledávání, otevřená data, API a MCP.">
+<meta name="theme-color" content="#de091c">
+<link rel="preload" href="/static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/style.css?v=4">
 </head>
 <body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="top">
-  <a class="brand" href="/"><span class="mark">V</span><span>Usnesení <b>MO Pardubice V</b></span></a>
-  <nav>
-    <a href="/">Hledat</a>
-    <a href="/jednani">Jednání</a>
-    <a href="/clenove">Členové</a>
-    <a href="/otevrena-data">Otevřená data &amp; API</a>
-  </nav>
+  <div class="wrap top-inner">
+    <a class="brand" href="/"><b>Usnesení</b> Pardubice&nbsp;V</a>
+    <nav aria-label="Hlavní navigace">
+      {% set p = request.url.path %}
+      <a href="/" {% if p == '/' or p.startswith('/usneseni') %}aria-current="page"{% endif %}>Hledat</a>
+      <a href="/jednani" {% if p.startswith('/jednani') %}aria-current="page"{% endif %}>Jednání</a>
+      <a href="/clenove" {% if p.startswith('/clenove') %}aria-current="page"{% endif %}>Členové</a>
+      <a href="/otevrena-data" {% if p.startswith('/otevrena') %}aria-current="page"{% endif %}>Data a API</a>
+    </nav>
+  </div>
 </header>
-<main>{% block main %}{% endblock %}</main>
+{% block hero %}{% endblock %}
+<main id="obsah" class="wrap">{% block main %}{% endblock %}</main>
 <footer>
-  Data vytěžena z <a href="https://pardubice.eu/obvod5">zápisů zveřejněných na pardubice.eu</a>.
-  Shrnutí a klíčová slova jsou odvozená, závazné je znění usnesení a zápis.
-  Hlasy jednotlivých členů jsou zčásti odvozené z prezence – <a href="/otevrena-data#metodika">metodika</a>.
-  · <a href="https://github.com/xaralis/usneseni-mo5">zdrojový kód</a>
+  <div class="wrap">
+    <p>Vytěženo ze <a href="https://pardubice.eu/obvod5">zápisů na pardubice.eu</a>. Závazné je znění usnesení v zápisu; názvy a shrnutí jsou odvozené. Hlasy členů jsou zčásti dopočítané z prezence (<a href="/otevrena-data#metodika">jak</a>).</p>
+    <p>Nejde o web úřadu. <a href="/otevrena-data">Data jsou otevřená</a> pod CC BY 4.0, <a href="https://github.com/xaralis/usneseni-mo5">kód na GitHubu</a>.</p>
+  </div>
 </footer>
 </body>
 </html>

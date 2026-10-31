@@ -1,0 +1,474 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "d7b7e348f1551de9201bde5e7e6e4b48624d8a243b1cb0e578b9ee6213031caf",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 15,
+   "kind": "radne",
+   "date": "2021-12-15",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Evžen Erban",
+    "Bc. Petra Prusáková",
+    "Ing. Jiří Janoš",
+    "Ing. Petr Netolický",
+    "Anna Gudrun-Vavrečková",
+    "Ing. Milan Randák",
+    "Petr Hemský",
+    "František Just",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Karolina Štefková"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 61,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Anna Gudrun-Vavrečková",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 103,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení",
+    "line": 117,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Kontrola dodržování předpisů a směrnic u investičních akcí a souvisejících výběrových řízení za rok 2021",
+    "line": 134,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Schválení plánu činnosti Kontrolního výboru ZMO Pardubice V na rok 2022",
+    "line": 153,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Aktualizace Programu rozvoje MO Pardubice V na rok 2022",
+    "line": 165,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 11. 2021",
+    "line": 170,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Návrh 4. změny rozpočtu MO Pardubice V na r. 2021",
+    "line": 182,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Návrh rozpočtu MO Pardubice V na rok 2022",
+    "line": 195,
+    "speakers": [
+     "Anna Gudrun-Vavrečková",
+     "Ing. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Aktualizace střednědobého výhledu rozpočtu MO Pardubice V na r. 2021-2024",
+    "line": 314,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "11",
+    "title": "Odvolání členů výborů ZMO Pardubice V",
+    "line": 330,
+    "speakers": [
+     "Ing. Petr Netolický",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "12",
+    "title": "Diskuse",
+    "line": 346,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Bc. Petr Dufek",
+     "Bc. Jan Nadrchal",
+     "Evžen Erban",
+     "Ing. Jiří Janoš",
+     "Ing. Petr Netolický"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "130/2021 Z",
+    "agenda_no": "1",
+    "first_line": 99,
+    "last_line": 100,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "131/2021 Z",
+    "agenda_no": "2",
+    "first_line": 112,
+    "last_line": 114,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "132/2021 Z",
+    "agenda_no": "3",
+    "first_line": 126,
+    "last_line": 130,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "133/2021 Z",
+    "agenda_no": "4",
+    "first_line": 144,
+    "last_line": 150,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "134/2021 Z",
+    "agenda_no": "5",
+    "first_line": 161,
+    "last_line": 162,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "135/2021 Z",
+    "agenda_no": "7",
+    "first_line": 178,
+    "last_line": 179,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "136/2021 Z",
+    "agenda_no": "8",
+    "first_line": 190,
+    "last_line": 193,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "137/2021 Z",
+    "agenda_no": "9",
+    "first_line": 225,
+    "last_line": 311,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "138/2021 Z",
+    "agenda_no": "10",
+    "first_line": 325,
+    "last_line": 327,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "139/2021 Z",
+    "agenda_no": "11",
+    "first_line": 340,
+    "last_line": 343,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": "130/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 115,
+    "last_line": 115,
+    "resolution": "131/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 131,
+    "last_line": 131,
+    "resolution": "132/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 151,
+    "last_line": 151,
+    "resolution": "133/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 163,
+    "last_line": 163,
+    "resolution": "134/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jiří Janoš"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 180,
+    "last_line": 180,
+    "resolution": "135/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 194,
+    "last_line": 194,
+    "resolution": "136/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 312,
+    "last_line": 312,
+    "resolution": "137/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 328,
+    "last_line": 328,
+    "resolution": "138/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Petr Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 344,
+    "last_line": 344,
+    "resolution": "139/2021 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Bc. Petr Dufek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 180: u usnesení 135/2021 Z chybí počet zdržených („Pro 14, proti 0, zdrželo se“); doplněno 0, protože přítomno 14 a pro 14.",
+   "ř. 171 a 178: název bodu uvádí rozbor k 31. 11. 2021 (neexistující datum), znění usnesení k 30. 11. 2021.",
+   "Bod 6 (ř. 165–168) byl stažen bez hlasování; PD Wolkerova (ř. 53, 378–379) stažena, bez hlasování."
+  ]
+ }
+}

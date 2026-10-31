@@ -1,11 +1,17 @@
 {% extends "base.html" %}
-{% block title %}Členové ZMO a RMO Pardubice V{% endblock %}
+{% from "_macros.html" import hero %}
+{% block title %}Členové zastupitelstva a rady Pardubice V{% endblock %}
+{% block hero %}{{ hero('Členové', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.') }}{% endblock %}
 {% block main %}
-<h1>Členové</h1>
 {% for term, group in members|groupby('term')|reverse %}
-<h2>Volební období {{ term }}</h2>
-<table class="list"><thead><tr><th>Člen</th><th>Kandidátka</th><th></th><th>Hlasování</th></tr></thead><tbody>
-{% for m in group %}<tr><td><a href="/clenove/{{ m.id }}">{{ m.name }}</a></td><td>{{ m.list }}</td><td>{% if m.in_rada %}rada{% endif %}{% if not m.elected %} náhradník{% endif %}</td><td>{{ m.n_ballots }}</td></tr>{% endfor %}
-</tbody></table>
+<section class="year">
+  <h2 class="year-no">{{ term|replace('-', '–') }}</h2>
+  {% for lst, people in group|groupby('list') %}
+  <h3 class="party">{{ lst }} <span class="muted">{{ people|selectattr('elected')|list|length }} {{ 'mandát' if people|selectattr('elected')|list|length == 1 else ('mandáty' if people|selectattr('elected')|list|length < 5 else 'mandátů') }}</span></h3>
+  <ul class="people-list">
+    {% for m in people %}<li><a href="/clenove/{{ m.id }}">{{ m.name }}</a>{% if m.in_rada %} <b>v radě</b>{% endif %}{% if not m.elected %} <span class="muted">nastoupil{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }} jako náhradník</span>{% endif %}</li>{% endfor %}
+  </ul>
+  {% endfor %}
+</section>
 {% endfor %}
 {% endblock %}

@@ -21,8 +21,9 @@ Databáze usnesení Zastupitelstva (ZMO, 15 členů) a Rady (RMO, 5 členů) mě
 Pardubice V od roku 2018, vytěžená z PDF zápisů na pardubice.eu.
 
 Při odpovědích:
-- Číslo usnesení neznamená, že bylo přijato. Řiď se polem `status` (prijato / neprijato /
-  castecne / neovereno) a výsledkem hlasování.
+- Číslo neznamená, že jde o usnesení. Záznam se `stav: neprijato` je jen hlasování o návrhu,
+  který nezískal většinu – podle zákona to usnesení není, i když mu zápis přidělil číslo.
+  Nazývej ho „nepřijatý návrh“, ne „usnesení“. `castecne` = prošly jen některé části.
 - Hlasy jednotlivých členů mají `provenance`: `named` = jmenovitě v zápisu, `inferred` =
   odvozeno z prezence a jmenovitě uvedených menšinových hlasů, `attendance` = nepřítomen /
   omluven. Odvozené hlasy tak označ.

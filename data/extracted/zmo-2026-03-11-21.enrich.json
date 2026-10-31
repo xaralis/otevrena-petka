@@ -1,0 +1,230 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "9f6645372c7992b1b6bfbdeea5a85ee143ac550dabf28a471efcb5b264fe3748",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "166/2026 Z",
+    "title": "Zpráva o činnosti starosty od jednání 17. 12. 2025",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu Pardubice V za období od posledního jednání zastupitelstva dne 17. 12. 2025.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "starosta",
+     "informace zastupitelům"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "167/2026 Z",
+    "title": "Kontrola plnění usnesení rady – zpráva kontrolního výboru",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení Rady MO Pardubice V. Splněná usnesení č. 247/2025 R, 253–256/2025 R, 258–260/2025 R, 263–265/2025 R a 267–270/2025 R vyřazuje z evidence, usnesení č. 235/2025 R, 239/2025 R, 246/2025 R, 257/2025 R, 261–262/2025 R a 266/2025 R ponechává v evidenci.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení rady",
+     "RMO",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "168/2026 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – zpráva kontrolního výboru",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení ZMO Pardubice V. Splněná usnesení č. 154–161/2025 Z a 164/2025 Z vyřazuje z evidence; v evidenci ponechává mimo jiné usnesení č. 75/2009 Z, 27/2019 Z, 142/2022 Z, 103/2024 Z, 113/2024 Z, 121/2024 Z, 128/2025 Z, 129/2025 Z, 136/2025 Z, 140/2025 Z, 146/2025 Z, 153/2025 Z, 162/2025 Z, 163/2025 Z a 165/2025 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "kontrolní výbor",
+     "usnesení zastupitelstva",
+     "ZMO",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "169/2026 Z",
+    "title": "Zadání projekčních prací na „PD Prodloužení stezky u Chrudimky“ ve variantě I.",
+    "summary": "Zastupitelstvo schvaluje zadání projekčních prací na akci „PD Prodloužení stezky u Chrudimky“ podle předložené nabídky ve variantě I. za cenu 94.380 Kč vč. DPH.",
+    "keywords": [
+     "stezka u Chrudimky",
+     "prodloužení stezky",
+     "projektová dokumentace",
+     "projekční práce",
+     "cyklostezka",
+     "Chrudimka",
+     "nabídka"
+    ],
+    "topics": [
+     "investice",
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Chrudimka",
+     "stezka u Chrudimky"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "94.380,-Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "170/2026 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 12. 2025",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření MO Pardubice V k 31. 12. 2025 uvedený v tabulkové části zprávy a bere na vědomí komentář k tomuto rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2025",
+     "plnění rozpočtu",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "171/2026 Z",
+    "title": "Výroční zpráva o činnosti Finančního výboru za rok 2025",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2025.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "zpráva o činnosti",
+     "rok 2025"
+    ],
+    "topics": [
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "172/2026 Z",
+    "title": "1. změna rozpočtu obvodu na rok 2026 a příspěvky školkám, škole a SVČ ALFA",
+    "summary": "Zastupitelstvo schvaluje rozpočtová opatření 1. změny rozpočtu na rok 2026 vč. sociálního fondu, úpravy plánu společenských akcí (nová akce Divadelní představení, navýšení akce Mikuláš s MO, Masopust) a účelové příspěvky na provoz mateřským školám Kamarád, Jesničánky, Benešovo náměstí, Motýlek a Sluníčko, ZŠ J. Ressla, Středisku volného času ALFA Pardubice a Východočeskému divadlu Pardubice. Bere na vědomí přejmenování DDM ALFA na Středisko volného času ALFA Pardubice a svěřuje radě obvodu pravomoc provádět v roce 2026 rozpočtová opatření u účelově přidělených dotací.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2026",
+     "příspěvek na provoz",
+     "mateřské školy",
+     "školky",
+     "plán společenských akcí",
+     "divadelní představení",
+     "Masopust",
+     "Mikuláš"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Teplého 2100",
+     "Raisova 226",
+     "Benešovo náměstí 2115",
+     "J. Ressla 1992",
+     "Gorkého",
+     "J. Ressla 2258"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Dům dětí a mládeže ALFA, Pardubice-Polabiny",
+     "Středisko volného času ALFA Pardubice",
+     "Mateřská škola Kamarád Pardubice",
+     "Mateřská škola Pardubice-Jesničánky",
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "Mateřská škola Motýlek Pardubice",
+     "Mateřská škola Sluníčko Pardubice",
+     "Základní škola Pardubice, J. Ressla 2258",
+     "Východočeské divadlo Pardubice",
+     "Rada městského obvodu Pardubice V"
+    ],
+    "amounts": [
+     "128,72 tis. Kč",
+     "100 tis. Kč",
+     "30 tis. Kč",
+     "27 tis. Kč",
+     "17,4 tis. Kč",
+     "28,38 tis. Kč",
+     "19,5 tis. Kč",
+     "28 tis. Kč",
+     "34 tis. Kč",
+     "15 tis. Kč",
+     "1,4 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání o parcích a zeleni z 19. 2. 2026 a na jednání se SmP a.s. z 26. 2. 2026. Jiří Rejda, DiS. vysvětlil, že šlo o to, zda by významné parky (např. Arboretum, Tyršovy sady) neměly mít jednotně v péči SmP a.s."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha a Ing. Jakub Jeřábek poděkovali za pokrok při zpracování projektu stezky u Chrudimky."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Filip Vařecha se ptal na stav projektování dopravního hřiště a proč se nevyčerpal navýšený rozpočet knihovny; Jiří Rejda, DiS. uvedl, že projektování pokračuje a nákup zařízení pro knihovnu byl odsunut. Ing. Jakub Jeřábek se ptal na dofakturace; úřad vysvětlil, že se některé položky přesouvají do letošního roku."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Filip Vařecha se ptal, k čemu jsou určeny 2 mil. Kč na dětské hřiště za OK Centrem a kdo vybere soubory pro divadelní představení. Jiří Rejda, DiS. slíbil zaslat odpovědi a informace o představeních zastupitelům e-mailem."
+   },
+   {
+    "no": "8",
+    "discussion": "Jiří Rejda, DiS. uvedl, že návrh nepodpoří, Mgr. Miloš Adamů, MBA. upozornil na dopady přejmenování ulice Gorkého na občany a firmy a Ing. Milan Randák uvedl, že Maxim Gorkij je i v maturitních otázkách. Bc. Jan Nadrchal a Ing. Filip Vařecha žádali hlasovat o bodech návrhu samostatně; Evžen Erban uvedl, že navrhovatel z řad veřejnosti souhlasil s pojmenováním nové ulice v nové zástavbě po Jiřím Bartoškovi."
+   },
+   {
+    "no": "9",
+    "discussion": "Bc. Jan Nadrchal se ptal na fungování participativního rozpočtu, Jiří Rejda, DiS. postup vysvětlil a připraví souhrn projektů. Ing. Filip Vařecha upozornil na chybějící dopravní značky u ZŠ Staňkova a ptal se, proč se složenky na odpady neposílají datovou schránkou; Michal Hrabák upozornil na špatnou signalizaci křižovatky Jana Palacha x Teplého x Pichlova."
+   }
+  ]
+ }
+}

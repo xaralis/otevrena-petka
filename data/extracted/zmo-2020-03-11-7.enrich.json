@@ -1,0 +1,256 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "da7979ba3a3c205a2d1209b6533f4550916e2922f269afaccc5c8acc3fffa2a7",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "58/2020 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 18. 12. 2019",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu za období od posledního jednání zastupitelstva 18. 12. 2019.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "59/2020 Z",
+    "title": "Kontrola plnění usnesení RMO – vyřazení usnesení 94/2019 R až 104/2019 R",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady městského obvodu a vyřazuje splněná usnesení 94/2019 R až 104/2019 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "Kontrolní výbor",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "60/2020 Z",
+    "title": "Kontrola plnění usnesení ZMO – vyřazení 48/2019 Z až 57/2019 Z",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva, vyřazuje z kontroly splněná usnesení 48/2019 Z až 57/2019 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z, 27/2019 Z, 46/2019 Z a 47/2019 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "Kontrolní výbor",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "61/2020 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2019 (bod Kontrola investičních akcí 2019)",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 30. 11. 2019 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru. Usnesení je v zápisu zařazeno k bodu Kontrola dokončených investičních akcí za rok 2019.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "kontrola investičních akcí",
+     "investiční akce 2019",
+     "Kontrolní výbor"
+    ],
+    "topics": [
+     "rozpocet",
+     "kontrola",
+     "investice"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "62/2020 Z",
+    "title": "Statut a jednací řád Kontrolního výboru ZMO",
+    "summary": "Zastupitelstvo schvaluje předložený Statut a jednací řád Kontrolního výboru Zastupitelstva městského obvodu Pardubice V.",
+    "keywords": [
+     "statut",
+     "jednací řád",
+     "Kontrolní výbor",
+     "střet zájmů"
+    ],
+    "topics": [
+     "komise-vybory",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "63/2020 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2019",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 31. 12. 2019 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2019",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "64/2020 Z",
+    "title": "Uložení RMO revidovat umístění Pump tracku podle projektu Stará vojenská plovárna",
+    "summary": "Návrh Ing. Vařechy ukládá radě městského obvodu revidovat umístění Pump tracku a design použitého mobiliáře tak, aby byly v souladu s projektem „Stará vojenská plovárna“ podle platné projektové dokumentace.",
+    "keywords": [
+     "pump track",
+     "Stará vojenská plovárna",
+     "Stará plovárna",
+     "mobiliář",
+     "umístění hřiště",
+     "úkol radě"
+    ],
+    "topics": [
+     "hriste-sport",
+     "investice"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Stará vojenská plovárna"
+    ],
+    "parcels": [],
+    "organizations": [
+     "RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "65/2020 Z",
+    "title": "1. změna rozpočtu 2020 a svěření rozpočtových opatření u transferů radě",
+    "summary": "Zastupitelstvo schvaluje 1. změnu rozpočtu městského obvodu a rozpočtu sociálního fondu na rok 2020 včetně rozpočtových opatření z komentáře. Zároveň svěřuje radě pravomoc provádět nezbytná rozpočtová opatření u účelově přidělených finančních transferů z veřejných rozpočtů (kromě dotace z ÚP, upravené usnesením 53/2019 Z).",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2020",
+     "sociální fond",
+     "rozpočtové opatření",
+     "dotace",
+     "finanční transfery",
+     "pravomoc rady"
+    ],
+    "topics": [
+     "rozpocet",
+     "dotace"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "ÚP"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "66/2020 Z",
+    "title": "Výroční zpráva Finančního výboru za rok 2019",
+    "summary": "Zastupitelstvo bere na vědomí výroční zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2019.",
+    "keywords": [
+     "Finanční výbor",
+     "výroční zpráva",
+     "činnost výboru",
+     "rok 2019"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "67/2020 Z",
+    "title": "Plnění Programu rozvoje za rok 2019 a doplnění bodu o jihozápadním obchvatu",
+    "summary": "Zastupitelstvo schvaluje vyhodnocení plnění úkolů Programu rozvoje městského obvodu za rok 2019 a souhlasí s doplněním bodu 1/13 do čl. 1 programu: na všech úrovních podporovat vybudování jihozápadního obchvatu města Pardubic (odpovídá starosta, RMO, ZMO; termín trvale, kontrola každoročně k 31. 12.).",
+    "keywords": [
+     "Program rozvoje",
+     "plnění programu rozvoje",
+     "jihozápadní obchvat",
+     "obchvat Pardubic",
+     "doprava",
+     "strategie"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "doprava"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "jihozápadní obchvat města Pardubic"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "II.",
+    "discussion": "Před projednáním materiálů vystoupil předseda místní komise Višňovka k parkování ve vnitroblocích (ul. Čihákova) a v ulici Železničního pluku a žádal o brzké vyznačení parkování v rámci Zóny 30 Višňovka. Starosta Jiří Rejda, DiS. odpověděl, že projekt Zóny 30 je pozastaven kvůli změně systému parkování v Pardubicích, a požádal o písemné připomínky."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Filip Vařecha se ptal na jednání ke křižovatce Teplého x Lexova, k ulici Pod Břízkami a s primátorem, Martin Merhout na kompenzace od LOM Praha, kamerový systém a ulici Na Spravedlnosti. Ing. Jiří Hájek se ptal na studii S. K. Neumanna a Masarykova kasárna a žádal seznámení zastupitelů s materiály; Ing. Milan Randák doporučil zástavbu v ulici S. K. Neumanna důkladně sledovat."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Milan Randák se ptal na ustanovení jednacího řádu o střetu zájmů, kvůli názoru Ing. Netolického, že je jako člen rady ve střetu zájmů; podle tajemníka úřadu ve střetu zájmů není."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Jiří Hájek apeloval na šetření. Ing. Filip Vařecha se ptal, proč se dva roky nečerpá položka na údržbu mobiliáře v lesoparku Dukla; úřad odpověděl, že mobiliář je v záruce a oprava za odhadem cca 200 tis. Kč bude řešena se zhotovitelem."
+   },
+   {
+    "no": "7",
+    "discussion": "Ing. Jiří Hájek vyzval k šetření. Ing. Filip Vařecha měl výhrady k umístění Pump tracku kvůli projektu Stará plovárna a podal protinávrh usnesení; starosta a Ing. Jiří Hájek umístění hájili, Ing. Jaroslav Kňava se ptal na vyjádření města."
+   },
+   {
+    "no": "IV.",
+    "discussion": "Ing. Filip Vařecha žádal propagaci úklidu lesoparku v rámci akce Ukliďme Česko a ptal se na projektový zásobník, Ing. Jiří Hájek na opatření úřadu kvůli koronaviru, Filip Šťastný navrhl zřizovat griloviště postupně a Ing. Jaroslav Kňava se ptal na vydání zpravodaje. Ing. Petr Netolický žádal seznámení zastupitelů se studií ulice S. K. Neumanna, k níž se dále vyjádřili Ing. Milan Randák, Evžen Erban, Ing. Filip Vařecha, Ing. Jiří Hájek a Bc. Jan Nadrchal."
+   }
+  ]
+ }
+}

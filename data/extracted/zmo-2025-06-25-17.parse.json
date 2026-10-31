@@ -1,0 +1,519 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e62e485c9551c0d745c2ab47fac4c4fb894bfa5b1fd60bf8cd84a4de93898596",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 17,
+   "kind": "radne",
+   "date": "2025-06-25",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jakub Kutílek",
+    "Bc. Petr Dufek",
+    "Ing. Filip Vařecha",
+    "Evžen Erban",
+    "Michal Hrabák",
+    "Ing. Lic. Jaroslav Kňava",
+    "Bc. Jan Nadrchal",
+    "Karolina Štefková",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Petr Netolický",
+    "JUDr. Bc. Jakub Jeřábek"
+   ],
+   "excused": [
+    "Ing. Milan Randák",
+    "Ing. Pavel Bergman",
+    "Petr Šmeral"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Výstavba bytových domů „REZIDENČNÍ BYDLENÍ ČACKÉ“ ve čtvrti Nové Jesenčany",
+    "line": 61,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Petr Netolický",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 116,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Ing. Jakub Jeřábek",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 137,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Kontrola plnění usnesení vzešlých z jednání ZMO Pardubice V",
+    "line": 153,
+    "speakers": [
+     "Ing. Jakub Jeřábek"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Schválení investičních akcí a investičních záměrů",
+    "line": 178,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Závěrečný účet MO Pardubice V za rok 2024",
+    "line": 193,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2024",
+    "line": 218,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "7",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2025",
+    "line": 233,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "8",
+    "title": "3. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 246,
+    "speakers": [
+     "Ing. Lic. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Bc. Jan Nadrchal",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "10",
+    "title": "Program rozvoje městského obvodu Pardubice V",
+    "line": 307,
+    "speakers": [
+     "Ing. Jakub Kutílek",
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "11",
+    "title": "Diskuse, závěr",
+    "line": 329,
+    "speakers": [
+     "Bc. Jan Nadrchal",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jakub Kutílek",
+     "Bc. Petr Dufek"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "136/2025 Z",
+    "agenda_no": "9",
+    "first_line": 82,
+    "last_line": 112,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "137/2025 Z",
+    "agenda_no": "1",
+    "first_line": 131,
+    "last_line": 132,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "138/2025 Z",
+    "agenda_no": "2",
+    "first_line": 145,
+    "last_line": 149,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "139/2025 Z",
+    "agenda_no": "3",
+    "first_line": 168,
+    "last_line": 174,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "140/2025 Z",
+    "agenda_no": "4",
+    "first_line": 188,
+    "last_line": 189,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "141/2025 Z",
+    "agenda_no": "5",
+    "first_line": 201,
+    "last_line": 214,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "142/2025 Z",
+    "agenda_no": "6",
+    "first_line": 226,
+    "last_line": 229,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "143/2025 Z",
+    "agenda_no": "7",
+    "first_line": 241,
+    "last_line": 242,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "144/2025 Z",
+    "agenda_no": "8",
+    "first_line": 266,
+    "last_line": 303,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "145/2025 Z",
+    "agenda_no": "10",
+    "first_line": 322,
+    "last_line": 325,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 32,
+    "last_line": 32,
+    "resolution": null,
+    "part": null,
+    "subject": "zapisovatelka, návrhová komise a ověřovatelé",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 28,
+    "motion_last_line": 31,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 55,
+    "last_line": 55,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu s předřazením bodu 9 před ostatní body",
+    "proposer": "Jiří Rejda, DiS.",
+    "motion_first_line": 53,
+    "motion_last_line": 54,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 113,
+    "last_line": 113,
+    "resolution": "136/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 133,
+    "last_line": 134,
+    "resolution": "137/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": 2,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": [
+      "Bc. Jan Nadrchal",
+      "Ing. Petr Netolický"
+     ]
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 150,
+    "last_line": 150,
+    "resolution": "138/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 175,
+    "last_line": 175,
+    "resolution": "139/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 190,
+    "last_line": 190,
+    "resolution": "140/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 215,
+    "last_line": 215,
+    "resolution": "141/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 230,
+    "last_line": 230,
+    "resolution": "142/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 243,
+    "last_line": 243,
+    "resolution": "143/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Jakub Kutílek",
+      "Ing. Filip Vařecha"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 304,
+    "last_line": 304,
+    "resolution": "144/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 326,
+    "last_line": 326,
+    "resolution": "145/2025 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   }
+  ],
+  "notes": [
+   "ř. 133–134: u usnesení 137/2025 Z jsou Bc. Jan Nadrchal a Ing. Petr Netolický uvedeni jako „Nepřítomni – nehlasovali“, ale zápis nezmiňuje jejich odchod ani návrat; vedeni jako přítomní s volbou nehlasoval.",
+   "ř. 122 a 158–159: JUDr. Bc. Jakub Jeřábek je v rozpravě uveden jako „Ing. Jakub Jeřábek“.",
+   "ř. 144: značka usnesení má zdvojenou závorku „(usnesení č. 138/2025 Z))“.",
+   "ř. 86: usnesení 136/2025 Z bod 1 obsahuje termín „Termín trvale.“ přímo v textu (bez řádku T:)."
+  ]
+ }
+}

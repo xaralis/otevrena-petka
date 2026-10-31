@@ -1,0 +1,78 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3b6632048d204b944b8b71343de43b1140424b7e9d456560de0e5403a220ad48",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "181/2026 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2025 a finanční vypořádání",
+    "summary": "Zastupitelstvo souhlasí s celoročním hospodařením městského obvodu Pardubice V v roce 2025 bez výhrad a bere na vědomí komentáře k rozboru hospodaření a k finančnímu vypořádání včetně příloh závěrečného účtu. Schvaluje návrh finančního vypořádání za rok 2025 včetně finančního vypořádání sociálního fondu.",
+    "keywords": [
+     "závěrečný účet 2025",
+     "hospodaření obvodu",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozbor hospodaření",
+     "bez výhrad"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "182/2026 Z",
+    "title": "3. změna rozpočtu na rok 2026 a příspěvky na provoz čtyřem mateřským školám",
+    "summary": "Zastupitelstvo schvaluje rozpočtová opatření 3. změny rozpočtu MO Pardubice V na rok 2026 včetně rozpočtu sociálního fondu (body 1–7 důvodové zprávy). Schvaluje účelově vázané příspěvky na provoz mateřským školám Kamarád (10 tis. Kč), Pardubice-Jesničánky (10 tis. Kč), Motýlek (12 tis. Kč) a Sluníčko (9 tis. Kč) a související přesuny v kapitole 33.",
+    "keywords": [
+     "změna rozpočtu 2026",
+     "rozpočtové opatření",
+     "příspěvek na provoz",
+     "mateřská škola",
+     "školka",
+     "MŠ Kamarád",
+     "MŠ Jesničánky",
+     "MŠ Motýlek",
+     "MŠ Sluníčko",
+     "sociální fond"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Teplého 2100",
+     "Raisova 226",
+     "J. Ressla 1992",
+     "Gorkého"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Kamarád Pardubice",
+     "Mateřská škola Pardubice-Jesničánky",
+     "Mateřská škola Motýlek Pardubice",
+     "Mateřská škola Sluníčko Pardubice"
+    ],
+    "amounts": [
+     "10 tis. Kč",
+     "12 tis. Kč",
+     "9 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "3",
+    "discussion": "Michal Hrabák se ptal na důvody změn v návrhu změn dopravního značení v obvodu a Ing. Filip Vařecha žádal o prodloužení termínu pro připomínky k němu; Bc. Jan Nadrchal vysvětlil, že se změny budou řešit v září a schvalovat po volbách, a starosta navrhl termín pro připomínky do poloviny července. Karolina Štefková se ptala na zavádění svozu tříděného odpadu „door to door“ v Dražkovicích; starosta odpověděl, že občané budou včas informováni."
+   }
+  ]
+ }
+}

@@ -1,0 +1,264 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "10c21c83f5bf7bb78dda57fcd6aaf1bf5789994ba176193018b4f2f4a1ebd442",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "146/2025 Z",
+    "title": "Nesouhlas s výstavbou „REZIDENČNÍ BYDLENÍ ČACKÉ“ v Nových Jesenčanech a uplatnění námitek",
+    "summary": "Zastupitelstvo nesouhlasí s předloženým návrhem výstavby bytových domů „REZIDENČNÍ BYDLENÍ ČACKÉ“ ve čtvrti Nové Jesenčany. Ukládá starostovi, aby po oznámení o zahájení řízení o povolení záměru na parcelách 2/1, 3/1 a 4/2 uplatnil jako účastník řízení námitky – nárůst obyvatel a dopravy, zhoršení parkování, hluk, změna rázu čtvrti, nesoulad s územním plánem pro plochu X/29 (podlažnost 2NP, zastavěnost 0,4), výška 10,5 m a riziko ztráty vody ve studních.",
+    "keywords": [
+     "Rezidenční bydlení Čacké",
+     "bytové domy",
+     "Nové Jesenčany",
+     "ulice Čacké",
+     "námitky",
+     "stavební řízení",
+     "územní plán",
+     "developerský projekt",
+     "parkování",
+     "nesouhlas s výstavbou"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "vztahy-mesto",
+     "bydleni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Nové Jesenčany",
+     "k. ú. Nové Jesenčany",
+     "plocha X/29"
+    ],
+    "parcels": [
+     "2/1",
+     "3/1",
+     "4/2"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "147/2025 Z",
+    "title": "Zpráva o činnosti starosty od jednání 25. 6. 2025",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 25. 6. 2025.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "148/2025 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady. Z evidence vyřazuje splněná usnesení č. 210/2025 R, 215/2025 R – 227/2025 R, 228/2025 R a 231/2025 R – 232/2025 R; v evidenci ponechává usnesení č. 199/2025 R, 212/2025 R a 229/2025 R – 230/2025 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení rady",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "149/2025 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Z evidence vyřazuje splněná usnesení č. 23/2023 Z, 137/2025 Z – 139/2025 Z a 141/2025 Z – 145/2025 Z; v evidenci ponechává mimo jiné usnesení č. 75/2009 Z, 27/2019 Z, 142/2022 Z, 66/2023 Z, 103/2024 Z, 113/2024 Z, 121/2024 Z, 128/2025 Z, 129/2025 Z, 136/2025 Z a 140/2025 Z.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "Kontrolní výbor",
+     "usnesení zastupitelstva",
+     "evidence usnesení",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "150/2025 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2025",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 8. 2025 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu",
+     "rozpočet 2025"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "151/2025 Z",
+    "title": "Informace o schválení účetní závěrky města za rok 2024",
+    "summary": "Zastupitelstvo bere na vědomí, že Zastupitelstvo města Pardubic dne 23. 6. 2025 schválilo účetní závěrku Statutárního města Pardubic včetně městských obvodů za rok 2024 sestavenou k 31. 12. 2024.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2024",
+     "Statutární město Pardubice",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "152/2025 Z",
+    "title": "4. změna rozpočtu MO Pardubice V na rok 2025 a příspěvky školám a školkám",
+    "summary": "Zastupitelstvo bere na vědomí komentář ke 4. změně rozpočtu na rok 2025 včetně sociálního fondu a schvaluje rozpočtová opatření v bodech 1–21 důvodové zprávy. Dále schvaluje přesuny z položky příspěvků příspěvkovým organizacím města v kapitole 33 na účelově vázané příspěvky na provoz pro ZŠ Waldorfská, DDM Alfa, MŠ Jesničánky, MŠ Višňovka, MŠ Motýlek, ZŠ Benešovo náměstí, MŠ Sluníčko a ZŠ J. Ressla na akce dle přílohy č. 2 zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2025",
+     "sociální fond",
+     "příspěvek na provoz",
+     "základní školy",
+     "mateřské školy",
+     "DDM Alfa"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Gorkého",
+     "Družby",
+     "Raisova",
+     "Benešovo náměstí",
+     "J. Ressla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ZŠ Waldorfská, Gorkého",
+     "DDM Alfa, Družby",
+     "MŠ Jesničánky, Raisova",
+     "MŠ Višňovka, Benešovo nám.",
+     "MŠ Motýlek, J. Ressla",
+     "ZŠ Benešovo náměstí",
+     "MŠ Sluníčko, Gorkého",
+     "ZŠ J. Ressla"
+    ],
+    "amounts": [
+     "5 tis. Kč",
+     "7 tis. Kč",
+     "10 tis. Kč",
+     "6 tis. Kč",
+     "17,15 tis. Kč",
+     "11 tis. Kč",
+     "23 tis. Kč",
+     "10 tis. Kč"
+    ]
+   },
+   {
+    "number": "153/2025 Z",
+    "title": "Investiční záměry: chodníky Dražkovická a Raisova, hřiště ve vnitrobloku S. K. Neumanna",
+    "summary": "Zastupitelstvo schvaluje záměr poptání projekčních prací na rekonstrukci chodníků v ulicích Dražkovická a Raisova (úsek Nemošická – Čacké – Chrudimská). Samostatně schvaluje investiční záměr stavebních úprav dětského hřiště ve vnitrobloku ulice S. K. Neumanna č. p. 2504–2506 k realizaci v letech 2025–2026.",
+    "keywords": [
+     "investiční záměr",
+     "rekonstrukce chodníků",
+     "projektová dokumentace",
+     "Dražkovická",
+     "Raisova",
+     "dětské hřiště",
+     "S. K. Neumanna",
+     "vnitroblok"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "hriste-sport"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Dražkovická",
+     "Raisova",
+     "Nemošická",
+     "Čacké",
+     "Chrudimská",
+     "S. K. Neumanna č.p. 2504-2506"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "–",
+    "discussion": "Občan z Dražkovic kritizoval provedení rekonstrukce komunikace (vysoké obrubníky, chodník, parkování, odvodnění) a úředník vysvětlil postup řízení a normy. Ing. Filip Vařecha navrhl veřejná projednávání staveb s občany, Jiří Rejda, DiS. a Michal Hrabák reagovali. Další občan informoval o trestním oznámení na Ing. Petra Netolického, který se nechtěl vyjádřit."
+   },
+   {
+    "no": "9",
+    "discussion": "Tajemník vysvětlil novou žádost magistrátu k projektu „REZIDENČNÍ BYDLENÍ ČACKÉ“. Bc. Jan Nadrchal informoval o záporném stanovisku hlavního architekta a rozporu s územním plánem a slíbil občany informovat; Ing. Milan Randák zmínil potřebu hlukové studie. Občané z okolí upozorňovali na výšku budov, hluk tepelných čerpadel, dopravu, kanalizaci a zastavěnost."
+   },
+   {
+    "no": "1",
+    "discussion": "Ing. Jakub Jeřábek otevřel přejmenování ulice Gorkého, proti kterému vystoupil Bc. Jan Nadrchal. Ing. Jakub Kutílek se ptal na skatepark, Ing. Filip Vařecha na dopravní hřiště, sladkosti na dětských akcích a bezpečnost u ZŠ Staňkova; starosta informoval o projektu Door to door. Bc. Petr Dufek a Ing. Jakub Kutílek informovali o návrhu bus pruhu na ulici Teplého."
+   },
+   {
+    "no": "2",
+    "discussion": "Ing. Jakub Jeřábek se ptal na smír s firmou Raamar s.r.o. (usnesení 199/2025 R). Ing. Jakub Kutílek upozornil, že by se mělo vyřadit zrušené usnesení 212/2025 R a že usnesení 215/2025 R a 228/2025 R obsahují neschválené části."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. Filip Vařecha se ptal na nulové čerpání položky na odstranění nepovolených reklamních zařízení, žádal informační tabuli k chodníkovým hrám u ZŠ Staňkova a cedulky u projektů participativního rozpočtu. Ing. Jakub Kutílek poukázal na nízké čerpání položek péče o zeleň, oprav a dětských hřišť; úřad vysvětlil financování krytu vozovky v ulici Lexova."
+   },
+   {
+    "no": "6",
+    "discussion": "Ing. Filip Vařecha se ptal na navýšení položky vánoční ozdoby; Jiří Rejda, DiS. vysvětlil, co položka zahrnuje, a rozpis má být do 30 dnů zaslán zastupitelům."
+   },
+   {
+    "no": "8",
+    "discussion": "Ing. Jakub Kutílek se ptal, zda by rekonstrukce chodníků Dražkovická a Raisova neměla řešit ulici komplexněji kvůli parkování a zeleni. Bc. Jan Nadrchal se ptal na opravu chodníku v ulici Holcova po výkopech ČEZ, Ing. Filip Vařecha a Ing. Petr Netolický na budoucí dětské hřiště ve vnitrobloku S. K. Neumanna; Michal Hrabák navrhl informovat ve zpravodaji. Na návrh se hlasovalo po částech."
+   },
+   {
+    "no": "10",
+    "discussion": "Ing. Milan Randák se ptal na trestní oznámení na Ing. Petra Netolického. Ing. Pavel Bergman upozornil na vrak v ulici Nemošická a Bc. Petr Dufek navrhl opravu této silnice transferem prostředků na MO Pardubice IV. Ing. Filip Vařecha upozornil na hlasování v participativním rozpočtu."
+   }
+  ]
+ }
+}

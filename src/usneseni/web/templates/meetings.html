@@ -1,9 +1,27 @@
 {% extends "base.html" %}
-{% block title %}Jednání ZMO a RMO Pardubice V{% endblock %}
+{% from "_macros.html" import hero %}
+{% block title %}Jednání zastupitelstva a rady Pardubice V{% endblock %}
+{% block hero %}{{ hero('Jednání', [], 'Zastupitelstvo se schází zhruba jednou za čtvrt roku, rada jednou až dvakrát do měsíce.') }}{% endblock %}
 {% block main %}
-<h1>Jednání</h1>
-<p><a href="/jednani" class="{{ 'on' if not organ }}">vše</a> · <a href="/jednani?organ=zmo" class="{{ 'on' if organ=='zmo' }}">zastupitelstvo</a> · <a href="/jednani?organ=rmo" class="{{ 'on' if organ=='rmo' }}">rada</a></p>
-<table class="list"><thead><tr><th>Datum</th><th>Jednání</th><th>Usnesení</th><th>Neprošlo celé</th></tr></thead><tbody>
-{% for m in meetings %}<tr><td>{{ m.date|d }}</td><td><a href="/jednani/{{ m.id }}">{{ m.number }}. {{ 'mimořádné ' if m.kind=='mimoradne' }}{{ 'ZMO' if m.body=='zmo' else 'RMO' }}</a>{% if m.status != 'ok' %} <span class="warn-dot" title="čeká na kontrolu">!</span>{% endif %}</td><td>{{ m.n_resolutions }}</td><td>{{ m.n_not_passed or '' }}</td></tr>{% endfor %}
-</tbody></table>
+<nav class="switch" aria-label="Orgán">
+  <a href="/jednani" {% if not organ %}aria-current="page"{% endif %}>Obojí</a>
+  <a href="/jednani?organ=zmo" {% if organ=='zmo' %}aria-current="page"{% endif %}>Zastupitelstvo</a>
+  <a href="/jednani?organ=rmo" {% if organ=='rmo' %}aria-current="page"{% endif %}>Rada</a>
+</nav>
+{% for year, group in meetings|groupby('date.year')|reverse %}
+<section class="year">
+  <h2 class="year-no">{{ year }}</h2>
+  <ol class="cal">
+    {% for m in group|sort(attribute='date', reverse=True) %}
+    <li class="cal-{{ m.body }}">
+      <a href="/jednani/{{ m.id }}">
+        <span class="cal-date">{{ m.date.day }}. {{ m.date.month }}.</span>
+        <span class="cal-what">{{ 'Zastupitelstvo' if m.body=='zmo' else 'Rada' }}{% if m.kind=='mimoradne' %}, mimořádné{% endif %}</span>
+        <span class="cal-n">{{ m.n_resolutions }} usnesení{% if m.n_partial %} ({{ m.n_partial }} zčásti){% endif %}{% if m.n_rejected %}, {{ m.n_rejected }} nepřijat{{ 'ý návrh' if m.n_rejected == 1 else 'é návrhy' if m.n_rejected < 5 else 'ých návrhů' }}{% endif %}{% if m.status != 'ok' %}, čeká na kontrolu{% endif %}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endfor %}
 {% endblock %}

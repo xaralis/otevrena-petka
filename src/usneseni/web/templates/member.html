@@ -1,16 +1,35 @@
 {% extends "base.html" %}
-{% block title %}{{ m.name }} – hlasování{% endblock %}
+{% from "_macros.html" import hero %}
+{% block title %}{{ m.name }}: jak hlasoval{% endblock %}
+{% block hero %}{{ hero(m.name, [("Členové", "/clenove")], (m.terms|map(attribute="list")|first)) }}{% endblock %}
 {% block main %}
-<h1>{{ m.name }}</h1>
-<p class="lead">{% for t in m.terms %}{{ t.term }}: {{ t.list }}{% if t.in_rada %}, člen rady{% endif %}{{ '; ' if not loop.last }}{% endfor %}</p>
-<h2>Docházka</h2>
-<table class="list"><thead><tr><th>Období</th><th>Orgán</th><th>Přítomen</th><th>Omluven</th><th>Nepřítomen</th></tr></thead><tbody>
-{% for a in m.attendance %}<tr><td>{{ a.term }}</td><td>{{ BODY[a.body] }}</td><td>{{ a.present }}</td><td>{{ a.excused }}</td><td>{{ a.absent }}</td></tr>{% endfor %}</tbody></table>
-<h2>Hlasování</h2>
-<p><a href="?odlisne=0" class="{{ 'on' if not odlisne }}">všechna</a> · <a href="?odlisne=1" class="{{ 'on' if odlisne }}">jen kde hlasoval jinak, než jak hlasování dopadlo</a></p>
-<table class="list votes"><thead><tr><th>Datum</th><th>Usnesení / předmět</th><th>Hlasoval</th><th>Výsledek</th></tr></thead><tbody>
-{% for v in votes %}<tr><td>{{ v.date|d }}</td><td>{% if v.uid %}<a href="/usneseni/{{ v.uid }}">{{ v.number }}</a> {{ v.title or '' }}{% else %}{{ v.subject or '' }}{% endif %}{% if v.part %} <small>({{ v.part }})</small>{% endif %}</td>
-<td class="b-{{ v.choice }}">{{ CHOICE[v.choice] }}{% if v.provenance == 'inferred' %}*{% endif %}</td><td>{{ 'přijato' if v.outcome == 'prijato' else ('nepřijato' if v.outcome == 'neprijato' else '?') }} {{ v.n_pro }}/{{ v.n_proti }}/{{ v.n_zdrzel }}</td></tr>
-{% else %}<tr><td colspan="4">Žádná hlasování.</td></tr>{% endfor %}</tbody></table>
-<p class="legend">* odvozeno z prezence a jmenovitých menšinových hlasů</p>
+<div class="detail">
+  <div class="detail-main">
+    <nav class="switch" aria-label="Filtr hlasování">
+      <a href="?odlisne=0" {% if not odlisne %}aria-current="page"{% endif %}>Všechna hlasování</a>
+      <a href="?odlisne=1" {% if odlisne %}aria-current="page"{% endif %}>Kde hlasoval jinak, než to dopadlo</a>
+    </nav>
+    <p class="note">Hlas <span class="inferred">podtržený tečkami</span> je dopočítaný: zápis jmenuje jen ty, kdo hlasovali jinak než většina. Procedurální hlasování (program, ověřovatelé) nejsou uvedena.</p>
+    <table class="ledger">
+      <caption class="sr">Hlasování člena</caption>
+      <thead><tr><th scope="col">Kdy</th><th scope="col">O čem</th><th scope="col">Hlasoval</th><th scope="col">Dopadlo</th></tr></thead>
+      <tbody>
+      {% for v in votes %}
+      <tr>
+        <td class="nowrap" data-label="">{{ v.date|d }}</td>
+        <td>{% if v.uid %}<a href="/usneseni/{{ v.uid }}"><span class="no no-{{ v.status }}">{{ v.number }}</span> {{ v.title or "" }}</a>{% else %}{{ (v.subject or 'hlasování bez čísla')|capitalize }}{% endif %}{% if v.part %}<br><small class="muted">{{ v.part }}</small>{% endif %}</td>
+        <td data-label="Hlasoval"><span class="choice c-{{ v.choice }}{{ ' inferred' if v.provenance == 'inferred' }}"{% if v.provenance == 'inferred' %} title="dopočítáno z prezence a součtů"{% endif %}>{{ CHOICE[v.choice] }}</span></td>
+        <td class="nowrap" data-label="Dopadlo">{{ 'prošlo' if v.outcome == 'prijato' else ('neprošlo' if v.outcome == 'neprijato' else 'nejasné') }} <small class="muted">({{ v.n_pro }} pro, {{ v.n_proti }} proti)</small></td>
+      </tr>
+      {% else %}<tr><td colspan="4">Žádná hlasování.</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <aside class="detail-side">
+    <h2 class="side-h">Mandáty</h2>
+    <ul class="plain">{% for t in m.terms %}<li>{{ t.term }}: {{ t.list }}{% if t.in_rada %}, v radě{% endif %}{% if not t.elected %}, jako náhradník{% endif %}</li>{% endfor %}</ul>
+    <h2 class="side-h">Účast na jednáních</h2>
+    <ul class="plain">{% for a in m.attendance %}<li>{{ 'Zastupitelstvo' if a.body == 'zmo' else 'Rada' }} {{ a.term }}: přítomen {{ a.present }}×{% if a.excused %}, omluven {{ a.excused }}×{% endif %}{% if a.absent %}, chyběl {{ a.absent }}×{% endif %}</li>{% endfor %}</ul>
+  </aside>
+</div>
 {% endblock %}
