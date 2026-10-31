@@ -1,0 +1,204 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e1ee1eb06555f3e02cd442f605eaf9a83c2453f701a769e73b4a29b7b85318fc",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "316/2018 R",
+    "title": "Stanovisko k výpůjčce a nájmu části pozemku na Palackého třídě a k prodeji pozemků pro školu",
+    "summary": "Rada vyjádřila pozemkové komisi rady města souhlas se záměrem výpůjčky a nájmu části pozemku p. p. č. 2971/1 v k. ú. Pardubice pro údržbu zeleně a parkování před rodinným domem. Druhý bod se týkal záměru prodeje pozemků p. p. č. 2426/2, 2426/35 a části 2400/2 Sboru církve bratrské v Pardubicích za 500,- Kč/m2 pro výstavbu mateřské a základní školy se sportovištěm a komunitním centrem.",
+    "keywords": [
+     "stanovisko k žádosti pozemkové komise",
+     "výpůjčka pozemku",
+     "nájem pozemku",
+     "parkování před domem",
+     "prodej pozemků",
+     "stavba školy",
+     "komunitní centrum",
+     "Sbor církve bratrské",
+     "Palackého třída"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "skolstvi"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Palackého třída",
+     "Lonkova",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2971/1, k. ú. Pardubice",
+     "p. p. č. 2426/2, k. ú. Pardubice",
+     "p. p. č. 2426/35, k. ú. Pardubice",
+     "p. p. č. 2400/2, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Sbor církve bratrské v Pardubicích"
+    ],
+    "amounts": [
+     "500,- Kč/m2"
+    ]
+   },
+   {
+    "number": "317/2018 R",
+    "title": "Doporučení schválit vyhodnocení Programu rozvoje MO Pardubice V za rok 2017",
+    "summary": "Rada vzala na vědomí zprávu o plnění Programu rozvoje městského obvodu Pardubice V za rok 2017 a doporučila zastupitelstvu schválit vyhodnocení plnění jeho úkolů.",
+    "keywords": [
+     "program rozvoje",
+     "plnění za rok 2017",
+     "vyhodnocení úkolů",
+     "doporučení zastupitelstvu",
+     "rozvoj obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "kontrola"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "318/2018 R",
+    "title": "Doporučení schválit rozbor hospodaření MO Pardubice V k 31. 12. 2017",
+    "summary": "Rada vzala na vědomí zprávu o rozboru hospodaření obvodu k 31. 12. 2017 a doporučila zastupitelstvu schválit rozbor v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření za rok 2017",
+     "doporučení zastupitelstvu",
+     "finance obvodu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "319/2018 R",
+    "title": "Doporučení schválit 1. změnu rozpočtu na rok 2018 a pravidla pro dary na společenské akce",
+    "summary": "Rada doporučila zastupitelstvu schválit 1. změnu rozpočtu a rozpočtu sociálního fondu na rok 2018, navýšit položku Masopust – lidová veselice o přijatý dar 10 tis. Kč a svěřit radě úpravy plánu společenských akcí a rozpočtová opatření při přijetí darů na tyto akce v roce 2018.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2018",
+     "sociální fond",
+     "rozpočtové opatření",
+     "dar",
+     "Masopust",
+     "plán společenských akcí",
+     "svěření pravomoci radě"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V",
+     "finanční výbor"
+    ],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   },
+   {
+    "number": "320/2018 R",
+    "title": "Odpisový plán na rok 2018",
+    "summary": "Rada schválila odpisový plán obvodu na rok 2018, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "rok 2018",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "321/2018 R",
+    "title": "Dotace školám, školkám a sportovním spolkům na akce v roce 2018",
+    "summary": "Rada schválila 21 dotací podle směrnice č. 28/2017 na akce a činnost škol, mateřských škol a sportovních spolků (např. NOE, MŠ Kamarád, Elipsa, Šumák, ZŠ Benešovo náměstí, MŠ Jesničánky, Atletika Bez Bariér, Hvězda Pardubice, Basketbalový klub Pardubice), uzavření veřejnoprávních smluv a související rozpočtová opatření z položky příspěvky a dary v kapitole 33, z rezervy rady a z rezervy starosty.",
+    "keywords": [
+     "dotace",
+     "grantový program",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "školy a školky",
+     "sport",
+     "atletika",
+     "basketbal",
+     "dětský den",
+     "mládež"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Lonkova 512",
+     "Teplého 2100",
+     "Železničního pluku 1983",
+     "Blato 72",
+     "A. Krause 2344",
+     "Gorkého 867",
+     "Benešovo náměstí 590",
+     "Raisova 226",
+     "Čs. armády 2515",
+     "Družby 334",
+     "V Ráji 311",
+     "Zoo Dvůr Králové"
+    ],
+    "parcels": [],
+    "organizations": [
+     "NOE – Křesťanská základní škola a mateřská škola v Pardubicích",
+     "MŠ Kamarád, Pardubice",
+     "Elipsa – Montessori centrum Pardubice, o.p.s.",
+     "Šumák z.s.",
+     "Základní škola a mateřská škola Pardubice, A. Krause 2344",
+     "Anglické gymnázium, Střední odborná škola a Vyšší odborná škola, s.r.o.",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Mateřská škola Pardubice - Jesničánky",
+     "Atletika Bez Bariér, z.s.",
+     "Dům dětí a mládeže ALFA Pardubice – Polabiny",
+     "Hvězda Pardubice z.s.",
+     "Basketbalový klub Pardubice, z. s."
+    ],
+    "amounts": [
+     "2.000,- Kč",
+     "5.000,- Kč",
+     "2 000,- Kč",
+     "3.000,- Kč",
+     "10.000,- Kč",
+     "9.960,- Kč",
+     "7.000,- Kč",
+     "4.500,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

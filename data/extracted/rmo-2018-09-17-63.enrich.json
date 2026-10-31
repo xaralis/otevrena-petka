@@ -1,0 +1,38 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7dd10a8c48ce17e5a15663c308894ae6e09c341a52a59d41fe4217f5bf914417",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "351/2018 R",
+    "title": "Rozpočtové opatření č. 86 – přesun 36 tis. Kč na provoz přípojky nám. Dukelských hrdinů",
+    "summary": "Rada schválila rozpočtové opatření č. 86, kterým se v kapitole 27 – doprava přesouvá 36 tis. Kč z položky opravy a údržba komunikací (vč. dopravního značení a kanalizace) na položku provoz přípojky náměstí Dukelských hrdinů. Jde o přesun v rámci běžných výdajů.",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun prostředků",
+     "náměstí Dukelských hrdinů",
+     "přípojka",
+     "opravy komunikací",
+     "údržba silnic",
+     "doprava",
+     "běžné výdaje"
+    ],
+    "topics": [
+     "rozpocet",
+     "doprava"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "36 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,293 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "327bbaab52e01959e6b6c5cc45b8d3fd3a77e4f4d696b44da47068ca978b6fa4",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "63/2019 R",
+    "title": "Stanovisko k žádostem pozemkové komise: prodej pozemku, věcná břemena, nájem a služebnost osvětlení",
+    "summary": "Stanovisko obvodu k pěti žádostem pozemkové komise rady města: prodej pozemku p. p. č. 2436/7 v lokalitě S. K. Neumanna společnosti Industrial Trade Services a.s., věcné břemeno pro vodovod ve prospěch Vodovodů a kanalizací Pardubice, a.s., nájem části pozemku st. p. č. 5375 pro zahradní posezení, věcná břemena pro kabelové vedení NN ČEZ Distribuce, a. s. v rámci stavby „Pardubice, Milheimova 1010“ a služebnost pro soubor veřejného osvětlení města v k. ú. Pardubice a Dražkovice. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "prodej pozemku",
+     "věcné břemeno",
+     "služebnost",
+     "nájem pozemku",
+     "zahradní posezení",
+     "vodovod",
+     "kabelové vedení NN",
+     "veřejné osvětlení",
+     "S. K. Neumanna"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "lokalita S. K. Neumanna",
+     "Milheimova 1010"
+    ],
+    "parcels": [
+     "p. p. č. 2436/7, k. ú. Pardubice",
+     "p. p. č. 3276/1, k. ú. Pardubice",
+     "st. p. č. 5375, k. ú. Pardubice",
+     "p. p. č. 4853/1, k. ú. Pardubice",
+     "p. p. č. 2583/16, k. ú. Pardubice",
+     "p. p. č. 2583/21, k. ú. Pardubice",
+     "p. p. č. 2118/63, k. ú. Pardubice",
+     "p. p. č. 2583/12, k. ú. Pardubice",
+     "p. p. č. 3351/16, k. ú. Pardubice",
+     "p. p. č. 285/37, k. ú. Dražkovice",
+     "p. p. č. 285/38, k. ú. Dražkovice",
+     "p. p. č. 287/2, k. ú. Dražkovice",
+     "p. p. č. 296/5, k. ú. Dražkovice",
+     "p. p. č. 296/6, k. ú. Dražkovice",
+     "p. p. č. 296/7, k. ú. Dražkovice",
+     "p. p. č. 332/9, k. ú. Dražkovice",
+     "p. p. č. 349/2, k. ú. Dražkovice",
+     "p. p. č. 471/20, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Industrial Trade Services a.s.",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "ČEZ Distribuce, a. s.",
+     "Statutární město Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "64/2019 R",
+    "title": "Souhlas se záměry nájmu garážových stání a nebytových prostorů města",
+    "summary": "Stanovisko obvodu k záměrům města pronajmout garážové stání v domě čp. 2792 v ulici Na Spravedlnosti, budovy čp. 363 a 372 v ulici Jana Palacha Pardubickému podnikatelskému inkubátoru, z. ú. pro inovační centrum, nebytovou jednotku č. 2225/17 v ulici Jilemnického spolku MAŠINKA Pardubice, z. s. pro dětskou skupinu a dílnu s kanceláří v areálu Jana Palacha čp. 324 spolku JUDOKLUB PARDUBICE z. s. jako sklad sportovního náčiní.",
+    "keywords": [
+     "nájem nebytových prostorů",
+     "garážové stání",
+     "podnikatelský inkubátor",
+     "inovační centrum",
+     "dětská skupina",
+     "judo",
+     "Na Spravedlnosti",
+     "Jana Palacha",
+     "Jilemnického",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ulice Na Spravedlnosti",
+     "ulice Jana Palacha",
+     "ulice Jilemnického",
+     "areál Jana Palacha čp. 324",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 10648, k. ú. Pardubice",
+     "stavební parcela č. 848/1, k. ú. Pardubice",
+     "stavební parcela č. 848/2, k. ú. Pardubice",
+     "st. p. č. 4182, k. ú. Pardubice",
+     "st. p. č. 864/10, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pardubický podnikatelský inkubátor, z. ú.",
+     "MAŠINKA Pardubice, z. s.",
+     "JUDOKLUB PARDUBICE z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "65/2019 R",
+    "title": "Změna termínu dotované akce Semifinále Sportovních her mateřských škol",
+    "summary": "Rada souhlasí se změnou termínu akce „Semifinále Sportovních her mateřských škol“ pořádané DDM ALFA Pardubice ze 14. 5. 2019 na 15. 5. 2019 a s uzavřením dodatku ke smlouvě o poskytnutí dotace.",
+    "keywords": [
+     "dotace",
+     "změna termínu",
+     "dodatek ke smlouvě",
+     "sportovní hry mateřských škol",
+     "DDM ALFA",
+     "mateřské školy"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "DDM ALFA Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "66/2019 R",
+    "title": "Schválení upraveného odpisového plánu na rok 2019",
+    "summary": "Rada schvaluje upravený odpisový plán městského obvodu na rok 2019, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy",
+     "majetek obvodu",
+     "rok 2019",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "67/2019 R",
+    "title": "Doporučení zastupitelstvu ke schválení závěrečného účtu za rok 2018",
+    "summary": "Rada doporučuje zastupitelstvu obvodu souhlasit s celoročním hospodařením za rok 2018 bez výhrad, vzít na vědomí komentáře a přílohy závěrečného účtu a schválit finanční vypořádání za rok 2018 včetně sociálního fondu, aktuální rozpočet na rok 2019 a související rozpočtová opatření. Částka finančního vypořádání s městem je podmíněna schválením Zastupitelstvem města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2018",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočet 2019",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "68/2019 R",
+    "title": "Doporučení zastupitelstvu ke schválení rozboru hospodaření k 31. 5. 2019",
+    "summary": "Rada doporučuje zastupitelstvu obvodu schválit rozbor hospodaření obvodu k 31. 5. 2019 uvedený v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2019",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "69/2019 R",
+    "title": "Doporučení zastupitelstvu ke schválení 2. změny rozpočtu na rok 2019",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí komentář a schválit návrh 2. změny rozpočtu a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "2. změna rozpočtu",
+     "rozpočet 2019",
+     "sociální fond",
+     "rozpočtové opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "70/2019 R",
+    "title": "Doporučení zastupitelstvu vzít na vědomí schvalování účetní závěrky za rok 2018",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2018 schválí v červnu zastupitelstvo města; informaci o jejím schválení obdrží zastupitelstvo obvodu na příštím jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2018",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "zastupitelstvo města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "71/2019 R",
+    "title": "Dotace na akce škol, školek a spolků a rozpočtová opatření (12 žadatelů)",
+    "summary": "Rada schvaluje dvanáct dotací z programu podle směrnice č. 28/2018 na akce mateřských a základních škol, festival GameCon, Basketbalový klub Pardubice a posvícení SK Dražkovice, uzavření veřejnoprávních smluv a související rozpočtová opatření v kapitolách 33 a 98 (pořadová č. 30–43).",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "mateřská škola",
+     "základní škola",
+     "Festival nepočítačových her",
+     "GameCon",
+     "basketbal",
+     "posvícení",
+     "Dražkovice",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice",
+     "Teplého 2100",
+     "Josefa Ressla 2258",
+     "A. Krause 2344",
+     "Raisova 226",
+     "Josefa Ressla 1992"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Kamarád Pardubice",
+     "GameCon z.s.",
+     "Základní škola Pardubice, Josefa Ressla 2258",
+     "Základní škola a mateřská škola Pardubice, A. Krause 2344",
+     "Mateřská škola Pardubice - Jesničánky",
+     "Mateřská škola Motýlek Pardubice",
+     "Basketbalový klub Pardubice",
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "7.000,- Kč",
+     "6.000,- Kč",
+     "20.000,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "7.250,- Kč",
+     "3.700,- Kč",
+     "4.300,- Kč",
+     "3.080,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

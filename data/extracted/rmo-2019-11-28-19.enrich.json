@@ -1,0 +1,182 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "dddab8f2fdbdc92ea32afd9eb8baabbdd8c072a13a1a078bebdb7bc8180d9086",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "94/2019 R",
+    "title": "Stanovisko k žádostem pozemkové komise – nájmy, prodeje a věcná břemena pozemků",
+    "summary": "Rada se v osmi bodech vyjadřuje k žádostem projednávaným pozemkovou komisí rady města: k nájmu části pozemku u domu Wolkerova 2096–2097 pro parkoviště, k prodejům pozemků u Benešova náměstí, v ulici Rožkova a části zaploceného pozemku, k nájmu pozemků v ulici Jana Palacha pro Pardubický podnikatelský inkubátor, k věcným břemenům pro Elektrárny Opatovice a UPC Česká republika a k výpovědi smlouvy o reklamních zařízeních se společností BARTH Reklamka.",
+    "keywords": [
+     "pozemková komise",
+     "nájem pozemku",
+     "prodej pozemku",
+     "věcné břemeno",
+     "parkoviště Wolkerova",
+     "Benešovo náměstí",
+     "Rožkova",
+     "Jana Palacha",
+     "reklamní zařízení",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Wolkerova",
+     "Benešovo náměstí",
+     "Zelené Předměstí",
+     "Rožkova",
+     "Jana Palacha",
+     "objekt čp. 363 a 372 v ul. Jana Palacha",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2165/18, k. ú. Pardubice",
+     "p. p. č. 2418/3, k. ú. Pardubice",
+     "p. p. č. 2419/2, k. ú. Pardubice",
+     "st. p. č. 7417, k. ú. Pardubice",
+     "st. p. č. 8183, k. ú. Pardubice",
+     "st. p. č. 8294, k. ú. Pardubice",
+     "st. p. č. 7418, k. ú. Pardubice",
+     "st. p. č. 848/1, k. ú. Pardubice",
+     "st. p. č. 848/2, k. ú. Pardubice",
+     "p. p. č. 2123/14, k. ú. Pardubice",
+     "p. p. č. 2582/1, k. ú. Pardubice",
+     "p. p. č. 2165/9, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pozemková komise rady města Pardubice",
+     "Společenství vlastníků jednotek domu 2096, 2097 Wolkerova, Pardubice",
+     "Společenství pro dům Benešovo náměstí 2517-2521, Pardubice",
+     "Elektrárny Opatovice, a.s.",
+     "Pardubický podnikatelský inkubátor z. ú.",
+     "Společenství vlastníků domu čp. 2628 Rožkova, Pardubice",
+     "UPC Česká republika, s.r.o.",
+     "BARTH Reklamka a. s."
+    ],
+    "amounts": [
+     "7.000,- Kč/rok",
+     "400,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "95/2019 R",
+    "title": "Jmenování nové členky MK Dukla od 1. 12. 2019",
+    "summary": "Rada jmenuje s účinností od 1. 12. 2019 novou členku místní komise Dukla Rady městského obvodu Pardubice V.",
+    "keywords": [
+     "MK Dukla",
+     "místní komise",
+     "jmenování člena",
+     "Dukla"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MK Dukla RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "96/2019 R",
+    "title": "Souhlas se záměrem města pronajmout dílnu v ul. Jana Palacha a garážová stání v Sokolovské",
+    "summary": "Rada souhlasí se záměrem města pronajmout dílnu s kanceláří a sociálním zařízením v areálu Jana Palacha 324 společnosti Elklima s.r.o. pro klempířskou dílnu a garážová stání v budovách čp. 2721 a 2731 v ulici Sokolovská pro garážování osobních automobilů.",
+    "keywords": [
+     "nájem nebytových prostorů",
+     "dílna",
+     "Jana Palacha",
+     "garážová stání",
+     "Sokolovská",
+     "garáže",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál Jana Palacha 324",
+     "Sokolovská",
+     "budova čp. 2721",
+     "budova čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/9, k. ú. Pardubice",
+     "stavební parcely č. 10089 a 10090, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Elklima s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "97/2019 R",
+    "title": "Smlouvy o dílo se Službami města Pardubic na kontejnery a výsyp košů pro rok 2020",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo se společností Služby města Pardubic a.s. na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů a výsyp košů na psí exkrementy na rok 2020 mimo režim zadávacího řádu veřejných zakázek, protože jde o městem založenou společnost zřízenou k tomuto účelu.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "odpadkové koše",
+     "psí exkrementy",
+     "Služby města Pardubic",
+     "smlouva o dílo",
+     "úklid",
+     "odpady",
+     "2020"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "689 700,- Kč (570 000,- Kč bez DPH)",
+     "828 850 Kč (685 000,- Kč bez DPH)",
+     "308 550,- Kč (255 000,- Kč bez DPH)"
+    ]
+   },
+   {
+    "number": "98/2019 R",
+    "title": "Rozpočtová opatření č. 110 a 111 – ohrádky na kontejnery a údržba hřišť",
+    "summary": "Rada schvaluje přesun 50 tis. Kč z oprav a údržby v kapitole 15 – životní prostředí na investice do kontejnerových stání (ohrádek) a přesun 150 tis. Kč z investic v kapitole 15 na péči o zeleň – údržbu hřišť.",
+    "keywords": [
+     "rozpočtové opatření",
+     "kontejnerová stání",
+     "ohrádky na kontejnery",
+     "údržba hřišť",
+     "péče o zeleň",
+     "životní prostředí"
+    ],
+    "topics": [
+     "rozpocet",
+     "cistota",
+     "hriste-sport"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "50 tis. Kč",
+     "150 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

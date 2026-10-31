@@ -212,6 +212,23 @@ def export() -> None:
     log.info("export: %s", [r["name"] for r in resources])
 
 
+# --- bootstrap (init container) -----------------------------------------------------------
+
+def bootstrap() -> None:
+    """Seed the volume from the image and load what changed; quick when nothing did."""
+    changed = store.seed()
+    db.migrate()
+    with db.connect() as conn:
+        empty = conn.execute("SELECT count(*) AS n FROM meetings").fetchone()["n"] == 0
+    if empty:
+        load(None)
+    elif changed:
+        load(sorted(changed & set(pipeline.meeting_ids())))
+    if empty or changed or not (OPENDATA / "datapackage.json").exists():
+        export()
+    log.info("bootstrap: %s", "full load" if empty else f"{len(changed)} changed")
+
+
 # --- update (cron) ------------------------------------------------------------------------
 
 def update() -> None:
@@ -224,13 +241,20 @@ def update() -> None:
             if store.text_path(mid).exists() or pipeline.source(mid).get("needs_transcription")]
     todo = [mid for mid in todo if not (store.text_path(mid).exists()
                                         and store.extracted(mid, "parse") and store.extracted(mid, "enrich"))]
+    attempts = _attempts()
     for mid in todo:
+        key = f"{mid}:{store.text_sha(mid) if store.text_path(mid).exists() else 'scan'}"
+        if attempts.get(key, 0) >= MAX_ATTEMPTS:
+            failures.append(f"{mid}: gave up after {MAX_ATTEMPTS} attempts, needs a person")
+            continue
         try:
             m = pipeline.process(mid, via=llm.BACKEND)
             log.info(pipeline.summarize(m))
         except Exception as e:
             log.exception("process %s failed", mid)
             failures.append(f"{mid}: {e}")
+            attempts[key] = attempts.get(key, 0) + 1
+            store._write(store.DATA / "attempts.json", json.dumps(attempts, indent=1))
     load(None)
     embed()
     export()
@@ -241,6 +265,14 @@ def update() -> None:
     _report(changed, todo, failures)
     if failures:
         sys.exit(1)
+
+
+MAX_ATTEMPTS = 2  # paid API calls per meeting and text version before a person has to look
+
+
+def _attempts() -> dict:
+    p = store.DATA / "attempts.json"
+    return json.loads(p.read_text()) if p.exists() else {}
 
 
 def _report(changed, processed, failures) -> None:

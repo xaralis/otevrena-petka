@@ -1,0 +1,171 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "49758cb09e2e662ca399e2033de1f376bb02f5a65a590750127d7e2bedf05364",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "25/2019 R",
+    "title": "Stanovisko k pozemkovým záměrům města – uznání vlastnictví, dar, věcné břemeno a dva prodeje",
+    "summary": "Stanovisko obvodu k pěti záměrům pozemkové komise rady města Pardubice: uznání vlastnického práva k pozemku v k. ú. Nové Jesenčany, darování pozemku pod komunikací městu, zřízení věcného břemene pro optickou síť v rámci akce „Rekonstrukce Benešova náměstí, Pardubice“ pro EDERA Group a.s. a prodeje pozemků – části p. p. č. 3350 pro parkovací místa u nového bytového domu a p. p. č. 2526/16 pro Kongresové centrum ILF a.s. k obsluze areálu a vlečky. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "uznání vlastnického práva",
+     "darování pozemku",
+     "věcné břemeno",
+     "optická síť",
+     "Benešovo náměstí",
+     "prodej pozemku",
+     "parkovací místa",
+     "vlečka",
+     "daňový sklad PHM"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Nové Jesenčany",
+     "k. ú. Pardubice",
+     "Benešovo náměstí"
+    ],
+    "parcels": [
+     "p. p. č. 604/27, k. ú. Nové Jesenčany",
+     "p. p. č. 2600/9, k. ú. Pardubice",
+     "p. p. č. 2406/31",
+     "p. p. č. 2406/33",
+     "p. p. č. 2406/34",
+     "p. p. č. 2408/13",
+     "p. p. č. 2410/37",
+     "p. p. č. 2415/1",
+     "p. p. č. 2415/3",
+     "p. p. č. 2419/7",
+     "p. p. č. 2506/23",
+     "p. p. č. 2506/25",
+     "p. p. č. 2580/6, k. ú. Pardubice",
+     "p. p. č. 3350, k. ú. Pardubice",
+     "p. p. č. 2526/16, k. ú. Pardubice",
+     "p. p. č. 2526/15"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice",
+     "EDERA Group a.s.",
+     "Kongresové centrum ILF a.s."
+    ],
+    "amounts": [
+     "88,- Kč/m2"
+    ]
+   },
+   {
+    "number": "26/2019 R",
+    "title": "Stanovisko k pronájmu tří garážových stání v ul. Sokolovská",
+    "summary": "Obvod souhlasí se záměrem města pronajmout garážová stání č. 5, 16 a 13 (každé 15 m2) v 1. podzemním podlaží budov čp. 2721 a čp. 2731 v ulici Sokolovská třem žadatelům ke garážování osobního automobilu.",
+    "keywords": [
+     "pronájem",
+     "garážové stání",
+     "garáž",
+     "parkování",
+     "Sokolovská",
+     "nebytové prostory",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Sokolovská",
+     "čp. 2721",
+     "čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "č.parc.st. 10089 a 10090, k. ú. a obec Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "27/2019 R",
+    "title": "Smlouva o dílo s HOLD s.r.o. na opravu chodníků v ul. Mikulovická",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo se zhotovitelem HOLD s.r.o. ze Slatiňan na akci Stavební úpravy – oprava povrchu chodníků v ulici Mikulovická za nabídkovou cenu 2.500.114,81 Kč vč. DPH a se zárukou 60 měsíců.",
+    "keywords": [
+     "oprava chodníků",
+     "chodník",
+     "Mikulovická",
+     "smlouva o dílo",
+     "veřejná zakázka",
+     "rozhodnutí zadavatele",
+     "HOLD"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Mikulovická"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o."
+    ],
+    "amounts": [
+     "2.500.114,81 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "28/2019 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2018",
+    "summary": "Rada schvaluje výroční zprávu o poskytování informací podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, za rok 2018 a ukládá tajemníkovi úřadu zveřejnit ji na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "informace",
+     "zveřejnění",
+     "2018"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "29/2019 R",
+    "title": "Vyvěšení tibetské vlajky na budově úřadu 10. 3. 2019",
+    "summary": "Návrh na vyvěšení tibetské vlajky na budově ÚMO Pardubice V dne 10. 3. 2019.",
+    "keywords": [
+     "tibetská vlajka",
+     "Tibet",
+     "vlajka pro Tibet",
+     "vyvěšení vlajky",
+     "budova úřadu"
+    ],
+    "topics": [
+     "ostatni"
+    ],
+    "kind": "jine",
+    "places": [
+     "budova ÚMO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

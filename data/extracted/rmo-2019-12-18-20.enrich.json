@@ -1,0 +1,157 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "76139e4c11412186dc31c555325c50eb40f2a075c1cb56ed36eda9c3c1d1ea0b",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "99/2019 R",
+    "title": "Souhlas s prodejem části pozemku p. p. č. 2155/15 Dopravnímu podniku města Pardubic",
+    "summary": "Rada na žádost pozemkové komise rady města souhlasí s prodejem části pozemku p. p. č. 2155/15 o výměře cca 303 m2 v k. ú. Pardubice společnosti Dopravní podnik města Pardubic a.s. Důvodem je rekonstrukce a rozšíření odstavné plochy před areálem DPMP na sousední pozemky.",
+    "keywords": [
+     "prodej pozemku",
+     "stanovisko obvodu",
+     "Dopravní podnik města Pardubic",
+     "DPMP",
+     "odstavná plocha",
+     "rekonstrukce",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "areál DPMP",
+     "Teplého 2141, Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2155/15, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Dopravní podnik města Pardubic a.s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "100/2019 R",
+    "title": "Směrnice č. 28/2019 – zásady a program poskytování dotací obvodu na rok 2020",
+    "summary": "Rada schvaluje směrnici č. 28/2019 Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v roce 2020 včetně sedmi příloh, mezi nimi formulář žádosti o dotaci, vzor smlouvy o poskytnutí dotace, čestná prohlášení žadatelů a formulář vyúčtování.",
+    "keywords": [
+     "dotace",
+     "dotační program 2020",
+     "zásady pro poskytování dotací",
+     "směrnice č. 28/2019",
+     "žádost o dotaci",
+     "smlouva o poskytnutí dotace",
+     "de minimis",
+     "vyúčtování dotace"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "101/2019 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření obvodu za rok 2019",
+    "summary": "Rada projednala rozbor hospodaření MO Pardubice V a doporučuje zastupitelstvu schválit rozbor hospodaření k 30. 11. 2019 uvedený v tabulkové části zprávy a vzít na vědomí komentář k němu. Název bodu přitom uvádí stav k 31. 8. 2019.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2019",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "102/2019 R",
+    "title": "Doporučení zastupitelstvu schválit 4. změnu rozpočtu obvodu na rok 2019",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh 4. změny rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu 2019",
+     "sociální fond",
+     "rozpočtová opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "103/2019 R",
+    "title": "Doporučení zastupitelstvu schválit rozpočet obvodu na rok 2020 a pravidla jeho čerpání",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozpočet MO Pardubice V a rozpočet sociálního fondu na rok 2020, svěřit radě pravomoc k vymezeným rozpočtovým opatřením a schválit pravidla pro rozpis rozpočtu, technické přesuny, plán společenských akcí, dárky jubilantům a propagační předměty. Součástí je i nová směrnice č. 7/2019 o hospodaření se sociálním fondem, která ruší směrnici č. 7/2018.",
+    "keywords": [
+     "rozpočet 2020",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice č. 7/2019",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "finanční výbor",
+     "odbor ekonomický"
+    ],
+    "amounts": [
+     "200 tis. Kč vč.",
+     "200,- Kč vč.",
+     "500,-- Kč vč."
+    ]
+   },
+   {
+    "number": "104/2019 R",
+    "title": "Doporučení zastupitelstvu schválit střednědobý výhled rozpočtu na roky 2020–2023",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh střednědobého výhledu rozpočtu MO Pardubice V na roky 2020–2023 uvedený v tabulkové části zprávy.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled 2020–2023",
+     "rozpočet",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "05b360388c31afcad09bc34ac44384e1e7917c69f654b2388703f141c799451c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "35/2019 R",
+    "title": "Souhlas s odkoupením pozemku s garáží pro akci „DUKLA SPORTOVNÍ“",
+    "summary": "Rada se na žádost pozemkové komise rady města vyjadřuje k odkupu pozemku st. p. č. 8045 o výměře 18 m2 se stavbou garáže v k. ú. Pardubice do vlastnictví statutárního města Pardubice za 160.000,- Kč. Odkup je součástí akce města „DUKLA SPORTOVNÍ“ (revitalizace sportovního areálu na Dukle); rada se záměrem souhlasí.",
+    "keywords": [
+     "výkup garáže",
+     "odkoupení pozemku",
+     "DUKLA SPORTOVNÍ",
+     "revitalizace sportovního areálu Dukla",
+     "pozemková komise",
+     "stanovisko k výkupu",
+     "garáž"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dukla",
+     "sportovní areál na Dukle",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 8045, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "160.000,- Kč"
+    ]
+   },
+   {
+    "number": "36/2019 R",
+    "title": "Výměna člena Místní komise Dukla",
+    "summary": "Rada odvolává ke dni 14. 2. 2019 jednu členku Místní komise Dukla RMO Pardubice V a ke dni 15. 2. 2019 jmenuje do komise novou členku.",
+    "keywords": [
+     "místní komise Dukla",
+     "MK Dukla",
+     "odvolání člena komise",
+     "jmenování člena komise",
+     "komise rady"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Dukla RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "37/2019 R",
+    "title": "Navýšení rozpočtu Masopustu o přijatý dar 10 tis. Kč a rozpočtové opatření č. 1",
+    "summary": "Rada upravuje plán společenských akcí obvodu na rok 2019 – částka na akci Masopust – lidová veselice se zvyšuje o přijatý dar 10 tis. Kč. Zároveň přijímá rozpočtové opatření č. 1, které dar zapojuje do nedaňových příjmů a o tutéž částku zvyšuje výdaje na společenské akce v kapitole 33 – školství, mládež, tělovýchova, kultura.",
+    "keywords": [
+     "Masopust",
+     "lidová veselice",
+     "plán společenských akcí",
+     "dar",
+     "rozpočtové opatření",
+     "kultura",
+     "společenské akce 2019"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet",
+     "dotace"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   },
+   {
+    "number": "38/2019 R",
+    "title": "Schválení Statutu komisí Rady MO Pardubice V",
+    "summary": "Rada schvaluje s účinností od 15. 2. 2019 Statut komisí Rady městského obvodu Pardubice V.",
+    "keywords": [
+     "statut komisí",
+     "komise rady",
+     "pravidla komisí",
+     "organizační předpis"
+    ],
+    "topics": [
+     "komise-vybory",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "39/2019 R",
+    "title": "Seč trávy 2019: odstoupení od smlouvy a nová smlouva se Službami města Pardubic",
+    "summary": "Rada souhlasí s odstoupením od smlouvy o dílo na sekání trávy v obvodu pro rok 2019 s dosavadním dodavatelem (fyzickou osobou) a s uzavřením smlouvy o dílo na rok 2019 se společností Služby města Pardubic a.s. mimo režim zadávacího řádu (směrnice č. 14/2017), protože jde o městem založenou společnost. Smlouva pokrývá lokality Dukla, Nové Jesenčany, Dražkovice a Višňovka (severní a jižní část) za celkem 511.506,30 Kč včetně DPH.",
+    "keywords": [
+     "seč trávy",
+     "sekání trávy",
+     "údržba zeleně",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "odstoupení od smlouvy",
+     "Dukla",
+     "Nové Jesenčany",
+     "Dražkovice",
+     "Višňovka"
+    ],
+    "topics": [
+     "zelen",
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dukla",
+     "Nové Jesenčany",
+     "Dražkovice",
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "511.506,30 Kč včetně DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

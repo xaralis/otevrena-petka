@@ -1,0 +1,279 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "76139e4c11412186dc31c555325c50eb40f2a075c1cb56ed36eda9c3c1d1ea0b",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 20,
+   "kind": "mimoradne",
+   "date": "2019-12-18",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 41,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2020",
+    "line": 51,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2019",
+    "line": 64,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh 4. změny rozpočtu MO Pardubice V na r. 2019",
+    "line": 74,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2020",
+    "line": 85,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2020 – 2023",
+    "line": 169,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "99/2019 R",
+    "agenda_no": "1",
+    "first_line": 44,
+    "last_line": 48,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "100/2019 R",
+    "agenda_no": "2",
+    "first_line": 54,
+    "last_line": 61,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "101/2019 R",
+    "agenda_no": "3",
+    "first_line": 67,
+    "last_line": 71,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "102/2019 R",
+    "agenda_no": "4",
+    "first_line": 77,
+    "last_line": 82,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "103/2019 R",
+    "agenda_no": "5",
+    "first_line": 88,
+    "last_line": 166,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "104/2019 R",
+    "agenda_no": "6",
+    "first_line": 172,
+    "last_line": 176,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (programu)",
+    "proposer": null,
+    "motion_first_line": 33,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 49,
+    "last_line": 49,
+    "resolution": "99/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 62,
+    "last_line": 62,
+    "resolution": "100/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "101/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "102/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 167,
+    "last_line": 167,
+    "resolution": "103/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 177,
+    "last_line": 177,
+    "resolution": "104/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 35 a 65: bod 3 je nazván „Rozbor hospodaření MO Pardubice V k 31. 8. 2019“, ale znění usnesení 101/2019 R (ř. 69–70) schvaluje rozbor hospodaření „k 30. 11. 2019“."
+  ]
+ }
+}

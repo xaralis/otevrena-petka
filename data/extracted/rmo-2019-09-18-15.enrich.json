@@ -1,0 +1,89 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7557f3b77f9e347e77df4d4c780d3f4956e1c55aef1802d4648387e6250074c1",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "78/2019 R",
+    "title": "Stanovisko k žádostem pozemkové komise – prodeje, výkupy, výpůjčka, dražba bytů a nájem",
+    "summary": "Rada obvodu souhlasí se sedmi majetkovými záměry města v k. ú. Pardubice: prodejem částí pozemku p. p. č. 2165/9 pod balkony dvěma společenstvím vlastníků v Jiránkově ulici, výkupem pozemků pod komunikací a podílů na pozemku s chodníkem a zelení v ulici Chrudimská, výpůjčkou pozemku Dopravnímu podniku města Pardubic pro zastávkový přístřešek MHD a nájmem pozemku pro parkování u domu čp. 2303 v ulici Na Spravedlnosti. Souhlasí také se záměrem prodeje bytových jednotek č. 2792/12 a 2792/17 v domě čp. 2792 ve veřejné dobrovolné dražbě za vyvolávací cenu 100 % ceny obvyklé podle znaleckého posudku.",
+    "keywords": [
+     "prodej pozemku",
+     "výkup pozemku",
+     "výpůjčka",
+     "zastávka MHD",
+     "dražba bytů",
+     "nájem pozemku",
+     "parkovací místo",
+     "Jiránkova",
+     "Chrudimská",
+     "Na Spravedlnosti"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "bydleni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jiránkova ulice",
+     "ul. Chrudimská",
+     "ul. Na Spravedlnosti",
+     "dům čp. 2792",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2165/9, k. ú. Pardubice",
+     "p. p. č. 2386/45, k. ú. Pardubice",
+     "p. p. č. 2386/55, k. ú. Pardubice",
+     "p. p. č. 2387/21, k. ú. Pardubice",
+     "p. p. č. 2419/3, k. ú. Pardubice",
+     "st. p. č. 10648, k. ú. Pardubice",
+     "p. p. č. 2515/1, k. ú. Pardubice",
+     "p. p. č. 2515/14, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Společenství vlastníků jednotek domu č.p. 2101, 2102, 2103, 2104 Jiránkova ulice v Pardubicích",
+     "Společenství vlastníků jednotek domu č.p. 2107, 2108, 2109, 2110, Jiránkova ulice v Pardubicích",
+     "Dopravní podnik města Pardubic a.s.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "79/2019 R",
+    "title": "Výběr dodavatele rekonstrukce dětského hřiště Pod Košem – FLASPRO s.r.o.",
+    "summary": "Rada obvodu rozhodla, že ekonomicky nejvýhodnější nabídkou ve veřejné zakázce na stavební práce na rekonstrukci dětského hřiště Pod Košem v Pardubicích je nabídka společnosti FLASPRO s.r.o. z Luhačovic za 871.901,80 Kč včetně DPH se zárukou 60 měsíců.",
+    "keywords": [
+     "dětské hřiště",
+     "rekonstrukce hřiště",
+     "Pod Košem",
+     "Dukla",
+     "veřejná zakázka",
+     "výběr dodavatele",
+     "FLASPRO"
+    ],
+    "topics": [
+     "zakazky",
+     "hriste-sport",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "dětské hřiště Pod Košem",
+     "Pardubice – Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "FLASPRO s.r.o."
+    ],
+    "amounts": [
+     "871.901,80 Kč včetně DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "7557f3b77f9e347e77df4d4c780d3f4956e1c55aef1802d4648387e6250074c1",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 15,
+   "kind": "mimoradne",
+   "date": "2019-09-18",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 41,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Rozhodnutí zadavatele – rekonstrukce dětského hřiště Pod Košem, Pardubice – Dukla",
+    "line": 95,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "78/2019 R",
+    "agenda_no": "1.",
+    "first_line": 44,
+    "last_line": 92,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "79/2019 R",
+    "agenda_no": "2.",
+    "first_line": 98,
+    "last_line": 104,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 93,
+    "last_line": 93,
+    "resolution": "78/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 105,
+    "last_line": 105,
+    "resolution": "79/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

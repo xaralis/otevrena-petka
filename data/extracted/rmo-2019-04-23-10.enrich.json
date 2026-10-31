@@ -1,0 +1,133 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e6069a161c872c905bab6deb6224579c9757a7987d660b5ce814b65dd436bb64",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "54/2019 R",
+    "title": "Stanovisko k pronájmu nebytových prostorů v ul. Devotyho a Jana Palacha",
+    "summary": "Obvod souhlasí se záměrem města pronajmout dva nebytové prostory: jednotku č. 2452/101 (146 m2) v přízemí domu v ul. Devotyho společnosti Paracordov s.r.o. pro ruční výrobu vodítek, obojků a náramků a dětský koutek pro děti zaměstnankyň, a prostor o výměře 40,94 m2 v přízemí budovy čp. 2767 v ul. Jana Palacha podnikateli jako prodejnu a výdejní místo e-shopu. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pronájem",
+     "nebytové prostory",
+     "Devotyho",
+     "Jana Palacha",
+     "Paracordov",
+     "prodejna",
+     "výdejní místo e-shopu",
+     "dětský koutek",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Devotyho",
+     "ul. Jana Palacha",
+     "čp. 2452",
+     "čp. 2767",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5029, k. ú. Pardubice",
+     "stavební parcela č. 10409, k. ú. a obec Pardubice"
+    ],
+    "organizations": [
+     "Paracordov s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "55/2019 R",
+    "title": "Stanovisko k odkoupení pozemku p. p. č. 2318/53 městem",
+    "summary": "Obvod souhlasí se záměrem odkoupit od soukromé navrhovatelky pozemek p. p. č. 2318/53 o výměře 115 m2 v k. ú. Pardubice (komunikace, chodník a přilehlá zeleň) za cenu dle znaleckého posudku. Jde o stanovisko k žádosti pozemkové komise rady města Pardubice.",
+    "keywords": [
+     "výkup pozemku",
+     "odkoupení pozemku",
+     "pozemková komise",
+     "komunikace",
+     "chodník",
+     "zeleň",
+     "znalecký posudek",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2318/53, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "56/2019 R",
+    "title": "Úprava plánu společenských akcí 2019 – přesun peněz na Slavnost MO Pardubice V",
+    "summary": "Rada přesouvá v plánu společenských akcí na rok 2019 celkem 4,7 tis. Kč z akcí Dětský karneval, Masopust – lidová veselice a Zelený čtvrtek na Slavnost MO Pardubice V. Celkový rozpočet plánu společenských akcí zůstává 450 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "Dětský karneval",
+     "Masopust",
+     "Zelený čtvrtek",
+     "přesun financí",
+     "kulturní akce"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "0,9 tis. Kč",
+     "3,2 tis. Kč",
+     "0,6 tis. Kč",
+     "4,7 tis. Kč",
+     "450 tis. Kč"
+    ]
+   },
+   {
+    "number": "57/2019 R",
+    "title": "Souhlas s předzahrádkou Kavárny Slunečnice v ul. Jilemnického",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 5 m2 před provozovnou Kavárna Slunečnice v ul. Jilemnického 2226 na pozemku parc. č. 2271 v k. ú. Pardubice.",
+    "keywords": [
+     "předzahrádka",
+     "zahrádka",
+     "kavárna",
+     "Kavárna Slunečnice",
+     "Jilemnického",
+     "zábor veřejného prostranství"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "jine",
+    "places": [
+     "Jilemnického 2226",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "pozemek parcelní číslo 2271 v katastrálním území Pardubice"
+    ],
+    "organizations": [
+     "Kavárna Slunečnice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

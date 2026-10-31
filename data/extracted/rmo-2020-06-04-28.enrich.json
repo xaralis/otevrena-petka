@@ -1,0 +1,190 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "fee9c419c841f82cffc31a4b4129a3ee2a6e943fe5c975adb10ea0cfe011fe75",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "123/2020 R",
+    "title": "Souhlas se záměrem přímého prodeje nebytových prostorů v Devotyho ul. nájemci Technipol",
+    "summary": "Rada souhlasí se záměrem přímého prodeje nebytových prostorů v přízemí budovy čp. 2449-52 v Devotyho ulici v Pardubicích dosavadnímu nájemci, společnosti Technipol s.r.o., za cenu dle znaleckého posudku.",
+    "keywords": [
+     "prodej nebytových prostorů",
+     "nebytové prostory",
+     "Devotyho",
+     "Technipol",
+     "přímý prodej",
+     "nájemce",
+     "znalecký posudek",
+     "majetek města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "budova čp. 2449-52, Devotyho ul., Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Technipol s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "124/2020 R",
+    "title": "Stanovisko k pozemkovým žádostem: věcné břemeno pro plynovod, lávka v ŽST, nájem pozemků",
+    "summary": "Rada souhlasí se zřízením věcného břemene na pozemku p. p. č. 2124/4 v k. ú. Pardubice pro prodloužení STL plynovodu v Milheimově ulici ve prospěch GasNet, s.r.o. Dále souhlasí se smlouvou o právu provést stavbu a s odkoupením částí pozemků od enteria a.s. pro stavbu lávky pro pěší v ŽST Pardubice hl. n. a s úpravou nájemní smlouvy na pozemky 848/1 a 848/2 pro Pardubický podnikatelský inkubátor z. ú. kvůli podmínkám dotační výzvy.",
+    "keywords": [
+     "pozemková komise",
+     "věcné břemeno",
+     "plynovod",
+     "Milheimova",
+     "lávka pro pěší",
+     "nádraží",
+     "Modernizace železničního uzlu",
+     "odkoupení pozemku",
+     "nájemní smlouva",
+     "podnikatelský inkubátor"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "investice"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Milheimova ulice",
+     "ŽST Pardubice hl. n.",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2124/4, k. ú. Pardubice",
+     "p. č. 2149/10",
+     "st. p. č. 1795/1, k. ú. Pardubice",
+     "p. p. č. 2054/9, k. ú. Pardubice",
+     "848/1, k. ú. Pardubice",
+     "848/2, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "GasNet, s.r.o.",
+     "enteria a.s.",
+     "Správa železnic, státní organizace",
+     "statutární město Pardubice",
+     "Pardubický podnikatelský inkubátor z. ú.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "6.022,80 Kč/m2"
+    ]
+   },
+   {
+    "number": "125/2020 R",
+    "title": "Směrnice č. 5/2020: Evidence a vymáhání daní",
+    "summary": "Rada schvaluje směrnici č. 5/2020 o evidenci a vymáhání daní s účinností od 5. 6. 2020. Směrnice nahrazuje původní směrnici 5/2017 účinnou od 21. 9. 2017.",
+    "keywords": [
+     "směrnice",
+     "evidence daní",
+     "vymáhání daní",
+     "daně",
+     "pohledávky",
+     "vnitřní předpis"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "126/2020 R",
+    "title": "Nové místo referenta, počet zaměstnanců úřadu a organizační řád od 1. 7. 2020",
+    "summary": "Rada od 1. 7. 2020 zřizuje místo referenta odboru investičního a správního ÚMO Pardubice V a stanoví celkový počet zaměstnanců úřadu na 30 (17 úředníků a 13 pracovníků skupiny drobné údržby). Zároveň schvaluje organizační řád a organizační strukturu úřadu.",
+    "keywords": [
+     "počet zaměstnanců",
+     "organizační řád",
+     "organizační struktura",
+     "referent",
+     "odbor investiční a správní",
+     "drobná údržba",
+     "úřad městského obvodu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "127/2020 R",
+    "title": "Změna termínu dotací sportovním spolkům a nové dotace na akce pro děti",
+    "summary": "Rada souhlasí s prodloužením termínu splnění účelu dříve schválených dotací pro TJ TESLA Pardubice a Atletiku Bez Bariér Pardubice do 31. 12. 2020. Dále schvaluje dotace na akce pro děti spolkům SKP CENTRUM, Chaloupka a Karkulka a mateřským školám Kamarád, Josefa Ressla a Dražkovice, včetně veřejnoprávních smluv a souvisejících rozpočtových opatření č. 29–36.",
+    "keywords": [
+     "dotace",
+     "změna termínu dotace",
+     "kuželky",
+     "atletika vozíčkářů",
+     "mateřská škola",
+     "dětský den",
+     "akce pro děti",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "K Vinici 1901, Pardubice",
+     "Čs. armády 2515, Pardubice",
+     "Jungmannova 2550, Pardubice",
+     "Heroland",
+     "Staňkova 1447, Pardubice",
+     "Gorkého 2573, Pardubice",
+     "Teplého 2100, Pardubice",
+     "Josefa Ressla 1992, Pardubice",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "TJ TESLA Pardubice, oddíl kuželky",
+     "Atletika Bez Bariér Pardubice, z.s.",
+     "SKP CENTRUM, o.p.s.",
+     "Chaloupka z.s.",
+     "Karkulka z.s.",
+     "MŠ Kamarád Pardubice",
+     "MŠ Pardubice, Josefa Ressla 1992",
+     "MŠ Pardubice – Dražkovice 146"
+    ],
+    "amounts": [
+     "4.000,- Kč",
+     "1.500,- Kč",
+     "2.000,- Kč",
+     "10.000,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "5.000,- Kč",
+     "4.000,- Kč",
+     "6.000,- Kč",
+     "6.000,- Kč",
+     "8.000,- Kč",
+     "8.000,- Kč",
+     "8.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

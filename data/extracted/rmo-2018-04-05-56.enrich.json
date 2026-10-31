@@ -1,0 +1,208 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "323d645bcdd9b7873d3bc5daace648bd1f1cf4d727dde8e7581717895b5bb67e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "322/2018 R",
+    "title": "Stanovisko k žádostem pozemkové komise města – prodeje, nájmy, převody a věcné břemeno",
+    "summary": "Stanovisko obvodu k sedmi majetkovým záměrům statutárního města Pardubice v k. ú. Pardubice: prodej budovy č. p. 2872 na Zeleném Předměstí společnosti VH EASY s.r.o., uznání vlastnických práv k pozemkům, nájem a prodej částí pozemků pro Vodovody a kanalizace Pardubice, a.s. (zateplení domu v ul. Teplého) a ČEZ Distribuce, a. s. (trafostanice), prodej pozemků u domu v ul. K Vinici, bezúplatné převody pozemků se společností WELL Invest s.r.o. a věcné břemeno pro kabelové vedení ČEZ Distribuce. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k prodeji pozemků",
+     "pozemková komise",
+     "prodej pozemku",
+     "nájem pozemku",
+     "trafostanice",
+     "zateplení",
+     "bezúplatný převod",
+     "věcné břemeno",
+     "kabelové vedení",
+     "parkoviště"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Zelené Předměstí",
+     "ul. Teplého",
+     "ul. K Vinici",
+     "Na Spravedlnosti",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5506, k. ú. Pardubice",
+     "p. p. č. 2404/71, k. ú. Pardubice",
+     "p. p. č. 2404/78, k. ú. Pardubice",
+     "p. p. č. 2303/22, k. ú. Pardubice",
+     "p. p. č. 2316/42, k. ú. Pardubice",
+     "p. p. č. 2500/11, k. ú. Pardubice",
+     "p. p. č. 2500/12, k. ú. Pardubice",
+     "st. p. č. 1079/5, k. ú. Pardubice",
+     "p. p. č. 2507/11, k. ú. Pardubice",
+     "p. p. č. 2505/1, k. ú. Pardubice",
+     "p. p. č. 4732/4, k. ú. Pardubice",
+     "p.p.č. 2408/13 k.ú. Pardubice",
+     "p. p. č. 2500/4, k. ú. Pardubice",
+     "p. p. č. 2499/135, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "VH EASY s.r.o.",
+     "statutární město Pardubice",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "ČEZ Distribuce, a. s.",
+     "Salesiánská provincie Praha",
+     "WELL Invest s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "323/2018 R",
+    "title": "Jmenování nového člena Místní komise Višňovka",
+    "summary": "Rada jmenuje s účinností od 6. 4. 2018 nového člena Místní komise Višňovka.",
+    "keywords": [
+     "místní komise",
+     "Višňovka",
+     "jmenování člena",
+     "MK Višňovka"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Višňovka"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "324/2018 R",
+    "title": "Stanovisko k pronájmu nebytových prostor města v J. Palacha, Čs. armády a A. Krause",
+    "summary": "Stanovisko obvodu k záměrům města pronajmout nebytové prostory: v areálu J. Palacha 324 spolku SK Pretorian Pardubice z. s. pro tělocvičnu úpolových sportů, jednotku č. 2087/17 v ul. Čs. armády pro kadeřnictví a jednotku č. 2317/5 v ul. Artura Krause jako sklad a dílnu. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "pronájem",
+     "tělocvična",
+     "bojové sporty",
+     "kadeřnictví",
+     "sklad",
+     "dílna",
+     "bývalá služebna městské policie",
+     "bývalá dětská herna"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál J. Palacha 324",
+     "ul. Čs. armády",
+     "čp. 2086, 2087",
+     "ul. Artura Krause",
+     "čp. 2317",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/13 k. ú. Pardubice",
+     "č. parc. st. 3815, k. ú. Pardubice",
+     "č. parc. st. 3816, k. ú. Pardubice",
+     "č. parc. st. 4294 k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SK Pretorian Pardubice z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "325/2018 R",
+    "title": "Dotace 5.500 Kč DDM ALFA na Přírodovědnou poznávací soutěž",
+    "summary": "Rada schvaluje dotaci 5.500,- Kč Domu dětí a mládeže ALFA Pardubice – Polabiny na „Přírodovědnou poznávací soutěž“ ve dnech 5. – 7. 6. 2018, uzavření veřejnoprávní smlouvy a související rozpočtové opatření č. 44 (přesun z položky příspěvky a dary v kapitole 33).",
+    "keywords": [
+     "dotace",
+     "DDM ALFA",
+     "dům dětí a mládeže",
+     "přírodovědná soutěž",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "Polabiny"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "rozpocet"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Polabiny",
+     "Družby 334"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Dům dětí a mládeže ALFA Pardubice – Polabiny"
+    ],
+    "amounts": [
+     "5.500,- Kč"
+    ]
+   },
+   {
+    "number": "326/2018 R",
+    "title": "Úprava plánu společenských akcí 2018 – přesun peněz z Masopustu",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí obvodu na rok 2018: přesun 2 tis. Kč z akce Masopust – lidová veselice na Vánoční punč a 8,1 tis. Kč na Slavnost MO Pardubice V.",
+    "keywords": [
+     "plán společenských akcí",
+     "Masopust",
+     "Vánoční punč",
+     "Slavnost MO Pardubice V",
+     "kulturní akce"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "2 tis. Kč",
+     "8,1 tis. Kč"
+    ]
+   },
+   {
+    "number": "327/2018 R",
+    "title": "Dodatek č. 1 ke smlouvě se SmP na sběr psích exkrementů – výsyp košů 1x týdně",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě č. O - MO V 02/2018 se Službami města Pardubic, a.s. o sběru a likvidaci psích exkrementů, podle něhož se koše do konce roku 2018 vysypávají jednou týdně ve středu.",
+    "keywords": [
+     "psí exkrementy",
+     "koše na psí exkrementy",
+     "výsyp košů",
+     "dodatek smlouvy",
+     "Služby města Pardubic",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic, a.s."
+    ],
+    "amounts": [
+     "206 000,- Kč bez DPH",
+     "249 260,- Kč včetně DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

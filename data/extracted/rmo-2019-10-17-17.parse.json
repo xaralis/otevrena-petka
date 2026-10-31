@@ -1,0 +1,268 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "729535a0ca4611f29efced0f72f157f457c0aa7019b674cd42c84480e733cd74",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 17,
+   "kind": "radne",
+   "date": "2019-10-17",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Stanovení termínů jednání RMO a ZMO Pardubice V na rok 2020",
+    "line": 42,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Odvolání a jmenování šéfredaktora Pardubické pětky",
+    "line": 55,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – nákup vozidla pro Skupinu drobné údržby ÚMO Pardubice V",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 74,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Dotace",
+    "line": 94,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "84/2019 R",
+    "agenda_no": "1",
+    "first_line": 45,
+    "last_line": 52,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "85/2019 R",
+    "agenda_no": "2",
+    "first_line": 58,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "86/2019 R",
+    "agenda_no": "3",
+    "first_line": 67,
+    "last_line": 71,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "87/2019 R",
+    "agenda_no": "4",
+    "first_line": 78,
+    "last_line": 92,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "88/2019 R",
+    "agenda_no": "5",
+    "first_line": 97,
+    "last_line": 260,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (programu)",
+    "proposer": null,
+    "motion_first_line": 33,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 53,
+    "last_line": 53,
+    "resolution": "84/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "85/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "86/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "87/2019 R",
+    "part": "bod 1 – nebytová jednotka č. 2278/18, Iva Jírková",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 88,
+    "last_line": 88,
+    "resolution": "87/2019 R",
+    "part": "bod 2 – nebytová jednotka č. 2277/20, Radka Pešková",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 92,
+    "last_line": 92,
+    "resolution": "87/2019 R",
+    "part": "bod 3 – prostor v čp. 2515, Tereza Nádvorníková",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 96–260: usnesení 88/2019 R (Dotace) je v textu i v PDF bez hlasovacího řádku; dokument po něm končí datem a podpisy.",
+   "ř. 13: Ing. Milan Randák přítomen „po část jednání“, příchod/odchod není u žádného bodu uveden; hlasování ř. 40–72 mají součet 4, ř. 83–92 součet 5.",
+   "ř. 83: bod 1 usnesení 87/2019 R – Pro 0, proti 5; výsledek není výslovně uveden, přesto je text ve znění usnesení „souhlasí“.",
+   "ř. 39: v programu u bodu 5 uvedena Informativní zpráva – čerpání finančních prostředků z rezerv, v dokumentu není samostatně projednána."
+  ]
+ }
+}

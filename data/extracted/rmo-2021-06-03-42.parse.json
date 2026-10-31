@@ -1,0 +1,284 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "ad701d7a38df3c01cb37f90eb27d4979bd3c0247f3fdb73d996d1b758b376207",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 42,
+   "kind": "radne",
+   "date": "2021-06-03",
+   "place": "zasedací místnost MO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou cukrárna Libuše, nám. Dukelských hrdinů 2235, Pardubice",
+    "line": 50,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o poskytování služeb na výsyp odpadkových košů na psí exkrementy a výsyp odpadkových košů na území MO Pardubice V",
+    "line": 60,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zástupce MO Pardubice V ve školských radách",
+    "line": 77,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Upravený odpisový plán na r. 2021",
+    "line": 89,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 96,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 119,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "194/2021 R",
+    "agenda_no": "1",
+    "first_line": 53,
+    "last_line": 56,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "195/2021 R",
+    "agenda_no": "2",
+    "first_line": 64,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "196/2021 R",
+    "agenda_no": "3",
+    "first_line": 79,
+    "last_line": 85,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "197/2021 R",
+    "agenda_no": "4",
+    "first_line": 91,
+    "last_line": 92,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "198/2021 R",
+    "agenda_no": "5",
+    "first_line": 98,
+    "last_line": 115,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": "194/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "195/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "196/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 93,
+    "last_line": 93,
+    "resolution": "197/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 109,
+    "last_line": 109,
+    "resolution": "198/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "198/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 116: bod 2 usnesení 198/2021 R (směna pozemku p. p. č. 2906/4 za část p. p. č. 1489/1, k. ú. Pardubice) měl hlasování Pro 0, zdržel se 2, proti 3 – nikdo nehlasoval pro, přesto je bod v textu usnesení („Rada … souhlasí: … 2. se směnou …“) uveden bez poznámky o nepřijetí; výsledek dokument výslovně neuvádí.",
+   "ř. 42: Informativní zpráva – VŘ na akci „Rozšíření rozvodů SK“ je v seznamu materiálů k projednání bez čísla a v části III. nemá vlastní oddíl."
+  ]
+ }
+}

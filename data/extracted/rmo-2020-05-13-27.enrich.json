@@ -1,0 +1,97 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "47529062d7005f693b88b2dd6d1e145c5d3f4015060141682e2ca9110ed813db",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "121/2020 R",
+    "title": "Stanovisko k pozemkovým žádostem: nájmy, bezúplatný převod a směna pozemků s ŘSD",
+    "summary": "Rada souhlasí s nájmem části pozemku p. p. č. 4853/1 v k. ú. Pardubice společnosti Elklima s.r.o. pro umístění maringotky, kontejneru a nákladního auta a s nájmem části pozemku p. p. č. 22/1 v k. ú. Dražkovice k pěstování květin. Dále souhlasí s bezúplatným převodem částí pozemků v k. ú. Nové Jesenčany do vlastnictví města kvůli šíři komunikace, se zřízením služebnosti cesty a stezky, a se směnou pozemků v k. ú. Pardubice mezi státem (Ředitelství silnic a dálnic ČR) a statutárním městem Pardubice.",
+    "keywords": [
+     "pozemková komise",
+     "nájem pozemku",
+     "bezúplatný převod",
+     "směna pozemků",
+     "služebnost cesty",
+     "věcné břemeno",
+     "Ředitelství silnic a dálnic",
+     "Nové Jesenčany",
+     "Dražkovice",
+     "maringotka"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "k. ú. Nové Jesenčany",
+     "Chrudimská",
+     "Na Pankráci, Praha",
+     "Pernštýnské nám., Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 4853/1, k. ú. Pardubice",
+     "p. p. č. 22/1, k. ú. Dražkovice",
+     "p. p. č. 38/28, k. ú. Nové Jesenčany",
+     "p. p. č. 38/100, k. ú. Nové Jesenčany",
+     "st. p. č. 744, k. ú. Nové Jesenčany",
+     "p. p. č. 694/8, k. ú. Pardubice",
+     "p. p. č. 4917/35, k. ú. Pardubice",
+     "p. p. č. 4917/46, k. ú. Pardubice",
+     "p. p. č. 4917/48, k. ú. Pardubice",
+     "p. p. č. 4917/55, k. ú. Pardubice",
+     "p. p. č. 2798/32, k. ú. Pardubice",
+     "p. p. č. 2798/33, k. ú. Pardubice",
+     "p. p. č. 2798/31, k. ú. Pardubice",
+     "p. p. č. 3926/1, k. ú. Pardubice",
+     "p. p. č. 3926/3, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Elklima s.r.o.",
+     "Ředitelství silnic a dálnic ČR",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice",
+     "SÚ MmP"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "122/2020 R",
+    "title": "Objednávka opravy nátěrů laviček a mobiliáře v lesoparku na Dukle u Kulant CZ",
+    "summary": "Rada souhlasí s uzavřením objednávky se společností Kulant CZ, s.r.o. na opravu nátěrů laviček a ostatního mobiliáře v lesoparku na Dukle za 237.101,92,- Kč včetně DPH. Zakázka se zadává podle Směrnice č. 14/2017 O zadávání veřejných zakázek, čl. 13, odst. 2.",
+    "keywords": [
+     "lesopark na Dukle",
+     "lavičky",
+     "mobiliář",
+     "nátěry",
+     "oprava",
+     "údržba",
+     "veřejná zakázka",
+     "objednávka",
+     "Kulant CZ"
+    ],
+    "topics": [
+     "zakazky",
+     "cistota",
+     "zelen"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "lesopark na Dukle"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Kulant CZ, s.r.o."
+    ],
+    "amounts": [
+     "237.101,92,- Kč včetně DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

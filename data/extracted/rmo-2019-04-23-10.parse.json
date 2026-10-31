@@ -1,0 +1,243 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e6069a161c872c905bab6deb6224579c9757a7987d660b5ce814b65dd436bb64",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 10,
+   "kind": "radne",
+   "date": "2019-04-23",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 37,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 69,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2019",
+    "line": 79,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Souhlas s umístěním předzahrádky před provozovnu Kavárna Slunečnice, ul. Jilemnického 2226, Pardubice",
+    "line": 91,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "54/2019 R",
+    "agenda_no": "1",
+    "first_line": 53,
+    "last_line": 65,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "55/2019 R",
+    "agenda_no": "2",
+    "first_line": 72,
+    "last_line": 75,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "56/2019 R",
+    "agenda_no": "3",
+    "first_line": 82,
+    "last_line": 88,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "57/2019 R",
+    "agenda_no": "4",
+    "first_line": 95,
+    "last_line": 97,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 46,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "54/2019 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "54/2019 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "55/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 89,
+    "last_line": 89,
+    "resolution": "56/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 98,
+    "last_line": 98,
+    "resolution": "57/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 46: mezi schválené materiály je zařazen bod „IZ – čerpání finančních prostředků z rezerv“, k němuž v dokumentu není žádné usnesení ani hlasování.",
+   "Nadpisy bodů I. a II. (ř. 27–34) neodpovídají programu na ř. 21–25 (Zahájení jednání / Schválení materiálů); uvedeno tak, jak je v textu."
+  ]
+ }
+}

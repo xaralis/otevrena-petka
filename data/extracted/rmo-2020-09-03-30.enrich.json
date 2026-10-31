@@ -1,0 +1,194 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "dcfa49c296ac4064248324a1fd1c4e284ac74a2d41b4632decdbfc4e9f836bfe",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "134/2020 R",
+    "title": "Stanovisko k 20 žádostem pozemkové komise města (směny, nájmy, prodeje, věcná břemena)",
+    "summary": "Rada obvodu se vyjadřuje k 20 majetkovým žádostem projednávaným pozemkovou komisí rady města – mj. směna pozemků s IP stav s.r.o. kvůli dětskému hřišti, výkupy a prodeje pozemků se společností enteria a.s. pro Terminál JIH, směna pozemků s Ředitelstvím silnic a dálnic ČR, smlouvy s Českými drahami pro stavbu Terminál JIH a věcná břemena pro ČEZ Distribuci, GasNet a EDERA Group. Dále jde o nájmy a prodeje menších pozemků, výpůjčku pozemku pro CEDR Pardubice a umístění reklamních bannerů Realitní kanceláře STING na oplocení (bod 17, hlasováno 0 pro, 5 proti).",
+    "keywords": [
+     "pozemková komise",
+     "stanovisko k záměru města",
+     "směna pozemků",
+     "prodej pozemku",
+     "nájem pozemku",
+     "věcné břemeno",
+     "Terminál JIH",
+     "dětské hřiště",
+     "reklamní bannery",
+     "Dukla sportovní"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Na Spravedlnosti",
+     "K Blahobytu",
+     "K Vápence",
+     "Jilemnického 2236 – 39",
+     "Terminál JIH",
+     "areál Dukla sportovní"
+    ],
+    "parcels": [
+     "p. p. č. 2515/25, k. ú. Pardubice",
+     "p. p. č. 2515/22, k. ú. Pardubice",
+     "p. p. č. 2515/16, k. ú. Pardubice",
+     "p. p. č. 2118/4, k. ú. Pardubice",
+     "p. p. č. 2318/17, k. ú. Pardubice",
+     "st. p. č. 2373, k. ú. Pardubice",
+     "p. p. č. 382/4, k. ú. Dražkovice",
+     "p. p. č. 382/47, k. ú. Dražkovice",
+     "p. p. č. 451/2, k. ú. Dražkovice",
+     "p. p. č. 2423/5, k. ú. Pardubice",
+     "p. p. č. 2477/3, k. ú. Pardubice",
+     "p. p. č. 2483/2, k. ú. Pardubice",
+     "p. p. č. 2424/4, k. ú. Pardubice",
+     "p. p. č. 2047/7, k. ú. Pardubice",
+     "p. p. č. 2605/59, k. ú. Pardubice",
+     "st. p. č. 8797, k. ú. Pardubice",
+     "st. p. č. 3097/1, k. ú. Pardubice",
+     "st. p. č. 1795/1, k. ú. Pardubice",
+     "p. p. č. 2054/9, k. ú. Pardubice",
+     "p. p. č. 2054/13, k. ú. Pardubice",
+     "st. p. č. 5375, k. ú. Pardubice",
+     "p. p. č. 2271, k. ú. Pardubice",
+     "p. p. č. 4917/49, k. ú. Pardubice",
+     "p. p. č. 2798/31, k. ú. Pardubice",
+     "p. p. č. 2798/32, k. ú. Pardubice",
+     "p. p. č. 2798/33, k. ú. Pardubice",
+     "p. p. č. 3926/1, k. ú. Pardubice",
+     "p. p. č. 3926/3, k. ú. Pardubice",
+     "p. p. č. 2573/2, k. ú. Pardubice",
+     "p. p. č. 2155/1, k. ú. Pardubice",
+     "p. p. č. 2309/5, k. ú. Pardubice",
+     "p. p. č. 2165/1, k. ú. Pardubice",
+     "p. p. č. 2062/3, k. ú. Pardubice",
+     "p. p. č. 2798/48, k. ú. Pardubice",
+     "p. p. č. 2149/8, k. ú. Pardubice",
+     "p. p. č. 2433/1, k. ú. Pardubice",
+     "p. p. č. 2335/40, k. ú. Pardubice",
+     "st. p. č. 4194, k. ú. Pardubice",
+     "p. p. č. 2168/12, k. ú. Pardubice",
+     "p. p. č. 2168/50, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "CEDR Pardubice, o.p.s.",
+     "ČEZ Distribuce, a. s.",
+     "Společenství pro dům čp. 2498 – 2500 K Blahobytu, Pardubice",
+     "IP stav s.r.o.",
+     "enteria a.s.",
+     "Společenství vlastníků jednotek v domě Jilemnického ul. 2236 - 39 v Pardubicích",
+     "Ředitelství silnic a dálnic ČR",
+     "Industrial Trade Services a.s.",
+     "GasNet, s.r.o.",
+     "České dráhy, a.s.",
+     "Realitní kancelář STING, s.r.o.",
+     "EDERA Group a.s."
+    ],
+    "amounts": [
+     "500,- Kč/m2",
+     "100,-Kč/m2/rok",
+     "5.000,- Kč"
+    ]
+   },
+   {
+    "number": "135/2020 R",
+    "title": "Dodatky ke smlouvám se Službami města Pardubice na výsyp odpadkových košů",
+    "summary": "Rada obvodu souhlasí s uzavřením dodatků ke smlouvám se Službami města Pardubice a.s. na výsyp košů na psí exkrementy (o 7 košů více) a na výsyp a pronájem odpadkových košů na TKO (o 5 košů více). Celkové ceny smluv 255.000,- Kč a 685.000,- Kč bez DPH se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "koše na psí exkrementy",
+     "psí exkrementy",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "území MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "255.000,- Kč bez DPH",
+     "685.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "136/2020 R",
+    "title": "Souhlas se záměrem města pronajmout garáž v areálu MAS Dukla a dvě garážová stání",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout garáž (17,5 m2) v areálu MAS Dukla a dvě garážová stání (č. 2 a č. 14, po 15 m2) v 1. podzemním podlaží budov čp. 2721 a čp. 2731 v ulici Sokolovská.",
+    "keywords": [
+     "pronájem garáže",
+     "garážové stání",
+     "nebytové prostory",
+     "MAS Dukla",
+     "Sokolovská",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál MAS Dukla",
+     "Sokolovská",
+     "čp. 2721, ul. Sokolovská",
+     "čp. 2731, ul. Sokolovská",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. 7007/32, k. ú. Pardubice",
+     "st. 10089, k. ú. Pardubice",
+     "st. 10090, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "137/2020 R",
+    "title": "Přesun 10 tis. Kč z akce Zelený čtvrtek na Opékání buřtů v plánu akcí 2020",
+    "summary": "Rada obvodu upravuje plán společenských akcí MO Pardubice V na rok 2020 přesunem 10 tis. Kč z akce Zelený čtvrtek na akci Opékání buřtů. Celkový rozpočet plánu zůstává 384,4 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Zelený čtvrtek",
+     "Opékání buřtů",
+     "společenské akce",
+     "přesun peněz",
+     "rok 2020"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč",
+     "384,4 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

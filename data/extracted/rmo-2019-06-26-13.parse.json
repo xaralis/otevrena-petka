@@ -1,0 +1,488 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "327bbaab52e01959e6b6c5cc45b8d3fd3a77e4f4d696b44da47068ca978b6fa4",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 13,
+   "kind": "mimoradne",
+   "date": "2019-06-26",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Evžen Erban",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 86,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Dotace – změna termínu akce",
+    "line": 115,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Upravený odpisový plán na r. 2019",
+    "line": 124,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Závěrečný účet MO Pardubice V za rok 2018",
+    "line": 131,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2019",
+    "line": 150,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na r. 2019",
+    "line": 159,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2018",
+    "line": 170,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Dotace",
+    "line": 181,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "63/2019 R",
+    "agenda_no": "1",
+    "first_line": 52,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "64/2019 R",
+    "agenda_no": "2",
+    "first_line": 90,
+    "last_line": 112,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "65/2019 R",
+    "agenda_no": "3",
+    "first_line": 118,
+    "last_line": 121,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "66/2019 R",
+    "agenda_no": "4",
+    "first_line": 127,
+    "last_line": 128,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "67/2019 R",
+    "agenda_no": "5",
+    "first_line": 134,
+    "last_line": 147,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "68/2019 R",
+    "agenda_no": "6",
+    "first_line": 153,
+    "last_line": 156,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "69/2019 R",
+    "agenda_no": "7",
+    "first_line": 162,
+    "last_line": 167,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "70/2019 R",
+    "agenda_no": "8",
+    "first_line": 173,
+    "last_line": 178,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "71/2019 R",
+    "agenda_no": "9",
+    "first_line": 184,
+    "last_line": 288,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 46,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": "63/2019 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "63/2019 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "63/2019 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "63/2019 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 84,
+    "last_line": 84,
+    "resolution": "63/2019 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 113,
+    "last_line": 113,
+    "resolution": "64/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 122,
+    "last_line": 122,
+    "resolution": "65/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 129,
+    "last_line": 129,
+    "resolution": "66/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 148,
+    "last_line": 148,
+    "resolution": "67/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 157,
+    "last_line": 157,
+    "resolution": "68/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 168,
+    "last_line": 168,
+    "resolution": "69/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 179,
+    "last_line": 179,
+    "resolution": "70/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 289,
+    "last_line": 289,
+    "resolution": "71/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 57: bod 1 usnesení 63/2019 R (souhlas s prodejem pozemku p. p. č. 2436/7) má hlasování pro 0, zdržel se 0, proti 5, tj. tato část nezískala většinu, přestože znění zní „souhlasí“; text výsledek výslovně neuvádí.",
+   "ř. 46: v seznamu projednávaných materiálů je u bodu 9 navíc položka „IZ – čerpání finančních prostředků z rezerv“, která v dalším textu samostatně projednána není."
+  ]
+ }
+}

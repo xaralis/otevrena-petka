@@ -1,0 +1,385 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "9c9a93367bbd79edb4ee05a764c90fefef20f8eca28cad03d7c2d3e6002f28fb",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 2,
+   "kind": "radne",
+   "date": "2018-11-29",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 65,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zástupci MO Pardubice V v radách škol",
+    "line": 85,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Jmenování člena MK Višňovka a MK Dražkovice Rady městského obvodu Pardubice V",
+    "line": 94,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Jmenování vedoucího odboru sekretariátu starosty ÚMO Pardubice V",
+    "line": 102,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 109,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2019",
+    "line": 120,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2018 – 2022",
+    "line": 205,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "8/2018 R",
+    "agenda_no": "1",
+    "first_line": 52,
+    "last_line": 63,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "9/2018 R",
+    "agenda_no": "2",
+    "first_line": 69,
+    "last_line": 82,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "10/2018 R",
+    "agenda_no": "3",
+    "first_line": 88,
+    "last_line": 91,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "11/2018 R",
+    "agenda_no": "4",
+    "first_line": 97,
+    "last_line": 98,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "12/2018 R",
+    "agenda_no": "5",
+    "first_line": 105,
+    "last_line": 106,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "13/2018 R",
+    "agenda_no": "6",
+    "first_line": 112,
+    "last_line": 117,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "14/2018 R",
+    "agenda_no": "7",
+    "first_line": 123,
+    "last_line": 202,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "15/2018 R",
+    "agenda_no": "8",
+    "first_line": 208,
+    "last_line": 212,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 46,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": "8/2018 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "8/2018 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "9/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 92,
+    "last_line": 92,
+    "resolution": "10/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 100,
+    "last_line": 100,
+    "resolution": "11/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 107,
+    "last_line": 107,
+    "resolution": "12/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "13/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 203,
+    "last_line": 203,
+    "resolution": "14/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 213,
+    "last_line": 213,
+    "resolution": "15/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 90: v usnesení 10/2018 R je u Jiřího Rejdy titul „DiS.“ uveden dvakrát (zřejmě překlep)."
+  ]
+ }
+}

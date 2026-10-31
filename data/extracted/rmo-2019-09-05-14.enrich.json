@@ -1,0 +1,232 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "a064db312a018b7f6190f0a77822d43027aa35f6cb8cf2857d202dd26e883e53",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "72/2019 R",
+    "title": "Stanovisko k žádostem pozemkové komise – nájmy, věcná břemena, prodej a výpůjčka pozemků",
+    "summary": "Rada obvodu souhlasí s osmi majetkovými záměry projednávanými pozemkovou komisí rady města: mimo jiné s nájmem a věcným břemenem na pozemcích Povodí Labe pro stavbu „Revitalizace nábřeží Chrudimky – Náhrdelník Chrudimky“, s věcnými břemeny na pozemcích ŘSD ČR pro vodovodní přípojku „Areál K Dolíčku“ a pro „Inteligentní řízení dopravy v Pardubicích“, s prodejem části pozemku v Dražkovicích a s odkoupením garáže v rámci akce „DUKLA SPORTOVNÍ“. Dále souhlasí s nájmem pozemku pod budovou čp. 231 v ulici Boženy Němcové Ministerstvu zemědělství, s věcným břemenem pro Vodovody a kanalizace Pardubice a s výpůjčkou části pozemku Dopravnímu podniku města Pardubic pro rekonstrukci odstavné plochy.",
+    "keywords": [
+     "pozemková komise",
+     "nájem pozemků",
+     "věcné břemeno",
+     "prodej pozemku",
+     "výpůjčka pozemku",
+     "Náhrdelník Chrudimky",
+     "nábřeží Chrudimky",
+     "cyklostezka",
+     "Dukla sportovní",
+     "vodovodní přípojka"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "investice"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "nábřeží Chrudimky",
+     "Boženy Němcové",
+     "Zelené Předměstí",
+     "Areál K Dolíčku",
+     "sportovní areál na Dukle",
+     "areál DPMP"
+    ],
+    "parcels": [
+     "p. p. č. 103/19, k. ú. Pardubice",
+     "p. p. č. 103/35, k. ú. Pardubice",
+     "p. p. č. 677/2, k. ú. Pardubice",
+     "p. p. č. 2543/2, k. ú. Pardubice",
+     "p. p. č. 2774/3, k. ú. Pardubice",
+     "p. p. č. 2774/24, k. ú. Pardubice",
+     "st. p. č. 11303, k. ú. Pardubice",
+     "st. p. č. 6930/4, k. ú. Pardubice",
+     "st. p. č. 6930/2, k. ú. Pardubice",
+     "p. p. č. 381/1, k. ú. Dražkovice",
+     "p. p. č. 382/29",
+     "p. p. č. 541/1, k. ú. Dražkovice",
+     "p. p. č. 541/2, k. ú. Dražkovice",
+     "p. p. č. 530/1, k. ú. Dražkovice",
+     "p. p. č. 4914/1, k. ú. Pardubice",
+     "p. p. č. 4914/21, k. ú. Pardubice",
+     "p. p. č. 4914/22, k. ú. Pardubice",
+     "st. p. č. 7007/32, k. ú. Pardubice",
+     "p. p. č. 2155/15, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Povodí Labe, státní podnik",
+     "Statutární město Pardubice",
+     "Ministerstvo zemědělství",
+     "Agrostav Pardubice a.s.",
+     "Ředitelství silnic a dálnic ČR",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "Dopravní podnik města Pardubic a.s."
+    ],
+    "amounts": [
+     "4.306,- Kč/rok",
+     "1,- Kč/m2",
+     "21.530,- Kč",
+     "1.800,- Kč/m2",
+     "31,62 Kč/bm bez DPH",
+     "31,62 Kč/bm + DPH",
+     "105,39 Kč/bm + DPH",
+     "52,69 Kč/bm + DPH",
+     "1.000,- Kč bez DPH/pozemek"
+    ]
+   },
+   {
+    "number": "73/2019 R",
+    "title": "Jmenování nového člena místní komise Višňovka",
+    "summary": "Rada obvodu jmenuje ke dni 5. 9. 2019 nového člena místní komise Višňovka Rady městského obvodu Pardubice V.",
+    "keywords": [
+     "místní komise",
+     "MK Višňovka",
+     "Višňovka",
+     "jmenování člena komise"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MK Višňovka RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "74/2019 R",
+    "title": "Přijetí finančního daru od HAMO systems na péči o veřejnou zeleň",
+    "summary": "Rada obvodu souhlasí s přijetím finančního daru od firmy HAMO systems s.r.o. určeného na péči o veřejnou zeleň na území městského obvodu Pardubice V v roce 2019.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "HAMO systems"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "HAMO systems s.r.o."
+    ],
+    "amounts": [
+     "1.500,- Kč"
+    ]
+   },
+   {
+    "number": "75/2019 R",
+    "title": "Nesouhlas s prodejem nebytových prostor města a žádost o jejich svěření obvodu",
+    "summary": "Rada obvodu nesouhlasí s navrženým prodejem zbytkových nebytových jednotek v domech města na území obvodu a žádá statutární město Pardubice o jejich svěření do správy obvodu. Jde o jednotky v domech ČSA 2086–87, Josefa Ressla 2277–79, A. Krause 2316–17 a Devotyho 2449–52.",
+    "keywords": [
+     "nebytové prostory",
+     "prodej nebytových prostor",
+     "svěření majetku",
+     "zbytkové nebytové jednotky",
+     "ČSA",
+     "Josefa Ressla",
+     "A. Krause",
+     "Devotyho"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ČSA 2086 - 87",
+     "Josefa Ressla 2277 - 79",
+     "A. Krause 2316 - 17",
+     "Devotyho 2449 - 52",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. 3815 a 3816, k. ú. Pardubice",
+     "st. 4267, k. ú. Pardubice",
+     "st. 5029, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "76/2019 R",
+    "title": "Dodatky ke smlouvám se Službami města Pardubice na výsyp odpadkových košů",
+    "summary": "Rada obvodu souhlasí s uzavřením dodatků ke smlouvám o výsypu odpadkových košů na psí exkrementy a košů na TKO se společností Služby města Pardubice a.s. Ceny se navyšují kvůli zvýšení počtu vysypávaných košů o 3 a o 2 kusy.",
+    "keywords": [
+     "odpadkové koše",
+     "koše na psí exkrementy",
+     "psí exkrementy",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "odpady"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "243.000,- Kč bez DPH",
+     "240.000,- Kč bez DPH",
+     "667.500,- Kč bez DPH",
+     "665.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "77/2019 R",
+    "title": "Stanovisko k pronájmu kanceláře v areálu Jana Palacha a prostor u stadionu",
+    "summary": "Rada obvodu souhlasí s pronájmem kanceláře v areálu Jana Palacha čp. 324 společnosti OBV s.r.o. pro realitní kancelář a s pronájmem prostor v areálu stadionu u ulic Čs. armády a V Ráji pro psí salón.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "pronájem kanceláře",
+     "Jana Palacha",
+     "realitní kancelář",
+     "psí salón",
+     "stadion",
+     "V Ráji",
+     "Čs. armády"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál Jana Palacha čp. 324",
+     "areál stadionu čp. 2515 ul. Čs. armády",
+     "čp. 311 ul. V Ráji",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 960, k. ú. Pardubice",
+     "st. p. č. 5382, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "OBV s.r.o."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

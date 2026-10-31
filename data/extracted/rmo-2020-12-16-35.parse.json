@@ -1,0 +1,332 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "3496a171fe864e470fcb6c129aa49a91e4c359f663f82fe8287204c62c2f461c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 35,
+   "kind": "mimoradne",
+   "date": "2020-12-16",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 51,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 93,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2020",
+    "line": 106,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh 4. změny rozpočtu MO Pardubice V na r. 2020",
+    "line": 116,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2021",
+    "line": 127,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Aktualizace střednědobého výhledu rozpočtu MO Pardubice V na r. 2020-2023",
+    "line": 232,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Směrnice č. 28/2020: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2021",
+    "line": 242,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 258,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "159/2020 R",
+    "agenda_no": "1",
+    "first_line": 54,
+    "last_line": 90,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "160/2020 R",
+    "agenda_no": "2",
+    "first_line": 96,
+    "last_line": 102,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "161/2020 R",
+    "agenda_no": "3",
+    "first_line": 109,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "162/2020 R",
+    "agenda_no": "4",
+    "first_line": 119,
+    "last_line": 124,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "163/2020 R",
+    "agenda_no": "5",
+    "first_line": 130,
+    "last_line": 229,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "164/2020 R",
+    "agenda_no": "6",
+    "first_line": 235,
+    "last_line": 239,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "165/2020 R",
+    "agenda_no": "7",
+    "first_line": 246,
+    "last_line": 255,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "159/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 103,
+    "last_line": 103,
+    "resolution": "160/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "161/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 125,
+    "last_line": 125,
+    "resolution": "162/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 230,
+    "last_line": 230,
+    "resolution": "163/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 240,
+    "last_line": 240,
+    "resolution": "164/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 256,
+    "last_line": 256,
+    "resolution": "165/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

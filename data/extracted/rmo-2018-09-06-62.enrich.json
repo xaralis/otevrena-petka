@@ -1,0 +1,129 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "59d43055df7d6c7cbcad976d52aa733e87e3f2aa86e3b94a71b363e7276eeaba",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "348/2018 R",
+    "title": "Stanovisko k žádosti pozemkové komise – věcná břemena, prodeje, nájem garáže a převod pozemků",
+    "summary": "Rada se vyjádřila k šesti záměrům projednávaným pozemkovou komisí rady města Pardubice: věcnému břemenu pro vodovodní řad Vodovodů a kanalizací Pardubice na p. p. č. 2113/28, prodeji pěti malých pozemků p. p. č. 2515/… pro parkovací místa u domu čp. 734, věcnému břemenu pro ČEZ Distribuce v k. ú. Nové Jesenčany a nájmu pozemku st. p. č. 7007/15 pod garáží. Dále šlo o bezúplatný převod státních pozemků městu pro investiční akci „Propojka ul. Pod Břízkami – Kyjevská“ a o prodej části pozemku p. p. č. 2319/16 společnosti ČEZ Distribuce pro trafostanici v rámci akce „Dukla sportovní“.",
+    "keywords": [
+     "stanovisko obvodu",
+     "pozemková komise",
+     "věcné břemeno",
+     "vodovod",
+     "prodej pozemku",
+     "parkovací místa",
+     "nájem pozemku",
+     "garáž",
+     "bezúplatný převod",
+     "trafostanice"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany",
+     "dům čp. 734",
+     "Pod Břízkami",
+     "Kyjevská",
+     "Dukla sportovní"
+    ],
+    "parcels": [
+     "p. p. č. 2113/28, k. ú. Pardubice",
+     "p. p. č. 2515/14, k. ú. Pardubice",
+     "p. p. č. 2515/18, k. ú. Pardubice",
+     "p. p. č. 2515/25, k. ú. Pardubice",
+     "p. p. č. 2515/3, k. ú. Pardubice",
+     "p. p. č. 2515/16, k. ú. Pardubice",
+     "st. p. č. 734, k. ú. Pardubice",
+     "p. p. č. 29/40, k. ú. Nové Jesenčany",
+     "p. p. č. 29/55, k. ú. Nové Jesenčany",
+     "st. p. č. 7007/15, k. ú. Pardubice",
+     "p. p. č. 2436/18, k. ú. Pardubice",
+     "p. p. č. 2442/5, k. ú. Pardubice",
+     "p. p. č. 2442/7, k. ú. Pardubice",
+     "p. p. č. 2442/8, k. ú. Pardubice",
+     "p. p. č. 2442/9, k. ú. Pardubice",
+     "p. p. č. 2442/16, k. ú. Pardubice",
+     "p. p. č. 2319/16, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "ČEZ Distribuce, a. s.",
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "Statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč bez DPH/ za pozemek",
+     "1.000,- Kč + DPH"
+    ]
+   },
+   {
+    "number": "349/2018 R",
+    "title": "Zpevněná plocha u BD 2070 – 2072, Dukla: zrušení výsledku zakázky a nové zadání HOLD s.r.o.",
+    "summary": "Rada zrušila usnesení č. 345/2018 R ze dne 15. 8. 2018 o výsledku veřejné zakázky na stavební úpravy zpevněné plochy u bytového domu čp. 2070 – 2072 na Dukle. Podle Zadávacího řádu veřejných zakázek MO Pardubice V zakázku nově zadala společnosti HOLD s.r.o. ze Slatiňan jako ekonomicky nejvýhodnější nabídce s cenou 1.218.182,43 Kč vč. DPH a zárukou 60 měsíců.",
+    "keywords": [
+     "veřejná zakázka",
+     "zpevněná plocha",
+     "stavební úpravy",
+     "Dukla",
+     "bytový dům 2070 – 2072",
+     "zrušení usnesení",
+     "výběr dodavatele",
+     "HOLD"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dukla",
+     "bytový dům čp. 2070 – 2072, Dukla, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o."
+    ],
+    "amounts": [
+     "1.218.182,43 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "350/2018 R",
+    "title": "Souhlas se záměrem pronájmu nebytového prostoru v Devotyho čp. 2449-52 pro Technipol s.r.o.",
+    "summary": "Rada souhlasí se záměrem města pronajmout prostor sloužící k podnikání o výměře 71 m2 v přízemí budovy čp. 2449-52 v ulici Devotyho (jednotka č. 2449/100, dříve prodejna a stáčírna vín) společnosti Technipol s.r.o. pro prodejnu svářecí techniky a příslušenství.",
+    "keywords": [
+     "stanovisko obvodu",
+     "nájem nebytových prostor",
+     "pronájem",
+     "Devotyho",
+     "prodejna",
+     "svářecí technika"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Devotyho",
+     "budova čp. 2449-52, ul. Devotyho",
+     "jednotka č. 2449/100"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Technipol s.r.o."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

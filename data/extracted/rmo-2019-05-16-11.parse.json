@@ -1,0 +1,157 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "fe67c6905e2f39d298f984567ebdfa35afc07b17add612c8fb2f545cf03c7b88",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 11,
+   "kind": "radne",
+   "date": "2019-05-16",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Evžen Erban",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Ing. Jiří Janoš"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 39,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 46,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "58/2019 R",
+    "agenda_no": "1",
+    "first_line": 48,
+    "last_line": 72,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 40,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 53,
+    "last_line": 53,
+    "resolution": "58/2019 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 67,
+    "last_line": 67,
+    "resolution": "58/2019 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "58/2019 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 40–41: ve schváleném pořadí materiálů je vedle bodu 1 uveden i řádek „IZ – čerpání finančních prostředků z rezerv“, který v dokumentu dále projednán není a nemá usnesení.",
+   "ř. 67: bod 2 usnesení 58/2019 R (výpůjčka pozemků pro sanaci, EUROBIT s.r.o.) dostal Pro 0, proti 4 – usnesení přesto uvádí „souhlasí se záměrem“ včetně tohoto bodu; text výslovně neříká, že bod nebyl přijat."
+  ]
+ }
+}

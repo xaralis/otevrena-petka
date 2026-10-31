@@ -1,0 +1,222 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "792f3d8efb7b87eb210201f97e9864c88f8b4246ee43a84d5973cd72144cc7c1",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 39,
+   "kind": "radne",
+   "date": "2021-04-01",
+   "place": "zasedací místnost MO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Ing. Jiří Janoš",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Bc. Jan Nadrchal"
+   ],
+   "absent": []
+  },
+  "presence_events": [
+   {
+    "line": 77,
+    "name": "Ing. Milan Randák",
+    "event": "arrive"
+   }
+  ],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 22,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 44,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – „Stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova, Pardubice včetně využití dešťových vod (2 retenční nádrže)“",
+    "line": 78,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 88,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "182/2021 R",
+    "agenda_no": "1",
+    "first_line": 47,
+    "last_line": 76,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "183/2021 R",
+    "agenda_no": "2",
+    "first_line": 82,
+    "last_line": 85,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 33,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": "182/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": "182/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "182/2021 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "182/2021 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "183/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 12 a 15: Ing. Milan Randák je uveden zároveň mezi přítomnými i omluvenými „po část jednání“; čas příchodu text neuvádí. Podle počtů hlasů (3 do ř. 76, 4 na ř. 86) přišel před hlasováním o bodu 2 – příchod zapsán k ř. 77.",
+   "ř. 66: bod 3 usnesení 182/2021 R (souhlas s prodejem části p. p. č. 2583/31) dostal pro 0, proti 3 – tato část nebyla schválena, přesto je v textu usnesení uvedena bez poznámky.",
+   "ř. 37–38: Informativní zpráva o výběrovém řízení na doplnění písku je v programu, ale v části III. není projednána ani nemá usnesení."
+  ]
+ }
+}

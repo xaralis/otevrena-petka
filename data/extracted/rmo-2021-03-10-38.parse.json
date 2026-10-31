@@ -1,0 +1,328 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "4bb71b767d07a2440c6789a45f20680eb11b405d5b69148af7946f6a017b1210",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 38,
+   "kind": "mimoradne",
+   "date": "2021-03-10",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 51,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 75,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Odpisový plán na r. 2021",
+    "line": 102,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2020",
+    "line": 108,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Návrh 1. změny rozpočtu MO Pardubice V na r. 2021",
+    "line": 118,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Novostavba dětského hřiště K Vinici, Pardubice",
+    "line": 129,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Schválení PD – Revitalizace - Stavební úpravy parkových částí náměstí Dukelských hrdinů, Pardubice",
+    "line": 140,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 149,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "175/2021 R",
+    "agenda_no": "1",
+    "first_line": 54,
+    "last_line": 72,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "176/2021 R",
+    "agenda_no": "2",
+    "first_line": 79,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "177/2021 R",
+    "agenda_no": "3",
+    "first_line": 105,
+    "last_line": 106,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "178/2021 R",
+    "agenda_no": "4",
+    "first_line": 111,
+    "last_line": 115,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "179/2021 R",
+    "agenda_no": "5",
+    "first_line": 121,
+    "last_line": 126,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "180/2021 R",
+    "agenda_no": "6",
+    "first_line": 133,
+    "last_line": 137,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "181/2021 R",
+    "agenda_no": "7",
+    "first_line": 144,
+    "last_line": 146,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "175/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 100,
+    "last_line": 100,
+    "resolution": "176/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 107,
+    "last_line": 107,
+    "resolution": "177/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "178/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 127,
+    "last_line": 127,
+    "resolution": "179/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 138,
+    "last_line": 138,
+    "resolution": "180/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 147,
+    "last_line": 147,
+    "resolution": "181/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 45: v seznamu materiálů je uvedena „Informativní zpráva – investice“, v části III. však projednána není (bez usnesení a hlasování).",
+   "ř. 114: usnesení 178/2021 R uvádí rozbor hospodaření „k 31. 12. 2021“, ačkoli název bodu (ř. 39, 109) zní „k 31. 12. 2020“ – zřejmě překlep ve zdroji."
+  ]
+ }
+}

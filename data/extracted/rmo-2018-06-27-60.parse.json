@@ -1,0 +1,489 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "c12e94a933c3a73f36a2b8255dd51eea398a7d8d970237b66aced80b9f5f9077",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 60,
+   "kind": "mimoradne",
+   "date": "2018-06-27",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Ing. Jaroslav Kňava",
+    "MUDr. Tomáš Rejda",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 69,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – výběr zhotovitele na akci „Stavební úpravy stávajících chodníků ul. Na Záboří, Pardubice“",
+    "line": 84,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Vyřazení projektové dokumentace z majetku",
+    "line": 98,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Dotace",
+    "line": 109,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Závěrečný účet MO Pardubice V za rok 2017",
+    "line": 216,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2018",
+    "line": 235,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2017",
+    "line": 245,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na r. 2018",
+    "line": 257,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "335/2018 R",
+    "agenda_no": "1",
+    "first_line": 51,
+    "last_line": 66,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "336/2018 R",
+    "agenda_no": "2",
+    "first_line": 71,
+    "last_line": 81,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "337/2018 R",
+    "agenda_no": "3",
+    "first_line": 87,
+    "last_line": 94,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "338/2018 R",
+    "agenda_no": "4",
+    "first_line": 101,
+    "last_line": 105,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "339/2018 R",
+    "agenda_no": "5",
+    "first_line": 111,
+    "last_line": 212,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "340/2018 R",
+    "agenda_no": "6",
+    "first_line": 218,
+    "last_line": 231,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "341/2018 R",
+    "agenda_no": "7",
+    "first_line": 237,
+    "last_line": 241,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "342/2018 R",
+    "agenda_no": "8",
+    "first_line": 247,
+    "last_line": 252,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "343/2018 R",
+    "agenda_no": "9",
+    "first_line": 259,
+    "last_line": 266,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 44,
+    "last_line": 44,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 32,
+    "motion_last_line": 43,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": "335/2018 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 62,
+    "last_line": 62,
+    "resolution": "335/2018 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "335/2018 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "336/2018 R",
+    "part": "bod 1. a)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "336/2018 R",
+    "part": "bod 1. b)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "336/2018 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "337/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "338/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 213,
+    "last_line": 213,
+    "resolution": "339/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 232,
+    "last_line": 232,
+    "resolution": "340/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 242,
+    "last_line": 242,
+    "resolution": "341/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 254,
+    "last_line": 254,
+    "resolution": "342/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 267,
+    "last_line": 267,
+    "resolution": "343/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 11–12: přítomno 5 členů rady, žádné odchody ani příchody nejsou uvedeny, ale hlasování o bodu 2 usnesení 335/2018 R (ř. 62: pro 4, zdržel se 0, proti 0) a o bodu 3 (ř. 66: pro 3, zdržel se 1, proti 0) mají jen 4 hlasy.",
+   "ř. 51–66 a 71–81: usnesení 335/2018 R a 336/2018 R se hlasovala jen po bodech, bez hlasování o celku; bod 1. b) usnesení 336/2018 R (ř. 76: pro 0, zdržel se 1, proti 4) nezískal žádný hlas pro, text výsledek výslovně neuvádí.",
+   "ř. 41–43: v programu je bod 8 uveden dvakrát (Schválení účetní závěrky i Návrh 2. změny rozpočtu) a je uvedena Informativní zpráva – čerpání finančních prostředků z rezerv, která v textu dále není; v textu jsou body číslovány 1–9."
+  ]
+ }
+}

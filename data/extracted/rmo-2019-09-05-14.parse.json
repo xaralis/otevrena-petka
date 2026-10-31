@@ -1,0 +1,287 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "a064db312a018b7f6190f0a77822d43027aa35f6cb8cf2857d202dd26e883e53",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 14,
+   "kind": "radne",
+   "date": "2019-09-05",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Evžen Erban",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání – jmenování ověřovatelů zápisu a usnesení, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 50,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Jmenování člena MK Višňovka Rady městského obvodu Pardubice V",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Přijetí finančního daru",
+    "line": 133,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – opakovaná žádost města - stanovisko RMO Pardubice V",
+    "line": 141,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o poskytování služeb na výsyp odpadkových košů na psí exkrementy a výsyp odpadkových košů na území MO Pardubice V",
+    "line": 158,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 174,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "72/2019 R",
+    "agenda_no": "1",
+    "first_line": 53,
+    "last_line": 123,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "73/2019 R",
+    "agenda_no": "2",
+    "first_line": 129,
+    "last_line": 130,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "74/2019 R",
+    "agenda_no": "3",
+    "first_line": 136,
+    "last_line": 138,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "75/2019 R",
+    "agenda_no": "4",
+    "first_line": 145,
+    "last_line": 155,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "76/2019 R",
+    "agenda_no": "5",
+    "first_line": 163,
+    "last_line": 171,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "77/2019 R",
+    "agenda_no": "6",
+    "first_line": 178,
+    "last_line": 186,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 124,
+    "last_line": 124,
+    "resolution": "72/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 131,
+    "last_line": 131,
+    "resolution": "73/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 139,
+    "last_line": 139,
+    "resolution": "74/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 156,
+    "last_line": 156,
+    "resolution": "75/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 172,
+    "last_line": 172,
+    "resolution": "76/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 187,
+    "last_line": 187,
+    "resolution": "77/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 13: Evžen Erban je uveden jako přítomný „po část jednání“, ale text neuvádí, kdy přišel/odešel; hlasování k bodům 1–5 a k programu mají 4 hlasy pro, hlasování k bodu 6 (ř. 187) má 5 hlasů pro.",
+   "ř. 47: v seznamu materiálů je navíc „IZ – čerpání finančních prostředků z rezerv“ bez čísla a bez samostatného projednání v textu.",
+   "ř. 54–55 a 66–67: p. p. č. 103/19 o výměře 1.157 m2 je v usnesení 72/2019 R uvedena dvakrát."
+  ]
+ }
+}

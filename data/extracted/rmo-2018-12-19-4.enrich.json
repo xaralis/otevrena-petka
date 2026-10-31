@@ -1,0 +1,170 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "f70fa71d0234633e060cfe535775a55774eeb0d77780912df149a338106ab169",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "19/2018 R",
+    "title": "Stanovisko k žádosti pozemkové komise – prodej pozemků a reklamní zařízení city light",
+    "summary": "Rada se vyjádřila ke třem záměrům projednávaným pozemkovou komisí rady města Pardubice: prodeji pozemku p. p. č. 2515/14 (14 m2) pro parkování u bytu v domě čp. 2303 v ulici Na Spravedlnosti, uzavření smlouvy o umístění stávajících světelných reklamních zařízení typu city light Dopravního podniku města Pardubic na p. p. č. 2583/21 a prodeji pozemku p. p. č. 2526/13 (102 m2) společnosti ESKA Invest a.s. kvůli trasám železniční vlečky.",
+    "keywords": [
+     "stanovisko obvodu",
+     "pozemková komise",
+     "prodej pozemku",
+     "parkování",
+     "reklamní zařízení",
+     "city light",
+     "reklama",
+     "železniční vlečka",
+     "Na Spravedlnosti"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "Na Spravedlnosti",
+     "čp. 2303"
+    ],
+    "parcels": [
+     "p. p. č. 2515/14, k. ú. Pardubice",
+     "p. p. č. 2583/21, k. ú. Pardubice",
+     "p. p. č. 2526/13, k. ú. Pardubice",
+     "p. č. 2500/24",
+     "p. č. 2526/7"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Dopravní podnik města Pardubic a.s.",
+     "ESKA Invest a.s.",
+     "AUTOFORUM s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "20/2018 R",
+    "title": "Směrnice č. 28/2018 – zásady a program poskytování dotací z rozpočtu obvodu na rok 2019",
+    "summary": "Rada schválila směrnici č. 28/2018 se zásadami a programem pro poskytování dotací z rozpočtu MO Pardubice V v roce 2019 včetně příloh – formuláře žádosti o dotaci, vzoru smlouvy o poskytnutí dotace, čestných prohlášení žadatele a formuláře vyúčtování dotace.",
+    "keywords": [
+     "dotace",
+     "dotační program",
+     "směrnice",
+     "zásady poskytování dotací",
+     "žádost o dotaci",
+     "smlouva o poskytnutí dotace",
+     "de minimis",
+     "vyúčtování dotace",
+     "2019"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "21/2018 R",
+    "title": "Rozbor hospodaření obvodu k 30. 11. 2018 – doporučení zastupitelstvu",
+    "summary": "Rada vzala na vědomí zprávu o rozboru hospodaření MO Pardubice V k 30. 11. 2018 a doporučila zastupitelstvu schválit rozbor v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet",
+     "plnění rozpočtu",
+     "doporučení zastupitelstvu",
+     "2018"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "22/2018 R",
+    "title": "4. změna rozpočtu obvodu na rok 2018 – doporučení zastupitelstvu",
+    "summary": "Rada projednala návrh 4. změny rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2018 a doporučila zastupitelstvu vzít na vědomí komentář a schválit změnu rozpočtu i rozpočtová opatření uvedená v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "rozpočet 2018",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "23/2018 R",
+    "title": "Návrh rozpočtu obvodu na rok 2019 a pravidla hospodaření – doporučení zastupitelstvu",
+    "summary": "Rada doporučila zastupitelstvu schválit rozpočet MO Pardubice V a rozpočet sociálního fondu na rok 2019, svěřit radě pravomoc provádět vymezená rozpočtová opatření, pravidla pro rozpis rozpočtu, technické přesuny, hrazení společenských akcí, dárky jubilantům a propagační předměty. Dále doporučila schválit směrnici č. 7/2018 o hospodaření se sociálním fondem a vzít na vědomí postup při rozpočtovém provizoriu města.",
+    "keywords": [
+     "rozpočet 2019",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "plán společenských akcí",
+     "životní jubilea",
+     "propagační předměty",
+     "rozpočtové provizorium",
+     "směrnice č. 7/2018",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "finanční výbor",
+     "odbor ekonomický",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "200 tis. Kč vč.",
+     "200,- Kč vč.",
+     "500,-- Kč vč."
+    ]
+   },
+   {
+    "number": "24/2018 R",
+    "title": "Střednědobý výhled rozpočtu obvodu na roky 2018–2022 – doporučení zastupitelstvu",
+    "summary": "Rada projednala návrh střednědobého výhledu rozpočtu MO Pardubice V na roky 2018–2022 a doporučila zastupitelstvu vzít na vědomí komentář a výhled schválit.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "rozpočet",
+     "2018–2022",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,286 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "614999e57af91b01337da143b92b1e364cdcebef3c1c949ac9683fe5f288b3db",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 25,
+   "kind": "mimoradne",
+   "date": "2020-03-11",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Ing. Jiří Janoš"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Oprava vozovek po zimě na území Městského obvodu Pardubice V – 2020",
+    "line": 50,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Odpisový plán na r. 2020",
+    "line": 79,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2019",
+    "line": 86,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Návrh 1. změny rozpočtu MO Pardubice V na r. 2020",
+    "line": 96,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Program rozvoje městského obvodu Pardubice V – plnění za rok 2019",
+    "line": 117,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Rozhodnutí o podpisu Smlouvy o smlouvě budoucí o realizaci přeložky distribučního zařízení určeného k dodávce elektrické energie se společností ČEZ Distribuce a.s.",
+    "line": 132,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "112/2020 R",
+    "agenda_no": "1.",
+    "first_line": 54,
+    "last_line": 75,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "113/2020 R",
+    "agenda_no": "2.",
+    "first_line": 81,
+    "last_line": 82,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "114/2020 R",
+    "agenda_no": "3.",
+    "first_line": 88,
+    "last_line": 92,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "115/2020 R",
+    "agenda_no": "4.",
+    "first_line": 98,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "116/2020 R",
+    "agenda_no": "5.",
+    "first_line": 119,
+    "last_line": 125,
+    "responsible": "starosta, RMO, ZMO",
+    "deadline": "trvale; KT: 31. 12 každoročně"
+   },
+   {
+    "number": "117/2020 R",
+    "agenda_no": "6.",
+    "first_line": 135,
+    "last_line": 138,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 44,
+    "last_line": 44,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání (program)",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 43,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "112/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "113/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 93,
+    "last_line": 93,
+    "resolution": "114/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "115/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 129,
+    "last_line": 129,
+    "resolution": "116/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 139,
+    "last_line": 139,
+    "resolution": "117/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 126–128: u usnesení 116/2020 R (doporučení ZMO) uvedeno „O: starosta, RMO, ZMO“, „T: trvale“ a „KT: 31. 12 každoročně“ – jde o odpovědnost/termín navrhovaného usnesení ZMO, nikoli standardní Z:/T."
+  ]
+ }
+}

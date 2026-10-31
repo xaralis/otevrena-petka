@@ -1,0 +1,175 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "03771ec3e3492307a673ec13b7afa03341eeae5cca78655daeabce9165bff0ac",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "30/2019 R",
+    "title": "Souhlas se záměry pronájmu garážového stání, kanceláře a garáže v majetku města",
+    "summary": "Rada souhlasí se záměrem pronajmout garážové stání v objektu Sokolovská 2721, kancelář o výměře 71,48 m2 v objektu Jana Palacha 324 pro šicí dílnu a budovu garáže na st. p. č. 7007/3, k. ú. Pardubice. Jde o stanovisko obvodu k nájmu nebytových prostorů v majetku města.",
+    "keywords": [
+     "nájem nebytových prostorů",
+     "pronájem garáže",
+     "garážové stání",
+     "pronájem kanceláře",
+     "šicí dílna",
+     "Sokolovská",
+     "Jana Palacha",
+     "stanovisko k nájmu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská 2721, Pardubice",
+     "Jana Palacha 324, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 960, k. ú. Pardubice",
+     "st. p. č. 7007/3, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": [
+     "615,- Kč/m2/rok vč. DPH",
+     "1.040,40 Kč/m2/rok bez DPH"
+    ]
+   },
+   {
+    "number": "31/2019 R",
+    "title": "Stanovisko k výkupům garáží pro „DUKLA SPORTOVNÍ“ a k prodejům a úpravám pozemků města",
+    "summary": "Rada se vyjadřuje k žádosti pozemkové komise rady města: souhlasí s odkoupením garáže na st. p. č. 7007/34 a pozemku st. p. č. 6147 s garáží do vlastnictví města v rámci akce „DUKLA SPORTOVNÍ“ (revitalizace sportovního areálu na Dukle), s prodejem pozemku p. p. č. 4787 Místní komunitě Salesiánů Dona Boska v Pardubicích a s odstraněním 2 reklamních zařízení na p. p. č. 2499/140 před vjezdem na pozemek ESKA Invest a.s. Bod o prodeji části pozemku p. p. č. 58/4, k. ú. Dražkovice, Dopravnímu podniku města Pardubic a.s. přijat nebyl.",
+    "keywords": [
+     "pozemková komise",
+     "výkup garáží",
+     "DUKLA SPORTOVNÍ",
+     "revitalizace sportovního areálu Dukla",
+     "prodej pozemku",
+     "školní dvůr",
+     "reklamní zařízení",
+     "Dražkovice",
+     "Salesiáni"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dukla",
+     "sportovní areál na Dukle",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Zborovského náměstí 2018, Pardubice",
+     "S. K. Neumanna 1220, Pardubice",
+     "Teplého 2141, Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 7007/34, k. ú. Pardubice",
+     "st. p. č. 6147, k. ú. Pardubice",
+     "p. p. č. 58/4, k. ú. Dražkovice",
+     "p. p. č. 4787, k. ú. Pardubice",
+     "p. p. č. 2499/140, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "Dopravní podnik města Pardubic a.s.",
+     "Místní komunita Salesiánů Dona Boska v Pardubicích",
+     "škola NOE",
+     "Salesiánské středisko mládeže",
+     "ESKA Invest a.s."
+    ],
+    "amounts": [
+     "140.000,- Kč",
+     "220.000,- Kč"
+    ]
+   },
+   {
+    "number": "32/2019 R",
+    "title": "Přijetí finančních darů na péči o zeleň a na Masopust 2019",
+    "summary": "Rada souhlasí s přijetím daru 15.000,- Kč od soukromé osoby na péči o veřejnou zeleň v obvodu v roce 2019 a daru 10.000,- Kč od firmy M-BET s.r.o. na akci Masopust MO Pardubice V 2019.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "veřejná zeleň",
+     "Masopust",
+     "Masopust 2019",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "MO Pardubice V",
+     "K Dubině 690, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč",
+     "10.000,- Kč"
+    ]
+   },
+   {
+    "number": "33/2019 R",
+    "title": "Smluvní cena dlouhodobé inzerce ve zpravodaji Pardubická 5",
+    "summary": "Rada souhlasí s dlouhodobou půlstránkovou inzercí podnikatele z Nemošic ve zpravodaji Pardubická 5 od března 2019 do října 2022 (15 čísel) za smluvní cenu 2.600,- Kč bez DPH za jedno číslo.",
+    "keywords": [
+     "inzerce",
+     "Pardubická 5",
+     "zpravodaj",
+     "smluvní cena",
+     "reklama ve zpravodaji",
+     "ceník inzerce"
+    ],
+    "topics": [
+     "kultura-akce"
+    ],
+    "kind": "jine",
+    "places": [
+     "Nemošice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "2.600,- Kč bez DPH za jedno číslo"
+    ]
+   },
+   {
+    "number": "34/2019 R",
+    "title": "Odvolání a jmenování člena místní komise Dukla",
+    "summary": "Rada odvolává ke dni 31. 1. 2019 jednoho člena místní komise Dukla a ke dni 1. 2. 2019 jmenuje nového člena této komise.",
+    "keywords": [
+     "MK Dukla",
+     "místní komise Dukla",
+     "odvolání člena komise",
+     "jmenování člena komise",
+     "Dukla"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MK Dukla RMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "fe67c6905e2f39d298f984567ebdfa35afc07b17add612c8fb2f545cf03c7b88",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "58/2019 R",
+    "title": "Stanovisko k pozemkovým záměrům města – odkoupení pozemku, výpůjčka pro sanaci a odkoupení garáže",
+    "summary": "Stanovisko obvodu ke třem záměrům pozemkové komise rady města Pardubice: odkoupení pozemku p. p. č. 2386/31 s chodníkem a zelení v ul. Chrudimské, výpůjčka pozemků pro sanaci staré ekologické zátěže v rámci akce „Sanace ČS PHM Pardubice společnosti UNIPETROL RPA, s.r.o.“ pro EUROBIT s.r.o. a odkoupení garáže na st. p. č. 7007/34 v rámci akce „DUKLA SPORTOVNÍ“. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "odkoupení pozemku",
+     "chodník",
+     "Chrudimská",
+     "výpůjčka pozemků",
+     "sanace ekologické zátěže",
+     "čerpací stanice PHM",
+     "odkoupení garáže",
+     "DUKLA SPORTOVNÍ",
+     "sportovní areál Dukla"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "zelen"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Chrudimská",
+     "k. ú. Pardubice",
+     "sportovní areál na Dukle"
+    ],
+    "parcels": [
+     "p. p. č. 2386/31, k. ú. Pardubice",
+     "p. p. č. 2376/15",
+     "p. p. č. 2376/23",
+     "p. p. č. 2583/40",
+     "p. p. č. 2583/17",
+     "p. p. č. 2583/12",
+     "st. p. č. 7007/34, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "UNIPETROL RPA, s.r.o.",
+     "EUROBIT s.r.o.",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "130.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

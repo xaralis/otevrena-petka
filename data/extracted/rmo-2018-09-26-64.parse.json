@@ -1,0 +1,410 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "192d9b94c540eafbf756719d63a80bd545204f64a4558bdd49a40e79a197f15c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 64,
+   "kind": "mimoradne",
+   "date": "2018-09-26",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "MUDr. Tomáš Rejda",
+    "Bc. Petr Dufek",
+    "Ing. Jaroslav Kňava"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 69,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2018",
+    "line": 87,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2018",
+    "line": 97,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Schválení zadávacích podmínek pro akci „Stavební úpravy oprava povrchu chodníků v ul. Mikulovická, Pardubice – SO 101 a SO 102“ vč. schválení členů hodnotící komise",
+    "line": 113,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Zrušení komisí Rady městského obvodu Pardubice V a odvolání jejich předsedů a členů",
+    "line": 137,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Peněžité dary předsedům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 166,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Usnesení vzešlé z diskuse",
+    "line": 203,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "352/2018 R",
+    "agenda_no": "1",
+    "first_line": 50,
+    "last_line": 66,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "353/2018 R",
+    "agenda_no": "2",
+    "first_line": 73,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "354/2018 R",
+    "agenda_no": "3",
+    "first_line": 90,
+    "last_line": 94,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "355/2018 R",
+    "agenda_no": "4",
+    "first_line": 100,
+    "last_line": 110,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "356/2018 R",
+    "agenda_no": "5",
+    "first_line": 117,
+    "last_line": 134,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "357/2018 R",
+    "agenda_no": "6",
+    "first_line": 140,
+    "last_line": 163,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "358/2018 R",
+    "agenda_no": "7",
+    "first_line": 169,
+    "last_line": 200,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "359/2018 R",
+    "agenda_no": "Diskuse",
+    "first_line": 205,
+    "last_line": 215,
+    "responsible": null,
+    "deadline": "průběžně, 31. 12. 2019"
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 58,
+    "last_line": 58,
+    "resolution": "352/2018 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "352/2018 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 67,
+    "last_line": 67,
+    "resolution": "352/2018 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "353/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "354/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 111,
+    "last_line": 111,
+    "resolution": "355/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 135,
+    "resolution": "356/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 164,
+    "last_line": 164,
+    "resolution": "357/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 201,
+    "last_line": 201,
+    "resolution": "358/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 217,
+    "last_line": 217,
+    "resolution": "359/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 54: bod 1 usnesení 352/2018 R (věcné břemeno ČEZ Distribuce, p. p. č. 605/1) je označen „Staženo“, nehlasovalo se o něm; hlasovalo se zvlášť o bodech 2, 3 a 4.",
+   "ř. 132–134: v usnesení 356/2018 R jsou místo jmen tří členů hodnotící komise jen zástupné texty „Zastupitel (zastupitel)“.",
+   "ř. 216: u usnesení 359/2018 R je řádek „KT: průběžně, 31. 12. 2019“ – zodpovědná osoba (Z:) chybí, jde zřejmě o slité „Z:“/„T:“; jako termín zapsáno „průběžně, 31. 12. 2019“.",
+   "Program na ř. 19–23 uvádí body I.–V. (vč. Různé a Závěr), v dokumentu jsou však oddíly I. ověřovatelé, II. zapisovatel, III. projednání materiálů; body IV. Různé a V. Závěr nemají vlastní oddíl, jen „Usnesení vzešlé z diskuse“ (ř. 203)."
+  ]
+ }
+}

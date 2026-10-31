@@ -1,0 +1,243 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "729426a677ffdc6a3e1bbe90ef3b52c987dd79ffa3570ddbd3e2dfb3fb4aa389",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 54,
+   "kind": "radne",
+   "date": "2018-02-21",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Ing. Jaroslav Kňava",
+    "MUDr. Tomáš Rejda"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování zapisovatele",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 40,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Parkoviště ul. Sokolovská, Pardubice",
+    "line": 65,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Úprava plánu společenských akcí MO na rok 2018",
+    "line": 75,
+    "speakers": []
+   },
+   {
+    "no": "Různé",
+    "title": "Usnesení vzešlé z diskuse",
+    "line": 83,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "312/2018 R",
+    "agenda_no": "1",
+    "first_line": 43,
+    "last_line": 62,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "313/2018 R",
+    "agenda_no": "2",
+    "first_line": 69,
+    "last_line": 72,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "314/2018 R",
+    "agenda_no": "3",
+    "first_line": 78,
+    "last_line": 80,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "315/2018 R",
+    "agenda_no": "Různé",
+    "first_line": 85,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 38,
+    "last_line": 38,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 37,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": "312/2018 R",
+    "part": "bod 1 – prodej st. p. č. 4941/4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": "312/2018 R",
+    "part": "bod 2 – nájem, prodej a výpůjčka částí p. p. č. 2303/22 (VAK Pardubice)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 1,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "312/2018 R",
+    "part": "bod 3 – souhlas vlastníka části p. p. č. 4853/1 (MO Pardubice I)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "313/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "314/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 84–86: usnesení 315/2018 R (vzešlé z diskuse) je v textu bez hlasovacího řádku.",
+   "ř. 59: bod 2 usnesení 312/2018 R získal Pro 0, zdržel se 2, proti 1 – tento bod nebyl schválen, přesto je uveden v textu usnesení „souhlasí se záměrem“; dokument výsledek výslovně neuvádí."
+  ]
+ }
+}

@@ -1,0 +1,490 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "103b0a17e3655d8119c1522c9ad5118dff200250de0bc99e4c605220e265ce27",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 1,
+   "kind": "radne",
+   "date": "2018-11-08",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Stanovení měsíční odměny starostovi MO Pardubice V",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 56,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Schválení Rámcové smlouvy o provádění exekucí",
+    "line": 102,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Dotace",
+    "line": 111,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Zřízení komisí Rady městského obvodu Pardubice V",
+    "line": 208,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Peněžité dary předsedům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 233,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Zástupci MO Pardubice V v radách škol",
+    "line": 241,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení nové organizační struktury a organizačního řádu Úřadu městského obvodu Pardubice V",
+    "line": 245,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "1/2018 R",
+    "agenda_no": "1",
+    "first_line": 51,
+    "last_line": 53,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "2/2018 R",
+    "agenda_no": "2",
+    "first_line": 59,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "3/2018 R",
+    "agenda_no": "3",
+    "first_line": 106,
+    "last_line": 108,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "4/2018 R",
+    "agenda_no": "4",
+    "first_line": 114,
+    "last_line": 205,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "5/2018 R",
+    "agenda_no": "5",
+    "first_line": 211,
+    "last_line": 230,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "6/2018 R",
+    "agenda_no": "6",
+    "first_line": 236,
+    "last_line": 238,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "7/2018 R",
+    "agenda_no": "8",
+    "first_line": 249,
+    "last_line": 254,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": "1/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "2/2018 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "2/2018 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 77,
+    "last_line": 77,
+    "resolution": "2/2018 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "2/2018 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "2/2018 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "2/2018 R",
+    "part": "bod 6",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "2/2018 R",
+    "part": "bod 7",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 100,
+    "last_line": 100,
+    "resolution": "2/2018 R",
+    "part": "bod 8",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 109,
+    "last_line": 109,
+    "resolution": "3/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 206,
+    "last_line": 206,
+    "resolution": "4/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 231,
+    "last_line": 231,
+    "resolution": "5/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 239,
+    "last_line": 239,
+    "resolution": "6/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 255,
+    "last_line": 255,
+    "resolution": "7/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 77–79: bod 3 usnesení 2/2018 R (směna pozemku p. p. č. 3837/10 za p. p. č. 2034/29, žadatel ŘSD ČR) – hlasování „Pro 0, zdržel se 5, proti 0“, tedy tento bod souhlasu nezískal; v závorce RMO navrhuje směnu za jiné pozemky (p. p. č. 4915/2, 4915/13 a 4914/11). Výsledek není výslovně uveden.",
+   "ř. 104: pod nadpisem bodu 3 („Schválení Rámcové smlouvy o provádění exekucí“) je navíc řádek „Rozbor hospodaření MO Pardubice V k 31. 8. 2018“, který s obsahem usnesení 3/2018 R nesouvisí (zřejmě pozůstatek z předchozího jednání).",
+   "ř. 243: bod 7 „Zástupci MO Pardubice V v radách škol“ – zpráva byla stažena, bez usnesení; usnesení k bodu 8 proto nese číslo 7/2018 R.",
+   "Program na ř. 20–24 uvádí body I.–V. (vč. Různé a Závěr), v dokumentu jsou však oddíly I. ověřovatelé, II. zapisovatel, III. projednání materiálů; body IV. Různé a V. Závěr nemají vlastní oddíl."
+  ]
+ }
+}

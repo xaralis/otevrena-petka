@@ -1,0 +1,184 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "368b9d9985965b5543aca328467af7a477cc39456d2d89c056d6611419eea486",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 26,
+   "kind": "radne",
+   "date": "2020-04-02",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schváleného materiálu",
+    "line": 43,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Dotace",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Odvolání a jmenování člena Komise pro strategii a rozvoj obvodu Rady městského obvodu Pardubice V",
+    "line": 235,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "118/2020 R",
+    "agenda_no": "1",
+    "first_line": 48,
+    "last_line": 53,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "119/2020 R",
+    "agenda_no": "2",
+    "first_line": 59,
+    "last_line": 231,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "120/2020 R",
+    "agenda_no": "3",
+    "first_line": 238,
+    "last_line": 241,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": "118/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 232,
+    "last_line": 232,
+    "resolution": "119/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 242,
+    "last_line": 242,
+    "resolution": "120/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 24–25: jednání proběhlo distančně telekonferencí, ačkoli záhlaví (ř. 10) uvádí zasedací místnost ÚMO Pardubice V.",
+   "ř. 53: znění usnesení 118/2020 R končí čárkou."
+  ]
+ }
+}

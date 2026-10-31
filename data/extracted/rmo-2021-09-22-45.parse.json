@@ -1,0 +1,314 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "d537456e22265d8be622f3e9bab3bb05c4e30e54a9223a9ce0169fcd0d93ca92",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 45,
+   "kind": "mimoradne",
+   "date": "2021-09-22",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Bc. Jan Nadrchal",
+    "Evžen Erban",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na akci „Stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova, Pardubice včetně využití dešťových vod (2 retenční nádrže)“",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Prodej nákladního přívěsu",
+    "line": 77,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2021",
+    "line": 85,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Prodej nebytového prostoru v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 94,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2021",
+    "line": 103,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 113,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "215/2021 R",
+    "agenda_no": "1",
+    "first_line": 52,
+    "last_line": 59,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "216/2021 R",
+    "agenda_no": "2",
+    "first_line": 67,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "217/2021 R",
+    "agenda_no": "3",
+    "first_line": 79,
+    "last_line": 81,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "218/2021 R",
+    "agenda_no": "4",
+    "first_line": 87,
+    "last_line": 90,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "219/2021 R",
+    "agenda_no": "5",
+    "first_line": 97,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "220/2021 R",
+    "agenda_no": "6",
+    "first_line": 105,
+    "last_line": 110,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": "215/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": "215/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "216/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 82,
+    "last_line": 82,
+    "resolution": "217/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "218/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 100,
+    "last_line": 100,
+    "resolution": "219/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 111,
+    "last_line": 111,
+    "resolution": "220/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 10: datum uvedeno jako „22. září na 2021“ (překlep), jednání proběhlo 22. 9. 2021 (ř. 119).",
+   "ř. 60: bod 2 usnesení 215/2021 R nebyl přijat (Pro 1, zdržel se 2, proti 2); text uvádí „usnesení nebylo přijato“, bod 1 přijat 4–0–1."
+  ]
+ }
+}

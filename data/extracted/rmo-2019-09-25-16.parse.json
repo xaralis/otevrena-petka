@@ -1,0 +1,211 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "02ae05dce60380b8f7cdf9c35505de99830ab970768e7d3e4ed6235f1622ef02",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 16,
+   "kind": "mimoradne",
+   "date": "2019-09-25",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Návrh obecně závazné vyhlášky č. ../2019, kterou se vydává Statut města Pardubic",
+    "line": 44,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2019",
+    "line": 97,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2019",
+    "line": 107,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Informace o schválení účetní závěrky za r. 2018 sestavené k 31. 12. 2018",
+    "line": 118,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "80/2019 R",
+    "agenda_no": "1.",
+    "first_line": 47,
+    "last_line": 94,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "81/2019 R",
+    "agenda_no": "2.",
+    "first_line": 100,
+    "last_line": 104,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "82/2019 R",
+    "agenda_no": "3.",
+    "first_line": 110,
+    "last_line": 115,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "83/2019 R",
+    "agenda_no": "4.",
+    "first_line": 121,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "80/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 105,
+    "last_line": 105,
+    "resolution": "81/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "82/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "83/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

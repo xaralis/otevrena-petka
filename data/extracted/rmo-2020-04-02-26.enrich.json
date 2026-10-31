@@ -1,0 +1,123 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "368b9d9985965b5543aca328467af7a477cc39456d2d89c056d6611419eea486",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "118/2020 R",
+    "title": "Souhlas s věcným břemenem pro přeložku teplovodu – stavba „Dukla Sportovní – I. etapa“",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města: souhlas se zřízením budoucího věcného břemene a věcného břemene na částech pozemků p. p. č. 2288, 2290/1, 2286/1 a 2290/29 v k. ú. Pardubice. Žadatelem je Elektrárny Opatovice, a.s., účelem je uložení a provozování přeložky teplovodní trasy v rámci stavby „Dukla Sportovní – I. etapa“.",
+    "keywords": [
+     "věcné břemeno",
+     "teplovod",
+     "přeložka teplovodní trasy",
+     "Elektrárny Opatovice",
+     "Dukla Sportovní",
+     "pozemková komise",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "Dukla Sportovní"
+    ],
+    "parcels": [
+     "p. p. č. 2288, k. ú. Pardubice",
+     "p. p. č. 2290/1, k. ú. Pardubice",
+     "p. p. č. 2286/1, k. ú. Pardubice",
+     "p. p. č. 2290/29, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Elektrárny Opatovice, a.s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "119/2020 R",
+    "title": "Dotace 2020 pro 22 akcí škol, školek, DDM a sportovních spolků",
+    "summary": "Schválení 22 dotací z programu podle Směrnice č. 28/2019 na rok 2020, uzavření veřejnoprávních smluv a souvisejících rozpočtových opatření č. 7–28 (přesuny z položky příspěvky v kapitole 33). Příjemci jsou mj. KIN – BALL Pardubice z.s., TJ TESLA Pardubice z.s., ZŠ Benešovo nám., ZŠ Josefa Ressla, MŠ Jesničánky, Atletika Bez Bariér Pardubice, z.s., ZŠ a MŠ A. Krause, DDM ALFA Pardubice a Hvězda Pardubice z.s. na sportovní turnaje, školní akce, Den Země, dětské dny a podporu handicapovaných dětí.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "sportovní akce",
+     "školní akce",
+     "Den Země",
+     "dětský den",
+     "handicapované děti",
+     "atletika",
+     "kuželky"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice 121",
+     "K Vinici 1901",
+     "Benešovo nám. 590",
+     "Josefa Ressla 2258",
+     "Raisova 226",
+     "Čs. armády 2515",
+     "A. Krause 2344",
+     "Družby 334",
+     "Fajnpark v Chlumci nad Cidlinou"
+    ],
+    "parcels": [],
+    "organizations": [
+     "KIN – BALL Pardubice z.s.",
+     "TJ TESLA Pardubice z.s.",
+     "TJ TESLA Pardubice, oddíl kuželky",
+     "Základní škola Pardubice, Benešovo nám. 590",
+     "Základní škola Pardubice, Josefa Ressla 2258",
+     "Mateřská škola Pardubice - Jesničánky",
+     "Atletika Bez Bariér Pardubice, z.s.",
+     "Základní škola a mateřská škola Pardubice, A. Krause 2344",
+     "DDM ALFA Pardubice",
+     "Hvězda Pardubice z.s."
+    ],
+    "amounts": [
+     "5.000,- Kč",
+     "6.000,- Kč",
+     "3.000,- Kč",
+     "10.000,- Kč",
+     "4.300,- Kč",
+     "6.500,- Kč",
+     "4.000,- Kč",
+     "1.500,- Kč",
+     "2.000,- Kč"
+    ]
+   },
+   {
+    "number": "120/2020 R",
+    "title": "Výměna člena Komise pro strategii a rozvoj obvodu",
+    "summary": "Odvolání jednoho člena Komise pro strategii a rozvoj obvodu RMO Pardubice V ke dni 2. 4. 2020 a jmenování nového člena ke dni 3. 4. 2020.",
+    "keywords": [
+     "Komise pro strategii a rozvoj obvodu",
+     "odvolání člena komise",
+     "jmenování člena komise",
+     "komise rady"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro strategii a rozvoj obvodu RMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

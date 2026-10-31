@@ -1,0 +1,274 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "8e12e41188e701bcc779ac4a21ab903ff3619814d4936997eec5cfe8b622f64f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "166/2021 R",
+    "title": "Smlouvy o dílo na přistavování velkoobjemových kontejnerů se Službami města Pardubic",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na přistavování velkoobjemových kontejnerů se společností Služby města Pardubic a.s. za 538.450,- Kč (445.000,- Kč bez DPH). Smlouvy se uzavírají mimo režim směrnice č. 14/2017 – zadávacího řádu, protože jde o společnost založenou městem k tomuto účelu.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "přistavování kontejnerů",
+     "odpady",
+     "Služby města Pardubic",
+     "smlouva o dílo",
+     "výjimka ze zadávacího řádu"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Hůrka 1803, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "538.450,- Kč",
+     "445.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "167/2021 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2020",
+    "summary": "Rada schvaluje výroční zprávu o poskytování informací za rok 2020 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím. Tajemníkovi úřadu ukládá zveřejnit ji na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "poskytování informací",
+     "zákon č. 106/1999 Sb.",
+     "svobodný přístup k informacím",
+     "zveřejnění na webu",
+     "2020"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "168/2021 R",
+    "title": "Nový zadávací řád veřejných zakázek – Směrnice č. 14/2021",
+    "summary": "Rada schvaluje s účinností ode dne 5. 2. 2021 Směrnici č. 14/2021: Zadávací řád veřejných zakázek.",
+    "keywords": [
+     "zadávací řád",
+     "veřejné zakázky",
+     "směrnice č. 14/2021",
+     "pravidla zadávání zakázek"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "zakazky"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "169/2021 R",
+    "title": "Administrace výběrového řízení na úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+    "summary": "Rada souhlasí s uzavřením příkazní smlouvy na zajištění výběrového řízení na podlimitní veřejnou zakázku Stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova v Pardubicích včetně využití dešťových vod (2 retenční nádrže). Nabídková cena příkazníka je 40.800,- Kč.",
+    "keywords": [
+     "vnitroblok",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova",
+     "retenční nádrže",
+     "dešťová voda",
+     "výběrové řízení",
+     "příkazní smlouva"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "zelen"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova",
+     "vnitroblok Kpt. Nálepky – Artura Krause – Sokolovská – Lexova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "40.800,- Kč"
+    ]
+   },
+   {
+    "number": "170/2021 R",
+    "title": "Stanovisko k žádostem pozemkové komise – věcná břemena, stavba trati, nebytové jednotky, parkování Teplého",
+    "summary": "Rada vydává stanovisko k žádostem pozemkové komise rady města: souhlasí s prodloužením a rozšířením věcného břemene pro kabelové vedení ČEZ Distribuce, se stavbou a nájmem pozemků pro modernizaci trati Hradec Králové – Pardubice – Chrudim (Správa železnic), s věcným břemenem pro optickou síť T-Mobile a se záměrem vložit nebytové jednotky v několika domech do Rozvojového fondu Pardubice a.s. Součástí je i bod o výpůjčce pozemků a odkoupení parkovacích stání v ul. Teplého a sjezdu z ul. Češkova pro stavbu bytového domu VITEUM s.r.o.",
+    "keywords": [
+     "věcné břemeno",
+     "kabelové vedení",
+     "modernizace trati",
+     "zdvoukolejnění Pardubice – Rosice nad Labem",
+     "optická síť",
+     "nebytové jednotky",
+     "Rozvojový fond Pardubice",
+     "nepeněžitý vklad",
+     "parkovací stání",
+     "Teplého"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "ul. Čs. armády",
+     "ul. Jilemnického",
+     "nám. Dukelských hrdinů",
+     "ul. Lexova",
+     "ul. Josefa Ressla",
+     "ul. Artura Krause",
+     "ul. Devotyho",
+     "ul. Teplého",
+     "ul. Češkova",
+     "Dukla"
+    ],
+    "parcels": [
+     "p. p. č. 2316/42, k. ú. Pardubice",
+     "p. p. č. 2316/1, k. ú. Pardubice",
+     "p. p. č. 2318/17, k. ú. Pardubice",
+     "p. p. č. 2335/39, k. ú. Pardubice",
+     "p. p. č. 1807/18, k. ú. Pardubice",
+     "p. p. č. 2629/27, k. ú. Pardubice",
+     "p. p. č. 2802/31, k. ú. Pardubice",
+     "p. p. č. 2802/33, k. ú. Pardubice",
+     "p. p. č. 3838/5, k. ú. Pardubice",
+     "p. p. č. 3839/2, k. ú. Pardubice",
+     "p. p. č. 3839/3, k. ú. Pardubice",
+     "p. p. č. 3839/4, k. ú. Pardubice",
+     "p. p. č. 3839/5, k. ú. Pardubice",
+     "p. p. č. 3839/6, k. ú. Pardubice",
+     "p. p. č. 3839/7, k. ú. Pardubice",
+     "p. p. č. 3839/8, k. ú. Pardubice",
+     "p. p. č. 3879, k. ú. Pardubice",
+     "p. p. č. 4327/2, k. ú. Pardubice",
+     "p. p. č. 4327/3, k. ú. Pardubice",
+     "p. p. č. 4328/2, k. ú. Pardubice",
+     "p. p. č. 4329/2, k. ú. Pardubice",
+     "p. p. č. 4329/3, k. ú. Pardubice",
+     "p. p. č. 4329/4, k. ú. Pardubice",
+     "p. p. č. 4333/1, k. ú. Pardubice",
+     "p. p. č. 4333/2, k. ú. Pardubice",
+     "p. p. č. 4449, k. ú. Pardubice",
+     "p. p. č. 2408/13, k. ú. Pardubice",
+     "p. p. č. 2410/1, k. ú. Pardubice",
+     "p. p. č. 2410/33, k. ú. Pardubice",
+     "p. p. č. 2410/34, k. ú. Pardubice",
+     "p. p. č. 2410/35, k. ú. Pardubice",
+     "p. p. č. 2410/37, k. ú. Pardubice",
+     "p. p. č. 2412/1, k. ú. Pardubice",
+     "p. p. č. 2413/4, k. ú. Pardubice",
+     "p. p. č. 2415/1, k. ú. Pardubice",
+     "p. p. č. 2415/3, k. ú. Pardubice",
+     "p. p. č. 2417/2, k. ú. Pardubice",
+     "p. p. č. 2418/3, k. ú. Pardubice",
+     "p. p. č. 2418/4, k. ú. Pardubice",
+     "p. p. č. 2419/4, k. ú. Pardubice",
+     "p. p. č. 2493/3, k. ú. Pardubice",
+     "p. p. č. 2493/21, k. ú. Pardubice",
+     "p. p. č. 2493/22, k. ú. Pardubice",
+     "p. p. č. 2496/1, k. ú. Pardubice",
+     "p. p. č. 2499/27, k. ú. Pardubice",
+     "p. p. č. 2499/100, k. ú. Pardubice",
+     "p. p. č. 2499/129, k. ú. Pardubice",
+     "p. p. č. 2499/130, k. ú. Pardubice",
+     "p. p. č. 2499/135, k. ú. Pardubice",
+     "p. p. č. 2499/140, k. ú. Pardubice",
+     "p. p. č. 2499/146, k. ú. Pardubice",
+     "p. p. č. 2499/147, k. ú. Pardubice",
+     "p. p. č. 2499/149, k. ú. Pardubice",
+     "p. p. č. 2502/5, k. ú. Pardubice",
+     "p. p. č. 2504/18, k. ú. Pardubice",
+     "p. p. č. 2506/8, k. ú. Pardubice",
+     "p. p. č. 2507/9, k. ú. Pardubice",
+     "st. p. č. 4949, k. ú. Pardubice",
+     "st. p. č. 10535/2, k. ú. Pardubice",
+     "st.p.č. 3815, k.ú. Pardubice",
+     "st.p.č. 3816, k.ú. Pardubice",
+     "st. p. č. 4182, k. ú. Pardubice",
+     "st. p. č. 4233, k. ú. Pardubice",
+     "st. p. č. 4234, k. ú. Pardubice",
+     "st. p. č. 4235, k. ú. Pardubice",
+     "st. p. č. 4236, k. ú. Pardubice",
+     "st. p. č. 4128, k. ú. Pardubice",
+     "st. p. č. 4129, k. ú. Pardubice",
+     "st. p. č. 4130, k. ú. Pardubice",
+     "st. p. č. 4131, k. ú. Pardubice",
+     "st. p. č. 4132, k. ú. Pardubice",
+     "st. p. č. 4133, k. ú. Pardubice",
+     "st. p. č. 4267, k. ú. Pardubice",
+     "st. p. č. 4294, k. ú. Pardubice",
+     "st. p. č. 4297, k. ú. Pardubice",
+     "st. p. č. 5029, k. ú. Pardubice",
+     "p. p. č. 2107/3, k. ú. Pardubice",
+     "p. p. č. 2318/47, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pozemková komise rady města Pardubice",
+     "ČEZ Distribuce, a. s.",
+     "Správa železnic, státní organizace",
+     "T-Mobile Czech Republic a.s.",
+     "EOP a.s.",
+     "Rozvojový fond Pardubice a.s.",
+     "Oddělení správy bytových domů a nebytových prostor OMI MmP",
+     "VITEUM s.r.o."
+    ],
+    "amounts": [
+     "61,- Kč/m2/rok bez DPH",
+     "743.285,- Kč/rok bez DPH",
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "171/2021 R",
+    "title": "Smlouva o dílo na opravy dětských hřišť v obvodu Pardubice V",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na opravy dětských hřišť na území MO Pardubice V s dodavatelem Kulant cz, s.r.o. za nabídkovou cenu 351.129,90 Kč vč. DPH, s použitím čl. 13 odst. 2 Směrnice č. 14/2017 O zadávání veřejných zakázek.",
+    "keywords": [
+     "dětská hřiště",
+     "opravy hřišť",
+     "Kulant cz",
+     "smlouva o dílo",
+     "veřejná zakázka"
+    ],
+    "topics": [
+     "hriste-sport",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Kulant cz, s.r.o."
+    ],
+    "amounts": [
+     "351.129,90 Kč vč. DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

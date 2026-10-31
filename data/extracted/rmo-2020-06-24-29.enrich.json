@@ -1,0 +1,203 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "02c442aaeec6b04e5be6f54a1b771472e150231245b87df4f714151c2f14fb22",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "128/2020 R",
+    "title": "Stanovisko k nájmům pozemků a věcnému břemeni pro ČEZ Distribuce (Dukla)",
+    "summary": "Rada souhlasí se změnou nájemce části pozemku p. p. č. 2115/6 (dosud Sklenářství – Dalibor Beer) a změnou nájemného na nepodnikatelské, se zřízením věcného břemene pro ČEZ Distribuce, a. s. k uložení kabelového vedení 1 kV v rámci akce „Pce, Dukla – rekonstrukce NN 3.etapa“ a s nájmem pozemku p. p. č. 2515/14 jako parkovacího místa u bytu v ul. Na Spravedlnosti.",
+    "keywords": [
+     "stanovisko k žádosti pozemkové komise",
+     "nájem pozemku",
+     "změna nájemce",
+     "věcné břemeno",
+     "kabelové vedení",
+     "rekonstrukce NN Dukla",
+     "parkovací místo",
+     "Na Spravedlnosti"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dukla",
+     "Na Spravedlnosti",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2115/6, k. ú. Pardubice",
+     "p. p. č. 2279/10, k. ú. Pardubice",
+     "p. p. č. 2286/10, k. ú. Pardubice",
+     "p. p. č. 2276/1, k. ú. Pardubice",
+     "p. p. č. 2276/2, k. ú. Pardubice",
+     "p. p. č. 2271, k. ú. Pardubice",
+     "p. p. č. 2165/1, k. ú. Pardubice",
+     "p. p. č. 2277/1, k. ú. Pardubice",
+     "p. p. č. 2274/1, k. ú. Pardubice",
+     "p. p. č. 2252/1, k. ú. Pardubice",
+     "p. p. č. 2277/8, k. ú. Pardubice",
+     "st. p. č. 4294, k. ú. Pardubice",
+     "st. p. č. 4297, k. ú. Pardubice",
+     "st. p. č. 5607, k. ú. Pardubice",
+     "st. p. č. 4137, k. ú. Pardubice",
+     "st. p. č. 8115, k. ú. Pardubice",
+     "p. p. č. 2515/14, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pozemková komise rady města Pardubice",
+     "Sklenářství – Dalibor Beer",
+     "ČEZ Distribuce, a. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "129/2020 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 31. 5. 2020",
+    "summary": "Rada projednala zprávu o rozboru hospodaření MO Pardubice V k 31. 5. 2020 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2020",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "130/2020 R",
+    "title": "Doporučení ZMO vzít na vědomí postup schválení účetní závěrky 2019",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2019 schválí v červnu zastupitelstvo města a informaci o schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2019",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "131/2020 R",
+    "title": "Doporučení ZMO schválit 2. změnu rozpočtu 2020 a úpravu plánu akcí",
+    "summary": "Rada doporučuje zastupitelstvu schválit 2. změnu rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2020 včetně rozpočtových opatření a úpravu plánu společenských akcí, kterou se snižuje rozpočtovaná částka na Slavnost MO Pardubice V o 225,6 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2020",
+     "sociální fond",
+     "rozpočtové opatření",
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "225,6 tis. Kč"
+    ]
+   },
+   {
+    "number": "132/2020 R",
+    "title": "Dotace spolkům a školám na akce 2020 a změna termínů dvou dotací",
+    "summary": "Rada souhlasí se změnou termínu splnění účelu dvou dotací pro Hvězdu Pardubice z.s. a schvaluje jedenáct dotací z programu dle Směrnice č. 28/2019 – pro ŠUMÁK z. s., MŠ Jesničánky, NOE – Křesťanskou ZŠ a MŠ, ZŠ a MŠ A. Krause, Atletiku Bez Bariér Pardubice, MŠ Motýlek, Basketbalový klub Pardubice a Sportovní klub Dražkovice – včetně veřejnoprávních smluv a souvisejících rozpočtových opatření č. 37–47.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "atletika",
+     "basketbal",
+     "Pohádková zahrada",
+     "posvícení Dražkovice",
+     "změna termínu dotace"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Čs. armády 2515",
+     "Raisova 226",
+     "Lonkova 512",
+     "A. Krause 2344",
+     "Josefa Ressla 1992",
+     "V Ráji 311",
+     "Dražkovice 93",
+     "Blato 72, Mikulovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Hvězda Pardubice z.s.",
+     "ŠUMÁK z. s.",
+     "Mateřská škola Pardubice – Jesničánky",
+     "NOE – Křesťanská základní škola a mateřská škola",
+     "Základní škola a mateřská škola Pardubice, A. Krause 2344",
+     "Atletika Bez Bariér Pardubice, z. s.",
+     "Mateřská škola Motýlek Pardubice",
+     "Basketbalový klub Pardubice z. s.",
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "5.000,- Kč",
+     "10.000,- Kč",
+     "6.900,- Kč",
+     "7.800,- Kč",
+     "6.500,- Kč",
+     "4.000,- Kč",
+     "7.320,- Kč",
+     "2.800,- Kč"
+    ]
+   },
+   {
+    "number": "133/2020 R",
+    "title": "Doporučení ZMO schválit závěrečný účet za rok 2019 bez výhrad",
+    "summary": "Rada doporučuje zastupitelstvu souhlasit s celoročním hospodařením MO Pardubice V v roce 2019 bez výhrad, vzít na vědomí komentáře a tabulky závěrečného účtu a schválit finanční vypořádání za rok 2019 a aktuální rozpočet na rok 2020; částku vypořádání s městem s podmínkou jejího schválení Zastupitelstvem města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "rok 2019",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočet 2020",
+     "hospodaření bez výhrad"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

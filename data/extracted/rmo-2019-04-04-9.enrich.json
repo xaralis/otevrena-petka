@@ -1,0 +1,129 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e6c3d20178e8b46ad360d684030286e8088cfafa763326100e4dd32a6f439cc4",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "51/2019 R",
+    "title": "Stanovisko k odkoupení pozemku p. p. č. 2123/34 a prodeji části p. p. č. 3276/1",
+    "summary": "Rada se vyjadřuje k žádosti pozemkové komise rady města Pardubice: k záměru odkoupení pozemku p. p. č. 2123/34 (91 m2, k. ú. Pardubice) pod komunikací města do vlastnictví statutárního města Pardubice za 182.000,- Kč a k záměru prodeje části p. p. č. 3276/1 (cca 53 m2) za účelem úpravy zeleně a vjezdu na pozemek žadatele. O obou bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k záměru města",
+     "pozemková komise",
+     "odkoupení pozemku",
+     "prodej pozemku",
+     "pozemek pod komunikací",
+     "vjezd na pozemek",
+     "k. ú. Pardubice"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2123/34, k. ú. Pardubice",
+     "p. p. č. 3276/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "182.000,- Kč"
+    ]
+   },
+   {
+    "number": "52/2019 R",
+    "title": "Dotace z rozpočtu MO Pardubice V na akce sportovních, školních a dalších spolků v r. 2019",
+    "summary": "Rada posuzuje poskytnutí 17 dotací podle Směrnice č. 28/2018 (Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2019), uzavření veřejnoprávních smluv a související rozpočtová opatření (přesuny z položky příspěvky a dary v kapitole 33 a z rezerv v kapitole 98). Žadateli jsou mj. Hvězda Pardubice, DDM ALFA Pardubice, Atletika Bez Bariér Pardubice, Kin-ball Pardubice, ŠUMÁK, OLYMP FLORBAL, ZŠ Waldorfská, MŠ Motýlek, SKP-CENTRUM a Basketbalový klub Pardubice. O každé dotaci se hlasovalo zvlášť, žádost OLYMP FLORBAL byla stažena.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "sportovní akce",
+     "atletika",
+     "kin-ball",
+     "dětský den",
+     "čarodějnice",
+     "mateřská škola",
+     "základní škola"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Pardubice",
+     "ČSA 2515",
+     "K Vinici 1901",
+     "Družby 334",
+     "Dražkovice 121",
+     "Blato 72, Mikulovice",
+     "Bulharská 996/20, Praha",
+     "Gorkého 867",
+     "Josefa Ressla 1992",
+     "Jungmannova 2550",
+     "V Ráji 311",
+     "Francie",
+     "Španělsko"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Hvězda Pardubice z. s.",
+     "DDM ALFA Pardubice",
+     "Atletika Bez Bariér Pardubice, z. s.",
+     "Kin-ball Pardubice z. s.",
+     "ŠUMÁK z.s.",
+     "OLYMP FLORBAL, z. s.",
+     "Základní škola Waldorfská Pardubice",
+     "Mateřská škola Motýlek Pardubice",
+     "SKP-CENTRUM, o. p. s.",
+     "Basketbalový klub Pardubice z. s.",
+     "MO Pardubice V"
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "4.500,- Kč",
+     "5.000,- Kč",
+     "20.000,- Kč",
+     "7.671,- Kč",
+     "4.635,- Kč"
+    ]
+   },
+   {
+    "number": "53/2019 R",
+    "title": "Rozpočtové opatření č. 29 – přesun 80 tis. Kč na provoz a vybavení tržnice",
+    "summary": "Rada schvaluje rozpočtové opatření č. 29: přesun 80 tis. Kč z položky provoz ÚMO V na položku provozní výdaje DHM a DDHM a pořízení DDHM – tržnice, obojí v kapitole 14 – vnitřní správa v běžných výdajích.",
+    "keywords": [
+     "rozpočtové opatření",
+     "tržnice",
+     "vnitřní správa",
+     "provoz úřadu",
+     "drobný hmotný majetek"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "tržnice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": [
+     "80 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

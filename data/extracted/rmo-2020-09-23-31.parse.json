@@ -1,0 +1,389 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "3b242a9c2f044ef9014c9015dc5d110d174de2699f4449379a2e882dd3c00f86",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 31,
+   "kind": "mimoradne",
+   "date": "2020-09-23",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 62,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 72,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Kontrola vyjádření ke stížnostem, peticím a připomínkám občanů na chod ÚMO Pardubice V za období 3 Q 2019 – 3 Q 2020",
+    "line": 86,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Kontrola přístupu ÚMO Pardubice V k poskytování informací dle zák. č. 106/1999 Sb., o svobodném přístupu k informacím za období 2 Q 2019 – 3 Q 2020",
+    "line": 96,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2020",
+    "line": 107,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Informace o schválení účetní závěrky za r. 2019 sestavené k 31. 12. 2019",
+    "line": 116,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2020",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Rozhodnutí zadavatele – zadání výroby betlému",
+    "line": 137,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Diskuse",
+    "line": 146,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "138/2020 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 59,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "139/2020 R",
+    "agenda_no": "2",
+    "first_line": 65,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "140/2020 R",
+    "agenda_no": "3",
+    "first_line": 76,
+    "last_line": 83,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "141/2020 R",
+    "agenda_no": "4",
+    "first_line": 90,
+    "last_line": 93,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "142/2020 R",
+    "agenda_no": "5",
+    "first_line": 101,
+    "last_line": 104,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "143/2020 R",
+    "agenda_no": "6",
+    "first_line": 110,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "144/2020 R",
+    "agenda_no": "7",
+    "first_line": 119,
+    "last_line": 123,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "145/2020 R",
+    "agenda_no": "8",
+    "first_line": 129,
+    "last_line": 134,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "146/2020 R",
+    "agenda_no": "9",
+    "first_line": 140,
+    "last_line": 143,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": "138/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "139/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 84,
+    "last_line": 84,
+    "resolution": "140/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 94,
+    "last_line": 94,
+    "resolution": "141/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 105,
+    "last_line": 105,
+    "resolution": "142/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "143/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 124,
+    "last_line": 124,
+    "resolution": "144/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 135,
+    "resolution": "145/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 144,
+    "last_line": 144,
+    "resolution": "146/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 146: bod Diskuse je v textu očíslován „9.“ (stejně jako předchozí bod), v programu (ř. 46) je jako bod 10.",
+   "ř. 65–69: usnesení 139/2020 R k bodu Kontrola plnění usnesení RMO doporučuje ZMO schválit „zprávu Kontrolního výboru ZMO“ a vyřadit usnesení 118/2020 R – 133/2020 R (rady) – znění zjevně převzato z bodu 3.",
+   "ř. 104: překlep „nebyla b žádná pochybení“."
+  ]
+ }
+}

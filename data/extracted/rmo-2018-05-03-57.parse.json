@@ -1,0 +1,275 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "71d4d27d284bdc6eb2b42320c43e36a1f06f28cd85f0eec5b60ab9046c88ca54",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 57,
+   "kind": "radne",
+   "date": "2018-05-03",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "MUDr. Tomáš Rejda",
+    "Ing. Jaroslav Kňava"
+   ],
+   "excused": [
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 42,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Schválení zadávacích podmínek pro akci „Stavební úpravy stávajících chodníků v ul. Na Záboří, Pardubice“ vč. schválení členů hodnotící komise",
+    "line": 135,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "328/2018 R",
+    "agenda_no": "1",
+    "first_line": 44,
+    "last_line": 132,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "329/2018 R",
+    "agenda_no": "2",
+    "first_line": 138,
+    "last_line": 155,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "328/2018 R",
+    "part": "bod 1 – zápis zákonných věcných břemen, Elektrárny Opatovice",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 89,
+    "last_line": 89,
+    "resolution": "328/2018 R",
+    "part": "bod 2 – změna nájemce st. p. č. 7007/15",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "328/2018 R",
+    "part": "bod 3 – uznání vlastnických práv p. p. č. 2581/3, 2390/24, 3277/3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 107,
+    "last_line": 107,
+    "resolution": "328/2018 R",
+    "part": "bod 4 – odkoupení p. p. č. 2353/32 a prodej části p. p. č. 2582/1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 122,
+    "last_line": 122,
+    "resolution": "328/2018 R",
+    "part": "bod 5 – bezúplatný převod p. p. č. 492/10 a služebnost, k. ú. Dražkovice",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 129,
+    "last_line": 129,
+    "resolution": "328/2018 R",
+    "part": "bod 6 – koupě stavby na st. p. č. 9073",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "328/2018 R",
+    "part": "bod 7 – uznání vlastnického práva k p. p. č. 604/4, k. ú. Nové Jesenčany",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 156,
+    "last_line": 156,
+    "resolution": "329/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 38: schválený program obsahuje i „Informativní zprávu – čerpání finančních prostředků z rezerv“, ke které v usnesení není žádný oddíl ani hlasování.",
+   "Usnesení 328/2018 R (ř. 44–132) se hlasovalo po bodech 1–7; bod 1 (ř. 85: pro 0, proti 4) a bod 6 (ř. 129: pro 0, zdržel se 4) nezískaly žádný hlas pro, přesto jsou uvedeny ve znění usnesení „souhlasí se záměrem“ bez výslovného výsledku."
+  ]
+ }
+}

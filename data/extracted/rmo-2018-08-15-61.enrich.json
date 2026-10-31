@@ -1,0 +1,154 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "52413f2114992eaae7d43c40ad7120f55fa90519a4e7da5b2a14c3716d732b73",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "344/2018 R",
+    "title": "Výběr zhotovitele stavebních úprav vnitrobloku ulic Jiránkova – Wolkerova",
+    "summary": "Rada rozhodla, že ekonomicky nejvýhodnější nabídkou ve veřejné zakázce na stavební úpravy vnitrobloku ulic Jiránkova – Wolkerova je nabídka společnosti HOLD s.r.o. za 4 416 672,09 Kč bez DPH se zárukou 60 měsíců.",
+    "keywords": [
+     "veřejná zakázka",
+     "výběr zhotovitele",
+     "vnitroblok",
+     "Jiránkova",
+     "Wolkerova",
+     "stavební úpravy",
+     "HOLD s.r.o.",
+     "rekonstrukce vnitrobloku"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice Jiránkova",
+     "ulice Wolkerova",
+     "Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o."
+    ],
+    "amounts": [
+     "4 416 672,09 Kč bez DPH",
+     "5 344 173,23 Kč včetně DPH"
+    ]
+   },
+   {
+    "number": "345/2018 R",
+    "title": "Výběr zhotovitele stavebních úprav zpevněné plochy u BD 2070 – 2072 na Dukle",
+    "summary": "Rada rozhodla, že ekonomicky nejvýhodnější nabídkou ve veřejné zakázce na stavební úpravy zpevněné plochy u bytového domu čp. 2070 – 2072 na Dukle je nabídka společnosti MIROS MAJETKOVÁ, a.s., za 1.162.543,70 Kč vč. DPH se zárukou 60 měsíců.",
+    "keywords": [
+     "veřejná zakázka",
+     "výběr zhotovitele",
+     "zpevněná plocha",
+     "Dukla",
+     "bytový dům 2070–2072",
+     "MIROS MAJETKOVÁ",
+     "parkoviště"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dukla",
+     "bytový dům čp. 2070 – 2072",
+     "Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS MAJETKOVÁ, a.s."
+    ],
+    "amounts": [
+     "1.162.543,70 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "346/2018 R",
+    "title": "Stanovisko k žádostem pozemkové komise rady města (nájmy, prodeje, garáže)",
+    "summary": "Rada se po jednotlivých bodech vyjádřila k záměrům města projednávaným pozemkovou komisí: nájmům části pozemku st. p. č. 5375, změně nájemce pozemku pod garáží, prodejům pozemků v k. ú. Nové Jesenčany a Pardubice (mj. pozemku s budovou č. p. 1380 v ul. Staňkova dražbou a pozemků pro Křesťanskou základní školu a mateřskou školu NOE žadatele Sbor církve bratrské v Pardubicích), uznání vlastnického práva a odkoupení garáže kvůli akci „Dukla sportovní“.",
+    "keywords": [
+     "pozemková komise",
+     "stanovisko",
+     "nájem pozemku",
+     "prodej pozemku",
+     "garáž",
+     "Staňkova",
+     "dražba",
+     "Křesťanská základní škola NOE",
+     "Dukla sportovní",
+     "Nové Jesenčany"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany",
+     "ul. Staňkova",
+     "Lonkova",
+     "Dukla"
+    ],
+    "parcels": [
+     "st. p. č. 5375, k. ú. Pardubice",
+     "st. p. č. 7007/31, k. ú. Pardubice",
+     "p. p. č. 605/1, k. ú. Nové Jesenčany",
+     "p. p. č. 604/16, k. ú. Nové Jesenčany",
+     "st. p. č. 2779, k. ú. Pardubice",
+     "p. p. č. 2426/2, k. ú. Pardubice",
+     "p. p. č. 2426/35, k. ú. Pardubice",
+     "p. p. č. 2400/2, k. ú. Pardubice",
+     "st. p. č. 9002, k. ú. Pardubice",
+     "st. p. č. 7007/3, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "Sbor církve bratrské v Pardubicích",
+     "Křesťanská základní škola a mateřská škola NOE"
+    ],
+    "amounts": [
+     "160.000,- Kč"
+    ]
+   },
+   {
+    "number": "347/2018 R",
+    "title": "Dodatky ke smlouvám se Službami města Pardubice na výsyp odpadkových a psích košů",
+    "summary": "Rada souhlasí s uzavřením dodatků ke smlouvám se Službami města Pardubice a.s. na výsyp odpadkových košů a košů na psí exkrementy a s navýšením jejich ceny kvůli vyššímu počtu vysypávaných košů.",
+    "keywords": [
+     "odpadkové koše",
+     "psí exkrementy",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "navýšení ceny",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "655.000,- Kč bez DPH",
+     "646.000,- Kč bez DPH",
+     "213.000,- Kč bez DPH",
+     "206.000,- Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

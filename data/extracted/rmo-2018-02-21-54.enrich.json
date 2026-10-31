@@ -1,0 +1,127 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "729426a677ffdc6a3e1bbe90ef3b52c987dd79ffa3570ddbd3e2dfb3fb4aa389",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "312/2018 R",
+    "title": "Stanovisko k pozemkovým záměrům města – garáž, VAK Pardubice, MO Pardubice I",
+    "summary": "Stanovisko rady obvodu k žádosti pozemkové komise rady města Pardubice ke třem záměrům: prodeji pozemku pod garáží (st. p. č. 4941/4), nájmu, prodeji a výpůjčce částí pozemku p. p. č. 2303/22 u objektu čp. 2014 v ulici Teplého pro investiční akci společnosti Vodovody a kanalizace Pardubice, a.s. „VAK Pardubice - přístavba vstupních objektů“ včetně bezúplatného převodu nového chodníku městu a souhlasu vlastníka s uskladněním stavebních materiálů na části pozemku p. p. č. 4853/1 pro Městský obvod Pardubice I. O každém záměru se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k prodeji pozemku",
+     "prodej pozemku pod garáží",
+     "Vodovody a kanalizace Pardubice",
+     "VAK",
+     "přístavba vstupních objektů",
+     "ulice Teplého",
+     "chodník",
+     "výpůjčka pozemku",
+     "uskladnění stavebního materiálu",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Teplého",
+     "čp. 2014 ul. Teplého",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 4941/4, k. ú. Pardubice",
+     "p. p. č. 2303/22, k. ú. Pardubice",
+     "p. p. č. 4853/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "statutární město Pardubice",
+     "Městský obvod Pardubice I"
+    ],
+    "amounts": [
+     "1.000,- Kč/m2"
+    ]
+   },
+   {
+    "number": "313/2018 R",
+    "title": "Smlouva o dílo na parkoviště v ulici Sokolovská",
+    "summary": "Rada obvodu jako zadavatel zakázky malého rozsahu souhlasí s uzavřením smlouvy o dílo na akci Parkoviště ul. Sokolovská, Pardubice s vybraným zhotovitelem (podnikající fyzická osoba) za cenu 1 144 226,13 Kč včetně DPH a se zárukou 60 měsíců od předání dokončených prací.",
+    "keywords": [
+     "parkoviště",
+     "Sokolovská",
+     "parkování",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr nejvhodnější nabídky",
+     "výstavba parkoviště"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Sokolovská"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1 144 226,13 Kč včetně DPH"
+    ]
+   },
+   {
+    "number": "314/2018 R",
+    "title": "Úprava plánu společenských akcí obvodu na rok 2018 – přesun peněz na masopust",
+    "summary": "Úprava plánu společenských akcí městského obvodu na rok 2018: částka 2.000,- Kč se přesouvá z položky Vánoční punč na položku masopust – lidová veselice.",
+    "keywords": [
+     "plán společenských akcí",
+     "masopust",
+     "lidová veselice",
+     "Vánoční punč",
+     "kulturní akce",
+     "přesun prostředků"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "2.000,- Kč"
+    ]
+   },
+   {
+    "number": "315/2018 R",
+    "title": "Odvolání člena Místní komise Višňovka",
+    "summary": "Rada obvodu odvolává ke dni 21. 2. 2018 jednoho člena Místní komise Višňovka z funkce. Usnesení vzešlo z diskuse.",
+    "keywords": [
+     "odvolání člena komise",
+     "Místní komise Višňovka",
+     "Višňovka",
+     "místní komise",
+     "personální změna"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Višňovka"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

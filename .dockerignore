@@ -1,0 +1,8 @@
+.venv
+work
+cache
+data/pdf
+data/opendata
+tests
+**/__pycache__
+.git

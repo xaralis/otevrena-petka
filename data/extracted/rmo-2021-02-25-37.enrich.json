@@ -1,0 +1,115 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "324f6079e88e46fd579970ea2e7eec22bbae9f9f68836c1263e0cc2f40d3051c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "172/2021 R",
+    "title": "Přijetí finančních darů na péči o veřejnou zeleň v roce 2021",
+    "summary": "Rada souhlasí s přijetím tří finančních darů od fyzické osoby a od firem M-BET s.r.o. a HAMO systems s.r.o. Dary jsou určeny na péči o veřejnou zeleň na území MO Pardubice V v roce 2021.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "M-BET",
+     "HAMO systems",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o.",
+     "HAMO systems s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč",
+     "10.000,- Kč",
+     "1.500,- Kč"
+    ]
+   },
+   {
+    "number": "173/2021 R",
+    "title": "Dotace pro MŠ Jesničánky, Atletiku Bez Bariér a ZŠ Benešovo náměstí",
+    "summary": "Rada schvaluje devět dotací z programu podle Směrnice č. 28/2020 na rok 2021 – čtyři pro Mateřskou školu Pardubice - Jesničánky na vzdělávací a tvořivé akce, tři pro Atletiku Bez Bariér z. s. na akce handicapovaných sportovců a dvě pro Základní školu Pardubice, Benešovo nám. na oslavu 60. výročí otevření školy. Současně schvaluje uzavření veřejnoprávních smluv a související rozpočtová opatření č. 1–9 (přesuny z položky příspěvky v kapitole 33).",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "MŠ Jesničánky",
+     "Atletika Bez Bariér",
+     "handicapovaní sportovci",
+     "ZŠ Benešovo náměstí",
+     "60. výročí školy",
+     "Velká cena Pardubic",
+     "parapohár"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Raisova 226, Pardubice",
+     "Čs. armády 2515, Pardubice",
+     "Benešovo nám. 590, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice - Jesničánky",
+     "Atletika Bez Bariér z. s.",
+     "Základní škola Pardubice, Benešovo nám. 590"
+    ],
+    "amounts": [
+     "6.800,- Kč",
+     "6.500,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč"
+    ]
+   },
+   {
+    "number": "174/2021 R",
+    "title": "Zadávací podmínky a hodnotící komise – vnitroblok Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+    "summary": "Rada schvaluje zadávací podmínky (výzvu a zadávací dokumentaci) zjednodušeného podlimitního řízení na stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova včetně využití dešťových vod (2 retenční nádrže). Zároveň pověřuje hodnotící komisi včetně náhradníků úkony v rámci zadávacího řízení.",
+    "keywords": [
+     "veřejná zakázka",
+     "zadávací podmínky",
+     "hodnotící komise",
+     "vnitroblok",
+     "revitalizace vnitrobloku",
+     "retenční nádrže",
+     "dešťová voda",
+     "Kpt. Nálepky",
+     "Sokolovská",
+     "Lexova"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "komise-vybory"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "vnitroblok Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

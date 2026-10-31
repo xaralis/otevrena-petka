@@ -1,0 +1,47 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "abfc84ca9dd25c88dada5458739d6f73dd8be47396487ce7206b66fbc990d8dc",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "107/2020 R",
+    "title": "Přijetí darů na zeleň a Dětský karneval, úprava plánu akcí a rozpočtové opatření",
+    "summary": "Rada souhlasí s přijetím tří finančních darů – na péči o veřejnou zeleň v obvodu v roce 2020 (mimo jiné od firmy HAMO systems s.r.o.) a od firmy M-BET s.r.o. na Dětský karneval MO Pardubice V 2020. Zároveň zvyšuje částku na Dětský karneval v plánu společenských akcí o 10 tis. Kč a přijímá rozpočtové opatření č. 1, které dar zapojuje do příjmů a výdajů kapitoly 33.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "Dětský karneval",
+     "veřejná zeleň",
+     "plán společenských akcí",
+     "rozpočtové opatření",
+     "sponzorský dar",
+     "kultura"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "dotace",
+    "places": [
+     "MO Pardubice V",
+     "K Dubině 690, Pardubice",
+     "ČSA 2006, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o.",
+     "HAMO systems s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč",
+     "10.000,- Kč",
+     "1.500,- Kč",
+     "10 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "abfc84ca9dd25c88dada5458739d6f73dd8be47396487ce7206b66fbc990d8dc",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 22,
+   "kind": "radne",
+   "date": "2020-01-30",
+   "place": "zasedací místnost ÚM Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání (jmenování ověřovatelů zápisu a usnesení, jmenování zapisovatele)",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Přijetí finančních darů, úprava plánu společenských akcí MO a rozpočtové opatření",
+    "line": 37,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "107/2020 R",
+    "agenda_no": "1.",
+    "first_line": 40,
+    "last_line": 55,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 35,
+    "last_line": 35,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálu k projednání: 1. Přijetí finančních darů, úprava plánu společenských akcí MO a rozpočtové opatření",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 34,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": "107/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 34–35: hlasování bez čísla usnesení u bodu 1 v části III – zřejmě schválení materiálu k projednání (bod II)"
+  ]
+ }
+}

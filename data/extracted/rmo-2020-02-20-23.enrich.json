@@ -1,0 +1,134 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "649a40b8bdeb6114cb7661f8e2bcb7da0ec42ff0864ff6160e49e4c8a27f3e97",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "108/2020 R",
+    "title": "Souhlas s odkupem pozemků u nádraží, stavbou železničního uzlu a služebností pro osvětlení",
+    "summary": "Rada obvodu na žádost pozemkové komise rady města souhlasí s odkoupením pozemků od společnosti enteria a.s. v k. ú. Pardubice dotčených stavbou „Lávka pro pěší v prostoru nádraží ČD“ za cenu dle znaleckého posudku. Dále souhlasí s vydáním souhlasu vlastníka pozemků se stavbou „Modernizace železničního uzlu Pardubice“ pro Správu železnic formou smlouvy o právu provést stavbu a se zřízením služebnosti pro veřejné osvětlení v parcích v ulici Rožkova a Čs. armády pro Služby města Pardubic a.s. za jednorázovou náhradu 500,- Kč bez DPH.",
+    "keywords": [
+     "odkoupení pozemků",
+     "lávka pro pěší",
+     "nádraží",
+     "modernizace železničního uzlu",
+     "smlouva o právu provést stavbu",
+     "služebnost",
+     "věcné břemeno",
+     "veřejné osvětlení",
+     "Rožkova",
+     "Čs. armády"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "investice"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "nádraží ČD",
+     "železniční stanice Pardubice",
+     "ulice Rožkova",
+     "ulice Čs. armády",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 1795/1, k. ú. Pardubice",
+     "st. p. č. 3097/1, k. ú. Pardubice",
+     "st. p. č. 8797, k. ú. Pardubice",
+     "p. p. č. 2054/9, k. ú. Pardubice",
+     "p. p. č. 2054/13, k. ú. Pardubice",
+     "p. p. č. 2047/7, k. ú. Pardubice",
+     "p. p. č. l2047/4, k. ú. Pardubice",
+     "p. p. č. 2590/1, k. ú. Pardubice",
+     "p. p. č. 2583/16, k. ú. Pardubice",
+     "p. p. č. 2583/15, k. ú. Pardubice",
+     "p. p. č. 2568/4, k. ú. Pardubice",
+     "p. p. č. 2529/6, k. ú. Pardubice",
+     "p. p. č. 2526/15, k. ú. Pardubice",
+     "p. p. č. 2500/11, k. ú. Pardubice",
+     "p. p. č. 2499/140, k. ú. Pardubice",
+     "p. p. č. 2499/129, k. ú. Pardubice",
+     "p. p. č. 5072, k. ú. Pardubice",
+     "p. p. č. 2526/13, k. ú. Pardubice",
+     "p. p. č. 2303/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "enteria a.s.",
+     "Správa železnic, státní organizace",
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "500,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "109/2020 R",
+    "title": "Souhlas s předzahrádkou Kavárny Slunečnice v Jilemnického ulici",
+    "summary": "Rada obvodu souhlasí s umístěním předzahrádky o ploše 5 m2 před provozovnou Kavárna Slunečnice, Jilemnického 2226, na pozemku parcelní číslo 2271 v k. ú. Pardubice. Souhlas platí vždy v období 1. 5. – 31. 10. po dobu 5 let (do roku 2025).",
+    "keywords": [
+     "předzahrádka",
+     "zahrádka kavárny",
+     "Kavárna Slunečnice",
+     "Jilemnického",
+     "zábor veřejného prostranství",
+     "souhlas"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jilemnického 2226",
+     "Kavárna Slunečnice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "pozemek parcelní číslo 2271 v katastrálním území Pardubice"
+    ],
+    "organizations": [
+     "Kavárna Slunečnice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "110/2020 R",
+    "title": "Souhlas se záměrem města pronajmout prostory v areálu Jana Palacha",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout nebytové prostory v areálu Jana Palacha čp. 324: kanceláře v objektu č. 23 pro CEDR Pardubice o.p.s (zázemí terénní služby CENTRA KOMPRE) a dílnu s kanceláří v objektu č. 10 pro žadatele – fyzickou osobu za účelem truhlářství.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "pronájem",
+     "areál Jana Palacha",
+     "kanceláře",
+     "dílna",
+     "truhlářství",
+     "CEDR Pardubice",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál Jana Palacha čp. 324",
+     "objekt č. 23",
+     "objekt č. 10",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/23, k. ú. a obec Pardubice",
+     "st. p. č. 864/9, k. ú. a obec Pardubice"
+    ],
+    "organizations": [
+     "CEDR Pardubice o.p.s",
+     "CENTRUM KOMPRE"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

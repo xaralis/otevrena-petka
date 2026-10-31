@@ -1,0 +1,250 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "9c9a93367bbd79edb4ee05a764c90fefef20f8eca28cad03d7c2d3e6002f28fb",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "8/2018 R",
+    "title": "Stanovisko k darování pozemků v Dražkovicích a k odkoupení pozemku v k. ú. Pardubice",
+    "summary": "Rada souhlasí se záměrem darování nově vzniklých pozemků v k. ú. Dražkovice z vlastnictví Pardubického kraje (správa Správy a údržby silnic Pardubického kraje) statutárnímu městu Pardubice. Dále souhlasí se záměrem odkoupení pozemku p. č. 3753 v k. ú. Pardubice za cenu dle znaleckého posudku na žádost fyzické osoby.",
+    "keywords": [
+     "pozemková komise",
+     "darování pozemků",
+     "odkoupení pozemku",
+     "Dražkovice",
+     "Pardubický kraj",
+     "Správa a údržba silnic",
+     "stanovisko k převodu pozemků"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 471/56",
+     "p. p. č. 471/57",
+     "p. p. č. 471/44",
+     "p. p. č. 471/58",
+     "p. p. č. 471/59",
+     "p. p. č. 471/10, k. ú. Dražkovice",
+     "p. č. 3753, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pardubický kraj",
+     "Správa a údržba silnic Pardubického kraje",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "9/2018 R",
+    "title": "Stanovisko k pronájmu skladů a dvou garážových stání v ul. Sokolovská",
+    "summary": "Rada souhlasí se záměrem pronájmu skladů v objektu na st. p. č. 864/20, k. ú. Pardubice, spolku SK PRETORIAN Pardubice z. s. pro uskladnění tělocvičného nářadí a žíněnek. Dále souhlasí se záměrem pronájmu dvou garážových stání v podzemním podlaží domů čp. 2721 a 2731 v ul. Sokolovská fyzickým osobám.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "pronájem skladů",
+     "garážové stání",
+     "garáž",
+     "Sokolovská",
+     "SK PRETORIAN",
+     "tělocvičné nářadí"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Sokolovská",
+     "čp. 2721",
+     "čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/20, k. ú. Pardubice",
+     "stavební parcely č. parc. 10089 a 10090, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SK PRETORIAN Pardubice z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "10/2018 R",
+    "title": "Doporučení zástupců obvodu do školských rad",
+    "summary": "Rada doporučuje Radě města Pardubic schválit zástupce městského obvodu Pardubice V do školských rad ZŠ Benešovo náměstí, ZŠ Staňkova, ZŠ Resslova, ZŠ Waldorfská a ZvŠ Artura Krause.",
+    "keywords": [
+     "školská rada",
+     "rada školy",
+     "zástupci obvodu",
+     "ZŠ Benešovo náměstí",
+     "ZŠ Staňkova",
+     "ZŠ Resslova",
+     "ZŠ Waldorfská",
+     "ZvŠ Artura Krause"
+    ],
+    "topics": [
+     "skolstvi",
+     "vztahy-mesto"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Benešovo náměstí",
+     "Staňkova",
+     "Resslova",
+     "Waldorfská",
+     "Artura Krause"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ZŠ Benešovo náměstí",
+     "ZŠ Staňkova",
+     "ZŠ Resslova",
+     "ZŠ Waldorfská",
+     "ZvŠ Artura Krause",
+     "Rada města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "11/2018 R",
+    "title": "Jmenování členů místních komisí Višňovka a Dražkovice",
+    "summary": "Rada jmenuje ke dni 1. 12. 2018 nového člena místní komise Višňovka a nového člena místní komise Dražkovice.",
+    "keywords": [
+     "místní komise",
+     "MK Višňovka",
+     "MK Dražkovice",
+     "jmenování člena komise"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Višňovka",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MK Višňovka",
+     "MK Dražkovice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "12/2018 R",
+    "title": "Jmenování vedoucí odboru sekretariátu starosty ÚMO Pardubice V",
+    "summary": "Rada jmenuje s účinností k 1. 12. 2018 vedoucí odboru sekretariátu starosty Úřadu městského obvodu Pardubice V.",
+    "keywords": [
+     "vedoucí odboru",
+     "sekretariát starosty",
+     "jmenování",
+     "ÚMO Pardubice V"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "13/2018 R",
+    "title": "Smlouvy o dílo se Službami města Pardubic na kontejnery a výsyp košů v roce 2019",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů a košů na psí exkrementy na rok 2019 se Službami města Pardubic a.s. mimo režim zadávacího řádu, s odůvodněním, že jde o městem založenou společnost.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "odpadkové koše",
+     "psí exkrementy",
+     "výsyp košů",
+     "Služby města Pardubic",
+     "smlouva o dílo",
+     "odpady",
+     "mimo zadávací řád"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Hůrka 1803"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "520.000,- Kč bez DPH",
+     "665.000,- Kč bez DPH",
+     "240.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "14/2018 R",
+    "title": "Doporučení zastupitelstvu schválit návrh rozpočtu obvodu na rok 2019",
+    "summary": "Rada doporučuje zastupitelstvu schválit návrh rozpočtu MO Pardubice V a sociálního fondu na rok 2019, svěřit radě pravomoc k vymezeným rozpočtovým opatřením a souhlasit s pravidly pro rozpis rozpočtu, společenské akce, dárky jubilantům a propagační předměty. Součástí je i nová směrnice č. 7/2018 o hospodaření se sociálním fondem a vzetí na vědomí režimu rozpočtového provizoria.",
+    "keywords": [
+     "rozpočet 2019",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "rozpočtové provizorium",
+     "společenské akce",
+     "jubilanti",
+     "propagační předměty",
+     "směrnice č. 7/2018"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "200 tis. Kč",
+     "200,- Kč",
+     "500,-- Kč"
+    ]
+   },
+   {
+    "number": "15/2018 R",
+    "title": "Doporučení zastupitelstvu schválit střednědobý výhled rozpočtu na roky 2018–2022",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh střednědobého výhledu rozpočtu MO Pardubice V na roky 2018–2022.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2018–2022",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

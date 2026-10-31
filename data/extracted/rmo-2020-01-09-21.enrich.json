@@ -1,0 +1,71 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5463427789617171d27e819b0f888780059e8e70ce506488943969ab14b8cdec",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "105/2020 R",
+    "title": "Souhlas se záměrem města pronajmout kanceláře v areálu Jana Palacha 324",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout kanceláře v 1. patře objektu č. 23 v areálu Jana Palacha 324 v Pardubicích. Nájemci mají být Spolek Spanish Club (komunitní centrum a výuka španělštiny) a Mydive z. s. (kancelář a školicí středisko potápěčského klubu).",
+    "keywords": [
+     "pronájem kanceláří",
+     "areál Jana Palacha",
+     "Jana Palacha 324",
+     "Spanish Club",
+     "Mydive",
+     "komunitní centrum",
+     "výuka španělštiny",
+     "potápěčský klub",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál Jana Palacha 324, Pardubice",
+     "objekt č. 23",
+     "Jiránkova 2297, Pardubice",
+     "Jilemnického 2228, Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/23, k. ú. a obec Pardubice"
+    ],
+    "organizations": [
+     "Spolek Spanish Club",
+     "Mydive z. s.",
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "106/2020 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2019",
+    "summary": "Rada obvodu schvaluje výroční zprávu o poskytování informací za rok 2019 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím. Tajemníkovi úřadu ukládá zveřejnit ji na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "poskytování informací",
+     "zákon 106/1999 Sb.",
+     "svobodný přístup k informacím",
+     "infozákon",
+     "zveřejnění na webu",
+     "rok 2019"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Úřad městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

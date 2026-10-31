@@ -1,0 +1,252 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "b514c4be86a9be7750e04505c777264219447972b83bbd4bc95267596e6bf0db",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 59,
+   "kind": "radne",
+   "date": "2018-06-07",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Ing. Jaroslav Kňava",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "MUDr. Tomáš Rejda"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 40,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 50,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Peněžité dary předsedům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 74,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "332/2018 R",
+    "agenda_no": "1",
+    "first_line": 44,
+    "last_line": 47,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "333/2018 R",
+    "agenda_no": "2",
+    "first_line": 53,
+    "last_line": 72,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "334/2018 R",
+    "agenda_no": "3",
+    "first_line": 77,
+    "last_line": 132,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 38,
+    "last_line": 38,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 37,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": "332/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": "333/2018 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": "333/2018 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "333/2018 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "333/2018 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "334/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 11 a 14: Ing. Jiří Janoš je uveden jako přítomen i omluven „po část jednání“; text neuvádí, kdy přišel. Hlasování na ř. 38–60 mají 3 hlasy, od ř. 65 hlasují 4 – Janoš se zřejmě dostavil mezi ř. 60 a 65.",
+   "ř. 53–72: usnesení 333/2018 R se hlasovalo jen po bodech, bez hlasování o celku; body 2 (ř. 60: pro 0, zdržel se 3) a 3 (ř. 65: pro 0, proti 4) nezískaly žádný hlas pro, text výsledek výslovně neuvádí.",
+   "ř. 100: v seznamu členů komisí chybí nadpis komise před Ing. Milošem Vendolským a dalšími (ř. 101–104) – pravděpodobně jiná místní komise."
+  ]
+ }
+}

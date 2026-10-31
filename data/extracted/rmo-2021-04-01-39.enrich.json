@@ -1,0 +1,94 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "792f3d8efb7b87eb210201f97e9864c88f8b4246ee43a84d5973cd72144cc7c1",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "182/2021 R",
+    "title": "Stanovisko k žádostem pozemkové komise: věcné břemeno, nájem, prodej a přesah zastřešení balkónů",
+    "summary": "Stanovisko obvodu k žádostem projednávaným pozemkovou komisí rady města: zřízení věcného břemene pro výměnu a uložení vodovodního a kanalizačního potrubí ve vnitrobloku H pro Vodovody a kanalizace Pardubice, a.s., nájem části pozemku pro stacionární měřicí stanici Českého hydrometeorologického ústavu a prodej části pozemku pod plošinou pro imobilní společnosti PARDUBICKÝ PARTNER a.s. Dále se týká souhlasu vlastníka pozemku se vzdušným přesahem nového zastřešení balkónů bytového domu č. p. 2277, 2278 a 2279 v ulici Josefa Ressla pro společenství vlastníků jednotek.",
+    "keywords": [
+     "věcné břemeno",
+     "vodovod a kanalizace",
+     "vnitroblok H",
+     "nájem pozemku",
+     "měřicí stanice",
+     "prodej pozemku",
+     "plošina pro imobilní",
+     "bezbariérovost",
+     "zastřešení balkónů",
+     "Josefa Ressla"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "vnitroblok H",
+     "k. ú. Pardubice",
+     "Josefa Ressla",
+     "bytový dům č. p. 2277, 2278 a 2279",
+     "Jana Palacha 1552"
+    ],
+    "parcels": [
+     "p. p. č. 2165/1, k. ú. Pardubice",
+     "p. p. č. 2252/1, k. ú. Pardubice",
+     "p. p. č. 2252/25, k. ú. Pardubice",
+     "p. p. č. 2252/5, k. ú. Pardubice",
+     "p. p. č. 2252/10, k. ú. Pardubice",
+     "p. p. č. 2292/7, k. ú. Pardubice",
+     "p. p. č. 2583/31, k. ú. Pardubice",
+     "p. p. č. 2252/9, k. ú. Pardubice",
+     "st. p. č. 4267, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "Český hydrometeorologický ústav",
+     "PARDUBICKÝ PARTNER a.s.",
+     "Společenství vlastníků jednotek domu č.p. 2277, 2278 a 2279, Josefa Ressla, Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "183/2021 R",
+    "title": "Smlouva o dílo na stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova včetně využití dešťových vod (2 retenční nádrže) s dodavatelem MIROS Pardubice a.s. za nabídkovou cenu 12.918.259,60 Kč bez DPH.",
+    "keywords": [
+     "vnitroblok",
+     "stavební úpravy",
+     "retenční nádrže",
+     "dešťová voda",
+     "smlouva o dílo",
+     "veřejná zakázka",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "vnitroblok Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "12.918.259,60 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

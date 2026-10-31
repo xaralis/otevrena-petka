@@ -1,0 +1,97 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "35c8573d4f55db2d882bb1eba90977299cbf345f1dc1eff3532d79050c421fc2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "16/2018 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na opravu chodníků v ul. Na Záboří",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 6. 8. 2018 na akci „Stavební úpravy stávajících chodníků v ul. Na Záboří, Pardubice“ se zhotovitelem MIROS MAJETKOVÁ, a.s. Celková cena se kvůli vícepracím při částečné změně stavby zvyšuje z 4 983 447,83 Kč na 5 067 361,95 Kč bez DPH.",
+    "keywords": [
+     "chodníky",
+     "Na Záboří",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "navýšení ceny",
+     "stavební úpravy",
+     "MIROS MAJETKOVÁ"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Na Záboří"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS MAJETKOVÁ, a.s."
+    ],
+    "amounts": [
+     "5 067 361,95 Kč bez DPH",
+     "4 983 447,83,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "17/2018 R",
+    "title": "Úprava plánu společenských akcí 2018 – přesun 6,5 tis. Kč na Vánoční punč",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí městského obvodu na rok 2018: z akcí Dětský karneval, Masopust – lidová veselice, Slavnost MO Pardubice, Ochutnávka Svatomartinského vína a Rozsvěcení vánočního stromečku se přesouvá celkem 6,5 tis. Kč na akci Vánoční punč. Celkový rozpočet plánu 421 tis. Kč se nemění.",
+    "keywords": [
+     "plán společenských akcí",
+     "Vánoční punč",
+     "Dětský karneval",
+     "Masopust",
+     "Slavnost MO Pardubice",
+     "Svatomartinské víno",
+     "Rozsvěcení vánočního stromečku",
+     "přesun prostředků"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "0,1 tis. Kč",
+     "1,0 tis. Kč",
+     "2,5 tis. Kč",
+     "1,7 tis. Kč",
+     "1,2 tis. Kč",
+     "6,5 tis. Kč",
+     "421 tis. Kč"
+    ]
+   },
+   {
+    "number": "18/2018 R",
+    "title": "Zrušení usnesení 356/2018 R o zadávacích podmínkách na chodníky v ul. Mikulovická",
+    "summary": "Rada ruší své usnesení č. 356/2018 R ze dne 26. 9. 2018, kterým byly schváleny zadávací podmínky pro akci „Stavební úpravy oprava povrchu chodníků v ul. Mikulovická, Pardubice – SO 101 a SO 102“.",
+    "keywords": [
+     "zrušení usnesení",
+     "zadávací podmínky",
+     "chodníky",
+     "Mikulovická",
+     "oprava povrchu chodníků",
+     "veřejná zakázka"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Mikulovická"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

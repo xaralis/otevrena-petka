@@ -63,16 +63,30 @@ def override(mid: str) -> dict:
     return (yaml.safe_load(p.read_text()) or {}) if p.exists() else {}
 
 
-def seed() -> None:
-    """Copy files from the image's data/ into DATA_DIR that the volume doesn't have yet."""
+def seed() -> set[str]:
+    """Bring the image's data/ into DATA_DIR; returns ids of meetings whose files changed.
+
+    Files in git (the image) win: they are the reviewed version. Files only on the volume –
+    meetings the cron job processed since the last snapshot into git – are left alone.
+    sources.json is merged by URL so the volume keeps documents the image doesn't know.
+    """
+    changed: set[str] = set()
     if DATA.resolve() == SEED.resolve() or not SEED.exists():
-        return
+        return changed
     for src in SEED.rglob("*"):
-        if src.is_file():
-            dst = DATA / src.relative_to(SEED)
-            if not dst.exists() or (src.name == "sources.json" and not dst.stat().st_size):
-                dst.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(src, dst)
+        if not src.is_file() or src.name == "sources.json":
+            continue
+        dst = DATA / src.relative_to(SEED)
+        if not dst.exists() or dst.read_bytes() != src.read_bytes():
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            changed.add(src.name.split(".")[0])
+    seed_sources = json.loads((SEED / "sources.json").read_text())
+    merged = {d["url"]: d for d in sources()}
+    for d in seed_sources:
+        merged[d["url"]] = {**merged.get(d["url"], {}), **d}
+    save_sources(list(merged.values()))
+    return changed
 
 
 def _write(p: Path, content: str) -> None:

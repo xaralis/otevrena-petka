@@ -62,12 +62,28 @@ class Hit:
     row: dict = field(default_factory=dict)
 
 
-def tsquery(q: str) -> str | None:
-    words = re.findall(r"[0-9a-z]+", fold(q))
-    words = [w for w in words if len(w) > 1]
+STOPWORDS = set("""a i o u v k s z ve ke se ze na do od po pro pri za nad pod mezi bez
+    je jsou byl byla bylo by kdy kde jak co kdo ktery ktera ktere ten ta to tom tech
+    jeho jejich nebo ale ani take tak jen uz jiz rada rady zastupitelstvo zastupitelstva
+    usneseni resil resila resilo resili schvalil schvalila zmo rmo mo""".split())
+
+
+def _stem(w: str) -> str:
+    """Crude Czech stemming for prefix search: drop the inflected ending.
+
+    'protihlukove' -> 'protihlukov' matches 'protihlukových'; 'parkovani' -> 'parkova'
+    matches 'parkování' and 'parkovací'. Numbers and short words stay whole.
+    """
+    if w.isdigit() or len(w) <= 5:
+        return w
+    return w[:max(5, len(w) - 2)]
+
+
+def tsquery(q: str, op: str = "&") -> str | None:
+    words = [w for w in re.findall(r"[0-9a-z]+", fold(q)) if len(w) > 1 and w not in STOPWORDS]
     if not words:
         return None
-    return " & ".join(f"{w}:*" for w in words)
+    return f" {op} ".join(f"{_stem(w)}:*" for w in dict.fromkeys(words))
 
 
 COLUMNS = """r.uid, r.number, r.body, r.date, r.meeting_id, r.status, r.title, r.summary,
@@ -93,13 +109,20 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             return [Hit(r["uid"], 0, row=r) for r in rows], info
 
         ft: list[str] = []
-        tq = tsquery(q)
-        if mode in ("hybrid", "fulltext") and tq:
-            ft = [r["uid"] for r in conn.execute(
-                f"""SELECT r.uid FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
-                    WHERE {where} AND r.tsv @@ to_tsquery('simple', %s)
-                    ORDER BY ts_rank_cd(r.tsv, to_tsquery('simple', %s), 32) DESC, r.date DESC
-                    LIMIT %s""", params + [tq, tq, pool_size])]
+        if mode in ("hybrid", "fulltext"):
+            # all words first; a natural-language question rarely matches all, so fall
+            # back to any word, ranked by how many and how important the matches are
+            for op in ("&", "|"):
+                tq = tsquery(q, op)
+                if not tq:
+                    break
+                ft = [r["uid"] for r in conn.execute(
+                    f"""SELECT r.uid FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
+                        WHERE {where} AND r.tsv @@ to_tsquery('simple', %s)
+                        ORDER BY ts_rank_cd(r.tsv, to_tsquery('simple', %s), 32) DESC, r.date DESC
+                        LIMIT %s""", params + [tq, tq, pool_size])]
+                if len(ft) >= 5:
+                    break
         sem: list[str] = []
         if mode in ("hybrid", "semantic"):
             vec = embed.embed_query(q)

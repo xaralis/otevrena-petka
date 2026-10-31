@@ -35,6 +35,7 @@ def main() -> None:
     sub.add_parser("embed", help="compute missing embeddings")
     sub.add_parser("export", help="write open-data files")
     sub.add_parser("update", help="cron: fetch, process, load, embed, export")
+    sub.add_parser("bootstrap", help="init container: seed volume from image, load changes")
     p = sub.add_parser("serve", help="run the web app, API and MCP server")
     p.add_argument("--host", default="0.0.0.0")
     p.add_argument("--port", type=int, default=8080)
@@ -74,7 +75,7 @@ def main() -> None:
         ok, report = getattr(pipeline, a.cmd.replace("-", "_"))(a.id)
         print(("ACCEPTED\n" if ok else "REJECTED\n") + report)
         sys.exit(0 if ok else 1)
-    elif a.cmd in ("load", "embed", "export", "update"):
+    elif a.cmd in ("load", "embed", "export", "update", "bootstrap"):
         from . import jobs
         getattr(jobs, a.cmd)(*([a.ids] if a.cmd == "load" else []))
     elif a.cmd == "serve":

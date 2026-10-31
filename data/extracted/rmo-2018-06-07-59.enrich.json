@@ -1,0 +1,137 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b514c4be86a9be7750e04505c777264219447972b83bbd4bc95267596e6bf0db",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "332/2018 R",
+    "title": "Souhlas se záměrem pronájmu skladů v areálu Jana Palacha 324 spolku Výměník",
+    "summary": "Rada souhlasí se záměrem pronájmu skladů o celkové výměře 55,78 m2 v objektu č. 11 v areálu Jana Palacha 324 na pozemku st. p. č. 864/17, k. ú. Pardubice. Žadatelem je Péče o duševní zdraví – středisko Výměník, z. s., účelem nájmu jsou sklady.",
+    "keywords": [
+     "pronájem skladů",
+     "nebytové prostory",
+     "Jana Palacha 324",
+     "Péče o duševní zdraví",
+     "středisko Výměník",
+     "nájem",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál Jana Palacha 324, Pardubice",
+     "objekt č. 11",
+     "Mladých 325, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/17, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Péče o duševní zdraví - středisko Výměník, z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "333/2018 R",
+    "title": "Stanovisko k žádosti pozemkové komise: změna nájemce, prodeje pozemků a výpůjčka pro zastávky MHD",
+    "summary": "Rada se vyjadřuje k žádosti pozemkové komise rady města Pardubice: ke změně nájemce pozemku st. p. č. 7007/27, k prodeji pozemku st. p. č. 4194 se stavbou za 2 000.000,- Kč, k prodeji pozemků p. p. č. 2389/3, st. p. č. 9498 a st. p. č. 1784 se stavbami pro sportovní využití a rekreaci a k výpůjčce částí pozemků pro zastávkové přístřešky MHD Dopravnímu podniku města Pardubic a.s. O jednotlivých bodech se hlasovalo samostatně.",
+    "keywords": [
+     "pozemková komise",
+     "změna nájemce",
+     "prodej pozemku",
+     "výpůjčka pozemku",
+     "zastávky MHD",
+     "zastávkové přístřešky",
+     "trafika",
+     "Dopravní podnik města Pardubic",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "Teplého 2141, Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 7007/27, k. ú. Pardubice",
+     "st. p. č. 4194, k. ú. Pardubice",
+     "p. p. č. 2389/3",
+     "st. p. č. 9498",
+     "st. p. č. 1784",
+     "p. p. č. 2155/7",
+     "p. p. č. 2580/4",
+     "p. p. č. 2499/140",
+     "p. p. č. 2155/3",
+     "p. p. č. 2165/30",
+     "p. p. č. 2316/1",
+     "p. p. č. 2583/3"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Dopravní podnik města Pardubic a.s."
+    ],
+    "amounts": [
+     "2 000.000,- Kč"
+    ]
+   },
+   {
+    "number": "334/2018 R",
+    "title": "Peněžité dary předsedům a členům komisí rady – nečlenům zastupitelstva",
+    "summary": "Rada schvaluje vyplácení peněžních darů předsedům komisí – nečlenům zastupitelstva ve výši 1.000,- Kč měsíčně za září 2018 a členům komisí rady za práci v období září 2017 – květen 2018. Dary se týkají místních komisí Dukla, Višňovka, Jesničánky a Dražkovice, komise pro životní prostředí, dopravu a bydlení, komise pro strategii a rozvoj obvodu a komise pro školství, kulturu, sport a mládež.",
+    "keywords": [
+     "peněžité dary",
+     "odměny členům komisí",
+     "komise rady",
+     "místní komise",
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice",
+     "nečlenové zastupitelstva"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Dukla",
+     "Místní komise Višňovka",
+     "Místní komise Jesničánky",
+     "Místní komise Dražkovice",
+     "Komise pro životní prostředí, dopravu a bydlení",
+     "Komise pro strategii a rozvoj obvodu",
+     "Komise pro školství, kulturu, sport a mládež"
+    ],
+    "amounts": [
+     "1.000,- Kč měsíčně",
+     "300,- Kč",
+     "900,- Kč",
+     "1.200,- Kč",
+     "1.500,- Kč",
+     "1.800,- Kč",
+     "2.100,- Kč",
+     "2.400,- Kč",
+     "2.700,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

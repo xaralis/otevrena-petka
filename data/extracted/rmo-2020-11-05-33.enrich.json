@@ -1,0 +1,198 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5d3a7b4004e02c9008044e866c797a25333c64692338a0afb9f04db151c999dc",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "150/2020 R",
+    "title": "Peněžité dary členům komisí rady, kteří nejsou zastupiteli, za listopad 2019 – říjen 2020",
+    "summary": "Rada schvaluje vyplacení peněžních darů členům svých komisí, kteří nejsou členy zastupitelstva, za práci v období listopad 2019 – říjen 2020. Dary se týkají členů místních komisí Dukla, Višňovka, Jesničánky a Dražkovice, komise pro školství, kulturu, sport a mládež a komise pro strategii a rozvoj obvodu.",
+    "keywords": [
+     "peněžité dary",
+     "odměny členům komisí",
+     "místní komise",
+     "komise rady",
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1.200,- Kč",
+     "600,- Kč",
+     "900,- Kč",
+     "1.500,- Kč",
+     "900,-Kč"
+    ]
+   },
+   {
+    "number": "151/2020 R",
+    "title": "Stanovisko k žádostem pozemkové komise rady města – věcná břemena, banner, směna, nájem, koupě budovy",
+    "summary": "Rada se vyjadřuje k osmi žádostem pozemkové komise rady města Pardubice: k věcným břemenům pro ČD – Telematika, Vodafone, ČEZ Distribuce a České dráhy v souvislosti s modernizací železničního uzlu a stavbou Terminál JIH, k umístění reklamního banneru firmy OZA s.r.o., ke směně pozemků s Elektrárnami Opatovice, k nájmu pozemku od Ministerstva obrany v Dražkovicích pro klidovou zónu u cyklostezky a k záměru odkoupit budovu č.p. 2113 od Basketbalového klubu Pardubice kvůli akci „Dukla sportovní“.",
+    "keywords": [
+     "věcné břemeno",
+     "Modernizace železničního uzlu Pardubice",
+     "reklamní banner",
+     "směna pozemků",
+     "nájem pozemku",
+     "klidová zóna u cyklostezky",
+     "Terminál JIH",
+     "odkoupení budovy",
+     "Dukla sportovní",
+     "stanovisko k pozemkové komisi"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "ŽST Pardubice hl. n.",
+     "Terminál JIH, Pardubice",
+     "budova č.p. 2113"
+    ],
+    "parcels": [
+     "p. p. č. 2499/140, k. ú. Pardubice",
+     "p. p. č. 2665/28, k. ú. Pardubice",
+     "p. p. č. 2798/27, k. ú. Pardubice",
+     "p. p. č. 2643/1, k. ú. Pardubice",
+     "p. p. č. 1778/65, k. ú. Pardubice",
+     "p. p. č. 3930/1, k. ú. Pardubice",
+     "p. p. č. 4453/2, k. ú. Pardubice",
+     "p. p. č. 4453/3, k. ú. Pardubice",
+     "p. p. č. 2526/15, k. ú. Pardubice",
+     "p. p. č. 2433/1, k. ú. Pardubice",
+     "p. p. č. 2165/9, k. ú. Pardubice",
+     "p. p. č. 2583/43, k. ú. Pardubice",
+     "p. p. č. 2798/36, k. ú. Pardubice",
+     "p. p. č. 2798/46, k. ú. Pardubice",
+     "st. p. č. 8623, k. ú. Pardubice",
+     "st. p. č. 9461, k. ú. Pardubice",
+     "st. p. č. 8415, k. ú. Pardubice",
+     "st. p. č. 6734, k. ú. Pardubice",
+     "p. p. č. 3638/2, k. ú. Pardubice",
+     "p. p. č. 3638/29, k. ú. Pardubice",
+     "p. p. č. 262/5, k. ú. Dražkovice",
+     "st. p. č. 4068/3, k. ú. Pardubice",
+     "st. p. č. 7352, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "ČD – Telematika a.s.",
+     "Správa železnic, státní organizace",
+     "OZA s.r.o.",
+     "Vodafone Czech Republic a.s.",
+     "České dráhy, a.s.",
+     "Elektrárny Opatovice, a.s.",
+     "Česká republika – Ministerstvo obrany",
+     "Agentura hospodaření s nemovitým majetkem",
+     "ČEZ Distribuce, a. s.",
+     "Basketbalový klub Pardubice, z. s.",
+     "Statutární město Pardubice",
+     "MO Pardubice II",
+     "OITS OMI MmP"
+    ],
+    "amounts": [
+     "4.880,- Kč/rok",
+     "61,- Kč/m2/rok",
+     "813, 34 Kč",
+     "900.000,- Kč"
+    ]
+   },
+   {
+    "number": "152/2020 R",
+    "title": "Souhlas se záměrem pronajmout nebytové prostory v areálu čp. 324, ul. J. Palacha",
+    "summary": "Rada souhlasí se záměrem města pronajmout nebytové prostory (dílnu, šatnu, sklady a archív o výměře 362,56 m2) v 1. patře objektu č. 10 v areálu čp. 324 v ulici J. Palacha. Žadatelem je Umělecký svaz České republiky, z. s., účelem nájmu je volnočasová kreativní dílna.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "J. Palacha",
+     "čp. 324",
+     "kreativní dílna",
+     "Umělecký svaz České republiky",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál čp. 324, ul. J. Palacha",
+     "objekt č. 10"
+    ],
+    "parcels": [
+     "st. p. č. 864/9, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Umělecký svaz České republiky, z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "153/2020 R",
+    "title": "Souhlas s aktualizovanou žádostí IP stav s.r.o. o směnu a výpůjčku pozemků s městem",
+    "summary": "Rada souhlasí s aktualizovanou žádostí firmy IP stav s.r.o. o směnu a výpůjčku pozemků se statutárním městem Pardubice podle přiloženého grafického návrhu.",
+    "keywords": [
+     "směna pozemků",
+     "výpůjčka pozemků",
+     "IP stav",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "IP stav s.r.o.",
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "154/2020 R",
+    "title": "Úprava plánu společenských akcí na rok 2020 – přesun peněz na Rozsvěcení vánočního stromečku",
+    "summary": "Rada schvaluje přesun 5 tis. Kč z akce Zelený čtvrtek a 6,1 tis. Kč z akce Ochutnávka Svatomartinského vína na akci Rozsvěcení vánočního stromečku. Celkový rozpočet plánu společenských akcí na rok 2020 zůstává 384,4 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Rozsvěcení vánočního stromečku",
+     "Zelený čtvrtek",
+     "Ochutnávka Svatomartinského vína",
+     "kulturní akce",
+     "přesun peněz"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "5 tis. Kč",
+     "6,1 tis. Kč",
+     "384,4 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "614999e57af91b01337da143b92b1e364cdcebef3c1c949ac9683fe5f288b3db",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "112/2020 R",
+    "title": "Výběr zhotovitelů opravy vozovek po zimě 2020 – HOLD s.r.o. a Oprava komunikací Zoubek s.r.o.",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na akci Oprava vozovek po zimě na území MO Pardubice V – 2020 s firmou HOLD s.r.o. (vyspravení výtluků ruční a strojní pokládkou) a s firmou Oprava komunikací Zoubek s.r.o. (tlakový zástřik poškozených míst) za uvedené jednotkové ceny a se zárukou 36 měsíců.",
+    "keywords": [
+     "oprava vozovek",
+     "výtluky",
+     "opravy silnic po zimě",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "tlakový zástřik",
+     "frézování",
+     "HOLD s.r.o.",
+     "Oprava komunikací Zoubek"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Městský obvod Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o.",
+     "Oprava komunikací Zoubek s.r.o.",
+     "DPMP",
+     "odbor investiční a správní ÚMO Pardubice V"
+    ],
+    "amounts": [
+     "3 500,- Kč bez DPH/t",
+     "4 235,- Kč s DPH/t",
+     "550,- Kč bez DPH/m2",
+     "665,50,- Kč s DPH/m2",
+     "3 145,- Kč bez DPH/t",
+     "3805,45,- Kč s DPH/t"
+    ]
+   },
+   {
+    "number": "113/2020 R",
+    "title": "Odpisový plán na rok 2020",
+    "summary": "Rada schvaluje odpisový plán městského obvodu Pardubice V na rok 2020, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "rok 2020",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "114/2020 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 31. 12. 2019",
+    "summary": "Rada projednala zprávu a doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 31. 12. 2019 v tabulkové části zprávy a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2019",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "115/2020 R",
+    "title": "Doporučení ZMO schválit 1. změnu rozpočtu 2020 a svěřit radě rozpočtová opatření u transferů",
+    "summary": "Rada doporučuje zastupitelstvu schválit návrh 1. změny rozpočtu na rok 2020 a rozpočtu sociálního fondu včetně rozpočtových opatření z komentáře. Dále doporučuje svěřit radě pravomoc provádět v nezbytných případech rozpočtová opatření u účelově přidělených finančních transferů z veřejných rozpočtů (kromě dotace z ÚP).",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2020",
+     "rozpočtové opatření",
+     "sociální fond",
+     "dotační transfery",
+     "svěření pravomoci radě",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚP"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "116/2020 R",
+    "title": "Doporučení ZMO schválit plnění Programu rozvoje za rok 2019 a doplnit podporu jihozápadního obchvatu",
+    "summary": "Rada doporučuje zastupitelstvu schválit vyhodnocení plnění úkolů Programu rozvoje MO Pardubice V za rok 2019 a doplnit do čl. 1 programu bod o podpoře vybudování jihozápadního obchvatu města Pardubic na všech úrovních.",
+    "keywords": [
+     "program rozvoje",
+     "plnění za rok 2019",
+     "jihozápadní obchvat",
+     "obchvat Pardubic",
+     "doprava",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "doprava"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "jihozápadní obchvat města Pardubic"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "117/2020 R",
+    "title": "Smlouva o smlouvě budoucí s ČEZ Distribuce na přeložku distribučního zařízení",
+    "summary": "Rada souhlasí s uzavřením Smlouvy o smlouvě budoucí o realizaci přeložky distribučního zařízení určeného k dodávce elektrické energie (č. Z_S14_12_8120073708) se společností ČEZ Distribuce, a.s.",
+    "keywords": [
+     "přeložka distribučního zařízení",
+     "elektrické vedení",
+     "smlouva o smlouvě budoucí",
+     "ČEZ Distribuce",
+     "elektřina"
+    ],
+    "topics": [
+     "investice"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ČEZ Distribuce, a.s."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

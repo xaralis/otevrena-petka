@@ -5,6 +5,7 @@ matter for not misleading anyone: a number doesn't mean passed, ballots may be i
 summaries are ours, and "nothing found" is not proof that something never happened.
 """
 
+import os
 from typing import Literal
 
 from mcp.server.fastmcp import FastMCP
@@ -13,7 +14,7 @@ from mcp.server.transport_security import TransportSecuritySettings
 from . import embed, queries, search
 from .text import fold
 
-PUBLIC_URL = "https://usneseni.dev.varecha.work"
+PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://usneseni.dev.varecha.work")
 
 INSTRUCTIONS = f"""\
 Databáze usnesení Zastupitelstva (ZMO, 15 členů) a Rady (RMO, 5 členů) městského obvodu

@@ -1,0 +1,146 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "83092e3449f15a664a9955d6f99e8ba517ff7c80adbea5259b9215685b3a1048",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "155/2020 R",
+    "title": "Termíny jednání rady a zastupitelstva obvodu na rok 2021",
+    "summary": "Rada obvodu schvaluje harmonogram termínů jednání Rady a Zastupitelstva MO Pardubice V na rok 2021. Zastupitelstvo má zasedat 10. 3., 23. 6., 22. 9. a 15. 12. 2021, rada v dalších uvedených termínech.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram",
+     "jednání rady",
+     "jednání zastupitelstva",
+     "rok 2021",
+     "kalendář zasedání"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "156/2020 R",
+    "title": "Stanovisko k věcnému břemeni pro Ministerstvo obrany a k výpůjčce pozemku v Dražkovicích",
+    "summary": "Rada obvodu souhlasí se zřízením věcného břemene na pozemcích města v k. ú. Pardubice ve prospěch ČR – Ministerstva obrany pro uložení komunikační sítě AČR v rámci investiční akce „DUKLA SPORTOVNÍ“ (bod 1). Dále souhlasí s výpůjčkou pozemku p. p. č. 514 v k. ú. Dražkovice společnosti Pozemky DRAŽKOVICE II. s.r.o. pro stavební úpravy a přístavbu místní komunikace k nové výstavbě rodinných domů a s následným odkoupením vybudované komunikace do majetku města za 1.000,- Kč (bod 2).",
+    "keywords": [
+     "pozemková komise",
+     "stanovisko k záměru města",
+     "věcné břemeno",
+     "komunikační síť",
+     "Dukla sportovní",
+     "výpůjčka pozemku",
+     "místní komunikace",
+     "rodinné domy",
+     "Dražkovice",
+     "Ministerstvo obrany"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "DUKLA SPORTOVNÍ",
+     "Dražkovice"
+    ],
+    "parcels": [
+     "st. p. č. 7352, k. ú. Pardubice",
+     "p. p. č. 2288, k. ú. Pardubice",
+     "p. p. č. 2290/1, k. ú. Pardubice",
+     "p. p. č. 2290/4, k. ú. Pardubice",
+     "p. p. č. 2290/6, k. ú. Pardubice",
+     "p. p. č. 2290/29, k. ú. Pardubice",
+     "p. p. č. 2291/4, k. ú. Pardubice",
+     "p. p. č. 2318/51, k. ú. Pardubice",
+     "p. p. č. 2319/1, k. ú. Pardubice",
+     "p. p. č. 2319/17, k. ú. Pardubice",
+     "p. p. č. 514, k. ú. Dražkovice",
+     "p. p. č. 151/3, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "Statutární město Pardubice",
+     "Česká republika – Ministerstvo obrany",
+     "Armáda České republiky",
+     "ORS MmP",
+     "Pozemky DRAŽKOVICE II. s.r.o.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "157/2020 R",
+    "title": "Souhlas se záměrem pronájmu nebytových prostorů v ulicích Devotyho a Jilemnického",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout nebytový prostor o výměře 146 m2 v domě čp. 2452 v ulici Devotyho spolku Klub dětem Pardubice, z. s. pro Ateliér Hudebního divadla dětem. Dále souhlasí se záměrem pronajmout nebytovou jednotku o výměře 120 m2 v domě čp. 2225 v ulici Jilemnického podnikateli pro prodejnu smíšeného zboží.",
+    "keywords": [
+     "nájem nebytových prostorů",
+     "pronájem",
+     "stanovisko k záměru města",
+     "Devotyho",
+     "Jilemnického",
+     "prodejna",
+     "Hudební divadlo dětem",
+     "nebytový prostor"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Devotyho 2452",
+     "Jilemnického 2225",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5029, k. ú. Pardubice",
+     "st. p. č. 4182, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Klub dětem Pardubice, z. s.",
+     "Ateliér Hudebního divadla dětem"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "158/2020 R",
+    "title": "Jmenování vedoucí Odboru investičního a správního ÚMO Pardubice V",
+    "summary": "Rada obvodu jmenuje s účinností od 1. 12. 2020 novou vedoucí Odboru investičního a správního Úřadu městského obvodu Pardubice V.",
+    "keywords": [
+     "jmenování",
+     "vedoucí odboru",
+     "Odbor investiční a správní",
+     "OIS",
+     "personální změna",
+     "úřad obvodu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Odbor investiční a správní ÚMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

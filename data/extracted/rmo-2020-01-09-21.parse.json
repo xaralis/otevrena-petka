@@ -1,0 +1,139 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "5463427789617171d27e819b0f888780059e8e70ce506488943969ab14b8cdec",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 21,
+   "kind": "radne",
+   "date": "2020-01-09",
+   "place": "zasedací místnost ÚM Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 39,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Výroční zpráva o poskytování informací za rok 2019 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím",
+    "line": 53,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "105/2020 R",
+    "agenda_no": "1",
+    "first_line": 41,
+    "last_line": 49,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "106/2020 R",
+    "agenda_no": "2",
+    "first_line": 56,
+    "last_line": 59,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 36,
+    "last_line": 36,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 33,
+    "motion_last_line": 35,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 50,
+    "last_line": 50,
+    "resolution": "105/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": "106/2020 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

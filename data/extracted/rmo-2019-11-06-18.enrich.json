@@ -1,0 +1,154 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "23cba88410602fff3d88608560db5061e9f6de71119442894cd96fdbf5503d4d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "89/2019 R",
+    "title": "Peněžité dary členům komisí rady, kteří nejsou zastupiteli, za prosinec 2018 – říjen 2019",
+    "summary": "Rada schvaluje vyplacení peněžních darů členům svých komisí, kteří nejsou členy zastupitelstva, za práci v období prosinec 2018 – říjen 2019. Dary se týkají místních komisí Dukla, Višňovka, Jesničánky a Dražkovice, komise pro školství, kulturu, sport a mládež a komise pro strategii a rozvoj obvodu.",
+    "keywords": [
+     "peněžité dary",
+     "odměny členům komisí",
+     "místní komise",
+     "komise rady",
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice",
+     "nečlenové zastupitelstva"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Dukla",
+     "Místní komise Višňovka",
+     "Místní komise Jesničánky",
+     "Místní komise Dražkovice",
+     "Komise pro školství, kulturu, sport a mládež",
+     "Komise pro strategii a rozvoj obvodu"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "90/2019 R",
+    "title": "Podklady pro výběrové řízení na veřejné griloviště",
+    "summary": "Rada schvaluje podklady pro připravované výběrové řízení na veřejné griloviště.",
+    "keywords": [
+     "veřejné griloviště",
+     "grilování",
+     "výběrové řízení",
+     "zadávací podklady",
+     "veřejná zakázka"
+    ],
+    "topics": [
+     "zakazky",
+     "hriste-sport"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "91/2019 R",
+    "title": "Darovací smlouva na 10 sadových růží ve vnitrobloku Wolkerova – Jiránkova",
+    "summary": "Rada souhlasí s uzavřením darovací smlouvy na dar 10 ks sadových růží William Bootl v hodnotě 2.100,00 Kč. Růže byly vysazeny ve vnitrobloku ulic Wolkerova – Jiránkova.",
+    "keywords": [
+     "darovací smlouva",
+     "dar",
+     "růže",
+     "výsadba",
+     "zeleň",
+     "vnitroblok",
+     "Wolkerova",
+     "Jiránkova"
+    ],
+    "topics": [
+     "zelen",
+     "dotace"
+    ],
+    "kind": "dotace",
+    "places": [
+     "vnitroblok ul. Wolkerova – Jiránkova",
+     "Wolkerova",
+     "Jiránkova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "2.100,00 Kč"
+    ]
+   },
+   {
+    "number": "92/2019 R",
+    "title": "Úprava plánu společenských akcí obvodu na rok 2019 – přesun peněz na Vánoční punč",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí městského obvodu na rok 2019. Na akci Vánoční punč se přesouvá 230 Kč z akce Rozsvěcení vánočního stromečku a 1200 Kč z akce Ochutnávka Svatomartinského vína.",
+    "keywords": [
+     "plán společenských akcí",
+     "Vánoční punč",
+     "Rozsvěcení vánočního stromečku",
+     "Ochutnávka Svatomartinského vína",
+     "Vánoce",
+     "kulturní akce",
+     "přesun peněz"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "230 Kč",
+     "1200 Kč"
+    ]
+   },
+   {
+    "number": "93/2019 R",
+    "title": "Projektová dokumentace na revitalizaci náměstí Dukelských hrdinů – II. etapa",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na zpracování projektové dokumentace k revitalizaci náměstí Dukelských hrdinů – II. etapa s firmou HIGHWAY DESIGN, s.r.o. (Hradec Králové) za 296 450,- Kč včetně DPH. Zakázka se zadává podle Směrnice č. 14/2017 o zadávání veřejných zakázek, čl. 13, odst. 2.",
+    "keywords": [
+     "náměstí Dukelských hrdinů",
+     "revitalizace",
+     "projektová dokumentace",
+     "smlouva o dílo",
+     "rozhodnutí zadavatele",
+     "veřejná zakázka",
+     "HIGHWAY DESIGN",
+     "Dukla"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HIGHWAY DESIGN, s.r.o."
+    ],
+    "amounts": [
+     "296 450,- Kč včetně DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

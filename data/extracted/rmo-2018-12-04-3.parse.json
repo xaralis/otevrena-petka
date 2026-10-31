@@ -1,0 +1,184 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "35c8573d4f55db2d882bb1eba90977299cbf345f1dc1eff3532d79050c421fc2",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 3,
+   "kind": "mimoradne",
+   "date": "2018-12-04",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování zapisovatele",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na akci „Stavební úpravy stávajících chodníků v ul. Na Záboří, Pardubice“",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Úprava plánu společenských akcí MO na r. 2018",
+    "line": 60,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zrušení usnesení č. 356/2018 R ze dne 26. 9. 2018 - Schválení zadávacích podmínek pro akci „Stavební úpravy oprava povrchu chodníků v ul. Mikulovická, Pardubice – SO 101 a SO 102“ vč. schválení členů hodnotící komise",
+    "line": 74,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "16/2018 R",
+    "agenda_no": "1",
+    "first_line": 52,
+    "last_line": 57,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "17/2018 R",
+    "agenda_no": "2",
+    "first_line": 63,
+    "last_line": 71,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "18/2018 R",
+    "agenda_no": "3",
+    "first_line": 79,
+    "last_line": 81,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 44,
+    "last_line": 44,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 43,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 58,
+    "last_line": 58,
+    "resolution": "16/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "17/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 82,
+    "last_line": 82,
+    "resolution": "18/2018 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení 18/2018 R ruší usnesení č. 356/2018 R z 26. 9. 2018, ale nadpis bodu 3 zmiňuje i schválení členů hodnotící komise, zatímco znění usnesení (ř. 79–81) uvádí jen zadávací podmínky."
+  ]
+ }
+}

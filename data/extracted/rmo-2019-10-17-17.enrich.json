@@ -1,0 +1,186 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "729535a0ca4611f29efced0f72f157f457c0aa7019b674cd42c84480e733cd74",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "84/2019 R",
+    "title": "Termíny jednání RMO a ZMO Pardubice V na rok 2020",
+    "summary": "Rada schvaluje harmonogram termínů jednání Rady a Zastupitelstva městského obvodu Pardubice V na rok 2020. Zastupitelstvo zasedne 11. 3., 24. 6., 23. 9. a 16. 12. 2020, ostatní termíny jsou jednání rady.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram 2020",
+     "jednání rady",
+     "zasedání zastupitelstva",
+     "RMO",
+     "ZMO"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "RMO Pardubice V",
+     "ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "85/2019 R",
+    "title": "Odvolání a jmenování šéfredaktora zpravodaje Pardubická pětka",
+    "summary": "Rada odvolává ke dni 17. 10. 2019 dosavadní šéfredaktorku zpravodaje Pardubická pětka a s účinností od 18. 10. 2019 jmenuje novou šéfredaktorku, sekretářku starosty MO Pardubice V.",
+    "keywords": [
+     "Pardubická pětka",
+     "šéfredaktor",
+     "zpravodaj",
+     "odvolání",
+     "jmenování",
+     "noviny obvodu"
+    ],
+    "topics": [
+     "kultura-akce",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Pardubická pětka"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "86/2019 R",
+    "title": "Nákup vozidla Škoda Rapid pro Skupinu drobné údržby od AUTO DRYML a.s.",
+    "summary": "Rada souhlasí s uzavřením smlouvy na nákup vozidla Škoda Rapid Style 1,0 TSI 70 kW pro Skupinu drobné údržby ÚMO Pardubice V od dodavatele AUTO DRYML a.s. za 348.957,- Kč vč. DPH podle směrnice č. 14/2017 o zadávání veřejných zakázek (čl. 13, odst. 2 – časové důvody). Stávající vozidlo Škoda Fabia bude vykoupeno protiúčtem.",
+    "keywords": [
+     "nákup vozidla",
+     "Škoda Rapid",
+     "Škoda Fabia",
+     "auto",
+     "Skupina drobné údržby",
+     "veřejná zakázka",
+     "výkup protiúčtem"
+    ],
+    "topics": [
+     "zakazky",
+     "cistota"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "AUTO DRYML a.s.",
+     "Skupina drobné údržby ÚMO Pardubice V",
+     "ÚMO Pardubice V"
+    ],
+    "amounts": [
+     "348.957,- Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "87/2019 R",
+    "title": "Stanovisko k nájmu nebytových prostorů města v ul. Josefa Ressla a Čs. armády",
+    "summary": "Rada hlasovala o stanovisku k záměru města pronajmout tři nebytové prostory na území obvodu: jednotku č. 2278/18 (82,31 m²) v ul. Josefa Ressla pro senior fitness klub, jednotku č. 2277/20 (20,02 m²) v téže budově na kancelářské prostory a prostor 32,5 m² v budově čp. 2515 v ul. Čs. armády na prodej točené zmrzliny. O každém prostoru se hlasovalo zvlášť.",
+    "keywords": [
+     "nájem nebytových prostorů",
+     "nebytová jednotka",
+     "Josefa Ressla",
+     "Čs. armády",
+     "senior fitness klub",
+     "kancelářské prostory",
+     "točená zmrzlina",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "čp. 2277, 2278, 2279, ul. Josefa Ressla, Pardubice",
+     "nebytová jednotka č. 2278/18",
+     "nebytová jednotka č. 2277/20",
+     "čp. 2515, ul. Čs. armády, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "88/2019 R",
+    "title": "Dotace na 19 akcí škol, spolků a organizací na přelomu let 2019/2020",
+    "summary": "Rada schvaluje poskytnutí dotací z rozpočtu MO Pardubice V podle směrnice č. 28/2018 na 19 akcí (např. vánoční sportovní dny, Masopust, Strašidelná noc, Mikulášský běh, Adventní jarmark, Vánoce v azylovém domě, basketbalový turnaj), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 86–109. Žadateli jsou školy, mateřské školy, DDM ALFA, spolky, SDH Dražkovice, SKP – CENTRUM a Basketbalový klub Pardubice.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "základní škola",
+     "Mikulášský běh",
+     "Adventní jarmark",
+     "Masopust",
+     "vánoční akce",
+     "spolky"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Benešovo náměstí 590, Pardubice",
+     "Raisova 226, Pardubice",
+     "Družby 334, Pardubice",
+     "Lonkova 512, Pardubice",
+     "ČSA 2515, Pardubice",
+     "A. Krause 2344",
+     "Dražkovice",
+     "Josefa Ressla 1992, Pardubice",
+     "Staňkova 1447, Pardubice",
+     "Gorkého 867, Pardubice",
+     "Teplého 2100, Pardubice",
+     "Jungmannova 2550, Pardubice",
+     "azylový dům"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Mateřská škola Pardubice - Jesničánky",
+     "DDM ALFA Pardubice",
+     "NOE – Křesťanská ZŠ a MŠ v Pardubicích",
+     "Hvězda Pardubice z.s.",
+     "Základní škola A. Krause 2344",
+     "Šumák z.s.",
+     "SDH Dražkovice",
+     "Mateřská škola Motýlek Pardubice",
+     "Chaloupka z.s.",
+     "Spolek pro podporu waldorfské pedagogiky v Pardubicích",
+     "Mateřská škola Kamarád Pardubice",
+     "SKP – CENTRUM, o.p.s.",
+     "Basketbalový klub Pardubice"
+    ],
+    "amounts": [
+     "4.500,- Kč",
+     "4.000,- Kč",
+     "500,-- Kč",
+     "5.000,- Kč",
+     "2.500,- Kč",
+     "4.100,- Kč",
+     "8.000,- Kč",
+     "3000,- Kč",
+     "10.000,- Kč",
+     "7000,- Kč",
+     "2500,- Kč",
+     "2000,- Kč",
+     "3.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

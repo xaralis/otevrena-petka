@@ -1,0 +1,253 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "192d9b94c540eafbf756719d63a80bd545204f64a4558bdd49a40e79a197f15c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "352/2018 R",
+    "title": "Stanovisko k pozemkovým záměrům města – prodej pod trafostanicí, odkup od Lesů ČR",
+    "summary": "Rada obvodu souhlasí se záměry pozemkové komise rady města: prodejem pozemku st. p. č. 11286 pod trafostanicí společnosti ČEZ Distribuce, odkoupením p. p. č. 2445/15 od Lesů České republiky do vlastnictví města a uznáním vlastnického práva města k pozemkům v k. ú. Nové Jesenčany. Bod o zřízení věcného břemene pro ČEZ Distribuce na p. p. č. 605/1 byl stažen.",
+    "keywords": [
+     "stanovisko k prodeji pozemku",
+     "odkup pozemku",
+     "věcné břemeno",
+     "trafostanice",
+     "uznání vlastnického práva",
+     "Nové Jesenčany",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Nové Jesenčany",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 605/1 v k. ú. Nové Jesenčany",
+     "st. p. č. 11286 v k. ú. Pardubice",
+     "p. p. č. 2445/15 v k. ú. Pardubice",
+     "p. p. č. 604/25, k. ú. Nové Jesenčany",
+     "p. p. č. 604/26, k. ú. Nové Jesenčany"
+    ],
+    "organizations": [
+     "ČEZ Distribuce, a. s.",
+     "Lesy České republiky, s.p.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč + DPH",
+     "135,- Kč/m2",
+     "265.545,- Kč"
+    ]
+   },
+   {
+    "number": "353/2018 R",
+    "title": "Stanovisko k nájmu nebytových prostor města – Devotyho, sklad, garážové stání Sokolovská",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout prostor sloužící podnikání v budově čp. 2449-52 v ulici Devotyho společnosti Technipol s.r.o., sklad v objektu č. 25 na st. p. č. 960 a garážové stání v budovách čp. 2721 a 2731 v ulici Sokolovská.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "pronájem",
+     "sklad",
+     "garážové stání",
+     "Devotyho",
+     "Sokolovská",
+     "prostor sloužící podnikání"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Devotyho",
+     "čp. 2449-52",
+     "ul. Sokolovská",
+     "čp. 2721",
+     "čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 960, k. ú. Pardubice",
+     "stavební parcely č. 10089 a 10090, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Technipol s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "354/2018 R",
+    "title": "Doporučení schválit rozbor hospodaření obvodu k 31. 8. 2018",
+    "summary": "Rada obvodu projednala zprávu o rozboru hospodaření MO Pardubice V k 31. 8. 2018 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "355/2018 R",
+    "title": "Doporučení schválit 3. změnu rozpočtu 2018 a úpravu plánu společenských akcí",
+    "summary": "Rada obvodu doporučuje zastupitelstvu schválit 3. změnu rozpočtu na rok 2018 a rozpočtu sociálního fondu včetně rozpočtových opatření. Doporučuje také navýšit rozpočet akcí Ochutnávka Svatomartinského vína, Rozsvěcení vánočního stromečku a Vánoční punč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "Svatomartinské víno",
+     "rozsvěcení vánočního stromečku",
+     "vánoční punč",
+     "společenské akce"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč",
+     "25 tis. Kč",
+     "5 tis. Kč"
+    ]
+   },
+   {
+    "number": "356/2018 R",
+    "title": "Zadávací podmínky a hodnotící komise – oprava chodníků v ul. Mikulovická",
+    "summary": "Rada obvodu schvaluje zadávací podmínky podlimitní veřejné zakázky na stavební práce v otevřeném řízení „Stavební úpravy – oprava povrchu chodníků v ul. Mikulovická, Pardubice – SO 101 a SO 102“ a pověřuje hodnotící komisi otevíráním, posouzením a hodnocením nabídek.",
+    "keywords": [
+     "veřejná zakázka",
+     "zadávací podmínky",
+     "hodnotící komise",
+     "oprava chodníků",
+     "Mikulovická",
+     "chodníky",
+     "podlimitní zakázka"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Mikulovická"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "357/2018 R",
+    "title": "Zrušení komisí rady a odvolání jejich předsedů a členů ke konci volebního období",
+    "summary": "Rada obvodu v souvislosti s ukončením volebního období 2014–2018 ruší ke dni 26. září 2018 místní komise Dukla, Višňovka, Jesničánky a Dražkovice, komisi pro životní prostředí, dopravu a bydlení, komisi pro školství, kulturu, sport a mládež a komisi pro strategii a rozvoj obvodu a odvolává jejich předsedy a členy.",
+    "keywords": [
+     "zrušení komisí",
+     "odvolání členů komisí",
+     "místní komise",
+     "konec volebního období",
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "organizacni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "358/2018 R",
+    "title": "Peněžité dary členům komisí rady za září 2018",
+    "summary": "Rada obvodu schvaluje vyplacení peněžních darů členům místních komisí a odborných komisí rady, kteří nejsou členy zastupitelstva, za práci v září 2018.",
+    "keywords": [
+     "peněžité dary",
+     "odměny členům komisí",
+     "komise rady",
+     "místní komise",
+     "nečlenové zastupitelstva"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "300,- Kč"
+    ]
+   },
+   {
+    "number": "359/2018 R",
+    "title": "Úkol zadat projektové dokumentace na vnitrobloky a veřejná prostranství",
+    "summary": "Rada obvodu ukládá vedoucí odboru OIS zadat projektové dokumentace na dosud nezadané vnitrobloky a veřejná prostranství, mimo jiné vnitroblok Pichlova – S. K. Neumanna – K Višňovce – Železničního pluku, za BD 2447–2448 v ulici Devotyho, ulici Wolkerova a vnitroblok Sokolovská – Jiránkova – Josefa Ressla. Součástí je i dopravní studie k záměru zjednosměrnění ulice Wolkerova.",
+    "keywords": [
+     "projektová dokumentace",
+     "vnitrobloky",
+     "veřejná prostranství",
+     "dopravní studie",
+     "jednosměrka Wolkerova",
+     "Devotyho",
+     "Jiránkova",
+     "Sokolovská",
+     "Pichlova"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "uzemni-planovani"
+    ],
+    "kind": "ukol",
+    "places": [
+     "ul. Pichlova",
+     "ul. S. K. Neumanna",
+     "ul. K Višňovce",
+     "ul. Železničního pluku",
+     "ul. Devotyho",
+     "ul. Wolkerova",
+     "ul. Sokolovská",
+     "ul. Jiránkova",
+     "ul. Josefa Ressla",
+     "ul. Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "OIS ÚMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

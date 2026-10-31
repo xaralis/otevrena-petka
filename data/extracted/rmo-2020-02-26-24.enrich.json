@@ -1,0 +1,36 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "a26b5529756e19c73afba8c50c2904c3de535a700fc67f5050fa3f0f5d3c35a2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "111/2020 R",
+    "title": "Úprava plánu společenských akcí 2020 – přesun peněz z Masopustu na Dětský karneval",
+    "summary": "Rada upravuje plán společenských akcí MO Pardubice V na rok 2020: 12,9 tis. Kč se přesouvá z akce Masopust – lidová veselice na akci Dětský karneval. Celkový rozpočet plánu společenských akcí se nemění a zůstává 610 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "společenské akce 2020",
+     "Masopust",
+     "lidová veselice",
+     "Dětský karneval",
+     "přesun financí",
+     "kulturní akce"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "12,9 tis. Kč",
+     "610 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

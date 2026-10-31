@@ -1,0 +1,126 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "d67e1baebe0919c52dcd66bf191f4d9a930932ab2e912ff5724fdfd3ccf919f0",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "59/2019 R",
+    "title": "Souhlas se snížením výměry pronajaté části pozemku st. p. č. 5376 pro venkovní posezení",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města: souhlas se záměrem snížit výměru pronajaté části pozemku st. p. č. 5376 v k. ú. Pardubice z 83 m2 na 36 m2. Pozemek slouží k umístění venkovního posezení s pergolou.",
+    "keywords": [
+     "pronájem pozemku",
+     "snížení výměry",
+     "venkovní posezení",
+     "pergola",
+     "předzahrádka",
+     "pozemková komise",
+     "stanovisko k žádosti města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5376, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "60/2019 R",
+    "title": "Odvolání člena místní komise Višňovka na vlastní žádost",
+    "summary": "Rada odvolává ke dni 6. 6. 2019 jednoho člena místní komise Višňovka na jeho vlastní žádost.",
+    "keywords": [
+     "odvolání člena komise",
+     "místní komise",
+     "MK Višňovka",
+     "Višňovka",
+     "vlastní žádost"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MK Višňovka RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "61/2019 R",
+    "title": "Výběr zhotovitele stavebních úprav vnitrobloku Jiránkova – Artura Krause – Lexova",
+    "summary": "Rada rozhodla o veřejné zakázce na stavební úpravy vnitrobloku ulic Jiránkova – Artura Krause – Lexova, že ekonomicky nejvýhodnější je nabídka společnosti Chrpa stavební společnost Pardubice, s.r.o. Cena díla činí 4.948.405,19 Kč včetně DPH při záruce 60 měsíců.",
+    "keywords": [
+     "veřejná zakázka",
+     "výběr zhotovitele",
+     "stavební úpravy",
+     "vnitroblok",
+     "Jiránkova",
+     "Artura Krause",
+     "Lexova",
+     "rekonstrukce vnitrobloku"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice Jiránkova",
+     "ulice Artura Krause",
+     "ulice Lexova",
+     "vnitroblok ulic Jiránkova – Artura Krause – Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Chrpa stavební společnost Pardubice, s.r.o."
+    ],
+    "amounts": [
+     "4.948.405,19 Kč včetně DPH"
+    ]
+   },
+   {
+    "number": "62/2019 R",
+    "title": "Individuální dotace 12.000 Kč pro Albertinum na sociální služby a rozpočtové opatření",
+    "summary": "Návrh na poskytnutí individuální dotace ve výši 12.000,- Kč odbornému léčebnému ústavu Albertinum v Žamberku na sociální služby pro občanku obvodu, uzavření veřejnoprávní smlouvy podle vzorové smlouvy směrnice č. 28/2018 a související rozpočtové opatření v kapitole 33, kterým se prostředky přesouvají z položky životní jubilea občanů na novou položku „dotace Albertinum“.",
+    "keywords": [
+     "individuální dotace",
+     "sociální služby",
+     "Albertinum",
+     "Žamberk",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "životní jubilea občanů"
+    ],
+    "topics": [
+     "dotace",
+     "socialni",
+     "rozpocet"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Žamberk"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Albertinum, odborný léčebný ústav, Žamberk"
+    ],
+    "amounts": [
+     "12.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

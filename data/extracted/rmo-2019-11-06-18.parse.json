@@ -1,0 +1,248 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "23cba88410602fff3d88608560db5061e9f6de71119442894cd96fdbf5503d4d",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 18,
+   "kind": "radne",
+   "date": "2019-11-06",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Jmenování ověřovatelů zápisu a usnesení",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Peněžité dary členům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 43,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Schválení podkladů pro připravované VŘ – veřejné griloviště",
+    "line": 90,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Souhlas s uzavřením darovací smlouvy - 10 ks sadových růží William Bootl",
+    "line": 97,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Úprava plánu společenských akcí MO na r. 2019",
+    "line": 108,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozhodnutí zadavatele – zadání projektové dokumentace na akci: Revitalizace náměstí Dukelských hrdinů – II. etapa",
+    "line": 118,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "89/2019 R",
+    "agenda_no": "1",
+    "first_line": 45,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "90/2019 R",
+    "agenda_no": "2",
+    "first_line": 92,
+    "last_line": 93,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "91/2019 R",
+    "agenda_no": "3",
+    "first_line": 100,
+    "last_line": 103,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "92/2019 R",
+    "agenda_no": "4",
+    "first_line": 111,
+    "last_line": 114,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "93/2019 R",
+    "agenda_no": "5",
+    "first_line": 121,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "89/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 94,
+    "last_line": 94,
+    "resolution": "90/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 104,
+    "last_line": 104,
+    "resolution": "91/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 115,
+    "last_line": 115,
+    "resolution": "92/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "93/2019 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

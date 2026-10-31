@@ -1,0 +1,310 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b92f06400754e475e43aed4533ae9e9afdbb65f9f00fff21f40e1c6e6d7f5838",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "40/2019 R",
+    "title": "Souhlas se záměry výkupu a prodeje pozemků města (Dukla, Benešovo náměstí)",
+    "summary": "Rada souhlasí se záměry města odkoupit pozemek st. p. č. 6131 s garáží pro akci „DUKLA SPORTOVNÍ“ (revitalizace sportovního areálu na Dukle), pozemky p. p. č. 2386/53 a p. p. č. 2387/44 (pod komunikací města) a prodat části pozemků p. p. č. 2418/3 a 2419/2 Společenství pro dům Benešovo náměstí 2517-2521 kvůli rekonstrukci zadních vchodů. Jde o stanovisko obvodu pro pozemkovou komisi rady města.",
+    "keywords": [
+     "výkup pozemků",
+     "prodej pozemků",
+     "garáž",
+     "DUKLA SPORTOVNÍ",
+     "sportovní areál Dukla",
+     "Benešovo náměstí",
+     "pozemek pod komunikací",
+     "pozemková komise",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dukla",
+     "sportovní areál na Dukle",
+     "Benešovo náměstí 2517-2521, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 6131, k. ú. Pardubice",
+     "p. p. č. 2386/53, k. ú. Pardubice",
+     "p. p. č. 2418/3, k. ú. Pardubice",
+     "p. p. č. 2419/2, k. ú. Pardubice",
+     "p. p. č. 2387/44, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Statutární město Pardubice",
+     "Společenství pro dům Benešovo náměstí 2517-2521, Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "240.000,- Kč",
+     "4.000,- Kč",
+     "500, Kč/m2"
+    ]
+   },
+   {
+    "number": "41/2019 R",
+    "title": "Dotace na turnaj seniorů, jazykovou soutěž a akce MŠ Jesničánky",
+    "summary": "Rada schvaluje dotace z rozpočtu obvodu podle Směrnice č. 28/2018: TJ Tesla Pardubice na 13. ročník turnaje seniorů ve stolním tenisu, Anglickému gymnáziu na soutěž v anglickém jazyce AGYSLINGUA a MŠ Pardubice – Jesničánky na akce „Maminka má svátek“, „Týden se Sluníčkem“ a „Děti na celém světě slaví svátek“. Zároveň schvaluje uzavření veřejnoprávních smluv a související rozpočtová opatření č. 2–6 (přesuny z položky příspěvky a dary v kapitole 33).",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "turnaj seniorů",
+     "stolní tenis",
+     "soutěž v angličtině",
+     "AGYSLINGUA",
+     "mateřská škola Jesničánky",
+     "Den matek",
+     "Den dětí",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "K Vinici 1901, Pardubice",
+     "Gorkého 867, Pardubice",
+     "Raisova 226, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "TJ Tesla Pardubice z. s.",
+     "Anglické gymnázium, Střední odborná škola a Vyšší odborná škola, s.r.o.",
+     "MŠ Pardubice – Jesničánky"
+    ],
+    "amounts": [
+     "6.000,- Kč",
+     "10.000,- Kč",
+     "5.800,- Kč",
+     "6.000,- Kč",
+     "6.700,- Kč"
+    ]
+   },
+   {
+    "number": "42/2019 R",
+    "title": "Nesouhlas s prodejem nebytových prostor města a žádost o jejich svěření obvodu",
+    "summary": "Rada nesouhlasí s navrženým prodejem zbytkových nebytových jednotek v domech ČSA 2086-87, Josefa Ressla 2277-79, A. Krause 2316-17 a Devotyho 2449-52 a žádá statutární město Pardubice o jejich svěření do správy městského obvodu.",
+    "keywords": [
+     "nebytové prostory",
+     "prodej nebytových jednotek",
+     "nesouhlas s prodejem",
+     "svěření majetku",
+     "ČSA",
+     "Josefa Ressla",
+     "A. Krause",
+     "Devotyho",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ČSA 2086-87",
+     "Josefa Ressla 2277-79",
+     "A. Krause 2316-17",
+     "Devotyho 2449-52",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. 3815, k. ú. Pardubice",
+     "st. 3816, k. ú. Pardubice",
+     "st. 4267, k. ú. Pardubice",
+     "st. 5029, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "43/2019 R",
+    "title": "Schválení odpisového plánu na rok 2019",
+    "summary": "Rada schvaluje odpisový plán městského obvodu na rok 2019, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "účetnictví",
+     "2019"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "44/2019 R",
+    "title": "Doporučení ZMO vyřadit splněná usnesení 8/2018 R – 24/2018 R z evidence",
+    "summary": "Rada projednala zprávu o kontrole plnění usnesení z jednání rady a doporučuje zastupitelstvu schválit předloženou zprávu a vyřadit splněná usnesení 8/2018 R – 24/2018 R z evidence sledování.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "splněná usnesení",
+     "vyřazení z evidence",
+     "usnesení rady",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "45/2019 R",
+    "title": "Doporučení ZMO schválit zprávu Kontrolního výboru o plnění usnesení",
+    "summary": "Rada doporučuje zastupitelstvu schválit zprávu Kontrolního výboru ZMO o plnění usnesení, vyřadit splněná usnesení 7/2018 Z – 16/2018 Z z kontroly a ponechat v evidenci usnesení 75/2009 Z, 95/2010 Z a 35/2015 Z.",
+    "keywords": [
+     "Kontrolní výbor",
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "vyřazení z kontroly",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "46/2019 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 31. 12. 2018",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření městského obvodu k 31. 12. 2018 uvedený v tabulkové části zprávy a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "2018",
+     "rozpočet",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "47/2019 R",
+    "title": "Doporučení ZMO schválit 1. změnu rozpočtu na rok 2019",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh 1. změny rozpočtu obvodu a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2019",
+     "sociální fond",
+     "rozpočtové opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "48/2019 R",
+    "title": "Doporučení ZMO schválit plnění a aktualizaci Programu rozvoje obvodu",
+    "summary": "Rada doporučuje zastupitelstvu schválit vyhodnocení plnění úkolů Programu rozvoje MO Pardubice V za rok 2018 a jeho aktualizaci k 1. 1. 2019.",
+    "keywords": [
+     "Program rozvoje",
+     "strategie obvodu",
+     "vyhodnocení plnění",
+     "aktualizace",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "49/2019 R",
+    "title": "Smlouva o dílo s HOLD s.r.o. na opravy vozovek po zimě",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo s firmou HOLD s.r.o. na zakázku malého rozsahu Oprava vozovek po zimě na území obvodu – 2019 za jednotkové ceny za vysprávky výtluků ruční pokládkou, frézováním se strojní pokládkou a tlakovým zástřikem, se zárukou 36 měsíců.",
+    "keywords": [
+     "oprava vozovek",
+     "výtluky",
+     "opravy silnic po zimě",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "HOLD",
+     "tlakový zástřik",
+     "frézování"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o.",
+     "DPMP"
+    ],
+    "amounts": [
+     "2 900,- Kč bez DPH/t",
+     "3 509,- Kč s DPH/t",
+     "350,- Kč bez DPH/m2",
+     "423,50,- Kč s DPH/m2",
+     "3 490,- Kč bez DPH/t",
+     "4 222,90,- Kč s DPH/t"
+    ]
+   },
+   {
+    "number": "50/2019 R",
+    "title": "Delegování starosty do Výboru Svazu měst a obcí ČR",
+    "summary": "Rada deleguje starostu MO Pardubice V jako zástupce obvodu do Výboru Svazu měst a obcí České republiky.",
+    "keywords": [
+     "Svaz měst a obcí",
+     "delegování zástupce",
+     "starosta",
+     "výbor SMO ČR"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Svaz měst a obcí České republiky"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

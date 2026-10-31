@@ -1,0 +1,105 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "02ae05dce60380b8f7cdf9c35505de99830ab970768e7d3e4ed6235f1622ef02",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "80/2019 R",
+    "title": "Připomínky k návrhu nového Statutu města Pardubic",
+    "summary": "Rada obvodu projednala návrh obecně závazné vyhlášky, kterou se vydává Statut města Pardubic, a doporučuje zastupitelstvu obvodu schválit její znění s připomínkami. Obvod nesouhlasí mimo jiné se zkrácením lhůty v čl. 23, s úpravou péče o zeleň podle pasportu zeleně, s odebráním výkonu vlastnických práv při uzavírkách a vyhrazeném parkování v zóně placeného stání a navrhuje doplnit pravomoci obvodu ve školství, pořádání akcí, vydávání zpravodaje a přednostní právo na užívání nebytových prostor města.",
+    "keywords": [
+     "Statut města Pardubic",
+     "obecně závazná vyhláška",
+     "připomínky",
+     "pravomoci obvodu",
+     "pasport zeleně",
+     "zóna placeného stání",
+     "vyhrazené parkování",
+     "školy",
+     "zpravodaj",
+     "nebytové prostory"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "81/2019 R",
+    "title": "Rozbor hospodaření obvodu k 31. 8. 2019 – doporučení zastupitelstvu",
+    "summary": "Rada obvodu projednala rozbor hospodaření MO Pardubice V k 31. 8. 2019 a doporučuje zastupitelstvu obvodu schválit rozbor v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet",
+     "plnění rozpočtu",
+     "2019"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Městský obvod Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "82/2019 R",
+    "title": "3. změna rozpočtu obvodu na rok 2019 – doporučení zastupitelstvu",
+    "summary": "Rada obvodu doporučuje zastupitelstvu obvodu vzít na vědomí komentář a schválit návrh 3. změny rozpočtu na rok 2019 a rozpočtu sociálního fondu na rok 2019 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "rozpočet 2019"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Městský obvod Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "83/2019 R",
+    "title": "Informace o schválení účetní závěrky města za rok 2018 – doporučení zastupitelstvu",
+    "summary": "Rada obvodu doporučuje zastupitelstvu obvodu vzít na vědomí, že Zastupitelstvo města Pardubic dne 20. 6. 2019 schválilo účetní závěrku statutárního města Pardubic za rok 2018 včetně městských obvodů sestavenou k 31. 12. 2018.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2018",
+     "závěrečný účet",
+     "hospodaření města"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice",
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

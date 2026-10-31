@@ -1,0 +1,163 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "ad701d7a38df3c01cb37f90eb27d4979bd3c0247f3fdb73d996d1b758b376207",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "194/2021 R",
+    "title": "Souhlas s předzahrádkou cukrárny Libuše na nám. Dukelských hrdinů",
+    "summary": "Rada souhlasí s umístěním předzahrádky o celkové ploše 8 m2 před cukrárnou Libuše na nám. Dukelských hrdinů 2235 v Pardubicích. Předzahrádka může být provozována od 15. 6. 2021 do 15. 11. 2021, denně od 9.00 do 18.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "cukrárna Libuše",
+     "nám. Dukelských hrdinů",
+     "zábor veřejného prostranství",
+     "venkovní posezení",
+     "zahrádka"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [
+     "nám. Dukelských hrdinů 2235, Pardubice",
+     "cukrárna Libuše"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "195/2021 R",
+    "title": "Dodatky ke smlouvám se Službami města Pardubice na výsyp odpadkových košů",
+    "summary": "Rada souhlasí s uzavřením dodatků ke smlouvám o poskytování služeb se Službami města Pardubice a.s. Výsyp košů na psí exkrementy se rozšiřuje o 8 košů na 127 a cena se zvyšuje z 265.000 Kč na 272.000 Kč bez DPH; výsyp a pronájem košů na TKO se rozšiřuje o 3 koše na 281 při nezměněné ceně 685.000 Kč bez DPH.",
+    "keywords": [
+     "odpadkové koše",
+     "psí exkrementy",
+     "koše na psí exkrementy",
+     "výsyp košů",
+     "TKO",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "272.000, - Kč bez DPH",
+     "265.000, - Kč bez DPH",
+     "685.000, - Kč bez DPH"
+    ]
+   },
+   {
+    "number": "196/2021 R",
+    "title": "Návrh zástupců obvodu do školských rad pěti základních škol",
+    "summary": "Rada doporučuje Radě města Pardubic schválit zástupce městského obvodu Pardubice V do školských rad při ZŠ Benešovo náměstí, ZŠ Josefa Ressla, ZŠ Waldorfská, ZŠ Staňkova a ZŠ a MŠ A. Krause.",
+    "keywords": [
+     "školská rada",
+     "zástupci obvodu",
+     "ZŠ Benešovo náměstí",
+     "ZŠ Josefa Ressla",
+     "ZŠ Waldorfská",
+     "ZŠ Staňkova",
+     "ZŠ a MŠ A. Krause",
+     "základní školy"
+    ],
+    "topics": [
+     "skolstvi",
+     "vztahy-mesto"
+    ],
+    "kind": "personalni",
+    "places": [
+     "ZŠ Benešovo náměstí",
+     "ZŠ Josefa Ressla",
+     "ZŠ Waldorfská",
+     "ZŠ Staňkova",
+     "ZŠ a MŠ A. Krause"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rada města Pardubic",
+     "ZŠ Benešovo náměstí",
+     "ZŠ Josefa Ressla",
+     "ZŠ Waldorfská",
+     "ZŠ Staňkova",
+     "ZŠ a MŠ A. Krause"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "197/2021 R",
+    "title": "Upravený odpisový plán na rok 2021",
+    "summary": "Rada schvaluje upravený odpisový plán městského obvodu na rok 2021, který je přílohou materiálu.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy",
+     "majetek",
+     "hospodaření",
+     "2021"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "198/2021 R",
+    "title": "Stanovisko k výpůjčce pozemků v Nových Jesenčanech pro ALS a ke směně pozemku",
+    "summary": "Stanovisko k žádostem pozemkové komise rady města: výpůjčka částí pozemků p. p. č. 2/12 a 2/20 v k. ú. Nové Jesenčany pro ALS Czech Republic, s.r.o. kvůli úpravám sjezdu, příjezdové komunikace a chodníku v rámci akce „Laboratorní provoz ALS Pardubice“ a jejich následné odkoupení městem za 1.000 Kč. Druhým bodem je směna pozemku p. p. č. 2906/4 pod chodníkem v ul. Chrudimská za část pozemku p. p. č. 1489/1 v k. ú. Pardubice s doplatkem ve prospěch města.",
+    "keywords": [
+     "výpůjčka pozemků",
+     "směna pozemků",
+     "Nové Jesenčany",
+     "ALS Czech Republic",
+     "Laboratorní provoz ALS Pardubice",
+     "sjezd",
+     "příjezdová komunikace",
+     "chodník",
+     "Chrudimská",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Nové Jesenčany",
+     "k. ú. Pardubice",
+     "ul. Chrudimská"
+    ],
+    "parcels": [
+     "p. p. č. 2/12, k. ú. Nové Jesenčany",
+     "p. p. č. 2/20, k. ú. Nové Jesenčany",
+     "p. p. č. 2906/4, k. ú. Pardubice",
+     "p. p. č. 1489/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "ALS Czech Republic, s.r.o.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

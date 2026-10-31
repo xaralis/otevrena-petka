@@ -1,0 +1,170 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3d4977dea62f8d39c26fffdf452c558da9cceb12c7038b07396f25a25ab4d97a",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "307/2018 R",
+    "title": "Stanovisko k majetkovým záměrům města – nájmy, převody pozemků a věcná břemena",
+    "summary": "Rada se na žádost pozemkové komise rady města Pardubice vyjádřila k pěti záměrům města: prodloužení nájmu části pozemku v k. ú. Pardubice pro ELZET Bohemia, spol. s r.o., dvěma bezúplatným převodům pozemků v k. ú. Dražkovice včetně technické infrastruktury do vlastnictví města, nájmu a věcnému břemeni na pozemcích Povodí Labe pro cyklostezku „Rekonstrukce Vinice – stará vojenská plovárna“ a věcnému břemeni pro kabelové vedení ČEZ Distribuce, a. s. O každém záměru se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k záměru města",
+     "pozemková komise",
+     "nájem pozemku",
+     "bezúplatný převod pozemku",
+     "věcné břemeno",
+     "cyklostezka Vinice",
+     "stará vojenská plovárna",
+     "Dražkovice",
+     "kabelové vedení",
+     "trafostanice"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Vinice",
+     "stará vojenská plovárna"
+    ],
+    "parcels": [
+     "p. p. č. 2165/18, k. ú. Pardubice",
+     "p. p. č. 390/8, k. ú. Dražkovice",
+     "p. p. č. 391/39, k. ú. Dražkovice",
+     "p. p. č. 2479/4, k. ú. Pardubice",
+     "p. p. č. 2543/2, k. ú. Pardubice",
+     "p. p. č. 2316/42, k. ú. Pardubice",
+     "p. p. č. 2316/1, k. ú. Pardubice",
+     "p. p. č. 2318/17, k. ú. Pardubice",
+     "p. p. č. 2335/39, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "ELZET Bohemia, spol. s r.o.",
+     "Povodí Labe, státní podnik",
+     "statutární město Pardubice",
+     "ČEZ Distribuce, a. s."
+    ],
+    "amounts": [
+     "18.511,- Kč/rok + DPH",
+     "890,- Kč/rok",
+     "1,- Kč/m2/rok bez DPH",
+     "1,- Kč + DPH v zákonné výši za 1 m2"
+    ]
+   },
+   {
+    "number": "308/2018 R",
+    "title": "Vyvěšení tibetské vlajky na budově úřadu 10. 3. 2018",
+    "summary": "Rada schválila vyvěšení tibetské vlajky na budově ÚMO Pardubice V dne 10. 3. 2018.",
+    "keywords": [
+     "tibetská vlajka",
+     "Vlajka pro Tibet",
+     "vyvěšení vlajky",
+     "budova úřadu",
+     "ÚMO Pardubice V"
+    ],
+    "topics": [
+     "ostatni"
+    ],
+    "kind": "jine",
+    "places": [
+     "budova ÚMO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "309/2018 R",
+    "title": "Přijetí finančních darů na Masopust MO Pardubice V 2018",
+    "summary": "Rada souhlasila s přijetím dvou finančních darů, od fyzické osoby a od firmy M-BET s.r.o., na akci obvodu Masopust MO Pardubice V konanou 13. 2. 2018.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "sponzorský dar",
+     "Masopust",
+     "akce obvodu"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč",
+     "10.000,- Kč"
+    ]
+   },
+   {
+    "number": "310/2018 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2017",
+    "summary": "Rada schválila výroční zprávu o poskytování informací za rok 2017 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, a uložila tajemníkovi úřadu zveřejnit ji na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "svobodný přístup k informacím",
+     "zákon 106/1999 Sb.",
+     "poskytování informací",
+     "infozákon",
+     "zveřejnění na webu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "311/2018 R",
+    "title": "Oprava vozovek po zimě 2018 – smlouva o dílo s HOLD s.r.o.",
+    "summary": "Rada souhlasila s uzavřením smlouvy o dílo s firmou HOLD s.r.o. na zakázku malého rozsahu Oprava vozovek po zimě na území obvodu v roce 2018 za jednotkové ceny pro vysprávky výtluků ruční a strojní pokládkou a tlakový zástřik, se zárukou 36 měsíců.",
+    "keywords": [
+     "oprava vozovek",
+     "výtluky",
+     "oprava silnic po zimě",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "frézování",
+     "tlakový zástřik",
+     "asfalt"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o.",
+     "DPMP",
+     "odbor investiční a správní ÚMO Pardubice V"
+    ],
+    "amounts": [
+     "3.500,- Kč bez DPH/t",
+     "4.235,- Kč s DPH/t",
+     "400,- Kč bez DPH/m2",
+     "484,- Kč s DPH/m2",
+     "3.999,- Kč bez DPH/t",
+     "4.838,79,- Kč s DPH/t"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "c12e94a933c3a73f36a2b8255dd51eea398a7d8d970237b66aced80b9f5f9077",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "335/2018 R",
+    "title": "Stanovisko k pronájmu nebytových prostorů v Devotyho, Lexově ul. a v areálu Jana Palacha",
+    "summary": "Rada vyjádřila souhlas se záměrem města pronajmout tři nebytové prostory: jednotku v přízemí domu čp. 2451 v Devotyho ul. pro prodej a servis výpočetní techniky, prostor o výměře 122,68 m2 v domě čp. 2255 v Lexově ul. pro prodejnu dámských oděvů a relaxační centrum a kanceláře o výměře 90,46 m2 v areálu Jana Palacha 324 pro spolek Laxus z. ú. (centrum terénních programů). O každém záměru se hlasovalo zvlášť.",
+    "keywords": [
+     "pronájem nebytových prostor",
+     "nájem",
+     "Devotyho",
+     "Lexova",
+     "Jana Palacha 324",
+     "nebytový prostor",
+     "stanovisko k záměru města",
+     "centrum terénních programů"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Devotyho ul. čp. 2451",
+     "Lexova ul. čp. 2255",
+     "areál Jana Palacha 324",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5029, k. ú. Pardubice",
+     "stavební parcely č. 4128, 4129, 4130, 4131, 4132 a 4133, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Laxus z. ú."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "336/2018 R",
+    "title": "Stanovisko k prodeji částí pozemků a uznání vlastnického práva v Nových Jesenčanech",
+    "summary": "Rada se vyjádřila k žádostem projednávaným pozemkovou komisí rady města: k záměru prodeje částí pozemků p. p. č. 29/55 (cca 50 m2) a p. p. č. 29/40 (cca 15 m2) v k. ú. Nové Jesenčany pro skladovací účely a k záměru uznání vlastnického práva k pozemku p. p. č. 604/13 ve prospěch statutárního města Pardubice. O jednotlivých bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "prodej pozemku",
+     "Nové Jesenčany",
+     "uznání vlastnického práva",
+     "pozemková komise",
+     "stanovisko k záměru města",
+     "sklad"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Nové Jesenčany"
+    ],
+    "parcels": [
+     "p. p. č. 29/55, k. ú. Nové Jesenčany",
+     "p. p. č. 29/40, k. ú. Nové Jesenčany",
+     "p. p. č. 604/13, k. ú. Nové Jesenčany"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "337/2018 R",
+    "title": "Výběr zhotovitele stavebních úprav chodníků v ulici Na Záboří",
+    "summary": "Rada rozhodla, že ekonomicky nejvýhodnější nabídkou v podlimitní veřejné zakázce na stavební úpravy stávajících chodníků v ulici Na Záboří je nabídka společnosti MIROS MAJETKOVÁ a.s. s cenou 4 983 447,83 Kč bez DPH a zárukou 120 měsíců.",
+    "keywords": [
+     "veřejná zakázka",
+     "chodníky",
+     "Na Záboří",
+     "výběr zhotovitele",
+     "rekonstrukce chodníků",
+     "MIROS MAJETKOVÁ"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Na Záboří"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS MAJETKOVÁ a.s."
+    ],
+    "amounts": [
+     "4 983 447,83 Kč bez DPH",
+     "6 029 971,87 Kč včetně DPH"
+    ]
+   },
+   {
+    "number": "338/2018 R",
+    "title": "Vyřazení projektové dokumentace k parkovišti v ulici Kpt. Nálepky z majetku",
+    "summary": "Rada souhlasila s vyřazením projektové dokumentace k parkovišti v ulici Kpt. Nálepky na Dukle z roku 2009 z majetku a jejím zaúčtováním do nákladů k 27. 6. 2018, protože se nepředpokládá, že by podle ní byl pořízen majetek.",
+    "keywords": [
+     "projektová dokumentace",
+     "vyřazení z majetku",
+     "parkoviště",
+     "Kpt. Nálepky",
+     "Dukla",
+     "odpis"
+    ],
+    "topics": [
+     "rozpocet",
+     "doprava"
+    ],
+    "kind": "jine",
+    "places": [
+     "ul. Kpt. Nálepky",
+     "Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Ing. Hynek Seiner, Projektová a inženýrská činnost ve výstavbě"
+    ],
+    "amounts": [
+     "73 899,-- Kč"
+    ]
+   },
+   {
+    "number": "339/2018 R",
+    "title": "Dotace školám, spolkům a organizacím na akce v roce 2018",
+    "summary": "Rada schválila dotace z programu obvodu podle směrnice č. 28/2017 a uzavření veřejnoprávních smluv s příjemci: mj. školám a mateřským školám (NOE, ZŠ a MŠ A. Krause, MŠ Raisova, ZŠ Josefa Ressla), spolku GameCon, Sociálním službám města Pardubic, Basketbalovému klubu Pardubice a KIN-BALL Pardubice, spolu se souvisejícími rozpočtovými opatřeními č. 46–58. Žádosti Atletiky Bez Bariér (vyčerpání limitu) a KIN-BALL Pardubice na Turnaj o pohár starosty (pozdě podaná žádost) byly přiděleny 0 Kč.",
+    "keywords": [
+     "dotace",
+     "granty",
+     "školy",
+     "mateřské školy",
+     "sport",
+     "basketbal",
+     "GameCon",
+     "kin-ball",
+     "rozpočtové opatření",
+     "veřejnoprávní smlouva"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Lonkova 512",
+     "A. Krause 2344",
+     "Raisova 226",
+     "Josefa Ressla 2259",
+     "kpt. Jaroše 726",
+     "V Ráji 311"
+    ],
+    "parcels": [],
+    "organizations": [
+     "NOE – Křesťanská základní škola a mateřská škola v Pardubicích",
+     "Základní škola a mateřská škola Pardubice, A. Krause 2344",
+     "Mateřská škola Pardubice - Jesničánky, Raisova 226",
+     "Základní škola Pardubice, Josefa Ressla 2259",
+     "GameCon z.s.",
+     "Sociální služby města Pardubic",
+     "Atletika Bez Bariér, z. s.",
+     "Basketbalový klub Pardubice, z. s.",
+     "KIN-BALL Pardubice z. s."
+    ],
+    "amounts": [
+     "6.700,- Kč",
+     "10.000,- Kč",
+     "7.000,- Kč",
+     "6.300,- Kč",
+     "6.500,- Kč",
+     "5.000,- Kč",
+     "20.000,- Kč",
+     "7.500,- Kč",
+     "0,- Kč",
+     "10 000,- Kč",
+     "6 000,- Kč",
+     "14 000,- Kč"
+    ]
+   },
+   {
+    "number": "340/2018 R",
+    "title": "Doporučení zastupitelstvu ke schválení závěrečného účtu obvodu za rok 2017",
+    "summary": "Rada doporučila zastupitelstvu obvodu vyslovit souhlas s celoročním hospodařením za rok 2017 bez výhrad, vzít na vědomí komentáře a přílohy závěrečného účtu a schválit finanční vypořádání za rok 2017 včetně sociálního fondu a aktuální rozpočet na rok 2018, s podmínkou schválení vypořádání zastupitelstvem města.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2017",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočet 2018",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "341/2018 R",
+    "title": "Doporučení zastupitelstvu ke schválení rozboru hospodaření k 31. 5. 2018",
+    "summary": "Rada doporučila zastupitelstvu obvodu schválit rozbor hospodaření městského obvodu k 31. 5. 2018 a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2018",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "342/2018 R",
+    "title": "Doporučení zastupitelstvu vzít na vědomí schvalování účetní závěrky za rok 2017",
+    "summary": "Rada doporučila zastupitelstvu obvodu vzít na vědomí, že účetní závěrku města včetně městských obvodů k 31. 12. 2017 schválí zastupitelstvo města v červnu a informaci o tom obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "2017",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "zastupitelstvo města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "343/2018 R",
+    "title": "Doporučení zastupitelstvu ke schválení 2. změny rozpočtu na rok 2018",
+    "summary": "Rada doporučila zastupitelstvu obvodu schválit 2. změnu rozpočtu a rozpočtu sociálního fondu na rok 2018 včetně rozpočtových opatření a úpravu plánu společenských akcí, kterou se zvyšuje částka na Počítačový kurz o 10 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2018",
+     "rozpočtové opatření",
+     "sociální fond",
+     "plán společenských akcí",
+     "počítačový kurz",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

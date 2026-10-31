@@ -118,10 +118,23 @@ def opendata_page(request: Request):
 
 @app.get("/opendata/{name}", include_in_schema=False)
 def opendata_file(name: str):
-    p = store.DATA / "opendata" / name
+    p = store.DATA / ("sources.json" if name == "sources.json" else f"opendata/{name}")
     if "/" in name or not p.is_file():
         raise HTTPException(404)
     return FileResponse(p)
+
+
+@app.get("/opendata/text/{name}", include_in_schema=False)
+def text_file(name: str):
+    p = store.DATA / "text" / name
+    if "/" in name or not name.endswith(".txt") or not p.is_file():
+        raise HTTPException(404)
+    return FileResponse(p, media_type="text/plain; charset=utf-8")
+
+
+@app.get("/opendata-texts.txt", response_class=PlainTextResponse, include_in_schema=False)
+def texts_index():
+    return "\n".join(sorted(p.name for p in (store.DATA / "text").glob("*.txt")))
 
 
 @app.get("/opendata/extracted/{name}", include_in_schema=False)
