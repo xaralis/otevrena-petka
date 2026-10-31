@@ -1,0 +1,348 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "259fc19ecc6e8ddb66f094816dd05b852448f840f569639cbf2b7d86c9e68dab",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "300/2022 R",
+    "title": "Doporučení zastupitelstvu schválit závěrečný účet MO Pardubice V za rok 2021",
+    "summary": "Rada doporučuje zastupitelstvu souhlasit s celoročním hospodařením obvodu v roce 2021 bez výhrad, vzít na vědomí komentáře a přílohy závěrečného účtu a schválit finanční vypořádání za rok 2021 včetně sociálního fondu a rozpočtová opatření v bodech 1–9.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2021",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "301/2022 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 31. 5. 2022",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 31. 5. 2022 uvedený v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření 2022",
+     "čerpání rozpočtu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "302/2022 R",
+    "title": "Doporučení zastupitelstvu schválit 2. změnu rozpočtu na rok 2022, spořicí účet a termínovaný vklad",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozpočtová opatření 2. změny rozpočtu na rok 2022 (body 1–23), souhlasit se zřízením spořicího účtu u Československé obchodní banky, a. s., a schválit termínovaný vklad 10 mil. Kč na tři měsíce u téže banky.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2022",
+     "rozpočtová opatření",
+     "spořicí účet",
+     "termínovaný vklad",
+     "ČSOB",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": [
+     "10 mil. Kč"
+    ]
+   },
+   {
+    "number": "303/2022 R",
+    "title": "Doporučení zastupitelstvu schválit směrnici č. 7/2022 o sociálním fondu",
+    "summary": "Rada doporučuje zastupitelstvu schválit směrnici č. 7/2022: Pravidla hospodaření se sociálním fondem MO Pardubice V, která k 22. 6. 2022 ruší dosavadní směrnici č. 7/2021.",
+    "keywords": [
+     "směrnice 7/2022",
+     "sociální fond",
+     "pravidla hospodaření",
+     "benefity zaměstnanců",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "304/2022 R",
+    "title": "Doporučení zastupitelstvu vzít na vědomí schvalování účetní závěrky k 31. 12. 2021",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí, že zastupitelstvo města schválí v červnu účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2021 a informaci o schválení dostane zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2021",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "305/2022 R",
+    "title": "Směrnice č. 5/2022: Evidence a vymáhání daní",
+    "summary": "Rada schvaluje směrnici č. 5/2022: Evidence a vymáhání daní, účinnou od 23. 6. 2022, která ruší původní směrnici 5/2020.",
+    "keywords": [
+     "směrnice 5/2022",
+     "evidence daní",
+     "vymáhání daní",
+     "poplatky",
+     "vnitřní předpis"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "306/2022 R",
+    "title": "Vyřazení projektové dokumentace k rekonstrukci ul. K Barvírně z majetku",
+    "summary": "Rada souhlasí s vyřazením projektové dokumentace k rekonstrukci ulice K Barvírně z let 2009–2011 od firmy Highway design, s. r. o., v hodnotě 124.360,-- Kč z majetku a s jejím jednorázovým odepsáním do nákladů k 22. 6. 2022, protože již nebude použitelná.",
+    "keywords": [
+     "projektová dokumentace",
+     "vyřazení majetku",
+     "odpis",
+     "K Barvírně",
+     "rekonstrukce ulice"
+    ],
+    "topics": [
+     "rozpocet",
+     "investice"
+    ],
+    "kind": "jine",
+    "places": [
+     "ul. K Barvírně"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Highway design, s. r. o."
+    ],
+    "amounts": [
+     "124.360,-- Kč"
+    ]
+   },
+   {
+    "number": "307/2022 R",
+    "title": "Souhlas s předzahrádkou u prodejny Mercato, Devotyho 764",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 2 m2 před provozovnou Veneto Group s.r.o. (prodejna Mercato) v ulici Devotyho 764 od 23. 6. 2022 do 30. 9. 2022.",
+    "keywords": [
+     "předzahrádka",
+     "zahrádka",
+     "Mercato",
+     "Devotyho",
+     "zábor veřejného prostranství"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Devotyho 764",
+     "prodejna Mercato"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Veneto Group s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "308/2022 R",
+    "title": "Dotace na akce škol, školek a spolků v roce 2022",
+    "summary": "Rada rozhoduje o devíti dotacích z Programu pro poskytování dotací podle Směrnice č. 28/2021 s veřejnoprávními smlouvami a souvisejícími rozpočtovými opatřeními – pro MŠ Jesničánky (tři akce), Kin-ball Pardubice z. s., Atletiku Bez Bariér Pardubice, z. s., ZŠ a MŠ Artura Krause, Basketbalový klub Pardubice, z. s., GameCon z. s. a MŠ Kamarád Pardubice. O každé dotaci se hlasovalo zvlášť.",
+    "keywords": [
+     "dotace",
+     "granty",
+     "mateřská škola",
+     "Jesničánky",
+     "Kin-ball",
+     "basketbalový turnaj",
+     "GameCon",
+     "Atletika Bez Bariér",
+     "rozpočtové opatření",
+     "veřejnoprávní smlouva"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Raisova 226",
+     "Dražkovice 121",
+     "Čs. armády 2515",
+     "Artura Krause 2344",
+     "V Ráji 311",
+     "Teplého 2100"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice - Jesničánky",
+     "Kin-ball Pardubice z. s.",
+     "Atletika Bez Bariér Pardubice, z. s.",
+     "Základní škola a mateřská škola Pardubice, Artura Krause",
+     "Basketbalový klub Pardubice, z. s.",
+     "GameCon z. s.",
+     "Mateřská škola Kamarád Pardubice"
+    ],
+    "amounts": [
+     "5.000,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "20.000,- Kč",
+     "10.000,- Kč",
+     "10.000,- Kč",
+     "20.000,- Kč",
+     "20.000,- Kč",
+     "5.000,- Kč"
+    ]
+   },
+   {
+    "number": "309/2022 R",
+    "title": "Smlouva o dílo na rekonstrukci chodníku Dražkovice – východ",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Rekonstrukce chodníku Dražkovice - východ“ s firmou ROCKY STAVBY COMPANY s. r. o. za nabídkovou cenu 2.254.409,16 bez DPH a se zárukou 72 měsíců.",
+    "keywords": [
+     "chodník",
+     "rekonstrukce chodníku",
+     "Dražkovice",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "výběr dodavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY s. r. o."
+    ],
+    "amounts": [
+     "2.254.409,16 bez DPH"
+    ]
+   },
+   {
+    "number": "310/2022 R",
+    "title": "Dodatky ke smlouvám na výsyp odpadkových košů a košů na psí exkrementy",
+    "summary": "Rada souhlasí s uzavřením dodatků ke smlouvám se Službami města Pardubice a.s. na výsyp odpadkových košů (zvýšení o 3 ks na 299 košů) a košů na psí exkrementy (zvýšení o 2 ks na 131 košů); ceny za výsypy se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "psí exkrementy",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "311/2022 R",
+    "title": "Smlouva o dílo na dodání edukativních prvků na území obvodu",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Dodání edukativních prvků na území MO Pardubice V“ s firmou AWOCADO s.r.o. za nabídkovou cenu 362.050,- Kč bez DPH a se zárukou 60 měsíců.",
+    "keywords": [
+     "edukativní prvky",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "výběr dodavatele",
+     "vzdělávací prvky"
+    ],
+    "topics": [
+     "zakazky",
+     "hriste-sport"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "AWOCADO s.r.o."
+    ],
+    "amounts": [
+     "362.050,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "312/2022 R",
+    "title": "Stanovisko k nájmu částí pozemků pro stánek s občerstvením",
+    "summary": "Návrh souhlasu s nájmem čtyř částí městských pozemků po 10 m2 v k. ú. Pardubice za účelem umístění a provozování přívěsného vozíku s občerstvením (grilovaná kuřata, ryby), k žádosti pozemkové komise rady města.",
+    "keywords": [
+     "nájem pozemku",
+     "pozemková komise",
+     "stánek s občerstvením",
+     "přívěsný vozík",
+     "grilovaná kuřata",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2404/2, k. ú. Pardubice",
+     "p. p. č. 2600/1, k. ú. Pardubice",
+     "p. p. č. 2155/7, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

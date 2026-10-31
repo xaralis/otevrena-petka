@@ -1,0 +1,218 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5fd49f7a267e13a8f1cb627bb05c00b62012ded4a078d50bd30cdc038d4754a0",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "233/2025 R",
+    "title": "Souhlas se záměrem pronájmu garážového stání v budově čp. 2731 v Sokolovské ulici",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout garážové stání o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2731 v Sokolovské ulici (st. p. č. 10090, k. ú. Pardubice). Účelem nájmu je garážování motorového vozidla.",
+    "keywords": [
+     "pronájem garážového stání",
+     "garáž",
+     "parkování",
+     "Sokolovská",
+     "čp. 2731",
+     "nebytové prostory",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "stavební parcela č. 10090, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "234/2025 R",
+    "title": "Souhlas s výkupem pozemků v zóně Vápenka a bezúplatným převodem pozemků od státu",
+    "summary": "Rada obvodu souhlasí se záměrem města odkoupit pozemky p. p. č. 2798/15, 2798/60 a 2798/61 v k. ú. Pardubice s dopravními stavbami „I/37 sjezd komerční zóny Vápenka“ a „Propojovací komunikace v zóně Vápenka“ od společnosti Chládek a Tintěra, Pardubice a.s. za 24.274.900,- Kč bez DPH. Dále souhlasí s bezúplatným převodem podílů a pozemků s místními komunikacemi z vlastnictví státu (Úřad pro zastupování státu ve věcech majetkových) do vlastnictví města.",
+    "keywords": [
+     "výkup pozemků",
+     "zóna Vápenka",
+     "sjezd z I/37",
+     "propojovací komunikace",
+     "bezúplatný převod",
+     "místní komunikace",
+     "pozemková komise",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "doprava",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "zóna Vápenka",
+     "komerční zóna Vápenka",
+     "I/37",
+     "K Vápence",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2798/15, k. ú. Pardubice",
+     "p. p. č. 2798/60, k. ú. Pardubice",
+     "p. p. č. 2798/61, k. ú. Pardubice",
+     "p. p. č. 2742/137, k. ú. Pardubice",
+     "p. p. č. 2981/30, k. ú. Pardubice",
+     "p. p. č. 2323/25, k. ú. Pardubice",
+     "p. p. č. 2387/21, k. ú. Pardubice",
+     "p. p. č. 2290/32, k. ú. Pardubice",
+     "p. p. č. 2426/42, k. ú. Pardubice",
+     "p. p. č. 152/15, k. ú. Pardubice",
+     "p. p. č. 152/16, k. ú. Pardubice",
+     "p. p. č. 2772/14, k. ú. Pardubice",
+     "p. p. č. 2499/138, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Chládek a Tintěra, Pardubice a.s.",
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "Česká republika",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "24.274.900,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "235/2025 R",
+    "title": "Přímé zadání zakázky „Obnova asfaltového krytu v ul. Lexova“ firmě Rocky stavby company CZ",
+    "summary": "Rada obvodu souhlasí s uplatněním výjimky podle čl. 7 odst. 2 Směrnice č. 14/2024 Zadávací řád veřejných zakázek a přímo zadává zakázku malého rozsahu „Obnova asfaltového krytu v ul. Lexova“ společnosti Rocky stavby company CZ s.r.o. za 2.696.275,- Kč bez DPH.",
+    "keywords": [
+     "Lexova",
+     "oprava silnice",
+     "asfalt",
+     "obnova povrchu komunikace",
+     "přímé zadání",
+     "výjimka ze zadávacího řádu",
+     "zakázka malého rozsahu"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rocky stavby company CZ s.r.o."
+    ],
+    "amounts": [
+     "2.696.275,-Kč bez DPH"
+    ]
+   },
+   {
+    "number": "236/2025 R",
+    "title": "Doporučení schválit rozbor hospodaření obvodu k 31. 8. 2025",
+    "summary": "Rada obvodu projednala zprávu a doporučuje zastupitelstvu obvodu schválit rozbor hospodaření MO Pardubice V k 31. 8. 2025 v tabulkové části zprávy a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "31. 8. 2025",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "237/2025 R",
+    "title": "Doporučení vzít na vědomí schválení účetní závěrky města za rok 2024",
+    "summary": "Rada obvodu doporučuje zastupitelstvu obvodu vzít na vědomí, že Zastupitelstvo města Pardubic dne 23. 6. 2025 schválilo účetní závěrku statutárního města Pardubic včetně městských obvodů za rok 2024 sestavenou k 31. 12. 2024.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2024",
+     "Zastupitelstvo města Pardubic",
+     "doporučení zastupitelstvu",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "238/2025 R",
+    "title": "Doporučení schválit 4. změnu rozpočtu obvodu na rok 2025",
+    "summary": "Rada obvodu doporučuje zastupitelstvu obvodu vzít na vědomí komentář ke 4. změně rozpočtu na rok 2025 a schválit rozpočtová opatření v bodech 1–21 důvodové zprávy. Dále doporučuje schválit přesuny příspěvků na provoz účelově vázaných na akce pro školy, mateřské školy a DDM Alfa.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu 2025",
+     "rozpočtová opatření",
+     "sociální fond",
+     "příspěvek na provoz",
+     "školy",
+     "mateřské školy",
+     "DDM Alfa"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Gorkého",
+     "Družby",
+     "Raisova",
+     "Benešovo náměstí",
+     "J. Ressla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ZŠ Waldorfská, Gorkého",
+     "DDM Alfa, Družby",
+     "MŠ Jesničánky, Raisova",
+     "MŠ Višňovka, Benešovo nám.",
+     "MŠ Motýlek, J. Ressla",
+     "ZŠ Benešovo náměstí",
+     "MŠ Sluníčko, Gorkého",
+     "ZŠ J. Ressla",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": [
+     "5 tis. Kč",
+     "7 tis. Kč",
+     "10 tis. Kč",
+     "6 tis. Kč",
+     "17,15 tis. Kč",
+     "11 tis. Kč",
+     "23 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "f71baf1a5869281beabb1a2678510c8407724acf1ae0c4553371767056f18f8f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "269/2026 R",
+    "title": "Souhlas s výpůjčkou části pozemku v Dražkovicích pro panelovou plochu u skládky",
+    "summary": "Rada obvodu souhlasí se záměrem města vypůjčit část pozemku p. p. č. 229/2 (2.055 m2) v k. ú. Dražkovice společnosti SmP – Odpady a.s. v režimu podpory de minimis. Na pozemku má vzniknout dočasná zpevněná panelová plocha ze silničních železobetonových panelů pro obsluhu stávající skládky.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "Dražkovice",
+     "skládka",
+     "panelová plocha",
+     "zpevněná plocha",
+     "SmP – Odpady",
+     "de minimis",
+     "stanovisko k žádosti pozemkové komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "cistota"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dražkovice",
+     "k. ú. Dražkovice",
+     "skládka"
+    ],
+    "parcels": [
+     "p. p. č. 229/2, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "SmP – Odpady a.s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "270/2026 R",
+    "title": "Odvolání člena Komise pro školství, kulturu, sport a mládež na základě rezignace",
+    "summary": "Rada obvodu odvolává na základě jeho vlastní rezignace ke dni 5. 2. 2026 člena Komise pro školství, kulturu, sport a mládež RMO Pardubice V.",
+    "keywords": [
+     "odvolání člena komise",
+     "rezignace",
+     "Komise pro školství, kulturu, sport a mládež",
+     "komise rady",
+     "personální změna"
+    ],
+    "topics": [
+     "komise-vybory",
+     "skolstvi"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro školství, kulturu, sport a mládež RMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

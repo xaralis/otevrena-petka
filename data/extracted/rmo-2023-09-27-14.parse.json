@@ -1,0 +1,224 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "7288a5dc40fadacbbca6826dcfb5b7f3dada6a6f5bb7d1df469f523cd0f415cb",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 14,
+   "kind": "radne",
+   "date": "2023-09-27",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA.",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 37,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Stavební úpravy vnitrobloku ul. Jiránkova č.p. 2209-2211“",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 68,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Program rozvoje městského obvodu Pardubice V – plnění za rok 2022",
+    "line": 79,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2023",
+    "line": 89,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Diskuse, závěr",
+    "line": 106,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "75/2023 R",
+    "agenda_no": "1",
+    "first_line": 61,
+    "last_line": 64,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "76/2023 R",
+    "agenda_no": "2",
+    "first_line": 72,
+    "last_line": 75,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "77/2023 R",
+    "agenda_no": "3",
+    "first_line": 82,
+    "last_line": 85,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "78/2023 R",
+    "agenda_no": "4",
+    "first_line": 92,
+    "last_line": 101,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "75/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "76/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "77/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "78/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

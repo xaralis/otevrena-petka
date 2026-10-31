@@ -1,0 +1,487 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "190ce700b0d4b2afb65801abc62870fc2ca4156c5b04eff5a98a18a5ed861ced",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 43,
+   "kind": "mimoradne",
+   "date": "2021-06-23",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 52,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Dotace – změna termínu schválených dotací",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Dotace",
+    "line": 82,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Stanovení počtu zaměstnanců ÚMO Pardubice V k 1. 7. 2021",
+    "line": 245,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2021",
+    "line": 257,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2021",
+    "line": 271,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Závěrečný účet MO Pardubice V za rok 2020",
+    "line": 281,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2020",
+    "line": 300,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na rok 2021",
+    "line": 312,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Udělení výjimky ze zákazu konzumace alkoholických nápojů",
+    "line": 323,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 332,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "199/2021 R",
+    "agenda_no": "1",
+    "first_line": 54,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "200/2021 R",
+    "agenda_no": "2",
+    "first_line": 75,
+    "last_line": 78,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "201/2021 R",
+    "agenda_no": "3",
+    "first_line": 84,
+    "last_line": 241,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "202/2021 R",
+    "agenda_no": "4",
+    "first_line": 247,
+    "last_line": 253,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "203/2021 R",
+    "agenda_no": "5",
+    "first_line": 259,
+    "last_line": 267,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "204/2021 R",
+    "agenda_no": "6",
+    "first_line": 273,
+    "last_line": 277,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "205/2021 R",
+    "agenda_no": "7",
+    "first_line": 283,
+    "last_line": 296,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "206/2021 R",
+    "agenda_no": "8",
+    "first_line": 303,
+    "last_line": 308,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "207/2021 R",
+    "agenda_no": "9",
+    "first_line": 314,
+    "last_line": 319,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "208/2021 R",
+    "agenda_no": "10",
+    "first_line": 325,
+    "last_line": 329,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 58,
+    "last_line": 58,
+    "resolution": "199/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "199/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "199/2021 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 79,
+    "last_line": 79,
+    "resolution": "200/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 242,
+    "last_line": 242,
+    "resolution": "201/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 254,
+    "last_line": 254,
+    "resolution": "202/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 268,
+    "last_line": 268,
+    "resolution": "203/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 278,
+    "last_line": 278,
+    "resolution": "204/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 297,
+    "last_line": 297,
+    "resolution": "205/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 309,
+    "last_line": 309,
+    "resolution": "206/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 320,
+    "last_line": 320,
+    "resolution": "207/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 330,
+    "last_line": 330,
+    "resolution": "208/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 64: bod 2 usnesení 199/2021 R (souhlas s umístěním reklamního banneru, Kamenictví Kůrka s.r.o.) měl hlasování Pro 0, zdržel se 0, proti 4, přesto je bod v textu usnesení uveden jako „souhlasí“ bez poznámky o nepřijetí; výsledek dokument výslovně neuvádí.",
+   "ř. 45: seznam materiálů k projednání (ř. 35–44) obsahuje navíc nečíslovanou položku „IZ – čerpání finančních prostředků z rezerv“, která nemá v části III. vlastní oddíl ani usnesení."
+  ]
+ }
+}

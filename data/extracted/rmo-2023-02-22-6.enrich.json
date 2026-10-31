@@ -1,0 +1,320 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "8b7267752a5ab0cc3b05041eef2df22663945e6212a0eb7330c15b02f54d1390",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "27/2023 R",
+    "title": "Souhlas s věcným břemenem pro rekonstrukci sítě nn Na Záboří (ČEZ Distribuce)",
+    "summary": "Rada obvodu souhlasí se zřízením budoucího věcného břemene a věcného břemene na částech pozemků v k. ú. Nové Jesenčany a Pardubice pro uložení a provoz distribučního vedení nn v rámci akce „Pardubice, Na Záboří – rekonstrukce nn“ pro ČEZ Distribuce, a. s. Smlouva o smlouvě budoucí bude uzavřena na 5 let s podmínkou opravy povrchu dotčených chodníků a komunikací v celé šíři.",
+    "keywords": [
+     "věcné břemeno",
+     "Na Záboří",
+     "Nové Jesenčany",
+     "ČEZ Distribuce",
+     "elektrické vedení nn",
+     "rekonstrukce elektrorozvodů",
+     "kabel",
+     "oprava chodníků",
+     "stanovisko pro pozemkovou komisi"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Na Záboří",
+     "k. ú. Nové Jesenčany",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 605/1, k. ú. Nové Jesenčany",
+     "p. p. č. 604/16, k. ú. Nové Jesenčany",
+     "p. p. č. 604/1, k. ú. Nové Jesenčany",
+     "p. p. č. 604/13, k. ú. Nové Jesenčany",
+     "p. p. č. 604/12, k. ú. Nové Jesenčany",
+     "p. p. č. 604/11, k. ú. Nové Jesenčany",
+     "p. p. č. 604/10, k. ú. Nové Jesenčany",
+     "p. p. č. 604/19, k. ú. Nové Jesenčany",
+     "p. p. č. 604/20, k. ú. Nové Jesenčany",
+     "p. p. č. 604/23, k. ú. Nové Jesenčany",
+     "p. p. č. 604/25, k. ú. Nové Jesenčany",
+     "p. p. č. 604/26, k. ú. Nové Jesenčany",
+     "p. p. č. 604/5, k. ú. Nové Jesenčany",
+     "p. p. č. 604/4, k. ú. Nové Jesenčany",
+     "p. p. č. 604/2, k. ú. Nové Jesenčany",
+     "p. p. č. 604/6, k. ú. Nové Jesenčany",
+     "p. p. č. 604/27, k. ú. Nové Jesenčany",
+     "p. p. č. 29/76, k. ú. Nové Jesenčany",
+     "p. p. č. 29/24, k. ú. Nové Jesenčany",
+     "p. p. č. 29/39, k. ú. Nové Jesenčany",
+     "p. p. č. 29/42, k. ú. Nové Jesenčany",
+     "p. p. č. 29/2, k. ú. Nové Jesenčany",
+     "p. p. č. 29/38, k. ú. Nové Jesenčany",
+     "p. p. č. 38/31, k. ú. Nové Jesenčany",
+     "p. p. č. 623/1, k. ú. Nové Jesenčany",
+     "p. p. č. 38/36, k. ú. Nové Jesenčany",
+     "p. p. č. 38/56, k. ú. Nové Jesenčany",
+     "p. p. č. 29/55, k. ú. Nové Jesenčany",
+     "p. p. č. 38/37, k. ú. Nové Jesenčany",
+     "p. p. č. 27/1, k. ú. Nové Jesenčany",
+     "p. p. č. 16/35, k. ú. Nové Jesenčany",
+     "p. p. č. 29/17, k. ú. Nové Jesenčany",
+     "p. p. č. 38/30, k. ú. Nové Jesenčany",
+     "p. p. č. 29/40, k. ú. Nové Jesenčany",
+     "p. p. č. 2600/4, k. ú. Pardubice",
+     "p. p. č. 2600/3, k. ú. Pardubice",
+     "p. p. č. 2600/9, k. ú. Pardubice",
+     "p. p. č. 2598/1, k. ú. Pardubice",
+     "p. p. č. 2598/3, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "ČEZ Distribuce, a. s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "28/2023 R",
+    "title": "Zrušení usnesení č. 4/2022 R o odměnách předsedům komisí – nečlenům ZMO",
+    "summary": "Rada obvodu ke dni 22. 2. 2023 ruší své usnesení č. 4/2022 R, kterým stanovila odměny (peněžité dary) předsedům komisí rady, kteří nejsou členy zastupitelstva obvodu.",
+    "keywords": [
+     "revokace usnesení",
+     "odměny",
+     "peněžité dary",
+     "předsedové komisí",
+     "komise rady",
+     "nečlenové zastupitelstva"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "29/2023 R",
+    "title": "Žádost o zahájení jednání o získání parcely 2511/30 v ulici Na Spravedlnosti",
+    "summary": "Rada obvodu ukládá požádat Odbor majetku a investic Magistrátu města Pardubic o zahájení jednání o získání pozemku p. č. 2511/30 v k. ú. Pardubice v ulici Na Spravedlnosti do vlastnictví města.",
+    "keywords": [
+     "Na Spravedlnosti",
+     "pozemek 2511/30",
+     "získání pozemku",
+     "výkup pozemku",
+     "vlastnictví města",
+     "Odbor majetku a investic"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "ukol",
+    "places": [
+     "Na Spravedlnosti",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. č. 2511/30, k.ú. Pardubice"
+    ],
+    "organizations": [
+     "Odbor majetku a investic Magistrátu města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "30/2023 R",
+    "title": "Příprava vyasfaltování cesty v dukelském lesoparku podél dopravního hřiště",
+    "summary": "Rada obvodu ukládá zajistit ve spolupráci s Magistrátem města Pardubic přípravu zpevnění (vyasfaltování) cesty v dukelském lesoparku, která vede podél dětského dopravního hřiště do prostoru mimoúrovňové křižovatky u Parama, v délce cca 240 metrů.",
+    "keywords": [
+     "dukelský lesopark",
+     "zpevnění cesty",
+     "asfaltování",
+     "dětské dopravní hřiště",
+     "mimoúrovňová křižovatka",
+     "Paramo",
+     "chodník",
+     "cyklostezka"
+    ],
+    "topics": [
+     "doprava",
+     "investice",
+     "zelen"
+    ],
+    "kind": "ukol",
+    "places": [
+     "dukelský lesopark",
+     "dětské dopravní hřiště",
+     "mimoúrovňová křižovatka u Parama"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Magistrát města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "31/2023 R",
+    "title": "Krajinářský návrh Dražkovice – pozemkové úpravy, dotace a program rozvoje",
+    "summary": "Rada obvodu bere na vědomí Krajinářský návrh Dražkovice a ukládá požádat Státní pozemkový úřad o komplexní pozemkové úpravy pro k. ú. Dražkovice a ORS MMP o vyhledávání dotačních příležitostí pro navržená opatření. Dále jde o zahrnutí navržených opatření do Programu rozvoje MO Pardubice V a o zahájení projektových prací na opatřeních realizovatelných na pozemcích města.",
+    "keywords": [
+     "Dražkovice",
+     "krajinářský návrh",
+     "komplexní pozemkové úpravy",
+     "Státní pozemkový úřad",
+     "krajina",
+     "program rozvoje",
+     "dotační příležitosti",
+     "projektové práce"
+    ],
+    "topics": [
+     "zelen",
+     "uzemni-planovani"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Dražkovice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Státní pozemkový úřad",
+     "ORS MMP"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "32/2023 R",
+    "title": "Dotace z programu obvodu na rok 2023 pro sedm akcí (sport, školy, festival)",
+    "summary": "Rada obvodu schvaluje poskytnutí sedmi dotací z programu podle směrnice č. 28/2022, uzavření veřejnoprávních smluv a související rozpočtová opatření. Dotace jdou na kondiční cvičení pro ženy, Den dětí v Herolandu (ZŠ a MŠ A. Krause), Křesťanský festival Pardubice (Salesiánský klub mládeže), tři akce spolku Atletika Bez Bariér pro handicapované sportovce a akci Velikonoce na zámku (MŠ Benešovo náměstí).",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "Den dětí v Herolandu",
+     "Křesťanský festival",
+     "Atletika Bez Bariér",
+     "handicapovaní sportovci",
+     "parapohár",
+     "Velikonoce na zámku",
+     "kondiční cvičení pro ženy"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "A. Krause 2344",
+     "Zborovské nám. 2018",
+     "Čs. armády 2505",
+     "Benešovo náměstí 2115",
+     "Heroland",
+     "zámek"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Základní škola a mateřská škola Pardubice, A. Krause 2344",
+     "Salesiánský klub mládeže, z. s., Pardubice",
+     "Atletika Bez Bariér, z. s.",
+     "Mateřská škola Benešovo náměstí 2115"
+    ],
+    "amounts": [
+     "20.000,- Kč",
+     "15.000,- Kč",
+     "5.000,- Kč",
+     "9.750,- Kč",
+     "10.000,- Kč",
+     "16.000,- Kč",
+     "4.000,- Kč",
+     "7.000,- Kč",
+     "3 000,- Kč",
+     "3.000,- Kč",
+     "5.200,- Kč"
+    ]
+   },
+   {
+    "number": "33/2023 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření obvodu k 31. 12. 2022",
+    "summary": "Rada obvodu projednala zprávu a doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 31. 12. 2022 v tabulkové části a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2022",
+     "doporučení zastupitelstvu",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "34/2023 R",
+    "title": "Doporučení zastupitelstvu: nová směrnice o sociálním fondu a spořicí účet",
+    "summary": "Rada obvodu doporučuje zastupitelstvu schválit směrnici č. 7/2023: Pravidla hospodaření se sociálním fondem MO Pardubice V, která ruší směrnici č. 7/2022-1. Dále doporučuje souhlasit se zřízením spořicího účtu sociálního fondu u Československé obchodní banky, a. s., a s převody mezi běžným a spořicím účtem prováděnými pracovníky úřadu.",
+    "keywords": [
+     "sociální fond",
+     "směrnice č. 7/2023",
+     "spořicí účet",
+     "ČSOB",
+     "pravidla hospodaření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "rozpocet",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "35/2023 R",
+    "title": "Doporučení zastupitelstvu: 1. změna rozpočtu 2023 a termínovaný vklad 13 mil. Kč",
+    "summary": "Rada obvodu doporučuje zastupitelstvu vzít na vědomí komentář k 1. změně rozpočtu na rok 2023 a schválit rozpočtová opatření v bodech č. 1–15 důvodové zprávy. Dále doporučuje schválit zřízení tříměsíčního termínovaného vkladu ve výši 13 mil. Kč u Československé obchodní banky, a. s., s opakovanou obnovou a výpovědí nejdéle v prosinci 2023.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2023",
+     "rozpočtová opatření",
+     "termínovaný vklad",
+     "ČSOB",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Československá obchodní banka, a. s."
+    ],
+    "amounts": [
+     "13 mil. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "10",
+    "discussion": "Bc. Petr Dufek se ptal, kdo má na starosti lesopark; tajemník odpověděl, že mobiliář městský obvod a údržbu cest odbor životního prostředí magistrátu. Bc. Petr Dufek požádal o vyzvání města k údržbě mlatových cest, úřad město vyzve."
+   }
+  ]
+ }
+}

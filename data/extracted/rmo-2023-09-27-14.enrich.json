@@ -1,0 +1,126 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7288a5dc40fadacbbca6826dcfb5b7f3dada6a6f5bb7d1df469f523cd0f415cb",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "75/2023 R",
+    "title": "Výběr zhotovitele stavebních úprav vnitrobloku Jiránkova 2209–2211",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na stavební úpravy vnitrobloku v ulici Jiránkova č. p. 2209–2211 se společností CHRPA stavební společnost s r.o. Jde o výsledek zakázky malého rozsahu.",
+    "keywords": [
+     "vnitroblok",
+     "Jiránkova",
+     "stavební úpravy",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele",
+     "CHRPA"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Jiránkova č.p. 2209-2211"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o."
+    ],
+    "amounts": [
+     "1.367.612,51 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "76/2023 R",
+    "title": "Souhlas s pronájmem skladového prostoru v areálu stadionu v ulici ČSA",
+    "summary": "Rada souhlasí se záměrem města pronajmout prostor o výměře 25 m2 v objektu čp. 2515 v areálu stadionu (ul. ČSA a V Ráji) jako skladové prostory. Žadatelem je fyzická osoba podnikající.",
+    "keywords": [
+     "nájem",
+     "nebytové prostory",
+     "stadion",
+     "ČSA",
+     "V Ráji",
+     "sklad",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "objekt čp. 2515",
+     "areál stadionu čp. 2515 ul. ČSA",
+     "čp. 311 ul. V Ráji",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5381 k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "77/2023 R",
+    "title": "Plnění Programu rozvoje MO Pardubice V za rok 2022 – doporučení zastupitelstvu",
+    "summary": "Rada projednala zprávu o plnění úkolů Programu rozvoje městského obvodu Pardubice V za rok 2022 a doporučuje zastupitelstvu obvodu vyhodnocení schválit.",
+    "keywords": [
+     "program rozvoje",
+     "plnění úkolů",
+     "vyhodnocení",
+     "rok 2022",
+     "doporučení zastupitelstvu",
+     "strategie obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "kontrola"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "78/2023 R",
+    "title": "Úprava plánu společenských akcí na rok 2023 – přesuny mezi akcemi",
+    "summary": "Rada schvaluje přesuny peněz mezi společenskými akcemi obvodu v roce 2023, hlavně ve prospěch Ochutnávky Svatomartinského vína a Rozsvěcení vánočního stromečku. Celkový rozpočet plánu akcí se nemění.",
+    "keywords": [
+     "společenské akce",
+     "plán akcí",
+     "Svatomartinské víno",
+     "rozsvěcení vánočního stromečku",
+     "opékání buřtů",
+     "dětský karneval",
+     "čarodějnice",
+     "slavnost MO",
+     "pohádková cesta",
+     "přesun peněz"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "30 tis. Kč",
+     "4,5 tis. Kč",
+     "2,1 tis. Kč",
+     "2,5 tis. Kč",
+     "6,2 tis. Kč",
+     "1 145 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,587 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "4f1b239c2ba6612e25a61a6aca1ebc2483eec4663828a52756dad8eef7fe9091",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 49,
+   "kind": "mimoradne",
+   "date": "2021-12-15",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 62,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Směrnice o ochraně oznamovatelů",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Upravený odpisový plán na r. 2021",
+    "line": 88,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Směrnice č. 28/2021: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2022",
+    "line": 95,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2022",
+    "line": 111,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Aktualizace střednědobého výhledu rozpočtu MO Pardubice V na r. 2021-2024",
+    "line": 214,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2021",
+    "line": 224,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Návrh 4. změny rozpočtu MO Pardubice V na rok 2021",
+    "line": 234,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 245,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na akci „Stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova, Pardubice včetně využití dešťových vod (2 retenční nádrže)“",
+    "line": 260,
+    "speakers": []
+   },
+   {
+    "no": "11",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na vydávání informačních novin „Pardubická Pětka“",
+    "line": 273,
+    "speakers": []
+   },
+   {
+    "no": "12",
+    "title": "Odvolání členů komisí",
+    "line": 283,
+    "speakers": []
+   },
+   {
+    "no": "13",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na akci „Změna užívání drobné provozovny na knihovnu, Josefa Ressla 2278, Pardubice“",
+    "line": 291,
+    "speakers": []
+   },
+   {
+    "no": "14",
+    "title": "Vzdání se mandátu členů zastupitelstva MO Pardubice V",
+    "line": 296,
+    "speakers": []
+   },
+   {
+    "no": "15",
+    "title": "Návrh na pojmenování nově vzniklých ulic",
+    "line": 315,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 332,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "231/2021 R",
+    "agenda_no": "1",
+    "first_line": 64,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "232/2021 R",
+    "agenda_no": "2",
+    "first_line": 75,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "233/2021 R",
+    "agenda_no": "3",
+    "first_line": 90,
+    "last_line": 91,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "234/2021 R",
+    "agenda_no": "4",
+    "first_line": 98,
+    "last_line": 107,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "235/2021 R",
+    "agenda_no": "5",
+    "first_line": 113,
+    "last_line": 210,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "236/2021 R",
+    "agenda_no": "6",
+    "first_line": 216,
+    "last_line": 220,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "237/2021 R",
+    "agenda_no": "7",
+    "first_line": 226,
+    "last_line": 230,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "238/2021 R",
+    "agenda_no": "8",
+    "first_line": 236,
+    "last_line": 241,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "239/2021 R",
+    "agenda_no": "9",
+    "first_line": 247,
+    "last_line": 256,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "240/2021 R",
+    "agenda_no": "10",
+    "first_line": 264,
+    "last_line": 269,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "241/2021 R",
+    "agenda_no": "11",
+    "first_line": 276,
+    "last_line": 279,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "242/2021 R",
+    "agenda_no": "12",
+    "first_line": 285,
+    "last_line": 287,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "243/2021 R",
+    "agenda_no": "14",
+    "first_line": 298,
+    "last_line": 311,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "244/2021 R",
+    "agenda_no": "15",
+    "first_line": 317,
+    "last_line": 329,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 55,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "231/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "232/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 1,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 92,
+    "last_line": 92,
+    "resolution": "233/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 108,
+    "last_line": 108,
+    "resolution": "234/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 211,
+    "last_line": 211,
+    "resolution": "235/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 221,
+    "last_line": 221,
+    "resolution": "236/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 231,
+    "last_line": 231,
+    "resolution": "237/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 242,
+    "last_line": 242,
+    "resolution": "238/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 257,
+    "last_line": 257,
+    "resolution": "239/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 270,
+    "last_line": 270,
+    "resolution": "240/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 280,
+    "last_line": 280,
+    "resolution": "241/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 288,
+    "last_line": 288,
+    "resolution": "242/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 312,
+    "last_line": 312,
+    "resolution": "243/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 330,
+    "last_line": 330,
+    "resolution": "244/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 70: usnesení č. 231/2021 R (Z-BOXy, Zásilkovna) má hlasování Pro 0, zdržel se 0, proti 5 – návrh zjevně nebyl přijat, přesto má číslo usnesení; text výsledek výslovně neuvádí.",
+   "ř. 55: bod „Informativní zpráva – investice“ je v pořadí materiálů bez čísla a v dokumentu není dále projednán.",
+   "ř. 293: bod 13 byl stažen, usnesení nemá."
+  ]
+ }
+}

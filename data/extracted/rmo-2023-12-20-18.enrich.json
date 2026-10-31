@@ -1,0 +1,238 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "afdc4169595c058307377fbc17d4f12f11ac1cc9a1c4d75654d6a29600afb9eb",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "92/2023 R",
+    "title": "Smlouvy se Službami města Pardubic na kontejnery a výsyp košů na rok 2024",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na rok 2024 se společností Služby města Pardubic a.s. na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů včetně košů na psí exkrementy a na svoz a likvidaci odpadu odloženého vedle kontejnerových stání. Smlouvy se uzavírají mimo režim zadávacího řádu veřejných zakázek (směrnice č. 14/2017), protože jde o městem založenou společnost zřízenou k tomuto účelu.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "výsyp odpadkových košů",
+     "koše na psí exkrementy",
+     "svoz odpadu",
+     "odpad u kontejnerů",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "150.000,- Kč bez DPH",
+     "1 105.000,- Kč bez DPH",
+     "410.000,- Kč bez DPH",
+     "160.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "93/2023 R",
+    "title": "Stanovisko k výpůjčce a převodu chodníčku na pozemku v Dražkovicích (nepřijato)",
+    "summary": "Návrh souhlasu se záměrem výpůjčky části pozemku p. p. č. 406/8 v k. ú. Dražkovice (12 m2) pro prodloužení přístupového chodníčku k nově budované brance a s následným bezúplatným převodem chodníčku po kolaudaci do vlastnictví statutárního města Pardubice. Žadatel chtěl posunutím branky rozšířit vjezd pro další parkování u rodinného domu čp. 214 Dražkovice; jde o stanovisko k žádosti pozemkové komise rady města.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "chodník",
+     "branka",
+     "vjezd",
+     "parkování",
+     "Dražkovice",
+     "bezúplatný převod",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dražkovice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 406/8, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "94/2023 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 30. 11. 2023",
+    "summary": "Rada projednala zprávu o rozboru hospodaření městského obvodu Pardubice V k 30. 11. 2023 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "doporučení zastupitelstvu",
+     "rok 2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "95/2023 R",
+    "title": "Doporučení ZMO schválit 6. změnu rozpočtu na rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář k 6. změně rozpočtu na rok 2023 a schválit rozpočtová opatření uvedená v bodech 1–15 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "6. změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2023",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "96/2023 R",
+    "title": "Doporučení ZMO schválit rozpočet na rok 2024 a pravomoci rady k rozpočtovým opatřením",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozpočet obvodu a rozpočet sociálního fondu na rok 2024, svěřit radě pravomoc provádět vymezená rozpočtová opatření (dotace a dary, přesuny do 300 tis. Kč, účelové transfery aj.) a ukončit nebo snížit termínovaný vklad 13 mil. Kč. Dále upravuje úhrady společenských akcí, drobných dárků, darů jubilantům a propagačních předmětů a schvaluje novou směrnici č. 7/2023-1 o hospodaření se sociálním fondem.",
+    "keywords": [
+     "rozpočet 2024",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoci rady",
+     "termínovaný vklad",
+     "společenské akce",
+     "životní jubilea",
+     "propagační předměty",
+     "směrnice 7/2023-1",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "300 tis. Kč",
+     "13 mil. Kč",
+     "1 000,-- Kč",
+     "200,- Kč",
+     "500,-- Kč"
+    ]
+   },
+   {
+    "number": "97/2023 R",
+    "title": "Doporučení ZMO schválit střednědobý výhled rozpočtu na roky 2023–2026",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh střednědobého výhledu rozpočtu městského obvodu Pardubice V na roky 2023–2026.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2023–2026",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "98/2023 R",
+    "title": "Směrnice č. 28/2023 – zásady a program dotací obvodu na rok 2024",
+    "summary": "Rada schvaluje směrnici č. 28/2023 se zásadami a programem pro poskytování dotací z rozpočtu městského obvodu Pardubice V v roce 2024 a její přílohy, mj. žádost o dotaci, vzor smlouvy o poskytnutí dotace, čestná prohlášení žadatelů (včetně režimu de minimis) a formuláře vyúčtování.",
+    "keywords": [
+     "dotace",
+     "dotační program",
+     "zásady poskytování dotací",
+     "směrnice 28/2023",
+     "žádost o dotaci",
+     "vyúčtování dotace",
+     "de minimis",
+     "rok 2024"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "99/2023 R",
+    "title": "Upravený odpisový plán na rok 2023",
+    "summary": "Rada schvaluje upravený odpisový plán městského obvodu na rok 2023, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "účetnictví",
+     "rok 2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "100/2023 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na úpravy vnitrobloku v ul. Jiránkova",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 2. 10. 2023 na akci „Stavební úpravy vnitrobloku ul. Jiránkova č.p. 2209-2211“ se zhotovitelem CHRPA stavební spol. s r.o. Po započtení víceprací a méněprací se cena mění z původně schválené 1.367.612,51 Kč na 1.546.946,91 Kč bez DPH.",
+    "keywords": [
+     "vnitroblok",
+     "ulice Jiránkova",
+     "stavební úpravy",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "méněpráce",
+     "navýšení ceny"
+    ],
+    "topics": [
+     "investice",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Jiránkova č.p. 2209-2211"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební spol. s r.o."
+    ],
+    "amounts": [
+     "1.546.946,91Kč bez DPH",
+     "1.367.612,51 Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

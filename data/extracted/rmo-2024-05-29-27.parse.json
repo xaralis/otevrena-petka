@@ -1,0 +1,117 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "99a7f3be9789b9b4e979d6e1df2de744e5cb4cae0dc1a15d3bb7a7cd5ec11552",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 27,
+   "kind": "mimoradne",
+   "date": "2024-05-29",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Souhlas zadavatele s uzavřením smlouvy o dílo – Arboretum",
+    "line": 43,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Diskuse, závěr",
+    "line": 56,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "136/2024 R",
+    "agenda_no": "1.",
+    "first_line": 46,
+    "last_line": 53,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 38,
+    "last_line": 38,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 37,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": "136/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 47: cena je v textu uvedena ve zjevně chybném formátu „333.0845,- Kč bez DPH za rok“ (pravděpodobně překlep)."
+  ]
+ }
+}

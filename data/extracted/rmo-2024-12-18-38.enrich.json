@@ -1,0 +1,170 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b3270ec4d5a49691ea66df8c6056732c9ce56db82d135c92f4e9067f3bec838f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "181/2024 R",
+    "title": "Doporučení ZMO schválit rozpočet MO Pardubice V na rok 2025 a související pravomoci",
+    "summary": "Rada doporučuje zastupitelstvu schválit návrh rozpočtu obvodu a rozpočtu sociálního fondu na rok 2025, svěřit radě pravomoc provádět vymezená rozpočtová opatření (přesuny do 300 tis. Kč, z rezervy na krizová opatření do 200 tis. Kč aj.) a stanovit pravidla pro rozpis rozpočtu, plán společenských akcí a hodnotu dárků. Součástí je i schválení směrnice č. 7/2024 o hospodaření se sociálním fondem, která ruší směrnici č. 7/2023-1.",
+    "keywords": [
+     "rozpočet 2025",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice č. 7/2024",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "300 tis. Kč vč.",
+     "200 tis. Kč vč.",
+     "1 000,-- Kč vč.",
+     "200,- Kč vč.",
+     "1 000,-- Kč vč",
+     "500,-- Kč vč."
+    ]
+   },
+   {
+    "number": "182/2024 R",
+    "title": "Doporučení ZMO schválit střednědobý výhled rozpočtu na roky 2024–2028",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh střednědobého výhledu rozpočtu MO Pardubice V na roky 2024–2028.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2024–2028",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "183/2024 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 30. 11. 2024",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 30. 11. 2024 a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "30. 11. 2024",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "184/2024 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na úpravy vnitrobloku Pichlova – S. K. Neumanna – K Višňovce",
+    "summary": "Rada souhlasí s uzavřením dodatku č. 1 ke smlouvě o dílo ze dne 18. 7. 2024 se zhotovitelem HOLD s.r.o. na stavební úpravy vnitrobloku v ulicích Pichlova, S. K. Neumanna a K Višňovce. Po započtení víceprací a méněprací činí cena 4.413.399,15 Kč bez DPH oproti původním 4.775.000 Kč bez DPH.",
+    "keywords": [
+     "vnitroblok",
+     "stavební úpravy",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce a méněpráce",
+     "Pichlova",
+     "S. K. Neumanna",
+     "K Višňovce",
+     "HOLD s.r.o."
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Pichlova",
+     "S. K. Neumanna",
+     "K Višňovce"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o."
+    ],
+    "amounts": [
+     "4.413.399,15Kč bez DPH",
+     "4.775.000,-Kč bez DPH"
+    ]
+   },
+   {
+    "number": "185/2024 R",
+    "title": "Směrnice č. 28/2024: zásady a program dotací z rozpočtu obvodu na rok 2025",
+    "summary": "Rada schvaluje směrnici č. 28/2024 se zásadami a programem pro poskytování dotací z rozpočtu MO Pardubice V v roce 2025 včetně příloh (žádost o dotaci, smlouva, čestná prohlášení, poučení žadatele a formuláře vyúčtování).",
+    "keywords": [
+     "dotace 2025",
+     "dotační program",
+     "zásady poskytování dotací",
+     "směrnice č. 28/2024",
+     "žádost o dotaci",
+     "vyúčtování dotace",
+     "de minimis"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "186/2024 R",
+    "title": "Stanovisko k výpůjčce pozemků u komunitní zahrady u DDM Delta",
+    "summary": "Návrh souhlasu se záměrem výpůjčky částí pozemků p. p. č. 2305/8 (106 m2) a 2306/4 (841 m2) v k. ú. Pardubice pro projekt „Úprava veřejného prostranství v okolí Komunitní zahrady u DDM Delta“. Jde o stanovisko obvodu k žádosti pozemkové komise rady města; žadatelem je fyzická osoba.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "komunitní zahrada",
+     "DDM Delta",
+     "veřejné prostranství",
+     "stanovisko obvodu",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "zelen"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Komunitní zahrada u DDM Delta",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2305/8, k. ú. Pardubice",
+     "p. p. č. 2306/4, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "DDM Delta",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

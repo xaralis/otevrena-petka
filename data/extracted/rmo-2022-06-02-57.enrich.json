@@ -1,0 +1,238 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "82792f2597179af4e8d1ba39ccd4e48d0a2c0f796300a9528369d83de50b8e82",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "293/2022 R",
+    "title": "Souhlas s předzahrádkou před Cherry barem v ulici Devotyho",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 7,20 m2 před provozovnou Cherry bar v ulici Devotyho 2452 v době od 3. 6. 2022 do 31. 10. 2022, denně od 15.00 do 22.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "Cherry bar",
+     "Devotyho",
+     "zábor veřejného prostranství",
+     "restaurace",
+     "venkovní posezení"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [
+     "Devotyho 2452, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Cherry bar"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "294/2022 R",
+    "title": "Změna termínu dvou schválených dotací – Dětský den a Rozloučení s předškoláky",
+    "summary": "Rada souhlasí se změnou termínu splnění účelu dvou již schválených dotací: na „Dětský den“ Sportovního klubu Dražkovice (nejdéle 4. 6. 2022) a na „Rozloučení s předškoláky“ Mateřské školy Pardubice, Benešovo náměstí (nejdéle 23. 6. 2022).",
+    "keywords": [
+     "dotace",
+     "změna termínu",
+     "Dětský den",
+     "Rozloučení s předškoláky",
+     "Sportovní klub Dražkovice",
+     "mateřská škola",
+     "Benešovo náměstí",
+     "Dražkovice"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice",
+     "Benešovo náměstí 2115, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Sportovní klub Dražkovice",
+     "Mateřská škola Pardubice, Benešovo náměstí 2115"
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "9.000,- Kč"
+    ]
+   },
+   {
+    "number": "295/2022 R",
+    "title": "Jmenování zástupců obvodu v Pracovní skupině Zásad pro spolupráci s investory",
+    "summary": "Rada jmenuje zástupcem MO Pardubice V v Pracovní skupině Zásad pro spolupráci s investory starostu obvodu; náhradníky jsou tajemník ÚMO Pardubice V a vedoucí odboru investičního a správního ÚMO Pardubice V.",
+    "keywords": [
+     "pracovní skupina",
+     "zásady pro spolupráci s investory",
+     "investoři",
+     "jmenování zástupců",
+     "starosta",
+     "tajemník"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "komise-vybory",
+     "uzemni-planovani"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Pracovní skupina Zásad pro spolupráci s investory",
+     "ÚMO Pardubice V",
+     "odbor investiční a správní ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "296/2022 R",
+    "title": "Stanovisko k žádostem pozemkové komise – prodej, výpůjčka, věcné břemeno, přesah stříšek",
+    "summary": "Stanovisko obvodu ke čtyřem žádostem projednávaným pozemkovou komisí rady města: prodej části p. p. č. 2511/16 jako zahrádky k bytu v domě čp. 1635, výpůjčka části p. p. č. 2400/1 pro parkování autobusu spolku OK Lokomotiva Pardubice, věcné břemeno pro optickou síť EDERA Group a.s. v ulici Na Spravedlnosti a vzdušný přesah stříšek nad vstupy bytového domu čp. 2524–2526 Bytového družstva KVĚT. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "prodej pozemku",
+     "výpůjčka pozemku",
+     "věcné břemeno",
+     "optická síť",
+     "parkování autobusu",
+     "stříšky",
+     "markýzy",
+     "Na Spravedlnosti",
+     "Benešovo náměstí"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Na Spravedlnosti, Pardubice",
+     "Palackého třída 2547, Pardubice",
+     "Benešovo náměstí 2524, 2525, 2526, Pardubice",
+     "dům čp. 1635",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2511/16, k. ú. Pardubice",
+     "p. p. č. 2400/1, k. ú. Pardubice",
+     "p. p. č. 2408/13, k. ú. Pardubice",
+     "p. p. č. 2496/1, k. ú. Pardubice",
+     "p. p. č. 2499/129, k. ú. Pardubice",
+     "p. p. č. 2499/135, k. ú. Pardubice",
+     "p. p. č. 2499/140, k. ú. Pardubice",
+     "p. p. č. 2500/4, k. ú. Pardubice",
+     "p. p. č. 2502/1, k. ú. Pardubice",
+     "p. p. č. 2502/6, k. ú. Pardubice",
+     "p. p. č. 2516/1, k. ú. Pardubice",
+     "p. p. č. 3784, k. ú. Pardubice",
+     "p. p. č. 2410/1, k. ú. Pardubice",
+     "st. p. č. 4959, k. ú. Pardubice",
+     "st. p. č. 4960, k. ú. Pardubice",
+     "st. p. č. 4961, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Spolek OK Lokomotiva Pardubice",
+     "EDERA Group a.s.",
+     "Bytové družstvo KVĚT"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "297/2022 R",
+    "title": "Smlouva o dílo na rekonstrukci chodníku v Dražkovicích mezi čp. 128 a čp. 140",
+    "summary": "Rada na základě výběru nejvhodnější nabídky v zakázce malého rozsahu souhlasí s uzavřením smlouvy o dílo na rekonstrukci chodníku v Dražkovicích mezi čp. 128 a čp. 140 s firmou ROCKY STAVBY COMPANY s. r. o. za 432.932,50 Kč bez DPH se zárukou 72 měsíců.",
+    "keywords": [
+     "rekonstrukce chodníku",
+     "chodník",
+     "Dražkovice",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "ROCKY STAVBY COMPANY"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY s. r. o."
+    ],
+    "amounts": [
+     "432.932,50 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "298/2022 R",
+    "title": "Smlouva o dílo na stavební úpravy vnitrobloku Wolkerova čp. 2116–2118 a 2119–2121",
+    "summary": "Rada na základě výběru nejvhodnější nabídky v zakázce malého rozsahu souhlasí s uzavřením smlouvy o dílo na stavební úpravy vnitrobloku v ulici Wolkerova (čp. 2116–2118 a čp. 2119–2121) s firmou M- STAV CZ s. r. o. za 3.362.645,19 Kč bez DPH se zárukou 60 měsíců.",
+    "keywords": [
+     "vnitroblok",
+     "Wolkerova",
+     "stavební úpravy",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "M- STAV CZ",
+     "revitalizace vnitrobloku"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Wolkerova čp. 2116–2118 a čp. 2119–2121, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M- STAV CZ s. r. o."
+    ],
+    "amounts": [
+     "3.362.645,19 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "299/2022 R",
+    "title": "Smlouva o dílo na stavební úpravy komunikace Do Zahrádek",
+    "summary": "Rada na základě výběru nejvhodnější nabídky v zakázce malého rozsahu souhlasí s uzavřením smlouvy o dílo na stavební úpravy komunikace v ulici Do Zahrádek s firmou ROCKY STAVBY COMPANY s. r. o. za 2.185.308,52 Kč bez DPH se zárukou 72 měsíců.",
+    "keywords": [
+     "Do Zahrádek",
+     "komunikace",
+     "oprava silnice",
+     "stavební úpravy",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "ROCKY STAVBY COMPANY"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice Do Zahrádek"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY s. r. o."
+    ],
+    "amounts": [
+     "2.185.308,52 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

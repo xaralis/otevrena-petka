@@ -1,0 +1,185 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b90a437069cdd0b3d3af817019dcc0a2a34641be65e90ab8e8b3aad66e6975e1",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "110/2024 R",
+    "title": "Směrnice č. 14/2024: Zadávací řád veřejných zakázek s účinností od 7. 3. 2024",
+    "summary": "Rada schvaluje Směrnici č. 14/2024 – Zadávací řád veřejných zakázek městského obvodu, a to dnem 7. 3. 2024.",
+    "keywords": [
+     "zadávací řád",
+     "veřejné zakázky",
+     "směrnice č. 14/2024",
+     "vnitřní předpis",
+     "pravidla zadávání zakázek"
+    ],
+    "topics": [
+     "zakazky",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "111/2024 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření MO Pardubice V k 31. 12. 2023",
+    "summary": "Rada projednala zprávu o rozboru hospodaření městského obvodu k 31. 12. 2023 a doporučuje zastupitelstvu rozbor uvedený v tabulkové části zprávy schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření 2023",
+     "hospodaření obvodu",
+     "doporučení zastupitelstvu",
+     "finance"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "112/2024 R",
+    "title": "Odpisový plán na r. 2024 – doporučení ZMO (znění shodné s rozborem hospodaření)",
+    "summary": "Usnesení k bodu Odpisový plán na r. 2024. Jeho znění v dokumentu je doslovně totožné s usnesením o rozboru hospodaření: rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 31. 12. 2023 a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "odpisový plán 2024",
+     "rozbor hospodaření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "113/2024 R",
+    "title": "Doporučení ZMO k 1. změně rozpočtu na rok 2024 a výzvě k participativnímu rozpočtu",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář k 1. změně rozpočtu na rok 2024, schválit rozpočtová opatření v bodech č. 1–14 a samostatně opatření v bodě č. 15 důvodové zprávy. Dále doporučuje souhlas s výzvou občanům k podávání návrhů projektů v rámci participativního rozpočtu s vyčleněním až 1 mil. Kč na vybrané projekty po veřejném hlasování.",
+    "keywords": [
+     "1. změna rozpočtu",
+     "rozpočet 2024",
+     "rozpočtová opatření",
+     "participativní rozpočet",
+     "návrhy občanů",
+     "veřejné hlasování",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "až do výše 1 mil. Kč"
+    ]
+   },
+   {
+    "number": "114/2024 R",
+    "title": "Pořízení integrované strategie urbanistického rozvoje MO podle doporučení komise",
+    "summary": "Rada bere na vědomí doporučení Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu pořídit integrovanou strategii urbanistického rozvoje MO a schvaluje záměr pořídit s odborníky tento strategický dokument s předpokládanou cenou do 1 mil. Kč, který nahradí dosavadní „Program rozvoje městského obvodu Pardubice V“. Zastupitelstvo žádá o schválení rozpočtového opatření na jeho pořízení.",
+    "keywords": [
+     "integrovaná strategie urbanistického rozvoje",
+     "strategický dokument",
+     "program rozvoje obvodu",
+     "rozvoj obvodu",
+     "KSROŽPD",
+     "komise pro strategii a rozvoj",
+     "urbanismus"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "komise-vybory",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO"
+    ],
+    "amounts": [
+     "do 1 mil. Kč"
+    ]
+   },
+   {
+    "number": "115/2024 R",
+    "title": "Propagace DejTip, kontaktů ÚMO a rubrika „Z podnětů občanů“ ve zpravodaji Pardubická 5",
+    "summary": "Rada ukládá zajistit ve zpravodaji „Pardubická 5“ propagaci nástroje DejTip, propagaci kontaktů na odpovědné pracovníky ÚMO (zejména péče o veřejná prostranství) a zřízení nové rubriky „Z podnětů občanů“ o vyřizování občanských podnětů. Usnesení souvisí s doporučením KSROŽPD k náhradě místních komisí.",
+    "keywords": [
+     "zpravodaj Pardubická 5",
+     "DejTip",
+     "podněty občanů",
+     "rubrika Z podnětů občanů",
+     "kontakty na úřad",
+     "náhrada místních komisí",
+     "veřejná prostranství",
+     "KSROŽPD"
+    ],
+    "topics": [
+     "kultura-akce",
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "116/2024 R",
+    "title": "Investiční záměry na rok 2024: kontejnerové stání a opravy chodníků Lexova a Boženy Němcové",
+    "summary": "Rada schvaluje investiční záměry obvodu k realizaci v roce 2024: kontejnerové stání Pichlova x Rokycanova, opravu povrchu chodníku v ulici Lexova (od Wolkerovy po Kpt. Nálepky, západní strana) a rekonstrukci povrchu chodníku v ulici Boženy Němcové (od Češkovy po Rožkovu).",
+    "keywords": [
+     "investiční záměry",
+     "kontejnerové stání",
+     "oprava chodníku",
+     "rekonstrukce chodníku",
+     "Lexova",
+     "Boženy Němcové",
+     "Pichlova",
+     "Rokycanova",
+     "investice 2024"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "cistota"
+    ],
+    "kind": "jine",
+    "places": [
+     "Pichlova",
+     "Rokycanova",
+     "Lexova",
+     "Wolkerova",
+     "Kpt. Nálepky",
+     "Boženy Němcové",
+     "Češkova",
+     "Rožkova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

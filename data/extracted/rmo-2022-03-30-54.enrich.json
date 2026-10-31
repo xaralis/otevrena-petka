@@ -1,0 +1,366 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5d68131480429a34ab680c8ab320451a80a2255d462bfab5f8223d622e26320e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "268/2022 R",
+    "title": "Dodatek č. 2 ke smlouvě o vydávání novin „Pardubická Pětka“ – zvýšení ceny",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 2 ke smlouvě o dílo ze dne 1. 2. 2021 na vydávání informačních novin „Pardubická Pětka“ se společností ZeHa studio s.r.o. Cena se od čísla 1/2022 zvyšuje z 33.360,- Kč na 34.400,- Kč bez DPH z důvodu zvýšení cen energie.",
+    "keywords": [
+     "Pardubická Pětka",
+     "zpravodaj",
+     "noviny obvodu",
+     "dodatek ke smlouvě",
+     "zvýšení ceny",
+     "ZeHa studio"
+    ],
+    "topics": [
+     "kultura-akce",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ZeHa studio s.r.o."
+    ],
+    "amounts": [
+     "33.360,- Kč bez DPH",
+     "34.400,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "269/2022 R",
+    "title": "Oprava chodníků v ulici Mikulovická – smlouva o dílo s MIROS Pardubice",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Stavební úpravy – oprava povrchu chodníků v ul. Mikulovická, Pardubice“ se společností MIROS Pardubice a.s. jako vítězem zakázky malého rozsahu.",
+    "keywords": [
+     "Mikulovická",
+     "oprava chodníků",
+     "chodníky",
+     "stavební úpravy",
+     "zakázka malého rozsahu",
+     "MIROS Pardubice"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Mikulovická"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "4.062.203,87 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "270/2022 R",
+    "title": "Předzahrádka před cukrárnou Libuše na nám. Dukelských hrdinů",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 12 m2 před provozovnou cukrárna Libuše, nám. Dukelských hrdinů 2235, v období od 1. 4. 2022 do 30. 10. 2022, denně od 9.00 do 18.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "cukrárna Libuše",
+     "náměstí Dukelských hrdinů",
+     "zábor veřejného prostranství",
+     "letní zahrádka"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "ostatni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "nám. Dukelských hrdinů 2235",
+     "cukrárna Libuše"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "271/2022 R",
+    "title": "Seč trávníků 2022 – blok Dukla západní, Višňovka severní a jižní část",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na seč trávníků na území obvodu v roce 2022 pro blok Dukla – západní část a Višňovka severní a jižní část s vybraným zhotovitelem (fyzická osoba podnikající).",
+    "keywords": [
+     "seč trávníků",
+     "sekání trávy",
+     "údržba zeleně",
+     "Dukla",
+     "Višňovka",
+     "smlouva o dílo"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky",
+     "cistota"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dukla – západní část",
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1.286.242,10 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "272/2022 R",
+    "title": "Zálivka zeleně na území obvodu v roce 2022 – smlouva o dílo",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Údržba zeleně – zálivka na území MO Pardubice V - 2022“ s vybraným zhotovitelem (fyzická osoba podnikající) za hodinovou sazbu.",
+    "keywords": [
+     "zálivka",
+     "zalévání zeleně",
+     "údržba zeleně",
+     "smlouva o dílo",
+     "2022"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "726,- Kč/hod. vč. DPH"
+    ]
+   },
+   {
+    "number": "273/2022 R",
+    "title": "Pletí výsadeb na území obvodu v roce 2022 – smlouva o dílo",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Pletí výsadeb na území MO Pardubice V pro rok 2022“ s vybraným zhotovitelem (fyzická osoba podnikající).",
+    "keywords": [
+     "pletí výsadeb",
+     "pletí záhonů",
+     "údržba zeleně",
+     "smlouva o dílo",
+     "2022"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "621.264,- Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "274/2022 R",
+    "title": "Stříhání živých plotů na území obvodu v roce 2022 – smlouva o dílo",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Stříhání živých plotů na území MO Pardubice V - 2022“ s vybraným zhotovitelem (fyzická osoba podnikající).",
+    "keywords": [
+     "stříhání živých plotů",
+     "živé ploty",
+     "keře",
+     "údržba zeleně",
+     "smlouva o dílo"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "320.000,- Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "275/2022 R",
+    "title": "Stanovisko k odkoupení parkovacích stání u projektu „Na Spravedlnosti“ městem",
+    "summary": "Návrh souhlasu obvodu s odkoupením deseti pozemků s parkovacími stáními a podílu 10/648 na pozemku přístupové komunikace u projektu „Na Spravedlnosti Pardubice“ do vlastnictví statutárního města Pardubice od společnosti Luxury Home – ALFA s.r.o. Jde o stanovisko k žádosti pozemkové komise rady města; pozemky měly sloužit k veřejnému užívání.",
+    "keywords": [
+     "parkovací stání",
+     "parkování",
+     "Na Spravedlnosti",
+     "výkup pozemků",
+     "odkoupení pozemků",
+     "pozemková komise",
+     "přístupová komunikace"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Na Spravedlnosti",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 4091/11",
+     "p. p. č. 4091/12",
+     "p. p. č. 4091/13",
+     "p. p. č. 4091/14",
+     "p. p. č. 4091/15",
+     "p. p. č. 4091/16",
+     "p. p. č. 4091/74",
+     "p. p. č. 4091/75",
+     "p. p. č. 4091/76",
+     "p. p. č. 4091/77",
+     "p. p. č. 4091/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Luxury Home – ALFA s.r.o.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "2.599.000,- Kč"
+    ]
+   },
+   {
+    "number": "276/2022 R",
+    "title": "Dotace z programu obvodu na rok 2022 pro 17 akcí spolků, škol a organizací",
+    "summary": "Rada schvaluje poskytnutí 17 dotací z Programu pro poskytování dotací dle Směrnice č. 28/2021 na sportovní, školní, kulturní a volnočasové akce (atletické akce, akce mateřských a základních škol, soutěže DDM, akce pro rodiny, Měsíc knihy, dětský den v Dražkovicích), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 18–35.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "atletika",
+     "mateřská škola",
+     "dětský den",
+     "Den Země",
+     "sportovní hry",
+     "Měsíc knihy",
+     "Pohádková zahrada"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Ekocentrum Oucmanice",
+     "Pohádková zahrada",
+     "Dražkovice",
+     "Benešovo náměstí",
+     "Artura Krause"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Hvězda Pardubice z. s.",
+     "Atletika Bez Bariér Pardubice, z. s.",
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "Základní škola a mateřská škola Pardubice, Artura Krause 2344",
+     "DDM ALFA Pardubice",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Šumák z. s.",
+     "SKP-CENTRUM o. p. s.",
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "7.000,- Kč",
+     "10.000,- Kč",
+     "9.000,- Kč",
+     "1.000,- Kč",
+     "9.900,- Kč",
+     "6.900,- Kč",
+     "3.000,- Kč",
+     "8.000,- Kč",
+     "5.000,- Kč",
+     "5.965,- Kč"
+    ]
+   },
+   {
+    "number": "277/2022 R",
+    "title": "Směrnice pro nakládání s nálezy",
+    "summary": "Rada schvaluje Směrnici pro přebírání, evidenci, vydávání a další nakládání s nálezy.",
+    "keywords": [
+     "nálezy",
+     "ztráty a nálezy",
+     "směrnice",
+     "evidence nálezů",
+     "nalezené věci"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "278/2022 R",
+    "title": "Stanovisko k pronájmu nebytového prostoru v ul. V Ráji 311 pro fitness centrum",
+    "summary": "Rada souhlasí se záměrem města pronajmout nebytový prostor o výměře 215,7 m2 v přízemí budovy č. p. 311 v ulici V Ráji spolku Integrační sportovní klub IFC z. s. za účelem provozu fitness centra.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "V Ráji",
+     "fitness centrum",
+     "pronájem",
+     "Integrační sportovní klub IFC"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "V Ráji 311",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5386, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Integrační sportovní klub IFC z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "279/2022 R",
+    "title": "Seč trávníků 2022 – blok Dukla východní, Nové Jesenčany, Dražkovice a Dukla",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na seč trávníků na území obvodu v roce 2022 pro blok Dukla východní, Nové Jesenčany, Dražkovice a Dukla s vybraným zhotovitelem (fyzická osoba podnikající).",
+    "keywords": [
+     "seč trávníků",
+     "sekání trávy",
+     "údržba zeleně",
+     "Dukla",
+     "Nové Jesenčany",
+     "Dražkovice",
+     "smlouva o dílo"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky",
+     "cistota"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dukla",
+     "Nové Jesenčany",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1.080.167,- Kč vč. DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

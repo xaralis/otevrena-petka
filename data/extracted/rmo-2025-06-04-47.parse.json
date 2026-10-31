@@ -1,0 +1,256 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "655e97e3141c4c53abb13c66c655a84aeb90a7dc32ed5ee99b7e2c6aa71e6da2",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 47,
+   "kind": "radne",
+   "date": "2025-06-04",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou bistra v ulici Josefa Ressla před čp. 2277-78, Pardubice",
+    "line": 93,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 107,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 116,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "215/2025 R",
+    "agenda_no": "1",
+    "first_line": 53,
+    "last_line": 91,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "216/2025 R",
+    "agenda_no": "2",
+    "first_line": 97,
+    "last_line": 100,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "217/2025 R",
+    "agenda_no": "3",
+    "first_line": 110,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "215/2025 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "215/2025 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "215/2025 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "215/2025 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": "216/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "217/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 86-91: bod 4 usnesení 215/2025 R (využití předkupního práva ke st. p. č. 8926) má hlasování Pro 0, zdržel se 4, proti 0 – text usnesení přesto uvádí, že rada „souhlasí se záměrem“ včetně bodu 4; tato část zjevně nebyla přijata."
+  ]
+ }
+}

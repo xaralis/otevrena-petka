@@ -1,0 +1,305 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "3ac926e543ed97cca7a30699417f1cf9f86b8232f5b87e1542687ffdca6bd51b",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 53,
+   "kind": "mimoradne",
+   "date": "2022-03-10",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 37,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Vzdání se mandátu člena zastupitelstva MO Pardubice V",
+    "line": 66,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Odpisový plán na r. 2022",
+    "line": 81,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2021",
+    "line": 88,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "1. změna rozpočtu MO Pardubice V na r. 2022",
+    "line": 100,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Nebytové prostory na území MO Pardubice V",
+    "line": 117,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rezoluce na podporu nezávislosti Ukrajiny, poskytnutí humanitární pomoci a související návrh rozpočtového opatření",
+    "line": 137,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 160,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "261/2022 R",
+    "agenda_no": "1",
+    "first_line": 55,
+    "last_line": 62,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "262/2022 R",
+    "agenda_no": "2",
+    "first_line": 68,
+    "last_line": 77,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "263/2022 R",
+    "agenda_no": "3",
+    "first_line": 83,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "264/2022 R",
+    "agenda_no": "4",
+    "first_line": 90,
+    "last_line": 94,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "265/2022 R",
+    "agenda_no": "5",
+    "first_line": 102,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "266/2022 R",
+    "agenda_no": "6",
+    "first_line": 119,
+    "last_line": 133,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "267/2022 R",
+    "agenda_no": "7",
+    "first_line": 140,
+    "last_line": 157,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 46,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "261/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "262/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "263/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "264/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "265/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 134,
+    "last_line": 134,
+    "resolution": "266/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení č. 267/2022 R (bod 7, ř. 139–157) je v textu i v PDF bez hlasovacího řádku; za ním následuje rovnou Diskuse (ř. 160)."
+  ]
+ }
+}

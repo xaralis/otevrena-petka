@@ -1,0 +1,273 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "de24ea91d67ffcf8953bd1ee5b494d40ac6c4fae50cb562330902017e8969a96",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 4,
+   "kind": "radne",
+   "date": "2023-01-11",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 51,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Výroční zpráva o poskytování informací za rok 2022 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím",
+    "line": 77,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost o revokaci usnesení č. 9/2022 R - pohledávka úřadu za bývalým místostarostou MO Pardubice V Ing. Jiřím Janošem",
+    "line": 87,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Přijetí finančních darů",
+    "line": 96,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Diskuse, závěr",
+    "line": 107,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "18/2023 R",
+    "agenda_no": "1",
+    "first_line": 54,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "19/2023 R",
+    "agenda_no": "2",
+    "first_line": 81,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "20/2023 R",
+    "agenda_no": "3",
+    "first_line": 91,
+    "last_line": 93,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "21/2023 R",
+    "agenda_no": "4",
+    "first_line": 100,
+    "last_line": 104,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "18/2023 R",
+    "part": "bod 1 – výpůjčka a odkoupení zpevněných ploch na p. p. č. 406/8, k. ú. Dražkovice",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": "18/2023 R",
+    "part": "bod 2 – nájem a prodej části p. p. č. 460/2, k. ú. Dražkovice",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "19/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 94,
+    "last_line": 94,
+    "resolution": "20/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "21/2023 R",
+    "part": "bod 1. a) – dar 10.000,- Kč od M-BET s.r.o.",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 105,
+    "last_line": 105,
+    "resolution": "21/2023 R",
+    "part": "bod 1. b) – dar 1.500,- Kč od HAMO systems s.r.o.",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 9 a 111: jednání podle textu začalo i skončilo v 16.30 hod.",
+   "ř. 101: IČ firmy M-BET s.r.o. je uvedeno jako 275211176 (9 číslic), IČ má mít 8 číslic.",
+   "ř. 104: text bodu b) uvádí „všechny na péči o veřejnou zeleň“, účel se zřejmě vztahuje k oběma darům a) i b).",
+   "ř. 66 a 75: obě dílčí hlasování k usnesení 18/2023 R mají 0 hlasů pro; text výsledek neuvádí."
+  ]
+ }
+}

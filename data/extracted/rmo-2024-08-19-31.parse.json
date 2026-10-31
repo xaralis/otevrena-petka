@@ -1,0 +1,116 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "722a55b1eb5878762231309060c0bf2aef9a88f27043fa0ca715103c6e5a39dd",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 31,
+   "kind": "mimoradne",
+   "date": "2024-08-19",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 38,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Oprava povrchu chodníku ul. Lexova - západ“",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Diskuse, závěr",
+    "line": 62,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "152/2024 R",
+    "agenda_no": "1",
+    "first_line": 55,
+    "last_line": 58,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 40,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": "152/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

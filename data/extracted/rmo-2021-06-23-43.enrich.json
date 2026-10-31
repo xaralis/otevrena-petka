@@ -1,0 +1,303 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "190ce700b0d4b2afb65801abc62870fc2ca4156c5b04eff5a98a18a5ed861ced",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "199/2021 R",
+    "title": "Stanovisko k žádostem pozemkové komise: výkup pozemku, reklamní banner, věcné břemeno kanalizace",
+    "summary": "Stanovisko obvodu k žádostem pozemkové komise rady města: odkoupení pozemku pod chodníkem v ulici Chrudimská do vlastnictví města, umístění reklamního banneru firmy Kamenictví Kůrka s.r.o. na oplocení bývalých kasáren naproti hřbitovu a zřízení věcného břemene pro Vodovody a kanalizace Pardubice, a.s. kvůli kanalizačnímu potrubí v rámci stavby „Pardubice, Dražkovice – propojení kanalizace“. O jednotlivých bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko pozemkové komise",
+     "výkup pozemku",
+     "chodník Chrudimská",
+     "reklamní banner",
+     "bývalá kasárna",
+     "věcné břemeno",
+     "kanalizace Dražkovice",
+     "propojení kanalizace"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Chrudimská",
+     "bývalá kasárna naproti hřbitovu",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 2387/42, k. ú. Pardubice",
+     "p. p. č. 2433/1, k. ú. Pardubice",
+     "p. p. č. 287/2, k. ú. Dražkovice",
+     "p. p. č. 285/37, k. ú. Dražkovice",
+     "p. p. č. 285/38, k. ú. Dražkovice",
+     "p. p. č. 332/9, k. ú. Dražkovice",
+     "p. p. č. 471/36, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice",
+     "Kamenictví Kůrka s.r.o.",
+     "Vodovody a kanalizace Pardubice, a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "200/2021 R",
+    "title": "Změna termínu dotace na Dětský den Sportovního klubu Dražkovice",
+    "summary": "Rada souhlasí se změnou termínu již schválené dotace na akci „Dětský den“ (původně 29. 5. 2021) pro Sportovní klub Dražkovice; účelu dotace má být dosaženo nejdéle 31. 8. 2021.",
+    "keywords": [
+     "změna termínu dotace",
+     "Dětský den",
+     "Sportovní klub Dražkovice",
+     "dotace"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "10.000,- Kč"
+    ]
+   },
+   {
+    "number": "201/2021 R",
+    "title": "Dotace 19 žadatelům na akce, kroužky a vybavení v roce 2021",
+    "summary": "Rada schvaluje 19 dotací z programu podle Směrnice č. 28/2020, uzavření veřejnoprávních smluv a související rozpočtová opatření (č. 30–48). Dotace jdou mj. na Pardubice Bez Bariér OPEN, projekty MŠ Dražkovice, Den předškoláka školy NOE, akci Ratolesti, soustředění BK Pardubice, Letní kino SKP – CENTRUM, Posvícení v Dražkovicích, vybavení kroužků ZŠ Josefa Ressla, zážitkový pobyt ZŠ a MŠ Artura Krause, projekty MŠ Jesničánky a festival GameCon 2021.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "základní škola",
+     "Letní kino",
+     "Posvícení v Dražkovicích",
+     "GameCon",
+     "kroužky",
+     "Pardubice Bez Bariér OPEN"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice",
+     "Čs. armády",
+     "Lonkova",
+     "K Blahobytu",
+     "V Ráji",
+     "Jungmannova",
+     "Josefa Ressla",
+     "Artura Krause",
+     "Raisova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Atletika Bez Bariér z. s.",
+     "Mateřská škola Pardubice – Dražkovice 146",
+     "NOE – Křesťanská základní škola a mateřská škola v Pardubicích",
+     "Ratolest, dětská péče a léčebná rehabilitace",
+     "Basketbalový klub Pardubice, z. s.",
+     "SKP – CENTRUM, o. p. s.",
+     "Sportovní klub Dražkovice",
+     "Základní škola Pardubice, Josefa Ressla 2258",
+     "Základní škola a mateřská škola Pardubice, Artura Krause 2344",
+     "Mateřská škola Pardubice - Jesničánky",
+     "GameCon z. s."
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "4.000,- Kč",
+     "4.700,- Kč",
+     "2.500,- Kč"
+    ]
+   },
+   {
+    "number": "202/2021 R",
+    "title": "Nové místo referenta ekonomického odboru, počet zaměstnanců a organizační řád ÚMO",
+    "summary": "Rada ke dni 1. 7. 2021 zřizuje místo referenta odboru ekonomického ÚMO Pardubice V, stanoví celkový počet zaměstnanců úřadu na 30 (18 úředníků a 12 pracovníků skupiny drobné údržby) a schvaluje nový organizační řád a organizační strukturu úřadu.",
+    "keywords": [
+     "počet zaměstnanců",
+     "organizační řád",
+     "organizační struktura",
+     "referent",
+     "odbor ekonomický",
+     "drobná údržba",
+     "úřad městského obvodu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "203/2021 R",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na rok 2021",
+    "summary": "Rada schvaluje přesun Slavnosti MO Pardubice V na září 2021 a přesuny peněz z Dětského karnevalu, Masopustu a Zeleného čtvrtku na Pohádkovou cestu a Slavnost MO Pardubice V. Celkový rozpočet plánu akcí zůstává 600 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "Pohádková cesta",
+     "Dětský karneval",
+     "Masopust",
+     "Zelený čtvrtek",
+     "kulturní akce"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "48,2 tis. Kč",
+     "11,8 tis. Kč",
+     "23,2 tis. Kč",
+     "15 tis. Kč",
+     "600 tis. Kč"
+    ]
+   },
+   {
+    "number": "204/2021 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 31. 5. 2021",
+    "summary": "Rada projednala zprávu o rozboru hospodaření MO Pardubice V k 31. 5. 2021 a doporučuje zastupitelstvu obvodu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "doporučení zastupitelstvu",
+     "rozpočet 2021"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "205/2021 R",
+    "title": "Doporučení zastupitelstvu k závěrečnému účtu za rok 2020",
+    "summary": "Rada doporučuje zastupitelstvu obvodu souhlasit s celoročním hospodařením za rok 2020 bez výhrad, vzít na vědomí podklady závěrečného účtu a schválit finanční vypořádání za rok 2020 včetně sociálního fondu, upravený rozpočet na rok 2021 a rozpočtová opatření. Částka vypořádání mezi městem a obvodem je podmíněna schválením Zastupitelstvem města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2020",
+     "finanční vypořádání",
+     "sociální fond",
+     "upravený rozpočet 2021",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V",
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "206/2021 R",
+    "title": "Doporučení zastupitelstvu vzít na vědomí postup schválení účetní závěrky 2020",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2020 schválí zastupitelstvo města v červnu a zastupitelstvo obvodu o tom dostane informaci na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2020",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "207/2021 R",
+    "title": "Doporučení zastupitelstvu schválit 2. změnu rozpočtu na rok 2021",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí komentář a schválit návrh 2. změny rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2021 včetně souvisejících rozpočtových opatření.",
+    "keywords": [
+     "změna rozpočtu",
+     "2. změna rozpočtu 2021",
+     "sociální fond",
+     "rozpočtová opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "208/2021 R",
+    "title": "Výjimka ze zákazu pití alkoholu na Slavnosti MO Pardubice V 11. 9. 2021",
+    "summary": "Rada uděluje výjimku z obecně závazné vyhlášky města č. 13/2006 o veřejném pořádku a souhlasí s konzumací alkoholických nápojů při Slavnosti MO Pardubice V dne 11. 9. 2021 od 12.00 do 22.00 hod. na náměstí Dukelských hrdinů.",
+    "keywords": [
+     "výjimka z vyhlášky",
+     "zákaz konzumace alkoholu",
+     "alkohol na veřejnosti",
+     "Slavnost MO Pardubice V",
+     "veřejný pořádek",
+     "náměstí Dukelských hrdinů"
+    ],
+    "topics": [
+     "bezpecnost",
+     "kultura-akce",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "jine",
+    "places": [
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

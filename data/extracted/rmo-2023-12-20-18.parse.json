@@ -1,0 +1,408 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "afdc4169595c058307377fbc17d4f12f11ac1cc9a1c4d75654d6a29600afb9eb",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 18,
+   "kind": "mimoradne",
+   "date": "2023-12-20",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2023",
+    "line": 89,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "6. změna rozpočtu MO Pardubice V na r. 2023",
+    "line": 99,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2024",
+    "line": 115,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2023-2026",
+    "line": 221,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Směrnice č. 28/2023: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2024",
+    "line": 231,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Upravený odpisový plán na r. 2023",
+    "line": 246,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Stavební úpravy vnitrobloku ul. Jiránkova č.p. 2209-2211“",
+    "line": 253,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Diskuse, závěr",
+    "line": 268,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "92/2023 R",
+    "agenda_no": "1",
+    "first_line": 59,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "93/2023 R",
+    "agenda_no": "2",
+    "first_line": 75,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "94/2023 R",
+    "agenda_no": "3",
+    "first_line": 91,
+    "last_line": 95,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "95/2023 R",
+    "agenda_no": "4",
+    "first_line": 101,
+    "last_line": 111,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "96/2023 R",
+    "agenda_no": "5",
+    "first_line": 117,
+    "last_line": 217,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "97/2023 R",
+    "agenda_no": "6",
+    "first_line": 223,
+    "last_line": 227,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "98/2023 R",
+    "agenda_no": "7",
+    "first_line": 234,
+    "last_line": 242,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "99/2023 R",
+    "agenda_no": "8",
+    "first_line": 248,
+    "last_line": 249,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "100/2023 R",
+    "agenda_no": "9",
+    "first_line": 260,
+    "last_line": 264,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "92/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "93/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 96,
+    "last_line": 96,
+    "resolution": "94/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 112,
+    "last_line": 112,
+    "resolution": "95/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 218,
+    "last_line": 218,
+    "resolution": "96/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 228,
+    "last_line": 228,
+    "resolution": "97/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 243,
+    "last_line": 243,
+    "resolution": "98/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 250,
+    "last_line": 250,
+    "resolution": "99/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 265,
+    "last_line": 265,
+    "resolution": "100/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 26, 31: jmenování zapisovatele a ověřovatelů bez hlasování; hlasováno jen o materiálech k projednání (ř. 48).",
+   "ř. 85–86: usnesení 93/2023 R (výpůjčka a převod chodníčku na p. p. č. 406/8 Dražkovice) získalo pro 0, zdržel se 5, proti 0 – text výslovně uvádí „Usnesení nebylo přijato“, přesto má číslo.",
+   "ř. 82: jméno žadatele je v dokumentu anonymizováno („xxxxxxxxxxx“).",
+   "ř. 161–162: usnesení 96/2023 R (rozpočet na r. 2024), bod 2 f) odkazuje na plán společenských akcí MO „na r. 2023“ – pravděpodobně překlep ve zdroji (má být 2024)."
+  ]
+ }
+}

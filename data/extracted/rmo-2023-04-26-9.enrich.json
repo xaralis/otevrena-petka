@@ -1,0 +1,145 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7faf0c4a522644dba65b7609f53379beeb10170c87dd8de34939e893559cda06",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "49/2023 R",
+    "title": "Souhlas s věcným břemenem pro vodovod v ul. Raisova a s užíváním pozemků pro Retroměstečko 2023",
+    "summary": "Rada souhlasí se zřízením budoucího věcného břemene a věcného břemene na pozemcích v k. ú. Nové Jesenčany a Pardubice pro uložení a provozování vodovodního řadu v rámci výměny vodovodu v ul. Raisova na Jesničánkách (žadatel Vodovody a kanalizace Pardubice, a.s.). Dále souhlasí s bezplatným užíváním pozemků a částí objektů v k. ú. Pardubice pro 10. ročník akce „RETROMĚSTEČKO (nejen) ČSLA, setkání HASIČŮ a bezpečnostních složek“ ve dnech 10. 9. – 11. 9. 2023 (žadatel RETROMĚSTEČKO s.r.o.).",
+    "keywords": [
+     "věcné břemeno",
+     "vodovod",
+     "ulice Raisova",
+     "Jesničánky",
+     "výměna vodovodního potrubí",
+     "Retroměstečko",
+     "bezplatné užívání pozemků",
+     "setkání hasičů",
+     "stanovisko k žádosti pozemkové komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "kultura-akce"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Raisova",
+     "Jesničánky",
+     "k. ú. Nové Jesenčany",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 8/4, k. ú. Nové Jesenčany",
+     "p. p. č. 605/1, k. ú. Nové Jesenčany",
+     "p. p. č. 2347/22, k. ú. Pardubice",
+     "p. p. č. 2347/42, k. ú. Pardubice",
+     "p. p. č. 2350/9, k. ú. Pardubice",
+     "p. p. č. 2906/1, k. ú. Pardubice",
+     "p. p. č. 2400/1, k. ú. Pardubice",
+     "p. p. č. 2400/2, k. ú. Pardubice",
+     "p. p. č. 2400/3, k. ú. Pardubice",
+     "p. p. č. 2400/5, k. ú. Pardubice",
+     "p. p. č. 2400/8, k. ú. Pardubice",
+     "p. p. č. 2400/9, k. ú. Pardubice",
+     "p. p. č. 2400/11, k. ú. Pardubice",
+     "p. p. č. 2426/2, k. ú. Pardubice",
+     "p. p. č. 2433/1, k. ú. Pardubice",
+     "p. p. č. 2575/4, k. ú. Pardubice",
+     "st. p. č. 2342, k. ú. Pardubice",
+     "st. p. č. 2343, k. ú. Pardubice",
+     "st. p. č. 5336, k. ú. Pardubice",
+     "st. p. č. 5340, k. ú. Pardubice",
+     "st. p. č. 5341, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pozemková komise Rady města Pardubice",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "RETROMĚSTEČKO s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "50/2023 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření MO Pardubice V k 31. 3. 2023",
+    "summary": "Rada projednala zprávu o rozboru hospodaření městského obvodu k 31. 3. 2023 a doporučuje zastupitelstvu schválit rozbor uvedený v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "1. čtvrtletí 2023",
+     "rozpočet",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "51/2023 R",
+    "title": "Doporučení ZMO schválit 2. změnu rozpočtu MO Pardubice V na rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář k 2. změně rozpočtu na rok 2023, schválit rozpočtová opatření v bodech 1–7 důvodové zprávy a schválit úpravu plánu společenských akcí, kterou se zvyšuje částka na akci Ochutnávka svatomartinského vína o 40 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2023",
+     "plán společenských akcí",
+     "Ochutnávka svatomartinského vína",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": [
+     "40 tis. Kč"
+    ]
+   },
+   {
+    "number": "52/2023 R",
+    "title": "Jednání s ŘSD o protihlukových a světelných opatřeních u jihovýchodního obchvatu",
+    "summary": "Rada ukládá jednat ve spolupráci s MO Pardubice IV a městem s Ředitelstvím silnic a dálnic ČR o doplnění projektu jihovýchodního obchvatu o opatření na zmírnění hlukových a světelných dopadů jeho provozu na okolní zástavbu a rekreační lokality. Úkol má starosta s termínem 30. 6. 2023.",
+    "keywords": [
+     "jihovýchodní obchvat",
+     "hluk",
+     "protihlukové opatření",
+     "světelné znečištění",
+     "Ředitelství silnic a dálnic",
+     "obchvat Pardubic",
+     "rekreační lokality"
+    ],
+    "topics": [
+     "doprava",
+     "zelen",
+     "vztahy-mesto"
+    ],
+    "kind": "ukol",
+    "places": [
+     "jihovýchodní obchvat"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Ředitelství silnic a dálnic ČR",
+     "Městský obvod Pardubice IV",
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

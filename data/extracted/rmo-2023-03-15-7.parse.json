@@ -1,0 +1,262 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "fd02775f808620d960f6e82c485c501fb71a3d5f9addbd37960cb118f0df5f56",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 7,
+   "kind": "radne",
+   "date": "2023-03-15",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Provozní řád tržiště v Jilemnického ulici v Pardubicích",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Provozní řád tržiště v Devotyho ulici v Pardubicích",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Provozní řád sportovně rekreačního areálu v ulici Kpt. Nálepky v Pardubicích",
+    "line": 64,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Dotace",
+    "line": 71,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 284,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Diskuse, závěr",
+    "line": 299,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "36/2023 R",
+    "agenda_no": "1",
+    "first_line": 49,
+    "last_line": 53,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "37/2023 R",
+    "agenda_no": "2",
+    "first_line": 59,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "38/2023 R",
+    "agenda_no": "3",
+    "first_line": 66,
+    "last_line": 67,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "39/2023 R",
+    "agenda_no": "4",
+    "first_line": 73,
+    "last_line": 280,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "40/2023 R",
+    "agenda_no": "5",
+    "first_line": 287,
+    "last_line": 295,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 41,
+    "last_line": 41,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 40,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": "36/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "37/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 68,
+    "last_line": 68,
+    "resolution": "38/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 281,
+    "last_line": 281,
+    "resolution": "39/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 296,
+    "last_line": 296,
+    "resolution": "40/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 217–224: usnesení 39/2023 R bod 17 – dotace ve výši 10.000,- Kč, ale související rozpočtové opatření přesouvá jen 3.500,- Kč z rezervy rady (ř. 221); ostatní body mají přesun rovný výši dotace.",
+   "ř. 229, 237, 245, 255, 265, 273: v názvu směrnice překlep „z rozpočtu MO ve dnech Pardubice V“."
+  ]
+ }
+}

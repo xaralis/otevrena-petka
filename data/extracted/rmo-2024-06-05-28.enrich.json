@@ -1,0 +1,119 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "0188f71b59feb630118a525f5ba420e736d5db41a59bacbf7fb91155b8358846",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "137/2024 R",
+    "title": "Záměr poptat projekční práce na pět investičních akcí – předložení ZMO",
+    "summary": "Rada ukládá předložit zastupitelstvu ke schválení záměr poptání projekčních prací na pět investičních akcí: výsadby v předprostoru KD Dukla s prokořenitelnými prostory, opravu psího výběhu u Lesoparku Dukla, průjezd pod mostem na Vinici, úpravu křižovatky Devotyho ⨯ Železničního pluku a projektovou dokumentaci prostoru u ZŠ Benešovo náměstí. O každé akci se hlasovalo zvlášť.",
+    "keywords": [
+     "projekční práce",
+     "projektová dokumentace",
+     "KD Dukla",
+     "výsadba stromů",
+     "psí výběh",
+     "Lesopark Dukla",
+     "průjezd pod mostem",
+     "Vinice",
+     "křižovatka Devotyho",
+     "ZŠ Benešovo náměstí"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "ukol",
+    "places": [
+     "KD Dukla",
+     "Lesopark Dukla",
+     "Vinice",
+     "křižovatka Devotyho ⨯ Železničního pluku",
+     "ZŠ Benešovo náměstí"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "138/2024 R",
+    "title": "Krajinářský návrh Dražkovice – zrušení částí 2. a 3. usnesení č. 31/2023 R",
+    "summary": "Rada ruší části 2. a 3. svého dřívějšího usnesení č. 31/2023 R, které se týkalo krajinářského návrhu v Dražkovicích (revokace).",
+    "keywords": [
+     "revokace usnesení",
+     "zrušení usnesení",
+     "krajinářský návrh",
+     "Dražkovice",
+     "31/2023 R"
+    ],
+    "topics": [
+     "zelen",
+     "investice"
+    ],
+    "kind": "jine",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "139/2024 R",
+    "title": "Souhlas s věcným břemenem pro kabelové vedení NN – Holcova 1121 (ČEZ Distribuce)",
+    "summary": "Rada souhlasí se záměrem zřídit budoucí věcné břemeno a věcné břemeno na částech pozemků v k. ú. Pardubice pro uložení a provoz nového kabelového vedení NN v rámci akce „Pardubice, Holcova 1121 knn“. Žadatelem je ČEZ Distribuce, a. s.; realizace se předpokládá v 4/2025, smlouva o budoucím břemeni na 6 let, o břemeni na dobu neurčitou.",
+    "keywords": [
+     "věcné břemeno",
+     "kabelové vedení NN",
+     "elektrické vedení",
+     "inženýrské sítě",
+     "ČEZ Distribuce",
+     "Holcova",
+     "pozemková komise",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Holcova 1121",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 1784, k. ú. Pardubice",
+     "p. p. č. 2389/2, k. ú. Pardubice",
+     "p. p. č. 2389/3, k. ú. Pardubice",
+     "p. p. č. 2389/27, k. ú. Pardubice",
+     "p. p. č. 2389/28, k. ú. Pardubice",
+     "p. p. č. 2389/29, k. ú. Pardubice",
+     "p. p. č. 2389/30, k. ú. Pardubice",
+     "p. p. č. 2390/23, k. ú. Pardubice",
+     "p. p. č. 2404/57, k. ú. Pardubice",
+     "p. p. č. 2404/58, k. ú. Pardubice",
+     "p. p. č. 2404/59, k. ú. Pardubice",
+     "p. p. č. 2404/60, k. ú. Pardubice",
+     "p. p. č. 2404/62, k. ú. Pardubice",
+     "p. p. č. 2404/63, k. ú. Pardubice",
+     "p. p. č. 2404/64, k. ú. Pardubice",
+     "p. p. č. 2404/65, k. ú. Pardubice",
+     "p. p. č. 2404/68, k. ú. Pardubice",
+     "p. p. č. 2404/70, k. ú. Pardubice",
+     "p. p. č. 3277/4, k. ú. Pardubice",
+     "p. p. č. 3343, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "ČEZ Distribuce, a. s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

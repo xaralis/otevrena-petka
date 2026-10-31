@@ -1,0 +1,281 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6df7512e5ac3d0dcbc172e8eeaa4ef28d40265a5f16a3f45bc9b72be9982dc8b",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "68/2023 R",
+    "title": "Stanovisko k žádostem pozemkové komise – výkupy, prodeje, směna a převody pozemků",
+    "summary": "Rada vydala stanovisko k sedmi majetkovým žádostem projednávaným pozemkovou komisí rady města: výkup podílů pozemku p. p. č. 2499/138, výpůjčka pozemku pro chodník u novostavby „Rezidence VEKTOR“ v Rokycanově ulici (VEKTOR INVEST s.r.o.), prodej pozemku Společenství pro dům čp. 1634 v ulici Železničního pluku, prodej a odkoupení pozemků p. p. č. 2113/28–30 kvůli parkování u objektu čp. 2809 a pozemkové dispozice pro stavbu „I/2 Pardubice – Jihovýchodní obchvat“ (ŘSD ČR, Pardubický kraj). Dále se týká směny pozemků se společností Služby města Pardubic a.s. za pozemky v k. ú. Staré Jesenčany včetně kompostárny a bezúplatného převodu pozemků v Dražkovicích od Úřadu pro zastupování státu ve věcech majetkových.",
+    "keywords": [
+     "pozemková komise",
+     "výkup pozemků",
+     "prodej pozemku",
+     "směna pozemků",
+     "výpůjčka pozemku",
+     "chodník",
+     "Jihovýchodní obchvat",
+     "kompostárna",
+     "Rezidence VEKTOR",
+     "Dražkovice"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Rokycanova ul.",
+     "Zelené Předměstí",
+     "Rezidence VEKTOR",
+     "Železničního pluku 1634",
+     "objekt čp. 2809",
+     "I/2 Pardubice – Jihovýchodní obchvat",
+     "kompostárna",
+     "Labe",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "k. ú. Staré Jesenčany"
+    ],
+    "parcels": [
+     "p. p. č. 2499/138, k. ú. Pardubice",
+     "p. p. č. 2499/129, k. ú. Pardubice",
+     "p. p. č. 2511/16",
+     "p. p. č. 2113/28, k. ú. Pardubice",
+     "p. p. č. 2113/29, k. ú. Pardubice",
+     "p. p. č. 2113/30, k. ú. Pardubice",
+     "p. p. č. 2581/11, k. ú. Pardubice",
+     "p. p. č. 2581/12, k. ú. Pardubice",
+     "p. p. č. 5349/8, k. ú. Pardubice",
+     "p. p. č. 5349/12, k. ú. Pardubice",
+     "p. p. č. 5349/17, k. ú. Pardubice",
+     "p. p. č. 2443/4, k. ú. Pardubice",
+     "p. p. č. 5349/14, k. ú. Pardubice",
+     "p. p. č. 2442/5, k. ú. Pardubice",
+     "p. p. č. 2445/9, k. ú. Pardubice",
+     "p. p. č. 2445/10, k. ú. Pardubice",
+     "p. p. č. 2443/3, k. ú. Pardubice",
+     "p. p. č. 2444/7, k. ú. Pardubice",
+     "p. p. č. 2445/16, k. ú. Pardubice",
+     "p. p. č. 2576/2, k. ú. Pardubice",
+     "p. p. č. 2576/3, k. ú. Pardubice",
+     "p. p. č. 2576/5, k. ú. Pardubice",
+     "p. p. č. 3752/4, k. ú. Pardubice",
+     "p. p. č. 3752/68, k. ú. Pardubice",
+     "p. p. č. 1711/11, k. ú. Pardubice",
+     "p. p. č. 1711/13, k. ú. Pardubice",
+     "p. p. č. 1711/15, k. ú. Pardubice",
+     "p. p. č. 1711/18, k. ú. Pardubice",
+     "p. p. č. 1711/29, k. ú. Pardubice",
+     "p. p. č. 1711/30, k. ú. Pardubice",
+     "p. p. č. 1714/3, k. ú. Pardubice",
+     "p. p. č. 1716/2, k. ú. Pardubice",
+     "p. p. č. 1716/4, k. ú. Pardubice",
+     "p. p. č. 1716/10, k. ú. Pardubice",
+     "p. p. č. 1716/18, k. ú. Pardubice",
+     "p. p. č. 1720/3, k. ú. Pardubice",
+     "p. p. č. 3988, k. ú. Pardubice",
+     "p. p. č. 579/6, k. ú. Dražkovice",
+     "p. p. č. 579/17, k. ú. Dražkovice",
+     "p. p. č. 579/9, k. ú. Dražkovice",
+     "p. p. č. 579/14, k. ú. Dražkovice",
+     "p. p. č. 471/14, k. ú. Dražkovice",
+     "p. p. č. 471/37, k. ú. Dražkovice",
+     "p. p. č. 471/20, k. ú. Dražkovice",
+     "p. p. č. 471/57, k. ú. Dražkovice",
+     "p. p. č. 349/2, k. ú. Dražkovice",
+     "p. p. č. 471/58, k. ú. Dražkovice",
+     "p. p. č. 474/3, k. ú. Dražkovice",
+     "p. p. č. 474/4, k. ú. Dražkovice",
+     "p. p. č. 471/13, k. ú. Dražkovice",
+     "p. p. č. 475/2, k. ú. Dražkovice",
+     "p. p. č. 475/6, k. ú. Dražkovice",
+     "st. p. č. 548, k. ú. Dražkovice",
+     "p. p. č. 432/8, k. ú. Dražkovice",
+     "p. p. č. 490/3, k. ú. Dražkovice",
+     "p. p. č. 262/7, k. ú. Staré Jesenčany",
+     "p. p. č. 262/6, k. ú. Staré Jesenčany",
+     "p. p. č. 262/5, k. ú. Staré Jesenčany",
+     "p. p. č. 305, k. ú. Staré Jesenčany"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "VEKTOR INVEST s.r.o.",
+     "Společenství pro dům čp. 1634, Železničního pluku, Pardubice",
+     "Ředitelství silnic a dálnic ČR",
+     "Pardubický kraj",
+     "Služby města Pardubic a.s.",
+     "MO Pardubice II",
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "Česká republika"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "69/2023 R",
+    "title": "Smlouva o dílo – stavební úpravy komunikace a chodníku Na Záboří",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Stavební úpravy komunikace a chodníku Na Záboří“ se zhotovitelem Ján Mucha – STAVREMO, který byl vybrán v zakázce malého rozsahu.",
+    "keywords": [
+     "Na Záboří",
+     "oprava chodníku",
+     "oprava komunikace",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "STAVREMO",
+     "výběr dodavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Na Záboří"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Ján Mucha – STAVREMO"
+    ],
+    "amounts": [
+     "1 293 953,08 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "70/2023 R",
+    "title": "Výběr dodavatele a smlouva o dílo – Relaxační zóna Stará plovárna",
+    "summary": "Rada souhlasí s výběrem dodavatele a s uzavřením smlouvy o dílo na akci „Relaxační zóna Stará plovárna“ se společností GARTENSTA PLUS s.r.o. v rámci zakázky malého rozsahu.",
+    "keywords": [
+     "Relaxační zóna Stará plovárna",
+     "Stará plovárna",
+     "výběr dodavatele",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "GARTENSTA PLUS",
+     "relaxační zóna"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "hriste-sport"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Stará plovárna"
+    ],
+    "parcels": [],
+    "organizations": [
+     "GARTENSTA PLUS s.r.o."
+    ],
+    "amounts": [
+     "7 950 005,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "71/2023 R",
+    "title": "Stanovisko k záměru pronájmu garážového stání v Sokolovské ulici čp. 2731",
+    "summary": "Rada souhlasí se záměrem města pronajmout garážové stání o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2731 v Sokolovské ulici za účelem garážování osobního automobilu.",
+    "keywords": [
+     "pronájem garáže",
+     "garážové stání",
+     "nájem nebytových prostor",
+     "Sokolovská",
+     "parkování",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova čp. 2731"
+    ],
+    "parcels": [
+     "stavební parcela č. 10090, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "72/2023 R",
+    "title": "Doporučení ZMO vzít na vědomí schválení účetní závěrky města za rok 2022",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí, že Zastupitelstvo města Pardubic dne 19. 6. 2023 schválilo účetní závěrku statutárního města Pardubic včetně městských obvodů za rok 2022.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2022",
+     "hospodaření",
+     "Zastupitelstvo města Pardubic",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "73/2023 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření MO Pardubice V k 31. 7. 2023",
+    "summary": "Rada doporučuje zastupitelstvu obvodu schválit rozbor hospodaření městského obvodu Pardubice V k 31. 7. 2023 uvedený v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2023",
+     "plnění rozpočtu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "74/2023 R",
+    "title": "Doporučení ZMO schválit 4. změnu rozpočtu MO Pardubice V na rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí komentář ke 4. změně rozpočtu na rok 2023, schválit rozpočtová opatření v bodech 1–16 důvodové zprávy a upravit plán společenských akcí – prodloužit termín akce Setkání se seniory do prosince 2023 a navýšit na ni částku o 10 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2023",
+     "Setkání se seniory",
+     "plán společenských akcí",
+     "senioři"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "socialni"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

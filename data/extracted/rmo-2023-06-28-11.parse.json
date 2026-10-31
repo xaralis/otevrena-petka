@@ -1,0 +1,469 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "1b7d239e0bc558ba1b210dbc1c22fc3b0f0e74cc5ba8bbe0191376f31b7d7015",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 11,
+   "kind": "mimoradne",
+   "date": "2023-06-28",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Souhlas s umístěním předzahrádky před provozovnu Cherry bar, ul. Devotyho 2452, Pardubice",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Střednědobý a dlouhodobý plán investic MO Pardubice V",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Dotace",
+    "line": 88,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2023",
+    "line": 148,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Závěrečný účet MO Pardubice V za rok 2022",
+    "line": 161,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2022",
+    "line": 178,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2023",
+    "line": 189,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Diskuse, závěr",
+    "line": 206,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "60/2023 R",
+    "agenda_no": "1",
+    "first_line": 57,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "61/2023 R",
+    "agenda_no": "2",
+    "first_line": 66,
+    "last_line": 85,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "62/2023 R",
+    "agenda_no": "3",
+    "first_line": 91,
+    "last_line": 145,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "63/2023 R",
+    "agenda_no": "4",
+    "first_line": 151,
+    "last_line": 154,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "64/2023 R",
+    "agenda_no": "5",
+    "first_line": 164,
+    "last_line": 175,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "65/2023 R",
+    "agenda_no": "6",
+    "first_line": 181,
+    "last_line": 186,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "66/2023 R",
+    "agenda_no": "7",
+    "first_line": 192,
+    "last_line": 203,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 44,
+    "last_line": 44,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 43,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "60/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "61/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": "62/2023 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 109,
+    "last_line": 109,
+    "resolution": "62/2023 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "62/2023 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "62/2023 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 129,
+    "last_line": 129,
+    "resolution": "62/2023 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 138,
+    "last_line": 138,
+    "resolution": "62/2023 R",
+    "part": "bod 6",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 146,
+    "last_line": 146,
+    "resolution": "62/2023 R",
+    "part": "bod 7",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 155,
+    "last_line": 155,
+    "resolution": "63/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 176,
+    "last_line": 176,
+    "resolution": "64/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 187,
+    "last_line": 187,
+    "resolution": "65/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 204,
+    "last_line": 204,
+    "resolution": "66/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

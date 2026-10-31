@@ -1,0 +1,133 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "eb8f86f9f3be86d8d94c45e1e659f018a7a423db0b646766abb46b4b307da4cc",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "83/2023 R",
+    "title": "Termíny jednání rady a zastupitelstva obvodu na rok 2024",
+    "summary": "Rada schvaluje harmonogram termínů jednání RMO a ZMO Pardubice V na rok 2024, z toho čtyři jednání zastupitelstva (6. 3., 26. 6., 25. 9. a 18. 12. 2024). V textu usnesení je uveden „rok 2021“, data jsou však pro rok 2024.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram",
+     "jednání rady",
+     "jednání zastupitelstva",
+     "rok 2024",
+     "plán zasedání"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "84/2023 R",
+    "title": "Přesun 30 tis. Kč z Ochutnávky Svatomartinského vína na Rozsvěcení vánočního stromečku",
+    "summary": "Rada upravuje plán společenských akcí MO Pardubice V na rok 2023 přesunem 30 tis. Kč z akce Ochutnávka Svatomartinského vína na akci Rozsvěcení vánočního stromečku. Celkový rozpočet plánu akcí se nemění a zůstává 1 145 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Ochutnávka Svatomartinského vína",
+     "Rozsvěcení vánočního stromečku",
+     "Vánoce",
+     "kulturní akce",
+     "přesun peněz"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "30 tis. Kč",
+     "1 145 tis. Kč"
+    ]
+   },
+   {
+    "number": "85/2023 R",
+    "title": "Doporučení zastupitelstvu schválit 5. změnu rozpočtu obvodu na rok 2023",
+    "summary": "Rada doporučuje Zastupitelstvu MO Pardubice V vzít na vědomí komentář k 5. změně rozpočtu na rok 2023 a schválit rozpočtová opatření uvedená v bodech 1–22 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "5. změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2023",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "86/2023 R",
+    "title": "Vzdání se mandátu členky zastupitelstva a osvědčení nastoupení náhradníka",
+    "summary": "Rada bere na vědomí, že se členka Zastupitelstva MO Pardubice V za volební stranu ANO 2011 vzdala mandátu ke dni 31. 10. 2023, osvědčuje, že dnem 1. 11. 2023 se členem zastupitelstva stal náhradník ze stejné volební strany, a ukládá předat mu osvědčení na nejbližším jednání zastupitelstva.",
+    "keywords": [
+     "vzdání se mandátu",
+     "náhradník",
+     "člen zastupitelstva",
+     "osvědčení o vzniku mandátu",
+     "ANO 2011",
+     "rezignace"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ANO 2011"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "87/2023 R",
+    "title": "Souhlas s věcným břemenem pro Klub vodáků – turistů u K Vinici",
+    "summary": "Rada na žádost pozemkové komise rady města souhlasí se záměrem zřízení věcného břemene práva užívání na částech pozemků p. p. č. 2462/1 a 2774/42 v k. ú. Pardubice ve prospěch vlastníka objektu čp. 2873 na st. p. č. 5507. Žadatelem je Spolek Tělovýchovná jednota Klub vodáků - turistů z. s.",
+    "keywords": [
+     "věcné břemeno",
+     "právo užívání",
+     "stanovisko obvodu",
+     "pozemková komise",
+     "Klub vodáků",
+     "K Vinici"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "K Vinici 2873, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "p. p. č. 2774/42, k. ú. Pardubice",
+     "p. p. č. 2462/12, k. ú. Pardubice",
+     "p. p. č. 2774/84, k. ú. Pardubice",
+     "st. p. č. 5507, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Spolek Tělovýchovná jednota Klub vodáků - turistů z. s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

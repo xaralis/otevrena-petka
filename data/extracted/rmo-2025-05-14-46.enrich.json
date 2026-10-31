@@ -1,0 +1,222 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "b85433f58ceafed26f480ceba9ada50b04efe6a81280dcf569c2a07d933a02d2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "210/2025 R",
+    "title": "Výjimka ze zadávacího řádu: přímé zadání chodníkových her před ZŠ Staňkova",
+    "summary": "Rada souhlasila s uplatněním výjimky dle čl. 7 odst. 2 Směrnice č. 14/2024 Zadávací řád veřejných zakázek a s přímým zadáním zakázky malého rozsahu „Chodníkové hry před ZŠ Staňkova“ dodavateli HRY NA CHODNÍK! za nabídkovou cenu 392.500,- Kč.",
+    "keywords": [
+     "chodníkové hry",
+     "ZŠ Staňkova",
+     "přímé zadání",
+     "výjimka ze zadávacího řádu",
+     "zakázka malého rozsahu",
+     "hry na chodníku",
+     "škola"
+    ],
+    "topics": [
+     "zakazky",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ZŠ Staňkova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HRY NA CHODNÍK!"
+    ],
+    "amounts": [
+     "392.500,- Kč"
+    ]
+   },
+   {
+    "number": "211/2025 R",
+    "title": "Smlouva o dílo na chodník v Sokolovské ulici u ZŠ J. Ressla",
+    "summary": "Rada souhlasila s uzavřením smlouvy o dílo na akci „Sokolovská ul. chodník u ZŠ J. Ressla“ se zhotovitelem CHRPA stavební společnost s r. o. za nabídkovou cenu 598.985,40 Kč bez DPH, jako výsledkem výběru nejvhodnější nabídky v zakázce malého rozsahu.",
+    "keywords": [
+     "chodník",
+     "Sokolovská",
+     "ZŠ J. Ressla",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele",
+     "oprava chodníku"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Sokolovská ul.",
+     "ZŠ J. Ressla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r. o."
+    ],
+    "amounts": [
+     "598.985,40 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "212/2025 R",
+    "title": "Smlouva o dílo na stavební úpravy komunikace v Dražkovicích",
+    "summary": "Rada souhlasila s uzavřením smlouvy o dílo na akci „Stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174“ se zhotovitelem STAVITELSTVÍ – TRUNEC s.r.o. za nabídkovou cenu 4.321.663,36 Kč bez DPH, jako výsledkem výběru nejvhodnější nabídky v zakázce malého rozsahu.",
+    "keywords": [
+     "Dražkovice",
+     "oprava komunikace",
+     "stavební úpravy silnice",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele",
+     "místní komunikace"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice č.p. 153 – č.p. 174"
+    ],
+    "parcels": [],
+    "organizations": [
+     "STAVITELSTVÍ – TRUNEC s.r.o."
+    ],
+    "amounts": [
+     "4.321.663,36 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "213/2025 R",
+    "title": "Rozpočtové opatření: přesun 11,5 tis. Kč v kapitole knihovna",
+    "summary": "Rada schválila rozpočtové opatření, kterým se přesouvá 11,5 tis. Kč z položky knihovna v kapitálových výdajích na položku akce pořádané knihovnou v běžných výdajích, obojí v kapitole 34 – knihovna.",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun prostředků",
+     "knihovna",
+     "akce knihovny",
+     "kapitola 34",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "11,5 tis. Kč"
+    ]
+   },
+   {
+    "number": "214/2025 R",
+    "title": "Stanovisko k žádostem pozemkové komise: věcná břemena, obchvat, výkupy pozemků",
+    "summary": "Rada souhlasila s pěti záměry projednávanými pozemkovou komisí rady města: věcným břemenem pro ČEZ Distribuce, a. s., na kabelové vedení v akci „PA Zborovského nám., ZŠ TGM-kvn, KKT, knn“ (za podmínky opravy živičných povrchů dotčených chodníků v celé šíři), nájmem, výpůjčkou a budoucím převodem pozemků pro ŘSD kvůli stavbě „I/2 Pardubice – Jihovýchodní obchvat“ a odkoupením pozemků v Dražkovicích pro investiční akci „CS jihovýchodní obchvat – Dražkovice – Pardubičky – Černá za Bory“. Dále souhlasila s odkoupením části pozemku od Dopravního podniku města Pardubic a. s. pod chodníkem v zóně Vápenka a s věcným břemenem pro Vodovody a kanalizace Pardubice, a. s., kvůli výměně kanalizace v akci „Pardubice, Wolkerova – kanalizace“.",
+    "keywords": [
+     "pozemková komise",
+     "stanovisko obvodu",
+     "věcné břemeno",
+     "jihovýchodní obchvat",
+     "výkup pozemků",
+     "Dražkovice",
+     "Zborovského náměstí",
+     "Vápenka",
+     "Wolkerova",
+     "kanalizace"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Zborovského nám.",
+     "ZŠ TGM",
+     "Pardubičky",
+     "Černá za Bory",
+     "zóna Vápenka",
+     "křižovatka Pražská/Teplého",
+     "Wolkerova"
+    ],
+    "parcels": [
+     "st. p. č. 9958, k. ú. Pardubice",
+     "p. p. č. 2404/79, k. ú. Pardubice",
+     "p. p. č. 2404/2, k. ú. Pardubice",
+     "p. p. č. 2583/6, k. ú. Pardubice",
+     "p. p. č. 2580/4, k. ú. Pardubice",
+     "p. p. č. 2433/1, k. ú. Pardubice",
+     "st. p. č. 2341, k. ú. Pardubice",
+     "p. p. č. 2400/1, k. ú. Pardubice",
+     "p. p. č. 2443/4, k. ú. Pardubice",
+     "p. p. č. 349/2, k. ú. Dražkovice",
+     "p. p. č. 471/20, k. ú. Dražkovice",
+     "p. p. č. 471/37, k. ú. Dražkovice",
+     "p. p. č. 471/57, k. ú. Dražkovice",
+     "p. p. č. 471/58, k. ú. Dražkovice",
+     "p. p. č. 474/3, k. ú. Dražkovice",
+     "p. p. č. 474/4, k. ú. Dražkovice",
+     "p. p. č. 475/2, k. ú. Dražkovice",
+     "p. p. č. 475/6, k. ú. Dražkovice",
+     "p. p. č. 2442/5, k. ú. Pardubice",
+     "p. p. č. 2443/3, k. ú. Pardubice",
+     "p. p. č. 2444/7, k. ú. Pardubice",
+     "p. p. č. 2445/9, k. ú. Pardubice",
+     "p. p. č. 2445/10, k. ú. Pardubice",
+     "p. p. č. 2445/16, k. ú. Pardubice",
+     "p. p. č. 2576/2, k. ú. Pardubice",
+     "p. p. č. 2576/3, k. ú. Pardubice",
+     "p. p. č. 2576/5, k. ú. Pardubice",
+     "p. p. č. 3752/4, k. ú. Pardubice",
+     "p. p. č. 3752/68, k. ú. Pardubice",
+     "p. p. č. 471/14, k. ú. Dražkovice",
+     "p. p. č. 5349/14, k. ú. Pardubice",
+     "p. p. č. 2581/11, k. ú. Pardubice",
+     "p. p. č. 2581/12, k. ú. Pardubice",
+     "p. p. č. 5349/8, k. ú. Pardubice",
+     "p. p. č. 5349/12, k. ú. Pardubice",
+     "p. p. č. 5349/17, k. ú. Pardubice",
+     "p. p. č. 579/17, k. ú. Dražkovice",
+     "p. p. č. 579/6, k. ú. Dražkovice",
+     "p. p. č. 579/9, k. ú. Dražkovice",
+     "p. p. č. 579/14, k. ú. Dražkovice",
+     "p. p. č. 317, k. ú. Dražkovice",
+     "p. p. č. 310/3, k. ú. Dražkovice",
+     "p. p. č. 318/1, k. ú. Dražkovice",
+     "p. p. č. 306/3, k. ú. Dražkovice",
+     "p. p. č. 324/4, k. ú. Dražkovice",
+     "p. p. č. 332/10, k. ú. Dražkovice",
+     "p. p. č. 2149/2, k. ú. Pardubice",
+     "p. p. č. 2149/16, k. ú. Pardubice",
+     "p. p. č. 2165/10, k. ú. Pardubice",
+     "p. p. č. 2165/12, k. ú. Pardubice",
+     "p. p. č. 2165/28, k. ú. Pardubice",
+     "p. p. č. 2165/30, k. ú. Pardubice",
+     "p. p. č. 2165/37, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "ČEZ Distribuce, a. s.",
+     "Ředitelství silnic a dálnic, s. p.",
+     "Statutární město Pardubice",
+     "Dopravní podnik města Pardubic a. s.",
+     "Vodovody a kanalizace Pardubice, a. s."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

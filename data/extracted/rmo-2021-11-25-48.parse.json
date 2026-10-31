@@ -1,0 +1,328 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "47ee764a2f193b30fde322ad32cef39dc0f4efb361ad8360f2678ceb76112b0f",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 48,
+   "kind": "radne",
+   "date": "2021-11-25",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Ing. Jiří Janoš"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Stanovení termínů jednání RMO a ZMO Pardubice V na rok 2022",
+    "line": 50,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Návrh na prodej traktoru",
+    "line": 90,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh na pojmenování nově vzniklých ulic",
+    "line": 103,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 119,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 130,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "226/2021 R",
+    "agenda_no": "1",
+    "first_line": 53,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "227/2021 R",
+    "agenda_no": "2",
+    "first_line": 66,
+    "last_line": 87,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "228/2021 R",
+    "agenda_no": "3",
+    "first_line": 93,
+    "last_line": 100,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "229/2021 R",
+    "agenda_no": "4",
+    "first_line": 106,
+    "last_line": 116,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "230/2021 R",
+    "agenda_no": "5",
+    "first_line": 123,
+    "last_line": 127,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "226/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 71,
+    "last_line": 71,
+    "resolution": "227/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "227/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "227/2021 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 88,
+    "last_line": 88,
+    "resolution": "227/2021 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": "228/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 117,
+    "last_line": 117,
+    "resolution": "229/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 128,
+    "last_line": 128,
+    "resolution": "230/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení 227/2021 R: body 1 a 2 (souhlas s prodejem stavby na st. p. č. 8999 a s nájmem části p. p. č. 2252/12 pro Zásilkovnu) hlasovány Pro 0, proti 4 (ř. 71, 76) – v textu usnesení zůstávají formulovány jako „souhlasí“, ačkoli v hlasování neprošly."
+  ]
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "f77402aed5637693514a04555df4f8f2c5b1e94f7c638953cd2882df73554515",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "191/2025 R",
+    "title": "Stanovisko k pronájmům, výpůjčce a věcnému břemeni na pozemcích města (Wolkerova, Dražkovice, Češkova)",
+    "summary": "Stanovisko obvodu k žádostem pozemkové komise rady města: pronájem 5 m2 pozemku u domu Wolkerova 2080, 2081 pro přístup k poštovním schránkám, výpůjčka a odkup stavebních úprav pro místo pro přecházení u stavby „HOTEL GARNI DRAŽKOVICE“ (RELAX CLUB s.r.o.), věcné břemeno pro kabelové vedení ČEZ Distribuce v rámci akce „Pardubice Češkova 794 knn“ a pronájem 3 m2 v Dražkovicích pro staveništní přípojku elektřiny (GLOBI MED s.r.o.). O každém ze čtyř záměrů se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k pronájmu pozemku",
+     "výpůjčka pozemku",
+     "věcné břemeno",
+     "poštovní schránky",
+     "místo pro přecházení",
+     "kabelové vedení",
+     "staveništní přípojka",
+     "Wolkerova",
+     "Dražkovice",
+     "Češkova"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Wolkerova 2080, 2081",
+     "Češkova 794",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Dražkovice",
+     "HOTEL GARNI DRAŽKOVICE"
+    ],
+    "parcels": [
+     "p. p. č. 2165/18, k. ú. Pardubice",
+     "p. p. č. 492/5, k. ú. Dražkovice",
+     "p. p. č. 432/8, k. ú. Dražkovice",
+     "parc. č. 436 k. ú. Dražkovice",
+     "p. p. č. 2107/6, k. ú. Pardubice",
+     "p. p. č. 2318/17, k. ú. Pardubice",
+     "p. p. č. 2318/47, k. ú. Pardubice",
+     "p. p. č. 2118/79, k. ú. Pardubice",
+     "p. p. č. 2107/3, k. ú. Pardubice",
+     "p. p. č. 513/1 v k. ú. Dražkovice",
+     "p. p. č. 436 v k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "Společenství pro dům Wolkerova 2080, 2081, Pardubice",
+     "RELAX CLUB s.r.o.",
+     "ČEZ Distribuce, a. s.",
+     "GLOBI MED s.r.o.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "192/2025 R",
+    "title": "Přijetí finančního daru 15.000 Kč od M-BET s.r.o. na péči o veřejnou zeleň",
+    "summary": "Rada souhlasí s přijetím finančního daru od firmy M-BET s.r.o. na péči o veřejnou zeleň na území MO Pardubice V.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "M-BET",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

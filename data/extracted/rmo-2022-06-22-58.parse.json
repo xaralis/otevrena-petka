@@ -1,0 +1,728 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "259fc19ecc6e8ddb66f094816dd05b852448f840f569639cbf2b7d86c9e68dab",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 58,
+   "kind": "mimoradne",
+   "date": "2022-06-22",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Závěrečný účet MO Pardubice V za rok 2021",
+    "line": 60,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2022",
+    "line": 77,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "2. změna rozpočtu MO Pardubice V na r. 2022",
+    "line": 86,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Směrnice č. 7/2022: Pravidla hospodaření se sociálním fondem MO Pardubice V",
+    "line": 107,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2021",
+    "line": 118,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Směrnice č. 5/2022: Evidence a vymáhání daní",
+    "line": 129,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Vyřazení projektové dokumentace z majetku",
+    "line": 137,
+    "speakers": []
+   },
+   {
+    "no": "8.",
+    "title": "Souhlas s umístěním předzahrádky před provozovnu Veneto Group (Mercato), ul. Devotyho 764, Pardubice",
+    "line": 147,
+    "speakers": []
+   },
+   {
+    "no": "9.",
+    "title": "Dotace",
+    "line": 157,
+    "speakers": []
+   },
+   {
+    "no": "10.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Rekonstrukce chodníku Dražkovice – východ",
+    "line": 249,
+    "speakers": []
+   },
+   {
+    "no": "11.",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke Smlouvě o poskytování služeb na výsyp odpadkových košů a Smlouvě o poskytování služeb na výsyp košů na psí exkrementy na území MO Pardubice V",
+    "line": 259,
+    "speakers": []
+   },
+   {
+    "no": "12.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Dodání edukativních prvků na území MO Pardubice V",
+    "line": 275,
+    "speakers": []
+   },
+   {
+    "no": "13.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 285,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 298,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "300/2022 R",
+    "agenda_no": "1.",
+    "first_line": 63,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "301/2022 R",
+    "agenda_no": "2.",
+    "first_line": 80,
+    "last_line": 83,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "302/2022 R",
+    "agenda_no": "3.",
+    "first_line": 89,
+    "last_line": 104,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "303/2022 R",
+    "agenda_no": "4.",
+    "first_line": 110,
+    "last_line": 115,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "304/2022 R",
+    "agenda_no": "5.",
+    "first_line": 121,
+    "last_line": 126,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "305/2022 R",
+    "agenda_no": "6.",
+    "first_line": 132,
+    "last_line": 134,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "306/2022 R",
+    "agenda_no": "7.",
+    "first_line": 140,
+    "last_line": 144,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "307/2022 R",
+    "agenda_no": "8.",
+    "first_line": 151,
+    "last_line": 154,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "308/2022 R",
+    "agenda_no": "9.",
+    "first_line": 160,
+    "last_line": 246,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "309/2022 R",
+    "agenda_no": "10.",
+    "first_line": 253,
+    "last_line": 256,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "310/2022 R",
+    "agenda_no": "11.",
+    "first_line": 264,
+    "last_line": 272,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "311/2022 R",
+    "agenda_no": "12.",
+    "first_line": 279,
+    "last_line": 282,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "312/2022 R",
+    "agenda_no": "13.",
+    "first_line": 288,
+    "last_line": 295,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 55,
+    "last_line": 55,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": "300/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 84,
+    "last_line": 84,
+    "resolution": "301/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 105,
+    "last_line": 105,
+    "resolution": "302/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "303/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 127,
+    "last_line": 127,
+    "resolution": "304/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 135,
+    "resolution": "305/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 145,
+    "last_line": 145,
+    "resolution": "306/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 155,
+    "last_line": 155,
+    "resolution": "307/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 171,
+    "last_line": 171,
+    "resolution": "308/2022 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 181,
+    "last_line": 181,
+    "resolution": "308/2022 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 190,
+    "last_line": 190,
+    "resolution": "308/2022 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 200,
+    "last_line": 200,
+    "resolution": "308/2022 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 209,
+    "last_line": 209,
+    "resolution": "308/2022 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 218,
+    "last_line": 218,
+    "resolution": "308/2022 R",
+    "part": "bod 6",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 230,
+    "last_line": 230,
+    "resolution": "308/2022 R",
+    "part": "bod 7",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 239,
+    "last_line": 239,
+    "resolution": "308/2022 R",
+    "part": "bod 8",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 247,
+    "last_line": 247,
+    "resolution": "308/2022 R",
+    "part": "bod 9",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 257,
+    "last_line": 257,
+    "resolution": "309/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 273,
+    "last_line": 273,
+    "resolution": "310/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 283,
+    "last_line": 283,
+    "resolution": "311/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 296,
+    "last_line": 296,
+    "resolution": "312/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení 308/2022 R (dotace) hlasováno po bodech: body 4 (Kin-ball, ř. 200) a 7 (BK Pardubice, ř. 230) Pro 0, proti 4 – tyto body nebyly schváleny; text výsledek výslovně neuvádí.",
+   "Usnesení 312/2022 R (ř. 296) hlasováno Pro 0, proti 4 – návrh nebyl přijat, přestože má číslo usnesení; text výsledek výslovně neuvádí.",
+   "Usnesení 300–304/2022 R jsou doporučení rady zastupitelstvu (znění usnesení ZMO)."
+  ]
+ }
+}

@@ -1,0 +1,386 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "52c82a5071430510399cd5e611a3aba4614e00972b6b578111dde3483bb10919",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 45,
+   "kind": "radne",
+   "date": "2025-04-23",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou Cherry Bar, Devotyho 2452, Pardubice",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2025",
+    "line": 118,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Úprava odpisového plánu na r. 2025",
+    "line": 128,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 3. 2025",
+    "line": 135,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "2. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 144,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Diskuse, závěr",
+    "line": 190,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "204/2025 R",
+    "agenda_no": "1",
+    "first_line": 57,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "205/2025 R",
+    "agenda_no": "2",
+    "first_line": 66,
+    "last_line": 115,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "206/2025 R",
+    "agenda_no": "3",
+    "first_line": 121,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "207/2025 R",
+    "agenda_no": "4",
+    "first_line": 131,
+    "last_line": 132,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "208/2025 R",
+    "agenda_no": "5",
+    "first_line": 138,
+    "last_line": 141,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "209/2025 R",
+    "agenda_no": "6",
+    "first_line": 147,
+    "last_line": 187,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "204/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "205/2025 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "205/2025 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 97,
+    "last_line": 97,
+    "resolution": "205/2025 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 109,
+    "last_line": 109,
+    "resolution": "205/2025 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "205/2025 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "206/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 133,
+    "last_line": 133,
+    "resolution": "207/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 142,
+    "last_line": 142,
+    "resolution": "208/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 188,
+    "last_line": 188,
+    "resolution": "209/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení 205/2025 R bylo hlasováno po jednotlivých bodech 1–5 (ř. 73, 76, 97, 109, 116); hlasování o celém usnesení v textu není."
+  ]
+ }
+}

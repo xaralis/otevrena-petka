@@ -1,0 +1,41 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "ce4650164f7cfeefa69e6b05f4d65ddb1246c848c8b599bc363fc585faab3288",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "67/2023 R",
+    "title": "Smlouva o dílo na stavební úpravy vnitrobloku Jiránkova – zhotovitel CHRPA",
+    "summary": "Rada jako zadavatel zakázky malého rozsahu souhlasí s uzavřením smlouvy o dílo na stavební úpravy vnitrobloku ul. Jiránkova č.p. 2206-2208 a č.p. 2246-2248. Zhotovitelem je CHRPA stavební společnost s r.o. za nabídkovou cenu 2 592 629,10 Kč bez DPH.",
+    "keywords": [
+     "vnitroblok Jiránkova",
+     "Jiránkova",
+     "stavební úpravy",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr nejvhodnější nabídky",
+     "CHRPA stavební společnost",
+     "revitalizace vnitrobloku"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "vnitroblok ul. Jiránkova č.p. 2206-2208 a č.p. 2246-2248",
+     "Jiránkova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o."
+    ],
+    "amounts": [
+     "2 592 629,10 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

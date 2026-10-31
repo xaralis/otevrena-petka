@@ -1,0 +1,430 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "8a824d0152b732549a236c8cecf9f4fd6ffe8e81b39931e1872e85bece1f0900",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 41,
+   "kind": "radne",
+   "date": "2021-05-13",
+   "place": "zasedací místnost MO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Ing. Jiří Janoš"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Souhlas s umístěním předzahrádky před provozovnu Cherry bar, ul. Devotyho 2452, Pardubice",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Dotace – změna termínu schválené dotace",
+    "line": 136,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na akci „Novostavba dětského hřiště K Vinici, Pardubice“",
+    "line": 145,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Návrh rozpočtového opatření",
+    "line": 157,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 168,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "188/2021 R",
+    "agenda_no": "1",
+    "first_line": 54,
+    "last_line": 70,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "189/2021 R",
+    "agenda_no": "2",
+    "first_line": 76,
+    "last_line": 123,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "190/2021 R",
+    "agenda_no": "3",
+    "first_line": 130,
+    "last_line": 133,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "191/2021 R",
+    "agenda_no": "4",
+    "first_line": 139,
+    "last_line": 142,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "192/2021 R",
+    "agenda_no": "5",
+    "first_line": 149,
+    "last_line": 154,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "193/2021 R",
+    "agenda_no": "6",
+    "first_line": 161,
+    "last_line": 165,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 71,
+    "last_line": 71,
+    "resolution": "188/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 80,
+    "last_line": 80,
+    "resolution": "189/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "189/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 96,
+    "last_line": 96,
+    "resolution": "189/2021 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 107,
+    "last_line": 107,
+    "resolution": "189/2021 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "189/2021 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 119,
+    "last_line": 119,
+    "resolution": "189/2021 R",
+    "part": "bod 6",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 124,
+    "last_line": 124,
+    "resolution": "189/2021 R",
+    "part": "bod 7",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 134,
+    "last_line": 134,
+    "resolution": "190/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 143,
+    "last_line": 143,
+    "resolution": "191/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 155,
+    "last_line": 155,
+    "resolution": "192/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 166,
+    "last_line": 166,
+    "resolution": "193/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení 189/2021 R: o bodech 4 a 5 hlasováno pro 0, zdržel se 1, proti 3 (ř. 107, 114) – tyto body nebyly přijaty, text výsledek výslovně neuvádí."
+  ]
+ }
+}

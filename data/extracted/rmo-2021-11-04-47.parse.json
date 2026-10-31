@@ -1,0 +1,224 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "30d01cd7ca44bfa90e8875b2169f3847bfca93122a18710c8d411b14bfcabed6",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 47,
+   "kind": "radne",
+   "date": "2021-11-04",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [
+    "Bc. Jan Nadrchal"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 45,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2021",
+    "line": 66,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Dotace",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh rozpočtového opatření",
+    "line": 197,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 207,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "222/2021 R",
+    "agenda_no": "1",
+    "first_line": 52,
+    "last_line": 63,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "223/2021 R",
+    "agenda_no": "2",
+    "first_line": 69,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "224/2021 R",
+    "agenda_no": "3",
+    "first_line": 79,
+    "last_line": 194,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "225/2021 R",
+    "agenda_no": "4",
+    "first_line": 200,
+    "last_line": 204,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "222/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "223/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 195,
+    "last_line": 195,
+    "resolution": "224/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 205,
+    "last_line": 205,
+    "resolution": "225/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

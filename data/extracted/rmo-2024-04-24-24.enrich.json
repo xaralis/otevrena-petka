@@ -1,0 +1,227 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "1fd19bfb68170b08a35ffdffd7dcc57131918d8f838cdce962b500992796b4f1",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "123/2024 R",
+    "title": "Stanovisko k výpůjčkám a nájmu pozemků v k. ú. Pardubice a Dražkovice",
+    "summary": "Rada souhlasí se záměrem města vypůjčit pozemek p. p. č. 4817 u čp. 803 v ul. Spravedlnosti společnosti SKP-CENTRUM, o.p.s. pro víceúčelovou zahradu pro klienty sociálních služeb, pronajmout část pozemku p. p. č. 4853/1 společnosti I FOR TECH s.r.o. pro skladovací kontejner a vypůjčit část pozemku p. p. č. 229/2 v Dražkovicích společnosti SmP – Odpady a.s. pro dočasnou panelovou plochu u skládky.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "nájem pozemku",
+     "pozemková komise",
+     "víceúčelová zahrada",
+     "sociální služby",
+     "skladovací kontejner",
+     "skládka Dražkovice",
+     "panelová plocha",
+     "ulice Spravedlnosti"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Spravedlnosti",
+     "čp. 803",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 4817, k. ú. Pardubice",
+     "p. p. č. 4853/1, k. ú. Pardubice",
+     "p. p. č. 229/2, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "SKP-CENTRUM, o.p.s.",
+     "I FOR TECH s.r.o.",
+     "SmP – Odpady a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "124/2024 R",
+    "title": "Rozpočtová opatření č. 48 a 49 – přesuny z kapitálových do běžných výdajů",
+    "summary": "Rada schvaluje přesun 13 tis. Kč z kapitálových do běžných výdajů u položky rekonstrukce komunikace Dražkovice u MŠ a přesun 249 tis. Kč z kapitálových do běžných výdajů u položky relaxační zóna Stará plovárna.",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun výdajů",
+     "kapitálové výdaje",
+     "běžné výdaje",
+     "rekonstrukce komunikace",
+     "Dražkovice",
+     "mateřská škola",
+     "relaxační zóna",
+     "Stará plovárna"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Dražkovice",
+     "MŠ Dražkovice",
+     "Stará plovárna"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "13 tis. Kč",
+     "249 tis. Kč"
+    ]
+   },
+   {
+    "number": "125/2024 R",
+    "title": "Dotace pro Atletiku Bez Bariér a individuální dotace pro Ratolest",
+    "summary": "Rada schvaluje tři dotace po 10.000,- Kč spolku Atletika Bez Bariér, z. s. na sportovní přípravu handicapovaných dětí, Školní atletický parapohár a Velkou cenu Pardubic v paraatletice a individuální dotaci 6.000,- Kč organizaci Ratolest, dětská péče a léčebná rehabilitace na zahradní posezení pro děti. Současně schvaluje uzavření veřejnoprávních smluv a související rozpočtová opatření č. 50–53.",
+    "keywords": [
+     "dotace",
+     "individuální dotace",
+     "paraatletika",
+     "handicapované děti",
+     "Školní atletický parapohár",
+     "Velká cena Pardubic v paraatletice",
+     "zahradní posezení",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "socialni"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Čs. armády 2515, Pardubice",
+     "K Blahobytu 727, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Atletika Bez Bariér, z. s.",
+     "Ratolest, dětská péče a léčebná rehabilitace"
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "6.000,- Kč",
+     "6 000,- Kč"
+    ]
+   },
+   {
+    "number": "126/2024 R",
+    "title": "Smlouva o dílo na kontejnerové stání Pichlova Rokycanova s firmou CHRPA",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Kontejnerové stání Pichlova Rokycanova“ se zhotovitelem CHRPA stavební společnost s.r.o. jako výsledek zakázky malého rozsahu.",
+    "keywords": [
+     "kontejnerové stání",
+     "stanoviště kontejnerů",
+     "popelnice",
+     "Pichlova",
+     "Rokycanova",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "výběr dodavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "cistota",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Pichlova",
+     "Rokycanova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s.r.o. Pardubice"
+    ],
+    "amounts": [
+     "554 918,45 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "127/2024 R",
+    "title": "Umístění pojízdného stánku se zmrzlinou v areálu Pod Vinicí",
+    "summary": "Návrh souhlasu s umístěním pojízdného stánku na prodej zmrzliny na pozemku p. p. č. 2462/1 v areálu Pod Vinicí o ploše 12 m2 v období od 1. 5. 2024 do 31. 10. 2024.",
+    "keywords": [
+     "stánek",
+     "zmrzlina",
+     "prodej zmrzliny",
+     "pojízdný stánek",
+     "areál Pod Vinicí",
+     "Pod Vinicí",
+     "zábor veřejného prostranství"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "hriste-sport"
+    ],
+    "kind": "majetek",
+    "places": [
+     "areál Pod Vinicí",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "128/2024 R",
+    "title": "Smlouva o dílo se SmP a.s. na výsadbu rostlin v Arboretu Dukla",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na výsadbu rostlin v Arboretu Dukla včetně následné péče po dobu 5 let se Službami města Pardubic a.s. v režimu „in house“ podle zadávacího řádu veřejných zakázek.",
+    "keywords": [
+     "Arboretum Dukla",
+     "výsadba rostlin",
+     "výsadba zeleně",
+     "následná péče",
+     "smlouva o dílo",
+     "in house",
+     "Služby města Pardubic",
+     "Dukla"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Arboretum Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "187.160,- Kč bez DPH",
+     "70.070,-Kč bez DPH"
+    ]
+   },
+   {
+    "number": "129/2024 R",
+    "title": "Přesun Pohádkové cesty v plánu společenských akcí na rok 2024",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí MO Pardubice V na rok 2024 – akce Pohádková cesta se přesouvá ze září 2024 na srpen, případně září 2024.",
+    "keywords": [
+     "Pohádková cesta",
+     "plán společenských akcí",
+     "společenské akce",
+     "akce pro děti",
+     "změna termínu"
+    ],
+    "topics": [
+     "kultura-akce"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

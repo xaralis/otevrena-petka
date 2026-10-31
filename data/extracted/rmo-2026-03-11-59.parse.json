@@ -1,0 +1,255 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "311fa87f6d5017672e0aec839c7bf83b64c27c56d21329287c10ed70c09d84f2",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 59,
+   "kind": "mimoradne",
+   "date": "2026-03-11",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 45,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2025",
+    "line": 69,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Výroční zpráva o činnosti Finančního výboru ZMO Pardubice V za r. 2025",
+    "line": 79,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "1. změna rozpočtu MO Pardubice V na r. 2026",
+    "line": 90,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Diskuse, závěr",
+    "line": 187,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "271/2026 R",
+    "agenda_no": "1",
+    "first_line": 54,
+    "last_line": 67,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "272/2026 R",
+    "agenda_no": "2",
+    "first_line": 72,
+    "last_line": 76,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "273/2026 R",
+    "agenda_no": "3",
+    "first_line": 83,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "274/2026 R",
+    "agenda_no": "4",
+    "first_line": 93,
+    "last_line": 184,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": "271/2026 R",
+    "part": "bod 1 – pronájem části p. p. č. 2406/32 (výdejní box TextilEco)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 67,
+    "last_line": 67,
+    "resolution": "271/2026 R",
+    "part": "bod 2 – věcné břemeno na p. p. č. 605/1 Nové Jesenčany",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 77,
+    "last_line": 77,
+    "resolution": "272/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "273/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 185,
+    "last_line": 185,
+    "resolution": "274/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 43: hlasování o programu uvádí „Pro 5“, ale přítomni jsou podle ř. 13 jen 4 členové (Bc. Petr Dufek omluven, ř. 15); ostatní hlasování mají 4 hlasy.",
+   "ř. 59: u usnesení 271/2026 R se o bodu 1 (pronájem části p. p. č. 2406/32 pro výdejní box TextilEco) hlasovalo Pro 0, proti 4, přesto znění uvádí „souhlasí se záměrem“ pro oba body; text výsledek dílčího hlasování výslovně neuvádí."
+  ]
+ }
+}

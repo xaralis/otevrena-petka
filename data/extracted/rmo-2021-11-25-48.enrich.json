@@ -1,0 +1,167 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "47ee764a2f193b30fde322ad32cef39dc0f4efb361ad8360f2678ceb76112b0f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "226/2021 R",
+    "title": "Harmonogram jednání rady a zastupitelstva obvodu na rok 2022",
+    "summary": "Rada schvaluje termíny svých jednání a jednání Zastupitelstva MO Pardubice V na rok 2022. Zastupitelstvo se má sejít 10. 3., 22. 6. a 21. 9. 2022.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram",
+     "rada obvodu",
+     "zastupitelstvo obvodu",
+     "rok 2022",
+     "kalendář schůzí"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "227/2021 R",
+    "title": "Stanovisko k žádostem pozemkové komise: chatka, Z-BOX, pamětní pylon, hřiště SK Jesničánky",
+    "summary": "Stanovisko obvodu ke čtyřem majetkovým žádostem projednávaným pozemkovou komisí rady města: výkup stavby na st. p. č. 8999 městem za 550.000 Kč, nájem 2 m2 pozemku p. p. č. 2252/12 pro Z-BOX společnosti Zásilkovna s.r.o., výpůjčka 1 m2 pozemku p. p. č. 2255/13 pro kamenný pylon s pamětní deskou Ing. Jindřicha Kmoníčka a výpůjčka pozemků se sportovním a dětským hřištěm spolku SK JESNIČÁNKY, z. s. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "prodej stavby",
+     "chatka",
+     "Z-BOX",
+     "Zásilkovna",
+     "výdejní box",
+     "pamětní deska",
+     "pylon",
+     "výpůjčka pozemku",
+     "hřiště SK Jesničánky"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Pardubice",
+     "Nové Jesenčany",
+     "Čacké 1581, Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 8999, k. ú. Pardubice",
+     "p. p. č. 2252/12, k. ú. Pardubice",
+     "p. p. č. 2255/13, k. ú. Pardubice",
+     "p. p. č. 2346/1, k. ú. Pardubice",
+     "p. p. č. 8/1, k. ú. Nové Jesenčany"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "Zásilkovna s.r.o.",
+     "SK JESNIČÁNKY, z. s."
+    ],
+    "amounts": [
+     "550.000,- Kč"
+    ]
+   },
+   {
+    "number": "228/2021 R",
+    "title": "Prodej traktoru ISEKI SXG 15 H, případně jeho vyřazení a likvidace",
+    "summary": "Rada souhlasí s prodejem traktoru ISEKI SXG 15 H prostřednictvím nabídky na úřední desce po dobu 15 dnů zájemci s nejvyšší nabídnutou cenou a s jeho vyřazením z účetnictví. Pokud se žádný zájemce nepřihlásí, bude traktor vyřazen z majetku a fyzicky zlikvidován.",
+    "keywords": [
+     "prodej traktoru",
+     "traktor ISEKI",
+     "vyřazení majetku",
+     "likvidace",
+     "úřední deska",
+     "movitý majetek"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "229/2021 R",
+    "title": "Názvy nových ulic u S. K. Neumanna: Václava Machka, Ke Staré plovárně, U Zeleňáku, U Červeňáku",
+    "summary": "Rada schvaluje návrh názvů čtyř nově vznikajících komunikací v nové zástavbě na území bývalého železničního vojska u ulice S. K. Neumanna v okolí nové prodejny LIDL: Václava Machka, Ke Staré plovárně, U Zeleňáku a U Červeňáku.",
+    "keywords": [
+     "pojmenování ulic",
+     "nové ulice",
+     "názvy ulic",
+     "Václava Machka",
+     "Ke Staré plovárně",
+     "U Zeleňáku",
+     "U Červeňáku",
+     "S. K. Neumanna",
+     "bývalé železniční vojsko",
+     "LIDL"
+    ],
+    "topics": [
+     "doprava",
+     "uzemni-planovani"
+    ],
+    "kind": "jine",
+    "places": [
+     "ulice S. K. Neumanna",
+     "území bývalého železničního vojska",
+     "prodejna LIDL",
+     "kruhový objezd S. K. Neumanna x Svobody",
+     "Václava Machka",
+     "Ke Staré plovárně",
+     "U Zeleňáku",
+     "U Červeňáku"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "230/2021 R",
+    "title": "Souhlas se záměrem pronájmu prostor v areálu J. Palacha 324 spolku Z patra",
+    "summary": "Rada souhlasí se záměrem města pronajmout nebytové prostory (dílnu, šatnu, sklady a archiv, celkem 362,56 m2) v 1. patře objektu č. 10 v areálu čp. 324 v ulici J. Palacha spolku Z patra, z. s. Prostory mají sloužit jako fotografický ateliér, hudební zkušebny a k pořádání výstav, workshopů a výukových lekcí.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "pronájem",
+     "areál J. Palacha",
+     "Z patra",
+     "hudební zkušebny",
+     "fotografický ateliér",
+     "výstavy",
+     "workshopy"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "kultura-akce"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál čp. 324, ul. J. Palacha, Pardubice",
+     "objekt č. 10"
+    ],
+    "parcels": [
+     "st. p. č. 864/9, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Z patra, z. s.",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

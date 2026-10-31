@@ -1,0 +1,241 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "26d8fe64240dae55e395fe3b30371fca47f40e7799da6b0b93dba3737c303500",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 34,
+   "kind": "radne",
+   "date": "2024-10-16",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Oprava povrchu chodníku ul. Lexova - západ“",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Dotace",
+    "line": 92,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – přímé zadání činností spojených s přípravou vánoční výzdoby v režimu „in house“",
+    "line": 222,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Odvolání člena Komise pro strategii a rozvoj obvodu RMO Pardubice V",
+    "line": 232,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Diskuse, závěr",
+    "line": 238,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "165/2024 R",
+    "agenda_no": "1",
+    "first_line": 57,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "166/2024 R",
+    "agenda_no": "2",
+    "first_line": 66,
+    "last_line": 89,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "167/2024 R",
+    "agenda_no": "3",
+    "first_line": 95,
+    "last_line": 219,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "168/2024 R",
+    "agenda_no": "4",
+    "first_line": 226,
+    "last_line": 229,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "169/2024 R",
+    "agenda_no": "5",
+    "first_line": 235,
+    "last_line": 236,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "165/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "166/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 220,
+    "last_line": 220,
+    "resolution": "167/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 230,
+    "last_line": 230,
+    "resolution": "168/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 13–15: přítomni 4 členové (omluven Ing. Milan Randák), ale u usnesení 165/2024 R (ř. 61) a 168/2024 R (ř. 230) je uvedeno Pro 5 – více hlasů než přítomných; v textu není zmínka o příchodu Ing. Randáka.",
+   "ř. 235–236: usnesení 169/2024 R nemá hlasovací řádek (ověřeno i v PDF)."
+  ]
+ }
+}

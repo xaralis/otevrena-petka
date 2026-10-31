@@ -1,0 +1,366 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "4f1b239c2ba6612e25a61a6aca1ebc2483eec4663828a52756dad8eef7fe9091",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "231/2021 R",
+    "title": "Stanovisko k nájmu částí pozemků pro Z-BOXy Zásilkovny",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města o souhlas s nájmem částí pozemků v k. ú. Dražkovice (1 m2) a k. ú. Pardubice (2 m2) pro umístění a provoz Z-BOXů na podání a výdej zásilek z e-shopů. Žadatelem je Zásilkovna s.r.o.; Z-Box má být napájen solárními panely.",
+    "keywords": [
+     "Z-BOX",
+     "výdejní box",
+     "zásilky",
+     "e-shop",
+     "nájem pozemku",
+     "Zásilkovna",
+     "Dražkovice",
+     "stanovisko k žádosti města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 452/12, k. ú. Dražkovice",
+     "p. p. č. 2400/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Zásilkovna s.r.o.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "232/2021 R",
+    "title": "Uplatnění městské směrnice „O ochraně oznamovatelů“ v obvodu",
+    "summary": "Rada bere na vědomí směrnici „O ochraně oznamovatelů“ vydanou radou města 13. 12. 2021 a souhlasí s jejím uplatněním v městském obvodu Pardubice V. Oznámení z působnosti obvodu budou směřovat na Útvar interního auditu statutárního města Pardubice a kontakty budou zveřejněny na webu města i obvodu.",
+    "keywords": [
+     "ochrana oznamovatelů",
+     "whistleblowing",
+     "oznamovatel",
+     "směrnice",
+     "interní audit"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "vztahy-mesto",
+     "kontrola"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Útvar interního auditu statutárního města Pardubice",
+     "rada města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "233/2021 R",
+    "title": "Upravený odpisový plán na rok 2021",
+    "summary": "Rada schvaluje upravený odpisový plán městského obvodu na rok 2021, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "účetnictví",
+     "2021"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "234/2021 R",
+    "title": "Směrnice č. 28/2021 – zásady a program dotací z rozpočtu obvodu na rok 2022",
+    "summary": "Rada schvaluje směrnici č. 28/2021 se zásadami a programem pro poskytování dotací z rozpočtu MO Pardubice V v roce 2022 včetně osmi příloh (formulář žádosti, vzor smlouvy o poskytnutí dotace, čestná prohlášení žadatelů včetně de minimis, poučení a formuláře vyúčtování).",
+    "keywords": [
+     "dotace",
+     "dotační program",
+     "zásady pro poskytování dotací",
+     "směrnice č. 28/2021",
+     "de minimis",
+     "vyúčtování dotace",
+     "2022"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "235/2021 R",
+    "title": "Doporučení zastupitelstvu schválit rozpočet obvodu na rok 2022",
+    "summary": "Rada doporučuje zastupitelstvu schválit návrh rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2022, svěřit radě pravomoc k vymezeným rozpočtovým opatřením během roku 2022 a souhlasit s pravidly pro rozpis a technické přesuny rozpočtu, pro hrazení společenských akcí a drobných dárků (do 200 Kč, 500 Kč). Součástí je i schválení směrnice č. 7/2021 o hospodaření se sociálním fondem, která ruší směrnici č. 7/2019.",
+    "keywords": [
+     "rozpočet 2022",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "společenské akce",
+     "životní jubilea",
+     "propagační předměty",
+     "směrnice č. 7/2021"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "200 tis. Kč",
+     "500,-- Kč",
+     "200,- Kč"
+    ]
+   },
+   {
+    "number": "236/2021 R",
+    "title": "Doporučení zastupitelstvu schválit aktualizaci střednědobého výhledu rozpočtu 2021–2024",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh aktualizovaného střednědobého výhledu rozpočtu MO Pardubice V na roky 2021–2024.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2021–2024",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "237/2021 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 30. 11. 2021",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 30. 11. 2021 a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "30. 11. 2021",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "238/2021 R",
+    "title": "Doporučení zastupitelstvu schválit 4. změnu rozpočtu na rok 2021",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh 4. změny rozpočtu a rozpočtu sociálního fondu na rok 2021 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "rozpočet 2021",
+     "sociální fond",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "239/2021 R",
+    "title": "Smlouvy se Službami města Pardubic na kontejnery a výsyp košů v roce 2022",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na rok 2022 se společností Služby města Pardubic a.s. na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů a košů na psí exkrementy a svoz odpadu odloženého vedle kontejnerových stání. Smlouvy se uzavírají mimo režim zadávacího řádu (směrnice č. 14/2017), protože jde o městem založenou společnost zřízenou k tomuto účelu.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "odpadkové koše",
+     "psí exkrementy",
+     "svoz odpadu",
+     "úklid",
+     "smlouva o dílo",
+     "Služby města Pardubic"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "245.000,- Kč bez DPH",
+     "745.000,- Kč bez DPH",
+     "295.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "240/2021 R",
+    "title": "Dodatek č. 1 – prodloužení termínu úprav vnitrobloku Kpt. Nálepky – Lexova",
+    "summary": "Rada souhlasí s dodatkem č. 1 ke smlouvě o dílo ze dne 16. 4. 2021 se zhotovitelem MIROS Pardubice a.s. na stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova včetně využití dešťových vod (2 retenční nádrže). Termín zhotovení se prodlužuje do 15. 5. 2022 kvůli zpoždění výměny kanalizace společností VaK Pardubice a.s.",
+    "keywords": [
+     "vnitroblok",
+     "retenční nádrže",
+     "dešťová voda",
+     "dodatek ke smlouvě",
+     "prodloužení termínu",
+     "Kpt. Nálepky",
+     "Lexova",
+     "kanalizace"
+    ],
+    "topics": [
+     "investice",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s.",
+     "VaK Pardubice a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "241/2021 R",
+    "title": "Dodatek č. 1 – zvýšení ceny vydávání novin „Pardubická Pětka“",
+    "summary": "Rada souhlasí s dodatkem č. 1 ke smlouvě o dílo ze dne 1. 2. 2021 se zhotovitelem ZeHa studio s.r.o. na vydávání informačních novin „Pardubická Pětka“. Cena se od čísla 4/2021 zvyšuje z důvodu zdražení papíru.",
+    "keywords": [
+     "Pardubická Pětka",
+     "zpravodaj",
+     "noviny obvodu",
+     "dodatek ke smlouvě",
+     "zvýšení ceny",
+     "cena papíru"
+    ],
+    "topics": [
+     "kultura-akce",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ZeHa studio s.r.o."
+    ],
+    "amounts": [
+     "30.560,- Kč bez DPH",
+     "33.360,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "242/2021 R",
+    "title": "Odvolání členů Místní komise Višňovka a komise pro strategii a rozvoj",
+    "summary": "Rada k 31. 12. 2021 odvolává dva členy Místní komise Višňovka a jednoho člena Komise pro strategii a rozvoj obvodu, dopravy a životního prostředí.",
+    "keywords": [
+     "odvolání členů komise",
+     "Místní komise Višňovka",
+     "komise pro strategii a rozvoj",
+     "Višňovka"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Višňovka"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Višňovka",
+     "Komise pro strategii a rozvoj obvodu, dopravy a životního prostředí"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "243/2021 R",
+    "title": "Vzdání se mandátu dvou zastupitelů a nástup náhradníků",
+    "summary": "Rada bere na vědomí vzdání se mandátu dvou členů zastupitelstva obvodu (volební strany Komunistická strana Čech a Moravy a Pardubáci společně: Pardubáci, Patrioti a STAN), osvědčuje vznik mandátu jejich náhradníků ke dni 13. 11. 2021 a 7. 12. 2021 a ukládá předat jim osvědčení na nejbližším jednání zastupitelstva.",
+    "keywords": [
+     "vzdání se mandátu",
+     "náhradník",
+     "zastupitelstvo",
+     "osvědčení o vzniku mandátu",
+     "změna v zastupitelstvu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komunistická strana Čech a Moravy",
+     "Pardubáci společně: Pardubáci, Patrioti a STAN"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "244/2021 R",
+    "title": "Názvy čtyř nových ulic u S. K. Neumanna (Ke Špitálce, U Zeleňáku aj.)",
+    "summary": "Rada ruší své usnesení č. 229/2021 z 25. 11. 2021 a nově schvaluje návrh názvů čtyř nově vznikajících komunikací v nové zástavbě na území bývalého železničního vojska u ulice S. K. Neumanna: Ke Špitálce, K Vojenské plovárně, U Zeleňáku a U Červeňáku.",
+    "keywords": [
+     "pojmenování ulic",
+     "názvy ulic",
+     "nové ulice",
+     "Ke Špitálce",
+     "K Vojenské plovárně",
+     "U Zeleňáku",
+     "U Červeňáku",
+     "S. K. Neumanna",
+     "LIDL"
+    ],
+    "topics": [
+     "doprava",
+     "uzemni-planovani"
+    ],
+    "kind": "jine",
+    "places": [
+     "S. K. Neumanna",
+     "Svobody",
+     "Ke Špitálce",
+     "K Vojenské plovárně",
+     "U Zeleňáku",
+     "U Červeňáku",
+     "území bývalého železničního vojska"
+    ],
+    "parcels": [],
+    "organizations": [
+     "LIDL"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

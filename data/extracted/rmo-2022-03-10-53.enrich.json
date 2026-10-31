@@ -1,0 +1,190 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3ac926e543ed97cca7a30699417f1cf9f86b8232f5b87e1542687ffdca6bd51b",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "261/2022 R",
+    "title": "Stanovisko k prodeji a odkupu pozemků v k. ú. Dražkovice za účelem scelení",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města Pardubice: návrh souhlasu s prodejem městských pozemků p. p. č. 488/13 a části p. p. č. 488/3 a s odkoupením pozemků p. p. č. 419/2 a 418/8 od soukromého žadatele, vše v k. ú. Dražkovice, za účelem jejich scelení.",
+    "keywords": [
+     "prodej pozemků",
+     "odkup pozemků",
+     "směna pozemků",
+     "scelení pozemků",
+     "Dražkovice",
+     "pozemková komise",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 488/13, k. ú. Dražkovice",
+     "p. p. č. 488/3, k. ú. Dražkovice",
+     "p. p. č. 419/2, k. ú. Dražkovice",
+     "p. p. č. 418/8, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "262/2022 R",
+    "title": "Vzdání se mandátu člena zastupitelstva a osvědčení nového člena za ANO 2011",
+    "summary": "Rada bere na vědomí vzdání se mandátu člena Zastupitelstva MO Pardubice V za volební stranu ANO 2011 ke dni 2. 2. 2022 a osvědčuje, že dnem 3. 2. 2022 se novým členem zastupitelstva stal náhradník téže volební strany. Ukládá předat mu osvědčení o vzniku mandátu na nejbližším jednání zastupitelstva.",
+    "keywords": [
+     "vzdání se mandátu",
+     "rezignace zastupitele",
+     "náhradník",
+     "osvědčení o vzniku mandátu",
+     "zastupitelstvo",
+     "ANO 2011"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ANO 2011",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "263/2022 R",
+    "title": "Odpisový plán na rok 2022",
+    "summary": "Rada schvaluje odpisový plán městského obvodu Pardubice V na rok 2022, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "2022",
+     "účetnictví",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "264/2022 R",
+    "title": "Doporučení schválit rozbor hospodaření obvodu k 31. 12. 2021",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 31. 12. 2021 uvedený v tabulkové části zprávy a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "2021",
+     "plnění rozpočtu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "265/2022 R",
+    "title": "Doporučení schválit 1. změnu rozpočtu obvodu na rok 2022",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozpočtová opatření 1. změny rozpočtu MO Pardubice V na rok 2022 (body 1–12 důvodové zprávy) a vzít na vědomí komentář k nim. Součástí je úprava plánu společenských akcí – navýšení částky na Slavnost MO Pardubice V o 40 tis. Kč a na Pohádkovou cestu o 20 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2022",
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "Pohádková cesta"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "40 tis. Kč",
+     "20 tis. Kč"
+    ]
+   },
+   {
+    "number": "266/2022 R",
+    "title": "Doporučený postup při prodeji městských nebytových prostor v obvodu",
+    "summary": "Rada doporučuje zastupitelstvu zrušit usnesení č. 45/2016 Z ze dne 9. 3. 2016 a přijmout doporučení statutárnímu městu Pardubice pro prodej jeho nebytových jednotek na území obvodu: přednostně stávajícím nájemcům za odhadní cenu, jinak pokračování nájmu, u prostor bez nájmu nabídka společenství vlastníků za odhadní cenu a případně veřejná dražba.",
+    "keywords": [
+     "nebytové prostory",
+     "prodej nebytových jednotek",
+     "nájemci",
+     "odhadní cena",
+     "veřejná dražba",
+     "společenství vlastníků",
+     "zrušení usnesení"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "267/2022 R",
+    "title": "Rezoluce na podporu Ukrajiny a humanitární pomoc do 50.000 Kč",
+    "summary": "Rada doporučuje zastupitelstvu přijmout rezoluci na podporu nezávislosti a územní celistvosti Ukrajiny odsuzující ruskou invazi, schválit věcný dar – humanitární pomoc pro občany Ukrajiny do 50.000,- Kč předávanou do městského centra humanitární pomoci v Milheimově ulici v areálu Vodovodů a kanalizací – a související rozpočtové opatření přesunem z rezervy rozpočtu.",
+    "keywords": [
+     "Ukrajina",
+     "rezoluce",
+     "humanitární pomoc",
+     "válka na Ukrajině",
+     "věcný dar",
+     "rozpočtové opatření",
+     "Milheimova ulice",
+     "pomoc uprchlíkům"
+    ],
+    "topics": [
+     "socialni",
+     "dotace",
+     "rozpocet"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Milheimova ulice",
+     "areál Vodovodů a kanalizací"
+    ],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice",
+     "Vodovody a kanalizace"
+    ],
+    "amounts": [
+     "50.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "51ee55278946e5b8f9a182132f882c90f7124ad8d3046a98277a674678e81791",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "172/2024 R",
+    "title": "Přesun peněz v plánu společenských akcí 2024 na Rozsvěcení vánočního stromečku",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí MO Pardubice V na rok 2024: 30 tis. Kč z akce Opékání buřtů a 50 tis. Kč z akce Divadelní představení se přesouvají na akci Rozsvěcení vánočního stromečku. Celkový rozpočet plánu ve výši 1 295 tis. Kč se nemění.",
+    "keywords": [
+     "plán společenských akcí",
+     "Rozsvěcení vánočního stromečku",
+     "vánoční strom",
+     "Opékání buřtů",
+     "Divadelní představení",
+     "přesun peněz",
+     "kulturní akce",
+     "2024"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "30 tis. Kč",
+     "50 tis. Kč",
+     "1 295 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

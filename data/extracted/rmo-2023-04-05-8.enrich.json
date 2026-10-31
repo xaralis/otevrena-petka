@@ -1,0 +1,246 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "d65a86b31ebdf3d56cb6080fe0fa9f701ddfeab113ecaac810b4642998c023d2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "41/2023 R",
+    "title": "Souhlas s předzahrádkou cukrárny Libuše na nám. Dukelských hrdinů",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 12 m2 před cukrárnou Libuše na nám. Dukelských hrdinů 2235 v době od 1. 5. do 31. 10. 2023, denně od 9.00 do 18.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "cukrárna Libuše",
+     "nám. Dukelských hrdinů",
+     "zábor veřejného prostranství",
+     "letní zahrádka",
+     "souhlas"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "nám. Dukelských hrdinů 2235, Pardubice",
+     "cukrárna Libuše"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "42/2023 R",
+    "title": "Stanovisko k žádostem pozemkové komise: věcné břemeno VO, prodej a odkup pozemků",
+    "summary": "Rada se vyjadřuje k žádostem pozemkové komise rady města: souhlasí se zřízením věcného břemene pro veřejné osvětlení Služeb města Pardubic a.s. v rámci modernizace trolejbusové trati Dukla vozovna – hlavní nádraží (ulice Teplého a Palackého) a s prodejem části pozemku p. p. č. 2165/26 pro zastřešenou terasu vinotéky. Třetí bod se týká nabídky společnosti CETIN a.s. na odkoupení pozemku p. p. č. 5101 do vlastnictví města za 328.500,- Kč.",
+    "keywords": [
+     "věcné břemeno",
+     "veřejné osvětlení",
+     "trolejbusová trať",
+     "Teplého",
+     "Palackého",
+     "prodej pozemku",
+     "odkoupení pozemku",
+     "vinotéka",
+     "pozemková komise",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ulice Teplého",
+     "ulice Palackého",
+     "Dukla vozovna",
+     "hlavní nádraží",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2165/30",
+     "p. p. č. 2165/37",
+     "p. p. č. 2165/40",
+     "p. p. č. 2168/3",
+     "p. p. č. 2303/2",
+     "p. p. č. 2303/18",
+     "p. p. č. 2303/24",
+     "p. p. č. 2599/2",
+     "p. p. č. 2605/59",
+     "p. p. č. 1778/30",
+     "p. p. č. 2605/45",
+     "p. p. č. 2165/26",
+     "st. p. č. 4127/11",
+     "p. p. č. 5101"
+    ],
+    "organizations": [
+     "Služby města Pardubic a.s.",
+     "CETIN a.s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "500,- Kč + DPH",
+     "11,54 Kč každoročně povyšovaná o míru inflace + DPH",
+     "328.500,- Kč"
+    ]
+   },
+   {
+    "number": "43/2023 R",
+    "title": "Revokace dotací z usnesení 39/2023 R a nové schválení dotací MŠ Jesničánky a na pálení vatry",
+    "summary": "Rada ruší body 6, 16 a 17 usnesení č. 39/2023 R z 15. 3. 2023 a nově schvaluje dotace: 16.200,- Kč Mateřské škole Pardubice - Jesničánky na akci „Zpátky do minulosti“ a 3.500,- Kč a 10.000,- Kč na akce „Pálení vatry“ 30. 4. a 27. 4. 2023, včetně veřejnoprávních smluv. Součástí jsou související rozpočtová opatření č. 55 až 58 z položky příspěvky a z rezervy rady.",
+    "keywords": [
+     "dotace",
+     "revokace usnesení",
+     "MŠ Jesničánky",
+     "Zpátky do minulosti",
+     "pálení vatry",
+     "čarodějnice",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "rezerva rady"
+    ],
+    "topics": [
+     "dotace",
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Raisova 226, Pardubice",
+     "Jesničánky"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice - Jesničánky"
+    ],
+    "amounts": [
+     "16.200,- Kč",
+     "5.700,- Kč",
+     "10.500,- Kč",
+     "3.500,- Kč",
+     "10.000,- Kč"
+    ]
+   },
+   {
+    "number": "44/2023 R",
+    "title": "Návrh zástupce obvodu do školské rady ZŠ Waldorfská",
+    "summary": "Rada doporučuje Radě města Pardubic schválit člena rady obvodu jako zástupce městského obvodu Pardubice V ve školské radě při ZŠ Waldorfská.",
+    "keywords": [
+     "školská rada",
+     "ZŠ Waldorfská",
+     "zástupce obvodu",
+     "nominace",
+     "základní škola"
+    ],
+    "topics": [
+     "skolstvi",
+     "vztahy-mesto"
+    ],
+    "kind": "personalni",
+    "places": [
+     "ZŠ Waldorfská"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ZŠ Waldorfská",
+     "Rada města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "45/2023 R",
+    "title": "Úprava plánu společenských akcí 2023: přesun 40 tis. Kč na Slavnost MO",
+    "summary": "Rada přesouvá v plánu společenských akcí na rok 2023 40 tis. Kč z akce Ochutnávka Svatomartinského vína na akci Slavnost MO Pardubice V. Celkový rozpočet plánu zůstává 985 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "Svatomartinské víno",
+     "ochutnávka vína",
+     "kulturní akce",
+     "přesun prostředků"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "40 tis. Kč",
+     "985 tis. Kč"
+    ]
+   },
+   {
+    "number": "46/2023 R",
+    "title": "Odpisový plán na rok 2023",
+    "summary": "Rada schvaluje odpisový plán městského obvodu na rok 2023, který je přílohou materiálu.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "účetnictví",
+     "hospodaření",
+     "2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "47/2023 R",
+    "title": "Statut komisí Rady MO Pardubice V",
+    "summary": "Rada schvaluje Statut komisí RMO Pardubice V s účinností ode dne 6. 4. 2023.",
+    "keywords": [
+     "statut komisí",
+     "komise rady",
+     "pravidla komisí",
+     "organizace"
+    ],
+    "topics": [
+     "komise-vybory",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "48/2023 R",
+    "title": "Souhlas se záměrem pronájmu prostor v areálu J. Palacha 324 Městskému obvodu Pardubice I",
+    "summary": "Rada souhlasí se záměrem města pronajmout Městskému obvodu Pardubice I prostor o výměře 193,75 m2 v přízemí objektu č. 10 v areálu čp. 324 v ul. J. Palacha. Prostor má sloužit jako zámečnická dílna pro opravy mobiliáře, herních prvků dětských hřišť a údržbu strojního vybavení.",
+    "keywords": [
+     "nájem nebytových prostor",
+     "J. Palacha",
+     "zámečnická dílna",
+     "Městský obvod Pardubice I",
+     "pronájem",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál čp. 324, ul. J. Palacha",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/9, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Městský obvod Pardubice I"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

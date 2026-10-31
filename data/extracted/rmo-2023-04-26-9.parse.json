@@ -1,0 +1,226 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "7faf0c4a522644dba65b7609f53379beeb10170c87dd8de34939e893559cda06",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 9,
+   "kind": "mimoradne",
+   "date": "2023-04-26",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 3. 2023",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "2. změna rozpočtu MO Pardubice V na r. 2023",
+    "line": 82,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Opatření na zmírnění hlukových a světelných dopadů jihovýchodního obchvatu",
+    "line": 98,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Diskuse, závěr",
+    "line": 114,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "49/2023 R",
+    "agenda_no": "1",
+    "first_line": 48,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "50/2023 R",
+    "agenda_no": "2",
+    "first_line": 75,
+    "last_line": 78,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "51/2023 R",
+    "agenda_no": "3",
+    "first_line": 84,
+    "last_line": 94,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "52/2023 R",
+    "agenda_no": "4",
+    "first_line": 100,
+    "last_line": 108,
+    "responsible": "J. Rejda, starosta",
+    "deadline": "30. 6. 2023"
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "49/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 79,
+    "last_line": 79,
+    "resolution": "50/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "51/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 111,
+    "last_line": 111,
+    "resolution": "52/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 25, 30: jmenování zapisovatele a ověřovatelů bez hlasování; hlasováno jen o materiálech k projednání (ř. 39).",
+   "ř. 62: u p. p. č. 2426/2 chybí jednotka výměry („o výměře 9.166,“)."
+  ]
+ }
+}

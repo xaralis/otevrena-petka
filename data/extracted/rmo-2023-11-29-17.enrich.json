@@ -1,0 +1,134 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "188ec525642f4600e85d70383bd7d57653a9a39344f9ec133fbb7fe0599e012b",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "88/2023 R",
+    "title": "Zpráva o poskytování informací podle zákona č. 106/1999 Sb.",
+    "summary": "Rada schvaluje předloženou zprávu o poskytování informací podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím.",
+    "keywords": [
+     "poskytování informací",
+     "zákon 106/1999 Sb.",
+     "svobodný přístup k informacím",
+     "infozákon",
+     "zpráva"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "89/2023 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo – stavební úpravy komunikace a chodníku Na Záboří",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 7. 9. 2023 na akci „Stavební úpravy komunikace a chodníku Na Záboří“ se zhotovitelem Ján Mucha – STAVREMO. Po započtení víceprací a méněprací se cena mění z 1.293953,08 Kč na 1.315.050,58 Kč bez DPH.",
+    "keywords": [
+     "Na Záboří",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "méněpráce",
+     "oprava chodníku",
+     "komunikace",
+     "STAVREMO"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Na Záboří"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Ján Mucha – STAVREMO"
+    ],
+    "amounts": [
+     "1.315.050,58 Kč bez DPH",
+     "1.293953,08 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "90/2023 R",
+    "title": "Stanovisko k výpůjčce pozemku pro parkování a k umístění poštovních schránek ve Wolkerově ulici",
+    "summary": "Rada souhlasí se záměrem města vypůjčit část pozemku p. p. č. 4853/1 (25 m2) pro 2 parkovací místa ošetřovatelské služby SKP-CENTRUM, o. p. s. Dále souhlasí s umístěním poštovních schránek u vchodu do bytového domu Wolkerova 2080–81 na pozemku p. p. č. 2165/18 na žádost Společenství pro dům Wolkerova 2080, 2081, Pardubice.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "parkovací místa",
+     "ošetřovatelská služba",
+     "poštovní schránky",
+     "Wolkerova",
+     "SKP-CENTRUM",
+     "stanovisko pozemkové komise"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Wolkerova 2080–81",
+     "Jungmannova 2550",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 4853/1, k. ú. Pardubice",
+     "p. p. č. 2165/18, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SKP-CENTRUM, o. p. s.",
+     "Společenství pro dům Wolkerova 2080, 2081, Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "91/2023 R",
+    "title": "Stanovisko k pronájmu nebytových prostor v ul. Josefa Ressla a dvou garážových stání v Sokolovské",
+    "summary": "Rada souhlasí se záměrem města pronajmout prostory v přízemí domu čp. 2257 v ulici Josefa Ressla (jednotky 2257/21 a 2257/22, dříve ordinace praktického lékaře) k provozování zubní ambulance. Dále souhlasí s pronájmem garážových stání č. 17 v domě čp. 2731 a č. 13 v domě čp. 2721 v Sokolovské ulici, druhé z nich pro Auta Pardubice s.r.o.",
+    "keywords": [
+     "pronájem nebytových prostor",
+     "zubní ordinace",
+     "ambulance",
+     "garážové stání",
+     "garáž",
+     "Josefa Ressla",
+     "Sokolovská",
+     "stanovisko komise pro nebytové prostory"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "socialni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Josefa Ressla",
+     "čp. 2252–2257",
+     "Sokolovská",
+     "čp. 2731",
+     "čp. 2721",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 4128, k. ú. Pardubice",
+     "st. 10089 a 10090"
+    ],
+    "organizations": [
+     "Auta Pardubice s.r.o.",
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "b3270ec4d5a49691ea66df8c6056732c9ce56db82d135c92f4e9067f3bec838f",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 38,
+   "kind": "mimoradne",
+   "date": "2024-12-18",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2025",
+    "line": 54,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2024-2028",
+    "line": 165,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 30.11.2024",
+    "line": 175,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Stavební úpravy vnitrobloku v ul. Pichlova – S. K. Neumanna – K Višňovce“",
+    "line": 185,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Směrnice č. 28/2024: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2025",
+    "line": 196,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 214,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Diskuse, závěr",
+    "line": 224,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "181/2024 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 161,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "182/2024 R",
+    "agenda_no": "2",
+    "first_line": 167,
+    "last_line": 171,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "183/2024 R",
+    "agenda_no": "3",
+    "first_line": 177,
+    "last_line": 181,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "184/2024 R",
+    "agenda_no": "4",
+    "first_line": 188,
+    "last_line": 192,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "185/2024 R",
+    "agenda_no": "5",
+    "first_line": 199,
+    "last_line": 210,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "186/2024 R",
+    "agenda_no": "6",
+    "first_line": 216,
+    "last_line": 220,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 162,
+    "last_line": 162,
+    "resolution": "181/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 172,
+    "last_line": 172,
+    "resolution": "182/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 182,
+    "last_line": 182,
+    "resolution": "183/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 193,
+    "last_line": 193,
+    "resolution": "184/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 211,
+    "last_line": 211,
+    "resolution": "185/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 221,
+    "last_line": 221,
+    "resolution": "186/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 221: usnesení č. 186/2024 R (souhlas se záměrem výpůjčky) má hlasování pro 0, zdržel se 2, proti 3 – návrh zjevně nebyl přijat, ačkoli má přidělené číslo usnesení a text výsledek výslovně neuvádí."
+  ]
+ }
+}

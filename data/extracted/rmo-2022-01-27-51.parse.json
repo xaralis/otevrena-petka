@@ -1,0 +1,364 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "2821a2c47bb58a72d31568e7f992336740017b8d869bc2d90c5a9c75d34c04f3",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 51,
+   "kind": "radne",
+   "date": "2022-01-27",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Jiří Janoš",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost o umístění reklamních pylonů – revokace usnesení č. č. 248/2022 R",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Návrh rozpočtových opatření",
+    "line": 90,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Provozní řád knihovny MO Pardubice V",
+    "line": 102,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Výroční zpráva o poskytování informací za rok 2021 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím",
+    "line": 108,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Peněžité dary členům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 118,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 162,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Poskytnutí daru a rozpočtové opatření",
+    "line": 182,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 192,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "250/2022 R",
+    "agenda_no": "1",
+    "first_line": 66,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "251/2022 R",
+    "agenda_no": "2",
+    "first_line": 79,
+    "last_line": 87,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "252/2022 R",
+    "agenda_no": "3",
+    "first_line": 93,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "253/2022 R",
+    "agenda_no": "4",
+    "first_line": 105,
+    "last_line": 105,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "254/2022 R",
+    "agenda_no": "5",
+    "first_line": 112,
+    "last_line": 115,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "255/2022 R",
+    "agenda_no": "6",
+    "first_line": 121,
+    "last_line": 159,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "256/2022 R",
+    "agenda_no": "7",
+    "first_line": 166,
+    "last_line": 179,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "257/2022 R",
+    "agenda_no": "8",
+    "first_line": 185,
+    "last_line": 189,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "250/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 88,
+    "last_line": 88,
+    "resolution": "251/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 100,
+    "last_line": 100,
+    "resolution": "252/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "253/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 116,
+    "resolution": "254/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 160,
+    "last_line": 160,
+    "resolution": "255/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 180,
+    "last_line": 180,
+    "resolution": "256/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 190,
+    "last_line": 190,
+    "resolution": "257/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 175: v usnesení 256/2022 R je po bodu 1. uveden rovnou bod „a)“ (bez bodu 2.), číslování v textu je nekonzistentní."
+  ]
+ }
+}

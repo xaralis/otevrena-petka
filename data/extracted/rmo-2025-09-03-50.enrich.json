@@ -1,0 +1,189 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "2a123262573465aba74eb8dd6f81559e774cedff0989ffc97498cd6d7f943d78",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "228/2025 R",
+    "title": "Stanovisko k šesti majetkovým záměrům města (nájem, věcná břemena, výpůjčky, předkupní právo)",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města, hlasované po bodech: nájem části pozemku na zahrádku, věcné břemeno pro opravu vodovodu a kanalizace v ul. Boženy Němcové pro Vodovody a kanalizace Pardubice, výpůjčka pozemků ŘSD pro cyklostezku Dražkovice – Pardubičky – Černá za Bory, výpůjčka pozemku pro sjezd a parkovací místo v rámci akce „Bydlení Kosatec“ (Centrum Kosatec, z. s.), věcné břemeno pro lávku pro pěší na pozemcích Dopravního podniku města Pardubic a využití předkupního práva k zahradní chatce v zahrádkářské kolonii za krematoriem za 150.000,- Kč.",
+    "keywords": [
+     "pozemková komise",
+     "nájem pozemku",
+     "zahrádka",
+     "věcné břemeno",
+     "vodovod a kanalizace",
+     "Boženy Němcové",
+     "cyklostezka",
+     "výpůjčka",
+     "lávka pro pěší",
+     "předkupní právo"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Boženy Němcové",
+     "Dražkovice",
+     "Pardubičky",
+     "Černá za Bory",
+     "Bydlení Kosatec",
+     "zahrádkářská kolonie za krematoriem"
+    ],
+    "parcels": [
+     "st. p. č. 5376, k. ú. Pardubice",
+     "p. p. č. 2117/21, k. ú. Pardubice",
+     "p. p. č. 2123/33, k. ú. Pardubice",
+     "p. p. č. 2123/34, k. ú. Pardubice",
+     "p. p. č. 2318/50, k. ú. Pardubice",
+     "p. p. č. 2118/79, k. ú. Pardubice",
+     "p. p. č. 2318/47, k. ú. Pardubice",
+     "p. p. č. 2119/7, k. ú. Pardubice",
+     "p. p. č. 2113/3, k. ú. Pardubice",
+     "p. p. č. 333/4, k. ú. Dražkovice",
+     "p. p. č. 579/8, k. ú. Dražkovice",
+     "p. p. č. 579/11, k. ú. Dražkovice",
+     "p. p. č. 579/12, k. ú. Dražkovice",
+     "p. p. č. 5349/13, k. ú. Pardubice",
+     "p. p. č. 2505/3, k. ú. Pardubice",
+     "p. p. č. 2054/9, k. ú. Pardubice",
+     "p. p. č. 2054/13, k. ú. Pardubice",
+     "p. p. č. 5494, k. ú. Pardubice",
+     "st. p. č. 8934, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "Ředitelství silnic a dálnic s. p.",
+     "Statutární město Pardubice",
+     "Centrum Kosatec, z. s.",
+     "Dopravní podnik města Pardubic a.s.",
+     "Základní organizace Českého zahrádkářského svazu Pardubice Jesničánky"
+    ],
+    "amounts": [
+     "18,- Kč/m2/rok",
+     "150.000,- Kč"
+    ]
+   },
+   {
+    "number": "229/2025 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo – chodník Lexova a náměstí Dukelských hrdinů",
+    "summary": "Uzavření Dodatku č. 1 ke smlouvě o dílo ze dne 28. 4. 2025 se zhotovitelem Rocky stavby Company CZ s.r.o. na opravu chodníku v ul. Lexova a stavební úpravy parkových částí náměstí Dukelských hrdinů. Po započtení víceprací a méněprací je cena 14.721.059,23 Kč vč. DPH oproti původním 14.866.179,53 Kč.",
+    "keywords": [
+     "dodatek ke smlouvě o dílo",
+     "oprava chodníku",
+     "Lexova",
+     "náměstí Dukelských hrdinů",
+     "revitalizace",
+     "parkové úpravy",
+     "vícepráce a méněpráce"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Lexova",
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rocky stavby Company CZ s.r.o."
+    ],
+    "amounts": [
+     "14.721.059,23Kč vč. DPH",
+     "14.866.179,53Kč"
+    ]
+   },
+   {
+    "number": "230/2025 R",
+    "title": "Smlouva o dílo na stavební úpravy vnitrobloku Pichlova – Rokycanova – K Višňovce",
+    "summary": "Výběr nejvhodnější nabídky v zakázce malého rozsahu a uzavření smlouvy o dílo na stavební úpravy vnitrobloku ulic Pichlova, Rokycanova a K Višňovce se zhotovitelem Ján Mucha za nabídkovou cenu 1.781.424,33 Kč vč. DPH.",
+    "keywords": [
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "vnitroblok",
+     "Pichlova",
+     "Rokycanova",
+     "K Višňovce",
+     "stavební úpravy"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Pichlova",
+     "ul. Rokycanova",
+     "ul. K Višňovce"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Ján Mucha"
+    ],
+    "amounts": [
+     "1.781.424,33 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "231/2025 R",
+    "title": "Souhlas se záměrem města pronajmout nebytový prostor na nám. Dukelských hrdinů",
+    "summary": "Souhlas se záměrem města pronajmout nebytovou jednotku č. 2233/112 (106,33 m2) v přízemí domu č. p. 2233 na nám. Dukelských hrdinů společnosti Wanted Sport s.r.o. pro prodej sportovních potřeb a celoroční servis.",
+    "keywords": [
+     "nebytové prostory",
+     "pronájem",
+     "náměstí Dukelských hrdinů",
+     "prodejna sportovních potřeb",
+     "komise pro nebytové prostory"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "nám. Dukelských hrdinů",
+     "č. p. 2233"
+    ],
+    "parcels": [
+     "st. p. č. 4233, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Wanted Sport s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "232/2025 R",
+    "title": "Informace o stavu projektové dokumentace prodloužení stezky u Chrudimky",
+    "summary": "Rada bere na vědomí zprávu o stavu projekčních prací na akci „PD Prodloužení stezky u Chrudimky“.",
+    "keywords": [
+     "stezka u Chrudimky",
+     "projektová dokumentace",
+     "cyklostezka",
+     "Chrudimka",
+     "prodloužení stezky"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "zprava",
+    "places": [
+     "Chrudimka"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

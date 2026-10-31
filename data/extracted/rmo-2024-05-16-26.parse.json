@@ -1,0 +1,259 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "7ddb271733f0bc54a16a993d52af552bf88774d9dfb2a99afda6ffdc27dedf6c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 26,
+   "kind": "radne",
+   "date": "2024-05-16",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost komise pro nebytové prostory rady města –stanovisko RMO Pardubice V",
+    "line": 54,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 64,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Souhlas s umístěním pojízdného stánku na prodej zmrzliny v areálu Pod Vinicí",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou Cherry Bar, Devotyho 2452, Pardubice",
+    "line": 134,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Zpevnění komunikace Lesopark“",
+    "line": 144,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Diskuse, závěr",
+    "line": 153,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "131/2024 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "132/2024 R",
+    "agenda_no": "2",
+    "first_line": 66,
+    "last_line": 122,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "133/2024 R",
+    "agenda_no": "3",
+    "first_line": 128,
+    "last_line": 130,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "134/2024 R",
+    "agenda_no": "4",
+    "first_line": 137,
+    "last_line": 140,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "135/2024 R",
+    "agenda_no": "5",
+    "first_line": 147,
+    "last_line": 149,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "131/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 123,
+    "last_line": 123,
+    "resolution": "132/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 131,
+    "last_line": 131,
+    "resolution": "133/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 141,
+    "last_line": 141,
+    "resolution": "134/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 150,
+    "last_line": 150,
+    "resolution": "135/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

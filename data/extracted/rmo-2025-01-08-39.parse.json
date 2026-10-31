@@ -1,0 +1,227 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "d93e6b4936fb6710afbec94af24263883433f8a4c095601a8f92f72480fbbfe3",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 39,
+   "kind": "radne",
+   "date": "2025-01-08",
+   "place": "zasedací místnost MO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 43,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 62,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Diskuse, závěr",
+    "line": 110,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "187/2025 R",
+    "agenda_no": "1",
+    "first_line": 49,
+    "last_line": 59,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "188/2025 R",
+    "agenda_no": "2",
+    "first_line": 65,
+    "last_line": 107,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": "187/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "188/2025 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 82,
+    "last_line": 82,
+    "resolution": "188/2025 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 93,
+    "last_line": 93,
+    "resolution": "188/2025 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 108,
+    "last_line": 108,
+    "resolution": "188/2025 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 64: číslo usnesení je v textu uvedeno s překlepem jako „188/20254 R“; zpracováno jako 188/2025 R (navazuje na 187/2025 R).",
+   "ř. 108: o bodu 4 usnesení 188/2025 R (využití předkupního práva) hlasováno pro 0, proti 3 – bod nebyl schválen, přestože je součástí číslovaného usnesení, které začíná „souhlasí se záměrem“."
+  ]
+ }
+}

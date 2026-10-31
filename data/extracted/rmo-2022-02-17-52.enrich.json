@@ -1,0 +1,107 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "fcf221792051a24f54f8e91f3f2660e239133ccce8ef8cb379e11505fdd56d26",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "258/2022 R",
+    "title": "Stanovisko k umístění 36 garáží v Dražkovicích a k nájmu pozemku pro parkovací místo",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města Pardubice: k návrhu na umístění 36 garáží na p. p. č. 262/1, k. ú. Dražkovice (žadatel statutární město Pardubice) a k nájmu části pozemku p. p. č. 2335/39 o výměře 10 m2, k. ú. Pardubice, pro zřízení parkovacího místa pro firemní automobil společnosti Stehno spedition s. r. o. O obou bodech se hlasovalo samostatně.",
+    "keywords": [
+     "garáže",
+     "Dražkovice",
+     "nájem pozemku",
+     "parkovací místo",
+     "parkování",
+     "pozemková komise",
+     "stanovisko",
+     "Demokratické mládeže"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice",
+     "k. ú. Pardubice",
+     "Demokratické mládeže"
+    ],
+    "parcels": [
+     "p. p. č. 262/1, k. ú. Dražkovice",
+     "p. p. č. 2335/39, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "Stehno spedition s. r. o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "259/2022 R",
+    "title": "Přijetí finančních darů na péči o veřejnou zeleň v roce 2022",
+    "summary": "Rada souhlasí s přijetím tří finančních darů na péči o veřejnou zeleň na území MO Pardubice V v roce 2022 – od fyzické osoby a od firem M-BET s.r.o. a HAMO systems s.r.o.",
+    "keywords": [
+     "finanční dar",
+     "dary",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "M-BET",
+     "HAMO systems"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o.",
+     "HAMO systems s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč",
+     "10.000,- Kč",
+     "1.500,- Kč"
+    ]
+   },
+   {
+    "number": "260/2022 R",
+    "title": "Souhlas s dočasným umístěním reklamního pylonu LIDL v ulici S. K. Neumanna",
+    "summary": "Rada souhlasí s umístěním jednoho reklamního pylonu pro firmu LIDL o velikosti 2,5 x 2,5 x 6 m na pozemku p. č. 2496/1, k. ú. Pardubice, v ulici S. K. Neumanna v termínu od 1. 3. 2022 do 30. 4. 2022. Žadatelem je outdoor akzent s. r. o.",
+    "keywords": [
+     "reklamní pylon",
+     "reklama",
+     "LIDL",
+     "S. K. Neumanna",
+     "zábor veřejného prostranství",
+     "outdoor akzent"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "ostatni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ulice S. K. Neumanna",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. č. 2496/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "LIDL",
+     "outdoor akzent s. r. o."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

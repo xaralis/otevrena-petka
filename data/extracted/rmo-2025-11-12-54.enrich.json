@@ -1,0 +1,36 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "ecc71fe807c3e8dbc86a6dcd50d8a8e847395109431b66fbbf1c192ff8976574",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "249/2025 R",
+    "title": "Úprava plánu společenských akcí 2025 – přesun z Pohádkové cesty na Rozsvěcení stromečku",
+    "summary": "Rada obvodu schvaluje úpravu plánu společenských akcí MO Pardubice V na rok 2025: přesun 2,98 tis. Kč z akce Pohádková cesta na akci Rozsvěcení vánočního stromečku. Celková výše rozpočtové položky společenské akce ani celková výše plánu se nemění.",
+    "keywords": [
+     "plán společenských akcí",
+     "společenské akce",
+     "Pohádková cesta",
+     "Rozsvěcení vánočního stromečku",
+     "vánoční strom",
+     "Vánoce",
+     "přesun peněz",
+     "úprava plánu"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "2,98 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

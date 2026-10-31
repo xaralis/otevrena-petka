@@ -1,0 +1,361 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "c3c3ce8eafa4765627f2929a190fb82490731e13275b14b1c80621fc5e50f88c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 33,
+   "kind": "mimoradne",
+   "date": "2024-09-25",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Program rozvoje městského obvodu Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Vyřazení projektové dokumentace z majetku",
+    "line": 89,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2024",
+    "line": 100,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "3. změna rozpočtu MO Pardubice V na r. 2024",
+    "line": 112,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Vzdání se mandátu člena zastupitelstva MO Pardubice V",
+    "line": 125,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Informace o schválení účetní závěrky za r. 2023 sestavené k 31. 12. 2023",
+    "line": 140,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Dar do veřejné sbírky a související rozpočtové opatření",
+    "line": 151,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Diskuse, závěr",
+    "line": 170,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "158/2024 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "159/2024 R",
+    "agenda_no": "2",
+    "first_line": 79,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "160/2024 R",
+    "agenda_no": "3",
+    "first_line": 92,
+    "last_line": 97,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "161/2024 R",
+    "agenda_no": "4",
+    "first_line": 106,
+    "last_line": 109,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "162/2024 R",
+    "agenda_no": "5",
+    "first_line": 115,
+    "last_line": 122,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "163/2024 R",
+    "agenda_no": "6",
+    "first_line": 128,
+    "last_line": 137,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "164/2024 R",
+    "agenda_no": "7",
+    "first_line": 143,
+    "last_line": 147,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "158/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "159/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 98,
+    "last_line": 98,
+    "resolution": "160/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 110,
+    "last_line": 110,
+    "resolution": "161/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 123,
+    "last_line": 123,
+    "resolution": "162/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 138,
+    "last_line": 138,
+    "resolution": "163/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 148,
+    "last_line": 148,
+    "resolution": "164/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 168,
+    "last_line": 168,
+    "resolution": null,
+    "part": null,
+    "subject": "návrh usnesení: dar 20.000 Kč do veřejné sbírky ZŠ a Praktické školy SVÍTÁNÍ, o.p.s., na školní svozový autobus a související rozpočtové opatření",
+    "proposer": null,
+    "motion_first_line": 153,
+    "motion_last_line": 167,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   }
+  ],
+  "notes": [
+   "Bod 8 (dar do veřejné sbírky) nemá číslo usnesení; návrh nebyl přijat (pro 0, proti 5)."
+  ]
+ }
+}

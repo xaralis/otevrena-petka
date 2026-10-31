@@ -1,0 +1,257 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "1f037ea5bd41e3e23701a4350ce24988a02b7f863ca820c12425a63f6c92d78b",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 56,
+   "kind": "radne",
+   "date": "2022-05-12",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Návrh rozpočtového opatření",
+    "line": 59,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Petice – omezení povolené rychlosti vozidel v ulicích Kpt. Nálepky a Demokratické mládeže v Pardubicích",
+    "line": 68,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 3 ke smlouvě o dílo na akci „Stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova, Pardubice včetně využití dešťových vod (2 retenční nádrže)“",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 89,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Rozhodnutí zadavatele – zrušení výběrového řízení na realizaci zakázky malého rozsahu: „Stavební úpravy komunikace ul. Do Zahrádek“",
+    "line": 97,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 105,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "288/2022 R",
+    "agenda_no": "1.",
+    "first_line": 62,
+    "last_line": 65,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "289/2022 R",
+    "agenda_no": "2.",
+    "first_line": 72,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "290/2022 R",
+    "agenda_no": "3.",
+    "first_line": 81,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "291/2022 R",
+    "agenda_no": "4.",
+    "first_line": 93,
+    "last_line": 94,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "292/2022 R",
+    "agenda_no": "5.",
+    "first_line": 101,
+    "last_line": 102,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "288/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "289/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "290/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "291/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 103,
+    "last_line": 103,
+    "resolution": "292/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 74: usnesení 289/2022 R – pro 0, zdržel se 1, proti 4; text výsledek výslovně neuvádí.",
+   "ř. 90–94: bod 4 je nadepsán „Nájem nebytových prostorů v majetku města…“, ale usnesení 291/2022 R souhlasí se záměrem prodeje objektu „BOBRA“ v lesoparku Dukla – název bodu neodpovídá znění usnesení.",
+   "ř. 54: hlasování o programu je uvedeno až za seznamem zápisů z jednání komisí."
+  ]
+ }
+}

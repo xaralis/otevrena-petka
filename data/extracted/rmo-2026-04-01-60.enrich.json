@@ -1,0 +1,225 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "4303da608b9fbeae25193cf059b5a74c8ab6cb9a4fba63270c0387a0ae8f2265",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "275/2026 R",
+    "title": "Stanovisko k výpůjčce pozemků pro TJ Klub vodáků – turistů a k rozšíření výpůjčky u Kulatky",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města: k záměru výpůjčky částí pozemků p. p. č. 2462/1 a 2774/42 a pozemků st. p. č. 5507 a 8756 v k. ú. Pardubice pro sportovní činnost Tělovýchovné jednoty Klub vodáků - turistů z. s. a k rozšíření účelu smlouvy o výpůjčce části pozemku p. p. č. 2387/22 o dočasný zábor pro výstavbu „REZIDENCE KULATKA“ (původně jen na demolici). O obou bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "výpůjčka pozemků",
+     "stanovisko obvodu",
+     "pozemková komise",
+     "Klub vodáků - turistů",
+     "sportovní činnost",
+     "Rezidence Kulatka",
+     "zábor pozemku",
+     "výstavba",
+     "demolice"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "K Vinici",
+     "Rezidence Kulatka"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "p. p. č. 2774/42, k. ú. Pardubice",
+     "st. p. č. 5507, k. ú. Pardubice",
+     "st. p. č. 8756, k. ú. Pardubice",
+     "p. p. č. 2387/22, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Tělovýchovná jednota Klub vodáků - turistů z. s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "276/2026 R",
+    "title": "Dotace na akce a činnost spolků a organizací v roce 2026 (14 žadatelů)",
+    "summary": "Rada schvaluje 14 dotací z programu dle směrnice č. 28/2025 na rok 2026 – mimo jiné na Rybářský ples, energie hasičské zbrojnice SDH Pardubice - město, akce KŘIŽOVATKA handicap centrum, RC Kulihrášek, Waldorfského spolku, Hvězdy Pardubice, Atletiky Bez Bariér, NOE – Křesťanské ZŠ a MŠ a SKP CENTRUM – a uzavření veřejnoprávních smluv. U dvou dotací (Rybářský ples, Dětské čarodějnice) schvaluje i související rozpočtová opatření č. 21 a 22 – přesun z rezervy starosty a místostarosty.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "Rybářský ples",
+     "hasičská zbrojnice",
+     "Rodinný dračí den",
+     "Vítání jara",
+     "atletický mítink",
+     "paraatletika",
+     "čarodějnice",
+     "Poznávejme zvířata"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Chrudimská 2829",
+     "hasičská zbrojnice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "SH ČMS – Sbor dobrovolných hasičů Pardubice - město",
+     "KŘIŽOVATKA handicap centrum, o. p. s.",
+     "Rodinné centrum Kulihrášek, z. s.",
+     "Spolek pro podporu Waldorfské pedagogiky v Pardubicích, z. s.",
+     "Hvězda Pardubice z. s.",
+     "Atletika Bez Bariér, z. s.",
+     "NOE – Křesťanská ZŠ a MŠ v Pardubicích",
+     "SKP CENTRUM, o. p. s."
+    ],
+    "amounts": [
+     "30.000,- Kč",
+     "15.000,- Kč",
+     "8.000,- Kč",
+     "5.000,- Kč",
+     "12.000,- Kč",
+     "10.000,- Kč",
+     "4.500,- Kč",
+     "14.000,- Kč"
+    ]
+   },
+   {
+    "number": "277/2026 R",
+    "title": "Stanovisko k pronájmu kanceláře v areálu J. Palacha a objektu v Chrudimské 2648",
+    "summary": "Stanovisko obvodu k žádosti komise pro nebytové prostory rady města: k záměru pronajmout kancelář 18,90 m2 v areálu čp. 324 v ul. J. Palacha společnosti SKP-CENTRUM, o.p.s., a objekt čp. 2648 v Chrudimské ul. (dosud zázemí obvodního oddělení Městské policie) společnosti DOVAST s.r.o. jako zázemí pro výrobu, skladování a prodej potravinářských produktů. O obou bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "pronájem",
+     "nebytové prostory",
+     "stanovisko obvodu",
+     "kancelář",
+     "Městská policie",
+     "služebna",
+     "potravinářská výroba",
+     "Chrudimská"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál čp. 324, ul. J. Palacha",
+     "Chrudimská čp. 2648",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/23, k. ú. Pardubice",
+     "stp. č. 9498, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SKP-CENTRUM, o.p.s.",
+     "DOVAST s.r.o.",
+     "Městská policie Pardubice",
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "278/2026 R",
+    "title": "Souhlas s předzahrádkou bistra v ulici Josefa Ressla",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 13,5 m2 na chodníku před bistrem v ulici Josefa Ressla čp. 2277–78 od 10. 4. do 31. 10. 2026 v době 8–22 h; žadatelem je AR – MADE, s. r. o.",
+    "keywords": [
+     "předzahrádka",
+     "bistro",
+     "zábor chodníku",
+     "Josefa Ressla",
+     "restaurace",
+     "venkovní posezení"
+    ],
+    "topics": [
+     "doprava",
+     "ostatni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Josefa Ressla čp. 2277–78"
+    ],
+    "parcels": [],
+    "organizations": [
+     "AR – MADE, s. r. o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "279/2026 R",
+    "title": "Odpisový plán na rok 2026",
+    "summary": "Rada schvaluje odpisový plán městského obvodu na rok 2026, který je přílohou materiálu.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "hospodaření",
+     "účetnictví",
+     "2026"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "280/2026 R",
+    "title": "Souhlas s předzahrádkou cukrárny Libuše na nám. Dukelských hrdinů",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 6 m2 před cukrárnou Libuše na nám. Dukelských hrdinů 2235 od 10. 4. do 30. 9. 2026 v době 8–22 h; žadatelem je Cukrárna Libuše s. r. o.",
+    "keywords": [
+     "předzahrádka",
+     "cukrárna Libuše",
+     "náměstí Dukelských hrdinů",
+     "zábor chodníku",
+     "venkovní posezení"
+    ],
+    "topics": [
+     "doprava",
+     "ostatni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "nám. Dukelských hrdinů 2235"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Cukrárna Libuše s. r. o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "281/2026 R",
+    "title": "Rozpočtové opatření č. 23 – dotace na parlamentní volby",
+    "summary": "Rada schvaluje rozpočtové opatření č. 23, kterým se v daňových příjmech vytváří nová položka dotace na parlamentní volby ve výši 23,4 tis. Kč a o stejnou částku se zvyšuje rezerva rozpočtu.",
+    "keywords": [
+     "rozpočtové opatření",
+     "dotace na volby",
+     "parlamentní volby",
+     "rezerva rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "23,4 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

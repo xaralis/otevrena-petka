@@ -1,0 +1,397 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e7445162571b79af49fca1b28ae6fa84a3004ec00dcf2c945fd2e96583590134",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 37,
+   "kind": "radne",
+   "date": "2024-12-04",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 39,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 62,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 92,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Knihovní řád knihovny MO Pardubice V",
+    "line": 114,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Doporučení Komise pro strategii a rozvoj obnovu, životní prostředí a dopravu RMO Pardubice V",
+    "line": 121,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Návrh rozpočtového opatření",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Vyřazení projektové dokumentace z majetku",
+    "line": 136,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Schválení realizace investičních akcí a investičních záměrů",
+    "line": 149,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Chodníky ul. Boženy Němcové“",
+    "line": 164,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Diskuse, závěr",
+    "line": 175,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "173/2024 R",
+    "agenda_no": "1",
+    "first_line": 65,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "174/2024 R",
+    "agenda_no": "2",
+    "first_line": 79,
+    "last_line": 89,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "175/2024 R",
+    "agenda_no": "3",
+    "first_line": 95,
+    "last_line": 111,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "176/2024 R",
+    "agenda_no": "4",
+    "first_line": 117,
+    "last_line": 118,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "177/2024 R",
+    "agenda_no": "6",
+    "first_line": 129,
+    "last_line": 133,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "178/2024 R",
+    "agenda_no": "7",
+    "first_line": 139,
+    "last_line": 146,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "179/2024 R",
+    "agenda_no": "8",
+    "first_line": 152,
+    "last_line": 161,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "180/2024 R",
+    "agenda_no": "9",
+    "first_line": 168,
+    "last_line": 172,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 42,
+    "motion_last_line": 56,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "173/2024 R",
+    "part": "bod 1 – prodej částí pozemků p. p. č. 2502/1 a 2499/33",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "173/2024 R",
+    "part": "bod 2 – nájem pozemků p. p. č. 2515/14 a 2515/22",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "174/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 112,
+    "last_line": 112,
+    "resolution": "175/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 119,
+    "last_line": 119,
+    "resolution": "176/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 134,
+    "last_line": 134,
+    "resolution": "177/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 147,
+    "last_line": 147,
+    "resolution": "178/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 162,
+    "last_line": 162,
+    "resolution": "179/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 173,
+    "last_line": 173,
+    "resolution": "180/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 70: bod 1 usnesení 173/2024 R (souhlas se záměrem prodeje částí pozemků) nezískal žádný hlas pro (pro 0, zdržel se 2, proti 3), přesto je text uveden v usnesení jako „souhlasí se záměrem“; výsledek dílčího hlasování text výslovně neuvádí."
+  ]
+ }
+}

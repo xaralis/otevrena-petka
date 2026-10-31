@@ -1,0 +1,401 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "82792f2597179af4e8d1ba39ccd4e48d0a2c0f796300a9528369d83de50b8e82",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 57,
+   "kind": "radne",
+   "date": "2022-06-02",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Projednání schválených materiálů",
+    "line": 51,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Souhlas s umístěním předzahrádky před provozovnu Cherry bar, ul. Devotyho 2452, Pardubice",
+    "line": 54,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Dotace – změna termínu schválené dotace",
+    "line": 64,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Zástupci MO Pardubice V v Pracovní skupině Zásad pro spolupráci s investory",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 84,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Rekonstrukce chodníku Dražkovice mezi čp. 128 a čp. 140",
+    "line": 114,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Stavební úpravy vnitrobloku ul. Wolkerova čp. 2116-2118 a čp. 2119-2121",
+    "line": 124,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: Stavební úpravy komunikace Do Zahrádek",
+    "line": 134,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 145,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "293/2022 R",
+    "agenda_no": "1",
+    "first_line": 58,
+    "last_line": 61,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "294/2022 R",
+    "agenda_no": "2",
+    "first_line": 67,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "295/2022 R",
+    "agenda_no": "3",
+    "first_line": 79,
+    "last_line": 81,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "296/2022 R",
+    "agenda_no": "4",
+    "first_line": 87,
+    "last_line": 111,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "297/2022 R",
+    "agenda_no": "5",
+    "first_line": 118,
+    "last_line": 121,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "298/2022 R",
+    "agenda_no": "6",
+    "first_line": 128,
+    "last_line": 131,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "299/2022 R",
+    "agenda_no": "7",
+    "first_line": 138,
+    "last_line": 141,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 49,
+    "last_line": 49,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 62,
+    "last_line": 62,
+    "resolution": "293/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 74,
+    "last_line": 74,
+    "resolution": "294/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 82,
+    "last_line": 82,
+    "resolution": "295/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "296/2022 R",
+    "part": "bod 1 – prodej části p. p. č. 2511/16",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 96,
+    "last_line": 96,
+    "resolution": "296/2022 R",
+    "part": "bod 2 – výpůjčka části p. p. č. 2400/1 (OK Lokomotiva Pardubice)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 104,
+    "last_line": 104,
+    "resolution": "296/2022 R",
+    "part": "bod 3 – věcné břemeno optické sítě EDERA Group a.s.",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 112,
+    "last_line": 112,
+    "resolution": "296/2022 R",
+    "part": "bod 4 – souhlas se vzdušným přesahem stříšek BD KVĚT",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 122,
+    "last_line": 122,
+    "resolution": "297/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "298/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 142,
+    "last_line": 142,
+    "resolution": "299/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 14 a 17: Ing. Jiří Janoš je uveden jako přítomen i omluven „po část jednání“; čas příchodu/odchodu text neuvádí. Uveden jen mezi přítomnými.",
+   "Hlasování u bodů II, 1–3 a 5–7 mají 4 hlasy, u bodu 4 (usnesení 296/2022 R, ř. 90–112) 5 hlasů – Janoš byl zřejmě přítomen jen při bodu 4, text to ale výslovně neuvádí.",
+   "ř. 87–111: usnesení 296/2022 R se hlasovalo po bodech; body 1 (pro 0, proti 5) a 2 (pro 0, zdržel se 5) nezískaly většinu, body 3 a 4 ano (pro 5)."
+  ]
+ }
+}

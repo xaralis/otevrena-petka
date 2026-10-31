@@ -1,0 +1,412 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "73e379b7e2aa7bd0b74adb08962f03986af25013b2a5ddffda3b3052c626cfba",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 48,
+   "kind": "mimoradne",
+   "date": "2025-06-25",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 56,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Dotace",
+    "line": 59,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Revokace usnesení č. 212/2025 R ze dne 14.5.2025, Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174“",
+    "line": 154,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke Smlouvě o poskytování služeb na výsyp odpadkových košů na území MO Pardubice V",
+    "line": 172,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 184,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 193,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Závěrečný účet MO Pardubice V za rok 2024",
+    "line": 229,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2024",
+    "line": 247,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2025",
+    "line": 258,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "3. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 269,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Diskuse, závěr",
+    "line": 314,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "218/2025 R",
+    "agenda_no": "1",
+    "first_line": 62,
+    "last_line": 151,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "219/2025 R",
+    "agenda_no": "2",
+    "first_line": 162,
+    "last_line": 169,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "220/2025 R",
+    "agenda_no": "3",
+    "first_line": 176,
+    "last_line": 181,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "221/2025 R",
+    "agenda_no": "4",
+    "first_line": 187,
+    "last_line": 190,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "222/2025 R",
+    "agenda_no": "5",
+    "first_line": 196,
+    "last_line": 226,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "223/2025 R",
+    "agenda_no": "6",
+    "first_line": 232,
+    "last_line": 244,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "224/2025 R",
+    "agenda_no": "7",
+    "first_line": 250,
+    "last_line": 255,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "225/2025 R",
+    "agenda_no": "8",
+    "first_line": 261,
+    "last_line": 267,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "226/2025 R",
+    "agenda_no": "9",
+    "first_line": 272,
+    "last_line": 311,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 53,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 152,
+    "last_line": 152,
+    "resolution": "218/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 170,
+    "last_line": 170,
+    "resolution": "219/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 182,
+    "last_line": 182,
+    "resolution": "220/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 191,
+    "last_line": 191,
+    "resolution": "221/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 227,
+    "last_line": 227,
+    "resolution": "222/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 245,
+    "last_line": 245,
+    "resolution": "223/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 256,
+    "last_line": 256,
+    "resolution": "224/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 268,
+    "last_line": 268,
+    "resolution": "225/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 312,
+    "last_line": 312,
+    "resolution": "226/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 180–181: znění usnesení 220/2025 R končí „…ve vlastnictví MO), a“ a pokračuje „Ceny za výsypy se nemění.“ – věta zřejmě neúplná ve zdroji."
+  ]
+ }
+}

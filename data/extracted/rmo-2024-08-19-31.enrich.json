@@ -1,0 +1,41 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "722a55b1eb5878762231309060c0bf2aef9a88f27043fa0ca715103c6e5a39dd",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "152/2024 R",
+    "title": "Oprava chodníku v Lexově ulici (západ) – smlouva o dílo s ROCKY STAVBY COMPANY CZ",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Oprava povrchu chodníku ul. Lexova - západ“ se zhotovitelem ROCKY STAVBY COMPANY CZ s.r.o., vybraným v zakázce malého rozsahu. Nabídková cena činí 3.687.364,79 Kč bez DPH.",
+    "keywords": [
+     "oprava chodníku",
+     "chodník",
+     "Lexova",
+     "Lexova - západ",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele",
+     "ROCKY STAVBY COMPANY CZ"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY CZ s.r.o."
+    ],
+    "amounts": [
+     "3.687.364,79 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "99a7f3be9789b9b4e979d6e1df2de744e5cb4cae0dc1a15d3bb7a7cd5ec11552",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "136/2024 R",
+    "title": "Smlouva o dílo na údržbu zeleně v Arboretu na roky 2024 a 2025 se Službami města Pardubic",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na „Údržbu zeleně v Arboretu v letech 2024 a 2025“ se společností Služby města Pardubic a.s. mimo režim směrnice č. 14/2017 – zadávacího řádu veřejných zakázek. Důvodem je využití společnosti založené městem, která je k tomuto účelu zřízena.",
+    "keywords": [
+     "Arboretum",
+     "údržba zeleně",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "veřejná zakázka",
+     "výjimka ze zadávacího řádu",
+     "zeleň"
+    ],
+    "topics": [
+     "zakazky",
+     "zelen"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Arboretum"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "333.0845,- Kč bez DPH za rok"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

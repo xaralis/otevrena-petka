@@ -1,0 +1,170 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "d537456e22265d8be622f3e9bab3bb05c4e30e54a9223a9ce0169fcd0d93ca92",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "215/2021 R",
+    "title": "Stanovisko ke změně nájemce pozemku pod garáží a k prodeji či nájmu pozemku pro parkování",
+    "summary": "Rada se k žádostem pozemkové komise rady města vyjádřila ke změně nájemce pozemku st. p. č. 4941/3 (19 m2) určeného pro umístění řadové garáže a k prodeji nebo nájmu části pozemku p. p. č. 2534/15 (cca 43 m2) pro vybudování parkovacího stání pro 2 automobily, obojí v k. ú. Pardubice.",
+    "keywords": [
+     "stanovisko",
+     "pozemková komise",
+     "změna nájemce",
+     "nájem pozemku",
+     "garáž",
+     "prodej pozemku",
+     "parkovací stání",
+     "parkování"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 4941/3, k. ú. Pardubice",
+     "p. p. č. 2534/15, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "216/2021 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na stavební úpravy vnitrobloku Kpt. Nálepky – Lexova",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 8. 3. 2021 se zhotovitelem MIROS MAJETKOVÁ, a.s., na stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova včetně využití dešťových vod (2 retenční nádrže). Celková cena se snižuje na 12.695.245,37 Kč bez DPH z důvodu započtení víceprací a méněprací při částečné změně stavby.",
+    "keywords": [
+     "dodatek ke smlouvě o dílo",
+     "vnitroblok",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova",
+     "retenční nádrže",
+     "dešťová voda",
+     "snížení ceny",
+     "vícepráce a méněpráce"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "vnitroblok Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS MAJETKOVÁ, a.s."
+    ],
+    "amounts": [
+     "12.695.245,37 Kč bez DPH",
+     "12.918.259,60 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "217/2021 R",
+    "title": "Prodej nákladního přívěsu AGADOS 26 S",
+    "summary": "Rada souhlasí s prodejem nákladního přívěsu AGADOS 26 S (výrobce AGADOS s.r.o., registrační značka 5E4 1280) zájemci za nabídnutou cenu 1.001,- Kč.",
+    "keywords": [
+     "prodej přívěsu",
+     "nákladní přívěs",
+     "AGADOS",
+     "prodej movitého majetku"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "AGADOS s.r.o."
+    ],
+    "amounts": [
+     "1.001,- Kč"
+    ]
+   },
+   {
+    "number": "218/2021 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 31. 8. 2021",
+    "summary": "Rada projednala zprávu o rozboru hospodaření MO Pardubice V k 31. 8. 2021 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "219/2021 R",
+    "title": "Stanovisko k záměru prodeje budovy bývalé vojenské plovárny Vinice 25",
+    "summary": "Rada souhlasí se záměrem města prodat stavební pozemek p. č. st. 5506 v k. ú. Pardubice včetně budovy bývalé vojenské plovárny čp. 2872 (Vinice 25). Žadatel ji chce zrekonstruovat a znovu zprovoznit jako restauraci.",
+    "keywords": [
+     "stanovisko",
+     "prodej budovy",
+     "vojenská plovárna",
+     "Vinice",
+     "restaurace",
+     "záměr prodeje",
+     "nebytový prostor"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Vinice 25",
+     "budova bývalé vojenské plovárny čp. 2872",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. č. st. 5506, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "220/2021 R",
+    "title": "Doporučení zastupitelstvu schválit 3. změnu rozpočtu na rok 2021",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh 3. změny rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2021 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "rozpočet 2021",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

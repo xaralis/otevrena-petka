@@ -1,0 +1,292 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "eb8f86f9f3be86d8d94c45e1e659f018a7a423db0b646766abb46b4b307da4cc",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 16,
+   "kind": "mimoradne",
+   "date": "2023-11-08",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 22,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Stanovení termínů jednání RMO a ZMO Pardubice V na rok 2024",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2023",
+    "line": 62,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Návrh úkolů plynoucích z plnění Programu rozvoje městského obvodu Pardubice V",
+    "line": 72,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "5. změna rozpočtu MO Pardubice V na r. 2023",
+    "line": 206,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Vzdání se mandátu člena zastupitelstva MO Pardubice V",
+    "line": 222,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 238,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Diskuse, závěr",
+    "line": 249,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "83/2023 R",
+    "agenda_no": "1.",
+    "first_line": 50,
+    "last_line": 59,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "84/2023 R",
+    "agenda_no": "2.",
+    "first_line": 65,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "85/2023 R",
+    "agenda_no": "4.",
+    "first_line": 209,
+    "last_line": 216,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "86/2023 R",
+    "agenda_no": "5.",
+    "first_line": 225,
+    "last_line": 235,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "87/2023 R",
+    "agenda_no": "6.",
+    "first_line": 241,
+    "last_line": 246,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 60,
+    "last_line": 60,
+    "resolution": "83/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "84/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 204,
+    "last_line": 204,
+    "resolution": null,
+    "part": null,
+    "subject": "návrh úkolů plynoucích z plnění Programu rozvoje městského obvodu Pardubice V (21 úkolů starostovi / předsedovi KSROŽPD)",
+    "proposer": null,
+    "motion_first_line": 75,
+    "motion_last_line": 203,
+    "procedural": false,
+    "pro": 0,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 220,
+    "last_line": 220,
+    "resolution": "85/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 236,
+    "last_line": 236,
+    "resolution": "86/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 247,
+    "last_line": 247,
+    "resolution": "87/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 54: usnesení 83/2023 R schvaluje termíny jednání „na rok 2021“, přestože název bodu i uvedená data jsou pro rok 2024 (zřejmě překlep ve zdroji).",
+   "ř. 204: bod 3 (návrh 21 úkolů z Programu rozvoje MO) nemá číslo usnesení; hlasování Pro 0, zdržel se 2, proti 2 – návrh nebyl přijat, text výsledek výslovně neuvádí.",
+   "ř. 202: úkol 21) má jako zodpovědného J. Kutílka, předsedu KSROŽPD RMO, ostatní úkoly J. Rejdu."
+  ]
+ }
+}

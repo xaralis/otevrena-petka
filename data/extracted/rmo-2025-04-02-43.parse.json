@@ -1,0 +1,236 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e3f7ba8c79f1ec9ac83520d5b38b169cf68af34c4d8ac16ab5607385609ea586",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 43,
+   "kind": "radne",
+   "date": "2025-04-02",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA.",
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 100,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Dotace",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 250,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "200/2025 R",
+    "agenda_no": "1",
+    "first_line": 48,
+    "last_line": 96,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "201/2025 R",
+    "agenda_no": "2",
+    "first_line": 102,
+    "last_line": 122,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "202/2025 R",
+    "agenda_no": "3",
+    "first_line": 128,
+    "last_line": 246,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 97,
+    "last_line": 97,
+    "resolution": "200/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 112,
+    "last_line": 112,
+    "resolution": "201/2025 R",
+    "part": "bod 1 – prodej jednotky č. 2225/18, Jilemnického ul.",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 117,
+    "last_line": 117,
+    "resolution": "201/2025 R",
+    "part": "bod 2 – pronájem garážového stání č. 12, čp. 2731 Sokolovská ul.",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 123,
+    "last_line": 123,
+    "resolution": "201/2025 R",
+    "part": "bod 3 – pronájem prostoru v čp. 25 Dražkovice (Oblastní spolek ČČK Pardubice)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 247,
+    "last_line": 247,
+    "resolution": "202/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 123: usnesení 201/2025 R, bod 3 (pronájem prostoru v čp. 25 Dražkovice pro Oblastní spolek ČČK) – hlasování pro 0, zdržel se 0, proti 3, tedy bod nebyl schválen, přestože je uveden ve znění usnesení „souhlasí se záměrem“; text výsledek výslovně neuvádí.",
+   "ř. 173–183: dotace 202/2025 R bod 6 – výše dotace 15.380,- Kč odpovídá součtu rozpočtových opatření 7.000 + 8.380 Kč.",
+   "ř. 213–222: dotace 202/2025 R bod 10 – 15.000,- Kč = 8.000 + 7.000 Kč z rezervy rady."
+  ]
+ }
+}

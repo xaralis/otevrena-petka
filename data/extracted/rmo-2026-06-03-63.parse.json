@@ -1,0 +1,407 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e7ca9995a6dc3b8717b349d52e9f03d9123fd657e149dbc79c971f89177d81b6",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 63,
+   "kind": "mimoradne",
+   "date": "2026-06-03",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 22,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 4. 2026",
+    "line": 56,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "2. změna rozpočtu MO Pardubice V 2026",
+    "line": 65,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2025",
+    "line": 78,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 89,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Vzdání se mandátu člena zastupitelstva MO Pardubice V, rezignace na funkci předsedy Komise pro rozvoj a strategii RMO Pardubice V",
+    "line": 101,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Křižovatka ul. Devotyho – Železničního pluku“",
+    "line": 126,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Chodníky ul. U Krematoria (Nemošická – Mikulovická ul.)“",
+    "line": 136,
+    "speakers": []
+   },
+   {
+    "no": "8.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Chodníky v ul. Wolkerova“",
+    "line": 146,
+    "speakers": []
+   },
+   {
+    "no": "9.",
+    "title": "Schválení zahraniční služební cesty",
+    "line": 155,
+    "speakers": []
+   },
+   {
+    "no": "10.",
+    "title": "Diskuse, závěr",
+    "line": 165,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "285/2026 R",
+    "agenda_no": "1",
+    "first_line": 59,
+    "last_line": 62,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "286/2026 R",
+    "agenda_no": "2",
+    "first_line": 68,
+    "last_line": 75,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "287/2026 R",
+    "agenda_no": "3",
+    "first_line": 81,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "288/2026 R",
+    "agenda_no": "4",
+    "first_line": 92,
+    "last_line": 98,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "289/2026 R",
+    "agenda_no": "5",
+    "first_line": 110,
+    "last_line": 123,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "290/2026 R",
+    "agenda_no": "6",
+    "first_line": 130,
+    "last_line": 133,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "291/2026 R",
+    "agenda_no": "7",
+    "first_line": 140,
+    "last_line": 143,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "292/2026 R",
+    "agenda_no": "8",
+    "first_line": 150,
+    "last_line": 152,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "293/2026 R",
+    "agenda_no": "9",
+    "first_line": 161,
+    "last_line": 162,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "285/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "286/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "287/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 99,
+    "last_line": 99,
+    "resolution": "288/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 124,
+    "last_line": 124,
+    "resolution": "289/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 134,
+    "last_line": 134,
+    "resolution": "290/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 144,
+    "last_line": 144,
+    "resolution": "291/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 153,
+    "last_line": 153,
+    "resolution": "292/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 163,
+    "last_line": 163,
+    "resolution": "293/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 115: usnesení 289/2026 R osvědčuje vznik mandátu „dnem 1. 6. 2024“, ačkoli mandát Ing. Kutílka zanikl k 30. 5. 2026 – rok 2024 je zřejmě překlep (má být 2026).",
+   "ř. 162: usnesení 293/2026 R ze 3. 6. 2026 schvaluje zahraniční služební cestu v termínu 12. – 14. 5. 2026, tedy zpětně (nebo chybné datum).",
+   "ř. 82: místo dvojtečky je v textu otazník („přijmout následující usnesení?“)."
+  ]
+ }
+}

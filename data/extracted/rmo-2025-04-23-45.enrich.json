@@ -1,0 +1,212 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "52c82a5071430510399cd5e611a3aba4614e00972b6b578111dde3483bb10919",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "204/2025 R",
+    "title": "Souhlas s předzahrádkou před Cherry Bar v ulici Devotyho",
+    "summary": "Rada souhlasila s umístěním předzahrádky provozovny Cherry Bar na chodníku před domem v ulici Devotyho čp. 2452 o celkové ploše 7,2 m2, a to od 1. 5. 2025 do 31. 10. 2025 v době od 15.00 do 22.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "zahrádka restaurace",
+     "Cherry Bar",
+     "ulice Devotyho",
+     "zábor chodníku",
+     "zábor veřejného prostranství",
+     "letní sezóna"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [
+     "ulice Devotyho čp. 2452"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Cherry Bar"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "205/2025 R",
+    "title": "Stanovisko k žádostem pozemkové komise: billboardy, výkupy pozemků, obchvat, vodovod",
+    "summary": "Rada souhlasila s pěti záměry projednávanými pozemkovou komisí rady města: posunutím billboardu BARTH Reklamka a.s. na p. p. č. 2303/1, odkoupením pozemku p. p. č. 2600/8, nájmem, odkoupením a výpůjčkou pozemků od ŘSD a Pardubického kraje pro investiční akci „CS jihovýchodní obchvat – Dražkovice – Pardubičky – Černá za Bory“. Dále souhlasila s věcným břemenem pro Vodovody a kanalizace Pardubice, a. s., kvůli výměně vodovodu v ulici K Židovskému hřbitovu a se smlouvou o umístění oboustranného reklamního zařízení společnosti Reklamní servis RS na p. p. č. 382/4, k. ú. Dražkovice.",
+    "keywords": [
+     "pozemková komise",
+     "stanovisko obvodu",
+     "billboard",
+     "reklamní zařízení",
+     "výkup pozemku",
+     "jihovýchodní obchvat",
+     "Dražkovice",
+     "věcné břemeno",
+     "výměna vodovodu",
+     "K Židovskému hřbitovu"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "K Židovskému hřbitovu",
+     "Pardubičky",
+     "Černá za Bory"
+    ],
+    "parcels": [
+     "p. p. č. 2303/1, k. ú. Pardubice",
+     "p. p. č. 2600/8, k. ú. Pardubice",
+     "p. p. č. 579/12, k. ú. Dražkovice",
+     "p. p. č. 5349/13, k. ú. Pardubice",
+     "p. p. č. 333/4, k. ú. Dražkovice",
+     "p. p. č. 579/8, k. ú. Dražkovice",
+     "p. p. č. 579/11, k. ú. Dražkovice",
+     "p. p. č. 579/15, k. ú. Dražkovice",
+     "p. p. č. 5349/4, k. ú. Pardubice",
+     "p. p. č. 2442/15, k. ú. Pardubice",
+     "p. p. č. 2442/14, k. ú. Pardubice",
+     "p. p. č. 2442/5, k. ú. Pardubice",
+     "p. p. č. 382/4, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "BARTH Reklamka a.s.",
+     "Ředitelství silnic a dálnic s. p.",
+     "Pardubický kraj",
+     "Správa a údržba silnic Pardubického kraje",
+     "Statutární město Pardubice",
+     "Vodovody a kanalizace Pardubice, a. s.",
+     "Reklamní servis RS, spol. s r.o."
+    ],
+    "amounts": [
+     "67,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "206/2025 R",
+    "title": "Úprava plánu společenských akcí 2025 – přesun peněz na Slavnost MO Pardubice V",
+    "summary": "Rada schválila přesun 5,6 tis. Kč z Dětského karnevalu, 0,8 tis. Kč z Masopustu a 30 tis. Kč z Opékání buřtů na akci Slavnost MO Pardubice V. Celkový rozpočet plánu společenských akcí na rok 2025 zůstává 1 400 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Slavnost MO Pardubice V",
+     "Dětský karneval",
+     "Masopust",
+     "Opékání buřtů",
+     "kulturní akce",
+     "rok 2025"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": [
+     "5,6 tis. Kč",
+     "0,8 tis. Kč",
+     "30 tis. Kč",
+     "1 400 tis. Kč"
+    ]
+   },
+   {
+    "number": "207/2025 R",
+    "title": "Úprava odpisového plánu na rok 2025",
+    "summary": "Rada schválila úpravu odpisového plánu městského obvodu na rok 2025; upravený i původní plán jsou přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "úprava odpisového plánu",
+     "rok 2025",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "208/2025 R",
+    "title": "Doporučení schválit rozbor hospodaření MO Pardubice V k 31. 3. 2025",
+    "summary": "Rada projednala rozbor hospodaření městského obvodu k 31. 3. 2025 a doporučila zastupitelstvu schválit jeho tabulkovou část a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "1. čtvrtletí 2025",
+     "doporučení zastupitelstvu",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "209/2025 R",
+    "title": "Doporučení schválit 2. změnu rozpočtu MO Pardubice V na rok 2025",
+    "summary": "Rada doporučila zastupitelstvu vzít na vědomí komentář ke 2. změně rozpočtu na rok 2025 a schválit navržená rozpočtová opatření včetně sociálního fondu. Součástí jsou přesuny z položky příspěvků příspěvkovým organizacím v kapitole 33 na účelově vázané příspěvky na provoz pro mateřské školy Sluníčko, Kamarád, Višňovka a Motýlek, DDM Alfa, ZŠ Benešovo náměstí a ZŠ J. Ressla.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "příspěvek na provoz",
+     "mateřské školy",
+     "základní školy",
+     "DDM Alfa",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Gorkého",
+     "Teplého",
+     "Benešovo nám.",
+     "Družby",
+     "J. Ressla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MŠ Sluníčko, Gorkého",
+     "MŠ Kamarád, Teplého",
+     "MŠ Višňovka, Benešovo nám.",
+     "DDM Alfa, Družby",
+     "ZŠ Benešovo náměstí",
+     "ZŠ J. Ressla",
+     "MŠ Motýlek, J. Ressla"
+    ],
+    "amounts": [
+     "13,65 tis. Kč",
+     "12,5 tis. Kč",
+     "17 tis. Kč",
+     "13,5 tis. Kč",
+     "11,5 tis. Kč",
+     "5 tis. Kč",
+     "18,35 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

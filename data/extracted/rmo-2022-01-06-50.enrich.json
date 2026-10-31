@@ -1,0 +1,150 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6c08392b1166fae85ca1987d655c6daeef8139e36ccdda81712edc4ca0d9612e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "245/2022 R",
+    "title": "Prodej traktoru ISEKI SXG 15 H za 16.200 Kč",
+    "summary": "Rada souhlasí s prodejem obvodního traktoru ISEKI SXG 15 H (sériové číslo DC 000 149, pořízen a uveden do provozu v roce 2011) zájemci za nabídnutou cenu 16.200,- Kč.",
+    "keywords": [
+     "prodej traktoru",
+     "traktor ISEKI",
+     "ISEKI SXG 15 H",
+     "prodej majetku",
+     "movitý majetek",
+     "technika"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "16.200,- Kč"
+    ]
+   },
+   {
+    "number": "246/2022 R",
+    "title": "Rozpočtové opatření č. 1 – přesun 168 tis. Kč na rekonstrukci knihovny",
+    "summary": "Rada schvaluje rozpočtové opatření č. 1, kterým se přesouvá 168 tis. Kč v kapitole 34 – knihovna z běžných výdajů na kapitálové výdaje na rekonstrukci prostor a pořízení dlouhodobého hmotného majetku.",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun prostředků",
+     "knihovna",
+     "rekonstrukce knihovny",
+     "kapitálové výdaje",
+     "běžné výdaje"
+    ],
+    "topics": [
+     "rozpocet",
+     "investice"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "168 tis. Kč"
+    ]
+   },
+   {
+    "number": "247/2022 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na přestavbu provozovny na knihovnu v Josefa Ressla 2278",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 22. 9. 2021 na akci „Změna užívání drobné provozovny na knihovnu, Josefa Ressla 2278, Pardubice“ se zhotovitelem CHRPA stavební společnost s r.o. Po započtení víceprací a méněprací se cena mění z 883.873,42 Kč na 1.022.114,52 Kč bez DPH.",
+    "keywords": [
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "knihovna",
+     "Josefa Ressla",
+     "změna užívání",
+     "navýšení ceny",
+     "rozhodnutí zadavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "kultura-akce"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Josefa Ressla 2278, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o."
+    ],
+    "amounts": [
+     "1.022.114,52 Kč bez DPH",
+     "1.236.758,57 Kč vč. DPH",
+     "883.873,42 Kč bez DPH",
+     "1.069.486,90 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "248/2022 R",
+    "title": "Umístění dvou reklamních pylonů LIDL v ulicích Chrudimská a Teplého",
+    "summary": "Rada souhlasí s dočasným umístěním 2 reklamních pylonů pro firmu LIDL o rozměrech 2,5 x 2,5 x 6 m na pozemcích v ulicích Chrudimská a Teplého v období od 1. 2. 2022 do 31. 3. 2022. Žadatelem je outdoor akzent s. r. o.",
+    "keywords": [
+     "reklamní pylony",
+     "reklama",
+     "LIDL",
+     "Chrudimská",
+     "Teplého",
+     "zábor pozemku",
+     "souhlas s umístěním"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [
+     "Chrudimská",
+     "Teplého",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. č. 2376/15, k. ú. Pardubice",
+     "p. č. 2303/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "LIDL",
+     "outdoor akzent s. r. o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "249/2022 R",
+    "title": "Nájem prostoru u HAMO Systems pro umístění dřevěného betléma",
+    "summary": "Rada souhlasí s uzavřením smlouvy o nájmu nebytového prostoru s firmou HAMO Systems s. r. o. v jejím objektu Čs. armády 2006 pro umístění 4 dřevěných soch betléma za 1.500,- Kč vč. DPH ročně.",
+    "keywords": [
+     "nájem nebytového prostoru",
+     "betlém",
+     "dřevěné sochy",
+     "Čs. armády",
+     "nájemní smlouva",
+     "uskladnění"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "kultura-akce"
+    ],
+    "kind": "majetek",
+    "places": [
+     "Čs. armády 2006, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HAMO Systems s. r. o."
+    ],
+    "amounts": [
+     "1.500,- Kč vč. DPH za rok"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "ecc71fe807c3e8dbc86a6dcd50d8a8e847395109431b66fbbf1c192ff8976574",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 54,
+   "kind": "mimoradne",
+   "date": "2025-11-12",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 40,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2025",
+    "line": 43,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Diskuse, závěr",
+    "line": 57,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "249/2025 R",
+    "agenda_no": "1",
+    "first_line": 47,
+    "last_line": 54,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 38,
+    "last_line": 38,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 37,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 55,
+    "last_line": 55,
+    "resolution": "249/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 48: v textu usnesení „2,98 tis. Kč tis.“ – zdvojené „tis.“",
+   "ř. 54: „celková výše plánu společenských MO“ – chybí slovo „akcí“"
+  ]
+ }
+}

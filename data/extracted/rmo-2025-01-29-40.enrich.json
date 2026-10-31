@@ -1,0 +1,71 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "f7765073f42896aa5ae5d4586658d0e42448b304ddba0125ca7b7c3f9f58b159",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "189/2025 R",
+    "title": "Souhlas s výpůjčkou, převodem a prodejem části pozemku u nám. Dukelských hrdinů a s balkony K Višňovce",
+    "summary": "Rada souhlasí se záměrem výpůjčky, bezúplatného převodu stavebních úprav a prodeje části pozemku p. p. č. 2155/13 v souvislosti se sanací bytového domu náměstí Dukelských hrdinů 2156-8 na žádost Společenství vlastníků jednotek Dukelských hrdinů 2156, 2157, 2158. Dále souhlasí s vydáním souhlasu vlastníka s umístěním balkonů nad pozemky města a se zřízením věcného břemene pro stavbu „Bytový dům K Višňovce, Pardubice“ společnosti Cornales s.r.o.",
+    "keywords": [
+     "stanovisko k žádosti pozemkové komise",
+     "výpůjčka pozemku",
+     "prodej pozemku",
+     "věcné břemeno",
+     "balkony",
+     "chodník",
+     "sanace bytového domu",
+     "náměstí Dukelských hrdinů",
+     "K Višňovce"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "náměstí Dukelských hrdinů 2156-8, Pardubice",
+     "K Višňovce, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2155/13, k. ú. Pardubice",
+     "p. p. č. 2505/3, k. ú. Pardubice",
+     "p. p. č. 2583/25, k. ú. Pardubice",
+     "p. p. č. 2506/17, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Společenství vlastníků jednotek: Dukelských hrdinů 2156, 2157, 2158",
+     "Cornales s.r.o.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "190/2025 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2024",
+    "summary": "Rada schvaluje výroční zprávu o poskytování informací za rok 2024 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím. Tajemníkovi úřadu ukládá zajistit její zveřejnění na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "poskytování informací",
+     "zákon č. 106/1999 Sb.",
+     "svobodný přístup k informacím",
+     "zveřejnění na webu",
+     "tajemník úřadu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Úřad městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

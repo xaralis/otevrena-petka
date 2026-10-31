@@ -1,0 +1,152 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "1f037ea5bd41e3e23701a4350ce24988a02b7f863ca820c12425a63f6c92d78b",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "288/2022 R",
+    "title": "Rozpočtové opatření č. 37 – přesun 1 600 tis. Kč na hřiště Dražkovická do běžných výdajů",
+    "summary": "Rada schvaluje rozpočtové opatření č. 37, kterým se 1 600 tis. Kč na položce hřiště Dražkovická v kapitole 15 – životní prostředí přesouvá z kapitálových do běžných výdajů.",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun výdajů",
+     "hřiště Dražkovická",
+     "kapitálové výdaje",
+     "běžné výdaje",
+     "kapitola 15 – životní prostředí"
+    ],
+    "topics": [
+     "rozpocet",
+     "hriste-sport"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "hřiště Dražkovická"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1 600 tis. Kč"
+    ]
+   },
+   {
+    "number": "289/2022 R",
+    "title": "Omezení rychlosti v ulicích Kpt. Nálepky a Demokratické mládeže na 40 km/h",
+    "summary": "Návrh usnesení k petici, podle něhož by rada schválila snížení povolené rychlosti vozidel v ulicích Kpt. Nálepky a Demokratické mládeže v Pardubicích z 50 km/hod. na 40 km/hod.",
+    "keywords": [
+     "petice",
+     "omezení rychlosti",
+     "rychlost 40 km/h",
+     "Kpt. Nálepky",
+     "Demokratické mládeže",
+     "dopravní značení",
+     "bezpečnost dopravy"
+    ],
+    "topics": [
+     "doprava",
+     "bezpecnost"
+    ],
+    "kind": "jine",
+    "places": [
+     "Kpt. Nálepky",
+     "Demokratické mládeže",
+     "Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "290/2022 R",
+    "title": "Dodatek č. 3 ke smlouvě o dílo – stavební úpravy vnitrobloku Kpt. Nálepky – Lexova",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 3 ke smlouvě o dílo ze dne 16. 4. 2021 se zhotovitelem MIROS Pardubice a.s. na stavební úpravy vnitrobloku Kpt. Nálepky – Artura Krause – Sokolovská – Lexova včetně využití dešťových vod (2 retenční nádrže). Po započtení víceprací a méněprací činí cena 11.860.106,37 Kč bez DPH oproti původně schváleným 12.918.259,60 Kč bez DPH.",
+    "keywords": [
+     "dodatek ke smlouvě o dílo",
+     "vnitroblok",
+     "vícepráce a méněpráce",
+     "retenční nádrže",
+     "dešťové vody",
+     "Kpt. Nálepky",
+     "Sokolovská",
+     "Lexova",
+     "Artura Krause",
+     "MIROS Pardubice"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "vnitroblok Kpt. Nálepky – Artura Krause – Sokolovská – Lexova",
+     "Kpt. Nálepky",
+     "Artura Krause",
+     "Sokolovská",
+     "Lexova",
+     "Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "11.860.106,37 Kč bez DPH",
+     "12.918.259,60 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "291/2022 R",
+    "title": "Souhlas se záměrem prodeje objektu „BOBRA“ v lesoparku Dukla",
+    "summary": "Rada jako stanovisko obvodu souhlasí se záměrem prodeje objektu „BOBRA“ v lesoparku Dukla včetně části pozemku p. p. č. 2168/12, k. ú. Pardubice o výměře 1070 m2.",
+    "keywords": [
+     "záměr prodeje",
+     "objekt BOBRA",
+     "lesopark Dukla",
+     "prodej nemovitosti",
+     "stanovisko obvodu",
+     "majetek města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "objekt „BOBRA“",
+     "lesopark Dukla",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2168/12, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "292/2022 R",
+    "title": "Zrušení výběrového řízení na stavební úpravy komunikace v ulici Do Zahrádek",
+    "summary": "Rada ruší výběrové řízení na zakázku malého rozsahu „Stavební úpravy komunikace ul. Do Zahrádek“.",
+    "keywords": [
+     "zrušení výběrového řízení",
+     "zakázka malého rozsahu",
+     "Do Zahrádek",
+     "stavební úpravy komunikace",
+     "oprava silnice"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Do Zahrádek"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

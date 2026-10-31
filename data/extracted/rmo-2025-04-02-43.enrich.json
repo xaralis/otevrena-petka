@@ -1,0 +1,159 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e3f7ba8c79f1ec9ac83520d5b38b169cf68af34c4d8ac16ab5607385609ea586",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "200/2025 R",
+    "title": "Stanovisko k sedmi majetkovým záměrům pozemkové komise města (nájmy, výpůjčky, odkup)",
+    "summary": "Rada souhlasí se záměry města: pronájmem pozemku pro předzahrádku restaurace Derby v ul. Josefa Ressla (GASTRO TORO s.r.o.), výpůjčkou pozemků v Dražkovicích pro místo pro přecházení (GLOBI MED s.r.o.) a pro přístavbu místní komunikace (Bydlení Dražkovice s.r.o.), dodatkem smlouvy o výpůjčce s SKP-CENTRUM, o.p.s. o náhradní výsadbě u čp. 803 ul. Na Spravedlnosti, nájmem soukromého pozemku pod chodníkem, odkoupením pozemku od TJ Loko Pardubice z. s. a výpůjčkou pozemků pod zastávkovými přístřešky MHD pro Dopravní podnik města Pardubic a.s.",
+    "keywords": [
+     "stanovisko obvodu",
+     "pozemková komise",
+     "předzahrádka",
+     "restaurace Derby",
+     "místo pro přecházení",
+     "náhradní výsadba",
+     "chodník",
+     "zastávky MHD",
+     "výpůjčka pozemku",
+     "pronájem pozemku"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Josefa Ressla",
+     "čp. 2279",
+     "Dražkovice",
+     "ul. Na Spravedlnosti",
+     "čp. 803",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 2252/9, k. ú. Pardubice",
+     "p. p. č. 492/10, k. ú. Dražkovice",
+     "p. p. č. 436, k. ú. Dražkovice",
+     "p. p. č. 4817, k. ú. Pardubice",
+     "p. p. č. 451/2, k. ú. Dražkovice",
+     "p. p. č. 3344/2, k. ú. Pardubice",
+     "p. p. č. 2306/15, k. ú. Pardubice",
+     "p. č. p. 2155/7, k. ú. Pardubice",
+     "p. č. p. 2580, k. ú. Pardubice",
+     "p. č. p. 2499/140, k. ú. Pardubice",
+     "p. č. p. 2155/3, k. ú. Pardubice",
+     "p. č. p. 2165/30, k. ú. Pardubice",
+     "p. č. p. 2316/1, k. ú. Pardubice",
+     "p. č. p. 2583/6, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "GASTRO TORO s.r.o.",
+     "GLOBI MED s.r.o.",
+     "SKP-CENTRUM, o.p.s.",
+     "Bydlení Dražkovice s.r.o.",
+     "TJ Loko Pardubice z. s.",
+     "Dopravní podnik města Pardubic a.s.",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "200,- Kč/m2/rok",
+     "1.000,- Kč",
+     "67,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "201/2025 R",
+    "title": "Stanovisko k záměrům komise pro nebytové prostory (prodej jednotky, nájem garáže a prostoru)",
+    "summary": "Usnesení se týká záměrů města: prodeje nebytové jednotky č. 2225/18 v domě čp. 2224–2227 v Jilemnického ul., pronájmu garážového stání č. 12 v budově čp. 2731 v Sokolovské ul. a pronájmu prostoru 61,78 m2 v budově čp. 25 v Dražkovicích pro Oblastní spolek Českého červeného kříže Pardubice. O každém záměru se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko obvodu",
+     "nebytové prostory",
+     "prodej nebytové jednotky",
+     "garážové stání",
+     "pronájem garáže",
+     "Červený kříž",
+     "Jilemnického",
+     "Sokolovská",
+     "Dražkovice"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jilemnického ul.",
+     "čp. 2224, 2225, 2226 a 2227",
+     "Sokolovská ul.",
+     "čp. 2731",
+     "Dražkovice",
+     "čp. 25 Dražkovice",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "st. p. č. 4182, k. ú. Pardubice",
+     "st. 10090, k. ú. Pardubice",
+     "st. 14/1, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "Oblastní spolek Českého červeného kříže Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "202/2025 R",
+    "title": "Dotace 2025 pro sportovní, kulturní a sociální akce a spolky, individuální dotace na pískoviště",
+    "summary": "Rada schvaluje dvanáct dotací z dotačního programu MO Pardubice V na rok 2025 (mj. Atletika Bez Bariér, z. s., Hvězda Pardubice z. s., SDH Pardubice – město, NOE – Křesťanská základní a mateřská škola, SKP – CENTRUM o. p. s., RC Kulihrášek, SK Dražkovice, Salesiánský klub mládeže) a individuální dotaci 15.000,- Kč na pořízení nového pískoviště, včetně uzavření veřejnoprávních smluv a souvisejících rozpočtových opatření č. 15–29.",
+    "keywords": [
+     "dotace",
+     "dotační program 2025",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "parasport",
+     "atletika",
+     "hasiči",
+     "dětský den",
+     "pískoviště",
+     "půlmaraton"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice",
+     "hasičská zbrojnice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Atletika Bez Bariér, z. s.",
+     "Hvězda Pardubice z. s.",
+     "SH ČMS – Sbor dobrovolných hasičů Pardubice - město",
+     "NOE – Křesťanská základní a mateřská škola v Pardubicích",
+     "SKP – CENTRUM o. p. s.",
+     "Rodinné centrum Kulihrášek, z. s.",
+     "Sportovní klub Dražkovice",
+     "Salesiánský klub mládeže, z. s., Pardubice"
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "8.000,- Kč",
+     "15.380,- Kč",
+     "7.000,- Kč",
+     "8.380,- Kč",
+     "15.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

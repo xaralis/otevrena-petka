@@ -1,0 +1,282 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6e8ae8c2657cb1c481ca991588ce5e2d6cdf10148e161d9ab8ed97873d330458",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "253/2025 R",
+    "title": "Doporučení zastupitelstvu schválit rozpočet MO Pardubice V na rok 2026",
+    "summary": "Rada doporučuje zastupitelstvu schválit návrh rozpočtu obvodu a sociálního fondu na rok 2026, svěřit radě pravomoc provádět vymezená rozpočtová opatření a schválit plán společenských akcí, příspěvek na provoz DDM Alfa na akce pro obvod, pravidla pro drobné dárky a propagační předměty. Zároveň doporučuje schválit novou směrnici č. 7/2025 o hospodaření se sociálním fondem, která ruší směrnici č. 7/2024.",
+    "keywords": [
+     "rozpočet 2026",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "DDM Alfa",
+     "příspěvek na provoz",
+     "drobné dárky",
+     "propagační předměty",
+     "směrnice č. 7/2025"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "DDM Alfa, Družby, Pardubice"
+    ],
+    "amounts": [
+     "300 tis. Kč",
+     "200 tis. Kč",
+     "128,72 tis. Kč",
+     "35 tis. Kč",
+     "40,6 tis. Kč",
+     "45 tis. Kč",
+     "3,2 tis. Kč",
+     "4,92 tis. Kč",
+     "0,96 tis. Kč",
+     "3,96 tis. Kč",
+     "1 000,-- Kč",
+     "300,- Kč",
+     "500,-- Kč",
+     "300,-- Kč"
+    ]
+   },
+   {
+    "number": "254/2025 R",
+    "title": "Doporučení schválit pravidla pro příspěvky na provoz příspěvkovým organizacím města",
+    "summary": "Rada doporučuje zastupitelstvu schválit Pravidla pro poskytování příspěvků na provoz příspěvkovým organizacím města z rozpočtu MO Pardubice V platná od 1. 1. 2026, včetně vzoru žádosti o příspěvek a jeho vypořádání.",
+    "keywords": [
+     "příspěvek na provoz",
+     "příspěvkové organizace města",
+     "pravidla",
+     "žádost o příspěvek",
+     "vypořádání příspěvku"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "255/2025 R",
+    "title": "Doporučení schválit střednědobý výhled rozpočtu na roky 2025–2029",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh střednědobého výhledu rozpočtu MO Pardubice V na roky 2025–2029.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2025–2029",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "256/2025 R",
+    "title": "Souhlas se záměry pronájmu, prodeje a směny pozemků v k. ú. Pardubice (Lexova, IP stav)",
+    "summary": "Rada jako stanovisko pro pozemkovou komisi rady města souhlasí se záměrem pronájmu a prodeje části pozemku p. p. č. 2155/3 Společenství vlastníků jednotek domu Lexova 2124–2125 kvůli přístavbě lodžií. Dále souhlasí se záměrem směny městských pozemků p. p. č. 2483/2 a části 2424/4 za části pozemků p. p. č. 2477/3 a 2477/67 společnosti IP stav s.r.o., související s propojením pro cyklisty a pěší, příjezdem a parkováním.",
+    "keywords": [
+     "stanovisko k pozemkům",
+     "pronájem pozemku",
+     "prodej pozemku",
+     "směna pozemků",
+     "přístavba lodžií",
+     "Lexova",
+     "parkování",
+     "cyklostezka",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Lexova 2124 a 2125",
+     "K Vinici",
+     "Kaufland",
+     "Lidl",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2155/3, k. ú. Pardubice",
+     "p. p. č. 2483/2, k. ú. Pardubice",
+     "p. p. č. 2424/4, k. ú. Pardubice",
+     "p. p. č. 2477/3, k. ú. Pardubice",
+     "p. p. č. 2477/67, k. ú. Pardubice",
+     "2483/1O",
+     "2573/2"
+    ],
+    "organizations": [
+     "Společenství vlastníků jednotek domu č.p. 2124 – 2125, Lexova ulice, Pardubice",
+     "IP stav s.r.o.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "257/2025 R",
+    "title": "Smlouvy o dílo se Službami města Pardubic na kontejnery, koše a odpad v roce 2026",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na rok 2026 se společností Služby města Pardubic a.s. na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů a košů na psí exkrementy a svoz odpadu odloženého u kontejnerových stání, mimo režim zadávacího řádu, protože jde o městskou společnost zřízenou k tomuto účelu.",
+    "keywords": [
+     "smlouva o dílo",
+     "velkoobjemové kontejnery",
+     "odpadkové koše",
+     "psí exkrementy",
+     "svoz odpadu",
+     "Služby města Pardubic",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "125.000,- Kč bez DPH",
+     "1.175.000,- Kč bez DPH",
+     "425.000,- Kč bez DPH",
+     "120.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "258/2025 R",
+    "title": "Doporučení schválit rozbor hospodaření k 30. 11. 2025",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 30. 11. 2025 a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "259/2025 R",
+    "title": "Doporučení schválit 5. změnu rozpočtu na rok 2025",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář k 5. změně rozpočtu na rok 2025 včetně sociálního fondu a schválit rozpočtová opatření uvedená v bodech 1–22 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "sociální fond",
+     "rozpočet 2025"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "260/2025 R",
+    "title": "Směrnice č. 28/2025 – zásady a program dotací z rozpočtu obvodu na rok 2026",
+    "summary": "Rada schvaluje směrnici č. 28/2025 se zásadami a programem pro poskytování dotací z rozpočtu MO Pardubice V v roce 2026 včetně příloh (žádost, smlouva, čestná prohlášení, poučení a vyúčtování dotace).",
+    "keywords": [
+     "dotace",
+     "dotační program",
+     "směrnice č. 28/2025",
+     "zásady poskytování dotací",
+     "de minimis",
+     "vyúčtování dotace"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "261/2025 R",
+    "title": "Rámcová smlouva na údržbu komunikací v roce 2026 se Službami města Pardubic",
+    "summary": "Rada souhlasí s uzavřením rámcové smlouvy na údržbu komunikací na území MO Pardubice V na období 1. 1. 2026 – 31. 12. 2026 se společností Služby města Pardubic a.s. jako výsledkem zakázky malého rozsahu.",
+    "keywords": [
+     "údržba komunikací",
+     "rámcová smlouva",
+     "zakázka malého rozsahu",
+     "silnice",
+     "chodníky",
+     "Služby města Pardubic"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "262/2025 R",
+    "title": "Smlouva o dílo na obnovu dětského hřiště SKN s firmou DŘEVOARTIKL",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Obnova dětského hřiště SKN“ se společností DŘEVOARTIKL, spol. s r. o., jako výsledkem zakázky malého rozsahu.",
+    "keywords": [
+     "dětské hřiště",
+     "obnova hřiště",
+     "SKN",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "herní prvky"
+    ],
+    "topics": [
+     "hriste-sport",
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "dětské hřiště SKN"
+    ],
+    "parcels": [],
+    "organizations": [
+     "DŘEVOARTIKL, spol. s r. o."
+    ],
+    "amounts": [
+     "2 079 482,- Kč vč. DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

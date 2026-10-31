@@ -1,0 +1,180 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "fd02775f808620d960f6e82c485c501fb71a3d5f9addbd37960cb118f0df5f56",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "36/2023 R",
+    "title": "Provozní řád tržiště v Jilemnického ulici",
+    "summary": "Rada schvaluje návrh Provozního řádu tržiště v Jilemnického ulici v Pardubicích.",
+    "keywords": [
+     "provozní řád",
+     "tržiště",
+     "trh",
+     "Jilemnického",
+     "pravidla tržiště"
+    ],
+    "topics": [
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Jilemnického ulice",
+     "tržiště v Jilemnického ulici"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "37/2023 R",
+    "title": "Provozní řád tržiště v Devotyho ulici",
+    "summary": "Rada schvaluje návrh Provozního řádu tržiště v Devotyho ulici v Pardubicích.",
+    "keywords": [
+     "provozní řád",
+     "tržiště",
+     "trh",
+     "Devotyho",
+     "pravidla tržiště"
+    ],
+    "topics": [
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Devotyho ulice",
+     "tržiště v Devotyho ulici"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "38/2023 R",
+    "title": "Provozní řád sportovně rekreačního areálu v ulici Kpt. Nálepky",
+    "summary": "Rada schvaluje návrh Provozního řádu sportovně rekreačního areálu v ulici Kpt. Nálepky v Pardubicích.",
+    "keywords": [
+     "provozní řád",
+     "sportovně rekreační areál",
+     "sportoviště",
+     "Kpt. Nálepky",
+     "pravidla areálu"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "hriste-sport"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "ulice Kpt. Nálepky",
+     "sportovně rekreační areál v ulici Kpt. Nálepky"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "39/2023 R",
+    "title": "Dotace na 23 akcí škol, školek a spolků v roce 2023",
+    "summary": "Rada schvaluje poskytnutí 23 dotací podle Směrnice č. 28/2022 na akce mateřských a základních škol, DDM ALFA, spolků a dalších žadatelů (např. Zahradní slavnost, Dětský den, Pardubický atletický mítink, Pálení vatry, Safari), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 27–54. Žadateli jsou mj. MŠ Benešovo nám., ZŠ Benešovo náměstí, MŠ Jesničánky, MŠ Motýlek, ZŠ Josefa Ressla, MŠ Dražkovice, MŠ Kamarád, Hvězda Pardubice, Šumák, SKP – CENTRUM a Sportovní klub Dražkovice.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "základní škola",
+     "Dětský den",
+     "pálení vatry",
+     "sportovní hry mateřských škol",
+     "akce pro děti",
+     "Směrnice č. 28/2022"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Benešovo náměstí",
+     "Jesničánky",
+     "Josefa Ressla",
+     "Dražkovice",
+     "Teplého",
+     "Gorkého",
+     "Raisova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MŠ Pardubice, Benešovo nám. 2115",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Hvězda Pardubice z. s.",
+     "Mateřská škola Pardubice - Jesničánky",
+     "DDM ALFA Pardubice",
+     "Mateřská škola Motýlek Pardubice",
+     "Základní škola Pardubice, Josefa Ressla 2258",
+     "Šumák z. s.",
+     "SKP – CENTRUM, o. p. s.",
+     "Mateřská škola Pardubice - Dražkovice",
+     "MŠ Kamarád Pardubice",
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "8.000,- Kč",
+     "7.000,- Kč",
+     "2.000,- Kč",
+     "2.500,- Kč",
+     "8.000,- Kč",
+     "16.200,- Kč",
+     "2.800,- Kč",
+     "2.500,- Kč",
+     "10.000,- Kč",
+     "8.000,- Kč",
+     "9.000,- Kč",
+     "5.000,- Kč",
+     "10.000,- Kč",
+     "3.000,- Kč",
+     "2.500,- Kč",
+     "3.500,- Kč",
+     "10.000,- Kč",
+     "10.000,- Kč",
+     "11.299,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "4.500,- Kč",
+     "10.000,- Kč"
+    ]
+   },
+   {
+    "number": "40/2023 R",
+    "title": "Souhlas s nájmem dvou garážových stání v domě Sokolovská 2731",
+    "summary": "Rada souhlasí se záměrem města pronajmout garážová stání č. 15 a č. 4 (každé 15 m2) v 1. podzemním podlaží budovy č. p. 2731 v Sokolovské ulici za účelem garážování osobního automobilu.",
+    "keywords": [
+     "nájem",
+     "garážové stání",
+     "garáž",
+     "parkování",
+     "Sokolovská",
+     "stanovisko k nájmu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova č. p. 2731 Sokolovská ul.",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "stavební parcela č. 10090, k. ú. a obec Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

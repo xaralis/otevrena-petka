@@ -1,0 +1,193 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "c3c3ce8eafa4765627f2929a190fb82490731e13275b14b1c80621fc5e50f88c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "158/2024 R",
+    "title": "Plnění Programu rozvoje MO za rok 2023 a doporučení ZMO k ponechání jeho bodů",
+    "summary": "Rada bere na vědomí plnění Programu rozvoje městského obvodu za rok 2023 a doporučuje zastupitelstvu vzít ho na vědomí s tím, že se zachovají vybrané body z oblastí zeleň, čištění komunikací, odpady, veřejná prostranství a doprava. Body odkazující na místní komise se nahradí obecně komisemi RMO, bod 8/3 se vyřadí.",
+    "keywords": [
+     "program rozvoje",
+     "plnění programu rozvoje 2023",
+     "zeleň",
+     "výsadba stromů",
+     "čištění komunikací",
+     "velkoobjemové kontejnery",
+     "veřejná prostranství",
+     "doprava",
+     "komise RMO",
+     "napojení z I/37"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "silnice I/37"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "159/2024 R",
+    "title": "Souhlas s odkupem pozemku pod chodníkem v Chrudimské a prodloužením výpůjčky softballu",
+    "summary": "Rada souhlasí se záměrem města odkoupit pozemek p. p. č. 2386/30 pod chodníkem v ulici Chrudimská do vlastnictví statutárního města Pardubice. Dále souhlasí s prodloužením výpůjčky části pozemku p. p. č. 2167/2 a pozemku st. p. č. 10945 v k. ú. Pardubice spolku SOFTBALL PARDUBICE z. s. min. o 15 let, do 12. 1. 2041.",
+    "keywords": [
+     "pozemková komise",
+     "odkup pozemku",
+     "chodník",
+     "Chrudimská",
+     "výpůjčka",
+     "softball",
+     "softballové hřiště",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Chrudimská",
+     "Josefa Ressla 2868, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2386/30, k. ú. Pardubice",
+     "p. p. č. 2167/2, k. ú. Pardubice",
+     "st. p. č. 10945, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice",
+     "SOFTBALL PARDUBICE z. s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "160/2024 R",
+    "title": "Vyřazení projektové dokumentace parkovacích míst v ul. Artura Krause z majetku",
+    "summary": "Rada souhlasí s vyřazením projektové dokumentace k vybudování parkovacích míst na severní straně ulice Artura Krause od firmy Highway design, s. r. o., z majetku a s jejím jednorázovým odepsáním do nákladů k 25. 9. 2024. Důvodem je zastavení projekčních prací, kvůli kterému dokumentace pravděpodobně nebude použita.",
+    "keywords": [
+     "projektová dokumentace",
+     "vyřazení z majetku",
+     "odpis",
+     "parkovací místa",
+     "parkování",
+     "Artura Krause",
+     "zastavení projektu"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "rozpocet"
+    ],
+    "kind": "jine",
+    "places": [
+     "ul. Artura Krause"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Highway design, s. r. o."
+    ],
+    "amounts": [
+     "36 300,-- Kč"
+    ]
+   },
+   {
+    "number": "161/2024 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 31. 8. 2024",
+    "summary": "Rada projednala zprávu o rozboru hospodaření městského obvodu Pardubice V k 31. 8. 2024 a doporučuje zastupitelstvu schválit rozbor v tabulkové části a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "31. 8. 2024",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "162/2024 R",
+    "title": "Doporučení ZMO schválit 3. změnu rozpočtu na rok 2024",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář a doplňující informace ke 3. změně rozpočtu městského obvodu na rok 2024 a schválit rozpočtová opatření uvedená v bodech č. 1–29 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "3. změna rozpočtu 2024",
+     "rozpočtová opatření",
+     "rozpočet obvodu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "163/2024 R",
+    "title": "Vzdání se mandátu člena ZMO a nastoupení náhradníka za ANO 2011",
+    "summary": "Rada bere na vědomí, že se člen zastupitelstva městského obvodu za volební stranu ANO 2011 vzdal mandátu ke dni 17. 9. 2024, a osvědčuje, že dnem 18. 9. 2024 se členem zastupitelstva stal náhradník téže volební strany. Ukládá předat mu osvědčení o vzniku mandátu na nejbližším jednání zastupitelstva.",
+    "keywords": [
+     "vzdání se mandátu",
+     "rezignace zastupitele",
+     "náhradník",
+     "osvědčení o vzniku mandátu",
+     "zastupitelstvo",
+     "ANO 2011"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ANO 2011"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "164/2024 R",
+    "title": "Doporučení ZMO vzít na vědomí schválení účetní závěrky města za rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí, že Zastupitelstvo města Pardubic dne 24. 6. 2024 schválilo účetní závěrku statutárního města Pardubic včetně městských obvodů za rok 2023 sestavenou k 31. 12. 2023.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2023",
+     "Zastupitelstvo města Pardubic",
+     "hospodaření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

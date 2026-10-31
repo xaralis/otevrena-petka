@@ -1,0 +1,40 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "c835ef5e6b50bf6376db37ee0acc0be6c27565dc228a5d56ea7443e4ab8a1ce7",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "151/2024 R",
+    "title": "Smlouva o dílo na chodníky v ulici Boženy Němcové – CHRPA stavební společnost",
+    "summary": "Rada jako zadavatel zakázky malého rozsahu „Chodníky ul. Boženy Němcové“ souhlasí s uzavřením smlouvy o dílo se zhotovitelem CHRPA stavební společnost s r.o. za nabídkovou cenu 1.768.599,55 Kč bez DPH.",
+    "keywords": [
+     "chodníky",
+     "Boženy Němcové",
+     "rekonstrukce chodníků",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr nejvhodnější nabídky",
+     "CHRPA stavební společnost"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice Boženy Němcové"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o."
+    ],
+    "amounts": [
+     "1.768.599,55 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

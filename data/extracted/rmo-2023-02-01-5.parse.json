@@ -1,0 +1,262 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "1002ec699ac1cab015be22d4ba14e0e01960037be3570659809ae3ec4325d438",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 5,
+   "kind": "radne",
+   "date": "2023-02-01",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Jmenování člena Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V",
+    "line": 52,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Udělení výjimky ze zákazu konzumace alkoholických nápojů",
+    "line": 61,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 78,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke smlouvě o dílo na akci „Stavební úpravy vnitrobloku ul. Wolkerova čp. 2116-2118 a čp. 2119-2121“",
+    "line": 86,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Prodej nebytového prostoru Josefa Ressla 2277-2279, Pardubice",
+    "line": 97,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Diskuse, závěr",
+    "line": 109,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "22/2023 R",
+    "agenda_no": "1",
+    "first_line": 55,
+    "last_line": 57,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "23/2023 R",
+    "agenda_no": "2",
+    "first_line": 63,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "24/2023 R",
+    "agenda_no": "3",
+    "first_line": 80,
+    "last_line": 82,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "25/2023 R",
+    "agenda_no": "4",
+    "first_line": 89,
+    "last_line": 93,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "26/2023 R",
+    "agenda_no": "5",
+    "first_line": 99,
+    "last_line": 105,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 58,
+    "last_line": 58,
+    "resolution": "22/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": "23/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "24/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 94,
+    "last_line": 94,
+    "resolution": "25/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "26/2023 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 83: usnesení 24/2023 R – Pro 0, zdržel se 5, proti 0; návrh zřejmě nebyl přijat, ačkoli má číslo usnesení a text výsledek výslovně neuvádí",
+   "ř. 112: jednání podle textu skončilo v 16.30 hod., tedy ve stejný čas, kdy začalo (ř. 9)"
+  ]
+ }
+}

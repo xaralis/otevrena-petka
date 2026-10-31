@@ -108,6 +108,11 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             info.update(mode="browse", total=total)
             return [Hit(r["uid"], 0, row=r) for r in rows], info
 
+        vec = None
+        if mode in ("hybrid", "semantic"):
+            vec = embed.embed_query(q)
+            if vec is None:  # embedder off or down: answer from full text instead of failing
+                mode = info["mode"] = "fulltext"
         ft: list[str] = []
         if mode in ("hybrid", "fulltext"):
             # all words first; a natural-language question rarely matches all, so fall
@@ -124,16 +129,12 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                 if len(ft) >= 5:
                     break
         sem: list[str] = []
-        if mode in ("hybrid", "semantic"):
-            vec = embed.embed_query(q)
-            if vec is None:
-                info["mode"] = "fulltext"
-            else:
-                sem = [r["uid"] for r in conn.execute(
-                    f"""SELECT r.uid FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
-                        WHERE {where} AND r.embedding IS NOT NULL
-                        ORDER BY r.embedding <=> %s::vector LIMIT %s""",
-                    params + [vec, pool_size])]
+        if vec is not None:
+            sem = [r["uid"] for r in conn.execute(
+                f"""SELECT r.uid FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
+                    WHERE {where} AND r.embedding IS NOT NULL
+                    ORDER BY r.embedding <=> %s::vector LIMIT %s""",
+                params + [vec, pool_size])]
         scores: dict[str, Hit] = {}
         for rank, uid in enumerate(ft, 1):
             h = scores.setdefault(uid, Hit(uid, 0))

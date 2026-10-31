@@ -1,0 +1,115 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "655e97e3141c4c53abb13c66c655a84aeb90a7dc32ed5ee99b7e2c6aa71e6da2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "215/2025 R",
+    "title": "Stanovisko k pozemkovým záměrům města: převod u Vápenky, prodej, směna, předkupní právo",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města ke čtyřem záměrům v k. ú. Pardubice: bezúplatný převod části pozemku p. p. č. 2303/17 s přechodovým ostrůvkem (stavba „Propojovací komunikace v zóně Vápenka“) od Pardubického kraje městu, prodej části p. p. č. 2260/1 Společenství vlastníků jednotek domu čp. 2200-2202 v ulici Josefa Ressla pro stavbu balkónů a směna pozemků se společností IP stav s.r.o. kvůli dopojení cyklostezky na park Pod Vinicí a parkovacím stáním. Čtvrtý bod se týká využití předkupního práva k budově na st. p. č. 8926 za kupní cenu 450.000,- Kč; o každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "bezúplatný převod pozemku",
+     "prodej pozemku",
+     "směna pozemků",
+     "předkupní právo",
+     "Vápenka",
+     "park Pod Vinicí",
+     "cyklostezka",
+     "balkóny",
+     "Josefa Ressla"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "zóna Vápenka",
+     "Josefa Ressla",
+     "park Pod Vinicí",
+     "lokalita U Vinice"
+    ],
+    "parcels": [
+     "p. p. č. 2303/17, k. ú. Pardubice",
+     "p. p. č. 2303/25",
+     "p. p. č. 2260/1, k. ú. Pardubice",
+     "p. p. č. 2483/2, k. ú. Pardubice",
+     "p. p. č. 2424/4, k. ú. Pardubice",
+     "p. p. č. 2477/3, k. ú. Pardubice",
+     "st. p. č. 8926, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pardubický kraj",
+     "Správa a údržba silnic Pardubického kraje",
+     "statutární město Pardubice",
+     "Společenství vlastníků jednotek domu čp. 2200-2202, Josefa Ressla, Pardubice",
+     "IP stav s.r.o.",
+     "OD MmP"
+    ],
+    "amounts": [
+     "450.000,- Kč"
+    ]
+   },
+   {
+    "number": "216/2025 R",
+    "title": "Souhlas s předzahrádkou bistra v ulici Josefa Ressla čp. 2277–78",
+    "summary": "Souhlas s umístěním předzahrádky o ploše 13,5 m2 na chodníku před bistrem v ulici Josefa Ressla čp. 2277–78 od 10. 6. 2025 do 31. 10. 2025, denně od 08.00 do 22.00 hod. Žadatelem je společnost AR – MADE, s. r. o.",
+    "keywords": [
+     "předzahrádka",
+     "bistro",
+     "zahrádka",
+     "chodník",
+     "zábor veřejného prostranství",
+     "Josefa Ressla",
+     "AR – MADE"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "ostatni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Josefa Ressla čp. 2277 – 78, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "AR – MADE, s. r. o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "217/2025 R",
+    "title": "Souhlas se záměrem pronájmu garážového stání v domě čp. 2767, Jana Palacha",
+    "summary": "Stanovisko obvodu k žádosti komise pro nebytové prostory rady města: souhlas se záměrem pronájmu garážového stání o výměře 11,25 m2 v 1. podzemním podlaží domu čp. 2767 v ulici Jana Palacha (st. p. č. 10409, k. ú. Pardubice) za účelem garážování osobního automobilu.",
+    "keywords": [
+     "pronájem garážového stání",
+     "garáž",
+     "parkování",
+     "nebytové prostory",
+     "Jana Palacha",
+     "komise pro nebytové prostory"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jana Palacha čp. 2767",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 10409, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

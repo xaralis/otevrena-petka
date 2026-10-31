@@ -1,0 +1,220 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "f77402aed5637693514a04555df4f8f2c5b1e94f7c638953cd2882df73554515",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 41,
+   "kind": "radne",
+   "date": "2025-02-19",
+   "place": "zasedací místnost MO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 44,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Přijetí finančního daru",
+    "line": 85,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Diskuse, závěr",
+    "line": 93,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "191/2025 R",
+    "agenda_no": "1",
+    "first_line": 47,
+    "last_line": 83,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "192/2025 R",
+    "agenda_no": "2",
+    "first_line": 88,
+    "last_line": 90,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 57,
+    "last_line": 57,
+    "resolution": "191/2025 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "191/2025 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "191/2025 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "191/2025 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "192/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 76: bod 3 usnesení 191/2025 R – hlasování Pro 0, zdržel se 4, proti 0; souhlas s tímto záměrem tedy nebyl vysloven, přesto je bod uveden ve znění usnesení „souhlasí se záměrem“."
+  ]
+ }
+}

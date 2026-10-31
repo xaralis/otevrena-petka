@@ -1,0 +1,314 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "73e379b7e2aa7bd0b74adb08962f03986af25013b2a5ddffda3b3052c626cfba",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "218/2025 R",
+    "title": "Dotace na 11 akcí v roce 2025 a související rozpočtová opatření",
+    "summary": "Rada schvaluje poskytnutí jedenácti dotací z programu dle směrnice č. 28/2024 na kulturní, sportovní a společenské akce v roce 2025 (mj. GameCon 2025, Dětský den s atletikou, Den předškoláka, Kino Dukla ožívá!, Pardubice bez bariér OPEN, SaSaKo CUP, Kapr Cup), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 42–54. Žadateli jsou mj. GameCon z. s., Hvězda Pardubice z. s., NOE – Křesťanská ZŠ a MŠ v Pardubicích, Atletika Bez Bariér, z. s., KŘIŽOVATKA handicap centrum, o. p. s. a Sportovní klub Dražkovice.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "GameCon",
+     "Dětský den s atletikou",
+     "Den předškoláka",
+     "Kino Dukla ožívá",
+     "SaSaKo CUP",
+     "Kapr Cup",
+     "rozpočtové opatření",
+     "směrnice č. 28/2024"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice",
+     "DK Dukla"
+    ],
+    "parcels": [],
+    "organizations": [
+     "GameCon z. s.",
+     "Hvězda Pardubice z. s.",
+     "NOE – Křesťanská ZŠ a MŠ v Pardubicích",
+     "Atletika Bez Bariér, z. s.",
+     "KŘIŽOVATKA handicap centrum, o. p. s.",
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "15.000,- Kč",
+     "15.000,- Kč",
+     "4.000,- Kč",
+     "9.000,- Kč",
+     "10.000,- Kč",
+     "8.000,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "5.000,-- Kč",
+     "5.000,- Kč",
+     "13.000,- Kč",
+     "7.000,- Kč",
+     "6.000,-- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč"
+    ]
+   },
+   {
+    "number": "219/2025 R",
+    "title": "Revokace výběru zhotovitele a nový zhotovitel stavebních úprav komunikace v Dražkovicích",
+    "summary": "Rada revokuje usnesení č. 212/2025 R o uzavření smlouvy o dílo se společností STAVITELSTVÍ – TRUNEC s.r.o. a souhlasí s uzavřením smlouvy o dílo na akci „Stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174“ se společností M-SILNICE a.s. za nabídkovou cenu 5.243.332,93 Kč včetně DPH.",
+    "keywords": [
+     "revokace usnesení",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "oprava silnice",
+     "stavební úpravy komunikace",
+     "Dražkovice",
+     "výběr zhotovitele"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "STAVITELSTVÍ – TRUNEC s.r.o.",
+     "M-SILNICE a.s."
+    ],
+    "amounts": [
+     "5.243.332,93 Kč včetně DPH"
+    ]
+   },
+   {
+    "number": "220/2025 R",
+    "title": "Dodatek ke smlouvě o výsypu odpadkových košů se Službami města Pardubice",
+    "summary": "Rada souhlasí s uzavřením dodatku ke smlouvě o výsypu a pronájmu odpadkových košů se Službami města Pardubice a.s. kvůli zvýšení počtu vysypávaných košů o 5 kusů a změně vlastnictví 1 koše, celkem na 311 košů (246 ve vlastnictví města, 65 ve vlastnictví obvodu). Ceny za výsypy se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "výsyp košů",
+     "dodatek smlouvy",
+     "odpady",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "221/2025 R",
+    "title": "Souhlas se záměrem města pronajmout sklad v areálu čp. 324 v ulici J. Palacha",
+    "summary": "Rada jako stanovisko pro komisi pro nebytové prostory rady města souhlasí se záměrem města pronajmout prostory v areálu čp. 324 v ulici J. Palacha jako sklad o výměře 47,86 m² k uskladnění zvukové techniky.",
+    "keywords": [
+     "pronájem",
+     "nebytové prostory",
+     "sklad",
+     "J. Palacha",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "J. Palacha, čp. 324",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/20, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "222/2025 R",
+    "title": "Souhlas se záměry věcných břemen pro ČEZ, VaK Pardubice a EDERA Group",
+    "summary": "Rada jako stanovisko pro pozemkovou komisi rady města souhlasí se záměry zřízení věcných břemen: pro ČEZ Distribuce, a. s. na kabelové vedení v rámci akce „Pardubice, Chrudimská, Čacké knn“, pro Vodovody a kanalizace Pardubice, a.s. na přeložku vodovodního řadu v ulici Pod Břízkami u ZŠ T. G. Masaryka a pro EDERA Group a.s. na metropolitní optickou síť v ulici B. Němcové.",
+    "keywords": [
+     "věcné břemeno",
+     "kabelové vedení",
+     "přeložka vodovodu",
+     "optická síť",
+     "Chrudimská",
+     "Čacké",
+     "Pod Břízkami",
+     "B. Němcové",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Chrudimská",
+     "Čacké",
+     "Pod Břízkami",
+     "Základní škola T.G.M. v Pardubicích",
+     "B. Němcové",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2386/39",
+     "p. p. č. 2386/38",
+     "p. p. č. 2386/52",
+     "p. p. č. 2386/51",
+     "p. p. č. 2386/50",
+     "p. p. č. 2386/48",
+     "p. p. č. 2376/3",
+     "p. p. č. 2347/41",
+     "p. p. č. 2347/42",
+     "p. p. č. 2386/43",
+     "p. p. č. 2386/42",
+     "p. p. č. 2386/41",
+     "p. p. č. 2386/46",
+     "p. p. č. 2386/15",
+     "p. p. č. 2906/3",
+     "p. p. č. 2906/1",
+     "p. p. č. 2906/2",
+     "p. p. č. 2600/4",
+     "p. p. č. 2388/1, k. ú. Pardubice",
+     "p. p. č. 2580/4, k. ú. Pardubice",
+     "p. p. č. 2115/6",
+     "p. p. č. 2117/21",
+     "p. p. č. 2117/22",
+     "p. p. č. 2119/7, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "ČEZ Distribuce, a. s.",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "EDERA Group a.s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "500,- Kč+DPH"
+    ]
+   },
+   {
+    "number": "223/2025 R",
+    "title": "Doporučení zastupitelstvu schválit závěrečný účet MO Pardubice V za rok 2024",
+    "summary": "Rada projednala závěrečný účet za rok 2024 a doporučuje zastupitelstvu souhlasit s celoročním hospodařením obvodu bez výhrad, vzít na vědomí komentáře a tabulky, schválit finanční vypořádání vč. sociálního fondu a rozpočtová opatření v rámci závěrečného účtu.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2024",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "224/2025 R",
+    "title": "Doporučení zastupitelstvu vzít na vědomí schvalování účetní závěrky k 31. 12. 2024",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí, že účetní závěrku města vč. městských obvodů sestavenou k 31. 12. 2024 schválí zastupitelstvo města v červnu a informaci o jejím schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2024",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "225/2025 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 31. 5. 2025",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozbor hospodaření MO Pardubice V k 31. 5. 2025 uvedený v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření 2025",
+     "rozpočet",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "226/2025 R",
+    "title": "Doporučení zastupitelstvu schválit 3. změnu rozpočtu na rok 2025",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář ke 3. změně rozpočtu na rok 2025, schválit navržená rozpočtová opatření vč. sociálního fondu a příspěvky na provoz pro MŠ Kamarád, MŠ Jesničánky a DDM Alfa na akce pro obvod (Počítačový kurz, Setkání se seniory, Komunitní setkávání, Cestovatelská beseda, Pasování na čtenáře) a souhlasit s doplněním plánu společenských akcí o rozpočtové položky.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtová opatření",
+     "příspěvek na provoz",
+     "MŠ Kamarád",
+     "MŠ Jesničánky",
+     "DDM Alfa",
+     "společenské akce",
+     "sociální fond",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "MŠ Kamarád, Teplého",
+     "MŠ Jesničánky, Raisova",
+     "DDM Alfa, Družby"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MŠ Kamarád",
+     "MŠ Jesničánky",
+     "DDM Alfa"
+    ],
+    "amounts": [
+     "12 tis. Kč",
+     "7,9 tis. Kč",
+     "120 tis. Kč",
+     "35 tis. Kč",
+     "40 tis. Kč",
+     "45 tis. Kč",
+     "3,2 tis. Kč",
+     "3,36 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

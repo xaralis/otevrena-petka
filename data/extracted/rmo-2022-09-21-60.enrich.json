@@ -1,0 +1,120 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6574c1c9f45f8761bf615b1e825efbcaa3df4822dd245673659a7c4cccdde38d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "318/2022 R",
+    "title": "Zrušení komisí rady obvodu a odvolání jejich předsedů a členů ke konci volebního období",
+    "summary": "Rada ruší v souvislosti s ukončením volebního období 2018–2022 ke dni 23. 9. 2022 šest svých komisí – místní komise Dukla, Višňovka, Jesničánky a Dražkovice, Komisi pro školství, kulturu, sport a mládež a Komisi pro strategii a rozvoj obvodu, životní prostředí a dopravu – a odvolává jejich předsedy a členy.",
+    "keywords": [
+     "zrušení komisí",
+     "odvolání členů komisí",
+     "místní komise",
+     "konec volebního období",
+     "komise pro školství, kulturu, sport a mládež",
+     "komise pro strategii a rozvoj obvodu",
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "organizacni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Dukla",
+     "Místní komise Višňovka",
+     "Místní komise Jesničánky",
+     "Místní komise Dražkovice",
+     "Komise pro školství, kulturu, sport a mládež",
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "319/2022 R",
+    "title": "Souhlas se snížením náhrady za věcné břemeno vodovodu a kanalizace – Dukla vnitroblok H",
+    "summary": "Stanovisko k žádosti pozemkové komise rady města: souhlas se změnou jednorázové náhrady za zřízení věcného břemene pro vodovodní a kanalizační potrubí na pozemcích v k. ú. Pardubice z 300,- a 200,- Kč/bm + DPH na 1.000,- Kč/pozemek + DPH. Žadatelem je společnost Vodovody a kanalizace Pardubice, a.s., která stavbu provedla v rámci akce Dukla vnitroblok H ve stávající trase infrastruktury.",
+    "keywords": [
+     "věcné břemeno",
+     "náhrada za věcné břemeno",
+     "vodovod",
+     "kanalizace",
+     "Dukla vnitroblok H",
+     "pozemková komise",
+     "Vodovody a kanalizace Pardubice",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dukla vnitroblok H",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č 2165/1, k. ú. Pardubice",
+     "p. p. č. 2252/1, k. ú. Pardubice",
+     "p. p. č. 2252/5, k. ú. Pardubice",
+     "p. p. č. 2252/10, k. ú. Pardubice",
+     "p. p. č. 2252/25, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "300,- Kč/bm + DPH",
+     "200,- Kč/bm + DPH",
+     "1.000,- Kč/pozemek + DPH"
+    ]
+   },
+   {
+    "number": "320/2022 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo – rekonstrukce chodníku v Dražkovicích",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 1. 6. 2022 na akci „Rekonstrukce chodníku Dražkovice mezi č.p. 128 a č.p. 140, SO 101“ se zhotovitelem ROCKY STAVBY COMPANY s. r. o. Po započtení víceprací a méněprací se cena mění z původních 432.932,50 Kč na 515.356,50 Kč bez DPH.",
+    "keywords": [
+     "rekonstrukce chodníku",
+     "chodník Dražkovice",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "méněpráce",
+     "ROCKY STAVBY COMPANY",
+     "rozhodnutí zadavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice",
+     "chodník mezi č.p. 128 a č.p. 140"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY s. r. o."
+    ],
+    "amounts": [
+     "515.356,50 Kč bez DPH",
+     "432.932,50 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

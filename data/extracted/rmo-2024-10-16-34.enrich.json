@@ -1,0 +1,205 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "26d8fe64240dae55e395fe3b30371fca47f40e7799da6b0b93dba3737c303500",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "165/2024 R",
+    "title": "Ukončení smlouvy o dílo na opravu chodníku v ul. Lexova – západ Dodatkem č. 1",
+    "summary": "Rada souhlasí s ukončením smlouvy o dílo ze dne 22. 8. 2024 na akci „Oprava povrchu chodníku ul. Lexova - západ“ se zhotovitelem ROCKY STAVBY COMPANY CZ s.r.o. Smlouva se ukončí formou Dodatku č. 1.",
+    "keywords": [
+     "ulice Lexova",
+     "oprava chodníku",
+     "chodník",
+     "smlouva o dílo",
+     "dodatek smlouvy",
+     "ukončení smlouvy",
+     "ROCKY STAVBY COMPANY CZ"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Lexova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY CZ s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "166/2024 R",
+    "title": "Stanovisko k záměrům města: odkup garáže na Dukle, věcné břemeno ČEZ, nájem pozemků pro obchvat",
+    "summary": "Rada souhlasí s třemi záměry statutárního města Pardubice: odkoupením garáže na st. p. č. 7007/33 za 800.000,- Kč v rámci revitalizace sportovního areálu na Dukle, zřízením věcného břemene pro ČEZ Distribuce, a. s. kvůli uložení kabelů pro sportovní halu Dukla a nájmem pozemků v k. ú. Dražkovice a Pardubice Ředitelství silnic a dálnic pro stavbu jihovýchodního obchvatu I/2.",
+    "keywords": [
+     "Dukla",
+     "sportovní areál Dukla",
+     "sportovní hala",
+     "odkup garáže",
+     "věcné břemeno",
+     "kabel",
+     "jihovýchodní obchvat",
+     "silnice I/2",
+     "nájem pozemků",
+     "Dražkovice"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dukla",
+     "sportovní areál na Dukle",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "silnice I/2 Pardubice – Jihovýchodní obchvat"
+    ],
+    "parcels": [
+     "st. p. č. 7007/33, k. ú. Pardubice",
+     "p. p. č. 2318/51, k. ú. Pardubice",
+     "p. p. č. 2319/1, k. ú. Pardubice",
+     "st. p. č. 7352, k. ú. Pardubice",
+     "st. p. č. 5386, k. ú. Pardubice",
+     "p. p. č. 579/14, k. ú. Dražkovice",
+     "p. p. č. 471/57, k. ú. Dražkovice",
+     "p. p. č. 471/58, k. ú. Dražkovice",
+     "p. p. č. 2576/2, k. ú. Pardubice",
+     "p. p. č. 2576/3, k. ú. Pardubice",
+     "p. p. č. 2576/5, k. ú. Pardubice",
+     "p. p. č. 3752/4, k. ú. Pardubice",
+     "p. p. č. 3752/68, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice",
+     "ČEZ Distribuce, a. s.",
+     "Ředitelství silnic a dálnic, s. p."
+    ],
+    "amounts": [
+     "800.000,- Kč",
+     "500,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "167/2024 R",
+    "title": "Dotace na podzimní a vánoční akce škol, školek a spolků v roce 2024",
+    "summary": "Rada schvaluje 16 dotací z programu podle Směrnice č. 28/2023 na akce mateřských a základních škol, DDM ALFA, Hvězdy Pardubice a SDH Dražkovice (např. svatomartinský průvod, Mikulášský běh, vánoční jarmark, mikulášské besídky), včetně uzavření veřejnoprávních smluv a souvisejících rozpočtových opatření č. 113–127. Žádostem SKP – CENTRUM o. p. s. a Šumák z. s. byla přiznána dotace ve výši 0,- Kč.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "základní škola",
+     "Mikuláš",
+     "Vánoce",
+     "svatý Martin",
+     "Mikulášský běh",
+     "SDH Dražkovice"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Benešovo náměstí",
+     "Josefa Ressla",
+     "Gorkého",
+     "Raisova",
+     "Dražkovice",
+     "Jesničánky"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "Mateřská škola Motýlek Pardubice",
+     "Hvězda Pardubice z. s.",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Dům dětí a mládeže ALFA Pardubice, odl. pracoviště DELTA",
+     "Mateřská škola Sluníčko Pardubice",
+     "Mateřská škola Pardubice – Jesničánky",
+     "Základní škola Pardubice, Josefa Ressla 2258",
+     "SDH Dražkovice",
+     "SKP – CENTRUM o. p. s.",
+     "Šumák z. s."
+    ],
+    "amounts": [
+     "7.000,- Kč",
+     "6.300,- Kč",
+     "5.000,- Kč",
+     "2.000,- Kč",
+     "3.000,- Kč",
+     "5.000,- Kč",
+     "5.000,- Kč",
+     "3.000,- Kč",
+     "2.000,- Kč",
+     "2.000,- Kč",
+     "2.000,- Kč",
+     "2.000,- Kč",
+     "5.000,- Kč",
+     "12.000,- Kč",
+     "7. 000,- Kč",
+     "0,- Kč",
+     "0,- Kč"
+    ]
+   },
+   {
+    "number": "168/2024 R",
+    "title": "Přímé zadání vánoční výzdoby 2024 Službám města Pardubic v režimu „in house“",
+    "summary": "Rada souhlasí s přímým zadáním činností souvisejících s vánoční výzdobou na území MO Pardubice V v roce 2024 v režimu „in house“ společnosti Služby města Pardubic a.s. za nabídkovou cenu 102.000,- Kč bez DPH.",
+    "keywords": [
+     "vánoční výzdoba",
+     "Vánoce",
+     "výzdoba",
+     "přímé zadání",
+     "in house",
+     "Služby města Pardubic"
+    ],
+    "topics": [
+     "zakazky",
+     "kultura-akce"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "102.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "169/2024 R",
+    "title": "Odvolání člena Komise pro strategii a rozvoj obvodu",
+    "summary": "Rada odvolává ke dni 16. 10. 2024 člena Komise pro strategii a rozvoj obvodu RMO Pardubice V.",
+    "keywords": [
+     "odvolání člena komise",
+     "Komise pro strategii a rozvoj obvodu",
+     "komise rady",
+     "personální změna"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro strategii a rozvoj obvodu RMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

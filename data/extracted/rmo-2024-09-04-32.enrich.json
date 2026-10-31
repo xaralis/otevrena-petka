@@ -1,0 +1,200 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "0c41818ed8b847c47884a0f9ea98b6aca18ac9f3fbc5c6a2df13012a2bbbd683",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "153/2024 R",
+    "title": "Stanovisko k devíti majetkovým záměrům města (věcná břemena, výpůjčky, nájem, odkup)",
+    "summary": "Stanovisko RMO Pardubice V k žádosti pozemkové komise rady města k devíti záměrům: věcná břemena pro opravu vodovodu u kasáren T.G.M. a pro vodovod v Dražkovicích (Vodovody a kanalizace Pardubice), věcná břemena pro kabelové sítě ČEZ Distribuce (mj. přeložka kvn u terminálu JIH, K Vápence), výpůjčky pozemků (parkovací místo pro držitele ZTP/P v ul. Dražkovická, úpravy u domu nám. Dukelských hrdinů 2156–2158) a odkup podílu na pozemku p. p. č. 2499/138. Dále prodloužení termínu převodu stavebních úprav komunikací Úřadem práce ČR do 31. 12. 2027 a změna nájemného, nájem a výpůjčka částí pozemku p. p. č. 2511/16 (zahrádka).",
+    "keywords": [
+     "věcné břemeno",
+     "výpůjčka pozemku",
+     "vodovod",
+     "parkovací místo ZTP/P",
+     "Dražkovice",
+     "Zborovského náměstí",
+     "náměstí Dukelských hrdinů",
+     "terminál JIH",
+     "zahrádka",
+     "nájem pozemku"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Zborovského nám.",
+     "kasárna T.G.M.",
+     "ul. Dražkovická",
+     "náměstí Dukelských hrdinů 2156–2158",
+     "Dražkovice",
+     "K Vápence",
+     "terminál JIH",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 2404/2, k. ú. Pardubice",
+     "p. p. č. 2583/6, k. ú. Pardubice",
+     "p. p. č. 2580/4, k. ú. Pardubice",
+     "p. p. č. 2404/70, k. ú. Pardubice",
+     "p. p. č. 2390/23, k. ú. Pardubice",
+     "p. p. č. 2155/13, k. ú. Pardubice",
+     "p. p. č. 382/29, k. ú. Dražkovice",
+     "p. p. č. 381/1, k. ú. Dražkovice",
+     "p. p. č. 382/42, k. ú. Dražkovice",
+     "p. p. č. 382/2, k. ú. Dražkovice",
+     "p. p. č. 382/39, k. ú. Dražkovice",
+     "p. p. č. 382/38, k. ú. Dražkovice",
+     "p. p. č. 382/36, k. ú. Dražkovice",
+     "p. p. č. 382/41, k. ú. Dražkovice",
+     "p. p. č. 2168/1, k. ú. Pardubice",
+     "p. p. č. 2168/2, k. ú. Pardubice",
+     "p. p. č. 2168/3, k. ú. Pardubice",
+     "p. p. č. 2303/24, k. ú. Pardubice",
+     "p. p. č. 4916/3, k. ú. Pardubice",
+     "p. p. č. 2499/138, k. ú. Pardubice",
+     "p. p. č. 2499/105, k. ú. Pardubice",
+     "p. p. č. 2404/79, k. ú. Pardubice",
+     "p. p. č. 2404/81, k. ú. Pardubice",
+     "p. p. č. 2404/80, k. ú. Pardubice",
+     "p. p. č. 2426/41, k. ú. Pardubice",
+     "p. p. č. 2575/4, k. ú. Pardubice",
+     "p. p. č. 5072, k. ú. Pardubice",
+     "p. p. č. 2054/15, k. ú. Pardubice",
+     "p. p. č. 2054/16, k. ú. Pardubice",
+     "p. p. č. 2605/59, k. ú. Pardubice",
+     "p. p. č. 2511/16, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "Společenství vlastníků jednotek: Dukelských hrdinů 2156, 2157, 2158",
+     "ČEZ Distribuce, a. s.",
+     "Úřad práce České republiky",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "1.150,- Kč/m2",
+     "500,- Kč+DPH",
+     "35,- Kč/m2/rok",
+     "18,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "154/2024 R",
+    "title": "Souhlas se záměrem pronájmu kanceláře v areálu ul. J. Palacha pro SKP-CENTRUM",
+    "summary": "Rada souhlasí se záměrem města pronajmout kancelář o výměře 13,76 m2 v objektu č. 23 v areálu čp. 324 v ul. J. Palacha společnosti SKP-CENTRUM, o.p.s. Prostor má sloužit jako kontaktní pracoviště Nízkoprahového denního centra Terénní program.",
+    "keywords": [
+     "pronájem nebytového prostoru",
+     "kancelář",
+     "J. Palacha",
+     "SKP-CENTRUM",
+     "nízkoprahové denní centrum",
+     "terénní program"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "socialni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. J. Palacha",
+     "areál čp. 324",
+     "objekt č. 23"
+    ],
+    "parcels": [
+     "st. p. č. 864/23, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SKP-CENTRUM, o.p.s.",
+     "Nízkoprahové denní centrum Terénní program"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "155/2024 R",
+    "title": "Úprava plánu společenských akcí na rok 2024 – přesun 50 tis. Kč na Pohádkovou cestu",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí MO Pardubice V na rok 2024: 50 tis. Kč se přesouvá z akce Divadelní představení na akci Pohádková cesta. Celkový rozpočet plánu zůstává 1 295 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "Pohádková cesta",
+     "divadelní představení",
+     "kulturní akce",
+     "přesun peněz"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "50 tis. Kč",
+     "1 295 tis. Kč"
+    ]
+   },
+   {
+    "number": "156/2024 R",
+    "title": "Přijetí finančního daru 51.200 Kč na provoz úřadu",
+    "summary": "Rada souhlasí s přijetím finančního daru na provoz úřadu MO Pardubice V.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "provoz úřadu",
+     "ÚMO Pardubice V"
+    ],
+    "topics": [
+     "dotace"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": [
+     "51.200,- Kč"
+    ]
+   },
+   {
+    "number": "157/2024 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na kontejnerové stání Pichlova – Rokycanova",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 29. 4. 2024 na akci „Kontejnerové stání Pichlova Rokycanova“ se zhotovitelem CHRPA stavební spol. s r.o. Pardubice. Po započtení víceprací se cena zvyšuje z 554.918,45 Kč na 613.172,89 Kč bez DPH.",
+    "keywords": [
+     "kontejnerové stání",
+     "popelnice",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "Pichlova",
+     "Rokycanova",
+     "CHRPA"
+    ],
+    "topics": [
+     "zakazky",
+     "cistota",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Pichlova",
+     "Rokycanova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební spol. s r.o. Pardubice"
+    ],
+    "amounts": [
+     "613.172,89 Kč bez DPH",
+     "554.918,45 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "1b7d239e0bc558ba1b210dbc1c22fc3b0f0e74cc5ba8bbe0191376f31b7d7015",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "60/2023 R",
+    "title": "Souhlas s předzahrádkou před Cherry barem v Devotyho ulici",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 7,20 m2 před provozovnou Cherry bar v ulici Devotyho 2452 od 1. 7. 2023 do 31. 10. 2023, denně od 15.00 do 22.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "Cherry bar",
+     "Devotyho",
+     "zahrádka restaurace",
+     "zábor veřejného prostranství",
+     "souhlas",
+     "stanovisko"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Devotyho 2452, Pardubice",
+     "Cherry bar"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "61/2023 R",
+    "title": "Střednědobý a dlouhodobý plán investic MO Pardubice V",
+    "summary": "Rada schvaluje střednědobý a dlouhodobý plán investic obvodu. Střednědobý plán zahrnuje mimo jiné opravy parkovacích ploch v Jiránkově ulici, zpevnění komunikace v lesoparku, úpravy vnitrobloků a komunikaci v Dražkovicích u MŠ; dlouhodobý plán mimo jiné Dražkovice sever, revitalizaci náměstí Dukelských hrdinů a relaxační zónu Stará vojenská plovárna.",
+    "keywords": [
+     "plán investic",
+     "investice",
+     "parkovací plochy",
+     "vnitroblok",
+     "chodník",
+     "komunikace",
+     "Dražkovice",
+     "Jiránkova",
+     "náměstí Dukelských hrdinů",
+     "Stará vojenská plovárna"
+    ],
+    "topics": [
+     "investice",
+     "doprava"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "Jiránkova 2246 – 48",
+     "Jiránkova 2206 – 08",
+     "lesopark",
+     "vnitroblok Pichlova - S. K. Neumanna – K Višňovce – Železničního pluku",
+     "Na Záboří 129, 146",
+     "vnitroblok Jiránkova 2209 – 11",
+     "Dražkovice",
+     "Pichlova – Rokycanova",
+     "Dražkovice sever",
+     "vnitroblok Pichlova 2563 – 65",
+     "náměstí Dukelských hrdinů",
+     "vnitroblok Jiránkova 2249 – 51",
+     "Stará vojenská plovárna",
+     "Lexova – západ",
+     "Dražkovice 153 - 174"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "62/2023 R",
+    "title": "Dotace z programu MO Pardubice V na sedm akcí v roce 2023",
+    "summary": "Rada schvaluje dotace z programu podle směrnice č. 28/2022 na akce Pardubice Bez Bariér OPEN, Valila se ze dvora veliká brambora, GameCon 2023, Zážitkový program pro žáky 2. stupně a Podzimní dílna s rodiči, včetně uzavření veřejnoprávních smluv a souvisejících rozpočtových opatření č. 66–70. Žádostem Hvězdy Pardubice (Dětský den s atletikou 2023) a Spolku pro podporu waldorfské pedagogiky (W akademie) přiznává dotaci ve výši 0 Kč.",
+    "keywords": [
+     "dotace",
+     "grant",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "Pardubice Bez Bariér OPEN",
+     "GameCon",
+     "Dětský den s atletikou",
+     "W akademie",
+     "mateřská škola",
+     "základní škola"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Čs. armády 2515, Pardubice",
+     "Raisova 226, Pardubice",
+     "Pernického 825/9, Praha",
+     "Gorkého 867, Pardubice",
+     "Artura Krause 2344, Pardubice",
+     "Teplého 2100, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Atletika Bez Bariér Pardubice, z. s.",
+     "Hvězda Pardubice z. s.",
+     "Mateřská škola Pardubice - Jesničánky",
+     "GameCon z. s.",
+     "Spolek pro podporu waldorfské pedagogiky v Pardubicích z.s.",
+     "Základní škola a mateřská škola Pardubice, A. Krause",
+     "Mateřská škola Kamarád Pardubice"
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "0,- Kč",
+     "3.000,- Kč",
+     "10.000,- Kč",
+     "0,- Kč",
+     "9.800,- Kč",
+     "3.000,- Kč"
+    ]
+   },
+   {
+    "number": "63/2023 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 31. 5. 2023",
+    "summary": "Rada projednala zprávu o rozboru hospodaření MO Pardubice V k 31. 5. 2023 a doporučuje zastupitelstvu schválit rozbor v tabulkové části zprávy a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet",
+     "doporučení zastupitelstvu",
+     "31. 5. 2023"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "64/2023 R",
+    "title": "Doporučení ZMO schválit závěrečný účet MO Pardubice V za rok 2022",
+    "summary": "Rada doporučuje zastupitelstvu souhlasit s celoročním hospodařením obvodu v roce 2022 bez výhrad, vzít na vědomí komentáře a přílohy závěrečného účtu, schválit finanční vypořádání za rok 2022 včetně sociálního fondu a rozpočtová opatření v bodech č. 1-13 důvodové zprávy.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2022",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtová opatření",
+     "bez výhrad",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "65/2023 R",
+    "title": "Doporučení ZMO vzít na vědomí schvalování účetní závěrky k 31. 12. 2022",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2022 schválí zastupitelstvo města na červnovém jednání a informaci o schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "2022",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu",
+     "hospodaření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "66/2023 R",
+    "title": "Doporučení ZMO schválit 3. změnu rozpočtu MO Pardubice V na rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář ke 3. změně rozpočtu na rok 2023, schválit rozpočtová opatření v bodech č. 1-9 důvodové zprávy a upravit plán společenských akcí o Setkání se seniory (10 tis. Kč) a Divadelní představení (100 tis. Kč).",
+    "keywords": [
+     "změna rozpočtu",
+     "3. změna rozpočtu",
+     "rozpočtová opatření",
+     "plán společenských akcí",
+     "setkání se seniory",
+     "divadelní představení",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "socialni"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "10 tis. Kč",
+     "100 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

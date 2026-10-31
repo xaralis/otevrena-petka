@@ -1,0 +1,256 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "6c08392b1166fae85ca1987d655c6daeef8139e36ccdda81712edc4ca0d9612e",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 50,
+   "kind": "radne",
+   "date": "2022-01-06",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [
+    "Bc. Jan Nadrchal"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Prodej traktoru ISEKI",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Návrh rozpočtového opatření",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o dílo na akci „Změna užívání drobné provozovny na knihovnu, Josefa Ressla 2278, Pardubice“",
+    "line": 67,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Žádost o umístění reklamních pylonů",
+    "line": 80,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Smlouva o nájmu nebytového prostoru",
+    "line": 90,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 100,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "245/2022 R",
+    "agenda_no": "1.",
+    "first_line": 50,
+    "last_line": 53,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "246/2022 R",
+    "agenda_no": "2.",
+    "first_line": 60,
+    "last_line": 63,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "247/2022 R",
+    "agenda_no": "3.",
+    "first_line": 71,
+    "last_line": 76,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "248/2022 R",
+    "agenda_no": "4.",
+    "first_line": 83,
+    "last_line": 86,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "249/2022 R",
+    "agenda_no": "5.",
+    "first_line": 93,
+    "last_line": 96,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 54,
+    "last_line": 54,
+    "resolution": "245/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "246/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 77,
+    "last_line": 77,
+    "resolution": "247/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 87,
+    "last_line": 87,
+    "resolution": "248/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 97,
+    "last_line": 97,
+    "resolution": "249/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 42: hlasování o programu uvádí Pro 5, ale přítomni jsou podle ř. 14 jen 4 členové (Bc. Jan Nadrchal omluven, ř. 16)."
+  ]
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "41c48c2a4cd19cc982cf06c2a0c588710c6840aecd7b54c8cb0626dd01feafe2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "8/2022 R",
+    "title": "Stanovisko k žádostem pozemkové komise: nájem na Vinici, odkup pozemků, věcné břemeno ČEZ",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města Pardubice ve třech bodech: nájem části pozemku p. p. č. 2462/1 v k. ú. Pardubice na 10 let za 35.000,- Kč/rok pro sportovně relaxační park Vinice – centrum (žadatel fyzická osoba), odkoupení částí pozemků pod chodníkem v ulici Na Spravedlnosti od společnosti AutoForum, spol. s r.o. do majetku statutárního města Pardubice po rekonstrukci ulice a zřízení (budoucího) věcného břemene pro společnost ČEZ Distribuce, a. s. na pozemcích v k. ú. Nové Jesenčany pro uložení inženýrské sítě v rámci akce „Pardubice Na Záboří 248 knn“. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "nájem pozemku",
+     "sportovně relaxační park",
+     "Vinice",
+     "odkup pozemků",
+     "Na Spravedlnosti",
+     "chodník",
+     "věcné břemeno",
+     "inženýrské sítě",
+     "Nové Jesenčany"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky",
+     "hriste-sport"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Vinice – centrum",
+     "Na Spravedlnosti",
+     "Na Záboří",
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "st. p. č. 5051, k. ú. Pardubice",
+     "p. p. č. 5367, k. ú. Pardubice",
+     "p. p. č. 2500/1, k. ú. Pardubice",
+     "p. p. č. 2500/34, k. ú. Pardubice",
+     "p. p. č. 2500/18, k. ú. Pardubice",
+     "p. p. č. 2500/35, k. ú. Pardubice",
+     "p. p. č. 29/40, k. ú. Nové Jesenčany",
+     "p. p. č. 38/30, k. ú. Nové Jesenčany",
+     "p. p. č. 29/2, k. ú. Nové Jesenčany",
+     "p. p. č. 29/42, k. ú. Nové Jesenčany",
+     "p. p. č. 38/57, k. ú. Nové Jesenčany"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "AutoForum, spol. s r.o.",
+     "ČEZ Distribuce, a. s."
+    ],
+    "amounts": [
+     "35.000,- Kč/rok",
+     "35.000,- Kč"
+    ]
+   },
+   {
+    "number": "9/2022 R",
+    "title": "Výše pohledávky za bývalým místostarostou za neodevzdaný tablet",
+    "summary": "Rada stanovila výši pohledávky městského obvodu Pardubice V za bývalým místostarostou za neodevzdaný majetek svěřený do užívání (tablet Samsung Gal TabA 10,5 LTE) na 7.437,00 Kč.",
+    "keywords": [
+     "pohledávka",
+     "bývalý místostarosta",
+     "neodevzdaný majetek",
+     "tablet",
+     "svěřený majetek"
+    ],
+    "topics": [
+     "rozpocet",
+     "organizace"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": [
+     "7.437,00 Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

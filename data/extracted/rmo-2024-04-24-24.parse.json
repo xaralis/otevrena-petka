@@ -1,0 +1,335 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "1fd19bfb68170b08a35ffdffd7dcc57131918d8f838cdce962b500992796b4f1",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 24,
+   "kind": "radne",
+   "date": "2024-04-24",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Návrh rozpočtových opatření",
+    "line": 70,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Dotace",
+    "line": 83,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Kontejnerové stání Pichlova Rokycanova“",
+    "line": 128,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Souhlas s umístěním pojízdného stánku na prodej zmrzliny v areálu Pod Vinicí",
+    "line": 138,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Souhlas zadavatele s uzavřením SOD – SmP a.s. Pardubice – „Výsadba rostlin v Arboretu Dukla“",
+    "line": 146,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2024",
+    "line": 161,
+    "speakers": []
+   },
+   {
+    "no": "8.",
+    "title": "Diskuse, závěr",
+    "line": 169,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "123/2024 R",
+    "agenda_no": "1.",
+    "first_line": 56,
+    "last_line": 67,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "124/2024 R",
+    "agenda_no": "2.",
+    "first_line": 74,
+    "last_line": 80,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "125/2024 R",
+    "agenda_no": "3.",
+    "first_line": 86,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "126/2024 R",
+    "agenda_no": "4.",
+    "first_line": 132,
+    "last_line": 135,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "127/2024 R",
+    "agenda_no": "5.",
+    "first_line": 141,
+    "last_line": 143,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "128/2024 R",
+    "agenda_no": "6.",
+    "first_line": 150,
+    "last_line": 158,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "129/2024 R",
+    "agenda_no": "7.",
+    "first_line": 164,
+    "last_line": 166,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 68,
+    "last_line": 68,
+    "resolution": "123/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "124/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "125/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 136,
+    "last_line": 136,
+    "resolution": "126/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 144,
+    "last_line": 144,
+    "resolution": "127/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 159,
+    "last_line": 159,
+    "resolution": "128/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 167,
+    "last_line": 167,
+    "resolution": "129/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 72: pod nadpisem bodu 2 „Návrh rozpočtových opatření“ je navíc zopakován nadpis bodu 1 „Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V“ (zřejmě chyba kopírování).",
+   "ř. 144: usnesení č. 127/2024 R má hlasování Pro 0, zdržel se 3, proti 0 – při 3 přítomných nemělo usnesení podporu, přesto má číslo; text výsledek výslovně neuvádí."
+  ]
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "3ac2eca6deb4cb84fab6d868697dbeffb67c522ee1afafbdad5930f5aac089ac",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 46,
+   "kind": "radne",
+   "date": "2021-10-14",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Bc. Jan Nadrchal",
+    "Evžen Erban",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 40,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 50,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "221/2021 R",
+    "agenda_no": "1",
+    "first_line": 43,
+    "last_line": 47,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 35,
+    "last_line": 35,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 34,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": "221/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

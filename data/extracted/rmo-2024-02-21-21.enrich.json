@@ -1,0 +1,108 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7d1758ffba57a9817ffb3ba933acdc621104deda658385c1f0d975aa38f8ae74",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "107/2024 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na Relaxační zónu Stará plovárna",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 20. 9. 2023 na akci „Relaxační zóna Stará Plovárna“ se zhotovitelem Gartensta plus s.r.o.",
+    "keywords": [
+     "Relaxační zóna Stará plovárna",
+     "Stará plovárna",
+     "dodatek ke smlouvě o dílo",
+     "Gartensta plus",
+     "rozhodnutí zadavatele",
+     "oddechová zóna"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Stará plovárna"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Gartensta plus s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "108/2024 R",
+    "title": "Stanovisko k výpůjčkám pozemků a odkoupení podílů pozemku p. p. č. 2499/138",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města: záměr výpůjčky části pozemku p. p. č. 2462/1 v k. ú. Pardubice Českému rodovému podílovému družstvu pro odpočinkové a vzdělávací místo, odkoupení dvou spoluvlastnických podílů id. 1/16 pozemku p. p. č. 2499/138 do vlastnictví města a výpůjčka části pozemku p. p. č. 229/2 v k. ú. Dražkovice Službám města Pardubic a.s. pro zpevněnou panelovou plochu u skládky. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "odkoupení spoluvlastnického podílu",
+     "pozemková komise",
+     "České rodové podílové družstvo",
+     "Služby města Pardubic",
+     "skládka",
+     "panelová plocha",
+     "Dražkovice",
+     "Pod Vinicí"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Pod Vinicí",
+     "Hůrka"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "p. p. č. 2463/1, k. ú. Pardubice",
+     "p. p. č. 2499/138, k. ú. Pardubice",
+     "p. p. č. 229/2, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "České rodové podílové družstvo",
+     "Služby města Pardubic a.s.",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "109/2024 R",
+    "title": "Stanovisko k pronájmu garážových stání v domě čp. 2721 v Sokolovské ulici",
+    "summary": "Rada souhlasí se záměrem města pronajmout garážová stání o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2721 v Sokolovské ulici (č. parc. st. 10089, k. ú. Pardubice) za účelem garážování vozidel; u druhého stání podle nabídnuté výše nájemného.",
+    "keywords": [
+     "garážové stání",
+     "pronájem garáže",
+     "parkování",
+     "Sokolovská",
+     "čp. 2721",
+     "komise pro nebytové prostory",
+     "nebytové prostory"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "čp. 2721",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "č. parc. st. 10089, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

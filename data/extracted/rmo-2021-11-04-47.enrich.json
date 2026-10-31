@@ -1,0 +1,163 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "30d01cd7ca44bfa90e8875b2169f3847bfca93122a18710c8d411b14bfcabed6",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "222/2021 R",
+    "title": "Souhlas s nájmem pozemku pod garáží, odkupem pozemku pod chodníkem a prodejem pozemku pro železnici",
+    "summary": "Stanovisko obvodu k žádostem pozemkové komise rady města: souhlas s nájmem st. p. č. 7007/23 pod řadovou garáží, s odkupem p. p. č. 2386/48 pod chodníkem do vlastnictví města za 1.000,- Kč/m2 a s prodejem p. p. č. 2802/33 Správě železnic pro stavbu „Modernizace trati Hradec Králové – Pardubice – Chrudim, 3.stavba, zdvoukolejnění Pardubice – Rosice nad Labem – Stéblová“.",
+    "keywords": [
+     "stanovisko k pozemkům",
+     "nájem pozemku",
+     "garáž",
+     "odkup pozemku",
+     "chodník",
+     "prodej pozemku",
+     "Správa železnic",
+     "zdvoukolejnění trati",
+     "modernizace trati Pardubice – Rosice nad Labem"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 7007/23, k. ú. Pardubice",
+     "p. p. č. 2386/48, k. ú. Pardubice",
+     "p. p. č. 2802/33, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice",
+     "Správa železnic, státní organizace"
+    ],
+    "amounts": [
+     "1.000,- Kč/m2"
+    ]
+   },
+   {
+    "number": "223/2021 R",
+    "title": "Úprava plánu společenských akcí na rok 2021 – přesun na rozsvěcení vánočního stromečku",
+    "summary": "Rada schvaluje přesun 30 tis. Kč v plánu společenských akcí MO Pardubice V na r. 2021 z akce Počítačový kurz na akci Rozsvěcení vánočního stromečku. Celkový rozpočet plánu zůstává 600 tis. Kč.",
+    "keywords": [
+     "plán společenských akcí",
+     "rozsvěcení vánočního stromečku",
+     "vánoční strom",
+     "počítačový kurz",
+     "přesun peněz",
+     "společenské akce 2021"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "30 tis. Kč",
+     "600 tis. Kč"
+    ]
+   },
+   {
+    "number": "224/2021 R",
+    "title": "Dotace na 14 akcí škol, školek a spolků (mikulášské, vánoční a další akce)",
+    "summary": "Rada schvaluje 14 dotací z rozpočtu MO Pardubice V podle Směrnice č. 28/2020 – mateřským a základním školám, spolkům a dalším organizacím na akce převážně v adventním a vánočním období (např. Mikulášský běh 2021, Mikulášská besídka SDH Dražkovice, Vánoce v azylovém domě). Ke každé dotaci schvaluje uzavření veřejnoprávní smlouvy a rozpočtové opatření č. 99–112.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "mateřská škola",
+     "základní škola",
+     "Mikulášský běh",
+     "Mikulášská besídka",
+     "vánoční akce",
+     "azylový dům",
+     "Pohádková zahrada",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Raisova 226, Pardubice",
+     "Čs. armády 2515, Pardubice",
+     "Benešovo náměstí 2115, Pardubice",
+     "Artura Krause 2344, Pardubice",
+     "Benešovo náměstí 590, Pardubice",
+     "Pohádková zahrada",
+     "Blato 72, Mikulovice",
+     "Dražkovice",
+     "Jungmannova 2550, Pardubice",
+     "Gorkého 867, Pardubice",
+     "K Blahobytu 727, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice - Jesničánky",
+     "Hvězda Pardubice z. s.",
+     "Mateřská škola Benešovo náměstí 2115, Pardubice",
+     "Základní škola a mateřská škola Pardubice, Artura Krause 2344",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Šumák z. s.",
+     "Sbor dobrovolných hasičů Dražkovice",
+     "SKP – CENTRUM, o. p. s.",
+     "Spolek pro podporu waldorfské pedagogiky v Pardubicích z. s.",
+     "Ratolest, dětská péče a léčebná rehabilitace"
+    ],
+    "amounts": [
+     "4.000,- Kč",
+     "4.000,- Kč",
+     "4.000,- Kč",
+     "10.000,- Kč",
+     "3.000,- Kč",
+     "5.000,- Kč",
+     "5.000,- Kč",
+     "6.000,- Kč",
+     "5.000,- Kč",
+     "9.700,- Kč",
+     "10.000,- Kč",
+     "10.000,- Kč",
+     "3.000,- Kč",
+     "2.880,- Kč"
+    ]
+   },
+   {
+    "number": "225/2021 R",
+    "title": "Rozpočtové opatření – přesun 25 tis. Kč na výdaje na parlamentní volby",
+    "summary": "Rada v rámci své pravomoci schvaluje přesun 25 tis. Kč z položky provoz ÚMO na položku výdaje na parlamentní volby, obojí v běžných výdajích kapitoly 14 – vnitřní správa.",
+    "keywords": [
+     "rozpočtové opatření",
+     "parlamentní volby",
+     "volby",
+     "provoz úřadu",
+     "vnitřní správa",
+     "přesun peněz"
+    ],
+    "topics": [
+     "rozpocet",
+     "organizace"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": [
+     "25 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

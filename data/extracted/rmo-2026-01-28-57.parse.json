@@ -1,0 +1,305 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "0a07cd561d47a9dff03e7580d2339e0a38f1fe572ce0bb77f3f7dcf18520aa14",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 57,
+   "kind": "radne",
+   "date": "2026-01-28",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Souhlas s umístěním pojízdného stánku na prodej zmrzliny v areálu Pod Vinicí",
+    "line": 119,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Výroční zpráva o poskytování informací za rok 2025 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím",
+    "line": 127,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Souhlas zadavatele s uzavřením smlouvy o dílo – Arboretum",
+    "line": 137,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Přijetí finančního daru, související rozpočtové opatření a úprava plánu společenských akcí MO Pardubice V na r. 2026",
+    "line": 146,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozhodnutí o výsledcích hlasování „Pětka sobě 2025“",
+    "line": 168,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Diskuse, závěr",
+    "line": 180,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "263/2026 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 116,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "264/2026 R",
+    "agenda_no": "2",
+    "first_line": 122,
+    "last_line": 124,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "265/2026 R",
+    "agenda_no": "3",
+    "first_line": 131,
+    "last_line": 134,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "266/2026 R",
+    "agenda_no": "4",
+    "first_line": 140,
+    "last_line": 144,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "267/2026 R",
+    "agenda_no": "5",
+    "first_line": 150,
+    "last_line": 165,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "268/2026 R",
+    "agenda_no": "6",
+    "first_line": 171,
+    "last_line": 178,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 45,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 117,
+    "last_line": 117,
+    "resolution": "263/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 125,
+    "last_line": 125,
+    "resolution": "264/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 135,
+    "resolution": "265/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 145,
+    "last_line": 145,
+    "resolution": "266/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 166,
+    "last_line": 166,
+    "resolution": "267/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 176,
+    "last_line": 176,
+    "resolution": "268/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 174–178: u usnesení 268/2026 R je hlasovací řádek (ř. 176) uprostřed výčtu – za bodem 2; následuje bod 3 „Výsadba stromořadí před DDM Delta: 400.000,- Kč“ (ř. 177) a věta „Tento bod byl stažen z programu jednání.“ (ř. 178). Z textu není jednoznačné, zda byl stažen jen bod 3 rozdělení, nebo celý materiál; hlasování 4-0-0 je uvedeno a číslo usnesení přiděleno.",
+   "ř. 89: termín realizace „II. – III.Q 2025“ u usnesení z ledna 2026 (pravděpodobně převzato ze žádosti)."
+  ]
+ }
+}

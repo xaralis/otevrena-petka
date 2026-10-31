@@ -1,0 +1,131 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "de24ea91d67ffcf8953bd1ee5b494d40ac6c4fae50cb562330902017e8969a96",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "18/2023 R",
+    "title": "Stanovisko k výpůjčce části p. p. č. 406/8 a k nájmu a prodeji části p. p. č. 460/2 v Dražkovicích",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města. Bod 1 se týká výpůjčky části pozemku p. p. č. 406/8 v k. ú. Dražkovice (27 m2) pro prodloužení přístupového chodníku a parkovací plochu u RD čp. 214 a následného odkupu zpevněných ploch městem za 1.000,- Kč; bod 2 nájmu a prodeje části pozemku p. p. č. 460/2 (cca 200 m2) pro komunikaci developerského projektu rodinných domů společnosti Bydlení Dražkovice s.r.o.",
+    "keywords": [
+     "Dražkovice",
+     "výpůjčka pozemku",
+     "nájem pozemku",
+     "prodej pozemku",
+     "chodník",
+     "parkovací místo",
+     "developerský projekt",
+     "rodinné domy",
+     "pozemková komise",
+     "Bydlení Dražkovice"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice",
+     "RD čp. 214"
+    ],
+    "parcels": [
+     "p. p. č. 406/8, k. ú. Dražkovice",
+     "p. p. č. 460/2, k. ú. Dražkovice",
+     "p. p. č. 174, k. ú. Dražkovice",
+     "p. p. č. 151/1, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Společnost Bydlení Dražkovice s.r.o.",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "19/2023 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2022",
+    "summary": "Rada schvaluje výroční zprávu o poskytování informací za rok 2022 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím. Tajemníkovi úřadu ukládá zveřejnit ji na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "poskytování informací",
+     "zákon 106/1999 Sb.",
+     "svobodný přístup k informacím",
+     "zveřejnění na webu",
+     "tajemník úřadu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "20/2023 R",
+    "title": "Revokace usnesení č. 9/2022 R o pohledávce za neodevzdaný tablet",
+    "summary": "Návrh na revokaci usnesení č. 9/2022 R ze dne 23. 11. 2022, kterým rada stanovila výši pohledávky obvodu za neodevzdaný svěřený majetek (tablet Samsung Gal TabA 10,5 LTE) ve výši 7.437,- Kč. Pohledávka se týká bývalého místostarosty obvodu.",
+    "keywords": [
+     "revokace usnesení",
+     "usnesení 9/2022 R",
+     "pohledávka",
+     "neodevzdaný majetek",
+     "tablet",
+     "bývalý místostarosta"
+    ],
+    "topics": [
+     "organizace",
+     "rozpocet"
+    ],
+    "kind": "jine",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": [
+     "7.437,- Kč"
+    ]
+   },
+   {
+    "number": "21/2023 R",
+    "title": "Přijetí finančních darů na péči o veřejnou zeleň v roce 2023",
+    "summary": "Rada souhlasí s přijetím finančních darů na péči o veřejnou zeleň na území obvodu v roce 2023: 10.000,- Kč od firmy M-BET s.r.o. a 1.500,- Kč od firmy HAMO systems s.r.o.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "M-BET",
+     "HAMO systems",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [
+     "K Dubině 690, Pardubice",
+     "ČSA 2006, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o.",
+     "HAMO systems s.r.o."
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "1.500,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "c09c37ff7c9dff73f941df13fcea3c71876dd5d44e46ce28526ed574cae6bf89",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 52,
+   "kind": "radne",
+   "date": "2025-10-15",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Jiří Rejda, DiS."
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 49,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174“",
+    "line": 54,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 65,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 74,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 2 ke Smlouvě o dílo na akci „Oprava chodníku ul. Lexova – západ, Revitalizace – Stavební úpravy parkových částí náměstí Dukelských hrdinů, Pardubice“",
+    "line": 108,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Stanovení termínů jednání RMO a ZMO Pardubice V na rok 2026",
+    "line": 121,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Dotace a rozpočtové opatření",
+    "line": 134,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Diskuse, závěr",
+    "line": 160,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "239/2025 R",
+    "agenda_no": "1",
+    "first_line": 58,
+    "last_line": 62,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "240/2025 R",
+    "agenda_no": "2",
+    "first_line": 68,
+    "last_line": 71,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "241/2025 R",
+    "agenda_no": "3",
+    "first_line": 77,
+    "last_line": 102,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "242/2025 R",
+    "agenda_no": "4",
+    "first_line": 113,
+    "last_line": 118,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "243/2025 R",
+    "agenda_no": "5",
+    "first_line": 124,
+    "last_line": 131,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "244/2025 R",
+    "agenda_no": "6",
+    "first_line": 137,
+    "last_line": 153,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 46,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "239/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "240/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": 1,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "241/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 119,
+    "last_line": 119,
+    "resolution": "242/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "243/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 154,
+    "last_line": 154,
+    "resolution": "244/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

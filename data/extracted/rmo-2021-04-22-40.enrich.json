@@ -1,0 +1,152 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e49a675c986781183beb770d61817564d2b44160a8bdeee9f59c7cfad584bc70",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "184/2021 R",
+    "title": "Souhlas se záměrem pronájmu garážového stání č. 16 v domě čp. 2721 v Sokolovské ulici",
+    "summary": "Rada souhlasí se záměrem města pronajmout garážové stání č. 16 o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2721 v Sokolovské ulici na stavebních parcelách č. 10089 a 10090, k. ú. Pardubice. Žadatelem je fyzická osoba.",
+    "keywords": [
+     "pronájem garáže",
+     "garážové stání",
+     "nájem nebytových prostorů",
+     "Sokolovská",
+     "čp. 2721",
+     "stanovisko obvodu",
+     "parkování"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova čp. 2721",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "stavební parcely č. 10089 a 10090, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "185/2021 R",
+    "title": "Souhlas s výpůjčkou části pozemku p. p. č. 4853/1 pro 3 parkovací místa SKP - CENTRUM",
+    "summary": "Rada na žádost pozemkové komise rady města souhlasí s výpůjčkou části pozemku p. p. č. 4853/1 o výměře 38 m2, k. ú. Pardubice. Pozemek má sloužit jako 3 parkovací místa pro osobní automobily ošetřovatelské služby SKP - CENTRUM, o. p. s.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "parkovací místa",
+     "parkování",
+     "ošetřovatelská služba",
+     "SKP - CENTRUM",
+     "pozemková komise",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 4853/1, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SKP - CENTRUM, o. p. s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "186/2021 R",
+    "title": "Dotace z programu MO Pardubice V na rok 2021 – 13 žádostí spolků a škol",
+    "summary": "Rada hlasovala po jednotlivých bodech o poskytnutí dotací z Programu pro poskytování dotací z rozpočtu MO Pardubice V v r. 2021 dle směrnice č. 28/2020, o uzavření veřejnoprávních smluv a souvisejících rozpočtových opatřeních č. 16–28. Žadateli jsou mj. Šumák z. s., Hvězda Pardubice z. s., NOE – Křesťanská ZŠ a MŠ, MŠ Kamarád, Pardubický klub kouzel a magie, MŠ Motýlek, SK Dražkovice, TAJV, z. s. a Pardubická KOZA z. s. (individuální dotace na komunitní kompostéry); bod 8 byl stažen.",
+    "keywords": [
+     "dotace",
+     "dotační program 2021",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "dětský den",
+     "atletika",
+     "kompostéry",
+     "muzeum kouzel",
+     "spolky"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Blato 72, Mikulovice",
+     "Československé armády 2515",
+     "Lonkova 512",
+     "Teplého 2100",
+     "Jana Palacha 473",
+     "Josefa Ressla 1992",
+     "Dražkovice 235",
+     "Sportovní 158, Poděbrady",
+     "Bubeníkova 520"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Šumák z. s.",
+     "Hvězda Pardubice z. s.",
+     "NOE – Křesťanská základní škola a mateřská škola v Pardubicích",
+     "Mateřská škola Kamarád Pardubice",
+     "Pardubický klub kouzel a magie, z. s.",
+     "Mateřská škola Motýlek Pardubice",
+     "Sportovní klub Dražkovice",
+     "TAJV, z. s.",
+     "Pardubická KOZA z. s."
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "4.500,- Kč",
+     "8.000,- Kč",
+     "9.990,- Kč",
+     "8.250,- Kč",
+     "3.000,- Kč"
+    ]
+   },
+   {
+    "number": "187/2021 R",
+    "title": "Změna termínu dvou dotací pro Atletiku Bez Bariér do 30. 11. 2021",
+    "summary": "Rada souhlasí se změnou termínu splnění účelu dvou již schválených dotací po 10.000,- Kč pro Atletika Bez Bariér z. s. na akce „Velká cena Pardubic v atletice handicapovaných“ a „Školní atletický parapohár“. Účel dotací má být splněn nejdéle 30. 11. 2021.",
+    "keywords": [
+     "dotace",
+     "změna termínu",
+     "Atletika Bez Bariér",
+     "atletika handicapovaných",
+     "parapohár",
+     "sport zdravotně postižených"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Čs. armády 2515"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Atletika Bez Bariér z. s."
+    ],
+    "amounts": [
+     "10.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3ac2eca6deb4cb84fab6d868697dbeffb67c522ee1afafbdad5930f5aac089ac",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "221/2021 R",
+    "title": "Souhlas s výpůjčkou části pozemku p. p. č. 2306/4 pro komunitní zahradu DDM ALFA",
+    "summary": "Rada obvodu na žádost pozemkové komise rady města Pardubice souhlasí s výpůjčkou části pozemku p. p. č. 2306/4 o výměře 1.500 m2 v k. ú. Pardubice Domu dětí a mládeže ALFA Pardubice-Polabiny. Pozemek má sloužit k realizaci projektu Komunitní zahrada ve spolupráci se spolkem Pardubická KOZA z.s.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "komunitní zahrada",
+     "Dům dětí a mládeže ALFA",
+     "DDM ALFA",
+     "Pardubická KOZA",
+     "pozemková komise",
+     "stanovisko k žádosti města",
+     "Polabiny"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "zelen"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "Družby 334, Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2306/4, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Dům dětí a mládeže ALFA Pardubice-Polabiny",
+     "Pardubická KOZA z.s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

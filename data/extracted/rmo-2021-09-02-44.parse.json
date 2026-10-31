@@ -1,0 +1,492 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "029aa7aa27c208b4d4a577bddeb2b56ecee1836328b88927f32413fdc9ecd91d",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 44,
+   "kind": "radne",
+   "date": "2021-09-02",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Evžen Erban",
+    "Ing. Jiří Janoš"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 52,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 120,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke smlouvě o poskytování služeb na výsyp odpadkových košů na území MO Pardubice V",
+    "line": 133,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Změna užívání drobné provozovny na knihovnu, Josefa Ressla 2278, Pardubice“",
+    "line": 143,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Dotace – změna termínu schválených dotací",
+    "line": 155,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Návrh na prodej nákladního přívěsu",
+    "line": 164,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 177,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "209/2021 R",
+    "agenda_no": "1",
+    "first_line": 55,
+    "last_line": 118,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "210/2021 R",
+    "agenda_no": "2",
+    "first_line": 124,
+    "last_line": 130,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "211/2021 R",
+    "agenda_no": "3",
+    "first_line": 137,
+    "last_line": 140,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "212/2021 R",
+    "agenda_no": "4",
+    "first_line": 148,
+    "last_line": 152,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "213/2021 R",
+    "agenda_no": "5",
+    "first_line": 158,
+    "last_line": 161,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "214/2021 R",
+    "agenda_no": "6",
+    "first_line": 167,
+    "last_line": 174,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 59,
+    "last_line": 59,
+    "resolution": "209/2021 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 67,
+    "last_line": 67,
+    "resolution": "209/2021 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "209/2021 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 1,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "209/2021 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "209/2021 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 94,
+    "last_line": 94,
+    "resolution": "209/2021 R",
+    "part": "bod 6",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "209/2021 R",
+    "part": "bod 7",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 108,
+    "last_line": 108,
+    "resolution": "209/2021 R",
+    "part": "bod 8",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 2,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "209/2021 R",
+    "part": "bod 9",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "209/2021 R",
+    "part": "bod 10",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 131,
+    "last_line": 131,
+    "resolution": "210/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 141,
+    "last_line": 141,
+    "resolution": "211/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 153,
+    "last_line": 153,
+    "resolution": "212/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 162,
+    "last_line": 162,
+    "resolution": "213/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 175,
+    "last_line": 175,
+    "resolution": "214/2021 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 10: datum v textu „2. září na 2021“ (překlep), dle ř. 183 jde o 2. 9. 2021.",
+   "ř. 45–47: v programu jsou tři informativní zprávy bez čísla; v projednávané části se neobjevují.",
+   "usnesení 209/2021 R: hlasovalo se o 10 bodech zvlášť; body 3 (ř. 72), 8 (ř. 108) a 10 (ř. 118) jsou označeny „usnesení nebylo přijato“, ostatní body výsledek výslovně neuvádějí."
+  ]
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7ddb271733f0bc54a16a993d52af552bf88774d9dfb2a99afda6ffdc27dedf6c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "131/2024 R",
+    "title": "Souhlas se záměrem pronájmu skladu v areálu stadionu v ul. ČSA",
+    "summary": "Rada souhlasí se záměrem města pronajmout nebytový prostor o výměře 25 m2 v objektu čp. 2515 v areálu stadionu v ul. ČSA a V Ráji. Žadatelem je KOLUMBIJSKÁ KÁVA s.r.o., účelem nájmu je sklad.",
+    "keywords": [
+     "pronájem nebytového prostoru",
+     "nájem",
+     "sklad",
+     "stadion",
+     "ČSA",
+     "V Ráji",
+     "KOLUMBIJSKÁ KÁVA",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál stadionu",
+     "čp. 2515",
+     "ul. ČSA",
+     "č. p. 311, ul. V Ráji",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 5381, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "KOLUMBIJSKÁ KÁVA s.r.o.",
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "132/2024 R",
+    "title": "Stanovisko k záměrům pozemkové komise – kanalizace Široká, směna s armádou, Terminál JIH, lávka u nádraží",
+    "summary": "Rada souhlasí se záměry města: věcné břemeno pro bezvýkopovou opravu kanalizace v ul. Široká (Vodovody a kanalizace Pardubice, a.s.), směnná smlouva a věcná břemena s Ministerstvem obrany kvůli vjezdu vojenských vozidel do kasáren, rozšíření nájmu pozemků Českých drah pro investiční akci „Terminál JIH, Pardubice“ a věcné břemeno k pozemkům Českých drah pro lávku pro pěší u nádraží v rámci „Modernizace železničního uzlu Pardubice“.",
+    "keywords": [
+     "věcné břemeno",
+     "kanalizace",
+     "Široká",
+     "směna pozemků",
+     "Ministerstvo obrany",
+     "kasárna",
+     "Terminál JIH",
+     "nájem pozemků",
+     "lávka pro pěší",
+     "nádraží"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "investice"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "ul. Široká",
+     "ul. Milheimova",
+     "ul. Teplého",
+     "Hůrka",
+     "areál kasáren",
+     "nádraží ČD",
+     "Terminál JIH",
+     "k. ú. Pardubice",
+     "k. ú. Semtín",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 2341/1, k. ú. Pardubice",
+     "p. p. č. 2600/4, k. ú. Pardubice",
+     "p. p. č. 174/11, k. ú. Semtín",
+     "p. p. č. 173/1, k. ú. Semtín",
+     "p. p. č. 376/1, k. ú. Semtín",
+     "p. p. č. 2155/15, k. ú. Pardubice",
+     "p. p. č. 987/14, k. ú. Pardubice",
+     "p. p. č. 987/22, k. ú. Pardubice",
+     "p. p. č. 987/23, k. ú. Pardubice",
+     "p. p. č. 2720/4, k. ú. Pardubice",
+     "st. p. č. 7072, k. ú. Pardubice",
+     "p. p. č. 2987/2, k. ú. Pardubice",
+     "p. p. č. 468/6, k. ú. Dražkovice",
+     "p. p. č. 262/5, k. ú. Dražkovice",
+     "p. p. č. 468/4, k. ú. Dražkovice",
+     "p. p. č. 2124/4, k. ú. Pardubice",
+     "p. p. č. 2303/18, k. ú. Pardubice",
+     "p. p. č. 2798/36, k. ú. Pardubice",
+     "p. p. č. 2149/8, k. ú. Pardubice",
+     "p. p. č. 2798/48, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "statutární město Pardubice",
+     "Ministerstvo obrany",
+     "Agentura hospodaření s nemovitým majetkem MO – oddělení územní správy nemovitého majetku Pardubice",
+     "České dráhy, a.s.",
+     "Správa železnic, státní organizace",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "100,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "133/2024 R",
+    "title": "Souhlas s umístěním pojízdného stánku se zmrzlinou v areálu Pod Vinicí",
+    "summary": "Rada souhlasí s umístěním pojízdného stánku na prodej zmrzliny o ploše 12 m2 v areálu Pod Vinicí, a to od vydání souhlasu do 31. 10. 2024.",
+    "keywords": [
+     "stánek",
+     "zmrzlina",
+     "pojízdný stánek",
+     "Pod Vinicí",
+     "zábor veřejného prostranství",
+     "prodej"
+    ],
+    "topics": [
+     "cistota",
+     "ostatni"
+    ],
+    "kind": "jine",
+    "places": [
+     "areál Pod Vinicí"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "134/2024 R",
+    "title": "Souhlas s předzahrádkou před Cherry Bar v ul. Devotyho",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 7,2 m2 na chodníku před provozovnou Cherry Bar v ul. Devotyho čp. 2452, a to od 1. 6. 2024 do 31. 10. 2024 v době od 15.00 do 22.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "Cherry Bar",
+     "Devotyho",
+     "chodník",
+     "zábor veřejného prostranství",
+     "restaurace"
+    ],
+    "topics": [
+     "cistota",
+     "ostatni"
+    ],
+    "kind": "jine",
+    "places": [
+     "Cherry Bar",
+     "ul. Devotyho čp. 2452"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "135/2024 R",
+    "title": "Zakázka „Zpevnění komunikace Lesopark“ – smlouva o dílo s MIROS Pardubice a.s.",
+    "summary": "Rada na základě výběru nejvhodnější nabídky v zakázce malého rozsahu souhlasí s uzavřením smlouvy o dílo na akci „Zpevnění komunikace Lesopark“ se společností MIROS Pardubice a.s. za nabídkovou cenu 1 905 118,69 Kč bez DPH.",
+    "keywords": [
+     "veřejná zakázka",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "Lesopark",
+     "zpevnění komunikace",
+     "cesta",
+     "MIROS Pardubice"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Lesopark"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "1 905 118,69 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

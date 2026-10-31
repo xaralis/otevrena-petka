@@ -1,0 +1,229 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e86045f9e55c6596e2c3938388c8bc71fa85d0574d4b32ce591259adc752b6cc",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 53,
+   "kind": "radne",
+   "date": "2025-11-05",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Dotace",
+    "line": 54,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Stavební úpravy vnitrobloku ul. Pichlova-Rokycanova-K Višňovce“",
+    "line": 83,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 3 ke Smlouvě o dílo na akci „Oprava chodníku ul. Lexova – západ, Revitalizace – Stavební úpravy parkových částí náměstí Dukelských hrdinů, Pardubice“",
+    "line": 94,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh rozpočtových opatření",
+    "line": 112,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Diskuse, závěr",
+    "line": 124,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "245/2025 R",
+    "agenda_no": "1",
+    "first_line": 56,
+    "last_line": 79,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "246/2025 R",
+    "agenda_no": "2",
+    "first_line": 86,
+    "last_line": 90,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "247/2025 R",
+    "agenda_no": "3",
+    "first_line": 98,
+    "last_line": 108,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "248/2025 R",
+    "agenda_no": "4",
+    "first_line": 114,
+    "last_line": 120,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 44,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 80,
+    "last_line": 80,
+    "resolution": "245/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "246/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 109,
+    "last_line": 109,
+    "resolution": "247/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 121,
+    "last_line": 121,
+    "resolution": "248/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "bcd8f056b1722c76055de57230b439b3f5d45c7eba8b4d4f0e829f65a54ee001",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 25,
+   "kind": "mimoradne",
+   "date": "2024-05-09",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Návrh rozpočtových opatření",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Diskuse, závěr",
+    "line": 58,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "130/2024 R",
+    "agenda_no": "1",
+    "first_line": 48,
+    "last_line": 54,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 55,
+    "last_line": 55,
+    "resolution": "130/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

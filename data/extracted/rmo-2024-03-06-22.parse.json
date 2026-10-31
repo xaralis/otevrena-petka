@@ -1,0 +1,403 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "b90a437069cdd0b3d3af817019dcc0a2a34641be65e90ab8e8b3aad66e6975e1",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 22,
+   "kind": "mimoradne",
+   "date": "2024-03-06",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 22,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 32,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Směrnice č. 14/2024: Zadávací řád veřejných zakázek",
+    "line": 48,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2023",
+    "line": 58,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Odpisový plán na r. 2024",
+    "line": 68,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "1. změna rozpočtu MO Pardubice V na rok 2024",
+    "line": 78,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Doporučení KSROŽPD – pořízení integrované strategie územního rozvoje",
+    "line": 101,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Doporučení KSROŽPD – náhrada místních komisí",
+    "line": 118,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Schválení investičních záměrů",
+    "line": 137,
+    "speakers": []
+   },
+   {
+    "no": "8.",
+    "title": "Diskuse, závěr",
+    "line": 148,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "110/2024 R",
+    "agenda_no": "1.",
+    "first_line": 53,
+    "last_line": 54,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "111/2024 R",
+    "agenda_no": "2.",
+    "first_line": 60,
+    "last_line": 64,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "112/2024 R",
+    "agenda_no": "3.",
+    "first_line": 70,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "113/2024 R",
+    "agenda_no": "4.",
+    "first_line": 80,
+    "last_line": 97,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "114/2024 R",
+    "agenda_no": "5.",
+    "first_line": 106,
+    "last_line": 114,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "115/2024 R",
+    "agenda_no": "6.",
+    "first_line": 120,
+    "last_line": 131,
+    "responsible": "J. Šmaha, tajemník ÚMO",
+    "deadline": "31.08.2024"
+   },
+   {
+    "number": "116/2024 R",
+    "agenda_no": "7.",
+    "first_line": 139,
+    "last_line": 144,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (programu)",
+    "proposer": null,
+    "motion_first_line": 34,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 55,
+    "last_line": 55,
+    "resolution": "110/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "111/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": "112/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "113/2024 R",
+    "part": "bod 1 – komentář k 1. změně rozpočtu na r. 2024 (bere na vědomí)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 89,
+    "last_line": 89,
+    "resolution": "113/2024 R",
+    "part": "bod 2 – rozpočtová opatření v bodech č. 1-14 důvodové zprávy",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 92,
+    "last_line": 92,
+    "resolution": "113/2024 R",
+    "part": "bod 3 – rozpočtové opatření v bodě č. 15 důvodové zprávy",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 98,
+    "last_line": 98,
+    "resolution": "113/2024 R",
+    "part": "bod 4 – výzva k participativnímu rozpočtu (až 1 mil. Kč)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 115,
+    "last_line": 115,
+    "resolution": "114/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 134,
+    "last_line": 134,
+    "resolution": "115/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 145,
+    "last_line": 145,
+    "resolution": "116/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 70–74: znění usnesení 112/2024 R (bod 3 Odpisový plán na r. 2024) je doslovně totožné se zněním 111/2024 R (ř. 60–64, rozbor hospodaření k 31. 12. 2023) – zřejmě chyba kopírování ve zdroji; znění o odpisovém plánu v dokumentu chybí.",
+   "ř. 92: dílčí hlasování o bodu 3 usnesení 113/2024 R skončilo Pro 0, zdržel se 1, proti 4; text usnesení přesto bod 3 „Schvaluje …“ uvádí, výsledek výslovně neuvedeno.",
+   "ř. 115: usnesení 114/2024 R hlasování Pro 0, zdržel se 2, proti 3 – nepřijato, ačkoli má číslo usnesení; výsledek text výslovně neuvádí.",
+   "ř. 134: usnesení 115/2024 R hlasování Pro 1, zdržel se 4, proti 0 – při 5 přítomných nedosaženo většiny, ačkoli má číslo usnesení a Z/T; výsledek text výslovně neuvádí.",
+   "ř. 88: překlep „k 1. změně rozpočtu.t“ ve zdroji."
+  ]
+ }
+}

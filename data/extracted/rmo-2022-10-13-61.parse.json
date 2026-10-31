@@ -1,0 +1,253 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "5081e8d2735041ee6e3f7512f5ab3086248ace9956e11d43dd812231f632af5b",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 61,
+   "kind": "radne",
+   "date": "2022-10-13",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák",
+    "Evžen Erban"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 45,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Peněžité dary členům komisí RMO Pardubice V – nečlenům ZMO Pardubice V",
+    "line": 65,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Poskytnutí peněžních darů",
+    "line": 99,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2022",
+    "line": 113,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Dotace",
+    "line": 123,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 226,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "321/2022 R",
+    "agenda_no": "1.",
+    "first_line": 49,
+    "last_line": 62,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "322/2022 R",
+    "agenda_no": "2.",
+    "first_line": 68,
+    "last_line": 96,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "323/2022 R",
+    "agenda_no": "3.",
+    "first_line": 102,
+    "last_line": 110,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "324/2022 R",
+    "agenda_no": "4.",
+    "first_line": 116,
+    "last_line": 120,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "325/2022 R",
+    "agenda_no": "5.",
+    "first_line": 126,
+    "last_line": 223,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "321/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 97,
+    "last_line": 97,
+    "resolution": "322/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 111,
+    "last_line": 111,
+    "resolution": "323/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 121,
+    "last_line": 121,
+    "resolution": "324/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 224,
+    "last_line": 224,
+    "resolution": "325/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

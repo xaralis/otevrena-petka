@@ -1,0 +1,183 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "a09e349b71065a9111460a1cd6f9444538d7a2e87ca48be79f1d2d6ac70e71e3",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "79/2023 R",
+    "title": "Dodatek č. 2 ke smlouvě o výsypu odpadkových košů se Službami města Pardubice",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 2 ke smlouvě o výsypu a pronájmu odpadkových košů se společností Služby města Pardubice a.s. Počet vysypávaných košů se zvyšuje o 1 na 302 a mění se jejich vlastnictví (241 ks města, 61 ks obvodu); ceny za výsyp se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "úklid",
+     "odpady"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "80/2023 R",
+    "title": "Dotace na podzimní a vánoční akce škol, spolků a organizací (10 žadatelů)",
+    "summary": "Rada schvaluje deset dotací z programu podle Směrnice č. 28/2022 na akce pro děti, rodiny a veřejnost (svatomartinské a mikulášské akce, Mikulášský běh, adventní a vánoční programy, Strašidelná noc aj.), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 109–121. Žadateli jsou mateřské a základní školy, Hvězda Pardubice, Šumák, DDM ALFA, SDH Dražkovice a SKP-CENTRUM.",
+    "keywords": [
+     "dotace",
+     "Svatomartinské slavnosti",
+     "Mikulášská besídka",
+     "Mikulášský běh",
+     "Strašidelná noc",
+     "Adventní čas",
+     "Vánoce v azylovém domě",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Benešovo náměstí",
+     "Pohádková zahrada",
+     "Dražkovice",
+     "Jesničánky"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "Mateřská škola Motýlek Pardubice",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Hvězda Pardubice z. s.",
+     "Šumák z. s.",
+     "Dům dětí a mládeže ALFA Pardubice",
+     "DDM Delta",
+     "SDH Dražkovice",
+     "SKP - CENTRUM, o. p. s.",
+     "Mateřská škola Pardubice-Jesničánky"
+    ],
+    "amounts": [
+     "7.000,- Kč",
+     "6 599,- Kč",
+     "401,-- Kč",
+     "2.000,- Kč",
+     "6.000,- Kč",
+     "4.000,- Kč",
+     "5.000,- Kč",
+     "4.451,- Kč",
+     "3.000,- Kč",
+     "800,-- Kč",
+     "200,-- Kč"
+    ]
+   },
+   {
+    "number": "81/2023 R",
+    "title": "Stanovisko k žádosti pozemkové komise: prodej, vklad pozemků a věcná břemena ČEZ",
+    "summary": "Stanovisko obvodu k pěti záměrům města, o nichž se hlasovalo jednotlivě: prodej pozemku pod domem S. K. Neumanna 2504–2506 společenství vlastníků, převod nemovitostí „Staré vojenské plovárny“ do Rozvojového fondu Pardubice a.s. formou navýšení základního jmění a tři věcná břemena pro ČEZ Distribuce, a. s. na uložení kabelového vedení NN (U Krematoria, Nemošická, kpt. Nálepky).",
+    "keywords": [
+     "pozemková komise",
+     "prodej pozemku",
+     "věcné břemeno",
+     "Stará vojenská plovárna",
+     "Rozvojový fond Pardubice",
+     "ČEZ Distribuce",
+     "kabelové vedení",
+     "S. K. Neumanna",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "S. K. Neumanna 2504-2506",
+     "Stará vojenská plovárna",
+     "Zelené Předměstí",
+     "U Krematoria",
+     "Nemošická",
+     "kpt. Nálepky",
+     "k. ú. Pardubice",
+     "k. ú. Nemošice"
+    ],
+    "parcels": [
+     "st. p. č. 4967, k. ú. Pardubice",
+     "p. p. č. 2774/42, k. ú. Pardubice",
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "st. p. č. 11286, k. ú. Pardubice",
+     "st. p. č. 5506, k. ú. Pardubice",
+     "st. p. č. 5507, k. ú. Pardubice",
+     "p. p. č. 2404/70, k. ú. Pardubice",
+     "p. p. č. 2390/23, k. ú. Pardubice",
+     "p. p. č. 2403/38, k. ú. Pardubice",
+     "p. p. č. 3276/1, k. ú. Pardubice",
+     "p. p. č. 2580/4, k. ú. Pardubice",
+     "p. p. č. 2393/251, k. ú. Pardubice",
+     "p. p. č. 2581/4, k. ú. Pardubice",
+     "p. p. č. 3277/1, k. ú. Pardubice",
+     "p. p. č. 25874/10, k. ú. Pardubice",
+     "p. p. č. 553/1, k. ú. Nemošice",
+     "p. p. č. 2252/1, k. ú. Pardubice",
+     "p. p. č. 2252/5, k. ú. Pardubice",
+     "p. p. č. 2252/10, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Společenství vlastníků S. K. Neumanna 2504-6, Pardubice",
+     "Rozvojový fond Pardubice a.s.",
+     "ČEZ Distribuce, a. s."
+    ],
+    "amounts": [
+     "409.150,- Kč"
+    ]
+   },
+   {
+    "number": "82/2023 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na stavební úpravy vnitrobloku Jiránkova",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 14. 7. 2023 na stavební úpravy vnitrobloku ul. Jiránkova č.p. 2206–2208 a 2246–2248 se zhotovitelem CHRPA stavební spol. s r.o. Po započtení víceprací a méněprací činí cena 2.735.528,56 Kč bez DPH oproti původním 2.592.629,10 Kč bez DPH.",
+    "keywords": [
+     "vnitroblok Jiránkova",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "méněpráce",
+     "CHRPA stavební",
+     "stavební úpravy",
+     "veřejná zakázka"
+    ],
+    "topics": [
+     "investice",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Jiránkova č.p. 2206-2208",
+     "Jiránkova č.p. 2246-2248"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební spol. s r.o."
+    ],
+    "amounts": [
+     "2.735.528,56 Kč bez DPH",
+     "2.592.629,10 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

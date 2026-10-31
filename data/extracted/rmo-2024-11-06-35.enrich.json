@@ -1,0 +1,82 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7b053bc2b5f2ab4c8d872271efa1ab3bfb4a1314790194b75da01407b6783c58",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "170/2024 R",
+    "title": "Harmonogram jednání RMO a ZMO Pardubice V na rok 2025",
+    "summary": "Rada schvaluje termíny jednání Rady a Zastupitelstva městského obvodu Pardubice V na rok 2025. Zastupitelstvo zasedne 12. 3., 25. 6., 24. 9. a 17. 12. 2025, rada v dalších termínech od 8. 1. do 17. 12. 2025.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram jednání 2025",
+     "jednání rady",
+     "zasedání zastupitelstva",
+     "kalendář schůzí",
+     "RMO",
+     "ZMO"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "171/2024 R",
+    "title": "Souhlas se záměry města: pronájem parkovacího místa a věcná břemena pro VaK a ČEZ",
+    "summary": "Rada na žádost pozemkové komise rady města souhlasí se záměrem pronájmu pozemku p. p. č. 2515/18 o výměře 14 m2 pro parkovací místo u bytového domu Na Spravedlnosti 2767 fyzické osobě. Dále souhlasí se zřízením budoucího věcného břemene a věcného břemene pro Vodovody a kanalizace Pardubice, a. s., na uložení kanalizačního a vodovodního řadu v rámci akce „Pardubice, S. K. Neumanna – SVO – SO 01“ a pro ČEZ Distribuce, a. s., na uložení kabelového vedení NN v rámci akce „PA Pardubice Čacké knn“.",
+    "keywords": [
+     "stanovisko k záměru města",
+     "pronájem pozemku",
+     "parkovací místo",
+     "parkování",
+     "věcné břemeno",
+     "vodovod",
+     "kanalizace",
+     "kabelové vedení NN",
+     "Na Spravedlnosti",
+     "S. K. Neumanna"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Na Spravedlnosti 2767",
+     "S. K. Neumanna",
+     "Čacké",
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany"
+    ],
+    "parcels": [
+     "p. p. č. 2515/18, k. ú. Pardubice",
+     "p. p. č. 2398/2, k. ú. Pardubice",
+     "p. p. č. 2442/14, k. ú. Pardubice",
+     "p. p. č. 2442/15, k. ú. Pardubice",
+     "p. p. č. 2499/105, k. ú. Pardubice",
+     "p. p. č. 2426/38, k. ú. Pardubice",
+     "p. p. č. 2/12, k. ú. Nové Jesenčany",
+     "p. p. č. 2347/41, k. ú. Pardubice",
+     "p. p. č. 2347/42, k. ú. Pardubice",
+     "p. p. č. 2360, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Vodovody a kanalizace Pardubice, a. s.",
+     "ČEZ Distribuce, a. s."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

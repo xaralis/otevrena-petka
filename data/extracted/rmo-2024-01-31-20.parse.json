@@ -1,0 +1,191 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "8e2c189f7fd4432315c23c92831e9526f8412f1f5d692327e96dfc0828966eec",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 20,
+   "kind": "radne",
+   "date": "2024-01-31",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [
+    "Jiří Rejda, DiS."
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 45,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Přijetí finančního daru",
+    "line": 58,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Smlouva o výpůjčce motorových vozidel",
+    "line": 66,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 75,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "104/2024 R",
+    "agenda_no": "1",
+    "first_line": 48,
+    "last_line": 55,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "105/2024 R",
+    "agenda_no": "2",
+    "first_line": 61,
+    "last_line": 63,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "106/2024 R",
+    "agenda_no": "3",
+    "first_line": 69,
+    "last_line": 72,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 40,
+    "last_line": 40,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 39,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": "104/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "105/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "106/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 62: IČ dárce M-BET s.r.o. uvedeno jako 275211176 (9 číslic, IČ má mít 8).",
+   "ř. 92: usnesení podepisuje jako starosta Jiří Rejda, DiS., který byl podle ř. 15 omluven."
+  ]
+ }
+}

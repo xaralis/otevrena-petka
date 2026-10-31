@@ -1,0 +1,185 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "6574c1c9f45f8761bf615b1e825efbcaa3df4822dd245673659a7c4cccdde38d",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 60,
+   "kind": "mimoradne",
+   "date": "2022-09-21",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zrušení komisí Rady městského obvodu Pardubice V a odvolání jejich předsedů a členů",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke smlouvě o dílo na akci „Rekonstrukce chodníku Dražkovice mezi č.p. 128 a č.p. 140, SO 101“",
+    "line": 91,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 106,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "318/2022 R",
+    "agenda_no": "1",
+    "first_line": 51,
+    "last_line": 70,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "319/2022 R",
+    "agenda_no": "2",
+    "first_line": 76,
+    "last_line": 88,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "320/2022 R",
+    "agenda_no": "3",
+    "first_line": 95,
+    "last_line": 100,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 71,
+    "last_line": 71,
+    "resolution": "318/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 89,
+    "last_line": 89,
+    "resolution": "319/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 1,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 101,
+    "last_line": 101,
+    "resolution": "320/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 89: usnesení 319/2022 R má číslo, ale hlasování Pro 0, zdržel se 3, proti 1 – návrh zřejmě nebyl přijat; text výsledek výslovně neuvádí.",
+   "ř. 41: v seznamu materiálů je bez čísla uvedena „Informativní zpráva – investice“, v části III. se samostatně neprojednává."
+  ]
+ }
+}

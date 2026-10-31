@@ -1,0 +1,227 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "8a824d0152b732549a236c8cecf9f4fd6ffe8e81b39931e1872e85bece1f0900",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "188/2021 R",
+    "title": "Stanovisko k záměrům pronájmu garáží, garážového stání a kanceláře v majetku města",
+    "summary": "Rada souhlasí se záměry pronájmu nebytových prostorů v majetku města na území obvodu: dvou garáží v areálu MAS (st. p. č. 7007/32 a 7007/34), garážového stání v ul. Sokolovská 2721 a kanceláře v areálu čp. 324 Jana Palacha pro SKP – CENTRUM, o.p.s., jako kontaktního pracoviště jejích sociálních služeb. Ostatními žadateli jsou fyzické osoby.",
+    "keywords": [
+     "nájem nebytových prostorů",
+     "pronájem garáže",
+     "garážové stání",
+     "areál MAS",
+     "Sokolovská",
+     "Jana Palacha",
+     "kancelář",
+     "SKP – CENTRUM",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál MAS",
+     "Sokolovská 2721, Pardubice",
+     "areál čp. 324 Jana Palacha, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "stavební parcela č. 7007/32, k. ú Pardubice",
+     "st. p. č. 864/23, k. ú. Pardubice",
+     "st. p. č. 7007/34, k. ú Pardubice"
+    ],
+    "organizations": [
+     "SKP – CENTRUM, o.p.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "189/2021 R",
+    "title": "Stanovisko k žádostem pozemkové komise – nájmy, věcná břemena GasNet, pozemky u prodejny Lidl",
+    "summary": "Rada se vyjadřuje k sedmi žádostem pozemkové komise rady města: nájem části pozemku v Dražkovicích na pěstování květin, dvě věcná břemena pro plynárenská zařízení společnosti GasNet, s. r. o. (akce „Reko MS Pardubice - Jana Palacha+3“ a „Reko MS Pardubice – Marty Exnarové+1“), výpůjčka pozemků a odkoupení oprav komunikace za 1.000,- Kč a budoucí bezúplatný převod pozemku pod chodníky v souvislosti se stavbou prodejny Lidl Česká republika v. o. s. v lokalitě S. K. Neumanna, nájem pozemku pro parkovací stání a výpůjčka pozemku pro parkovací místo držitele průkazu ZTP. O jednotlivých bodech se hlasovalo samostatně.",
+    "keywords": [
+     "pozemková komise",
+     "věcné břemeno",
+     "plynovod",
+     "GasNet",
+     "Lidl",
+     "prodejna Lidl",
+     "S. K. Neumanna",
+     "parkovací stání",
+     "parkovací místo ZTP",
+     "Dražkovice"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice",
+     "k. ú. Pardubice",
+     "Jana Palacha",
+     "Marty Exnarové",
+     "S. K. Neumanna"
+    ],
+    "parcels": [
+     "p. p. č. 22/1, k. ú. Dražkovice",
+     "p. p. č. 2316/1",
+     "p. p. č. 2316/20",
+     "p. p. č. 2335/39",
+     "p. p. č. 2338/2",
+     "p. p. č. 2338/4",
+     "p. p. č. 2338/5",
+     "p. p. č. 2338/6",
+     "p. p. č. 2404/57",
+     "p. p. č. 2583/19",
+     "p. p. č. 2404/19",
+     "p. p. č. 2406/9",
+     "p. p. č. 2406/23",
+     "p. p. č. 2406/24",
+     "p. p. č. 2406/25",
+     "p. p. č. 2406/28",
+     "p. p. č. 2406/30",
+     "p. p. č. 2406/32",
+     "p. p. č. 2408/13",
+     "p. p. č. 2423/5",
+     "p. p. č. 2423/7",
+     "p. p. č. 2423/9",
+     "p. p. č. 2423/10",
+     "p. p. č. 2426/38",
+     "p. p. č. 2426/43",
+     "p. p. č. 2426/44",
+     "p. p. č. 2426/45",
+     "p. p. č. 2583/28",
+     "p. p. č. 2424/4, k. ú. Pardubice",
+     "p. p. č. 2430/5, k. ú. Pardubice",
+     "p. p. č. 2425/2, k. ú. Pardubice",
+     "p. p. č. 2515/22, k. ú. Pardubice",
+     "p. p. č. 2353/35, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "GasNet, s. r. o.",
+     "Lidl Česká republika v. o. s."
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "190/2021 R",
+    "title": "Souhlas s předzahrádkou před Cherry bar v ul. Devotyho",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 6,75 m2 před provozovnou Cherry bar, Devotyho 2452, Pardubice, v období od 15. 5. 2021 do 31. 10. 2021 denně od 15.00 do 22.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "Cherry bar",
+     "Devotyho",
+     "zábor veřejného prostranství",
+     "provozovna",
+     "restaurace"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "jine",
+    "places": [
+     "Devotyho 2452, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Cherry bar"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "191/2021 R",
+    "title": "Změna termínu dotace na Sportovní den mládeže s TAJV",
+    "summary": "Rada souhlasí se změnou termínu již schválené dotace 3.000,- Kč spolku TAJV, z. s., na akci „Sportovní den mládeže s TAJV v MO Pardubice V“ na 18. 5. 2021; účel dotace má být splněn nejpozději 31. 10. 2021.",
+    "keywords": [
+     "dotace",
+     "změna termínu",
+     "Sportovní den mládeže",
+     "TAJV",
+     "sport",
+     "mládež"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "TAJV, z. s."
+    ],
+    "amounts": [
+     "3.000,- Kč"
+    ]
+   },
+   {
+    "number": "192/2021 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na novostavbu dětského hřiště K Vinici",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 12. 3. 2021 se zhotovitelem CHRPA stavební společnost s r.o. na akci „Novostavba dětského hřiště K Vinici, Pardubice“. Cena díla se kvůli vícepracím při dílčí změně stavby zvyšuje z 1.146.332,24 Kč na 1.227.668,42 Kč bez DPH.",
+    "keywords": [
+     "dětské hřiště",
+     "K Vinici",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "navýšení ceny",
+     "novostavba hřiště",
+     "CHRPA"
+    ],
+    "topics": [
+     "zakazky",
+     "hriste-sport",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "K Vinici, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o."
+    ],
+    "amounts": [
+     "1.227.668,42 Kč bez DPH",
+     "1.146.332,24 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "193/2021 R",
+    "title": "Rozpočtové opatření č. 29 – přesun 75 tis. Kč na technické zhodnocení majetku",
+    "summary": "Rada v rámci své pravomoci schvaluje rozpočtové opatření č. 29, kterým se 75 tis. Kč přesouvá v kapitole 14 – vnitřní správa z běžných výdajů na provoz ÚMO V do kapitálových výdajů na dlouhodobý hmotný majetek a technické zhodnocení.",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun prostředků",
+     "vnitřní správa",
+     "kapitálové výdaje",
+     "technické zhodnocení",
+     "provoz úřadu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO V"
+    ],
+    "amounts": [
+     "75 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

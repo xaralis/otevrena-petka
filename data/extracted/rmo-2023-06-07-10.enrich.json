@@ -1,0 +1,212 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "f8fbb980b87ef08b5d42787a8557208db8b559b8fab95fe2e8da8095ce5fefd8",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "53/2023 R",
+    "title": "Stanovisko k žádostem pozemkové komise města – Nové Jesenčany a k. ú. Pardubice",
+    "summary": "Stanovisko rady obvodu ke čtyřem žádostem projednávaným pozemkovou komisí rady města Pardubice: výpůjčka části p. p. č. 2/12 v k. ú. Nové Jesenčany pro sjezd stavby „Rezidenční bydlení Čacké – bytový soubor“ (žadatel REZIDENČNÍ BYDLENÍ ČACKÉ s.r.o.) s následným odkoupením sjezdu městem za 1.000,- Kč, odkoupení pozemku p. p. č. 605/19 pod silnicí na křižovatce ulic Raisova a K Dolíčku, nájem části st. p. č. 5375 jako zahrádky a umístění 3 směrových tabulí pro parkování zákazníků provozovny na oplocení na p. p. č. 5108. O každém bodu se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k pozemkům",
+     "pozemková komise",
+     "výpůjčka pozemku",
+     "sjezd",
+     "Rezidenční bydlení Čacké",
+     "odkoupení pozemku",
+     "nájem pozemku",
+     "zahrádka",
+     "směrové tabule",
+     "parkování"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Nové Jesenčany",
+     "k. ú. Pardubice",
+     "Raisova",
+     "K Dolíčku",
+     "Rezidenční bydlení Čacké – bytový soubor"
+    ],
+    "parcels": [
+     "p. p. č. 2/12, k. ú. Nové Jesenčany",
+     "p. p. č. 605/19, k. ú. Nové Jesenčany",
+     "st. p. č. 5375, k. ú. Pardubice",
+     "p. p. č. 5108, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "REZIDENČNÍ BYDLENÍ ČACKÉ s.r.o.",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč"
+    ]
+   },
+   {
+    "number": "54/2023 R",
+    "title": "Přijetí finančního daru 15.000,- Kč od IP stav s. r. o. na péči o veřejnou zeleň",
+    "summary": "Obvod přijímá finanční dar ve výši 15.000,- Kč od firmy IP stav s. r. o. určený na péči o veřejnou zeleň na území MO Pardubice V v roce 2023.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "IP stav s. r. o."
+    ],
+    "amounts": [
+     "15.000,- Kč"
+    ]
+   },
+   {
+    "number": "55/2023 R",
+    "title": "Odvolání a jmenování šéfredaktorky zpravodaje Pardubická pětka",
+    "summary": "Rada odvolává ke dni 7. 6. 2023 dosavadní šéfredaktorku zpravodaje Pardubická pětka a od 8. 6. 2023 jmenuje novou šéfredaktorkou sekretářku starosty MO Pardubice V.",
+    "keywords": [
+     "Pardubická pětka",
+     "zpravodaj",
+     "šéfredaktor",
+     "odvolání",
+     "jmenování",
+     "obvodní noviny"
+    ],
+    "topics": [
+     "kultura-akce",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Pardubická pětka"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "56/2023 R",
+    "title": "Dodatky ke smlouvám se Službami města Pardubice na výsyp odpadkových a psích košů",
+    "summary": "Uzavření dodatků ke smlouvám se Službami města Pardubice a.s. na výsyp a pronájem odpadkových košů (zvýšení na 301 košů) a na výsyp košů na psí exkrementy (zvýšení na 132 košů), vždy o 1 kus. Ceny za výsypy se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "koše na psí exkrementy",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "MO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "57/2023 R",
+    "title": "Smlouva o dílo s MIROS Pardubice na rekonstrukci chodníku v ulici Široká",
+    "summary": "Výsledek zakázky malého rozsahu: uzavření smlouvy o dílo na akci „Rekonstrukce chodníku ul. Široká – severní strana“ se zhotovitelem MIROS Pardubice a.s. za nabídkovou cenu 964 917,23 Kč bez DPH.",
+    "keywords": [
+     "rekonstrukce chodníku",
+     "chodník",
+     "Široká",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "MIROS"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Široká"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "964 917,23 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "58/2023 R",
+    "title": "Smlouva o dílo s CHRPA na rekonstrukci chodníku v ulici Raisova",
+    "summary": "Výsledek zakázky malého rozsahu: uzavření smlouvy o dílo na akci „Rekonstrukce chodníku ul. Raisova – severní strana“ se zhotovitelem CHRPA stavební společnost s r.o. za nabídkovou cenu 997 701,72 Kč bez DPH.",
+    "keywords": [
+     "rekonstrukce chodníku",
+     "chodník",
+     "Raisova",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "CHRPA"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Raisova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o."
+    ],
+    "amounts": [
+     "997 701,72 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "59/2023 R",
+    "title": "Schválení zadávací dokumentace k zakázce „Relaxační zóna Stará plovárna“",
+    "summary": "Rada podle směrnice MO Pardubice V č. 14/2021 (Zadávací řád veřejných zakázek) schvaluje zadávací dokumentaci na nadlimitní veřejnou zakázku na dodávku „Relaxační zóna Stará plovárna“.",
+    "keywords": [
+     "Stará plovárna",
+     "relaxační zóna",
+     "zadávací dokumentace",
+     "nadlimitní veřejná zakázka",
+     "veřejná zakázka",
+     "volný čas"
+    ],
+    "topics": [
+     "zakazky",
+     "hriste-sport"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Stará plovárna"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

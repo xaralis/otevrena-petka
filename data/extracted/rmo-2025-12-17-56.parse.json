@@ -1,0 +1,446 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "6e8ae8c2657cb1c481ca991588ce5e2d6cdf10148e161d9ab8ed97873d330458",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 56,
+   "kind": "mimoradne",
+   "date": "2025-12-17",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 58,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2026",
+    "line": 61,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Pravidla pro poskytování příspěvků na provoz příspěvkovým organizacím města z rozpočtu MO Pardubice",
+    "line": 179,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2025-2029",
+    "line": 194,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 210,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 257,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2025",
+    "line": 273,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "5. změna rozpočtu MO Pardubice V na r. 2025",
+    "line": 283,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Směrnice č. 28/2025: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2026",
+    "line": 296,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Údržba komunikací na území MO Pardubice V“ v r. 2026",
+    "line": 313,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Obnova dětského hřiště SKN“",
+    "line": 323,
+    "speakers": []
+   },
+   {
+    "no": "11",
+    "title": "Diskuse, závěr",
+    "line": 332,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "253/2025 R",
+    "agenda_no": "1",
+    "first_line": 63,
+    "last_line": 175,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "254/2025 R",
+    "agenda_no": "2",
+    "first_line": 182,
+    "last_line": 190,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "255/2025 R",
+    "agenda_no": "3",
+    "first_line": 202,
+    "last_line": 206,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "256/2025 R",
+    "agenda_no": "4",
+    "first_line": 212,
+    "last_line": 249,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "257/2025 R",
+    "agenda_no": "5",
+    "first_line": 259,
+    "last_line": 269,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "258/2025 R",
+    "agenda_no": "6",
+    "first_line": 275,
+    "last_line": 279,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "259/2025 R",
+    "agenda_no": "7",
+    "first_line": 285,
+    "last_line": 292,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "260/2025 R",
+    "agenda_no": "8",
+    "first_line": 299,
+    "last_line": 309,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "261/2025 R",
+    "agenda_no": "9",
+    "first_line": 316,
+    "last_line": 319,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "262/2025 R",
+    "agenda_no": "10",
+    "first_line": 326,
+    "last_line": 328,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 55,
+    "last_line": 55,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 54,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 176,
+    "last_line": 176,
+    "resolution": "253/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 191,
+    "last_line": 191,
+    "resolution": "254/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 207,
+    "last_line": 207,
+    "resolution": "255/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 250,
+    "last_line": 250,
+    "resolution": "256/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 270,
+    "last_line": 270,
+    "resolution": "257/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 280,
+    "last_line": 280,
+    "resolution": "258/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 293,
+    "last_line": 293,
+    "resolution": "259/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 310,
+    "last_line": 310,
+    "resolution": "260/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 320,
+    "last_line": 320,
+    "resolution": "261/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 329,
+    "last_line": 329,
+    "resolution": "262/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

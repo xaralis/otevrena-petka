@@ -1,0 +1,189 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "ca55532eb8ace66c0cfcc0f0e818c1fdbf61a7fdfc8beadad91f591263937103",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 19,
+   "kind": "radne",
+   "date": "2024-01-10",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Výroční zpráva o poskytování informací za rok 2023 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím",
+    "line": 67,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Rekonstrukce komunikace Dražkovice u MŠ“",
+    "line": 77,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 87,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "101/2024 R",
+    "agenda_no": "1",
+    "first_line": 50,
+    "last_line": 64,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "102/2024 R",
+    "agenda_no": "2",
+    "first_line": 71,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "103/2024 R",
+    "agenda_no": "3",
+    "first_line": 81,
+    "last_line": 84,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "101/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": "102/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 85,
+    "last_line": 85,
+    "resolution": "103/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 50–65: usnesení 101/2024 R je formulováno jako souhlas („souhlasí se záměrem“), ale hlasování je Pro 0, proti 5 – usnesení tedy nebylo přijato, přestože má číslo; text výsledek výslovně neuvádí."
+  ]
+ }
+}

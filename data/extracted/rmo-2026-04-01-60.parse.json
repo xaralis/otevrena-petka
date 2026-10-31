@@ -1,0 +1,383 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "4303da608b9fbeae25193cf059b5a74c8ab6cb9a4fba63270c0387a0ae8f2265",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 60,
+   "kind": "radne",
+   "date": "2026-04-01",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "IV.",
+    "title": "Projednání schválených materiálů",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Dotace",
+    "line": 70,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 153,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou bistra v ulici Josefa Ressla před čp. 2277-78, Pardubice",
+    "line": 173,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Odpisový plán na r. 2026",
+    "line": 183,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou cukrárny Libuše na nám. Dukelských hrdinů 2235 v Pardubicích",
+    "line": 190,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozpočtové opatření k dotaci",
+    "line": 200,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Diskuse, závěr",
+    "line": 212,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "275/2026 R",
+    "agenda_no": "1",
+    "first_line": 55,
+    "last_line": 66,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "276/2026 R",
+    "agenda_no": "2",
+    "first_line": 72,
+    "last_line": 149,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "277/2026 R",
+    "agenda_no": "3",
+    "first_line": 155,
+    "last_line": 169,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "278/2026 R",
+    "agenda_no": "4",
+    "first_line": 176,
+    "last_line": 179,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "279/2026 R",
+    "agenda_no": "5",
+    "first_line": 185,
+    "last_line": 186,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "280/2026 R",
+    "agenda_no": "6",
+    "first_line": 193,
+    "last_line": 196,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "281/2026 R",
+    "agenda_no": "7",
+    "first_line": 202,
+    "last_line": 205,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 44,
+    "last_line": 44,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "275/2026 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 67,
+    "last_line": 67,
+    "resolution": "275/2026 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 150,
+    "last_line": 150,
+    "resolution": "276/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 163,
+    "last_line": 163,
+    "resolution": "277/2026 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 170,
+    "last_line": 170,
+    "resolution": "277/2026 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 180,
+    "last_line": 180,
+    "resolution": "278/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 187,
+    "last_line": 187,
+    "resolution": "279/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 197,
+    "last_line": 197,
+    "resolution": "280/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 206,
+    "last_line": 206,
+    "resolution": "281/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 55–61: usnesení 275/2026 R bod 1 (výpůjčka pozemků pro TJ Klub vodáků – turistů) je formulován jako „souhlasí se záměrem“, ale hlasování je Pro 0, zdržel se 5, proti 0 – bod 1 tedy nezískal žádný hlas pro."
+  ]
+ }
+}

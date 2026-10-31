@@ -1,0 +1,158 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "f7765073f42896aa5ae5d4586658d0e42448b304ddba0125ca7b7c3f9f58b159",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 40,
+   "kind": "radne",
+   "date": "2025-01-29",
+   "place": "zasedací místnost MO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 52,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Výroční zpráva o poskytování informací za rok 2024 podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím",
+    "line": 80,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Diskuse, závěr",
+    "line": 90,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "189/2025 R",
+    "agenda_no": "1",
+    "first_line": 55,
+    "last_line": 77,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "190/2025 R",
+    "agenda_no": "2",
+    "first_line": 84,
+    "last_line": 87,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 39,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "189/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 88,
+    "last_line": 88,
+    "resolution": "190/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

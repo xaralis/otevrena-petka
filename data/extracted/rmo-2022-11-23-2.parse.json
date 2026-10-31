@@ -1,0 +1,204 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "41c48c2a4cd19cc982cf06c2a0c588710c6840aecd7b54c8cb0626dd01feafe2",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 2,
+   "kind": "radne",
+   "date": "2022-11-23",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 45,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Pohledávka úřadu za bývalým místostarostou MO Pardubice V Ing. Jiřím Janošem",
+    "line": 76,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Informativní zpráva – petice proti výstavbě bytových domů ve čtvrti Nové Jesenčany",
+    "line": 84,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 88,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "8/2022 R",
+    "agenda_no": "1",
+    "first_line": 47,
+    "last_line": 73,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "9/2022 R",
+    "agenda_no": "2",
+    "first_line": 78,
+    "last_line": 80,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 39,
+    "last_line": 39,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 35,
+    "motion_last_line": 38,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 58,
+    "last_line": 58,
+    "resolution": "8/2022 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "8/2022 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "8/2022 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "9/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 47–73: usnesení 8/2022 R je formulováno jako „souhlasí“ se všemi třemi body, ale bod 1 (ř. 58: pro 0, zdržel se 5) a bod 3 (ř. 73: pro 0, proti 5) nezískaly žádný hlas pro; přijat byl jen bod 2 (ř. 66: pro 5).",
+   "ř. 13–14: text přítomných uvádí „Mgr. Miloš Adamů, MBA., Bc. Petr Dufek“ rozdělené přes řádek; ověřovatel na ř. 30 je psán „Mgr. Miloš Adamů MBA.“ bez čárky."
+  ]
+ }
+}

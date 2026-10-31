@@ -1,0 +1,515 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "5d68131480429a34ab680c8ab320451a80a2255d462bfab5f8223d622e26320e",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 54,
+   "kind": "radne",
+   "date": "2022-03-30",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Bc. Jan Nadrchal"
+   ],
+   "excused": [
+    "Ing. Jiří Janoš",
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 26,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Projednání schválených materiálů",
+    "line": 60,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 2 ke smlouvě o dílo na vydávání informačních novin „Pardubická Pětka“",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Stavební úpravy – oprava povrchu chodníků v ul. Mikulovická, Pardubice“",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou cukrárna Libuše, nám. Dukelských hrdinů 2235, Pardubice",
+    "line": 83,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – „Seč trávníků na území MO Pardubice V pro rok 2022 – blok Dukla západní, Višňovka severní a jižní část“",
+    "line": 93,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Rozhodnutí zadavatele – „Údržba zeleně – zálivka na území MO Pardubice V - 2022“",
+    "line": 104,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Rozhodnutí zadavatele – „Pletí výsadeb na území MO Pardubice V pro rok 2022“",
+    "line": 112,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Rozhodnutí zadavatele – „Stříhání živých plotů na území MO Pardubice V - 2022“",
+    "line": 120,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 128,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Dotace",
+    "line": 146,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "Směrnice pro přebírání, evidenci, vydávání a další nakládání s nálezy",
+    "line": 295,
+    "speakers": []
+   },
+   {
+    "no": "11",
+    "title": "Nájem nebytových prostorů v majetku města na území MO Pardubice V – stanovisko RMO Pardubice V",
+    "line": 302,
+    "speakers": []
+   },
+   {
+    "no": "12",
+    "title": "Rozhodnutí zadavatele – „Seč trávníků na území MO Pardubice V pro rok 2022 – blok Dukla východní, Nové Jesenčany, Dražkovice a Dukla“",
+    "line": 313,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 324,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "268/2022 R",
+    "agenda_no": "1",
+    "first_line": 67,
+    "last_line": 70,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "269/2022 R",
+    "agenda_no": "2",
+    "first_line": 77,
+    "last_line": 80,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "270/2022 R",
+    "agenda_no": "3",
+    "first_line": 87,
+    "last_line": 90,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "271/2022 R",
+    "agenda_no": "4",
+    "first_line": 97,
+    "last_line": 101,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "272/2022 R",
+    "agenda_no": "5",
+    "first_line": 107,
+    "last_line": 109,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "273/2022 R",
+    "agenda_no": "6",
+    "first_line": 115,
+    "last_line": 117,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "274/2022 R",
+    "agenda_no": "7",
+    "first_line": 123,
+    "last_line": 125,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "275/2022 R",
+    "agenda_no": "8",
+    "first_line": 131,
+    "last_line": 143,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "276/2022 R",
+    "agenda_no": "9",
+    "first_line": 150,
+    "last_line": 292,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "277/2022 R",
+    "agenda_no": "10",
+    "first_line": 298,
+    "last_line": 299,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "278/2022 R",
+    "agenda_no": "11",
+    "first_line": 306,
+    "last_line": 310,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "279/2022 R",
+    "agenda_no": "12",
+    "first_line": 317,
+    "last_line": 320,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 58,
+    "last_line": 58,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 71,
+    "last_line": 71,
+    "resolution": "268/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "269/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "270/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "271/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 110,
+    "last_line": 110,
+    "resolution": "272/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 118,
+    "last_line": 118,
+    "resolution": "273/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 126,
+    "last_line": 126,
+    "resolution": "274/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 144,
+    "last_line": 144,
+    "resolution": "275/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 293,
+    "last_line": 293,
+    "resolution": "276/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 300,
+    "last_line": 300,
+    "resolution": "277/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 311,
+    "last_line": 311,
+    "resolution": "278/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 321,
+    "last_line": 321,
+    "resolution": "279/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 144: usnesení 275/2022 R (souhlas s odkoupením pozemků) má hlasování Pro 0, zdržel se 0, proti 3, text výslovně neuvádí výsledek – návrh zjevně nebyl přijat, přesto má číslo usnesení.",
+   "ř. 220: datum „1. 6. 20222“ – překlep ve zdroji."
+  ]
+ }
+}

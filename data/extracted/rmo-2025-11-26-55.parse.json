@@ -1,0 +1,219 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "281dea03c7f19d542fbae78c7da98c0441a411ae7e940b8c3eae80662ceda51c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 55,
+   "kind": "radne",
+   "date": "2025-11-26",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Mgr. Miloš Adamů, MBA.",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 44,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Souhlas s umístěním předzahrádky před provozovnou kavárny Slunečnice v Jilemnického ulici 2226, Pardubice",
+    "line": 67,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Knihovní řád knihovny MO Pardubice V",
+    "line": 77,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 84,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "250/2025 R",
+    "agenda_no": "1",
+    "first_line": 53,
+    "last_line": 65,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "251/2025 R",
+    "agenda_no": "2",
+    "first_line": 71,
+    "last_line": 74,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "252/2025 R",
+    "agenda_no": "3",
+    "first_line": 80,
+    "last_line": 81,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 42,
+    "last_line": 42,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 41,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": "250/2025 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "250/2025 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 75,
+    "last_line": 75,
+    "resolution": "251/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 82,
+    "last_line": 82,
+    "resolution": "252/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 55: jméno žadatele je v dokumentu anonymizováno („xxxxxxxxxxx“)",
+   "ř. 81: v názvu bodu 3 „Knihovní řád knihovny MO Pardubice V“, ve znění usnesení „Knihovní řád knihovny ÚMO Pardubice V“"
+  ]
+ }
+}

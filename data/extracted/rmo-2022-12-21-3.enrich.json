@@ -1,0 +1,231 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "2a3a14c7d763e53c6f88c8edf5bbc0aeb24303ab83a74538e83a2a16f112eec1",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "10/2022 R",
+    "title": "Stanovisko k žádosti pozemkové komise: nájem, výpůjčka a směna pozemků",
+    "summary": "Rada se vyjadřuje k žádosti pozemkové komise rady města k nájmu části pozemku p. p. č. 2400/1 v k. ú. Pardubice pro odběrové místo na testy COVID (EDAX GROUP s.r.o.), k výpůjčce části pozemku p. p. č. 29/40 v k. ú. Nové Jesenčany pro mobilní WC řidičů MHD (Dopravní podnik města Pardubic a.s.) a ke směně pozemku p. p. č. 514 za část pozemku p. p. č. 437/1 v k. ú. Dražkovice, která má zlepšit přístup k přilehlým domům a souvisí s plánovanou cyklostezkou Dražkovice – Mikulovice.",
+    "keywords": [
+     "stanovisko k pozemkům",
+     "nájem pozemku",
+     "výpůjčka pozemku",
+     "směna pozemků",
+     "odběrové místo COVID",
+     "mobilní WC pro řidiče MHD",
+     "cyklostezka Dražkovice – Mikulovice",
+     "Dražkovice",
+     "Nové Jesenčany"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany",
+     "k. ú. Dražkovice",
+     "cyklostezka Dražkovice – Mikulovice"
+    ],
+    "parcels": [
+     "p. p. č. 2400/1, k. ú. Pardubice",
+     "p. p. č. 29/40, k. ú. Nové Jesenčany",
+     "p. p. č. 514, k. ú. Dražkovice",
+     "p. p. č. 437/1, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "EDAX GROUP s.r.o.",
+     "Dopravní podnik města Pardubic a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "11/2022 R",
+    "title": "Jmenování členů komise pro školství a komise pro strategii, rozvoj a dopravu",
+    "summary": "Rada jmenuje s účinností od 1. 1. 2023 nové členy Komise pro školství, kulturu, sport a mládež a Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V; o každém jmenování se hlasovalo zvlášť.",
+    "keywords": [
+     "jmenování členů komisí",
+     "komise rady",
+     "Komise pro školství, kulturu, sport a mládež",
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+     "členové komise"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro školství, kulturu, sport a mládež RMO Pardubice V",
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "12/2022 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 30. 11. 2022",
+    "summary": "Rada projednala zprávu o rozboru hospodaření městského obvodu Pardubice V k 30. 11. 2022 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2022",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "13/2022 R",
+    "title": "Doporučení zastupitelstvu schválit 4. změnu rozpočtu na rok 2022",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář ke 4. změně rozpočtu obvodu na rok 2022 a schválit rozpočtová opatření uvedená v bodech 1–24 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "rozpočtová opatření",
+     "rozpočet 2022",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "14/2022 R",
+    "title": "Doporučení zastupitelstvu schválit rozpočet obvodu na rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozpočet obvodu a sociálního fondu na rok 2023, svěřit radě pravomoc k vymezeným rozpočtovým opatřením, plán společenských akcí, limity hodnoty dárků pro občany a jubilanty a novou směrnici č. 7/2022-1 o hospodaření se sociálním fondem, která ruší směrnici č. 7/2022.",
+    "keywords": [
+     "rozpočet 2023",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice o sociálním fondu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V",
+     "Rada městského obvodu Pardubice V",
+     "odbor ekonomický",
+     "finanční výbor"
+    ],
+    "amounts": [
+     "300 tis. Kč vč.",
+     "1 000,-- Kč vč.",
+     "200,- Kč vč.",
+     "500,-- Kč vč."
+    ]
+   },
+   {
+    "number": "15/2022 R",
+    "title": "Doporučení zastupitelstvu schválit střednědobý výhled rozpočtu 2022–2025",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář k aktualizaci a schválit aktualizovaný střednědobý výhled rozpočtu městského obvodu Pardubice V na roky 2022–2025.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "aktualizace výhledu",
+     "2022–2025",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "16/2022 R",
+    "title": "Směrnice č. 28/2022: zásady a program poskytování dotací v roce 2023",
+    "summary": "Rada schvaluje směrnici č. 28/2022, která stanoví zásady a program pro poskytování dotací z rozpočtu obvodu v roce 2023, včetně příloh (formulář žádosti, vzor smlouvy, čestná prohlášení, poučení a formuláře vyúčtování).",
+    "keywords": [
+     "dotace",
+     "dotační program",
+     "směrnice o dotacích",
+     "zásady poskytování dotací",
+     "žádost o dotaci",
+     "vyúčtování dotace",
+     "de minimis",
+     "2023"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "17/2022 R",
+    "title": "Smlouvy o dílo se Službami města Pardubic na kontejnery a koše v roce 2023",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na rok 2023 se společností Služby města Pardubic a.s. na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů a košů na psí exkrementy a svoz odpadu odloženého vedle kontejnerových stání, a to mimo režim zadávacího řádu (směrnice č. 14/2017), protože jde o městem založenou společnost.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "odpadkové koše",
+     "koše na psí exkrementy",
+     "svoz odpadu",
+     "černé skládky u kontejnerů",
+     "smlouva o dílo",
+     "SmP",
+     "výjimka ze zadávacího řádu"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Hůrka 1803, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "200.000,- Kč bez DPH",
+     "902.000,- Kč bez DPH",
+     "370.000,- Kč bez DPH",
+     "150.000,- Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

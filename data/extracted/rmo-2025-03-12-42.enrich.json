@@ -1,0 +1,185 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5dee4e31a23346c6b4a7d12865da99584274e72aee54fcc112c09aea094d731e",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "193/2025 R",
+    "title": "Doporučení schválit rozbor hospodaření MO Pardubice V k 31. 12. 2024",
+    "summary": "Rada projednala rozbor hospodaření městského obvodu k 31. 12. 2024 a doporučila zastupitelstvu schválit jeho tabulkovou část a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2024",
+     "doporučení zastupitelstvu",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "194/2025 R",
+    "title": "Zadání zakázky a zadávací dokumentace: oprava chodníku Lexova – západ a náměstí Dukelských hrdinů",
+    "summary": "Rada podle směrnice MO Pardubice V č. 14/2024 schválila zadání podlimitní veřejné zakázky na stavební práce „Oprava chodníku ul. Lexova – západ, Revitalizace – Stavební úpravy parkových částí náměstí Dukelských hrdinů, Pardubice“ ve zjednodušeném podlimitním řízení a schválila k ní zadávací dokumentaci.",
+    "keywords": [
+     "veřejná zakázka",
+     "zadávací dokumentace",
+     "zjednodušené podlimitní řízení",
+     "oprava chodníku",
+     "ulice Lexova",
+     "náměstí Dukelských hrdinů",
+     "revitalizace parku",
+     "stavební práce"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Lexova",
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "195/2025 R",
+    "title": "Souhlas s pojízdným stánkem se zmrzlinou v areálu Pod Vinicí",
+    "summary": "Rada souhlasila s umístěním pojízdného stánku na prodej zmrzliny v areálu Pod Vinicí na pozemku p. p. č. 2462/1, k. ú. Pardubice, o ploše 12 m2 od 1. 4. 2025 do 30. 11. 2025.",
+    "keywords": [
+     "stánek se zmrzlinou",
+     "prodej zmrzliny",
+     "pojízdný stánek",
+     "areál Pod Vinicí",
+     "Vinice",
+     "zábor veřejného prostranství"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "hriste-sport"
+    ],
+    "kind": "majetek",
+    "places": [
+     "areál Pod Vinicí",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "196/2025 R",
+    "title": "Odpisový plán na rok 2025",
+    "summary": "Rada schválila odpisový plán městského obvodu na rok 2025, který je přílohou zprávy.",
+    "keywords": [
+     "odpisový plán",
+     "odpisy majetku",
+     "rok 2025",
+     "účetnictví"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "197/2025 R",
+    "title": "Doporučení schválit 1. změnu rozpočtu MO Pardubice V na rok 2025",
+    "summary": "Rada doporučila zastupitelstvu vzít na vědomí komentář k 1. změně rozpočtu na rok 2025 včetně sociálního fondu a schválit rozpočtová opatření v bodech 1–14 důvodové zprávy. Zároveň doporučila souhlasit, aby drobné dárky pro občany z položky akcí pořádaných knihovnou měly hodnotu do 200 Kč na osobu.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2025",
+     "sociální fond",
+     "knihovna",
+     "drobné dárky",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "knihovna"
+    ],
+    "amounts": [
+     "200,-- Kč vč. na osobu"
+    ]
+   },
+   {
+    "number": "198/2025 R",
+    "title": "Doporučení vzít na vědomí výroční zprávu Finančního výboru za rok 2024",
+    "summary": "Rada doporučila zastupitelstvu vzít na vědomí zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2024.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "zpráva o činnosti",
+     "rok 2024",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "komise-vybory",
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "199/2025 R",
+    "title": "Smír ve sporu s firmou Raamar s. r. o. – úhrada 50 % žalované částky",
+    "summary": "Rada schválila uzavření smíru ve sporu mezi městským obvodem a firmou Raamar s. r. o. (IČ 26024705), podle něhož obvod uhradí 50 % žalované částky, tj. 47.277,50 Kč.",
+    "keywords": [
+     "smír",
+     "soudní spor",
+     "Raamar",
+     "RAAMAR",
+     "žaloba",
+     "narovnání",
+     "úhrada"
+    ],
+    "topics": [
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Raamar s. r. o.",
+     "Městský obvod Pardubice V"
+    ],
+    "amounts": [
+     "47.277,50 Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

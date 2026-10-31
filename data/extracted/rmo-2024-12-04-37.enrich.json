@@ -1,0 +1,257 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e7445162571b79af49fca1b28ae6fa84a3004ec00dcf2c945fd2e96583590134",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "173/2024 R",
+    "title": "Stanovisko k záměru prodeje částí pozemků a nájmu pozemků pro parkování",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města Pardubice. Usnesení se týká záměru prodeje částí pozemků p. p. č. 2502/1 a 2499/33 v k. ú. Pardubice (zdůvodněno problémy se vsakem dešťových vod a údržbou) a záměru nájmu pozemků p. p. č. 2515/14 a 2515/22 pro užívání parkovacích míst; o obou bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k prodeji pozemku",
+     "prodej pozemků",
+     "nájem pozemků",
+     "parkovací místa",
+     "parkování",
+     "pozemková komise",
+     "vsak dešťových vod"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2502/1, k. ú. Pardubice",
+     "p. p. č. 2499/33, k. ú. Pardubice",
+     "p. p. č. 2515/14, k. ú. Pardubice",
+     "p. p. č. 2515/22, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "174/2024 R",
+    "title": "Smlouvy o dílo se Službami města Pardubic na kontejnery, odpadkové koše a svoz odpadu na rok 2025",
+    "summary": "Rada souhlasí s uzavřením smluv o dílo na rok 2025 se společností Služby města Pardubic a.s. na přistavování velkoobjemových kontejnerů, výsyp odpadkových košů včetně košů na psí exkrementy a svoz odpadu odloženého vedle kontejnerových stání. Smlouvy se uzavírají mimo režim směrnice č. 14/2024 – zadávací řád veřejných zakázek, protože jde o městem založenou společnost zřízenou k tomuto účelu.",
+    "keywords": [
+     "velkoobjemové kontejnery",
+     "odpadkové koše",
+     "psí exkrementy",
+     "svoz odpadu",
+     "úklid",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "SmP"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "160.000,- Kč bez DPH",
+     "1.140.000,- Kč bez DPH",
+     "410.000,- Kč bez DPH",
+     "160.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "175/2024 R",
+    "title": "Stanovisko k záměru prodeje nebytového prostoru v Jilemnického ul. a pronájmu garážového stání v ul. Jana Palacha",
+    "summary": "Rada souhlasí se záměrem prodeje nebytové jednotky č. 2224/19 v přízemí domu čp. 2224–2227 v Jilemnického ulici, dosud pronajaté k provozování prodejny ovoce, zeleniny, květin a potravin a výrobny lahůdek. Dále souhlasí se záměrem pronájmu garážového stání č. 4 v objektu čp. 2767 v ulici Jana Palacha ke garážování osobního automobilu; jde o stanovisko k žádosti komise pro nebytové prostory rady města.",
+    "keywords": [
+     "prodej nebytového prostoru",
+     "nebytový prostor",
+     "prodejna",
+     "pronájem garáže",
+     "garážové stání",
+     "Jilemnického",
+     "Jana Palacha",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jilemnického ul.",
+     "čp. 2224, 2225, 2226 a 2227",
+     "ul. Jana Palacha",
+     "čp. 2767",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 4182, k. ú. Pardubice",
+     "st. p. č. 10409, k. ú a obec Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": [
+     "1.048,46 Kč/m2/rok bez DPH",
+     "131.549,76 Kč/rok bez DPH"
+    ]
+   },
+   {
+    "number": "176/2024 R",
+    "title": "Knihovní řád knihovny ÚMO Pardubice V s účinností od 1. 1. 2025",
+    "summary": "Rada schvaluje Knihovní řád knihovny ÚMO Pardubice V s účinností od 1. 1. 2025.",
+    "keywords": [
+     "knihovna",
+     "knihovní řád",
+     "pravidla knihovny",
+     "ÚMO Pardubice V"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "knihovna ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "177/2024 R",
+    "title": "Rozpočtové opatření č. 128 – přesun 150 tis. Kč na opravy a údržbu komunikací",
+    "summary": "Rada schvaluje rozpočtové opatření č. 128, kterým se v kapitole 27 – doprava přesouvá 150 tis. Kč z kapitálové položky rekonstrukce, investice – PD na běžnou položku opravy a údržba komunikací (včetně dopravního značení a kanalizace).",
+    "keywords": [
+     "rozpočtové opatření",
+     "přesun prostředků",
+     "opravy komunikací",
+     "údržba silnic",
+     "dopravní značení",
+     "kanalizace",
+     "doprava"
+    ],
+    "topics": [
+     "rozpocet",
+     "doprava"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "150 tis. Kč"
+    ]
+   },
+   {
+    "number": "178/2024 R",
+    "title": "Vyřazení projektových dokumentací k přechodu v Chrudimské ul. a zpevněné ploše Dražkovická z majetku",
+    "summary": "Rada souhlasí s vyřazením z majetku a jednorázovým odepsáním do nákladů k 18. 12. 2024 dvou projektových dokumentací: k přechodu pro chodce v křižovatce Chrudimská – Raisova od firmy Highway design, s.r.o. a ke zpevněné ploše Dražkovická od firmy VECTURA Pardubice, s. r. o. Důvodem je, že podle důvodové zprávy nebudou pravděpodobně v budoucnu použitelné.",
+    "keywords": [
+     "vyřazení majetku",
+     "projektová dokumentace",
+     "odpis",
+     "přechod pro chodce",
+     "Chrudimská",
+     "Raisova",
+     "Dražkovice",
+     "zpevněná plocha"
+    ],
+    "topics": [
+     "investice",
+     "rozpocet"
+    ],
+    "kind": "jine",
+    "places": [
+     "Chrudimská ul.",
+     "křižovatka Chrudimská – Raisova",
+     "Dražkovická"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Highway design, s.r.o.",
+     "VECTURA Pardubice, s. r. o."
+    ],
+    "amounts": [
+     "34 800,-- Kč",
+     "49 985,10 Kč"
+    ]
+   },
+   {
+    "number": "179/2024 R",
+    "title": "Investiční záměry k realizaci v roce 2025",
+    "summary": "Rada schvaluje investiční záměry k realizaci v roce 2025: stavební úpravy vnitrobloku Pichlova – Rokycanova – K Višňovce, komunikaci a chodník v Dražkovicích, chodník v Sokolovské ulici, revitalizaci parkových částí náměstí Dukelských hrdinů a opravu povrchů ve Wolkerově ulici.",
+    "keywords": [
+     "investiční záměry",
+     "investice 2025",
+     "chodník",
+     "vnitroblok",
+     "revitalizace parku",
+     "oprava povrchů",
+     "Dražkovice",
+     "náměstí Dukelských hrdinů"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zelen"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "ul. Pichlova",
+     "ul. Rokycanova",
+     "ul. K Višňovce",
+     "Dražkovice čp. 153 – čp. 174",
+     "ul. Sokolovská",
+     "ul. Josefa Ressla",
+     "nám. Dukelských hrdinů",
+     "ul. Wolkerova"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "180/2024 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na chodníky v ul. Boženy Němcové",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 15. 8. 2024 na akci „Chodníky ul. Boženy Němcové“ se zhotovitelem CHRPA stavební spol. s r.o. Pardubice. Po započtení víceprací a méněprací se cena mění z původních 1.768.599,55 Kč na 1.844.188,18 Kč bez DPH.",
+    "keywords": [
+     "dodatek ke smlouvě",
+     "smlouva o dílo",
+     "chodníky",
+     "Boženy Němcové",
+     "vícepráce",
+     "méněpráce",
+     "CHRPA"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Boženy Němcové"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební spol. s r.o. Pardubice"
+    ],
+    "amounts": [
+     "1.844.188,18Kč bez DPH",
+     "1.768.599,55 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5081e8d2735041ee6e3f7512f5ab3086248ace9956e11d43dd812231f632af5b",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "321/2022 R",
+    "title": "Stanovisko k žádostem pozemkové komise: přesah vrat čp. 717 a převod pozemku p. p. č. 4817",
+    "summary": "Rada obvodu souhlasí se vzdušným přesahem 150 mm pojezdových vrat objektu čp. 717 nad pozemkem p. p. č. 2516/1, k. ú. Pardubice. Dále souhlasí s bezúplatným převodem pozemku p. p. č. 4817 (679 m2) od státu (ÚZSVM) do vlastnictví statutárního města Pardubice pro víceúčelovou zahradu Azylového domu pro ženy a matky s dětmi (SKP-CENTRUM, o.p.s.), za podmínky, že se obvod nebude na vybudování zahrady finančně ani jinak podílet.",
+    "keywords": [
+     "stanovisko pozemkové komise",
+     "souhlas vlastníka pozemku",
+     "přesah vrat",
+     "bezúplatný převod pozemku",
+     "víceúčelová zahrada",
+     "azylový dům",
+     "pozemky"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "čp. 717",
+     "k. ú. Pardubice",
+     "Azylový dům pro ženy a matky s dětmi"
+    ],
+    "parcels": [
+     "p. p. č. 2516/1, k. ú. Pardubice",
+     "st. p. č. 1322, k. ú. Pardubice",
+     "p. p. č. 4817, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "statutární město Pardubice",
+     "SKP - CENTRUM, o.p.s.",
+     "Azylový dům pro ženy a matky s dětmi",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "322/2022 R",
+    "title": "Peněžité dary členům komisí rady (nečlenům ZMO) za leden–září 2022",
+    "summary": "Rada schvaluje vyplacení peněžních darů členům komisí rady, kteří nejsou členy zastupitelstva, za práci v období leden – září 2022. Týká se místních komisí Dukla, Višňovka, Jesničánky a Dražkovice, komise pro školství, kulturu, sport a mládež a komise pro strategii a rozvoj obvodu.",
+    "keywords": [
+     "peněžité dary",
+     "odměny členům komisí",
+     "místní komise",
+     "komise rady",
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "topics": [
+     "komise-vybory",
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [
+     "Dukla",
+     "Višňovka",
+     "Jesničánky",
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Místní komise Dukla",
+     "Místní komise Višňovka",
+     "Místní komise Jesničánky",
+     "Místní komise Dražkovice",
+     "Komise pro školství, kulturu, sport a mládež",
+     "Komise pro strategii a rozvoj obvodu"
+    ],
+    "amounts": [
+     "300,- Kč",
+     "600,- Kč",
+     "900,- Kč",
+     "1.200,- Kč",
+     "1.500,- Kč"
+    ]
+   },
+   {
+    "number": "323/2022 R",
+    "title": "Peněžité dary za výpomoc při volbách v září a říjnu 2022",
+    "summary": "Rada schvaluje poskytnutí peněžních darů čtyřem osobám (dvakrát 5.000,- Kč a dvakrát 2.500,- Kč) za nadstandardní výpomoc při organizování a průběhu voleb do Zastupitelstva města Pardubic, Zastupitelstva MO Pardubice V a Senátu Parlamentu ČR v září a říjnu 2022.",
+    "keywords": [
+     "peněžité dary",
+     "volby",
+     "komunální volby",
+     "senátní volby",
+     "odměny",
+     "výpomoc při volbách"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "5.000,- Kč",
+     "2.500,- Kč"
+    ]
+   },
+   {
+    "number": "324/2022 R",
+    "title": "Úprava plánu společenských akcí 2022 – přesun 30,4 tis. Kč na Rozsvěcení vánočního stromečku",
+    "summary": "Rada schvaluje úpravu plánu společenských akcí MO Pardubice V na rok 2022: přesun 30 tis. Kč z akce Opékání buřtů a 0,4 tis. Kč z akce Pohádková cesta na akci Rozsvěcení vánočního stromečku. Celkový rozpočet plánu ve výši 705 tis. Kč se nemění.",
+    "keywords": [
+     "plán společenských akcí",
+     "Rozsvěcení vánočního stromečku",
+     "Opékání buřtů",
+     "Pohádková cesta",
+     "společenské akce",
+     "přesun peněz"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "30 tis. Kč",
+     "0,4 tis. Kč",
+     "30,4 tis. Kč",
+     "705 tis. Kč"
+    ]
+   },
+   {
+    "number": "325/2022 R",
+    "title": "Dotace na 12 akcí z dotačního programu 2022 a související rozpočtová opatření",
+    "summary": "Rada schvaluje poskytnutí dotací z programu podle směrnice č. 28/2021 na 12 akcí (např. Svatomartinská slavnost, Mikulášský běh, Adventní setkání, Vánoce v azylovém domě, Mikulášská besídka, Strašidelná noc, Ptáci v zahradě), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 96–108. Příjemci jsou mateřské a základní školy, spolky, SDH Dražkovice, DDM ALFA a SKP-CENTRUM, o. p. s.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "Svatomartinská slavnost",
+     "Mikulášský běh",
+     "Adventní setkání",
+     "Mikulášská besídka",
+     "Strašidelná noc",
+     "Vánoční zpívání",
+     "mateřská škola"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Benešovo náměstí 2115",
+     "Čs. armády 2515",
+     "Artura Krause 2344",
+     "Jungmannova 2550",
+     "Dražkovice",
+     "Družby 334",
+     "Gorkého 334",
+     "V Ráji 878",
+     "Pohádková zahrada",
+     "Teplého 2100",
+     "Josefa Ressla 1992"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Benešovo náměstí 2115, Pardubice",
+     "Hvězda Pardubice z. s.",
+     "Základní škola a mateřská škola Pardubice, Artura Krause",
+     "SKP-CENTRUM, o. p. s.",
+     "SDH Dražkovice",
+     "Dům dětí a mládeže ALFA Pardubice",
+     "Šumák z. s.",
+     "MŠ Kamarád Pardubice",
+     "Mateřská škola Motýlek Pardubice"
+    ],
+    "amounts": [
+     "8.000,- Kč",
+     "10.000,- Kč",
+     "7.000,- Kč",
+     "5.000,- Kč",
+     "4.000,- Kč",
+     "2.000,- Kč",
+     "2.524,- Kč",
+     "19.700,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

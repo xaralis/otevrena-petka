@@ -1,0 +1,254 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3496a171fe864e470fcb6c129aa49a91e4c359f663f82fe8287204c62c2f461c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "159/2020 R",
+    "title": "Stanovisko k pozemkovým žádostem: Terminál JIH, veřejné osvětlení, odběrové místo COVID-19, optická síť",
+    "summary": "Rada obvodu souhlasí s odkoupením části pozemku od DEPRO Vápenka s.r.o. pro investiční akci města „Terminál JIH, Pardubice“, se zřízením věcných břemen pro veřejné osvětlení Služeb města Pardubic a. s. v ulicích Lexova, Wolkerova a na nám. Dukelských hrdinů a s nájmem části pozemku pro odběrové místo COVID-19 společnosti Scimed Biotechnologies, s.r.o. Souhlasí také s věcným břemenem pro optickou síť T-Mobile Czech Republic a. s. na Dukle s podmínkou ochrany stávajících dřevin a prostoru pro plánovanou výsadbu.",
+    "keywords": [
+     "stanovisko k žádosti pozemkové komise",
+     "Terminál JIH",
+     "odkoupení pozemku",
+     "věcné břemeno",
+     "veřejné osvětlení",
+     "Lexova",
+     "Wolkerova",
+     "odběrové místo COVID-19",
+     "optická síť",
+     "nájem pozemku"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Terminál JIH, Pardubice",
+     "ulice Lexova",
+     "nám. Dukelských hrdinů",
+     "ulice Wolkerova",
+     "Jiráskova 169, Pardubice",
+     "Dukla",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 5277, k. ú. Pardubice",
+     "p. p. č. 5277/2, k. ú. Pardubice",
+     "p. p. č. 2155/7, k. ú. Pardubice",
+     "p. p. č. 2155/9, k. ú. Pardubice",
+     "p. p. č. 2155/13, k. ú. Pardubice",
+     "p. p. č. 2165/1, k. ú. Pardubice",
+     "p. p. č. 2165/18, k. ú. Pardubice",
+     "p. p. č. 2165/26, k. ú. Pardubice",
+     "p. p. č. 2165/28, k. ú. Pardubice",
+     "p. p. č. 2165/30, k. ú. Pardubice",
+     "p. p. č. 2252/1, k. ú. Pardubice",
+     "p. p. č. 2252/9, k. ú. Pardubice",
+     "p. p. č. 2252/15, k. ú. Pardubice",
+     "p. p. č. 2252/17, k. ú. Pardubice",
+     "p. p. č. 2252/18, k. ú. Pardubice",
+     "p. p. č. 2252/20, k. ú. Pardubice",
+     "p. p. č. 2252/21, k. ú. Pardubice",
+     "p. p. č. 2252/26, k. ú. Pardubice",
+     "p. p. č. 2255/13, k. ú. Pardubice",
+     "p. p. č. 2266/2, k. ú. Pardubice",
+     "p. p. č. 2271, k. ú. Pardubice",
+     "p. p. č. 2276/2, k. ú. Pardubice",
+     "p. p. č. 2165/40, k. ú. Pardubice",
+     "p. p. č. 2165/37, k. ú. Pardubice",
+     "p. p. č. 2400/1, k. ú. Pardubice",
+     "p. p. č. 2110/7, k. ú. Pardubice",
+     "p. p. č. 2117/19, k. ú. Pardubice",
+     "p. p. č. 2117/20, k. ú. Pardubice",
+     "p. p. č. 2292/7, k. ú. Pardubice",
+     "p. p. č. 2303/1, k. ú. Pardubice",
+     "p. p. č. 2306/13, k. ú. Pardubice",
+     "p. p. č. 2306/17, k. ú. Pardubice",
+     "p. p. č. 2309/4, k. ú. Pardubice",
+     "p. p. č. 2309/11, k. ú. Pardubice",
+     "p. p. č. 2309/12, k. ú. Pardubice",
+     "p. p. č. 2313/3, k. ú. Pardubice",
+     "p. p. č. 2318/17, k. ú. Pardubice",
+     "p. p. č. 2318/51, k. ú. Pardubice",
+     "p. p. č. 2506/8, k. ú. Pardubice",
+     "p. p. č. 2583/41, k. ú. Pardubice",
+     "p. p. č. 2309/5, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Statutární město Pardubice",
+     "DEPRO Vápenka s.r.o.",
+     "Služby města Pardubic a. s.",
+     "Scimed Biotechnologies, s.r.o.",
+     "T-Mobile Czech Republic a. s.",
+     "EOP a.s."
+    ],
+    "amounts": [
+     "500,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "160/2020 R",
+    "title": "Smlouvy se Službami města Pardubic na výsyp odpadkových košů a košů na psí exkrementy v roce 2021",
+    "summary": "Rada obvodu souhlasí s uzavřením smluv o dílo s a.s. Služby města Pardubic na výsyp odpadkových košů a košů na psí exkrementy na rok 2021 mimo režim směrnice č. 14/2017 – zadávací řád veřejných zakázek. Důvodem je využití společnosti založené městem k tomuto účelu.",
+    "keywords": [
+     "výsyp odpadkových košů",
+     "psí exkrementy",
+     "koše na psí exkrementy",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "úklid",
+     "odpady",
+     "výjimka ze zadávacího řádu"
+    ],
+    "topics": [
+     "zakazky",
+     "cistota"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Hůrka 1803, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "828.850 Kč",
+     "685 000,- Kč bez DPH",
+     "320.650,- Kč",
+     "265 000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "161/2020 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 30. 11. 2020",
+    "summary": "Rada obvodu projednala zprávu o rozboru hospodaření MO Pardubice V k 30. 11. 2020 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "30. 11. 2020",
+     "doporučení zastupitelstvu",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "162/2020 R",
+    "title": "Doporučení zastupitelstvu schválit 4. změnu rozpočtu na rok 2020",
+    "summary": "Rada obvodu doporučuje zastupitelstvu vzít na vědomí komentář a schválit návrh 4. změny rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2020 včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu 2020",
+     "rozpočtové opatření",
+     "sociální fond",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "163/2020 R",
+    "title": "Doporučení zastupitelstvu schválit rozpočet na rok 2021 a související pravidla",
+    "summary": "Rada obvodu doporučuje zastupitelstvu schválit návrh rozpočtu MO Pardubice V a rozpočtu sociálního fondu na rok 2021 a svěřit radě pravomoc provádět vymezená rozpočtová opatření. Návrh dále upravuje rozpis rozpočtu a technické přesuny, plán společenských akcí, limity hodnoty drobných dárků, dárků jubilantům a propagačních předmětů a bere na vědomí, že hospodaření se sociálním fondem se řídí směrnicí č. 7/2019.",
+    "keywords": [
+     "rozpočet 2021",
+     "návrh rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoc rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V",
+     "Rada městského obvodu Pardubice V",
+     "odbor ekonomický",
+     "finanční výbor",
+     "ÚP"
+    ],
+    "amounts": [
+     "200 tis. Kč",
+     "500,-- Kč",
+     "200,- Kč"
+    ]
+   },
+   {
+    "number": "164/2020 R",
+    "title": "Doporučení zastupitelstvu schválit aktualizaci střednědobého výhledu rozpočtu 2020–2023",
+    "summary": "Rada obvodu doporučuje zastupitelstvu vzít na vědomí komentář a schválit aktualizovaný střednědobý výhled rozpočtu MO Pardubice V na roky 2020–2023.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "2020–2023",
+     "doporučení zastupitelstvu",
+     "rozpočet"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "165/2020 R",
+    "title": "Směrnice č. 28/2020 – zásady a program poskytování dotací z rozpočtu obvodu v roce 2021",
+    "summary": "Rada obvodu schvaluje směrnici č. 28/2020 se zásadami a programem pro poskytování dotací z rozpočtu MO Pardubice V v roce 2021 včetně osmi příloh (žádost, smlouva o poskytnutí dotace, čestná prohlášení, poučení žadatele a formuláře vyúčtování).",
+    "keywords": [
+     "dotace",
+     "dotační program 2021",
+     "směrnice č. 28/2020",
+     "zásady poskytování dotací",
+     "žádost o dotaci",
+     "vyúčtování dotace",
+     "de minimis",
+     "granty"
+    ],
+    "topics": [
+     "dotace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

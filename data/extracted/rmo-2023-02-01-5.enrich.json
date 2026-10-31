@@ -1,0 +1,155 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "1002ec699ac1cab015be22d4ba14e0e01960037be3570659809ae3ec4325d438",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "22/2023 R",
+    "title": "Jmenování nového člena Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "summary": "Rada jmenuje ke dni 1. 2. 2023 nového člena Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V.",
+    "keywords": [
+     "jmenování člena komise",
+     "Komise pro strategii a rozvoj obvodu",
+     "životní prostředí",
+     "doprava",
+     "komise rady"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "23/2023 R",
+    "title": "Výjimka ze zákazu konzumace alkoholu na akcích obvodu v roce 2023",
+    "summary": "Rada uděluje výjimku z čl. 3 odst. 3 obecně závazné vyhlášky města Pardubice č. 13/2006 o veřejném pořádku a souhlasí s konzumací alkoholu na akcích MO Pardubice V v roce 2023. Jde o Májové slavnosti 5. 5. 2023 a Vánoční stromeček 3. 12. 2023 na náměstí Dukelských hrdinů a o punče 19. 12. 2023 na hřišti v Raisově ulici a v Dražkovicích a 21. 12. 2023 před ZŠ Benešovo náměstí a na náměstí Dukelských hrdinů.",
+    "keywords": [
+     "výjimka z vyhlášky",
+     "konzumace alkoholu",
+     "alkohol na veřejnosti",
+     "veřejný pořádek",
+     "Májové slavnosti",
+     "Vánoční stromeček",
+     "punč",
+     "náměstí Dukelských hrdinů",
+     "společenské akce"
+    ],
+    "topics": [
+     "kultura-akce",
+     "vyhlasky-pravidla",
+     "bezpecnost"
+    ],
+    "kind": "jine",
+    "places": [
+     "náměstí Dukelských hrdinů",
+     "hřiště v Raisově ulici",
+     "Dražkovice",
+     "ZŠ Benešovo náměstí"
+    ],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice",
+     "MO Pardubice V",
+     "ZŠ Benešovo náměstí"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "24/2023 R",
+    "title": "Stanovisko k prodeji pozemků p. p. č. 460/2 a 460/3 v k. ú. Dražkovice",
+    "summary": "Návrh, aby rada na žádost pozemkové komise rady města Pardubice souhlasila s prodejem pozemků p. p. č. 460/2 (611 m2) a p. p. č. 460/3 (497 m2) v k. ú. Dražkovice. Žadatel uvádí jako důvod další využití k zemědělským účelům.",
+    "keywords": [
+     "prodej pozemků",
+     "stanovisko obvodu",
+     "pozemková komise",
+     "Dražkovice",
+     "zemědělské pozemky",
+     "460/2",
+     "460/3"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "p. p. č. 460/2, k. ú. Dražkovice",
+     "p. p. č. 460/3, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "25/2023 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na stavební úpravy vnitrobloku Wolkerova",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo z 1. 8. 2022 na akci „Stavební úpravy vnitrobloku ul. Wolkerova čp. 2116-2118 a čp. 2119-2121“ se zhotovitelem M- STAV CZ s. r. o. Po započtení víceprací a méněprací činí cena 2.807.904,15 Kč bez DPH, původně schválená cena byla 3.362.645,19 Kč bez DPH.",
+    "keywords": [
+     "dodatek ke smlouvě o dílo",
+     "vnitroblok Wolkerova",
+     "stavební úpravy",
+     "vícepráce",
+     "méněpráce",
+     "rozhodnutí zadavatele",
+     "M- STAV CZ"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Wolkerova čp. 2116-2118 a čp. 2119-2121"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M- STAV CZ s. r. o."
+    ],
+    "amounts": [
+     "2.807.904,15 Kč bez DPH",
+     "3.362.645,19 Kč bez DPH"
+    ]
+   },
+   {
+    "number": "26/2023 R",
+    "title": "Záměr prodeje nebytového prostoru v domě Josefa Ressla 2277-2279",
+    "summary": "Rada souhlasí se záměrem prodeje nebytového prostoru v přízemí budovy čp. 2277-2279 v ulici Josefa Ressla; žadatelem je jednatel společnosti AR-made s.r.o. Jde o nebytovou jednotku č. 2277/20 o výměře 20,02 m2, nyní pronajatou jako kancelářské prostory na dobu neurčitou za 1.399,79 Kč/m2/rok bez DPH.",
+    "keywords": [
+     "prodej nebytového prostoru",
+     "záměr prodeje",
+     "Josefa Ressla",
+     "nebytová jednotka 2277/20",
+     "kancelářské prostory",
+     "nájem",
+     "AR-made"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [
+     "Josefa Ressla 2277-2279, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "AR-made s.r.o."
+    ],
+    "amounts": [
+     "1.399,79 Kč/m2/rok bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

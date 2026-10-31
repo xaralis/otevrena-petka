@@ -1,0 +1,265 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "3b6cb1b62fea407890d5b8de42d8601ff69a0b7235c9b93840f197169399a551",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "280/2022 R",
+    "title": "Stanovisko k žádostem pozemkové komise: sleva na reklamu, Retroměstečko, nájmy pozemků, boží muka",
+    "summary": "Rada obvodu se vyjádřila k pěti žádostem projednávaným pozemkovou komisí rady města: 30% sleva z plateb za reklamní zařízení na pozemcích a stavbách města za leden–duben 2021 pro společnost Reklamní servis RS, spol. s r.o. kvůli pandemii, bezplatné užívání pozemků v k. ú. Pardubice pro akci „RETROMĚSTEČKO (nejen) ČSLA, setkání HASIČŮ a bezpečnostních složek“ 10.–11. 9. 2022, nájem a odkoupení státního pozemku p. p. č. 2349/28 městem, výpůjčka části pozemku v Dražkovicích pro stavbu božích muk s lavičkami a nájem pozemku pod garáží. O jednotlivých bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko pozemkové komise",
+     "sleva z nájmu reklamních zařízení",
+     "reklama",
+     "covid",
+     "Retroměstečko",
+     "setkání hasičů",
+     "boží muka",
+     "Dražkovice",
+     "nájem pozemku",
+     "garáž"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Dražkovice",
+     "Pardubice",
+     "Pardubičky",
+     "Studánka",
+     "Ohrazenice",
+     "Rosice n.Labem",
+     "Trnová",
+     "Svítkov",
+     "podchod pro pěší Karla IV.",
+     "opěrná zeď 17.listopadu",
+     "nadjezd u nemocnice (M117)"
+    ],
+    "parcels": [
+     "p. p. č. 2400/1, k. ú. Pardubice",
+     "p. p. č. 2400/2, k. ú. Pardubice",
+     "p. p. č. 2400/3, k. ú. Pardubice",
+     "p. p. č. 2400/5, k. ú. Pardubice",
+     "p. p. č. 2400/8, k. ú. Pardubice",
+     "p. p. č. 2400/9, k. ú. Pardubice",
+     "p. p. č. 2400/11, k. ú. Pardubice",
+     "p. p. č. 2426/2, k. ú. Pardubice",
+     "p. p. č. 2433/1, k. ú. Pardubice",
+     "p. p. č. 2575/4, k. ú. Pardubice",
+     "st. p. č. 2342, k. ú. Pardubice",
+     "st. p. č. 2343, k. ú. Pardubice",
+     "st. p. č. 5336, k. ú. Pardubice",
+     "st. p. č. 5340, k. ú. Pardubice",
+     "st. p. č. 5341, k. ú. Pardubice",
+     "p. p. č. 2349/28, k. ú. Pardubice",
+     "st. p. č. 3379",
+     "p. p. č. 468/5, k. ú. Dražkovice",
+     "st. p. č. 7007/7, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Reklamní servis RS, spol. s r.o.",
+     "RETROMĚSTEČKO s.r.o.",
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "258 647,03 Kč",
+     "77 593,99 Kč",
+     "3.619,- Kč/rok",
+     "2.261,00 Kč",
+     "3.486,00 Kč",
+     "1.190,00 Kč"
+    ]
+   },
+   {
+    "number": "281/2022 R",
+    "title": "Souhlas se záměrem prodeje pěti nebytových jednotek v Jilemnického, nám. Dukelských hrdinů a A. Krause",
+    "summary": "Rada obvodu souhlasí se záměrem města prodat nebytové jednotky č. 2225/17 v Jilemnického ul., č. 2234/113 a 2234/114 na nám. Dukelských hrdinů a č. 2317/5 a 2316/6 v ul. A. Krause.",
+    "keywords": [
+     "prodej nebytových prostor",
+     "nebytové jednotky",
+     "Jilemnického",
+     "náměstí Dukelských hrdinů",
+     "A. Krause",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jilemnického ul.",
+     "nám. Dukelských hrdinů",
+     "ul. A. Krause"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "282/2022 R",
+    "title": "Rozpočtové opatření č. 36 – převod 100 tis. Kč městu na krajinářskou studii Dražkovice",
+    "summary": "Rada obvodu schvaluje přesun 100 tis. Kč z položky pořízení krajinářské studie Dražkovice v kapitole životní prostředí na novou položku převodu z rozpočtu obvodu do rozpočtu města na pořízení této studie (rozpočtové opatření č. 36).",
+    "keywords": [
+     "rozpočtové opatření",
+     "krajinářská studie",
+     "Dražkovice",
+     "převod do rozpočtu města",
+     "životní prostředí"
+    ],
+    "topics": [
+     "rozpocet",
+     "zelen"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "100 tis. Kč"
+    ]
+   },
+   {
+    "number": "283/2022 R",
+    "title": "Souhlas se záměrem pronájmu garážového stání v domě čp. 2731 v Sokolovské ulici",
+    "summary": "Rada obvodu souhlasí se záměrem pronajmout garážové stání o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2731 v Sokolovské ulici k garážování osobního automobilu.",
+    "keywords": [
+     "nájem",
+     "garážové stání",
+     "garáž",
+     "Sokolovská",
+     "parkování",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova čp. 2731"
+    ],
+    "parcels": [
+     "stavební parcela č. 10090, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "284/2022 R",
+    "title": "Opravy komunikací po zimě „in house“ se Službami města Pardubic",
+    "summary": "Rada obvodu souhlasí, aby opravy komunikací ve správě obvodu po zimě provedla společnost Služby města Pardubic v režimu „in house“ mimo zadávací řád veřejných zakázek, za uvedené jednotkové ceny frézování, pokládky asfaltu, oprav výtluků a tlakového zástřiku. Záruka na práce je 36 měsíců, s výjimkou oprav výtluků.",
+    "keywords": [
+     "opravy komunikací",
+     "výtluky",
+     "asfalt",
+     "oprava silnic po zimě",
+     "in house",
+     "Služby města Pardubic"
+    ],
+    "topics": [
+     "doprava",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "750,0",
+     "670,0",
+     "4 300,0"
+    ]
+   },
+   {
+    "number": "285/2022 R",
+    "title": "Smlouva o dílo na opravu hřiště v Dražkovické ulici se Službami města Pardubic",
+    "summary": "Rada obvodu souhlasí s uzavřením smlouvy o dílo na opravu hřiště v Dražkovické ulici se společností Služby města Pardubic a.s. mimo zadávací řád veřejných zakázek, protože jde o městem založenou společnost.",
+    "keywords": [
+     "oprava hřiště",
+     "hřiště Dražkovická",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "in house"
+    ],
+    "topics": [
+     "hriste-sport",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovická ul."
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "993.900,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "286/2022 R",
+    "title": "Souhlas s umístěním stánku rychlého občerstvení na nám. Dukelských hrdinů",
+    "summary": "Návrh závazného stanoviska obvodu se souhlasem s umístěním stánku rychlého občerstvení na pozemku p. p. č. 2252/9 na náměstí Dukelských hrdinů.",
+    "keywords": [
+     "stánek",
+     "rychlé občerstvení",
+     "náměstí Dukelských hrdinů",
+     "závazné stanovisko",
+     "zábor veřejného prostranství"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "nám. Dukelských hrdinů"
+    ],
+    "parcels": [
+     "p. p. č. 2252/9, k. ú Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "287/2022 R",
+    "title": "Výjimka ze zákazu konzumace alkoholu na Májových slavnostech 6. 5. 2022",
+    "summary": "Rada obvodu uděluje výjimku z obecně závazné vyhlášky města č. 13/2006 o veřejném pořádku a souhlasí s konzumací alkoholických nápojů při Májových slavnostech MO Pardubice V dne 6. 5. 2022 od 16.00 do 22.00 hod. na náměstí Dukelských hrdinů.",
+    "keywords": [
+     "výjimka z vyhlášky",
+     "alkohol",
+     "konzumace alkoholu",
+     "Májové slavnosti",
+     "náměstí Dukelských hrdinů",
+     "veřejný pořádek"
+    ],
+    "topics": [
+     "kultura-akce",
+     "vyhlasky-pravidla",
+     "bezpecnost"
+    ],
+    "kind": "jine",
+    "places": [
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

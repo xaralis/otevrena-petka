@@ -1,0 +1,210 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "029aa7aa27c208b4d4a577bddeb2b56ecee1836328b88927f32413fdc9ecd91d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "209/2021 R",
+    "title": "Stanovisko k žádostem pozemkové komise – slevy, prodeje, nájmy a výpůjčky pozemků",
+    "summary": "Rada obvodu se po jednotlivých bodech vyjádřila k deseti žádostem pozemkové komise rady města: sleva z plateb za reklamní zařízení pro BARTH Reklamka a.s., prodej části pozemku u čp. 153 v ulici Široká, prodej pozemků v k. ú. Dražkovice, prodloužení termínu převodu stavebních úprav komunikací pro Úřad práce ČR, nájmy pozemků pro stánky (rychlé občerstvení, zmrzlina pro FG Ice s.r.o.), parkovací místo a venkovní sezení, prodloužení výpůjčky pozemků pod zastávkovými přístřešky MHD Dopravního podniku města Pardubic a odkoupení pozemků do vlastnictví města.",
+    "keywords": [
+     "pozemková komise",
+     "prodej pozemku",
+     "nájem pozemku",
+     "výpůjčka",
+     "reklamní zařízení",
+     "zastávky MHD",
+     "stánek",
+     "zmrzlina",
+     "parkovací místo",
+     "Dražkovice"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Široká, Pardubice",
+     "čp. 153",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "Hůrka 1798, Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2341/32, k. ú. Pardubice",
+     "p. p. č. 2341/21, k. ú. Pardubice",
+     "p. p. č. 488/13, k. ú. Dražkovice",
+     "p. p. č. 488/3, k. ú. Dražkovice",
+     "p. p. č. 2499/105, k. ú. Pardubice",
+     "p. p. č. 2404/79, k. ú. Pardubice",
+     "p. p. č. 2404/81, k. ú. Pardubice",
+     "p. p. č. 2404/80, k. ú. Pardubice",
+     "p. p. č. 2426/41, k. ú. Pardubice",
+     "p. p. č. 2575/4, k. ú. Pardubice",
+     "p. p. č. 2252/9, k. ú. Pardubice",
+     "p. p. č. 58/4, k. ú. Dražkovice",
+     "p. č. 2155/7, k. ú. Pardubice",
+     "p. č 2580/4, k. ú. Pardubice",
+     "p. č. 2499/140, k. ú. Pardubice",
+     "p. č. 2155/3, k. ú. Pardubice",
+     "p. č. 2165/30, k. ú. Pardubice",
+     "p. č. 2316/1, k. ú. Pardubice",
+     "p. č. 2583/6, k. ú. Pardubice",
+     "p. p. č. 2335/39, k. ú. Pardubice",
+     "st. p. č. 5376, k. ú. Pardubice",
+     "p. p. č. 3752/7, k. ú. Pardubice",
+     "p. p. č. 5240, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "BARTH Reklamka a.s.",
+     "Česká republika - Úřad práce České republiky",
+     "FG Ice s.r.o.",
+     "Dopravní podnik města Pardubic a.s.",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "4.000,- Kč/m2"
+    ]
+   },
+   {
+    "number": "210/2021 R",
+    "title": "Souhlas se záměrem pronájmu garážových stání v Sokolovské ulici",
+    "summary": "Rada obvodu souhlasí se záměrem pronajmout tři garážová stání o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2731 v Sokolovské ulici (budovy čp. 2721 a čp. 2731, k. ú. Pardubice) fyzickým osobám.",
+    "keywords": [
+     "garážové stání",
+     "pronájem",
+     "nebytové prostory",
+     "Sokolovská",
+     "garáž",
+     "parkování"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "čp. 2721",
+     "čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "stavební parcely č. 10089 a 10090, k. ú. Pardubice"
+    ],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "211/2021 R",
+    "title": "Dodatek ke smlouvě na výsyp odpadkových košů se Službami města Pardubice",
+    "summary": "Rada obvodu souhlasí s uzavřením dodatku ke smlouvě o výsypu a pronájmu odpadkových košů se Službami města Pardubice a.s. kvůli zvýšení počtu košů o 3 ks na 284; celková cena se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "výsyp košů",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "odpady",
+     "úklid"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "685.000, - Kč bez DPH"
+    ]
+   },
+   {
+    "number": "212/2021 R",
+    "title": "Smlouva o dílo na přestavbu provozovny na knihovnu v ulici Josefa Ressla",
+    "summary": "Rada obvodu souhlasí s uzavřením smlouvy o dílo na akci „Změna užívání drobné provozovny na knihovnu, Josefa Ressla 2278, Pardubice“ se zhotovitelem CHRPA stavební společnost s r.o. Pardubice jako výsledkem zakázky malého rozsahu.",
+    "keywords": [
+     "knihovna",
+     "Josefa Ressla",
+     "změna užívání",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "CHRPA"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "kultura-akce"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Josefa Ressla 2278, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "CHRPA stavební společnost s r.o. Pardubice"
+    ],
+    "amounts": [
+     "883.873,42 Kč bez DPH",
+     "1.069.486,90 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "213/2021 R",
+    "title": "Změna termínu dotace na Dětský den Sportovního klubu Dražkovice",
+    "summary": "Rada obvodu souhlasí se změnou termínu schválené dotace na akci „Dětský den“ (původně 29. 5. 2021) pro Sportovní klub Dražkovice; účel dotace bude splněn nejdéle 30. 10. 2021.",
+    "keywords": [
+     "dotace",
+     "Dětský den",
+     "Sportovní klub Dražkovice",
+     "změna termínu",
+     "Dražkovice"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "10.000,- Kč"
+    ]
+   },
+   {
+    "number": "214/2021 R",
+    "title": "Prodej nákladního přívěsu AGADOS, případně jeho vyřazení a likvidace",
+    "summary": "Rada obvodu souhlasí s prodejem nákladního přívěsu AGADOS 26 S prostřednictvím nabídky na úřední desce zájemci s nejvyšší nabídnutou cenou a s jeho vyřazením z účetnictví. Pokud se žádný zájemce nepřihlásí, bude přívěs vyřazen z majetku a fyzicky zlikvidován.",
+    "keywords": [
+     "prodej majetku",
+     "nákladní přívěs",
+     "AGADOS",
+     "vyřazení majetku",
+     "likvidace",
+     "úřední deska"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "majetek",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "AGADOS s.r.o."
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

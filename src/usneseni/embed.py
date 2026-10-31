@@ -4,9 +4,12 @@ bge-m3 needs no query/document prefixes. EMBED_URL is the server base URL; unset
 semantic search (the web and MCP fall back to full text and say so).
 """
 
+import logging
 import os
 
 import httpx
+
+log = logging.getLogger(__name__)
 
 URL = os.environ.get("EMBED_URL", "")
 MODEL = os.environ.get("EMBED_MODEL", "bge-m3")
@@ -38,6 +41,12 @@ def embed_documents(texts: list[str]) -> list[list[float]]:
 
 
 def embed_query(q: str) -> list[float] | None:
+    """Query vector, or None when semantic search is off or the embedder is down (starting,
+    restarting) – search then falls back to full text and says so."""
     if not enabled():
         return None
-    return _call([q[:2000]])[0]
+    try:
+        return _call([q[:2000]])[0]
+    except httpx.HTTPError as e:
+        log.warning("embedder unavailable: %r", e)
+        return None

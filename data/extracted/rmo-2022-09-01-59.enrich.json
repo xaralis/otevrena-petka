@@ -1,0 +1,173 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "80d80b535aa8911eb5e0dfdaff316ced4f30add002087207ea9830b618f62dce",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "313/2022 R",
+    "title": "Stanovisko k žádostem pozemkové komise rady města – nájmy, prodeje, směna, věcná břemena",
+    "summary": "Rada se vyjádřila k osmi majetkovým žádostem projednávaným pozemkovou komisí rady města Pardubice, o každé hlasovala zvlášť. Jde o nájem části pozemku na zahrádku a směnu pozemků v k. ú. Dražkovice, prodej objektu „Bobr“ formou veřejné dražby, věcné břemeno pro ČEZ Distribuce (kabelové vedení NN a VN), přesah zateplení domu č. p. 1446 Jana Palacha, nájem pozemku Státního pozemkového úřadu pro stavební úpravy ul. Do Zahrádek a nájem a prodej pozemků p. p. č. 460/2 a 460/3 v Dražkovicích, mj. pro developerský projekt společnosti Bydlení Dražkovice s.r.o.",
+    "keywords": [
+     "pozemková komise",
+     "nájem pozemku",
+     "prodej pozemku",
+     "směna pozemků",
+     "věcné břemeno",
+     "veřejná dražba",
+     "objekt Bobr",
+     "Dražkovice",
+     "Do Zahrádek",
+     "zateplení"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Dražkovice",
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany",
+     "objekt „Bobr“",
+     "ul. Čacké",
+     "Jana Palacha",
+     "ul. Do Zahrádek"
+    ],
+    "parcels": [
+     "p. p. č. 22/1, k. ú. Dražkovice",
+     "st. p. č. 4194, k. ú. Pardubice",
+     "p. p. č. 2168/12, k. ú. Pardubice",
+     "p. p. č. 2/12, k. ú. Nové Jesenčany",
+     "p. p. č. 2/20, k. ú. Nové Jesenčany",
+     "p. p. č. 2347/22, k. ú. Pardubice",
+     "p. p. č. 2347/42, k. ú. Pardubice",
+     "p. p. č. 2360, k. ú. Pardubice",
+     "p. p. č. 488/13, k. ú. Dražkovice",
+     "p. p. č. 420/2, k. ú. Dražkovice",
+     "p. p. č. 2583/32, k. ú. Pardubice",
+     "st. p. č. 2350, k. ú. Pardubice",
+     "p. p. č. 38/71, k. ú. Nové Jesenčany",
+     "p. p. č. 460/2, k. ú. Dražkovice",
+     "p. p. č. 174, k. ú. Dražkovice",
+     "p. p. č. 151/1, k. ú. Dražkovice",
+     "p. p. č. 460/3, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "ČEZ Distribuce, a. s.",
+     "Státní pozemkový úřad",
+     "Statutární město Pardubice",
+     "Bydlení Dražkovice s.r.o."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "314/2022 R",
+    "title": "Úprava plánu společenských akcí na rok 2022 – přesun peněz na Pohádkovou cestu",
+    "summary": "Rada schvaluje přesun 5,8 tis. Kč v plánu společenských akcí MO Pardubice V na rok 2022 z akce Slavnost MO Pardubice V na akci Pohádková cesta. Celkový rozpočet plánu ve výši 705 tis. Kč se nemění.",
+    "keywords": [
+     "plán společenských akcí",
+     "Pohádková cesta",
+     "Slavnost MO Pardubice V",
+     "kulturní akce",
+     "přesun prostředků"
+    ],
+    "topics": [
+     "kultura-akce",
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "5,8 tis. Kč",
+     "705 tis. Kč"
+    ]
+   },
+   {
+    "number": "315/2022 R",
+    "title": "Rozpočtové opatření č. 80 – převod 295 tis. Kč na bezpečnostní kamery městu",
+    "summary": "Rada schvaluje rozpočtové opatření č. 80, kterým se 295 tis. Kč z položky bezpečnostní kamery v kapitole 14 – vnitřní správa přesouvá na převod z rozpočtu obvodu do rozpočtu města na pořízení bezpečnostních kamer.",
+    "keywords": [
+     "rozpočtové opatření",
+     "bezpečnostní kamery",
+     "kamerový systém",
+     "převod městu",
+     "kapitálové výdaje"
+    ],
+    "topics": [
+     "rozpocet",
+     "bezpecnost",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "295 tis. Kč"
+    ]
+   },
+   {
+    "number": "316/2022 R",
+    "title": "Přijetí finančního daru 7 000 Kč od IP stav s. r. o. na péči o zeleň",
+    "summary": "Rada souhlasí s přijetím finančního daru 7.000,- Kč od firmy IP stav s. r. o. na péči o veřejnou zeleň na území MO Pardubice V v roce 2022.",
+    "keywords": [
+     "finanční dar",
+     "IP stav",
+     "veřejná zeleň",
+     "péče o zeleň",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "IP stav s. r. o."
+    ],
+    "amounts": [
+     "7.000,- Kč"
+    ]
+   },
+   {
+    "number": "317/2022 R",
+    "title": "Výjimka pro ohňostroj na Pardubickém vodáckém maratonu 3. 9. 2022",
+    "summary": "Rada uděluje výjimku z obecně závazné vyhlášky města Pardubice č. 13/2006, o veřejném pořádku, a souhlasí s ohňostrojem při Pardubickém vodáckém maratonu v areálu bývalé vojenské plovárny Pod Vinicí 3. 9. 2022 mezi 21.00 a 21.30 hod. Žadatelem je Tělovýchovná jednota klub vodáků – turistů, z. s.; podmínkou je dodržení hygienických předpisů o hluku a informování subjektů IZS.",
+    "keywords": [
+     "ohňostroj",
+     "výjimka z vyhlášky",
+     "veřejný pořádek",
+     "vodácký maraton",
+     "plovárna Pod Vinicí",
+     "hluk"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "kultura-akce",
+     "bezpecnost"
+    ],
+    "kind": "jine",
+    "places": [
+     "areál bývalé vojenské plovárny Pod Vinicí",
+     "K Vinici"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Tělovýchovná jednota klub vodáků – turistů, z. s.",
+     "statutární město Pardubice",
+     "IZS"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

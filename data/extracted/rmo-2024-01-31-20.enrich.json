@@ -1,0 +1,91 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "8e2c189f7fd4432315c23c92831e9526f8412f1f5d692327e96dfc0828966eec",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "104/2024 R",
+    "title": "Souhlas s pronájmem části pozemku pro předzahrádku restaurace „Pod košem“ v ul. Gorkého",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout 100 m2 pozemku p. p. č. 2292/7 v k. ú. Pardubice společnosti DŮM KULTURY DUKLA PARDUBICE, s.r.o. Pozemek má sloužit k umístění a provozování venkovní terasy – předzahrádky u restaurace „Pod košem“ v objektu čp. 2573 v ulici Gorkého.",
+    "keywords": [
+     "pronájem pozemku",
+     "předzahrádka",
+     "venkovní terasa",
+     "restaurace Pod košem",
+     "Gorkého",
+     "Dům kultury Dukla",
+     "stanovisko k žádosti pozemkové komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Gorkého 2573, Pardubice",
+     "restaurace „Pod košem“",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2292/7, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "DŮM KULTURY DUKLA PARDUBICE, s.r.o.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "105/2024 R",
+    "title": "Přijetí finančního daru 15.000 Kč od M-BET s.r.o. na údržbu zeleně",
+    "summary": "Rada obvodu souhlasí s přijetím finančního daru od firmy M-BET s.r.o. Dar je určen na údržbu zeleně na území obvodu.",
+    "keywords": [
+     "finanční dar",
+     "přijetí daru",
+     "M-BET",
+     "údržba zeleně",
+     "sponzorský dar"
+    ],
+    "topics": [
+     "dotace",
+     "zelen"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "M-BET s.r.o."
+    ],
+    "amounts": [
+     "15.000,- Kč"
+    ]
+   },
+   {
+    "number": "106/2024 R",
+    "title": "Výpůjčka dvou automobilů Hyundai iX35 od městského obvodu Pardubice I",
+    "summary": "Rada obvodu souhlasí s uzavřením smluv o výpůjčce dvou motorových vozidel Hyundai iX35, r. v. 2015, RZ 4E3 5126 a 4E3 5143. Půjčitelem je městský obvod Pardubice I, vypůjčitelem městský obvod Pardubice V.",
+    "keywords": [
+     "smlouva o výpůjčce",
+     "výpůjčka vozidel",
+     "služební auta",
+     "Hyundai iX35",
+     "MO Pardubice I"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "organizace"
+    ],
+    "kind": "majetek",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Statutární město Pardubice – městský obvod Pardubice I",
+     "Statutární město Pardubice – městský obvod Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

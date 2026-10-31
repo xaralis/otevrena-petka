@@ -1,0 +1,440 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "0c41818ed8b847c47884a0f9ea98b6aca18ac9f3fbc5c6a2df13012a2bbbd683",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 32,
+   "kind": "radne",
+   "date": "2024-09-04",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Evžen Erban",
+    "Bc. Petr Dufek",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák"
+   ],
+   "excused": [
+    "Jiří Rejda, DiS."
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 38,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 56,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 134,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Úprava plánu společenských akcí MO Pardubice V na r. 2024",
+    "line": 145,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Přijetí finančního daru",
+    "line": 153,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Kontejnerové stání Pichlova Rokycanova“",
+    "line": 163,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Diskuse, závěr",
+    "line": 174,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "153/2024 R",
+    "agenda_no": "1.",
+    "first_line": 59,
+    "last_line": 131,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "154/2024 R",
+    "agenda_no": "2.",
+    "first_line": 137,
+    "last_line": 142,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "155/2024 R",
+    "agenda_no": "3.",
+    "first_line": 148,
+    "last_line": 151,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "156/2024 R",
+    "agenda_no": "4.",
+    "first_line": 159,
+    "last_line": 160,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "157/2024 R",
+    "agenda_no": "5.",
+    "first_line": 167,
+    "last_line": 171,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 41,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 65,
+    "last_line": 65,
+    "resolution": "153/2024 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 69,
+    "last_line": 69,
+    "resolution": "153/2024 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "153/2024 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 84,
+    "last_line": 84,
+    "resolution": "153/2024 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "153/2024 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "153/2024 R",
+    "part": "bod 6",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 110,
+    "last_line": 110,
+    "resolution": "153/2024 R",
+    "part": "bod 7",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 120,
+    "last_line": 120,
+    "resolution": "153/2024 R",
+    "part": "bod 8",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "153/2024 R",
+    "part": "bod 9",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 143,
+    "last_line": 143,
+    "resolution": "154/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 152,
+    "last_line": 152,
+    "resolution": "155/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 161,
+    "last_line": 161,
+    "resolution": "156/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 172,
+    "last_line": 172,
+    "resolution": "157/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 13–15: starosta Jiří Rejda, DiS. je uveden jako omluvený, přesto je na ř. 192 uveden jako podepisující starosta.",
+   "ř. 69: bod 2 usnesení 153/2024 R (výpůjčka části p. p. č. 2390/23) – hlasování Pro 0, zdržel se 0, proti 4; text výsledek výslovně neuvádí.",
+   "ř. 109: odůvodnění bodu 7 usnesení 153/2024 R končí čárkou uprostřed věty („V současnosti připravujeme změnu projektové dokumentace,“) – text zřejmě neúplný."
+  ]
+ }
+}

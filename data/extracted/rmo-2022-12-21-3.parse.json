@@ -1,0 +1,445 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "2a3a14c7d763e53c6f88c8edf5bbc0aeb24303ab83a74538e83a2a16f112eec1",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 3,
+   "kind": "mimoradne",
+   "date": "2022-12-21",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 52,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 55,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Jmenování členů komisí Rady městského obvodu Pardubice V",
+    "line": 81,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2022",
+    "line": 93,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "4. změna rozpočtu MO Pardubice V na r. 2022",
+    "line": 103,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2023",
+    "line": 116,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Aktualizace střednědobého výhledu rozpočtu MO Pardubice V na r. 2022 – 2025",
+    "line": 219,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Směrnice č. 28/2022: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2023",
+    "line": 229,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Souhlas zadavatele s uzavřením smluv o dílo – SmP a.s. Pardubice",
+    "line": 244,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Diskuse, závěr",
+    "line": 260,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "10/2022 R",
+    "agenda_no": "1",
+    "first_line": 57,
+    "last_line": 77,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "11/2022 R",
+    "agenda_no": "2",
+    "first_line": 83,
+    "last_line": 89,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "12/2022 R",
+    "agenda_no": "3",
+    "first_line": 95,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "13/2022 R",
+    "agenda_no": "4",
+    "first_line": 105,
+    "last_line": 112,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "14/2022 R",
+    "agenda_no": "5",
+    "first_line": 118,
+    "last_line": 215,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "15/2022 R",
+    "agenda_no": "6",
+    "first_line": 221,
+    "last_line": 225,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "16/2022 R",
+    "agenda_no": "7",
+    "first_line": 232,
+    "last_line": 240,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "17/2022 R",
+    "agenda_no": "8",
+    "first_line": 246,
+    "last_line": 256,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí (program)",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 63,
+    "last_line": 63,
+    "resolution": "10/2022 R",
+    "part": "bod 1 – nájem části p. p. č. 2400/1 (EDAX GROUP s.r.o.)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 68,
+    "last_line": 68,
+    "resolution": "10/2022 R",
+    "part": "bod 2 – výpůjčka části p. p. č. 29/40 (Dopravní podnik města Pardubic a.s.)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "10/2022 R",
+    "part": "bod 3 – směna pozemku p. p. č. 514 za část p. p. č. 437/1 v k. ú. Dražkovice",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "11/2022 R",
+    "part": "bod 1 – Martina Tomanová – členka Komise pro školství, kulturu, sport a mládež",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "11/2022 R",
+    "part": "bod 2 – Jiří Matouš – člen Komise pro strategii a rozvoj obvodu, životní prostředí a dopravu",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 100,
+    "last_line": 100,
+    "resolution": "12/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 113,
+    "last_line": 113,
+    "resolution": "13/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 216,
+    "last_line": 216,
+    "resolution": "14/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 226,
+    "last_line": 226,
+    "resolution": "15/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 241,
+    "last_line": 241,
+    "resolution": "16/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 257,
+    "last_line": 257,
+    "resolution": "17/2022 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 13–15: přítomni 4 členové rady (Randák omluven), ale hlasování o programu (ř. 48) a o usnesení 12/2022 R (ř. 100) uvádí Pro 5 – počet hlasů převyšuje počet přítomných; ostatní hlasování uvádějí 4 hlasy.",
+   "ř. 47: v programu je pod bodem 9 (Diskuse, závěr) uveden řádek „Plán zimní údržby komunikací v elektronické podobě“, v bodu 9 (ř. 259–261) se k němu nic neuvádí.",
+   "ř. 78: dílčí bod 3 usnesení 10/2022 R (směna pozemku v Dražkovicích) – Pro 0, zdržel se 4; ř. 86: dílčí bod 1 usnesení 11/2022 R (jmenování Martiny Tomanové) – Pro 0, proti 4; text výslovně neuvádí, že tyto body nebyly přijaty.",
+   "ř. 252: v usnesení 17/2022 R je čtvrtá smlouva (svoz velkoobjemového odpadu vedle kontejnerových stání, 150.000,- Kč) bez vlastního čísla bodu, připojená k bodu 3."
+  ]
+ }
+}

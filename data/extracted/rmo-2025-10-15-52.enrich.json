@@ -1,0 +1,195 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "c09c37ff7c9dff73f941df13fcea3c71876dd5d44e46ce28526ed574cae6bf89",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "239/2025 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo na stavební úpravy komunikace v Dražkovicích",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo ze dne 30. 6. 2025 se zhotovitelem M-SILNICE a.s. na akci „Stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174“. Po započtení více a méněprací se cena zvyšuje z 5 243 332,93 Kč na 5 768 964,32 Kč vč. DPH.",
+    "keywords": [
+     "Dražkovice",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "méněpráce",
+     "oprava silnice",
+     "stavební úpravy komunikace",
+     "M-SILNICE"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "M-SILNICE a.s."
+    ],
+    "amounts": [
+     "5 768 964,32 Kč vč. DPH",
+     "5 243 332,93 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "240/2025 R",
+    "title": "Souhlas se záměrem pronajmout garážové stání v budově čp. 2731 v Sokolovské ulici",
+    "summary": "Rada souhlasí se záměrem města pronajmout garážové stání o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2731 v Sokolovské ulici v Pardubicích za účelem garážování motorového vozidla. Jde o stanovisko k žádosti komise pro nebytové prostory rady města.",
+    "keywords": [
+     "garážové stání",
+     "pronájem",
+     "Sokolovská",
+     "garáž",
+     "parkování",
+     "nebytové prostory",
+     "stanovisko"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova čp. 2731"
+    ],
+    "parcels": [
+     "stavební parcela č. 10090 k. ú. a obec Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "241/2025 R",
+    "title": "Stanovisko k výpůjčce, prodejům pozemků a odkoupení garáže (pozemková komise)",
+    "summary": "Rada souhlasí se záměry města: výpůjčkou části pozemku p. p. č. 2387/22 pro dočasný zábor chodníku při demolici restaurace Na Rozkoši U Kulatý báby, prodejem části pozemku p. p. č. 2426/38 pod vchodovými přístřešky bytového domu na Benešově náměstí Společenství vlastníků jednotek Benešovo náměstí 2471-5, prodejem pozemku st. p. č. 4941/3 pod garáží a odkoupením řadové garáže na st. p. č. 7007/21 za 600.000,- Kč.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "prodej pozemku",
+     "odkoupení garáže",
+     "demolice",
+     "restaurace Na Rozkoši",
+     "U Kulatý báby",
+     "Benešovo náměstí",
+     "vchodové přístřešky",
+     "zábor chodníku",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "restaurace Na Rozkoši U Kulatý báby",
+     "Benešovo náměstí",
+     "bytový dům čp. 2471-2475",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2387/22 v k. ú. Pardubice",
+     "st. p. č. 1262/1 v k. ú. Pardubice",
+     "p. p. č. 2426/38 v k. ú. Pardubice",
+     "st. p. č. 4941/3 v k. ú. Pardubice",
+     "st. p. č. 7007/21, k.ú. Pardubice"
+    ],
+    "organizations": [
+     "Společenství vlastníků jednotek Benešovo náměstí 2471-5, Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "600.000,- Kč"
+    ]
+   },
+   {
+    "number": "242/2025 R",
+    "title": "Dodatek č. 2 ke smlouvě o dílo na chodník v Lexově ulici a náměstí Dukelských hrdinů",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 2 ke smlouvě o dílo ze dne 28. 4. 2025 se zhotovitelem Rocky stavby Company CZ s.r.o. na akci „Oprava chodníku ul. Lexova – západ, Revitalizace – Stavební úpravy parkových částí náměstí Dukelských hrdinů, Pardubice“. Po započtení více a méněprací se cena zvyšuje ze 14.866.179,53 Kč na 16.763.360,44 Kč vč. DPH.",
+    "keywords": [
+     "Lexova",
+     "náměstí Dukelských hrdinů",
+     "oprava chodníku",
+     "revitalizace",
+     "parkové úpravy",
+     "dodatek ke smlouvě o dílo",
+     "vícepráce",
+     "Rocky stavby"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Lexova",
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Rocky stavby Company CZ s.r.o."
+    ],
+    "amounts": [
+     "16.763.360,44 Kč vč. DPH",
+     "14.866.179,53 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "243/2025 R",
+    "title": "Termíny jednání rady a zastupitelstva obvodu na rok 2026",
+    "summary": "Rada schvaluje harmonogram jednání RMO a ZMO Pardubice V na rok 2026. Zastupitelstvo se má sejít 11. 3., 3. 6. a 2. 9. 2026, rada v ostatních uvedených termínech od 7. 1. do 23. 9. 2026.",
+    "keywords": [
+     "termíny jednání",
+     "harmonogram",
+     "rada obvodu",
+     "zastupitelstvo obvodu",
+     "2026",
+     "zasedání"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "244/2025 R",
+    "title": "Přesun 8.000,- Kč mezi dvěma dotacemi na letní akce a rozpočtové opatření",
+    "summary": "Rada schvaluje zvýšení dotace na akci „Rozloučení s prázdninami“ (29. 8. 2025) o 8.000,- Kč a snížení dotace na akci „Taneční večer s živou hudbou“ (23. 8. 2025) o stejnou částku u téhož žadatele. Schvaluje související rozpočtové opatření v kapitole 33 a uzavření dodatků k veřejnoprávním smlouvám.",
+    "keywords": [
+     "dotace",
+     "rozpočtové opatření",
+     "Rozloučení s prázdninami",
+     "Taneční večer s živou hudbou",
+     "dodatek k veřejnoprávní smlouvě",
+     "kulturní akce",
+     "přesun prostředků"
+    ],
+    "topics": [
+     "dotace",
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "5.000,- Kč",
+     "8.000,- Kč",
+     "13.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

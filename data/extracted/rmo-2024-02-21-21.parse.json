@@ -1,0 +1,256 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "7d1758ffba57a9817ffb3ba933acdc621104deda658385c1f0d975aa38f8ae74",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 21,
+   "kind": "radne",
+   "date": "2024-02-21",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA"
+   ],
+   "excused": [
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 23,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 28,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 33,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Rozhodnutí zadavatele – uzavření Dodatku č. 1 ke Smlouvě o dílo na akci „Relaxační zóna Stará plovárna“",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 58,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Žádost komise pro nebytové prostory rady města – stanovisko RMO Pardubice V",
+    "line": 83,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Diskuse, závěr",
+    "line": 101,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "107/2024 R",
+    "agenda_no": "1.",
+    "first_line": 50,
+    "last_line": 55,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "108/2024 R",
+    "agenda_no": "2.",
+    "first_line": 61,
+    "last_line": 81,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "109/2024 R",
+    "agenda_no": "3.",
+    "first_line": 86,
+    "last_line": 99,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 41,
+    "last_line": 41,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a jejich pořadí (programu)",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 40,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": "107/2024 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "108/2024 R",
+    "part": "bod 1 (výpůjčka části p. p. č. 2462/1, k. ú. Pardubice)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "108/2024 R",
+    "part": "bod 2 (odkoupení spoluvlastnických podílů p. p. č. 2499/138)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "108/2024 R",
+    "part": "bod 3 (výpůjčka části p. p. č. 229/2, k. ú. Dražkovice)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 91,
+    "last_line": 91,
+    "resolution": "109/2024 R",
+    "part": "bod 1 (garážové stání, čp. 2721 Sokolovská)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 99,
+    "last_line": 99,
+    "resolution": "109/2024 R",
+    "part": "bod 2 (garážová stání, čp. 2721 Sokolovská, žadatelé a) nebo b))",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 66: dílčí hlasování o bodu 1 usnesení 108/2024 R skončilo Pro 0, zdržel se 1, proti 3, ale text usnesení (ř. 61–65) přesto uvádí „souhlasí se záměrem: 1. výpůjčky…“; výsledek dílčího hlasování text výslovně neuvádí."
+  ]
+ }
+}

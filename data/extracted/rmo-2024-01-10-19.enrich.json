@@ -1,0 +1,103 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "ca55532eb8ace66c0cfcc0f0e818c1fdbf61a7fdfc8beadad91f591263937103",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "101/2024 R",
+    "title": "Stanovisko k odkoupení stavby na st. p. č. 9023 a prodeji části p. p. č. 2360 v ul. Čacké",
+    "summary": "Stanovisko obvodu k žádosti pozemkové komise rady města Pardubice: souhlas se záměrem, aby město odkoupilo stavbu na pozemku st. p. č. 9023 v k. ú. Pardubice za 1.050.000,- Kč (vzájemné předkupní právo ke stavbě a pozemku), a se záměrem prodeje části pozemku p. p. č. 2360 o výměře cca 28 m2 za 500,- Kč/m2 z důvodu ochrany základové spáry a vstupních schodů domu čp. 126 v ul. Čacké.",
+    "keywords": [
+     "stanovisko k záměru města",
+     "pozemková komise",
+     "odkoupení stavby",
+     "předkupní právo",
+     "prodej pozemku",
+     "Čacká",
+     "st. p. č. 9023",
+     "p. p. č. 2360"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "ul. Čacká",
+     "budova čp. 126"
+    ],
+    "parcels": [
+     "st. p. č. 9023, k. ú. Pardubice",
+     "p. p. č. 2360, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "1.050.000,- Kč",
+     "500,- Kč/m2"
+    ]
+   },
+   {
+    "number": "102/2024 R",
+    "title": "Výroční zpráva o poskytování informací za rok 2023",
+    "summary": "Rada schvaluje výroční zprávu o poskytování informací podle zákona č. 106/1999 Sb., o svobodném přístupu k informacím, za rok 2023. Tajemníkovi úřadu ukládá zveřejnit ji na webových stránkách úřadu do 7 dnů po ověření usnesení.",
+    "keywords": [
+     "výroční zpráva",
+     "poskytování informací",
+     "zákon č. 106/1999 Sb.",
+     "svobodný přístup k informacím",
+     "infozákon",
+     "zveřejnění na webu",
+     "2023"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "103/2024 R",
+    "title": "Smlouva o dílo na rekonstrukci komunikace v Dražkovicích u MŠ – MIROS Pardubice",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Rekonstrukce komunikace Dražkovice u MŠ“ se zhotovitelem MIROS Pardubice a.s. za nabídkovou cenu 2.038.053,81 Kč bez DPH, jako výsledek zakázky malého rozsahu.",
+    "keywords": [
+     "rekonstrukce komunikace",
+     "Dražkovice",
+     "mateřská škola",
+     "MŠ Dražkovice",
+     "zakázka malého rozsahu",
+     "smlouva o dílo",
+     "oprava silnice",
+     "MIROS Pardubice"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice",
+     "MŠ Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "2.038.053,81 Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

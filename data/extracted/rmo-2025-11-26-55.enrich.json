@@ -1,0 +1,98 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "281dea03c7f19d542fbae78c7da98c0441a411ae7e940b8c3eae80662ceda51c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "250/2025 R",
+    "title": "Souhlas se záměrem pronájmu pozemku pro parkování a výpůjčky pozemků pro sjezdy u projektu Bydlení na Spravedlnosti",
+    "summary": "Rada obvodu souhlasí se záměrem města pronajmout pozemek p. p. č. 2515/22 (13 m2) k užívání parkovacího místa pro osobní automobil. Dále souhlasí se záměrem výpůjčky částí pozemků p. p. č. 2500/4 a 2499/129 k využití a úpravě sjezdů v souvislosti s výstavbou projektu „BYDLENÍ NA SPRAVEDLNOSTI“ a s bezúplatným převodem vybudovaných úprav sjezdů po kolaudaci do vlastnictví statutárního města Pardubice; žadatelem je Podílový, penzijní fond IMOS development otevřený podílový fond.",
+    "keywords": [
+     "pronájem pozemku",
+     "parkovací místo",
+     "parkování",
+     "výpůjčka pozemku",
+     "sjezdy",
+     "Bydlení na Spravedlnosti",
+     "IMOS development",
+     "stanovisko k záměru města",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "projekt „BYDLENÍ NA SPRAVEDLNOSTI“"
+    ],
+    "parcels": [
+     "p. p. č. 2515/22, k. ú. Pardubice",
+     "p. p. č. 2500/4, k. ú. Pardubice",
+     "p. p. č. 2499/129, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Pozemková komise rady města Pardubice",
+     "Podílový, penzijní fond IMOS development otevřený podílový fond",
+     "Statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "251/2025 R",
+    "title": "Souhlas s předzahrádkou kavárny Slunečnice v Jilemnického ulici na sezónu 2026",
+    "summary": "Rada obvodu souhlasí s umístěním předzahrádky o ploše 5 m2 před kavárnou Slunečnice v Jilemnického ulici 2226 v Pardubicích od 1. 5. 2026 do 31. 10. 2026, denně od 07.00 do 18.00 hod. Žadatelem jsou Sociální služby města Pardubic.",
+    "keywords": [
+     "předzahrádka",
+     "kavárna Slunečnice",
+     "Jilemnického",
+     "zábor veřejného prostranství",
+     "Sociální služby města Pardubic",
+     "letní zahrádka"
+    ],
+    "topics": [
+     "ostatni"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jilemnického 2226, Pardubice",
+     "kavárna Slunečnice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Sociální služby města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "252/2025 R",
+    "title": "Schválení Knihovního řádu knihovny ÚMO Pardubice V s účinností od 1. 1. 2026",
+    "summary": "Rada obvodu schvaluje Knihovní řád knihovny ÚMO Pardubice V s účinností od 1. 1. 2026.",
+    "keywords": [
+     "knihovní řád",
+     "knihovna",
+     "knihovna ÚMO Pardubice V",
+     "pravidla knihovny",
+     "výpůjční řád"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "koncepce",
+    "places": [
+     "knihovna ÚMO Pardubice V"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ÚMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

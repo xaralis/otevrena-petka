@@ -1,0 +1,346 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "7260f6d9f104512879604670d749ecac65671168f171e8fe9e0465c963dc8f6d",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "140/2024 R",
+    "title": "Souhlas se záměrem pronájmu garážového stání č. 4 v domě čp. 2721 v Sokolovské ulici",
+    "summary": "Rada souhlasí se záměrem města pronajmout garážové stání č. 4 o velikosti 15 m2 v 1. podzemním podlaží budovy čp. 2721 v Sokolovské ulici k garážování osobního automobilu. Nájemce bude vybrán ze dvou zájemců podle výše nabídnutého nájmu.",
+    "keywords": [
+     "garážové stání",
+     "pronájem garáže",
+     "nebytový prostor",
+     "Sokolovská",
+     "parkování",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "budova čp. 2721",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "stavební parcela č. 10089, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "141/2024 R",
+    "title": "Stanovisko k pozemkovým záměrům města – směny, nájmy a prodej pozemků",
+    "summary": "Rada se vyjadřuje k šesti záměrům města: směně pozemků s TJ Tesla Pardubice u cesty podél Chrudimky, nájmu pozemku p. p. č. 2386/36 pod komunikací od soukromých vlastníků, směně podílů na pozemcích v Dražkovicích s Ředitelstvím silnic a dálnic, nájmu pozemků pro předzahrádku restaurace na náměstí Dukelských hrdinů, směně pozemků s Lesy České republiky (Semtín, Nové Jesenčany) a prodeji či věcnému břemeni na části pozemku pro nabíjecí stanici elektromobilu. O jednotlivých bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "směna pozemků",
+     "nájem pozemku",
+     "předzahrádka",
+     "nabíjecí stanice",
+     "elektromobil",
+     "věcné břemeno",
+     "Dražkovice",
+     "Semtín",
+     "náměstí Dukelských hrdinů",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice",
+     "k. ú. Nové Jesenčany",
+     "k. ú. Semtín",
+     "řeka Chrudimka",
+     "sportovní areál TJ Tesla Pardubice",
+     "náměstí Dukelských hrdinů",
+     "objekt čp. 2551"
+    ],
+    "parcels": [
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "p. p. č. 3886, k. ú. Pardubice",
+     "p. p. č. 2386/36, k. ú. Pardubice",
+     "p. p. č. 558/4, k. ú. Dražkovice",
+     "p. p. č. 558/6, k. ú. Dražkovice",
+     "p. p. č. 225/15, k. ú. Dražkovice",
+     "p. p. č. 556/10, k. ú. Dražkovice",
+     "p. p. č. 2255/13, k. ú. Pardubice",
+     "p. p. č. 2155/9, k. ú. Pardubice",
+     "p. p. č. 2168/5, k. ú. Pardubice",
+     "p. p. č. 2240/1, k. ú. Pardubice",
+     "p. p. č. 2240/9, k. ú. Pardubice",
+     "p. p. č. 618/3, k. ú. Nové Jesenčany",
+     "p. p. č. 618/4, k. ú. Nové Jesenčany",
+     "p. p. č. 23, k. ú. Semtín",
+     "p. p. č. 2335/41, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "statutární město Pardubice",
+     "TJ Tesla Pardubice, z. s.",
+     "Ředitelství silnic a dálnic s. p.",
+     "Lesy České republiky, s. p."
+    ],
+    "amounts": [
+     "67,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "142/2024 R",
+    "title": "Dotace z programu MO Pardubice V na deset akcí škol a spolků v roce 2024",
+    "summary": "Rada schvaluje dotace z programu dle směrnice č. 28/2023 na deset akcí (např. akce MŠ Jesničánky, Retroměstečko, GameCon 2024, Pardubice Bez Bariér Open, SaSaKo Cup), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 55–67. O každé dotaci se hlasovalo zvlášť.",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "Retroměstečko",
+     "GameCon",
+     "Pardubice Bez Bariér Open",
+     "SaSaKo Cup",
+     "Den předškoláka",
+     "mateřská škola",
+     "spolky"
+    ],
+    "topics": [
+     "dotace",
+     "kultura-akce",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice - Jesničánky",
+     "Retroměstečko s.r.o.",
+     "ZŠ a MŠ Pardubice, Artura Krause 2344",
+     "GameCon z. s.",
+     "Atletika Bez Bariér Pardubice, z. s.",
+     "Hvězda Pardubice z. s.",
+     "NOE – Křesťanská ZŠ a MŠ v Pardubicích",
+     "Kalyna – Komunitní uprchlické centrum, z. s.",
+     "SK Dražkovice"
+    ],
+    "amounts": [
+     "4.900,- Kč",
+     "5.000,- Kč",
+     "20.000,- Kč",
+     "10.000,- Kč",
+     "8.300,- Kč",
+     "15.000,- Kč",
+     "4.000,- Kč",
+     "3.000,-- Kč",
+     "2.000,- Kč"
+    ]
+   },
+   {
+    "number": "143/2024 R",
+    "title": "Návrh zástupců obvodu do školských rad pěti základních škol",
+    "summary": "Rada doporučuje Radě města Pardubic schválit zástupce městského obvodu do školských rad ZŠ Benešovo náměstí, ZŠ Staňkova, ZŠ Resslova, ZŠ Waldorfská a ZŠ a MŠ speciální Artura Krause.",
+    "keywords": [
+     "školská rada",
+     "rada školy",
+     "zástupci obvodu",
+     "základní škola",
+     "ZŠ Benešovo náměstí",
+     "ZŠ Staňkova",
+     "ZŠ Resslova",
+     "ZŠ Waldorfská"
+    ],
+    "topics": [
+     "skolstvi",
+     "organizace",
+     "vztahy-mesto"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada města Pardubic",
+     "ZŠ Benešovo náměstí",
+     "ZŠ Staňkova",
+     "ZŠ Resslova",
+     "ZŠ Waldorfská",
+     "ZŠ a MŠ speciální Artura Krause"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "144/2024 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření k 31. 5. 2024",
+    "summary": "Rada projednala zprávu o rozboru hospodaření MO Pardubice V k 31. 5. 2024 a doporučuje zastupitelstvu rozbor schválit a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet 2024",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "145/2024 R",
+    "title": "Doporučení zastupitelstvu k závěrečnému účtu MO Pardubice V za rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu vyslovit souhlas s celoročním hospodařením obvodu za rok 2023 bez výhrad, vzít na vědomí komentáře a přílohy závěrečného účtu, schválit finanční vypořádání včetně sociálního fondu a rozpočtová opatření v rámci závěrečného účtu.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2023",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočtové opatření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "146/2024 R",
+    "title": "Doporučení zastupitelstvu schválit 2. změnu rozpočtu na rok 2024",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář ke 2. změně rozpočtu na rok 2024, schválit rozpočtová opatření v bodech 1–9 důvodové zprávy a rozpočtové opatření přesouvající 1 750 tis. Kč z rezervy na péči o zeleň, prvky a hřiště.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2024",
+     "péče o zeleň",
+     "hřiště",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "zelen"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "1 750 tis. Kč"
+    ]
+   },
+   {
+    "number": "147/2024 R",
+    "title": "Doporučení zastupitelstvu vzít na vědomí schvalování účetní závěrky za rok 2023",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2023 schválí zastupitelstvo města v červnu a informaci o tom obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2023",
+     "zastupitelstvo města",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "148/2024 R",
+    "title": "Smlouva o dílo na stavební úpravy vnitrobloku Pichlova – S. K. Neumanna – K Višňovce",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na stavební úpravy vnitrobloku v ulicích Pichlova, S. K. Neumanna a K Višňovce se zhotovitelem HOLD s.r.o., vybraným v zakázce malého rozsahu.",
+    "keywords": [
+     "vnitroblok",
+     "stavební úpravy",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "Pichlova",
+     "S. K. Neumanna",
+     "K Višňovce",
+     "HOLD"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Pichlova",
+     "S. K. Neumanna",
+     "K Višňovce"
+    ],
+    "parcels": [],
+    "organizations": [
+     "HOLD s.r.o."
+    ],
+    "amounts": [
+     "4.775. 000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "149/2024 R",
+    "title": "Odvolání a jmenování člena Komise pro školství, kulturu, sport a mládež",
+    "summary": "Rada odvolává k 30. 6. 2024 jednu členku Komise pro školství, kulturu, sport a mládež RMO Pardubice V z důvodu stěhování a od 1. 7. 2024 jmenuje nového člena komise.",
+    "keywords": [
+     "komise pro školství, kulturu, sport a mládež",
+     "odvolání člena komise",
+     "jmenování člena komise",
+     "personální změna"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "150/2024 R",
+    "title": "Smlouva o dílo se Službami města Pardubic na výsadbu rostlin v Arboretu",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na roky 2024–2029 na výsadbu rostlin v Arboretu včetně zálivek a následné pětileté péče se Službami města Pardubic a.s., mimo režim zadávacího řádu, protože jde o společnost založenou městem k tomuto účelu.",
+    "keywords": [
+     "Arboretum",
+     "výsadba rostlin",
+     "zeleň",
+     "smlouva o dílo",
+     "Služby města Pardubic",
+     "péče o zeleň",
+     "zálivka"
+    ],
+    "topics": [
+     "zelen",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Arboretum"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": [
+     "1.033.850,- Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

@@ -1,0 +1,260 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "b85433f58ceafed26f480ceba9ada50b04efe6a81280dcf569c2a07d933a02d2",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 46,
+   "kind": "radne",
+   "date": "2025-05-14",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "Mgr. Miloš Adamů, MBA"
+   ],
+   "excused": [
+    "Evžen Erban"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Rozhodnutí zadavatele – uplatnění výjimky při výběru nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Chodníkové hry před ZŠ Staňkova“",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Sokolovská ul. chodník u ZŠ J. Ressla“",
+    "line": 63,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Stavební úpravy komunikace Dražkovice č.p. 153 – č.p. 174“",
+    "line": 73,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Návrh rozpočtového opatření",
+    "line": 83,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 91,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Diskuse, závěr",
+    "line": 182,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "210/2025 R",
+    "agenda_no": "1",
+    "first_line": 57,
+    "last_line": 60,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "211/2025 R",
+    "agenda_no": "2",
+    "first_line": 67,
+    "last_line": 70,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "212/2025 R",
+    "agenda_no": "3",
+    "first_line": 77,
+    "last_line": 80,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "213/2025 R",
+    "agenda_no": "4",
+    "first_line": 86,
+    "last_line": 88,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "214/2025 R",
+    "agenda_no": "5",
+    "first_line": 94,
+    "last_line": 179,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 61,
+    "last_line": 61,
+    "resolution": "210/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 71,
+    "last_line": 71,
+    "resolution": "211/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "212/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 89,
+    "last_line": 89,
+    "resolution": "213/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 180,
+    "last_line": 180,
+    "resolution": "214/2025 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 4,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

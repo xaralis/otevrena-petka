@@ -1,0 +1,268 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6f28506f6294e38356b3bf3ede95df8240c74aef4018f27ccdd44f85bc53a052",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "117/2024 R",
+    "title": "Dotace na 32 akcí škol, školek a spolků z dotačního programu na rok 2024",
+    "summary": "Rada schvaluje poskytnutí dotací z Programu pro poskytování dotací dle Směrnice č. 28/2023 na rok 2024 na 32 akcí mateřských a základních škol, DDM ALFA, sportovních klubů a dalších spolků (např. MŠ Sluníčko, MŠ Motýlek, Hvězda Pardubice, Softball Pardubice, SK Dražkovice), uzavření veřejnoprávních smluv a související rozpočtová opatření č. 15–47. Částky se pohybují od 3.000,- Kč do 20.000,- Kč a hradí se převážně z položky příspěvky v kapitole 33, část z rezerv rady, starosty a místostarosty v kapitole 98.",
+    "keywords": [
+     "dotace",
+     "dotační program 2024",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "mateřská škola",
+     "základní škola",
+     "pálení čarodějnic",
+     "dětský den",
+     "sportovní akce",
+     "spolky"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi",
+     "hriste-sport"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Benešovo náměstí",
+     "Raisova",
+     "Staňkova",
+     "Gorkého",
+     "Artura Krause",
+     "Josefa Ressla",
+     "Teplého",
+     "Jesničánky",
+     "Dražkovice",
+     "Čs. armády",
+     "V Ráji",
+     "Čacké",
+     "K Vinici",
+     "Družby"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "Mateřská škola Pardubice - Jesničánky",
+     "Základní škola Pardubice, Staňkova 128",
+     "Hvězda Pardubice z. s.",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Mateřská škola Sluníčko Pardubice",
+     "DDM ALFA Pardubice",
+     "ZŠ a MŠ Pardubice, Artura Krause 2344",
+     "Mateřská škola Motýlek Pardubice",
+     "Integrační sportovní klub IFC, z. s.",
+     "SK Jesničánky, z.s.",
+     "SKP - CENTRUM, o. p. s.",
+     "Šumák z. s.",
+     "Mateřská škola Kamarád Pardubice",
+     "Softball Pardubice z. s.",
+     "Sportovní klub Dražkovice"
+    ],
+    "amounts": [
+     "14.000,- Kč",
+     "8.000,- Kč",
+     "5.000,- Kč",
+     "4.000,- Kč",
+     "4.000,- Kč",
+     "20.000,- Kč",
+     "8.000,- Kč",
+     "3.000,- Kč",
+     "3.000,- Kč",
+     "5.000,- Kč",
+     "3.000,- Kč",
+     "3.000,- Kč",
+     "4.000,- Kč",
+     "6.000,- Kč",
+     "3.000,- Kč",
+     "6.000,- Kč",
+     "8.000,- Kč",
+     "10.000,- Kč",
+     "9.000,- Kč",
+     "9.000,- Kč",
+     "4.000,- Kč",
+     "7.000,- Kč",
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "7.000,- Kč",
+     "5.000,- Kč",
+     "4.000,- Kč",
+     "4.500,- Kč",
+     "10.000,- Kč",
+     "10.000,- Kč",
+     "20.000,- Kč",
+     "10.000,- Kč",
+     "2.000,- Kč"
+    ]
+   },
+   {
+    "number": "118/2024 R",
+    "title": "Stanovisko k žádostem pozemkové komise rady města – prodej, předkupní právo, věcná břemena, akce",
+    "summary": "Rada se vyjadřuje k pěti žádostem pozemkové komise rady města Pardubice: prodej části p. p. č. 2260 pod budoucími balkony domu Jiránkova 2206–2208 za 500,- Kč/m2, využití předkupního práva ke stavbě zahradního domku na st. p. č. 8979, věcné břemeno pro kanalizační přípojku a jímku Klubu vodáků-turistů na p. p. č. 2462/1, souhlas vlastníka s bezplatným užíváním pozemků a objektů pro akci RETROMĚSTEČKO 7.–8. 9. 2024 a věcné břemeno pro optickou síť EDERA Group na p. p. č. 2155/3 a 2309/4. O jednotlivých bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "pozemková komise",
+     "stanovisko",
+     "prodej pozemku",
+     "balkony",
+     "předkupní právo",
+     "věcné břemeno",
+     "kanalizační přípojka",
+     "RETROMĚSTEČKO",
+     "optická síť",
+     "Jiránkova"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jiránkova 2206-2208",
+     "k. ú. Pardubice",
+     "zahrádkářská kolonie",
+     "K Vinici 2873",
+     "Teplého"
+    ],
+    "parcels": [
+     "p. p. č. 2260, k. ú. Pardubice",
+     "st. p. č. 8979, k. ú. Pardubice",
+     "p. p. č. 2462/1, k. ú. Pardubice",
+     "p. p. č. 2400/1",
+     "p. p. č. 2400/2",
+     "p. p. č. 2400/3",
+     "p. p. č. 2400/5",
+     "p. p. č. 2400/8",
+     "p. p. č. 2400/9",
+     "p. p. č. 2400/11",
+     "p. p. č. 2426/2",
+     "p. p. č. 2433/1",
+     "p. p. č. 2575/4",
+     "st. p. č. 2342",
+     "st. p. č. 2343",
+     "st. p. č. 5336",
+     "st. p. č. 5340",
+     "st. p. č. 5341",
+     "p. p. č. 2155/3, k. ú. Pardubice",
+     "p. p. č. 2309/4, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Společenství vlastníků domu Jiránkova 2206-2208",
+     "Spolek Tělovýchovná jednota Klub vodáků-turistů z. s.",
+     "RETROMĚSTEČKO s.r.o.",
+     "EDERA Group a.s."
+    ],
+    "amounts": [
+     "500,- Kč/m2"
+    ]
+   },
+   {
+    "number": "119/2024 R",
+    "title": "Souhlas s předzahrádkou cukrárny Libuše na nám. Dukelských hrdinů",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 12 m2 před cukrárnou Libuše na nám. Dukelských hrdinů 2235 v období od 1. 5. 2024 do 31. 10. 2024, denně od 9.00 do 18.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "cukrárna Libuše",
+     "náměstí Dukelských hrdinů",
+     "zábor veřejného prostranství",
+     "provozovna"
+    ],
+    "topics": [
+     "ostatni"
+    ],
+    "kind": "jine",
+    "places": [
+     "nám. Dukelských hrdinů 2235"
+    ],
+    "parcels": [],
+    "organizations": [
+     "cukrárna Libuše"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "120/2024 R",
+    "title": "Dodatek č. 1 ke smlouvě o výsypu odpadkových košů se Službami města Pardubice",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o poskytování služeb na výsyp a pronájem odpadkových košů na TKO se Službami města Pardubice a.s. kvůli zvýšení počtu vysypávaných košů o 2 na 304 (243 ve vlastnictví SMP a 61 ve vlastnictví obvodu). Celková cena 1.105.000,- Kč bez DPH se nemění.",
+    "keywords": [
+     "odpadkové koše",
+     "výsyp košů",
+     "TKO",
+     "dodatek smlouvy",
+     "Služby města Pardubice",
+     "odpady"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "1.105.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "121/2024 R",
+    "title": "Rámcová smlouva na údržbu komunikací 2024–2025 se Službami města Pardubic",
+    "summary": "Rada jako zadavatel zakázky malého rozsahu „Údržba komunikací na území MO Pardubice V“ souhlasí s uzavřením rámcové smlouvy na období od 1. 4. 2024 do 31. 12. 2025 se zhotovitelem Služby města Pardubic a.s.",
+    "keywords": [
+     "údržba komunikací",
+     "rámcová smlouva",
+     "zakázka malého rozsahu",
+     "výběr nabídky",
+     "silnice",
+     "chodníky"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubic a.s."
+    ],
+    "amounts": []
+   },
+   {
+    "number": "122/2024 R",
+    "title": "Dodatek č. 1 ke smlouvě o dílo – rekonstrukce komunikace Dražkovice u MŠ",
+    "summary": "Rada souhlasí s uzavřením Dodatku č. 1 ke smlouvě o dílo z 22. 1. 2024 na rekonstrukci komunikace v Dražkovicích u mateřské školy se zhotovitelem MIROS Pardubice a.s.; po započtení víceprací činí cena 2.047.553,81 Kč bez DPH oproti původním 2.038.053,81 Kč bez DPH.",
+    "keywords": [
+     "rekonstrukce komunikace",
+     "Dražkovice",
+     "mateřská škola",
+     "dodatek smlouvy o dílo",
+     "vícepráce",
+     "silnice"
+    ],
+    "topics": [
+     "investice",
+     "doprava",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Dražkovice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "2.047.553,81Kč bez DPH",
+     "2.038.053,81Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

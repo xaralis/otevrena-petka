@@ -1,0 +1,109 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "d93e6b4936fb6710afbec94af24263883433f8a4c095601a8f92f72480fbbfe3",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "187/2025 R",
+    "title": "Souhlas se záměrem pronájmu kanceláří a skladu v areálu čp. 324 v ul. J. Palacha",
+    "summary": "Rada obvodu souhlasí se záměrem pronájmu nebytových prostorů v areálu čp. 324 v ulici J. Palacha – tří kanceláří v 1. patře objektu č. 23 a skladu v přízemí objektu č. 2A. Žadatelem je SH ČMS – Okresní sdružení hasičů Pardubice, účelem nájmu jsou kanceláře a sklad.",
+    "keywords": [
+     "pronájem nebytových prostorů",
+     "nájem kanceláří",
+     "sklad",
+     "areál čp. 324",
+     "ulice J. Palacha",
+     "hasiči",
+     "Okresní sdružení hasičů Pardubice",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál čp. 324, ul. J. Palacha",
+     "objekt č. 23",
+     "objekt č. 2A",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. p. č. 864/23, k. ú. a obec Pardubice",
+     "st. p. č. 864/20, k. ú. a obec Pardubice"
+    ],
+    "organizations": [
+     "SH ČMS – Okresní sdružení hasičů Pardubice",
+     "komise pro nebytové prostory rady města"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "188/2025 R",
+    "title": "Stanovisko k věcným břemenům pro optické sítě a vodovod a k využití předkupního práva",
+    "summary": "Rada obvodu se vyjadřuje k žádostem pozemkové komise rady města: ke zřízení věcných břemen pro optický kabel „Městská optická síť – propoj Lexova“ (EDERA Group a.s.), pro výměnu vodovodu „Pardubice, U Krematoria – vodovod“ (Vodovody a kanalizace Pardubice, a.s.) a pro rekonstrukci optické sítě „VDF FOC Pardubice PAR24“ (Vodafone Czech Republic a.s.). Čtvrtý bod se týká využití předkupního práva k zahradní chatce na pozemku st. p. č. 8997 v zahrádkářské kolonii za krematoriem za kupní cenu 150.000,- Kč.",
+    "keywords": [
+     "věcné břemeno",
+     "optický kabel",
+     "optická síť",
+     "výměna vodovodu",
+     "U Krematoria",
+     "Lexova",
+     "předkupní právo",
+     "zahradní chatka",
+     "zahrádkářská kolonie",
+     "stanovisko k záměru města"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Lexova",
+     "U Krematoria",
+     "zahrádkářská kolonie za krematoriem",
+     "Zelené Předměstí",
+     "Jesničánky",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2252/1",
+     "p. p. č. 2165/1",
+     "p. p. č. 2165/43",
+     "p. p. č. 2252/15",
+     "p. p. č. 2252/26",
+     "p. p. č. 2252/9",
+     "p. p. č. 2165/26",
+     "p. p. č. 2165/18",
+     "p. p. č. 3351/9",
+     "p. p. č. 3353/6",
+     "p. p. č. 2971/1",
+     "p. p. č. 3344/1",
+     "p. p. č. 3343",
+     "p. p. č. 3277/1",
+     "p. p. č. 2277/1",
+     "p. p. č. 2275",
+     "p. p. č. 2271/1",
+     "p. p. č. 2276/2",
+     "p. p. č. 2276/1",
+     "st. p. č. 8997, k. ú. Pardubice",
+     "p. p. č. 8997, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "EDERA Group a.s.",
+     "Vodovody a kanalizace Pardubice, a.s.",
+     "Vodafone Czech Republic a.s.",
+     "Základní organizace Českého zahrádkářského svazu Pardubice Jesničánky",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "300 Kč za bm",
+     "150.000,- Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

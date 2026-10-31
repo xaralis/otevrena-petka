@@ -1,0 +1,43 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e2a9490faaae4717f1f81794aaaf54b2fd9d149f3aca9a38823fd7c865c410e9",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "203/2025 R",
+    "title": "Výběr dodavatele opravy chodníku v Lexově ulici a úprav parku na nám. Dukelských hrdinů",
+    "summary": "Rada vybrala firmu ROCKY STAVBY COMPANY CZ s.r.o. jako dodavatele investiční akce „Oprava chodníku ul. Lexova – západ, Revitalizace – Stavební úpravy parkových částí náměstí Dukelských hrdinů, Pardubice“ za 14.866.179,53 Kč včetně DPH. Starostu pověřila podpisem smlouvy.",
+    "keywords": [
+     "výběr dodavatele",
+     "veřejná zakázka",
+     "oprava chodníku",
+     "Lexova",
+     "náměstí Dukelských hrdinů",
+     "revitalizace parku",
+     "stavební úpravy",
+     "ROCKY STAVBY COMPANY CZ",
+     "smlouva o dílo"
+    ],
+    "topics": [
+     "zakazky",
+     "investice",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice Lexova",
+     "náměstí Dukelských hrdinů"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY CZ s.r.o."
+    ],
+    "amounts": [
+     "14.866.179,53 Kč včetně DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}
