@@ -86,8 +86,10 @@ def tsquery(q: str, op: str = "&") -> str | None:
     return f" {op} ".join(f"{_stem(w)}:*" for w in dict.fromkeys(words))
 
 
+# `|| ''` detoasts the whole value first: Postgres 16 slices compressed TOAST text by bytes
+# for left()/substr() and fails when the cut lands inside a multibyte character.
 COLUMNS = """r.uid, r.number, r.body, r.date, r.meeting_id, r.status, r.title, r.summary,
-             r.agenda_title, r.topics, r.kind, r.keywords, left(r.text, 400) AS text_start,
+             r.agenda_title, r.topics, r.kind, r.keywords, left(r.text || '', 400) AS text_start,
              (SELECT string_agg(x.type || ':' || x.scope || ':' || s.number, ';')
                 FROM resolution_relations x JOIN resolutions s ON s.uid = x.source_uid
                WHERE x.target_uid = r.uid AND x.effective) AS revoked_by,

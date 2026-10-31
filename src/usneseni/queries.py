@@ -64,7 +64,7 @@ def meeting(mid: str) -> dict | None:
             "SELECT * FROM agenda_items WHERE meeting_id = %s ORDER BY seq", (mid,)).fetchall()
         m["resolutions"] = conn.execute(
             """SELECT r.uid, r.number, r.body, r.title, r.status, r.agenda_no, r.agenda_title, r.summary,
-                 left(r.text, 300) AS text_start, (SELECT json_build_object('pro', v.n_pro, 'proti', v.n_proti, 'zdrzel', v.n_zdrzel,
+                 left(r.text || '', 300) AS text_start, (SELECT json_build_object('pro', v.n_pro, 'proti', v.n_proti, 'zdrzel', v.n_zdrzel,
                 'nehl', coalesce(v.n_nehlasoval, 0), 'quorum', v.quorum, 'present', v.n_present,
                 'parts', (SELECT count(*) FROM votes p WHERE p.resolution_uid = r.uid AND p.part IS NOT NULL),
                 'whole', v.part IS NULL,
