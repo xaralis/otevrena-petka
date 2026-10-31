@@ -64,8 +64,11 @@ def _filters(organ, rok, tema, druh, stav, clen, volba) -> search.Filters:
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request, q: str = "", rezim: str = "hybrid", organ: str = "",
-         rok: int | None = None, tema: str = "", druh: str = "", stav: str = "",
-         clen: str = "", volba: str = "", strana: int = 1, razeni: str = ""):
+         rok: str = "", tema: str = "", druh: str = "", stav: str = "",
+         clen: str = "", volba: str = "", strana: str = "1", razeni: str = ""):
+    # empty <select> options arrive as "" – treat anything non-numeric as "any year"
+    rok = int(rok) if rok.strip().isdigit() else None
+    strana = max(1, int(strana)) if strana.strip().isdigit() else 1
     f = _filters(organ, rok, tema, druh, stav, clen, volba)
     per = 20
     hits, info = search.search(q, rezim, f, limit=per, offset=(strana - 1) * per,
