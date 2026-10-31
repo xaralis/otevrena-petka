@@ -1,0 +1,151 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "311fa87f6d5017672e0aec839c7bf83b64c27c56d21329287c10ed70c09d84f2",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "271/2026 R",
+    "title": "Stanovisko k pronájmu pozemku pro výdejní box a k věcnému břemeni pro vodovod a kanalizaci",
+    "summary": "Stanovisko rady obvodu k žádostem pozemkové komise rady města: k záměru pronajmout 2 m² pozemku na Benešově náměstí společnosti TextilEco a. s. pro umístění výdejního zásilkového boxu a k záměru zřídit budoucí věcné břemeno a věcné břemeno na pozemku v k. ú. Nové Jesenčany pro vybudování vodovodu, splaškové kanalizace a revizní šachty v rámci projektu Residence Lípa (10 rodinných domů včetně ZTV). O obou bodech se hlasovalo zvlášť.",
+    "keywords": [
+     "stanovisko k žádosti města",
+     "pronájem pozemku",
+     "výdejní box",
+     "zásilkový box",
+     "Benešovo náměstí",
+     "věcné břemeno",
+     "vodovod",
+     "kanalizace",
+     "Nové Jesenčany",
+     "Residence Lípa"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Benešovo nám.",
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany",
+     "Residence Lípa"
+    ],
+    "parcels": [
+     "p. p. č. 2406/32, k. ú. Pardubice",
+     "p. p. č. 605/1, k. ú. Nové Jesenčany"
+    ],
+    "organizations": [
+     "TextilEco a. s.",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "272/2026 R",
+    "title": "Doporučení zastupitelstvu schválit rozbor hospodaření obvodu k 31. 12. 2025",
+    "summary": "Rada projednala zprávu a doporučuje zastupitelstvu schválit rozbor hospodaření městského obvodu Pardubice V k 31. 12. 2025 v tabulkové části zprávy a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2025",
+     "plnění rozpočtu",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "273/2026 R",
+    "title": "Doporučení vzít na vědomí výroční zprávu finančního výboru za rok 2025",
+    "summary": "Rada projednala zprávu a doporučuje zastupitelstvu vzít na vědomí zprávu o činnosti Finančního výboru Zastupitelstva městského obvodu Pardubice V za rok 2025.",
+    "keywords": [
+     "finanční výbor",
+     "výroční zpráva",
+     "zpráva o činnosti",
+     "rok 2025",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor Zastupitelstva městského obvodu Pardubice V",
+     "Zastupitelstvo městského obvodu Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "274/2026 R",
+    "title": "Doporučení zastupitelstvu schválit 1. změnu rozpočtu obvodu na rok 2026",
+    "summary": "Rada doporučuje zastupitelstvu schválit rozpočtová opatření 1. změny rozpočtu na rok 2026 včetně sociálního fondu, příspěvky na provoz mateřským školám, ZŠ J. Ressla, Středisku volného času ALFA Pardubice (dříve DDM ALFA) a Východočeskému divadlu na akce pro obvod a úpravy plánu společenských akcí (nové divadelní představení, navýšení akce Mikuláš s MO). Zastupitelstvo má zároveň svěřit radě pravomoc provádět v roce 2026 rozpočtová opatření u účelově přidělených dotací.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "rozpočet 2026",
+     "sociální fond",
+     "příspěvek na provoz",
+     "mateřské školy",
+     "plán společenských akcí",
+     "divadelní představení",
+     "Mikuláš",
+     "svěření pravomoci radě"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Teplého",
+     "Raisova",
+     "Benešovo náměstí",
+     "J. Ressla",
+     "Gorkého",
+     "Družby",
+     "Polabiny"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Dům dětí a mládeže ALFA, Pardubice-Polabiny",
+     "Středisko volného času ALFA Pardubice",
+     "Mateřská škola Kamarád Pardubice",
+     "Mateřská škola Pardubice-Jesničánky",
+     "Mateřská škola Pardubice, Benešovo náměstí 2115",
+     "Mateřská škola Motýlek Pardubice",
+     "Mateřská škola Sluníčko Pardubice",
+     "Základní škola Pardubice, J. Ressla 2258",
+     "Východočeské divadlo Pardubice",
+     "Zastupitelstvo městského obvodu Pardubice V",
+     "Rada městského obvodu Pardubice V"
+    ],
+    "amounts": [
+     "128,72 tis. Kč",
+     "100 tis. Kč",
+     "30 tis. Kč",
+     "27 tis. Kč",
+     "17,4 tis. Kč",
+     "28,38 tis. Kč",
+     "19,5 tis. Kč",
+     "28 tis. Kč",
+     "34 tis. Kč",
+     "15 tis. Kč",
+     "1,4 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

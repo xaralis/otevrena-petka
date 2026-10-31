@@ -1,0 +1,299 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "9affcc13365aadd4dd85832897fd00e65c469028257c8e9c160d356b8ec0ed1c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 64,
+   "kind": "radne",
+   "date": "2026-06-24",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA."
+   ],
+   "excused": [
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 24,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 29,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 34,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Žádost komise pro nebytové prostory rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 66,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Dotace",
+    "line": 100,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Závěrečný účet MO Pardubice V za rok 2025",
+    "line": 139,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "3. změna rozpočtu MO Pardubice V na rok 2026",
+    "line": 158,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Rozhodnutí zadavatele – uzavření dodatku ke Smlouvě o poskytování služeb na výsyp odpadkových košů na psí exkrementy na území MO Pardubice V",
+    "line": 203,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Diskuse, závěr",
+    "line": 220,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "294/2026 R",
+    "agenda_no": "1.",
+    "first_line": 57,
+    "last_line": 63,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "295/2026 R",
+    "agenda_no": "2.",
+    "first_line": 69,
+    "last_line": 97,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "296/2026 R",
+    "agenda_no": "3.",
+    "first_line": 106,
+    "last_line": 136,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "297/2026 R",
+    "agenda_no": "4.",
+    "first_line": 142,
+    "last_line": 152,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "298/2026 R",
+    "agenda_no": "5.",
+    "first_line": 161,
+    "last_line": 200,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "299/2026 R",
+    "agenda_no": "6.",
+    "first_line": 211,
+    "last_line": 217,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 45,
+    "last_line": 45,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 64,
+    "last_line": 64,
+    "resolution": "294/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 98,
+    "last_line": 98,
+    "resolution": "295/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 137,
+    "last_line": 137,
+    "resolution": "296/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 153,
+    "last_line": 153,
+    "resolution": "297/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 201,
+    "last_line": 201,
+    "resolution": "298/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 218,
+    "last_line": 218,
+    "resolution": "299/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 3,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 64: usnesení 294/2026 R má hlasování „Pro 0, zdržel se 3, proti 0“ – návrh zjevně nebyl přijat, přesto je uveden s číslem usnesení a výsledek text výslovně neuvádí.",
+   "ř. 216: u usnesení 299/2026 R nesedí částky – 444.380 − 425.000 = 19.380 Kč, text uvádí navýšení o 19.500,- Kč bez DPH."
+  ]
+ }
+}

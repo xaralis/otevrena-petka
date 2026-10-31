@@ -1,0 +1,90 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "c20e517e4dcb4c7b098e7ac3e32013a2b79fd931bede783c3ea7b1a93561c1c6",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "310/2026 R",
+    "title": "Přímé zadání obnovy asfaltového krytu v ul. Wolkerova (Lexova – Lesopark) firmě AGROSTAV",
+    "summary": "Rada souhlasí s uplatněním výjimky podle čl. 7 odst. 2 Směrnice č. 14/2024 Zadávací řád veřejných zakázek a s přímým zadáním zakázky malého rozsahu „Obnova asfaltového krytu v ul. Wolkerova v úseku ul. Lexova - Lesopark“ firmě AGROSTAV Pardubice a.s. Maximální cena je 1.150.000,- Kč bez DPH.",
+    "keywords": [
+     "Wolkerova",
+     "Lexova",
+     "Lesopark",
+     "oprava silnice",
+     "asfaltový kryt",
+     "přímé zadání",
+     "výjimka ze zadávacího řádu",
+     "zakázka malého rozsahu",
+     "AGROSTAV Pardubice"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Wolkerova",
+     "ul. Lexova",
+     "Lesopark"
+    ],
+    "parcels": [],
+    "organizations": [
+     "AGROSTAV Pardubice a.s."
+    ],
+    "amounts": [
+     "1.150.000,-Kč bez DPH"
+    ]
+   },
+   {
+    "number": "311/2026 R",
+    "title": "Stanovisko k žádostem pozemkové komise: prodej pozemků na balkóny, reklama, Nové Jesenčany",
+    "summary": "Stanovisko RMO Pardubice V k žádosti pozemkové komise rady města Pardubice. Týká se záměru prodeje částí pozemků v k. ú. Pardubice pro výstavbu balkónů bytového domu S. K. Neumanna 2501-2503 (žadatel Společenství vlastníků domu čp. 2501-2503 S.K. Neumanna), rozšíření nájemní smlouvy NS_3107562 na oboustranné reklamní zařízení (žadatel BARTH Reklamka a.s.) a odkoupení nebo směny pozemků v k. ú. Nové Jesenčany za pozemek v k. ú. Svítkov za účelem majetkoprávního vyrovnání (žadatel Astavil Project s.r.o.).",
+    "keywords": [
+     "pozemková komise",
+     "prodej pozemku",
+     "balkóny",
+     "S. K. Neumanna",
+     "reklamní zařízení",
+     "billboard",
+     "nájemní smlouva",
+     "směna pozemků",
+     "odkoupení pozemků",
+     "Nové Jesenčany"
+    ],
+    "topics": [
+     "vztahy-mesto",
+     "majetek-pozemky"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "S. K. Neumanna 2501-2503, Pardubice",
+     "k. ú. Pardubice",
+     "k. ú. Nové Jesenčany",
+     "k. ú. Svítkov"
+    ],
+    "parcels": [
+     "p. p. č. 2418/3, k. ú. Pardubice",
+     "p. p. č. 2419/2, k. ú. Pardubice",
+     "p. p. č. 2419/3, k. ú. Pardubice",
+     "p. p. č. 2423/5, k. ú. Pardubice",
+     "p. p. č. 2303/1, k. ú. Pardubice",
+     "p. p. č. 29/3, k. ú. Nové Jesenčany",
+     "p. p. č. 29/78, k. ú. Nové Jesenčany",
+     "p. p. č. 29/56, k. ú. Nové Jesenčany",
+     "p. p. č. 958/1, k. ú. Svítkov"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "Společenství vlastníků domu čp. 2501-2503 S.K. Neumanna, Pardubice",
+     "BARTH Reklamka a.s.",
+     "Astavil Project s.r.o.",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

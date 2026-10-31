@@ -1,0 +1,486 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "5742b2b1cb6596ea70612a6c60c2255ddb971bbe531f371c8d1ae90c8c6d1131",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 2,
+   "kind": "radne",
+   "date": "2018-12-19",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Karolina Štefková",
+    "Bc. Petra Prusáková",
+    "Ing. Filip Vařecha",
+    "Ing. Aneta Jelínková",
+    "Ing. Jaroslav Kňava",
+    "Ing. Jiří Janoš",
+    "Evžen Erban",
+    "Ing. Jiří Hájek",
+    "Petr Hemský",
+    "Ing. Petr Netolický",
+    "Pavel Studnička"
+   ],
+   "excused": [
+    "Ing. Milan Randák"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 54,
+    "speakers": [
+     "Ing. Aneta Jelínková",
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Janoš",
+     "Ing. Jaroslav Kňava",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "2.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 73,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "3.",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 87,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Schválení plánu činnosti Kontrolního výboru ZMO Pardubice V na rok 2019",
+    "line": 102,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "5.",
+    "title": "Stanovení měsíčních odměn neuvolněným členům Zastupitelstva městského obvodu Pardubice V",
+    "line": 114,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Petr Netolický",
+     "Bc. Jan Nadrchal"
+    ]
+   },
+   {
+    "no": "6.",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 11. 2018",
+    "line": 162,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "7.",
+    "title": "Návrh 4. změny rozpočtu MO Pardubice V na r. 2018",
+    "line": 178,
+    "speakers": [
+     "Ing. Jaroslav Kňava",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "8.",
+    "title": "Návrh rozpočtu MO Pardubice V na r. 2019",
+    "line": 194,
+    "speakers": [
+     "Ing. Jiří Hájek",
+     "Ing. Aneta Jelínková"
+    ]
+   },
+   {
+    "no": "9.",
+    "title": "Střednědobý výhled rozpočtu MO Pardubice V na r. 2018 – 2022",
+    "line": 284,
+    "speakers": []
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 295,
+    "speakers": [
+     "Ing. Jiří Hájek",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Petr Hemský",
+     "Ing. Jiří Janoš"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "7/2018 Z",
+    "agenda_no": "1.",
+    "first_line": 68,
+    "last_line": 69,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "8/2018 Z",
+    "agenda_no": "2.",
+    "first_line": 81,
+    "last_line": 83,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "9/2018 Z",
+    "agenda_no": "3.",
+    "first_line": 94,
+    "last_line": 98,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "10/2018 Z",
+    "agenda_no": "4.",
+    "first_line": 109,
+    "last_line": 110,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "11/2018 Z",
+    "agenda_no": "5.",
+    "first_line": 132,
+    "last_line": 142,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "12/2018 Z",
+    "agenda_no": "5.",
+    "first_line": 148,
+    "last_line": 158,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "13/2018 Z",
+    "agenda_no": "6.",
+    "first_line": 172,
+    "last_line": 174,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "14/2018 Z",
+    "agenda_no": "7.",
+    "first_line": 187,
+    "last_line": 190,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "15/2018 Z",
+    "agenda_no": "8.",
+    "first_line": 204,
+    "last_line": 280,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "16/2018 Z",
+    "agenda_no": "9.",
+    "first_line": 290,
+    "last_line": 292,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 48,
+    "last_line": 48,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 47,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 70,
+    "last_line": 70,
+    "resolution": "7/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 84,
+    "last_line": 84,
+    "resolution": "8/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 99,
+    "last_line": 99,
+    "resolution": "9/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 111,
+    "last_line": 111,
+    "resolution": "10/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 143,
+    "last_line": 143,
+    "resolution": "11/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Filip Vařecha",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 2,
+    "proti": 6,
+    "zdrzel": 6,
+    "nehlasoval": null,
+    "names": {
+     "pro": [
+      "Ing. Vařecha",
+      "Ing. A. Jelínková"
+     ],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 159,
+    "last_line": 159,
+    "resolution": "12/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 2,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Vařecha",
+      "Ing. A. Jelínková"
+     ],
+     "zdrzel": [
+      "Ing. J. Hájek",
+      "Ing. P. Netolický"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 175,
+    "last_line": 175,
+    "resolution": "13/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 191,
+    "last_line": 191,
+    "resolution": "14/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 281,
+    "last_line": 281,
+    "resolution": "15/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 293,
+    "last_line": 293,
+    "resolution": "16/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 99: hlasování o usnesení 9/2018 Z má jen 13 hlasů (Pro 13, zdržel se 0, proti 0), přestože bylo přítomno 14 členů a odchod není zaznamenán.",
+   "ř. 143–144: usnesení č. 11/2018 Z (protinávrh Ing. Vařechy) nebylo přijato (Pro 2, zdržel se 6, proti 6), přesto mu bylo přiděleno číslo usnesení.",
+   "ř. 187–189: usnesení 14/2018 Z mluví o 4. změně rozpočtu „na r. 2019“, ačkoli bod 7 programu je Návrh 4. změny rozpočtu na r. 2018.",
+   "ř. 96–97: v usnesení 9/2018 Z je rozsah „1/2018 – 6/2018 Z“ (u prvního čísla chybí označení Z).",
+   "ř. 127–128: Nadrchal uveden jako „Ing. J. Nadrchal“, v prezenci jako „Bc. Jan Nadrchal“."
+  ]
+ }
+}

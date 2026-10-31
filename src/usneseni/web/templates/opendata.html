@@ -5,6 +5,7 @@
 <p class="lead">Všechna data jsou volně k použití pod licencí <a href="https://creativecommons.org/licenses/by/4.0/deed.cs">CC BY 4.0</a>. Aktualizují se automaticky po zveřejnění nového zápisu (poslední: {{ stats.last_date|d }}).</p>
 <h2>Soubory</h2>
 <ul class="files">{% for f in files %}<li><a href="/opendata/{{ f }}">{{ f }}</a></li>{% endfor %}</ul>
+<p><b>Specifikace formátu</b> (význam polí, identifikátory, mapování na Popolo a data Prahy, doporučení pro úřady): <a href="https://github.com/xaralis/usneseni-mo5/blob/main/docs/otevrena-data.md">docs/otevrena-data.md</a>. V ČR pro usnesení a hlasování zatím neexistuje otevřená formální norma (OFN).</p>
 <p><code>datapackage.json</code> popisuje soubory ve formátu <a href="https://datapackage.org/">Frictionless Data Package</a>. Surové výstupy zpracování po jednotlivých jednáních: <a href="/opendata-extracted.txt">seznam</a> (<code>/opendata/extracted/&lt;id&gt;.parse.json</code>). Historie dat je v <a href="https://github.com/xaralis/usneseni-mo5/tree/main/data">gitu</a>.</p>
 <h2>REST API</h2>
 <p>Dokumentace OpenAPI: <a href="/api/docs">/api/docs</a>. Například:</p>
@@ -22,6 +23,7 @@ curl '{{ base }}/api/v1/members/filip-varecha/votes?dissent_only=true'</pre>
 <li><b>Číslo usnesení neznamená, že bylo přijato.</b> Výsledek se určuje z hlasování: přijato je, pokud pro hlasovala nadpoloviční většina všech členů (zastupitelstvo 8 z 15, rada 3 ze 5). Pokud zápis výslovně uvádí „bylo / nebylo přijato“ a nesouhlasí to, jednání jde ke kontrole.</li>
 <li><b>Hlasy jednotlivých členů:</b> zápisy MO V jmenovitě uvádějí jen ty, kdo hlasovali jinak než většina (případně nikoho). Hlas ostatních odvozujeme: přítomní (podle prezence a zmínek o příchodech a odchodech) minus jmenovaní = hlasovali pro zbývající možnost, pokud to přesně odpovídá součtu. Takový hlas je označen hvězdičkou / <code>provenance=inferred</code>. Pokud součty nesedí nebo chybí jména u více možností, uvádíme jen součty.</li>
 <li>Název, shrnutí, klíčová slova, témata a rozprava jsou <b>odvozené</b> modelem a slouží k hledání. Částky se jen opisují, nesčítají.</li>
+<li><b>Zrušení a změny:</b> když usnesení ruší (revokuje) nebo mění dřívější usnesení, je to u obou vyznačeno (tabulka <code>relations</code>). Platí jen zrušení, které samo prošlo hlasováním.</li>
 <li>Jména fyzických osob, která město v textech anonymizuje („xxxx“), nedoplňujeme.</li>
 </ul>
 {% endblock %}

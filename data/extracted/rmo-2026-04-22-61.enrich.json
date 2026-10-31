@@ -1,0 +1,61 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "43f9ee6d5e0354a3e724de7eb9cebc0ceea3fbb8b6183f184e838091015715db",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "282/2026 R",
+    "title": "Souhlas s výpůjčkou pozemků pro projekt Rezidence Kávoviny a se stříškou u domu č. p. 2433",
+    "summary": "Rada souhlasí se záměrem výpůjčky částí městských pozemků v k. ú. Pardubice pro staveniště při demolici areálu Kávoviny a pro nová napojení, úpravy chodníků a autobusové zastávky v rámci projektu „Rezidence Kávoviny“, s následným odkoupením stavebních úprav městem za 1.000,- Kč za stavební objekt; žadatelem je Podílový, penzijní fond IMOS development otevřený podílový fond. Dále souhlasí s vydáním souhlasu vlastníka pozemku p. p. č. 2426/43 s vybudováním stříšky u vchodu bytového domu č. p. 2433 pro Společenství vlastníků jednotek pro dům 2433, 2434 a 2435.",
+    "keywords": [
+     "Kávoviny",
+     "Rezidence Kávoviny",
+     "výpůjčka pozemků",
+     "staveniště",
+     "demolice",
+     "autobusové zastávky",
+     "chodníky",
+     "stříška",
+     "souhlas vlastníka pozemku",
+     "Marty Exnarové"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "investice"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "areál Kávoviny",
+     "Rezidence Kávoviny",
+     "Sokolovská 700/113a, Karlín, Praha 8",
+     "bytový dům č. p. 2433",
+     "Marty Exnarové 2434, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2583/16, k. ú. Pardubice",
+     "p. p. č. 2118/63, k. ú. Pardubice",
+     "p. p. č. 2583/24, k. ú. Pardubice",
+     "p. p. č. 2583/39, k. ú. Pardubice",
+     "p. p. č. 2583/15, k. ú. Pardubice",
+     "p. p. č. 2516/1, k. ú. Pardubice",
+     "2583/37, k. ú. Pardubice",
+     "p. p. č. 2426/43, k. ú. Pardubice",
+     "st. p. č. 5397, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Podílový, penzijní fond IMOS development otevřený podílový fond",
+     "Společenství vlastníků jednotek pro dům 2433, 2434 a 2435",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "1.000,- Kč/stavební objekt"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

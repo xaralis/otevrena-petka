@@ -1,0 +1,482 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "10691810d82e7fd4028ee3c324ad7cc60500d98b4d8cf685a999fe77fcf73d3c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 4,
+   "kind": "radne",
+   "date": "2019-06-26",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Karolina Štefková",
+    "Bc. Petra Prusáková",
+    "Ing. Filip Vařecha",
+    "Ing. Jaroslav Kňava",
+    "Ing. Jiří Janoš",
+    "Evžen Erban",
+    "Ing. Jiří Hájek",
+    "Ing. Petr Netolický",
+    "Pavel Studnička",
+    "Ing. Milan Randák",
+    "Ing. Aneta Jelínková"
+   ],
+   "excused": [
+    "Petr Hemský"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 27,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 55,
+    "speakers": [
+     "Ing. Aneta Jelínková",
+     "Jiří Rejda, DiS.",
+     "Ing. Jaroslav Kňava",
+     "Ing. Petr Netolický",
+     "Ing. Milan Randák"
+    ]
+   },
+   {
+    "no": "2.",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 74,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Petr Netolický",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "3.",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 88,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "4.",
+    "title": "Kontrola dokončených investičních akcí a souvisejících výběrových řízení za období 2016 – 2018",
+    "line": 116,
+    "speakers": [
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS.",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "5.",
+    "title": "Kontrola přístupu ÚMO Pardubice V k poskytování informací dle zák. č. 106/1999 Sb., o svobodném přístupu k informacím za období 1 Q 2017 – 1 Q 2019",
+    "line": 135,
+    "speakers": [
+     "Ing. Filip Vařecha"
+    ]
+   },
+   {
+    "no": "6.",
+    "title": "Závěrečný účet MO Pardubice V za rok 2018",
+    "line": 147,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2019",
+    "line": 168,
+    "speakers": [
+     "Ing. Jaroslav Kňava",
+     "Ing. Jiří Hájek",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "8.",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na r. 2019",
+    "line": 182,
+    "speakers": [
+     "Ing. Jaroslav Kňava",
+     "Ing. Petr Netolický",
+     "Ing. Filip Vařecha",
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "9.",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2018",
+    "line": 201,
+    "speakers": [
+     "Ing. Jaroslav Kňava"
+    ]
+   },
+   {
+    "no": "IV.",
+    "title": "Různé",
+    "line": 215,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Filip Vařecha",
+     "Ing. Aneta Jelínková",
+     "Ing. Jaroslav Kňava",
+     "Bc. Jan Nadrchal",
+     "Ing. Petr Netolický",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "V.",
+    "title": "Závěr",
+    "line": 261,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "25/2019 Z",
+    "agenda_no": "1.",
+    "first_line": 70,
+    "last_line": 71,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "26/2019 Z",
+    "agenda_no": "2.",
+    "first_line": 83,
+    "last_line": 85,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "27/2019 Z",
+    "agenda_no": "3.",
+    "first_line": 103,
+    "last_line": 105,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "28/2019 Z",
+    "agenda_no": "3.",
+    "first_line": 110,
+    "last_line": 113,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "29/2019 Z",
+    "agenda_no": "4.",
+    "first_line": 127,
+    "last_line": 128,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "30/2019 Z",
+    "agenda_no": "5.",
+    "first_line": 143,
+    "last_line": 144,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "31/2019 Z",
+    "agenda_no": "6.",
+    "first_line": 154,
+    "last_line": 165,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "32/2019 Z",
+    "agenda_no": "7.",
+    "first_line": 178,
+    "last_line": 179,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "33/2019 Z",
+    "agenda_no": "8.",
+    "first_line": 195,
+    "last_line": 198,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "34/2019 Z",
+    "agenda_no": "9.",
+    "first_line": 209,
+    "last_line": 212,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 50,
+    "last_line": 50,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu (materiálů k projednání a jejich pořadí)",
+    "proposer": null,
+    "motion_first_line": 38,
+    "motion_last_line": 49,
+    "procedural": true,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 72,
+    "last_line": 72,
+    "resolution": "25/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 86,
+    "last_line": 86,
+    "resolution": "26/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "27/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 114,
+    "last_line": 114,
+    "resolution": "28/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": "Ing. Jiří Hájek",
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 129,
+    "last_line": 129,
+    "resolution": "29/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 145,
+    "last_line": 145,
+    "resolution": "30/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 166,
+    "last_line": 166,
+    "resolution": "31/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 180,
+    "last_line": 180,
+    "resolution": "32/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 199,
+    "last_line": 199,
+    "resolution": "33/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 213,
+    "last_line": 213,
+    "resolution": "34/2019 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": []
+ }
+}

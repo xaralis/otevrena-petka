@@ -1,0 +1,257 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e7ca9995a6dc3b8717b349d52e9f03d9123fd657e149dbc79c971f89177d81b6",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "285/2026 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření obvodu k 30. 4. 2026",
+    "summary": "Rada doporučuje Zastupitelstvu MO Pardubice V schválit rozbor hospodaření obvodu k 30. 4. 2026 uvedený v tabulkové části zprávy a vzít na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2026",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "286/2026 R",
+    "title": "Doporučení ZMO schválit 2. změnu rozpočtu obvodu na rok 2026",
+    "summary": "Rada doporučuje Zastupitelstvu MO Pardubice V vzít na vědomí komentář k 2. změně rozpočtu na rok 2026 včetně rozpočtu sociálního fondu a schválit rozpočtová opatření uvedená v bodech 1–14 důvodové zprávy.",
+    "keywords": [
+     "změna rozpočtu",
+     "2. změna rozpočtu 2026",
+     "rozpočtová opatření",
+     "sociální fond",
+     "rozpočet 2026",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "287/2026 R",
+    "title": "Doporučení ZMO vzít na vědomí postup schválení účetní závěrky k 31. 12. 2025",
+    "summary": "Rada doporučuje Zastupitelstvu MO Pardubice V vzít na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2025 schválí zastupitelstvo města na červnovém jednání. Informaci o jejím schválení obdrží zastupitelstvo obvodu na nejbližším jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2025",
+     "zastupitelstvo města",
+     "městské obvody",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "288/2026 R",
+    "title": "Souhlas s výpůjčkou části pozemku 2583/21 u bytového domu Jana Palacha 304",
+    "summary": "Rada na žádost pozemkové komise rady města souhlasí se záměrem výpůjčky části pozemku p. p. č. 2583/21 (36,70 m²) v k. ú. Pardubice pro stavbu „NOVOSTAVBA A DEMOLICE – bytový dům Jana Palacha č.p.304“ (zrušení anglického dvorku a úprava chodníku) a s následným bezúplatným převodem upraveného chodníku do vlastnictví města po kolaudaci. Žadatelem je Bytové družstvo Jana Palacha 304.",
+    "keywords": [
+     "výpůjčka pozemku",
+     "chodník",
+     "anglický dvorek",
+     "bytový dům",
+     "novostavba a demolice",
+     "bezúplatný převod",
+     "Jana Palacha",
+     "stanovisko obvodu"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto",
+     "doprava"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Jana Palacha",
+     "bytový dům Jana Palacha č.p. 304",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2583/21, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "Bytové družstvo Jana Palacha 304",
+     "pozemková komise rady města Pardubice",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "289/2026 R",
+    "title": "Vzdání se mandátu člena ZMO, nástup náhradnice a rezignace předsedy komise pro rozvoj",
+    "summary": "Rada bere na vědomí vzdání se mandátu člena zastupitelstva obvodu za volební stranu Zelení a Piráti: 42 projektu.cz ke dni 30. 5. 2026 a jeho rezignaci na funkci předsedy Komise pro rozvoj a strategii RMO. Osvědčuje vznik mandátu náhradnice ze stejné volební strany a ukládá předat jí osvědčení na nejbližším jednání zastupitelstva.",
+    "keywords": [
+     "vzdání se mandátu",
+     "náhradník",
+     "osvědčení o vzniku mandátu",
+     "člen zastupitelstva",
+     "rezignace",
+     "Komise pro rozvoj a strategii",
+     "předseda komise"
+    ],
+    "topics": [
+     "organizace",
+     "komise-vybory"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Zelení a Piráti: 42 projektu.cz",
+     "Komise pro rozvoj a strategii RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "290/2026 R",
+    "title": "Smlouva o dílo na křižovatku ulic Devotyho – Železničního pluku",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na zakázku malého rozsahu „Křižovatka ul. Devotyho – Železničního pluku“ se společností ROCKY STAVBY COMPANY CZ s.r.o. jako vybraným zhotovitelem.",
+    "keywords": [
+     "křižovatka",
+     "Devotyho",
+     "Železničního pluku",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele",
+     "úprava křižovatky"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Devotyho",
+     "ul. Železničního pluku"
+    ],
+    "parcels": [],
+    "organizations": [
+     "ROCKY STAVBY COMPANY CZ s.r.o."
+    ],
+    "amounts": [
+     "2.286.204,59 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "291/2026 R",
+    "title": "Smlouva o dílo na chodníky v ul. U Krematoria (Nemošická – Mikulovická)",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na zakázku malého rozsahu „Chodníky ul. U Krematoria (Nemošická – Mikulovická ul.)“ se společností MIROS Pardubice a.s. jako vybraným zhotovitelem.",
+    "keywords": [
+     "chodníky",
+     "oprava chodníků",
+     "U Krematoria",
+     "Nemošická",
+     "Mikulovická",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. U Krematoria",
+     "Nemošická ul.",
+     "Mikulovická ul."
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "4.407.871,42 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "292/2026 R",
+    "title": "Smlouva o dílo na chodníky v ul. Wolkerova",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na zakázku malého rozsahu „Chodníky v ul. Wolkerova“ se společností MIROS Pardubice a.s. jako vybraným zhotovitelem.",
+    "keywords": [
+     "chodníky",
+     "oprava chodníků",
+     "Wolkerova",
+     "smlouva o dílo",
+     "zakázka malého rozsahu",
+     "výběr dodavatele"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ul. Wolkerova"
+    ],
+    "parcels": [],
+    "organizations": [
+     "MIROS Pardubice a.s."
+    ],
+    "amounts": [
+     "5. 965.631,32 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "293/2026 R",
+    "title": "Schválení zahraniční služební cesty do Koszalinu (Polsko)",
+    "summary": "Rada schvaluje zahraniční služební cestu tří osob do polského města uvedeného v textu jako Kozsalin v termínu 12. – 14. 5. 2026.",
+    "keywords": [
+     "zahraniční služební cesta",
+     "služební cesta",
+     "Polsko",
+     "Koszalin",
+     "Kozsalin"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "jine",
+    "places": [
+     "Kozsalin (Polsko)"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": []
+ }
+}

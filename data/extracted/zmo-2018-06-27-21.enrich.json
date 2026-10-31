@@ -1,0 +1,139 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "ab84488feb1231fb08ae73187074c0991af1a1ca849964d4a8dd2d1d1f0d4201",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "100/2018 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 14. 3. 2018",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty MO Pardubice V za období od posledního jednání zastupitelstva dne 14. 3. 2018.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "101/2018 Z",
+    "title": "Závěrečný účet MO Pardubice V za rok 2017 a finanční vypořádání",
+    "summary": "Zastupitelstvo projednalo závěrečný účet obvodu za rok 2017 a souhlasí s celoročním hospodařením bez výhrad. Schvaluje finanční vypořádání za rok 2017 včetně sociálního fondu, aktuální rozpočet na rok 2018 po jeho zahrnutí a související rozpočtová opatření; částku vypořádání s městem schvaluje s podmínkou, že ji schválí i Zastupitelstvo města Pardubic.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2017",
+     "finanční vypořádání",
+     "sociální fond",
+     "rozpočet 2018",
+     "rozpočtové opatření"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V",
+     "Zastupitelstvo města Pardubic"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "102/2018 Z",
+    "title": "Rozbor hospodaření MO Pardubice V",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření obvodu uvedený v tabulkové části zprávy (znění usnesení uvádí stav k 31. 12. 2017, bod programu k 31. 5. 2018) a bere na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "103/2018 Z",
+    "title": "Informace o schvalování účetní závěrky města k 31. 12. 2017",
+    "summary": "Zastupitelstvo bere na vědomí, že účetní závěrku města včetně městských obvodů sestavenou k 31. 12. 2017 schválí zastupitelstvo města na červnovém jednání; informaci o jejím schválení obdrží zastupitelstvo obvodu na příštím jednání.",
+    "keywords": [
+     "účetní závěrka",
+     "účetní závěrka 2017",
+     "schválení účetní závěrky"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "104/2018 Z",
+    "title": "2. změna rozpočtu MO Pardubice V na rok 2018",
+    "summary": "Zastupitelstvo schvaluje 2. změnu rozpočtu obvodu a rozpočtu sociálního fondu na rok 2018 a související rozpočtová opatření. Zároveň upravuje plán společenských akcí zvýšením částky na Počítačový kurz o 10 tis. Kč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočet 2018",
+     "sociální fond",
+     "rozpočtové opatření",
+     "plán společenských akcí",
+     "počítačový kurz"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Ladislav Doležal se ptal na jednání s Českou poštou a na projekt zóny 30 na Višňovce a v Jesničánkách, Ing. Jiří Janoš na stav jednání o zóně 30. Ing. Jiří Hájek se ptal na jednání s primátorem (vánoční výzdoba) a Bc. Petr Dufek na jednání se společností LOM o provozu na letišti Pardubice; odpovídal starosta Jiří Rejda, DiS."
+   },
+   {
+    "no": "3",
+    "discussion": "Ing. Jiří Hájek se ptal na čerpání prostředků na dohody a na monitorovací stanici a na příjmy z inzerce ve zpravodaji; odpovídala vedoucí ekonomického odboru a starosta."
+   },
+   {
+    "no": "5",
+    "discussion": "Ing. Jiří Hájek se ptal na položku projektové dokumentace Dražkovice; tajemník vysvětlil, že třetí etapu nelze zadat, dokud nejsou vykoupeny pozemky."
+   },
+   {
+    "no": "IV",
+    "discussion": "Členové zastupitelstva se ptali na výsadbu zeleně z prostředků letiště (Alice Paurová), přechod u krematoria (Ladislav Doležal), čistotu a kanalizaci v ul. Na Spravedlnosti a B. V. Kunětické (Ing. Jiří Hájek), křižovatku Pražská – Teplého a propady v ul. Jana Palacha (Bc. Petr Dufek), kanalizační vpusť u MŠ a kryté koše na hřištích (Ing. Milan Randák), propady ve Wolkerově ulici (Ing. Jiří Janoš), chodníky v ul. Na Záboří a dopravní hřiště v lesoparku (Ing. Petr Netolický) a vjezdy k ZŠ Staňkova (MUDr. Tomáš Rejda). Občané se ptali na projekt zóny 30; Ing. Jiří Hájek navrhl usnesení pověřit starostu předáním připomínek k projektu odboru dopravy magistrátu, návrh však stáhl."
+   }
+  ]
+ }
+}

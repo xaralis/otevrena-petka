@@ -1,0 +1,273 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "5742b2b1cb6596ea70612a6c60c2255ddb971bbe531f371c8d1ae90c8c6d1131",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "7/2018 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 26. 9. 2018",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu od posledního jednání zastupitelstva dne 26. 9. 2018.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelům"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "8/2018 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení rady městského obvodu a vyřazuje z evidence sledování splněná usnesení 344/2018 R – 359/2018 R a 1/2018 R – 7/2018 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "vyřazení z evidence",
+     "splněná usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "9/2018 Z",
+    "title": "Kontrola plnění usnesení zastupitelstva – vyřazení splněných, ponechání tří v evidenci",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru o plnění usnesení zastupitelstva. Splněná usnesení 105/2018 Z – 110/2018 Z a 1/2018 – 6/2018 Z vyřazuje z kontroly, usnesení 75/2009 Z, 95/2010 Z a 35/2015 Z ponechává v evidenci.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "kontrolní výbor",
+     "vyřazení z kontroly",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "10/2018 Z",
+    "title": "Plán činnosti Kontrolního výboru na rok 2019",
+    "summary": "Zastupitelstvo schvaluje předložený plán činnosti Kontrolního výboru zastupitelstva městského obvodu na rok 2019.",
+    "keywords": [
+     "plán činnosti",
+     "kontrolní výbor",
+     "plán kontrol 2019"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "11/2018 Z",
+    "title": "Měsíční odměny neuvolněným zastupitelům od 1. 1. 2019 – protinávrh s nižšími částkami",
+    "summary": "Návrh na stanovení měsíčních odměn od 1. 1. 2019 místostarostovi (18.000,- Kč) a ostatním neuvolněným členům zastupitelstva podle funkce v zastupitelstvu, radě, výborech a komisích, se sčítáním odměn při souběhu funkcí podle § 74 odst. 3 zákona č. 99/2017 Sb.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění členové zastupitelstva",
+     "odměna místostarosty",
+     "odměny členů výborů a komisí",
+     "souběh funkcí",
+     "protinávrh"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "18.000,- Kč",
+     "900,- Kč",
+     "3.500,- Kč",
+     "3.000,- Kč",
+     "2.500,- Kč",
+     "2.500,- Kč",
+     "2.000,- Kč"
+    ]
+   },
+   {
+    "number": "12/2018 Z",
+    "title": "Měsíční odměny neuvolněným zastupitelům od 1. 1. 2019",
+    "summary": "Stanovení měsíčních odměn od 1. 1. 2019 místostarostovi (21.400,- Kč) a ostatním neuvolněným členům zastupitelstva podle funkce – člen zastupitelstva, člen rady, předseda a člen výboru, předseda a člen komise rady. Odměny se při souběhu funkcí sčítají podle § 74 odst. 3 zákona č. 99/2017 Sb.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění členové zastupitelstva",
+     "odměna místostarosty",
+     "odměny členů výborů a komisí",
+     "souběh funkcí",
+     "zvýšení odměn"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "21.400,- Kč",
+     "1.070,- Kč",
+     "4.280,- Kč",
+     "3.745,- Kč",
+     "3.210,- Kč",
+     "3.210,- Kč",
+     "2.675,- Kč"
+    ]
+   },
+   {
+    "number": "13/2018 Z",
+    "title": "Rozbor hospodaření městského obvodu k 30. 11. 2018",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu k 30. 11. 2018 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "čerpání rozpočtu 2018"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "14/2018 Z",
+    "title": "4. změna rozpočtu a rozpočtu sociálního fondu",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje návrh 4. změny rozpočtu a rozpočtu sociálního fondu (v textu usnesení uvedeno „na r. 2019“, bod programu se týká roku 2018) včetně rozpočtových opatření uvedených v komentáři.",
+    "keywords": [
+     "změna rozpočtu",
+     "4. změna rozpočtu",
+     "sociální fond",
+     "rozpočtová opatření"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "15/2018 Z",
+    "title": "Rozpočet městského obvodu a sociálního fondu na rok 2019 a pravidla jeho provádění",
+    "summary": "Zastupitelstvo schvaluje rozpočet městského obvodu a rozpočet sociálního fondu na rok 2019 a svěřuje radě pravomoc provádět vymezená rozpočtová opatření (dotace a dary z rezerv, přesuny do 200 tis. Kč na položce, dotace z ÚP, přesuny mezi běžnými a kapitálovými výdaji, přijaté dary na akce). Dále upravuje technické přesuny, hrazení společenských akcí, dárky jubilantům a propagační předměty, schvaluje směrnici č. 7/2018 o sociálním fondu (ruší směrnici č. 7-1/2015) a bere na vědomí postup při rozpočtovém provizoriu města.",
+    "keywords": [
+     "rozpočet 2019",
+     "sociální fond",
+     "rozpočtová opatření",
+     "pravomoci rady",
+     "plán společenských akcí",
+     "dárky jubilantům",
+     "propagační předměty",
+     "směrnice o sociálním fondu",
+     "rozpočtové provizorium"
+    ],
+    "topics": [
+     "rozpocet",
+     "vyhlasky-pravidla",
+     "kultura-akce"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ÚP",
+     "statutární město Pardubice"
+    ],
+    "amounts": [
+     "200 tis. Kč",
+     "200,- Kč",
+     "500,-- Kč",
+     "500,-- Kč"
+    ]
+   },
+   {
+    "number": "16/2018 Z",
+    "title": "Střednědobý výhled rozpočtu na roky 2018–2022",
+    "summary": "Zastupitelstvo bere na vědomí komentář a schvaluje návrh střednědobého výhledu rozpočtu městského obvodu na roky 2018–2022 v tabulkové části zprávy.",
+    "keywords": [
+     "střednědobý výhled rozpočtu",
+     "rozpočtový výhled",
+     "rozpočet 2018–2022"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1.",
+    "discussion": "Ing. A. Jelínková navrhla rozšířit zprávu starosty o obsah či výsledek jednání, Ing. F. Vařecha navrhl sdílet starostův kalendář se zastupiteli. Ing. J. Janoš a Ing. J. Kňava oponovali, Ing. P. Netolický navrhl doplnit do zprávy pár vět; starosta bude zprávu psát obsahově významněji."
+   },
+   {
+    "no": "2.",
+    "discussion": "Ing. J. Hájek se ptal, proč u usnesení 349/2018 získala zakázku druhá firma v pořadí; tajemník odpověděl, že vítězná firma z kapacitních důvodů odstoupila."
+   },
+   {
+    "no": "4.",
+    "discussion": "Ing. F. Vařecha upozornil na chybu v materiálech – období kontroly ve 3. čtvrtletí se upravuje z 2016–2018 na 2017–2019."
+   },
+   {
+    "no": "5.",
+    "discussion": "Ing. F. Vařecha uvedl, že nový zákon nestanoví povinnost odměny zvýšit, a předložil protinávrh s nižšími odměnami. Ing. J. Kňava a Ing. J. Nadrchal zvýšení podpořili, Ing. P. Netolický upozornil na chybné datum účinnosti v návrhu (má být 1. 1. 2019)."
+   },
+   {
+    "no": "6.",
+    "discussion": "Ing. F. Vařecha se ptal, proč nebyly vyčerpány navýšené položky na rozsvěcení vánočního stromu a punč; ekonomka odpověděla, že akce jsou prosincové a vyúčtují se v prosinci."
+   },
+   {
+    "no": "7.",
+    "discussion": "Ing. J. Kňava uvedl, že návrh byl podrobně projednán ve finančním výboru a rozpočet se mění podle čerpání; Ing. J. Hájek ocenil důslednost projednání."
+   },
+   {
+    "no": "8.",
+    "discussion": "Ing. J. Hájek uvedl, že návrh ve finančním výboru podpořil i přes některé disproporce; Ing. A. Jelínková poukázala, že jako nová členka má těžší situaci v chápání položek."
+   },
+   {
+    "no": "Diskuse",
+    "discussion": "Ing. J. Hájek a Ing. P. Netolický se ptali na projektový zásobník a vánoční punč, Ing. F. Vařecha navrhl hudební akce pro mladší občany a ptal se na monitorovací stanici ovzduší na Dukle. P. Hemský se ptal na městské kamery (starosta znovu žádá návrhy lokalit), Ing. J. Janoš požádal o předávání výstupů místních komisí."
+   }
+  ]
+ }
+}

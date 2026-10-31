@@ -7,7 +7,7 @@ import logging
 import os
 import sys
 
-from . import db, embed as embedder, members as reg, pipeline, store
+from . import db, embed as embedder, members as reg, opendata_schema, pipeline, relations, store
 from .text import fold
 
 log = logging.getLogger(__name__)
@@ -127,8 +127,30 @@ def load(ids: list[str] | None = None) -> None:
             stats[st] = stats.get(st, 0) + 1
             if st not in ("ok", "not-parsed"):
                 log.warning("%s: %s", mid, st)
+        with conn.transaction():
+            n = _relations(conn)
         conn.commit()
-    log.info("load: %s", stats)
+    log.info("load: %s, %d resolution links", stats, n)
+
+
+def _relations(conn) -> int:
+    """Recompute revoke/amend links across the whole database (targets may be in any meeting)."""
+    conn.execute("DELETE FROM resolution_relations")
+    rows = conn.execute("SELECT uid, number, body, status, text FROM resolutions").fetchall()
+    by_number = {r["number"]: r["uid"] for r in rows}
+    n = 0
+    for r in rows:
+        for link in relations.links(r["text"], r["body"]):
+            if link["target"] == r["number"]:
+                continue
+            conn.execute(
+                """INSERT INTO resolution_relations (source_uid, type, target_number, target_uid,
+                     scope, detail, effective) VALUES (%s,%s,%s,%s,%s,%s,%s)
+                   ON CONFLICT DO NOTHING""",
+                (r["uid"], link["type"], link["target"], by_number.get(link["target"]),
+                 link["scope"], link["detail"], r["status"] in ("prijato", "castecne")))
+            n += 1
+    return n
 
 
 # --- embeddings ---------------------------------------------------------------------------
@@ -173,6 +195,10 @@ EXPORTS = {
                 FROM votes ORDER BY meeting_id, seq""",
     "ballots": """SELECT b.vote_id, b.member_id, b.choice, b.provenance
                   FROM ballots b JOIN votes v ON v.id = b.vote_id ORDER BY v.meeting_id, v.seq, b.member_id""",
+    "relations": """SELECT x.source_uid, s.number AS source_number, x.type, x.target_number,
+                      x.target_uid, x.scope, x.detail, x.effective
+                    FROM resolution_relations x JOIN resolutions s ON s.uid = x.source_uid
+                    ORDER BY s.date, x.source_uid""",
     "members": """SELECT m.id, m.name, s.term, s.list, s.elected, s.in_rada
                   FROM members m LEFT JOIN memberships s ON s.member_id = m.id
                   WHERE EXISTS (SELECT 1 FROM ballots b WHERE b.member_id = m.id)
@@ -192,21 +218,30 @@ def export() -> None:
             w = csv.writer(buf)
             w.writerow(cols)
             for r in rows:
-                w.writerow(["" if r[c] is None else r[c] for c in cols])
+                w.writerow(["" if r[c] is None else str(r[c]).lower() if isinstance(r[c], bool) else r[c]
+                            for c in cols])
             store._write(OPENDATA / f"{name}.csv", buf.getvalue())
             store._write(OPENDATA / f"{name}.json", json.dumps(
                 [{c: r[c] for c in cols} for r in rows], ensure_ascii=False, default=str) + "\n")
-            resources.append({"name": name, "path": f"{name}.csv", "format": "csv",
-                              "mediatype": "text/csv", "encoding": "utf-8",
-                              "schema": {"fields": [{"name": c} for c in cols]}})
+            t = opendata_schema.TABLES[name]
+            fields = [fd for fd in t["fields"] if fd["name"] in cols]
+            missing = set(cols) - {fd["name"] for fd in fields}
+            if missing:
+                raise RuntimeError(f"{name}: columns without schema {missing}")
+            schema = {"fields": fields, **{k: t[k] for k in ("primaryKey", "foreignKeys") if k in t}}
+            resources.append({"name": name, "title": t["title"], "description": t["description"],
+                              "path": f"{name}.csv", "format": "csv", "mediatype": "text/csv",
+                              "encoding": "utf-8", "schema": schema})
     store._write(OPENDATA / "datapackage.json", json.dumps({
         "name": "usneseni-mo-pardubice-v",
-        "title": "Usnesení zastupitelstva a rady městského obvodu Pardubice V",
+        "title": "Usnesení a hlasování zastupitelstva a rady městského obvodu Pardubice V",
+        "version": "1.0",
+        "homepage": "https://usneseni.dev.varecha.work/otevrena-data",
         "licenses": [{"name": "CC-BY-4.0", "path": "https://creativecommons.org/licenses/by/4.0/"}],
         "sources": [{"title": "Statutární město Pardubice – zápisy z jednání ZMO a RMO Pardubice V",
                      "path": "https://pardubice.eu/obvod5"}],
-        "description": "Usnesení, hlasování a hlasy členů vytěžené z PDF zápisů. Hlasy členů jsou "
-                       "zčásti odvozené (provenance=inferred), viz metodika.",
+        "description": "Usnesení, hlasování a hlasy členů vytěžené z PDF zápisů. Specifikace: "
+                       "https://github.com/xaralis/usneseni-mo5/blob/main/docs/otevrena-data.md",
         "resources": resources,
     }, ensure_ascii=False, indent=1) + "\n")
     log.info("export: %s", [r["name"] for r in resources])

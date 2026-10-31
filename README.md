@@ -51,6 +51,7 @@ hlasovali pro zbývající možnost – jen pokud to přesně sedí na součet. 
 | `config/members.yaml` | kandidáti a zvolení podle volby.cz (`scripts/members_from_volby.py`) |
 | `config/topics.yaml` | pevný seznam témat a druhů rozhodnutí |
 | `src/usneseni/` | pipeline, web (FastAPI), REST API, MCP server |
+| `docs/otevrena-data.md` | specifikace formátu otevřených dat (+ doporučení pro úřad) |
 | `docs/agent-backfill.md` | zpracování jednání subagentem Claude Code (první naplnění) |
 
 ## Lokální běh

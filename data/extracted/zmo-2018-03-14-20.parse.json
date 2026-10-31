@@ -1,0 +1,380 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "6e5b5e2eb75d626c7e3cdfb59fad40b3d50cdfeebdef6620f5c66a50e905ae18",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 20,
+   "kind": "radne",
+   "date": "2018-03-14",
+   "place": "salónek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ladislav Doležal",
+    "Ing. Jan Jedlička",
+    "Alice Paurová",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "Pavel Studnička",
+    "MUDr. Tomáš Rejda",
+    "Ing. Jiří Hájek",
+    "Ing. Petr Netolický",
+    "Ing. Jiří Janoš",
+    "Evžen Erban"
+   ],
+   "excused": [
+    "Ing. Jaroslav Kňava",
+    "Ing. Petr Beneš",
+    "Lic. Pavlína Mazuchová"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 31,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 38,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 52,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ladislav Doležal",
+     "Alice Paurová",
+     "Ing. Jiří Hájek",
+     "Ing. Jiří Janoš",
+     "Ing. Jan Jedlička"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Program rozvoje městského obvodu Pardubice V – plnění za rok 2017",
+    "line": 82,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 30. 12. 2017",
+    "line": 94,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Alice Paurová",
+     "Ing. Jiří Hájek",
+     "Bc. Petr Dufek",
+     "Ing. Petr Netolický",
+     "Ladislav Doležal",
+     "Ing. Milan Randák",
+     "Ing. Jiří Janoš",
+     "Evžen Erban"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Návrh 1. změny rozpočtu MO Pardubice V na r. 2018",
+    "line": 144,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek",
+     "MUDr. Tomáš Rejda"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Individuální dotace a rozpočtové opatření",
+    "line": 178,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ladislav Doležal",
+     "Ing. Jiří Hájek",
+     "MUDr. Tomáš Rejda",
+     "Alice Paurová",
+     "Bc. Petr Dufek",
+     "Ing. Milan Randák",
+     "Evžen Erban",
+     "Ing. Petr Netolický"
+    ]
+   },
+   {
+    "no": "IV",
+    "title": "Různé – Výzva zastupitelům obcí a měst české republiky",
+    "line": 219,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek",
+     "Evžen Erban",
+     "Ing. Milan Randák",
+     "Alice Paurová",
+     "Ing. Petr Netolický",
+     "Ing. Jan Jedlička"
+    ]
+   },
+   {
+    "no": "Diskuse",
+    "title": "Diskuse",
+    "line": 244,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Alice Paurová",
+     "Ing. Jiří Hájek",
+     "Ing. Milan Randák",
+     "Ing. Petr Netolický",
+     "Bc. Petr Dufek",
+     "Evžen Erban",
+     "Ladislav Doležal",
+     "Ing. Jan Jedlička",
+     "Pavel Studnička"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "94/2018 Z",
+    "agenda_no": "1",
+    "first_line": 78,
+    "last_line": 79,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "95/2018 Z",
+    "agenda_no": "2",
+    "first_line": 90,
+    "last_line": 91,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "96/2018 Z",
+    "agenda_no": "3",
+    "first_line": 132,
+    "last_line": 134,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "97/2018 Z",
+    "agenda_no": "3",
+    "first_line": 139,
+    "last_line": 141,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "98/2018 Z",
+    "agenda_no": "4",
+    "first_line": 159,
+    "last_line": 175,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "99/2018 Z",
+    "agenda_no": "5",
+    "first_line": 206,
+    "last_line": 216,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 29,
+    "last_line": 29,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 47,
+    "last_line": 47,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 80,
+    "last_line": 80,
+    "resolution": "94/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 92,
+    "last_line": 92,
+    "resolution": "95/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. J. Hájek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 135,
+    "resolution": "96/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 142,
+    "last_line": 142,
+    "resolution": "97/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 176,
+    "last_line": 176,
+    "resolution": "98/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 217,
+    "last_line": 217,
+    "resolution": "99/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 18 a 20–21: Ing. Jiří Janoš je uveden mezi přítomnými i omluvenými („po část jednání“); čas jeho odchodu/příchodu text neuvádí.",
+   "ř. 176 a 217: hlasování o usneseních 98/2018 Z a 99/2018 Z má jen 11 hlasů (12 přítomných dříve), pravděpodobně kvůli odchodu Ing. Janoše, což text výslovně neuvádí.",
+   "ř. 43 a 95 uvádí rozbor k 30. 12. 2017, znění usnesení 97/2018 Z (ř. 140) k 31. 12. 2017."
+  ]
+ }
+}

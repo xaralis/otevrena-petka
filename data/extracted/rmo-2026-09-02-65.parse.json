@@ -1,0 +1,536 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "e1b8a417d9bf2d2b7607067dad013e6a594aa907a3ae36bdfaa0b934ab9b31ab",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 65,
+   "kind": "mimoradne",
+   "date": "2026-09-02",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "IV.",
+    "title": "Projednání schválených materiálů",
+    "line": 58,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 61,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Souhlas s umístěním předzahrádky před restaurací v ulici Jana Palacha 571 v Pardubicích",
+    "line": 98,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Rozhodnutí zadavatele – uplatnění výjimky při výběru nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Obnova asfaltového krytu v ul. U Krematoria v úseku ul. Nemošická - Mikulovická“",
+    "line": 112,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Rozhodnutí zadavatele – výběr nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Vnitroblok ul. K Blahobytu č.p. 2482-2484“",
+    "line": 124,
+    "speakers": []
+   },
+   {
+    "no": "5",
+    "title": "Věcné dary mateřským školám",
+    "line": 134,
+    "speakers": []
+   },
+   {
+    "no": "6",
+    "title": "Směrnice č. 5/2026: Evidence a vymáhání daní",
+    "line": 167,
+    "speakers": []
+   },
+   {
+    "no": "7",
+    "title": "Informace o schválení účetní závěrky za r. 2025 sestavené k 31. 12. 2025",
+    "line": 174,
+    "speakers": []
+   },
+   {
+    "no": "8",
+    "title": "Zpráva o činnosti Finančního výboru ZMO Pardubice V ve volebním období 2022-2026",
+    "line": 184,
+    "speakers": []
+   },
+   {
+    "no": "9",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 7. 2026",
+    "line": 193,
+    "speakers": []
+   },
+   {
+    "no": "10",
+    "title": "4. změna rozpočtu MO Pardubice V na r. 2026",
+    "line": 202,
+    "speakers": []
+   },
+   {
+    "no": "11",
+    "title": "Diskuse, závěr",
+    "line": 266,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "300/2026 R",
+    "agenda_no": "1",
+    "first_line": 64,
+    "last_line": 95,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "301/2026 R",
+    "agenda_no": "2",
+    "first_line": 107,
+    "last_line": 109,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "302/2026 R",
+    "agenda_no": "3",
+    "first_line": 117,
+    "last_line": 121,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "303/2026 R",
+    "agenda_no": "4",
+    "first_line": 128,
+    "last_line": 131,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "304/2026 R",
+    "agenda_no": "5",
+    "first_line": 137,
+    "last_line": 164,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "305/2026 R",
+    "agenda_no": "6",
+    "first_line": 170,
+    "last_line": 171,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "306/2026 R",
+    "agenda_no": "7",
+    "first_line": 177,
+    "last_line": 181,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "307/2026 R",
+    "agenda_no": "8",
+    "first_line": 187,
+    "last_line": 190,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "308/2026 R",
+    "agenda_no": "9",
+    "first_line": 196,
+    "last_line": 199,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "309/2026 R",
+    "agenda_no": "10",
+    "first_line": 205,
+    "last_line": 261,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 56,
+    "last_line": 56,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 37,
+    "motion_last_line": 55,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 73,
+    "last_line": 73,
+    "resolution": "300/2026 R",
+    "part": "bod 1",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 0,
+    "zdrzel": 5,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 81,
+    "last_line": 81,
+    "resolution": "300/2026 R",
+    "part": "bod 2",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 4,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 84,
+    "last_line": 84,
+    "resolution": "300/2026 R",
+    "part": "bod 3",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 3,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "300/2026 R",
+    "part": "bod 4",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 0,
+    "proti": 2,
+    "zdrzel": 3,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 96,
+    "last_line": 96,
+    "resolution": "300/2026 R",
+    "part": "bod 5",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 110,
+    "last_line": 110,
+    "resolution": "301/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 122,
+    "last_line": 122,
+    "resolution": "302/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 132,
+    "last_line": 132,
+    "resolution": "303/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 165,
+    "last_line": 165,
+    "resolution": "304/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 172,
+    "last_line": 172,
+    "resolution": "305/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 182,
+    "last_line": 182,
+    "resolution": "306/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 191,
+    "last_line": 191,
+    "resolution": "307/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 200,
+    "last_line": 200,
+    "resolution": "308/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 262,
+    "last_line": 262,
+    "resolution": "309/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "Usnesení 300/2026 R (ř. 64–96): hlasovalo se odděleně o bodech 1–5 záměru; body 1–4 nezískaly žádný hlas pro (ř. 73, 81, 84, 90), bod 5 5 pro (ř. 96). Text usnesení přesto uvádí „souhlasí se záměrem“ u všech pěti bodů a výsledek hlasování výslovně neuvádí.",
+   "Seznam Omluveni (ř. 16) je prázdný."
+  ]
+ }
+}

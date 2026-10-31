@@ -1,0 +1,356 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "ae2c71166b227df4ffb54bbb5f479134514f8280fc9dc3df9a1dd64904320888",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 22,
+   "kind": "radne",
+   "date": "2018-09-26",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ladislav Doležal",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "MUDr. Tomáš Rejda",
+    "Ing. Jiří Hájek",
+    "Ing. Petr Beneš",
+    "Ing. Jaroslav Kňava",
+    "Ing. Jiří Janoš",
+    "Ing. Jan Jedlička",
+    "Pavel Studnička"
+   ],
+   "excused": [
+    "Alice Paurová",
+    "Evžen Erban",
+    "Lic. Pavlína Mazuchová",
+    "Ing. Petr Netolický"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 37,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 52,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ladislav Doležal",
+     "Bc. Petr Dufek",
+     "Ing. Jiří Janoš",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Kontrola plnění usnesení vzešlých z jednání RMO Pardubice V",
+    "line": 81,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jan Jedlička"
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Zpráva Kontrolního výboru ZMO Pardubice V o plnění přijatých usnesení ZMO Pardubice V",
+    "line": 93,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jan Jedlička"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 8. 2018",
+    "line": 109,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Bc. Petr Dufek",
+     "Ladislav Doležal"
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Návrh 3. změny rozpočtu MO Pardubice V na r. 2018",
+    "line": 125,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "6",
+    "title": "Zpráva o činnosti Finančního výboru ZMO Pardubice V",
+    "line": 151,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "IV",
+    "title": "Různé",
+    "line": 163,
+    "speakers": [
+     "MUDr. Tomáš Rejda",
+     "Ladislav Doležal",
+     "Ing. Milan Randák",
+     "Bc. Petr Dufek",
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Janoš",
+     "Ing. Jan Jedlička"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "105/2018 Z",
+    "agenda_no": "1",
+    "first_line": 76,
+    "last_line": 77,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "106/2018 Z",
+    "agenda_no": "2",
+    "first_line": 87,
+    "last_line": 89,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "107/2018 Z",
+    "agenda_no": "3",
+    "first_line": 101,
+    "last_line": 105,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "108/2018 Z",
+    "agenda_no": "4",
+    "first_line": 119,
+    "last_line": 121,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "109/2018 Z",
+    "agenda_no": "5",
+    "first_line": 134,
+    "last_line": 147,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "110/2018 Z",
+    "agenda_no": "6",
+    "first_line": 158,
+    "last_line": 159,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 27,
+    "last_line": 27,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 46,
+    "last_line": 46,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "105/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 90,
+    "last_line": 90,
+    "resolution": "106/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 106,
+    "last_line": 106,
+    "resolution": "107/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 122,
+    "last_line": 122,
+    "resolution": "108/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 148,
+    "last_line": 148,
+    "resolution": "109/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 160,
+    "last_line": 160,
+    "resolution": "110/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 15 a 18–19: Ing. Jiří Hájek je uveden mezi přítomnými i omluvenými („po část jednání“); čas jeho příchodu/odchodu text neuvádí.",
+   "ř. 27 a 46: procedurální hlasování mají 11 hlasů pro (11 přítomných), usnesení 105/2018 Z (ř. 78), 109/2018 Z a 110/2018 Z (ř. 148, 160) jen 10 hlasů a usnesení 106–108/2018 Z (ř. 90, 106, 122) jen 9 hlasů; odchody/příchody členů text výslovně neuvádí.",
+   "ř. 40 a 81: bod 2 se jmenuje „Kontrola plnění usnesení vzešlých z jednání RMO“, ale ř. 82 a usnesení 106/2018 Z (ř. 87–88) mluví o zprávě Kontrolního výboru."
+  ]
+ }
+}

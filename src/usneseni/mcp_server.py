@@ -27,6 +27,8 @@ Při odpovědích:
   odvozeno z prezence a jmenovitě uvedených menšinových hlasů, `attendance` = nepřítomen /
   omluven. Odvozené hlasy tak označ.
 - `title`, `summary`, `keywords` jsou odvozené popisy, ne text města; cituj `text`.
+- Usnesení mohou být později zrušena (revokována) nebo změněna jiným usnesením – viz
+  `zruseno_nebo_zmeneno` (jen `ucinne: true` platí; zrušení, které neprošlo, nic nemění).
 - Prázdný výsledek neznamená, že se o věci nikdy nejednalo – zkus jiná slova nebo režim.
 - Odkazuj na usnesení číslem a URL {PUBLIC_URL}/usneseni/<uid>, zdroj je `source_url`.
 """
@@ -87,7 +89,7 @@ def hledej_usneseni(
             "uid": h.uid, "cislo": h.row["number"], "datum": str(h.row["date"]),
             "organ": h.row["body"], "stav": h.row["status"], "nazev": h.row["title"],
             "shrnuti": h.row["summary"], "bod_programu": h.row["agenda_title"],
-            "temata": h.row["topics"], "url": _url(h.uid),
+            "temata": h.row["topics"], "zruseno": h.row["revoked_by"], "url": _url(h.uid),
         } for h in hits],
     }
     if info["mode"] != rezim and rezim != "fulltext":
@@ -114,6 +116,11 @@ def usneseni_detail(usneseni: str) -> dict:
                      "pozemky": r["parcels"], "organizace": r["organizations"],
                      "castky": r["amounts"]},
         "hlasovani": [_vote(v) for v in r["votes"]],
+        "zruseno_nebo_zmeneno": [{"usnesenim": x["number"], "datum": str(x["date"]), "typ": x["type"],
+                                  "rozsah": x["scope"], "cast": x["detail"], "ucinne": x["effective"]}
+                                 for x in r["revoked_by"]],
+        "rusi_nebo_meni": [{"usneseni": x["target_number"], "typ": x["type"], "rozsah": x["scope"],
+                            "cast": x["detail"], "ucinne": x["effective"]} for x in r["revokes"]],
         "url": _url(r["uid"]), "zdroj": r["source_url"],
     }
 

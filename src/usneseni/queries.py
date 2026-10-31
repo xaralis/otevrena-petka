@@ -22,6 +22,13 @@ def resolution(uid: str) -> dict | None:
         r.pop("embedding", None)
         r.pop("tsv", None)
         r["votes"] = _votes(conn, "v.resolution_uid = %s", uid)
+        r["revoked_by"] = conn.execute(
+            """SELECT x.type, x.scope, x.detail, x.effective, s.uid, s.number, s.date, s.status
+               FROM resolution_relations x JOIN resolutions s ON s.uid = x.source_uid
+               WHERE x.target_uid = %s ORDER BY s.date""", (uid,)).fetchall()
+        r["revokes"] = conn.execute(
+            """SELECT x.type, x.scope, x.detail, x.effective, x.target_number, x.target_uid
+               FROM resolution_relations x WHERE x.source_uid = %s""", (uid,)).fetchall()
         return r
 
 

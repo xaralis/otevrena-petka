@@ -1,0 +1,319 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "ab84488feb1231fb08ae73187074c0991af1a1ca849964d4a8dd2d1d1f0d4201",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 21,
+   "kind": "radne",
+   "date": "2018-06-27",
+   "place": "salónek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ladislav Doležal",
+    "Alice Paurová",
+    "Bc. Petr Dufek",
+    "Ing. Milan Randák",
+    "MUDr. Tomáš Rejda",
+    "Ing. Jiří Hájek",
+    "Ing. Petr Beneš",
+    "Ing. Petr Netolický",
+    "Ing. Jaroslav Kňava",
+    "Lic. Pavlína Mazuchová",
+    "Ing. Jiří Janoš"
+   ],
+   "excused": [
+    "Evžen Erban",
+    "Ing. Jan Jedlička",
+    "Pavel Studnička"
+   ],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání",
+    "line": 36,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 43,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Zpráva o činnosti starosty MO Pardubice V od posledního jednání ZMO Pardubice V",
+    "line": 57,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ladislav Doležal",
+     "Ing. Jiří Janoš",
+     "Ing. Jiří Hájek",
+     "Bc. Petr Dufek"
+    ]
+   },
+   {
+    "no": "2",
+    "title": "Závěrečný účet MO Pardubice V za rok 2017",
+    "line": 81,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "3",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 5. 2018",
+    "line": 104,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "4",
+    "title": "Schválení účetní závěrky sestavené k 31. 12. 2017",
+    "line": 123,
+    "speakers": [
+     "Jiří Rejda, DiS."
+    ]
+   },
+   {
+    "no": "5",
+    "title": "Návrh 2. změny rozpočtu MO Pardubice V na r. 2018",
+    "line": 137,
+    "speakers": [
+     "Jiří Rejda, DiS.",
+     "Ing. Jiří Hájek"
+    ]
+   },
+   {
+    "no": "IV",
+    "title": "Různé",
+    "line": 161,
+    "speakers": [
+     "Alice Paurová",
+     "Jiří Rejda, DiS.",
+     "Ladislav Doležal",
+     "Ing. Jiří Hájek",
+     "Bc. Petr Dufek",
+     "Ing. Milan Randák",
+     "Ing. Jiří Janoš",
+     "Ing. Petr Netolický",
+     "MUDr. Tomáš Rejda"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "100/2018 Z",
+    "agenda_no": "1",
+    "first_line": 77,
+    "last_line": 78,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "101/2018 Z",
+    "agenda_no": "2",
+    "first_line": 89,
+    "last_line": 101,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "102/2018 Z",
+    "agenda_no": "3",
+    "first_line": 118,
+    "last_line": 120,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "103/2018 Z",
+    "agenda_no": "4",
+    "first_line": 131,
+    "last_line": 134,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "104/2018 Z",
+    "agenda_no": "5",
+    "first_line": 152,
+    "last_line": 157,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 33,
+    "last_line": 33,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 51,
+    "last_line": 51,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 9,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 79,
+    "last_line": 79,
+    "resolution": "100/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 102,
+    "last_line": 102,
+    "resolution": "101/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 121,
+    "last_line": 121,
+    "resolution": "102/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 135,
+    "last_line": 135,
+    "resolution": "103/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 158,
+    "last_line": 158,
+    "resolution": "104/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 16–19 a 22–24: Ing. Petr Netolický, Ing. Jaroslav Kňava, Lic. Pavlína Mazuchová a Ing. Jiří Janoš jsou uvedeni mezi přítomnými i omluvenými („po část jednání“); časy jejich příchodů/odchodů text neuvádí, v parse jsou vedeni jako přítomní.",
+   "Počty hlasů kolísají (9, 9, 10, 11, 10, 10, 10) bez zaznamenaných příchodů/odchodů; max. 11 hlasujících z 12 vedených jako přítomní.",
+   "ř. 138–139: nadpis bodu 5 obsahuje navíc zbytek staršího nadpisu („Návrh 1. změny rozpočtu MO Pardubice V na r. 2018“).",
+   "ř. 105 a 48: bod 3 je rozbor hospodaření k 31. 5. 2018, znění usnesení 102/2018 Z (ř. 118–119) uvádí k 31. 12. 2017.",
+   "ř. 243–250: Ing. J. Hájek navrhl usnesení (pověřit starostu doplněním připomínek k projektu zóna 30), návrh stáhl; nehlasovalo se.",
+   "Bod V. Závěr z programu (ř. 32) není v textu samostatně zapsán."
+  ]
+ }
+}

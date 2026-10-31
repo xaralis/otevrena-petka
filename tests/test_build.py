@@ -86,3 +86,11 @@ def test_invariants(mid):
             assert len(voted) == v["pro"] + v["proti"] + v["zdrzel"] + (v["nehlasoval"] or 0)
         if v["stated_outcome"]:
             assert v["outcome"] == v["stated_outcome"]
+
+
+def test_revocation_links():
+    from usneseni.relations import links
+    assert links("Rada: 1. revokuje usnesení č. 39/2023 R, bod 6, 16 a 17 ze dne 15. 3. 2023", "rmo") == \
+        [{"type": "rusi", "target": "39/2023 R", "scope": "cast", "detail": "bod 6, 16 a 17"}]
+    assert links("Rada ruší své usnesení č. 229/2021 ze dne 25.11.2021", "rmo")[0]["target"] == "229/2021 R"
+    assert links("kterou se k datu 31. 12. 2018 ruší směrnice č. 7-1/2015", "rmo") == []

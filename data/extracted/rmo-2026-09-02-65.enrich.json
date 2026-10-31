@@ -1,0 +1,302 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "e1b8a417d9bf2d2b7607067dad013e6a594aa907a3ae36bdfaa0b934ab9b31ab",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "300/2026 R",
+    "title": "Stanovisko k pozemkovým záměrům města – hotel na Dukle, pažení u Vápenky a další",
+    "summary": "Stanovisko rady obvodu k pěti záměrům projednávaným pozemkovou komisí rady města Pardubice, o nichž se hlasovalo jednotlivě: výpůjčka a budoucí prodej pozemků v lokalitě Dukla pro výstavbu a provoz hotelu (ventio holding a.s.), pronájem částí pozemků u ulice K Vápence pro dočasné pažení stavební jámy projektu „Vápenka“ (ERA a.s.), prodej části pozemku p. p. č. 2393/251 na scelení zahrady a zřízení služebnosti cesty a stezky na st. p. č. 5375 a 5376. Pátý bod se týká bezúplatného převodu spoluvlastnického podílu na pozemku p. p. č. 490/3 v k. ú. Dražkovice z vlastnictví státu na statutární město Pardubice.",
+    "keywords": [
+     "stanovisko k záměru města",
+     "hotel Dukla",
+     "výpůjčka pozemku",
+     "prodej pozemku",
+     "smlouva o smlouvě budoucí kupní",
+     "Vápenka",
+     "pažení stavební jámy",
+     "věcné břemeno",
+     "služebnost cesty",
+     "bezúplatný převod"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "lokalita Dukla",
+     "ulice K Vápence",
+     "k. ú. Pardubice",
+     "k. ú. Dražkovice"
+    ],
+    "parcels": [
+     "st. p. č. 8410, k. ú. Pardubice",
+     "st. p. č. 8248, k. ú. Pardubice",
+     "p. p. č. 2319/1, k. ú. Pardubice",
+     "p. p. č. 2054/16, k. ú. Pardubice",
+     "p. p. č. 2605/59, k. ú. Pardubice",
+     "p. p. č. 2605/227, k. ú. Pardubice",
+     "p. p. č. 2605/221, k. ú. Pardubice",
+     "p. p. č. 2393/251, k. ú. Pardubice",
+     "st. p. č. 5375, k. ú. Pardubice",
+     "st. p. č. 5376, k. ú. Pardubice",
+     "p. p. č. 2290/7, k. ú. Pardubice",
+     "p. p. č. 490/3, k. ú. Dražkovice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "ventio holding a.s.",
+     "ERA a.s.",
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "301/2026 R",
+    "title": "Souhlas s předzahrádkou restaurace v ulici Jana Palacha 571",
+    "summary": "Souhlas s umístěním předzahrádky o ploše 4,5 m2 před restaurací v ulici Jana Palacha 571 v Pardubicích na období od 3. 9. 2026 do 30. 9. 2026.",
+    "keywords": [
+     "předzahrádka",
+     "restaurace",
+     "zábor veřejného prostranství",
+     "Jana Palacha",
+     "souhlas"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "ostatni"
+    ],
+    "kind": "jine",
+    "places": [
+     "ulice Jana Palacha 571, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "302/2026 R",
+    "title": "Přímé zadání obnovy asfaltového krytu v ulici U Krematoria",
+    "summary": "Rada souhlasí s uplatněním výjimky ze Směrnice č. 14/2024 Zadávací řád veřejných zakázek a s přímým zadáním zakázky malého rozsahu „Obnova asfaltového krytu v ul. U Krematoria v úseku ul. Nemošická - Mikulovická“ firmě PP-GROUP stavby TJ s.r.o. za maximální cenu 900.000,- Kč bez DPH.",
+    "keywords": [
+     "veřejná zakázka",
+     "přímé zadání",
+     "výjimka ze zadávacího řádu",
+     "oprava silnice",
+     "asfalt",
+     "U Krematoria",
+     "Nemošická",
+     "Mikulovická"
+    ],
+    "topics": [
+     "zakazky",
+     "doprava"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice U Krematoria",
+     "ulice Nemošická",
+     "ulice Mikulovická"
+    ],
+    "parcels": [],
+    "organizations": [
+     "PP-GROUP stavby TJ s.r.o."
+    ],
+    "amounts": [
+     "900.000,- Kč bez DPH"
+    ]
+   },
+   {
+    "number": "303/2026 R",
+    "title": "Smlouva o dílo na úpravu vnitrobloku v ulici K Blahobytu",
+    "summary": "Rada souhlasí s uzavřením smlouvy o dílo na akci „Vnitroblok ul. K Blahobytu č.p. 2482-2484“ se zhotovitelem Ján Mucha za nabídkovou cenu 1.322.911,56 Kč vč. DPH.",
+    "keywords": [
+     "veřejná zakázka",
+     "smlouva o dílo",
+     "vnitroblok",
+     "K Blahobytu",
+     "výběr nejvhodnější nabídky",
+     "úprava veřejného prostranství"
+    ],
+    "topics": [
+     "zakazky",
+     "investice"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "ulice K Blahobytu č.p. 2482-2484"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Ján Mucha"
+    ],
+    "amounts": [
+     "1.322.911,56 Kč vč. DPH"
+    ]
+   },
+   {
+    "number": "304/2026 R",
+    "title": "Věcné dary dětských knih MŠ Sluníčko a MŠ Motýlek",
+    "summary": "Rada schvaluje věcné dary souborů dětských knih v hodnotě do 10.000,-- Kč Mateřské škole Sluníčko Pardubice a Mateřské škole Motýlek Pardubice a vzor darovací smlouvy; podpisem smluv pověřuje starostu. Pořízení knih je podmíněno schválením rozpočtového opatření zastupitelstvem obvodu.",
+    "keywords": [
+     "věcný dar",
+     "dětské knihy",
+     "mateřská škola",
+     "MŠ Sluníčko",
+     "MŠ Motýlek",
+     "darovací smlouva"
+    ],
+    "topics": [
+     "dotace",
+     "skolstvi"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Gorkého 1521",
+     "Josefa Ressla 1992"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Mateřská škola Sluníčko Pardubice",
+     "Mateřská škola Motýlek Pardubice"
+    ],
+    "amounts": [
+     "10.000,-- Kč"
+    ]
+   },
+   {
+    "number": "305/2026 R",
+    "title": "Směrnice č. 5/2026: Evidence a vymáhání daní",
+    "summary": "Rada schvaluje směrnici č. 5/2026 Evidence a vymáhání daní s účinností od 3. 9. 2026, která nahrazuje směrnici č. 5/2022.",
+    "keywords": [
+     "směrnice",
+     "daně",
+     "vymáhání daní",
+     "evidence daní",
+     "vnitřní předpis"
+    ],
+    "topics": [
+     "vyhlasky-pravidla",
+     "organizace"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "306/2026 R",
+    "title": "Doporučení ZMO vzít na vědomí účetní závěrku města za rok 2025",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí, že Zastupitelstvo města Pardubic dne 29. 6. 2026 schválilo účetní závěrku statutárního města Pardubic včetně městských obvodů za rok 2025.",
+    "keywords": [
+     "účetní závěrka",
+     "rok 2025",
+     "hospodaření",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "vztahy-mesto"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo města Pardubic",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "307/2026 R",
+    "title": "Doporučení ZMO vzít na vědomí zprávu Finančního výboru 2022–2026",
+    "summary": "Rada doporučuje zastupitelstvu obvodu vzít na vědomí zprávu o činnosti Finančního výboru ZMO Pardubice V ve volebním období 2022–2026.",
+    "keywords": [
+     "finanční výbor",
+     "zpráva o činnosti",
+     "volební období 2022–2026",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "308/2026 R",
+    "title": "Doporučení ZMO schválit rozbor hospodaření k 31. 7. 2026",
+    "summary": "Rada doporučuje zastupitelstvu obvodu schválit rozbor hospodaření MO Pardubice V k 31. 7. 2026 a vzít na vědomí komentář k němu.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rozpočet",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "309/2026 R",
+    "title": "Doporučení ZMO schválit 4. změnu rozpočtu 2026 a příspěvky školám",
+    "summary": "Rada doporučuje zastupitelstvu obvodu schválit 4. změnu rozpočtu na rok 2026 včetně sociálního fondu (rozpočtová opatření 1–21), snížení příspěvku SVČ ALFA o 1,32 tis. Kč a účelové příspěvky na provoz ZŠ Benešovo náměstí, ZŠ Waldorfská a mateřským školám Kamarád, Sluníčko, Jesničánky a Benešovo náměstí.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "příspěvek na provoz",
+     "mateřská škola",
+     "základní škola",
+     "SVČ ALFA",
+     "sociální fond",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Benešovo náměstí 590",
+     "Teplého 2100",
+     "Gorkého 1521",
+     "Raisova 226",
+     "Gorkého 867",
+     "Benešovo náměstí 2115"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Středisko volného času ALFA Pardubice",
+     "Základní škola Pardubice, Benešovo náměstí 590",
+     "Mateřská škola Kamarád Pardubice",
+     "Mateřská škola Sluníčko Pardubice",
+     "Mateřská škola Pardubice-Jesničánky",
+     "Základní škola Waldorfská Pardubice",
+     "Mateřská škola Pardubice, Benešovo náměstí 2115"
+    ],
+    "amounts": [
+     "1,32 tis. Kč",
+     "12 tis. Kč",
+     "5 tis. Kč",
+     "6,72 tis. Kč",
+     "6 tis. Kč"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

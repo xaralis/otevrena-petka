@@ -1,0 +1,492 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "57cd9eed57f02cc4403231a6c215e40464aa967e0dfc9dd7e1c2e110298c9c5c",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "zmo",
+   "number": 1,
+   "kind": "ustavujici",
+   "date": "2018-10-31",
+   "place": "salonek DK Dukla"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Ing. Milan Randák",
+    "Bc. Jan Nadrchal",
+    "Filip Šťastný",
+    "Karolina Štefková",
+    "Bc. Petra Prusáková",
+    "Ing. Filip Vařecha",
+    "Ing. Aneta Jelínková",
+    "Ing. Jaroslav Kňava",
+    "Ing. Jiří Janoš",
+    "Evžen Erban",
+    "Ing. Jiří Hájek",
+    "Petr Hemský",
+    "Ing. Petr Netolický",
+    "Pavel Studnička"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I.",
+    "title": "Zahájení jednání",
+    "line": 42,
+    "speakers": []
+   },
+   {
+    "no": "II.",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 47,
+    "speakers": []
+   },
+   {
+    "no": "1.",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 56,
+    "speakers": []
+   },
+   {
+    "no": "2.",
+    "title": "Složení slibu členů zastupitelstva MO Pardubice V",
+    "line": 60,
+    "speakers": []
+   },
+   {
+    "no": "3.",
+    "title": "Jmenování ověřitelů zápisu a návrhové komise",
+    "line": 66,
+    "speakers": []
+   },
+   {
+    "no": "4.",
+    "title": "Schválení volebního řádu zastupitelstva MO Pardubice V",
+    "line": 71,
+    "speakers": []
+   },
+   {
+    "no": "5.",
+    "title": "Volba starosty a místostarosty MO Pardubice V",
+    "line": 79,
+    "speakers": []
+   },
+   {
+    "no": "6.",
+    "title": "Volba dalších členů rady MO Pardubice V",
+    "line": 123,
+    "speakers": []
+   },
+   {
+    "no": "7.",
+    "title": "Zřízení výborů Zastupitelstva MO Pardubice V, volba předsedů a členů výborů",
+    "line": 158,
+    "speakers": []
+   },
+   {
+    "no": "8.",
+    "title": "Stanovení měsíčních odměn neuvolněným členům zastupitelstva městského obvodu Pardubice V",
+    "line": 221,
+    "speakers": []
+   },
+   {
+    "no": "9.",
+    "title": "Stanovení termínů jednání RMO a ZMO Pardubice V na rok 2018 a 2019",
+    "line": 239,
+    "speakers": []
+   },
+   {
+    "no": "10.",
+    "title": "Diskuse, závěr",
+    "line": 255,
+    "speakers": [
+     "Ing. Petr Netolický"
+    ]
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "1/2018 Z",
+    "agenda_no": "4.",
+    "first_line": 75,
+    "last_line": 75,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "2/2018 Z",
+    "agenda_no": "5.",
+    "first_line": 113,
+    "last_line": 120,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "3/2018 Z",
+    "agenda_no": "6.",
+    "first_line": 141,
+    "last_line": 155,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "4/2018 Z",
+    "agenda_no": "7.",
+    "first_line": 204,
+    "last_line": 218,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "5/2018 Z",
+    "agenda_no": "8.",
+    "first_line": 226,
+    "last_line": 235,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "6/2018 Z",
+    "agenda_no": "9.",
+    "first_line": 243,
+    "last_line": 251,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 50,
+    "last_line": 50,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení programu",
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": true,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "prijato"
+   },
+   {
+    "line": 76,
+    "last_line": 76,
+    "resolution": "1/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 14,
+    "proti": 1,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Netolický"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 116,
+    "last_line": 117,
+    "resolution": "2/2018 Z",
+    "part": "bod 1 – Jiří Rejda, DiS. – starosta",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková",
+      "Ing. Jiří Hájek",
+      "Petr Hemský"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 120,
+    "last_line": 120,
+    "resolution": "2/2018 Z",
+    "part": "bod 2 – Ing. Jiří Janoš – místostarosta",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 12,
+    "proti": 3,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková",
+      "Ing. Jiří Hájek"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 145,
+    "last_line": 146,
+    "resolution": "3/2018 Z",
+    "part": "bod 1 – Evžen Erban – člen rady",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 3,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková",
+      "Petr Hemský"
+     ],
+     "zdrzel": [
+      "Ing. Jiří Hájek"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 149,
+    "last_line": 150,
+    "resolution": "3/2018 Z",
+    "part": "bod 2 – Ing. Milan Randák – člen rady",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková",
+      "Ing. Jiří Hájek",
+      "Petr Hemský"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 154,
+    "last_line": 155,
+    "resolution": "3/2018 Z",
+    "part": "bod 3 – Bc. Jan Nadrchal – člen rady",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 11,
+    "proti": 4,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková",
+      "Ing. Jiří Hájek",
+      "Petr Hemský"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 207,
+    "last_line": 208,
+    "resolution": "4/2018 Z",
+    "part": "bod 1 a) – Ing. Jaroslav Kňava – předseda finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 10,
+    "proti": 5,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková",
+      "Ing. Jiří Hájek",
+      "Petr Hemský",
+      "Ing. Petr Netolický"
+     ],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 211,
+    "last_line": 211,
+    "resolution": "4/2018 Z",
+    "part": "bod 1 b) – členové finančního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 215,
+    "last_line": 215,
+    "resolution": "4/2018 Z",
+    "part": "bod 2 a) – Ing. Filip Vařecha – předseda kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 218,
+    "last_line": 218,
+    "resolution": "4/2018 Z",
+    "part": "bod 2 b) – členové kontrolního výboru",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 236,
+    "last_line": 236,
+    "resolution": "5/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 13,
+    "proti": 0,
+    "zdrzel": 2,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [
+      "Ing. Filip Vařecha",
+      "Ing. Aneta Jelínková"
+     ],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 252,
+    "last_line": 252,
+    "resolution": "6/2018 Z",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 15,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   }
+  ],
+  "notes": [
+   "ř. 93, 110, 136–138: výsledky veřejné volby („zvolen 11/12 hlasy“) uvedeny slovně; vlastní hlasovací řádky jsou u usnesení 2/2018 Z a 3/2018 Z.",
+   "ř. 183–200: u návrhů na kontrolní výbor je Ing. Filip Vařecha uveden jako „předseda finančního výboru“ – zřejmě překlep, usnesení 4/2018 Z bod 2 a) ho volí předsedou kontrolního výboru.",
+   "ř. 207: zdvojená závorka „((Ing. Filip Vařecha …“ v textu.",
+   "ř. 258: Ing. Netolický v diskusi uvádí, že mu nebyl doručen volební řád, proto nemohl hlasovat (u usnesení 1/2018 Z hlasoval proti)."
+  ]
+ }
+}

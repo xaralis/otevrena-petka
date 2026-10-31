@@ -87,7 +87,10 @@ def tsquery(q: str, op: str = "&") -> str | None:
 
 
 COLUMNS = """r.uid, r.number, r.body, r.date, r.meeting_id, r.status, r.title, r.summary,
-             r.agenda_title, r.topics, r.kind, r.keywords, left(r.text, 400) AS text_start"""
+             r.agenda_title, r.topics, r.kind, r.keywords, left(r.text, 400) AS text_start,
+             (SELECT string_agg(x.type || ':' || x.scope || ':' || s.number, ';')
+                FROM resolution_relations x JOIN resolutions s ON s.uid = x.source_uid
+               WHERE x.target_uid = r.uid AND x.effective) AS revoked_by"""
 
 
 def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: int = 20,

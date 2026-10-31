@@ -1,0 +1,162 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "57cd9eed57f02cc4403231a6c215e40464aa967e0dfc9dd7e1c2e110298c9c5c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "1/2018 Z",
+    "title": "Volební řád Zastupitelstva MO Pardubice V",
+    "summary": "Zastupitelstvo na ustavujícím jednání schvaluje volební řád ZMO Pardubice V, podle kterého probíhá volba starosty, místostarosty a členů rady.",
+    "keywords": [
+     "volební řád",
+     "ustavující zastupitelstvo",
+     "volba",
+     "pravidla volby",
+     "jednací pravidla"
+    ],
+    "topics": [
+     "organizace",
+     "vyhlasky-pravidla"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "2/2018 Z",
+    "title": "Volba starosty a místostarosty MO Pardubice V",
+    "summary": "Zastupitelstvo na ustavujícím jednání volí starostou městského obvodu Pardubice V Jiřího Rejdu, DiS., a místostarostou Ing. Jiřího Janoše. O každé funkci se hlasovalo zvlášť.",
+    "keywords": [
+     "volba starosty",
+     "volba místostarosty",
+     "starosta",
+     "místostarosta",
+     "ustavující zastupitelstvo",
+     "vedení obvodu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "3/2018 Z",
+    "title": "Volba dalších členů Rady MO Pardubice V",
+    "summary": "Zastupitelstvo volí na zbývající tři místa v radě městského obvodu Pardubice V Evžena Erbana, Ing. Milana Randáka a Bc. Jana Nadrchala. O každém členovi se hlasovalo zvlášť.",
+    "keywords": [
+     "volba členů rady",
+     "rada městského obvodu",
+     "radní",
+     "ustavující zastupitelstvo",
+     "složení rady"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "4/2018 Z",
+    "title": "Zřízení finančního a kontrolního výboru, volba předsedů a členů",
+    "summary": "Zastupitelstvo k 1. 11. 2018 zřizuje sedmičlenný finanční výbor s předsedou Ing. Jaroslavem Kňavou a sedmičlenný kontrolní výbor s předsedou Ing. Filipem Vařechou a volí jejich členy. O předsedech a členech každého výboru se hlasovalo zvlášť.",
+    "keywords": [
+     "finanční výbor",
+     "kontrolní výbor",
+     "výbory zastupitelstva",
+     "předseda výboru",
+     "členové výboru",
+     "zřízení výborů"
+    ],
+    "topics": [
+     "komise-vybory",
+     "kontrola"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "finanční výbor ZMO Pardubice V",
+     "kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "5/2018 Z",
+    "title": "Měsíční odměny neuvolněným členům zastupitelstva od 1. 11. 2018",
+    "summary": "Zastupitelstvo stanoví od 1. 11. 2018 měsíční odměny neuvolněnému místostarostovi a ostatním neuvolněným členům zastupitelstva podle funkce (člen zastupitelstva, člen rady, předseda a člen výboru, předseda a člen komise rady). Při souběhu funkcí se odměny sčítají podle § 74 odst. 3 zákona č. 99/2017 Sb.",
+    "keywords": [
+     "odměny zastupitelů",
+     "neuvolnění členové zastupitelstva",
+     "odměna místostarosty",
+     "odměna radního",
+     "odměna předsedy výboru",
+     "odměna členů komise",
+     "souběh funkcí"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "personalni",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "20.000,- Kč",
+     "1.000,- Kč",
+     "4.000,- Kč",
+     "3.500,- Kč",
+     "3.000,- Kč",
+     "2.500,- Kč"
+    ]
+   },
+   {
+    "number": "6/2018 Z",
+    "title": "Termíny jednání rady a zastupitelstva na roky 2018 a 2019",
+    "summary": "Zastupitelstvo schvaluje harmonogram termínů jednání Rady a Zastupitelstva MO Pardubice V od listopadu 2018 do prosince 2019; jednání zastupitelstva jsou určena na 19. 12. 2018, 13. 3. 2019, 26. 6. 2019, 25. 9. 2019 a 18. 12. 2019.",
+    "keywords": [
+     "harmonogram jednání",
+     "termíny jednání",
+     "jednání zastupitelstva",
+     "jednání rady",
+     "kalendář schůzí"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "organizacni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada MO Pardubice V",
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "4.",
+    "discussion": "Starosta vysvětlil důvody pro schválení navrženého volebního řádu, poté proběhla diskuse; její obsah zápis neuvádí."
+   },
+   {
+    "no": "10.",
+    "discussion": "Ing. Petr Netolický upozornil, že mu nebyl doručen volební řád, a proto nemohl hlasovat."
+   }
+  ]
+ }
+}

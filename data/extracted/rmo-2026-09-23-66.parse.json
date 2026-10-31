@@ -1,0 +1,211 @@
+{
+ "version": "parse-v1",
+ "text_sha256": "c20e517e4dcb4c7b098e7ac3e32013a2b79fd931bede783c3ea7b1a93561c1c6",
+ "via": "agent",
+ "result": {
+  "header": {
+   "body": "rmo",
+   "number": 66,
+   "kind": "radne",
+   "date": "2026-09-23",
+   "place": "zasedací místnost ÚMO Pardubice V"
+  },
+  "attendance": {
+   "present": [
+    "Jiří Rejda, DiS.",
+    "Evžen Erban",
+    "Mgr. Miloš Adamů, MBA.",
+    "Ing. Milan Randák",
+    "Bc. Petr Dufek"
+   ],
+   "excused": [],
+   "absent": []
+  },
+  "presence_events": [],
+  "agenda_items": [
+   {
+    "no": "I",
+    "title": "Zahájení jednání, jmenování zapisovatele",
+    "line": 25,
+    "speakers": []
+   },
+   {
+    "no": "II",
+    "title": "Jmenování ověřitelů zápisu a usnesení",
+    "line": 30,
+    "speakers": []
+   },
+   {
+    "no": "III",
+    "title": "Schválení materiálů k projednání a stanovení jejich pořadí",
+    "line": 35,
+    "speakers": []
+   },
+   {
+    "no": "IV",
+    "title": "Projednání schválených materiálů",
+    "line": 46,
+    "speakers": []
+   },
+   {
+    "no": "1",
+    "title": "Participační rozpočet 2026 – projednání ve Komisi pro strategii a rozvoj obvodu (staženo)",
+    "line": 53,
+    "speakers": []
+   },
+   {
+    "no": "2",
+    "title": "Rozhodnutí zadavatele – uplatnění výjimky při výběru nejvhodnější nabídky na realizaci zakázky malého rozsahu: „Obnova asfaltového krytu v ul. Wolkerova v úseku ul. Lexova - Lesopark“",
+    "line": 57,
+    "speakers": []
+   },
+   {
+    "no": "3",
+    "title": "Žádost pozemkové komise rady města Pardubice – stanovisko RMO Pardubice V",
+    "line": 69,
+    "speakers": []
+   },
+   {
+    "no": "4",
+    "title": "Diskuse, závěr",
+    "line": 98,
+    "speakers": []
+   }
+  ],
+  "resolutions": [
+   {
+    "number": "310/2026 R",
+    "agenda_no": "2",
+    "first_line": 61,
+    "last_line": 65,
+    "responsible": null,
+    "deadline": null
+   },
+   {
+    "number": "311/2026 R",
+    "agenda_no": "3",
+    "first_line": 71,
+    "last_line": 95,
+    "responsible": null,
+    "deadline": null
+   }
+  ],
+  "votes": [
+   {
+    "line": 43,
+    "last_line": 43,
+    "resolution": null,
+    "part": null,
+    "subject": "schválení materiálů k projednání a stanovení jejich pořadí",
+    "proposer": null,
+    "motion_first_line": 36,
+    "motion_last_line": 42,
+    "procedural": true,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 66,
+    "last_line": 66,
+    "resolution": "310/2026 R",
+    "part": null,
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 78,
+    "last_line": 78,
+    "resolution": "311/2026 R",
+    "part": "bod 1 – prodej částí p. p. č. 2418/3, 2419/2, 2419/3 a 2423/5 (balkóny S. K. Neumanna 2501-2503)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 5,
+    "proti": 0,
+    "zdrzel": 0,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": null
+   },
+   {
+    "line": 83,
+    "last_line": 83,
+    "resolution": "311/2026 R",
+    "part": "bod 2 – rozšíření nájemní smlouvy NS_3107562 (oboustranné reklamní zařízení, BARTH Reklamka a.s.)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 3,
+    "zdrzel": 1,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   },
+   {
+    "line": 95,
+    "last_line": 95,
+    "resolution": "311/2026 R",
+    "part": "bod 3 – odkoupení nebo směna pozemků p. p. č. 29/3 a 29/56 v k. ú. Nové Jesenčany (Astavil Project s.r.o.)",
+    "subject": null,
+    "proposer": null,
+    "motion_first_line": null,
+    "motion_last_line": null,
+    "procedural": false,
+    "pro": 1,
+    "proti": 0,
+    "zdrzel": 4,
+    "nehlasoval": null,
+    "names": {
+     "pro": [],
+     "proti": [],
+     "zdrzel": [],
+     "nehlasoval": []
+    },
+    "stated_outcome": "neprijato"
+   }
+  ],
+  "notes": [
+   "Usnesení 311/2026 R (ř. 71–95): hlasovalo se odděleně o bodech 1–3 záměru; body 2 a 3 nebyly přijaty (ř. 83 „Pro 1, zdržel se 1, proti 3 – návrh nebyl přijat“, ř. 95 „Pro 1, zdržel se 4, proti 0 – návrh nebyl přijat“), znění přesto uvádí „souhlasí se záměrem“ u všech tří bodů.",
+   "Bod 1 programu (Participační rozpočet 2026, ř. 36–37 a 53–54) byl stažen; bez usnesení.",
+   "Seznam omluvených ani nepřítomných v dokumentu není uveden."
+  ]
+ }
+}

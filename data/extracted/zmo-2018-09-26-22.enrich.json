@@ -1,0 +1,166 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "ae2c71166b227df4ffb54bbb5f479134514f8280fc9dc3df9a1dd64904320888",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "105/2018 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 27. 6. 2018",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty od posledního jednání zastupitelstva dne 27. 6. 2018.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace starosty"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "106/2018 Z",
+    "title": "Kontrola plnění usnesení rady – vyřazení splněných usnesení z evidence",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru a vyřazuje z evidence sledování splněná usnesení rady 296/2017 R – 306/2017 R a 307/2018 R – 343/2018 R.",
+    "keywords": [
+     "kontrola plnění usnesení",
+     "usnesení rady",
+     "kontrolní výbor",
+     "splněná usnesení",
+     "vyřazení z evidence"
+    ],
+    "topics": [
+     "kontrola"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V",
+     "RMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "107/2018 Z",
+    "title": "Zpráva Kontrolního výboru o plnění usnesení zastupitelstva",
+    "summary": "Zastupitelstvo schvaluje zprávu Kontrolního výboru, vyřazuje z kontroly splněná usnesení 85/2017 Z – 93/2017 Z a 94/2018 Z – 104/2018 Z a v evidenci ponechává usnesení 75/2009 Z, 95/2010 Z a 35/2015 Z.",
+    "keywords": [
+     "kontrolní výbor",
+     "kontrola plnění usnesení",
+     "usnesení zastupitelstva",
+     "splněná usnesení",
+     "evidence usnesení"
+    ],
+    "topics": [
+     "kontrola",
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Kontrolní výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "108/2018 Z",
+    "title": "Rozbor hospodaření obvodu k 31. 8. 2018",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 8. 2018 v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "plnění rozpočtu",
+     "rozpočet 2018"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "109/2018 Z",
+    "title": "3. změna rozpočtu na rok 2018 a úprava plánu společenských akcí",
+    "summary": "Zastupitelstvo schvaluje 3. změnu rozpočtu obvodu a rozpočtu sociálního fondu na rok 2018 včetně úpravy na jednání, kterou se přesouvá 120 tis. Kč z rezervy na odměny členů zastupitelstva a náhrady v době nemoci v kapitole 14 – vnitřní správa. Zároveň schvaluje navýšení plánu společenských akcí u položek Ochutnávka Svatomartinského vína, Rozsvěcení vánočního stromečku a Vánoční punč.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "rezerva rozpočtu",
+     "odměny zastupitelů",
+     "společenské akce",
+     "vánoční stromeček",
+     "Svatomartinské víno",
+     "vánoční punč"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "MO Pardubice V"
+    ],
+    "amounts": [
+     "120 tis. Kč",
+     "10 tis. Kč",
+     "25 tis. Kč",
+     "5 tis. Kč"
+    ]
+   },
+   {
+    "number": "110/2018 Z",
+    "title": "Zpráva o činnosti Finančního výboru",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti Finančního výboru zastupitelstva městského obvodu Pardubice V.",
+    "keywords": [
+     "finanční výbor",
+     "zpráva výboru",
+     "činnost výboru"
+    ],
+    "topics": [
+     "komise-vybory"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Finanční výbor ZMO Pardubice V"
+    ],
+    "amounts": []
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "Starosta Jiří Rejda, DiS. doplnil zprávu o akce z poslední doby. Ladislav Doležal se ptal na bezpečnostní situaci a problémové lokality z pohledu městské policie, Bc. Petr Dufek na projekt Dukla Sportovní a 2. etapu cyklostezky Dražkovice a Ing. Jiří Janoš na termín dokončení rekonstrukce ulice U Krematoria. Ing. Jiří Hájek upozornil na nedotažené projekty a na propad v ulici B. Vikové Kunětické."
+   },
+   {
+    "no": "4",
+    "discussion": "Starosta Jiří Rejda, DiS. upozornil na investiční akce, které nejsou z rozpočtu patrné (povrch komunikace u zahrádkářské kolonie, chodníky v ulici Teplého). Ladislav Doležal se ptal na položku reklamy; úřad vysvětlil, že obvod má podle Statutu města příjmy z reklam na svém území."
+   },
+   {
+    "no": "5",
+    "discussion": "Starosta Jiří Rejda, DiS. informoval o navýšení peněz na rozsvěcení vánočního stromečku, protože akce je větší než v minulých letech a potřebuje lepší technické zabezpečení."
+   },
+   {
+    "no": "IV",
+    "discussion": "MUDr. Tomáš Rejda upozornil na propad v ulici K Barvírně a žádal častější kontroly zón 30 městskou policií; Ladislav Doležal na stížnosti na zálivku zeleně, k níž starosta uvedl vypovězení smlouvy a novou smlouvu se Službami města Pardubic. Ing. Milan Randák, Bc. Petr Dufek a Ing. Jiří Janoš hovořili o propadech kvůli nízké hladině spodní vody, suchu a výběru vhodnějších stromů a zeleně. Ing. Jan Jedlička upozornil na propad před krematoriem a nepořádek v altánku v ulici Dražkovická."
+   }
+  ]
+ }
+}

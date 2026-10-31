@@ -10,6 +10,17 @@
     {% if r.status == 'castecne' %}<span class="explain">Některé části prošly, jiné ne – viz hlasování níže.</span>{% endif %}
     {% if r.status == 'neovereno' %}<span class="explain">Výsledek nejde ze zápisu jednoznačně určit.</span>{% endif %}
   </p>
+  {% for x in r.revoked_by if x.effective %}
+  <p class="warn">{{ 'Zrušeno' if x.type == 'rusi' else 'Změněno' }}{% if x.scope == 'cast' %} částečně ({{ x.detail }}){% endif %} usnesením
+    <a href="/usneseni/{{ x.uid }}">{{ x.number }}</a> ze dne {{ x.date|d }}.</p>
+  {% endfor %}
+  {% for x in r.revoked_by if not x.effective %}
+  <p class="muted">Návrh na {{ 'zrušení' if x.type == 'rusi' else 'změnu' }} tohoto usnesení (<a href="/usneseni/{{ x.uid }}">{{ x.number }}</a>, {{ x.date|d }}) nebyl přijat.</p>
+  {% endfor %}
+  {% for x in r.revokes %}
+  <p class="muted">{{ 'Ruší' if x.type == 'rusi' else 'Mění' }}{% if x.scope == 'cast' %} ({{ x.detail }}){% endif %} usnesení
+    {% if x.target_uid %}<a href="/usneseni/{{ x.target_uid }}">{{ x.target_number }}</a>{% else %}{{ x.target_number }} (mimo databázi){% endif %}{% if not x.effective %} – neprošlo, nemá účinek{% endif %}.</p>
+  {% endfor %}
   {% if r.summary %}<div class="derived"><span class="label">Shrnutí (odvozené)</span><p>{{ r.summary }}</p>
     {% if r.keywords %}<p class="tags">{% for k in r.keywords %}<a href="/?q={{ k|urlencode }}">{{ k }}</a>{% endfor %}</p>{% endif %}
     {% if r.topics %}<p class="topics">{% for t in r.topics %}<a href="/?tema={{ t }}">{{ vocab.topics[t] }}</a>{% endfor %}</p>{% endif %}

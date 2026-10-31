@@ -1,0 +1,70 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "1d7ee7f2f6cce651da2ec78a9e3202485f0b23d9318b2b90256ce575aba6876f",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "283/2026 R",
+    "title": "Souhlas s předzahrádkou Cherry Baru v ul. Devotyho",
+    "summary": "Rada souhlasí s umístěním předzahrádky o ploše 7,2 m2 na chodníku před provozovnou Cherry Bar v domě Devotyho čp. 2452 v Pardubicích. Předzahrádka může být umístěna od 20. 6. 2026 do 31. 10. 2026, denně od 15.00 do 22.00 hod.",
+    "keywords": [
+     "předzahrádka",
+     "zahrádka",
+     "bar",
+     "Cherry Bar",
+     "Devotyho",
+     "chodník",
+     "zábor veřejného prostranství"
+    ],
+    "topics": [
+     "majetek-pozemky"
+    ],
+    "kind": "jine",
+    "places": [
+     "Devotyho čp. 2452, Pardubice",
+     "chodník před domem v ulici Devotyho"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Cherry Bar"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "284/2026 R",
+    "title": "Stanovisko k dodatku nájemní smlouvy na p. p. č. 2386/36 – zvýšení nájemného",
+    "summary": "Rada na žádost pozemkové komise rady města Pardubice souhlasí se záměrem uzavřít dodatek k nájemní smlouvě na pozemek p. p. č. 2386/36 o výměře 58 m2 v k. ú. Pardubice. Dodatek zvyšuje nájemné z 35,- Kč/m2/rok na 85,- Kč/m2/rok podle platného výměru MF.",
+    "keywords": [
+     "stanovisko obvodu",
+     "pozemková komise",
+     "nájem pozemku",
+     "nájemní smlouva",
+     "dodatek",
+     "zvýšení nájemného",
+     "výměr MF"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 2386/36, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "pozemková komise rady města Pardubice",
+     "MF"
+    ],
+    "amounts": [
+     "35,- Kč/m2/rok",
+     "85,- Kč/m2/rok"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}

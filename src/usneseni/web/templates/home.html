@@ -27,7 +27,7 @@
   {% else %}<h2>Nejnovější usnesení</h2>{% endif %}
   {% for h in hits %}{% set r = h.row %}
   <article class="hit">
-    <div class="meta">{{ badge(r.status) }} <a href="/usneseni/{{ r.uid }}" class="num">{{ r.number }}</a> · {{ BODY[r.body] }} · {{ r.date|d }}</div>
+    <div class="meta">{{ badge(r.status) }}{% if r.revoked_by %} <span class="badge s-neovereno" title="{{ r.revoked_by }}">{{ 'ZMĚNĚNO' if r.revoked_by.startswith('meni') else 'ZRUŠENO' }}{{ ' ČÁSTEČNĚ' if ':cast:' in r.revoked_by }}</span>{% endif %} <a href="/usneseni/{{ r.uid }}" class="num">{{ r.number }}</a> · {{ BODY[r.body] }} · {{ r.date|d }}</div>
     <h3><a href="/usneseni/{{ r.uid }}">{{ r.title or r.agenda_title or r.number }}</a></h3>
     <p>{{ r.summary or r.text_start }}</p>
     {% if r.keywords %}<p class="tags">{% for k in r.keywords[:6] %}<span>{{ k }}</span>{% endfor %}</p>{% endif %}

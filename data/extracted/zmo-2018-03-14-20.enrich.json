@@ -1,0 +1,173 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "6e5b5e2eb75d626c7e3cdfb59fad40b3d50cdfeebdef6620f5c66a50e905ae18",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "94/2018 Z",
+    "title": "Zpráva o činnosti starosty od jednání ZMO 20. 12. 2017",
+    "summary": "Zastupitelstvo bere na vědomí zprávu o činnosti starosty městského obvodu Pardubice V za období od posledního jednání zastupitelstva dne 20. 12. 2017.",
+    "keywords": [
+     "zpráva starosty",
+     "činnost starosty",
+     "informace zastupitelstvu"
+    ],
+    "topics": [
+     "organizace"
+    ],
+    "kind": "zprava",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "95/2018 Z",
+    "title": "Vyhodnocení plnění Programu rozvoje MO Pardubice V za rok 2017",
+    "summary": "Zastupitelstvo schvaluje vyhodnocení plnění úkolů Programu rozvoje městského obvodu Pardubice V za rok 2017.",
+    "keywords": [
+     "program rozvoje",
+     "plnění úkolů",
+     "vyhodnocení",
+     "rok 2017",
+     "strategie obvodu"
+    ],
+    "topics": [
+     "uzemni-planovani",
+     "kontrola"
+    ],
+    "kind": "koncepce",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "96/2018 Z",
+    "title": "Úkol starostovi jednat s primátorem a SmP o vánoční výzdobě obvodu",
+    "summary": "Zastupitelstvo ukládá starostovi vstoupit do jednání s primátorem města Pardubice a ředitelem a.s. SmP o vánoční výzdobě na území městského obvodu Pardubice V, nejlépe v režii a.s. SmP.",
+    "keywords": [
+     "vánoční výzdoba",
+     "vánoční osvětlení",
+     "výzdoba obvodu",
+     "jednání s primátorem",
+     "Služby města Pardubic",
+     "SmP"
+    ],
+    "topics": [
+     "kultura-akce",
+     "vztahy-mesto"
+    ],
+    "kind": "ukol",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "a.s. SmP",
+     "statutární město Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "97/2018 Z",
+    "title": "Rozbor hospodaření MO Pardubice V k 31. 12. 2017",
+    "summary": "Zastupitelstvo schvaluje rozbor hospodaření městského obvodu Pardubice V k 31. 12. 2017 uvedený v tabulkové části zprávy a bere na vědomí komentář k rozboru.",
+    "keywords": [
+     "rozbor hospodaření",
+     "hospodaření obvodu",
+     "rok 2017",
+     "plnění rozpočtu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [],
+    "amounts": []
+   },
+   {
+    "number": "98/2018 Z",
+    "title": "1. změna rozpočtu MO Pardubice V na rok 2018 a pravomoci rady k darům na akce",
+    "summary": "Zastupitelstvo schvaluje 1. změnu rozpočtu a rozpočtu sociálního fondu na rok 2018 a navýšení položky Masopust – lidová veselice o přijatý dar 10 tis. Kč. Radě městského obvodu svěřuje pravomoc upravovat plán společenských akcí a provádět v roce 2018 rozpočtová opatření související s přijetím darů na tyto akce.",
+    "keywords": [
+     "změna rozpočtu",
+     "rozpočtové opatření",
+     "sociální fond",
+     "plán společenských akcí",
+     "Masopust",
+     "dary",
+     "rozpočet 2018"
+    ],
+    "topics": [
+     "rozpocet",
+     "kultura-akce"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Rada městského obvodu Pardubice V"
+    ],
+    "amounts": [
+     "10 tis. Kč"
+    ]
+   },
+   {
+    "number": "99/2018 Z",
+    "title": "Individuální dotace 21.780 Kč na rehabilitační pobyt v Ostravě",
+    "summary": "Zastupitelstvo schvaluje individuální dotaci fyzické osobě podle Směrnice č. 28/2017 na ambulantní rehabilitační cvičení a ubytování v Ostravě včetně doprovodu, s dosažením účelu nejpozději 27. 4. 2018. Schvaluje také uzavření veřejnoprávní smlouvy a rozpočtové opatření č. 43 – přesun částky z rezervy rozpočtu do kapitoly 33.",
+    "keywords": [
+     "individuální dotace",
+     "rehabilitace",
+     "veřejnoprávní smlouva",
+     "rozpočtové opatření",
+     "rezerva rozpočtu",
+     "sociální pomoc"
+    ],
+    "topics": [
+     "dotace",
+     "socialni",
+     "rozpocet"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Ostrava"
+    ],
+    "parcels": [],
+    "organizations": [],
+    "amounts": [
+     "21.780,- Kč",
+     "21.780 Kč"
+    ]
+   }
+  ],
+  "agenda": [
+   {
+    "no": "1",
+    "discussion": "L. Doležal se ptal na jednání s poslancem Kolovratníkem a opravy chodníčků v parku na Zborovském náměstí, A. Paurová a Ing. J. Hájek na jednání s primátorem (ul. Pod Břízkami, kasárna). Ing. J. Janoš se ptal na novou služebnu městské policie, Ing. J. Hájek na využití hřiště za služebnou a kotců, Ing. J. Jedlička upozornil na odstranění reklamy."
+   },
+   {
+    "no": "3",
+    "discussion": "A. Paurová se ptala na výsadbu stromů z prostředků z provozu letiště a nevyčerpanou položku na osvětlení a výzdobu; navázala diskuse o nedostatečné vánoční výzdobě obvodu (Ing. J. Hájek, Bc. P. Dufek, Ing. P. Netolický, L. Doležal, Ing. M. Randák, Ing. J. Janoš, E. Erban). Na základě diskuse Bc. P. Dufek navrhl usnesení uložit starostovi jednání s primátorem a SmP o výzdobě."
+   },
+   {
+    "no": "4",
+    "discussion": "Ing. J. Hájek se ptal na zvýšení příjmů (platba za zábor veřejného prostranství) a na budoucnost tržnice na náměstí Dukelských hrdinů; podle starosty a MUDr. T. Rejdy se tržnice přesune a stánky budou redukovány."
+   },
+   {
+    "no": "5",
+    "discussion": "L. Doležal a Ing. J. Hájek vyjádřili obavy z dalších žádostí a z řešení sociálních případů obvodem; MUDr. T. Rejda, A. Paurová, Bc. P. Dufek, Ing. M. Randák a E. Erban přiblížili okolnosti žádosti a podpořili dotaci. Ing. P. Netolický se ptal na stanovisko rady, které bylo doporučující; starosta navrhl platbu z rezervy rozpočtu."
+   },
+   {
+    "no": "IV",
+    "discussion": "Diskuse k výzvě zastupitelům ohledně odměn členů volebních komisí: Ing. J. Hájek souhlasil se zasláním stanoviska a doporučil obrátit se na Poslaneckou sněmovnu, E. Erban by výzvu směřoval na ministerstvo vnitra, Ing. M. Randák se ptal na výši odměn. Ing. P. Netolický mluvil o podpoře petice, Ing. J. Jedlička doporučil sledovat další vývoj."
+   },
+   {
+    "no": "Diskuse",
+    "discussion": "Zastupitelé se ptali na projektovou dokumentaci Dražkovice sever (A. Paurová), chodníky v ul. Chrudimská a počítačové kurzy pro seniory (Ing. J. Hájek), záruku povrchu u zastávek před DK Dukla (Ing. M. Randák), Červeňák (Bc. P. Dufek), zastřešení zastávek v ul. Svobody (L. Doležal), stav mostu za Červeňákem (Ing. J. Jedlička) a kácení stromů v ulicích Široká a Chrudimská (P. Studnička). Ing. P. Netolický informoval o projektu koridorů MHD v ulicích Palachova a Chrudimská."
+   }
+  ]
+ }
+}

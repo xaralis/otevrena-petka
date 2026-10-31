@@ -1,0 +1,225 @@
+{
+ "version": "enrich-v1",
+ "text_sha256": "9affcc13365aadd4dd85832897fd00e65c469028257c8e9c160d356b8ec0ed1c",
+ "via": "agent",
+ "result": {
+  "resolutions": [
+   {
+    "number": "294/2026 R",
+    "title": "Stanovisko k záměru pronajmout garážové stání v domě čp. 2731 v Sokolovské ulici",
+    "summary": "Rada vyjadřuje souhlas se záměrem města pronajmout garážové stání č. 2 (15 m2) v 1. podzemním podlaží budovy čp. 2731 v Sokolovské ulici na st. p. č. 10090 v k. ú. Pardubice za účelem garážování motorového vozidla. Jde o stanovisko k žádosti komise pro nebytové prostory rady města Pardubice.",
+    "keywords": [
+     "garážové stání",
+     "garáž",
+     "pronájem",
+     "Sokolovská",
+     "čp. 2731",
+     "parkování",
+     "stanovisko k záměru města",
+     "komise pro nebytové prostory"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "Sokolovská ul.",
+     "čp. 2731",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "st. 10090, k. ú. a obec Pardubice"
+    ],
+    "organizations": [
+     "komise pro nebytové prostory rady města Pardubice"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "295/2026 R",
+    "title": "Stanovisko k majetkovým záměrům města: výpůjčka, převod podílu pozemku a dva nájmy",
+    "summary": "Rada souhlasí se záměry města: prodloužit výpůjčku části pozemku p. p. č. 4853/1 pro SKP-CENTRUM, o.p.s. (5 parkovacích míst u budovy v ulici J. Palacha 324), bezúplatně převést od státu podíl 11/150 pozemku p. p. č. 2323/25 s místní komunikací do vlastnictví města, zvýšit nájemné za pozemek p. p. č. 2386/36 z 35 na 85 Kč/m2/rok a pronajmout pozemek st. p. č. 7007/21 pod garáží za 35 Kč/m2/rok. Jde o stanovisko k žádosti pozemkové komise rady města Pardubice.",
+    "keywords": [
+     "výpůjčka",
+     "bezúplatný převod",
+     "pronájem pozemku",
+     "zvýšení nájemného",
+     "garáž",
+     "parkovací místa",
+     "místní komunikace",
+     "stanovisko k záměru města",
+     "pozemková komise"
+    ],
+    "topics": [
+     "majetek-pozemky",
+     "vztahy-mesto"
+    ],
+    "kind": "stanovisko",
+    "places": [
+     "J. Palacha 324, Pardubice",
+     "Jungmannova 2550, Pardubice",
+     "Chrudimská 819, Pardubice",
+     "Jana Palacha 2803, Pardubice",
+     "k. ú. Pardubice"
+    ],
+    "parcels": [
+     "p. p. č. 4853/1, k. ú. Pardubice",
+     "st. p. č. 864/23",
+     "p. p. č. 2323/25, k. ú. Pardubice",
+     "p. p. č. 2386/36, k. ú. Pardubice",
+     "st. p. č. 7007/21, k. ú. Pardubice",
+     "p. p. č. 2286/2, k. ú. Pardubice",
+     "p. p. č. 2286/11, k. ú. Pardubice"
+    ],
+    "organizations": [
+     "SKP-CENTRUM, o.p.s.",
+     "Úřad pro zastupování státu ve věcech majetkových",
+     "Česká republika",
+     "statutární město Pardubice",
+     "pozemková komise rady města Pardubice"
+    ],
+    "amounts": [
+     "35,- Kč/m2/rok",
+     "85,- Kč/m2/rok"
+    ]
+   },
+   {
+    "number": "296/2026 R",
+    "title": "Dotace na sportovní a společenské akce: SaSaKo CUP, Bez Bariér OPEN, Dětský den, Den předškoláka",
+    "summary": "Rada schvaluje čtyři dotace z dotačního programu obvodu na rok 2026 podle směrnice č. 28/2025: Sportovnímu klubu Dražkovice na turnaj „SaSaKo CUP“, Atletice Bez Bariér, a. s., na „Pardubice Bez Bariér OPEN 2026“, Hvězdě Pardubice z. s. na „Dětský den s atletikou“ a NOE – Křesťanské ZŠ a MŠ v Pardubicích na „Den předškoláka“. Současně schvaluje uzavření veřejnoprávních smluv a související rozpočtová opatření (přesuny z rezerv v kapitole 98 do kapitoly 33).",
+    "keywords": [
+     "dotace",
+     "veřejnoprávní smlouva",
+     "turnaj v malé kopané",
+     "SaSaKo CUP",
+     "Pardubice Bez Bariér OPEN",
+     "Dětský den s atletikou",
+     "Den předškoláka",
+     "sport",
+     "rozpočtové opatření",
+     "rezerva rady"
+    ],
+    "topics": [
+     "dotace",
+     "hriste-sport",
+     "kultura-akce"
+    ],
+    "kind": "dotace",
+    "places": [
+     "Dražkovice 235",
+     "Čs. armády 2515, Pardubice",
+     "Lonkova 512, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Sportovní klub Dražkovice, z. s.",
+     "Atletika Bez Bariér, a. s.",
+     "Hvězda Pardubice z. s.",
+     "NOE – Křesťanská ZŠ a MŠ v Pardubicích"
+    ],
+    "amounts": [
+     "10.000,- Kč",
+     "5.000,- Kč",
+     "2.500,- Kč"
+    ]
+   },
+   {
+    "number": "297/2026 R",
+    "title": "Doporučení zastupitelstvu schválit závěrečný účet obvodu za rok 2025",
+    "summary": "Rada projednala zprávu o závěrečném účtu MO Pardubice V za rok 2025 a doporučuje zastupitelstvu souhlasit s celoročním hospodařením bez výhrad, vzít na vědomí komentáře a tabulky k rozboru hospodaření a finančnímu vypořádání a schválit finanční vypořádání za rok 2025 včetně sociálního fondu.",
+    "keywords": [
+     "závěrečný účet",
+     "hospodaření 2025",
+     "finanční vypořádání",
+     "sociální fond",
+     "bez výhrad",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet"
+    ],
+    "kind": "rozpocet",
+    "places": [],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V"
+    ],
+    "amounts": []
+   },
+   {
+    "number": "298/2026 R",
+    "title": "Doporučení zastupitelstvu schválit 3. změnu rozpočtu 2026 a příspěvky mateřským školám",
+    "summary": "Rada doporučuje zastupitelstvu vzít na vědomí komentář k 3. změně rozpočtu na rok 2026, schválit navržená rozpočtová opatření včetně sociálního fondu a schválit účelové příspěvky na provoz mateřským školám Kamarád, Pardubice-Jesničánky, Motýlek a Sluníčko s přesuny v kapitole 33.",
+    "keywords": [
+     "změna rozpočtu",
+     "3. změna rozpočtu 2026",
+     "rozpočtová opatření",
+     "příspěvek na provoz",
+     "mateřská škola",
+     "MŠ Kamarád",
+     "MŠ Jesničánky",
+     "MŠ Motýlek",
+     "MŠ Sluníčko",
+     "doporučení zastupitelstvu"
+    ],
+    "topics": [
+     "rozpocet",
+     "skolstvi"
+    ],
+    "kind": "rozpoctove-opatreni",
+    "places": [
+     "Teplého 2100",
+     "Raisova 226",
+     "J. Ressla 1992",
+     "Gorkého"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Zastupitelstvo MO Pardubice V",
+     "Mateřská škola Kamarád Pardubice",
+     "Mateřská škola Pardubice-Jesničánky",
+     "Mateřská škola Motýlek Pardubice",
+     "Mateřská škola Sluníčko Pardubice"
+    ],
+    "amounts": [
+     "10 tis. Kč",
+     "12 tis. Kč",
+     "9 tis. Kč"
+    ]
+   },
+   {
+    "number": "299/2026 R",
+    "title": "Dodatek ke smlouvě se Službami města Pardubice na častější výsyp košů na psí exkrementy",
+    "summary": "Rada souhlasí s uzavřením dodatku ke smlouvě se Službami města Pardubice a.s. o výsypu košů na psí exkrementy. U 19 ze 134 košů se v období červenec až říjen zvyšuje četnost výsypu na 2x týdně (úterý a pátek), cena se zvyšuje z 425.000,- Kč na 444.380,- Kč bez DPH.",
+    "keywords": [
+     "koše na psí exkrementy",
+     "psí exkrementy",
+     "výsyp košů",
+     "úklid",
+     "dodatek ke smlouvě",
+     "Služby města Pardubice",
+     "psi"
+    ],
+    "topics": [
+     "cistota",
+     "zakazky"
+    ],
+    "kind": "zakazka",
+    "places": [
+     "Hůrka 1803, Pardubice"
+    ],
+    "parcels": [],
+    "organizations": [
+     "Služby města Pardubice a.s."
+    ],
+    "amounts": [
+     "425.000,- Kč bez DPH",
+     "444.380,- Kč bez DPH",
+     "19.500,- Kč bez DPH"
+    ]
+   }
+  ],
+  "agenda": []
+ }
+}
