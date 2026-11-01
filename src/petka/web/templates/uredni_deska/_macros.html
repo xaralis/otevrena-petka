@@ -1,0 +1,17 @@
+{#- One notice: date posted, title linking to the city's notice, kind and dates, the city's
+    files. Taken-down delivery notices are redacted (no name, no link). -#}
+{% macro notice(n, files=True) -%}
+<li class="row" id="{{ n.id }}">
+  <div class="row-no">{% if n.published %}<span class="notice-day">{{ n.published.day }}. {{ n.published.month }}.</span> <span class="notice-year">{{ n.published.year }}</span>{% endif %}</div>
+  <div class="row-body">
+    <h3>{% if n.redacted %}{{ n.title }}{% else %}<a href="{{ n.url }}">{{ n.title }}</a>{% endif %}</h3>
+    <p class="row-meta">{{ n.kind_label }} – vyvěšeno {{ n.published|d }}{% if n.removed_at %}, sejmuto nejpozději {{ n.removed_on|d }}{% elif n.valid_until and n.valid_until.year < 2100 %}, visí do {{ n.valid_until|d }}{% endif %}{% if n.board != 'mo5' %}; deska magistrátu{% if n.department %}, {{ 'o' ~ n.department[1:] if n.department.startswith('Odbor') else n.department }}{% endif %}{% endif %}</p>
+    {% if files and n.reference %}<p class="row-meta">Č. j. {{ n.reference }}</p>{% endif %}
+    {% if files and n.attachments %}
+    <ul class="notice-files">
+      {% for a in n.attachments %}{% set ext = a.url.rsplit('.', 1)[-1] %}<li><a href="{{ a.url }}">{{ a.title }}</a>{% if ext|length <= 4 %} <span class="muted">{{ ext|upper }}</span>{% endif %}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</li>
+{%- endmacro %}

@@ -17,6 +17,17 @@
 </table>
 <p>Strojový popis všech tabulek: <a href="/usneseni/data/datapackage.json">datapackage.json</a> (Frictionless Data Package). Surové výstupy zpracování po jednotlivých jednáních: <a href="/usneseni/data/extracted.txt">seznam souborů</a>; historie dat je v <a href="https://github.com/xaralis/otevrena-petka/tree/main/data/usneseni">gitu</a>.</p>
 
+<h2 id="uredni-deska">Úřední deska</h2>
+<p>Oznámení z úřední desky obvodu Pardubice V a z desky magistrátu{% if deska.since %}, sejmutá vedeme od {{ deska.since|d }}{% endif %}{% if deska.checked_local %}, naposledy staženo {{ deska.checked_local|d }}{% endif %}. Soubory se tvoří z databáze, takže jsou vždy aktuální. Sloupec <code>is_mo5</code> říká, jestli se oznámení týká obvodu: všechno z desky obvodu a z desky magistrátu to, co obvod výslovně jmenuje.</p>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Tabulka</th><th scope="col">Co obsahuje</th><th scope="col" class="num-cell">Řádků</th><th scope="col">Stáhnout</th></tr></thead>
+  <tbody>
+    <tr><td><b>Oznámení</b></td><td>Název, druh (odvozený z názvu), vyvěšení, relevantní do, kdy oznámení z desky zmizelo, číslo jednací, odbor, deska a odkazy na dokumenty na pardubice.eu.</td><td class="num-cell">{{ '{:,}'.format(deska.total).replace(',', ' ') }}</td>
+        <td class="nowrap"><a href="/uredni-deska/data/notices.csv">CSV</a>, <a href="/uredni-deska/data/notices.json">JSON</a></td></tr>
+  </tbody>
+</table>
+<p>Původní zdroj jsou otevřená data města ve formátu <a href="{{ deska_source.OFN }}">OFN Úřední deska</a>: {% for b in deska_source.BOARDS %}<a href="{{ b.url }}">{{ b.name|replace('Úřední deska ', 'deska ') }}</a>{{ ' a ' if not loop.last }}{% endfor %} (deska magistrátu je i v <a href="{{ deska_source.NKOD }}">Národním katalogu otevřených dat</a>).</p>
+
 <h2>Ve výstavbě</h2>
 <p>{% for s in SECTIONS if s.status == 'planned' %}<a href="/{{ s.slug }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>
 
@@ -24,7 +35,8 @@
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
-curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'</pre>
+curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'
+curl '{{ base }}/api/v1/uredni-deska/notices?q=rozpočet&amp;active=false'</pre>
 
 <h2 id="mcp">AI asistenti (MCP)</h2>
 <p>Jeden MCP server pro celý portál, bez přihlášení a jen pro čtení. V Claude.ai ho přidáte v Nastavení mezi konektory jako vlastní konektor s adresou:</p>

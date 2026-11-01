@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% from "uredni_deska/_macros.html" import notice %}
+{% set S = SECTION['uredni-deska'] %}
+{% block title %}Úřední deska MO Pardubice V{% endblock %}
+{% block description %}Co právě visí na úřední desce městského obvodu Pardubice V a magistrátu: vyhledávání, archiv sejmutých oznámení, otevřená data a API. Stahováno z oficiálních dat města.{% endblock %}
+{% block hero %}{{ hero(S.question, [], 'Úřední deska městského obvodu Pardubice V a magistrátu na jednom místě, s hledáním a archivem sejmutých oznámení. Bereme ji z oficiálních otevřených dat města, závazné jsou dokumenty na pardubice.eu.', kind='section') }}{% endblock %}
+{% block main %}
+<form class="search search-plain" method="get" action="/uredni-deska" role="search">
+  <label for="q" class="sr">Hledat na úřední desce</label>
+  <input id="q" type="search" name="q" value="{{ q }}" placeholder="Hledat na desce" autocomplete="off">
+  {% if kde %}<input type="hidden" name="kde" value="{{ kde }}">{% endif %}
+  {% if sejmute %}<input type="hidden" name="sejmute" value="1">{% endif %}
+  {% if druh %}<input type="hidden" name="druh" value="{{ druh }}">{% endif %}
+  <button type="submit">Hledat</button>
+</form>
+
+<div class="deska-switches">
+  <nav class="switch" aria-label="Čí oznámení">
+    <a href="{{ url(kde='') }}" {% if mo5 %}aria-current="page"{% endif %}>Pardubice V</a>
+    <a href="{{ url(kde='mesto') }}" {% if not mo5 %}aria-current="page"{% endif %}>Celé město</a>
+  </nav>
+  <nav class="switch" aria-label="Vyvěšená nebo sejmutá">
+    <a href="{{ url(sejmute='') }}" {% if active %}aria-current="page"{% endif %}>Vyvěšená</a>
+    <a href="{{ url(sejmute='1') }}" {% if not active %}aria-current="page"{% endif %}>Sejmutá</a>
+  </nav>
+</div>
+{% if kinds|length > 1 or druh %}
+<p class="deska-kinds"><span class="muted">Druh:</span>
+  <a href="{{ url(druh='') }}" {% if not druh %}aria-current="true"{% endif %}>všechny</a>
+  {% for k in kinds %}
+  <a href="{{ url(druh=k.kind) }}" {% if druh == k.kind %}aria-current="true"{% endif %}>{{ k.label|lower }} <span class="muted">{{ k.n }}</span></a>
+  {% endfor %}
+</p>
+{% endif %}
+
+<section class="results" aria-live="polite">
+  {%- set one, few = total == 1, 2 <= total <= 4 %}
+  {%- set what = ('vyvěšené' if one else 'vyvěšená' if few else 'vyvěšených') if active else ('sejmuté' if one else 'sejmutá' if few else 'sejmutých') %}
+  {%- set where = (', které se týká Pardubic V' if one else ', která se týkají Pardubic V') if mo5 else ' z desky obvodu a magistrátu' %}
+  <h2 class="results-head">{% if q %}Hledání „{{ q }}“: {% endif %}{{ total }} {{ what }} oznámení{{ where }}</h2>
+  <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.</p>
+  {% if rows %}
+  <ol class="rows notices">
+    {% for n in rows %}{{ notice(n) }}{% endfor %}
+  </ol>
+  {% else %}
+  <div class="empty">
+    {% if not stats.total %}<p>Desku jsme zatím nestáhli. Mezitím ji najdete na <a href="{{ boards[0].page }}">pardubice.eu</a>.</p>
+    {% elif q %}<p>Nic takového tu není. Zkuste kratší nebo jiné slovo{% if mo5 %}, <a href="{{ url(kde='mesto') }}">hledat na celé desce města</a>{% endif %}{% if active %} nebo <a href="{{ url(sejmute='1') }}">mezi sejmutými</a>{% endif %}.</p>
+    {% elif not active %}<p>Zatím jsme nezaznamenali žádné sejmuté oznámení. Archiv vedeme od {{ stats.since|d }}.</p>
+    {% else %}<p>Na desce teď nic takového nevisí.</p>{% endif %}
+  </div>
+  {% endif %}
+  {% if pages > 1 %}
+  <nav class="pager" aria-label="Stránkování">
+    {% if strana > 1 %}<a href="{{ url(strana=strana-1) }}">Předchozí</a>{% else %}<span></span>{% endif %}
+    <span>{{ strana }} / {{ pages }}</span>
+    {% if strana < pages %}<a href="{{ url(strana=strana+1) }}">Další</a>{% else %}<span></span>{% endif %}
+  </nav>
+  {% endif %}
+</section>
+
+<section class="deska-about prose" aria-labelledby="deska-about-h">
+  <h2 id="deska-about-h">Odkud to je</h2>
+  <p>Pravidelně stahujeme oficiální strojově čitelnou úřední desku podle <a href="https://ofn.gov.cz/úřední-desky/2021-07-20/">otevřené formální normy</a>: <a href="{{ boards[0].page }}">desku obvodu Pardubice V</a> a <a href="{{ boards[1].page }}">desku magistrátu</a>. Pod „Pardubice V“ je všechno z desky obvodu a z desky magistrátu to, co obvod výslovně jmenuje. Když oznámení z desky zmizí, necháme ho v archivu sejmutých.</p>
+  <p>Celý seznam si můžete stáhnout jako <a href="/uredni-deska/data/notices.csv">CSV</a> nebo <a href="/uredni-deska/data/notices.json">JSON</a>, napojit přes <a href="/data#uredni-deska">API</a> nebo se na něj zeptat AI asistenta. U oznámení o doručení písemnosti po sejmutí neuvádíme jméno adresáta.</p>
+</section>
+{% endblock %}

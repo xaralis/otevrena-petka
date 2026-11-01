@@ -535,3 +535,25 @@ body > footer { flex-shrink: 0; }
 .att-legend { font-size: .8rem; margin: .2rem 0 .6rem; }
 @media (max-width: 600px) { .rank-bar-h, .rank-bar-c { display: none; } }
 .foot-links { display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; }
+
+/* ===== section: úřední deska (keep together at the end of the file) ===== */
+.deska-switches { display: flex; flex-wrap: wrap; gap: 0 1rem; margin-top: .4rem; }
+.deska-switches .switch { margin-bottom: .9rem; }
+.deska-kinds { margin: 0 0 .4rem; font-size: .95rem; line-height: 2; max-width: 80ch; }
+.deska-kinds a { margin-right: .9rem; white-space: nowrap; color: var(--ink-2); }
+.deska-kinds a[aria-current] { color: var(--ink); font-weight: 650; text-decoration-thickness: 2px; text-decoration-color: var(--red); }
+.deska-kinds .muted { font-size: .85rem; }
+.notices .row { grid-template-columns: 6.5rem minmax(0, 1fr); }
+.notice-day { display: block; font-weight: 700; font-size: 1.05rem; font-stretch: 90%; white-space: nowrap; }
+.notice-year { display: block; font-size: .85rem; color: var(--muted); }
+.notices h3 { overflow-wrap: anywhere; }
+.notice-files { list-style: none; margin: .45rem 0 0; padding: 0; font-size: .92rem; line-height: 1.7; }
+.notice-files li { overflow-wrap: anywhere; }
+.notice-files li::before { content: "↓ "; color: var(--muted); }
+.deska-about { margin-top: 2.6rem; padding-top: .2rem; border-top: 3px solid var(--ink); }
+.deska-about h2 { font-size: 1.15rem; margin: .8rem 0 .4rem; }
+@media (max-width: 600px) {
+  .notices .row { grid-template-columns: minmax(0, 1fr); }
+  .notice-day, .notice-year { display: inline; }
+}
+/* ===== end úřední deska ===== */

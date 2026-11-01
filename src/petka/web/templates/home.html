@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% from "usneseni/_macros.html" import row %}
+{% from "uredni_deska/_macros.html" import notice %}
 {% set U = SECTION['usneseni'] %}
+{% set D = SECTION['uredni-deska'] %}
 {% block title %}Otevřená data Pardubic V{% endblock %}
 {% block hero %}
 <section class="band band-portal">
   <div class="wrap">
     <h1>Co dělá městský obvod Pardubice&nbsp;V</h1>
-    <p class="band-lead">Dohledejte, jak rozhodla rada a zastupitelstvo, u každého rozhodnutí s odkazem na původní zápis. Rozpočet, smlouvy a úřední deska přibudou.</p>
+    <p class="band-lead">Dohledejte, jak rozhodla rada a zastupitelstvo, u každého rozhodnutí s odkazem na původní zápis, a co právě visí na úřední desce. Rozpočet a smlouvy přibudou.</p>
     <form class="search" method="get" action="/usneseni" role="search">
       <label for="q" class="sr">Hledat v usneseních</label>
       <input id="q" type="search" name="q" placeholder="Hledat v usneseních" autocomplete="off">
@@ -35,6 +37,20 @@
       <ol class="rows rows-compact">{% for r in latest %}{{ row(r) }}{% endfor %}</ol>
       <p><a href="/usneseni">Všechna usnesení</a></p>
     </div>
+  </article>
+  <article class="index-row live">
+    <h2><a href="/uredni-deska">{{ D.question }}</a></h2>
+    <div class="index-meta">
+      <p class="index-name">{{ D.title }}</p>
+      <p>Teď visí <a href="/uredni-deska">{{ deska.posted_mo5 }} oznámení</a>, která se týkají obvodu{% if deska.posted > deska.posted_mo5 %}, a dalších <a href="/uredni-deska?kde=mesto">{{ deska.posted - deska.posted_mo5 }}</a> na desce magistrátu{% endif %}. Sejmutá zůstávají v archivu.</p>
+    </div>
+    {% if notices %}
+    <div class="index-latest">
+      <p class="index-sub">Naposledy vyvěšeno</p>
+      <ol class="rows rows-compact notices">{% for n in notices %}{{ notice(n, files=False) }}{% endfor %}</ol>
+      <p><a href="/uredni-deska">Celá úřední deska</a></p>
+    </div>
+    {% endif %}
   </article>
   {% for s in SECTIONS if s.status == 'planned' %}
   <article class="index-row planned">
