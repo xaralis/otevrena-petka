@@ -549,7 +549,7 @@ body > footer { flex-shrink: 0; }
 .map-legend .pk { margin-right: .1rem; }
 .street-index { list-style: none; padding: 0; margin: 0; columns: 3 14rem; column-gap: 2rem; }
 .street-index li { padding: .2rem 0; break-inside: avoid; }
-.map-pop { font: inherit; font-size: .9rem; line-height: 1.35; color: var(--ink); }
+.map-pop { font: inherit; font-size: .9rem; line-height: 1.35; color: var(--ink); max-height: min(15rem, 40vh); overflow-y: auto; overscroll-behavior: contain; padding-right: .3rem; }
 .map-pop p { margin: 0 0 .45rem; }
 .map-pop-h { font-weight: 700; }
 .map-pop a { color: var(--ink); }

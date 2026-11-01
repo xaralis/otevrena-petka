@@ -58,7 +58,16 @@
       if (detail) map.fitBounds(b, { padding: 48, maxZoom: 17, duration: 0 });
     }
 
-    const popup = new maplibregl.Popup({ closeButton: true, maxWidth: "320px" });
+    const popup = new maplibregl.Popup({ closeButton: true, maxWidth: "320px", focusAfterOpen: false });
+    // keep the whole popup inside the map: pan by however much it sticks out
+    const fit = () => requestAnimationFrame(() => {
+      const box = popup.getElement(), pad = 12;
+      if (!box) return;
+      const p = box.getBoundingClientRect(), m = el.getBoundingClientRect();
+      const dx = p.left < m.left + pad ? p.left - m.left - pad : p.right > m.right - pad ? p.right - m.right + pad : 0;
+      const dy = p.top < m.top + pad ? p.top - m.top - pad : p.bottom > m.bottom - pad ? p.bottom - m.bottom + pad : 0;
+      if (dx || dy) map.panBy([dx, dy], { duration: 250 });
+    });
     layers.forEach((id) => {
       map.on("mouseenter", id, () => (map.getCanvas().style.cursor = "pointer"));
       map.on("mouseleave", id, () => (map.getCanvas().style.cursor = ""));
@@ -94,6 +103,7 @@
           m.textContent = "a dalších " + (items.length - 8) + " – přibližte mapu"; box.append(m); }
       }
       popup.setLngLat(e.lngLat).setDOMContent(box).addTo(map);
+      fit();
     });
   });
   }
