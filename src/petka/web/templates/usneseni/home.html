@@ -34,9 +34,9 @@
     <datalist id="clenove">{% for n in member_names %}<option value="{{ n }}">{% endfor %}</datalist>
     <span class="w">hlasoval</span>
     <select name="volba" aria-label="Jak hlasoval"><option value="">jakkoli</option><option value="pro" {{ 'selected' if f.volba=='pro' }}>pro</option><option value="proti" {{ 'selected' if f.volba=='proti' }}>proti</option><option value="zdrzel" {{ 'selected' if f.volba=='zdrzel' }}>zdržel se</option></select><span class="w">.</span></span>
-    <span class="seg seg-go"><button type="submit">Ukázat</button>
-    {% if f.organ or f.rok or f.tema or f.druh or f.clen or f.volba or f.stav != 'usneseni' %}<a href="/usneseni?q={{ q|urlencode }}">Zrušit výběr</a>{% endif %}</span>
   </p>
+    <div class="sentence-go"><button type="submit">Ukázat</button>
+    {% if f.organ or f.rok or f.tema or f.druh or f.clen or f.volba or f.stav != 'usneseni' %}<a href="/usneseni?q={{ q|urlencode }}">Zrušit výběr</a>{% endif %}</div>
 </form>
 
 <section class="results" aria-live="polite">
