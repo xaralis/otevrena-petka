@@ -117,7 +117,7 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
         if not q.strip():
             rows = conn.execute(
                 f"""SELECT {COLUMNS} FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
-                    WHERE {where} ORDER BY r.date DESC, r.seq LIMIT %s OFFSET %s""",
+                    WHERE {where} ORDER BY r.date DESC, r.seq DESC LIMIT %s OFFSET %s""",
                 params + [limit, offset]).fetchall()
             total = conn.execute(f"""SELECT count(*) AS n FROM resolutions r JOIN meetings m
                                      ON m.id = r.meeting_id WHERE {where}""", params).fetchone()["n"]
@@ -167,7 +167,7 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             ranked = [h for h in ranked if h.fulltext_rank or (h.semantic_rank or 999) <= SEMANTIC_DATE_TOP]
             dates = {r["uid"]: (r["date"], r["seq"]) for r in conn.execute(
                 "SELECT uid, date, seq FROM resolutions WHERE uid = ANY(%s)", ([h.uid for h in ranked],))}
-            ranked.sort(key=lambda h: (dates[h.uid][0], -dates[h.uid][1]), reverse=True)
+            ranked.sort(key=lambda h: (dates[h.uid][0], dates[h.uid][1]), reverse=True)
         info["total"] = len(ranked)
         page = ranked[offset:offset + limit]
         if page:

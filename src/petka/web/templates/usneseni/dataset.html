@@ -6,10 +6,10 @@
 <div class="prose wide">
 <p class="lead-text">Usnesení a hlasování rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Licence CC BY 4.0. Strojový popis: <a href="/usneseni/data/datapackage.json">datapackage.json</a> (Frictionless Data Package).</p>
 <table class="ledger catalog">
-  <thead><tr><th scope="col">Tabulka</th><th scope="col">Co obsahuje</th><th scope="col">Řádků</th><th scope="col">Stáhnout</th></tr></thead>
+  <thead><tr><th scope="col">Tabulka</th><th scope="col">Co obsahuje</th><th scope="col" class="num-cell">Řádků</th><th scope="col">Stáhnout</th></tr></thead>
   <tbody>
   {% for t in tables %}
-    <tr><td><b>{{ t.title }}</b></td><td>{{ t.description }}</td><td class="nowrap">{{ t.rows if t.rows is not none else '' }}</td>
+    <tr><td><b>{{ t.title }}</b></td><td>{{ t.description }}</td><td class="num-cell">{{ '{:,}'.format(t.rows).replace(',', ' ') if t.rows is not none else '' }}</td>
         <td class="nowrap"><a href="/usneseni/data/{{ t.name }}.csv">CSV</a>, <a href="/usneseni/data/{{ t.name }}.json">JSON</a></td></tr>
   {% endfor %}
   </tbody>
@@ -19,7 +19,7 @@
 <h2>API</h2>
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
-curl '{{ base }}/api/v1/usneseni/members/filip-varecha/votes?dissent_only=true'</pre>
+curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'</pre>
 <p>Celé API a připojení AI asistentů: <a href="/data">Data a API</a>.</p>
 <h2 id="metodika">Metodika</h2>
 <ul class="method">

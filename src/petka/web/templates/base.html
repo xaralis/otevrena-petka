@@ -7,7 +7,7 @@
 <meta name="description" content="Otevřená Pětka: otevřená data městského obvodu Pardubice V. Usnesení a hlasování, dále rozpočet, smlouvy a úřední deska. Vyhledávání, API a MCP. Nezávislý projekt, nejde o web úřadu.">
 <meta name="theme-color" content="#de091c">
 <link rel="preload" href="/static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/static/style.css?v=10">
+<link rel="stylesheet" href="/static/style.css?v=12">
 </head>
 {% set p = request.url.path %}
 {% set in_usneseni = p.startswith('/usneseni') %}
@@ -16,6 +16,7 @@
 <header class="top">
   <div class="wrap top-inner">
     <a class="brand" href="/" aria-label="{{ SITE_NAME }} – úvod">Otevřená <b>Pětka</b></a>
+    <a class="util-m" href="/data">Data a API</a>
     <nav class="portal-nav" aria-label="Sekce portálu">
       {% for s in SECTIONS %}
       <a href="/{{ s.slug }}" class="{{ 'soon' if s.status == 'planned' }}" {% if p.startswith('/' ~ s.slug) %}aria-current="page"{% endif %}>{{ s.nav }}{% if s.status == 'planned' %}<span class="sr"> (připravujeme)</span>{% endif %}</a>

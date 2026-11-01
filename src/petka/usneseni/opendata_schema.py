@@ -45,7 +45,7 @@ TABLES = {
     },
     "resolutions": {
         "title": "Usnesení a nepřijaté návrhy",
-        "description": "Číslované záznamy ze zápisu. Status `neprijato` = nepřijatý návrh: nezískal většinu, takže nejde o usnesení, i když mu zápis přidělil číslo.",
+        "description": "Číslované záznamy ze zápisu. Stav „neprijato“ znamená nepřijatý návrh: nezískal většinu, takže nejde o usnesení, i když mu zápis přidělil číslo.",
         "primaryKey": ["uid"],
         "foreignKeys": [{"fields": ["meeting_id"], "reference": {"resource": "meetings", "fields": ["id"]}}],
         "fields": [

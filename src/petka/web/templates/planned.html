@@ -9,13 +9,13 @@
     <h2>Už teď najdete v usneseních</h2>
     <ul class="links">{% for label, url in s.bridges %}<li><a href="{{ url }}">{{ label|capitalize }}</a></li>{% endfor %}</ul>
     {% endif %}
-    <h2>Než sekci dokončíme, podívejte se přímo</h2>
+    <h2>Mezitím hledejte přímo u zdroje</h2>
     <ul class="links">{% for label, url in s.sources %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
     <p class="muted">Z těchto zdrojů budeme data brát. Stejně jako u usnesení bude každý údaj odkazovat na původní dokument, půjde stáhnout a dotazovat přes API i AI asistenty. Pomoct můžete na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>.</p>
   </div>
   <aside class="planned-side">
-    <h2>Na co tu najdete odpověď</h2>
-    <ul class="examples">{% for q in s.examples %}<li>{{ q }}</li>{% endfor %}</ul>
+    <h2>Na co tu jednou najdete odpověď</h2>
+    <ul class="examples">{% for q in s.examples %}<li>„{{ q }}“</li>{% endfor %}</ul>
   </aside>
 </div>
 {% endblock %}

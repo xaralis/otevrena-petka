@@ -162,12 +162,13 @@ def embed() -> None:
             """SELECT uid, title, summary, keywords, agenda_title, text, embed_hash,
                  encode(sha256(convert_to(%s || uid || coalesce(title,'') || coalesce(summary,'') || text, 'UTF8')), 'hex') AS h
                FROM resolutions""", (embedder.MODEL,)).fetchall()
+        conn.commit()  # end the read transaction: every batch below commits on its own
         todo = [r for r in rows if r["h"] != r["embed_hash"]]
         log.info("embed: %d of %d resolutions", len(todo), len(rows))
         for i in range(0, len(todo), 16):
             batch = todo[i:i + 16]
             vecs = embedder.embed_documents([embedder.document_text(r) for r in batch])
-            with conn.transaction():
+            with conn.transaction():  # a real transaction (no outer one), committed per batch
                 for r, vec in zip(batch, vecs):
                     conn.execute("""INSERT INTO embedding_cache (hash, model, embedding) VALUES (%s,%s,%s)
                                     ON CONFLICT (hash) DO NOTHING""", (r["h"], embedder.MODEL, vec))

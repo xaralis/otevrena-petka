@@ -415,3 +415,32 @@ pre { white-space: pre-wrap; word-break: break-all; }
   .sub-nav a { font-size: .9rem; padding: .45rem .7rem .5rem; }
   .band-section .band-lead { font-size: .95rem; }
 }
+
+/* ---- round 2 fixes ---- */
+/* the strip is only as wide as its tiles, so the notch (computed from 100%) lands right */
+.seats-l { width: fit-content; max-width: 100%; }
+/* links in data tables are the page's main actions */
+.catalog a { color: var(--red-ink); text-decoration: underline; }
+.catalog a:hover { text-decoration-thickness: 2px; }
+.num-cell { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.band-section h1 { max-width: 32ch; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.band-page h1 { font-size: clamp(2rem, 4.2vw, 3rem); }
+.brand { align-self: flex-end; padding-bottom: 1.05rem; }
+.portal-nav a.soon[aria-current] { text-decoration: none; }
+.util-m { display: none; }
+.examples li { font-size: 1.05rem; font-weight: 400; }
+@supports (field-sizing: content) {
+  @media (min-width: 601px) { .sentence select, .sentence input { field-sizing: content; min-width: 4em; } }
+}
+@media (max-width: 600px) {
+  .top-inner { display: grid; grid-template-columns: 1fr auto; }
+  .brand { align-self: center; padding-bottom: .2rem; }
+  .util-m { display: block; align-self: center; color: #fff; font-weight: 400; font-size: .92rem; padding: .3rem 0 .2rem; }
+  .top .portal-nav { grid-column: 1 / -1; }
+  .top .portal-nav a.util { display: none; }
+  .switch { display: inline-flex; flex-direction: row; }
+  .switch a + a { border-top: 0; }
+  .switch a { padding: .45rem .7rem; font-size: .9rem; }
+}
+.ledger.catalog td a { color: var(--red-ink); text-decoration: underline; }
+.top .portal-nav a { margin: 0; }
