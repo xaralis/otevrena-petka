@@ -1,13 +1,11 @@
 """Otevřená Pětka: the open-data portal of MO Pardubice V.
 
 Portal pages (home, data catalog, planned sections), the sections' routers, REST API
-(OpenAPI at /api/docs) and one MCP server for the whole portal at /mcp. Requests for the
-old single-section host are redirected to the matching portal path.
+(OpenAPI at /api/docs) and one MCP server for the whole portal at /mcp.
 """
 
 import contextlib
 import os
-import re
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
@@ -21,7 +19,6 @@ from ..usneseni import queries, search as usneseni_search, web as usneseni_web
 from .render import HERE, tpl
 
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
-LEGACY_HOSTS = {h.strip() for h in os.environ.get("LEGACY_HOSTS", "usneseni.dev.varecha.work").split(",") if h.strip()}
 
 if os.environ.get("SENTRY_DSN"):
     import sentry_sdk
@@ -43,34 +40,6 @@ app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
 app.router.routes.extend(mcp.streamable_http_app().routes)  # POST /mcp
 app.include_router(usneseni_web.pages)
 app.include_router(usneseni_web.api)
-
-
-# --- the old usneseni.dev.varecha.work: same paths, one level down -----------------------
-
-_LEGACY = [
-    (re.compile(r"^/$"), "/usneseni"),
-    (re.compile(r"^/(jednani|clenove)(/.*)?$"), r"/usneseni/\1\2"),
-    (re.compile(r"^/otevrena-data$"), "/usneseni/data"),
-    (re.compile(r"^/opendata/(.*)$"), r"/usneseni/data/\1"),
-    (re.compile(r"^/opendata-texts\.txt$"), "/usneseni/data/texts.txt"),
-    (re.compile(r"^/opendata-extracted\.txt$"), "/usneseni/data/extracted.txt"),
-    (re.compile(r"^/pdf/(.*)$"), r"/usneseni/pdf/\1"),
-    (re.compile(r"^/api/v1/(resolutions|meetings|members|stats)(.*)$"), r"/api/v1/usneseni/\1\2"),
-]
-
-
-@app.middleware("http")
-async def legacy_redirect(request: Request, call_next):
-    host = request.headers.get("host", "").split(":")[0]
-    path = request.url.path
-    if host in LEGACY_HOSTS and path not in ("/mcp", "/healthz"):  # MCP clients don't follow redirects
-        for pat, repl in _LEGACY:
-            if pat.match(path):
-                path = pat.sub(repl, path)
-                break
-        q = f"?{request.url.query}" if request.url.query else ""
-        return RedirectResponse(PUBLIC_URL + path + q, status_code=301)
-    return await call_next(request)
 
 
 # --- error pages: the portal's look for people, JSON for the API ------------------------
