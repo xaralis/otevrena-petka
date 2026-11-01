@@ -44,7 +44,9 @@
     {% if q %}{{ info.total }} {{ 'usnesení odpovídá' if info.total != 1 else 'usnesení odpovídá' }} „{{ q }}“{% else %}Nejnovější usnesení{% endif %}
   </h2>
   {% if hits %}{{ legend() }}<p class="note">Políčko = jedno místo v zastupitelstvu (15) nebo radě (5). Názvy a texty v přehledu jsou strojová shrnutí, závazné je znění v detailu.</p>{% endif %}
-  {% if q and hits %}<p class="order">Seřazeno {% if razeni == 'datum' %}od nejnovějších. <a href="?{{ request.query_params|string|replace('&razeni=datum', '') }}&razeni=shoda">Seřadit podle shody s dotazem</a>{% else %}podle shody s dotazem. <a href="?{{ request.query_params|string|replace('&razeni=shoda', '') }}&razeni=datum">Seřadit od nejnovějších</a>{% endif %}</p>{% endif %}
+  {% if q and hits and info.order == 'shoda' %}<p class="order">Žádné usnesení neobsahuje všechna slova dotazu, proto jsou výsledky seřazené podle shody.</p>
+  {% elif q and hits %}<p class="order">Seřazeno {% if razeni == 'datum' %}od nejnovějších. <a href="?{{ request.query_params|string|replace('&razeni=datum', '') }}&razeni=shoda">Seřadit podle shody s dotazem</a>{% else %}podle shody s dotazem. <a href="?{{ request.query_params|string|replace('&razeni=shoda', '') }}&razeni=datum">Seřadit od nejnovějších</a>{% endif %}</p>{% endif %}
+  {% if q and info.hidden_rejected %}{% set n = info.hidden_rejected %}<p class="note">Dotazu {{ 'odpovídá' if n == 1 else 'odpovídají' if n < 5 else 'odpovídá' }} také {{ n }} {{ 'nepřijatý návrh' if n == 1 else 'nepřijaté návrhy' if n < 5 else 'nepřijatých návrhů' }}, které výchozí zobrazení skrývá. <a href="?{{ request.query_params|string|replace('&stav=usneseni', '')|replace('stav=usneseni&', '') }}&stav=vse">Zobrazit i nepřijaté návrhy</a></p>{% endif %}
   {% if q and info.mode == 'fulltext' and rezim != 'fulltext' %}<p class="note">Hledání podle smyslu teď neběží, výsledky jsou jen podle slov.</p>{% endif %}
   {% if hits %}
   <ol class="rows">{% for h in hits %}{{ row(h.row) }}{% endfor %}</ol>

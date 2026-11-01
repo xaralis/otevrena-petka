@@ -150,6 +150,7 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                         ORDER BY ts_rank_cd(r.tsv, to_tsquery('simple', %s), 32) DESC, r.date DESC
                         LIMIT %s""", params + [tq, tq, pool_size])]
                 if ft:
+                    info["loose"] = op == "|"
                     break
         sem: list[str] = []
         sim: dict[str, float] = {}
@@ -162,6 +163,20 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                     params + [vec, vec, pool_size]):
                 sem.append(r["uid"])
                 sim[r["uid"]] = r["sim"]
+        if vec is not None and newest_first:
+            # the floor comes from the best match in the whole database: when a filter hides
+            # the real matches, what is left must not pass just for being the best of the rest
+            best_all = conn.execute("SELECT max(1 - (embedding <=> %s::vector)) AS s FROM resolutions",
+                                    (vec,)).fetchone()["s"] or 0
+        if f.status == "usneseni" and ft is not None:
+            # tell the reader when the default "real resolutions only" hides word matches
+            tq_all = tsquery(q, "&")
+            if tq_all:
+                info["hidden_rejected"] = conn.execute(
+                    f"""SELECT count(*) AS n FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
+                        WHERE {Filters(**{**f.__dict__, "status": "neprijato"}).sql()[0]}
+                          AND r.tsv @@ to_tsquery('simple', %s)""",
+                    Filters(**{**f.__dict__, "status": "neprijato"}).sql()[1] + [tq_all]).fetchone()["n"]
         scores: dict[str, Hit] = {}
         for rank, uid in enumerate(ft, 1):
             h = scores.setdefault(uid, Hit(uid, 0))
@@ -172,10 +187,15 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             h.score += 1 / (RRF_K + rank)
             h.semantic_rank = rank
         ranked = sorted(scores.values(), key=lambda h: -h.score)
+        if newest_first and info.get("loose"):
+            # no resolution has every word (a question in plain language): by date, loose
+            # one-word matches would come first, so these stay ordered by how well they match
+            newest_first = False
+            info["order"] = "shoda"
         if newest_first and ranked:
             # by date, only what clearly matches: every word match plus the closest by meaning
             # (the vector side always returns neighbours, relevant or not)
-            floor = (max(sim.values()) - (SEMANTIC_MARGIN_WITH_WORDS if ft else SEMANTIC_MARGIN)) if sim else 1
+            floor = (max(best_all, *sim.values()) - (SEMANTIC_MARGIN_WITH_WORDS if ft else SEMANTIC_MARGIN)) if sim else 1
             ranked = [h for h in ranked if h.fulltext_rank or (
                 (h.semantic_rank or 999) <= SEMANTIC_DATE_TOP and sim[h.uid] >= floor)]
             dates = {r["uid"]: (r["date"], r["seq"]) for r in conn.execute(
