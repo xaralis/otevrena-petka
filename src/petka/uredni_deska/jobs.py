@@ -56,7 +56,10 @@ def sync(conn, board: source.Board, rows: list[dict]) -> dict:
 
 def redact(conn) -> int:
     return conn.execute(
-        """UPDATE notices SET title = %s, attachments = '[]', redacted = true
+        # everything that could lead back to the addressee goes: title, files, the notice URL
+        # and the file numbers (the city takes the notice down; we keep only that it existed)
+        """UPDATE notices SET title = %s, attachments = '[]', url = '', reference = NULL,
+             file_mark = NULL, redacted = true
            WHERE removed_at IS NOT NULL AND kind = 'doruceni' AND NOT redacted""",
         (REDACTED_TITLE,)).rowcount
 

@@ -105,7 +105,7 @@ def stats() -> dict:
 
 EXPORT_FIELDS = ["id", "board", "is_mo5", "title", "kind", "published", "valid_until", "removed_at",
                  "first_seen", "last_seen", "reference", "file_mark", "department", "agenda", "url",
-                 "attachments"]
+                 "attachments", "redacted"]
 
 
 def export_rows() -> list[dict]:
