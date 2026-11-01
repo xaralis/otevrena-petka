@@ -373,8 +373,12 @@ def bootstrap() -> None:
         empty = conn.execute("SELECT count(*) AS n FROM meetings").fetchone()["n"] == 0
     if empty:
         load(None)
-    elif changed:
-        load(sorted(changed & set(pipeline.meeting_ids())))
+    elif changed & set(pipeline.meeting_ids()):
+        load(sorted(changed & set(pipeline.meeting_ids())))  # also refreshes links and places
+    elif "geo" in changed:  # only the places changed: no need to reload meetings
+        with db.connect() as conn:
+            with conn.transaction():
+                log.info("bootstrap: %d places", _places(conn))
     with db.connect() as conn:  # vectors from the image (git) or the volume, no recompute
         import_embeddings(conn)
         n = apply_cached_embeddings(conn)
