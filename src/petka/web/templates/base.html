@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ SITE_NAME }}{% endblock %} – {{ SITE_NAME }}</title>
-{% set desc %}{% block description %}Otevřená Pětka: otevřená data městského obvodu Pardubice V. Usnesení a hlasování, dále rozpočet, smlouvy a úřední deska. Vyhledávání, API a MCP. Nezávislý projekt, nejde o web úřadu.{% endblock %}{% endset %}
+{% set desc %}{% block description %}Otevřená Pětka: otevřená data městského obvodu Pardubice V. Usnesení a hlasování a úřední deska, připravujeme rozpočet a smlouvy. Vyhledávání, API a MCP. Nezávislý projekt, nejde o web úřadu.{% endblock %}{% endset %}
 <meta name="description" content="{{ desc|trim }}">
 <link rel="canonical" href="{{ PUBLIC_URL }}{{ request.url.path }}">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#de091c">
 <link rel="preload" href="/static/fonts/bricolage-latin.woff2?v=1" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/static/style.css?v=25">
+<link rel="stylesheet" href="/static/style.css?v=26">
 {% block head %}{% endblock %}
 </head>
 {% set p = request.url.path %}

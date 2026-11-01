@@ -43,13 +43,9 @@ SECTIONS = [
             sources=[("Registr smluv", "https://smlouvy.gov.cz/"),
                      ("Hlídač státu", "https://www.hlidacstatu.cz/")]),
     Section("uredni-deska", "Úřední deska", "Úřední deska",
-            "Co úřad právě vyvěsil?", "planned",
-            examples=["Jaké stavby se v obvodu povolují?",
-                      "Kdy je další zasedání zastupitelstva?",
-                      "Které oznámení se týká mé ulice?"],
-            bridges=[("program a zápisy jednání", "/usneseni/jednani")],
-            sources=[("Úřední deska MO Pardubice V (JSON podle OFN Úřední desky)",
-                      "https://www.pardubice.eu/export/official-board-json?district_id=5")]),
+            "Co úřad právě vyvěsil?", "live",
+            sources=[("Úřední deska MO Pardubice V na pardubice.eu", "https://pardubice.eu/uredni-deska/obvody?district=mo5"),
+                     ("Úřední deska Magistrátu města Pardubic", "https://pardubice.eu/uredni-deska")]),
 ]
 
 BY_SLUG = {s.slug: s for s in SECTIONS}

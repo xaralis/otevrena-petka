@@ -18,6 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from .. import db
 from ..mcp_server import mcp
 from ..sections import BY_SLUG, SECTIONS
+from ..uredni_deska import queries as deska_queries, source as deska_source, web as deska_web
 from ..usneseni import queries, search as usneseni_search, web as usneseni_web
 from .render import HERE, tpl
 
@@ -54,6 +55,8 @@ app.mount("/static", _Static(directory=HERE / "static"), name="static")
 app.router.routes.extend(mcp.streamable_http_app().routes)  # POST /mcp
 app.include_router(usneseni_web.pages)
 app.include_router(usneseni_web.api)
+app.include_router(deska_web.pages)   # before the planned-section catch-all /{slug}
+app.include_router(deska_web.api)
 
 
 class _Head:
@@ -118,8 +121,11 @@ async def server_error(request: Request, exc: Exception):
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request):
     hits, _ = usneseni_search.search("", filters=usneseni_search.Filters(status="usneseni"), limit=3)
+    # the newest notices of MO V, leaving out deliveries to named people (not news, and personal)
+    notices = [n for n in deska_queries.search(limit=12)[0] if n["kind"] != "doruceni"][:3]
     return tpl.TemplateResponse(request, "home.html", {
         "stats": queries.stats(), "latest": [h.row for h in hits],
+        "deska": deska_queries.stats(), "notices": notices,
     })
 
 
@@ -128,6 +134,7 @@ def catalog(request: Request):
     return tpl.TemplateResponse(request, "data.html", {
         "stats": queries.stats(), "base": PUBLIC_URL,
         "tables": queries.opendata_tables(), "updated": usneseni_web.opendata_updated(),
+        "deska": deska_queries.stats(), "deska_source": deska_source,
     })
 
 
@@ -171,7 +178,7 @@ def robots():
 @app.get("/sitemap.xml", include_in_schema=False)
 def sitemap():
     pages = ["/", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/mapa", "/usneseni/jednani",
-             "/usneseni/clenove", "/usneseni/clenove/ucast", "/usneseni/metodika"]
+             "/usneseni/clenove", "/usneseni/clenove/ucast", "/usneseni/metodika", "/uredni-deska"]
     pages += [f"/{s.slug}" for s in SECTIONS if s.status == "planned"]
     urls = [(u, None) for u in pages]
     with db.pool().connection() as conn:

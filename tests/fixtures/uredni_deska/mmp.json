@@ -1,0 +1,212 @@
+{
+ "@context": "https://ofn.gov.cz/úřední-desky/2021-07-20/kontexty/úřední-deska.jsonld",
+ "typ": "Úřední deska",
+ "stránka": "https://pardubice.eu/uredni-deska",
+ "provozovatel": {
+  "typ": "Osoba",
+  "ičo": "00274046"
+ },
+ "informace": [
+  {
+   "typ": [
+    "Digitální objekt",
+    "Informace na úřední desce"
+   ],
+   "url": "https://pardubice.eu/uredni-deska?id=15470",
+   "název": {
+    "cs": "Oznámení o přerušení dodávky elektrické energie č. 110061124186, MO Pardubice V - Nové Jesenčany"
+   },
+   "vyvěšení": {
+    "typ": "Časový okamžik",
+    "datum": "2026-10-15"
+   },
+   "číslo_jednací": "xxx",
+   "relevantní_do": {
+    "typ": "Časový okamžik",
+    "datum": "2026-11-05"
+   },
+   "dokument": [
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "pis_2457"
+     },
+     "url": "https://pardubice.eu/data/files/11/7c1/b57096ecda41a4c12b79d45502b3a91cf5c/pis-2457.pdf"
+    }
+   ],
+   "odbor": "Kancelář tajemníka"
+  },
+  {
+   "typ": [
+    "Digitální objekt",
+    "Informace na úřední desce"
+   ],
+   "url": "https://pardubice.eu/uredni-deska?id=15545",
+   "název": {
+    "cs": "Oznámení o přerušení dodávky elektrické energie č. 110061123880, MO Pardubice VII - Rosice"
+   },
+   "vyvěšení": {
+    "typ": "Časový okamžik",
+    "datum": "2026-10-23"
+   },
+   "číslo_jednací": "xxx",
+   "relevantní_do": {
+    "typ": "Časový okamžik",
+    "datum": "2026-11-12"
+   },
+   "dokument": [
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "pis_2467"
+     },
+     "url": "https://pardubice.eu/data/files/44/29f/5f706f408b32e8fd5d93874d597236e2fc6/pis-2467.pdf"
+    }
+   ],
+   "odbor": "Kancelář tajemníka"
+  },
+  {
+   "typ": [
+    "Digitální objekt",
+    "Informace na úřední desce"
+   ],
+   "url": "https://pardubice.eu/uredni-deska?id=15548",
+   "název": {
+    "cs": "Oznámení o možnosti převzít písemnost - Jana Vzorová"
+   },
+   "vyvěšení": {
+    "typ": "Časový okamžik",
+    "datum": "2026-10-23"
+   },
+   "číslo_jednací": "OSA/D-7379/26",
+   "relevantní_do": {
+    "typ": "Časový okamžik",
+    "datum": "2026-11-09"
+   },
+   "dokument": [
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "Oznámení o možnosti převzetí písemnosti - Jana Vzorová"
+     },
+     "url": "https://pardubice.eu/data/files/00/012/14d6a669f4f32c396fed72772e1e4ab5a31/oznameni-o-moznosti-prevzeti-pisemnosti-jana-vzorova.pdf"
+    }
+   ],
+   "odbor": "Odbor správních agend"
+  },
+  {
+   "typ": [
+    "Digitální objekt",
+    "Informace na úřední desce"
+   ],
+   "url": "https://pardubice.eu/uredni-deska?id=15584",
+   "název": {
+    "cs": "Návrhy rozpočtových dokumentů Svazku Metropolitních oblastí a aglomerací ČR (SO MOA)"
+   },
+   "vyvěšení": {
+    "typ": "Časový okamžik",
+    "datum": "2026-10-27"
+   },
+   "číslo_jednací": "MmP 212062/2026",
+   "relevantní_do": {
+    "typ": "Časový okamžik",
+    "datum": "2026-11-27"
+   },
+   "dokument": [
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "SO MOA_Návrh rozpočtu pro rok 2027"
+     },
+     "url": "https://pardubice.eu/data/files/0c/9cb/b6f6f1f95e67fd0eba8f76495a421bd7e03/so-moa-navrh-rozpoctu-pro-rok-2027.pdf"
+    },
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "SO MOA_Návrh rozpočtového opatření č. 1_2026"
+     },
+     "url": "https://pardubice.eu/data/files/7a/e59/c77b578ed9c1d0a2ed9a62e9e85d60a4fc9/so-moa-navrh-rozpoctoveho-opatreni-c-1-2026.pdf"
+    },
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "SO MOA_Důvodová zpráva_Střednědobý výhled rozpočtu_final"
+     },
+     "url": "https://pardubice.eu/data/files/7a/703/e6d265c145aadca0034614220071cf4a5ad/so-moa-duvodova-zprava-strednedoby-vyhled-rozpoctu-final.pdf"
+    },
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "SO MOA_Důvodová zpráva_Návrh rozpočtu 2027_final"
+     },
+     "url": "https://pardubice.eu/data/files/b6/4cd/3cc759d11adf68a1ec50c948714ee4191ba/so-moa-duvodova-zprava-navrh-rozpoctu-2027-final.pdf"
+    },
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "SO MOA_Důvodová zpráva_Návrh rozpočtového opatření č. 1_final"
+     },
+     "url": "https://pardubice.eu/data/files/bd/d40/a4c2bd733a91bbab455e22b33101f8923d8/so-moa-duvodova-zprava-navrh-rozpoctoveho-opatreni-c-1-final.pdf"
+    }
+   ],
+   "odbor": "Odbor ITI Hradecko-pardubické aglomerace"
+  },
+  {
+   "typ": [
+    "Digitální objekt",
+    "Informace na úřední desce"
+   ],
+   "url": "https://pardubice.eu/uredni-deska?id=299",
+   "název": {
+    "cs": "Žádost o poskytnutí informace"
+   },
+   "vyvěšení": {
+    "typ": "Časový okamžik",
+    "datum": "2013-02-25"
+   },
+   "číslo_jednací": "OSA/P-1280/12-D/61",
+   "relevantní_do": {
+    "typ": "Časový okamžik",
+    "datum": "2222-02-25"
+   },
+   "dokument": [
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "Text dokumentu"
+     },
+     "url": "https://pardubice.eu/data/files/42/4ea/404d906c71c3947845892dde41b249479d8/text-dokumentu.pdf"
+    }
+   ]
+  },
+  {
+   "typ": [
+    "Digitální objekt",
+    "Informace na úřední desce"
+   ],
+   "url": "https://pardubice.eu/uredni-deska?id=15592",
+   "název": {
+    "cs": "Pozvánka na ustavující zasedání ZmP dne 09.11.2026"
+   },
+   "vyvěšení": {
+    "typ": "Časový okamžik",
+    "datum": "2026-10-30"
+   },
+   "číslo_jednací": "01/2026",
+   "relevantní_do": {
+    "typ": "Časový okamžik",
+    "datum": "2026-11-10"
+   },
+   "dokument": [
+    {
+     "typ": "Digitální objekt",
+     "název": {
+      "cs": "Pozvánka na ustavující zasedání ZmP dne 09.11.2026"
+     },
+     "url": "https://pardubice.eu/data/files/60/72f/48bd181697f9649a9b73856ea0b31d93f7a/pozvanka-na-ustavujici-zasedani-zmp-dne-09-11-2026-1.pdf"
+    }
+   ],
+   "odbor": "Kancelář primátora"
+  }
+ ]
+}

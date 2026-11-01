@@ -17,6 +17,27 @@ Claude a další AI asistenty.
 - **Jednání**: prezence, body programu se shrnutím rozpravy, nepřijaté návrhy a protinávrhy.
 - **Členové**: docházka, hlasování, kdy hlasovali jinak, než jak hlasování dopadlo.
 - **Automatická aktualizace**: každý den se kontroluje pardubice.eu a nové zápisy se zpracují.
+- **Úřední deska** (`/uredni-deska`): co visí na desce obvodu a magistrátu, hledání, archiv
+  sejmutých oznámení, CSV/JSON a API. Viz níže.
+
+## Úřední deska
+
+Zdroj je oficiální strojově čitelná deska města podle OFN
+[Úřední deska](https://ofn.gov.cz/úřední-desky/2021-07-20/) (JSON-LD):
+
+- `https://pardubice.eu/export/official-board-json?district_id=5` – deska ÚMO Pardubice V
+  (v NKOD není, endpoint je stejný jako u magistrátu; `district_id` 1–8 = MO I–VIII),
+- `https://pardubice.eu/export/official-board-json` – deska magistrátu (v NKOD).
+
+`uv run usneseni deska-update` (idempotentní, stačí jednou za hodinu) stáhne obě desky,
+upsertne oznámení do tabulky `notices` a ta, která z feedu zmizela, označí `removed_at`
+(nemaže je). **Týká se MO V** (`is_mo5`): všechno z desky obvodu (i rozhodnutí magistrátu
+vyvěšená obvodem) a z desky magistrátu to, co obvod výslovně jmenuje v názvu, odboru nebo
+čísle jednacím („MO Pardubice V“, „ÚMO 5“, „UMO5“, „městský obvod Pardubice V“); názvy
+částí obvodu se nepočítají. Druh oznámení je odvozený z názvu. Popis (`popis`, často
+s datem narození) se neukládá a u doručení písemnosti se po sejmutí skryje jméno adresáta.
+Server neposílá ETag ani Last-Modified (`no-store`); podmíněné hlavičky posíláme pro případ,
+že je začne posílat.
 
 ## Jak data vznikají (a jejich limity)
 
@@ -77,7 +98,7 @@ claude mcp add --transport http usneseni-mo5 https://usneseni.dev.varecha.work/m
 ```
 
 Nástroje: `hledej_usneseni`, `usneseni_detail`, `jednani`, `clenove`, `hlasovani_clena`,
-`statistika`. Bez přihlášení, jen čtení.
+`statistika`, `uredni_deska_hledej`. Bez přihlášení, jen čtení.
 
 ## Licence
 

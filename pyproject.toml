@@ -21,8 +21,8 @@ dependencies = [
 ]
 
 [project.scripts]
-usneseni = "petka.usneseni.cli:main"
-petka = "petka.usneseni.cli:main"
+usneseni = "petka.cli:main"
+petka = "petka.cli:main"
 
 [dependency-groups]
 dev = ["pytest>=8"]
