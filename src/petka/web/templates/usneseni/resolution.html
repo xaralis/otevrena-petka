@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "usneseni/_macros.html" import vote, seats %}
 {% block title %}{% if r.status == 'neprijato' %}Nepřijatý návrh ({{ r.number }}){% else %}Usnesení {{ r.number }}{% endif %}: {{ r.title or '' }}{% endblock %}
+{% block description %}{{ (r.summary or r.title or '')|truncate(300) }}{% endblock %}
 {% set eff = r.revoked_by|selectattr('effective')|list %}
 {% set eff_full = eff|rejectattr('scope', 'equalto', 'cast')|list %}
 {% block hero %}

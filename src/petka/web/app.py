@@ -7,9 +7,12 @@ Portal pages (home, data catalog, planned sections), the sections' routers, REST
 import contextlib
 import os
 
+from xml.sax.saxutils import escape
+
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, RedirectResponse, Response
 from starlette.exceptions import HTTPException as StarletteHTTPException
+from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .. import db
@@ -36,10 +39,48 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Otevřená Pětka – otevřená data MO Pardubice V", lifespan=lifespan,
               docs_url="/api/docs", redoc_url=None, openapi_url="/api/openapi.json")
-app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
+class _Static(StaticFiles):
+    """Versioned assets (?v=N) never change; icons and fonts change rarely."""
+    async def get_response(self, path, scope):
+        resp = await super().get_response(path, scope)
+        if resp.status_code == 200:
+            versioned = b"v=" in scope.get("query_string", b"")
+            resp.headers["Cache-Control"] = ("public, max-age=31536000, immutable" if versioned
+                                             else "public, max-age=604800")
+        return resp
+
+
+app.mount("/static", _Static(directory=HERE / "static"), name="static")
 app.router.routes.extend(mcp.streamable_http_app().routes)  # POST /mcp
 app.include_router(usneseni_web.pages)
 app.include_router(usneseni_web.api)
+
+
+class _Head:
+    """FastAPI GET routes answer HEAD with 405; monitors and link checkers send HEAD.
+    Run HEAD as GET on a copy of the scope; uvicorn still sees HEAD and drops the body."""
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "http" and scope["method"] == "HEAD":
+            scope = dict(scope, method="GET")
+        await self.app(scope, receive, send)
+
+
+class _Gzip:
+    """Compress pages and data files, but leave the MCP endpoint's responses alone."""
+    def __init__(self, app):
+        self.app, self.gzip = app, GZipMiddleware(app, minimum_size=1024)
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "http" and not scope["path"].startswith("/mcp"):
+            return await self.gzip(scope, receive, send)
+        await self.app(scope, receive, send)
+
+
+app.add_middleware(_Gzip)
+app.add_middleware(_Head)
 
 
 # --- error pages: the portal's look for people, JSON for the API ------------------------
@@ -91,6 +132,55 @@ def catalog(request: Request):
 @app.get("/data/usneseni", include_in_schema=False)
 def dataset_usneseni_moved():
     return RedirectResponse("/data#usneseni", status_code=301)
+
+
+# --- files crawlers, browsers and feed readers ask for at fixed paths ---------------------
+
+ICONS = HERE / "static" / "icons"
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    return FileResponse(ICONS / "favicon.ico", headers={"Cache-Control": "public, max-age=604800"})
+
+
+@app.get("/apple-touch-icon.png", include_in_schema=False)
+@app.get("/apple-touch-icon-precomposed.png", include_in_schema=False)
+def apple_touch_icon():
+    return FileResponse(ICONS / "apple-touch-icon.png", headers={"Cache-Control": "public, max-age=604800"})
+
+
+@app.get("/site.webmanifest", include_in_schema=False)
+def manifest():
+    return JSONResponse({
+        "name": "Otevřená Pětka", "short_name": "Pětka", "lang": "cs", "start_url": "/",
+        "display": "browser", "background_color": "#ffffff", "theme_color": "#de091c",
+        "icons": [{"src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                  {"src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png"}],
+    }, media_type="application/manifest+json")
+
+
+@app.get("/robots.txt", include_in_schema=False)
+def robots():
+    # The API and MCP are for programs; the bulk files are linked from /data
+    return PlainTextResponse(f"User-agent: *\nDisallow: /api/\nDisallow: /mcp\n\nSitemap: {PUBLIC_URL}/sitemap.xml\n")
+
+
+@app.get("/sitemap.xml", include_in_schema=False)
+def sitemap():
+    pages = ["/", "/data", "/usneseni", "/usneseni/jednani", "/usneseni/clenove", "/usneseni/metodika"]
+    pages += [f"/{s.slug}" for s in SECTIONS if s.status == "planned"]
+    urls = [(u, None) for u in pages]
+    with db.pool().connection() as conn:
+        urls += [(f"/usneseni/jednani/{r['id']}", r["date"]) for r in conn.execute(
+            "SELECT id, date FROM meetings ORDER BY date DESC")]
+        urls += [(f"/usneseni/{r['uid']}", r["date"]) for r in conn.execute(
+            "SELECT uid, date FROM resolutions ORDER BY date DESC, seq DESC")]
+        urls += [(f"/usneseni/clenove/{r['id']}", None) for r in conn.execute("SELECT id FROM members ORDER BY id")]
+    body = "".join(f"<url><loc>{escape(PUBLIC_URL + u)}</loc>{f'<lastmod>{d.isoformat()}</lastmod>' if d else ''}</url>"
+                   for u, d in urls)
+    return Response('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                    + body + "</urlset>", media_type="application/xml")
 
 
 @app.get("/healthz", include_in_schema=False)

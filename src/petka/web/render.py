@@ -1,5 +1,6 @@
 """Shared Jinja environment for the portal and its sections."""
 
+import os
 from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
@@ -12,7 +13,7 @@ HERE = Path(__file__).parent
 SITE_NAME = "Otevřená Pětka"
 
 tpl = Jinja2Templates(directory=HERE / "templates")
-tpl.env.globals.update(STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
+tpl.env.globals.update(PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
                        CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 

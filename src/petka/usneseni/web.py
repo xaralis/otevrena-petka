@@ -4,7 +4,7 @@
 import datetime as dt
 
 from fastapi import APIRouter, HTTPException, Query, Request
-from fastapi.responses import RedirectResponse, FileResponse, HTMLResponse, PlainTextResponse
+from fastapi.responses import Response, RedirectResponse, FileResponse, HTMLResponse, PlainTextResponse
 
 from ..web.render import tpl
 from . import embed, queries, search, store
@@ -85,6 +85,29 @@ def member_page(request: Request, mid: str, odlisne: bool = False):
 
 
 # --- data: page, files (static routes before /{uid}) --------------------------------------
+
+@pages.get("/feed.xml", include_in_schema=False)
+def feed():
+    """Atom feed of the newest resolutions (rejected proposals left out), for feed readers."""
+    import os
+    from xml.sax.saxutils import escape
+    base = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+    hits, _ = search.search("", filters=search.Filters(status="usneseni"), limit=50)
+    rows = [h.row for h in hits]
+    body_name = {"zmo": "zastupitelstvo", "rmo": "rada"}
+    entries = "".join(
+        f"""<entry><id>{base}/usneseni/{r['uid']}</id><title>{escape(r['number'] + ': ' + (r['title'] or ''))}</title>
+<link href="{base}/usneseni/{r['uid']}"/><updated>{r['date'].isoformat()}T00:00:00Z</updated>
+<category term="{r['body']}" label="{body_name.get(r['body'], r['body'])}"/>
+<summary>{escape(r['summary'] or '')}</summary></entry>""" for r in rows)
+    updated = rows[0]["date"].isoformat() if rows else "2018-01-01"
+    xml = f"""<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="cs"><id>{base}/usneseni/feed.xml</id>
+<title>Usnesení MO Pardubice V – Otevřená Pětka</title><link rel="self" href="{base}/usneseni/feed.xml"/>
+<link href="{base}/usneseni"/><updated>{updated}T00:00:00Z</updated><author><name>Otevřená Pětka</name></author>
+{entries}</feed>"""
+    return Response(xml, media_type="application/atom+xml")
+
 
 @pages.get("/metodika", response_class=HTMLResponse)
 def method(request: Request):
