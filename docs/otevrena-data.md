@@ -99,6 +99,15 @@ revokuje, `meni` = mění / doplňuje), `target_number`, `target_uid` (je-li v d
 `scope` (`cele`/`cast`), `detail` (které body), **`effective`** (rušící usnesení prošlo –
 neúspěšný návrh na revokaci nic neruší).
 
+**places** – místa, kterých se usnesení týká, s geometrií: `uid`, `number`, `kind`
+(`parcel` = pozemek jako polygon, `address` = adresní místo jako bod, `street` = ulice jako
+linie), `label` (úřední název podle RÚIAN, např. „p. p. č. 2515/14, k. ú. Pardubice“),
+`source_text` (jak místo uvádí zápis), `lon`/`lat` (těžiště, WGS84), `geometry` (GeoJSON).
+Stejná data jsou jako `places.geojson`. Polohy pocházejí z RÚIAN (ČÚZK) v dnešní podobě:
+pozemek, který se od usnesení rozdělil nebo zanikl, chybí. Obecná místa („Dukla“, „sídliště“)
+nejsou zahrnuta. Kdyby úřad u usnesení uváděl kódy RÚIAN (parcela, adresní místo, ulice),
+odpadlo by odhadování.
+
 ## Mapování
 
 | tento formát | Popolo | Praha ZHMP (CSV) |
@@ -109,6 +118,7 @@ neúspěšný návrh na revokaci nic neruší).
 | ballots | Vote (`voter_id`, `option`) | `osobaJmeno` (řádek na hlasujícího) |
 | members | Person + Membership (`organization_id`, `on_behalf_of_id` = kandidátka) | – |
 | relations | (Motion `requirement` / vlastní vazba) | – |
+| places | – (GeoJSON Feature, kódy RÚIAN) | – |
 
 ## Doporučení pro úřad (ÚMO Pardubice V)
 
