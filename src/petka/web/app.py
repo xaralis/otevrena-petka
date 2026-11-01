@@ -95,7 +95,8 @@ def _error_response(request: Request, status: int, detail=None):
     if request.url.path.startswith(("/api/", "/mcp")):
         return JSONResponse({"detail": detail or _ERRORS.get(status, ("Chyba",))[0]}, status_code=status)
     title, text = _ERRORS.get(status, ("Chyba", "Požadavek se nepodařilo zpracovat."))
-    return tpl.TemplateResponse(request, "error.html", {"title": title, "text": text}, status_code=status)
+    return tpl.TemplateResponse(request, "error.html", {"title": title, "text": text, "error_page": True},
+                                status_code=status)
 
 
 @app.exception_handler(StarletteHTTPException)
@@ -168,7 +169,7 @@ def robots():
 
 @app.get("/sitemap.xml", include_in_schema=False)
 def sitemap():
-    pages = ["/", "/data", "/usneseni", "/usneseni/jednani", "/usneseni/clenove", "/usneseni/metodika"]
+    pages = ["/", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/clenove/ucast", "/usneseni/jednani", "/usneseni/clenove", "/usneseni/metodika"]
     pages += [f"/{s.slug}" for s in SECTIONS if s.status == "planned"]
     urls = [(u, None) for u in pages]
     with db.pool().connection() as conn:
@@ -181,6 +182,22 @@ def sitemap():
                    for u, d in urls)
     return Response('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                     + body + "</urlset>", media_type="application/xml")
+
+
+@app.get("/.well-known/security.txt", include_in_schema=False)
+def security_txt():
+    return PlainTextResponse("Contact: mailto:filip.varecha@pirati.cz\nExpires: 2027-11-01T00:00:00Z\n"
+                             f"Preferred-Languages: cs, en\nCanonical: {PUBLIC_URL}/.well-known/security.txt\n")
+
+
+@app.get("/soukromi", response_class=HTMLResponse, include_in_schema=False)
+def privacy(request: Request):
+    return tpl.TemplateResponse(request, "privacy.html", {})
+
+
+@app.get("/pristupnost", response_class=HTMLResponse, include_in_schema=False)
+def accessibility(request: Request):
+    return tpl.TemplateResponse(request, "accessibility.html", {})
 
 
 @app.get("/healthz", include_in_schema=False)

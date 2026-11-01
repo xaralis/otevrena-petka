@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% block title %}Prohlášení o přístupnosti{% endblock %}
+{% block description %}Prohlášení o přístupnosti portálu Otevřená Pětka podle normy EN 301 549 a WCAG 2.1 na úrovni AA.{% endblock %}
+{% block hero %}{{ hero('Prohlášení o přístupnosti', [], 'Web má být použitelný pro každého, včetně lidí se zdravotním postižením.') }}{% endblock %}
+{% block main %}
+<div class="prose">
+<p>Otevřená Pětka usiluje o to, aby portál {{ PUBLIC_URL|replace('https://', '') }} byl přístupný podle zákona č. 99/2019 Sb., o přístupnosti internetových stránek a mobilních aplikací, a harmonizované normy EN 301 549, která odkazuje na WCAG 2.1 na úrovni AA. Portál neprovozuje povinný subjekt podle tohoto zákona; prohlášení vydáváme dobrovolně, protože portál má jednou převzít statutární město Pardubice.</p>
+
+<h2>Stav souladu</h2>
+<p>Portál je <b>částečně v souladu</b> s normou EN 301 549 kvůli výjimkám uvedeným níže.</p>
+
+<h2>Nepřístupný obsah</h2>
+<ul>
+<li><b>Původní dokumenty města.</b> Odkazované PDF zápisy vydává město a jejich přístupnost neovlivníme. Jejich obsah (znění usnesení, hlasování, prezence) je na portálu dostupný jako přístupný text.</li>
+<li><b>Grafy hlasování a účasti.</b> Políčka zastupují místa v zastupitelstvu nebo jednotlivá jednání. Každý graf má textovou alternativu a stejné údaje jsou vždy vypsané i slovy a čísly.</li>
+<li><b>Strojová shrnutí.</b> Názvy a shrnutí vytváří jazykový model. Snažíme se o srozumitelnost, ale mohou obsahovat nepřesnosti; závazné je vždy znění usnesení.</li>
+</ul>
+
+<h2>Vypracování prohlášení</h2>
+<p>Prohlášení bylo vypracováno 1. 11. 2026 na základě vlastního posouzení:</p>
+<ul>
+<li>automatické testy (Lighthouse a axe) na všech typech stránek, bez nalezených chyb;</li>
+<li>ruční kontrola ovládání klávesnicí, viditelnosti fokusu a pořadí procházení;</li>
+<li>zobrazení v šířce 320 px (odpovídá zvětšení na 400 %) bez vodorovného posouvání;</li>
+<li>kontrast textu nejméně 4,5 : 1, jazyk stránky, nadpisy a popisky formulářů.</li>
+</ul>
+<p>Prohlášení bylo naposledy přezkoumáno 1. 11. 2026.</p>
+
+<h2>Zpětná vazba a kontakt</h2>
+<p>Pokud narazíte na něco, co vám brání portál používat, nebo potřebujete obsah v jiné podobě, napište na <a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a>. Odpovíme do 30 dnů.</p>
+</div>
+{% endblock %}

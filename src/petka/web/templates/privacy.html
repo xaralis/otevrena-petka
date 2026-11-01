@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% block title %}Ochrana osobních údajů{% endblock %}
+{% block description %}Jak Otevřená Pětka zachází s osobními údaji: bez cookies, bez analytiky, bez logování IP adres a hledaných dotazů.{% endblock %}
+{% block hero %}{{ hero('Ochrana osobních údajů', [], 'Žádné cookies, žádná analytika a žádné záznamy o tom, kdo co hledal.') }}{% endblock %}
+{% block main %}
+<div class="prose">
+<h2>Kdo údaje zpracovává</h2>
+<p>Správcem je Ing. Filip Vařecha, autor a provozovatel portálu (nejde o web úřadu). Kontakt: <a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a>.</p>
+
+<h2>Návštěvníci webu, API a MCP</h2>
+<ul>
+<li>Nepoužíváme cookies ani jiné ukládání v prohlížeči a neměříme návštěvnost.</li>
+<li>Neukládáme IP adresy ani to, co hledáte. Server nevede přístupový log.</li>
+<li>Při překročení limitu počtu dotazů se IP adresa krátce drží jen v paměti serveru, aby šlo nápor odrazit. Nikam se nezapisuje.</li>
+<li>Když se na serveru něco pokazí, zaznamenáme adresu stránky a technický popis chyby, bez IP adresy. Záznamy jsou na našem serveru a mažou se po 90 dnech.</li>
+<li>Web nenačítá nic od třetích stran: písma, ikony i vyhledávání podle smyslu běží na našem serveru v Česku. Dotazy se nikam dál neposílají.</li>
+</ul>
+
+<h2>Údaje v datech o usneseních</h2>
+<p>Portál zpracovává údaje, které zveřejnilo město: jména členů zastupitelstva a rady městského obvodu, jejich kandidátní listiny, účast na jednáních a hlasování. Jde o výkon veřejné funkce a zpřístupňujeme je na základě oprávněného zájmu na informování veřejnosti o činnosti samosprávy (čl. 6 odst. 1 písm. f GDPR).</p>
+<p>Texty usnesení přebíráme tak, jak je zveřejnilo město, které jména soukromých osob anonymizuje. Pokud v textu najdete údaj, který by tam být neměl, napište nám a skryjeme ho.</p>
+<p>Názvy, shrnutí a klíčová slova vytváří jazykový model Claude (Anthropic) z veřejných dokumentů města. Model dostává jen tyto dokumenty, nikdy nic od návštěvníků.</p>
+
+<h2>Vaše práva</h2>
+<p>Máte právo na přístup ke svým údajům, jejich opravu nebo výmaz, na omezení zpracování a právo vznést námitku. Ozvěte se na <a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a>; odpovíme do 30 dnů. Stížnost můžete podat u <a href="https://uoou.gov.cz/">Úřadu pro ochranu osobních údajů</a>.</p>
+<p class="note">Platné od 1. 11. 2026.</p>
+</div>
+{% endblock %}

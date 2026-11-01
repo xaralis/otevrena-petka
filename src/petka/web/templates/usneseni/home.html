@@ -6,7 +6,7 @@
     <h1>{{ SECTION['usneseni'].question }}</h1>
     <form class="search" method="get" action="/usneseni" role="search">
       <label for="q" class="sr">Hledat v usneseních</label>
-      <input id="q" type="search" name="q" value="{{ q }}" placeholder="Napište, co hledáte" autocomplete="off" {% if not q %}autofocus{% endif %}>
+      <input id="q" type="search" name="q" value="{{ q }}" placeholder="Napište, co hledáte" autocomplete="off">
       <button type="submit">Hledat</button>
       {% for k, val in f.items() if val and not (k == 'stav' and val == 'usneseni') %}<input type="hidden" name="{{ k }}" value="{{ val }}">{% endfor %}
       {% if rezim != 'hybrid' %}<input type="hidden" name="rezim" value="{{ rezim }}">{% endif %}

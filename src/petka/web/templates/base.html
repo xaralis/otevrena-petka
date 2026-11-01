@@ -8,7 +8,7 @@
 <meta name="description" content="{{ desc|trim }}">
 <link rel="canonical" href="{{ PUBLIC_URL }}{{ request.url.path }}">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/static/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/static/icons/favicon.svg?v=1" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="Nová usnesení MO Pardubice V" href="/usneseni/feed.xml">
@@ -23,20 +23,20 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#de091c">
-<link rel="preload" href="/static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/static/style.css?v=18">
+<link rel="preload" href="/static/fonts/bricolage-latin.woff2?v=1" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/style.css?v=22">
 </head>
 {% set p = request.url.path %}
-{% set in_usneseni = p.startswith('/usneseni') %}
+{% set in_usneseni = p.startswith('/usneseni') and not error_page %}
 <body class="{{ 'in-section' if in_usneseni }}">
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="top">
   <div class="wrap top-inner">
-    <a class="brand" href="/" aria-label="{{ SITE_NAME }} – úvod">Otevřená <b>Pětka</b></a>
+    <a class="brand" href="/" aria-label="{{ SITE_NAME }} – úvod"><img src="/static/icons/brand-inv.svg?v=1" alt="" width="30" height="30"><span>Otevřená <b>Pětka</b></span></a>
     <a class="util-m" href="/data">Data a API</a>
     <nav class="portal-nav" aria-label="Sekce portálu">
       {% for s in SECTIONS %}
-      <a href="/{{ s.slug }}" class="{{ 'soon' if s.status == 'planned' }}" {% if p.startswith('/' ~ s.slug) %}aria-current="page"{% endif %}>{{ s.nav }}{% if s.status == 'planned' %}<span class="sr"> (ve výstavbě)</span>{% endif %}</a>
+      <a href="/{{ s.slug }}" class="{{ 'soon' if s.status == 'planned' }}" {% if p.startswith('/' ~ s.slug) and not error_page %}aria-current="page"{% endif %}>{{ s.nav }}{% if s.status == 'planned' %}<span class="sr"> (ve výstavbě)</span>{% endif %}</a>
       {% endfor %}
       <a href="/data" class="util" {% if p == '/data' %}aria-current="page"{% endif %}>Data a API</a>
     </nav>
@@ -58,9 +58,10 @@
 <main id="obsah" class="wrap">{% block main %}{% endblock %}</main>
 <footer>
   <div class="wrap foot">
-    <p class="foot-brand">Otevřená <b>Pětka</b></p>
+    <p class="foot-brand"><img src="/static/icons/favicon.svg?v=1" alt="" width="28" height="28"><span>Otevřená <b>Pětka</b></span></p>
     <p>Projekt Filipa Vařechy, starosty městského obvodu Pardubice V, s cílem předat portál do správy statutárního města Pardubice. Nejde o oficiální web města. Závazné jsou vždy původní dokumenty, na které odkazujeme; názvy a shrnutí jsou odvozené.</p>
     <p>Data si můžete stáhnout pod licencí CC BY 4.0 v části <a href="/data">Data a API</a>, AI asistenti se na ně mohou ptát <a href="/data#mcp">přes MCP</a> a zdrojový kód je na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>. Chybu v datech nebo na webu nahlásíte <a href="https://github.com/xaralis/otevrena-petka/issues/new">tamtéž</a>.</p>
+    <p class="foot-links"><a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a> <a href="/pristupnost">Prohlášení o přístupnosti</a> <a href="/soukromi">Ochrana osobních údajů</a></p>
   </div>
 </footer>
 </body>

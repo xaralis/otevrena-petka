@@ -127,6 +127,42 @@ def member(mid: str) -> dict | None:
         return m
 
 
+def attendance(term: str) -> list[dict]:
+    """Attendance per member and body in one term, best first. Every meeting lists each
+    member as present, excused or absent, so the share counts only meetings held while
+    the person held the seat (a substitute starts from their first meeting)."""
+    with db.pool().connection() as conn:
+        return conn.execute(
+            """SELECT m.id, m.name, mt.body, s.list,
+                 count(*) FILTER (WHERE m.id = ANY(mt.present)) AS present,
+                 count(*) FILTER (WHERE m.id = ANY(mt.excused)) AS excused,
+                 count(*) FILTER (WHERE m.id = ANY(mt.absent)) AS absent,
+                 count(*) AS total
+               FROM meetings mt JOIN members m ON m.id = ANY(mt.present || mt.excused || mt.absent)
+               LEFT JOIN memberships s ON s.member_id = m.id AND s.term = mt.term
+               WHERE mt.term = %s
+               GROUP BY m.id, m.name, mt.body, s.list
+               ORDER BY mt.body DESC, count(*) FILTER (WHERE m.id = ANY(mt.present))::float / count(*) DESC,
+                        count(*) DESC, m.last_name""", (term,)).fetchall()
+
+
+def terms() -> list[str]:
+    with db.pool().connection() as conn:
+        return [r["term"] for r in conn.execute(
+            "SELECT DISTINCT term FROM meetings ORDER BY term DESC")]
+
+
+def member_meetings(mid: str) -> list[dict]:
+    """Each meeting of the member's bodies while they held the seat, oldest first."""
+    with db.pool().connection() as conn:
+        return conn.execute(
+            """SELECT id, body, term, date, number,
+                 CASE WHEN %s = ANY(present) THEN 'present' WHEN %s = ANY(excused) THEN 'excused'
+                      ELSE 'absent' END AS state
+               FROM meetings WHERE %s = ANY(present || excused || absent)
+               ORDER BY date, id""", (mid, mid, mid)).fetchall()
+
+
 def member_votes(mid: str, *, dissent_only: bool = False, choice: str | None = None,
                  procedural: bool = True, limit: int = 50, offset: int = 0) -> list[dict]:
     """A member's ballots with the resolution; dissent = voted differently than the outcome."""
@@ -134,7 +170,7 @@ def member_votes(mid: str, *, dissent_only: bool = False, choice: str | None = N
         return conn.execute(
             """SELECT v.id AS vote_id, mt.date, mt.body, v.part, v.subject, v.outcome,
                  v.n_pro, v.n_proti, v.n_zdrzel, b.choice, b.provenance,
-                 r.uid, r.number, r.title, r.status
+                 r.uid, r.number, r.title, r.status, count(*) OVER () AS total
                FROM ballots b JOIN votes v ON v.id = b.vote_id JOIN meetings mt ON mt.id = v.meeting_id
                LEFT JOIN resolutions r ON r.uid = v.resolution_uid
                WHERE b.member_id = %s AND b.choice NOT IN ('omluven', 'nepritomen')

@@ -6,7 +6,7 @@
 <div class="detail">
   <div class="detail-main">
     <nav class="switch" aria-label="Filtr hlasování">
-      <a href="?odlisne=0" {% if not odlisne %}aria-current="page"{% endif %}>Všechna hlasování</a>
+      <a href="?" {% if not odlisne %}aria-current="page"{% endif %}>Všechna hlasování</a>
       <a href="?odlisne=1" {% if odlisne %}aria-current="page"{% endif %}>Kde hlasoval jinak, než to dopadlo</a>
     </nav>
     <p class="note">Hlas <span class="inferred">podtržený tečkami</span> je dopočítaný: zápis jmenuje jen ty, kdo hlasovali jinak než většina. Procedurální hlasování (program, ověřovatelé) nejsou uvedena.</p>
@@ -24,12 +24,26 @@
       {% else %}<tr><td colspan="4">Žádná hlasování.</td></tr>{% endfor %}
       </tbody>
     </table>
+    {% if pages > 1 %}
+    <nav class="pager" aria-label="Stránkování">
+      {% if strana > 1 %}<a href="?{{ 'odlisne=1&' if odlisne }}strana={{ strana-1 }}">Předchozí</a>{% else %}<span></span>{% endif %}
+      <span>{{ strana }} / {{ pages }} <small class="muted">({{ total }} hlasování)</small></span>
+      {% if strana < pages %}<a href="?{{ 'odlisne=1&' if odlisne }}strana={{ strana+1 }}">Další</a>{% else %}<span></span>{% endif %}
+    </nav>
+    {% endif %}
   </div>
   <aside class="detail-side">
     <h2 class="side-h">Mandáty</h2>
     <ul class="plain">{% for t in m.terms %}<li>{{ t.term }}: {{ t.list }}{% if t.in_rada %}, v radě{% endif %}{% if not t.elected %}, jako náhradník{% endif %}</li>{% endfor %}</ul>
     <h2 class="side-h">Účast na jednáních</h2>
-    <ul class="plain">{% for a in m.attendance %}<li>{{ 'Zastupitelstvo' if a.body == 'zmo' else 'Rada' }} {{ a.term }}: přítomen {{ a.present }}×{% if a.excused %}, omluven {{ a.excused }}×{% endif %}{% if a.absent %}, chyběl {{ a.absent }}×{% endif %}</li>{% endfor %}</ul>
+    {% for a in presence %}{% set n = a.meetings|length %}
+    <div class="att">
+      <p class="att-h">{{ 'Zastupitelstvo' if a.body == 'zmo' else 'Rada' }} {{ a.term|replace('-', '–') }}: <b>{{ (100 * a.present / n)|round|int }} %</b> <span class="muted">({{ a.present }} z {{ n }})</span></p>
+      <p class="att-tiles" role="img" aria-label="Přítomen {{ a.present }}, omluven {{ a.excused }}, chyběl {{ n - a.present - a.excused }} z {{ n }} jednání">{% for x in a.meetings %}<i class="a-{{ x.state }}" title="{{ x.date|d }}: {{ {'present':'přítomen','excused':'omluven','absent':'chyběl'}[x.state] }}"></i>{% endfor %}</p>
+    </div>
+    {% endfor %}
+    <p class="legend att-legend"><span><i class="a-present"></i>přítomen</span><span><i class="a-excused"></i>omluven</span><span><i class="a-absent"></i>chyběl</span></p>
+    {% if presence %}<p class="note"><a href="/usneseni/clenove/ucast?obdobi={{ presence[0].term }}">Srovnání se všemi zastupiteli</a></p>{% endif %}
   </aside>
 </div>
 {% endblock %}

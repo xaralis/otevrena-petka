@@ -3,6 +3,10 @@
 {% block title %}Zastupitelé městského obvodu Pardubice V{% endblock %}
 {% block hero %}{{ hero('Zastupitelé', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.', kind='section') }}{% endblock %}
 {% block main %}
+<nav class="switch" aria-label="Pohled">
+  <a href="/usneseni/clenove" aria-current="page">Podle stran</a>
+  <a href="/usneseni/clenove/ucast">Účast na jednáních</a>
+</nav>
 {% for term, clubs in terms.items() %}
 <section class="year">
   <h2 class="year-no">{{ term|replace('-', '–') }}</h2>

@@ -74,14 +74,41 @@ def members_page(request: Request):
     return tpl.TemplateResponse(request, "usneseni/members.html", {"terms": clubs})
 
 
+@pages.get("/clenove/ucast", response_class=HTMLResponse)
+def attendance_page(request: Request, obdobi: str = ""):
+    terms = [t for t in queries.terms() if t >= "2018"]
+    term = obdobi if obdobi in terms else terms[0]
+    rows = queries.attendance(term)
+    return tpl.TemplateResponse(request, "usneseni/attendance.html", {
+        "terms": terms, "term": term,
+        "zmo": [r for r in rows if r["body"] == "zmo"], "rmo": [r for r in rows if r["body"] == "rmo"],
+    })
+
+
+MEMBER_PER_PAGE = 50
+
+
 @pages.get("/clenove/{mid}", response_class=HTMLResponse)
-def member_page(request: Request, mid: str, odlisne: bool = False):
+def member_page(request: Request, mid: str, odlisne: bool = False, strana: str = "1"):
     m = queries.member(mid)
     if not m:
         raise HTTPException(404)
-    votes = queries.member_votes(mid, dissent_only=odlisne, procedural=False, limit=300)
-    return tpl.TemplateResponse(request, "usneseni/member.html",
-                                {"m": m, "votes": votes, "odlisne": odlisne})
+    strana = max(1, int(strana)) if strana.strip().isdigit() else 1
+    votes = queries.member_votes(mid, dissent_only=odlisne, procedural=False,
+                                 limit=MEMBER_PER_PAGE, offset=(strana - 1) * MEMBER_PER_PAGE)
+    total = votes[0]["total"] if votes else 0
+    meetings = queries.member_meetings(mid)
+    groups: dict[tuple, list] = {}
+    for mt in meetings:
+        groups.setdefault((mt["term"], mt["body"]), []).append(mt)
+    presence = [{"term": t, "body": b, "meetings": ms,
+                 "present": sum(1 for x in ms if x["state"] == "present"),
+                 "excused": sum(1 for x in ms if x["state"] == "excused")}
+                for (t, b), ms in sorted(groups.items(), key=lambda kv: (kv[0][0], kv[0][1] == "rmo"), reverse=True)]
+    return tpl.TemplateResponse(request, "usneseni/member.html", {
+        "m": m, "votes": votes, "odlisne": odlisne, "strana": strana,
+        "pages": -(-total // MEMBER_PER_PAGE), "total": total, "presence": presence,
+    })
 
 
 # --- data: page, files (static routes before /{uid}) --------------------------------------

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% block title %}Účast zastupitelů na jednáních {{ term|replace('-', '–') }}{% endblock %}
+{% block description %}Kolik jednání zastupitelstva a rady MO Pardubice V v období {{ term }} který zastupitel absolvoval.{% endblock %}
+{% block hero %}{{ hero('Zastupitelé', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.', kind='section') }}{% endblock %}
+{% macro ranking(rows, body) -%}
+<table class="ledger rank">
+  <caption class="sr">Účast {{ 'na zastupitelstvu' if body == 'zmo' else 'na radě' }}</caption>
+  <thead><tr><th scope="col">Kdo</th><th scope="col" class="num-cell">Účast</th><th scope="col" class="rank-bar-h"><span class="sr">Graf</span></th><th scope="col">Omluven / chyběl</th></tr></thead>
+  <tbody>
+  {% for r in rows %}{% set pct = (100 * r.present / r.total) if r.total else 0 %}
+  <tr>
+    <td><a href="/usneseni/clenove/{{ r.id }}">{{ r.name }}</a><br><small class="muted">{{ r.list or '' }}</small></td>
+    <td class="num-cell nowrap"><b>{{ pct|round|int }} %</b><br><small class="muted">{{ r.present }} z {{ r.total }}</small></td>
+    <td class="rank-bar-c" aria-hidden="true"><span class="rank-bar"><i style="width: {{ pct|round(1) }}%"></i></span></td>
+    <td class="nowrap">{% if r.excused %}omluven {{ r.excused }}×{% endif %}{% if r.excused and r.absent %}, {% endif %}{% if r.absent %}chyběl {{ r.absent }}×{% endif %}{% if not r.excused and not r.absent %}<span class="muted">nikdy</span>{% endif %}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{%- endmacro %}
+{% block main %}
+<nav class="switch" aria-label="Pohled">
+  <a href="/usneseni/clenove">Podle stran</a>
+  <a href="/usneseni/clenove/ucast" aria-current="page">Účast na jednáních</a>
+</nav>
+<p class="term-pick">Volební období: {% for t in terms %}{% if t == term %}<b aria-current="page">{{ t|replace('-', '–') }}</b>{% else %}<a href="?obdobi={{ t }}">{{ t|replace('-', '–') }}</a>{% endif %}{{ ' ' if not loop.last }}{% endfor %}</p>
+<p class="note">Podíl jednání, na kterých byl zastupitel podle prezence v zápisu přítomen, z jednání konaných v době jeho mandátu (náhradník se počítá od nástupu). Pozdní příchod nebo dřívější odchod se počítá jako účast.</p>
+<section class="year">
+  <h2 class="year-no small">Zastupitelstvo</h2>
+  {{ ranking(zmo, 'zmo') }}
+</section>
+{% if rmo %}<section class="year">
+  <h2 class="year-no small">Rada</h2>
+  {{ ranking(rmo, 'rmo') }}
+</section>{% endif %}
+{% endblock %}

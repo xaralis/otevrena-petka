@@ -80,8 +80,9 @@ def main() -> None:
         getattr(jobs, a.cmd)(*([a.ids] if a.cmd == "load" else []))
     elif a.cmd == "serve":
         import uvicorn
+        # no access log: it would keep visitors' IP addresses next to their searches
         uvicorn.run("petka.web.app:app", host=a.host, port=a.port, proxy_headers=True,
-                    forwarded_allow_ips="*")
+                    forwarded_allow_ips="*", access_log=False)
 
 
 if __name__ == "__main__":
