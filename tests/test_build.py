@@ -4,9 +4,9 @@ import datetime as dt
 
 import pytest
 
-from usneseni import members, pipeline, scrape, store
-from usneseni.parse import counts_in_raw, normalize_number, resolution_numbers_in_text
-from usneseni.text import clean_block, ws
+from petka.usneseni import members, pipeline, scrape, store
+from petka.usneseni.parse import counts_in_raw, normalize_number, resolution_numbers_in_text
+from petka.usneseni.text import clean_block, ws
 
 PARSED = [mid for mid in pipeline.meeting_ids() if store.text_path(mid).exists()
           and store.extracted(mid, "parse")]
@@ -89,7 +89,7 @@ def test_invariants(mid):
 
 
 def test_revocation_links():
-    from usneseni.relations import links
+    from petka.usneseni.relations import links
     assert links("Rada: 1. revokuje usnesení č. 39/2023 R, bod 6, 16 a 17 ze dne 15. 3. 2023", "rmo") == \
         [{"type": "rusi", "target": "39/2023 R", "scope": "cast", "detail": "bod 6, 16 a 17"}]
     assert links("Rada ruší své usnesení č. 229/2021 ze dne 25.11.2021", "rmo")[0]["target"] == "229/2021 R"

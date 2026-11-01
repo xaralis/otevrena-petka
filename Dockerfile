@@ -1,4 +1,4 @@
-# usneseni-mo5: web + API + MCP (`usneseni serve`) and the daily job (`usneseni update`).
+# Otevřená Pětka: portal web + API + MCP (`petka serve`) and section jobs (`usneseni update`).
 FROM python:3.13-slim
 
 RUN apt-get update \

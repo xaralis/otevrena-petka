@@ -1,0 +1,10 @@
+source_uid,source_number,type,target_number,target_uid,scope,detail,effective
+349-2018-r,349/2018 R,rusi,345/2018 R,345-2018-r,cele,,true
+18-2018-r,18/2018 R,rusi,356/2018 R,356-2018-r,cele,,true
+244-2021-r,244/2021 R,rusi,229/2021 R,229-2021-r,cele,,true
+250-2022-r,250/2022 R,rusi,248/2022 R,248-2022-r,cele,,true
+20-2023-r,20/2023 R,rusi,9/2022 R,9-2022-r,cele,,false
+28-2023-r,28/2023 R,rusi,4/2022 R,4-2022-r,cele,,true
+43-2023-r,43/2023 R,rusi,39/2023 R,39-2023-r,cast,"bod 6, 16 a 17",true
+138-2024-r,138/2024 R,rusi,31/2023 R,31-2023-r,cast,části 2. a 3.,true
+219-2025-r,219/2025 R,rusi,212/2025 R,212-2025-r,cele,,true

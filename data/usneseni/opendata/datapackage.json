@@ -1,0 +1,687 @@
+{
+ "name": "usneseni-mo-pardubice-v",
+ "title": "Usnesení a hlasování zastupitelstva a rady městského obvodu Pardubice V",
+ "version": "1.0",
+ "homepage": "https://usneseni.dev.varecha.work/otevrena-data",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0",
+   "path": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ ],
+ "sources": [
+  {
+   "title": "Statutární město Pardubice – zápisy z jednání ZMO a RMO Pardubice V",
+   "path": "https://pardubice.eu/obvod5"
+  }
+ ],
+ "description": "Usnesení, hlasování a hlasy členů vytěžené z PDF zápisů. Specifikace: https://github.com/xaralis/usneseni-mo5/blob/main/docs/otevrena-data.md",
+ "resources": [
+  {
+   "name": "meetings",
+   "title": "Jednání",
+   "description": "Jedno jednání zastupitelstva (ZMO) nebo rady (RMO).",
+   "path": "meetings.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "id",
+      "type": "string",
+      "description": "Identifikátor jednání: <orgán>-<datum>-<číslo jednání>, např. zmo-2025-12-17-20.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "body",
+      "type": "string",
+      "description": "Orgán: zmo = zastupitelstvo, rmo = rada.",
+      "constraints": {
+       "enum": [
+        "zmo",
+        "rmo"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "term",
+      "type": "string",
+      "description": "Volební období, např. 2022-2026.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "number",
+      "type": "integer",
+      "description": "Pořadové číslo jednání v rámci období.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "kind",
+      "type": "string",
+      "description": "Druh jednání.",
+      "constraints": {
+       "enum": [
+        "radne",
+        "mimoradne",
+        "ustavujici"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "date",
+      "type": "date",
+      "description": "Datum jednání.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "place",
+      "type": "string",
+      "description": "Místo konání."
+     },
+     {
+      "name": "status",
+      "type": "string",
+      "description": "ok = zpracování prošlo kontrolami; needs_review = čeká na ruční kontrolu.",
+      "constraints": {
+       "enum": [
+        "ok",
+        "needs_review"
+       ]
+      }
+     },
+     {
+      "name": "source_url",
+      "type": "string",
+      "description": "URL zdrojového PDF na pardubice.eu.",
+      "format": "uri",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "present",
+      "type": "string",
+      "description": "Přítomní členové (id oddělená středníkem)."
+     },
+     {
+      "name": "excused",
+      "type": "string",
+      "description": "Omluvení členové (id oddělená středníkem)."
+     },
+     {
+      "name": "absent",
+      "type": "string",
+      "description": "Neomluveně nepřítomní členové (id oddělená středníkem)."
+     }
+    ],
+    "primaryKey": [
+     "id"
+    ]
+   }
+  },
+  {
+   "name": "resolutions",
+   "title": "Usnesení",
+   "description": "Číslované usnesení. Číslo neznamená přijetí – rozhoduje `status`.",
+   "path": "resolutions.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "uid",
+      "type": "string",
+      "description": "Identifikátor odvozený z čísla: 154-2025-z.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "number",
+      "type": "string",
+      "description": "Číslo usnesení, jak ho uvádí zápis: 154/2025 Z (Z = zastupitelstvo, R = rada).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "meeting_id",
+      "type": "string",
+      "description": "Jednání (meetings.id).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "body",
+      "type": "string",
+      "description": "Orgán.",
+      "constraints": {
+       "enum": [
+        "zmo",
+        "rmo"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "date",
+      "type": "date",
+      "description": "Datum jednání.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "agenda_no",
+      "type": "string",
+      "description": "Číslo bodu programu."
+     },
+     {
+      "name": "agenda_title",
+      "type": "string",
+      "description": "Název bodu programu."
+     },
+     {
+      "name": "status",
+      "type": "string",
+      "description": "Výsledek: prijato; neprijato (dostalo číslo, ale neprošlo); castecne (část bodů prošla); neovereno (nelze určit ze zápisu).",
+      "constraints": {
+       "enum": [
+        "prijato",
+        "neprijato",
+        "castecne",
+        "neovereno"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "text",
+      "type": "string",
+      "description": "Doslovné znění usnesení ze zápisu.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "responsible",
+      "type": "string",
+      "description": "Zodpovídá (řádek Z:)."
+     },
+     {
+      "name": "deadline",
+      "type": "string",
+      "description": "Termín (řádek T:)."
+     },
+     {
+      "name": "verbs",
+      "type": "string",
+      "description": "Rozhodovací slovesa ve znění (schvaluje; bere na vědomí; …), oddělená středníkem."
+     },
+     {
+      "name": "title",
+      "type": "string",
+      "description": "ODVOZENÉ: krátký název."
+     },
+     {
+      "name": "summary",
+      "type": "string",
+      "description": "ODVOZENÉ: shrnutí v 1–3 větách."
+     },
+     {
+      "name": "keywords",
+      "type": "string",
+      "description": "ODVOZENÉ: klíčová slova oddělená středníkem."
+     },
+     {
+      "name": "topics",
+      "type": "string",
+      "description": "ODVOZENÉ: témata (id z číselníku témat) oddělená středníkem."
+     },
+     {
+      "name": "kind",
+      "type": "string",
+      "description": "ODVOZENÉ: druh rozhodnutí (id z číselníku druhů)."
+     },
+     {
+      "name": "places",
+      "type": "string",
+      "description": "ODVOZENÉ: místa a ulice zmíněná ve znění."
+     },
+     {
+      "name": "parcels",
+      "type": "string",
+      "description": "ODVOZENÉ: pozemky ve tvaru ze znění."
+     },
+     {
+      "name": "organizations",
+      "type": "string",
+      "description": "ODVOZENÉ: právnické osoby a organizace."
+     },
+     {
+      "name": "amounts",
+      "type": "string",
+      "description": "ODVOZENÉ: částky, jak jsou ve znění (nesčítat)."
+     }
+    ],
+    "primaryKey": [
+     "uid"
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "meeting_id"
+      ],
+      "reference": {
+       "resource": "meetings",
+       "fields": [
+        "id"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "votes",
+   "title": "Hlasování",
+   "description": "Každé hlasování v zápisu: o usnesení, o jeho části, procedurální i o nepřijatých návrzích bez čísla.",
+   "path": "votes.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "id",
+      "type": "string",
+      "description": "Identifikátor: <meeting_id>-<pořadí>.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "meeting_id",
+      "type": "string",
+      "description": "Jednání.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "seq",
+      "type": "integer",
+      "description": "Pořadí hlasování v zápisu.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "resolution_uid",
+      "type": "string",
+      "description": "Usnesení, ke kterému hlasování patří; prázdné u procedurálních a nepřijatých návrhů bez čísla."
+     },
+     {
+      "name": "part",
+      "type": "string",
+      "description": "Část usnesení, o které se hlasovalo zvlášť (bod 4, jedna osoba při volbě); prázdné = celé usnesení."
+     },
+     {
+      "name": "subject",
+      "type": "string",
+      "description": "Předmět hlasování bez čísla usnesení (program, protinávrh …)."
+     },
+     {
+      "name": "proposer",
+      "type": "string",
+      "description": "Navrhovatel u protinávrhů a nepřijatých návrhů, pokud ho zápis uvádí."
+     },
+     {
+      "name": "procedural",
+      "type": "boolean",
+      "description": "Procedurální hlasování (program, ověřovatelé …).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "n_pro",
+      "type": "integer",
+      "description": "Počet hlasů pro.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "n_proti",
+      "type": "integer",
+      "description": "Počet hlasů proti.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "n_zdrzel",
+      "type": "integer",
+      "description": "Počet zdržení.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "n_nehlasoval",
+      "type": "integer",
+      "description": "Počet nehlasujících; prázdné, pokud ho zápis neuvádí."
+     },
+     {
+      "name": "n_present",
+      "type": "integer",
+      "description": "Členů přítomných v okamžiku hlasování (podle prezence a příchodů/odchodů).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "quorum",
+      "type": "integer",
+      "description": "Potřebný počet hlasů pro: nadpoloviční většina všech členů orgánu (§ 87 a § 101 zákona o obcích).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "passed",
+      "type": "boolean",
+      "description": "n_pro >= quorum.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "outcome",
+      "type": "string",
+      "description": "Výsledek; prázdný, pokud zápis výslovně tvrdí opak toho, co vychází z počtů.",
+      "constraints": {
+       "enum": [
+        "prijato",
+        "neprijato"
+       ]
+      }
+     },
+     {
+      "name": "stated_outcome",
+      "type": "string",
+      "description": "Výsledek, pokud ho zápis výslovně uvádí.",
+      "constraints": {
+       "enum": [
+        "prijato",
+        "neprijato"
+       ]
+      }
+     },
+     {
+      "name": "ballots_status",
+      "type": "string",
+      "description": "Hlasy jednotlivých členů: complete = všechny známé; partial = jen jmenovaní; tallies_only = jen součty.",
+      "constraints": {
+       "enum": [
+        "complete",
+        "partial",
+        "tallies_only"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "raw",
+      "type": "string",
+      "description": "Hlasovací řádek doslova ze zápisu.",
+      "constraints": {
+       "required": true
+      }
+     }
+    ],
+    "primaryKey": [
+     "id"
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "meeting_id"
+      ],
+      "reference": {
+       "resource": "meetings",
+       "fields": [
+        "id"
+       ]
+      }
+     },
+     {
+      "fields": [
+       "resolution_uid"
+      ],
+      "reference": {
+       "resource": "resolutions",
+       "fields": [
+        "uid"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "ballots",
+   "title": "Hlasy členů",
+   "description": "Jak hlasoval jednotlivý člen. Zápisy MO V jmenují jen menšinu; ostatní hlasy jsou odvozené.",
+   "path": "ballots.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "vote_id",
+      "type": "string",
+      "description": "Hlasování (votes.id).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "member_id",
+      "type": "string",
+      "description": "Člen (members.id).",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "choice",
+      "type": "string",
+      "description": "Volba, nebo omluven/nepritomen.",
+      "constraints": {
+       "enum": [
+        "pro",
+        "proti",
+        "zdrzel",
+        "nehlasoval",
+        "omluven",
+        "nepritomen"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "provenance",
+      "type": "string",
+      "description": "named = jmenovitě v zápisu; inferred = odvozeno (přítomní minus jmenovaní, sedí-li součet); attendance = podle prezence.",
+      "constraints": {
+       "enum": [
+        "named",
+        "inferred",
+        "attendance"
+       ],
+       "required": true
+      }
+     }
+    ],
+    "primaryKey": [
+     "vote_id",
+     "member_id"
+    ],
+    "foreignKeys": [
+     {
+      "fields": [
+       "vote_id"
+      ],
+      "reference": {
+       "resource": "votes",
+       "fields": [
+        "id"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "relations",
+   "title": "Zrušení a změny usnesení",
+   "description": "Usnesení, které ruší (revokuje) nebo mění dřívější usnesení. Účinné jen, pokud rušící usnesení prošlo.",
+   "path": "relations.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "source_uid",
+      "type": "string",
+      "description": "Rušící / měnící usnesení.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "source_number",
+      "type": "string",
+      "description": "Jeho číslo."
+     },
+     {
+      "name": "type",
+      "type": "string",
+      "description": "rusi = ruší/revokuje; meni = mění/doplňuje.",
+      "constraints": {
+       "enum": [
+        "rusi",
+        "meni"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "target_number",
+      "type": "string",
+      "description": "Číslo rušeného usnesení.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "target_uid",
+      "type": "string",
+      "description": "Rušené usnesení, je-li v databázi (starší než 2018 nejsou)."
+     },
+     {
+      "name": "scope",
+      "type": "string",
+      "description": "cele / cast.",
+      "constraints": {
+       "enum": [
+        "cele",
+        "cast"
+       ],
+       "required": true
+      }
+     },
+     {
+      "name": "detail",
+      "type": "string",
+      "description": "Která část (body, části), jak ji uvádí znění."
+     },
+     {
+      "name": "effective",
+      "type": "boolean",
+      "description": "Rušící usnesení bylo přijato.",
+      "constraints": {
+       "required": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "members",
+   "title": "Členové",
+   "description": "Členové ZMO/RMO po volebních obdobích, s kandidátní listinou podle volby.cz.",
+   "path": "members.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "id",
+      "type": "string",
+      "description": "Identifikátor: jmeno-prijmeni bez diakritiky.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "name",
+      "type": "string",
+      "description": "Jméno s tituly.",
+      "constraints": {
+       "required": true
+      }
+     },
+     {
+      "name": "term",
+      "type": "string",
+      "description": "Volební období."
+     },
+     {
+      "name": "list",
+      "type": "string",
+      "description": "Kandidátní listina, za kterou byl zvolen."
+     },
+     {
+      "name": "elected",
+      "type": "boolean",
+      "description": "Zvolen ve volbách (jinak nastoupil jako náhradník)."
+     },
+     {
+      "name": "in_rada",
+      "type": "boolean",
+      "description": "Byl v daném období členem rady."
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% block title %}Data a API{% endblock %}
+{% block hero %}{{ hero('Data a API', [], 'Všechno, co na Otevřené Pětce vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.') }}{% endblock %}
+{% block main %}
+<div class="prose">
+<h2>Datové sady</h2>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Datová sada</th><th scope="col">Rozsah</th><th scope="col">Formáty</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/data/usneseni"><b>Usnesení a hlasování</b></a><br><span class="muted">jednání, usnesení, hlasování, hlasy členů, zrušení</span></td>
+        <td>{{ stats.first_date|d }} až {{ stats.last_date|d }}, {{ stats.meetings }} jednání</td>
+        <td><a href="/usneseni/data/datapackage.json">Data Package</a>, CSV, JSON, API, MCP</td></tr>
+    {% for s in SECTIONS if s.status == 'planned' %}
+    <tr class="planned"><td><a href="/{{ s.slug }}"><b>{{ s.title }}</b></a></td><td colspan="2" class="muted">připravujeme</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2 id="api">REST API</h2>
+<p>Dokumentace OpenAPI: <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, např. <code>/api/v1/usneseni/…</code>.</p>
+<pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;newest_first=true'</pre>
+
+<h2 id="mcp">MCP pro Claude a další asistenty</h2>
+<p>Jeden MCP server pro celý portál (streamable HTTP, bez přihlášení, jen čtení):</p>
+<pre>{{ base }}/mcp</pre>
+<p>V Claude.ai: Nastavení, Konektory, Přidat vlastní konektor a vložit adresu výše. V Claude Code:</p>
+<pre>claude mcp add --transport http otevrena-petka {{ base }}/mcp</pre>
+
+<h2>Pro úřad</h2>
+<p>Formát dat je popsaný tak, aby ho mohl úřad publikovat rovnou ze svých systémů: <a href="https://github.com/xaralis/otevrena-petka/blob/main/docs/otevrena-data.md">specifikace a doporučení</a>. V Česku pro usnesení a hlasování zatím neexistuje otevřená formální norma (OFN).</p>
+</div>
+{% endblock %}

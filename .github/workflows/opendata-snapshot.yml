@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 env:
-  BASE: https://usneseni.dev.varecha.work
+  BASE: https://opendata.mov.varecha.work
 jobs:
   snapshot:
     runs-on: ubuntu-latest
@@ -17,16 +17,16 @@ jobs:
       - name: Download extracted results and texts
         run: |
           set -euo pipefail
-          for f in $(curl -fsS "$BASE/opendata-extracted.txt"); do
-            curl -fsS -o "data/extracted/$f" "$BASE/opendata/extracted/$f"
+          for f in $(curl -fsS "$BASE/usneseni/data/extracted.txt"); do
+            curl -fsS -o "data/usneseni/extracted/$f" "$BASE/usneseni/data/extracted/$f"
           done
-          for f in $(curl -fsS "$BASE/opendata-texts.txt"); do
-            curl -fsS -o "data/text/$f" "$BASE/opendata/text/$f"
+          for f in $(curl -fsS "$BASE/usneseni/data/texts.txt"); do
+            curl -fsS -o "data/usneseni/text/$f" "$BASE/usneseni/data/text/$f"
           done
-          curl -fsS -o data/sources.json "$BASE/opendata/sources.json"
+          curl -fsS -o data/usneseni/sources.json "$BASE/usneseni/data/sources.json"
       - name: Commit
         run: |
-          git config user.name "usneseni-mo5 bot"
+          git config user.name "otevrena-petka bot"
           git config user.email "actions@users.noreply.github.com"
           git add data
           git diff --cached --quiet || git commit -m "data: snapshot from $BASE" && git push

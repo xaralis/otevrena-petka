@@ -1,25 +1,25 @@
 # Zpracování jednoho jednání subagentem
 
 Postup pro Claude Code subagenta, který místo API (`usneseni process`) zpracuje jedno
-jednání ZMO/RMO ručně. Pracovní adresář je kořen repa `usneseni-mo5`. Výsledek ukládá jen
+jednání ZMO/RMO ručně. Pracovní adresář je kořen repa `otevrena-petka`. Výsledek ukládá jen
 `uv run usneseni agent-accept-*`, které ho validuje stejně jako automatická cesta.
 
 Neměň kód, konfiguraci ani soubory jiných jednání. Nespouštěj git.
 
 ## 0. Text
 
-Pokud `data/text/<ID>.txt` neexistuje (sken bez textové vrstvy), přečti
-`data/pdf/<ID>.pdf` nástrojem Read a celý dokument přesně přepiš do `data/text/<ID>.txt`
+Pokud `data/usneseni/text/<ID>.txt` neexistuje (sken bez textové vrstvy), přečti
+`data/usneseni/pdf/<ID>.pdf` nástrojem Read a celý dokument přesně přepiš do `data/usneseni/text/<ID>.txt`
 (prostý text, pořadí, odstavce, číslování, všechna čísla a jména; nic neshrnuj).
 
 ## 1. Struktura (parse)
 
 Pokud `uv run usneseni status | grep <ID>` už ukazuje `parse=y`, krok 1 přeskoč.
 
-1. `uv run usneseni agent-prepare-parse <ID>` vytvoří ve `work/<ID>/`:
+1. `uv run usneseni agent-prepare-parse <ID>` vytvoří ve `work/usneseni/<ID>/`:
    `parse-system.md` (instrukce), `parse-schema.json` (JSON schéma), `numbered.txt` (text
    s čísly řádků).
-2. Přečti instrukce a celý `numbered.txt`. Vytvoř `work/<ID>/parse.json` – jeden JSON
+2. Přečti instrukce a celý `numbered.txt`. Vytvoř `work/usneseni/<ID>/parse.json` – jeden JSON
    objekt přesně podle schématu (všechna pole povinná, `null` kde schéma dovoluje).
 3. `uv run usneseni agent-accept-parse <ID>`. Při `REJECTED` oprav `parse.json` podle
    hlášení a spusť znovu. `[warn]` nevadí, `[error]` ano.
@@ -27,7 +27,7 @@ Pokud `uv run usneseni status | grep <ID>` už ukazuje `parse=y`, krok 1 přesko
 Chyby typu `vote-count-mismatch`, `resolution-missing`, `outcome-contradiction` téměř vždy
 znamenají chybu v `parse.json` – vrať se k textu. Jen když chyba je opravdu ve zdrojovém
 dokumentu (např. město uvádí počty, které nesedí, nebo číslované usnesení bez hlasování),
-vytvoř `data/overrides/<ID>.yaml`:
+vytvoř `data/usneseni/overrides/<ID>.yaml`:
 
 ```yaml
 accept: [resolution-no-vote]
@@ -41,7 +41,7 @@ neodvozuj z toho, že návrh má číslo usnesení.
 
 1. `uv run usneseni agent-prepare-enrich <ID>` vytvoří `enrich-system.md`,
    `enrich-schema.json`, `enrich-input.txt`.
-2. Podle instrukcí vytvoř `work/<ID>/enrich.json` (jeden objekt podle schématu, všechna
+2. Podle instrukcí vytvoř `work/usneseni/<ID>/enrich.json` (jeden objekt podle schématu, všechna
    usnesení z `enrich-input.txt`).
 3. `uv run usneseni agent-accept-enrich <ID>`; při `REJECTED` oprav a opakuj.
 

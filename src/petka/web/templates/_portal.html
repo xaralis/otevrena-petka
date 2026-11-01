@@ -1,0 +1,9 @@
+{% macro hero(title, crumbs=[], lead=None) -%}
+<section class="band">
+  <div class="wrap">
+    {% if crumbs %}<nav class="crumbs" aria-label="Drobečková navigace">{% for label, href in crumbs %}{% if href %}<a href="{{ href }}">{{ label }}</a>{% else %}<span>{{ label }}</span>{% endif %}{% if not loop.last %} <span aria-hidden="true">/</span> {% endif %}{% endfor %}</nav>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if lead %}<p class="band-lead">{{ lead }}</p>{% endif %}
+  </div>
+</section>
+{%- endmacro %}

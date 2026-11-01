@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "usneseni/_macros.html" import vote, row, legend %}{% from "_portal.html" import hero %}
+{% set kind = {'radne':'řádné','mimoradne':'mimořádné','ustavujici':'ustavující'}[m.kind] %}
+{% block title %}{{ m.number }}. jednání {{ 'zastupitelstva' if m.body == 'zmo' else 'rady' }} {{ m.date|d }}{% endblock %}
+{% block hero %}{{ hero(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), [('Jednání', '/usneseni/jednani'), (m.date|d, None)], m.place) }}{% endblock %}
+{% block main %}
+<div class="detail">
+  <div class="detail-main">
+    {% if m.status != 'ok' %}<p class="verdict v-castecne">Zpracování tohoto jednání čeká na kontrolu člověkem, údaje mohou být neúplné.</p>{% endif %}
+    {% set nrej = m.resolutions|selectattr('status', 'equalto', 'neprijato')|list|length %}
+    <h2>{{ m.resolutions|length - nrej }} usnesení{% if nrej %} a {{ nrej }} nepřijat{{ 'ý návrh' if nrej == 1 else 'é návrhy' if nrej < 5 else 'ých návrhů' }}{% endif %}</h2>
+    {% if nrej %}<p class="muted small">Nepřijaté návrhy jsou přeškrtnuté. Usneseními nejsou, zápis jim ale přidělil číslo.</p>{% endif %}
+    {{ legend() }}
+    <ol class="rows">{% for r in m.resolutions %}{{ row(r, False) }}{% endfor %}</ol>
+    {% if m.other_votes %}
+    <h2>Hlasování bez čísla usnesení</h2>
+    <p class="muted">Program, procedurální návrhy a návrhy, které neprošly ani nedostaly číslo, včetně protinávrhů.</p>
+    {% for v in m.other_votes %}
+      {{ vote(v, m.body) }}
+      {% if v.motion_text or v.proposer %}<div class="motion">{% if v.proposer %}<p class="muted small">Navrhl{{ 'a' if v.proposer.split()[-1].endswith('á') }} {{ v.proposer }}:</p>{% endif %}{% if v.motion_text %}<blockquote>{{ v.motion_text }}</blockquote>{% endif %}</div>{% endif %}
+    {% endfor %}
+    {% endif %}
+    {% if m.agenda|selectattr('discussion')|list %}
+    <h2>O čem se mluvilo</h2>
+    <p class="muted small">Shrnutí rozpravy ze zápisu, napsané jazykovým modelem.</p>
+    <dl class="agenda">{% for a in m.agenda if a.discussion %}<dt>{{ a.no }} {{ a.title }}</dt><dd>{{ a.discussion }}</dd>{% endfor %}</dl>
+    {% endif %}
+  </div>
+  <aside class="detail-side">
+    <h2 class="side-h">Přítomni</h2>
+    <p class="people">{% for x in m.present %}<a href="/usneseni/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
+    {% if m.excused %}<h2 class="side-h">Omluveni</h2><p class="people">{% for x in m.excused %}<a href="/usneseni/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+    {% if m.absent %}<h2 class="side-h">Chyběli</h2><p class="people">{% for x in m.absent %}<a href="/usneseni/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+    <p class="source"><a href="{{ m.source_url }}">Zápis na pardubice.eu</a><br><a href="/usneseni/pdf/{{ m.id }}.pdf">Archivní kopie zápisu</a></p>
+  </aside>
+</div>
+{% endblock %}

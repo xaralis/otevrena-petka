@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Otevřená data Pardubic V{% endblock %}
+{% block hero %}
+<section class="band band-portal">
+  <div class="wrap">
+    <h1>Co dělá městský obvod Pardubice&nbsp;V</h1>
+    <p class="band-lead">Rozhodnutí rady a zastupitelstva, peníze, smlouvy a úřední deska na jednom místě, dohledatelně a s odkazem na původní dokument.</p>
+    <form class="search" method="get" action="/usneseni" role="search">
+      <label for="q" class="sr">Hledat v usneseních</label>
+      <input id="q" type="search" name="q" placeholder="Hledat v rozhodnutích, třeba „parkování“" autocomplete="off">
+      <button type="submit">Hledat</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
+{% block main %}
+<section class="index" aria-label="Sekce">
+  {% for s in SECTIONS %}
+  <article class="index-row{{ ' planned' if s.status == 'planned' }}">
+    <h2><a href="/{{ s.slug }}">{{ s.question }}</a></h2>
+    <div class="index-meta">
+      <p class="index-name">{{ s.title }}</p>
+      {% if s.slug == 'usneseni' %}
+      <p>{{ stats.resolutions }} usnesení a {{ stats.rejected }} nepřijatých návrhů z {{ stats.meetings }} jednání, od {{ stats.first_date|d }}. Poslední jednání {{ stats.last_date|d }}.</p>
+      {% else %}
+      <p>Data budeme brát z: {% for label, url in s.sources %}<a href="{{ url }}">{{ label }}</a>{{ ', ' if not loop.last }}{% endfor %}.</p>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="latest">
+  <h2>Naposledy se jednalo</h2>
+  <ol class="cal">
+    {% for m in latest %}
+    <li class="cal-{{ m.body }}"><a href="/usneseni/jednani/{{ m.id }}">
+      <span class="cal-date">{{ m.date.day }}. {{ m.date.month }}.</span>
+      <span class="cal-what">{{ 'Zastupitelstvo' if m.body=='zmo' else 'Rada' }}{% if m.kind=='mimoradne' %}, mimořádné{% endif %}</span>
+      <span class="cal-n">{{ m.date.year }}: {{ m.n_resolutions }} usnesení{% if m.n_rejected %}, {{ m.n_rejected }} nepřijat{{ 'ý návrh' if m.n_rejected == 1 else 'é návrhy' if m.n_rejected < 5 else 'ých návrhů' }}{% endif %}</span>
+    </a></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="ask">
+  <h2>Ptejte se svými slovy</h2>
+  <p>Data jsou otevřená a dostupná i pro AI asistenty. Přidejte si do Claude konektor <code>https://opendata.mov.varecha.work/mcp</code> a zeptejte se třeba „jak hlasovala rada o parkování v Polabinách“. Odpověď dostanete s čísly usnesení a odkazy. <a href="/data#mcp">Jak na to</a></p>
+</section>
+{% endblock %}
