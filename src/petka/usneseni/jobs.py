@@ -165,8 +165,9 @@ def embed() -> None:
         conn.commit()  # end the read transaction: every batch below commits on its own
         todo = [r for r in rows if r["h"] != r["embed_hash"]]
         log.info("embed: %d of %d resolutions", len(todo), len(rows))
-        for i in range(0, len(todo), 16):
-            batch = todo[i:i + 16]
+        # small batches leave room for live search queries on the same server
+        for i in range(0, len(todo), 4):
+            batch = todo[i:i + 4]
             vecs = embedder.embed_documents([embedder.document_text(r) for r in batch])
             with conn.transaction():  # a real transaction (no outer one), committed per batch
                 for r, vec in zip(batch, vecs):

@@ -12,7 +12,7 @@
         <td>{{ stats.meetings }} jednání rady a zastupitelstva od {{ stats.first_date|d }}: usnesení, hlasování, hlasy členů, zrušení usnesení</td>
         <td>poslední jednání {{ stats.last_date|d }}, doplňuje se po zveřejnění zápisu</td>
         <td><a href="/usneseni/data/datapackage.json">Data Package</a>, <a href="/usneseni/data">CSV a JSON</a></td></tr>
-    <tr class="planned"><td colspan="4">Připravujeme: {% for s in SECTIONS if s.status == 'planned' %}<a href="/{{ s.slug }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}.</td></tr>
+    <tr class="planned"><td colspan="4"><span class="tape-label">ve výstavbě</span> {% for s in SECTIONS if s.status == 'planned' %}<a href="/{{ s.slug }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}.</td></tr>
   </tbody>
 </table>
 

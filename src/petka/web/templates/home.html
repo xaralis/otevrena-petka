@@ -13,11 +13,16 @@
       <button type="submit">Hledat</button>
     </form>
     <p class="band-lead small">Třeba <a href="/usneseni?q=parkov%C3%A1n%C3%AD+Polabiny">parkování v Polabinách</a>, <a href="/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/usneseni?q=prodej+pozemku">prodej pozemku</a>.</p>
-    <p class="independent">Nezávislý projekt nad veřejnými daty, nejde o web úřadu.</p>
   </div>
 </section>
 {% endblock %}
 {% block main %}
+<section class="about" aria-labelledby="about-h">
+  <h2 id="about-h">Kdo za tím stojí a proč</h2>
+  <p>Otevřenou Pětku připravil <b>Filip Vařecha, starosta městského obvodu Pardubice V</b>. Vzniká vedle oficiálního webu města, protože zavádění podobných funkcí na pardubice.eu trvá dlouho – tady je zkoušíme hned a ukazujeme, jak by mohly fungovat.</p>
+  <p>Cílem je <b>předat portál do správy statutárního města Pardubice</b>. Do té doby nejde o oficiální web města a závazné jsou vždy původní dokumenty, na které u každého údaje odkazujeme.</p>
+</section>
+
 <section class="index" aria-label="Co tu najdete">
   <article class="index-row live">
     <h2><a href="/usneseni">{{ U.question }}</a></h2>
@@ -35,7 +40,7 @@
   <article class="index-row planned">
     <h2><a href="/{{ s.slug }}">{{ s.question }}</a></h2>
     <div class="index-meta">
-      <p class="index-name">{{ s.title }} <span class="muted">připravujeme</span></p>
+      <p class="index-name">{{ s.title }} <span class="tape-label">ve výstavbě</span></p>
       {% if s.bridges %}<p>Už teď najdete v usneseních {% for label, url in s.bridges %}<a href="{{ url }}">{{ label }}</a>{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}
     </div>
   </article>

@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}{{ s.title }}{% endblock %}
-{% block hero %}{{ hero(s.question, [], s.title ~ ' – sekce, kterou připravujeme.') }}{% endblock %}
+{% block hero %}{{ hero(s.question, [], s.title ~ ' – ve výstavbě.') }}{% endblock %}
 {% block main %}
+<div class="tape" role="note"><p><b>Ve výstavbě.</b> Tahle část portálu ještě není hotová. Níže najdete, co už jde dohledat v usneseních a kde hledat mezitím.</p></div>
 <div class="planned-page">
   <div class="prose">
     {% if s.bridges %}

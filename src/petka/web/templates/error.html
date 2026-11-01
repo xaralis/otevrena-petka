@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% block title %}{{ title }}{% endblock %}
+{% block hero %}{{ hero(title) }}{% endblock %}
+{% block main %}
+<div class="prose">
+  <p class="lead-text">{{ text }}</p>
+  <form class="search search-plain" method="get" action="/usneseni" role="search">
+    <label for="q" class="sr">Hledat v usneseních</label>
+    <input id="q" type="search" name="q" placeholder="Hledat v usneseních" autocomplete="off">
+    <button type="submit">Hledat</button>
+  </form>
+  <p>Nebo pokračujte na <a href="/">úvodní stránku</a>, <a href="/usneseni/jednani">přehled jednání</a> či <a href="/data">data a API</a>.</p>
+</div>
+{% endblock %}

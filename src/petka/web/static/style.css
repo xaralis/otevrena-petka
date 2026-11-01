@@ -444,3 +444,49 @@ pre { white-space: pre-wrap; word-break: break-all; }
 }
 .ledger.catalog td a { color: var(--red-ink); text-decoration: underline; }
 .top .portal-nav a { margin: 0; }
+
+/* ---- round 3: header, construction, footer, about ---------------------------------------- */
+/* header without hairlines: the active page is a solid white bar, a section under
+   construction carries a striped bar like barrier tape */
+.top-inner { border-bottom: 0; padding-top: .9rem; }
+.brand { align-self: center; padding-bottom: .9rem; }
+.top .portal-nav a { border-bottom: 0; padding: .35rem 0 .75rem; position: relative; text-decoration: none; }
+.top .portal-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: .35rem; height: 3px; }
+.top .portal-nav a[aria-current]::after, .top .portal-nav a:hover::after { background: #fff; }
+.top .portal-nav a.soon::after { background: repeating-linear-gradient(135deg, #fff 0 4px, transparent 4px 8px); height: 4px; opacity: .9; }
+.top .portal-nav a.soon[aria-current]::after { background: repeating-linear-gradient(135deg, #fff 0 4px, transparent 4px 8px); opacity: 1; height: 5px; }
+.top .portal-nav a.util { border-left: 0; padding-left: 0; margin-left: 1.2rem; font-weight: 400; }
+.band { border-top: 1px solid rgba(255,255,255,.22); }
+.sub-band { border-top: 0; }
+
+/* barrier tape: the Czech red-and-white "zábrana", for parts under construction */
+.tape { margin: 0 0 2rem; padding: 12px; background: repeating-linear-gradient(135deg, var(--red) 0 16px, #fff 16px 32px); }
+.tape p { margin: 0; background: #fff; padding: .7rem 1rem; font-size: 1.02rem; }
+.tape-label { display: inline-block; font-size: .78rem; font-weight: 650; color: var(--ink); padding: .05rem .5rem .05rem 1.6rem;
+  background: linear-gradient(#fff, #fff) 1.2rem 0 / 100% 100% no-repeat,
+              repeating-linear-gradient(135deg, var(--red) 0 4px, #fff 4px 8px); border: 1px solid var(--red); border-radius: 2px; vertical-align: .15em; }
+
+/* who is behind it – right under the hero, plain and specific */
+.about { max-width: 72ch; margin: .4rem 0 2.6rem; padding-left: 1.1rem; border-left: 4px solid var(--ink); }
+.about h2 { font-size: 1.2rem; margin: 0 0 .4rem; }
+.about p { margin: 0 0 .5rem; color: var(--ink-2); }
+
+/* footer sits at the bottom of short pages, no white strip below it */
+html { background: var(--grey); }
+body { min-height: 100vh; display: flex; flex-direction: column; background: #fff; }
+body > main { flex: 1 0 auto; width: 100%; }
+body > footer { flex-shrink: 0; }
+
+.search-plain { margin: 1.2rem 0; max-width: 640px; }
+.search-plain input[type=search] { color: var(--ink); border-bottom-color: var(--ink); }
+.search-plain input[type=search]::placeholder { color: var(--muted); }
+.search-plain button { background: var(--ink); color: #fff; }
+
+@media (max-width: 600px) {
+  .top-inner { padding-top: .6rem; }
+  .top .portal-nav a.util { display: none; }
+}
+.top-inner { align-items: center; }
+.brand { padding: .35rem 0 .75rem; align-self: auto; }
+.band { border-top: 0; }
+@media (max-width: 600px) { .top-inner { align-items: stretch; } .brand { padding: .2rem 0; } }

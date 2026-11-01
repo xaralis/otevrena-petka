@@ -10,7 +10,8 @@ import os
 import re
 
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.staticfiles import StaticFiles
 
 from .. import db
@@ -24,7 +25,9 @@ LEGACY_HOSTS = {h.strip() for h in os.environ.get("LEGACY_HOSTS", "usneseni.dev.
 
 if os.environ.get("SENTRY_DSN"):
     import sentry_sdk
-    sentry_sdk.init(os.environ["SENTRY_DSN"], traces_sample_rate=0)
+    sentry_sdk.init(os.environ["SENTRY_DSN"], traces_sample_rate=0, send_default_pii=False,
+                    environment=os.environ.get("SENTRY_ENVIRONMENT", "production"),
+                    release=os.environ.get("APP_VERSION") or None)
 
 
 @contextlib.asynccontextmanager
@@ -68,6 +71,34 @@ async def legacy_redirect(request: Request, call_next):
         q = f"?{request.url.query}" if request.url.query else ""
         return RedirectResponse(PUBLIC_URL + path + q, status_code=301)
     return await call_next(request)
+
+
+# --- error pages: the portal's look for people, JSON for the API ------------------------
+
+_ERRORS = {
+    404: ("Tahle stránka tu není", "Odkaz je možná starý nebo v něm je překlep. Zkuste to, co hledáte, najít vyhledáváním."),
+    500: ("Něco se pokazilo u nás", "Chybu jsme zaznamenali a podíváme se na ni. Zkuste stránku za chvíli načíst znovu."),
+}
+
+
+def _error_response(request: Request, status: int, detail=None):
+    if request.url.path.startswith(("/api/", "/mcp")):
+        return JSONResponse({"detail": detail or _ERRORS.get(status, ("Chyba",))[0]}, status_code=status)
+    title, text = _ERRORS.get(status, ("Chyba", "Požadavek se nepodařilo zpracovat."))
+    return tpl.TemplateResponse(request, "error.html", {"title": title, "text": text}, status_code=status)
+
+
+@app.exception_handler(StarletteHTTPException)
+async def http_error(request: Request, exc: StarletteHTTPException):
+    if exc.status_code in _ERRORS or request.url.path.startswith(("/api/", "/mcp")):
+        return _error_response(request, exc.status_code, exc.detail)
+    return JSONResponse({"detail": exc.detail}, status_code=exc.status_code)
+
+
+@app.exception_handler(Exception)
+async def server_error(request: Request, exc: Exception):
+    # Starlette re-raises after this, so Sentry/GlitchTip still records the exception
+    return _error_response(request, 500)
 
 
 # --- portal pages -------------------------------------------------------------------------
