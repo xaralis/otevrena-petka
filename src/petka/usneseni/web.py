@@ -129,7 +129,8 @@ def extracted_index():
 def opendata_file(name: str):
     if "/" in name:
         raise HTTPException(404)
-    return _file(store.DATA / ("sources.json" if name == "sources.json" else f"opendata/{name}"))
+    top = {"sources.json", "embeddings.jsonl"}   # live in the section's data root, not opendata/
+    return _file(store.DATA / (name if name in top else f"opendata/{name}"))
 
 
 @pages.get("/pdf/{mid}.pdf")

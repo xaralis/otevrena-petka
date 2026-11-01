@@ -99,3 +99,9 @@ def test_revocation_links():
 def test_double_surname_across_terms():
     term = members.term_for(dt.date(2021, 3, 10))
     assert members.resolve_attendee("Anna Gudrun Vavrečková", term) == "anna-gudrun-vavreckova"
+
+
+def test_embedding_pack_roundtrip():
+    from petka.usneseni.jobs import _pack, _unpack
+    v = [0.5, -1.25, 3.0, 1e-3]
+    assert [round(x, 6) for x in _unpack(_pack(v))] == [round(x, 6) for x in v]

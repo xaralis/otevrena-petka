@@ -1,5 +1,7 @@
 """Batch jobs: load the database from the data directory, embed, export open data, update."""
 
+import array
+import base64
 import csv
 import io
 import json
@@ -117,6 +119,8 @@ def load(ids: list[str] | None = None) -> None:
     with db.connect() as conn:
         with conn.transaction():
             _members(conn)
+            n_emb = import_embeddings(conn)  # load_meeting picks them up from the cache
+        log.info("embeddings file: %d vectors", n_emb)
         if not ids or ids == pipeline.meeting_ids():
             conn.execute("DELETE FROM meetings WHERE NOT (id = ANY(%s))", (pipeline.meeting_ids(),))
         for mid in ids:
@@ -155,6 +159,64 @@ def _relations(conn) -> int:
 
 
 # --- embeddings ---------------------------------------------------------------------------
+#
+# Computing them is the only expensive part of a rebuild (≈17 min on CPU), so they are also
+# kept in the data directory: data/usneseni/embeddings.jsonl, one line per vector,
+# {"hash", "model", "v": base64 float32 little-endian}, keyed by the hash of the embedded
+# text. The database imports the file on load; `embed` rewrites it after every run.
+
+EMB_FILE = store.DATA / "embeddings.jsonl"
+_EMB_HASH_SQL = ("encode(sha256(convert_to(%s || r.uid || coalesce(r.title,'') || "
+                 "coalesce(r.summary,'') || r.text, 'UTF8')), 'hex')")
+
+
+def _pack(vec) -> str:
+    a = array.array("f", vec.to_list() if hasattr(vec, "to_list") else vec)
+    if sys.byteorder != "little":
+        a.byteswap()
+    return base64.b64encode(a.tobytes()).decode()
+
+
+def _unpack(s: str) -> list[float]:
+    a = array.array("f")
+    a.frombytes(base64.b64decode(s))
+    if sys.byteorder != "little":
+        a.byteswap()
+    return a.tolist()
+
+
+def import_embeddings(conn) -> int:
+    """Embedding cache from the data directory; returns the number of vectors read."""
+    if not EMB_FILE.exists():
+        return 0
+    rows = [(d["hash"], d["model"], _unpack(d["v"]))
+            for d in map(json.loads, filter(str.strip, EMB_FILE.read_text().splitlines()))]
+    with conn.cursor() as cur:
+        cur.executemany("""INSERT INTO embedding_cache (hash, model, embedding) VALUES (%s,%s,%s)
+                           ON CONFLICT (hash) DO NOTHING""", rows)
+    return len(rows)
+
+
+def apply_cached_embeddings(conn) -> int:
+    """Set embeddings on resolutions whose current text has a cached vector."""
+    cur = conn.execute(
+        f"""UPDATE resolutions r SET embedding = c.embedding, embed_hash = c.hash
+            FROM embedding_cache c
+            WHERE c.hash = {_EMB_HASH_SQL} AND r.embed_hash IS DISTINCT FROM c.hash""",
+        (embedder.MODEL,))
+    return cur.rowcount
+
+
+def save_embeddings(conn) -> int:
+    """Write the vectors of the current resolutions to the data directory (sorted, stable diff)."""
+    rows = conn.execute(
+        """SELECT DISTINCT c.hash, c.model, c.embedding FROM embedding_cache c
+           JOIN resolutions r ON r.embed_hash = c.hash ORDER BY c.hash""").fetchall()
+    store._write(EMB_FILE, "".join(
+        json.dumps({"hash": r["hash"], "model": r["model"], "v": _pack(r["embedding"])}) + "\n"
+        for r in rows))
+    return len(rows)
+
 
 def embed() -> None:
     with db.connect() as conn:
@@ -175,6 +237,8 @@ def embed() -> None:
                                     ON CONFLICT (hash) DO NOTHING""", (r["h"], embedder.MODEL, vec))
                     conn.execute("UPDATE resolutions SET embedding = %s, embed_hash = %s WHERE uid = %s",
                                  (vec, r["h"], r["uid"]))
+        log.info("embeddings file: %d vectors written", save_embeddings(conn))
+        conn.commit()
 
 
 # --- open data ----------------------------------------------------------------------------
@@ -262,6 +326,12 @@ def bootstrap() -> None:
         load(None)
     elif changed:
         load(sorted(changed & set(pipeline.meeting_ids())))
+    with db.connect() as conn:  # vectors from the image (git) or the volume, no recompute
+        import_embeddings(conn)
+        n = apply_cached_embeddings(conn)
+        conn.commit()
+    if n:
+        log.info("bootstrap: %d embeddings restored from the data directory", n)
     if empty or changed or not (OPENDATA / "datapackage.json").exists():
         export()
     log.info("bootstrap: %s", "full load" if empty else f"{len(changed)} changed")
