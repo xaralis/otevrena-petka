@@ -12,7 +12,7 @@
       {% if rezim != 'hybrid' %}<input type="hidden" name="rezim" value="{{ rezim }}">{% endif %}
       {% if razeni != 'datum' %}<input type="hidden" name="razeni" value="{{ razeni }}">{% endif %}
     </form>
-    {% if not q %}<p class="band-lead">Třeba <a href="/usneseni?q=parkov%C3%A1n%C3%AD+Jesni%C4%8D%C3%A1nky">parkování na Jesničánkách</a>, <a href="/usneseni?q=dotace+pro+spolky">dotace pro spolky</a>, <a href="/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/usneseni?q=prodej+pozemku">prodej pozemku</a>. <span class="hide-m">Hledá se podle slov i podle smyslu, v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích od roku {{ stats.first_date.year if stats.first_date else 2018 }}.</span></p>{% endif %}
+    {% if not q %}<p class="band-lead">Třeba <a href="/usneseni?q=parkov%C3%A1n%C3%AD+Jesni%C4%8D%C3%A1nky">parkování v Jesničánkách</a>, <a href="/usneseni?q=dotace+pro+spolky">dotace pro spolky</a>, <a href="/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/usneseni?q=prodej+pozemku">prodej pozemku</a>. <span class="hide-m">Hledá se podle slov i podle smyslu, v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích od roku {{ stats.first_date.year if stats.first_date else 2018 }}.</span></p>{% endif %}
   </div>
 </section>
 {% endblock %}
