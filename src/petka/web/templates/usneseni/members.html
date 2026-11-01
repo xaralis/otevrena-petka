@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
-{% block title %}Členové zastupitelstva a rady Pardubice V{% endblock %}
-{% block hero %}{{ hero('Členové', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.', kind='section') }}{% endblock %}
+{% block title %}Zastupitelé městského obvodu Pardubice V{% endblock %}
+{% block hero %}{{ hero('Zastupitelé', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.', kind='section') }}{% endblock %}
 {% block main %}
-{% for term, group in members|groupby('term')|reverse %}
+{% for term, clubs in terms.items() %}
 <section class="year">
   <h2 class="year-no">{{ term|replace('-', '–') }}</h2>
-  {% for lst, people in group|groupby('list') %}
-  <h3 class="party">{{ lst }} <span class="muted">{{ people|selectattr('elected')|list|length }} {{ 'mandát' if people|selectattr('elected')|list|length == 1 else ('mandáty' if people|selectattr('elected')|list|length < 5 else 'mandátů') }}</span></h3>
-  <ul class="people-list">
-    {% for m in people %}<li><a href="/usneseni/clenove/{{ m.id }}">{{ m.name }}</a>{% if m.in_rada %} <b>v radě</b>{% endif %}{% if not m.elected %} <span class="muted">nastoupil{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }} jako náhradník</span>{% endif %}</li>{% endfor %}
-  </ul>
+  {% for c in clubs %}
+  <div class="club">
+    <h3 class="club-name">{{ c.name }}
+      <span class="club-seats" aria-label="{{ c.seats }} {{ 'mandát' if c.seats == 1 else ('mandáty' if c.seats < 5 else 'mandátů') }}">{% for _ in range(c.seats) %}<i></i>{% endfor %}</span>
+      <span class="muted">{{ c.seats }} {{ 'mandát' if c.seats == 1 else ('mandáty' if c.seats < 5 else 'mandátů') }}</span></h3>
+    <ul class="club-people">
+      {% for m in c.people %}<li><a href="/usneseni/clenove/{{ m.id }}">{{ m.name }}</a>{% if m.in_rada %} <b>v radě</b>{% endif %}{% if not m.elected %} <span class="muted">nastoupil{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }} jako náhradník</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </div>
   {% endfor %}
 </section>
 {% endfor %}

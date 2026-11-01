@@ -2,8 +2,8 @@
     nehlasoval, then empty seats (absent/excused). A notch marks the votes needed to pass. -#}
 {% macro seats(c, body, size='s', label=True) -%}
 {% if c and c.parts and not c.whole %}
-<span class="part-tiles" role="img" aria-label="Hlasovalo se zvlášť o {{ c.parts }} částech, prošlo {{ c.parts_ok }}">{% for _ in range(c.parts_ok) %}<i class="t-pro"></i>{% endfor %}{% for _ in range(c.parts - c.parts_ok) %}<i class="t-proti"></i>{% endfor %}</span>
-<span class="seats-cap">po částech: {{ c.parts_ok }} z {{ c.parts }} prošl{{ 'a' if c.parts_ok == 1 else ('y' if 2 <= c.parts_ok <= 4 else 'o') }}</span>
+<span class="part-tiles" role="img" aria-label="Hlasovalo se zvlášť o {{ c.parts }} částech, prošlo {{ c.parts_ok }}" title="Kolečko = jedna část usnesení, o které se hlasovalo zvlášť">{% for _ in range(c.parts_ok) %}<i class="t-pro"></i>{% endfor %}{% for _ in range(c.parts - c.parts_ok) %}<i class="t-proti"></i>{% endfor %}</span>
+<span class="seats-cap">hlasováno zvlášť o {{ c.parts }} částech,<br>prošl{{ 'a' if c.parts_ok == 1 else ('y' if 2 <= c.parts_ok <= 4 else 'o') }} {{ c.parts_ok }}</span>
 {% elif c %}
 {% set total = 15 if body == 'zmo' else 5 %}
 {% set absent = [total - c.pro - c.proti - c.zdrzel - c.nehl, 0]|max %}

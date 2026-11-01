@@ -4,21 +4,27 @@
 {% block hero %}{{ hero('Data a API', [], 'Všechno, co tu vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.') }}{% endblock %}
 {% block main %}
 <div class="prose wide">
-<h2>Datové sady</h2>
+<h2 id="usneseni">Usnesení a hlasování</h2>
+<p>{{ stats.meetings }} jednání rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}, poslední {{ stats.last_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Doplňuje se po zveřejnění každého zápisu. Jak data vznikají a co z nich je odvozené, popisuje <a href="/usneseni/metodika">metodika</a>.</p>
 <table class="ledger catalog">
-  <thead><tr><th scope="col">Sada</th><th scope="col">Co obsahuje</th><th scope="col">Aktualizace</th><th scope="col">Stáhnout</th></tr></thead>
+  <thead><tr><th scope="col">Tabulka</th><th scope="col">Co obsahuje</th><th scope="col" class="num-cell">Řádků</th><th scope="col">Stáhnout</th></tr></thead>
   <tbody>
-    <tr><td><a href="/usneseni/data"><b>Usnesení a hlasování</b></a></td>
-        <td>{{ stats.meetings }} jednání rady a zastupitelstva od {{ stats.first_date|d }}: usnesení, hlasování, hlasy členů, zrušení usnesení</td>
-        <td>poslední jednání {{ stats.last_date|d }}, doplňuje se po zveřejnění zápisu</td>
-        <td><a href="/usneseni/data/datapackage.json">Data Package</a>, <a href="/usneseni/data">CSV a JSON</a></td></tr>
-    <tr class="planned"><td colspan="4"><span class="tape-label">ve výstavbě</span> {% for s in SECTIONS if s.status == 'planned' %}<a href="/{{ s.slug }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}.</td></tr>
+  {% for t in tables %}
+    <tr><td><b>{{ t.title }}</b></td><td>{{ t.description }}</td><td class="num-cell">{{ '{:,}'.format(t.rows).replace(',', ' ') if t.rows is not none else '' }}</td>
+        <td class="nowrap"><a href="/usneseni/data/{{ t.name }}.csv">CSV</a>, <a href="/usneseni/data/{{ t.name }}.json">JSON</a></td></tr>
+  {% endfor %}
   </tbody>
 </table>
+<p>Strojový popis všech tabulek: <a href="/usneseni/data/datapackage.json">datapackage.json</a> (Frictionless Data Package). Surové výstupy zpracování po jednotlivých jednáních: <a href="/usneseni/data/extracted.txt">seznam souborů</a>; historie dat je v <a href="https://github.com/xaralis/otevrena-petka/tree/main/data/usneseni">gitu</a>.</p>
+
+<h2>Ve výstavbě</h2>
+<p>{% for s in SECTIONS if s.status == 'planned' %}<a href="/{{ s.slug }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>
 
 <h2 id="api">REST API</h2>
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>
-<pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;newest_first=true'</pre>
+<pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
+curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
+curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'</pre>
 
 <h2 id="mcp">AI asistenti (MCP)</h2>
 <p>Jeden MCP server pro celý portál, bez přihlášení a jen pro čtení. V Claude.ai ho přidáte v Nastavení mezi konektory jako vlastní konektor s adresou:</p>

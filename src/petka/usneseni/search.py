@@ -14,6 +14,12 @@ from .text import fold
 
 RRF_K = 60
 SEMANTIC_DATE_TOP = 20
+# Newest-first keeps a by-meaning hit only if its cosine similarity is close to the best one.
+# bge-m3 always returns neighbours (unrelated resolutions sit ~0.35-0.45), so a fixed top-N
+# drags in noise for exact terms such as street names. The margin is tighter when words
+# matched too, because then the word hits already carry the answer.
+SEMANTIC_MARGIN = 0.08
+SEMANTIC_MARGIN_WITH_WORDS = 0.05
 
 
 @dataclass
@@ -145,12 +151,16 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                 if len(ft) >= 5:
                     break
         sem: list[str] = []
+        sim: dict[str, float] = {}
         if vec is not None:
-            sem = [r["uid"] for r in conn.execute(
-                f"""SELECT r.uid FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
-                    WHERE {where} AND r.embedding IS NOT NULL
-                    ORDER BY r.embedding <=> %s::vector LIMIT %s""",
-                params + [vec, pool_size])]
+            for r in conn.execute(
+                    f"""SELECT r.uid, 1 - (r.embedding <=> %s::vector) AS sim
+                        FROM resolutions r JOIN meetings m ON m.id = r.meeting_id
+                        WHERE {where} AND r.embedding IS NOT NULL
+                        ORDER BY r.embedding <=> %s::vector LIMIT %s""",
+                    params + [vec, vec, pool_size]):
+                sem.append(r["uid"])
+                sim[r["uid"]] = r["sim"]
         scores: dict[str, Hit] = {}
         for rank, uid in enumerate(ft, 1):
             h = scores.setdefault(uid, Hit(uid, 0))
@@ -164,7 +174,9 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
         if newest_first and ranked:
             # by date, only what clearly matches: every word match plus the closest by meaning
             # (the vector side always returns neighbours, relevant or not)
-            ranked = [h for h in ranked if h.fulltext_rank or (h.semantic_rank or 999) <= SEMANTIC_DATE_TOP]
+            floor = (max(sim.values()) - (SEMANTIC_MARGIN_WITH_WORDS if ft else SEMANTIC_MARGIN)) if sim else 1
+            ranked = [h for h in ranked if h.fulltext_rank or (
+                (h.semantic_rank or 999) <= SEMANTIC_DATE_TOP and sim[h.uid] >= floor)]
             dates = {r["uid"]: (r["date"], r["seq"]) for r in conn.execute(
                 "SELECT uid, date, seq FROM resolutions WHERE uid = ANY(%s)", ([h.uid for h in ranked],))}
             ranked.sort(key=lambda h: (dates[h.uid][0], dates[h.uid][1]), reverse=True)

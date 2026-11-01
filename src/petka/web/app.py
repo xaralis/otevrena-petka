@@ -84,12 +84,13 @@ def home(request: Request):
 def catalog(request: Request):
     return tpl.TemplateResponse(request, "data.html", {
         "stats": queries.stats(), "base": PUBLIC_URL,
+        "tables": queries.opendata_tables(), "updated": usneseni_web.opendata_updated(),
     })
 
 
 @app.get("/data/usneseni", include_in_schema=False)
 def dataset_usneseni_moved():
-    return RedirectResponse("/usneseni/data", status_code=301)
+    return RedirectResponse("/data#usneseni", status_code=301)
 
 
 @app.get("/healthz", include_in_schema=False)

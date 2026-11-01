@@ -4,7 +4,7 @@
 import datetime as dt
 
 from fastapi import APIRouter, HTTPException, Query, Request
-from fastapi.responses import FileResponse, HTMLResponse, PlainTextResponse
+from fastapi.responses import RedirectResponse, FileResponse, HTMLResponse, PlainTextResponse
 
 from ..web.render import tpl
 from . import embed, queries, search, store
@@ -64,7 +64,14 @@ def meeting_page(request: Request, mid: str):
 
 @pages.get("/clenove", response_class=HTMLResponse)
 def members_page(request: Request):
-    return tpl.TemplateResponse(request, "usneseni/members.html", {"members": queries.members()})
+    terms: dict[str, dict[str, list]] = {}
+    for m in queries.members():
+        terms.setdefault(m["term"], {}).setdefault(m["list"], []).append(m)
+    # Strongest club first; ties alphabetically
+    clubs = {t: sorted(({"name": k, "people": v, "seats": sum(1 for m in v if m["elected"])}
+                        for k, v in lists.items()), key=lambda c: (-c["seats"], c["name"].casefold()))
+             for t, lists in terms.items()}
+    return tpl.TemplateResponse(request, "usneseni/members.html", {"terms": clubs})
 
 
 @pages.get("/clenove/{mid}", response_class=HTMLResponse)
@@ -79,14 +86,14 @@ def member_page(request: Request, mid: str, odlisne: bool = False):
 
 # --- data: page, files (static routes before /{uid}) --------------------------------------
 
-@pages.get("/data", response_class=HTMLResponse)
-def dataset(request: Request):
-    import os
-    base = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
-    return tpl.TemplateResponse(request, "usneseni/dataset.html", {
-        "tables": queries.opendata_tables(), "stats": queries.stats(), "base": base,
-        "updated": opendata_updated(),
-    })
+@pages.get("/metodika", response_class=HTMLResponse)
+def method(request: Request):
+    return tpl.TemplateResponse(request, "usneseni/method.html", {})
+
+
+@pages.get("/data", include_in_schema=False)
+def dataset_moved():
+    return RedirectResponse("/data#usneseni", status_code=301)
 
 
 def opendata_updated():

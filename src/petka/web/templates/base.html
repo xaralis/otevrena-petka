@@ -7,7 +7,7 @@
 <meta name="description" content="Otevřená Pětka: otevřená data městského obvodu Pardubice V. Usnesení a hlasování, dále rozpočet, smlouvy a úřední deska. Vyhledávání, API a MCP. Nezávislý projekt, nejde o web úřadu.">
 <meta name="theme-color" content="#de091c">
 <link rel="preload" href="/static/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/static/style.css?v=14">
+<link rel="stylesheet" href="/static/style.css?v=17">
 </head>
 {% set p = request.url.path %}
 {% set in_usneseni = p.startswith('/usneseni') %}
@@ -30,10 +30,10 @@
 <div class="sub-band">
   <div class="wrap">
     <nav class="sub-nav" aria-label="Usnesení">
-      <a href="/usneseni" {% if p == '/usneseni' or (not p.startswith('/usneseni/jednani') and not p.startswith('/usneseni/clenove') and not p.startswith('/usneseni/data')) %}aria-current="page"{% endif %}>Usnesení</a>
+      <a href="/usneseni" {% if p == '/usneseni' or (not p.startswith('/usneseni/jednani') and not p.startswith('/usneseni/clenove') and not p.startswith('/usneseni/metodika')) %}aria-current="page"{% endif %}>Usnesení</a>
       <a href="/usneseni/jednani" {% if p.startswith('/usneseni/jednani') %}aria-current="page"{% endif %}>Jednání</a>
-      <a href="/usneseni/clenove" {% if p.startswith('/usneseni/clenove') %}aria-current="page"{% endif %}>Členové</a>
-      <a href="/usneseni/data" {% if p.startswith('/usneseni/data') %}aria-current="page"{% endif %}>Data<span class="hide-m"> a metodika</span></a>
+      <a href="/usneseni/clenove" {% if p.startswith('/usneseni/clenove') %}aria-current="page"{% endif %}>Zastupitelé</a>
+      <a href="/usneseni/metodika" {% if p.startswith('/usneseni/metodika') %}aria-current="page"{% endif %}>Metodika</a>
     </nav>
   </div>
 </div>
