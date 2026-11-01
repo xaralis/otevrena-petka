@@ -10,10 +10,10 @@
   const detail = el.dataset.map === "detail";
   // MapLibre wants absolute URLs for sprites, glyphs and the PMTiles archive
   const abs = (u) => location.origin + u;
-  const style = fetch("/static/map/style.json?v=1").then((r) => r.json()).then((s) => {
+  const style = fetch(el.dataset.style).then((r) => r.json()).then((s) => {
     s.sprite = abs(s.sprite);
     s.glyphs = abs(s.glyphs);
-    s.sources.protomaps.url = "pmtiles://" + abs("/static/map/pardubice.pmtiles?v=1");
+    s.sources.protomaps.url = "pmtiles://" + abs(el.dataset.tiles);
     return s;
   });
   style.then((s) => init(s));

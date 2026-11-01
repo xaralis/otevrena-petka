@@ -6,6 +6,7 @@ Portal pages (home, data catalog, planned sections), the sections' routers, REST
 
 import contextlib
 import os
+from urllib.parse import parse_qs
 
 from xml.sax.saxutils import escape
 
@@ -20,7 +21,7 @@ from ..mcp_server import mcp
 from ..sections import BY_SLUG, SECTIONS
 from ..uredni_deska import queries as deska_queries, source as deska_source, web as deska_web
 from ..usneseni import queries, search as usneseni_search, web as usneseni_web
-from .render import HERE, tpl
+from .render import HERE, asset_version, tpl
 
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
 
@@ -41,13 +42,15 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Otevřená Pětka – otevřená data MO Pardubice V", lifespan=lifespan,
               docs_url="/api/docs", redoc_url=None, openapi_url="/api/openapi.json")
 class _Static(StaticFiles):
-    """Versioned assets (?v=N) never change; icons and fonts change rarely."""
+    """A URL carrying the file's own hash (?v=<asset_version>) never changes, so it may be
+    cached for a year. Any other version – e.g. a new page asking an old pod during a rolling
+    update – must not be: the browser would keep the old file under the new URL for good."""
     async def get_response(self, path, scope):
         resp = await super().get_response(path, scope)
-        if resp.status_code == 200:
-            versioned = b"v=" in scope.get("query_string", b"")
-            resp.headers["Cache-Control"] = ("public, max-age=31536000, immutable" if versioned
-                                             else "public, max-age=604800")
+        if resp.status_code in (200, 206):
+            v = parse_qs(scope.get("query_string", b"").decode()).get("v", [""])[0]
+            resp.headers["Cache-Control"] = ("public, max-age=31536000, immutable" if v == asset_version(path)
+                                             else "no-cache" if v else "public, max-age=604800")
         return resp
 
 

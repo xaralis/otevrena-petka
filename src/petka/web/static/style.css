@@ -6,10 +6,10 @@
    "against / failed", nothing else. */
 
 @font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 300 800; font-stretch: 75% 100%; font-display: swap;
-  src: url(/static/fonts/bricolage-latin-ext.woff2?v=1) format("woff2");
+  src: url(/static/fonts/bricolage-latin-ext.woff2) format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 300 800; font-stretch: 75% 100%; font-display: swap;
-  src: url(/static/fonts/bricolage-latin.woff2?v=1) format("woff2");
+  src: url(/static/fonts/bricolage-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
@@ -565,17 +565,21 @@ body > footer { flex-shrink: 0; }
 .deska-kinds a { margin-right: .9rem; white-space: nowrap; color: var(--ink-2); }
 .deska-kinds a[aria-current] { color: var(--ink); font-weight: 650; text-decoration-thickness: 2px; text-decoration-color: var(--red); }
 .deska-kinds .muted { font-size: .85rem; }
-.notices .row { grid-template-columns: 6.5rem minmax(0, 1fr); }
+.notices .row { grid-template-columns: 6.5rem minmax(0, 1fr) 11rem; }
+.notices h3 { font-size: 1.05rem; font-weight: 650; line-height: 1.35; }
 .notice-day { display: block; font-weight: 700; font-size: 1.05rem; font-stretch: 90%; white-space: nowrap; }
 .notice-year { display: block; font-size: .85rem; color: var(--muted); }
 .notices h3 { overflow-wrap: anywhere; }
-.notice-files { list-style: none; margin: .45rem 0 0; padding: 0; font-size: .92rem; line-height: 1.7; }
-.notice-files li { overflow-wrap: anywhere; }
-.notice-files li::before { content: "↓ "; color: var(--muted); }
+.notice-files { list-style: none; margin: .5rem 0 0; padding: 0; font-size: .92rem; line-height: 1.45; }
+.notice-files li { overflow-wrap: anywhere; margin: 0 0 .3rem; }
+.file-ext { font-size: .75rem; font-weight: 650; color: var(--muted); margin-left: .25rem; }
+.notice-ref { margin: .15rem 0 0; font-size: .85rem; color: var(--ink-2); overflow-wrap: anywhere; line-height: 1.35; }
+.notice-ref span { display: block; color: var(--muted); font-size: .78rem; }
 .deska-about { margin-top: 2.6rem; padding-top: .2rem; border-top: 3px solid var(--ink); }
 .deska-about h2 { font-size: 1.15rem; margin: .8rem 0 .4rem; }
 @media (max-width: 600px) {
   .notices .row { grid-template-columns: minmax(0, 1fr); }
+  .notice-ref span { display: inline; }
   .notice-day, .notice-year { display: inline; }
 }
 /* ===== end úřední deska ===== */

@@ -46,7 +46,7 @@
 
     {% if r.geo %}
     <h2>Na mapě</h2>
-    <div class="map map-detail" data-map="detail" data-inline="places-json" role="region" aria-label="Mapa míst, kterých se usnesení týká"></div>
+    <div class="map map-detail" data-map="detail" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="places-json" role="region" aria-label="Mapa míst, kterých se usnesení týká"></div>
     <script type="application/json" id="places-json">{{ {"type": "FeatureCollection", "features": r.geo|map(attribute="feature")|list}|tojson }}</script>
     <ul class="place-list">{% for g in r.geo %}<li><i class="pk pk-{{ g.kind }}" aria-hidden="true"></i>{{ g.label }}</li>{% endfor %}</ul>
     <p class="note">Poloha podle RÚIAN (ČÚZK) z míst, která zápis uvádí. Pozemky jsou v dnešní podobě, mohly se mezitím rozdělit nebo sloučit.</p>
@@ -73,5 +73,5 @@
   </aside>
 </div>
 {% endblock %}
-{% block head %}{% if r.geo %}<link rel="stylesheet" href="/static/map/maplibre-gl.css?v=1">{% endif %}{% endblock %}
-{% block scripts %}{% if r.geo %}<script src="/static/map/maplibre-gl.js?v=1" defer></script><script src="/static/map/pmtiles.js?v=1" defer></script><script src="/static/map/map.js?v=2" defer></script>{% endif %}{% endblock %}
+{% block head %}{% if r.geo %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endif %}{% endblock %}
+{% block scripts %}{% if r.geo %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}

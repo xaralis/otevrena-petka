@@ -30,7 +30,7 @@
     <span class="seg"><span class="m">Téma</span>
     <select name="tema" aria-label="Téma"><option value="">na jakékoli téma</option>{% for k, t in vocab.topics.items() %}<option value="{{ k }}" {{ 'selected' if f.tema==k }}>{{ t|lower }}</option>{% endfor %}</select></span>
     <span class="seg seg-who"><span class="w">a kde</span><span class="m">Kdo</span>
-    <input name="clen" value="{{ f.clen }}" placeholder="kdokoli (příjmení)" aria-label="Příjmení člena" list="clenove">
+    <input name="clen" value="{{ f.clen }}" placeholder="kdokoli (příjmení)" aria-label="Příjmení zastupitele" list="clenove">
     <datalist id="clenove">{% for n in member_names %}<option value="{{ n }}">{% endfor %}</datalist>
     <span class="w">hlasoval</span>
     <select name="volba" aria-label="Jak hlasoval"><option value="">jakkoli</option><option value="pro" {{ 'selected' if f.volba=='pro' }}>pro</option><option value="proti" {{ 'selected' if f.volba=='proti' }}>proti</option><option value="zdrzel" {{ 'selected' if f.volba=='zdrzel' }}>zdržel se</option></select><span class="w">.</span></span>

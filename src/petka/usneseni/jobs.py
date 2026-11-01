@@ -356,7 +356,7 @@ def export() -> None:
         "licenses": [{"name": "CC-BY-4.0", "path": "https://creativecommons.org/licenses/by/4.0/"}],
         "sources": [{"title": "Statutární město Pardubice – zápisy z jednání ZMO a RMO Pardubice V",
                      "path": "https://pardubice.eu/obvod5"}],
-        "description": "Usnesení, hlasování a hlasy členů vytěžené z PDF zápisů. Specifikace: "
+        "description": "Usnesení, hlasování a hlasy zastupitelů vytěžené z PDF zápisů. Specifikace: "
                        "https://github.com/xaralis/otevrena-petka/blob/main/docs/otevrena-data.md",
         "resources": resources,
     }, ensure_ascii=False, indent=1) + "\n")

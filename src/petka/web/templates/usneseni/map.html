@@ -2,7 +2,7 @@
 {% from "_portal.html" import hero %}
 {% block title %}Usnesení na mapě{% endblock %}
 {% block description %}Kde v Pardubicích V se o čem rozhodovalo: pozemky, adresy a ulice z usnesení zastupitelstva a rady na mapě.{% endblock %}
-{% block head %}<link rel="stylesheet" href="/static/map/maplibre-gl.css?v=1">{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
 {% block hero %}{{ hero('Usnesení na mapě', [], 'Pozemky, domy a ulice, o kterých zastupitelstvo a rada rozhodovaly. Klepnutím na místo zobrazíte usnesení.', kind='section') }}{% endblock %}
 {% block main %}
 <form class="sentence" method="get" action="/usneseni/mapa" aria-label="Filtry mapy">
@@ -20,11 +20,11 @@
   {% if f.organ or f.rok or f.tema or f.stav != 'usneseni' %}<a href="/usneseni/mapa">Zrušit výběr</a>{% endif %}</div>
 </form>
 
-<div class="map map-all" data-map="all" data-src="{{ geojson_url }}" role="region" aria-label="Mapa míst z usnesení; stejné údaje jsou níže jako seznam ulic"></div>
+<div class="map map-all" data-map="all" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-src="{{ geojson_url }}" role="region" aria-label="Mapa míst z usnesení; stejné údaje jsou níže jako seznam ulic"></div>
 <p class="legend map-legend"><span><i class="pk pk-parcel"></i>pozemek</span><span><i class="pk pk-address"></i>dům, adresa</span><span><i class="pk pk-street"></i>ulice</span></p>
 <p class="note">Poloha podle RÚIAN (ČÚZK) z míst, která uvádí zápis. Obecná místa jako „Dukla“ nebo „sídliště“ na mapě nejsou, pozemky jsou v dnešní podobě. Data: <a href="/usneseni/data/places.geojson">GeoJSON</a>, <a href="/api/v1/usneseni/places.geojson">API</a>. Podklad © přispěvatelé OpenStreetMap.</p>
 
 <h2 class="year-no small">Nejčastější ulice</h2>
 <ul class="street-index">{% for s in index %}<li><a href="/usneseni?q={{ s.name|urlencode }}">{{ s.name }}</a> <span class="muted">{{ s.n }}</span></li>{% endfor %}</ul>
 {% endblock %}
-{% block scripts %}<script src="/static/map/maplibre-gl.js?v=1" defer></script><script src="/static/map/pmtiles.js?v=1" defer></script><script src="/static/map/map.js?v=2" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endblock %}

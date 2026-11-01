@@ -15,7 +15,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 
 | sekce | stav | co umí |
 |---|---|---|
-| [Usnesení](https://opendata.mov.varecha.work/usneseni) | běží | usnesení a hlasování ZMO a RMO od roku 2018, hledání slovy i podle smyslu, hlasy členů, mapa, účast na jednáních |
+| [Usnesení](https://opendata.mov.varecha.work/usneseni) | běží | usnesení a hlasování ZMO a RMO od roku 2018, hledání slovy i podle smyslu, hlasy zastupitelů, mapa, účast na jednáních |
 | [Úřední deska](https://opendata.mov.varecha.work/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
@@ -26,7 +26,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
   přes embeddingy bge-m3, výsledky spojené metodou RRF. Filtry podle orgánu, roku, tématu,
   výsledku a podle toho, jak hlasoval konkrétní člen. Výchozí je od nejnovějších a jen
   platná usnesení.
-- **Detail usnesení**: doslovné znění z PDF, výsledek, hlasy jednotlivých členů, zrušení
+- **Detail usnesení**: doslovné znění z PDF, výsledek, hlasy jednotlivých zastupitelů, zrušení
   a změny jinými usneseními, mapa míst, odvozené shrnutí, klíčová slova a témata.
 - **Mapa**: pozemky, adresy a ulice z usnesení na jedné mapě i u každého usnesení.
 - **Jednání**: prezence, body programu, nepřijaté návrhy.
@@ -52,7 +52,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 6. `load` / `embed` / `export`: Postgres + pgvector, embeddingy, CSV/JSON/GeoJSON
    a `datapackage.json`.
 
-**Hlasy jednotlivých členů:** zápisy MO V jmenovitě uvádějí jen menšinu (kdo byl proti nebo
+**Hlasy jednotlivých zastupitelů:** zápisy MO V jmenovitě uvádějí jen menšinu (kdo byl proti nebo
 se zdržel). Hlas ostatních se odvodí: přítomní v okamžiku hlasování minus jmenovaní hlasovali
 pro zbývající možnost, jen pokud to přesně sedí na součet (`provenance = inferred`). Když to
 nejde jednoznačně, zůstanou jen součty (`tallies_only`).

@@ -6,12 +6,12 @@
   <div class="row-body">
     <h3>{% if n.redacted %}{{ n.title }}{% else %}<a href="{{ n.url }}">{{ n.title }}</a>{% endif %}</h3>
     <p class="row-meta">{{ n.kind_label }} – vyvěšeno {{ n.published|d }}{% if n.removed_at %}, sejmuto nejpozději {{ n.removed_on|d }}{% elif n.valid_until and n.valid_until.year < 2100 %}, visí do {{ n.valid_until|d }}{% endif %}{% if n.board != 'mo5' %}; deska magistrátu{% if n.department %}, {{ 'o' ~ n.department[1:] if n.department.startswith('Odbor') else n.department }}{% endif %}{% endif %}</p>
-    {% if files and n.reference %}<p class="row-meta">Č. j. {{ n.reference }}</p>{% endif %}
     {% if files and n.attachments %}
-    <ul class="notice-files">
-      {% for a in n.attachments %}{% set ext = a.url.rsplit('.', 1)[-1] %}<li><a href="{{ a.url }}">{{ a.title }}</a>{% if ext|length <= 4 %} <span class="muted">{{ ext|upper }}</span>{% endif %}</li>{% endfor %}
+    <ul class="notice-files" aria-label="Přílohy">
+      {% for a in n.attachments %}{% set ext = a.url.rsplit('.', 1)[-1] %}<li><a href="{{ a.url }}">{{ a.title|replace('_', ' ') }}</a>{% if ext|length <= 4 %} <span class="file-ext">{{ ext|upper }}</span>{% endif %}</li>{% endfor %}
     </ul>
     {% endif %}
   </div>
+  {% if files and n.reference %}<p class="notice-ref"><span>č. j.</span> {{ n.reference }}</p>{% endif %}
 </li>
 {%- endmacro %}
