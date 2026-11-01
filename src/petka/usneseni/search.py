@@ -137,8 +137,9 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                 mode = info["mode"] = "fulltext"
         ft: list[str] = []
         if mode in ("hybrid", "fulltext"):
-            # all words first; a natural-language question rarely matches all, so fall
-            # back to any word, ranked by how many and how important the matches are
+            # all words first; only when nothing has them all, fall back to any word (a
+            # natural-language question), ranked by how many and how important the matches
+            # are. A few exact hits beat a hundred loose ones; the vector side adds the rest.
             for op in ("&", "|"):
                 tq = tsquery(q, op)
                 if not tq:
@@ -148,7 +149,7 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                         WHERE {where} AND r.tsv @@ to_tsquery('simple', %s)
                         ORDER BY ts_rank_cd(r.tsv, to_tsquery('simple', %s), 32) DESC, r.date DESC
                         LIMIT %s""", params + [tq, tq, pool_size])]
-                if len(ft) >= 5:
+                if ft:
                     break
         sem: list[str] = []
         sim: dict[str, float] = {}
