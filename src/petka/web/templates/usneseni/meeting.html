@@ -2,7 +2,7 @@
 {% from "usneseni/_macros.html" import vote, row, legend %}{% from "_portal.html" import hero %}
 {% set kind = {'radne':'řádné','mimoradne':'mimořádné','ustavujici':'ustavující'}[m.kind] %}
 {% block title %}{{ m.number }}. jednání {{ 'zastupitelstva' if m.body == 'zmo' else 'rady' }} {{ m.date|d }}{% endblock %}
-{% block hero %}{{ hero(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), [('Jednání', '/usneseni/jednani'), (m.date|d, None)], m.place) }}{% endblock %}
+{% block hero %}{{ hero(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), [('Jednání', '/usneseni/jednani'), (m.date|d, None)], m.place, kind='section') }}{% endblock %}
 {% block main %}
 <div class="detail">
   <div class="detail-main">

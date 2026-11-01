@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}{{ s.title }}{% endblock %}
-{% block hero %}{{ hero(s.question, [], s.title ~ ': připravujeme.') }}{% endblock %}
+{% block hero %}{{ hero(s.question, [], s.title ~ ' – sekce, kterou připravujeme.') }}{% endblock %}
 {% block main %}
-<div class="prose">
-  <p class="lead-text">{{ s.short }}. Tahle sekce zatím není hotová – data budeme brát odsud:</p>
-  <ul class="sources">{% for label, url in s.sources %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
-  <p>Stejně jako u <a href="/usneseni">usnesení</a> bude každý údaj odkazovat na původní dokument a půjde stáhnout jako otevřená data i dotazovat přes API a MCP.</p>
-  <p>Chcete pomoct nebo máte k tématu data? Projekt je otevřený na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>.</p>
+<div class="planned-page">
+  <div class="prose">
+    {% if s.bridges %}
+    <h2>Už teď najdete v usneseních</h2>
+    <ul class="links">{% for label, url in s.bridges %}<li><a href="{{ url }}">{{ label|capitalize }}</a></li>{% endfor %}</ul>
+    {% endif %}
+    <h2>Než sekci dokončíme, podívejte se přímo</h2>
+    <ul class="links">{% for label, url in s.sources %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
+    <p class="muted">Z těchto zdrojů budeme data brát. Stejně jako u usnesení bude každý údaj odkazovat na původní dokument, půjde stáhnout a dotazovat přes API i AI asistenty. Pomoct můžete na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>.</p>
+  </div>
+  <aside class="planned-side">
+    <h2>Na co tu najdete odpověď</h2>
+    <ul class="examples">{% for q in s.examples %}<li>{{ q }}</li>{% endfor %}</ul>
+  </aside>
 </div>
 {% endblock %}

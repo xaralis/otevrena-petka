@@ -1,50 +1,50 @@
 {% extends "base.html" %}
+{% from "usneseni/_macros.html" import row %}
+{% set U = SECTION['usneseni'] %}
 {% block title %}Otevřená data Pardubic V{% endblock %}
 {% block hero %}
 <section class="band band-portal">
   <div class="wrap">
     <h1>Co dělá městský obvod Pardubice&nbsp;V</h1>
-    <p class="band-lead">Rozhodnutí rady a zastupitelstva, peníze, smlouvy a úřední deska na jednom místě, dohledatelně a s odkazem na původní dokument.</p>
+    <p class="band-lead">Rozhodnutí rady a zastupitelstva dohledatelně a s odkazem na původní dokument. Rozpočet, smlouvy a úřední deska přibudou.</p>
     <form class="search" method="get" action="/usneseni" role="search">
       <label for="q" class="sr">Hledat v usneseních</label>
-      <input id="q" type="search" name="q" placeholder="Hledat v rozhodnutích, třeba „parkování“" autocomplete="off">
+      <input id="q" type="search" name="q" placeholder="Hledat v usneseních" autocomplete="off">
       <button type="submit">Hledat</button>
     </form>
+    <p class="band-lead small">Třeba <a href="/usneseni?q=parkov%C3%A1n%C3%AD+Polabiny">parkování v Polabinách</a>, <a href="/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/usneseni?q=prodej+pozemku">prodej pozemku</a>.</p>
+    <p class="independent">Nezávislý projekt nad veřejnými daty, nejde o web úřadu.</p>
   </div>
 </section>
 {% endblock %}
 {% block main %}
-<section class="index" aria-label="Sekce">
-  {% for s in SECTIONS %}
-  <article class="index-row{{ ' planned' if s.status == 'planned' }}">
+<section class="index" aria-label="Co tu najdete">
+  <article class="index-row live">
+    <h2><a href="/usneseni">{{ U.question }}</a></h2>
+    <div class="index-meta">
+      <p class="index-name">{{ U.title }}</p>
+      <p><a href="/usneseni">{{ stats.resolutions }} usnesení</a> a <a href="/usneseni?stav=neprijato">{{ stats.rejected }} nepřijatých návrhů</a> z <a href="/usneseni/jednani">{{ stats.meetings }} jednání</a> od roku {{ stats.first_date.year }}.</p>
+    </div>
+    <div class="index-latest">
+      <p class="index-sub">Nejnovější rozhodnutí</p>
+      <ol class="rows rows-compact">{% for r in latest %}{{ row(r) }}{% endfor %}</ol>
+      <p><a href="/usneseni">Všechna usnesení</a></p>
+    </div>
+  </article>
+  {% for s in SECTIONS if s.status == 'planned' %}
+  <article class="index-row planned">
     <h2><a href="/{{ s.slug }}">{{ s.question }}</a></h2>
     <div class="index-meta">
-      <p class="index-name">{{ s.title }}</p>
-      {% if s.slug == 'usneseni' %}
-      <p>{{ stats.resolutions }} usnesení a {{ stats.rejected }} nepřijatých návrhů z {{ stats.meetings }} jednání, od {{ stats.first_date|d }}. Poslední jednání {{ stats.last_date|d }}.</p>
-      {% else %}
-      <p>Data budeme brát z: {% for label, url in s.sources %}<a href="{{ url }}">{{ label }}</a>{{ ', ' if not loop.last }}{% endfor %}.</p>
-      {% endif %}
+      <p class="index-name">{{ s.title }} <span class="muted">připravujeme</span></p>
+      {% if s.bridges %}<p>Už teď najdete v usneseních {% for label, url in s.bridges %}<a href="{{ url }}">{{ label }}</a>{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}
     </div>
   </article>
   {% endfor %}
 </section>
 
-<section class="latest">
-  <h2>Naposledy se jednalo</h2>
-  <ol class="cal">
-    {% for m in latest %}
-    <li class="cal-{{ m.body }}"><a href="/usneseni/jednani/{{ m.id }}">
-      <span class="cal-date">{{ m.date.day }}. {{ m.date.month }}.</span>
-      <span class="cal-what">{{ 'Zastupitelstvo' if m.body=='zmo' else 'Rada' }}{% if m.kind=='mimoradne' %}, mimořádné{% endif %}</span>
-      <span class="cal-n">{{ m.date.year }}: {{ m.n_resolutions }} usnesení{% if m.n_rejected %}, {{ m.n_rejected }} nepřijat{{ 'ý návrh' if m.n_rejected == 1 else 'é návrhy' if m.n_rejected < 5 else 'ých návrhů' }}{% endif %}</span>
-    </a></li>
-    {% endfor %}
-  </ol>
-</section>
-
 <section class="ask">
-  <h2>Ptejte se svými slovy</h2>
-  <p>Data jsou otevřená a dostupná i pro AI asistenty. Přidejte si do Claude konektor <code>https://opendata.mov.varecha.work/mcp</code> a zeptejte se třeba „jak hlasovala rada o parkování v Polabinách“. Odpověď dostanete s čísly usnesení a odkazy. <a href="/data#mcp">Jak na to</a></p>
+  <h2>Zeptejte se AI asistenta</h2>
+  <p class="ask-q">„Jak hlasovala rada o parkování v Polabinách?“</p>
+  <p>Asistenti s podporou MCP (třeba Claude) se mohou ptát přímo v našich datech a odpovídat s čísly usnesení a odkazy, které si můžete ověřit. <a href="/data#mcp">Jak to nastavit</a></p>
 </section>
 {% endblock %}

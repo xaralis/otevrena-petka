@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}Členové zastupitelstva a rady Pardubice V{% endblock %}
-{% block hero %}{{ hero('Členové', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.') }}{% endblock %}
+{% block hero %}{{ hero('Členové', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.', kind='section') }}{% endblock %}
 {% block main %}
 {% for term, group in members|groupby('term')|reverse %}
 <section class="year">

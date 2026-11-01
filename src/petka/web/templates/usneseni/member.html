@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}{{ m.name }}: jak hlasoval{% endblock %}
-{% block hero %}{{ hero(m.name, [("Členové", "/usneseni/clenove")], (m.terms|map(attribute="list")|first)) }}{% endblock %}
+{% block hero %}{{ hero(m.name, [("Členové", "/usneseni/clenove")], (m.terms|map(attribute="list")|first), kind='section') }}{% endblock %}
 {% block main %}
 <div class="detail">
   <div class="detail-main">

@@ -77,7 +77,22 @@ def member_page(request: Request, mid: str, odlisne: bool = False):
                                 {"m": m, "votes": votes, "odlisne": odlisne})
 
 
-# --- data files (static routes before /{uid}) -----------------------------------------------
+# --- data: page, files (static routes before /{uid}) --------------------------------------
+
+@pages.get("/data", response_class=HTMLResponse)
+def dataset(request: Request):
+    import os
+    base = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+    return tpl.TemplateResponse(request, "usneseni/dataset.html", {
+        "tables": queries.opendata_tables(), "stats": queries.stats(), "base": base,
+        "updated": opendata_updated(),
+    })
+
+
+def opendata_updated():
+    p = store.DATA / "opendata" / "datapackage.json"
+    return dt.datetime.fromtimestamp(p.stat().st_mtime).date() if p.exists() else None
+
 
 def _file(path, media_type=None):
     if not path.is_file():

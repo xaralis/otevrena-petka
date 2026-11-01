@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}Usnesení: data a metodika{% endblock %}
-{% block hero %}{{ hero("Data a metodika usnesení", [("Data a API", "/data")], "Jak data vznikají, co znamenají a kde si je stáhnout. Licence CC BY 4.0.") }}{% endblock %}
+{% block hero %}{{ hero("Data a metodika", [], "Jak data o usneseních vznikají, co znamenají a kde si je stáhnout.", kind="section") }}{% endblock %}
 {% block main %}
-<div class="prose">
-<p class="lead-text">Všechna data jsou volně k použití pod licencí <a href="https://creativecommons.org/licenses/by/4.0/deed.cs">CC BY 4.0</a>. Aktualizují se automaticky po zveřejnění nového zápisu (poslední: {{ stats.last_date|d }}).</p>
-<h2>Soubory</h2>
-<ul class="files">{% for f in files %}<li><a href="/usneseni/data/{{ f }}">{{ f }}</a></li>{% endfor %}</ul>
-<p><b>Specifikace formátu</b> (význam polí, identifikátory, mapování na Popolo a data Prahy, doporučení pro úřady): <a href="https://github.com/xaralis/otevrena-petka/blob/main/docs/otevrena-data.md">docs/otevrena-data.md</a>. V ČR pro usnesení a hlasování zatím neexistuje otevřená formální norma (OFN).</p>
-<p><code>datapackage.json</code> popisuje soubory ve formátu <a href="https://datapackage.org/">Frictionless Data Package</a>. Surové výstupy zpracování po jednotlivých jednáních: <a href="/usneseni/data/extracted.txt">seznam</a> (<code>/usneseni/data/extracted/&lt;id&gt;.parse.json</code>). Historie dat je v <a href="https://github.com/xaralis/otevrena-petka/tree/main/data/usneseni">gitu</a>.</p>
-<h2>REST API</h2>
-<p>Dokumentace OpenAPI: <a href="/api/docs">/api/docs</a>. Například:</p>
-<pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;body=rmo&amp;status=neprijato'
+<div class="prose wide">
+<p class="lead-text">Usnesení a hlasování rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Licence CC BY 4.0. Strojový popis: <a href="/usneseni/data/datapackage.json">datapackage.json</a> (Frictionless Data Package).</p>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Tabulka</th><th scope="col">Co obsahuje</th><th scope="col">Řádků</th><th scope="col">Stáhnout</th></tr></thead>
+  <tbody>
+  {% for t in tables %}
+    <tr><td><b>{{ t.title }}</b></td><td>{{ t.description }}</td><td class="nowrap">{{ t.rows if t.rows is not none else '' }}</td>
+        <td class="nowrap"><a href="/usneseni/data/{{ t.name }}.csv">CSV</a>, <a href="/usneseni/data/{{ t.name }}.json">JSON</a></td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p>Význam polí, identifikátory a mapování na mezinárodní model Popolo popisuje <a href="https://github.com/xaralis/otevrena-petka/blob/main/docs/otevrena-data.md">specifikace formátu</a>. Surové výstupy zpracování po jednotlivých jednáních: <a href="/usneseni/data/extracted.txt">seznam souborů</a>; historie dat je v <a href="https://github.com/xaralis/otevrena-petka/tree/main/data/usneseni">gitu</a>.</p>
+
+<h2>API</h2>
+<pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
 curl '{{ base }}/api/v1/usneseni/members/filip-varecha/votes?dissent_only=true'</pre>
-<h2>MCP pro Claude a další asistenty</h2>
-<p>MCP server (streamable HTTP, bez přihlášení, jen čtení): <code>{{ base }}/mcp</code></p>
-<pre>claude mcp add --transport http otevrena-petka {{ base }}/mcp</pre>
-<p>V Claude.ai: Nastavení → Konektory → Přidat vlastní konektor → URL výše. Nástroje: <code>hledej_usneseni</code>, <code>usneseni_detail</code>, <code>jednani</code>, <code>clenove</code>, <code>hlasovani_clena</code>, <code>statistika</code>.</p>
+<p>Celé API a připojení AI asistentů: <a href="/data">Data a API</a>.</p>
 <h2 id="metodika">Metodika</h2>
 <ul class="method">
 <li>Zdrojem jsou PDF „Usnesení (a zápis)“ zveřejněná městem na pardubice.eu od roku 2018 pro zastupitelstvo (ZMO) i radu (RMO). Každý den se kontroluje, zda nepřibyl nový.</li>

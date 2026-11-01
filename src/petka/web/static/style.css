@@ -324,51 +324,94 @@ footer p { max-width: 80ch; }
 /* ---- portal ------------------------------------------------------------------------- */
 .brand { font-size: 1.25rem; font-stretch: 85%; letter-spacing: -.01em; }
 .brand b { font-weight: 800; }
-.portal-nav { display: flex; gap: .2rem 1.3rem; flex-wrap: wrap; }
-.portal-nav a.soon { opacity: .72; }
-.portal-nav a.soon:hover, .portal-nav a.soon[aria-current] { opacity: 1; }
-/* section tabs sit on the band's lower edge, like folder tabs into the page */
-.sub-band { background: var(--red); margin-top: -1.2rem; }
+/* nav links stretch to the hairline so the active underline sits on it */
+.top-inner { padding-bottom: 0; align-items: stretch; }
+.brand { align-self: center; padding-bottom: .9rem; }
+.portal-nav { display: flex; gap: 0 1.3rem; flex-wrap: wrap; align-items: stretch; }
+.portal-nav a { display: flex; align-items: center; margin: 0; padding: .2rem 0 .9rem; font-weight: 650; border-bottom: 3px solid transparent; }
+.portal-nav a:hover, .portal-nav a[aria-current] { border-bottom-color: #fff; }
+/* planned sections: lighter weight and a dashed underline – not dimmed, so they keep contrast */
+.portal-nav a.soon { font-weight: 400; }
+.portal-nav a.soon > :first-child { }
+.portal-nav a.soon { text-decoration: underline dashed 1px rgba(255,255,255,.65); text-underline-offset: .3em; }
+/* "Data a API" is a utility, not a section */
+.portal-nav a.util { margin-left: .4rem; padding-left: 1.3rem; border-left: 1px solid rgba(255,255,255,.4); font-weight: 400; }
+.portal-nav a.util[aria-current], .portal-nav a.util:hover { border-bottom-color: #fff; }
+
+/* section tabs on the band's lower edge, the active one merges into the page */
+.sub-band { background: var(--red); }
 .sub-nav { display: flex; gap: .3rem; overflow-x: auto; }
 .sub-nav a { color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; padding: .5rem .9rem .55rem;
   border-radius: 4px 4px 0 0; white-space: nowrap; }
 .sub-nav a:hover { background: rgba(255,255,255,.14); }
 .sub-nav a[aria-current] { background: #fff; color: var(--ink); }
 .sub-band + main { padding-top: 2rem; }
-/* inside a section the band is a page head, not a landing hero */
-.sub-band ~ main, .band-section h1 { }
-body:has(.sub-band) .band h1 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
-body:has(.sub-band) .band .no-big { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+.band-section .wrap { padding-bottom: 1.4rem; }
 
+/* three band sizes: portal home, portal page / planned section, inside a section */
 .band-portal h1 { font-size: clamp(2.2rem, 5.5vw, 4.2rem); max-width: 16ch; }
 .band-portal .band-lead { font-size: 1.15rem; max-width: 52ch; }
+.band-portal .band-lead.small { font-size: 1rem; margin-top: .9rem; }
+.band-page h1 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); max-width: 26ch; }
+.band-section h1 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+.band-section .no-big { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+.independent { margin: 1.4rem 0 0; font-size: .9rem; padding-top: .7rem; border-top: 1px solid rgba(255,255,255,.35); max-width: 52ch; }
 
-/* home: sections as an index of the questions they answer */
+/* home: an index of the questions the portal answers */
 .index { margin: 1rem 0 3rem; }
 .index-row { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: .5rem 3rem;
   padding: 1.6rem 0 1.7rem; border-top: 3px solid var(--ink); }
 .index-row h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; font-stretch: 88%; letter-spacing: -.02em; }
-.index-row h2 a { color: var(--ink); text-decoration: none; }
-.index-row h2 a:hover { color: var(--red-ink); text-decoration: underline; text-decoration-thickness: 3px; }
+.index-row h2 a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: .15em; text-decoration-color: var(--red); }
+.index-row h2 a:hover { color: var(--red-ink); }
 .index-row.planned { border-top-color: var(--rule); }
-.index-row.planned h2 a { color: var(--muted); }
+.index-row.planned h2 { font-size: clamp(1.25rem, 2.4vw, 1.7rem); }
+.index-row.planned h2 a { color: var(--muted); text-decoration: none; }
+.index-row.planned h2 a:hover { color: var(--ink); text-decoration: underline; }
+.index-row.planned a { color: var(--ink-2); }
 .index-meta p { margin: 0 0 .4rem; color: var(--ink-2); }
 .index-name { font-weight: 650; color: var(--ink) !important; }
-.planned .index-name::after { content: " – připravujeme"; font-weight: 400; color: var(--muted); }
-.latest h2, .ask h2 { font-size: 1.3rem; margin: 2.4rem 0 .8rem; }
-.ask { max-width: 64ch; }
-.ask code { background: var(--grey); padding: .1rem .35rem; }
-.sources { line-height: 1.9; }
-.catalog .planned td { color: var(--muted); }
+.index-name .muted { font-weight: 400; }
+.index-latest { grid-column: 1 / -1; margin-top: .6rem; }
+.index-sub { font-weight: 650; margin: 0 0 .4rem; }
+.rows-compact .row { padding: .8rem .9rem; }
+.rows-compact .row-text { -webkit-line-clamp: 1; }
+.ask { max-width: 64ch; margin-top: 2.4rem; }
+.ask h2 { font-size: 1.3rem; margin: 0 0 .5rem; }
+.ask-q { font-size: 1.35rem; font-weight: 650; margin: 0 0 .4rem; }
+
+/* planned section page */
+.planned-page { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 3rem; align-items: start; }
+.planned-page h2 { font-size: 1.15rem; margin: 1.6rem 0 .5rem; }
+.planned-page h2:first-child { margin-top: 0; }
+.links { padding-left: 1.1rem; line-height: 1.9; margin: 0; }
+.planned-side { border-top: 3px solid var(--ink); padding-top: .8rem; }
+.examples { list-style: none; padding: 0; margin: 0; }
+.examples li { font-size: 1.15rem; font-weight: 600; padding: .6rem 0; border-bottom: 1px solid var(--grey); }
+
+.prose.wide { max-width: none; }
 .catalog td { vertical-align: top; }
+.catalog .planned td { color: var(--muted); }
+pre { white-space: pre-wrap; word-break: break-all; }
+.key { display: inline-block; width: .75rem; height: .75rem; margin-right: .4rem; vertical-align: -.05em; border-radius: 2px; }
+.key-zmo { background: var(--ink); box-shadow: 0 0 0 1px #fff; }
+.key-rmo { background: var(--grey); box-shadow: inset 0 0 0 1px var(--field); }
 .foot { display: grid; gap: .3rem; }
 .foot-brand { font-size: 1.15rem; font-stretch: 85%; margin: 0 0 .3rem; }
 .foot-brand b { font-weight: 800; }
 
 @media (max-width: 920px) {
-  .index-row { grid-template-columns: minmax(0, 1fr); }
+  .index-row, .planned-page { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
-  .portal-nav { gap: .2rem 1rem; font-size: .95rem; }
-  .sub-nav a { font-size: .88rem; padding: .45rem .7rem .5rem; }
+  .hide-m { display: none; }
+  .top-inner { flex-direction: column; align-items: stretch; gap: .2rem; padding-top: .7rem; }
+  .brand { padding-bottom: .2rem; align-self: flex-start; }
+  .top .portal-nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 0 1.1rem; font-size: .95rem;
+    -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); padding-right: 1.5rem; }
+  .top .portal-nav::-webkit-scrollbar { display: none; }
+  .top .portal-nav a { white-space: nowrap; padding-bottom: .7rem; margin: 0; flex: none; }
+  .top .portal-nav a.util { padding-left: 1.1rem; margin-left: 0; }
+  .sub-nav a { font-size: .9rem; padding: .45rem .7rem .5rem; }
+  .band-section .band-lead { font-size: .95rem; }
 }

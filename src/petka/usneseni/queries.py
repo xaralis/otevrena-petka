@@ -146,6 +146,23 @@ def member_votes(mid: str, *, dissent_only: bool = False, choice: str | None = N
             (mid, choice, choice, procedural, dissent_only, limit, offset)).fetchall()
 
 
+def opendata_tables() -> list[dict]:
+    """Published tables with Czech names, descriptions and row counts (dataset page)."""
+    from .opendata_schema import TABLES
+    counts = {"meetings": "meetings", "resolutions": "resolutions", "votes": "votes",
+              "ballots": "ballots", "relations": "resolution_relations"}
+    out = []
+    with db.pool().connection() as conn:
+        for name, t in TABLES.items():
+            n = None
+            if name in counts:
+                n = conn.execute(f"SELECT count(*) AS n FROM {counts[name]}").fetchone()["n"]
+            elif name == "members":
+                n = conn.execute("SELECT count(DISTINCT member_id) AS n FROM ballots").fetchone()["n"]
+            out.append({"name": name, "title": t["title"], "description": t["description"], "rows": n})
+    return out
+
+
 def latest_meetings(n: int = 4) -> list[dict]:
     with db.pool().connection() as conn:
         return conn.execute(

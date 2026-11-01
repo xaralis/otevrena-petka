@@ -1,5 +1,6 @@
-{% macro hero(title, crumbs=[], lead=None) -%}
-<section class="band">
+{#- kind: page (portal pages, planned sections) | section (inside a live section) -#}
+{% macro hero(title, crumbs=[], lead=None, kind='page') -%}
+<section class="band band-{{ kind }}">
   <div class="wrap">
     {% if crumbs %}<nav class="crumbs" aria-label="Drobečková navigace">{% for label, href in crumbs %}{% if href %}<a href="{{ href }}">{{ label }}</a>{% else %}<span>{{ label }}</span>{% endif %}{% if not loop.last %} <span aria-hidden="true">/</span> {% endif %}{% endfor %}</nav>{% endif %}
     <h1>{{ title }}</h1>

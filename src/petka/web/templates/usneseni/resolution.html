@@ -4,7 +4,7 @@
 {% set eff = r.revoked_by|selectattr('effective')|list %}
 {% set eff_full = eff|rejectattr('scope', 'equalto', 'cast')|list %}
 {% block hero %}
-<section class="band">
+<section class="band band-section">
   <div class="wrap">
     <nav class="crumbs" aria-label="Drobečková navigace"><a href="/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. {{ 'mimořádné ' if r.meeting_kind == 'mimoradne' }}jednání {{ 'zastupitelstva' if r.body == 'zmo' else 'rady' }}, {{ r.date|d }}</a>{% if r.agenda_title %} <span aria-hidden="true">/</span> bod {{ r.agenda_no }}{% endif %}</nav>
     <p class="no no-big no-{{ r.status }}{% if eff_full %} no-revoked{% elif eff %} no-amended{% endif %}">{{ r.number }}</p>

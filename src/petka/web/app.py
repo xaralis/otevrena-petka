@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from .. import db
 from ..mcp_server import mcp
 from ..sections import BY_SLUG, SECTIONS
-from ..usneseni import queries, web as usneseni_web
+from ..usneseni import queries, search as usneseni_search, web as usneseni_web
 from .render import HERE, tpl
 
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
@@ -47,7 +47,7 @@ app.include_router(usneseni_web.api)
 _LEGACY = [
     (re.compile(r"^/$"), "/usneseni"),
     (re.compile(r"^/(jednani|clenove)(/.*)?$"), r"/usneseni/\1\2"),
-    (re.compile(r"^/otevrena-data$"), "/data/usneseni"),
+    (re.compile(r"^/otevrena-data$"), "/usneseni/data"),
     (re.compile(r"^/opendata/(.*)$"), r"/usneseni/data/\1"),
     (re.compile(r"^/opendata-texts\.txt$"), "/usneseni/data/texts.txt"),
     (re.compile(r"^/opendata-extracted\.txt$"), "/usneseni/data/extracted.txt"),
@@ -74,8 +74,9 @@ async def legacy_redirect(request: Request, call_next):
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request):
+    hits, _ = usneseni_search.search("", filters=usneseni_search.Filters(status="usneseni"), limit=3)
     return tpl.TemplateResponse(request, "home.html", {
-        "stats": queries.stats(), "latest": queries.latest_meetings(4),
+        "stats": queries.stats(), "latest": [h.row for h in hits],
     })
 
 
@@ -83,15 +84,12 @@ def home(request: Request):
 def catalog(request: Request):
     return tpl.TemplateResponse(request, "data.html", {
         "stats": queries.stats(), "base": PUBLIC_URL,
-        "usneseni_files": usneseni_web.opendata_files(),
     })
 
 
-@app.get("/data/usneseni", response_class=HTMLResponse, include_in_schema=False)
-def dataset_usneseni(request: Request):
-    return tpl.TemplateResponse(request, "usneseni/dataset.html", {
-        "files": usneseni_web.opendata_files(), "stats": queries.stats(), "base": PUBLIC_URL,
-    })
+@app.get("/data/usneseni", include_in_schema=False)
+def dataset_usneseni_moved():
+    return RedirectResponse("/usneseni/data", status_code=301)
 
 
 @app.get("/healthz", include_in_schema=False)

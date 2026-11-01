@@ -4,7 +4,7 @@ from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
 
-from ..sections import SECTIONS
+from ..sections import BY_SLUG, SECTIONS
 from ..usneseni import queries
 from ..usneseni.text import strip_titles
 
@@ -13,7 +13,7 @@ SITE_NAME = "Otevřená Pětka"
 
 tpl = Jinja2Templates(directory=HERE / "templates")
 tpl.env.globals.update(STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
-                       CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SITE_NAME=SITE_NAME)
+                       CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 
 def _date(d) -> str:

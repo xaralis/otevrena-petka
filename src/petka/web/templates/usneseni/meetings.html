@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}Jednání zastupitelstva a rady Pardubice V{% endblock %}
-{% block hero %}{{ hero('Jednání', [], 'Zastupitelstvo se schází zhruba jednou za čtvrt roku, rada jednou až dvakrát do měsíce.') }}{% endblock %}
+{% block hero %}{{ hero('Jednání', [], 'Zastupitelstvo se schází zhruba jednou za čtvrt roku, rada jednou až dvakrát do měsíce.', kind='section') }}{% endblock %}
 {% block main %}
 <nav class="switch" aria-label="Orgán">
   <a href="/usneseni/jednani" {% if not organ %}aria-current="page"{% endif %}>Obojí</a>
-  <a href="/usneseni/jednani?organ=zmo" {% if organ=='zmo' %}aria-current="page"{% endif %}>Zastupitelstvo</a>
-  <a href="/usneseni/jednani?organ=rmo" {% if organ=='rmo' %}aria-current="page"{% endif %}>Rada</a>
+  <a href="/usneseni/jednani?organ=zmo" {% if organ=='zmo' %}aria-current="page"{% endif %}><i class="key key-zmo" aria-hidden="true"></i>Zastupitelstvo</a>
+  <a href="/usneseni/jednani?organ=rmo" {% if organ=='rmo' %}aria-current="page"{% endif %}><i class="key key-rmo" aria-hidden="true"></i>Rada</a>
 </nav>
 {% for year, group in meetings|groupby('date.year')|reverse %}
 <section class="year">
