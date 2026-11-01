@@ -8,6 +8,7 @@ summaries are ours, and "nothing found" is not proof that something never happen
 import os
 from typing import Literal
 
+from .. import db
 from . import embed, queries, search
 from .text import fold
 
@@ -112,8 +113,37 @@ def usneseni_detail(usneseni: str) -> dict:
                                  for x in r["revoked_by"]],
         "rusi_nebo_meni": [{"usneseni": x["target_number"], "typ": x["type"], "rozsah": x["scope"],
                             "cast": x["detail"], "ucinne": x["effective"]} for x in r["revokes"]],
+        "na_mape": [{"druh": g["kind"], "misto": g["label"], "lat": round(g["lat"], 6), "lon": round(g["lon"], 6)}
+                    for g in r["geo"]],
         "url": _url(r["uid"]), "zdroj": r["source_url"],
     }
+
+
+def usneseni_k_mistu(misto: str, jen_platna: bool = True, limit: int = 30) -> dict:
+    """Usnesení týkající se konkrétního místa v MO Pardubice V: ulice ('Jiránkova'), adresy
+    ('Jana Palacha 324') nebo parcely ('2515/14'). Hledá v místech převedených na souřadnice
+    podle RÚIAN; obecná místa (Dukla, sídliště) tu nejsou – na ta použijte hledej_usneseni.
+    Výsledek je od nejnovějších."""
+    q = fold(misto).strip()
+    if not q:
+        return {"chyba": "Zadejte místo."}
+    with db.pool().connection() as conn:
+        rows = conn.execute(
+            """SELECT p.kind, p.label, r.uid, r.number, r.title, r.date, r.status
+               FROM resolution_places p JOIN resolutions r ON r.uid = p.uid
+               WHERE (NOT %s OR r.status <> 'neprijato') ORDER BY r.date DESC, r.seq DESC""",
+            (jen_platna,)).fetchall()
+    hits: dict[str, dict] = {}
+    for x in rows:
+        if q in fold(x["label"]):
+            h = hits.setdefault(x["uid"], {"cislo": x["number"], "nazev": x["title"], "datum": str(x["date"]),
+                                           "stav": x["status"], "mista": [], "url": _url(x["uid"])})
+            if x["label"] not in h["mista"]:
+                h["mista"].append(x["label"])
+    out = list(hits.values())
+    return {"misto": misto, "pocet": len(out), "usneseni": out[:limit],
+            "mapa": f"{PUBLIC_URL}/usneseni/mapa",
+            "poznamka": "Jen místa, která šlo podle zápisu jednoznačně umístit; nenalezeno ≠ nikdy neřešeno."}
 
 
 def _vote(v: dict) -> dict:
@@ -191,7 +221,7 @@ def statistika() -> dict:
             "otevrena_data": f"{PUBLIC_URL}/data/usneseni"}
 
 
-TOOLS = [hledej_usneseni, usneseni_detail, jednani, clenove, hlasovani_clena, statistika]
+TOOLS = [hledej_usneseni, usneseni_detail, usneseni_k_mistu, jednani, clenove, hlasovani_clena, statistika]
 
 
 def register(mcp) -> None:

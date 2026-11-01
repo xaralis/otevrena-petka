@@ -2,9 +2,10 @@
 /api/v1/usneseni."""
 
 import datetime as dt
+from urllib.parse import urlencode
 
 from fastapi import APIRouter, HTTPException, Query, Request
-from fastapi.responses import Response, RedirectResponse, FileResponse, HTMLResponse, PlainTextResponse
+from fastapi.responses import JSONResponse, Response, RedirectResponse, FileResponse, HTMLResponse, PlainTextResponse
 
 from ..web.render import tpl
 from . import embed, queries, search, store
@@ -60,6 +61,19 @@ def meeting_page(request: Request, mid: str):
     if not m:
         raise HTTPException(404)
     return tpl.TemplateResponse(request, "usneseni/meeting.html", {"m": m})
+
+
+@pages.get("/mapa", response_class=HTMLResponse)
+def map_page(request: Request, organ: str = "", rok: str = "", tema: str = "", stav: str = ""):
+    stav = stav or "usneseni"
+    rok_i = int(rok) if rok.strip().isdigit() else None
+    params = {k: v for k, v in {"organ": organ, "rok": rok_i or "", "tema": tema, "stav": stav}.items() if v}
+    return tpl.TemplateResponse(request, "usneseni/map.html", {
+        "f": {"organ": organ, "rok": rok_i, "tema": tema, "stav": stav},
+        "years": list(range(2018, (queries.stats()["last_date"] or dt.date.today()).year + 1))[::-1],
+        "vocab": vocab(), "index": queries.place_index(),
+        "geojson_url": "/api/v1/usneseni/places.geojson" + ("?" + urlencode(params) if params else ""),
+    })
 
 
 @pages.get("/clenove", response_class=HTMLResponse)
@@ -186,7 +200,7 @@ def extracted_index():
 def opendata_file(name: str):
     if "/" in name:
         raise HTTPException(404)
-    top = {"sources.json", "embeddings.jsonl"}   # live in the section's data root, not opendata/
+    top = {"sources.json", "embeddings.jsonl", "geo.json", "geo_cache.json"}   # live in the section's data root, not opendata/
     return _file(store.DATA / (name if name in top else f"opendata/{name}"))
 
 
@@ -228,6 +242,15 @@ def api_search(q: str = "", mode: str = Query("hybrid", pattern="^(hybrid|fullte
                        member_choice=member_choice)
     hits, info = search.search(q, mode, f, limit=limit, offset=offset, newest_first=newest_first)
     return {"info": info, "results": [{**h.row, "score": h.score} for h in hits]}
+
+
+@api.get("/places.geojson")
+def api_places(organ: str = "", rok: str = "", tema: str = "", stav: str = "usneseni"):
+    """Places of resolutions (parcels, addresses, streets) as GeoJSON; same filters as the site."""
+    rok_i = int(rok) if rok.strip().isdigit() else None
+    f = _filters(organ, rok_i, tema, "", stav, "", "")
+    return JSONResponse(queries.places_geojson(f), media_type="application/geo+json",
+                        headers={"Cache-Control": "public, max-age=600"})
 
 
 @api.get("/resolutions/{uid}")

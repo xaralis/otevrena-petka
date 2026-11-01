@@ -134,8 +134,45 @@ def load(ids: list[str] | None = None) -> None:
                 log.warning("%s: %s", mid, st)
         with conn.transaction():
             n = _relations(conn)
+            n_places = _places(conn)
         conn.commit()
-    log.info("load: %s, %d resolution links", stats, n)
+    log.info("load: %s, %d resolution links, %d places", stats, n, n_places)
+
+
+def _coords(g: dict):
+    c = g["coordinates"]
+    depth = {"Point": 0, "MultiPoint": 1, "LineString": 1, "MultiLineString": 2,
+             "Polygon": 2, "MultiPolygon": 3}[g["type"]]
+    stack = [(c, depth)]
+    while stack:
+        x, d = stack.pop()
+        if d == 0:
+            yield x
+        else:
+            stack.extend((y, d - 1) for y in x)
+
+
+def _places(conn) -> int:
+    """Replace resolution_places from geo.json (built by `python -m petka.usneseni.geo`)."""
+    f = store.DATA / "geo.json"
+    conn.execute("DELETE FROM resolution_places")
+    if not f.exists():
+        return 0
+    known = {r["uid"] for r in conn.execute("SELECT uid FROM resolutions")}
+    n = 0
+    for uid, feats in json.loads(f.read_text()).items():
+        if uid not in known:
+            continue
+        for ft in feats:
+            pts = list(_coords(ft["geometry"]))
+            xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+            conn.execute(
+                """INSERT INTO resolution_places (uid, kind, label, source_text, geometry, lon, lat, bbox)
+                   VALUES (%s, %s, %s, %s, %s, %s, %s, %s)""",
+                (uid, ft["kind"], ft["label"], ft.get("source_text"), json.dumps(ft["geometry"]),
+                 sum(xs) / len(xs), sum(ys) / len(ys), [min(xs), min(ys), max(xs), max(ys)]))
+            n += 1
+    return n
 
 
 def _relations(conn) -> int:
@@ -270,6 +307,10 @@ EXPORTS = {
                   FROM members m LEFT JOIN memberships s ON s.member_id = m.id
                   WHERE EXISTS (SELECT 1 FROM ballots b WHERE b.member_id = m.id)
                   ORDER BY m.last_name, m.first_name, s.term""",
+    "places": """SELECT p.uid, r.number, p.kind, p.label, p.source_text,
+                   round(p.lon::numeric, 6) AS lon, round(p.lat::numeric, 6) AS lat, p.geometry::text AS geometry
+                 FROM resolution_places p JOIN resolutions r ON r.uid = p.uid
+                 ORDER BY r.date, r.seq, p.id""",
 }
 
 
@@ -299,6 +340,14 @@ def export() -> None:
             resources.append({"name": name, "title": t["title"], "description": t["description"],
                               "path": f"{name}.csv", "format": "csv", "mediatype": "text/csv",
                               "encoding": "utf-8", "schema": schema})
+    with db.connect() as conn:  # the same places as one GeoJSON file, for GIS tools
+        feats = [{"type": "Feature", "geometry": r["geometry"],
+                  "properties": {k: r[k] for k in ("uid", "number", "kind", "label", "source_text")}}
+                 for r in conn.execute(
+                     """SELECT p.uid, r.number, p.kind, p.label, p.source_text, p.geometry
+                        FROM resolution_places p JOIN resolutions r ON r.uid = p.uid ORDER BY r.date, r.seq, p.id""")]
+    store._write(OPENDATA / "places.geojson", json.dumps(
+        {"type": "FeatureCollection", "features": feats}, ensure_ascii=False) + "\n")
     store._write(OPENDATA / "datapackage.json", json.dumps({
         "name": "usneseni-mo-pardubice-v",
         "title": "Usnesení a hlasování zastupitelstva a rady městského obvodu Pardubice V",
@@ -363,6 +412,12 @@ def update() -> None:
             failures.append(f"{mid}: {e}")
             attempts[key] = attempts.get(key, 0) + 1
             store._write(store.DATA / "attempts.json", json.dumps(attempts, indent=1))
+    try:  # places → geometry; only new strings go to ČÚZK, the rest comes from geo_cache.json
+        from . import geo
+        geo.build()
+    except Exception as e:
+        log.exception("geo build failed")
+        failures.append(f"geo: {e}")
     load(None)
     embed()
     export()

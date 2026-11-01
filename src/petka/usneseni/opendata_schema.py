@@ -124,6 +124,21 @@ TABLES = {
             f("in_rada", "boolean", "Byl v daném období členem rady."),
         ],
     },
+    "places": {
+        "title": "Místa usnesení",
+        "description": "Pozemky, adresy a ulice, kterých se usnesení týká, s geometrií z RÚIAN (ČÚZK). Obecná místa (Dukla, sídliště) nejsou zahrnuta; parcely jsou v dnešní podobě. Stejná data jako GeoJSON: places.geojson.",
+        "fields": [
+            f("uid", "string", "Usnesení.", required=True),
+            f("number", "string", "Číslo usnesení."),
+            f("kind", "string", "parcel = pozemek (polygon), address = adresní místo (bod), street = ulice (linie).", enum=["parcel", "address", "street"], required=True),
+            f("label", "string", "Úřední název podle RÚIAN.", required=True),
+            f("source_text", "string", "Místo, jak ho uvádí zápis (strojově vytěžené)."),
+            f("lon", "number", "Zeměpisná délka těžiště (WGS84)."),
+            f("lat", "number", "Zeměpisná šířka těžiště (WGS84)."),
+            f("geometry", "string", "Geometrie jako GeoJSON (WGS84).", required=True),
+        ],
+        "foreignKeys": [{"fields": "uid", "reference": {"resource": "resolutions", "fields": "uid"}}],
+    },
     "relations": {
         "title": "Zrušení a změny usnesení",
         "description": "Usnesení, které ruší (revokuje) nebo mění dřívější usnesení. Účinné jen, pokud rušící usnesení prošlo.",

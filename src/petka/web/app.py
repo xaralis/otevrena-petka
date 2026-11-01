@@ -74,7 +74,8 @@ class _Gzip:
         self.app, self.gzip = app, GZipMiddleware(app, minimum_size=1024)
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] == "http" and not scope["path"].startswith("/mcp"):
+        # MCP streams; PMTiles is read with Range requests, which compression would break
+        if scope["type"] == "http" and not scope["path"].startswith("/mcp") and not scope["path"].endswith(".pmtiles"):
             return await self.gzip(scope, receive, send)
         await self.app(scope, receive, send)
 
@@ -169,7 +170,8 @@ def robots():
 
 @app.get("/sitemap.xml", include_in_schema=False)
 def sitemap():
-    pages = ["/", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/clenove/ucast", "/usneseni/jednani", "/usneseni/clenove", "/usneseni/metodika"]
+    pages = ["/", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/mapa", "/usneseni/jednani",
+             "/usneseni/clenove", "/usneseni/clenove/ucast", "/usneseni/metodika"]
     pages += [f"/{s.slug}" for s in SECTIONS if s.status == "planned"]
     urls = [(u, None) for u in pages]
     with db.pool().connection() as conn:

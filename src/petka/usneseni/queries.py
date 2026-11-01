@@ -29,6 +29,12 @@ def resolution(uid: str) -> dict | None:
         r["revokes"] = conn.execute(
             """SELECT x.type, x.scope, x.detail, x.effective, x.target_number, x.target_uid
                FROM resolution_relations x WHERE x.source_uid = %s""", (uid,)).fetchall()
+        r["geo"] = conn.execute(
+            """SELECT kind, label, source_text, geometry, lon, lat FROM resolution_places
+               WHERE uid = %s ORDER BY kind = 'street', id""", (uid,)).fetchall()
+        for g in r["geo"]:
+            g["feature"] = {"type": "Feature", "geometry": g["geometry"],
+                            "properties": {"label": g["label"], "kind": g["kind"]}}
         return r
 
 
@@ -125,6 +131,34 @@ def member(mid: str) -> dict | None:
                FROM meetings WHERE %s = ANY(present || excused || absent)
                GROUP BY 1, 2 ORDER BY 2 DESC, 1""", (mid, mid, mid, mid)).fetchall()
         return m
+
+
+def places_geojson(f) -> dict:
+    """All places of resolutions matching the filters as one FeatureCollection (map page)."""
+    from .search import Filters
+    where, params = (f or Filters()).sql()
+    with db.pool().connection() as conn:
+        rows = conn.execute(
+            f"""SELECT p.kind, p.label, p.geometry, r.uid, r.number, r.title, r.date, r.status, r.body
+                FROM resolution_places p JOIN resolutions r ON r.uid = p.uid
+                JOIN meetings m ON m.id = r.meeting_id
+                WHERE {where} ORDER BY r.date, r.seq""", params).fetchall()
+    return {"type": "FeatureCollection", "features": [
+        {"type": "Feature", "geometry": r["geometry"],
+         "properties": {"kind": r["kind"], "label": r["label"], "uid": r["uid"], "number": r["number"],
+                        "title": r["title"], "date": r["date"].isoformat(), "year": r["date"].year,
+                        "status": r["status"], "body": r["body"]}} for r in rows]}
+
+
+def place_index(limit: int = 60) -> list[dict]:
+    """Streets and addresses with the most resolutions (text alternative to the map)."""
+    with db.pool().connection() as conn:
+        return conn.execute(
+            """SELECT CASE WHEN p.kind = 'address' THEN regexp_replace(p.label, ' [0-9].*$', '')
+                           ELSE p.label END AS name, count(DISTINCT p.uid) AS n
+               FROM resolution_places p JOIN resolutions r ON r.uid = p.uid
+               WHERE p.kind IN ('street', 'address') AND r.status <> 'neprijato'
+               GROUP BY 1 ORDER BY 2 DESC, 1 LIMIT %s""", (limit,)).fetchall()
 
 
 def attendance(term: str) -> list[dict]:
