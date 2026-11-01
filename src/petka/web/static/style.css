@@ -291,9 +291,9 @@ footer p { max-width: 80ch; }
 .club-seats { display: flex; flex-wrap: wrap; gap: var(--gap); margin-top: .55rem; }
 .club-seats i { width: var(--tile); height: var(--tile); background: var(--ink); border-radius: 2px; }
 .club-people { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 2rem; }
-.club-people li { break-inside: avoid; padding: .3rem 0 .45rem; border-bottom: 1px solid var(--grey); }
+.club-people li { break-inside: avoid; padding: .3rem 0 .45rem; }
 .club-people a { font-weight: 600; color: var(--ink); }
-@media (max-width: 640px) { .club { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .club { grid-template-columns: 1fr; } .club-people li { border-bottom: 1px solid var(--grey); } }
 .seats-l.bare .t-proti { background: linear-gradient(#fff, #fff) center / 50% 3px no-repeat, var(--red); }
 .seats-l.bare .t-off { background: radial-gradient(circle, var(--field) 0 2.5px, transparent 3px); }
 
