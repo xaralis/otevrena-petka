@@ -79,7 +79,8 @@ def map_page(request: Request, organ: str = "", rok: str = "", tema: str = "", s
 @pages.get("/clenove", response_class=HTMLResponse)
 def members_page(request: Request):
     terms: dict[str, dict[str, list]] = {}
-    for m in queries.members():
+    # seats are what the election gave (volby.cz), so someone elected who never sat still counts
+    for m in queries.members() + queries.elected_without_votes():
         terms.setdefault(m["term"], {}).setdefault(m["list"], []).append(m)
     # Strongest club first; ties alphabetically
     clubs = {t: sorted(({"name": k, "people": v, "seats": sum(1 for m in v if m["elected"])}

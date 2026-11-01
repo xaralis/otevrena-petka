@@ -112,6 +112,19 @@ def members(term: str | None = None) -> list[dict]:
                ORDER BY s.term DESC, m.last_name""", (term, term)).fetchall()
 
 
+def elected_without_votes() -> list[dict]:
+    """Elected in a term but never voting in it (gave up the seat before the first meeting)."""
+    with db.pool().connection() as conn:
+        return conn.execute(
+            """SELECT m.id, m.name, s.term, s.list, s.elected, s.in_rada, 0 AS n_ballots, true AS never_sat
+               FROM members m JOIN memberships s ON s.member_id = m.id
+               WHERE s.elected AND EXISTS (SELECT 1 FROM meetings mt WHERE mt.term = s.term)
+                 AND NOT EXISTS (SELECT 1 FROM ballots b JOIN votes v ON v.id = b.vote_id
+                                 JOIN meetings mt ON mt.id = v.meeting_id
+                                 WHERE b.member_id = m.id AND mt.term = s.term)
+               ORDER BY s.term DESC, m.last_name""").fetchall()
+
+
 def member(mid: str) -> dict | None:
     with db.pool().connection() as conn:
         m = conn.execute("SELECT * FROM members WHERE id = %s", (mid,)).fetchone()

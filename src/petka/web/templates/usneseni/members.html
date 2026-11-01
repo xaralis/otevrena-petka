@@ -16,7 +16,7 @@
       <span class="club-seats" aria-label="{{ c.seats }} {{ 'mandát' if c.seats == 1 else ('mandáty' if c.seats < 5 else 'mandátů') }}">{% for _ in range(c.seats) %}<i></i>{% endfor %}</span>
       <span class="muted">{{ c.seats }} {{ 'mandát' if c.seats == 1 else ('mandáty' if c.seats < 5 else 'mandátů') }}</span></h3>
     <ul class="club-people">
-      {% for m in c.people %}<li><a href="/usneseni/clenove/{{ m.id }}">{{ m.name }}</a>{% if m.in_rada %} <b>v radě</b>{% endif %}{% if not m.elected %} <span class="muted">nastoupil{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }} jako náhradník</span>{% endif %}</li>{% endfor %}
+      {% for m in c.people %}<li><a href="/usneseni/clenove/{{ m.id }}">{{ m.name }}</a>{% if m.in_rada %} <b>v radě</b>{% endif %}{% if not m.elected %} <span class="muted">nastoupil{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }} jako náhradník</span>{% endif %}{% if m.never_sat %} <span class="muted">zvolen{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }}, na jednáních nezasedl{{ 'a' if m.name.split(',')[0].split()[-1].endswith('á') }}</span>{% endif %}</li>{% endfor %}
     </ul>
   </div>
   {% endfor %}
