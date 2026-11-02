@@ -9,9 +9,9 @@
   "kind": "radne",
   "date": "2026-09-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "69b184750c3f897deeb7920dd87837e29e3439111b9544d183d8b70b720665b1",
-  "fetched_at": "2026-10-31T16:00:40+00:00"
+  "fetched_at": "2026-10-31T16:00:40+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2026-06-24-23",
@@ -23,9 +23,9 @@
   "kind": "mimoradne",
   "date": "2026-06-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c0e23114c3cac1f5ed01cf8461287fe4b88f50809a9c0536b8345c59c51b7c3d",
-  "fetched_at": "2026-10-31T16:00:40+00:00"
+  "fetched_at": "2026-10-31T16:00:40+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2026-06-03-22",
@@ -37,9 +37,9 @@
   "kind": "radne",
   "date": "2026-06-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "32d85b90f324b6756ff676b4a6af886a302a0d2c1b57c02e55f14755cd2edfc7",
-  "fetched_at": "2026-10-31T16:00:41+00:00"
+  "fetched_at": "2026-10-31T16:00:41+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2026-03-11-21",
@@ -51,9 +51,9 @@
   "kind": "radne",
   "date": "2026-03-11",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "cb32552cbdc3c570ba254702f039a78417610b2bd8fcb1108becadf34135287e",
-  "fetched_at": "2026-10-31T16:00:41+00:00"
+  "fetched_at": "2026-10-31T16:00:41+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2025-12-17-20",
@@ -65,9 +65,9 @@
   "kind": "radne",
   "date": "2025-12-17",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8c38773b43d77f58ba090c9b76a053978e0856442c38f1d690f61c40f74e58a2",
-  "fetched_at": "2026-10-31T16:00:41+00:00"
+  "fetched_at": "2026-10-31T16:00:41+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2025-11-18-19",
@@ -79,9 +79,9 @@
   "kind": "mimoradne",
   "date": "2025-11-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ba027a16825091c99bdd191421d0476568caccbff7864997ce44b0af6489280c",
-  "fetched_at": "2026-10-31T16:00:42+00:00"
+  "fetched_at": "2026-10-31T16:00:42+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2025-09-24-18",
@@ -93,9 +93,9 @@
   "kind": "radne",
   "date": "2025-09-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "813c9be505d62ab15fef236a2c0f017681d125ecd5c7e5214d7c0bfd854c0011",
-  "fetched_at": "2026-10-31T16:00:42+00:00"
+  "fetched_at": "2026-10-31T16:00:42+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2025-06-25-17",
@@ -107,9 +107,9 @@
   "kind": "radne",
   "date": "2025-06-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f2bd5c58120b29a506be5cae22f5d18c76eec8edadc4334c636843a48609547e",
-  "fetched_at": "2026-10-31T16:00:43+00:00"
+  "fetched_at": "2026-10-31T16:00:43+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2025-04-23-16",
@@ -121,9 +121,9 @@
   "kind": "mimoradne",
   "date": "2025-04-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b68f8be7eb59872fe863135e00f34cbf0686588786b3c6732a713b891d26eeca",
-  "fetched_at": "2026-10-31T16:00:43+00:00"
+  "fetched_at": "2026-10-31T16:00:43+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2025-03-12-15",
@@ -135,9 +135,9 @@
   "kind": "radne",
   "date": "2025-03-12",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "612e243d36a87a89efe231b054a60c42b44131054ca8b0c82fcf1cf6318e81cb",
-  "fetched_at": "2026-10-31T16:00:43+00:00"
+  "fetched_at": "2026-10-31T16:00:43+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2024-12-18-14",
@@ -149,9 +149,9 @@
   "kind": "radne",
   "date": "2024-12-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a5edd35caa13e796bbe91138e95d345fde7bb384ab77a405232bbc538b8a735f",
-  "fetched_at": "2026-10-31T16:00:43+00:00"
+  "fetched_at": "2026-10-31T16:00:43+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2024-09-25-13",
@@ -163,9 +163,9 @@
   "kind": "radne",
   "date": "2024-09-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "11596703c0fff37b93b3e3f88e3e862087b19437d371405f20094aeb777a32f2",
-  "fetched_at": "2026-10-31T16:00:44+00:00"
+  "fetched_at": "2026-10-31T16:00:44+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2024-06-26-12",
@@ -177,9 +177,9 @@
   "kind": "radne",
   "date": "2024-06-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e0a6219a41a630cecc5869f00e9825912a5a2657db73daa4bfa490c68d1b7f70",
-  "fetched_at": "2026-10-31T16:00:44+00:00"
+  "fetched_at": "2026-10-31T16:00:44+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2024-06-11-11",
@@ -191,9 +191,9 @@
   "kind": "mimoradne",
   "date": "2024-06-11",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "5318e280e8d5f60b15cb1e4ff3a44b68ebc5c5758df6b6354dee4aafcdd39437",
-  "fetched_at": "2026-10-31T16:00:44+00:00"
+  "fetched_at": "2026-10-31T16:00:44+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2024-03-06-10",
@@ -205,9 +205,9 @@
   "kind": "radne",
   "date": "2024-03-06",
   "is_attachment": false,
-  "needs_transcription": true,
   "sha256": "2821ce7f851d7211b97edd5a623e8c6206c16e5ad5d14d66d9813fa807feee88",
-  "fetched_at": "2026-10-31T16:00:45+00:00"
+  "fetched_at": "2026-10-31T16:00:45+00:00",
+  "needs_transcription": true
  },
  {
   "id": "zmo-2023-12-20-9",
@@ -219,9 +219,9 @@
   "kind": "radne",
   "date": "2023-12-20",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "3c1a4f3e62c7ab771466834cf83ed199bf1c9d20f088d77f3fabdf3a6704408c",
-  "fetched_at": "2026-10-31T16:00:45+00:00"
+  "fetched_at": "2026-10-31T16:00:45+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2023-11-08-8",
@@ -233,9 +233,9 @@
   "kind": "radne",
   "date": "2023-11-08",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "16109e6c993d1ee364301a0a98867663f42fe90a1302b568720892a20f6a504a",
-  "fetched_at": "2026-10-31T16:00:45+00:00"
+  "fetched_at": "2026-10-31T16:00:45+00:00",
+  "needs_transcription": false
  },
  {
   "id": null,
@@ -258,9 +258,9 @@
   "kind": "radne",
   "date": "2023-09-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d2ab29eadd9281539ff0d12c5057bc57bf8c3c95883540d2c6f9b7d35f99ac47",
-  "fetched_at": "2026-10-31T16:00:45+00:00"
+  "fetched_at": "2026-10-31T16:00:45+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2023-06-28-6",
@@ -272,9 +272,9 @@
   "kind": "radne",
   "date": "2023-06-28",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6773d84eca54d80c0c910ddf10d578f272a4add5c8c634ce5c19142376e93108",
-  "fetched_at": "2026-10-31T16:00:46+00:00"
+  "fetched_at": "2026-10-31T16:00:46+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2023-04-26-5",
@@ -286,9 +286,9 @@
   "kind": "radne",
   "date": "2023-04-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d372b1ed38e015776f524e75028811abccf826b2fdcb6ad67ded42cfc0aad7cc",
-  "fetched_at": "2026-10-31T16:00:46+00:00"
+  "fetched_at": "2026-10-31T16:00:46+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2023-04-12-4",
@@ -300,9 +300,9 @@
   "kind": "mimoradne",
   "date": "2023-04-12",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "150ff4b8f37a1c85ba60ccf02434b550c15ea1ab0d3e7f0acc80915f2060fd91",
-  "fetched_at": "2026-10-31T16:00:46+00:00"
+  "fetched_at": "2026-10-31T16:00:46+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2023-02-22-3",
@@ -314,9 +314,9 @@
   "kind": null,
   "date": "2023-02-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6fdc5479d5b0d78972deaf8a8c3fce95b4bb41120bfe18ba38aac9842358abb4",
-  "fetched_at": "2026-10-31T16:00:46+00:00"
+  "fetched_at": "2026-10-31T16:00:46+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2022-12-21-2",
@@ -328,9 +328,9 @@
   "kind": null,
   "date": "2022-12-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6e9dd34f8b96ad0c5237e62a5e6946455b45525986141dc5efe98cff69d9d66d",
-  "fetched_at": "2026-10-31T16:00:47+00:00"
+  "fetched_at": "2026-10-31T16:00:47+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2022-10-19-1",
@@ -342,9 +342,9 @@
   "kind": "ustavujici",
   "date": "2022-10-19",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "95ed0a6090939833381f2195cd22a9a8684ffe0fa4862032b57af741e06984df",
-  "fetched_at": "2026-10-31T16:00:47+00:00"
+  "fetched_at": "2026-10-31T16:00:47+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2022-09-21-18",
@@ -356,9 +356,9 @@
   "kind": null,
   "date": "2022-09-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a20d90917a8a946266d22c0b8d284aad916c414431df9d7d38201edefd48d2bf",
-  "fetched_at": "2026-10-31T16:00:47+00:00"
+  "fetched_at": "2026-10-31T16:00:47+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2022-06-22-17",
@@ -370,9 +370,9 @@
   "kind": "radne",
   "date": "2022-06-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2eeb71868ce00c4ba9fad77a7f71ea436a43239211ee2b10b541aa34f127bbdd",
-  "fetched_at": "2026-10-31T16:00:48+00:00"
+  "fetched_at": "2026-10-31T16:00:48+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2022-03-10-16",
@@ -384,9 +384,9 @@
   "kind": "radne",
   "date": "2022-03-10",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "12ba7ba3eba8bd93b44a2d7ca25642372c73a0ddefdee6941e15479366df41f0",
-  "fetched_at": "2026-10-31T16:00:48+00:00"
+  "fetched_at": "2026-10-31T16:00:48+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2021-12-15-15",
@@ -398,9 +398,9 @@
   "kind": "radne",
   "date": "2021-12-15",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f244b0675568487702daa1f04a1f408869153e8125ff63f489a63c247c9843f0",
-  "fetched_at": "2026-10-31T16:00:48+00:00"
+  "fetched_at": "2026-10-31T16:00:48+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2021-09-22-14",
@@ -412,9 +412,9 @@
   "kind": "radne",
   "date": "2021-09-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "35aee5b2e3477c9edd7e5c1ee031dc6e967595eb3e0f757e1a2b051bca699278",
-  "fetched_at": "2026-10-31T16:00:48+00:00"
+  "fetched_at": "2026-10-31T16:00:48+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2021-06-23-13",
@@ -426,9 +426,9 @@
   "kind": "radne",
   "date": "2021-06-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "73d2a10b06d0e7e76c2323b24ed56b32440d0d47c09e1a0994964b09863e74e4",
-  "fetched_at": "2026-10-31T16:00:48+00:00"
+  "fetched_at": "2026-10-31T16:00:48+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2021-03-18-12",
@@ -440,9 +440,9 @@
   "kind": "mimoradne",
   "date": "2021-03-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "1f36d754ce7b570870964fb172f123212a433555c5658582b38ef0dc07453f4e",
-  "fetched_at": "2026-10-31T16:00:49+00:00"
+  "fetched_at": "2026-10-31T16:00:49+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2021-03-10-11",
@@ -454,9 +454,9 @@
   "kind": "radne",
   "date": "2021-03-10",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f9b0a6fb19b6640bab987792283bb53c3e13dd79dee54712fcbec8c469d29bfe",
-  "fetched_at": "2026-10-31T16:00:49+00:00"
+  "fetched_at": "2026-10-31T16:00:49+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2020-12-16-10",
@@ -468,9 +468,9 @@
   "kind": "radne",
   "date": "2020-12-16",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e135c53ae1aa85661bc575df6ae82a5a45d9e94b362e71ac77aec5f17397019f",
-  "fetched_at": "2026-10-31T16:00:49+00:00"
+  "fetched_at": "2026-10-31T16:00:49+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2020-09-23-9",
@@ -482,9 +482,9 @@
   "kind": "radne",
   "date": "2020-09-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2fd08e5f6613cf7c43877c12ba67a608e465c256b86755881be295445088483f",
-  "fetched_at": "2026-10-31T16:00:49+00:00"
+  "fetched_at": "2026-10-31T16:00:49+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2020-06-24-8",
@@ -496,9 +496,9 @@
   "kind": "radne",
   "date": "2020-06-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "995cc3fdbce934a5b9aecdc11fd536cff5900b352b85ff30deb6ae212bde0bcf",
-  "fetched_at": "2026-10-31T16:00:50+00:00"
+  "fetched_at": "2026-10-31T16:00:50+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2020-03-11-7",
@@ -510,9 +510,9 @@
   "kind": "radne",
   "date": "2020-03-11",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "22dc6867c522834973dee742cc453fa0b6ecc72738c6d808975068e06f03c580",
-  "fetched_at": "2026-10-31T16:00:50+00:00"
+  "fetched_at": "2026-10-31T16:00:50+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2019-12-18-6",
@@ -524,9 +524,9 @@
   "kind": "radne",
   "date": "2019-12-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "1aa62cc8feb5d7a88aa12277a7dc3094f3cc59734b745c74e73c0282c3ece2b2",
-  "fetched_at": "2026-10-31T16:00:50+00:00"
+  "fetched_at": "2026-10-31T16:00:50+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2019-09-25-5",
@@ -538,9 +538,9 @@
   "kind": "radne",
   "date": "2019-09-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "691a31198b6820b6a78218822784f693bf573214abbd1b24dacf4e0a0dcb7ebc",
-  "fetched_at": "2026-10-31T16:00:50+00:00"
+  "fetched_at": "2026-10-31T16:00:50+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2019-06-26-4",
@@ -552,9 +552,9 @@
   "kind": "radne",
   "date": "2019-06-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "33944bbbc31d931a8b14b8a0ad7124179bc958cf4ba617f08b6c981fec5cc81d",
-  "fetched_at": "2026-10-31T16:00:51+00:00"
+  "fetched_at": "2026-10-31T16:00:51+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2019-03-13-3",
@@ -566,9 +566,9 @@
   "kind": "radne",
   "date": "2019-03-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "07b1886c8667c3ba481ef76f0cdeb25bbd1d21e9c19c7237faa1af644973316e",
-  "fetched_at": "2026-10-31T16:00:51+00:00"
+  "fetched_at": "2026-10-31T16:00:51+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2018-12-19-2",
@@ -580,9 +580,9 @@
   "kind": "radne",
   "date": "2018-12-19",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8d7160aae344d331dbc59decfb26823712acac1ce8f0b2b1b3e937ce0b69c4e8",
-  "fetched_at": "2026-10-31T16:00:51+00:00"
+  "fetched_at": "2026-10-31T16:00:51+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2018-10-31-1",
@@ -594,9 +594,9 @@
   "kind": "ustavujici",
   "date": "2018-10-31",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "914e8f47e0b1892d99ae42b22e05aca3ebb2b9cb81b0e14ef61d2509df585383",
-  "fetched_at": "2026-10-31T16:00:51+00:00"
+  "fetched_at": "2026-10-31T16:00:51+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2018-09-26-22",
@@ -608,9 +608,9 @@
   "kind": "radne",
   "date": "2018-09-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f6fc7318a2fe007cfa9d069b35578c21339a3557adebed0698f31727e7b56514",
-  "fetched_at": "2026-10-31T16:00:51+00:00"
+  "fetched_at": "2026-10-31T16:00:51+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2018-06-27-21",
@@ -622,9 +622,9 @@
   "kind": "radne",
   "date": "2018-06-27",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "72adf1a304da7150f9d874a54dbf217da2b575779cffedb752e1986efc24620d",
-  "fetched_at": "2026-10-31T16:00:52+00:00"
+  "fetched_at": "2026-10-31T16:00:52+00:00",
+  "needs_transcription": false
  },
  {
   "id": "zmo-2018-03-14-20",
@@ -636,9 +636,9 @@
   "kind": "radne",
   "date": "2018-03-14",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a0c2e2e2c0b600a48a3f022ed507c4c9b2f6b416525a2d7948036f89e0e6dbea",
-  "fetched_at": "2026-10-31T16:00:52+00:00"
+  "fetched_at": "2026-10-31T16:00:52+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-09-23-66",
@@ -650,9 +650,9 @@
   "kind": "radne",
   "date": "2026-09-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c2eb295ff39fd6cd42a6be167db5b730d177bf1f54a954df2eaa722af3e65d00",
-  "fetched_at": "2026-10-31T16:00:52+00:00"
+  "fetched_at": "2026-10-31T16:00:52+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-09-02-65",
@@ -664,9 +664,9 @@
   "kind": "mimoradne",
   "date": "2026-09-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "0204d67503d71156612e6895d9d8f76312b47c8dae768ffd5ead0e84cb6d42ab",
-  "fetched_at": "2026-10-31T16:00:53+00:00"
+  "fetched_at": "2026-10-31T16:00:53+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-06-24-64",
@@ -678,9 +678,9 @@
   "kind": "radne",
   "date": "2026-06-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "959e21b8c8784ec7cb1e1610043ead78ad66b702dbc19e9349c12f4b03c911ce",
-  "fetched_at": "2026-10-31T16:00:53+00:00"
+  "fetched_at": "2026-10-31T16:00:53+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-06-03-63",
@@ -692,9 +692,9 @@
   "kind": "mimoradne",
   "date": "2026-06-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8bf6d2f373934e81730682edd80123e0db7606b663f2d6915cbec6f6b2f78475",
-  "fetched_at": "2026-10-31T16:00:53+00:00"
+  "fetched_at": "2026-10-31T16:00:53+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-05-13-62",
@@ -706,9 +706,9 @@
   "kind": "radne",
   "date": "2026-05-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e6b6c159132781f1d4742f082d5fbec23544f512df13c3d95ea6ad4982e4783d",
-  "fetched_at": "2026-10-31T16:00:54+00:00"
+  "fetched_at": "2026-10-31T16:00:54+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-04-22-61",
@@ -720,9 +720,9 @@
   "kind": "radne",
   "date": "2026-04-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "bc362ca6a5c9010a42f1c9cb989229a50acc47794a89a678e9d9b937889480bf",
-  "fetched_at": "2026-10-31T16:00:54+00:00"
+  "fetched_at": "2026-10-31T16:00:54+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-04-01-60",
@@ -734,9 +734,9 @@
   "kind": "radne",
   "date": "2026-04-01",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c82b1dad4e07ef3f79e8491d21466e16c189489f81adf72a3ae1c9e750208237",
-  "fetched_at": "2026-10-31T16:00:54+00:00"
+  "fetched_at": "2026-10-31T16:00:54+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-03-11-59",
@@ -748,9 +748,9 @@
   "kind": "mimoradne",
   "date": "2026-03-11",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "bb6c232d26a7d7fa72134b0c714c6d4b7b8b0ac85f21b262ebfc1a16bc6ba1af",
-  "fetched_at": "2026-10-31T16:00:55+00:00"
+  "fetched_at": "2026-10-31T16:00:55+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-02-18-58",
@@ -762,9 +762,9 @@
   "kind": "radne",
   "date": "2026-02-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2d0854873a13ab2b59b8cdea11d844c92f2ed0a776aeb03f519023a9ff878bca",
-  "fetched_at": "2026-10-31T16:00:55+00:00"
+  "fetched_at": "2026-10-31T16:00:55+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2026-01-28-57",
@@ -776,9 +776,9 @@
   "kind": "radne",
   "date": "2026-01-28",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "40d9527b6e6c478781500fcef899e09e5268d45f4fa30e8cf495f1d26a39f6d2",
-  "fetched_at": "2026-10-31T16:00:55+00:00"
+  "fetched_at": "2026-10-31T16:00:55+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-12-17-56",
@@ -790,9 +790,9 @@
   "kind": "mimoradne",
   "date": "2025-12-17",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e692666e35070f37d5544df3250897e07fc2d0737690241ab8afeb18626c8d96",
-  "fetched_at": "2026-10-31T16:00:56+00:00"
+  "fetched_at": "2026-10-31T16:00:56+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-11-26-55",
@@ -804,9 +804,9 @@
   "kind": "radne",
   "date": "2025-11-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a89138044e666720f4363fc0e1ade5d02664a0e861e67d865a554377a683f7de",
-  "fetched_at": "2026-10-31T16:00:56+00:00"
+  "fetched_at": "2026-10-31T16:00:56+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-11-12-54",
@@ -818,9 +818,9 @@
   "kind": "mimoradne",
   "date": "2025-11-12",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "dfcd103e60cdb042a9fc7541342356299d0516badaf5f98aab4cffd9bcf5a296",
-  "fetched_at": "2026-10-31T16:00:56+00:00"
+  "fetched_at": "2026-10-31T16:00:56+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-11-05-53",
@@ -832,9 +832,9 @@
   "kind": "radne",
   "date": "2025-11-05",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ed01baf0725c329a81297a6e8b155eb4571a1f96c777475e42c8937930616c03",
-  "fetched_at": "2026-10-31T16:00:56+00:00"
+  "fetched_at": "2026-10-31T16:00:56+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-10-15-52",
@@ -846,9 +846,9 @@
   "kind": "radne",
   "date": "2025-10-15",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "27840fe0a663a17925feb1bc55871c10c12276ac37512d9f4e57240c21a862ea",
-  "fetched_at": "2026-10-31T16:00:57+00:00"
+  "fetched_at": "2026-10-31T16:00:57+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-09-24-51",
@@ -860,9 +860,9 @@
   "kind": "mimoradne",
   "date": "2025-09-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "64fa3d1a8ddfb56e5f496af9f2266ee3e2300eddabd7b2b9e395c4ca5f9b17ed",
-  "fetched_at": "2026-10-31T16:00:57+00:00"
+  "fetched_at": "2026-10-31T16:00:57+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-09-03-50",
@@ -874,9 +874,9 @@
   "kind": "radne",
   "date": "2025-09-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ba7b25b81fbe1b68c10dec5a741dfc7b5873aa46834307543eed5a4d257d3102",
-  "fetched_at": "2026-10-31T16:00:58+00:00"
+  "fetched_at": "2026-10-31T16:00:58+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-07-02-49",
@@ -888,9 +888,9 @@
   "kind": "mimoradne",
   "date": "2025-07-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "73368c6c7bcdbfc5c40160cc41dfdd959bebd3b3da58e10c2a325f65ebdbe024",
-  "fetched_at": "2026-10-31T16:00:59+00:00"
+  "fetched_at": "2026-10-31T16:00:59+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-06-25-48",
@@ -902,9 +902,9 @@
   "kind": "mimoradne",
   "date": "2025-06-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b94177ea2be5f84398180e8fe8c3877280b35f3883895d6a4ad7e7c5fcbc52b7",
-  "fetched_at": "2026-10-31T16:00:59+00:00"
+  "fetched_at": "2026-10-31T16:00:59+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-06-04-47",
@@ -916,9 +916,9 @@
   "kind": "radne",
   "date": "2025-06-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "98b70fa4f7748de5aa75e54d3f7a5113cf964ef4bba0b5495e7b8af484f24ff7",
-  "fetched_at": "2026-10-31T16:00:59+00:00"
+  "fetched_at": "2026-10-31T16:00:59+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-05-14-46",
@@ -930,9 +930,9 @@
   "kind": "radne",
   "date": "2025-05-14",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "98953d1a987974b8d12fb91beeefdd8d31a5d76a6dc875d9de56ca667160321d",
-  "fetched_at": "2026-10-31T16:01:00+00:00"
+  "fetched_at": "2026-10-31T16:01:00+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-04-23-45",
@@ -944,9 +944,9 @@
   "kind": "radne",
   "date": "2025-04-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "5515778260533df9a35bb5365361b3e85bfa321e32e51c8e1e5cc4ba007631d5",
-  "fetched_at": "2026-10-31T16:01:00+00:00"
+  "fetched_at": "2026-10-31T16:01:00+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-04-07-44",
@@ -958,9 +958,9 @@
   "kind": "mimoradne",
   "date": "2025-04-07",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "305b24f5b4dcee95bd18d03ca7393229df69155567c43e44024913ae8ad21ea3",
-  "fetched_at": "2026-10-31T16:01:00+00:00"
+  "fetched_at": "2026-10-31T16:01:00+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-04-02-43",
@@ -972,9 +972,9 @@
   "kind": "radne",
   "date": "2025-04-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f2da9a673ec6641b197e8572d2f12fcf3117d78d4f8aa9554615c6e884d9259c",
-  "fetched_at": "2026-10-31T16:01:01+00:00"
+  "fetched_at": "2026-10-31T16:01:01+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-03-12-42",
@@ -986,9 +986,9 @@
   "kind": "mimoradne",
   "date": "2025-03-12",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "56b79f5ec3d16eebf7a937b5c8b560741a4e56eb5f4b9177cff634d2091b4574",
-  "fetched_at": "2026-10-31T16:01:01+00:00"
+  "fetched_at": "2026-10-31T16:01:01+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-02-19-41",
@@ -1000,9 +1000,9 @@
   "kind": "radne",
   "date": "2025-02-19",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e16c054f7fa5ad573045981ef216edc6aee5767e73c29ef3af49d75623574088",
-  "fetched_at": "2026-10-31T16:01:01+00:00"
+  "fetched_at": "2026-10-31T16:01:01+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-01-29-40",
@@ -1014,9 +1014,9 @@
   "kind": "radne",
   "date": "2025-01-29",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b73faf62b05b908ef26c5b325c95613dcbd8d3b625f40f91441d1337c8197220",
-  "fetched_at": "2026-10-31T16:01:01+00:00"
+  "fetched_at": "2026-10-31T16:01:01+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2025-01-08-39",
@@ -1028,9 +1028,9 @@
   "kind": "radne",
   "date": "2025-01-08",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "1c428af334b21f8dc2cc12410e70ed3171c0878b80b976da198f935d86c96709",
-  "fetched_at": "2026-10-31T16:01:02+00:00"
+  "fetched_at": "2026-10-31T16:01:02+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-12-18-38",
@@ -1042,9 +1042,9 @@
   "kind": "mimoradne",
   "date": "2024-12-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "545b5bface9a873dbb4d9deb1f1147c381137b7d293bca114285201957a3e9f1",
-  "fetched_at": "2026-10-31T16:01:02+00:00"
+  "fetched_at": "2026-10-31T16:01:02+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-12-04-37",
@@ -1056,9 +1056,9 @@
   "kind": "radne",
   "date": "2024-12-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b1278c7dbfa7e108b5979fed627c8f3baaabba89c4788b3c969888e7a72bd25c",
-  "fetched_at": "2026-10-31T16:01:02+00:00"
+  "fetched_at": "2026-10-31T16:01:02+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-11-13-36",
@@ -1070,9 +1070,9 @@
   "kind": "mimoradne",
   "date": "2024-11-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "4f6fc8f01cda769f6faf719dd6995914470fbf6c91f0577ee7d4792d45c4f165",
-  "fetched_at": "2026-10-31T16:01:02+00:00"
+  "fetched_at": "2026-10-31T16:01:02+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-11-06-35",
@@ -1084,9 +1084,9 @@
   "kind": "radne",
   "date": "2024-11-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f095e913bbccae234513bd6464f0837185437d735dfbaf7d2c898f906ff6001f",
-  "fetched_at": "2026-10-31T16:01:03+00:00"
+  "fetched_at": "2026-10-31T16:01:03+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-10-16-34",
@@ -1098,9 +1098,9 @@
   "kind": "radne",
   "date": "2024-10-16",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "5c9a82665aba1bef58c106a2cc30989c4b19d484417c90a30debd371d25ccf25",
-  "fetched_at": "2026-10-31T16:01:03+00:00"
+  "fetched_at": "2026-10-31T16:01:03+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-09-25-33",
@@ -1112,9 +1112,9 @@
   "kind": "mimoradne",
   "date": "2024-09-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "0e003bbe3d9114ed0c100573ddf8ed9b65a181819f5760b802a6182b65bfa974",
-  "fetched_at": "2026-10-31T16:01:03+00:00"
+  "fetched_at": "2026-10-31T16:01:03+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-09-04-32",
@@ -1126,9 +1126,9 @@
   "kind": "radne",
   "date": "2024-09-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "5c6036daf7f71f7c19d441478f5830c655d3ff4740064ba8acb626cb093b0691",
-  "fetched_at": "2026-10-31T16:01:04+00:00"
+  "fetched_at": "2026-10-31T16:01:04+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-08-19-31",
@@ -1140,9 +1140,9 @@
   "kind": "mimoradne",
   "date": "2024-08-19",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a84b80132e1a77d157af33bd198051dbdeef25c2db97751ca37e9de292c18800",
-  "fetched_at": "2026-10-31T16:01:04+00:00"
+  "fetched_at": "2026-10-31T16:01:04+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-07-29-30",
@@ -1154,9 +1154,9 @@
   "kind": "mimoradne",
   "date": "2024-07-29",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "96fe498cf733b9fd244b7d2a9c97b1efa2b1e9f8c4015677fb0ab46d52a9306b",
-  "fetched_at": "2026-10-31T16:01:04+00:00"
+  "fetched_at": "2026-10-31T16:01:04+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-06-26-29",
@@ -1168,9 +1168,9 @@
   "kind": "mimoradne",
   "date": "2024-06-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "89e18c893e4d7452e7ce5ea7a087d96781a4e100a02991d82fcf5344d3bfd461",
-  "fetched_at": "2026-10-31T16:01:04+00:00"
+  "fetched_at": "2026-10-31T16:01:04+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-06-05-28",
@@ -1182,9 +1182,9 @@
   "kind": "radne",
   "date": "2024-06-05",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a66d8671cbb4b0d964eec13f4e63d79c411d4fa1208250fe2ba99a70034999d4",
-  "fetched_at": "2026-10-31T16:01:05+00:00"
+  "fetched_at": "2026-10-31T16:01:05+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-05-29-27",
@@ -1196,9 +1196,9 @@
   "kind": "mimoradne",
   "date": "2024-05-29",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "1d30de900c65fa3502983e1d3164f23cbe8d5100b6299821bb322431695157e3",
-  "fetched_at": "2026-10-31T16:01:05+00:00"
+  "fetched_at": "2026-10-31T16:01:05+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-05-16-26",
@@ -1210,9 +1210,9 @@
   "kind": "radne",
   "date": "2024-05-16",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "0297b36dc2ec0480296a4defb03fc4bc871246b8cf66ec89ef346849f951e9d9",
-  "fetched_at": "2026-10-31T16:01:05+00:00"
+  "fetched_at": "2026-10-31T16:01:05+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-05-09-25",
@@ -1224,9 +1224,9 @@
   "kind": "mimoradne",
   "date": "2024-05-09",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "cf7f58215b92ba07baa29b3a5e5ead020e3169f617ab4db78739f4145a703c2e",
-  "fetched_at": "2026-10-31T16:01:05+00:00"
+  "fetched_at": "2026-10-31T16:01:05+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-04-24-24",
@@ -1238,9 +1238,9 @@
   "kind": "radne",
   "date": "2024-04-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2fd963fbc79382e8e858c1801e068321c13dad2af851938450d740fe2c1de269",
-  "fetched_at": "2026-10-31T16:01:06+00:00"
+  "fetched_at": "2026-10-31T16:01:06+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-04-03-23",
@@ -1252,9 +1252,9 @@
   "kind": "radne",
   "date": "2024-04-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "86105b4b641233f0595205a82dc5e97ea2209ab192391656872f71151b140e10",
-  "fetched_at": "2026-10-31T16:01:06+00:00"
+  "fetched_at": "2026-10-31T16:01:06+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-03-06-22",
@@ -1266,9 +1266,9 @@
   "kind": "radne",
   "date": "2024-03-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "7800432ae406d3009730bef1ffd17ce5c3df53ddd4fc1a2300441b198229b32b",
-  "fetched_at": "2026-10-31T16:01:06+00:00"
+  "fetched_at": "2026-10-31T16:01:06+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-02-21-21",
@@ -1280,9 +1280,9 @@
   "kind": "radne",
   "date": "2024-02-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d174e3771062ec7be2170bb8b35186da7c5666773cf29e1fe3161fd1a5aa224c",
-  "fetched_at": "2026-10-31T16:01:07+00:00"
+  "fetched_at": "2026-10-31T16:01:07+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-01-31-20",
@@ -1294,9 +1294,9 @@
   "kind": "radne",
   "date": "2024-01-31",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a994e811bd5d7a1f73f7e3d409c93b26f46aeb60520db195bb66e936f55ab848",
-  "fetched_at": "2026-10-31T16:01:07+00:00"
+  "fetched_at": "2026-10-31T16:01:07+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2024-01-10-19",
@@ -1308,9 +1308,9 @@
   "kind": "radne",
   "date": "2024-01-10",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b3d3a863b0715ad13a046bc2eb1ad499f9e27b6303c1a9b88db15f7b6e2519db",
-  "fetched_at": "2026-10-31T16:01:07+00:00"
+  "fetched_at": "2026-10-31T16:01:07+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-12-20-18",
@@ -1322,9 +1322,9 @@
   "kind": "mimoradne",
   "date": "2023-12-20",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "9ea340b31bef6c201b413cf2bd441441b4fd22ca5daa81b063678e0cbd5c0450",
-  "fetched_at": "2026-10-31T16:01:07+00:00"
+  "fetched_at": "2026-10-31T16:01:07+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-11-29-17",
@@ -1336,9 +1336,9 @@
   "kind": "radne",
   "date": "2023-11-29",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "3aae678c68652ab82c06ffd8f5ee74587201dc98ca09f854485f983ba16d52f6",
-  "fetched_at": "2026-10-31T16:01:08+00:00"
+  "fetched_at": "2026-10-31T16:01:08+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-11-08-16",
@@ -1350,9 +1350,9 @@
   "kind": "mimoradne",
   "date": "2023-11-08",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "fb217b3642898ca7b6b91f9185003add9d1b7896aeb7ba4e4e715d2cf9d92c1a",
-  "fetched_at": "2026-10-31T16:01:08+00:00"
+  "fetched_at": "2026-10-31T16:01:08+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-10-18-15",
@@ -1364,9 +1364,9 @@
   "kind": "radne",
   "date": "2023-10-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ba657b72c480317b86d59da05da560a4e1e3886e92d78e3ca9367a21d2053bd2",
-  "fetched_at": "2026-10-31T16:01:08+00:00"
+  "fetched_at": "2026-10-31T16:01:08+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-09-27-14",
@@ -1378,9 +1378,9 @@
   "kind": "radne",
   "date": "2023-09-27",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "06586f5f50a1ee2403a14bb5dd266702d80c0bf17829a070f33d2b1428662663",
-  "fetched_at": "2026-10-31T16:01:08+00:00"
+  "fetched_at": "2026-10-31T16:01:08+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-09-06-13",
@@ -1392,9 +1392,9 @@
   "kind": "mimoradne",
   "date": "2023-09-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "23b2364d12609455722e084e98bc636e28e4570906022a25edfcddd75dea61af",
-  "fetched_at": "2026-10-31T16:01:09+00:00"
+  "fetched_at": "2026-10-31T16:01:09+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-07-04-12",
@@ -1406,9 +1406,9 @@
   "kind": "mimoradne",
   "date": "2023-07-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "503f8b801bfe3ace53710207f1f127391df9a4a82bd42723c4dae72939d09975",
-  "fetched_at": "2026-10-31T16:01:09+00:00"
+  "fetched_at": "2026-10-31T16:01:09+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-06-28-11",
@@ -1420,9 +1420,9 @@
   "kind": "mimoradne",
   "date": "2023-06-28",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "36b1df2058576aadbd3761a877b3bc5251abb7e5666dc221f81141c07ae6bdfa",
-  "fetched_at": "2026-10-31T16:01:09+00:00"
+  "fetched_at": "2026-10-31T16:01:09+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-06-07-10",
@@ -1434,9 +1434,9 @@
   "kind": "radne",
   "date": "2023-06-07",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "76f827d61ae2186c91098f8ac0fbfaaf815774cf1824c338f7f6d421fc1a69b1",
-  "fetched_at": "2026-10-31T16:01:09+00:00"
+  "fetched_at": "2026-10-31T16:01:09+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-04-26-9",
@@ -1448,9 +1448,9 @@
   "kind": "mimoradne",
   "date": "2023-04-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "191260b5e4e7739d894d5f68196d11bd9e53ea7a7ecb980086d562183ea9cf2c",
-  "fetched_at": "2026-10-31T16:01:10+00:00"
+  "fetched_at": "2026-10-31T16:01:10+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-04-05-8",
@@ -1462,9 +1462,9 @@
   "kind": "radne",
   "date": "2023-04-05",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "85033a87b7368201e372be33c2cc70b22cb0f5a702a66cdf41f57f6df876f1c1",
-  "fetched_at": "2026-10-31T16:01:10+00:00"
+  "fetched_at": "2026-10-31T16:01:10+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-03-15-7",
@@ -1476,9 +1476,9 @@
   "kind": "radne",
   "date": "2023-03-15",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f105142b79ac79c58666e536c3d38584ed0be462874bf23e973114e9f2abeb32",
-  "fetched_at": "2026-10-31T16:01:10+00:00"
+  "fetched_at": "2026-10-31T16:01:10+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-02-22-6",
@@ -1490,9 +1490,9 @@
   "kind": "mimoradne",
   "date": "2023-02-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e76a06bc2bf7a69d3fbd2b2ae3c22ce52b4ac7d20bf3e589a2b221e71b6c902c",
-  "fetched_at": "2026-10-31T16:01:10+00:00"
+  "fetched_at": "2026-10-31T16:01:10+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-02-01-5",
@@ -1504,9 +1504,9 @@
   "kind": "radne",
   "date": "2023-02-01",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "0adcb6c648e7bcc263f06d8873eb12fc071a1b0cf60b257ced3fb9ee30322024",
-  "fetched_at": "2026-10-31T16:01:11+00:00"
+  "fetched_at": "2026-10-31T16:01:11+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2023-01-11-4",
@@ -1518,9 +1518,9 @@
   "kind": "radne",
   "date": "2023-01-11",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d3f38071e1afff804cef9cade721e473f05d595f912bcd7e54450e0025ac5ff8",
-  "fetched_at": "2026-10-31T16:01:11+00:00"
+  "fetched_at": "2026-10-31T16:01:11+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-12-21-3",
@@ -1532,9 +1532,9 @@
   "kind": "mimoradne",
   "date": "2022-12-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "0eae08669ca349dea3842711d9fe4462b9049e88660ec889fc353e75b5c75fe7",
-  "fetched_at": "2026-10-31T16:01:11+00:00"
+  "fetched_at": "2026-10-31T16:01:11+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-11-23-2",
@@ -1546,9 +1546,9 @@
   "kind": "radne",
   "date": "2022-11-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "98b4047b00bc25cfde28a11aa314cd10edcb86e4d70b4e0d9b3618f4fca06130",
-  "fetched_at": "2026-10-31T16:01:11+00:00"
+  "fetched_at": "2026-10-31T16:01:11+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-11-02-1",
@@ -1560,9 +1560,9 @@
   "kind": "radne",
   "date": "2022-11-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2f5b43cec20c49ad87a67933c6fb16f4409505a9fbfc09d5225bf80dff7299e3",
-  "fetched_at": "2026-10-31T16:01:12+00:00"
+  "fetched_at": "2026-10-31T16:01:12+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-10-13-61",
@@ -1574,9 +1574,9 @@
   "kind": "radne",
   "date": "2022-10-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d6516950746c599fff7a4b0bb5b7f2c2d0cede91fcf6cf08e1347729c840bb62",
-  "fetched_at": "2026-10-31T16:01:12+00:00"
+  "fetched_at": "2026-10-31T16:01:12+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-09-21-60",
@@ -1588,9 +1588,9 @@
   "kind": "mimoradne",
   "date": "2022-09-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "14a9e3b16b975f80252b532760cb301612818bed516b669b8ef41fdf56e52dac",
-  "fetched_at": "2026-10-31T16:01:12+00:00"
+  "fetched_at": "2026-10-31T16:01:12+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-09-01-59",
@@ -1602,9 +1602,9 @@
   "kind": "radne",
   "date": "2022-09-01",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ac7a80d2726a9a4ac697c14abcee630bf0d38d988527f161c43b2681159ed27f",
-  "fetched_at": "2026-10-31T16:01:12+00:00"
+  "fetched_at": "2026-10-31T16:01:12+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-06-22-58",
@@ -1616,9 +1616,9 @@
   "kind": "mimoradne",
   "date": "2022-06-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "eb1f92c4e85adead96d356f522e96d252ee634085125ad447016cceef129350d",
-  "fetched_at": "2026-10-31T16:01:13+00:00"
+  "fetched_at": "2026-10-31T16:01:13+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-06-02-57",
@@ -1630,9 +1630,9 @@
   "kind": "radne",
   "date": "2022-06-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f97a088abdf443999bda0c1a3f4c85276529ddf8d6d98ec23e660388a3cb842e",
-  "fetched_at": "2026-10-31T16:01:13+00:00"
+  "fetched_at": "2026-10-31T16:01:13+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-05-12-56",
@@ -1644,9 +1644,9 @@
   "kind": "radne",
   "date": "2022-05-12",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "cbc7dea6f1fcd751c06d2b70a77b699d7cc8c4bd5e2a3a7f32e956cc595f3c39",
-  "fetched_at": "2026-10-31T16:01:13+00:00"
+  "fetched_at": "2026-10-31T16:01:13+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-04-21-55",
@@ -1658,9 +1658,9 @@
   "kind": "radne",
   "date": "2022-04-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "3493073293099e1a7f5b4ff3261a5bbb5700521d717dd2a6ec6530d26c9904d4",
-  "fetched_at": "2026-10-31T16:01:13+00:00"
+  "fetched_at": "2026-10-31T16:01:13+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-03-30-54",
@@ -1672,9 +1672,9 @@
   "kind": "radne",
   "date": "2022-03-30",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b2f8f20ac8ab48d75d095dee87fc346982f66633a9fc033f293164cdb36a8273",
-  "fetched_at": "2026-10-31T16:01:13+00:00"
+  "fetched_at": "2026-10-31T16:01:13+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-03-10-53",
@@ -1686,9 +1686,9 @@
   "kind": "mimoradne",
   "date": "2022-03-10",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "54188e1e3e074fc24c75b4eec79693139092ce3a4b364c79068e2f627fdefb9f",
-  "fetched_at": "2026-10-31T16:01:14+00:00"
+  "fetched_at": "2026-10-31T16:01:14+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-02-17-52",
@@ -1700,9 +1700,9 @@
   "kind": "radne",
   "date": "2022-02-17",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "5873b0dfce6c56e6d3c664ad66d3a89b8ce6d61b5a5a258be099b28e8152c5a0",
-  "fetched_at": "2026-10-31T16:01:14+00:00"
+  "fetched_at": "2026-10-31T16:01:14+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-01-27-51",
@@ -1714,9 +1714,9 @@
   "kind": "radne",
   "date": "2022-01-27",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "263a789d509f29306af63c669fc8690360dc4122d4814d920254e03611e77fdf",
-  "fetched_at": "2026-10-31T16:01:14+00:00"
+  "fetched_at": "2026-10-31T16:01:14+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2022-01-06-50",
@@ -1728,9 +1728,9 @@
   "kind": "radne",
   "date": "2022-01-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "7d40f8db56f857ef081efea3b6ec39d0cad34394e20e57aba2ade397b6606880",
-  "fetched_at": "2026-10-31T16:01:14+00:00"
+  "fetched_at": "2026-10-31T16:01:14+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-12-15-49",
@@ -1742,9 +1742,9 @@
   "kind": "mimoradne",
   "date": "2021-12-15",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d91ccb3466199f9ed52c74e49799498fe562a60512b54a893f554c65e5ec55d6",
-  "fetched_at": "2026-10-31T16:01:15+00:00"
+  "fetched_at": "2026-10-31T16:01:15+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-11-25-48",
@@ -1756,9 +1756,9 @@
   "kind": "radne",
   "date": "2021-11-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "9251e4d4737f964bdca3c51518c44b10778967836539feb423768c3ab12649dd",
-  "fetched_at": "2026-10-31T16:01:15+00:00"
+  "fetched_at": "2026-10-31T16:01:15+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-11-04-47",
@@ -1770,9 +1770,9 @@
   "kind": "radne",
   "date": "2021-11-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "e89867c12783afc9216363421450e131a8102d4e479b34b1ca1fa2a29ce6a331",
-  "fetched_at": "2026-10-31T16:01:15+00:00"
+  "fetched_at": "2026-10-31T16:01:15+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-10-14-46",
@@ -1784,9 +1784,9 @@
   "kind": "radne",
   "date": "2021-10-14",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "577984c8b859a9ed08fc97b23f388565af860c042a53e5a9fc1db0c8c1b54faa",
-  "fetched_at": "2026-10-31T16:01:15+00:00"
+  "fetched_at": "2026-10-31T16:01:15+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-09-22-45",
@@ -1798,9 +1798,9 @@
   "kind": "mimoradne",
   "date": "2021-09-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c4ced87cdf798035b16da4388a66b816042f3b75e2fd4cac1e75ff879cc74e4a",
-  "fetched_at": "2026-10-31T16:01:15+00:00"
+  "fetched_at": "2026-10-31T16:01:15+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-09-02-44",
@@ -1812,9 +1812,9 @@
   "kind": "radne",
   "date": "2021-09-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8098e3c812b2196c07ef916792907225ea072545f879ebe317d2381fda16c05a",
-  "fetched_at": "2026-10-31T16:01:16+00:00"
+  "fetched_at": "2026-10-31T16:01:16+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-06-23-43",
@@ -1826,9 +1826,9 @@
   "kind": "mimoradne",
   "date": "2021-06-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ee80c10cb54d5d8ff77e983b390ff66f069e8cbb1cc25c45ae5e21b07399cede",
-  "fetched_at": "2026-10-31T16:01:16+00:00"
+  "fetched_at": "2026-10-31T16:01:16+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-06-03-42",
@@ -1840,9 +1840,9 @@
   "kind": "radne",
   "date": "2021-06-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c9a600715578494778ee078176fb5010a394e940a774ea58fc075bf9074e14de",
-  "fetched_at": "2026-10-31T16:01:16+00:00"
+  "fetched_at": "2026-10-31T16:01:16+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-05-13-41",
@@ -1854,9 +1854,9 @@
   "kind": "radne",
   "date": "2021-05-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "9d47e8764a956ae1d3fd5cb9078725484411f4ec7f209ddc554bbb50ed6d0154",
-  "fetched_at": "2026-10-31T16:01:16+00:00"
+  "fetched_at": "2026-10-31T16:01:16+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-04-22-40",
@@ -1868,9 +1868,9 @@
   "kind": "radne",
   "date": "2021-04-22",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8d2668786f1cdb80488334ff7c3bafd24278710e1240debce40e62e5a1f12db8",
-  "fetched_at": "2026-10-31T16:01:17+00:00"
+  "fetched_at": "2026-10-31T16:01:17+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-04-01-39",
@@ -1882,9 +1882,9 @@
   "kind": "radne",
   "date": "2021-04-01",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2d5fa716f516c6c4e75262b7ceb7a453866eee849d8a0562ac18b5f29f0fcca1",
-  "fetched_at": "2026-10-31T16:01:17+00:00"
+  "fetched_at": "2026-10-31T16:01:17+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-03-10-38",
@@ -1896,9 +1896,9 @@
   "kind": "mimoradne",
   "date": "2021-03-10",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "cd948e39514f9170a4d21849a11514d911053ccb5b9ed746872ec9229be09d4f",
-  "fetched_at": "2026-10-31T16:01:17+00:00"
+  "fetched_at": "2026-10-31T16:01:17+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-02-25-37",
@@ -1910,9 +1910,9 @@
   "kind": "radne",
   "date": "2021-02-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "bde17ba7158928b28ccc63d378341cb26b26c099774e27fddd71d69b4ec27bf1",
-  "fetched_at": "2026-10-31T16:01:17+00:00"
+  "fetched_at": "2026-10-31T16:01:17+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2021-02-04-36",
@@ -1924,9 +1924,9 @@
   "kind": "radne",
   "date": "2021-02-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d8e8d20925aef24670e18407288779e9a21edf67c19e059f374de87fa2e3cd35",
-  "fetched_at": "2026-10-31T16:01:17+00:00"
+  "fetched_at": "2026-10-31T16:01:17+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-12-16-35",
@@ -1938,9 +1938,9 @@
   "kind": "mimoradne",
   "date": "2020-12-16",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c2590e9400c1837f2502ae054e076212235c758ac91e196361391852c2be7f30",
-  "fetched_at": "2026-10-31T16:01:18+00:00"
+  "fetched_at": "2026-10-31T16:01:18+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-11-25-34",
@@ -1952,9 +1952,9 @@
   "kind": "radne",
   "date": "2020-11-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "da7f6df11b6e8fefda174481f888d1f1009287f61dd1f2c9f99eb30c8979d40a",
-  "fetched_at": "2026-10-31T16:01:18+00:00"
+  "fetched_at": "2026-10-31T16:01:18+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-11-05-33",
@@ -1966,9 +1966,9 @@
   "kind": "radne",
   "date": "2020-11-05",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8a79b47f93150a8043e3fd146ca8a4f7fb022125d7be007ac7ede654ed633fc4",
-  "fetched_at": "2026-10-31T16:01:18+00:00"
+  "fetched_at": "2026-10-31T16:01:18+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-10-15-32",
@@ -1980,9 +1980,9 @@
   "kind": "radne",
   "date": "2020-10-15",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "12531c18fbe60981c7e07bcb60d492e38db5a39a53c35cd5bdb8664a6c416930",
-  "fetched_at": "2026-10-31T16:01:18+00:00"
+  "fetched_at": "2026-10-31T16:01:18+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-09-23-31",
@@ -1994,9 +1994,9 @@
   "kind": "mimoradne",
   "date": "2020-09-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "4042559bbaceb1cbbb14344bab1310fc249cd28870e283e984def85fa375d71b",
-  "fetched_at": "2026-10-31T16:01:19+00:00"
+  "fetched_at": "2026-10-31T16:01:19+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-09-03-30",
@@ -2008,9 +2008,9 @@
   "kind": "radne",
   "date": "2020-09-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ebc67b49762b2dbdeb1a688db2c00d9fb85effa9f2adcd8844b79b396ff1f694",
-  "fetched_at": "2026-10-31T16:01:19+00:00"
+  "fetched_at": "2026-10-31T16:01:19+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-06-24-29",
@@ -2022,9 +2022,9 @@
   "kind": "mimoradne",
   "date": "2020-06-24",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ca623d1bf62eef58de7b92b93d14800e9353b08c1e444529259cd36d41d06dc1",
-  "fetched_at": "2026-10-31T16:01:19+00:00"
+  "fetched_at": "2026-10-31T16:01:19+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-06-04-28",
@@ -2036,9 +2036,9 @@
   "kind": "radne",
   "date": "2020-06-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "534cc3f581622d7676dd1d6d3a4e4236c5e04d273f8f3993aae1426bc5f9fbc4",
-  "fetched_at": "2026-10-31T16:01:19+00:00"
+  "fetched_at": "2026-10-31T16:01:19+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-05-13-27",
@@ -2050,9 +2050,9 @@
   "kind": "radne",
   "date": "2020-05-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ec5f5b445a96d39939bf1f2324be1b718b4904bf960ff03a0c37a1414cc5c47e",
-  "fetched_at": "2026-10-31T16:01:19+00:00"
+  "fetched_at": "2026-10-31T16:01:19+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-04-02-26",
@@ -2064,9 +2064,9 @@
   "kind": "radne",
   "date": "2020-04-02",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "88ab6cd85ecfed2105899cca6d05ff87d4a1d292682c31e746b22cb001c708dd",
-  "fetched_at": "2026-10-31T16:01:20+00:00"
+  "fetched_at": "2026-10-31T16:01:20+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-03-11-25",
@@ -2078,9 +2078,9 @@
   "kind": "mimoradne",
   "date": "2020-03-11",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b9b291b37a3653ace6a42c7c55b3b2c03900e85b9352de240fa7d4fda5536962",
-  "fetched_at": "2026-10-31T16:01:20+00:00"
+  "fetched_at": "2026-10-31T16:01:20+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-02-26-24",
@@ -2092,9 +2092,9 @@
   "kind": "mimoradne",
   "date": "2020-02-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "7131a37673e9e84426dc6b056dbf42515361e808e61265bbe8c06546c6f2f4ce",
-  "fetched_at": "2026-10-31T16:01:20+00:00"
+  "fetched_at": "2026-10-31T16:01:20+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-02-20-23",
@@ -2106,9 +2106,9 @@
   "kind": "radne",
   "date": "2020-02-20",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "463ec211edf789b1bfa532e106c4f1a33b72870a67892445240bcdbf2675afed",
-  "fetched_at": "2026-10-31T16:01:20+00:00"
+  "fetched_at": "2026-10-31T16:01:20+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-01-30-22",
@@ -2120,9 +2120,9 @@
   "kind": "radne",
   "date": "2020-01-30",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "401b8cbb438f34b0bf1e63681dc9b15d69bb1c5397b2eb27a065b8a304194451",
-  "fetched_at": "2026-10-31T16:01:20+00:00"
+  "fetched_at": "2026-10-31T16:01:20+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2020-01-09-21",
@@ -2134,9 +2134,9 @@
   "kind": "radne",
   "date": "2020-01-09",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a337c588d9e01b238185a48873d7ec6f1473d106bb63d4d78a7ea4320b6f1c62",
-  "fetched_at": "2026-10-31T16:01:21+00:00"
+  "fetched_at": "2026-10-31T16:01:21+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-12-18-20",
@@ -2148,9 +2148,9 @@
   "kind": "mimoradne",
   "date": "2019-12-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6b82aefcb91247cfbee21f88bf369bb4aef8c9b9dd9f2338551b0623b81a43f9",
-  "fetched_at": "2026-10-31T16:01:21+00:00"
+  "fetched_at": "2026-10-31T16:01:21+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-11-28-19",
@@ -2162,9 +2162,9 @@
   "kind": "radne",
   "date": "2019-11-28",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "8e5a035f58b21a02ba3ee8f054e7d4edbcc0db9f38f19e6ff47fefd734a321a0",
-  "fetched_at": "2026-10-31T16:01:21+00:00"
+  "fetched_at": "2026-10-31T16:01:21+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-11-06-18",
@@ -2176,9 +2176,9 @@
   "kind": "radne",
   "date": "2019-11-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6cbebb42741ff8fc18cc6f563db32881440124b9f3f2fcad12611be08fa363b9",
-  "fetched_at": "2026-10-31T16:01:21+00:00"
+  "fetched_at": "2026-10-31T16:01:21+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-10-17-17",
@@ -2190,9 +2190,9 @@
   "kind": "radne",
   "date": "2019-10-17",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "174a4adac52cfec12c0bd06d6263738cb1bf491a08fcb93ca7da0353bb9e8fc4",
-  "fetched_at": "2026-10-31T16:01:22+00:00"
+  "fetched_at": "2026-10-31T16:01:22+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-09-25-16",
@@ -2204,9 +2204,9 @@
   "kind": "mimoradne",
   "date": "2019-09-25",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f246f2f196e486085a41889a8a96cd487e71b92a3f640971b9c14f777c14093b",
-  "fetched_at": "2026-10-31T16:01:22+00:00"
+  "fetched_at": "2026-10-31T16:01:22+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-09-18-15",
@@ -2218,9 +2218,9 @@
   "kind": "mimoradne",
   "date": "2019-09-18",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "79bccb4361c076262cf15a40b06ec8428e2aa17a72af6d00cf67b5ab64e70ae7",
-  "fetched_at": "2026-10-31T16:01:23+00:00"
+  "fetched_at": "2026-10-31T16:01:23+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-09-05-14",
@@ -2232,9 +2232,9 @@
   "kind": "radne",
   "date": "2019-09-05",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "954fa9615e911c4c2ac9dcd5ab97cd7a44d1babf8cf0f105a87f396926330fc7",
-  "fetched_at": "2026-10-31T16:01:23+00:00"
+  "fetched_at": "2026-10-31T16:01:23+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-06-26-13",
@@ -2246,9 +2246,9 @@
   "kind": "mimoradne",
   "date": "2019-06-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "c94901a6b8edd23f2bd18550ba1cf1fb464fb739fb60814a4f1a611b2527410c",
-  "fetched_at": "2026-10-31T16:01:23+00:00"
+  "fetched_at": "2026-10-31T16:01:23+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-06-06-12",
@@ -2260,9 +2260,9 @@
   "kind": "radne",
   "date": "2019-06-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "bfb27038d05c0d929a809c225d538a5cfadd47e228d9c0ce8d2996e6947c145f",
-  "fetched_at": "2026-10-31T16:01:24+00:00"
+  "fetched_at": "2026-10-31T16:01:24+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-05-16-11",
@@ -2274,9 +2274,9 @@
   "kind": "radne",
   "date": "2019-05-16",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "cf538807423e010be7a02617b3a5a48b090fb78432851a289c287d52b49b85c9",
-  "fetched_at": "2026-10-31T16:01:24+00:00"
+  "fetched_at": "2026-10-31T16:01:24+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-04-23-10",
@@ -2288,9 +2288,9 @@
   "kind": "radne",
   "date": "2019-04-23",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2501a7798a50dc7bb2129a927d3c374350ad661a5e578156eae852712d32fc05",
-  "fetched_at": "2026-10-31T16:01:24+00:00"
+  "fetched_at": "2026-10-31T16:01:24+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-04-04-9",
@@ -2302,9 +2302,9 @@
   "kind": "radne",
   "date": "2019-04-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "f79a67a2a87a8813a6e75db1475238dff3056bd58eafb1164c99a4757bf125a7",
-  "fetched_at": "2026-10-31T16:01:24+00:00"
+  "fetched_at": "2026-10-31T16:01:24+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-03-13-8",
@@ -2316,9 +2316,9 @@
   "kind": "mimoradne",
   "date": "2019-03-13",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b21159835c566b0e26acc0e85e6db4803e510fcd2be1c26dd1993e1d6f8e7b22",
-  "fetched_at": "2026-10-31T16:01:24+00:00"
+  "fetched_at": "2026-10-31T16:01:24+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-02-14-7",
@@ -2330,9 +2330,9 @@
   "kind": "radne",
   "date": "2019-02-14",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "5a8b748de4aad25b409735720c1424bd6e303d5759f78d07907ac694d6399b66",
-  "fetched_at": "2026-10-31T16:01:25+00:00"
+  "fetched_at": "2026-10-31T16:01:25+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-01-31-6",
@@ -2344,9 +2344,9 @@
   "kind": "radne",
   "date": "2019-01-31",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6c0599e9eef41942b700fa2bd49821eae112fb453a4ae05b46e3a65db6ec7509",
-  "fetched_at": "2026-10-31T16:01:25+00:00"
+  "fetched_at": "2026-10-31T16:01:25+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2019-01-10-5",
@@ -2358,9 +2358,9 @@
   "kind": "radne",
   "date": "2019-01-10",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "853a804e50fca3ad55b1ae0c1dd983fc69da831cb49ef6e342730db462dc6153",
-  "fetched_at": "2026-10-31T16:01:25+00:00"
+  "fetched_at": "2026-10-31T16:01:25+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-12-19-4",
@@ -2372,9 +2372,9 @@
   "kind": "mimoradne",
   "date": "2018-12-19",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "a2a449146bc4d64cb8fd51ecf2ca5d9669a51bd2405a5b0ec0b841bba945a6a7",
-  "fetched_at": "2026-10-31T16:01:25+00:00"
+  "fetched_at": "2026-10-31T16:01:25+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-12-04-3",
@@ -2386,9 +2386,9 @@
   "kind": "mimoradne",
   "date": "2018-12-04",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b0a73a0c8f6eb5b50668676fb2814863624c43bd9a4d35cd84425478c0a8a451",
-  "fetched_at": "2026-10-31T16:01:26+00:00"
+  "fetched_at": "2026-10-31T16:01:26+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-11-29-2",
@@ -2400,9 +2400,9 @@
   "kind": "radne",
   "date": "2018-11-29",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "2ac2f532a993397c0f59ff3229277e8b1a6c214eab57290cf8a7e7957d87bd3f",
-  "fetched_at": "2026-10-31T16:01:26+00:00"
+  "fetched_at": "2026-10-31T16:01:26+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-11-08-1",
@@ -2414,9 +2414,9 @@
   "kind": "radne",
   "date": "2018-11-08",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "07fc4547c623fc24e2e086e4ef04d257e7344819ba737bd5afda331ce71414d5",
-  "fetched_at": "2026-10-31T16:01:26+00:00"
+  "fetched_at": "2026-10-31T16:01:26+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-09-26-64",
@@ -2428,9 +2428,9 @@
   "kind": "mimoradne",
   "date": "2018-09-26",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "de8b4129e49f4cc26fc60f75c35e5cadd8aef1261cb2df9cd10f47a048234d9f",
-  "fetched_at": "2026-10-31T16:01:26+00:00"
+  "fetched_at": "2026-10-31T16:01:26+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-09-17-63",
@@ -2442,9 +2442,9 @@
   "kind": "mimoradne",
   "date": "2018-09-17",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ac935b384347f9ccd994932cbd0f29035c503c3d19412e9cb48094d56da3e555",
-  "fetched_at": "2026-10-31T16:01:26+00:00"
+  "fetched_at": "2026-10-31T16:01:26+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-09-06-62",
@@ -2456,9 +2456,9 @@
   "kind": "radne",
   "date": "2018-09-06",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "3ac0b22112e253c7eff1b4bea5d1cc7358541ba3e69823167c64fba9397912d2",
-  "fetched_at": "2026-10-31T16:01:27+00:00"
+  "fetched_at": "2026-10-31T16:01:27+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-08-15-61",
@@ -2470,9 +2470,9 @@
   "kind": "mimoradne",
   "date": "2018-08-15",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "db9217540f9aaf4e6c4884d0fcf9dc3bbd2ce6160744d998ac709de564bfbcab",
-  "fetched_at": "2026-10-31T16:01:27+00:00"
+  "fetched_at": "2026-10-31T16:01:27+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-06-27-60",
@@ -2484,9 +2484,9 @@
   "kind": "mimoradne",
   "date": "2018-06-27",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "d61580b78921e90b416a4bc79960bb486708ebe3d97cdd38a8fcafa456148b5a",
-  "fetched_at": "2026-10-31T16:01:27+00:00"
+  "fetched_at": "2026-10-31T16:01:27+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-06-07-59",
@@ -2498,9 +2498,9 @@
   "kind": "radne",
   "date": "2018-06-07",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "958a2476ef429094f0b7d881edd059127c8ffe87953ab5d40e1cc58829ae568a",
-  "fetched_at": "2026-10-31T16:01:27+00:00"
+  "fetched_at": "2026-10-31T16:01:27+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-05-17-58",
@@ -2512,9 +2512,9 @@
   "kind": "radne",
   "date": "2018-05-17",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "b81445a7eebee2bd4e611a26a7a2c5b663af3212f59aab0f56653efd6480c794",
-  "fetched_at": "2026-10-31T16:01:28+00:00"
+  "fetched_at": "2026-10-31T16:01:28+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-05-03-57",
@@ -2526,9 +2526,9 @@
   "kind": "radne",
   "date": "2018-05-03",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "6d316a532a0dac08111d3a3cb90c8cca87245a656028794e184857e41cc7cec8",
-  "fetched_at": "2026-10-31T16:01:28+00:00"
+  "fetched_at": "2026-10-31T16:01:28+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-04-05-56",
@@ -2540,9 +2540,9 @@
   "kind": "radne",
   "date": "2018-04-05",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "ee477e95cd09ab8f143792a3d9cdaefddab14a1a4558b75c8d40e1f1219c1229",
-  "fetched_at": "2026-10-31T16:01:28+00:00"
+  "fetched_at": "2026-10-31T16:01:28+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-03-14-55",
@@ -2554,9 +2554,9 @@
   "kind": "mimoradne",
   "date": "2018-03-14",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "142f08598cbe63827feaa2beda28d2ff4591b6efc40a1ac062451126029c3ee5",
-  "fetched_at": "2026-10-31T16:01:28+00:00"
+  "fetched_at": "2026-10-31T16:01:28+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-02-21-54",
@@ -2568,9 +2568,9 @@
   "kind": "radne",
   "date": "2018-02-21",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "face18c8f68f3c0cf0584984d69853463b22a3a23d2c4a8fb7b49a355df702f6",
-  "fetched_at": "2026-10-31T16:01:28+00:00"
+  "fetched_at": "2026-10-31T16:01:28+00:00",
+  "needs_transcription": false
  },
  {
   "id": "rmo-2018-02-01-53",
@@ -2582,8 +2582,8 @@
   "kind": "radne",
   "date": "2018-02-01",
   "is_attachment": false,
-  "needs_transcription": false,
   "sha256": "1f67e47d998eb35ab29c8e466df7751f07691995cc1b2968ef396f5d52e8a151",
-  "fetched_at": "2026-10-31T16:01:29+00:00"
+  "fetched_at": "2026-10-31T16:01:29+00:00",
+  "needs_transcription": false
  }
 ]
