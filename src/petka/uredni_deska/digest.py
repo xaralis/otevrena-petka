@@ -28,6 +28,7 @@ import yaml
 from ..usneseni import geo, llm
 from ..usneseni.store import ROOT
 from . import parking, photo, source
+from .jobs import REDACTED_TITLE
 
 log = logging.getLogger(__name__)
 
@@ -501,7 +502,7 @@ def draft(group: list[dict]) -> Path:
         "notice_id": leader["id"], "members": [n["id"] for n in group[1:]], "status": "draft",
         "prompt_version": PROMPT_VERSION, "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",
         "created_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
-        "source": {"title": leader["title"], "url": leader["url"], "board": leader["board"]},
+        "source": _source(leader, d["cluster"]),
         **d, "visual": visual, "problems": problems,
     }
     (out / "digest.json").write_text(json.dumps(digest, ensure_ascii=False, indent=1, default=str) + "\n")
@@ -526,14 +527,28 @@ def drafts(limit: int = 20, ids: list[str] | None = None) -> list[dict]:
     return report
 
 
-def publish(ids: list[str], note: str | None = None) -> list[str]:
-    """Approve drafts: move them to DIGESTS with status published (then commit and sync)."""
+def _source(n: dict, cluster: str) -> dict:
+    """Where the card came from. A delivery's title names the addressee and the city takes the
+    notice down, so the card (which lives on in git) keeps neither the title nor the link."""
+    if cluster == "doruceni":
+        return {"title": REDACTED_TITLE, "url": "", "board": n["board"], "mo5": n.get("is_mo5")}
+    return {"title": n["title"], "url": n["url"], "board": n["board"], "mo5": n.get("is_mo5")}
+
+
+def publish(ids: list[str], note: str | None = None) -> list:
+    """Approve drafts: move them to DIGESTS with status published (then commit and sync).
+    Cards for notices that aren't about MO V (drafted by id, e.g. to try something) are refused."""
     done = []
     for nid in ids:
         src, dst = DRAFTS / nid, DIGESTS / nid
         if not (src / "digest.json").exists():
             continue
         d = json.loads((src / "digest.json").read_text())
+        if d.get("source", {}).get("mo5") is False:
+            done.append({"id": nid, "error": "oznámení se netýká MO V, kartu nevydávám"})
+            continue
+        if d["cluster"] == "doruceni":
+            d["source"] |= {"title": REDACTED_TITLE, "url": ""}
         d.update(status="published", published_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
                  review_note=note)
         (src / "digest.json").write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
@@ -549,6 +564,10 @@ def reject(ids: list[str], note: str | None = None) -> list[str]:
     """Keep a rejected draft (so it isn't proposed again) but never show it publicly."""
     done = []
     for nid in ids:
+        if (DIGESTS / nid / "digest.json").exists():    # already published: take it back down
+            if (DRAFTS / nid).exists():
+                shutil.rmtree(DRAFTS / nid)
+            shutil.move(str(DIGESTS / nid), str(DRAFTS / nid))
         f = DRAFTS / nid / "digest.json"
         if f.exists():
             d = json.loads(f.read_text())
@@ -574,7 +593,8 @@ def seed() -> None:
 
 def receive(stream) -> dict:
     """Replace the cards in DATA with a tar of `drafts/` and `digests/` (from scripts/deska-sync.sh):
-    drafts are swapped wholesale (approved or dropped ones disappear), approved cards are updated."""
+    drafts are swapped wholesale (approved or dropped ones disappear), approved cards are updated
+    and those taken back down (`deska-reject` on a published card) are removed."""
     import tarfile
     import tempfile
     DATA.mkdir(parents=True, exist_ok=True)
@@ -592,6 +612,12 @@ def receive(stream) -> dict:
             if old.exists():
                 shutil.rmtree(old)
         n = 0
+        if (new / "digests").is_dir() and DIGESTS.is_dir():
+            # the tar holds every approved card; one missing from it was taken back down
+            keep = {d.name for d in (new / "digests").iterdir()}
+            for d in DIGESTS.iterdir():
+                if d.is_dir() and d.name not in keep:
+                    shutil.rmtree(d)
         for src in (new / "digests").glob("*/*") if (new / "digests").is_dir() else []:
             dst = DIGESTS / src.relative_to(new / "digests")
             dst.parent.mkdir(parents=True, exist_ok=True)

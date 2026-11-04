@@ -6,9 +6,10 @@
  "model": "cli:opus",
  "created_at": "2026-11-04T07:35:05+00:00",
  "source": {
-  "title": "Veřejná vyhláška - oznámení o uložení a možnosti vyzvednutí písemnosti č. j. 9455/2026/OE UMO5/Lu ze dne 2. 11. 2026, jejímž adresátem je pan Braichenko Danylo",
-  "url": "https://pardubice.eu/uredni-deska/obvody?id=15606",
-  "board": "mo5"
+  "title": "Oznámení o doručení písemnosti (adresáta po sejmutí neuvádíme)",
+  "url": "",
+  "board": "mo5",
+  "mo5": true
  },
  "cluster": "doruceni",
  "headline": "Úřad doručuje písemnost veřejnou vyhláškou",

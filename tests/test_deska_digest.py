@@ -1,3 +1,4 @@
+import json
 from petka.uredni_deska import digest
 
 
@@ -67,3 +68,31 @@ def test_change_pairs_one_to_one():
                       {"code": "IP12", "text": None, "change": "odstranit"}])
     assert [(x["text"], x["change"]) for x in s] == [("NÁSTUPNÍ PLOCHA PRO POŽÁRNÍ TECHNIKU", "vymena"),
                                                      ("MAX. 30 min", "nova"), (None, "odstranit")]
+
+
+def test_delivery_source_keeps_no_title_or_link():
+    n = {"title": "Oznámení o uložení písemnosti, adresát pan Jan Novák", "url": "https://x/?id=1",
+         "board": "mo5", "is_mo5": True}
+    s = digest._source(n, "doruceni")
+    assert "Novák" not in json.dumps(s, ensure_ascii=False) and s["url"] == ""
+    assert digest._source(n, "doprava")["title"] == n["title"]
+
+
+def _card(root, nid, mo5, status="draft"):
+    (root / nid).mkdir(parents=True)
+    (root / nid / "digest.json").write_text(json.dumps(
+        {"notice_id": nid, "status": status, "cluster": "doprava",
+         "source": {"title": "t", "url": "u", "board": "mmp", "mo5": mo5}}))
+
+
+def test_publish_refuses_cards_outside_mo5_and_reject_takes_cards_down(tmp_path, monkeypatch):
+    monkeypatch.setattr(digest, "DRAFTS", tmp_path / "drafts")
+    monkeypatch.setattr(digest, "DIGESTS", tmp_path / "digests")
+    _card(tmp_path / "drafts", "mmp-1", False)
+    _card(tmp_path / "drafts", "mo5-2", True)
+    report = digest.publish(["mmp-1", "mo5-2"])
+    assert report[0]["error"] and report[1] == "mo5-2"
+    assert not (tmp_path / "digests" / "mmp-1").exists()
+    assert digest.reject(["mo5-2"]) == ["mo5-2"]
+    assert not (tmp_path / "digests" / "mo5-2").exists()
+    assert json.loads((tmp_path / "drafts" / "mo5-2" / "digest.json").read_text())["status"] == "rejected"
