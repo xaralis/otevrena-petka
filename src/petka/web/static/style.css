@@ -599,6 +599,7 @@ body > footer { flex-shrink: 0; }
 .signs img { width: 64px; height: 64px; object-fit: contain; }
 .sign-code { display: grid; place-items: center; width: 64px; height: 64px; border: 2px solid var(--rule); font-weight: 700; }
 .sign-change { font-size: .85rem; font-weight: 650; }
+.plate { display: grid; place-items: center; width: 64px; min-height: 40px; padding: 3px; border: 2px solid #111; border-radius: 3px; background: #fff; font: 700 .55rem/1.15 system-ui, sans-serif; text-align: center; text-transform: uppercase; overflow-wrap: anywhere; }
 .sign-nova .sign-change { color: var(--pro); }
 .sign-odstranit .sign-change { color: var(--red-ink); }
 .sign-odstranit img { opacity: .55; filter: grayscale(1); }
