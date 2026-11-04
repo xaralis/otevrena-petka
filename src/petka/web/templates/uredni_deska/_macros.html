@@ -33,6 +33,12 @@
 {%- endmacro %}
 
 
+{% macro money(v) -%}
+{%- set a = v|abs -%}
+{{ '+' if v > 0 else '−' }}{% if a >= 1000 %}{{ ('%.2f'|format(a / 1000)).rstrip('0').rstrip('.').replace('.', ',') }} mil. Kč{% else %}{{ '{:,.0f}'.format(a).replace(',', ' ') }} tis. Kč{% endif %}
+{%- endmacro %}
+
+
 {#- The body of a card: summary, what you can do, facts, pictures, the original. Used by the
     notice page and by the reviewers' preview, so both look the same. -#}
 {% macro digest_body(d, n, members, preview=False) -%}
@@ -86,10 +92,21 @@
 {% endif %}
 {% if d.budget %}
 {% set mx = d.budget|map(attribute='change')|map('abs')|max %}
+{% set plus = d.budget|selectattr('change', 'gt', 0)|sort(attribute='change', reverse=True)|list %}
+{% set minus = d.budget|selectattr('change', 'lt', 0)|sort(attribute='change')|list %}
 <h2>Největší změny</h2>
-<ul class="budget">
-  {% for b in d.budget %}<li><span class="b-label">{{ b.label }}</span><span class="b-bar {{ 'b-plus' if b.change > 0 else 'b-minus' }}" style="--w: {{ (100 * (b.change|abs) / mx)|round(1) if mx else 0 }}%"></span><span class="b-val">{{ '+' if b.change > 0 }}{{ '{:,.0f}'.format(b.change).replace(',', ' ').replace('-', '−') }} tis. Kč</span></li>{% endfor %}
-</ul>
+<figure class="budget-fig">
+  <div class="budget-axis" aria-hidden="true"><span>← ubráno</span><span>přidáno →</span></div>
+  <ul class="budget">
+    {% for b in plus + minus %}{% set a = b.change|abs %}
+    <li class="{{ 'b-in' if b.change > 0 else 'b-out' }}">
+      <span class="b-label">{{ b.label }}</span>
+      <span class="b-side b-neg">{% if b.change < 0 %}<span class="b-val">{{ money(b.change) }}</span><span class="b-bar" style="--w: {{ (100 * a / mx)|round(1) }}%"></span>{% endif %}</span>
+      <span class="b-side b-pos">{% if b.change > 0 %}<span class="b-bar" style="--w: {{ (100 * a / mx)|round(1) }}%"></span><span class="b-val">{{ money(b.change) }}</span>{% endif %}</span>
+    </li>{% endfor %}
+  </ul>
+  <figcaption class="muted">Největší přesuny v této změně rozpočtu, ne všechny položky. Částky podle tabulek v příloze oznámení.</figcaption>
+</figure>
 {% endif %}
 <details class="original">
   <summary>Originál na úřední desce</summary>

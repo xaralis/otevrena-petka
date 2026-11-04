@@ -167,7 +167,8 @@ Pravidla:
   (od 1) a výřez se samotným obrázkem jako zlomky šířky a výšky strany [x0, y0, x1, y1]
   (0 = levý/horní okraj), bez hlavičky a razítek. Jinak null.
 - `budget`: u změn rozpočtu nejvýš 8 největších změn v tisících Kč (+ přidáno, − ubráno),
-  popsaných lidsky („odvoz odpadu“, ne „MP za komunální odpad“). Jinak prázdné pole.
+  popsaných lidsky a krátce, nejvýš 45 znaků („odvoz odpadu“, ne „MP za komunální odpad“; důvod
+  jako „vyšlo levněji“ smí být v závorce). Jinak prázdné pole.
 - `visual_plan`: pro redaktora 1–2 věty, jak oznámení nejlépe ukázat (mapa, výkres, graf…)
   a proč; `reviewer_notes`: co si má člověk před zveřejněním ověřit (nejasnosti, odhady).
 - Shluky: {", ".join(f"{k} = {v}" for k, v in CLUSTERS.items())}."""
