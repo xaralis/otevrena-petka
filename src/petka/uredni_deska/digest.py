@@ -391,6 +391,19 @@ def check(d: dict, text: str) -> list[str]:
     return problems
 
 
+def annotated_drawing(d: dict, out: Path) -> dict:
+    """The office's drawing with numbered markers Claude puts on what changes (only on things
+    the drawing shows), the explanations go under it."""
+    work = WORK / d.get("_id", out.name) / "vykres"
+    work.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(out / "vykres.png", work / "vykres.png")
+    res = llm.structured_files(photo.ANNOTATE_SYSTEM,
+                               f"Změna: {d['headline']}\n{d['summary']}\nKde: {d.get('where') or '–'}",
+                               [work / "vykres.png"], photo.ANNOTATE_SCHEMA, effort="high")
+    kept = photo.annotate(out / "vykres.png", res["marks"], out / "vykres-popis.png")
+    return {"annotated": "vykres-popis.png", "marks": kept, "legend": res["legend"]} if kept else {}
+
+
 def _centre(f: dict) -> tuple[float, float]:
     pts = list(_coords(f["geometry"]))
     return sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
@@ -445,11 +458,18 @@ def draft(group: list[dict]) -> Path:
     feats = geo.locate(d["places"], d["parcels"]) if (d["places"] or d["parcels"]) else []
     visual = {"map": feats}
     try:
-        visual["ortho"] = ortho(feats, out / "ortofoto.jpg") if feats else None
+        # a whole street would make the crop useless: centre on the addresses/parcels if any
+        spot = [f for f in feats if f["kind"] != "street"] or feats
+        visual["ortho"] = ortho(spot, out / "ortofoto.jpg") if feats else None
     except Exception as e:
         log.warning("%s: ortofoto failed: %s", leader["id"], e)
         visual["ortho"] = None
     visual["drawing"] = drawing_crop(d["drawing"], files, out / "vykres.png") if d.get("drawing") else None
+    if visual["drawing"] and d["cluster"] in ("doprava", "stavby"):
+        try:
+            visual["drawing"].update(annotated_drawing(d, out))
+        except Exception as e:
+            log.warning("%s: drawing annotation failed: %s", leader["id"], e)
     visual["signs"] = signs(d["signs"])
     problems = check(d, text)
     visual["parking"] = None

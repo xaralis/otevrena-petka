@@ -85,7 +85,16 @@
   <figcaption>Schéma podle výkresu úřadu{% if preview %} <span class="muted">– {{ v.parking.evidence }}</span>{% endif %}</figcaption>
 </figure>
 {% endif %}
-{% if v.drawing %}
+{% if v.drawing and v.drawing.annotated %}
+<figure class="pic drawing-explained">
+  <img src="{{ img }}{{ v.drawing.annotated }}" alt="{{ v.drawing.caption }} s očíslovanými místy" loading="lazy">
+  <figcaption>
+    <ol class="dmarks">{% for k in v.drawing.marks %}<li class="dm-{{ k.kind }}"><span class="dm-n">{{ loop.index }}</span>{{ k.text }}</li>{% endfor %}</ol>
+    {% if v.drawing.legend %}<p class="muted">{% for l in v.drawing.legend %}{{ l.color|capitalize }}: {{ l.meaning }}{{ '; ' if not loop.last else '.' }}{% endfor %}</p>{% endif %}
+    <p class="muted">Výkres z přílohy oznámení, čísla doplnila redakce.</p>
+  </figcaption>
+</figure>
+{% elif v.drawing %}
 <figure class="pic">
   <img src="{{ img }}{{ v.drawing.file }}" alt="{{ v.drawing.caption }}" loading="lazy">
   <figcaption>{{ v.drawing.caption }} <span class="muted">Výřez z přílohy oznámení.</span></figcaption>

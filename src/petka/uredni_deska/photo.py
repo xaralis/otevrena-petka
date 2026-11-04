@@ -243,3 +243,49 @@ PLACEMENT_SCHEMA = {
         "reason": {"type": "string"},
     },
 }
+
+
+ANNOTATE_SYSTEM = """Jsi redaktor portálu Otevřená Pětka. Dostaneš oficiální výkres k úpravě dopravního
+značení a stručný popis změny. Označ na výkresu nejvýš 6 míst, která běžnému čtenáři vysvětlí, co se
+mění: nové nebo rušené značení (přechod, šikmé čáry, stání, sloupky, značky), případně názvy ulic pro
+orientaci. Jen věci, které na výkresu opravdu jsou nakreslené; nic nedomýšlej.
+- x, y = místo na výkresu jako zlomky šířky a výšky (0 = vlevo/nahoře), přesně na tom prvku.
+- text: krátce a lidsky, nejvýš 70 znaků („nový přechod pro chodce“, „šikmé čáry: tady se nesmí stát,
+  aby byly děti vidět“), bez kódů značek.
+- kind: nove (přibývá), zrusene (mizí), stavajici (zůstává, jen pro orientaci), misto (ulice, budova).
+- legend: co znamenají barvy na výkresu, jen pokud to z výkresu nebo textu jasně plyne; jinak prázdné."""
+
+ANNOTATE_SCHEMA = {
+    "type": "object", "additionalProperties": False, "required": ["marks", "legend"],
+    "properties": {
+        "marks": {"type": "array", "maxItems": 6, "items": {
+            "type": "object", "additionalProperties": False, "required": ["x", "y", "text", "kind"],
+            "properties": {"x": {"type": "number"}, "y": {"type": "number"}, "text": {"type": "string"},
+                           "kind": {"type": "string", "enum": ["nove", "zrusene", "stavajici", "misto"]}}}},
+        "legend": {"type": "array", "maxItems": 4, "items": {
+            "type": "object", "additionalProperties": False, "required": ["color", "meaning"],
+            "properties": {"color": {"type": "string"}, "meaning": {"type": "string"}}}},
+    },
+}
+MARK_COLOUR = {"nove": GREEN, "zrusene": RED, "stavajici": INK, "misto": (95, 99, 104, 235)}
+
+
+def annotate(src: Path, marks: list[dict], out: Path) -> list[dict]:
+    """Numbered markers on the drawing; the texts go into the caption, numbered the same."""
+    img = Image.open(src).convert("RGB")
+    W, H = img.size
+    d = ImageDraw.Draw(img, "RGBA")
+    r = max(13, min(W, H) // 34)
+    f = _font(int(r * 1.15))
+    kept = []
+    for m in marks:
+        if not (0 <= m["x"] <= 1 and 0 <= m["y"] <= 1):
+            continue
+        kept.append(m)
+        n = str(len(kept))
+        cx, cy = int(m["x"] * W), int(m["y"] * H)
+        d.ellipse([cx - r - 3, cy - r - 3, cx + r + 3, cy + r + 3], fill=(255, 255, 255, 255))
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=MARK_COLOUR.get(m["kind"], INK))
+        d.text((cx - d.textlength(n, font=f) / 2, cy - r * .62), n, font=f, fill=(255, 255, 255, 255))
+    img.save(out)
+    return kept
