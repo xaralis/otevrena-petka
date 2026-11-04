@@ -36,6 +36,7 @@
 {#- The body of a card: summary, what you can do, facts, pictures, the original. Used by the
     notice page and by the reviewers' preview, so both look the same. -#}
 {% macro digest_body(d, n, members, preview=False) -%}
+{% set img = ('/uredni-deska/navrhy/obrazky/' if preview else '/uredni-deska/obrazky/') ~ n.id ~ '/' %}
 <p class="lead-text">{{ d.summary }}</p>
 {% if d.action %}
 <div class="act">
@@ -63,14 +64,14 @@
 {% endif %}
 {% if v.drawing %}
 <figure class="pic">
-  <img src="/uredni-deska/obrazky/{{ n.id }}/{{ v.drawing.file }}" alt="{{ v.drawing.caption }}" loading="lazy">
+  <img src="{{ img }}{{ v.drawing.file }}" alt="{{ v.drawing.caption }}" loading="lazy">
   <figcaption>{{ v.drawing.caption }} <span class="muted">Výřez z přílohy oznámení.</span></figcaption>
 </figure>
 {% endif %}
 {% if v.ortho %}
 <figure class="pic ortho">
   <div class="ortho-box" style="aspect-ratio: {{ v.ortho.width }} / {{ v.ortho.height }}">
-    <img src="/uredni-deska/obrazky/{{ n.id }}/{{ v.ortho.file }}" alt="Letecký snímek okolí s vyznačeným místem" loading="lazy">
+    <img src="{{ img }}{{ v.ortho.file }}" alt="Letecký snímek okolí s vyznačeným místem" loading="lazy">
     <svg viewBox="0 0 {{ v.ortho.width }} {{ v.ortho.height }}" preserveAspectRatio="none" aria-hidden="true">
       {% for s in v.ortho.shapes %}{% if s.kind == 'point' %}<circle cx="{{ s.xy[0] }}" cy="{{ s.xy[1] }}" r="11"/>{% elif s.kind == 'line' %}<path class="ln" d="{{ s.d }}"/>{% else %}<path class="ar" d="{{ s.d }}"/>{% endif %}{% endfor %}
     </svg>

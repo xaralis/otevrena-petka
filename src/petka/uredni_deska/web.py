@@ -107,14 +107,32 @@ def api_kinds():
 
 # --- "pro lidi": the reviewers' preview, card images, one notice (keep /{nid} last) --------
 
+def _reviewer(request: Request) -> None:
+    """The preview has its own ingress with basic auth, which passes the signed-in user on as
+    X-Auth-User; the public ingress strips that header. Without it the page doesn't exist –
+    whatever path spelling got the request here."""
+    if not request.headers.get("x-auth-user", "").strip():
+        raise HTTPException(404)
+
+
 @pages.get("/navrhy", response_class=HTMLResponse)
 def drafts_page(request: Request):
     """Proposed cards for a person to review (behind basic auth at the ingress, not indexed)."""
+    _reviewer(request)
     rows = queries.drafts()
     for r in rows:
         r["member_rows"] = queries.members(r["draft"].get("members", []))
     return tpl.TemplateResponse(request, "uredni_deska/navrhy.html", {"rows": rows, "clusters": digests.CLUSTERS},
                                 headers={"X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store"})
+
+
+@pages.get("/navrhy/obrazky/{nid}/{name}")
+def draft_image(request: Request, nid: str, name: str):
+    _reviewer(request)
+    p = digests.asset_path(nid, name, draft=True)
+    if not p:
+        raise HTTPException(404)
+    return FileResponse(p, headers={"Cache-Control": "no-store"})
 
 
 @pages.get("/obrazky/{nid}/{name}")

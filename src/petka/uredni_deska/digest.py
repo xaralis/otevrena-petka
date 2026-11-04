@@ -499,12 +499,15 @@ def load(conn) -> int:
     return n
 
 
-def asset_path(nid: str, name: str) -> Path | None:
-    """An image of a digest, if it exists (published first, then a draft)."""
+def asset_path(nid: str, name: str, draft: bool = False) -> Path | None:
+    """An image of a card: published ones for everybody, drafts only for the reviewers'
+    preview (and never those of a rejected draft)."""
     if not re.fullmatch(r"[a-z0-9]+-\d+", nid) or not re.fullmatch(r"[a-z0-9_-]+\.(png|jpg|jpeg)", name):
         return None
-    for root in (DIGESTS, DRAFTS):
-        p = root / nid / name
-        if p.is_file():
-            return p
-    return None
+    root = DRAFTS if draft else DIGESTS
+    meta, p = root / nid / "digest.json", root / nid / name
+    if not (meta.is_file() and p.is_file()):
+        return None
+    if json.loads(meta.read_text()).get("status") != ("draft" if draft else "published"):
+        return None
+    return p
