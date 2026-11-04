@@ -51,3 +51,10 @@ def test_delivery_card_names_nobody():
 def test_sign_codes_normalised():
     s = digest.signs([{"code": "IP 12", "text": None, "change": "nova"}, {"code": "V-10E", "text": None, "change": "odstranit"}])
     assert [x["code"] for x in s] == ["IP12", "V10e"]
+
+
+def test_same_sign_removed_and_added_is_one_change():
+    s = digest.signs([{"code": "IP12", "text": None, "change": "zustava"},
+                      {"code": "E13", "text": None, "change": "odstranit"},
+                      {"code": "E 13", "text": None, "change": "nova"}])
+    assert [(x["code"], x["change"]) for x in s] == [("IP12", "zustava"), ("E13", "vymena")]

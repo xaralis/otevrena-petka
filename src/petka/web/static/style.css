@@ -604,6 +604,8 @@ body > footer { flex-shrink: 0; }
 .sign-odstranit .sign-change { color: var(--red-ink); }
 .sign-odstranit img { opacity: .55; filter: grayscale(1); }
 .sign-zustava .sign-change { color: var(--muted); }
+.sign-vymena .sign-change { color: var(--abst); }
+.plate-blank { background: repeating-linear-gradient(0deg, #fff 0 9px, #e8ecf0 9px 11px); }
 .pic { margin: 0 0 1.6rem; max-width: 62rem; }
 .pic img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); }
 .pic figcaption { font-size: .9rem; margin-top: .4rem; color: var(--ink-2); }

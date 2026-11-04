@@ -63,9 +63,9 @@
 <h2>Dopravní značky</h2>
 <ul class="signs">
   {% for s in v.signs %}<li class="sign-{{ s.change }}">
-    {% if s.code in ('E12', 'E12a', 'E12b', 'E12c', 'E13') and s.text %}<span class="plate" aria-hidden="true">{{ s.text }}</span>{# the Commons picture shows sample wording #}
+    {% if s.code in ('E12', 'E12a', 'E12b', 'E12c', 'E13') %}<span class="plate{{ ' plate-blank' if not s.text }}" aria-hidden="true">{{ s.text or '' }}</span>{# the Commons picture shows sample wording #}
     {% elif s.image %}<img src="/static/znacky/{{ s.image }}" alt="" width="64" height="64" loading="lazy">{% else %}<span class="sign-code">{{ s.code }}</span>{% endif %}
-    <span><b>{{ s.name or s.code }}</b>{% if s.text and s.code not in ('E12', 'E12a', 'E12b', 'E12c', 'E13') %}<br><span class="muted">{{ s.text }}</span>{% endif %}<br><span class="sign-change">{{ {'nova': 'nová', 'odstranit': 'odstraní se', 'zustava': 'zůstává'}[s.change] }}</span></span>
+    <span><b>{{ s.name or s.code }}</b>{% if not s.text and s.code in ('E12', 'E12a', 'E12b', 'E12c', 'E13') %}<br><span class="muted">text tabulky neuvádíme (osobní údaje)</span>{% endif %}{% if s.text and s.code not in ('E12', 'E12a', 'E12b', 'E12c', 'E13') %}<br><span class="muted">{{ s.text }}</span>{% endif %}<br><span class="sign-change">{{ {'nova': 'nová', 'odstranit': 'odstraní se', 'zustava': 'zůstává', 'vymena': 'mění se text'}[s.change] }}</span></span>
   </li>{% endfor %}
 </ul>
 {% endif %}

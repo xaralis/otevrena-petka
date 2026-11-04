@@ -156,8 +156,9 @@ Pravidla:
   dopočtené datum (třeba konec lhůty) uveď a v `reviewer_notes` vysvětli výpočet. Lhůta pro připomínky,
   námitky nebo nabídky je nejdůležitější údaj, pokud existuje – dej ji do `action`.
 - U úprav provozu vypiš každou dopravní značku (kód přesně podle dokumentu, např. IP12, E13,
-  V10e) a zda je nová, k odstranění, nebo zůstává; text dodatkové tabulky (E13) opiš, pokud
-  neobsahuje osobní údaje.
+  V10e) a zda je nová, k odstranění, zůstává, nebo se jen mění její text (`vymena` – třeba nová SPZ
+  na tabulce; neuváděj ji pak dvakrát jako odstranit + nová). Text dodatkové tabulky (E13) opiš,
+  pokud neobsahuje osobní údaje; jinak text null.
 - `places`: místa v Pardubicích tak, jak je dokument píše (ulice, ulice + číslo popisné, část
   obce + č. p.); `parcels`: pozemky („p. p. č. 2515/14, k. ú. Pardubice“). Obecná místa (sídliště
   Dukla) do `places` nedávej. Když dokument vyjmenovává domy (výpadek elektřiny, uzavírka), dej
@@ -201,7 +202,7 @@ SCHEMA = {
         "signs": {"type": "array", "items": {
             "type": "object", "additionalProperties": False, "required": ["code", "text", "change"],
             "properties": {"code": {"type": "string"}, "text": {"type": ["string", "null"]},
-                           "change": {"type": "string", "enum": ["nova", "odstranit", "zustava"]}}}},
+                           "change": {"type": "string", "enum": ["nova", "odstranit", "zustava", "vymena"]}}}},
         "places": {"type": "array", "items": {"type": "string"}},
         "parcels": {"type": "array", "items": {"type": "string"}},
         "budget": {"type": "array", "maxItems": 8, "items": {
@@ -335,6 +336,17 @@ def drawing_crop(spec: dict, files: list[Path], target: Path, dpi: int = 130) ->
 
 
 def signs(items: list[dict]) -> list[dict]:
+    """Sign list for the card. The same sign both removed and added (a new plate text, a new
+    number plate) is one sign whose content changes, not two."""
+    items = list(items)
+    codes = lambda ch: {re.sub(r"[\s-]", "", i["code"]).upper() for i in items if i["change"] == ch}
+    for code in codes("odstranit") & codes("nova"):
+        first = True
+        for i in items:
+            if re.sub(r"[\s-]", "", i["code"]).upper() == code and i["change"] in ("odstranit", "nova"):
+                i["change"] = "vymena" if first else "_drop"
+                first = False
+    items = [i for i in items if i["change"] != "_drop"]
     out = []
     for s in items:
         code = re.sub(r"[\s-]", "", s["code"]).upper()
