@@ -58,3 +58,12 @@ def test_same_sign_removed_and_added_is_one_change():
                       {"code": "E13", "text": None, "change": "odstranit"},
                       {"code": "E 13", "text": None, "change": "nova"}])
     assert [(x["code"], x["change"]) for x in s] == [("IP12", "zustava"), ("E13", "vymena")]
+
+
+def test_change_pairs_one_to_one():
+    s = digest.signs([{"code": "E13", "text": "NÁSTUPNÍ PLOCHA", "change": "odstranit"},
+                      {"code": "E13", "text": "NÁSTUPNÍ PLOCHA PRO POŽÁRNÍ TECHNIKU", "change": "nova"},
+                      {"code": "E13", "text": "MAX. 30 min", "change": "nova"},
+                      {"code": "IP12", "text": None, "change": "odstranit"}])
+    assert [(x["text"], x["change"]) for x in s] == [("NÁSTUPNÍ PLOCHA PRO POŽÁRNÍ TECHNIKU", "vymena"),
+                                                     ("MAX. 30 min", "nova"), (None, "odstranit")]

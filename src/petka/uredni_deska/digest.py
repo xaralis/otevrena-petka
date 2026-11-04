@@ -338,14 +338,14 @@ def drawing_crop(spec: dict, files: list[Path], target: Path, dpi: int = 130) ->
 def signs(items: list[dict]) -> list[dict]:
     """Sign list for the card. The same sign both removed and added (a new plate text, a new
     number plate) is one sign whose content changes, not two."""
-    items = list(items)
-    codes = lambda ch: {re.sub(r"[\s-]", "", i["code"]).upper() for i in items if i["change"] == ch}
-    for code in codes("odstranit") & codes("nova"):
-        first = True
-        for i in items:
-            if re.sub(r"[\s-]", "", i["code"]).upper() == code and i["change"] in ("odstranit", "nova"):
-                i["change"] = "vymena" if first else "_drop"
-                first = False
+    items = [dict(i) for i in items]
+    norm = lambda i: re.sub(r"[\s-]", "", i["code"]).upper()
+    for code in {norm(i) for i in items if i["change"] == "odstranit"}:
+        gone = [i for i in items if norm(i) == code and i["change"] == "odstranit"]
+        new = [i for i in items if norm(i) == code and i["change"] == "nova"]
+        for old, fresh in zip(gone, new):        # one removed + one added = one whose content changes
+            fresh["change"] = "vymena"
+            old["change"] = "_drop"
     items = [i for i in items if i["change"] != "_drop"]
     out = []
     for s in items:
