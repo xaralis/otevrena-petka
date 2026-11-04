@@ -17,18 +17,21 @@
 {%- endmacro %}
 
 
-{#- A notice with an approved plain-language card: the card leads, the office's wording is one
-    click away. -#}
+{#- A notice with an approved plain-language card: our headline and summary lead, marked as
+    ours, with the office's title and file number kept underneath so it can still be found. -#}
 {% macro card(n, preview=False) -%}
 {% set d = n.digest %}
 <li class="row card-row" id="{{ n.id }}">
   <div class="row-no">{% if n.published %}<span class="notice-day">{{ n.published.day }}. {{ n.published.month }}.</span> <span class="notice-year">{{ n.published.year }}</span>{% endif %}</div>
   <div class="row-body">
+    <p class="human-tag">Polidštěné</p>
     <h3><a href="{{ '#' if preview else '/uredni-deska/' ~ n.id }}">{{ d.headline }}</a></h3>
     <p class="row-meta">{{ CLUSTERS.get(d.cluster, n.kind_label) }}{% if d.where %} – {{ d.where }}{% endif %}</p>
     <p class="row-text">{{ d.summary }}</p>
     {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
+    {% if d.cluster != 'doruceni' %}<p class="official-title"><span>Úředně:</span> {{ n.title }}</p>{% endif %}{# its title names the addressee #}
   </div>
+  {% if n.reference %}<p class="notice-ref"><span>č. j.</span> {{ n.reference }}</p>{% endif %}
 </li>
 {%- endmacro %}
 
@@ -43,6 +46,7 @@
     notice page and by the reviewers' preview, so both look the same. -#}
 {% macro digest_body(d, n, members, preview=False) -%}
 {% set img = ('/uredni-deska/navrhy/obrazky/' if preview else '/uredni-deska/obrazky/') ~ n.id ~ '/' %}
+<p class="digest-top"><span class="human-tag">Polidštěné</span> Přepsáno do běžné řeči, <a href="#original-h">úřední znění s č. j. a přílohami</a> je níže.</p>
 <p class="lead-text">{{ d.summary }}</p>
 {% if d.action %}
 <div class="act">
@@ -133,9 +137,16 @@
   <figcaption class="muted">Největší přesuny v této změně rozpočtu, ne všechny položky. Částky podle tabulek v příloze oznámení.</figcaption>
 </figure>
 {% endif %}
-<details class="original">
-  <summary>Originál na úřední desce</summary>
-  <ol class="rows notices">{{ notice(n) }}{% for m in members %}{{ notice(m) }}{% endfor %}</ol>
-</details>
-<p class="note">Kartu připravil jazykový model Claude z oznámení a jeho příloh a před zveřejněním ji zkontroloval člověk. Závazné je vždy originální oznámení.</p>
+<p class="note ai-note">Polidštěnou verzi připravil jazykový model Claude z oznámení a jeho příloh a před zveřejněním ji zkontroloval člověk. Závazné je vždy originální oznámení níže.</p>
+<section class="original" aria-labelledby="original-h">
+  <h2 id="original-h">Originál na úřední desce</h2>
+  <p class="muted">Takhle oznámení vyvěsil úřad. Odkaz vede na pardubice.eu, přílohy jsou původní PDF.</p>
+  <ol class="rows notices">{{ notice(n) }}</ol>
+  {% if members %}
+  <details>
+    <summary>Další části téhož oznámení ({{ members|length }})</summary>
+    <ol class="rows notices">{% for m in members %}{{ notice(m) }}{% endfor %}</ol>
+  </details>
+  {% endif %}
+</section>
 {%- endmacro %}

@@ -19,13 +19,16 @@ PER_PAGE = 20
 
 
 @pages.get("", response_class=HTMLResponse)
-def home(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: str = "", strana: str = "1"):
+def home(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: str = "", zneni: str = "",
+         strana: str = "1"):
     mo5 = kde != "mesto"            # default: only what concerns MO Pardubice V
     active = sejmute != "1"
     druh = druh if druh in queries.KIND_LABEL else ""
+    official = zneni == "uredni"   # default: our plain-language card where there is one
     strana = max(1, int(strana)) if strana.strip().isdigit() else 1
     rows, total = queries.search(q, mo5, active, druh or None, limit=PER_PAGE, offset=(strana - 1) * PER_PAGE)
-    state = {"q": q.strip(), "kde": "" if mo5 else "mesto", "sejmute": "" if active else "1", "druh": druh}
+    state = {"q": q.strip(), "kde": "" if mo5 else "mesto", "sejmute": "" if active else "1", "druh": druh,
+             "zneni": "uredni" if official else ""}
 
     def url(**change) -> str:
         """This page with some parameters changed; empty ones dropped, back to page 1."""
@@ -33,7 +36,7 @@ def home(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: 
         return "/uredni-deska" + ("?" + urlencode(params) if params else "")
 
     return tpl.TemplateResponse(request, "uredni_deska/home.html", {
-        **state, "mo5": mo5, "active": active, "url": url,
+        **state, "mo5": mo5, "active": active, "official": official, "url": url,
         "rows": rows, "total": total, "strana": strana, "pages": -(-total // PER_PAGE),
         "kinds": queries.kinds(mo5, active), "stats": queries.stats(), "boards": source.BOARDS,
     })

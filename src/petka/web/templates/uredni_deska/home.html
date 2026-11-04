@@ -2,9 +2,9 @@
 {% from "_portal.html" import hero %}
 {% from "uredni_deska/_macros.html" import notice, card %}
 {% set S = SECTION['uredni-deska'] %}
-{% block title %}Úřední deska MO Pardubice V{% endblock %}
+{% block title %}Úřední deska pro lidi – MO Pardubice V{% endblock %}
 {% block description %}Co právě visí na úřední desce městského obvodu Pardubice V a magistrátu: vyhledávání, archiv sejmutých oznámení, otevřená data a API. Stahováno z oficiálních dat města.{% endblock %}
-{% block hero %}{{ hero(S.question, [], 'Úřední deska městského obvodu Pardubice V a magistrátu na jednom místě, s hledáním a archivem sejmutých oznámení. Bereme ji z oficiálních otevřených dat města, závazné jsou dokumenty na pardubice.eu.', kind='section') }}{% endblock %}
+{% block hero %}{{ hero(S.question, [], 'Úřední deska pro lidi: oznámení městského obvodu Pardubice V a magistrátu na jednom místě, přepsaná do běžné řeči. Úřední znění s č. j. a přílohami zůstává u každého. Bereme ji z oficiálních otevřených dat města, závazné jsou dokumenty na pardubice.eu.', kind='section') }}{% endblock %}
 {% block main %}
 <form class="search search-plain" method="get" action="/uredni-deska" role="search">
   <label for="q" class="sr">Hledat na úřední desce</label>
@@ -12,6 +12,7 @@
   {% if kde %}<input type="hidden" name="kde" value="{{ kde }}">{% endif %}
   {% if sejmute %}<input type="hidden" name="sejmute" value="1">{% endif %}
   {% if druh %}<input type="hidden" name="druh" value="{{ druh }}">{% endif %}
+  {% if official %}<input type="hidden" name="zneni" value="uredni">{% endif %}
   <button type="submit">Hledat</button>
 </form>
 
@@ -24,6 +25,17 @@
     <a href="{{ url(sejmute='') }}" {% if active %}aria-current="page"{% endif %}>Vyvěšená</a>
     <a href="{{ url(sejmute='1') }}" {% if not active %}aria-current="page"{% endif %}>Sejmutá</a>
   </nav>
+  <nav class="switch" aria-label="Jak oznámení ukázat">
+    <a href="{{ url(zneni='') }}" {% if not official %}aria-current="page"{% endif %}>Polidštěné</a>
+    <a href="{{ url(zneni='uredni') }}" {% if official %}aria-current="page"{% endif %}>Úřední</a>
+  </nav>
+  <details class="hint">
+    <summary><span aria-hidden="true">?</span><span class="sr">Co znamená polidštěné</span></summary>
+    <div class="hint-body">
+      <p><b>Polidštěné</b> je oznámení přepsané do běžné řeči: co se děje, kde, kdy, koho se to týká a co s tím můžete udělat, u úprav provozu se značkami, výkresem a mapou. Píše ho jazykový model Claude z oznámení a jeho příloh a před zveřejněním ho kontroluje člověk.</p>
+      <p><b>Úřední</b> je přesně to, co vyvěsil úřad. Úřední název, č. j. a původní PDF najdete i u každého polidštěného oznámení. Závazné je vždy úřední znění.</p>
+    </div>
+  </details>
 </div>
 {% if kinds|length > 1 or druh %}
 <p class="deska-kinds"><span class="muted">Druh:</span>
@@ -39,10 +51,10 @@
   {%- set what = ('vyvěšené' if one else 'vyvěšená' if few else 'vyvěšených') if active else ('sejmuté' if one else 'sejmutá' if few else 'sejmutých') %}
   {%- set where = (', které se týká Pardubic V' if one else ', která se týkají Pardubic V') if mo5 else ' z desky obvodu a magistrátu' %}
   <h2 class="results-head">{% if q %}Hledání „{{ q }}“: {% endif %}{{ total }} {{ what }} oznámení{{ where }}</h2>
-  <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.</p>
+  <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.{% if not official %} Polidštěné znění připravuje jazykový model a kontroluje člověk; kde ještě není, ukazujeme úřední.{% endif %}</p>
   {% if rows %}
   <ol class="rows notices">
-    {% for n in rows %}{% if n.digest %}{{ card(n) }}{% else %}{{ notice(n) }}{% endif %}{% endfor %}
+    {% for n in rows %}{% if n.digest and not official %}{{ card(n) }}{% else %}{{ notice(n) }}{% endif %}{% endfor %}
   </ol>
   {% else %}
   <div class="empty">
