@@ -69,6 +69,22 @@
   </li>{% endfor %}
 </ul>
 {% endif %}
+{% if v.photo %}
+<h2>Jak to bude vypadat</h2>
+<figure class="pic photo-pair">
+  <div class="pair">
+    <img src="{{ img }}{{ v.photo.before }}" alt="Místo dnes, fotka z ulice" loading="lazy">
+    {% if v.photo.after %}<img src="{{ img }}{{ v.photo.after }}" alt="Totéž místo po změně: rušené značky přeškrtnuté, nové doplněné" loading="lazy">{% endif %}
+  </div>
+  <figcaption>{% if v.photo.after %}Nové značky jsou do fotky vložené podle výkresu úřadu, jejich poloha je přibližná. {% endif %}<a href="{{ v.photo.source }}">{{ v.photo.credit }}</a>{% if preview %} <span class="muted">(fotka {{ v.photo.distance }} m od místa; shoda s výkresem: {{ {'vysoka': 'vysoká', 'stredni': 'střední'}.get(v.photo.confidence, v.photo.confidence) }} – {{ v.photo.reason }})</span>{% endif %}</figcaption>
+</figure>
+{% endif %}
+{% if v.parking %}
+<figure class="pic parking">
+  <img src="{{ img }}{{ v.parking.file }}" alt="Schéma parkovacích stání dnes a po změně" loading="lazy">
+  <figcaption>Schéma podle výkresu úřadu{% if preview %} <span class="muted">– {{ v.parking.evidence }}</span>{% endif %}</figcaption>
+</figure>
+{% endif %}
 {% if v.drawing %}
 <figure class="pic">
   <img src="{{ img }}{{ v.drawing.file }}" alt="{{ v.drawing.caption }}" loading="lazy">

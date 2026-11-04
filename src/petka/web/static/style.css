@@ -608,6 +608,8 @@ body > footer { flex-shrink: 0; }
 .pic img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); }
 .pic figcaption { font-size: .9rem; margin-top: .4rem; color: var(--ink-2); }
 .ortho-box { position: relative; width: 100%; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: .6rem; }
+.parking img { background: #fff; padding: .6rem; max-width: 46rem; }
 .ortho-box img, .ortho-box svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .ortho-box svg circle { fill: var(--red); stroke: #fff; stroke-width: 4; }
 .ortho-box svg .ln { fill: none; stroke: var(--red); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }

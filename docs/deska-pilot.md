@@ -23,6 +23,17 @@ scripts/deska-sync.sh                                    # koncepty do produkce 
   dev stránky). Každý návrh má vlastní ukázku `/uredni-deska/navrhy/<id>` přesně v podobě, jakou uvidí
   lidé, a tlačítko „Kopírovat název“ (id + titulek) pro odpověď v session.
 
+## Obrázky u úprav provozu
+
+- **Fotka z ulice**: nejbližší 360° snímek z Panoramaxu do 40 m (CC BY-SA, autor uveden). Claude
+  vybere ze tří pohledů ten, na kterém místo opravdu odpovídá výkresu, a určí, kde stojí rušené
+  značky a kam patří nové. Když si není jistý (nízká shoda), fotka „po změně“ nevznikne. Do fotky
+  se značky jen kreslí (rušené přeškrtnuté, nové v panelu se šipkou ke sloupu), nic se negeneruje.
+  V náhledu je u fotky zdůvodnění – ověřit, že sedí s výkresem.
+- **Schéma stání** jen tam, kde výkres řadu stání opravdu ukazuje a dají se spočítat; Claude uvádí,
+  podle čeho počty určil, a bez výkresu se schéma nikdy nekreslí. V náhledu je hned nad výkresem.
+- 3D pohledy ani generované obrázky se nepoužívají.
+
 ## Posouzení a vydání (v téže session)
 
 Uživatel napíše třeba „1 a 3 vydej, u 2 zkrať shrnutí a přidej mapu, 4 zahoď“. Session:

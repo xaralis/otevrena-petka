@@ -27,7 +27,7 @@ import yaml
 
 from ..usneseni import geo, llm
 from ..usneseni.store import ROOT
-from . import source
+from . import parking, photo, source
 
 log = logging.getLogger(__name__)
 
@@ -169,6 +169,11 @@ Pravidla:
 - `budget`: u změn rozpočtu nejvýš 8 největších změn v tisících Kč (+ přidáno, − ubráno),
   popsaných lidsky a krátce, nejvýš 45 znaků („odvoz odpadu“, ne „MP za komunální odpad“; důvod
   jako „vyšlo levněji“ smí být v závorce). Jinak prázdné pole.
+- `parking`: jen když výkres nebo fotka v příloze ukazují řadu parkovacích stání a změna se jich týká.
+  Popiš jednu řadu zleva doprava tak, jak ji výkres kreslí: úseky stejného druhu s počtem stání
+  (`before` dnes, `after` po změně). Počty a pořadí musí jít na výkresu spočítat; co výkres neukazuje,
+  nedoplňuj. Do `evidence` napiš, podle čeho na výkresu jsi počty a pořadí určil. Když si nejsi jistý
+  (výkres chybí, stání nejsou vidět, nejde je spočítat), dej null – schéma pak nebude.
 - `visual_plan`: pro redaktora 1–2 věty, jak oznámení nejlépe ukázat (mapa, výkres, graf…)
   a proč; `reviewer_notes`: co si má člověk před zveřejněním ověřit (nejasnosti, odhady).
 - Shluky: {", ".join(f"{k} = {v}" for k, v in CLUSTERS.items())}."""
@@ -176,7 +181,7 @@ Pravidla:
 SCHEMA = {
     "type": "object", "additionalProperties": False,
     "required": ["cluster", "headline", "summary", "where", "period", "action", "affects", "facts",
-                 "signs", "places", "parcels", "budget", "drawing", "visual_plan", "reviewer_notes"],
+                 "signs", "places", "parcels", "budget", "drawing", "parking", "visual_plan", "reviewer_notes"],
     "properties": {
         "cluster": {"type": "string", "enum": list(CLUSTERS)},
         "headline": {"type": "string", "description": "Jedna věta, nejvýš 110 znaků: co se děje."},
@@ -207,6 +212,16 @@ SCHEMA = {
                     "properties": {"file": {"type": "string"}, "page": {"type": "integer"},
                                    "box": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
                                    "caption": {"type": "string"}}},
+        "parking": {"type": ["object", "null"], "additionalProperties": False,
+                    "required": ["street", "kind", "before", "after", "evidence"],
+                    "properties": {"street": {"type": "string"},
+                                   "kind": {"type": "string", "enum": ["kolme", "podelne", "sikme"]},
+                                   "before": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["type", "n", "label"],
+                   "properties": {"type": {"type": "string", "enum": ["bezne", "ztp", "kratkodobe", "doprovod", "rezident", "vyhrazene", "nabijeni", "zakaz"]},
+                                  "n": {"type": "integer"}, "label": {"type": ["string", "null"]}}}}, "after": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["type", "n", "label"],
+                   "properties": {"type": {"type": "string", "enum": ["bezne", "ztp", "kratkodobe", "doprovod", "rezident", "vyhrazene", "nabijeni", "zakaz"]},
+                                  "n": {"type": "integer"}, "label": {"type": ["string", "null"]}}}},
+                                   "evidence": {"type": "string"}}},
         "visual_plan": {"type": "string"},
         "reviewer_notes": {"type": "string"},
     },
@@ -232,7 +247,7 @@ def delivery(group: list[dict]) -> dict:
                         "lhůty se považuje za doručenou."),
             "where": None, "period": {"from": None, "to": n.get("valid_until"), "text": None},
             "action": None, "affects": "jen adresáta písemnosti", "facts": [], "signs": [],
-            "places": [], "parcels": [], "budget": [], "drawing": None,
+            "places": [], "parcels": [], "budget": [], "drawing": None, "parking": None,
             "visual_plan": "Bez vizuálu; jméno adresáta nepřebíráme.", "reviewer_notes": ""}
 
 
@@ -376,6 +391,44 @@ def check(d: dict, text: str) -> list[str]:
     return problems
 
 
+def _centre(f: dict) -> tuple[float, float]:
+    pts = list(_coords(f["geometry"]))
+    return sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
+
+
+def street_photo(notice: dict, d: dict, feats: list[dict], visual: dict, out: Path) -> dict | None:
+    """Nearest Panoramax picture of the place, 'dnes' and 'po změně' (signs placed by Claude
+    against the drawing). None when there is no picture or Claude can't match it to the drawing."""
+    target = _centre(next((f for f in feats if f["kind"] == "address"), feats[0]))
+    feature = photo.nearest(*target)
+    if not feature:
+        return None
+    work = WORK / notice["id"] / "foto"
+    work.mkdir(parents=True, exist_ok=True)
+    c = photo.candidates(feature, target, work)
+    inputs = list(c["files"])
+    if visual.get("drawing"):
+        shutil.copy2(out / visual["drawing"]["file"], work / "vykres.png")
+        inputs.append(work / "vykres.png")
+    listing = "\n".join(f"- {s['code']} ({s['change']}){': ' + s['text'] if s.get('text') else ''}" for s in visual["signs"])
+    placed = llm.structured_files(
+        photo.PLACEMENT_SYSTEM,
+        f"Oznámení: {d['headline']}\nKde: {d.get('where') or '–'}\nZnačky:\n{listing or '–'}\n"
+        f"Fotka je {c['distance']} m od místa. " + ("Výkres je přiložen (vykres.png)." if visual.get("drawing") else "Výkres není."),
+        inputs, photo.PLACEMENT_SCHEMA, effort="high")
+    if placed["view"] is None or placed["confidence"] == "nizka":
+        log.info("%s: photo not used (%s)", notice["id"], placed["reason"][:200])
+        return None
+    credit = f"Foto: {c['author']}, Panoramax, {c['licence']}" + (f", {c['date']}" if c["date"] else "")
+    marks = [m for m in placed["marks"] if 0 <= m["x"] <= 1 and 0 <= m["y"] <= 1]
+    photo.render(c["files"][placed["view"]], marks, out / "foto-dnes.jpg", out / "foto-po.jpg",
+                 credit + (" · upraveno: značky podle výkresu" if marks else ""))
+    return {"before": "foto-dnes.jpg", "after": "foto-po.jpg" if marks else None, "credit": credit,
+            "source": c["url"], "distance": c["distance"], "confidence": placed["confidence"],
+            "reason": placed["reason"], "marks": marks, "picture": c["id"],
+            "yaw": round(c["yaws"][placed["view"]], 1)}
+
+
 # --- making a draft ----------------------------------------------------------------------------
 
 def draft(group: list[dict]) -> Path:
@@ -399,6 +452,19 @@ def draft(group: list[dict]) -> Path:
     visual["drawing"] = drawing_crop(d["drawing"], files, out / "vykres.png") if d.get("drawing") else None
     visual["signs"] = signs(d["signs"])
     problems = check(d, text)
+    visual["parking"] = None
+    if d.get("parking"):
+        if visual["drawing"]:            # never without the drawing it was read from
+            (out / "schema.svg").write_text(parking.svg(d["parking"]))
+            visual["parking"] = {"file": "schema.svg", "evidence": d["parking"]["evidence"]}
+        else:
+            problems.append("schéma stání vynecháno: bez výkresu by nebylo čím ho doložit")
+    visual["photo"] = None
+    if d["cluster"] == "doprava" and feats:
+        try:
+            visual["photo"] = street_photo(leader, d, feats, visual, out)
+        except Exception as e:
+            log.warning("%s: street photo failed: %s", leader["id"], e)
     digest = {
         "notice_id": leader["id"], "members": [n["id"] for n in group[1:]], "status": "draft",
         "prompt_version": PROMPT_VERSION, "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",
@@ -413,7 +479,7 @@ def draft(group: list[dict]) -> Path:
 def drafts(limit: int = 20, ids: list[str] | None = None) -> list[dict]:
     """Draft digests for new MO V notices (or the given ids). Returns a short report per draft."""
     have = set() if ids else existing()
-    todo = [g for g in groups(notices()) if (g[0]["id"] in ids if ids else
+    todo = [g for g in groups(notices(mo5=not ids)) if (g[0]["id"] in ids if ids else
                                               not ({n["id"] for n in g} & have))][:limit]
     report = []
     for g in todo:
@@ -531,7 +597,7 @@ def load(conn) -> int:
 def asset_path(nid: str, name: str, draft: bool = False) -> Path | None:
     """An image of a card: published ones for everybody, drafts only for the reviewers'
     preview (and never those of a rejected draft)."""
-    if not re.fullmatch(r"[a-z0-9]+-\d+", nid) or not re.fullmatch(r"[a-z0-9_-]+\.(png|jpg|jpeg)", name):
+    if not re.fullmatch(r"[a-z0-9]+-\d+", nid) or not re.fullmatch(r"[a-z0-9_-]+\.(png|jpg|jpeg|svg)", name):
         return None
     root = DRAFTS if draft else DIGESTS
     meta, p = root / nid / "digest.json", root / nid / name
