@@ -1,0 +1,656 @@
+{
+ "notice_id": "mmp-15470",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v2",
+ "model": "cli:opus",
+ "created_at": "2026-11-04T07:36:44+00:00",
+ "source": {
+  "title": "Oznámení o přerušení dodávky elektrické energie č. 110061124186, MO Pardubice V - Nové Jesenčany",
+  "url": "https://pardubice.eu/uredni-deska?id=15470",
+  "board": "mmp"
+ },
+ "cluster": "energie",
+ "headline": "Ve čtvrtek 5. 11. 2026 nepůjde od 7:30 do 15:30 elektřina v části Nových Jesenčan a Zeleného Předměstí",
+ "summary": "ČEZ Distribuce plánuje ve čtvrtek 5. 11. 2026 od 7:30 do 15:30 odstávku elektřiny. Bez proudu budou vybrané domy v ulicích Čacké, K Dolíčku, Na Záboří a Raisova v Nových Jesenčanech a v ulicích Čacké a Terezy Novákové na Zeleném Předměstí. Odstávka se týká i několika pozemků v Nových Jesenčanech, Dražkovicích a Pardubicích. Vedení berte i během odstávky jako pod napětím. Kdo vyrábí elektřinu, třeba z fotovoltaiky, musí výrobnu od vypnuté sítě odpojit.",
+ "where": "Nové Jesenčany a Zelené Předměstí (Pardubice V) – ulice Čacké, K Dolíčku, Na Záboří, Raisova a Terezy Novákové",
+ "period": {
+  "from": "2026-11-05",
+  "to": "2026-11-05",
+  "text": "5. 11. 2026 od 7:30 do 15:30"
+ },
+ "action": null,
+ "affects": "Domácnosti a firmy ve vyjmenovaných domech a majitelé vyjmenovaných pozemků, včetně majitelů vlastních zdrojů elektřiny (např. fotovoltaiky)",
+ "facts": [
+  {
+   "label": "Kdy",
+   "value": "čtvrtek 5. 11. 2026, 7:30–15:30"
+  },
+  {
+   "label": "Kdo odstávku dělá",
+   "value": "ČEZ Distribuce"
+  },
+  {
+   "label": "Číslo odstávky",
+   "value": "110061124186"
+  },
+  {
+   "label": "Infolinka",
+   "value": "800 850 860"
+  },
+  {
+   "label": "Stav dodávek na adrese",
+   "value": "www.bezstavy.cz"
+  },
+  {
+   "label": "Upozornění e-mailem nebo SMS",
+   "value": "zdarma po registraci na www.cezdistribuce.cz/sluzba"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Čacké 125, 128, 131, 132, 133, 136, 150, 154, 155, 229",
+  "K Dolíčku 4, 16–20, 22, 23, 27, 28, 29, 31, 41, 42, 53, 54, 56–60, 62, 64, 66–71, 73, 74, 77, 78, 80, 81, 83, 91, 92, 97, 104, 120, 151, 224, 249",
+  "Na Záboří 12",
+  "Raisova 225, 228, 243",
+  "Čacké 126, 144, 164, 165, 1449, 1450, 1724, 1725, 2662, 2747, 2758",
+  "Terezy Novákové 1448, 2814"
+ ],
+ "parcels": [
+  "p. p. č. 2/30, k. ú. Nové Jesenčany",
+  "p. p. č. 8/9, k. ú. Nové Jesenčany",
+  "p. p. č. 91/1, k. ú. Nové Jesenčany",
+  "p. p. č. 127, k. ú. Dražkovice",
+  "p. p. č. 140, k. ú. Dražkovice",
+  "p. p. č. 143, k. ú. Dražkovice",
+  "p. p. č. 160, k. ú. Dražkovice",
+  "p. p. č. 266/13, k. ú. Dražkovice",
+  "p. p. č. 266/28, k. ú. Dražkovice",
+  "p. p. č. 389/2, k. ú. Pardubice"
+ ],
+ "budget": [],
+ "drawing": {
+  "file": "mmp-15470-1.pdf",
+  "page": 2,
+  "box": [
+   0.155,
+   0.209,
+   0.845,
+   0.697
+  ],
+  "caption": "Orientační mapa odstávky: červené body jsou dotčené adresy, černé čtverečky dotčená místa připojení k síti"
+ },
+ "visual_plan": "Na mapě zvýrazněte dotčené domy podle čísel popisných v ulicích Čacké, K Dolíčku, Na Záboří, Raisova a Terezy Novákové. Jako doplněk se hodí orientační mapka ČEZ ze strany 2.",
+ "reviewer_notes": "Ulice Čacké je v dokumentu dvakrát: jednou v části obce Nové Jesenčany, jednou na Zeleném Předměstí, pokaždé s jinými čísly popisnými. V `places` jsou proto dva samostatné záznamy, a geokódování je potřeba ověřit podle části obce. Pozemky v k. ú. Dražkovice a Pardubice jsou v dokumentu uvedené mimo část Pardubice V. Oznámení visí do 5. 11. 2026, tedy do dne odstávky. Kartu proto zveřejněte hned. Dnes je 4. 11.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2/30, k. ú. Nové Jesenčany",
+    "source_text": "p. p. č. 2/30, k. ú. Nové Jesenčany",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.766632,
+        50.015713
+       ],
+       [
+        15.767476,
+        50.015673
+       ],
+       [
+        15.767484,
+        50.015709
+       ],
+       [
+        15.76665,
+        50.015746
+       ],
+       [
+        15.766632,
+        50.015713
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 8/9, k. ú. Nové Jesenčany",
+    "source_text": "p. p. č. 8/9, k. ú. Nové Jesenčany",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.767419,
+        50.017574
+       ],
+       [
+        15.767115,
+        50.017606
+       ],
+       [
+        15.767103,
+        50.017591
+       ],
+       [
+        15.767875,
+        50.017509
+       ],
+       [
+        15.767914,
+        50.017687
+       ],
+       [
+        15.767228,
+        50.017752
+       ],
+       [
+        15.767161,
+        50.017666
+       ],
+       [
+        15.767175,
+        50.017652
+       ],
+       [
+        15.767259,
+        50.017644
+       ],
+       [
+        15.767277,
+        50.017712
+       ],
+       [
+        15.76745,
+        50.017693
+       ],
+       [
+        15.767419,
+        50.017574
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 140, k. ú. Dražkovice",
+    "source_text": "p. p. č. 140, k. ú. Dražkovice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.762854,
+        50.003908
+       ],
+       [
+        15.762876,
+        50.003779
+       ],
+       [
+        15.762973,
+        50.003828
+       ],
+       [
+        15.763319,
+        50.003813
+       ],
+       [
+        15.763715,
+        50.003813
+       ],
+       [
+        15.764193,
+        50.003848
+       ],
+       [
+        15.764792,
+        50.003916
+       ],
+       [
+        15.764779,
+        50.003978
+       ],
+       [
+        15.764017,
+        50.003905
+       ],
+       [
+        15.763383,
+        50.003887
+       ],
+       [
+        15.762854,
+        50.003908
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 266/13, k. ú. Dražkovice",
+    "source_text": "p. p. č. 266/13, k. ú. Dražkovice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.767138,
+        50.012816
+       ],
+       [
+        15.764794,
+        50.013092
+       ],
+       [
+        15.764768,
+        50.013021
+       ],
+       [
+        15.767135,
+        50.012744
+       ],
+       [
+        15.767138,
+        50.012816
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 266/28, k. ú. Dražkovice",
+    "source_text": "p. p. č. 266/28, k. ú. Dražkovice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.7671,
+        50.0126
+       ],
+       [
+        15.76713,
+        50.012596
+       ],
+       [
+        15.767133,
+        50.012672
+       ],
+       [
+        15.76474,
+        50.012952
+       ],
+       [
+        15.76471,
+        50.012878
+       ],
+       [
+        15.7671,
+        50.0126
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Čacké 125, 128, 131–133, 136, 150, 154–155, 229",
+    "source_text": "Čacké 125, 128, 131, 132, 133, 136, 150, 154, 155, 229",
+    "geometry": {
+     "type": "MultiPoint",
+     "coordinates": [
+      [
+       15.76668,
+       50.016358
+      ],
+      [
+       15.766781,
+       50.016357
+      ],
+      [
+       15.767348,
+       50.016322
+      ],
+      [
+       15.767157,
+       50.016355
+      ],
+      [
+       15.767029,
+       50.016355
+      ],
+      [
+       15.767449,
+       50.016322
+      ],
+      [
+       15.767359,
+       50.015853
+      ],
+      [
+       15.767971,
+       50.01655
+      ],
+      [
+       15.768615,
+       50.016527
+      ],
+      [
+       15.768357,
+       50.016536
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "K Dolíčku 4, 16–20, 22–23, 27–29, 31, 41–42, 53–54, 56–60, 62, 64, 66–71, 73–74, 77–78, 80–81, 83, 91–92, 97, 104, 120, 151, 224, 249",
+    "source_text": "K Dolíčku 4, 16–20, 22, 23, 27, 28, 29, 31, 41, 42, 53, 54, 56–60, 62, 64, 66–71, 73, 74, 77, 78, 80, 81, 83, 91, 92, 97, 104, 120, 151, 224, 249",
+    "geometry": {
+     "type": "MultiPoint",
+     "coordinates": [
+      [
+       15.766646,
+       50.016621
+      ],
+      [
+       15.767879,
+       50.018882
+      ],
+      [
+       15.767805,
+       50.018782
+      ],
+      [
+       15.76738,
+       50.018243
+      ],
+      [
+       15.767296,
+       50.018161
+      ],
+      [
+       15.767437,
+       50.01832
+      ],
+      [
+       15.767494,
+       50.018413
+      ],
+      [
+       15.76791,
+       50.018497
+      ],
+      [
+       15.767467,
+       50.018556
+      ],
+      [
+       15.766725,
+       50.017023
+      ],
+      [
+       15.766619,
+       50.016879
+      ],
+      [
+       15.767571,
+       50.018654
+      ],
+      [
+       15.76798,
+       50.018591
+      ],
+      [
+       15.768029,
+       50.018673
+      ],
+      [
+       15.765708,
+       50.01584
+      ],
+      [
+       15.765738,
+       50.015907
+      ],
+      [
+       15.76582,
+       50.016017
+      ],
+      [
+       15.765856,
+       50.016083
+      ],
+      [
+       15.76593,
+       50.016216
+      ],
+      [
+       15.765979,
+       50.016322
+      ],
+      [
+       15.765798,
+       50.015436
+      ],
+      [
+       15.765876,
+       50.015558
+      ],
+      [
+       15.76591,
+       50.015647
+      ],
+      [
+       15.765413,
+       50.015424
+      ],
+      [
+       15.765996,
+       50.015775
+      ],
+      [
+       15.765556,
+       50.015519
+      ],
+      [
+       15.766062,
+       50.01647
+      ],
+      [
+       15.76605,
+       50.015877
+      ],
+      [
+       15.765651,
+       50.015707
+      ],
+      [
+       15.766158,
+       50.016666
+      ],
+      [
+       15.766195,
+       50.016748
+      ],
+      [
+       15.766119,
+       50.016008
+      ],
+      [
+       15.765768,
+       50.016593
+      ],
+      [
+       15.766284,
+       50.01686
+      ],
+      [
+       15.766336,
+       50.016927
+      ],
+      [
+       15.766494,
+       50.017128
+      ],
+      [
+       15.766664,
+       50.017363
+      ],
+      [
+       15.76659,
+       50.017275
+      ],
+      [
+       15.766175,
+       50.016122
+      ],
+      [
+       15.766248,
+       50.01627
+      ],
+      [
+       15.766298,
+       50.016355
+      ],
+      [
+       15.766818,
+       50.017535
+      ],
+      [
+       15.768283,
+       50.018862
+      ],
+      [
+       15.766484,
+       50.017013
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Na Záboří 12",
+    "source_text": "Na Záboří 12",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.767813,
+      50.019052
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Raisova 225, 228, 243",
+    "source_text": "Raisova 225, 228, 243",
+    "geometry": {
+     "type": "MultiPoint",
+     "coordinates": [
+      [
+       15.767499,
+       50.01783
+      ],
+      [
+       15.768689,
+       50.01809
+      ],
+      [
+       15.768955,
+       50.018174
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Čacké 126, 144, 164–165, 1449–1450, 1724–1725, 2662, 2747, 2758",
+    "source_text": "Čacké 126, 144, 164, 165, 1449, 1450, 1724, 1725, 2662, 2747, 2758",
+    "geometry": {
+     "type": "MultiPoint",
+     "coordinates": [
+      [
+       15.768083,
+       50.016306
+      ],
+      [
+       15.76869,
+       50.016247
+      ],
+      [
+       15.768927,
+       50.016504
+      ],
+      [
+       15.769185,
+       50.0165
+      ],
+      [
+       15.769551,
+       50.016219
+      ],
+      [
+       15.769662,
+       50.016212
+      ],
+      [
+       15.768833,
+       50.015516
+      ],
+      [
+       15.76823,
+       50.01574
+      ],
+      [
+       15.769017,
+       50.016237
+      ],
+      [
+       15.769312,
+       50.01622
+      ],
+      [
+       15.76849,
+       50.016253
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Terezy Novákové 1448, 2814",
+    "source_text": "Terezy Novákové 1448, 2814",
+    "geometry": {
+     "type": "MultiPoint",
+     "coordinates": [
+      [
+       15.769762,
+       50.016211
+      ],
+      [
+       15.769716,
+       50.015951
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Orientační mapa odstávky: červené body jsou dotčené adresy, černé čtverečky dotčená místa připojení k síti"
+  },
+  "signs": []
+ },
+ "problems": [],
+ "published_at": "2026-11-04T11:23:32+00:00",
+ "review_note": null
+}

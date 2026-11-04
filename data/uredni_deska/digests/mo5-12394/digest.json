@@ -1,0 +1,122 @@
+{
+ "notice_id": "mo5-12394",
+ "members": [
+  "mo5-12402",
+  "mo5-12395",
+  "mo5-12396",
+  "mo5-12397",
+  "mo5-12398",
+  "mo5-12399",
+  "mo5-12400",
+  "mo5-12401"
+ ],
+ "status": "published",
+ "prompt_version": "deska-v2",
+ "model": "cli:opus",
+ "created_at": "2026-11-04T07:37:40+00:00",
+ "source": {
+  "title": "Schválená směrnice č. 28/2025: Zásady a program pro poskytování dotací z rozpočtu MO Pardubice V v r. 2026",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=12394",
+  "board": "mo5"
+ },
+ "cluster": "dotace",
+ "headline": "Pětka v roce 2026 rozdělí až 250 tisíc Kč na kulturu, sport a volný čas. Žádat šlo ve třech kolech.",
+ "summary": "Městský obvod Pardubice V zveřejnil pravidla, podle kterých v roce 2026 dává peníze na kulturní, sportovní, společenské, vzdělávací, ekologické a volnočasové akce. Žádat mohou spolky, firmy i jednotlivci, pokud se akce koná na území obvodu, nebo pokud ji pořádají či se jí účastní lidé a organizace z obvodu. Jeden žadatel dostane za rok nejvýš 30 000 Kč. Výjimkou jsou akce celostátního nebo mezinárodního významu, ty se do limitu nepočítají. Všechna tři kola žádostí už skončila, poslední 30. 9. 2026. Kdo dotaci dostal, musí ji vyúčtovat do 30 dnů po akci, nejpozději do 13. 1. 2027.",
+ "where": "Území městského obvodu Pardubice V",
+ "period": {
+  "from": "2026-01-01",
+  "to": "2026-12-31",
+  "text": "Pravidla platí pro dotace v roce 2026. Žádosti se podávaly od 29. 1. do 28. 2. 2026, od 1. 5. do 31. 5. 2026 a od 1. 9. do 30. 9. 2026."
+ },
+ "action": {
+  "what": "Příjemci dotace musí dotaci vyúčtovat na předepsaném formuláři. Peníze, které nevyužili, vrátí obvodu.",
+  "deadline": "2027-01-13",
+  "how": "Vyúčtování se odevzdává ekonomickému odboru úřadu obvodu (Češkova 22) do 30 dnů od konce akce, nejpozději do 13. 1. 2027. U akcí, které začnou v lednu nebo únoru 2027, tento nejzazší termín neplatí. K vyúčtování patří přehled dokladů, jejich kopie označené textem „financováno z dotace Městského obvodu Pardubice V“ a propagační materiály. Nevyužité peníze se vracejí do 14 dnů od odevzdání vyúčtování."
+ },
+ "affects": "Spolky, sportovní kluby, pořadatelé akcí a jednotlivci, kteří pořádají akce v Pardubicích V nebo tam působí",
+ "facts": [
+  {
+   "label": "Celkem na dotace",
+   "value": "250 000 Kč (rezerva rady 60 tis., starosty 40 tis., místostarosty 20 tis., příspěvky na školství, mládež, tělovýchovu a kulturu 130 tis.)"
+  },
+  {
+   "label": "Nejvýš na jednoho žadatele",
+   "value": "30 000 Kč za rok (do limitu se nepočítají akce celostátního a mezinárodního významu)"
+  },
+  {
+   "label": "1. kolo žádostí",
+   "value": "29. 1. – 28. 2. 2026 (akce do 30. 6. 2026)"
+  },
+  {
+   "label": "2. kolo žádostí",
+   "value": "1. 5. – 31. 5. 2026 (akce od 1. 7. do 31. 10. 2026)"
+  },
+  {
+   "label": "3. kolo žádostí",
+   "value": "1. 9. – 30. 9. 2026 (akce od 1. 11. 2026, jednorázové akce až do 28. 2. 2027)"
+  },
+  {
+   "label": "Kdo rozhoduje",
+   "value": "Rada obvodu na doporučení komise pro školství, kulturu, sport a mládež, nejpozději do 2 měsíců po konci kola"
+  },
+  {
+   "label": "Vyúčtování",
+   "value": "do 30 dnů po akci, nejpozději do 13. 1. 2027"
+  },
+  {
+   "label": "Schváleno",
+   "value": "Rada obvodu 17. 12. 2025"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Češkova 22"
+ ],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "visual_plan": "Časová osa roku 2026 se třemi koly žádostí a termínem vyúčtování 13. 1. 2027. Vedle ní jednoduchý sloupec nebo koláč, ze kterých zdrojů se skládá 250 tisíc Kč. Mapa nemá smysl, pravidla platí pro celý obvod.",
+ "reviewer_notes": "Dnes je 4. 11. 2026, takže všechna tři kola žádostí už skončila (poslední 30. 9. 2026). Proto jsem do `action` místo podání žádosti dal termín vyúčtování 13. 1. 2027 pro příjemce dotací; tento termín v dokumentu výslovně stojí. Je potřeba zvážit, jestli kartu vůbec zveřejnit jako aktuální, nebo ji označit jako informaci o pravidlech roku 2026. `period.to` (31. 12. 2026) je odvozené z toho, že pravidla platí „pro rok 2026“; dotace na akce z ledna a února 2027 jsou výjimka. Žádosti se podávají na podatelně úřadu Češkova 22 nebo poštou, papírové dokumenty jsou k nahlédnutí v kanceláři č. 206. Kontaktní e-mail úřednice pro vrácení peněz jsem do karty nedával. Přílohy č. 1–7 (formuláře žádosti, smlouvy, čestných prohlášení a vyúčtování) jsem podrobně nečetl, podle názvů jde jen o prázdné vzory.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Češkova 22",
+    "source_text": "Češkova 22",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.769221,
+      50.026558
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.766981497667185,
+    50.025658,
+    15.771460502332815,
+    50.027458
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": []
+ },
+ "problems": [],
+ "published_at": "2026-11-04T11:23:32+00:00",
+ "review_note": null
+}
