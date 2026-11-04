@@ -6,7 +6,9 @@ views next to the office's drawing; when it can't tell, there is no "after" pict
 
 import io
 import math
+import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 import httpx
 import numpy as np
@@ -18,6 +20,7 @@ API = "https://api.panoramax.xyz/api"
 SIGNS_DIR = Path(__file__).resolve().parents[1] / "web" / "static" / "znacky"
 FONT = next((p for p in ("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
                          "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf") if Path(p).exists()), None)
+MAX_BYTES, MAX_PIXELS = 40_000_000, 16384 * 8192      # a full 360° picture is ~ 30 MP
 RED, GREEN, INK = (222, 9, 28, 235), (6, 115, 82, 235), (25, 28, 31, 220)
 
 
@@ -69,9 +72,21 @@ def view(pano: np.ndarray, center: float, yaw: float, pitch: float = -3, fov: fl
 def candidates(feature: dict, target: tuple[float, float], out: Path) -> dict:
     """Download the picture and save three views around the direction of the target."""
     href = (feature["assets"].get("hd") or feature["assets"]["sd"])["href"]
-    r = httpx.get(href, timeout=120, headers=source.HEADERS, follow_redirects=True)
-    r.raise_for_status()
-    pano = np.asarray(Image.open(io.BytesIO(r.content)).convert("RGB"))
+    host = urlparse(href).hostname or ""
+    if not (host == "panoramax.xyz" or host.endswith(".panoramax.xyz") or host.endswith(".openstreetmap.fr")
+            or host.endswith(".ign.fr")):
+        raise ValueError(f"picture from an unexpected host: {host}")
+    buf = io.BytesIO()
+    with httpx.stream("GET", href, timeout=120, headers=source.HEADERS) as r:   # no redirects elsewhere
+        r.raise_for_status()
+        for chunk in r.iter_bytes():
+            buf.write(chunk)
+            if buf.tell() > MAX_BYTES:
+                raise ValueError("picture too large")
+    im = Image.open(buf)
+    if im.width * im.height > MAX_PIXELS:
+        raise ValueError(f"picture too large: {im.width}x{im.height}")
+    pano = np.asarray(im.convert("RGB"))
     cam = feature["geometry"]["coordinates"]
     center = float(feature["properties"].get("view:azimuth") or 0)
     toward = _bearing(cam, target)
@@ -103,9 +118,11 @@ def _label(d: ImageDraw.ImageDraw, text: str, xy, bg, size=17):
 
 
 def _sign_picture(code: str) -> Image.Image | None:
-    for ext in (".png", ".jpg", ".jpeg", ".svg"):
+    if not re.fullmatch(r"[A-ZČ]{1,2}\d{1,2}[a-z]?", code):    # a code comes from the model: no paths
+        return None
+    for ext in (".png", ".jpg", ".jpeg"):
         p = SIGNS_DIR / f"{code}{ext}"
-        if p.exists() and ext != ".svg":
+        if p.is_file() and p.resolve().is_relative_to(SIGNS_DIR.resolve()):
             return Image.open(p).convert("RGBA")
     return None
 
