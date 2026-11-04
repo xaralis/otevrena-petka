@@ -578,6 +578,7 @@ body > footer { flex-shrink: 0; }
 .notices h3 { font-size: 1.05rem; font-weight: 650; line-height: 1.35; }
 .notice-day { display: block; font-weight: 700; font-size: 1.05rem; font-stretch: 90%; white-space: nowrap; }
 .notice-year { display: block; font-size: .85rem; color: var(--muted); }
+.notice-board { display: block; margin-top: .35rem; font-size: .8rem; color: var(--ink-2); line-height: 1.25; }
 .notices h3 { overflow-wrap: anywhere; }
 .notice-files { list-style: none; margin: .5rem 0 0; padding: 0; font-size: .92rem; line-height: 1.45; }
 .notice-files li { overflow-wrap: anywhere; margin: 0 0 .3rem; }
@@ -590,6 +591,7 @@ body > footer { flex-shrink: 0; }
   .notices .row { grid-template-columns: minmax(0, 1fr); }
   .notice-ref span { display: inline; }
   .notice-day, .notice-year { display: inline; }
+  .notice-board { display: inline; margin: 0 0 0 .5rem; }
 }
 /* pro lidi: cards, the notice page, the reviewers' preview */
 .card-row .row-text { -webkit-line-clamp: 3; }
