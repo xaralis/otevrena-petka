@@ -15,7 +15,8 @@ DESKA_HELP = """  deska-update        download the úřední deska boards and up
   deska-drafts [N | ID…]  propose plain-language cards for new MO V notices (default 20)
   deska-publish ID…   approve drafts (move to data/uredni_deska/digests, then commit + sync)
   deska-reject ID…    reject drafts (kept so they aren't proposed again)
-  deska-load          load card directories into the database (after seed / sync)"""
+  deska-load          load card directories into the database (after seed / sync)
+  deska-receive       replace the cards with a tar from stdin, then load (scripts/deska-sync.sh)"""
 
 
 def deska_update() -> int:
@@ -58,6 +59,10 @@ def main() -> None:
         if cmd == "deska-update":
             sys.exit(deska_update())
         if cmd == "deska-load":
+            sys.exit(deska_load())
+        if cmd == "deska-receive":            # tar on stdin from scripts/deska-sync.sh
+            from .uredni_deska import digest
+            print(json.dumps(digest.receive(sys.stdin.buffer)))
             sys.exit(deska_load())
         if cmd in ("deska-drafts", "deska-publish", "deska-reject"):
             sys.exit(deska_cards(cmd, sys.argv[2:]))

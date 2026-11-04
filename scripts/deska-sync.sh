@@ -9,6 +9,4 @@ POD=$(kubectl -n "$NS" get pods -o name --field-selector=status.phase=Running | 
 [ -n "$POD" ] || { echo "no running app pod" >&2; exit 1; }
 mkdir -p data/uredni_deska/drafts data/uredni_deska/digests
 tar -C data/uredni_deska -cf - drafts digests \
-  | kubectl -n "$NS" exec -i "$POD" -c app -- sh -c \
-      'mkdir -p /data/uredni_deska && rm -rf /data/uredni_deska/drafts && tar -C /data/uredni_deska -xf -'
-kubectl -n "$NS" exec "$POD" -c app -- usneseni deska-load
+  | kubectl -n "$NS" exec -i "$POD" -c app -- usneseni deska-receive

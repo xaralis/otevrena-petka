@@ -473,6 +473,34 @@ def seed() -> None:
                 shutil.copy2(src, dst)
 
 
+def receive(stream) -> dict:
+    """Replace the cards in DATA with a tar of `drafts/` and `digests/` (from scripts/deska-sync.sh):
+    drafts are swapped wholesale (approved or dropped ones disappear), approved cards are updated."""
+    import tarfile
+    import tempfile
+    DATA.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=DATA, prefix=".incoming-") as tmp:
+        with tarfile.open(fileobj=stream, mode="r|") as tar:
+            tar.extractall(tmp, filter="data")       # no absolute paths, links or devices
+        new = Path(tmp)
+        if (new / "drafts").is_dir():
+            old = DATA / ".drafts-old"
+            if old.exists():
+                shutil.rmtree(old)
+            if DRAFTS.exists():
+                DRAFTS.rename(old)
+            (new / "drafts").rename(DRAFTS)
+            if old.exists():
+                shutil.rmtree(old)
+        n = 0
+        for src in (new / "digests").glob("*/*") if (new / "digests").is_dir() else []:
+            dst = DIGESTS / src.relative_to(new / "digests")
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            n += 1
+    return {"drafts": len(list(DRAFTS.glob("*/digest.json"))), "published_files": n}
+
+
 def load(conn) -> int:
     """Bring notice_digests in line with the digest directories (drafts and published)."""
     rows = []
