@@ -24,7 +24,7 @@
 <li class="row card-row" id="{{ n.id }}">
   <div class="row-no">{% if n.published %}<span class="notice-day">{{ n.published.day }}. {{ n.published.month }}.</span> <span class="notice-year">{{ n.published.year }}</span>{% endif %}</div>
   <div class="row-body">
-    <p class="human-tag">Polidštěné</p>
+    <p class="human-tag">Polidštěno</p>
     <h3><a href="{{ '#' if preview else '/uredni-deska/' ~ n.id }}">{{ d.headline }}</a></h3>
     <p class="row-meta">{{ CLUSTERS.get(d.cluster, n.kind_label) }}{% if d.where %} – {{ d.where }}{% endif %}</p>
     <p class="row-text">{{ d.summary }}</p>
@@ -46,7 +46,7 @@
     notice page and by the reviewers' preview, so both look the same. -#}
 {% macro digest_body(d, n, members, preview=False) -%}
 {% set img = ('/uredni-deska/navrhy/obrazky/' if preview else '/uredni-deska/obrazky/') ~ n.id ~ '/' %}
-<p class="digest-top"><span class="human-tag">Polidštěné</span> Přepsáno do běžné řeči, <a href="#original-h">úřední znění s č. j. a přílohami</a> je níže.</p>
+<p class="digest-top"><span class="human-tag">Polidštěno</span> Přepsáno do běžné řeči, <a href="#original-h">úřední znění s č. j. a přílohami</a> je níže.</p>
 <p class="lead-text">{{ d.summary }}</p>
 {% if d.action %}
 <div class="act">
