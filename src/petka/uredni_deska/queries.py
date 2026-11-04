@@ -9,7 +9,11 @@ from .source import BY_ID, KIND_LABEL
 COLUMNS = """n.id, n.board, n.url, n.title, n.published, n.valid_until, n.agenda, n.kind,
              n.reference, n.file_mark, n.department, n.attachments, n.is_mo5, n.redacted,
              n.first_seen, n.last_seen, n.removed_at,
-             (n.removed_at AT TIME ZONE 'Europe/Prague')::date AS removed_on"""
+             (n.removed_at AT TIME ZONE 'Europe/Prague')::date AS removed_on,
+             (SELECT d.data FROM notice_digests d WHERE d.notice_id = n.id AND d.status = 'published') AS digest"""
+
+# annexes shown inside a published card don't get a row of their own
+NOT_MEMBER = """NOT EXISTS (SELECT 1 FROM notice_digests x WHERE x.status = 'published' AND n.id = ANY(x.members))"""
 
 STOPWORDS = set("""a i o u v k s z ve ke se ze na do od po pro pri za nad pod mezi bez
     je jsou byl byla bylo by kdy kde jak co kdo ktery ktera ktere ten ta to tom tech
@@ -30,7 +34,7 @@ def _stem(w: str) -> str:
 
 
 def _where(mo5: bool, active: bool, kind: str | None) -> tuple[list[str], list]:
-    w, p = ["n.removed_at IS NULL" if active else "n.removed_at IS NOT NULL"], []
+    w, p = ["n.removed_at IS NULL" if active else "n.removed_at IS NOT NULL", NOT_MEMBER], []
     if mo5:
         w.append("n.is_mo5")
     if kind:
@@ -71,6 +75,25 @@ def notice(nid: str) -> dict | None:
 def _row(r: dict) -> dict:
     return {**r, "kind_label": KIND_LABEL.get(r["kind"], r["kind"]),
             "board_name": BY_ID[r["board"]].name if r["board"] in BY_ID else r["board"]}
+
+
+def members(ids: list[str]) -> list[dict]:
+    """The annexes of a card (notices posted separately), as rows."""
+    if not ids:
+        return []
+    with db.pool().connection() as conn:
+        rows = conn.execute(f"SELECT {COLUMNS} FROM notices n WHERE n.id = ANY(%s) ORDER BY n.id", (ids,)).fetchall()
+    return [_row(r) for r in rows]
+
+
+def drafts() -> list[dict]:
+    """Proposed cards waiting for a person, newest notice first (the preview page)."""
+    with db.pool().connection() as conn:
+        rows = conn.execute(
+            f"""SELECT {COLUMNS}, d.data AS draft, d.status AS draft_status
+                FROM notice_digests d JOIN notices n ON n.id = d.notice_id
+                WHERE d.status = 'draft' ORDER BY n.published DESC NULLS LAST, n.id DESC""").fetchall()
+    return [_row(r) for r in rows]
 
 
 def kinds(mo5: bool = True, active: bool = True) -> list[dict]:

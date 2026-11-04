@@ -1,5 +1,6 @@
 """Shared Jinja environment for the portal and its sections."""
 
+import datetime as dt
 import functools
 import hashlib
 import os
@@ -21,16 +22,27 @@ def asset_version(path: str) -> str:
     return hashlib.sha256(f.read_bytes()).hexdigest()[:10] if f.is_file() else "0"
 
 
+def _clusters() -> dict:
+    from ..uredni_deska.digest import CLUSTERS
+    return CLUSTERS
+
+
 def asset(path: str) -> str:
     return f"/static/{path}?v={asset_version(path)}"
 SITE_NAME = "Otevřená Pětka"
 
 tpl = Jinja2Templates(directory=HERE / "templates")
-tpl.env.globals.update(asset=asset, CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
+tpl.env.globals.update(asset=asset, CLUSTERS=_clusters(), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
                        CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 
 def _date(d) -> str:
+    """'1. 2. 2018' from a date or an ISO string (digests keep dates as text)."""
+    if isinstance(d, str):
+        try:
+            d = dt.date.fromisoformat(d[:10])
+        except ValueError:
+            return d
     return f"{d.day}. {d.month}. {d.year}" if d else ""
 
 

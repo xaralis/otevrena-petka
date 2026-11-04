@@ -11,7 +11,11 @@ import sys
 
 from .usneseni import cli as usneseni_cli
 
-DESKA_HELP = "  deska-update        download the úřední deska boards and update the notices (idempotent)"
+DESKA_HELP = """  deska-update        download the úřední deska boards and update the notices (idempotent)
+  deska-drafts [N | ID…]  propose plain-language cards for new MO V notices (default 20)
+  deska-publish ID…   approve drafts (move to data/uredni_deska/digests, then commit + sync)
+  deska-reject ID…    reject drafts (kept so they aren't proposed again)
+  deska-load          load card directories into the database (after seed / sync)"""
 
 
 def deska_update() -> int:
@@ -21,17 +25,49 @@ def deska_update() -> int:
     return 1 if report["failures"] else 0
 
 
+def deska_load() -> int:
+    from . import db
+    from .uredni_deska import digest
+    digest.seed()
+    db.migrate()
+    with db.connect() as conn:
+        with conn.transaction():
+            n = digest.load(conn)
+    print(json.dumps({"cards": n}))
+    return 0
+
+
+def deska_cards(cmd: str, args: list[str]) -> int:
+    from .uredni_deska import digest
+    if cmd == "deska-drafts":
+        limit = int(args[0]) if len(args) == 1 and args[0].isdigit() else 20
+        ids = [a for a in args if not a.isdigit()] or None
+        report = digest.drafts(limit=limit, ids=ids)
+    elif cmd == "deska-publish":
+        report = digest.publish(args)
+    else:
+        report = digest.reject(args)
+    print(json.dumps(report, ensure_ascii=False, indent=1))
+    return 1 if any(isinstance(r, dict) and r.get("error") for r in report) else 0
+
+
 def main() -> None:
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
-    if cmd == "deska-update":
+    if cmd.startswith("deska-"):
         logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
-        sys.exit(deska_update())
+        if cmd == "deska-update":
+            sys.exit(deska_update())
+        if cmd == "deska-load":
+            sys.exit(deska_load())
+        if cmd in ("deska-drafts", "deska-publish", "deska-reject"):
+            sys.exit(deska_cards(cmd, sys.argv[2:]))
     if cmd in ("-h", "--help", ""):
         print("section úřední deska:\n" + DESKA_HELP + "\n")
     usneseni_cli.main()
     if cmd == "bootstrap":
         try:
             deska_update()
+            deska_load()
         except Exception:
             logging.getLogger(__name__).exception("bootstrap: úřední deska not refreshed")
 

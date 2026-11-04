@@ -15,3 +15,83 @@
   {% if files and n.reference %}<p class="notice-ref"><span>č. j.</span> {{ n.reference }}</p>{% endif %}
 </li>
 {%- endmacro %}
+
+
+{#- A notice with an approved plain-language card: the card leads, the office's wording is one
+    click away. -#}
+{% macro card(n) -%}
+{% set d = n.digest %}
+<li class="row card-row" id="{{ n.id }}">
+  <div class="row-no">{% if n.published %}<span class="notice-day">{{ n.published.day }}. {{ n.published.month }}.</span> <span class="notice-year">{{ n.published.year }}</span>{% endif %}</div>
+  <div class="row-body">
+    <h3><a href="/uredni-deska/{{ n.id }}">{{ d.headline }}</a></h3>
+    <p class="row-meta">{{ CLUSTERS.get(d.cluster, n.kind_label) }}{% if d.where %} – {{ d.where }}{% endif %}</p>
+    <p class="row-text">{{ d.summary }}</p>
+    {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
+  </div>
+</li>
+{%- endmacro %}
+
+
+{#- The body of a card: summary, what you can do, facts, pictures, the original. Used by the
+    notice page and by the reviewers' preview, so both look the same. -#}
+{% macro digest_body(d, n, members, preview=False) -%}
+<p class="lead-text">{{ d.summary }}</p>
+{% if d.action %}
+<div class="act">
+  <h2 class="act-h">{% if d.action.deadline %}Do {{ d.action.deadline|d }}: {% endif %}{{ d.action.what }}</h2>
+  <p>{{ d.action.how }}</p>
+</div>
+{% endif %}
+{% if d.where or d.period.text or d.affects or d.facts %}
+<dl class="facts digest-facts">
+  {% if d.where %}<dt>Kde</dt><dd>{{ d.where }}</dd>{% endif %}
+  {% if d.period.text %}<dt>Kdy</dt><dd>{{ d.period.text }}</dd>{% elif d.period.from or d.period.to %}<dt>Kdy</dt><dd>{% if d.period.from %}od {{ d.period.from|d }} {% endif %}{% if d.period.to %}do {{ d.period.to|d }}{% endif %}</dd>{% endif %}
+  {% if d.affects %}<dt>Koho se to týká</dt><dd>{{ d.affects }}</dd>{% endif %}
+  {% for f in d.facts %}<dt>{{ f.label }}</dt><dd>{{ f.value }}</dd>{% endfor %}
+</dl>
+{% endif %}
+{% set v = d.visual %}
+{% if v.signs %}
+<h2>Dopravní značky</h2>
+<ul class="signs">
+  {% for s in v.signs %}<li class="sign-{{ s.change }}">
+    {% if s.image %}<img src="/static/znacky/{{ s.image }}" alt="" width="64" height="64" loading="lazy">{% else %}<span class="sign-code">{{ s.code }}</span>{% endif %}
+    <span><b>{{ s.name or s.code }}</b>{% if s.text %}<br><span class="muted">{{ s.text }}</span>{% endif %}<br><span class="sign-change">{{ {'nova': 'nová', 'odstranit': 'odstraní se', 'zustava': 'zůstává'}[s.change] }}</span></span>
+  </li>{% endfor %}
+</ul>
+{% endif %}
+{% if v.drawing %}
+<figure class="pic">
+  <img src="/uredni-deska/obrazky/{{ n.id }}/{{ v.drawing.file }}" alt="{{ v.drawing.caption }}" loading="lazy">
+  <figcaption>{{ v.drawing.caption }} <span class="muted">Výřez z přílohy oznámení.</span></figcaption>
+</figure>
+{% endif %}
+{% if v.ortho %}
+<figure class="pic ortho">
+  <div class="ortho-box" style="aspect-ratio: {{ v.ortho.width }} / {{ v.ortho.height }}">
+    <img src="/uredni-deska/obrazky/{{ n.id }}/{{ v.ortho.file }}" alt="Letecký snímek okolí s vyznačeným místem" loading="lazy">
+    <svg viewBox="0 0 {{ v.ortho.width }} {{ v.ortho.height }}" preserveAspectRatio="none" aria-hidden="true">
+      {% for s in v.ortho.shapes %}{% if s.kind == 'point' %}<circle cx="{{ s.xy[0] }}" cy="{{ s.xy[1] }}" r="11"/>{% elif s.kind == 'line' %}<path class="ln" d="{{ s.d }}"/>{% else %}<path class="ar" d="{{ s.d }}"/>{% endif %}{% endfor %}
+    </svg>
+  </div>
+  <figcaption>{% for f in v.map %}{{ f.label }}{{ ', ' if not loop.last }}{% endfor %}. <span class="muted">{{ v.ortho.credit }}</span></figcaption>
+</figure>
+{% elif v.map %}
+<div class="map map-detail" data-map="detail" data-inline="places-{{ n.id }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" role="region" aria-label="Mapa míst z oznámení"></div>
+<script type="application/json" id="places-{{ n.id }}">{"type":"FeatureCollection","features":[{% for g in v.map %}{"type":"Feature","geometry":{{ g.geometry|tojson }},"properties":{"label":{{ g.label|tojson }},"kind":{{ g.kind|tojson }}}}{{ ',' if not loop.last }}{% endfor %}]}</script>
+<ul class="place-list">{% for g in v.map %}<li><i class="pk pk-{{ g.kind }}" aria-hidden="true"></i>{{ g.label }}</li>{% endfor %}</ul>
+{% endif %}
+{% if d.budget %}
+{% set mx = d.budget|map(attribute='change')|map('abs')|max %}
+<h2>Největší změny</h2>
+<ul class="budget">
+  {% for b in d.budget %}<li><span class="b-label">{{ b.label }}</span><span class="b-bar {{ 'b-plus' if b.change > 0 else 'b-minus' }}" style="--w: {{ (100 * (b.change|abs) / mx)|round(1) if mx else 0 }}%"></span><span class="b-val">{{ '+' if b.change > 0 }}{{ '{:,.0f}'.format(b.change).replace(',', ' ').replace('-', '−') }} tis. Kč</span></li>{% endfor %}
+</ul>
+{% endif %}
+<details class="original">
+  <summary>Originál na úřední desce</summary>
+  <ol class="rows notices">{{ notice(n) }}{% for m in members %}{{ notice(m) }}{% endfor %}</ol>
+</details>
+<p class="note">Kartu připravil jazykový model Claude z oznámení a jeho příloh a před zveřejněním ji zkontroloval člověk. Závazné je vždy originální oznámení.</p>
+{%- endmacro %}

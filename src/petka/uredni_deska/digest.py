@@ -1,0 +1,510 @@
+"""Úřední deska "pro lidi": each notice retold in plain Czech, with a picture where one helps.
+
+A digest is a directory `<root>/<notice id>/` with `digest.json` and its images:
+
+    data/uredni_deska/drafts/<id>/    proposals waiting for a person (not in git)
+    data/uredni_deska/digests/<id>/   approved and published (in git, seeded into the cluster)
+
+Pilot workflow (docs/deska-pilot.md): `deska-drafts` proposes digests for new notices that
+concern MO V, a person reviews them at /uredni-deska/navrhy, `deska-publish` approves.
+Text comes from Claude (usneseni/llm.py, `api` or `claude-cli`); everything visual is
+deterministic: places via RÚIAN (usneseni/geo.py), an orthophoto crop from ČÚZK with the
+place drawn on it, a crop of the office's own drawing from the PDF, sign pictures by code.
+Personal data from the notices (applicants, number plates, birth dates) never goes in.
+"""
+
+import datetime as dt
+import json
+import logging
+import os
+import re
+import shutil
+import subprocess
+from pathlib import Path
+
+import httpx
+import yaml
+
+from ..usneseni import geo, llm
+from ..usneseni.store import ROOT
+from . import source
+
+log = logging.getLogger(__name__)
+
+PROMPT_VERSION = "deska-v2"
+DATA = Path(os.environ.get("DATA_DIR", ROOT / "data")) / "uredni_deska"
+SEED = ROOT / "data" / "uredni_deska"
+DRAFTS, DIGESTS = DATA / "drafts", DATA / "digests"
+WORK = Path(os.environ.get("DESKA_WORK", "/tmp/petka-deska"))
+PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+SIGNS = yaml.safe_load((ROOT / "config" / "uredni_deska" / "znacky.yaml").read_text()) \
+    if (ROOT / "config" / "uredni_deska" / "znacky.yaml").exists() else {}
+ORTHO_WMS = "https://ags.cuzk.gov.cz/arcgis1/services/ORTOFOTO/MapServer/WMSServer"
+
+CLUSTERS = {
+    "doprava": "Doprava a uzavírky", "energie": "Výpadky elektřiny", "stavby": "Stavby a řízení",
+    "majetek": "Majetek města", "rozpocet": "Rozpočet a hospodaření", "predpisy": "Pravidla a vyhlášky",
+    "dotace": "Dotace", "informace": "Odpovědi na dotazy", "drazby": "Dražby",
+    "doruceni": "Doručení písemnosti", "prostredi": "Životní prostředí", "volby": "Volby",
+    "poplatky": "Poplatky", "jednani": "Jednání zastupitelstva", "ostatni": "Ostatní",
+}
+
+
+# --- candidates and grouping ----------------------------------------------------------------
+
+def notices(mo5: bool = True) -> list[dict]:
+    """Posted notices from the public API (works anywhere, no database credentials)."""
+    out, offset = [], 0
+    with httpx.Client(timeout=30, headers=source.HEADERS) as c:
+        while True:
+            r = c.get(f"{PUBLIC_URL}/api/v1/uredni-deska/notices",
+                      params={"mo5": str(mo5).lower(), "active": "true", "limit": 100, "offset": offset})
+            r.raise_for_status()
+            page = r.json()
+            out += page["results"]
+            offset += 100
+            if offset >= page["total"]:
+                return out
+
+
+_ATTACHMENT = re.compile(r"\s*[-–]\s*příloha\s*(č\.?\s*\d+)?\s*$|^příloha\s*č\.?\s*\d+\s*", re.I)
+_KEYS = [re.compile(p, re.I) for p in (r"směrnic\w*\s+č\.\s*\d+/\d{4}",
+                                       r"\d+\.\s*změn\w*\s+rozpočtu.*?r\.\s*\d{4}",
+                                       r"závěrečn\w*\s+účt\w*.*?\d{4}")]
+
+
+def group_key(n: dict) -> str:
+    """Notices posted as one package (a directive and its annexes, a budget change and its
+    tables) share a key; everything else is its own group."""
+    t = n["title"]
+    for rx in _KEYS:
+        m = rx.search(t)
+        if m:
+            return f"{n['board']}:{re.sub(r'\\s+', ' ', m.group(0).lower())}"
+    return f"{n['board']}:{_ATTACHMENT.sub('', t).strip().lower()}"
+
+
+def groups(items: list[dict]) -> list[list[dict]]:
+    """Grouped notices, the main one first (not an annex; then the oldest id)."""
+    by: dict[str, list[dict]] = {}
+    for n in items:
+        by.setdefault(group_key(n), []).append(n)
+    out = []
+    for g in by.values():
+        g.sort(key=lambda n: (bool(re.search(r"příloha", n["title"], re.I)), n["id"]))
+        out.append(g)
+    return sorted(out, key=lambda g: g[0]["published"] or "", reverse=True)
+
+
+def existing() -> set[str]:
+    """Notice ids that already have a digest (draft, published or rejected) – leaders and members."""
+    ids = set()
+    for root in (DRAFTS, DIGESTS):
+        for f in root.glob("*/digest.json"):
+            d = json.loads(f.read_text())
+            ids |= {d["notice_id"], *d.get("members", [])}
+    return ids
+
+
+# --- attachments -------------------------------------------------------------------------------
+
+def download(group: list[dict]) -> list[Path]:
+    """The group's attachments (PDFs) into WORK/<leader id>/; returns local paths."""
+    d = WORK / group[0]["id"]
+    d.mkdir(parents=True, exist_ok=True)
+    paths = []
+    with httpx.Client(timeout=60, headers=source.HEADERS, follow_redirects=True) as c:
+        for n in group:
+            for i, a in enumerate(n.get("attachments") or []):
+                url = a.get("url") or ""
+                ext = Path(url.split("?")[0]).suffix.lower() or ".pdf"
+                if ext not in (".pdf", ".png", ".jpg", ".jpeg"):
+                    continue
+                p = d / f"{n['id']}-{i + 1}{ext}"
+                if not p.exists():
+                    r = c.get(url)
+                    r.raise_for_status()
+                    p.write_bytes(r.content)
+                paths.append(p)
+    return paths
+
+
+def pdf_text(paths: list[Path]) -> str:
+    out = []
+    for p in paths:
+        if p.suffix.lower() == ".pdf":
+            r = subprocess.run(["pdftotext", "-layout", str(p), "-"], capture_output=True, text=True)
+            out.append(r.stdout)
+    return "\n".join(out)
+
+
+# --- the plain-language draft (Claude) ---------------------------------------------------------
+
+SYSTEM = f"""Jsi redaktor portálu Otevřená Pětka (otevřená data městského obvodu Pardubice V).
+Převádíš oznámení z úřední desky do češtiny pro běžné lidi: co se děje, kde, kdy, koho se to
+týká a co s tím můžou udělat. Píšeš věcně, krátce, bez úředních obratů, paragrafů a zkratek
+(místo „OOP o stanovení místní úpravy provozu“ napiš, co se na ulici změní). Nic si nedomýšlej:
+každý údaj musí být v oznámení nebo jeho přílohách; když něco nevíš, pole nech prázdné (null).
+
+Pravidla:
+- Žádné osobní údaje soukromých osob: jména žadatelů a adresátů, adresy bydliště, SPZ, čísla
+  průkazů (ZTP), data narození, čísla účtů. Úřady, firmy a úřední osoby jménem úřadu smíš uvést.
+  U vyhrazeného parkování pro osobu se zdravotním postižením napiš jen „vyhrazené místo pro
+  osobu se zdravotním postižením“.
+- V polích `period.from`, `period.to` a `action.deadline` piš data jako ISO (RRRR-MM-DD); ve všech
+  textech (shrnutí, fakta, `period.text`) česky „24. 10. 2026“. Jen data, která v dokumentu stojí;
+  dopočtené datum (třeba konec lhůty) uveď a v `reviewer_notes` vysvětli výpočet. Lhůta pro připomínky,
+  námitky nebo nabídky je nejdůležitější údaj, pokud existuje – dej ji do `action`.
+- U úprav provozu vypiš každou dopravní značku (kód přesně podle dokumentu, např. IP12, E13,
+  V10e) a zda je nová, k odstranění, nebo zůstává; text dodatkové tabulky (E13) opiš, pokud
+  neobsahuje osobní údaje.
+- `places`: místa v Pardubicích tak, jak je dokument píše (ulice, ulice + číslo popisné, část
+  obce + č. p.); `parcels`: pozemky („p. p. č. 2515/14, k. ú. Pardubice“). Obecná místa (sídliště
+  Dukla) do `places` nedávej. Když dokument vyjmenovává domy (výpadek elektřiny, uzavírka), dej
+  každou ulici s jejími čísly popisnými („K Dolíčku 4, 16–20, 22“), ne jen název ulice – mapa pak
+  ukáže přesně dotčené domy.
+- `drawing`: pokud příloha obsahuje situační výkres, mapku nebo fotku místa, urči soubor, stranu
+  (od 1) a výřez se samotným obrázkem jako zlomky šířky a výšky strany [x0, y0, x1, y1]
+  (0 = levý/horní okraj), bez hlavičky a razítek. Jinak null.
+- `budget`: u změn rozpočtu nejvýš 8 největších změn v tisících Kč (+ přidáno, − ubráno),
+  popsaných lidsky („odvoz odpadu“, ne „MP za komunální odpad“). Jinak prázdné pole.
+- `visual_plan`: pro redaktora 1–2 věty, jak oznámení nejlépe ukázat (mapa, výkres, graf…)
+  a proč; `reviewer_notes`: co si má člověk před zveřejněním ověřit (nejasnosti, odhady).
+- Shluky: {", ".join(f"{k} = {v}" for k, v in CLUSTERS.items())}."""
+
+SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "required": ["cluster", "headline", "summary", "where", "period", "action", "affects", "facts",
+                 "signs", "places", "parcels", "budget", "drawing", "visual_plan", "reviewer_notes"],
+    "properties": {
+        "cluster": {"type": "string", "enum": list(CLUSTERS)},
+        "headline": {"type": "string", "description": "Jedna věta, nejvýš 110 znaků: co se děje."},
+        "summary": {"type": "string", "description": "2–4 věty pro běžného čtenáře."},
+        "where": {"type": ["string", "null"]},
+        "period": {"type": "object", "additionalProperties": False, "required": ["from", "to", "text"],
+                   "properties": {"from": {"type": ["string", "null"]}, "to": {"type": ["string", "null"]},
+                                  "text": {"type": ["string", "null"]}}},
+        "action": {"type": ["object", "null"], "additionalProperties": False,
+                   "required": ["what", "deadline", "how"],
+                   "properties": {"what": {"type": "string"}, "deadline": {"type": ["string", "null"]},
+                                  "how": {"type": "string"}}},
+        "affects": {"type": ["string", "null"]},
+        "facts": {"type": "array", "maxItems": 8, "items": {
+            "type": "object", "additionalProperties": False, "required": ["label", "value"],
+            "properties": {"label": {"type": "string"}, "value": {"type": "string"}}}},
+        "signs": {"type": "array", "items": {
+            "type": "object", "additionalProperties": False, "required": ["code", "text", "change"],
+            "properties": {"code": {"type": "string"}, "text": {"type": ["string", "null"]},
+                           "change": {"type": "string", "enum": ["nova", "odstranit", "zustava"]}}}},
+        "places": {"type": "array", "items": {"type": "string"}},
+        "parcels": {"type": "array", "items": {"type": "string"}},
+        "budget": {"type": "array", "maxItems": 8, "items": {
+            "type": "object", "additionalProperties": False, "required": ["label", "change"],
+            "properties": {"label": {"type": "string"}, "change": {"type": "number"}}}},
+        "drawing": {"type": ["object", "null"], "additionalProperties": False,
+                    "required": ["file", "page", "box", "caption"],
+                    "properties": {"file": {"type": "string"}, "page": {"type": "integer"},
+                                   "box": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+                                   "caption": {"type": "string"}}},
+        "visual_plan": {"type": "string"},
+        "reviewer_notes": {"type": "string"},
+    },
+}
+
+
+def prompt(group: list[dict]) -> str:
+    lines = ["Oznámení z úřední desky (jedno nebo balíček souvisejících):"]
+    for n in group:
+        lines.append(f"- {n['title']} (vyvěšeno {n['published']}, visí do {n['valid_until']}, "
+                     f"deska {'MO Pardubice V' if n['board'] == 'mo5' else 'magistrátu'}, "
+                     f"odbor: {n.get('department') or '–'}, druh podle názvu: {n['kind']})")
+    lines.append("Názvy souborů příloh začínají id oznámení. Připrav podklad pro kartu „pro lidi“.")
+    return "\n".join(lines)
+
+
+def delivery(group: list[dict]) -> dict:
+    """Delivery notices: nothing from them is worth repeating (and the name must not be)."""
+    n = group[0]
+    return {"cluster": "doruceni", "headline": "Úřad doručuje písemnost veřejnou vyhláškou",
+            "summary": ("Úřad se nemohl spojit s adresátem úřední písemnosti, a tak mu ji doručuje "
+                        "vyvěšením na úřední desce. Adresát si ji může vyzvednout na úřadu; po uplynutí "
+                        "lhůty se považuje za doručenou."),
+            "where": None, "period": {"from": None, "to": n.get("valid_until"), "text": None},
+            "action": None, "affects": "jen adresáta písemnosti", "facts": [], "signs": [],
+            "places": [], "parcels": [], "budget": [], "drawing": None,
+            "visual_plan": "Bez vizuálu; jméno adresáta nepřebíráme.", "reviewer_notes": ""}
+
+
+# --- visuals (deterministic) ------------------------------------------------------------------
+
+def _coords(g: dict):
+    c, depth = g["coordinates"], {"Point": 0, "MultiPoint": 1, "LineString": 1, "MultiLineString": 2,
+                                  "Polygon": 2, "MultiPolygon": 3}[g["type"]]
+    stack = [(c, depth)]
+    while stack:
+        x, d = stack.pop()
+        if d == 0:
+            yield x
+        else:
+            stack.extend((y, d - 1) for y in x)
+
+
+def ortho(features: list[dict], target: Path, width: int = 1200) -> dict | None:
+    """Orthophoto crop (ČÚZK WMS, CC BY 4.0) around the places, with the places as SVG paths in
+    the image's pixel space. Not for whole streets across town: then the map says more."""
+    pts = [p for f in features for p in _coords(f["geometry"])]
+    if not pts:
+        return None
+    w, e = min(p[0] for p in pts), max(p[0] for p in pts)
+    s, n = min(p[1] for p in pts), max(p[1] for p in pts)
+    if (e - w) > 0.012 or (n - s) > 0.008:       # ~850 x 900 m: too large for a useful photo
+        return None
+    cx, cy = (w + e) / 2, (s + n) / 2
+    half_lat = max((n - s) * 0.8, 0.0009)        # at least ~200 m tall
+    half_lon = max((e - w) * 0.8, half_lat * 1.6 / 0.643)  # 16:10, cos(50°) ≈ 0.643
+    half_lat = max(half_lat, half_lon * 0.643 / 1.6)
+    bbox = [cx - half_lon, cy - half_lat, cx + half_lon, cy + half_lat]
+    height = round(width * (half_lat / (half_lon * 0.643)))
+    r = httpx.get(ORTHO_WMS, timeout=60, headers=source.HEADERS, params={
+        "service": "WMS", "version": "1.3.0", "request": "GetMap", "layers": "0", "styles": "",
+        "crs": "EPSG:4326", "bbox": f"{bbox[1]},{bbox[0]},{bbox[3]},{bbox[2]}",
+        "width": width, "height": height, "format": "image/jpeg"})
+    r.raise_for_status()
+    if not r.headers.get("content-type", "").startswith("image/"):
+        raise RuntimeError(f"ČÚZK WMS: {r.text[:200]}")
+    target.write_bytes(r.content)
+
+    def xy(p):
+        return (round((p[0] - bbox[0]) / (bbox[2] - bbox[0]) * width, 1),
+                round((bbox[3] - p[1]) / (bbox[3] - bbox[1]) * height, 1))
+
+    shapes = []
+    for f in features:
+        g = f["geometry"]
+        if g["type"] in ("Point", "MultiPoint"):
+            for p in ([g["coordinates"]] if g["type"] == "Point" else g["coordinates"]):
+                shapes.append({"kind": "point", "xy": xy(p)})
+        elif g["type"] in ("LineString", "MultiLineString"):
+            for line in ([g["coordinates"]] if g["type"] == "LineString" else g["coordinates"]):
+                shapes.append({"kind": "line", "d": "M" + " L".join(f"{x},{y}" for x, y in map(xy, line))})
+        else:
+            for poly in ([g["coordinates"]] if g["type"] == "Polygon" else g["coordinates"]):
+                shapes.append({"kind": "area", "d": " ".join(
+                    "M" + " L".join(f"{x},{y}" for x, y in map(xy, ring)) + " Z" for ring in poly)})
+    return {"file": target.name, "width": width, "height": height, "bbox": bbox, "shapes": shapes,
+            "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"}
+
+
+def drawing_crop(spec: dict, files: list[Path], target: Path, dpi: int = 130) -> dict | None:
+    """The office's own drawing or photo, cut out of the PDF page Claude pointed at."""
+    src = next((p for p in files if p.name == spec["file"]), None)
+    if not src or src.suffix.lower() != ".pdf":
+        return None
+    page = max(1, int(spec["page"]))
+    info = subprocess.run(["pdfinfo", "-f", str(page), "-l", str(page), str(src)],
+                          capture_output=True, text=True).stdout
+    m = re.search(rf"Page\s+{page}\s+size:\s+([\d.]+) x ([\d.]+)", info)
+    if not m:
+        return None
+    pw, ph = float(m.group(1)) / 72 * dpi, float(m.group(2)) / 72 * dpi
+    x0, y0, x1, y1 = [min(max(v, 0.0), 1.0) for v in spec["box"]]
+    if x1 - x0 < 0.1 or y1 - y0 < 0.1:
+        x0, y0, x1, y1 = 0, 0, 1, 1
+    stem = target.with_suffix("")
+    subprocess.run(["pdftoppm", "-f", str(page), "-l", str(page), "-r", str(dpi), "-png", "-singlefile",
+                    "-x", str(int(x0 * pw)), "-y", str(int(y0 * ph)),
+                    "-W", str(int((x1 - x0) * pw)), "-H", str(int((y1 - y0) * ph)), str(src), str(stem)],
+                   check=True)
+    return {"file": target.name, "caption": spec.get("caption") or "Příloha oznámení"}
+
+
+def signs(items: list[dict]) -> list[dict]:
+    out = []
+    for s in items:
+        code = re.sub(r"[\s-]", "", s["code"]).upper()
+        code = re.sub(r"(\d)([A-Z])$", lambda m: m.group(1) + m.group(2).lower(), code)
+        meta = SIGNS.get(code, {})
+        out.append({"code": code, "name": meta.get("name"), "image": meta.get("image"),
+                    "text": s.get("text"), "change": s["change"]})
+    return out
+
+
+# --- checks ------------------------------------------------------------------------------------
+
+PLATE = re.compile(r"\b\d[A-Z][A-Z0-9]\s?\d{4}\b")
+BIRTH = re.compile(r"nar(ozen[aáý]|\.)", re.I)
+
+
+def _date_forms(iso: str) -> list[str]:
+    d = dt.date.fromisoformat(iso)
+    return [f"{d.day}. {d.month}. {d.year}", f"{d.day}.{d.month}.{d.year}", f"{d.day:02d}.{d.month:02d}.{d.year}",
+            f"{d.day}. {d.month}.{d.year}", f"{d.day:02d}. {d.month:02d}. {d.year}", iso]
+
+
+def private_names(text: str) -> list[str]:
+    """Names of private applicants as the notice states them ("Žadatel: … – fyzická osoba")."""
+    out = []
+    for m in re.finditer(r"Žadatel\w*:\s*([^,\n]+?),[^\n]*fyzick", text):
+        out.append(m.group(1).strip())
+    return out
+
+
+def check(d: dict, text: str) -> list[str]:
+    problems = []
+    flat = json.dumps({k: d[k] for k in ("headline", "summary", "where", "affects", "facts", "action", "signs")},
+                      ensure_ascii=False)
+    for name in private_names(text):
+        for part in name.split():
+            if len(part) > 2 and part in flat:
+                problems.append(f"obsahuje jméno žadatele ({part})")
+    if PLATE.search(flat):
+        problems.append("vypadá to na SPZ")
+    if BIRTH.search(flat):
+        problems.append("zmínka o datu narození")
+    compact = re.sub(r"\s+", " ", text)
+    for label, iso in (("od", d["period"]["from"]), ("do", d["period"]["to"]),
+                       ("lhůta", (d.get("action") or {}).get("deadline"))):
+        if iso:
+            try:
+                if not any(f in compact for f in _date_forms(iso)):
+                    problems.append(f"datum {label} {iso} v dokumentu není doslova")
+            except ValueError:
+                problems.append(f"datum {label} '{iso}' není ve tvaru RRRR-MM-DD")
+    if len(d["headline"]) > 140:
+        problems.append("titulek je dlouhý")
+    return problems
+
+
+# --- making a draft ----------------------------------------------------------------------------
+
+def draft(group: list[dict]) -> Path:
+    """Propose a digest for one notice group; writes DRAFTS/<leader id>/digest.json (+ images)."""
+    leader = group[0]
+    out = DRAFTS / leader["id"]
+    out.mkdir(parents=True, exist_ok=True)
+    files = download(group)
+    text = pdf_text(files)
+    if leader["kind"] == "doruceni":
+        d = delivery(group)
+    else:
+        d = llm.structured_files(SYSTEM, prompt(group), files, SCHEMA, effort="high")
+    feats = geo.locate(d["places"], d["parcels"]) if (d["places"] or d["parcels"]) else []
+    visual = {"map": feats}
+    try:
+        visual["ortho"] = ortho(feats, out / "ortofoto.jpg") if feats else None
+    except Exception as e:
+        log.warning("%s: ortofoto failed: %s", leader["id"], e)
+        visual["ortho"] = None
+    visual["drawing"] = drawing_crop(d["drawing"], files, out / "vykres.png") if d.get("drawing") else None
+    visual["signs"] = signs(d["signs"])
+    problems = check(d, text)
+    digest = {
+        "notice_id": leader["id"], "members": [n["id"] for n in group[1:]], "status": "draft",
+        "prompt_version": PROMPT_VERSION, "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",
+        "created_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+        "source": {"title": leader["title"], "url": leader["url"], "board": leader["board"]},
+        **d, "visual": visual, "problems": problems,
+    }
+    (out / "digest.json").write_text(json.dumps(digest, ensure_ascii=False, indent=1, default=str) + "\n")
+    return out
+
+
+def drafts(limit: int = 20, ids: list[str] | None = None) -> list[dict]:
+    """Draft digests for new MO V notices (or the given ids). Returns a short report per draft."""
+    have = set() if ids else existing()
+    todo = [g for g in groups(notices()) if (g[0]["id"] in ids if ids else
+                                              not ({n["id"] for n in g} & have))][:limit]
+    report = []
+    for g in todo:
+        try:
+            p = draft(g)
+            d = json.loads((p / "digest.json").read_text())
+            report.append({"id": g[0]["id"], "members": len(g) - 1, "cluster": d["cluster"],
+                           "headline": d["headline"], "problems": d["problems"]})
+        except Exception as e:
+            log.exception("draft %s failed", g[0]["id"])
+            report.append({"id": g[0]["id"], "error": str(e)})
+    return report
+
+
+def publish(ids: list[str], note: str | None = None) -> list[str]:
+    """Approve drafts: move them to DIGESTS with status published (then commit and sync)."""
+    done = []
+    for nid in ids:
+        src, dst = DRAFTS / nid, DIGESTS / nid
+        if not (src / "digest.json").exists():
+            continue
+        d = json.loads((src / "digest.json").read_text())
+        d.update(status="published", published_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+                 review_note=note)
+        (src / "digest.json").write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
+        if dst.exists():
+            shutil.rmtree(dst)
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(src), str(dst))
+        done.append(nid)
+    return done
+
+
+def reject(ids: list[str], note: str | None = None) -> list[str]:
+    """Keep a rejected draft (so it isn't proposed again) but never show it publicly."""
+    done = []
+    for nid in ids:
+        f = DRAFTS / nid / "digest.json"
+        if f.exists():
+            d = json.loads(f.read_text())
+            d.update(status="rejected", review_note=note)
+            f.write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
+            done.append(nid)
+    return done
+
+
+# --- database (in the cluster: after seed/sync) -------------------------------------------------
+
+def seed() -> None:
+    """Published digests from the image (git) into DATA – they are the reviewed version."""
+    if DATA.resolve() == SEED.resolve() or not (SEED / "digests").exists():
+        return
+    for src in (SEED / "digests").rglob("*"):
+        if src.is_file():
+            dst = DIGESTS / src.relative_to(SEED / "digests")
+            if not dst.exists() or dst.read_bytes() != src.read_bytes():
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, dst)
+
+
+def load(conn) -> int:
+    """Bring notice_digests in line with the digest directories (drafts and published)."""
+    rows = []
+    for root in (DIGESTS, DRAFTS):
+        for f in root.glob("*/digest.json"):
+            d = json.loads(f.read_text())
+            if root == DRAFTS and (DIGESTS / d["notice_id"]).exists():
+                continue                    # an approved copy wins over a stale draft
+            rows.append(d)
+    known = {r["id"] for r in conn.execute("SELECT id FROM notices")}
+    conn.execute("DELETE FROM notice_digests")
+    n = 0
+    for d in rows:
+        if d["notice_id"] not in known:
+            continue
+        conn.execute(
+            """INSERT INTO notice_digests (notice_id, members, status, cluster, data, prompt_version,
+                 created_at, published_at, review_note)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""",
+            (d["notice_id"], [m for m in d.get("members", []) if m in known], d["status"], d["cluster"],
+             json.dumps(d, ensure_ascii=False, default=str), d.get("prompt_version"), d.get("created_at"),
+             d.get("published_at"), d.get("review_note")))
+        n += 1
+    return n
+
+
+def asset_path(nid: str, name: str) -> Path | None:
+    """An image of a digest, if it exists (published first, then a draft)."""
+    if not re.fullmatch(r"[a-z0-9]+-\d+", nid) or not re.fullmatch(r"[a-z0-9_-]+\.(png|jpg|jpeg)", name):
+        return None
+    for root in (DIGESTS, DRAFTS):
+        p = root / nid / name
+        if p.is_file():
+            return p
+    return None

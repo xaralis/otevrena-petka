@@ -33,6 +33,27 @@ def structured(system: str, user: str, schema: dict, *, effort: str = "high",
     return _api(system, [{"type": "text", "text": user}], schema, effort, max_tokens)
 
 
+def structured_files(system: str, user: str, files: list[Path], schema: dict, *,
+                     effort: str = "high", max_tokens: int = 32000) -> dict:
+    """Like `structured`, with PDFs/images for Claude to read (text and pictures)."""
+    if BACKEND == "claude-cli":
+        listing = "\n".join(f"- {p.resolve()}" for p in files)
+        dirs = sorted({str(p.resolve().parent) for p in files})
+        return _cli(system, f"{user}\n\nPřílohy (přečti je nástrojem Read):\n{listing}", schema,
+                    tools="Read", add_dir=dirs[0] if len(dirs) == 1 else None)
+    content = []
+    for p in files:
+        data = base64.standard_b64encode(p.read_bytes()).decode()
+        if p.suffix.lower() == ".pdf":
+            content.append({"type": "document", "title": p.name,
+                            "source": {"type": "base64", "media_type": "application/pdf", "data": data}})
+        else:
+            media = "image/png" if p.suffix.lower() == ".png" else "image/jpeg"
+            content.append({"type": "image", "source": {"type": "base64", "media_type": media, "data": data}})
+    content.append({"type": "text", "text": user})
+    return _api(system, content, schema, effort, max_tokens)
+
+
 def transcribe_pdf(path: Path) -> str:
     """Text of a scanned PDF (no text layer). Rare – one ZMO record so far."""
     system = ("Přepiš český úřední dokument (usnesení a zápis z jednání) přesně do prostého "

@@ -7,10 +7,10 @@ import json
 from urllib.parse import urlencode
 
 from fastapi import APIRouter, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 
 from ..web.render import tpl
-from . import queries, source
+from . import digest as digests, queries, source
 
 pages = APIRouter(prefix="/uredni-deska", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/uredni-deska", tags=["úřední deska"])
@@ -103,3 +103,34 @@ def api_boards():
 def api_kinds():
     """Druhy oznámení (odvozené z názvu, ne údaj města)."""
     return queries.KIND_LABEL
+
+
+# --- "pro lidi": the reviewers' preview, card images, one notice (keep /{nid} last) --------
+
+@pages.get("/navrhy", response_class=HTMLResponse)
+def drafts_page(request: Request):
+    """Proposed cards for a person to review (behind basic auth at the ingress, not indexed)."""
+    rows = queries.drafts()
+    for r in rows:
+        r["member_rows"] = queries.members(r["draft"].get("members", []))
+    return tpl.TemplateResponse(request, "uredni_deska/navrhy.html", {"rows": rows, "clusters": digests.CLUSTERS},
+                                headers={"X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store"})
+
+
+@pages.get("/obrazky/{nid}/{name}")
+def card_image(nid: str, name: str):
+    p = digests.asset_path(nid, name)
+    if not p:
+        raise HTTPException(404)
+    return FileResponse(p, headers={"Cache-Control": "public, max-age=86400"})
+
+
+@pages.get("/{nid}", response_class=HTMLResponse)
+def notice_page(request: Request, nid: str):
+    n = queries.notice(nid)
+    if not n:
+        raise HTTPException(404)
+    d = n.get("digest")
+    return tpl.TemplateResponse(request, "uredni_deska/notice.html", {
+        "n": n, "d": d, "member_rows": queries.members(d.get("members", [])) if d else [],
+        "clusters": digests.CLUSTERS})

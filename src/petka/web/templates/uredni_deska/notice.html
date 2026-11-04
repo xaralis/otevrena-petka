@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from "_portal.html" import hero %}
+{% from "uredni_deska/_macros.html" import notice, digest_body %}
+{% block title %}{{ d.headline if d else n.title }}{% endblock %}
+{% block description %}{{ (d.summary if d else n.title)|truncate(300) }}{% endblock %}
+{% block head %}{% if d and d.visual.map and not d.visual.ortho %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endif %}{% endblock %}
+{% block hero %}{{ hero(d.headline if d else n.title, [('Úřední deska', '/uredni-deska')], (CLUSTERS.get(d.cluster) ~ ' – vyvěšeno ' ~ (n.published|d)) if d else ('Vyvěšeno ' ~ (n.published|d)), kind='section') }}{% endblock %}
+{% block main %}
+<div class="prose wide digest">
+{% if d %}
+{{ digest_body(d, n, member_rows) }}
+{% else %}
+<p class="lead-text">K tomuto oznámení zatím nemáme vysvětlení pro běžné čtenáře. Takhle ho vyvěsil úřad:</p>
+<ol class="rows notices">{{ notice(n) }}</ol>
+{% endif %}
+</div>
+{% endblock %}
+{% block scripts %}{% if d and d.visual.map and not d.visual.ortho %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}

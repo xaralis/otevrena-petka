@@ -504,10 +504,84 @@ def resolutions():
             yield slug(r["number"]), r
 
 
+def _features(cache: Cache, names: Names, r: dict, parsed: dict, stats: dict) -> list[dict]:
+    """Geometry of one record's `places` and `parcels` (parcels already parsed and fetched)."""
+    feats = []
+
+    def add(kind, label, src, geom):
+        if not in_bbox(geom):
+            stats["outside"][src] += 1
+            return
+        feats.append({"kind": kind, "label": label, "source_text": src, "geometry": geom})
+        stats["kinds"][kind] += 1
+
+    for t in r.get("parcels", []):
+        p = parsed[t]
+        if not p:
+            stats["unparsed"]["parcel: " + t] += 1
+            continue
+        stats["inferred_ku"] += p["ku_inferred"]
+        ok = False
+        for kmen, pod in p["numbers"]:
+            for druh in [p["druh"]] if p["druh"] else [POZEMKOVA, STAVEBNI]:
+                g = cache[_parcel_key(KU[p["ku"]], druh, kmen, pod)]
+                if g:
+                    add("parcel", _parcel_label(druh, kmen, pod, p["ku"]), t, g)
+                    ok = True
+                    break
+        stats["strings"]["parcel" if ok else "parcel (miss)"] += 1
+        if not ok:
+            stats["unmatched"]["parcel: " + t] += 1
+
+    ku, ctx = _resolution_ku(r), context(r, names)
+    for t in r.get("places", []):
+        p = parse_place(t, names)
+        if not p:
+            stats["general"][t] += 1
+            continue
+        if p["kind"] == "street":
+            g, label = street_geometry(cache, names.kod[p["street"]]), p["street"]
+        else:
+            g, label = geocode_address(cache, p, names, ctx, ku)
+        if g:
+            add(p["kind"], label, t, g)
+            stats["strings"][p["kind"]] += 1
+        else:
+            stats["strings"][p["kind"] + " (miss)"] += 1
+            stats["unmatched"][f"{p['kind']}: {t}"] += 1
+    seen, uniq = set(), []
+    for f in feats:
+        if (f["kind"], f["label"]) not in seen:
+            seen.add((f["kind"], f["label"]))
+            uniq.append(f)
+    return uniq
+
+
+def _stats() -> dict:
+    return {"kinds": Counter(), "strings": Counter(), "general": Counter(), "unparsed": Counter(),
+            "unmatched": Counter(), "outside": Counter(), "inferred_ku": 0}
+
+
+def locate(places: list[str], parcels: list[str] = (), offline: bool = False) -> list[dict]:
+    """Geometry for a handful of place/parcel strings outside the resolutions (e.g. a notice
+    on the úřední deska). Same rules and cache as `build`; general places are skipped."""
+    cache = Cache(offline)
+    try:
+        names = Names(streets(cache), parts(cache))
+        r = {"places": list(places), "parcels": list(parcels)}
+        ku = _resolution_ku(r)
+        parsed = {t: parse_parcel(t, ku or "pardubice") for t in r["parcels"]}
+        fetch_parcels(cache, {(KU[p["ku"]], d, k, pod) for p in parsed.values() if p
+                              for d in ([p["druh"]] if p["druh"] else [POZEMKOVA, STAVEBNI])
+                              for k, pod in p["numbers"]})
+        return _features(cache, names, r, parsed, _stats())
+    finally:
+        cache.save()
+
+
 def build(offline: bool = False) -> dict:
     cache = Cache(offline)
-    stats = {"kinds": Counter(), "strings": Counter(), "general": Counter(), "unparsed": Counter(),
-             "unmatched": Counter(), "outside": Counter(), "inferred_ku": 0}
+    stats = _stats()
     try:
         names = Names(streets(cache), parts(cache))
         rs = list(resolutions())
@@ -522,54 +596,7 @@ def build(offline: bool = False) -> dict:
 
         out = {}
         for uid, r in rs:
-            feats = []
-
-            def add(kind, label, src, geom):
-                if not in_bbox(geom):
-                    stats["outside"][src] += 1
-                    return
-                feats.append({"kind": kind, "label": label, "source_text": src, "geometry": geom})
-                stats["kinds"][kind] += 1
-
-            for t in r.get("parcels", []):
-                p = parsed_parcels[(uid, t)]
-                if not p:
-                    stats["unparsed"]["parcel: " + t] += 1
-                    continue
-                stats["inferred_ku"] += p["ku_inferred"]
-                ok = False
-                for kmen, pod in p["numbers"]:
-                    for druh in [p["druh"]] if p["druh"] else [POZEMKOVA, STAVEBNI]:
-                        g = cache[_parcel_key(KU[p["ku"]], druh, kmen, pod)]
-                        if g:
-                            add("parcel", _parcel_label(druh, kmen, pod, p["ku"]), t, g)
-                            ok = True
-                            break
-                stats["strings"]["parcel" if ok else "parcel (miss)"] += 1
-                if not ok:
-                    stats["unmatched"]["parcel: " + t] += 1
-
-            ku, ctx = _resolution_ku(r), context(r, names)
-            for t in r.get("places", []):
-                p = parse_place(t, names)
-                if not p:
-                    stats["general"][t] += 1
-                    continue
-                if p["kind"] == "street":
-                    g, label = street_geometry(cache, names.kod[p["street"]]), p["street"]
-                else:
-                    g, label = geocode_address(cache, p, names, ctx, ku)
-                if g:
-                    add(p["kind"], label, t, g)
-                    stats["strings"][p["kind"]] += 1
-                else:
-                    stats["strings"][p["kind"] + " (miss)"] += 1
-                    stats["unmatched"][f"{p['kind']}: {t}"] += 1
-            seen, uniq = set(), []
-            for f in feats:
-                if (f["kind"], f["label"]) not in seen:
-                    seen.add((f["kind"], f["label"]))
-                    uniq.append(f)
+            uniq = _features(cache, names, r, {t: parsed_parcels[(uid, t)] for t in r.get("parcels", [])}, stats)
             if uniq:
                 out[uid] = uniq
     finally:

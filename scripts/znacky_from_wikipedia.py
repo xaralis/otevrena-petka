@@ -1,0 +1,118 @@
+"""Build config/uredni_deska/znacky.yaml and static/znacky/ from cs.wikipedia + Commons.
+
+Source: the article "Seznam dopravních značek v Česku" – each table row has the sign's
+picture(s) and "| <CODE> '''<official name>'''". Names are those of vyhláška 294/2015 Sb.
+(an official work, not copyrighted). For every sign we keep the first picture whose Commons
+licence is public domain or CC BY / CC BY-SA, download it and record licence and author.
+
+Run: uv run python scripts/znacky_from_wikipedia.py
+"""
+
+import json
+import re
+import sys
+import time
+import urllib.parse
+from pathlib import Path
+
+import httpx
+import yaml
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "config" / "uredni_deska" / "znacky.yaml"
+IMG = ROOT / "src" / "petka" / "web" / "static" / "znacky"
+API_CS = "https://cs.wikipedia.org/w/api.php"
+API_COMMONS = "https://commons.wikimedia.org/w/api.php"
+UA = {"User-Agent": "otevrena-petka/1.0 (https://opendata.mov.varecha.work; filip.varecha@pirati.cz)"}
+OK_LICENCE = re.compile(r"^(public domain|pd|cc0|cc by(-sa)? [0-9.]+)", re.I)
+
+
+def get(client: httpx.Client, url: str, **kw) -> httpx.Response:
+    """GET politely: Wikimedia answers 429 to fast bots, so wait as told and retry."""
+    for attempt in range(6):
+        r = client.get(url, **kw)
+        if r.status_code != 429:
+            r.raise_for_status()
+            return r
+        time.sleep(int(r.headers.get("Retry-After", "0") or 0) or 10 * (attempt + 1))
+    r.raise_for_status()
+    return r
+
+
+def wikitext(client: httpx.Client) -> str:
+    r = get(client, API_CS, params={"action": "parse", "page": "Seznam dopravních značek v Česku",
+                                   "prop": "wikitext", "format": "json"})
+    return r.json()["parse"]["wikitext"]["*"]
+
+
+def rows(text: str):
+    """(code, name, [files]) per table row."""
+    for block in text.split("\n|-"):
+        m = re.search(r"^\|\s*([A-ZČ]{1,2}) ?(\d{1,2}[a-z]?)\s+'''(.+?)'''", block, re.M)
+        if not m:
+            continue
+        name = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", m.group(3)).strip().rstrip(".")
+        files = re.findall(r"\[\[(?:Soubor|File):([^|\]]+)", block[: m.start()])
+        yield m.group(1) + m.group(2), name, [f.strip() for f in files]
+
+
+def licence(client: httpx.Client, files: list[str]) -> dict:
+    """{file: {licence, author, url}} via Commons imageinfo (50 titles per call)."""
+    out = {}
+    for i in range(0, len(files), 50):
+        r = get(client, API_COMMONS, params={
+            "action": "query", "format": "json", "prop": "imageinfo", "iiprop": "url|extmetadata",
+            "iiurlwidth": 160,                    # a 160 px thumbnail is plenty for a 64 px icon
+            "titles": "|".join("File:" + f for f in files[i:i + 50])})
+        norm = {n["to"]: n["from"] for n in r.json()["query"].get("normalized", [])}
+        for page in r.json()["query"]["pages"].values():
+            ii = (page.get("imageinfo") or [{}])[0]
+            meta = ii.get("extmetadata", {})
+            title = norm.get(page["title"], page["title"]).removeprefix("File:")
+            out[title] = {
+                "licence": meta.get("LicenseShortName", {}).get("value", ""),
+                "author": re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")).strip(),
+                "url": ii.get("thumburl") or ii.get("url"),
+            }
+        time.sleep(0.5)
+    return out
+
+
+def main() -> int:
+    with httpx.Client(headers=UA, timeout=30, follow_redirects=True) as client:
+        signs = {}
+        for code, name, files in rows(wikitext(client)):
+            signs.setdefault(code, {"name": name, "files": files})
+        info = licence(client, sorted({f for s in signs.values() for f in s["files"]}))
+        IMG.mkdir(parents=True, exist_ok=True)
+        out = {}
+        for code, s in sorted(signs.items()):
+            entry = {"name": s["name"]}
+            for f in s["files"]:
+                i = info.get(f.replace("_", " ")) or info.get(f)
+                if not i or not i["url"] or not OK_LICENCE.match(i["licence"]):
+                    continue
+                ext = Path(urllib.parse.urlparse(i["url"]).path).suffix.lower()
+                target = IMG / f"{code}{ext}"
+                if not target.exists() or target.stat().st_size > 60_000:   # a full-size original
+                    target.write_bytes(get(client, i["url"]).content)
+                    time.sleep(1.5)
+                entry |= {"image": target.name, "source": f"https://commons.wikimedia.org/wiki/File:{urllib.parse.quote(f.replace(' ', '_'))}",
+                          "licence": i["licence"], "author": i["author"] or None}
+                break
+            out[code] = entry
+        keep = {e["image"] for e in out.values() if "image" in e}
+        for f in IMG.iterdir():                  # our own outputs that are no longer used
+            if f.name not in keep:
+                f.unlink()
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text("# Generated by scripts/znacky_from_wikipedia.py – names per vyhláška 294/2015 Sb.,\n"
+                   "# pictures from Wikimedia Commons with the licence recorded per sign.\n"
+                   + yaml.safe_dump(out, allow_unicode=True, sort_keys=True, width=120))
+    with_img = sum(1 for e in out.values() if "image" in e)
+    print(json.dumps({"signs": len(out), "with_image": with_img}))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -2,11 +2,13 @@
 // <div data-map="detail" data-inline="places-json"> (one resolution) or
 // <div data-map="all" data-src="/api/v1/usneseni/places.geojson?..."> (the map page).
 (function () {
-  const el = document.querySelector("[data-map]");
-  if (!el || !window.maplibregl) return;
-  const RED = "#de091c", INK = "#191c1f";
+  const els = document.querySelectorAll("[data-map]");
+  if (!els.length || !window.maplibregl) return;
   const protocol = new pmtiles.Protocol();
   maplibregl.addProtocol("pmtiles", protocol.tile);
+  els.forEach(setup);
+  function setup(el) {
+  const RED = "#de091c";
   const detail = el.dataset.map === "detail";
   // MapLibre wants absolute URLs for sprites, glyphs and the PMTiles archive
   const abs = (u) => location.origin + u;
@@ -106,5 +108,6 @@
       fit();
     });
   });
+  }
   }
 })();

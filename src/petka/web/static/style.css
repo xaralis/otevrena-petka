@@ -582,4 +582,53 @@ body > footer { flex-shrink: 0; }
   .notice-ref span { display: inline; }
   .notice-day, .notice-year { display: inline; }
 }
+/* pro lidi: cards, the notice page, the reviewers' preview */
+.card-row .row-text { -webkit-line-clamp: 3; }
+.deadline { margin: .5rem 0 0; font-size: .95rem; color: var(--ink); }
+.deadline b { color: var(--red-ink); }
+.digest .lead-text { font-size: 1.15rem; line-height: 1.55; max-width: 62ch; margin: 0 0 1.4rem; }
+.act { border-left: 6px solid var(--red); background: var(--grey); padding: .9rem 1.2rem; max-width: 62ch; margin: 0 0 1.6rem; }
+.act-h { font-size: 1.1rem; margin: 0 0 .3rem; }
+.act p { margin: 0; color: var(--ink-2); }
+.digest-facts { max-width: 62rem; display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: .45rem 1.5rem; margin: 0 0 1.8rem; }
+.digest-facts dt { margin: 0; }
+.digest-facts dd { margin: 0; }
+@media (max-width: 600px) { .digest-facts { grid-template-columns: minmax(0, 1fr); gap: .1rem; } .digest-facts dd { margin-bottom: .5rem; } }
+.signs { list-style: none; padding: 0; margin: .4rem 0 1.6rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .9rem 1.4rem; }
+.signs li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: .8rem; align-items: start; font-size: .95rem; }
+.signs img { width: 64px; height: 64px; object-fit: contain; }
+.sign-code { display: grid; place-items: center; width: 64px; height: 64px; border: 2px solid var(--rule); font-weight: 700; }
+.sign-change { font-size: .85rem; font-weight: 650; }
+.sign-nova .sign-change { color: var(--pro); }
+.sign-odstranit .sign-change { color: var(--red-ink); }
+.sign-odstranit img { opacity: .55; filter: grayscale(1); }
+.sign-zustava .sign-change { color: var(--muted); }
+.pic { margin: 0 0 1.6rem; max-width: 62rem; }
+.pic img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); }
+.pic figcaption { font-size: .9rem; margin-top: .4rem; color: var(--ink-2); }
+.ortho-box { position: relative; width: 100%; }
+.ortho-box img, .ortho-box svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ortho-box svg circle { fill: var(--red); stroke: #fff; stroke-width: 4; }
+.ortho-box svg .ln { fill: none; stroke: var(--red); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
+.ortho-box svg .ar { fill: rgba(222, 9, 28, .25); stroke: var(--red); stroke-width: 4; }
+.budget { list-style: none; padding: 0; margin: .4rem 0 1.6rem; max-width: 62rem; }
+.budget li { display: grid; grid-template-columns: minmax(0, 20rem) minmax(0, 1fr) 9rem; gap: .8rem; align-items: center; padding: .3rem 0; font-size: .95rem; }
+.b-bar { height: 14px; width: var(--w); min-width: 2px; border-radius: 2px; }
+.b-plus { background: var(--pro); }
+.b-minus { background: var(--red); }
+.b-val { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.original { margin: 2rem 0 1rem; max-width: 62rem; }
+.original summary { cursor: pointer; font-weight: 650; padding: .4rem 0; }
+.drafts { list-style: none; padding: 0; margin: 0; }
+.draft { border-top: 6px solid var(--ink); padding: 1.4rem 0 3rem; }
+.draft-head { margin: 0 0 .3rem; }
+.draft-title { font-size: 1.6rem; margin: 0 0 1rem; }
+.draft-problems { background: #fff4e5; border-left: 6px solid var(--abst-tile); padding: .7rem 1rem; margin: 0 0 1rem; max-width: 62ch; }
+.draft-problems ul { margin: .3rem 0 0; padding-left: 1.2rem; }
+.draft-review { background: var(--grey); padding: .8rem 1rem; margin: 0 0 1.4rem; max-width: 62ch; font-size: .95rem; }
+.draft-review p { margin: 0 0 .4rem; }
+@media (max-width: 600px) {
+  .budget li { grid-template-columns: minmax(0, 1fr) 7rem; }
+  .budget .b-bar { grid-column: 1 / -1; grid-row: 2; }
+}
 /* ===== end úřední deska ===== */

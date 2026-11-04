@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
-{% from "uredni_deska/_macros.html" import notice %}
+{% from "uredni_deska/_macros.html" import notice, card %}
 {% set S = SECTION['uredni-deska'] %}
 {% block title %}Úřední deska MO Pardubice V{% endblock %}
 {% block description %}Co právě visí na úřední desce městského obvodu Pardubice V a magistrátu: vyhledávání, archiv sejmutých oznámení, otevřená data a API. Stahováno z oficiálních dat města.{% endblock %}
@@ -42,7 +42,7 @@
   <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.</p>
   {% if rows %}
   <ol class="rows notices">
-    {% for n in rows %}{{ notice(n) }}{% endfor %}
+    {% for n in rows %}{% if n.digest %}{{ card(n) }}{% else %}{{ notice(n) }}{% endif %}{% endfor %}
   </ol>
   {% else %}
   <div class="empty">
