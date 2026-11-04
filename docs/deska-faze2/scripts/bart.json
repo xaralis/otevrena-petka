@@ -1,0 +1,3 @@
+{"street": "Bartoňova – parkoviště před č. p. 846–849", "kind": "kolmé",
+ "before": [{"type": "bezne", "n": 4}, {"type": "ztp", "n": 1}, {"type": "bezne", "n": 3}, {"type": "zakaz", "n": 2, "label": "zákaz zastavení"}],
+ "after":  [{"type": "bezne", "n": 4}, {"type": "kratkodobe", "n": 1}, {"type": "bezne", "n": 3}, {"type": "zakaz", "n": 2, "label": "hasiči – zákaz stání"}]}

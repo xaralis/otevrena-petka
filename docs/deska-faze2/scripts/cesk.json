@@ -1,0 +1,3 @@
+{"street": "Češkova – parkoviště u domu č. p. 481", "kind": "kolmé",
+ "before": [{"type": "bezne", "n": 3}, {"type": "bezne", "n": 1}, {"type": "bezne", "n": 4}],
+ "after":  [{"type": "bezne", "n": 3}, {"type": "ztp", "n": 1}, {"type": "bezne", "n": 4}]}

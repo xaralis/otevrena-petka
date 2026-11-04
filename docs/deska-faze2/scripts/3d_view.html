@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="http://127.0.0.1:8099/static/map/maplibre-gl.css">
+<script src="http://127.0.0.1:8099/static/map/maplibre-gl.js"></script>
+<script src="http://127.0.0.1:8099/static/map/pmtiles.js"></script>
+<style>html,body,#m{margin:0;width:100%;height:100%}
+.sg{display:flex;flex-direction:column;align-items:center} .sg img{height:46px} .sg .post{width:4px;height:60px;background:#888}
+.lab{font:700 13px Liberation Sans, sans-serif;color:#fff;padding:3px 6px;margin-bottom:4px;white-space:nowrap}
+.plate{background:#fff;border:2px solid #111;font:700 9px Liberation Sans;padding:2px 3px;text-align:center;width:58px}
+.x{position:relative} .x::after{content:"";position:absolute;inset:-3px;background:linear-gradient(45deg,transparent 46%,#de091c 46% 54%,transparent 54%),linear-gradient(-45deg,transparent 46%,#de091c 46% 54%,transparent 54%);border:3px solid #de091c}
+</style></head><body><div id="m"></div><script>
+const P = new URLSearchParams(location.search);
+const center = [+P.get("lon"), +P.get("lat")], bearing = +P.get("bearing"), mode = P.get("mode");
+const proto = new pmtiles.Protocol(); maplibregl.addProtocol("pmtiles", proto.tile);
+fetch("http://127.0.0.1:8099/static/map/style.json").then(r => r.json()).then(s => {
+  const abs = u => "http://127.0.0.1:8099" + u;
+  s.sprite = abs(s.sprite); s.glyphs = abs(s.glyphs); s.sources.protomaps.url = "pmtiles://" + abs("/static/map/pardubice.pmtiles");
+  s.layers = s.layers.filter(l => !/building/.test(l.id) && l.type !== "symbol");
+  s.layers.push({id: "b3d", type: "fill-extrusion", source: "protomaps", "source-layer": "buildings",
+    paint: {"fill-extrusion-color": "#d9d4cc", "fill-extrusion-height": ["coalesce", ["get", "height"], 12],
+            "fill-extrusion-base": ["coalesce", ["get", "min_height"], 0], "fill-extrusion-opacity": 1}});
+  s.sky = {"sky-color": "#bcd7f0", "horizon-color": "#eef3f7", "sky-horizon-blend": 0.6};
+  const map = new maplibregl.Map({container: "m", style: s, center, zoom: +(P.get("zoom") || 19), pitch: +(P.get("pitch") || 74), bearing, maxPitch: 85, attributionControl: false, preserveDrawingBuffer: true});
+  map.on("load", () => {
+    for (const m of JSON.parse(P.get("signs") || "[]")) {
+      if (m.mode && m.mode !== mode) continue;
+      const el = document.createElement("div"); el.className = "sg";
+      el.innerHTML = (m.label ? `<div class="lab" style="background:${m.color}">${m.label}</div>` : "") +
+        `<div class="${m.x ? "x" : ""}"><img src="http://127.0.0.1:8099/static/znacky/${m.img}"></div>` + (m.plate ? `<div class="plate">${m.plate}</div>` : "") + `<div class="post"></div>`;
+      new maplibregl.Marker({element: el, anchor: "bottom"}).setLngLat(m.at).addTo(map);
+    }
+    map.once("idle", () => { document.title = "ready"; });
+  });
+  window.map = map;
+});
+</script></body></html>
