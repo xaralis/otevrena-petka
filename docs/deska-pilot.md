@@ -20,7 +20,8 @@ scripts/deska-sync.sh                                    # koncepty do produkce 
 - Doručení písemností dostanou jednotnou kartu bez jména, bez volání modelu.
 - Pak session pošle souhrn: počet návrhů, titulky a co hlásí automatická kontrola, s odkazem
   na náhled **https://opendata.mov.varecha.work/uredni-deska/navrhy** (heslo jako ostatní
-  dev stránky).
+  dev stránky). Každý návrh má vlastní ukázku `/uredni-deska/navrhy/<id>` přesně v podobě, jakou uvidí
+  lidé, a tlačítko „Kopírovat název“ (id + titulek) pro odpověď v session.
 
 ## Posouzení a vydání (v téže session)
 

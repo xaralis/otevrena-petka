@@ -1,18 +1,40 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
-{% from "uredni_deska/_macros.html" import notice, digest_body %}
+{% from "uredni_deska/_macros.html" import notice, digest_body, card %}
 {% block title %}{{ d.headline if d else n.title }}{% endblock %}
 {% block description %}{{ (d.summary if d else n.title)|truncate(300) }}{% endblock %}
-{% block head %}{% if d and d.visual.map and not d.visual.ortho %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endif %}{% endblock %}
+{% block head %}{% if preview %}<meta name="robots" content="noindex, nofollow">{% endif %}{% if d and d.visual.map and not d.visual.ortho %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endif %}{% endblock %}
+{% block before_hero %}{% if preview %}{% set copy = n.id ~ ' – ' ~ d.headline %}
+<div class="review-bar"><div class="wrap review-inner">
+  <span><b>Návrh {{ position }}/{{ total }}</b> {{ n.id }} – takhle kartu uvidí lidé</span>
+  <button type="button" data-copy="{{ copy }}">Kopírovat název</button>
+  <nav aria-label="Další návrhy">{% if prev_id %}<a href="/uredni-deska/navrhy/{{ prev_id }}">Předchozí</a>{% endif %}<a href="/uredni-deska/navrhy">Všechny návrhy</a>{% if next_id %}<a href="/uredni-deska/navrhy/{{ next_id }}">Další</a>{% endif %}</nav>
+</div></div>
+{% endif %}{% endblock %}
 {% block hero %}{{ hero(d.headline if d else n.title, [('Úřední deska', '/uredni-deska')], (CLUSTERS.get(d.cluster) ~ ' – vyvěšeno ' ~ (n.published|d)) if d else ('Vyvěšeno ' ~ (n.published|d)), kind='section') }}{% endblock %}
 {% block main %}
 <div class="prose wide digest">
 {% if d %}
-{{ digest_body(d, n, member_rows) }}
+{% if preview %}
+<section class="review-list" aria-label="V seznamu na desce">
+  <p class="review-label">V seznamu na desce</p>
+  <ol class="rows notices">{{ card(dict(n, digest=d), preview=True) }}</ol>
+  <p class="review-label">Stránka oznámení</p>
+</section>
+{% endif %}
+{{ digest_body(d, n, member_rows, preview=preview) }}
+{% if preview %}
+<details class="review-notes" open>
+  <summary>Pro kontrolu (veřejnost neuvidí)</summary>
+  {% if d.problems %}<p><b>Automatická kontrola:</b></p><ul>{% for p in d.problems %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+  <p><b>Jak to ukázat:</b> {{ d.visual_plan }}</p>
+  {% if d.reviewer_notes %}<p><b>Ověřit:</b> {{ d.reviewer_notes }}</p>{% endif %}
+</details>
+{% endif %}
 {% else %}
 <p class="lead-text">K tomuto oznámení zatím nemáme vysvětlení pro běžné čtenáře. Takhle ho vyvěsil úřad:</p>
 <ol class="rows notices">{{ notice(n) }}</ol>
 {% endif %}
 </div>
 {% endblock %}
-{% block scripts %}{% if d and d.visual.map and not d.visual.ortho %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}
+{% block scripts %}{% if preview %}<script src="{{ asset('copy.js') }}" defer></script>{% endif %}{% if d and d.visual.map and not d.visual.ortho %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}

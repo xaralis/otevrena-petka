@@ -86,6 +86,15 @@ def members(ids: list[str]) -> list[dict]:
     return [_row(r) for r in rows]
 
 
+def draft(nid: str) -> dict | None:
+    """One proposed card with its notice (the preview page)."""
+    with db.pool().connection() as conn:
+        r = conn.execute(f"""SELECT {COLUMNS}, d.data AS draft FROM notice_digests d
+                             JOIN notices n ON n.id = d.notice_id
+                             WHERE d.notice_id = %s AND d.status = 'draft'""", (nid,)).fetchone()
+    return _row(r) if r else None
+
+
 def drafts() -> list[dict]:
     """Proposed cards waiting for a person, newest notice first (the preview page)."""
     with db.pool().connection() as conn:

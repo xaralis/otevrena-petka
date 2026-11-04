@@ -119,11 +119,11 @@ def _reviewer(request: Request) -> None:
 def drafts_page(request: Request):
     """Proposed cards for a person to review (behind basic auth at the ingress, not indexed)."""
     _reviewer(request)
-    rows = queries.drafts()
-    for r in rows:
-        r["member_rows"] = queries.members(r["draft"].get("members", []))
-    return tpl.TemplateResponse(request, "uredni_deska/navrhy.html", {"rows": rows, "clusters": digests.CLUSTERS},
-                                headers={"X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store"})
+    return tpl.TemplateResponse(request, "uredni_deska/navrhy.html", {"rows": queries.drafts()},
+                                headers=NO_INDEX)
+
+
+NO_INDEX = {"X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store"}
 
 
 @pages.get("/navrhy/obrazky/{nid}/{name}")
@@ -133,6 +133,23 @@ def draft_image(request: Request, nid: str, name: str):
     if not p:
         raise HTTPException(404)
     return FileResponse(p, headers={"Cache-Control": "no-store"})
+
+
+@pages.get("/navrhy/{nid}", response_class=HTMLResponse)
+def draft_page(request: Request, nid: str):
+    """One proposed card exactly as people would see it, with a slim reviewers' bar."""
+    _reviewer(request)
+    r = queries.draft(nid)
+    if not r:
+        raise HTTPException(404)
+    d = r["draft"]
+    order = [x["id"] for x in queries.drafts()]
+    return tpl.TemplateResponse(request, "uredni_deska/notice.html", {
+        "n": r, "d": d, "member_rows": queries.members(d.get("members", [])), "preview": True,
+        "position": order.index(nid) + 1 if nid in order else None, "total": len(order),
+        "prev_id": order[order.index(nid) - 1] if nid in order and order.index(nid) > 0 else None,
+        "next_id": order[order.index(nid) + 1] if nid in order and order.index(nid) + 1 < len(order) else None,
+    }, headers=NO_INDEX)
 
 
 @pages.get("/obrazky/{nid}/{name}")

@@ -19,12 +19,12 @@
 
 {#- A notice with an approved plain-language card: the card leads, the office's wording is one
     click away. -#}
-{% macro card(n) -%}
+{% macro card(n, preview=False) -%}
 {% set d = n.digest %}
 <li class="row card-row" id="{{ n.id }}">
   <div class="row-no">{% if n.published %}<span class="notice-day">{{ n.published.day }}. {{ n.published.month }}.</span> <span class="notice-year">{{ n.published.year }}</span>{% endif %}</div>
   <div class="row-body">
-    <h3><a href="/uredni-deska/{{ n.id }}">{{ d.headline }}</a></h3>
+    <h3><a href="{{ '#' if preview else '/uredni-deska/' ~ n.id }}">{{ d.headline }}</a></h3>
     <p class="row-meta">{{ CLUSTERS.get(d.cluster, n.kind_label) }}{% if d.where %} – {{ d.where }}{% endif %}</p>
     <p class="row-text">{{ d.summary }}</p>
     {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}

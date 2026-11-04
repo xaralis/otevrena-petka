@@ -632,4 +632,22 @@ body > footer { flex-shrink: 0; }
   .budget li { grid-template-columns: minmax(0, 1fr) 7rem; }
   .budget .b-bar { grid-column: 1 / -1; grid-row: 2; }
 }
+/* reviewers' preview of cards */
+.review-bar { background: #fff4e5; border-bottom: 3px solid var(--abst-tile); font-size: .95rem; }
+.review-inner { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.4rem; padding-top: .6rem; padding-bottom: .6rem; }
+.review-inner nav { display: flex; gap: 1rem; margin-left: auto; }
+.review-bar button, .draft-actions button, .draft-actions .btn { font: inherit; font-size: .9rem; font-weight: 650; padding: .35rem .8rem;
+  border: 2px solid var(--ink); border-radius: 3px; background: #fff; color: var(--ink); cursor: pointer; text-decoration: none; white-space: nowrap; }
+.draft-actions .btn { background: var(--ink); color: #fff; }
+.review-bar button:hover, .draft-actions button:hover { background: var(--ink); color: #fff; }
+.review-list { margin: 0 0 2rem; }
+.review-label { font-size: .85rem; font-weight: 650; color: var(--abst); margin: 0 0 .4rem; }
+.review-list .rows { margin-bottom: 1.6rem; }
+.review-notes { margin: 2rem 0 1rem; background: #fff4e5; border-left: 6px solid var(--abst-tile); padding: .7rem 1.1rem; max-width: 62ch; font-size: .95rem; }
+.review-notes summary { font-weight: 650; cursor: pointer; }
+.review-notes p, .review-notes ul { margin: .5rem 0 0; }
+.draft-list .row { grid-template-columns: 3rem minmax(0, 1fr) auto; align-items: start; }
+.draft-actions { display: flex; flex-direction: column; gap: .4rem; align-items: stretch; }
+.draft-flag { margin: .4rem 0 0; font-size: .9rem; color: var(--abst); }
+@media (max-width: 600px) { .draft-actions { flex-direction: row; } .review-inner nav { margin-left: 0; } }
 /* ===== end úřední deska ===== */
