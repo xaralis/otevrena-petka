@@ -119,3 +119,19 @@ def test_fetch_conditional_and_304():
     f = source.fetch(MO5, etag='"abc"', last_modified="Sun, 01 Nov 2026 10:00:00 GMT", client=client)
     assert f.status == 304 and f.etag == '"abc"'
     assert seen["if-modified-since"] == "Sun, 01 Nov 2026 10:00:00 GMT"
+
+
+def test_same_title_different_reference_are_separate_groups():
+    from petka.uredni_deska import digest
+    title = "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Jana Palacha"
+    items = [{"id": "mo5-15510", "board": "mo5", "title": title, "reference": "MmP 204442/2026", "published": "2026-10-20"},
+             {"id": "mo5-15626", "board": "mo5", "title": title, "reference": "MmP 211191/2026", "published": "2026-11-04"},
+             {"id": "mo5-15628", "board": "mo5", "title": title, "reference": "MmP 211605/2026", "published": "2026-11-04"},
+             {"id": "mo5-14303", "board": "mo5", "title": "3. změna rozpočtu MO Pardubice V na r. 2026",
+              "reference": "6085/2026/OE UMO5/Kot", "published": "2026-09-01"},
+             {"id": "mo5-14305", "board": "mo5", "title": "3. změna rozpočtu MO Pardubice V na r. 2026 - příloha č. 1",
+              "reference": "6085/2026/OE UMO5/Kot/p1", "published": "2026-09-01"},
+             {"id": "mo5-9001", "board": "mo5", "title": "Výroční zpráva", "reference": "1/2026", "published": "2026-09-01"},
+             {"id": "mo5-9002", "board": "mo5", "title": "Výroční zpráva - příloha č. 1", "reference": "", "published": "2026-09-01"}]
+    groups = sorted([n["id"] for n in g] for g in digest.groups(items))
+    assert groups == [["mo5-14303", "mo5-14305"], ["mo5-15510"], ["mo5-15626"], ["mo5-15628"], ["mo5-9001", "mo5-9002"]]

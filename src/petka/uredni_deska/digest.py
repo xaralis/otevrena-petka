@@ -76,20 +76,29 @@ _KEYS = [re.compile(p, re.I) for p in (r"směrnic\w*\s+č\.\s*\d+/\d{4}",
 
 def group_key(n: dict) -> str:
     """Notices posted as one package (a directive and its annexes, a budget change and its
-    tables) share a key; everything else is its own group."""
+    tables) share a key; everything else is its own group. Same-titled notices that are not
+    annexes are separate decisions when their references differ (the magistrát posts every
+    traffic order on a street as „VV - OOP … - Jana Palacha“), so the reference is in the key."""
     t = n["title"]
     for rx in _KEYS:
         m = rx.search(t)
         if m:
             return f"{n['board']}:{re.sub(r'\\s+', ' ', m.group(0).lower())}"
-    return f"{n['board']}:{_ATTACHMENT.sub('', t).strip().lower()}"
+    key = f"{n['board']}:{_ATTACHMENT.sub('', t).strip().lower()}"
+    ref = " ".join((n.get("reference") or "").split()).lower()
+    return f"{key}|{ref}" if ref and not _ATTACHMENT.search(t) else key
 
 
 def groups(items: list[dict]) -> list[list[dict]]:
-    """Grouped notices, the main one first (not an annex; then the oldest id)."""
+    """Grouped notices, the main one first (not an annex; then the oldest id). Annexes known only
+    by their title join the one notice of that title, if there is exactly one."""
     by: dict[str, list[dict]] = {}
     for n in items:
         by.setdefault(group_key(n), []).append(n)
+    for key in [k for k in by if "|" not in k]:
+        mains = [k for k in by if k.startswith(key + "|")]
+        if len(mains) == 1:
+            by[mains[0]] += by.pop(key)
     out = []
     for g in by.values():
         g.sort(key=lambda n: (bool(re.search(r"příloha", n["title"], re.I)), n["id"]))
