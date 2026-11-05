@@ -32,7 +32,7 @@ from .jobs import REDACTED_TITLE
 
 log = logging.getLogger(__name__)
 
-PROMPT_VERSION = "deska-v3"
+PROMPT_VERSION = "deska-v4"
 DATA = Path(os.environ.get("DATA_DIR", ROOT / "data")) / "uredni_deska"
 SEED = ROOT / "data" / "uredni_deska"
 DRAFTS, DIGESTS = DATA / "drafts", DATA / "digests"
@@ -191,6 +191,10 @@ Pravidla:
   (`before` dnes, `after` po změně). Počty a pořadí musí jít na výkresu spočítat; co výkres neukazuje,
   nedoplňuj. Do `evidence` napiš, podle čeho na výkresu jsi počty a pořadí určil. Když si nejsi jistý
   (výkres chybí, stání nejsou vidět, nejde je spočítat), dej null – schéma pak nebude.
+- Dnešní datum je v zadání. Co už proběhlo (uzavírka, akce, volby), popiš v minulém čase, i v
+  titulku („28. a 31. 10. 2026 byl … uzavřený“), a `action` dej null, pokud už nic nejde udělat.
+  Dokument, který na desce visí dlouhodobě (rozpočet, jeho změny, závěrečný účet, výhled, směrnice),
+  popiš podle obsahu: co v něm je, k čemu slouží a odkdy platí; nepiš ho jako novinku dne.
 - `visual_plan`: pro redaktora 1–2 věty, jak oznámení nejlépe ukázat (mapa, výkres, graf…)
   a proč; `reviewer_notes`: co si má člověk před zveřejněním ověřit (nejasnosti, odhady).
 - Shluky: {", ".join(f"{k} = {v}" for k, v in CLUSTERS.items())}."""
@@ -245,8 +249,10 @@ SCHEMA = {
 }
 
 
-def prompt(group: list[dict]) -> str:
-    lines = ["Oznámení z úřední desky (jedno nebo balíček souvisejících):"]
+def prompt(group: list[dict], today: dt.date | None = None) -> str:
+    today = today or dt.date.today()
+    lines = [f"Dnes je {today.day}. {today.month}. {today.year}.",
+             "Oznámení z úřední desky (jedno nebo balíček souvisejících):"]
     for n in group:
         lines.append(f"- {n['title']} (vyvěšeno {n['published']}, visí do {n['valid_until']}, "
                      f"deska {'MO Pardubice V' if n['board'] == 'mo5' else 'magistrátu'}, "
@@ -602,39 +608,22 @@ def draft(group: list[dict]) -> Path:
     return out
 
 
-# The board keeps some notices up for years (where to find the budget, fee rules from 2022).
-# Cards are for what is happening now: only notices posted in the last WINDOW_DAYS are drafted,
-# and a card whose event is already over (and leaves nothing to do) is dropped right away.
-WINDOW_DAYS = 30
-
-
-def recent(group: list[dict], today: dt.date | None = None) -> bool:
-    today = today or dt.date.today()
-    published = str(group[0].get("published") or "")[:10]
-    return bool(published) and published >= (today - dt.timedelta(days=WINDOW_DAYS)).isoformat()
-
-
-def over(d: dict, today: dt.date | None = None) -> bool:
-    """The card's period has ended and there is no deadline still running."""
-    today = (today or dt.date.today()).isoformat()
-    end = str((d.get("period") or {}).get("to") or "")[:10]
-    deadline = str((d.get("action") or {}).get("deadline") or "")[:10]
-    return bool(end) and end < today and not (deadline and deadline >= today)
+# Every notice posted on the board gets a card while it hangs there – also when its event is over
+# (written in the past tense) or the document hangs for years (budget, closing account): people
+# see those notices on the page too, and an unexplained official title reads as a gap.
 
 
 def drafts(limit: int = 20, ids: list[str] | None = None) -> list[dict]:
-    """Draft digests for new MO V notices (or the given ids). Returns a short report per draft."""
+    """Draft digests for posted MO V notices without a card (or the given ids). Returns a short
+    report per draft."""
     have = set() if ids else existing()
     todo = [g for g in groups(notices(mo5=not ids)) if (g[0]["id"] in ids if ids else
-            recent(g) and not ({n["id"] for n in g} & have))][:limit]
+            not ({n["id"] for n in g} & have))][:limit]
     report = []
     for g in todo:
         try:
             p = draft(g)
             d = json.loads((p / "digest.json").read_text())
-            if over(d) and not ids:
-                reject([g[0]["id"]], note=f"už proběhlo (do {d['period']['to']})")
-                d["problems"] = ["zahozeno: už proběhlo"]
             report.append({"id": g[0]["id"], "members": len(g) - 1, "cluster": d["cluster"],
                            "headline": d["headline"], "problems": d["problems"]})
         except Exception as e:

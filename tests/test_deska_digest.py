@@ -98,15 +98,11 @@ def test_publish_refuses_cards_outside_mo5_and_reject_takes_cards_down(tmp_path,
     assert json.loads((tmp_path / "drafts" / "mo5-2" / "digest.json").read_text())["status"] == "rejected"
 
 
-def test_only_current_notices_get_cards():
+def test_prompt_carries_today():
     import datetime as dt
-    today = dt.date(2026, 11, 5)
-    assert digest.recent([{"published": "2026-10-20"}], today)
-    assert not digest.recent([{"published": "2022-03-21"}], today)
-    assert digest.over({"period": {"to": "2026-10-11"}, "action": None}, today)
-    assert not digest.over({"period": {"to": "2026-10-11"}, "action": {"deadline": "2026-11-30"}}, today)
-    assert not digest.over({"period": {"to": "2026-11-13"}, "action": None}, today)
-    assert not digest.over({"period": {"to": None}, "action": None}, today)
+    p = digest.prompt([{"title": "VV - OOP Doubravice", "published": "2026-11-04", "valid_until": "2026-11-21",
+                        "board": "mo5", "kind": "doprava"}], dt.date(2026, 11, 5))
+    assert p.startswith("Dnes je 5. 11. 2026.")
 
 
 def test_sign_ranges_are_one_item_with_a_name():
