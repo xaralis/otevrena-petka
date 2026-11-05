@@ -61,6 +61,12 @@
 {%- endmacro %}
 
 
+{% macro kc(v) -%}
+{% if v >= 1000 %}{{ ('%.1f'|format(v / 1000)).replace('.', ',').replace(',0', '') }} mil. Kč{% else %}{{ '{:,.0f}'.format(v).replace(',', ' ') }} tis. Kč{% endif %}
+{%- endmacro %}
+
+{% macro pct(p) -%}{{ '< 1' if p < 1 else '%.0f'|format(p) }} %{%- endmacro %}
+
 {% macro money(v) -%}
 {%- set a = v|abs -%}
 {{ '+' if v > 0 else '−' }}{% if a >= 1000 %}{{ ('%.2f'|format(a / 1000)).rstrip('0').rstrip('.').replace('.', ',') }} mil. Kč{% else %}{{ '{:,.0f}'.format(a).replace(',', ' ') }} tis. Kč{% endif %}
@@ -143,6 +149,20 @@
 <div class="map map-detail" data-map="detail" data-inline="places-{{ n.id }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" role="region" aria-label="Mapa míst z oznámení"></div>
 <script type="application/json" id="places-{{ n.id }}">{"type":"FeatureCollection","features":[{% for g in v.map %}{"type":"Feature","geometry":{{ g.geometry|tojson }},"properties":{"label":{{ g.label|tojson }},"kind":{{ g.kind|tojson }}}}{{ ',' if not loop.last }}{% endfor %}]}</script>
 <ul class="place-list">{% for g in v.map %}<li><i class="pk pk-{{ g.kind }}" aria-hidden="true"></i>{{ g.label }}</li>{% endfor %}</ul>
+{% endif %}
+{% if d.spending %}{% set sl = donut(d.spending) %}{% set total = d.spending|sum(attribute='amount') %}
+<h2>Kam jdou peníze</h2>
+<figure class="spend-fig">
+  <svg viewBox="0 0 200 200" role="img" aria-label="Výdaje podle kapitol, celkem {{ kc(total) }}; po kapitolách v seznamu vedle">
+    {% for s in sl %}<path d="{{ s.d }}" fill="{{ s.color }}" stroke="#fff" stroke-width="2" stroke-linejoin="round"><title>{{ s.label }}: {{ kc(s.amount) }} ({{ pct(s.pct) }})</title></path>{% endfor %}
+    <text x="100" y="99" text-anchor="middle" class="spend-total">{{ kc(total) }}</text>
+    <text x="100" y="118" text-anchor="middle" class="spend-sub">výdaje celkem</text>
+  </svg>
+  <ul class="spend-legend">{% for s in sl %}
+    <li><i style="background: {{ s.color }}" aria-hidden="true"></i><span class="s-label">{{ s.label }}</span><span class="s-val">{{ kc(s.amount) }}</span><span class="s-pct">{{ pct(s.pct) }}</span></li>{% endfor %}
+  </ul>
+  <figcaption class="muted">Výdaje podle kapitol rozpočtu; pět největších, zbytek v „ostatní“. Částky podle příloh oznámení.</figcaption>
+</figure>
 {% endif %}
 {% if d.budget %}
 {% set mx = d.budget|map(attribute='change')|map('abs')|max %}

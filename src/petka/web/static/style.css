@@ -728,3 +728,16 @@ body > footer { flex-shrink: 0; }
 .draft-flag { margin: .4rem 0 0; font-size: .9rem; color: var(--abst); }
 @media (max-width: 600px) { .draft-actions { flex-direction: row; } .review-inner nav { margin-left: 0; } }
 /* ===== end úřední deska ===== */
+
+/* spending by chapter: donut + legend with every value as text */
+.spend-fig { margin: .4rem 0 1.8rem; display: grid; grid-template-columns: minmax(10rem, 15rem) minmax(0, 28rem); gap: 1rem 2rem; align-items: center; }
+.spend-fig svg { width: 100%; height: auto; }
+.spend-fig .spend-total { font-size: 17px; font-weight: 750; fill: var(--ink); }
+.spend-fig .spend-sub { font-size: 11px; fill: var(--muted); }
+.spend-legend { list-style: none; margin: 0; padding: 0; font-size: .95rem; }
+.spend-legend li { display: grid; grid-template-columns: .8rem minmax(0, 1fr) auto 3.2rem; gap: .6rem; align-items: center; padding: .3rem 0; border-bottom: 1px solid #e6e6e3; }
+.spend-legend i { width: .8rem; height: .8rem; border-radius: 2px; }
+.spend-legend .s-val { font-variant-numeric: tabular-nums; text-align: right; }
+.spend-legend .s-pct { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
+.spend-fig figcaption { grid-column: 1 / -1; font-size: .85rem; }
+@media (max-width: 40rem) { .spend-fig { grid-template-columns: 1fr; } .spend-fig svg { max-width: 14rem; margin: 0 auto; } }

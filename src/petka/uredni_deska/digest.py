@@ -32,7 +32,7 @@ from .jobs import REDACTED_TITLE
 
 log = logging.getLogger(__name__)
 
-PROMPT_VERSION = "deska-v4"
+PROMPT_VERSION = "deska-v5"
 DATA = Path(os.environ.get("DATA_DIR", ROOT / "data")) / "uredni_deska"
 SEED = ROOT / "data" / "uredni_deska"
 DRAFTS, DIGESTS = DATA / "drafts", DATA / "digests"
@@ -183,7 +183,11 @@ Pravidla:
 - `drawing`: pokud příloha obsahuje situační výkres, mapku nebo fotku místa, urči soubor, stranu
   (od 1) a výřez se samotným obrázkem jako zlomky šířky a výšky strany [x0, y0, x1, y1]
   (0 = levý/horní okraj), bez hlavičky a razítek. Jinak null.
-- `budget`: u změn rozpočtu nejvýš 8 největších změn v tisících Kč (+ přidáno, − ubráno),
+- `spending`: u rozpočtu (návrhu i schváleného) a závěrečného účtu výdaje podle kapitol rozpočtu tak,
+  jak je dokument člení (u závěrečného účtu skutečnost, u rozpočtu schválená/navržená částka), v tisících
+  Kč, s lidským názvem kapitoly nejvýš 30 znaků („Doprava“, „Úřad a samospráva“). Všechny kapitoly,
+  součet má sedět s celkovými výdaji. U změn rozpočtu a u všeho ostatního prázdné pole.
+- `budget`: jen u změn rozpočtu a rozpočtových opatření nejvýš 8 největších změn v tisících Kč (+ přidáno, − ubráno),
   popsaných lidsky a krátce, nejvýš 45 znaků („odvoz odpadu“, ne „MP za komunální odpad“; důvod
   jako „vyšlo levněji“ smí být v závorce). Jinak prázdné pole.
 - `parking`: jen když výkres nebo fotka v příloze ukazují řadu parkovacích stání a změna se jich týká.
@@ -202,7 +206,7 @@ Pravidla:
 SCHEMA = {
     "type": "object", "additionalProperties": False,
     "required": ["cluster", "headline", "summary", "where", "period", "action", "affects", "facts",
-                 "signs", "places", "parcels", "budget", "drawing", "parking", "visual_plan", "reviewer_notes"],
+                 "signs", "places", "parcels", "spending", "budget", "drawing", "parking", "visual_plan", "reviewer_notes"],
     "properties": {
         "cluster": {"type": "string", "enum": list(CLUSTERS)},
         "headline": {"type": "string", "description": "Jedna věta, nejvýš 110 znaků: co se děje."},
@@ -225,6 +229,9 @@ SCHEMA = {
                            "change": {"type": "string", "enum": ["nova", "odstranit", "zustava", "vymena"]}}}},
         "places": {"type": "array", "items": {"type": "string"}},
         "parcels": {"type": "array", "items": {"type": "string"}},
+        "spending": {"type": "array", "maxItems": 16, "items": {
+            "type": "object", "additionalProperties": False, "required": ["label", "amount"],
+            "properties": {"label": {"type": "string"}, "amount": {"type": "number"}}}},
         "budget": {"type": "array", "maxItems": 8, "items": {
             "type": "object", "additionalProperties": False, "required": ["label", "change"],
             "properties": {"label": {"type": "string"}, "change": {"type": "number"}}}},
@@ -270,7 +277,7 @@ def delivery(group: list[dict]) -> dict:
                         "lhůty se považuje za doručenou."),
             "where": None, "period": {"from": None, "to": n.get("valid_until"), "text": None},
             "action": None, "affects": "jen adresáta písemnosti", "facts": [], "signs": [],
-            "places": [], "parcels": [], "budget": [], "drawing": None, "parking": None,
+            "places": [], "parcels": [], "spending": [], "budget": [], "drawing": None, "parking": None,
             "visual_plan": "Bez vizuálu; jméno adresáta nepřebíráme.", "reviewer_notes": ""}
 
 

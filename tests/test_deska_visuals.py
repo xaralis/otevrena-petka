@@ -24,3 +24,15 @@ def test_bearing_and_distance():
     a, b = (15.8089, 50.0420), (15.8089, 50.0423)
     assert abs(photo._bearing(a, b)) < 1 or abs(photo._bearing(a, b) - 360) < 1     # due north
     assert 30 < photo._dist(a, b) < 36
+
+
+def test_spending_donut_folds_the_rest_and_never_cycles_colours():
+    from petka.web.render import DONUT_COLORS, DONUT_REST, _donut
+    items = [{"label": f"k{i}", "amount": 100 - i} for i in range(8)]
+    sl = _donut(items)
+    assert [s["label"] for s in sl] == ["k0", "k1", "k2", "k3", "k4", "Ostatní"]
+    assert [s["color"] for s in sl] == DONUT_COLORS + [DONUT_REST]
+    assert abs(sum(s["pct"] for s in sl) - 100) < 1e-6
+    six = _donut(items[:6])
+    assert six[-1]["label"] == "k5" and six[-1]["color"] == DONUT_REST
+    assert len(_donut([{"label": "jediná", "amount": 5}])) == 1
