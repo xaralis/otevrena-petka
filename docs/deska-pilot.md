@@ -9,7 +9,7 @@ Během pilotu nic nejde ven bez schválení člověkem. Kód: `src/petka/uredni_
 
 ```bash
 cd ~/Workspace/otevrena-petka && git pull
-LLM_BACKEND=claude-cli uv run usneseni deska-drafts      # návrhy pro nová oznámení (max 20)
+LLM_BACKEND=claude-cli uv run usneseni deska-drafts      # návrhy pro oznámení bez karty
 scripts/deska-sync.sh                                    # koncepty do produkce (náhled)
 ```
 

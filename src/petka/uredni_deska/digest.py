@@ -613,12 +613,12 @@ def draft(group: list[dict]) -> Path:
 # see those notices on the page too, and an unexplained official title reads as a gap.
 
 
-def drafts(limit: int = 20, ids: list[str] | None = None) -> list[dict]:
+def drafts(ids: list[str] | None = None) -> list[dict]:
     """Draft digests for posted MO V notices without a card (or the given ids). Returns a short
     report per draft."""
     have = set() if ids else existing()
     todo = [g for g in groups(notices(mo5=not ids)) if (g[0]["id"] in ids if ids else
-            not ({n["id"] for n in g} & have))][:None if ids else limit]   # named ids: all of them
+            not ({n["id"] for n in g} & have))]
     report = []
     for g in todo:
         try:

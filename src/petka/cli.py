@@ -12,7 +12,7 @@ import sys
 from .usneseni import cli as usneseni_cli
 
 DESKA_HELP = """  deska-update        download the úřední deska boards and update the notices (idempotent)
-  deska-drafts [N | ID…]  propose plain-language cards for new MO V notices (default 20)
+  deska-drafts [ID…]  propose plain-language cards for posted MO V notices without one (or the given ids)
   deska-publish ID…   approve drafts (move to data/uredni_deska/digests, then commit + sync)
   deska-reject ID…    reject drafts (kept so they aren't proposed again)
   deska-load          load card directories into the database (after seed / sync)
@@ -41,9 +41,7 @@ def deska_load() -> int:
 def deska_cards(cmd: str, args: list[str]) -> int:
     from .uredni_deska import digest
     if cmd == "deska-drafts":
-        limit = int(args[0]) if len(args) == 1 and args[0].isdigit() else 20
-        ids = [a for a in args if not a.isdigit()] or None
-        report = digest.drafts(limit=limit, ids=ids)
+        report = digest.drafts(ids=args or None)
     elif cmd == "deska-publish":
         report = digest.publish(args)
     else:
