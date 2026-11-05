@@ -594,7 +594,7 @@ body > footer { flex-shrink: 0; }
   .notice-board { display: inline; margin: 0 0 0 .5rem; }
 }
 /* pro lidi: cards, the notice page, the reviewers' preview */
-.card-row .row-text { -webkit-line-clamp: 3; }
+.card-row .row-text { display: block; overflow: visible; }   /* the whole summary: 2–4 sentences, cut mid-sentence it misleads */
 .human-tag { display: inline-block; margin: 0 0 .3rem; padding: .05rem .45rem; font-size: .8rem; font-weight: 650; color: var(--red-ink); border: 1px solid currentColor; border-radius: 3px; line-height: 1.5; }
 .official-title { margin: .55rem 0 0; font-size: .85rem; color: var(--muted); max-width: 68ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .official-title span { color: var(--ink-2); }
