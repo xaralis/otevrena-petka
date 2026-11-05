@@ -32,7 +32,7 @@ from .jobs import REDACTED_TITLE
 
 log = logging.getLogger(__name__)
 
-PROMPT_VERSION = "deska-v2"
+PROMPT_VERSION = "deska-v3"
 DATA = Path(os.environ.get("DATA_DIR", ROOT / "data")) / "uredni_deska"
 SEED = ROOT / "data" / "uredni_deska"
 DRAFTS, DIGESTS = DATA / "drafts", DATA / "digests"
@@ -156,6 +156,12 @@ Pravidla:
   textech (shrnutí, fakta, `period.text`) česky „24. 10. 2026“. Jen data, která v dokumentu stojí;
   dopočtené datum (třeba konec lhůty) uveď a v `reviewer_notes` vysvětli výpočet. Lhůta pro připomínky,
   námitky nebo nabídky je nejdůležitější údaj, pokud existuje – dej ji do `action`.
+- Návrhy opatření obecné povahy (místní úprava provozu): „30 dnů ode dne zveřejnění“, kde dnem
+  zveřejnění je poslední (15.) den vyvěšení. Počítej od vyvěšení na desce MAGISTRÁTU (ten
+  opatření vydává), ne od vyvěšení na desce obvodu: vyvěšeno 12. 10. → zveřejněno 27. 10. →
+  lhůta do 26. 11. Datum vyvěšení na desce magistrátu hledej v dokumentu („vyvěšena na úřední
+  desku Magistrátu … dne“); když tam není, vezmi datum vyhotovení (`Datum:` v záhlaví) a v
+  `reviewer_notes` napiš, že je potřeba ho ověřit.
 - U úprav provozu vypiš každou dopravní značku (kód přesně podle dokumentu, např. IP12, E13,
   V10e) a zda je nová, k odstranění, zůstává, nebo se jen mění její text (`vymena` – třeba nová SPZ
   na tabulce; neuváděj ji pak dvakrát jako odstranit + nová). Text dodatkové tabulky (E13) opiš,
