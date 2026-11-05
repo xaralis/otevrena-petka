@@ -18,6 +18,9 @@ scripts/deska-sync.sh                                    # koncepty do produkce 
   koncept do `data/uredni_deska/drafts/<id>/` (není v gitu). Text píše Claude přes
   předplatné (`claude -p`), obrázky vznikají deterministicky.
 - Doručení písemností dostanou jednotnou kartu bez jména, bez volání modelu.
+- Jen to, co se děje teď: návrhy vznikají jen k oznámením vyvěšeným za posledních 30 dní
+  (`WINDOW_DAYS`). Karta, jejíž platnost už skončila a nemá běžící lhůtu, se rovnou zahodí
+  („už proběhlo“). Roky vyvěšená oznámení (kde najdete rozpočet, pravidla z roku 2022) karty nedostanou.
 - Pak session pošle souhrn: počet návrhů, titulky a co hlásí automatická kontrola, s odkazem
   na náhled **https://opendata.mov.varecha.work/uredni-deska/navrhy** (heslo jako ostatní
   dev stránky). Každý návrh má vlastní ukázku `/uredni-deska/navrhy/<id>` přesně v podobě, jakou uvidí

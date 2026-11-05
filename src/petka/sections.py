@@ -42,7 +42,7 @@ SECTIONS = [
                      ("výběrová řízení a jejich výsledky", "/usneseni?tema=zakazky")],
             sources=[("Registr smluv", "https://smlouvy.gov.cz/"),
                      ("Hlídač státu", "https://www.hlidacstatu.cz/")]),
-    Section("uredni-deska", "Úřední deska", "Úřední deska pro lidi",
+    Section("uredni-deska", "Úřední deska pro lidi", "Úřední deska pro lidi",
             "Co úřad právě vyvěsil?", "live",
             sources=[("Úřední deska MO Pardubice V na pardubice.eu", "https://pardubice.eu/uredni-deska/obvody?district=mo5"),
                      ("Úřední deska Magistrátu města Pardubic", "https://pardubice.eu/uredni-deska")]),

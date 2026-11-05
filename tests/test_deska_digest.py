@@ -96,3 +96,14 @@ def test_publish_refuses_cards_outside_mo5_and_reject_takes_cards_down(tmp_path,
     assert digest.reject(["mo5-2"]) == ["mo5-2"]
     assert not (tmp_path / "digests" / "mo5-2").exists()
     assert json.loads((tmp_path / "drafts" / "mo5-2" / "digest.json").read_text())["status"] == "rejected"
+
+
+def test_only_current_notices_get_cards():
+    import datetime as dt
+    today = dt.date(2026, 11, 5)
+    assert digest.recent([{"published": "2026-10-20"}], today)
+    assert not digest.recent([{"published": "2022-03-21"}], today)
+    assert digest.over({"period": {"to": "2026-10-11"}, "action": None}, today)
+    assert not digest.over({"period": {"to": "2026-10-11"}, "action": {"deadline": "2026-11-30"}}, today)
+    assert not digest.over({"period": {"to": "2026-11-13"}, "action": None}, today)
+    assert not digest.over({"period": {"to": None}, "action": None}, today)

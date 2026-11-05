@@ -509,16 +509,39 @@ def draft(group: list[dict]) -> Path:
     return out
 
 
+# The board keeps some notices up for years (where to find the budget, fee rules from 2022).
+# Cards are for what is happening now: only notices posted in the last WINDOW_DAYS are drafted,
+# and a card whose event is already over (and leaves nothing to do) is dropped right away.
+WINDOW_DAYS = 30
+
+
+def recent(group: list[dict], today: dt.date | None = None) -> bool:
+    today = today or dt.date.today()
+    published = str(group[0].get("published") or "")[:10]
+    return bool(published) and published >= (today - dt.timedelta(days=WINDOW_DAYS)).isoformat()
+
+
+def over(d: dict, today: dt.date | None = None) -> bool:
+    """The card's period has ended and there is no deadline still running."""
+    today = (today or dt.date.today()).isoformat()
+    end = str((d.get("period") or {}).get("to") or "")[:10]
+    deadline = str((d.get("action") or {}).get("deadline") or "")[:10]
+    return bool(end) and end < today and not (deadline and deadline >= today)
+
+
 def drafts(limit: int = 20, ids: list[str] | None = None) -> list[dict]:
     """Draft digests for new MO V notices (or the given ids). Returns a short report per draft."""
     have = set() if ids else existing()
     todo = [g for g in groups(notices(mo5=not ids)) if (g[0]["id"] in ids if ids else
-                                              not ({n["id"] for n in g} & have))][:limit]
+            recent(g) and not ({n["id"] for n in g} & have))][:limit]
     report = []
     for g in todo:
         try:
             p = draft(g)
             d = json.loads((p / "digest.json").read_text())
+            if over(d) and not ids:
+                reject([g[0]["id"]], note=f"už proběhlo (do {d['period']['to']})")
+                d["problems"] = ["zahozeno: už proběhlo"]
             report.append({"id": g[0]["id"], "members": len(g) - 1, "cluster": d["cluster"],
                            "headline": d["headline"], "problems": d["problems"]})
         except Exception as e:
