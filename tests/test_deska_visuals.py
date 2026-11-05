@@ -36,3 +36,19 @@ def test_spending_donut_folds_the_rest_and_never_cycles_colours():
     six = _donut(items[:6])
     assert six[-1]["label"] == "k5" and six[-1]["color"] == DONUT_REST
     assert len(_donut([{"label": "jediná", "amount": 5}])) == 1
+
+
+def test_delivery_card_names_the_addressee_only_while_it_hangs():
+    import datetime as dt
+    from petka.uredni_deska.jobs import REDACTED_TITLE
+    from petka.web.render import tpl
+    t = tpl.env.from_string('{% from "uredni_deska/_macros.html" import card %}{{ card(n) }}')
+    d = {"cluster": "doruceni", "headline": "Úřad doručuje písemnost veřejnou vyhláškou", "summary": "…",
+         "where": None, "action": None, "visual": {}}
+    n = {"id": "mo5-1", "published": dt.date(2026, 11, 3), "board": "mo5", "kind": "doruceni", "kind_label": "Doručení",
+         "title": "Oznámení o doručení písemnosti – Jan Novák", "url": "https://pardubice.eu/x", "attachments": [],
+         "reference": "1/2026", "redacted": False, "removed_at": None, "valid_until": None, "digest": d}
+    hanging = t.render(n=n)
+    assert "Úředně: Oznámení o doručení písemnosti – Jan Novák" in hanging and "data-nosnippet" in hanging
+    gone = t.render(n=dict(n, title=REDACTED_TITLE, redacted=True, url=""))
+    assert "Novák" not in gone and "Úředně:" not in gone

@@ -43,7 +43,8 @@
         <p class="row-meta"><span class="human">Polidštěno</span> {{ CLUSTERS.get(d.cluster, n.kind_label)|lower }}{% if d.where %}, {{ d.where }}{% endif %}</p>
         <p class="row-text">{{ d.summary }}</p>
         {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
-        {% if d.cluster != 'doruceni' %}<p class="official-title">Úředně: {{ n.title }}</p>{% endif %}{# a delivery's title names the addressee #}
+        {% if d.cluster != 'doruceni' %}<p class="official-title">Úředně: {{ n.title }}</p>
+        {% elif not n.redacted %}<p class="official-title" data-nosnippet>Úředně: {{ n.title }}</p>{% endif %}{# a delivery names the addressee as the office does, only while it hangs: once taken down the title is redacted #}
       </div>
     </div>
     <div class="card-face card-back card-body" id="{{ n.id }}-back" hidden>
