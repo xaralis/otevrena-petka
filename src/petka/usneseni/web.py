@@ -133,7 +133,7 @@ def feed():
     """Atom feed of the newest resolutions (rejected proposals left out), for feed readers."""
     import os
     from xml.sax.saxutils import escape
-    base = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+    base = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
     hits, _ = search.search("", filters=search.Filters(status="usneseni"), limit=50)
     rows = [h.row for h in hits]
     body_name = {"zmo": "zastupitelstvo", "rmo": "rada"}

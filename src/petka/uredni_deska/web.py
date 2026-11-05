@@ -85,7 +85,7 @@ def rss(zneni: str = ""):
     from email.utils import format_datetime
     from datetime import datetime, time, timezone
     from xml.sax.saxutils import escape
-    base = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+    base = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
     official = zneni == "uredni"
     rows, _ = queries.search("", True, True, None, limit=50)
     items = []

@@ -23,7 +23,7 @@ def test_wrap_keeps_one_letter_words_with_the_next():
 def test_route_draws_only_existing_pages():
     c = TestClient(app)
     page = c.get("/pristupnost")
-    assert 'content="https://opendata.mov.varecha.work/og/pristupnost.png"' in page.text
+    assert 'content="https://otevrenapetka.cz/og/pristupnost.png"' in page.text
     r = c.get("/og/pristupnost.png")
     assert r.status_code == 200 and r.headers["content-type"] == "image/png"
     assert c.get("/og/neexistuje.png").status_code == 404

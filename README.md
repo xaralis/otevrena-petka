@@ -4,8 +4,8 @@ Portál otevřených dat **městského obvodu Pardubice V**: co rozhodlo zastupi
 a kdo pro to hlasoval, kde se to děje na mapě, kdo chodí na jednání a co právě visí na
 úřední desce. Web, otevřená data, REST API a jeden MCP server pro Claude a další AI asistenty.
 
-**https://opendata.mov.varecha.work** · [Data a API](https://opendata.mov.varecha.work/data) ·
-[OpenAPI](https://opendata.mov.varecha.work/api/docs) · MCP: `https://opendata.mov.varecha.work/mcp`
+**https://otevrenapetka.cz** · [Data a API](https://otevrenapetka.cz/data) ·
+[OpenAPI](https://otevrenapetka.cz/api/docs) · MCP: `https://otevrenapetka.cz/mcp`
 
 Projekt Filipa Vařechy, starosty MO Pardubice V. Vzniká vedle webu města, protože zavádění
 takových funkcí na pardubice.eu trvá dlouho; cílem je předat ho do správy statutárního města
@@ -15,8 +15,8 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 
 | sekce | stav | co umí |
 |---|---|---|
-| [Usnesení](https://opendata.mov.varecha.work/usneseni) | běží | usnesení a hlasování ZMO a RMO od roku 2018, hledání slovy i podle smyslu, hlasy zastupitelů, mapa, účast na jednáních |
-| [Úřední deska](https://opendata.mov.varecha.work/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
+| [Usnesení](https://otevrenapetka.cz/usneseni) | běží | usnesení a hlasování ZMO a RMO od roku 2018, hledání slovy i podle smyslu, hlasy zastupitelů, mapa, účast na jednáních |
+| [Úřední deska](https://otevrenapetka.cz/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
 
@@ -75,14 +75,14 @@ skryje jméno adresáta, přílohy, odkaz i čísla spisu.
 ## Otevřená data, API a MCP
 
 - **Data**: `/data` na webu. Usnesení jako CSV + JSON s
-  [Frictionless `datapackage.json`](https://opendata.mov.varecha.work/usneseni/data/datapackage.json),
+  [Frictionless `datapackage.json`](https://otevrenapetka.cz/usneseni/data/datapackage.json),
   místa i jako GeoJSON, úřední deska jako CSV + JSON. Formát popisuje
   [docs/otevrena-data.md](docs/otevrena-data.md), včetně doporučení pro úřad.
 - **REST API**: `/api/v1/usneseni/…` a `/api/v1/uredni-deska/…`, OpenAPI na `/api/docs`.
 - **MCP** (bez přihlášení, jen čtení):
 
   ```bash
-  claude mcp add --transport http otevrena-petka https://opendata.mov.varecha.work/mcp
+  claude mcp add --transport http otevrena-petka https://otevrenapetka.cz/mcp
   ```
 
   Nástroje: `hledej_usneseni`, `usneseni_detail`, `usneseni_k_mistu`, `jednani`, `clenove`,
@@ -92,8 +92,8 @@ skryje jméno adresáta, přílohy, odkaz i čísla spisu.
 
 Žádné cookies, analytika ani přístupový log; nic se nenačítá od třetích stran (písma,
 mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Podrobnosti na
-[/soukromi](https://opendata.mov.varecha.work/soukromi). Web míří na WCAG 2.1 AA
-([prohlášení o přístupnosti](https://opendata.mov.varecha.work/pristupnost)).
+[/soukromi](https://otevrenapetka.cz/soukromi). Web míří na WCAG 2.1 AA
+([prohlášení o přístupnosti](https://otevrenapetka.cz/pristupnost)).
 
 ## Struktura repa
 
@@ -149,6 +149,6 @@ a `deska` (každou hodinu). Chyby hlásí GlitchTip.
 ## Licence
 
 Kód: MIT. Data (`data/`, otevřená data na webu): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.cs).
-Uveďte „Otevřená Pětka (opendata.mov.varecha.work), zdroj: Statutární město Pardubice“.
+Uveďte „Otevřená Pětka (otevrenapetka.cz), zdroj: Statutární město Pardubice“.
 Zdrojové dokumenty jsou úřední dokumenty zveřejněné městem. Mapové podklady
 © přispěvatelé OpenStreetMap (ODbL), polohy míst © ČÚZK (CC BY 4.0).

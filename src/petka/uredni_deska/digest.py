@@ -37,7 +37,7 @@ DATA = Path(os.environ.get("DATA_DIR", ROOT / "data")) / "uredni_deska"
 SEED = ROOT / "data" / "uredni_deska"
 DRAFTS, DIGESTS = DATA / "drafts", DATA / "digests"
 WORK = Path(os.environ.get("DESKA_WORK", "/tmp/petka-deska"))
-PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 SIGNS = yaml.safe_load((ROOT / "config" / "uredni_deska" / "znacky.yaml").read_text()) \
     if (ROOT / "config" / "uredni_deska" / "znacky.yaml").exists() else {}
 ORTHO_WMS = "https://ags.cuzk.gov.cz/arcgis1/services/ORTOFOTO/MapServer/WMSServer"

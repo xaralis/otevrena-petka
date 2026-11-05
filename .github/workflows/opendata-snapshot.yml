@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 env:
-  BASE: https://opendata.mov.varecha.work
+  BASE: https://otevrenapetka.cz
 jobs:
   snapshot:
     runs-on: ubuntu-latest

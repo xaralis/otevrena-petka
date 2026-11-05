@@ -4,7 +4,7 @@ import os
 
 from . import queries, source
 
-PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 
 INSTRUCTIONS = """\
 Sekce Úřední deska: oznámení z oficiálních úředních desek, stažená z otevřených dat města

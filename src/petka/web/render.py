@@ -88,7 +88,7 @@ def asset(path: str) -> str:
 SITE_NAME = "Otevřená Pětka"
 
 tpl = Jinja2Templates(directory=HERE / "templates")
-tpl.env.globals.update(asset=asset, donut=_donut, headline=_headline, CLUSTERS=_clusters(), card_thumb=_card_thumb, ICONS=set(re.findall(r'<symbol id="([a-z]+)"', (HERE / 'static' / 'deska-ikony.svg').read_text())), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
+tpl.env.globals.update(asset=asset, donut=_donut, headline=_headline, CLUSTERS=_clusters(), card_thumb=_card_thumb, ICONS=set(re.findall(r'<symbol id="([a-z]+)"', (HERE / 'static' / 'deska-ikony.svg').read_text())), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
                        CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 

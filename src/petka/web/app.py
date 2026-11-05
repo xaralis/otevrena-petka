@@ -29,7 +29,7 @@ from ..usneseni import queries, search as usneseni_search, web as usneseni_web
 from . import og
 from .render import HERE, asset_version, tpl
 
-PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 
 if os.environ.get("SENTRY_DSN"):
     import sentry_sdk

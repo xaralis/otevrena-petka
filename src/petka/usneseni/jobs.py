@@ -357,7 +357,7 @@ def export() -> None:
         "name": "usneseni-mo-pardubice-v",
         "title": "Usnesení a hlasování zastupitelstva a rady městského obvodu Pardubice V",
         "version": "1.0",
-        "homepage": "https://opendata.mov.varecha.work/data/usneseni",
+        "homepage": "https://otevrenapetka.cz/data/usneseni",
         "licenses": [{"name": "CC-BY-4.0", "path": "https://creativecommons.org/licenses/by/4.0/"}],
         "sources": [{"title": "Statutární město Pardubice – zápisy z jednání ZMO a RMO Pardubice V",
                      "path": "https://pardubice.eu/obvod5"}],

@@ -23,7 +23,7 @@ OUT = ROOT / "config" / "uredni_deska" / "znacky.yaml"
 IMG = ROOT / "src" / "petka" / "web" / "static" / "znacky"
 API_CS = "https://cs.wikipedia.org/w/api.php"
 API_COMMONS = "https://commons.wikimedia.org/w/api.php"
-UA = {"User-Agent": "otevrena-petka/1.0 (https://opendata.mov.varecha.work; filip.varecha@pirati.cz)"}
+UA = {"User-Agent": "otevrena-petka/1.0 (https://otevrenapetka.cz; filip.varecha@pirati.cz)"}
 OK_LICENCE = re.compile(r"^(public domain|pd|cc0|cc by(-sa)? [0-9.]+)", re.I)
 
 

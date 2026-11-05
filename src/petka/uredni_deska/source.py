@@ -51,7 +51,7 @@ NKOD = "https://data.gov.cz/datov%C3%A1-sada?iri=https%3A%2F%2Fdata.gov.cz%2Fzdr
 OFN = "https://ofn.gov.cz/úřední-desky/2021-07-20/"
 
 TIMEOUT = httpx.Timeout(30, connect=10)
-HEADERS = {"User-Agent": "otevrena-petka (+https://opendata.mov.varecha.work)",
+HEADERS = {"User-Agent": "otevrena-petka (+https://otevrenapetka.cz)",
            "Accept": "application/ld+json, application/json"}
 
 

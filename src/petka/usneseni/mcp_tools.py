@@ -12,7 +12,7 @@ from .. import db
 from . import embed, queries, search
 from .text import fold
 
-PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 
 INSTRUCTIONS = f"""\
 Sekce Usnesení: databáze usnesení Zastupitelstva (ZMO, 15 členů) a Rady (RMO, 5 členů) městského obvodu

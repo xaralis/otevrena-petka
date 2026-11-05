@@ -22,7 +22,7 @@ scripts/deska-sync.sh                                    # koncepty do produkce 
   proběhlé se zahazovaly – lidé je ale na stránce vidí). Co už proběhlo, karta popíše v minulém
   čase; dlouhodobě vyvěšené dokumenty (rozpočet, závěrečný účet, směrnice) podle obsahu.
 - Pak session pošle souhrn: počet návrhů, titulky a co hlásí automatická kontrola, s odkazem
-  na náhled **https://opendata.mov.varecha.work/uredni-deska/navrhy** (heslo jako ostatní
+  na náhled **https://otevrenapetka.cz/uredni-deska/navrhy** (heslo jako ostatní
   dev stránky). Každý návrh má vlastní ukázku `/uredni-deska/navrhy/<id>` přesně v podobě, jakou uvidí
   lidé, a tlačítko „Kopírovat název“ (id + titulek) pro odpověď v session.
 
