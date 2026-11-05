@@ -43,18 +43,20 @@
         <p class="row-meta"><span class="human">Polidštěno</span> {{ CLUSTERS.get(d.cluster, n.kind_label)|lower }}{% if d.where %}, {{ d.where }}{% endif %}</p>
         <p class="row-text">{{ d.summary }}</p>
         {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
-        <button type="button" class="flip" aria-expanded="false" aria-controls="{{ n.id }}-back"><svg width="14" height="14" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#otocit"/></svg><span>{% if d.cluster != 'doruceni' %}Úředně: {{ n.title }}{% else %}Úřední znění{% endif %}</span></button>{# a delivery's title names the addressee #}
+        {% if d.cluster != 'doruceni' %}<p class="official-title">Úředně: {{ n.title }}</p>{% endif %}{# a delivery's title names the addressee #}
       </div>
     </div>
     <div class="card-face card-back card-body" id="{{ n.id }}-back" hidden>
       {{ kind_icon(n.kind, 'card-vis-raw') }}
       <div class="card-text">
         {{ official(n) }}
-        <button type="button" class="flip flip-back"><svg width="14" height="14" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#otocit"/></svg>Polidštěné znění</button>
       </div>
     </div>
   </div>
-  {% if n.reference %}<p class="notice-ref"><span>č. j.</span> {{ n.reference }}</p>{% endif %}
+  <div class="card-side">
+    {% if n.reference %}<p class="notice-ref"><span>č. j.</span> {{ n.reference }}</p>{% endif %}
+    <button type="button" class="flip" aria-pressed="false" aria-controls="{{ n.id }}-back" hidden><svg width="16" height="16" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#otocit"/></svg><span class="flip-to-back">Ukázat originál</span><span class="flip-to-front">Zpět na polidštěné</span></button>
+  </div>
 </li>
 {%- endmacro %}
 
