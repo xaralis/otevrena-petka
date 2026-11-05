@@ -161,7 +161,7 @@
   <ul class="spend-legend">{% for s in sl %}
     <li><i style="background: {{ s.color }}" aria-hidden="true"></i><span class="s-label">{{ s.label }}</span><span class="s-val">{{ kc(s.amount) }}</span><span class="s-pct">{{ pct(s.pct) }}</span></li>{% endfor %}
   </ul>
-  <figcaption class="muted">Výdaje podle kapitol rozpočtu; pět největších, zbytek v „ostatní“. Částky podle příloh oznámení.</figcaption>
+  <figcaption class="muted">Výdaje podle kapitol rozpočtu{% if sl|selectattr('label', 'eq', 'Ostatní')|list %}; pět největších, zbytek v „ostatní“{% endif %}. Částky podle příloh oznámení.</figcaption>
 </figure>
 {% endif %}
 {% if d.budget %}
