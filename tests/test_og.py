@@ -27,4 +27,6 @@ def test_route_draws_only_existing_pages():
     r = c.get("/og/pristupnost.png")
     assert r.status_code == 200 and r.headers["content-type"] == "image/png"
     assert c.get("/og/neexistuje.png").status_code == 404
-    assert c.get("/og/og/pristupnost.png.png").status_code == 404
+    for bad in ("/og/og/pristupnost.png.png", "/og/x/../og/pristupnost.png.png", "/og/%2e%2e/og/a.png.png"):
+        assert c.get(bad).status_code == 404
+    assert c.get("/og/pristupnost.png", headers={"x-petka-og": "1"}).status_code == 404

@@ -238,16 +238,19 @@ _OG_TITLE = re.compile(r'<meta property="og:title" content="([^"]*)"')
 _og_cache: OrderedDict[tuple[str, str, str], bytes] = OrderedDict()
 
 
+_OG_PATH = re.compile(r"(?:[a-z0-9_-]+(?:\.[a-z0-9_-]+)*/)*[a-z0-9_-]+\.png")   # no "..", "//", "%", "?"
+
+
 @app.get("/og/{path:path}", include_in_schema=False)
-async def og_image(path: str):
+async def og_image(request: Request, path: str):
     """The share image of page /<path> (og:image is /og/<path>.png, the front page /og/index.png).
     The title comes from the page itself, rendered in-process, so only text the page shows gets drawn."""
-    if not path.endswith(".png") or path.startswith("og/"):
-        raise HTTPException(404)
+    if request.headers.get("x-petka-og") or not _OG_PATH.fullmatch(path) or path.startswith("og/"):
+        raise HTTPException(404)        # the header marks our own request: never render recursively
     page = "/" if path == "index.png" else "/" + path[:-4]
     async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app, raise_app_exceptions=False),
                                  base_url=PUBLIC_URL) as client:
-        r = await client.get(page, headers={"accept": "text/html"})
+        r = await client.get(page, headers={"accept": "text/html", "x-petka-og": "1"})
     m = _OG_TITLE.search(r.text) if r.status_code == 200 and r.headers.get("content-type", "").startswith("text/html") else None
     if not m:
         raise HTTPException(404)
