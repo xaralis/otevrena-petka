@@ -107,3 +107,15 @@ def test_only_current_notices_get_cards():
     assert not digest.over({"period": {"to": "2026-10-11"}, "action": {"deadline": "2026-11-30"}}, today)
     assert not digest.over({"period": {"to": "2026-11-13"}, "action": None}, today)
     assert not digest.over({"period": {"to": None}, "action": None}, today)
+
+
+def test_sign_ranges_are_one_item_with_a_name():
+    out = digest.signs([{"code": "C4a-c", "text": None, "change": "nova"},
+                        {"code": "B24a-b", "text": None, "change": "nova"}])
+    assert out[0]["code"] == "C4a–c" and out[0]["name"] == "Přikázaný směr objíždění" and out[0]["image"]
+    assert out[1]["name"] == "Zákaz odbočování"
+
+
+def test_sign_with_a_value_in_brackets():
+    out = digest.signs([{"code": "B20a(30)", "text": None, "change": "nova"}])
+    assert out[0]["code"] == "B20a" and out[0]["text"] == "30" and out[0]["image"]

@@ -1,0 +1,129 @@
+{
+ "notice_id": "mo5-15509",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v2",
+ "model": "cli:opus",
+ "created_at": "2026-11-04T11:31:19+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Boženy Němcové",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15509",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Lešení před domem Boženy Němcové 1920 zúží chodník do 30. 11. 2026",
+ "summary": "Kvůli zateplení fasády domu č. p. 1920 v ulici Boženy Němcové stojí před domem lešení a zařízení staveniště. Část chodníku a okraj silnice před domem jsou uzavřené a ohrazené červenobílými zábranami. Platí to od 20. 10. do 30. 11. 2026. Podle situačního plánku jde o úsek dlouhý asi 6 metrů a široký 1 metr.",
+ "where": "Ulice Boženy Němcové, chodník a okraj silnice před domem č. p. 1920",
+ "period": {
+  "from": "2026-10-20",
+  "to": "2026-11-30",
+  "text": "20. 10. 2026 – 30. 11. 2026"
+ },
+ "action": null,
+ "affects": "Chodci a řidiči v ulici Boženy Němcové u domu č. p. 1920",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "lešení a zařízení staveniště kvůli zateplení fasády"
+  },
+  {
+   "label": "Uzavřeno",
+   "value": "část chodníku a okraj silnice před domem č. p. 1920"
+  },
+  {
+   "label": "Rozsah podle plánku",
+   "value": "asi 6 m na délku, 1 m na šířku"
+  },
+  {
+   "label": "Značení",
+   "value": "červenobílé zábrany"
+  },
+  {
+   "label": "Platnost",
+   "value": "20. 10. 2026 – 30. 11. 2026"
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  }
+ ],
+ "signs": [
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Boženy Němcové 1920"
+ ],
+ "parcels": [],
+ "budget": [],
+ "drawing": {
+  "file": "/tmp/petka-deska/mo5-15509/mo5-15509-1.pdf",
+  "page": 4,
+  "box": [
+   0.18,
+   0.05,
+   0.72,
+   0.84
+  ],
+  "caption": "Ručně kreslený plánek: červeně vyznačené lešení (6 × 1 m) na chodníku před domem Boženy Němcové 1920"
+ },
+ "parking": null,
+ "visual_plan": "Bod na mapě u domu Boženy Němcové 1920 a k tomu výřez ručního plánku, na kterém je červeně vidět místo a rozměr lešení. Plánek je otočený na šířku a je potřeba ho pootočit.",
+ "reviewer_notes": "Žadatel je soukromá osoba, proto jméno neuvádíme. Dům č. 1920 zmiňujeme jen jako místo stavby. V dokumentu je jednou překlep „Bořeny Němcové“, jinde správně Boženy Němcové. Na plánku je číslo 3442, nejspíš číslo pozemku. Katastrální území ale chybí, proto jsem ho do pozemků nedal. Rozměry 6 m × 1 m jsem odečetl z ručně kresleného plánku. Opatření podle vyhlášky nabývá účinnosti pátým dnem po vyvěšení, ale v dokumentu se uvádí platnost od 20. 10. 2026. Proti opatření se nelze odvolat, proto lhůta pro lidi není.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Boženy Němcové 1920",
+    "source_text": "Boženy Němcové 1920",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.765018,
+      50.028168
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.762778497667185,
+    50.027268,
+    15.767257502332814,
+    50.029068
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null
+ },
+ "problems": [],
+ "published_at": "2026-11-05T09:31:58+00:00",
+ "review_note": null
+}

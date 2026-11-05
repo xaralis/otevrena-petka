@@ -1,0 +1,667 @@
+{
+ "notice_id": "mo5-15510",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v2",
+ "model": "cli:opus",
+ "created_at": "2026-11-04T11:30:58+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Jana Palacha",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15510",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Jana Palacha: kvůli opravě kanalizace do 13. 11. zúžení, zákaz stání a přesunutá zastávka MHD",
+ "summary": "Firma KOVIG K+P opravuje kanalizaci v ulici Jana Palacha v úseku mezi ulicemi Teplého a Na Spravedlnosti, a to bez rozkopávání. Od 21. 10. do 13. 11. 2026 bude část silnice uzavřená, platí zákaz zastavení a zaparkovaná auta mohou být odtažena. Zastávka MHD Jana Palacha se v obou směrech přesouvá k podjezdu za křižovatku s ulicí Na Spravedlnosti. Trolejbusy projedou na baterie se staženými sběrači, ostatní spoje pojedou podle výlukového jízdního řádu objížďkou přes Hlavní nádraží a nadjezd Paramo.",
+ "where": "Ulice Jana Palacha (silnice II/324) v úseku mezi ulicemi Teplého a Na Spravedlnosti",
+ "period": {
+  "from": "2026-10-21",
+  "to": "2026-11-13",
+  "text": "od 21. 10. 2026 do 13. 11. 2026"
+ },
+ "action": null,
+ "affects": "Řidiči a cestující MHD v ulici Jana Palacha a lidé, kteří tam parkují",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "oprava kanalizace bez rozkopávání"
+  },
+  {
+   "label": "Platnost",
+   "value": "21. 10. 2026 – 13. 11. 2026"
+  },
+  {
+   "label": "Úsek",
+   "value": "Jana Palacha mezi ulicemi Teplého a Na Spravedlnosti"
+  },
+  {
+   "label": "Parkování",
+   "value": "zákaz zastavení, zaparkovaná auta mohou být odtažena"
+  },
+  {
+   "label": "Zastávka MHD Jana Palacha",
+   "value": "v obou směrech přesunuta k podjezdu za křižovatku s ulicí Na Spravedlnosti"
+  },
+  {
+   "label": "Trolejbusy",
+   "value": "projedou na baterie se staženými sběrači; trolejové vedení je od 26. 10. 2026 vypnuté"
+  },
+  {
+   "label": "Ostatní spoje MHD",
+   "value": "objížďka přes Hlavní nádraží a nadjezd Paramo podle výlukového jízdního řádu"
+  },
+  {
+   "label": "Provádí",
+   "value": "KOVIG K+P, s.r.o."
+  }
+ ],
+ "signs": [
+  {
+   "code": "B28",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8c",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "A15",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "B20a(30)",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "C4a-b",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "Z4d",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "Z5d",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E7b",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "IJ4a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "B1",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "S7",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "IP10a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "A9",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "B24a-b",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Jana Palacha",
+  "Teplého",
+  "Na Spravedlnosti"
+ ],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Na mapě vyznačit úsek ulice Jana Palacha mezi Teplého a Na Spravedlnosti a přesunutou zastávku MHD u podjezdu. Výkres se značením v příloze není, takže zbývá jen mapa.",
+ "reviewer_notes": "Situační plán (příloha č. 1) chybí v publikovaném PDF, jsou jen 4 strany textu. Počet ani přesné umístění značek a přesné místo přesunuté zastávky proto nejde ověřit. Všechny značky jsou přenosné a dočasné, proto jsou vedeny jako „nová“. Text dodatkové tabulky E13 dokument neuvádí, píše jen „s uvedením termínu platnosti“. Úřad dále nařizuje upravit neplatné stálé značení (např. IP19), ale neříká jak, proto IP19 v seznamu značek není. Opatření podle textu nabývá účinnosti pátý den po vyvěšení. Vyvěšeno bylo 20. 10. 2026, tedy přibližně 25. 10. 2026, přesto je platnost úpravy uvedena od 21. 10. Ověřit, kdy bylo vyvěšeno na desce magistrátu. Lhůta pro připomínky není, opravné prostředky nejsou přípustné. Kód „C4a-b“ a „B24a-b“ ponechán tak, jak je v dokumentu. Jméno zmocněné osoby žadatele záměrně neuvedeno.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Jana Palacha",
+    "source_text": "Jana Palacha",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.771048,
+        50.024178
+       ],
+       [
+        15.771135,
+        50.023194
+       ]
+      ],
+      [
+       [
+        15.770839,
+        50.026333
+       ],
+       [
+        15.770904,
+        50.025456
+       ]
+      ],
+      [
+       [
+        15.770752,
+        50.027267
+       ],
+       [
+        15.770839,
+        50.026333
+       ]
+      ],
+      [
+       [
+        15.770562,
+        50.029244
+       ],
+       [
+        15.770752,
+        50.027267
+       ]
+      ],
+      [
+       [
+        15.770334,
+        50.031738
+       ],
+       [
+        15.770562,
+        50.029244
+       ]
+      ],
+      [
+       [
+        15.770904,
+        50.025456
+       ],
+       [
+        15.771048,
+        50.024178
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Teplého",
+    "source_text": "Teplého",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.754794,
+        50.027065
+       ],
+       [
+        15.754101,
+        50.027041
+       ]
+      ],
+      [
+       [
+        15.76893,
+        50.027193
+       ],
+       [
+        15.767231,
+        50.027124
+       ]
+      ],
+      [
+       [
+        15.762053,
+        50.026887
+       ],
+       [
+        15.76059,
+        50.026835
+       ]
+      ],
+      [
+       [
+        15.767231,
+        50.027124
+       ],
+       [
+        15.765768,
+        50.027044
+       ]
+      ],
+      [
+       [
+        15.770752,
+        50.027267
+       ],
+       [
+        15.76893,
+        50.027193
+       ]
+      ],
+      [
+       [
+        15.754794,
+        50.027065
+       ],
+       [
+        15.755138,
+        50.027063
+       ]
+      ],
+      [
+       [
+        15.75707,
+        50.026931
+       ],
+       [
+        15.756918,
+        50.026943
+       ]
+      ],
+      [
+       [
+        15.756918,
+        50.026943
+       ],
+       [
+        15.755833,
+        50.027027
+       ],
+       [
+        15.755138,
+        50.027063
+       ]
+      ],
+      [
+       [
+        15.76059,
+        50.026835
+       ],
+       [
+        15.759576,
+        50.026793
+       ],
+       [
+        15.758686,
+        50.026802
+       ]
+      ],
+      [
+       [
+        15.762897,
+        50.02693
+       ],
+       [
+        15.763236,
+        50.026945
+       ]
+      ],
+      [
+       [
+        15.757554,
+        50.026895
+       ],
+       [
+        15.75707,
+        50.026931
+       ]
+      ],
+      [
+       [
+        15.762897,
+        50.02693
+       ],
+       [
+        15.762053,
+        50.026887
+       ]
+      ],
+      [
+       [
+        15.765768,
+        50.027044
+       ],
+       [
+        15.765116,
+        50.027021
+       ]
+      ],
+      [
+       [
+        15.763236,
+        50.026945
+       ],
+       [
+        15.763727,
+        50.026961
+       ]
+      ],
+      [
+       [
+        15.757554,
+        50.026895
+       ],
+       [
+        15.758686,
+        50.026802
+       ]
+      ],
+      [
+       [
+        15.765116,
+        50.027021
+       ],
+       [
+        15.763727,
+        50.026961
+       ]
+      ],
+      [
+       [
+        15.754101,
+        50.027041
+       ],
+       [
+        15.753147,
+        50.026936
+       ],
+       [
+        15.751815,
+        50.026744
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Na Spravedlnosti",
+    "source_text": "Na Spravedlnosti",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.781447,
+        50.030546
+       ],
+       [
+        15.780538,
+        50.029104
+       ],
+       [
+        15.780487,
+        50.029052
+       ],
+       [
+        15.780406,
+        50.029025
+       ],
+       [
+        15.779953,
+        50.029032
+       ]
+      ],
+      [
+       [
+        15.775171,
+        50.029144
+       ],
+       [
+        15.777069,
+        50.029111
+       ]
+      ],
+      [
+       [
+        15.775171,
+        50.029144
+       ],
+       [
+        15.773652,
+        50.029184
+       ]
+      ],
+      [
+       [
+        15.770562,
+        50.029244
+       ],
+       [
+        15.773077,
+        50.029186
+       ]
+      ],
+      [
+       [
+        15.773652,
+        50.029184
+       ],
+       [
+        15.773077,
+        50.029186
+       ]
+      ],
+      [
+       [
+        15.777069,
+        50.029111
+       ],
+       [
+        15.777784,
+        50.029096
+       ]
+      ],
+      [
+       [
+        15.779953,
+        50.029032
+       ],
+       [
+        15.779796,
+        50.029039
+       ]
+      ],
+      [
+       [
+        15.777784,
+        50.029096
+       ],
+       [
+        15.779121,
+        50.029076
+       ]
+      ],
+      [
+       [
+        15.779796,
+        50.029039
+       ],
+       [
+        15.77935,
+        50.029053
+       ],
+       [
+        15.779121,
+        50.029076
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": null,
+  "signs": [
+   {
+    "code": "B28",
+    "name": "Zákaz zastavení",
+    "image": "B28.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8a",
+    "name": "Začátek úseku",
+    "image": "E8a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8c",
+    "name": "Konec úseku",
+    "image": "E8c.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "A15",
+    "name": "Práce na silnici",
+    "image": "A15.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "B20a",
+    "name": "Nejvyšší dovolená rychlost",
+    "image": "B20a.jpg",
+    "text": "30",
+    "change": "nova"
+   },
+   {
+    "code": "C4a–b",
+    "name": "Přikázaný směr objíždění",
+    "image": "C4a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "Z4d",
+    "name": "Směrovací deska se šipkou doleva",
+    "image": "Z4d.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "Z5d",
+    "name": "Vodicí deska středová s vodorovnými pruhy",
+    "image": "Z5d.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E7b",
+    "name": "Směrová šipka pro odbočení",
+    "image": "E7b.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "IJ4a",
+    "name": "Označník zastávky",
+    "image": "IJ4a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "B1",
+    "name": "Zákaz vjezdu všech vozidel (v obou směrech)",
+    "image": "B1.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "S7",
+    "name": "Přerušované žluté světlo",
+    "image": null,
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "IP10a",
+    "name": "Slepá pozemní komunikace",
+    "image": "IP10a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "A9",
+    "name": "Provoz v obou směrech",
+    "image": "A9.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "B24a–b",
+    "name": "Zákaz odbočování",
+    "image": "B24a.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null
+ },
+ "problems": [],
+ "published_at": "2026-11-05T09:31:58+00:00",
+ "review_note": null
+}

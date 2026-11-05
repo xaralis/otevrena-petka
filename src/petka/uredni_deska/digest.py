@@ -350,12 +350,44 @@ def signs(items: list[dict]) -> list[dict]:
     items = [i for i in items if i["change"] != "_drop"]
     out = []
     for s in items:
-        code = re.sub(r"[\s-]", "", s["code"]).upper()
+        span = RANGE.match(re.sub(r"\s", "", s["code"]))
+        if span:                                 # "C4a-c": whichever variant fits, one item
+            base, first, last = span.group(1).upper(), span.group(2).lower(), span.group(3).lower()
+            metas = [SIGNS.get(base + chr(c), {}) for c in range(ord(first), ord(last) + 1)]
+            out.append({"code": f"{base}{first}–{last}", "name": _common_name([m.get("name") for m in metas]),
+                        "image": metas[0].get("image"), "text": s.get("text"), "change": s["change"]})
+            continue
+        code, text = re.sub(r"[\s-]", "", s["code"]), s.get("text")
+        value = re.match(r"^(.+?)\((.+)\)$", code)       # "B20a(30)": the sign and its number
+        if value:
+            code, text = value.group(1), text or value.group(2)
+        code = code.upper()
         code = re.sub(r"(\d)([A-Z])$", lambda m: m.group(1) + m.group(2).lower(), code)
         meta = SIGNS.get(code, {})
-        out.append({"code": code, "name": meta.get("name"), "image": meta.get("image"),
-                    "text": s.get("text"), "change": s["change"]})
+        out.append({"code": code, "name": meta.get("name") or EXTRA_NAMES.get(code), "image": meta.get("image"),
+                    "text": text, "change": s["change"]})
     return out
+
+
+# signs the Wikipedia list (znacky.yaml) lacks; names per vyhláška 294/2015 Sb., no picture
+EXTRA_NAMES = {"IP10b": "Návěst před slepou pozemní komunikací", "S7": "Přerušované žluté světlo"}
+
+
+RANGE = re.compile(r"^([A-Za-z]{1,2}\d{1,2})([a-z])[-–]([a-z])$")
+
+
+def _common_name(names: list) -> str | None:
+    """'Přikázaný směr objíždění vpravo' + '… vlevo' -> 'Přikázaný směr objíždění'."""
+    names = [n for n in names if n]
+    if not names:
+        return None
+    words = [n.split() for n in names]
+    common = []
+    for ws in zip(*words):
+        if len(set(ws)) > 1:
+            break
+        common.append(ws[0])
+    return " ".join(common) if len(common) >= 2 else " / ".join(names)
 
 
 # --- checks ------------------------------------------------------------------------------------
