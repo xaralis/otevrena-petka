@@ -4,12 +4,17 @@ Portal pages (home, data catalog, planned sections), the sections' routers, REST
 (OpenAPI at /api/docs) and one MCP server for the whole portal at /mcp.
 """
 
+import asyncio
 import contextlib
+import html
 import os
+import re
+from collections import OrderedDict
 from urllib.parse import parse_qs
 
 from xml.sax.saxutils import escape
 
+import httpx
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, RedirectResponse, Response
 from starlette.exceptions import HTTPException as StarletteHTTPException
@@ -21,6 +26,7 @@ from ..mcp_server import mcp
 from ..sections import BY_SLUG, SECTIONS
 from ..uredni_deska import queries as deska_queries, source as deska_source, web as deska_web
 from ..usneseni import queries, search as usneseni_search, web as usneseni_web
+from . import og
 from .render import HERE, asset_version, tpl
 
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
@@ -224,6 +230,34 @@ def healthz():
     with db.pool().connection() as conn:
         conn.execute("SELECT 1")
     return {"ok": True}
+
+
+# --- share images ---------------------------------------------------------------------------
+
+_OG_TITLE = re.compile(r'<meta property="og:title" content="([^"]*)"')
+_og_cache: OrderedDict[tuple[str, str, str], bytes] = OrderedDict()
+
+
+@app.get("/og/{path:path}", include_in_schema=False)
+async def og_image(path: str):
+    """The share image of page /<path> (og:image is /og/<path>.png, the front page /og/index.png).
+    The title comes from the page itself, rendered in-process, so only text the page shows gets drawn."""
+    if not path.endswith(".png") or path.startswith("og/"):
+        raise HTTPException(404)
+    page = "/" if path == "index.png" else "/" + path[:-4]
+    async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app, raise_app_exceptions=False),
+                                 base_url=PUBLIC_URL) as client:
+        r = await client.get(page, headers={"accept": "text/html"})
+    m = _OG_TITLE.search(r.text) if r.status_code == 200 and r.headers.get("content-type", "").startswith("text/html") else None
+    if not m:
+        raise HTTPException(404)
+    section = BY_SLUG.get(page.strip("/").split("/")[0])
+    key = (page, html.unescape(m[1]), section.title if section else "")
+    if key not in _og_cache:
+        _og_cache[key] = await asyncio.to_thread(og.render, key[1], key[2])
+        while len(_og_cache) > 300:
+            _og_cache.popitem(last=False)
+    return Response(_og_cache[key], media_type="image/png", headers={"Cache-Control": "public, max-age=86400"})
 
 
 # catch-all for planned sections – keep it last

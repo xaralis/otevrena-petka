@@ -18,7 +18,7 @@
 <meta property="og:title" content="{{ self.title()|trim }}">
 <meta property="og:description" content="{{ desc|trim }}">
 <meta property="og:url" content="{{ PUBLIC_URL }}{{ request.url.path }}">
-<meta property="og:image" content="{{ PUBLIC_URL }}/static/icons/og.png">
+<meta property="og:image" content="{{ PUBLIC_URL }}{{ '/static/icons/og.png' if error_page else '/og' ~ (request.url.path if request.url.path != '/' else '/index') ~ '.png' }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
