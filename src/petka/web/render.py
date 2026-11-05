@@ -68,12 +68,27 @@ def _donut(items: list[dict], top: int = 5, r: float = 90, w: float = 34) -> lis
     return out
 
 
+_ADDRESSEE = re.compile(r"adresátem je\s+(.+?)\s*$", re.I)
+_SALUTATION = re.compile(r"^(?:(?:pan|paní|pí|p\.)\s+)+", re.I)
+
+
+def _headline(d: dict, n: dict) -> str:
+    """The card's headline as shown. A delivery names its addressee like the office's title does, but
+    only while it hangs: the title of a taken-down delivery is redacted, and the generic headline is back.
+    Page titles and share images keep the stored headline (they get cached outside our reach)."""
+    m = _ADDRESSEE.search(n.get("title") or "") if d.get("cluster") == "doruceni" and not n.get("redacted") else None
+    if not m:
+        return d["headline"]
+    name = _SALUTATION.sub("", m[1]).strip()
+    return f"Úřad doručuje písemnost: {name.title() if name.isupper() else name}"
+
+
 def asset(path: str) -> str:
     return f"/static/{path}?v={asset_version(path)}"
 SITE_NAME = "Otevřená Pětka"
 
 tpl = Jinja2Templates(directory=HERE / "templates")
-tpl.env.globals.update(asset=asset, donut=_donut, CLUSTERS=_clusters(), card_thumb=_card_thumb, ICONS=set(re.findall(r'<symbol id="([a-z]+)"', (HERE / 'static' / 'deska-ikony.svg').read_text())), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
+tpl.env.globals.update(asset=asset, donut=_donut, headline=_headline, CLUSTERS=_clusters(), card_thumb=_card_thumb, ICONS=set(re.findall(r'<symbol id="([a-z]+)"', (HERE / 'static' / 'deska-ikony.svg').read_text())), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
                        CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 

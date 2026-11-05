@@ -11,7 +11,7 @@
   <nav aria-label="Další návrhy">{% if prev_id %}<a href="/uredni-deska/navrhy/{{ prev_id }}">Předchozí</a>{% endif %}<a href="/uredni-deska/navrhy">Všechny návrhy</a>{% if next_id %}<a href="/uredni-deska/navrhy/{{ next_id }}">Další</a>{% endif %}</nav>
 </div></div>
 {% endif %}{% endblock %}
-{% block hero %}{{ hero(d.headline if d else n.title, [('Úřední deska', '/uredni-deska')], (CLUSTERS.get(d.cluster) ~ ' – vyvěšeno ' ~ (n.published|d)) if d else ('Vyvěšeno ' ~ (n.published|d)), kind='section') }}{% endblock %}
+{% block hero %}{{ hero(headline(d, n) if d else n.title, [('Úřední deska', '/uredni-deska')], (CLUSTERS.get(d.cluster) ~ ' – vyvěšeno ' ~ (n.published|d)) if d else ('Vyvěšeno ' ~ (n.published|d)), kind='section') }}{% endblock %}
 {% block main %}
 <div class="prose wide digest">
 {% if d %}

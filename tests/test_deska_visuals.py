@@ -52,3 +52,14 @@ def test_delivery_card_names_the_addressee_only_while_it_hangs():
     assert "Úředně: Oznámení o doručení písemnosti – Jan Novák" in hanging and "data-nosnippet" in hanging
     gone = t.render(n=dict(n, title=REDACTED_TITLE, redacted=True, url=""))
     assert "Novák" not in gone and "Úředně:" not in gone
+
+
+def test_delivery_headline_names_the_addressee_while_it_hangs():
+    from petka.web.render import _headline
+    d = {"cluster": "doruceni", "headline": "Úřad doručuje písemnost veřejnou vyhláškou"}
+    t = "Veřejná vyhláška - oznámení o uložení … ze dne 20. 10. 2026, jejímž adresátem je pan pan Alnajari Wasel"
+    assert _headline(d, {"title": t}) == "Úřad doručuje písemnost: Alnajari Wasel"
+    assert _headline(d, {"title": "… jejichž adresátem je paní Zarvanska Liudmyla"}) == "Úřad doručuje písemnost: Zarvanska Liudmyla"
+    assert _headline(d, {"title": "… adresátem je pan BATMUNKH BATTSETSEG"}) == "Úřad doručuje písemnost: Batmunkh Battsetseg"
+    assert _headline(d, {"title": t, "redacted": True}) == d["headline"]
+    assert _headline({"cluster": "doprava", "headline": "X"}, {"title": t}) == "X"

@@ -39,7 +39,7 @@
     <div class="card-face card-front card-body">
       <span class="card-vis card-vis-{{ t.kind }}" aria-hidden="true">{% if t.kind == 'sign' %}<img src="{{ t.src }}" alt="" width="52" height="52" loading="lazy">{% elif t.kind == 'photo' %}<img src="{{ '/uredni-deska/navrhy/obrazky/' if preview else '/uredni-deska/obrazky/' }}{{ n.id }}/{{ t.file }}" alt="" width="60" height="60" loading="lazy">{% else %}<svg width="26" height="26"><use href="{{ asset('deska-ikony.svg') }}#{{ t.id }}"/></svg>{% endif %}</span>
       <div class="card-text">
-        <h3><a href="{{ '#' if preview else '/uredni-deska/' ~ n.id }}">{{ d.headline }}</a></h3>
+        <h3><a href="{{ '#' if preview else '/uredni-deska/' ~ n.id }}">{{ headline(d, n) }}</a></h3>
         <p class="row-meta"><span class="human">Polidštěno</span> {{ CLUSTERS.get(d.cluster, n.kind_label)|lower }}{% if d.where %}, {{ d.where }}{% endif %}</p>
         <p class="row-text">{{ d.summary }}</p>
         {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
