@@ -1,0 +1,171 @@
+{
+ "notice_id": "mo5-15623",
+ "members": [
+  "mo5-15624"
+ ],
+ "status": "published",
+ "prompt_version": "deska-v4",
+ "model": "cli:opus",
+ "created_at": "2026-11-05T10:48:30+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Nadjezd směr Lázně Bohdaneč",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15623",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "28. a 31. 10. 2026 byl nadjezd v Doubravicích kvůli opravě průjezdný jen jedním pruhem, s objížďkami",
+ "summary": "Firma Chládek a Tintěra opravovala vozovku na nadjezdu v Doubravicích, kde se kříží silnice I/36 (směr Lázně Bohdaneč) a I/37. 28. 10. 2026 se pracovalo ve směru od centra k Semtínu, 31. 10. 2026 ve směru od Semtína k centru, včetně sjezdů křižovatky. Na nadjezdu se jezdilo střídavě jedním pruhem podle pokynů pracovníků stavby a část sjezdů byla objízdná přes kruhový objezd u Globusu, přes Palackého a kruhový objezd u rafinerie nebo přes Stéblovou, Srch a Staré Hradiště. Uzavírka už skončila, takže teď už nic dělat nemusíte.",
+ "where": "Nadjezd v Doubravicích – mimoúrovňová křižovatka silnic I/36 a I/37 v Pardubicích",
+ "period": {
+  "from": "2026-10-28",
+  "to": "2026-10-31",
+  "text": "28. 10. 2026 (směr centrum → Semtín) a 31. 10. 2026 (směr Semtín → centrum)"
+ },
+ "action": null,
+ "affects": "Řidiči jedoucí přes Doubravice po silnicích I/36 a I/37 (směry Lázně Bohdaneč, Chrudim, Hradec Králové), cestující regionální autobusové linky 650607 a trolejbusů MHD",
+ "facts": [
+  {
+   "label": "Co se dělo",
+   "value": "Oprava levého i pravého jízdního pruhu a sjezdů nadjezdu v Doubravicích"
+  },
+  {
+   "label": "Kdy",
+   "value": "28. 10. 2026 a 31. 10. 2026"
+  },
+  {
+   "label": "Provoz",
+   "value": "Střídavě jedním pruhem, řídili ho pracovníci stavby"
+  },
+  {
+   "label": "Objížďka 28. 10.",
+   "value": "Z Chrudimi na Bohdaneč přes kruhový objezd u Globusu; ze Semtína na Hradec přes křižovatku Palackého a kruhový objezd u rafinerie"
+  },
+  {
+   "label": "Objížďka 31. 10.",
+   "value": "Ze Semtína na Hradec přes kruhový objezd u Globusu; z Chrudimi a Hradce do Pardubic přes Stéblovou, Srch a Staré Hradiště na obchvat I/36"
+  },
+  {
+   "label": "MHD",
+   "value": "Trolejbusy projížděly místem na baterie se staženými sběrači; autobusová linka 650607 bez výlukového jízdního řádu"
+  },
+  {
+   "label": "Stavbu prováděla",
+   "value": "Chládek a Tintěra, Pardubice a.s."
+  },
+  {
+   "label": "Povolil",
+   "value": "Krajský úřad Pardubického kraje, odbor dopravy a silničního hospodářství"
+  }
+ ],
+ "signs": [
+  {
+   "code": "IP22",
+   "text": "I/36 odbočení směr Hradec Králové 28.10.2026 uzavřeno",
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Doubravická"
+ ],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Hodila by se mapa s nadjezdem v Doubravicích a oběma objížďkami barevně podle dne (28. 10. a 31. 10.). Situační výkresy dopravního značení na desce nejsou, takže trasy je třeba nakreslit podle textu.",
+ "reviewer_notes": "Balíček tvoří dvě písemnosti Krajského úřadu Pardubického kraje (jsou ve stejném spisu): stanovení přechodné úpravy provozu z 22. 10. 2026 a rozhodnutí o částečné uzavírce z 23. 10. 2026. Na desku obvodu se dostaly až 4. 11. 2026, tedy po skončení prací, proto je vše psáno v minulém čase a action je null. Proti stanovení nejde podat opravný prostředek. Proti rozhodnutí se lze odvolat do 15 dnů od oznámení, odvolání ale nemá odkladný účinek a uzavírka už proběhla, takže ho jako výzvu k akci neuvádím. Značka IP22: v podmínkách stanovení je jako podmínka policie 2a, jenže odůvodnění říká, že policie později „podmínku č. 2“ vzala zpět. Není jasné, jestli se to týká právě této značky, proto to před zveřejněním ověřte, případně značku vynechejte. Situační přílohy (situace dopravního značení) v souborech nejsou. Úpravu provozu na místních komunikacích stanovil i Magistrát (č. j. MmP 197602/2026 ze 7. 10. 2026), ale ten dokument v balíčku není. Kontaktní osobu stavby jsem kvůli ochraně osobních údajů neuvedl.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Doubravická",
+    "source_text": "Doubravická",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.75319,
+        50.061098
+       ],
+       [
+        15.753551,
+        50.060152
+       ]
+      ],
+      [
+       [
+        15.752878,
+        50.061863
+       ],
+       [
+        15.75319,
+        50.061098
+       ]
+      ],
+      [
+       [
+        15.753551,
+        50.060152
+       ],
+       [
+        15.753713,
+        50.059731
+       ],
+       [
+        15.753728,
+        50.059669
+       ],
+       [
+        15.753704,
+        50.059521
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.748640853810253,
+    50.0588184,
+    15.757965146189749,
+    50.062565600000006
+   ],
+   "shapes": [
+    {
+     "kind": "line",
+     "d": "M585.5,293.7 L631.9,483.1"
+    },
+    {
+     "kind": "line",
+     "d": "M545.3,140.6 L585.5,293.7"
+    },
+    {
+     "kind": "line",
+     "d": "M631.9,483.1 L652.8,567.3 L654.7,579.8 L651.6,609.4"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "IP22",
+    "name": "Změna organizace dopravy",
+    "image": "IP22.png",
+    "text": "I/36 odbočení směr Hradec Králové 28.10.2026 uzavřeno",
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "published_at": "2026-11-05T10:58:30+00:00",
+ "review_note": null
+}

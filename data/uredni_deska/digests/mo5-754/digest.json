@@ -1,0 +1,105 @@
+{
+ "notice_id": "mo5-754",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v4",
+ "model": "cli:opus",
+ "created_at": "2026-11-05T10:40:36+00:00",
+ "source": {
+  "title": "Zveřejňování pro ÚSC na úřední desce",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=754",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "rozpocet",
+ "headline": "Kde najdete rozpočet obvodu Pardubice V, jeho změny a závěrečný účet – na webu i na úřadě",
+ "summary": "Tohle stálé oznámení říká, kde si můžete prohlédnout rozpočtové dokumenty městského obvodu Pardubice V. Najdete je na webu pardubice.eu (úřední deska obvodu a stránka pardubice.eu/rozpocet-mo5). Papírově jsou k nahlédnutí na ekonomickém odboru úřadu obvodu, Češkova 22, kancelář 206 v 1. patře. Trvale tam je schválený rozpočet, výhled rozpočtu na další roky, změny rozpočtu, pravidla pro hospodaření bez schváleného rozpočtu a závěrečný účet. Návrhy rozpočtu, výhledu a závěrečného účtu se zveřejňují jen na kratší dobu před schválením.",
+ "where": "Úřad městského obvodu Pardubice V, Češkova 22, kancelář 206 (1. patro); web pardubice.eu/rozpocet-mo5",
+ "period": {
+  "from": "2022-03-28",
+  "to": "2027-01-11",
+  "text": "Oznámení visí na desce od 28. 3. 2022 do 11. 1. 2027"
+ },
+ "action": {
+  "what": "Prohlédnout si rozpočet obvodu, jeho změny nebo závěrečný účet",
+  "deadline": null,
+  "how": "Na webu pardubice.eu/rozpocet-mo5 nebo na úřední desce obvodu; papírově na ekonomickém odboru, Češkova 22, kancelář 206 (1. patro)"
+ },
+ "affects": "Obyvatelé městského obvodu Pardubice V, kteří chtějí vědět, jak obvod hospodaří",
+ "facts": [
+  {
+   "label": "Web",
+   "value": "pardubice.eu/rozpocet-mo5"
+  },
+  {
+   "label": "Na úřadě",
+   "value": "Ekonomický odbor, Češkova 22, kancelář 206, 1. patro"
+  },
+  {
+   "label": "Trvale k dispozici",
+   "value": "schválený rozpočet, výhled rozpočtu, změny rozpočtu, pravidla rozpočtového provizoria, závěrečný účet s přezkumem hospodaření"
+  },
+  {
+   "label": "Jen krátce před schválením",
+   "value": "návrh rozpočtu, návrh výhledu rozpočtu, návrh závěrečného účtu"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Češkova 22"
+ ],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Bez obrázku stačí jednoduchá karta s odkazem na stránku s rozpočtem a adresou kanceláře. Případně můžete přidat seznam dokumentů rozdělený na „trvale“ a „návrhy“.",
+ "reviewer_notes": "Jde o obecné oznámení, které visí dlouhodobě. Neobsahuje žádné částky ani lhůty. Zkontrolujte, že odkaz pardubice.eu/rozpocet-mo5 funguje. Úřední hodiny kanceláře v dokumentu nejsou.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Češkova 22",
+    "source_text": "Češkova 22",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.769221,
+      50.026558
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.766981497667185,
+    50.025658,
+    15.771460502332815,
+    50.027458
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [
+  "datum od 2022-03-28 v dokumentu není doslova",
+  "datum do 2027-01-11 v dokumentu není doslova"
+ ],
+ "published_at": "2026-11-05T10:58:30+00:00",
+ "review_note": null
+}

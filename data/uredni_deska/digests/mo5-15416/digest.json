@@ -1,0 +1,81 @@
+{
+ "notice_id": "mo5-15416",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v4",
+ "model": "cli:opus",
+ "created_at": "2026-11-05T10:33:05+00:00",
+ "source": {
+  "title": "Zápis o výsledku voleb do Zastupitelstva MO Pardubice V",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15416",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "volby",
+ "headline": "Volby do zastupitelstva Pětky 9. a 10. 10. 2026 vyhrálo ANO, sedm uskupení získalo křesla",
+ "summary": "Ve volbách 9. a 10. 10. 2026 se rozdělilo všech 15 křesel v zastupitelstvu obvodu Pardubice V. ANO 2011 získalo 4 mandáty, Progresivní Pardubice a Noví lidovci 3, ODS 3, Starostové a nezávislí 2. Po jednom mandátu mají Žijeme Pardubice, SPD s podporou Trikolory, Svobodných a nezávislých a Naše Pardubice. Srdcem pro Pardubice dostalo 3,74 % hlasů a do zastupitelstva se nedostalo, protože nepřekročilo hranici 5 %. Volit přišlo 4 614 z 11 857 zapsaných voličů.",
+ "where": "Městský obvod Pardubice V (18 volebních okrsků)",
+ "period": {
+  "from": "2026-10-09",
+  "to": "2026-10-10",
+  "text": "9. a 10. 10. 2026"
+ },
+ "action": null,
+ "affects": "Obyvatelé obvodu Pardubice V: zastupitelstvo na příští volební období",
+ "facts": [
+  {
+   "label": "ANO 2011",
+   "value": "24,17 % – 4 mandáty (Jiří Rejda, Robert Novotný, Jan Nadrchal, Michal Hrabák)"
+  },
+  {
+   "label": "Progresivní Pardubice a Noví lidovci",
+   "value": "19,75 % – 3 mandáty (Petr Netolický, Filip Vařecha, Jakub Jeřábek)"
+  },
+  {
+   "label": "ODS Pardubice",
+   "value": "18,56 % – 3 mandáty (Matěj Slanař, Martina Tomanová, Jiří Janoš)"
+  },
+  {
+   "label": "Starostové a nezávislí",
+   "value": "10,53 % – 2 mandáty (Daniel Vondra, Vojtěch Zigmund)"
+  },
+  {
+   "label": "Žijeme Pardubice",
+   "value": "9,93 % – 1 mandát (Miloš Adamů)"
+  },
+  {
+   "label": "Naše Pardubice",
+   "value": "7,35 % – 1 mandát (Filip Sedlák, díky přednostním hlasům z 15. místa kandidátky)"
+  },
+  {
+   "label": "SPD s podporou Trikolory, Svobodných a nezávislých",
+   "value": "6,42 % – 1 mandát (Petr Rydval)"
+  },
+  {
+   "label": "Účast",
+   "value": "4 614 z 11 857 voličů (asi 38,9 %), Srdcem pro Pardubice 3,74 % – bez mandátu"
+  }
+ ],
+ "signs": [],
+ "places": [],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Nejlépe sloupcový graf procent hlasů podle stran s vyznačenou hranicí 5 % a k tomu schéma 15 křesel (půlkruh) obarvené podle mandátů. Výsledek je tak srozumitelný na první pohled.",
+ "reviewer_notes": "Volební účast 38,9 % jsem dopočítal: vydané obálky 4 614 ÷ zapsaní voliči 11 857. V zápisu jako procento neuvedená. Procenta stran jsou ze zápisu (příloha č. 1). Jména zvolených zastupitelů jsou veřejné výsledky voleb, a proto je uvádím. Náhradníky a další kandidáty jsem nevypisoval. Filip Sedlák (Naše Pardubice) se do zastupitelstva dostal z 15. místa kandidátky díky přednostním hlasům (375 hlasů, hranice 334,4). Zápis byl vyhotoven 10. 10. 2026 ve 21:27. Na desce visí dlouhodobě (do 11. 10. 2030), proto je karta psaná jako přehled výsledků, ne jako novinka. Ustavující zasedání zastupitelstva zápis nezmiňuje.",
+ "visual": {
+  "map": [],
+  "ortho": null,
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [
+  "datum od 2026-10-09 v dokumentu není doslova"
+ ],
+ "published_at": "2026-11-05T10:58:30+00:00",
+ "review_note": null
+}

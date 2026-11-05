@@ -1,0 +1,67 @@
+{
+ "notice_id": "mo5-694",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v4",
+ "model": "cli:opus",
+ "created_at": "2026-11-05T10:40:51+00:00",
+ "source": {
+  "title": "Okruh údajů, na které se nevztahuje ohlašovací povinnost ve vztahu k místním poplatkům zavedeným statutárním městem Pardubice",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=694",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "poplatky",
+ "headline": "Co úřadu kvůli poplatku za odpad a za psa hlásit nemusíte – zjistí si to z registrů sám",
+ "summary": "Úřad obvodu Pardubice V zveřejnil seznam údajů, které si při vybírání místních poplatků zjistí sám z úředních registrů, takže je lidé nemusí hlásit. U poplatku za odpad jde o dítě, kterému v daném roce bude 6 let, o změnu trvalého pobytu a o úmrtí poplatníka. U poplatku ze psů jde o poplatníka, kterému v daném roce bude 65 let, a o jeho úmrtí. Platí to jen pro občany České republiky. U poplatku za zábor veřejného prostranství a za vjezd do vybraných míst se nic nemění, tam se hlásí vše jako dřív.",
+ "where": "městský obvod Pardubice V",
+ "period": {
+  "from": "2022-03-21",
+  "to": null,
+  "text": "platí od 21. 3. 2022, na desce visí dlouhodobě"
+ },
+ "action": null,
+ "affects": "Lidé s trvalým pobytem v obvodu Pardubice V s českým občanstvím, kteří platí poplatek za odpad nebo za psa",
+ "facts": [
+  {
+   "label": "Poplatek za odpad – nemusíte hlásit",
+   "value": "dítě, kterému v daném roce bude 6 let; změnu trvalého pobytu; úmrtí poplatníka"
+  },
+  {
+   "label": "Poplatek ze psů – nemusíte hlásit",
+   "value": "dovršení 65 let poplatníka v daném roce; úmrtí poplatníka"
+  },
+  {
+   "label": "Zábor veřejného prostranství a vjezd vozidel",
+   "value": "žádné výjimky, údaje se hlásí jako dosud"
+  },
+  {
+   "label": "Pro koho",
+   "value": "jen pro občany České republiky"
+  },
+  {
+   "label": "Vydal",
+   "value": "Úřad městského obvodu Pardubice V, ekonomický odbor, 21. 3. 2022"
+  }
+ ],
+ "signs": [],
+ "places": [],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Stačí jednoduchý přehled ve dvou sloupcích: druh poplatku a co se nemusí hlásit (ikony odpad / pes). Mapa ani výkres nemají smysl.",
+ "reviewer_notes": "Dokument je z 21. 3. 2022 a visí dlouhodobě (do 1. 1. 2029), proto ho popisujeme jako trvale platný přehled, ne jako novinku. Ověřit, zda seznam stále odpovídá aktuálním vyhláškám města o poplatcích (např. zda se úleva u psů stále váže na věk 65 let a u odpadu na věk 6 let). Ostatní údaje a změny (např. pořízení psa, změny mimo registry) je dál nutné hlásit. Jméno vedoucí odboru je uvedeno v dokumentu jako úřední osoba, na kartě není nutné.",
+ "visual": {
+  "map": [],
+  "ortho": null,
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "published_at": "2026-11-05T10:58:30+00:00",
+ "review_note": null
+}

@@ -1,0 +1,182 @@
+{
+ "notice_id": "mo5-14303",
+ "members": [
+  "mo5-14305",
+  "mo5-14307"
+ ],
+ "status": "published",
+ "prompt_version": "deska-v4",
+ "model": "cli:opus",
+ "created_at": "2026-11-05T10:33:31+00:00",
+ "source": {
+  "title": "Schválená 3. změna rozpočtu MO Pardubice V na r. 2026 a schválená rozpočtová opatření v rámci 3. změny",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=14303",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "rozpocet",
+ "headline": "Obvod schválil 3. změnu rozpočtu na rok 2026: peníze ušetřené z loňska jdou hlavně do rezervy",
+ "summary": "Zastupitelstvo obvodu Pardubice V schválilo 24. 6. 2026 třetí změnu letošního rozpočtu. Peníze, které loni zbyly nebo přišly z vyúčtování s městem, jdou hlavně do rezervy (asi 1 mil. Kč) a do sociálního fondu zaměstnanců úřadu (863,6 tis. Kč). U dětského hřiště Višňovka v ulici S. K. Neumanna se 590 tis. Kč jen přeúčtovalo z investic na běžné výdaje. Čtyři mateřské školy dostaly celkem 41 tis. Kč na podzimní akce pro děti. Rozpočet obvodu má po změně 114,26 mil. Kč a dokument visí na desce do března 2027.",
+ "where": "Městský obvod Pardubice V",
+ "period": {
+  "from": "2026-06-24",
+  "to": null,
+  "text": "Platí od schválení zastupitelstvem 24. 6. 2026, pro rozpočet na rok 2026"
+ },
+ "action": null,
+ "affects": "Obyvatelé obvodu Pardubice V, mateřské školy Kamarád, Jesničánky, Motýlek a Sluníčko a zaměstnanci úřadu obvodu (sociální fond)",
+ "facts": [
+  {
+   "label": "Schváleno",
+   "value": "Zastupitelstvo MO Pardubice V, 24. 6. 2026"
+  },
+  {
+   "label": "Rozpočet po změně",
+   "value": "114 260,16 tis. Kč (dříve 112 387,98 tis. Kč)"
+  },
+  {
+   "label": "Změna celkem",
+   "value": "+1 872,18 tis. Kč"
+  },
+  {
+   "label": "Rezerva rozpočtu",
+   "value": "+1 008,6 tis. Kč, nově 7 040,48 tis. Kč"
+  },
+  {
+   "label": "Hřiště Višňovka",
+   "value": "590 tis. Kč převedeno z investic na běžné výdaje, celková částka 2 090 tis. Kč se nemění"
+  },
+  {
+   "label": "Příspěvky mateřským školám",
+   "value": "Kamarád 10 tis., Jesničánky 10 tis., Motýlek 12 tis., Sluníčko 9 tis. Kč (celkem 41 tis. Kč)"
+  },
+  {
+   "label": "Akce školek",
+   "value": "Dýňová zahrada, Hravá ekologie u nás, Školka volá, Malí muzikanti, Podzimní slavnosti, S pusinkami, jazýčky, děláme si rozcvičky, Barevný podzim v MŠ"
+  },
+  {
+   "label": "Sociální fond",
+   "value": "zvýšen o 1 190,6 tis. Kč, nově 2 437 tis. Kč"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "S. K. Neumanna 2506",
+  "Teplého 2100",
+  "Raisova 226",
+  "J. Ressla 1992",
+  "Gorkého 1521"
+ ],
+ "parcels": [],
+ "budget": [
+  {
+   "label": "rezerva rozpočtu (loňské úspory)",
+   "change": 1008.58
+  },
+  {
+   "label": "doplatek do sociálního fondu zaměstnanců",
+   "change": 863.6
+  },
+  {
+   "label": "hřiště Višňovka – běžné výdaje",
+   "change": 590
+  },
+  {
+   "label": "hřiště Višňovka – investice (přeúčtováno)",
+   "change": -590
+  },
+  {
+   "label": "příspěvky školám – nerozdělené",
+   "change": -41
+  },
+  {
+   "label": "MŠ Motýlek – podzimní akce",
+   "change": 12
+  },
+  {
+   "label": "MŠ Kamarád – Dýňová zahrada",
+   "change": 10
+  },
+  {
+   "label": "MŠ Jesničánky – akce pro děti",
+   "change": 10
+  }
+ ],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Sloupcový graf změn: zvlášť přírůstky (rezerva, sociální fond) a přesuny (Višňovka, školky). U školek můžou být na mapě jejich čtyři budovy s částkou a názvem akce.",
+ "reviewer_notes": "Dokument je platný od 24. 6. 2026 a na desce visí dlouhodobě. Nejde o novinku a nelze se k němu vyjádřit, proto je action null. Částky jsou v tisících Kč podle Přílohy č. 1. Rezerva rozpočtu je v tabulce uvedena jednou jako 1 008,58 a jednou zaokrouhleně jako 1 008,6 tis. Kč (711,78 + 296,8). Do přehledu budget se nevešel příspěvek MŠ Sluníčko (+9 tis. Kč) a změny uvnitř sociálního fondu (rezerva fondu +1 189,6 tis., poplatky +1 tis.). Sociální fond je samostatný rozpočet, do kterého jde doplatek 863,6 tis. Kč, proto jsem jeho rezervu do budget nedal, aby se částky nesčítaly dvakrát. Termíny akcí školek (září až prosinec 2026) jsou z velké části už za námi.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "S. K. Neumanna 2506",
+    "source_text": "S. K. Neumanna 2506",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.778419,
+      50.025541
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Teplého 2100",
+    "source_text": "Teplého 2100",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.764372,
+      50.026719
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Raisova 226",
+    "source_text": "Raisova 226",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.768153,
+      50.017546
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Josefa Ressla 1992",
+    "source_text": "J. Ressla 1992",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.757567,
+      50.023739
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Gorkého 1521",
+    "source_text": "Gorkého 1521",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.761213,
+      50.02436
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "published_at": "2026-11-05T10:58:30+00:00",
+ "review_note": null
+}

@@ -1,0 +1,82 @@
+{
+ "notice_id": "mo5-12524",
+ "members": [
+  "mo5-12525",
+  "mo5-12206"
+ ],
+ "status": "published",
+ "prompt_version": "deska-v4",
+ "model": "cli:opus",
+ "created_at": "2026-11-05T10:50:07+00:00",
+ "source": {
+  "title": "Schválený střednědobý výhled rozpočtu MO Pardubice V na r. 2025-2029",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=12524",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "rozpocet",
+ "headline": "Obvod Pardubice V má schválený finanční výhled do roku 2029: bez úvěrů a s větší rezervou",
+ "summary": "Výhled rozpočtu je plán, se kterým obvod počítá pro roky 2025–2029. Každý rok se aktualizuje. Zastupitelstvo ho schválilo 17. 12. 2025. Na rok 2026 počítá s příjmy 75,1 milionu Kč a výdaji 104,2 milionu Kč. Rozdíl pokryjí peníze ušetřené v minulých letech, obvod si nepůjčuje. Výdaje na dopravu po velkých stavbách v roce 2025 klesají. Peníze, které město na začátku prosince 2025 přidalo na sdílených daních, jdou celé do rezervy rozpočtu.",
+ "where": "Městský obvod Pardubice V",
+ "period": {
+  "from": null,
+  "to": null,
+  "text": "Výhled na roky 2025–2029, schválený 17. 12. 2025"
+ },
+ "action": null,
+ "affects": "Všichni obyvatelé obvodu Pardubice V – výhled ukazuje, kolik peněz obvod plánuje na dopravu, zeleň, úřad nebo knihovnu.",
+ "facts": [
+  {
+   "label": "Schváleno",
+   "value": "zastupitelstvem obvodu 17. 12. 2025 (usnesení č. 161/2025)"
+  },
+  {
+   "label": "Příjmy 2026",
+   "value": "75,1 mil. Kč (z toho podíl na daních 61,2 mil. Kč)"
+  },
+  {
+   "label": "Výdaje 2026",
+   "value": "104,2 mil. Kč, rozdíl pokryjí peníze ušetřené z minulých let (29,1 mil. Kč)"
+  },
+  {
+   "label": "Doprava",
+   "value": "48,4 mil. Kč v roce 2025, 25,4 mil. Kč v roce 2026, potom kolem 17 mil. Kč ročně"
+  },
+  {
+   "label": "Zeleň a životní prostředí",
+   "value": "25,0 mil. Kč v roce 2025, 23,6 mil. Kč v roce 2026, potom asi 22 mil. Kč ročně"
+  },
+  {
+   "label": "Rezerva rozpočtu",
+   "value": "9,3 mil. Kč v roce 2026, do roku 2029 roste na 12,9 mil. Kč"
+  },
+  {
+   "label": "Úvěry",
+   "value": "obvod nemá žádné úvěry ani půjčky"
+  },
+  {
+   "label": "Kde nahlédnout",
+   "value": "na pardubice.eu/rozpocet-mo5 nebo v papírové podobě na ekonomickém odboru úřadu obvodu, Češkova 22, kancelář č. 206 (1. patro)"
+  }
+ ],
+ "signs": [],
+ "places": [],
+ "parcels": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Sloupcový graf příjmů a výdajů v letech 2025–2029 podle tabulky ve schváleném výhledu. Případně skládaný graf výdajů podle oblastí (doprava, zeleň, úřad, školství, knihovna, rezerva). Je na něm dobře vidět pokles výdajů na dopravu po roce 2025.",
+ "reviewer_notes": "Balíček tvoří návrh (vyvěšený 26. 11. 2025), schválený výhled a oznámení o jeho zveřejnění. Karta popisuje schválenou verzi. Proti návrhu se v ní zvýšil podíl na daních (2026 o 3 741 tis., 2027 o 3 778 tis., 2028 o 4 440 tis., 2029 o 5 115 tis. Kč) a o stejné částky i rezerva rozpočtu. Ostatní výdaje zůstaly stejné. Pole budget je prázdné, protože nejde o změnu rozpočtu, ale o víceletý výhled. Pokud chcete, tyto rozdíly mezi návrhem a schválenou verzí do něj lze doplnit. Nejsou tu žádné lhůty k připomínkám, připomínky k návrhu se mohly podávat jen do schválení 17. 12. 2025. Jméno úřednice z ekonomického odboru je v kartě vynechané, uvedené je jen pracoviště.",
+ "visual": {
+  "map": [],
+  "ortho": null,
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "published_at": "2026-11-05T10:58:30+00:00",
+ "review_note": null
+}
