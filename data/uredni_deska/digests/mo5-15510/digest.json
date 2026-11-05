@@ -659,7 +659,8 @@
    }
   ],
   "parking": null,
-  "photo": null
+  "photo": null,
+  "thumb": null
  },
  "problems": [],
  "published_at": "2026-11-05T09:31:58+00:00",

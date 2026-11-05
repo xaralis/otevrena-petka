@@ -37,7 +37,8 @@
   "drawing": null,
   "signs": [],
   "parking": null,
-  "photo": null
+  "photo": null,
+  "thumb": null
  },
  "problems": [
   "datum do 2026-12-08 v dokumentu není doslova"

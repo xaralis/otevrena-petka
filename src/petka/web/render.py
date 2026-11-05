@@ -4,6 +4,7 @@ import datetime as dt
 import functools
 import hashlib
 import os
+import re
 from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
@@ -22,6 +23,11 @@ def asset_version(path: str) -> str:
     return hashlib.sha256(f.read_bytes()).hexdigest()[:10] if f.is_file() else "0"
 
 
+def _card_thumb(d: dict) -> dict:
+    from ..uredni_deska.digest import card_thumb
+    return card_thumb(d)
+
+
 def _clusters() -> dict:
     from ..uredni_deska.digest import CLUSTERS
     return CLUSTERS
@@ -32,7 +38,7 @@ def asset(path: str) -> str:
 SITE_NAME = "Otevřená Pětka"
 
 tpl = Jinja2Templates(directory=HERE / "templates")
-tpl.env.globals.update(asset=asset, CLUSTERS=_clusters(), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
+tpl.env.globals.update(asset=asset, CLUSTERS=_clusters(), card_thumb=_card_thumb, ICONS=set(re.findall(r'<symbol id="([a-z]+)"', (HERE / 'static' / 'deska-ikony.svg').read_text())), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
                        CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 

@@ -648,7 +648,8 @@
    "file": "vykres.png",
    "caption": "Orientační mapa odstávky: červené body jsou dotčené adresy, černé čtverečky dotčená místa připojení k síti"
   },
-  "signs": []
+  "signs": [],
+  "thumb": null
  },
  "problems": [],
  "published_at": "2026-11-04T11:23:32+00:00",

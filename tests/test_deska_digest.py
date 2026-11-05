@@ -119,3 +119,14 @@ def test_sign_ranges_are_one_item_with_a_name():
 def test_sign_with_a_value_in_brackets():
     out = digest.signs([{"code": "B20a(30)", "text": None, "change": "nova"}])
     assert out[0]["code"] == "B20a" and out[0]["text"] == "30" and out[0]["image"]
+
+
+def test_card_thumb_prefers_main_sign_then_photo_then_icon():
+    d = {"cluster": "doprava", "visual": {"thumb": "nahled.jpg", "signs": [
+        {"code": "E13", "image": "E13.jpg", "change": "nova", "name": "Text"},
+        {"code": "Z2", "image": "Z2.png", "change": "nova", "name": "Zábrana"},
+        {"code": "B28", "image": "B28.png", "change": "nova", "name": "Zákaz zastavení"}]}}
+    assert digest.card_thumb(d)["alt"] == "Zákaz zastavení"
+    assert digest.card_thumb({"cluster": "stavby", "visual": {"thumb": "nahled.jpg"}})["kind"] == "photo"
+    assert digest.card_thumb({"cluster": "poplatky", "visual": {"thumb": "nahled.jpg"}})["kind"] == "icon"
+    assert digest.card_thumb({"cluster": "doruceni", "visual": {}}) == {"kind": "icon", "id": "doruceni"}

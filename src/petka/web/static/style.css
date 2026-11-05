@@ -594,10 +594,37 @@ body > footer { flex-shrink: 0; }
   .notice-board { display: inline; margin: 0 0 0 .5rem; }
 }
 /* pro lidi: cards, the notice page, the reviewers' preview */
-.card-row .row-text { display: block; overflow: visible; }   /* the whole summary: 2–4 sentences, cut mid-sentence it misleads */
-.human-tag { display: inline-block; margin: 0 0 .3rem; padding: .05rem .45rem; font-size: .8rem; font-weight: 650; color: var(--red-ink); border: 1px solid currentColor; border-radius: 3px; line-height: 1.5; }
+.card-row .row-text { display: block; overflow: visible; }
+.card-body { display: grid; grid-template-columns: 60px minmax(0, 1fr); column-gap: 1.1rem; align-items: start; align-content: start; }
+.card-vis { width: 60px; height: 60px; display: grid; place-items: center; }
+.card-vis-sign img { width: 52px; height: 52px; object-fit: contain; }
+.card-vis-photo img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; display: block; }
+.card-vis-icon { border-radius: 50%; background: color-mix(in srgb, var(--ink) 7%, transparent); color: var(--ink-2); }
+.card-row .row-meta .human { color: var(--red-ink); font-weight: 650; margin-right: .15rem; }
+.card-row .row-text { margin-top: .45rem; }
+.card-vis-raw { background: none; box-shadow: inset 0 0 0 1.5px var(--rule); color: var(--muted); }
+.flip { display: flex; align-items: baseline; gap: .4rem; margin: .6rem 0 0; padding: 0; max-width: 68ch; background: none; border: 0; font: inherit; font-size: .85rem; line-height: 1.4; text-align: left; color: var(--muted); cursor: pointer; }
+.flip svg { flex: none; position: relative; top: .15rem; color: var(--ink-2); }
+.flip span { text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--field); text-underline-offset: 3px; }
+.flip:hover, .flip:hover svg { color: var(--ink); }
+.flip:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.card-flip { display: grid; }
+.card-flip.ready { perspective: 1800px; }
+.card-flip.ready > .card-face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .55s cubic-bezier(.3, .7, .2, 1); }
+.card-flip.ready > .card-back { transform: rotateY(180deg); }
+.card-flip.flipped > .card-front { transform: rotateY(-180deg); }
+.card-flip.flipped > .card-back { transform: rotateY(0deg); }
+.card-flip.ready:not(.flipped) > .card-back, .card-flip.flipped > .card-front { pointer-events: none; }   /* the hidden face still sits on top for hit-testing */
+@media (prefers-reduced-motion: reduce) { .card-flip.ready > .card-face { transition: none; } }
+@media (max-width: 600px) {
+  .card-body .card-text { display: contents; }
+  .card-body > .card-vis { grid-row: 1 / span 2; }
+  .card-body h3, .card-body .row-meta { grid-column: 2; }
+  .card-body .card-text > :not(h3):not(.row-meta) { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) { .card-body { grid-template-columns: 44px minmax(0, 1fr); column-gap: .8rem; } .card-vis { width: 44px; height: 44px; } .card-vis-sign img { width: 40px; height: 40px; } .card-vis-photo img { width: 44px; height: 44px; } .card-vis-icon svg { width: 22px; height: 22px; } }
+.human-tag { color: var(--red-ink); font-weight: 650; }
 .official-title { margin: .55rem 0 0; font-size: .85rem; color: var(--muted); max-width: 68ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.official-title span { color: var(--ink-2); }
 .deadline { margin: .5rem 0 0; font-size: .95rem; color: var(--ink); }
 .deadline b { color: var(--red-ink); }
 .digest .lead-text { font-size: 1.15rem; line-height: 1.55; max-width: 62ch; margin: 0 0 1.4rem; }

@@ -186,7 +186,8 @@
    }
   ],
   "parking": null,
-  "photo": null
+  "photo": null,
+  "thumb": "nahled.jpg"
  },
  "problems": [
   "datum od 2026-10-11 v dokumentu není doslova"

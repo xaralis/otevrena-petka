@@ -222,7 +222,8 @@
    }
   ],
   "parking": null,
-  "photo": null
+  "photo": null,
+  "thumb": "nahled.jpg"
  },
  "problems": [],
  "published_at": "2026-11-04T11:23:32+00:00",

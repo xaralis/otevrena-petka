@@ -313,6 +313,51 @@ def ortho(features: list[dict], target: Path, width: int = 1200) -> dict | None:
             "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"}
 
 
+def thumbnail(folder: Path, visual: dict, size: int = 192) -> str | None:
+    """A small square of the orthophoto around the place, with the dot, for the list."""
+    o = visual.get("ortho")
+    if not o or not (folder / o["file"]).is_file():
+        return None
+    from PIL import Image, ImageDraw
+    im = Image.open(folder / o["file"]).convert("RGB")
+    pts = [sh["xy"] for sh in o["shapes"] if sh["kind"] == "point"]
+    cx, cy = pts[0] if pts else (im.width / 2, im.height / 2)
+    side = min(im.width, im.height) * 0.6
+    left = min(max(cx - side / 2, 0), im.width - side)
+    top = min(max(cy - side / 2, 0), im.height - side)
+    out = im.crop((round(left), round(top), round(left + side), round(top + side))).resize((size, size), Image.LANCZOS)
+    if pts:
+        x, y, r = (cx - left) / side * size, (cy - top) / side * size, size * 0.055
+        ImageDraw.Draw(out).ellipse((x - r, y - r, x + r, y + r), fill=(222, 9, 28), outline="white", width=max(2, round(r / 3)))
+    out.save(folder / "nahled.jpg", quality=82)
+    return "nahled.jpg"
+
+
+# signs that say most about a traffic card, best first: prohibitions, orders, information, zones,
+# warnings, markings; supplementary plates (E), barriers (Z) and lights (S) say little alone
+_SIGN_RANK = ("B", "C", "IP", "IZ", "IS", "A", "P", "V")
+
+
+_PLACE_CLUSTERS = {"doprava", "stavby", "majetek", "prostredi", "energie", "drazby", "ostatni"}
+
+
+def card_thumb(d: dict) -> dict:
+    """What the list shows next to a card: its main sign, a crop of its photo, or a kind icon."""
+    v = d.get("visual") or {}
+    if d.get("cluster") == "doprava":
+        signs = [s for s in v.get("signs") or [] if s.get("image")]
+        def rank(s):     # within a kind, the order of the document: the main sign comes first
+            prefix = next((i for i, p in enumerate(_SIGN_RANK) if s["code"].startswith(p)), len(_SIGN_RANK))
+            return (s["change"] not in ("nova", "vymena"), prefix)
+        signs = [s for s in signs if s["code"][:1] not in "EZS" or s["code"].startswith("IS")]
+        if signs:
+            best = min(signs, key=rank)
+            return {"kind": "sign", "src": f"/static/znacky/{best['image']}", "alt": best.get("name") or best["code"]}
+    if v.get("thumb") and d.get("cluster") in _PLACE_CLUSTERS:   # elsewhere the place is the office
+        return {"kind": "photo", "file": v["thumb"], "alt": "Letecký snímek místa"}
+    return {"kind": "icon", "id": d.get("cluster") or "ostatni"}
+
+
 def drawing_crop(spec: dict, files: list[Path], target: Path, dpi: int = 130) -> dict | None:
     """The office's own drawing or photo, cut out of the PDF page Claude pointed at."""
     src = next((p for p in files if p.name == spec["file"]), None)
@@ -530,6 +575,7 @@ def draft(group: list[dict]) -> Path:
             visual["photo"] = street_photo(leader, d, feats, visual, out)
         except Exception as e:
             log.warning("%s: street photo failed: %s", leader["id"], e)
+    visual["thumb"] = thumbnail(out, visual)
     digest = {
         "notice_id": leader["id"], "members": [n["id"] for n in group[1:]], "status": "draft",
         "prompt_version": PROMPT_VERSION, "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",

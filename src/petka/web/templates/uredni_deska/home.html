@@ -55,7 +55,7 @@
   <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.{% if not official %} Polidštěné znění připravuje jazykový model a kontroluje člověk; kde ještě není, ukazujeme úřední.{% endif %}</p>
   {% if rows %}
   <ol class="rows notices">
-    {% for n in rows %}{% if n.digest and not official %}{{ card(n) }}{% else %}{{ notice(n) }}{% endif %}{% endfor %}
+    {% for n in rows %}{% if n.digest and not official %}{{ card(n) }}{% else %}{{ notice(n, icon=True) }}{% endif %}{% endfor %}
   </ol>
   {% else %}
   <div class="empty">
@@ -80,3 +80,4 @@
   <p>Celý seznam si můžete stáhnout jako <a href="/uredni-deska/data/notices.csv">CSV</a> nebo <a href="/uredni-deska/data/notices.json">JSON</a>, odebírat jako <a href="/uredni-deska/rss.xml">RSS</a> (úřední znění: <a href="/uredni-deska/rss.xml?zneni=uredni">RSS</a>), napojit přes <a href="/data#uredni-deska">API</a> nebo se na něj zeptat AI asistenta. U oznámení o doručení písemnosti po sejmutí neuvádíme jméno adresáta.</p>
 </section>
 {% endblock %}
+{% block scripts %}<script src="{{ asset('flip.js') }}" defer></script>{% endblock %}

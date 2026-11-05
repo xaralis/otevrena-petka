@@ -37,4 +37,4 @@
 {% endif %}
 </div>
 {% endblock %}
-{% block scripts %}{% if preview %}<script src="{{ asset('copy.js') }}" defer></script>{% endif %}{% if d and d.visual.map and not d.visual.ortho %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}
+{% block scripts %}{% if preview %}<script src="{{ asset('copy.js') }}" defer></script><script src="{{ asset('flip.js') }}" defer></script>{% endif %}{% if d and d.visual.map and not d.visual.ortho %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}
