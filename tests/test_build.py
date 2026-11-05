@@ -105,3 +105,12 @@ def test_embedding_pack_roundtrip():
     from petka.usneseni.jobs import _pack, _unpack
     v = [0.5, -1.25, 3.0, 1e-3]
     assert [round(x, 6) for x in _unpack(_pack(v))] == [round(x, 6) for x in v]
+
+
+def test_outgoing_bodies_keep_their_term_until_the_new_council_is_constituted():
+    # election 23. 9. 2022; the old board met as no. 61 on 13. 10., the new one as no. 1 on 2. 11.
+    assert members.term_for(dt.date(2022, 10, 13), 61).id == "2018-2022"
+    assert members.term_for(dt.date(2022, 11, 2), 1).id == "2022-2026"
+    assert members.term_for(dt.date(2022, 10, 19), 1).id == "2022-2026"
+    assert members.term_for(dt.date(2023, 6, 1), 12).id == "2022-2026"
+    assert members.term_for(dt.date(2022, 10, 13)).id == "2022-2026"     # no number: by date

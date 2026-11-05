@@ -74,7 +74,7 @@ def build(doc: dict, text: str, parsed: dict, accepted_issues: frozenset[str] = 
     h = parsed["header"]
     body = h["body"]
     date = dt.date.fromisoformat(h["date"])
-    term = reg.term_for(date)
+    term = reg.term_for(date, h.get("number"))
     issues: list[Issue] = []
 
     def issue(sev, code, msg, line=None):

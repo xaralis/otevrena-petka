@@ -72,11 +72,17 @@ def aliases() -> dict[str, str]:
     return {fold(k): v for k, v in (yaml.safe_load(p.read_text()) or {}).items()}
 
 
-def term_for(d: dt.date) -> Term:
+def term_for(d: dt.date, number: int | None = None) -> Term:
+    """The term of a meeting. A term starts with its election, but the outgoing council and board
+    keep meeting until the new council is constituted, and keep their numbering (rada 61 on
+    13. 10. 2022, after the election of 23. 9.), while the new ones start at 1. So a meeting in the
+    first months after an election with a number past 10 still belongs to the previous term."""
     _, terms = registry()
     current = [t for t in terms if t.start <= d]
     if not current:
         raise ValueError(f"no term for {d}")
+    if number and number > 10 and len(current) > 1 and (d - current[-1].start).days < 120:
+        return current[-2]
     return current[-1]
 
 

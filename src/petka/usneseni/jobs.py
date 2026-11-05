@@ -35,6 +35,14 @@ def _members(conn) -> None:
                    elected = EXCLUDED.elected""", (mid, t.id, lst, mid in t.elected))
 
 
+def _in_rada(conn) -> None:
+    """Who sat on the board in a term, from the attendance of its meetings – recomputed, never only
+    switched on, so a meeting moved to another term takes its members with it."""
+    conn.execute("""UPDATE memberships s SET in_rada = EXISTS (
+                      SELECT 1 FROM meetings mt WHERE mt.body = 'rmo' AND mt.term = s.term
+                        AND s.member_id = ANY(mt.present || mt.excused || mt.absent))""")
+
+
 def _tsv_sql() -> str:
     return """
       setweight(to_tsvector('simple', f_unaccent(lower(coalesce(number,'') || ' ' || coalesce(title,'')))), 'A') ||
@@ -58,10 +66,6 @@ def load_meeting(conn, mid: str) -> str:
                 conn.execute("""INSERT INTO members (id, name, first_name, last_name, name_fold)
                                 VALUES (%s, %s, '', %s, %s) ON CONFLICT DO NOTHING""",
                              (pid, p["name"], p["name"], fold(p["name"])))
-        if m.body == "rmo":
-            for pid in m.attendance["present"] + m.attendance["excused"] + m.attendance["absent"]:
-                conn.execute("UPDATE memberships SET in_rada = true WHERE member_id = %s AND term = %s",
-                             (pid, m.term))
         conn.execute(
             """INSERT INTO meetings (id, body, term, number, kind, date, place, source_url,
                  source_title, status, issues, model_notes, present, excused, absent, parsed_via)
@@ -133,6 +137,7 @@ def load(ids: list[str] | None = None) -> None:
             if st not in ("ok", "not-parsed"):
                 log.warning("%s: %s", mid, st)
         with conn.transaction():
+            _in_rada(conn)
             n = _relations(conn)
             n_places = _places(conn)
         conn.commit()
