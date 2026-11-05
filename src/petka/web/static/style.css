@@ -613,12 +613,13 @@ body > footer { flex-shrink: 0; }
 .flip:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .card-flip { display: grid; }
 .card-flip.ready { perspective: 1800px; }
-.card-flip.ready > .card-face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .55s cubic-bezier(.3, .7, .2, 1); }
+.card-flip.ready > .card-face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.card-flip.animate > .card-face { transition: transform .55s cubic-bezier(.3, .7, .2, 1); }
 .card-flip.ready > .card-back { transform: rotateY(180deg); }
 .card-flip.flipped > .card-front { transform: rotateY(-180deg); }
 .card-flip.flipped > .card-back { transform: rotateY(0deg); }
 .card-flip.ready:not(.flipped) > .card-back, .card-flip.flipped > .card-front { pointer-events: none; }   /* the hidden face still sits on top for hit-testing */
-@media (prefers-reduced-motion: reduce) { .card-flip.ready > .card-face { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .card-flip.animate > .card-face { transition: none; } }
 @media (max-width: 600px) {
   .card-body .card-text { display: contents; }
   .card-body > .card-vis { grid-row: 1 / span 2; }
