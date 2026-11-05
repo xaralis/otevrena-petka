@@ -122,6 +122,13 @@ async def server_error(request: Request, exc: Exception):
 # --- portal pages -------------------------------------------------------------------------
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
+def front(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: str = "", zneni: str = "",
+          strana: str = "1"):
+    """The front page is the úřední deska pro lidi (its own address stays canonical)."""
+    return deska_web.home(request, q=q, kde=kde, sejmute=sejmute, druh=druh, zneni=zneni, strana=strana)
+
+
+@app.get("/prehled", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request):
     hits, _ = usneseni_search.search("", filters=usneseni_search.Filters(status="usneseni"), limit=3)
     # the newest notices of MO V, leaving out deliveries to named people (not news, and personal)
@@ -180,7 +187,7 @@ def robots():
 
 @app.get("/sitemap.xml", include_in_schema=False)
 def sitemap():
-    pages = ["/", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/mapa", "/usneseni/jednani",
+    pages = ["/prehled", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/mapa", "/usneseni/jednani",
              "/usneseni/clenove", "/usneseni/clenove/ucast", "/usneseni/metodika", "/uredni-deska"]
     pages += [f"/{s.slug}" for s in SECTIONS if s.status == "planned"]
     urls = [(u, None) for u in pages]

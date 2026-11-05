@@ -39,6 +39,7 @@ def home(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: 
         **state, "mo5": mo5, "active": active, "official": official, "url": url,
         "rows": rows, "total": total, "strana": strana, "pages": -(-total // PER_PAGE),
         "kinds": queries.kinds(mo5, active), "stats": queries.stats(), "boards": source.BOARDS,
+        "canonical": "/uredni-deska",
     })
 
 

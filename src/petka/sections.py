@@ -20,6 +20,10 @@ class Section:
 
 
 SECTIONS = [
+    Section("uredni-deska", "Úřední deska pro lidi", "Úřední deska pro lidi",
+            "Co úřad právě vyvěsil?", "live",
+            sources=[("Úřední deska MO Pardubice V na pardubice.eu", "https://pardubice.eu/uredni-deska/obvody?district=mo5"),
+                     ("Úřední deska Magistrátu města Pardubic", "https://pardubice.eu/uredni-deska")]),
     Section("usneseni", "Usnesení", "Usnesení a hlasování",
             "Co se rozhodlo a kdo pro to hlasoval?", "live",
             sources=[("Zápisy z jednání ZMO a RMO na pardubice.eu", "https://pardubice.eu/zapisy-z-jednani-zmo5")]),
@@ -42,10 +46,6 @@ SECTIONS = [
                      ("výběrová řízení a jejich výsledky", "/usneseni?tema=zakazky")],
             sources=[("Registr smluv", "https://smlouvy.gov.cz/"),
                      ("Hlídač státu", "https://www.hlidacstatu.cz/")]),
-    Section("uredni-deska", "Úřední deska pro lidi", "Úřední deska pro lidi",
-            "Co úřad právě vyvěsil?", "live",
-            sources=[("Úřední deska MO Pardubice V na pardubice.eu", "https://pardubice.eu/uredni-deska/obvody?district=mo5"),
-                     ("Úřední deska Magistrátu města Pardubic", "https://pardubice.eu/uredni-deska")]),
 ]
 
 BY_SLUG = {s.slug: s for s in SECTIONS}

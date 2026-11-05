@@ -6,7 +6,7 @@
 <title>{% block title %}{{ SITE_NAME }}{% endblock %} – {{ SITE_NAME }}</title>
 {% set desc %}{% block description %}Otevřená Pětka: otevřená data městského obvodu Pardubice V. Usnesení a hlasování a úřední deska, připravujeme rozpočet a smlouvy. Vyhledávání, API a MCP. Nezávislý projekt, nejde o web úřadu.{% endblock %}{% endset %}
 <meta name="description" content="{{ desc|trim }}">
-<link rel="canonical" href="{{ PUBLIC_URL }}{{ request.url.path }}">
+<link rel="canonical" href="{{ PUBLIC_URL }}{{ canonical or request.url.path }}">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="{{ asset('icons/favicon.svg') }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -37,7 +37,7 @@
     <a class="util-m" href="/data">Data a API</a>
     <nav class="portal-nav" aria-label="Sekce portálu">
       {% for s in SECTIONS %}
-      <a href="/{{ s.slug }}" class="{{ 'soon' if s.status == 'planned' }}" {% if p.startswith('/' ~ s.slug) and not error_page %}aria-current="page"{% endif %}>{{ s.nav }}{% if s.status == 'planned' %}<span class="sr"> (ve výstavbě)</span>{% endif %}</a>
+      <a href="/{{ s.slug }}" class="{{ 'soon' if s.status == 'planned' }}" {% if (p.startswith('/' ~ s.slug) or (p == '/' and loop.first)) and not error_page %}aria-current="page"{% endif %}>{{ s.nav }}{% if s.status == 'planned' %}<span class="sr"> (ve výstavbě)</span>{% endif %}</a>
       {% endfor %}
       <a href="/data" class="util" {% if p == '/data' %}aria-current="page"{% endif %}>Data a API</a>
     </nav>
@@ -64,7 +64,7 @@
     <p class="foot-brand"><img src="{{ asset('icons/favicon.svg') }}" alt="" width="28" height="28"><span>Otevřená <b>Pětka</b></span></p>
     <p>Projekt Filipa Vařechy, starosty městského obvodu Pardubice V, s cílem předat portál do správy statutárního města Pardubice. Nejde o oficiální web města. Závazné jsou vždy původní dokumenty, na které odkazujeme; názvy a shrnutí jsou odvozené.</p>
     <p>Data si můžete stáhnout pod licencí CC BY 4.0 v části <a href="/data">Data a API</a>, AI asistenti se na ně mohou ptát <a href="/data#mcp">přes MCP</a> a zdrojový kód je na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>. Chybu v datech nebo na webu nahlásíte <a href="https://github.com/xaralis/otevrena-petka/issues/new">tamtéž</a>.</p>
-    <p class="foot-links"><a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a> <a href="/pristupnost">Prohlášení o přístupnosti</a> <a href="/soukromi">Ochrana osobních údajů</a></p>
+    <p class="foot-links"><a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a> <a href="/prehled">Přehled portálu</a> <a href="/pristupnost">Prohlášení o přístupnosti</a> <a href="/soukromi">Ochrana osobních údajů</a></p>
   </div>
 </footer>
 {% block scripts %}{% endblock %}
