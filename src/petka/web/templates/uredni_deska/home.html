@@ -3,6 +3,7 @@
 {% from "uredni_deska/_macros.html" import notice, card %}
 {% set S = SECTION['uredni-deska'] %}
 {% block title %}Úřední deska pro lidi – MO Pardubice V{% endblock %}
+{% block head %}<link rel="alternate" type="application/rss+xml" title="Úřední deska pro lidi – MO Pardubice V" href="/uredni-deska/rss.xml">{% endblock %}
 {% block description %}Co právě visí na úřední desce městského obvodu Pardubice V a magistrátu: vyhledávání, archiv sejmutých oznámení, otevřená data a API. Stahováno z oficiálních dat města.{% endblock %}
 {% block hero %}{{ hero(S.question, [], 'Úřední deska pro lidi: oznámení týkající se městského obvodu Pardubice V na jednom místě, přepsaná do běžné řeči. Úřední znění s č. j. a přílohami zůstává u každého. Bereme ji z oficiálních otevřených dat města, závazné jsou dokumenty na pardubice.eu.', kind='section') }}{% endblock %}
 {% block main %}
@@ -76,6 +77,6 @@
 <section class="deska-about prose" aria-labelledby="deska-about-h">
   <h2 id="deska-about-h">Odkud to je</h2>
   <p>Pravidelně stahujeme oficiální strojově čitelnou úřední desku podle <a href="https://ofn.gov.cz/úřední-desky/2021-07-20/">otevřené formální normy</a>: <a href="{{ boards[0].page }}">desku obvodu Pardubice V</a> a <a href="{{ boards[1].page }}">desku magistrátu</a>. Pod „Pardubice V“ je všechno z desky obvodu a z desky magistrátu to, co obvod výslovně jmenuje. Když oznámení z desky zmizí, necháme ho v archivu sejmutých.</p>
-  <p>Celý seznam si můžete stáhnout jako <a href="/uredni-deska/data/notices.csv">CSV</a> nebo <a href="/uredni-deska/data/notices.json">JSON</a>, napojit přes <a href="/data#uredni-deska">API</a> nebo se na něj zeptat AI asistenta. U oznámení o doručení písemnosti po sejmutí neuvádíme jméno adresáta.</p>
+  <p>Celý seznam si můžete stáhnout jako <a href="/uredni-deska/data/notices.csv">CSV</a> nebo <a href="/uredni-deska/data/notices.json">JSON</a>, odebírat jako <a href="/uredni-deska/rss.xml">RSS</a> (úřední znění: <a href="/uredni-deska/rss.xml?zneni=uredni">RSS</a>), napojit přes <a href="/data#uredni-deska">API</a> nebo se na něj zeptat AI asistenta. U oznámení o doručení písemnosti po sejmutí neuvádíme jméno adresáta.</p>
 </section>
 {% endblock %}

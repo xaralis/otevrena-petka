@@ -27,6 +27,7 @@
   </tbody>
 </table>
 <p>Původní zdroj jsou otevřená data města ve formátu <a href="{{ deska_source.OFN }}">OFN Úřední deska</a>: {% for b in deska_source.BOARDS %}<a href="{{ b.url }}">{{ b.name|replace('Úřední deska ', 'deska ') }}</a>{{ ' a ' if not loop.last }}{% endfor %} (deska magistrátu je i v <a href="{{ deska_source.NKOD }}">Národním katalogu otevřených dat</a>).</p>
+<p>Co právě visí a týká se Pětky, můžete odebírat jako <a href="/uredni-deska/rss.xml">RSS</a>: polidštěné znění tam, kde ho máme, jinak úřední. Jen úřední názvy: <a href="/uredni-deska/rss.xml?zneni=uredni">RSS v úředním znění</a>. U doručení písemností kanál jméno adresáta nikdy neuvádí.</p>
 
 <h2>Ve výstavbě</h2>
 <p>{% for s in SECTIONS if s.status == 'planned' %}<a href="/{{ s.slug }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>

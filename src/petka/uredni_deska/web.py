@@ -75,6 +75,45 @@ def data_csv():
                     headers={"Content-Disposition": 'inline; filename="notices.csv"'})
 
 
+@pages.get("/rss.xml")
+def rss(zneni: str = ""):
+    """RSS 2.0 of what is posted for MO V now, newest first. Our plain-language card where there
+    is one (`?zneni=uredni`: the office's titles only). A delivery never carries the addressee's
+    name: readers keep items for good, and we drop the name once the notice is taken down."""
+    import os
+    from email.utils import format_datetime
+    from datetime import datetime, time, timezone
+    from xml.sax.saxutils import escape
+    base = os.environ.get("PUBLIC_URL", "https://opendata.mov.varecha.work").rstrip("/")
+    official = zneni == "uredni"
+    rows, _ = queries.search("", True, True, None, limit=50)
+    items = []
+    for n in rows:
+        d = None if official else n["digest"]
+        link = f"{base}/uredni-deska/{n['id']}"
+        if n["kind"] == "doruceni":
+            title, text = "Doručení písemnosti veřejnou vyhláškou", "Úřad doručuje písemnost vyvěšením na úřední desce."
+        elif d:
+            title, text = d["headline"], d["summary"] + f"\n\nÚředně: {n['title']}"
+        else:
+            title, text = n["title"], f"{n['kind_label']} – vyvěsil {'MO Pardubice V' if n['board'] == 'mo5' else 'Magistrát města Pardubic'}"
+        if n["reference"] and n["kind"] != "doruceni":
+            text += f" (č. j. {n['reference']})"
+        when = format_datetime(datetime.combine(n["published"], time(8), timezone.utc)) if n["published"] else ""
+        items.append(f"""<item><title>{escape(title)}</title><link>{link}</link><guid isPermaLink="true">{link}</guid>
+<description>{escape(text)}</description><category>{escape(n['kind_label'])}</category>{f'<pubDate>{when}</pubDate>' if when else ''}</item>""")
+    name = "Úřední deska MO Pardubice V (úřední znění)" if official else "Úřední deska pro lidi – MO Pardubice V"
+    xml = f"""<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>{name}</title><link>{base}/uredni-deska</link>
+<atom:link href="{base}/uredni-deska/rss.xml{'?zneni=uredni' if official else ''}" rel="self" type="application/rss+xml"/>
+<description>Co právě visí na úřední desce a týká se městského obvodu Pardubice V. Závazné jsou dokumenty na pardubice.eu.</description>
+<language>cs</language>
+{chr(10).join(items)}
+</channel></rss>"""
+    return Response(xml, media_type="application/rss+xml; charset=utf-8")
+
+
 # --- REST API -------------------------------------------------------------------------------
 
 @api.get("/notices")
