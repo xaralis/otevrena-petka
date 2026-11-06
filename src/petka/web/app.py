@@ -22,6 +22,7 @@ from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .. import db
+from ..ankety import web as ankety_web
 from ..mcp_server import mcp
 from ..sections import BY_SLUG, SECTIONS
 from ..uredni_deska import queries as deska_queries, source as deska_source, web as deska_web
@@ -66,6 +67,7 @@ app.include_router(usneseni_web.pages)
 app.include_router(usneseni_web.api)
 app.include_router(deska_web.pages)   # before the planned-section catch-all /{slug}
 app.include_router(deska_web.api)
+app.include_router(ankety_web.api)
 
 
 class _Head:
