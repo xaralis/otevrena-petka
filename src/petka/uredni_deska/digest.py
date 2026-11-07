@@ -620,7 +620,7 @@ def draft(group: list[dict], fixes: list[str] | None = None) -> Path:
         "notice_id": leader["id"], "members": [n["id"] for n in group[1:]], "status": "draft",
         "prompt_version": PROMPT_VERSION, "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",
         "created_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
-        "source": _source(leader, d["cluster"]),
+        "source": _source(leader, d["cluster"]), "fixes_given": fixes or [],
         **d, "visual": visual, "problems": problems,
     }
     (out / "digest.json").write_text(json.dumps(digest, ensure_ascii=False, indent=1, default=str) + "\n")
@@ -714,8 +714,11 @@ def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
         folder = draft(group, fixes=fixes)
         d = json.loads((folder / "digest.json").read_text())
     q = assess(group, folder, d)
-    rewritten = bool(fixes)     # written to fix findings, so it has to pass two reads as well
-    attempts, fixes, confirmed = 1, list(fixes or []), False
+    # written to fix findings, so it has to pass two reads as well; the draft remembers that, in case
+    # its check failed and a later run picks it up
+    fixes = list(fixes or d.get("fixes_given") or [])
+    rewritten = bool(fixes)
+    attempts, confirmed = 1, False
     while True:
         if score.goes_out(q):
             # the check isn't perfectly stable and repeating it would let a card through by luck:

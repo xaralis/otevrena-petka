@@ -126,6 +126,16 @@ def test_rewritten_card_must_pass_two_reads_in_a_row(tmp_path, monkeypatch):
     assert calls["drafts"] == [None, ["Oprav datum"]] and calls["reviews"] == 3
 
 
+def test_rewrite_whose_check_crashed_still_needs_two_reads_next_run(tmp_path, monkeypatch):
+    group, calls = setup(tmp_path, monkeypatch, [res(), res()])
+    folder = digest.draft(group, fixes=["Oprav datum"])
+    d = json.loads((folder / "digest.json").read_text())
+    d["fixes_given"] = ["Oprav datum"]      # what the real draft() stores
+    (folder / "digest.json").write_text(json.dumps(d))
+    assert digest._settle(group)["state"] == "vydano"
+    assert calls["reviews"] == 2
+
+
 def test_findings_add_up_over_rewrites(tmp_path, monkeypatch):
     group, calls = setup(tmp_path, monkeypatch, [res(marks=marks(p=2), fixes=["A"]), res(marks=marks(p=2), fixes=["B", "A"]), res(), res()])
     row = digest._settle(group)
