@@ -130,6 +130,14 @@ def test_working_notes_stay_out_of_a_published_card(tmp_path, monkeypatch):
     assert "fixes_given" not in d and "fixes" not in d["quality"]
 
 
+def test_usage_adds_up_per_card():
+    from petka.usneseni import llm
+    t = llm.track_usage()
+    llm._add_usage({"input_tokens": 10, "output_tokens": 5, "cache_read_input_tokens": 2}, 0.5)
+    llm._add_usage({"input_tokens": 1, "output_tokens": 1}, 0.25)
+    assert t["calls"] == 2 and t["input"] == 11 and t["output"] == 6 and t["cache_read"] == 2 and t["usd"] == 0.75
+
+
 def test_check_runs_on_its_own_model(monkeypatch):
     seen = {}
 

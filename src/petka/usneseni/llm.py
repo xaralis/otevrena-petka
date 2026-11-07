@@ -13,6 +13,7 @@ import json
 import logging
 import os
 import subprocess
+import threading
 from pathlib import Path
 
 log = logging.getLogger(__name__)
@@ -24,6 +25,27 @@ CLI_MODEL = os.environ.get("LLM_CLI_MODEL", "opus")
 
 class LLMError(RuntimeError):
     pass
+
+
+_usage = threading.local()
+
+
+def track_usage() -> dict:
+    """Start adding up what this thread's calls use; returns the running totals. `usd` is what the
+    calls would cost through the API (the CLI reports it; on a subscription nothing is billed)."""
+    _usage.totals = {"calls": 0, "input": 0, "cache_read": 0, "cache_write": 0, "output": 0, "usd": 0.0}
+    return _usage.totals
+
+
+def _add_usage(u: dict, usd: float = 0.0) -> None:
+    t = getattr(_usage, "totals", None)
+    if t is not None:
+        t["calls"] += 1
+        t["input"] += u.get("input_tokens") or 0
+        t["cache_read"] += u.get("cache_read_input_tokens") or 0
+        t["cache_write"] += u.get("cache_creation_input_tokens") or 0
+        t["output"] += u.get("output_tokens") or 0
+        t["usd"] = round(t["usd"] + (usd or 0), 4)
 
 
 def structured(system: str, user: str, schema: dict, *, effort: str = "high",
@@ -125,6 +147,7 @@ def _cli(system: str, user: str, schema: dict, tools: str = "", add_dir: str | N
     if res.get("is_error") or res.get("structured_output") is None:
         raise LLMError(f"claude -p error: {str(res.get('result'))[:2000]}")
     u = res.get("usage", {})
+    _add_usage(u, res.get("total_cost_usd"))
     log.info("llm cli in=%s cache_read=%s out=%s", u.get("input_tokens"),
              u.get("cache_read_input_tokens"), u.get("output_tokens"))
     return res["structured_output"]

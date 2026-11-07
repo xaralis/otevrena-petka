@@ -708,6 +708,7 @@ def _group_of(d: dict) -> list[dict]:
 def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
     """One group through writing, the check, rewrites while they can help, and out or to a person."""
     leader = group[0]["id"]
+    usage = llm.track_usage()
     folder = DRAFTS / leader
     d = json.loads((folder / "digest.json").read_text()) if (folder / "digest.json").exists() else None
     if not d or d["status"] != "draft":
@@ -735,9 +736,9 @@ def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
         d = json.loads((folder / "digest.json").read_text())
         q, confirmed = assess(group, folder, d), False
         attempts += 1
-    d["quality"]["attempts"] = attempts
+    d["quality"].update(attempts=attempts, usage=usage)
     _save(folder, d)
-    row = {"id": leader, "headline": d["headline"], "cluster": d["cluster"], "level": q.get("level"), "attempts": attempts}
+    row = {"id": leader, "headline": d["headline"], "cluster": d["cluster"], "level": q.get("level"), "attempts": attempts, "usage": usage}
     if score.goes_out(q):
         res = publish([leader], reviewed_by="model")
         if res and isinstance(res[0], str):
