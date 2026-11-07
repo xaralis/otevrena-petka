@@ -103,7 +103,7 @@ opatření obecné povahy: 30 dnů ode dne zveřejnění, kterým je 15. den vyv
 i u dat zapsaných jinak nebo ve skenu: ověř je čtením, jen to hlášení samo chyba není.
 
 Karta popisuje stav k datu svého vzniku: minulý ani budoucí čas neposuzuj podle dneška.
-`summary`, `reason` a `what` se zveřejňují u karty, proto v nich nesmí být osobní údaje (SPZ ani jméno neopisuj, napiš jen, že tam jsou). Piš je pro běžného čtenáře, který neví, jak karta vzniká: bez názvů polí (`period.to`, `summary`) a souborů (`karta-vykres.png`), piš „nadpis“, „obrázek“, „originál“. `fixes` piš tak,
+`summary`, `reason` a `what` se zveřejňují u karty, proto v nich ani ve `fixes` nesmí být osobní údaje (SPZ ani jméno neopisuj, napiš jen, že tam jsou). Piš je pro běžného čtenáře, který neví, jak karta vzniká: bez názvů polí (`period.to`, `summary`) a souborů (`karta-vykres.png`), piš „nadpis“, „obrázek“, „originál“. `fixes` piš tak,
 aby podle nich redaktor kartu opravil bez dalšího hledání."""
 
 

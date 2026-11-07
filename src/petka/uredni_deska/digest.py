@@ -779,7 +779,7 @@ def improve(ids: list[str] | None = None) -> list[dict]:
             continue
         nid = d["notice_id"]
         try:
-            row = _settle(_group_of(d), fixes=q.get("fixes") or q.get("issues"))
+            row = _settle(_group_of(d), fixes=q.get("issues"))
         except Exception as e:
             log.exception("improve %s failed", nid)
             row = {"id": nid, "state": "chyba", "error": str(e)}
@@ -801,6 +801,7 @@ def rescore(ids: list[str] | None = None) -> list[dict]:
             continue
         try:
             q = assess(_group_of(d), f.parent, d)
+            _save(f.parent, _strip_internal(d))
             report.append({"id": d["notice_id"], "headline": d["headline"], "level": q.get("level"),
                            "why": q["issues"]})
         except Exception as e:
@@ -815,6 +816,15 @@ def _source(n: dict, cluster: str) -> dict:
     if cluster == "doruceni":
         return {"title": REDACTED_TITLE, "url": "", "board": n["board"], "mo5": n.get("is_mo5")}
     return {"title": n["title"], "url": n["url"], "board": n["board"], "mo5": n.get("is_mo5")}
+
+
+def _strip_internal(d: dict) -> dict:
+    """Working notes for rewrites stay out of what goes on the web and into git: unlike the sentences
+    shown to readers, they may quote the document more closely."""
+    d.pop("fixes_given", None)
+    if d.get("quality"):
+        d["quality"].pop("fixes", None)
+    return d
 
 
 def publish(ids: list[str], note: str | None = None, reviewed_by: str = "clovek") -> list:
@@ -837,6 +847,7 @@ def publish(ids: list[str], note: str | None = None, reviewed_by: str = "clovek"
         if reviewed_by == "clovek" and d.get("quality", {}).get("level"):
             # a person has read it, and possibly fixed what the check found
             d["quality"].update(level="spolehlive", issues=[], approved_by_person=True)
+        _strip_internal(d)
         (src / "digest.json").write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
         if dst.exists():
             shutil.rmtree(dst)

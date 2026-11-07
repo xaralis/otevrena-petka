@@ -114,6 +114,22 @@ def test_good_card_goes_out_marked_as_checked_by_the_model(tmp_path, monkeypatch
     assert calls["drafts"] == [None]
 
 
+def test_working_notes_stay_out_of_a_published_card(tmp_path, monkeypatch):
+    group, _ = setup(tmp_path, monkeypatch, [res(marks=marks(p=2), fixes=["Oprav datum"]), res(fixes=["x"]), res(fixes=["x"])])
+    real = digest.draft
+
+    def noting(g, fixes=None):
+        out = real(g, fixes)
+        d = json.loads((out / "digest.json").read_text())
+        d["fixes_given"] = fixes or []
+        (out / "digest.json").write_text(json.dumps(d))
+        return out
+    monkeypatch.setattr(digest, "draft", noting)
+    digest._settle(group)
+    d = json.loads((digest.DIGESTS / "mo5-1" / "digest.json").read_text())
+    assert "fixes_given" not in d and "fixes" not in d["quality"]
+
+
 def test_first_green_needs_no_second_read(tmp_path, monkeypatch):
     group, calls = setup(tmp_path, monkeypatch, [res()])
     digest._settle(group)
@@ -234,7 +250,7 @@ def _published(monkeypatch, level="spatne"):
     (out / "digest.json").write_text(json.dumps({
         "notice_id": "mo5-1", "members": [], "status": "published", "cluster": "ostatni", "headline": "Stará",
         "summary": "S", "action": None, "problems": [], "source": {"title": "T", "url": "u", "mo5": True},
-        "quality": {"level": level, "fixes": ["Oprav datum"], "issues": ["x"]}}))
+        "quality": {"level": level, "issues": ["Oprav datum"]}}))
 
 
 def test_improve_replaces_a_card_only_with_a_green_rewrite(tmp_path, monkeypatch):
