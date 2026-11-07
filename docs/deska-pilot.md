@@ -37,7 +37,8 @@ písemností jsou pevná šablona bez modelu, takže semafor nemají.
 Semafor je na webu u každé karty. Po najetí nebo klepnutí bublina vysvětlí, že text přepsala a zkontrolovala AI, a ukáže výsledek po rozměrech. Pod kartou je věta, jestli
 ji pustil člověk, nebo jen kontrola. Když kartu schválí člověk, semafor je zelený. Staré karty ohodnotí
 `uv run usneseni deska-score`; ty prošly člověkem, takže se u nich nic jiného nezmění a červený stav
-se u nich na webu neukazuje, jen ho dostane redaktor ve výpisu.
+se u nich na webu neukazuje, jen ho dostane redaktor ve výpisu. `deska-improve` je přepíše podle výtek: zelený
+přepis kartu nahradí, jinak vydaná karta zůstane beze změny.
 
 Doplňující poznámky:
 

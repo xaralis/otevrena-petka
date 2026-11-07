@@ -705,21 +705,22 @@ def _group_of(d: dict) -> list[dict]:
     return rows
 
 
-def _settle(group: list[dict]) -> dict:
+def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
     """One group through writing, the check, rewrites while they can help, and out or to a person."""
     leader = group[0]["id"]
     folder = DRAFTS / leader
     d = json.loads((folder / "digest.json").read_text()) if (folder / "digest.json").exists() else None
     if not d or d["status"] != "draft":
-        folder = draft(group)
+        folder = draft(group, fixes=fixes)
         d = json.loads((folder / "digest.json").read_text())
     q = assess(group, folder, d)
-    attempts, fixes, confirmed = 1, [], False
+    rewritten = bool(fixes)     # written to fix findings, so it has to pass two reads as well
+    attempts, fixes, confirmed = 1, list(fixes or []), False
     while True:
         if score.goes_out(q):
             # the check isn't perfectly stable and repeating it would let a card through by luck:
             # a rewritten card must pass a second, separate read in a row
-            if attempts == 1 or confirmed:
+            if (attempts == 1 and not rewritten) or confirmed:
                 break
             q, confirmed = assess(group, folder, d), True
             if score.goes_out(q):
@@ -761,6 +762,29 @@ def auto(ids: list[str] | None = None) -> list[dict]:
         except Exception as e:
             log.exception("auto %s failed", g[0]["id"])
             report.append({"id": g[0]["id"], "state": "chyba", "error": str(e)})
+    return report
+
+
+def improve(ids: list[str] | None = None) -> list[dict]:
+    """Rewrite published cards the check isn't happy with. The better version replaces the card only
+    when it comes out green; otherwise the published card stays exactly as it was."""
+    report = []
+    for f in sorted(DIGESTS.glob("*/digest.json")):
+        d = json.loads(f.read_text())
+        q = d.get("quality") or {}
+        if (ids and d["notice_id"] not in ids) or q.get("level") not in ("pozor", "spatne"):
+            continue
+        nid = d["notice_id"]
+        try:
+            row = _settle(_group_of(d), fixes=q.get("fixes") or q.get("issues"))
+        except Exception as e:
+            log.exception("improve %s failed", nid)
+            row = {"id": nid, "state": "chyba", "error": str(e)}
+        if row["state"] != "vydano":
+            row["state"] = "ponechano" if row["state"] == "ceka" else row["state"]
+            if (DRAFTS / nid).exists():
+                shutil.rmtree(DRAFTS / nid)
+        report.append(row)
     return report
 
 

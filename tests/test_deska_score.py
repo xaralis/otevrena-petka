@@ -218,6 +218,43 @@ def test_person_approving_a_held_card_turns_it_green(tmp_path, monkeypatch):
     assert d["reviewed_by"] == "clovek" and d["quality"]["level"] == "spolehlive"
 
 
+def _published(monkeypatch, level="spatne"):
+    out = digest.DIGESTS / "mo5-1"
+    out.mkdir(parents=True)
+    (out / "digest.json").write_text(json.dumps({
+        "notice_id": "mo5-1", "members": [], "status": "published", "cluster": "ostatni", "headline": "Stará",
+        "summary": "S", "action": None, "problems": [], "source": {"title": "T", "url": "u", "mo5": True},
+        "quality": {"level": level, "fixes": ["Oprav datum"], "issues": ["x"]}}))
+
+
+def test_improve_replaces_a_card_only_with_a_green_rewrite(tmp_path, monkeypatch):
+    group, calls = setup(tmp_path, monkeypatch, [res(), res()])
+    _published(monkeypatch)
+    monkeypatch.setattr(digest, "_group_of", lambda d: group)
+    assert digest.improve()[0]["state"] == "vydano"
+    d = json.loads((digest.DIGESTS / "mo5-1" / "digest.json").read_text())
+    assert d["headline"] == "H" and d["reviewed_by"] == "model" and d["quality"]["level"] == "spolehlive"
+    assert calls["drafts"] == [["Oprav datum"]] and calls["reviews"] == 2   # the old findings, two reads
+
+
+def test_improve_keeps_the_published_card_when_the_rewrite_fails(tmp_path, monkeypatch):
+    poor = res(marks=marks(p=2), fixes=["A"])
+    group, _ = setup(tmp_path, monkeypatch, [poor] * 3)
+    _published(monkeypatch)
+    monkeypatch.setattr(digest, "_group_of", lambda d: group)
+    assert digest.improve()[0]["state"] == "ponechano"
+    d = json.loads((digest.DIGESTS / "mo5-1" / "digest.json").read_text())
+    assert d["headline"] == "Stará" and d["status"] == "published"
+    assert not (digest.DRAFTS / "mo5-1").exists()
+
+
+def test_improve_leaves_green_cards_alone(tmp_path, monkeypatch):
+    group, calls = setup(tmp_path, monkeypatch, [])
+    _published(monkeypatch, level="spolehlive")
+    monkeypatch.setattr(digest, "_group_of", lambda d: group)
+    assert digest.improve() == [] and calls["drafts"] == []
+
+
 def test_breakdown_gives_each_dimension_a_state_and_keeps_other_problems_apart():
     q = score.evaluate(res(marks=marks(p=4, u=3, s=5, o=None),
                            blockers=[{"kind": "spatny_termin", "what": "jiný rok"}]), CARD)
