@@ -25,11 +25,11 @@ udělá jeden ze tří stavů (`score.py`):
 
 | stav | kdy | co se stane |
 |---|---|---|
-| Spolehlivé | nic z níže uvedeného | karta vyjde |
-| Buďte obezřetní | úplnost do 3, srozumitelnost nebo obrázky do 2 | karta vyjde, důvod je u ní |
+| Spolehlivé | nic z níže uvedeného | karta vyjde sama |
+| Buďte obezřetní | úplnost do 3, srozumitelnost nebo obrázky do 2 | čeká na člověka, důvod je u ní |
 | Něco je špatně | přesnost pod 4; některý jiný rozměr do 1; osobní údaje v textu nebo na obrázku; špatné datum; neověřená lhůta; zavádějící tvrzení; obrázek jiného místa; oznámení mimo obvod; pokyny pro model v dokumentu | čeká na člověka |
 
-Když je karta červená a jde to napravit, model ji jednou přepíše podle výtek a znovu se ohodnotí. Pak
+Když karta není zelená a jde to napravit, model ji jednou přepíše podle výtek a znovu se ohodnotí. Pak
 buď vyjde, nebo čeká na **https://otevrenapetka.cz/uredni-deska/navrhy** i s důvodem. Doručení
 písemností jsou pevná šablona bez modelu, takže semafor nemají.
 

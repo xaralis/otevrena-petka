@@ -723,7 +723,7 @@ def _settle(group: list[dict]) -> dict:
     d["quality"]["attempts"] = attempts
     _save(folder, d)
     row = {"id": leader, "headline": d["headline"], "cluster": d["cluster"], "level": q.get("level"), "attempts": attempts}
-    if q["passed"]:
+    if score.goes_out(q):
         res = publish([leader], reviewed_by="model")
         if res and isinstance(res[0], str):
             return {**row, "state": "vydano"}

@@ -5,9 +5,9 @@ four dimensions on described 0–5 scales. Code turns that into one of three lev
 behind it. Accuracy is judged on its own and blockers (personal data, a wrong date, a misleading
 claim, a picture that shows somebody) always stop a card: no average can hide them.
 
-  spolehlive  goes out, the check found nothing a reader needs to watch for
-  pozor       goes out, but something is missing or unclear; the reasons are shown
-  spatne      waits for a person
+  spolehlive  goes out on its own, the check found nothing a reader needs to watch for
+  pozor       something is missing or unclear; waits for a person, the reasons are shown
+  spatne      an error or a blocker; waits for a person
 """
 
 import datetime as dt
@@ -195,7 +195,12 @@ def template() -> dict:
             "scored_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds")}
 
 
+def goes_out(q: dict) -> bool:
+    """May this card be published without a person? Fixed templates and green cards only."""
+    return q.get("method") == "sablona" or q.get("level") == "spolehlive"
+
+
 def retryable(q: dict) -> bool:
     """Worth one more writing round? Not when the source itself is the problem."""
-    return not q["passed"] and bool(q.get("fixes")) and not any(
+    return not goes_out(q) and bool(q.get("fixes")) and not any(
         b["kind"] in ("mimo_obvod", "pokyny_v_dokumentu") for b in q.get("blockers", []))

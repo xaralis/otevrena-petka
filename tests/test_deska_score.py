@@ -152,6 +152,19 @@ def test_card_outside_mo5_is_not_published_even_with_a_good_score(tmp_path, monk
     assert not (digest.DIGESTS / "mo5-1").exists()
 
 
+def test_caution_card_is_rewritten_once_then_waits_for_a_person(tmp_path, monkeypatch):
+    caution = res(marks=marks(u=3), fixes=["Doplň místo"])
+    group, calls = setup(tmp_path, monkeypatch, [caution, caution])
+    row = digest._settle(group)
+    assert row["state"] == "ceka" and row["level"] == "pozor" and calls["reviews"] == 2
+    assert not (digest.DIGESTS / "mo5-1").exists()
+
+
+def test_caution_card_that_turns_green_goes_out(tmp_path, monkeypatch):
+    group, _ = setup(tmp_path, monkeypatch, [res(marks=marks(u=3), fixes=["Doplň místo"]), res()])
+    assert digest._settle(group)["state"] == "vydano"
+
+
 def test_personal_data_in_the_reviewers_sentences_never_reaches_the_page(tmp_path, monkeypatch):
     group, _ = setup(tmp_path, monkeypatch, [res(summary="Místo pro SPZ 7E3 5810.")])
     assert digest._settle(group)["state"] == "ceka"
