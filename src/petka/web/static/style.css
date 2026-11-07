@@ -697,6 +697,28 @@ body > footer { flex-shrink: 0; }
 .original > .muted { margin: 0 0 .6rem; font-size: .92rem; }
 .original summary { cursor: pointer; font-weight: 650; padding: .6rem 0; }
 .ai-note { margin-top: 1.6rem; }
+.q-light { position: relative; display: inline-flex; align-items: center; gap: .35rem; margin: 0 .4rem; font-weight: 600; color: var(--ink-2); white-space: nowrap; cursor: help; }
+.q-light > i { width: .72em; height: .72em; border-radius: 50%; flex: none; }
+.q-spolehlive > i { background: var(--pro-tile); }
+.q-pozor > i { background: var(--abst-tile); }
+.q-spatne > i { background: var(--red); }
+.q-tip { display: none; position: absolute; z-index: 5; top: 100%; left: 0; width: 42ch; margin-top: .4rem; padding: .75rem .85rem; background: var(--ink); color: #fff; font-size: .85rem; font-weight: 400; line-height: 1.4; white-space: normal; border-radius: 3px; cursor: auto; }
+.q-tip::before { content: ""; position: absolute; left: 0; right: 0; top: -.5rem; height: .5rem; }   /* the pointer can cross the gap */
+.q-light:hover .q-tip, .q-light:focus .q-tip, .q-light:focus-within .q-tip, .q-light.q-open .q-tip { display: block; }
+.q-lead, .q-main, .q-rows, .q-row, .q-row-h, .q-reason, .q-how { display: block; }
+.q-main { margin-top: .55rem; font-weight: 650; }
+.q-rows { margin-top: .6rem; border-top: 1px solid rgba(255,255,255,.25); }
+.q-row { padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.25); }
+.q-row-h { display: flex; justify-content: space-between; gap: .8rem; }
+.q-row-h b { font-weight: 650; }
+.q-state { flex: none; font-weight: 650; }
+.q-is-ok .q-state { color: #7fe0b8; }
+.q-is-minor .q-state { color: #d6dbe0; }
+.q-is-caution .q-state { color: #ffc266; }
+.q-is-wrong .q-state { color: #ff9a9f; }
+.q-reason { margin-top: .15rem; color: #d6dbe0; }
+.q-how { margin-top: .55rem; opacity: .8; font-size: .78rem; }
+@media (max-width: 700px) { .q-tip { position: fixed; top: auto; left: 16px; right: 16px; bottom: 16px; width: auto; margin: 0; max-height: 75vh; overflow-y: auto; box-shadow: 0 4px 24px rgba(0,0,0,.35); } .q-tip::before { display: none; } }
 .digest-top { margin: 0 0 .6rem; font-size: .92rem; color: var(--muted); }
 .digest-top .human-tag { margin: 0 .3rem 0 0; }
 .drafts { list-style: none; padding: 0; margin: 0; }

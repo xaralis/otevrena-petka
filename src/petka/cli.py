@@ -12,6 +12,8 @@ import sys
 from .usneseni import cli as usneseni_cli
 
 DESKA_HELP = """  deska-update        download the úřední deska boards and update the notices (idempotent)
+  deska-auto [ID…]    write, score and publish cards for new MO V notices; poor ones wait for a person
+  deska-score [ID…]   score published cards (all or the given ids), nothing else changes
   deska-drafts [ID…]  propose plain-language cards for posted MO V notices without one (or the given ids)
   deska-publish ID…   approve drafts (move to data/uredni_deska/digests, then commit + sync)
   deska-reject ID…    reject drafts (kept so they aren't proposed again)
@@ -40,7 +42,11 @@ def deska_load() -> int:
 
 def deska_cards(cmd: str, args: list[str]) -> int:
     from .uredni_deska import digest
-    if cmd == "deska-drafts":
+    if cmd == "deska-auto":
+        report = digest.auto(ids=args or None)
+    elif cmd == "deska-score":
+        report = digest.rescore(ids=args or None)
+    elif cmd == "deska-drafts":
         report = digest.drafts(ids=args or None)
     elif cmd == "deska-publish":
         report = digest.publish(args)
@@ -62,7 +68,7 @@ def main() -> None:
             from .uredni_deska import digest
             print(json.dumps(digest.receive(sys.stdin.buffer)))
             sys.exit(deska_load())
-        if cmd in ("deska-drafts", "deska-publish", "deska-reject"):
+        if cmd in ("deska-auto", "deska-score", "deska-drafts", "deska-publish", "deska-reject"):
             sys.exit(deska_cards(cmd, sys.argv[2:]))
     if cmd in ("-h", "--help", ""):
         print("section úřední deska:\n" + DESKA_HELP + "\n")

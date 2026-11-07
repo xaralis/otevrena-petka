@@ -33,7 +33,7 @@
   <details class="hint">
     <summary><span aria-hidden="true">?</span><span class="sr">Co znamená polidštěné</span></summary>
     <div class="hint-body">
-      <p><b>Polidštěné</b> je oznámení přepsané do běžné řeči: co se děje, kde, kdy, koho se to týká a co s tím můžete udělat, u úprav provozu se značkami, výkresem a mapou. Píše ho jazykový model Claude z oznámení a jeho příloh a před zveřejněním ho kontroluje člověk.</p>
+      <p><b>Polidštěné</b> je oznámení přepsané do běžné řeči: co se děje, kde, kdy, koho se to týká a co s tím můžete udělat, u úprav provozu se značkami, výkresem a mapou. Píše ho jazykový model Claude z oznámení a jeho příloh. Před zveřejněním ho druhý běh modelu porovná s originálem. Výsledek ukazuje semafor u karty: spolehlivé, buďte obezřetní, nebo něco je špatně; po najetí nebo klepnutí je vidět proč. Karta s chybou v důležitém údaji nebo s osobními údaji jde ke kontrole člověku.</p>
       <p><b>Úřední</b> je přesně to, co vyvěsil úřad. Úřední název, č. j. a původní PDF najdete i u každého polidštěného oznámení. Závazné je vždy úřední znění.</p>
     </div>
   </details>
@@ -52,7 +52,7 @@
   {%- set what = ('vyvěšené' if one else 'vyvěšená' if few else 'vyvěšených') if active else ('sejmuté' if one else 'sejmutá' if few else 'sejmutých') %}
   {%- set where = (', které se týká Pardubic V' if one else ', která se týkají Pardubic V') if mo5 else ' z desky obvodu a magistrátu' %}
   <h2 class="results-head">{% if q %}Hledání „{{ q }}“: {% endif %}{{ total }} {{ what }} oznámení{{ where }}</h2>
-  <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.{% if not official %} Polidštěné znění připravuje jazykový model a kontroluje člověk; kde ještě není, ukazujeme úřední.{% endif %}</p>
+  <p class="note">{% if stats.checked_local %}Staženo z pardubice.eu {{ stats.checked_local|d }} v {{ stats.checked_local.strftime('%H:%M') }}. {% endif %}{% if not active and stats.since %}Sejmutí zaznamenáváme od {{ stats.since|d }}. {% endif %}Druh oznámení odvozujeme z názvu.{% if not official %} Polidštěné znění připravuje jazykový model a kontroluje druhý běh modelu, sporné karty i člověk; kde ještě není, ukazujeme úřední.{% endif %}</p>
   {% if rows %}
   <ol class="rows notices">
     {% for n in rows %}{% if n.digest and not official %}{{ card(n) }}{% else %}{{ notice(n, icon=True) }}{% endif %}{% endfor %}

@@ -27,6 +27,8 @@
 <details class="review-notes" open>
   <summary>Pro kontrolu (veřejnost neuvidí)</summary>
   {% if d.problems %}<p><b>Automatická kontrola:</b></p><ul>{% for p in d.problems %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+  {% if d.quality and d.quality.issues %}<p><b>Proč karta čeká:</b></p><ul>{% for w in d.quality.issues %}<li>{{ w }}</li>{% endfor %}</ul>{% endif %}
+  {% if d.quality and d.quality.fixes %}<p><b>Co opravit:</b></p><ul>{% for w in d.quality.fixes %}<li>{{ w }}</li>{% endfor %}</ul>{% endif %}
   <p><b>Jak to ukázat:</b> {{ d.visual_plan }}</p>
   {% if d.reviewer_notes %}<p><b>Ověřit:</b> {{ d.reviewer_notes }}</p>{% endif %}
 </details>

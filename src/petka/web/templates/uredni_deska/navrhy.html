@@ -2,7 +2,7 @@
 {% from "_portal.html" import hero %}
 {% block title %}Návrhy karet úřední desky{% endblock %}
 {% block head %}<meta name="robots" content="noindex, nofollow">{% endblock %}
-{% block hero %}{{ hero('Návrhy ke kontrole', [('Úřední deska', '/uredni-deska')], 'Karty „pro lidi“, které ještě nikdo neschválil; veřejnost je nevidí. Otevřete ukázku, a co vydat nebo upravit, napište v session, která návrhy připravila.', kind='section') }}{% endblock %}
+{% block hero %}{{ hero('Návrhy ke kontrole', [('Úřední deska', '/uredni-deska')], 'Karty, které automatická kontrola nepustila ven, nebo které na ni teprve čekají. Veřejnost je nevidí. Otevřete ukázku a napište v session, co vydat, upravit nebo zahodit.', kind='section') }}{% endblock %}
 {% block main %}
 {% if not rows %}<div class="empty"><p>Žádné návrhy nečekají na kontrolu.</p></div>{% endif %}
 <ol class="rows draft-list">
@@ -12,7 +12,8 @@
   <div class="row-body">
     <h3><a href="/uredni-deska/navrhy/{{ r.id }}">{{ d.headline }}</a></h3>
     <p class="row-meta">{{ r.id }}{% if d.members %} + {{ d.members|length }} {{ 'příloha' if d.members|length == 1 else 'přílohy' if d.members|length < 5 else 'příloh' }}{% endif %} – {{ CLUSTERS.get(d.cluster, d.cluster) }}, vyvěšeno {{ r.published|d }}</p>
-    {% if d.problems %}<p class="draft-flag">Kontrola hlásí: {{ d.problems|join('; ') }}</p>{% endif %}
+    {% if d.quality and d.quality.issues %}<p class="draft-flag">Proč čeká: {{ d.quality.issues|join(' ') }}</p>
+    {% elif d.problems %}<p class="draft-flag">Kontrola hlásí: {{ d.problems|join('; ') }}</p>{% endif %}
   </div>
   <div class="draft-actions">
     <a class="btn" href="/uredni-deska/navrhy/{{ r.id }}">Ukázka</a>

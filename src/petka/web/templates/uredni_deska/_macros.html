@@ -29,6 +29,25 @@
 {%- endmacro %}
 
 
+{#- The traffic light: one of three levels. The popover (hover, or tap: it takes focus) says what
+    this is about for readers who don't know the text is AI-written, then what the check found. -#}
+{% macro quality_light(d, open=False) -%}
+{% set q = d.quality %}
+{# a published card that rates red went through a person before the check existed: the finding goes to the editor, not on the page #}
+{% if q and q.level and not (q.level == 'spatne' and d.status == 'published') %}
+<span class="q-light q-{{ q.level }}{{ ' q-open' if open }}" tabindex="0"><i aria-hidden="true"></i>{{ QUALITY_LEVELS[q.level] }}<span class="q-tip" role="tooltip">
+  {% if q.approved_by_person %}<span class="q-lead">Tento text přepsala z úředního oznámení do běžné řeči umělá inteligence. Člověk ho po kontrole schválil.</span>
+  {% else %}{% set b = quality_breakdown(q) %}
+  <span class="q-lead">Tento text přepsala z úředního oznámení do běžné řeči umělá inteligence. Jiná AI ho pak porovnala s originálem: {{ QUALITY_LEADS[q.level] }}</span>
+  {% for w in b.main %}<span class="q-main">{{ w }}</span>{% endfor %}
+  <span class="q-rows">{% for r in b.rows %}<span class="q-row q-is-{{ r.state }}"><span class="q-row-h"><b>{{ r.question }}</b> <span class="q-state">{{ r.state_label }}</span></span>{% if r.reason %}<span class="q-reason">{{ r.reason }}</span>{% endif %}</span>{% endfor %}</span>
+  <span class="q-how">I tuto kontrolu dělá AI, takže není zárukou správnosti. Závazné je vždy úřední oznámení.</span>
+  {% endif %}
+</span></span>
+{% endif %}
+{%- endmacro %}
+
+
 {#- A notice with an approved plain-language card: our headline and summary lead, marked as
     ours, with the office's title and file number kept underneath so it can still be found. -#}
 {% macro card(n, preview=False) -%}
@@ -40,7 +59,7 @@
       <span class="card-vis card-vis-{{ t.kind }}" aria-hidden="true">{% if t.kind == 'sign' %}<img src="{{ t.src }}" alt="" width="52" height="52" loading="lazy">{% elif t.kind == 'photo' %}<img src="{{ '/uredni-deska/navrhy/obrazky/' if preview else '/uredni-deska/obrazky/' }}{{ n.id }}/{{ t.file }}" alt="" width="60" height="60" loading="lazy">{% else %}<svg width="26" height="26"><use href="{{ asset('deska-ikony.svg') }}#{{ t.id }}"/></svg>{% endif %}</span>
       <div class="card-text">
         <h3><a href="{{ '#' if preview else '/uredni-deska/' ~ n.id }}">{{ headline(d, n) }}</a></h3>
-        <p class="row-meta"><span class="human">Polidštěno</span> {{ CLUSTERS.get(d.cluster, n.kind_label)|lower }}{% if d.where %}, {{ d.where }}{% endif %}</p>
+        <p class="row-meta"><span class="human">Polidštěno</span>{{ quality_light(d) }} {{ CLUSTERS.get(d.cluster, n.kind_label)|lower }}{% if d.where %}, {{ d.where }}{% endif %}</p>
         <p class="row-text">{{ d.summary }}</p>
         {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
         {% if d.cluster != 'doruceni' %}<p class="official-title">Úředně: {{ n.title }}</p>
@@ -78,7 +97,7 @@
     notice page and by the reviewers' preview, so both look the same. -#}
 {% macro digest_body(d, n, members, preview=False) -%}
 {% set img = ('/uredni-deska/navrhy/obrazky/' if preview else '/uredni-deska/obrazky/') ~ n.id ~ '/' %}
-<p class="digest-top"><span class="human-tag">Polidštěno</span> Přepsáno do běžné řeči, <a href="#original-h">úřední znění s č. j. a přílohami</a> je níže.</p>
+<p class="digest-top"><span class="human-tag">Polidštěno</span>{{ quality_light(d) }} Přepsáno do běžné řeči, <a href="#original-h">úřední znění s č. j. a přílohami</a> je níže.</p>
 <p class="lead-text">{{ d.summary }}</p>
 {% if d.action %}
 <div class="act">
@@ -183,7 +202,7 @@
   <figcaption class="muted">Největší přesuny v této změně rozpočtu, ne všechny položky. Částky podle tabulek v příloze oznámení.</figcaption>
 </figure>
 {% endif %}
-<p class="note ai-note">Polidštěnou verzi připravil jazykový model Claude z oznámení a jeho příloh a před zveřejněním ji zkontroloval člověk. Závazné je vždy originální oznámení níže.</p>
+<p class="note ai-note">{% if d.cluster == 'doruceni' %}Text je jednotná šablona bez údajů z oznámení.{% elif d.reviewed_by == 'model' %}Polidštěnou verzi připravil jazykový model Claude z oznámení a jeho příloh. Vyšla po automatické kontrole, člověk ji před zveřejněním nečetl.{% else %}Polidštěnou verzi připravil jazykový model Claude z oznámení a jeho příloh a před zveřejněním ji zkontroloval člověk.{% endif %} Závazné je vždy originální oznámení níže. Chyba? Napište na <a href="mailto:{{ CONTACT }}">{{ CONTACT }}</a>.</p>
 <section class="original" aria-labelledby="original-h">
   <h2 id="original-h">Originál na úřední desce</h2>
   <p class="muted">Takhle oznámení vyvěsil úřad. Odkaz vede na pardubice.eu, přílohy jsou původní PDF.</p>
