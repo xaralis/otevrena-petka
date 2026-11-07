@@ -86,7 +86,7 @@ def setup(tmp_path, monkeypatch, reviews, kind="ostatni"):
     calls = {"drafts": [], "reviews": 0}
 
     def fake_draft(g, fixes=None):
-        calls["drafts"].append(fixes)
+        calls["drafts"].append(list(fixes) if fixes else None)
         out = digest.DRAFTS / "mo5-1"
         out.mkdir(parents=True, exist_ok=True)
         (out / "digest.json").write_text(json.dumps({
@@ -114,19 +114,47 @@ def test_good_card_goes_out_marked_as_checked_by_the_model(tmp_path, monkeypatch
     assert calls["drafts"] == [None]
 
 
-def test_poor_card_gets_one_rewrite_with_the_findings(tmp_path, monkeypatch):
-    group, calls = setup(tmp_path, monkeypatch, [res(marks=marks(p=2), fixes=["Oprav datum"]), res()])
+def test_first_green_needs_no_second_read(tmp_path, monkeypatch):
+    group, calls = setup(tmp_path, monkeypatch, [res()])
+    digest._settle(group)
+    assert calls["reviews"] == 1
+
+
+def test_rewritten_card_must_pass_two_reads_in_a_row(tmp_path, monkeypatch):
+    group, calls = setup(tmp_path, monkeypatch, [res(marks=marks(p=2), fixes=["Oprav datum"]), res(), res()])
     assert digest._settle(group)["state"] == "vydano"
-    assert calls["drafts"] == [None, ["Oprav datum"]]
+    assert calls["drafts"] == [None, ["Oprav datum"]] and calls["reviews"] == 3
 
 
-def test_card_that_stays_poor_waits_for_a_person_with_the_reason(tmp_path, monkeypatch):
+def test_findings_add_up_over_rewrites(tmp_path, monkeypatch):
+    group, calls = setup(tmp_path, monkeypatch, [res(marks=marks(p=2), fixes=["A"]), res(marks=marks(p=2), fixes=["B", "A"]), res(), res()])
+    row = digest._settle(group)
+    assert row["state"] == "vydano" and row["attempts"] == 3
+    assert calls["drafts"] == [None, ["A"], ["A", "B"]]
+
+
+def test_card_that_fails_the_second_read_is_rewritten_again(tmp_path, monkeypatch):
+    poor = res(marks=marks(p=2), fixes=["A"])
+    group, calls = setup(tmp_path, monkeypatch, [poor, res(), poor, res(), res()])
+    assert digest._settle(group)["state"] == "vydano"
+    assert len(calls["drafts"]) == 3 and calls["reviews"] == 5
+
+
+def test_attempts_are_capped_then_a_person_gets_it(tmp_path, monkeypatch):
     poor = res(marks=marks(p=2), fixes=["Oprav datum"])
-    group, calls = setup(tmp_path, monkeypatch, [poor, poor])
+    group, calls = setup(tmp_path, monkeypatch, [poor] * 5)
     row = digest._settle(group)
     assert row["state"] == "ceka" and any("Přesnost" in w for w in row["why"])
-    assert calls["reviews"] == 2 and not (digest.DIGESTS / "mo5-1").exists()
+    assert len(calls["drafts"]) == score.MAX_ATTEMPTS == row["attempts"] and calls["reviews"] == 3
+    assert not (digest.DIGESTS / "mo5-1").exists()
     assert json.loads((digest.DRAFTS / "mo5-1" / "digest.json").read_text())["status"] == "draft"
+
+
+def test_last_attempt_green_on_first_read_but_red_on_second_waits(tmp_path, monkeypatch):
+    poor = res(marks=marks(p=2), fixes=["A"])
+    group, calls = setup(tmp_path, monkeypatch, [poor, poor, res(), poor])
+    assert digest._settle(group)["state"] == "ceka"
+    assert calls["reviews"] == 4 and len(calls["drafts"]) == 3
 
 
 def test_delivery_uses_no_model_and_shows_no_score(tmp_path, monkeypatch):
@@ -152,16 +180,16 @@ def test_card_outside_mo5_is_not_published_even_with_a_good_score(tmp_path, monk
     assert not (digest.DIGESTS / "mo5-1").exists()
 
 
-def test_caution_card_is_rewritten_once_then_waits_for_a_person(tmp_path, monkeypatch):
+def test_caution_card_is_rewritten_then_waits_for_a_person(tmp_path, monkeypatch):
     caution = res(marks=marks(u=3), fixes=["Doplň místo"])
-    group, calls = setup(tmp_path, monkeypatch, [caution, caution])
+    group, calls = setup(tmp_path, monkeypatch, [caution] * 3)
     row = digest._settle(group)
-    assert row["state"] == "ceka" and row["level"] == "pozor" and calls["reviews"] == 2
+    assert row["state"] == "ceka" and row["level"] == "pozor" and calls["reviews"] == 3
     assert not (digest.DIGESTS / "mo5-1").exists()
 
 
 def test_caution_card_that_turns_green_goes_out(tmp_path, monkeypatch):
-    group, _ = setup(tmp_path, monkeypatch, [res(marks=marks(u=3), fixes=["Doplň místo"]), res()])
+    group, _ = setup(tmp_path, monkeypatch, [res(marks=marks(u=3), fixes=["Doplň místo"]), res(), res()])
     assert digest._settle(group)["state"] == "vydano"
 
 
@@ -183,7 +211,7 @@ def test_unscored_draft_is_picked_up_again(tmp_path, monkeypatch):
 
 def test_person_approving_a_held_card_turns_it_green(tmp_path, monkeypatch):
     poor = res(marks=marks(p=2), fixes=["Oprav datum"])
-    group, _ = setup(tmp_path, monkeypatch, [poor, poor])
+    group, _ = setup(tmp_path, monkeypatch, [poor] * 3)
     digest._settle(group)
     assert digest.publish(["mo5-1"]) == ["mo5-1"]
     d = json.loads((digest.DIGESTS / "mo5-1" / "digest.json").read_text())

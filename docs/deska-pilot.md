@@ -29,8 +29,9 @@ udělá jeden ze tří stavů (`score.py`):
 | Buďte obezřetní | úplnost do 3, srozumitelnost nebo obrázky do 2 | čeká na člověka, důvod je u ní |
 | Něco je špatně | přesnost pod 4; některý jiný rozměr do 1; osobní údaje v textu nebo na obrázku; špatné datum; neověřená lhůta; zavádějící tvrzení; obrázek jiného místa; oznámení mimo obvod; pokyny pro model v dokumentu | čeká na člověka |
 
-Když karta není zelená a jde to napravit, model ji jednou přepíše podle výtek a znovu se ohodnotí. Pak
-buď vyjde, nebo čeká na **https://otevrenapetka.cz/uredni-deska/navrhy** i s důvodem. Doručení
+Když karta není zelená a jde to napravit, model ji přepíše podle výtek a znovu se ohodnotí, karta se
+napíše nejvýš třikrát (`MAX_ATTEMPTS`) a výtky se sčítají. Kontrola není úplně stálá, proto přepsaná karta
+musí projít dvěma samostatnými čteními po sobě, aby neprošla náhodou. Pak buď vyjde, nebo čeká na **https://otevrenapetka.cz/uredni-deska/navrhy** i s důvodem. Doručení
 písemností jsou pevná šablona bez modelu, takže semafor nemají.
 
 Semafor je na webu u každé karty. Po najetí nebo klepnutí bublina vysvětlí, že text přepsala a zkontrolovala AI, a ukáže výsledek po rozměrech. Pod kartou je věta, jestli

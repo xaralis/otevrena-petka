@@ -706,7 +706,7 @@ def _group_of(d: dict) -> list[dict]:
 
 
 def _settle(group: list[dict]) -> dict:
-    """One group through writing, the check, one rewrite if it can help, and out or to a person."""
+    """One group through writing, the check, rewrites while they can help, and out or to a person."""
     leader = group[0]["id"]
     folder = DRAFTS / leader
     d = json.loads((folder / "digest.json").read_text()) if (folder / "digest.json").exists() else None
@@ -714,12 +714,23 @@ def _settle(group: list[dict]) -> dict:
         folder = draft(group)
         d = json.loads((folder / "digest.json").read_text())
     q = assess(group, folder, d)
-    attempts = 1
-    if score.retryable(q):
-        folder = draft(group, fixes=q["fixes"])
+    attempts, fixes, confirmed = 1, [], False
+    while True:
+        if score.goes_out(q):
+            # the check isn't perfectly stable and repeating it would let a card through by luck:
+            # a rewritten card must pass a second, separate read in a row
+            if attempts == 1 or confirmed:
+                break
+            q, confirmed = assess(group, folder, d), True
+            if score.goes_out(q):
+                break
+        if not score.retryable(q) or attempts >= score.MAX_ATTEMPTS:
+            break
+        fixes += [f for f in q["fixes"] if f not in fixes]     # earlier findings must stay fixed
+        folder = draft(group, fixes=fixes)
         d = json.loads((folder / "digest.json").read_text())
-        q = assess(group, folder, d)
-        attempts = 2
+        q, confirmed = assess(group, folder, d), False
+        attempts += 1
     d["quality"]["attempts"] = attempts
     _save(folder, d)
     row = {"id": leader, "headline": d["headline"], "cluster": d["cluster"], "level": q.get("level"), "attempts": attempts}

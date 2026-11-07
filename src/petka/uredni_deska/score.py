@@ -16,6 +16,7 @@ import json
 from ..usneseni import llm
 
 PROMPT_VERSION = "kvalita-v1"
+MAX_ATTEMPTS = 3        # how many times a card is written before it waits for a person
 ACCURACY_MIN = 4        # 3 means an error in a less important fact: not without a person
 LEVELS = {"spolehlive": "Spolehlivé", "pozor": "Buďte obezřetní", "spatne": "Něco je špatně"}
 # what the popover says: readers may not know the text is AI-written or what was checked
