@@ -449,10 +449,6 @@
    }
   },
   "summary": "Přepis s originálem souhlasí ve všech podstatných údajích včetně místa a termínu, chybí jen dvě vedlejší informace o parkujících autech a dočasně zrušené značce.",
-  "fixes": [
-   "Do shrnutí nebo do části „koho se to týká“ doplnit praktický dopad pro parkující, například: „Auta zaparkovaná v místě, kde bude platit zákaz zastavení, mohou být přemístěna.“ Originál to uvádí na straně 2 (vymístění parkujících vozidel podle § 19a zákona o pozemních komunikacích).",
-   "Popisek čísla 5 na plánu upřesnit z obecného „dosavadní dopravní značka“ na „Dočasně přestává platit značka jednosměrného provozu (IP 4b)“. Plán v originálu na straně 5 uvádí „zrušení platnosti SDZ IP 4b“. Nepsat, že v ulici bude obousměrný provoz, pokud to redaktor neověří u odboru dopravy, protože text originálu to výslovně neříká."
-  ],
   "blockers": [],
   "dates": [
    {

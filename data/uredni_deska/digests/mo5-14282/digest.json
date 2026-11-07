@@ -113,10 +113,6 @@
    }
   },
   "summary": "Přepis obstál: všechny částky, datum i číslo usnesení sedí s originálem, jen označení „kapitola 33“ zůstává pro běžného čtenáře nevysvětlené.",
-  "fixes": [
-   "V údaji „Počet změn“ nahraďte „6 rozpočtových opatření (č. 38–43)“ textem „6 změn rozpočtu (vedených pod čísly 38–43)“.",
-   "V textu karty doplňte k „kapitola 33“ vysvětlení, že jde o část rozpočtu a originál neuvádí, co zahrnuje. Význam kapitoly uveďte, jen pokud ho ověříte, například v usnesení rady č. 296/2026 R."
-  ],
   "blockers": [],
   "dates": [
    {

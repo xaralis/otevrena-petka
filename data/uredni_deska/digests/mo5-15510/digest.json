@@ -667,44 +667,37 @@
  "review_note": null,
  "quality": {
   "method": "druhy-model",
-  "level": "pozor",
+  "level": "spolehlive",
   "passed": true,
   "issues": [
-   "Obrázky: Karta nemá žádný obrázek; výkres sice v publikovaném originálu chybí, ale jde o přesně pojmenovaný úsek ulice, který by mapka čtenáři ukázala."
+   "Termíny, úsek, přesun zastávky i provoz MHD sedí s originálem; drobně se liší „zákaz stání“ v nadpisu oproti zákazu zastavení v originále a označení firmy jako prováděcí, i když ji originál uvádí jako žadatele a odpovědnou za značení."
   ],
   "marks": {
    "presnost": {
     "score": 4,
-    "reason": "Termíny, úsek, firma, přesun zastávky i provoz MHD souhlasí s originálem, jen nadpis píše o zákazu stání místo zákazu zastavení a formulace „část silnice uzavřená“ je nepřesná."
+    "reason": "Termíny, úsek, přesun zastávky i provoz MHD sedí s originálem; drobně se liší „zákaz stání“ v nadpisu oproti zákazu zastavení v originále a označení firmy jako prováděcí, i když ji originál uvádí jako žadatele a odpovědnou za značení."
    },
    "uplnost": {
     "score": 4,
-    "reason": "Karta říká co, kde, kdy i koho se to týká a správně neuvádí žádnou lhůtu pro čtenáře, v textu ale chybí omezení rychlosti na 30 km/h a informace, že MHD musí mít průjezd místem stavby v obou směrech."
+    "reason": "Karta říká co, kde, kdy a koho se to týká, ale neupozorňuje, že plán se značkami v originále chybí, takže přesné místo zastávky a značek není známé."
    },
    "srozumitelnost": {
     "score": 4,
-    "reason": "Text je psaný běžnou češtinou bez paragrafů, jen několik výrazů jako „stažené sběrače“ a „výlukový jízdní řád“ je odbornějších."
+    "reason": "Text je psaný běžnou češtinou, jen výrazy „stažené sběrače“ a „výlukový jízdní řád“ nemusí každý znát."
    },
    "obrazky": {
-    "score": 2,
-    "reason": "Karta nemá žádný obrázek; výkres sice v publikovaném originálu chybí, ale jde o přesně pojmenovaný úsek ulice, který by mapka čtenáři ukázala."
+    "score": 4,
+    "reason": "Mapa vyznačuje správné ulice a pomáhá se v místě zorientovat, ale neukazuje nové místo zastávky ani rozmístění značek, protože plán v originále chybí."
    }
   },
-  "summary": "Přepis v podstatných údajích souhlasí s originálem a nemá zásadní chybu; drobně nepřesný je popis zákazu a uzavírky, v textu chybí omezení rychlosti a karta nemá mapku úseku.",
-  "fixes": [
-   "V nadpisu nahradit „zákaz stání“ výrazem „zákaz zastavení“, protože originál stanovuje značku B28 a text karty i její údaj Parkování už mluví o zákazu zastavení.",
-   "Ve shrnutí upřesnit „část silnice uzavřená“, například na „část vozovky je uzavřená“, a neuvádět uzavření celého úseku: originál mluví o příčné uzavírce jízdního pruhu a o tom, že MHD musí místem stavby projet v obou směrech.",
-   "Do shrnutí doplnit omezení rychlosti na 30 km/h (značka B20a(30) na straně 1 originálu) a větu, že po celou dobu musí být zajištěn bezpečný průjezd vozidel MHD v obou směrech (strana 2 originálu).",
-   "Ve shrnutí změnit „bude část silnice uzavřená“ na přítomný čas („je část silnice uzavřená“), protože úprava v den vzniku karty 4. 11. 2026 už platila.",
-   "Přidat mapku s vyznačeným úsekem ulice Jana Palacha mezi ulicemi Teplého a Na Spravedlnosti. Situační plán v publikovaném originálu chybí, proto na mapce nezakreslovat přesná místa značek ani přesunuté zastávky."
-  ],
+  "summary": "Přepis v podstatných údajích souhlasí s originálem, drobně se liší jen pojmenování zákazu v nadpisu a role firmy a chybí upozornění, že plán se značkami není zveřejněný.",
   "blockers": [],
   "dates": [
    {
     "field": "od",
     "value": "2026-10-21",
     "verdict": "v_dokumentu",
-    "evidence": "Originál, strana 2: „Platnost úpravy: 21. 10. 2026 – 13. 11. 2026“."
+    "evidence": "Originál, strana 2: „Platnost úpravy: 21. 10. 2026 – 13. 11. 2026“. Na straně 4 je sice účinnost stanovena na pátý den po vyvěšení, datum vyvěšení je ale v originále prázdné, takže případný rozpor s tímto datem z něj nelze ověřit."
    },
    {
     "field": "do",
@@ -714,7 +707,7 @@
    }
   ],
   "prompt_version": "kvalita-v1",
-  "model": "cli:opus",
-  "scored_at": "2026-11-07T08:58:16+00:00"
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-07T12:29:53+00:00"
  }
 }

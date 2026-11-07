@@ -111,15 +111,6 @@
    }
   },
   "summary": "Přepis v podstatných údajích obstál: termín, značka, důvod i odpovědná firma odpovídají originálu, drobné výhrady jsou k několika odvozeným formulacím a k chybějícímu plánu značení.",
-  "fixes": [
-   "Ve faktu „Policie“ změňte „nedoporučila“ na „Policie s umístěním značek nesouhlasila“; originál na straně 2 mluví o nesouhlasném stanovisku krajského ředitelství policie.",
-   "Ve stejném faktu změňte „nařídil“ na „stanovil“ a doplňte důvod: originál uvádí horší viditelnost i nepozornost účastníků provozu. Značky stanovil magistrát na žádost firmy.",
-   "V souhrnu nahraďte větu „Je tam krátká vzdálenost a za šera nebo při nepozornosti může dojít ke kolizi.“ například takto: „Sjezd ze silnice II/324 je od stezky jen kousek, takže za šera nebo při nepozornosti může dojít ke střetu s chodcem nebo cyklistou.“",
-   "Upravte „Stezka zůstává otevřená“ v souhrnu i ve faktu „Co se mění“, protože originál to výslovně neříká; přesnější je například „Opatření stanovuje jen informativní značky, uzavírku stezky neuvádí.“",
-   "V údaji o místě nahraďte „u sjezdu ze silnice II/324“ za „Stezka pro chodce a cyklisty Jesničánky – Dražkovice“ a do textu doplňte, že přesné umístění značek je jen v plánu, který ve zveřejněném dokumentu není. Originál zmiňuje sjezd pouze v odůvodnění, ne jako místo značek.",
-   "Doplňte do karty větu: „Proti tomuto opatření se nelze odvolat.“ (strana 2 originálu, Poučení).",
-   "Dohledejte přílohu „1 × situace dopravního značení“: zveřejněné PDF má 3 strany a plán v něm není, v podkladech pro kontrolu také není. Zkuste úřední desku magistrátu, případně se zeptejte odboru dopravy (telefon 466 859 195). Když plán získáte, přidejte ho na kartu jako obrázek a zpřesněte místo."
-  ],
   "blockers": [],
   "dates": [
    {

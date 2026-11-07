@@ -197,9 +197,6 @@
    }
   },
   "summary": "Přepis s originálem souhlasí ve všech údajích a je srozumitelný; drobnou výhradu lze mít jen k obrázku, kde značky zakrývají ručně psané rozměry.",
-  "fixes": [
-   "Na popsaném obrázku posuňte značky tak, aby nezakrývaly ručně psané rozměry: značku 2 doprava mimo údaj „8 M“ (asi na x 0,45, y 0,74), značku 3 mimo údaj „1,4 m“ (asi na x 0,47, y 0,68) a značku 4 vpravo od údaje „3 M“ (asi na x 0,72, y 0,63)."
-  ],
   "blockers": [],
   "dates": [
    {

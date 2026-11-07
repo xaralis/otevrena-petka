@@ -2,9 +2,9 @@
  "notice_id": "mo5-15506",
  "members": [],
  "status": "published",
- "prompt_version": "deska-v4",
+ "prompt_version": "deska-v6",
  "model": "cli:opus",
- "created_at": "2026-11-05T10:32:44+00:00",
+ "created_at": "2026-11-07T09:24:10+00:00",
  "source": {
   "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - sídliště Dukla",
   "url": "https://pardubice.eu/uredni-deska/obvody?id=15506",
@@ -12,8 +12,8 @@
   "mo5": true
  },
  "cluster": "doprava",
- "headline": "Při Velké pardubické 11. 10. 2026 platil na sídlišti Dukla zákaz parkování pro návštěvníky dostihů",
- "summary": "V neděli 11. 10. 2026 od 7:00 do 16:00 platilo na sídlišti Dukla dočasné dopravní značení. Mělo zabránit tomu, aby tu parkovali návštěvníci Velké pardubické a ucpali ulice místním. Přenosné značky (zákazy vjezdu, odbočení a stání s dodatkovými tabulkami a uzavírky) nechal postavit městský obvod Pardubice V, úpravu povolil magistrát. Akce už proběhla, nedá se proti ní nic podat.",
+ "headline": "Při Velké pardubické 11. 10. 2026 platila na sídlišti Dukla dočasná omezení proti parkování návštěvníků",
+ "summary": "Na sídlišti Dukla platila 11. 10. 2026 od 7:00 do 16:00 dočasná dopravní omezení (uzavírky, zákazy vjezdu, zákazy odbočení a přikázaný směr jízdy, některé s doplňujícími tabulkami). Měla zabránit nelegálnímu parkování návštěvníků Velké pardubické a zachovat dopravní obslužnost v této lokalitě. Plán s konkrétními ulicemi a umístěním značek ani texty doplňujících tabulek nejsou ve zveřejněném dokumentu k dispozici.",
  "where": "sídliště Dukla, Pardubice",
  "period": {
   "from": "2026-10-11",
@@ -21,31 +21,31 @@
   "text": "11. 10. 2026 od 7:00 do 16:00"
  },
  "action": null,
- "affects": "Řidiči a obyvatelé sídliště Dukla, návštěvníci Velké pardubické 2026",
+ "affects": "Řidiči, kteří 11. 10. 2026 jezdili na sídliště Dukla, včetně návštěvníků Velké pardubické",
  "facts": [
   {
-   "label": "Kdy",
-   "value": "11. 10. 2026, 7:00–16:00"
+   "label": "Důvod",
+   "value": "Zamezení nelegálního parkování návštěvníků Velké pardubické 2026"
   },
   {
-   "label": "Proč",
-   "value": "aby na sídlišti neparkovali návštěvníci Velké pardubické 2026"
-  },
-  {
-   "label": "Značení",
-   "value": "přenosné dopravní značky a zařízení"
-  },
-  {
-   "label": "Kdo značení zajistil",
+   "label": "O úpravu požádal",
    "value": "Městský obvod Pardubice V"
   },
   {
-   "label": "Kdo úpravu povolil",
+   "label": "Vydal",
    "value": "Magistrát města Pardubic, odbor dopravy"
   },
   {
-   "label": "Odtahy",
-   "value": "pokud by se auta odtahovala, musí obvod doložit fotkami, kdy a kde značky stály"
+   "label": "Značení",
+   "value": "Přenosné dopravní značky a dopravní zařízení"
+  },
+  {
+   "label": "Možnost odvolání",
+   "value": "Proti tomuto opatření nebyly přípustné žádné opravné prostředky"
+  },
+  {
+   "label": "Odtahy vozidel",
+   "value": "Pro případ odtahu měl obvod zajistit fotodokumentaci s časem a místem umístění značek; zda k odtahům došlo, dokument neuvádí"
   }
  ],
  "signs": [
@@ -60,12 +60,12 @@
    "change": "nova"
   },
   {
-   "code": "B24a",
+   "code": "E13",
    "text": null,
    "change": "nova"
   },
   {
-   "code": "B24b",
+   "code": "B24a-b",
    "text": null,
    "change": "nova"
   },
@@ -83,20 +83,16 @@
    "code": "E3a",
    "text": null,
    "change": "nova"
-  },
-  {
-   "code": "E13",
-   "text": null,
-   "change": "nova"
   }
  ],
  "places": [],
  "parcels": [],
+ "spending": [],
  "budget": [],
  "drawing": null,
  "parking": null,
- "visual_plan": "Bez situačního plánu (v příloze chybí) stačí karta s datem a časem a obecný bod na sídlišti Dukla. Mapa ulic by se dala udělat až podle situace umístění značek.",
- "reviewer_notes": "Příloha obsahuje jen třístránkovou vyhlášku. Situační plán („příloha č. 1 OOP“) v ní chybí, proto nejsou známé konkrétní ulice, umístění značek ani texty dodatkových tabulek E13. Vyhláška je datovaná 7. 10. 2026 a podle ní platí čtvrtým dnem od vyvěšení na desce magistrátu. Na desce obvodu ale visí až od 20. 10. 2026, tedy po akci (11. 10. 2026). Akce proběhla, proto je karta v minulém čase a action je null. Proti opatření se nelze odvolat. B24a-b je v dokumentu uvedeno společně, v seznamu značek je rozepsáno na B24a a B24b. U všech značek je „nova“, protože jde o dočasné přenosné značky.",
+ "visual_plan": "Bez mapy a výkresu: dokument jmenuje jen sídliště Dukla a situační plán ve zveřejněném souboru chybí, takže stačí textová karta s datem, časem a seznamem značek. Pokud se plán podaří získat od magistrátu, je nejlepší ukázat přímo jeho výřez.",
+ "reviewer_notes": "Příloha č. 1 (situace umístění dopravního značení) není ve zveřejněném PDF, proto karta neuvádí konkrétní ulice ani texty tabulek E13 a E3a. U E3a dokument jen určuje, že se má uvést počet metrů bez „za 300 m“. Značky jsou vedené jako nové ve smyslu dočasně osazené pro tento den; po skončení platnosti je dokument výslovně neřeší. Kombinace značek v dokumentu: Z2 + B11 + E13, B24a-b + E13, C2b + E13, B1 + E3a, B1 + E13. Slovní výčet v shrnutí vychází z běžného významu těchto kódů, dokument je slovně nepopisuje. Oznámení bylo podle zadání na desce obvodu vyvěšeno 20. 10. 2026, tedy až po dni platnosti úpravy. Datum vyvěšení na desce magistrátu v dokumentu vyplněné není (vyhotoveno 7. 10. 2026), je potřeba ho ověřit, protože účinnost nastává čtvrtým dnem po vyvěšení. Lhůta pro připomínky neexistuje: opatření bylo vydáno bez návrhu a opravné prostředky nejsou přípustné. Titulek je oproti návrhu z kontroly zkrácený kvůli limitu 110 znaků (vypadlo „dopravní“ a „dostihů“).",
  "visual": {
   "map": [],
   "ortho": null,
@@ -117,16 +113,16 @@
     "change": "nova"
    },
    {
-    "code": "B24a",
-    "name": "Zákaz odbočování vpravo",
-    "image": "B24a.jpg",
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
     "text": null,
     "change": "nova"
    },
    {
-    "code": "B24b",
-    "name": "Zákaz odbočování vlevo",
-    "image": "B24b.jpg",
+    "code": "B24a–b",
+    "name": "Zákaz odbočování",
+    "image": "B24a.jpg",
     "text": null,
     "change": "nova"
    },
@@ -150,13 +146,6 @@
     "image": "E3a.jpg",
     "text": null,
     "change": "nova"
-   },
-   {
-    "code": "E13",
-    "name": "Text nebo symbol",
-    "image": "E13.jpg",
-    "text": null,
-    "change": "nova"
    }
   ],
   "parking": null,
@@ -164,62 +153,51 @@
   "thumb": null
  },
  "problems": [],
- "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null,
  "quality": {
   "method": "druhy-model",
-  "level": "spatne",
-  "passed": false,
-  "issues": [
-   "Karta říká něco jiného než dokument: Nadpis mluví o zákazu parkování a text o zákazech stání, ale originál žádnou značku zákazu stání ani zastavení neuvádí. Stanovené značky omezují hlavně vjezd a odbočení a určují směr jízdy; zamezení parkování je jejich účel, ne samotná úprava.",
-   "Přesnost: Datum, čas, místo, důvod i úřady sedí, ale nadpis a text popisují zákaz parkování a zákazy stání, zatímco originál uvádí uzavírky, zákazy vjezdu a odbočení a přikázaný směr jízdy."
-  ],
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
   "marks": {
    "presnost": {
-    "score": 2,
-    "reason": "Datum, čas, místo, důvod i úřady sedí, ale nadpis a text popisují zákaz parkování a zákazy stání, zatímco originál uvádí uzavírky, zákazy vjezdu a odbočení a přikázaný směr jízdy."
+    "score": 5,
+    "reason": "Datum, čas, místo, důvod, žadatel, vydávající úřad, použité značky i nemožnost odvolání odpovídají originálu."
    },
    "uplnost": {
-    "score": 4,
-    "reason": "Uvedeno je vše podstatné, co originál obsahuje, jen chybí upozornění, že plán s konkrétními ulicemi a texty dodatkových tabulek není v dostupném dokumentu."
+    "score": 5,
+    "reason": "Karta říká co, kde, kdy a koho se to týkalo a otevřeně uvádí, že plán s ulicemi a texty tabulek ve zveřejněném originálu nejsou; žádnou lhůtu pro čtenáře originál nestanovuje."
    },
    "srozumitelnost": {
     "score": 4,
-    "reason": "Text je psaný běžnou řečí a čtenář ho pochopí, jen obrat „dodatkové tabulky“ zůstává odborný."
+    "reason": "Text je celkově srozumitelný, ale zůstalo v něm pár úředních obratů, například „dopravní obslužnost“ a „opravné prostředky“."
    },
    "obrazky": {
     "score": null,
-    "reason": "Karta je bez obrázků a dostupný originál neobsahuje plán ani přesnou adresu, ze kterých by se dal připravit užitečný obrázek."
+    "reason": "Karta je bez obrázků a originál žádný plánek ani konkrétní adresu neobsahuje, protože příloha s rozmístěním značek v něm není."
    }
   },
-  "summary": "Datum, čas, místo a důvod úpravy sedí s originálem, ale karta nepřesně popisuje samotné omezení: uvádí zákaz parkování a stání, zatímco originál stanovuje hlavně uzavírky, zákazy vjezdu a odbočení a přikázaný směr jízdy.",
-  "fixes": [
-   "Nadpis změňte například na: „Při Velké pardubické 11. 10. 2026 platila na sídlišti Dukla dočasná dopravní omezení proti parkování návštěvníků dostihů“.",
-   "V souhrnu nahraďte závorku „(zákazy vjezdu, odbočení a stání s dodatkovými tabulkami a uzavírky)“ výčtem podle originálu: „(uzavírky, zákazy vjezdu, zákazy odbočení a přikázaný směr jízdy, některé s doplňujícími tabulkami)“. Zákaz stání vypusťte, protože ho originál neuvádí.",
-   "Do souhrnu nebo faktů doplňte: „Plán s konkrétními ulicemi a umístěním značek ani texty doplňujících tabulek nejsou ve zveřejněném dokumentu k dispozici.“"
-  ],
-  "blockers": [
-   {
-    "kind": "zavadejici",
-    "what": "Nadpis mluví o zákazu parkování a text o zákazech stání, ale originál žádnou značku zákazu stání ani zastavení neuvádí. Stanovené značky omezují hlavně vjezd a odbočení a určují směr jízdy; zamezení parkování je jejich účel, ne samotná úprava."
-   }
-  ],
+  "summary": "Přepis s originálem souhlasí ve všech údajích a poctivě uvádí, že konkrétní ulice ve zveřejněném dokumentu nejsou; jen pár obratů by šlo napsat jednodušeji.",
+  "blockers": [],
   "dates": [
    {
     "field": "od",
     "value": "2026-10-11",
     "verdict": "v_dokumentu",
-    "evidence": "Originál, strana 2: „Platnost úpravy: 11. 10. 2026 od 7:00 hod do 16:00 hod.“"
+    "evidence": "Strana 2 originálu: „Platnost úpravy: 11. 10. 2026 od 7:00 hod do 16:00 hod.“"
    },
    {
     "field": "do",
     "value": "2026-10-11",
     "verdict": "v_dokumentu",
-    "evidence": "Originál, strana 2: „Platnost úpravy: 11. 10. 2026 od 7:00 hod do 16:00 hod.“"
+    "evidence": "Strana 2 originálu: „Platnost úpravy: 11. 10. 2026 od 7:00 hod do 16:00 hod.“"
    }
   ],
   "prompt_version": "kvalita-v1",
   "model": "cli:opus",
-  "scored_at": "2026-11-07T08:57:06+00:00"
- }
+  "scored_at": "2026-11-07T09:25:13+00:00",
+  "attempts": 1
+ },
+ "published_at": "2026-11-07T09:25:13+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
 }

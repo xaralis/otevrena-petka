@@ -213,55 +213,47 @@
  "review_note": null,
  "quality": {
   "method": "druhy-model",
-  "level": "pozor",
+  "level": "spolehlive",
   "passed": true,
   "issues": [
-   "Obrázky: Karta nemá obrázek, přitom jde o konkrétní, snadno dohledatelné místo; plánek značení v originále chybí, mapa podjezdu by ale čtenáři pomohla."
+   "Místo, oba termíny, důvod, firma i trolejbusy na baterie sedí; originál ale výslovně slibuje průjezd v obou směrech jen vozům MHD, u aut to karta dovozuje."
   ],
   "marks": {
    "presnost": {
     "score": 4,
-    "reason": "Místo, termíny, důvod, šířka pruhu i značky sedí; originál ale výslovně zaručuje průjezd v obou směrech jen pro MHD, ne pro auta, a stanovuje dopravní značení, zatímco povolení omezení silnice řeší samostatné řízení."
+    "reason": "Místo, oba termíny, důvod, firma i trolejbusy na baterie sedí; originál ale výslovně slibuje průjezd v obou směrech jen vozům MHD, u aut to karta dovozuje."
    },
    "uplnost": {
     "score": 4,
-    "reason": "Podstatné údaje jsou uvedeny, chybí však, že provoz budou řídit světelné signály, a že originál neříká, jestli se použije hlavní, nebo náhradní termín."
+    "reason": "Čtenář se dozví co, kde, kdy a koho se to týká a možnost připomínek originál nedává, chybí ale světelné signály v místě a vysvětlení, že se náhradní noc použije jen v případě potřeby."
    },
    "srozumitelnost": {
-    "score": 5,
-    "reason": "Text je psaný běžnou češtinou, bez úředních obratů a paragrafů, a pochopí ho i čtenář bez znalosti úřadů."
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen z něj není jasné, zda se pruh v náhradní noc opravdu uzavře a jak se auta v jednom pruhu vystřídají."
    },
    "obrazky": {
-    "score": 2,
-    "reason": "Karta nemá obrázek, přitom jde o konkrétní, snadno dohledatelné místo; plánek značení v originále chybí, mapa podjezdu by ale čtenáři pomohla."
+    "score": 4,
+    "reason": "Mapa ukazuje správnou ulici, ale podle dostupných údajů nevyznačuje přímo podjezd ani samotnou změnu; plánek značení v dostupném originále chybí."
    }
   },
-  "summary": "Přepis ve všech termínech, místě i důvodu odpovídá originálu, jen průjezd aut v obou směrech je domyšlený a chybí zmínka o světelných signálech i mapa místa.",
-  "fixes": [
-   "V shrnutí změňte „Auta i trolejbusy projedou v obou směrech“ a v údaji „Provoz“ text „obousměrně“. Originál výslovně zaručuje obousměrný průjezd jen vozidlům MHD. Možné znění: „Trolejbusy a autobusy MHD musí moct projet v obou směrech, zůstane pruh široký nejméně 3,5 m a místo bude označeno i světelnými signály.“ U aut uveďte obousměrný průjezd, jen pokud ho potvrdí chybějící příloha č. 1 nebo odbor dopravy magistrátu.",
-   "Začátek shrnutí „Magistrát povolil, aby se … uzavřel jeden jízdní pruh“ nahraďte například „Magistrát stanovil přechodné dopravní značení kvůli uzavření jednoho jízdního pruhu“. Originál rozhodnutí o značení a povolení zvláštního užívání silnice odlišuje: to druhé podléhá samostatnému řízení.",
-   "Do shrnutí a k údajům doplňte, že se na místě počítá se světelnými signály (originál, strana 2). Zda půjde o střídavý provoz, napište jen po ověření v příloze č. 1 nebo na odboru dopravy.",
-   "Do shrnutí doplňte větu: „Z oznámení nevyplývá, jestli se práce v hlavním termínu uskutečnily a jestli se náhradní termín použije.“ Karta vznikla po hlavním termínu a čtenář by měl vědět, že to není potvrzené.",
-   "Údaj „Práce provádí“ přejmenujte na „Žadatel a odpovědná firma“ a větu „Firma … bude kontrolovat“ upravte na „Na žádost firmy … proběhne kontrola“. Originál firmu uvádí jako žadatele a odpovědnou za provedení úpravy, kdo fyzicky provede práce, výslovně neříká.",
-   "Přidejte mapu podjezdu pod železniční tratí v ulici Jana Palacha, případně doplňte plánek značení, pokud se podaří získat chybějící přílohu č. 1 od magistrátu."
-  ],
+  "summary": "Přepis v hlavních údajích odpovídá originálu a nemá vážnou chybu, jen nezmiňuje světelné signály a nevysvětluje, že se náhradní noc použije jen v případě potřeby.",
   "blockers": [],
   "dates": [
    {
     "field": "od",
     "value": "2026-10-31",
     "verdict": "v_dokumentu",
-    "evidence": "Strana 2 originálu: platnost úpravy 31. 10. 2026 19:00 – 1. 11. 2026 7:00."
+    "evidence": "Originál, strana 2: platnost úpravy 31. 10. 2026 19:00 – 1. 11. 2026 7:00."
    },
    {
     "field": "do",
     "value": "2026-11-08",
     "verdict": "v_dokumentu",
-    "evidence": "Strana 2 originálu: náhradní termín 7. 11. 2026 19:00 – 8. 11. 2026 7:00; jde o konec náhradního termínu, hlavní termín končí 1. 11. 2026."
+    "evidence": "Originál, strana 2: náhradní termín 7. 11. 2026 19:00 – 8. 11. 2026 7:00. Jde o konec náhradního termínu, ne o souvislé uzavření od 31. 10.; text karty to uvádí správně jako dvě samostatné noci."
    }
   ],
   "prompt_version": "kvalita-v1",
-  "model": "cli:opus",
-  "scored_at": "2026-11-07T08:59:07+00:00"
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-07T12:31:15+00:00"
  }
 }

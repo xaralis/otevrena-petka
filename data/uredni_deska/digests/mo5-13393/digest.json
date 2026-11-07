@@ -115,12 +115,6 @@
    }
   },
   "summary": "Přepis s originálem věcně souhlasí, všechna data i částky sedí a chybí jen drobné upřesnění, že rezervy hradí podporu obou akcí pouze částečně.",
-  "fixes": [
-   "V souhrnu doplňte za větu o obou akcích: „Rezervy pokrývají podporu obou akcí jen zčásti.“ V originálu stojí, že programová dotace bude z rezervy hrazena „částečně“; celkovou výši podpory originál neuvádí.",
-   "V souhrnu vypusťte slovo „zatím“ ve větě o dotaci na volby, takže bude znít „kterou uložil do rezervy rozpočtu“. Originál neříká, že jde o dočasné řešení. Opravte přitom i tvar „které“ na „kterou“, protože se vztahuje k dotaci.",
-   "V části „koho se to týká“ nahraďte „Spolky a pořadatelé podpořených akcí“ za „Pořadatelé podpořených akcí“. Originál o spolcích nemluví.",
-   "V přehledu údajů u položky „Schválila“ nahraďte „Rada MO Pardubice V“ za „Rada městského obvodu Pardubice V“."
-  ],
   "blockers": [],
   "dates": [
    {

@@ -121,12 +121,6 @@
    }
   },
   "summary": "Přepis obstál: údaje o pravidlech pro dotace na rok 2025 odpovídají originálu, včetně data schválení 18. 12. 2024, chybí jen číslo směrnice a letecké snímky čtenáři příliš nepomáhají.",
-  "fixes": [
-   "Do textu nebo do řádku „Co to je“ doplňte číslo dokumentu: „směrnice č. 28/2024“, aby šel na webu i na úřadě snadno dohledat.",
-   "V řádku „Koho se týká“ nahraďte „Spolky, organizace a další žadatelé o dotace od obvodu Pardubice V“ obecnějším „Žadatelé o dotace od obvodu Pardubice V“, protože originál druhy žadatelů nevyjmenovává. Spolky lze ponechat jen tehdy, pokud to potvrdí plné znění směrnice na pardubice.eu/dotace-mo5.",
-   "Ověřte na pardubice.eu/dotace-mo5, zda už není zveřejněn novější program na rok 2026 nebo 2027, jak žádá poznámka redaktora; kontrola to z přiloženého originálu ověřit nemohla. Pokud existuje, přidejte na něj odkaz a větu, že tato karta popisuje starší pravidla pro rok 2025.",
-   "Ověřte v mapě, že značka na malém obrázku opravdu leží na budově Češkova 22. Velký letecký snímek buď označte stejnou značkou, nebo oba snímky z karty odeberte, protože k pochopení pravidel nepřispívají."
-  ],
   "blockers": [],
   "dates": [],
   "prompt_version": "kvalita-v1",

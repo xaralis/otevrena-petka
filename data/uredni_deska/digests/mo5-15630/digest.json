@@ -2,9 +2,9 @@
  "notice_id": "mo5-15630",
  "members": [],
  "status": "published",
- "prompt_version": "deska-v2",
- "model": "cli:opus",
- "created_at": "2026-11-05T06:24:17+00:00",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-07T12:37:12+00:00",
  "source": {
   "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - náměstí Dukelských hrdinů a Gorkého",
   "url": "https://pardubice.eu/uredni-deska/obvody?id=15630",
@@ -12,59 +12,54 @@
   "mo5": true
  },
  "cluster": "doprava",
- "headline": "Kvůli Vánocům 2026 bude část náměstí Dukelských hrdinů uzavřená, v Gorkého se nesmí parkovat",
- "summary": "Městský obvod Pardubice V pořádá akci „Vánoce 2026“, a proto bude od 20. 11. 2026 do 7. 1. 2027 část náměstí Dukelských hrdinů uzavřená pro auta. Kolem bude platit zákaz stání, který se netýká vozidel pořadatele. V ulici Gorkého se budou odtahovat auta 20. 11. 2026 a 27. 11. 2026, vždy od 12:00. Kdo tam parkuje, musí v tyto dny auto včas přeparkovat.",
- "where": "náměstí Dukelských hrdinů a ulice Gorkého",
+ "headline": "Od 20. 11. 2026 do 7. 1. 2027 platí úprava provozu na nám. Dukelských hrdinů; v Gorkého se auta odstraní jen 2 dny",
+ "summary": "Kvůli kulturní akci „Vánoce 2026“ platí od 20. 11. 2026 do 7. 1. 2027 přechodná úprava provozu na náměstí Dukelských hrdinů a v ulici Gorkého. Část náměstí bude uzavřena. Parkující auta se z ulice Gorkého odstraní jen 20. 11. 2026 a 27. 11. 2026, vždy od 12:00. Hodinu začátku dokument uvádí jen u ulice Gorkého, u náměstí ji neuvádí.",
+ "where": "Náměstí Dukelských hrdinů a ulice Gorkého, Pardubice",
  "period": {
   "from": "2026-11-20",
   "to": "2027-01-07",
-  "text": "od 20. 11. 2026 do 7. 1. 2027; v ulici Gorkého se odtahuje 20. 11. 2026 a 27. 11. 2026 vždy od 12:00"
+  "text": "20. 11. 2026 – 7. 1. 2027; vymístění aut z ulice Gorkého 20. 11. 2026 a 27. 11. 2026, vždy od 12:00"
  },
- "action": {
-  "what": "Přeparkovat auto z ulice Gorkého a z části náměstí Dukelských hrdinů, kde bude zákaz stání",
-  "deadline": "2026-11-20",
-  "how": "Auto odvezte nejpozději 20. 11. 2026 do 12:00. Totéž platí i 27. 11. 2026 do 12:00. Jinak hrozí odtah."
- },
- "affects": "Řidiči, kteří parkují na náměstí Dukelských hrdinů a v ulici Gorkého, a lidé, kteří tudy jezdí autem",
+ "action": null,
+ "affects": "Řidiči a lidé parkující na náměstí Dukelských hrdinů a v ulici Gorkého; pořadatelé akce",
  "facts": [
   {
    "label": "Důvod",
    "value": "kulturní akce „Vánoce 2026“"
   },
   {
-   "label": "Platí",
+   "label": "Platnost úpravy",
    "value": "20. 11. 2026 – 7. 1. 2027"
   },
   {
-   "label": "Odtah v Gorkého",
-   "value": "20. 11. 2026 a 27. 11. 2026, vždy od 12:00"
+   "label": "Vymístění aut v ulici Gorkého",
+   "value": "jen 20. 11. 2026 a 27. 11. 2026, vždy od 12:00"
   },
   {
-   "label": "Výjimka ze zákazu stání",
-   "value": "vozidla pořadatele"
+   "label": "Náměstí Dukelských hrdinů",
+   "value": "část náměstí bude uzavřena; hodina začátku vymístění aut se u náměstí neuvádí"
   },
   {
-   "label": "Pořadatel",
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy, po vyjádření Policie ČR"
+  },
+  {
+   "label": "Žadatel",
    "value": "Městský obvod Pardubice V"
   },
   {
-   "label": "Úpravu nařídil",
-   "value": "Magistrát města Pardubic, odbor dopravy"
+   "label": "Kontakt",
+   "value": "Luděk Fiedler, odbor dopravy, tel. +420 466 859 195, Ludek.Fiedler@mmp.cz"
   },
   {
-   "label": "Kontakt",
-   "value": "Luděk Fiedler, odbor dopravy Magistrátu, tel. 466 859 195"
+   "label": "Opravné prostředky",
+   "value": "proti opatření nejsou přípustné"
   }
  ],
  "signs": [
   {
-   "code": "IZ8a",
-   "text": "zóna se zákazem stání (B29), s termínem platnosti, „MIMO VOZIDLA POŘADATELE“",
-   "change": "nova"
-  },
-  {
-   "code": "IZ8b",
-   "text": "konec zóny se zákazem stání",
+   "code": "IZ8a-b",
+   "text": "MIMO VOZIDLA POŘADATELE (se symbolem B29)",
    "change": "nova"
   },
   {
@@ -98,11 +93,12 @@
   "Gorkého"
  ],
  "parcels": [],
+ "spending": [],
  "budget": [],
  "drawing": null,
  "parking": null,
- "visual_plan": "Nejlépe poslouží mapa se zvýrazněným náměstím Dukelských hrdinů a ulicí Gorkého a k ní jednoduchý časový pruh: celé období akce a dva dny odtahu. Situační plán značení v podkladech chybí, takže výkres ukázat nejde.",
- "reviewer_notes": "Mezi podklady chybí situační plán, na který vyhláška odkazuje. Je ho proto potřeba vyžádat, protože ukazuje, kterou část náměstí přesně uzavřou. V dokumentu stojí „20. 11. 206 od 12:00“, ale je to zjevný překlep: platnost začíná 20. 11. 2026, proto uvádím 2026. Text dodatkové tabulky E13 dokument neuvádí, je jen „s termínem platnosti“. Dokument nerozepisuje, kde přesně bude zákaz stání a kde zákaz vjezdu. Opatření má nabýt účinnosti pátý den po vyvěšení. Při vyvěšení 4. 11. 2026 jsem to dopočítal na 9. 11. 2026, úprava ale platí až od 20. 11. 2026. Proti opatření se nelze odvolat a lhůta pro připomínky neexistuje. Do „action“ jsem proto dal jen termín, kdy je potřeba přeparkovat.",
+ "visual_plan": "Mapa s vyznačeným náměstím Dukelských hrdinů a ulicí Gorkého a časová osa: celá úprava 20. 11. 2026 – 7. 1. 2027, dva dny vymístění aut v Gorkého zvlášť.",
+ "reviewer_notes": "Situační plán je podle dokumentu přílohou, ale v PDF chybí (jen 3 strany textu), proto drawing a parking jsou null. Dokument má překlep „20. 11. 206“ – vzato jako 20. 11. 2026. Hodina 12:00 je v originálu jen u ulice Gorkého. Rozsah uzavírky části náměstí je z plánu neznámý. Značky dokument jmenuje bez textu E13 („s termínem platnosti“), text proto null. Datum vyvěšení na desce magistrátu v dokumentu není; úprava je stejně krátkodobá bez lhůty pro připomínky.",
  "visual": {
   "map": [
    {
@@ -364,17 +360,10 @@
   "drawing": null,
   "signs": [
    {
-    "code": "IZ8a",
-    "name": "Zóna s dopravním omezením",
+    "code": "IZ8a–b",
+    "name": "Zóna s dopravním omezením / Konec zóny s dopravním omezením",
     "image": "IZ8a.png",
-    "text": "zóna se zákazem stání (B29), s termínem platnosti, „MIMO VOZIDLA POŘADATELE“",
-    "change": "nova"
-   },
-   {
-    "code": "IZ8b",
-    "name": "Konec zóny s dopravním omezením",
-    "image": "IZ8b.png",
-    "text": "konec zóny se zákazem stání",
+    "text": "MIMO VOZIDLA POŘADATELE (se symbolem B29)",
     "change": "nova"
    },
    {
@@ -418,73 +407,61 @@
   "thumb": null
  },
  "problems": [],
- "published_at": "2026-11-05T09:31:58+00:00",
- "review_note": null,
  "quality": {
   "method": "druhy-model",
-  "level": "spatne",
-  "passed": false,
+  "level": "spolehlive",
+  "passed": true,
   "issues": [
-   "Špatné datum nebo lhůta: Karta říká, že auto z části náměstí Dukelských hrdinů stačí odvézt 20. 11. a 27. 11. do 12:00. Originál uvádí tento čas jen u ulice Gorkého, zatímco u celé úpravy uvádí jen začátek platnosti 20. 11. 2026 bez hodiny. Řidič na náměstí by se tak mohl spolehnout na čas, který pro něj originál nestanoví.",
-   "Přesnost: Termíny a značky sedí, ale čas 12:00 originál uvádí jen pro ulici Gorkého, karta ho vztahuje i na náměstí a nadpis zákaz parkování v Gorkého časově neomezuje."
+   "Termíny, místa, důvod, žadatel i značky sedí s originálem; nepřesné je jen to, že u náměstí má chybět pouze hodina odstranění aut, ačkoli originál u něj neuvádí ani den."
   ],
   "marks": {
    "presnost": {
-    "score": 2,
-    "reason": "Termíny a značky sedí, ale čas 12:00 originál uvádí jen pro ulici Gorkého, karta ho vztahuje i na náměstí a nadpis zákaz parkování v Gorkého časově neomezuje."
+    "score": 4,
+    "reason": "Termíny, místa, důvod, žadatel i značky sedí s originálem; nepřesné je jen to, že u náměstí má chybět pouze hodina odstranění aut, ačkoli originál u něj neuvádí ani den."
    },
    "uplnost": {
-    "score": 3,
-    "reason": "Hlavní údaje jsou uvedené, ale karta neříká, že přesný rozsah uzavírky a zákazu určuje situační plán, který mezi podklady chybí, ani že se proti opatření nelze odvolat."
+    "score": 4,
+    "reason": "Podstatné údaje karta má, ale nadpis ani hlavní text jasně neříkají, že se auta budou odstraňovat i z náměstí, a čtenář se nedozví, že plán s uzavřenou částí náměstí v originálu chybí."
    },
    "srozumitelnost": {
     "score": 4,
-    "reason": "Text je psaný běžnou češtinou, jen seznam značek obsahuje kódy bez vysvětlení."
+    "reason": "Karta je většinou srozumitelná, jen výrazy „vymístění aut“ a „opravné prostředky“ jsou úřední a věta o „hodině začátku“ neříká, začátku čeho."
    },
    "obrazky": {
-    "score": 2,
-    "reason": "Karta nemá žádný obrázek, přitom jde o konkrétní místo a originál se odvolává na situační plán, který by ukázal uzavřenou část náměstí."
+    "score": 3,
+    "reason": "Mapa vyznačuje správná místa, ale uzavřenou část náměstí ukázat nemůže, protože plán v originálu chybí."
    }
   },
-  "summary": "Základní termíny, místa i důvod sedí s originálem, ale karta nesprávně vztahuje čas 12:00 i na náměstí, nadpis zákaz parkování v ulici Gorkého zjednodušuje a chybí upozornění na nedostupný situační plán.",
-  "fixes": [
-   "V části „co udělat“ oddělte ulici Gorkého od náměstí: čas „do 12:00“ 20. 11. a 27. 11. 2026 nechte jen u ulice Gorkého. U náměstí napište, že úprava platí od 20. 11. 2026 a originál u ní hodinu neuvádí, takže je bezpečnější auto odvézt už předem.",
-   "Nadpis změňte tak, aby zákaz v Gorkého nepůsobil jako trvalý po celou dobu, například: „Kvůli Vánocům 2026 bude část náměstí Dukelských hrdinů uzavřená, z ulice Gorkého se budou 20. a 27. 11. odtahovat auta“.",
-   "V textu nahraďte „Kolem bude platit zákaz stání“ formulací, která nic nedomýšlí, například: „Na místě bude platit i zákaz stání; přesný úsek originál v textu neuvádí.“",
-   "Doplňte, že přesný rozsah uzavírky a zákazů určuje situační plán, který je přílohou vyhlášky, ale mezi podklady chybí. Plán si vyžádejte od odboru dopravy Magistrátu a po získání ho přidejte na kartu jako obrázek.",
-   "Zmiňte, že mezi značkami je i B28 (zákaz zastavení), který je přísnější než zákaz stání: v úseku s touto značkou se nesmí ani krátce zastavit.",
-   "„Uzavřená pro auta“ změňte na „uzavřená pro vozidla“, protože značka B1 zakazuje vjezd všem vozidlům, nejen autům.",
-   "Řádek „Pořadatel: Městský obvod Pardubice V“ změňte na „Žadatel: Městský obvod Pardubice V“ a větu „Městský obvod Pardubice V pořádá akci“ přeformulujte na „kvůli akci Vánoce 2026 o úpravu požádal Městský obvod Pardubice V“. Originál ho výslovně jako pořadatele neoznačuje.",
-   "Doplňte krátkou větu: „Proti tomuto opatření se nelze odvolat.“"
-  ],
-  "blockers": [
-   {
-    "kind": "spatny_termin",
-    "what": "Karta říká, že auto z části náměstí Dukelských hrdinů stačí odvézt 20. 11. a 27. 11. do 12:00. Originál uvádí tento čas jen u ulice Gorkého, zatímco u celé úpravy uvádí jen začátek platnosti 20. 11. 2026 bez hodiny. Řidič na náměstí by se tak mohl spolehnout na čas, který pro něj originál nestanoví."
-   }
-  ],
+  "summary": "Přepis s originálem věcně souhlasí a termíny jsou správné, jen by měl jasněji říct, že se auta odstraní i z náměstí bez uvedeného dne a hodiny a že plán uzavřené části v originálu chybí.",
+  "blockers": [],
   "dates": [
    {
     "field": "od",
     "value": "2026-11-20",
     "verdict": "v_dokumentu",
-    "evidence": "Originál, strana 2: „Platnost úpravy: 20. 11. 2026 – 7. 1. 2027“."
+    "evidence": "Originál, strana 2: „Platnost úpravy: 20. 11. 2026 – 7. 1. 2027“. Překlep „20. 11. 206“ u odstranění aut z ulice Gorkého je správně čten jako 20. 11. 2026, protože úprava začíná téhož dne."
    },
    {
     "field": "do",
     "value": "2027-01-07",
     "verdict": "v_dokumentu",
     "evidence": "Originál, strana 2: „Platnost úpravy: 20. 11. 2026 – 7. 1. 2027“."
-   },
-   {
-    "field": "lhuta",
-    "value": "2026-11-20",
-    "verdict": "v_dokumentu",
-    "evidence": "Originál, strana 2: „vymístění ul. Gorkého – 20. 11. 206 od 12:00 hod.“ Rok 206 je zjevný překlep, úprava začíná platit 20. 11. 2026, takže oprava na rok 2026 je správná. Datum včetně času 12:00 je však doložené jen pro ulici Gorkého, ne pro náměstí."
    }
   ],
   "prompt_version": "kvalita-v1",
-  "model": "cli:opus",
-  "scored_at": "2026-11-07T09:01:19+00:00"
- }
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-07T12:38:40+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 14,
+   "cache_read": 57037,
+   "cache_write": 22679,
+   "output": 11925,
+   "usd": 0.3499
+  }
+ },
+ "published_at": "2026-11-07T12:38:41+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
 }

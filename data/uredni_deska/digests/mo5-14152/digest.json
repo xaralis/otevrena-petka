@@ -1037,13 +1037,6 @@
    }
   },
   "summary": "Přepis obstál: částky i datum schválení odpovídají originálu, jen u poplatku za odpad text nepřesně naznačuje, kolik z něj šlo na hřiště a vnitroblok, a obrázky čtenáři moc nepomáhají.",
-  "fixes": [
-   "V souhrnu oddělte zdroje peněz od celkového výběru poplatku. Místo „a z vyššího výběru poplatku za odpad (o 1,95 mil. Kč víc)“ napište například: „z rezervy a z vyššího výběru poplatku za odpad (na hřiště z něj jde 1,2 mil. Kč, z celkem o 1,95 mil. Kč vyššího příjmu; zbytek jde na oplocení kontejnerů a vybavení pro akce)“.",
-   "V údaji „Výdaje po změně“ nahraďte zápis v tisících běžným tvarem: „112,39 mil. Kč (předtím 110,44 mil. Kč)“.",
-   "V grafu změňte popisek „participativní rozpočet (ušetřeno)“ na „participativní rozpočet (ušetřené a uvolněné peníze)“. Originál uvádí, že část je úspora a část technické navýšení položky.",
-   "Do údajů přidejte položku, která vysvětlí ulice uvedené u místa: na vnitroblok K Blahobytu jde také 260 tis. Kč z akce Lexova a náměstí Dukelských hrdinů a 100 tis. Kč z křižovatky Devotyho – Železničního pluku.",
-   "Oba obrázky doplňte popiskem, co a které místo ukazují. Ověřte, že značka na náhledu leží na vnitrobloku K Blahobytu 2482–2484, a na větším snímku místo vyznačte; pokud to nejde, snímky z karty odeberte, protože originál mapu neobsahuje a jedna značka nepokryje všechna zmíněná místa."
-  ],
   "blockers": [],
   "dates": [
    {

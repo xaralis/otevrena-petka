@@ -95,9 +95,6 @@
    }
   },
   "summary": "Přepis s originálem věcně souhlasí, datum, částka 6 560 Kč i položky rozpočtu sedí; jen věta o rozpočtu „v rovnováze“ jde nad rámec originálu.",
-  "fixes": [
-   "V shrnutí nahraďte větu „Celkový rozpočet tím zůstává v rovnováze.“ větou „Příjmy i výdaje obvodu tak vzrostly o stejnou částku, rozdíl mezi nimi se nemění.“ Originál o vyrovnanosti celého rozpočtu nic neříká, uvádí jen zvýšení obou položek o tutéž částku."
-  ],
   "blockers": [],
   "dates": [
    {

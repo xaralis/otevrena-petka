@@ -90,12 +90,6 @@
    }
   },
   "summary": "Přepis věrně a srozumitelně popisuje, co se u poplatků za odpad a za psa nemusí hlásit; drobné výhrady má jen k upřesnění, koho se to týká, a k tomu, že nezmiňuje povinnost hlásit ostatní údaje dál.",
-  "fixes": [
-   "V řádku „koho se to týká“ nahraďte „Lidé s trvalým pobytem v obvodu Pardubice V s českým občanstvím, kteří platí poplatek za odpad nebo za psa“ za „Občané České republiky, kteří platí poplatek za odpad nebo za psa úřadu obvodu Pardubice V“; podmínka trvalého pobytu v obvodu v originále není.",
-   "V souhrnu i v položkách upřesněte, že u dítěte, které v daném roce dovrší 6 let, a u poplatníka, který dovrší 65 let, se nemusí hlásit jméno, rodné číslo a trvalý pobyt.",
-   "Do souhrnu doplňte větu: „Ostatní údaje, které v seznamu nejsou, se hlásí dál.“ Vychází to z toho, že originál vyjímá jen vyjmenované údaje.",
-   "U období změňte „platí od 21. 3. 2022“ na „vydáno 21. 3. 2022“, protože originál uvádí jen datum vydání, ne začátek platnosti."
-  ],
   "blockers": [],
   "dates": [
    {

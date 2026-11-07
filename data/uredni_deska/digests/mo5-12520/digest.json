@@ -798,13 +798,6 @@
    }
   },
   "summary": "Přepis obstál: částky, datum schválení i místa, kde si lze rozpočet prohlédnout, odpovídají schválenému rozpočtu a zpřesnit by se měly jen dvě formulace.",
-  "fixes": [
-   "V souhrnu nahraďte „do nových chodníků ve Wolkerově ulici“ za „do rekonstrukce chodníků ve Wolkerově ulici“. Originál (komentář k dopravě) popisuje rekonstrukci, při níž asfalt nahradí zámková dlažba.",
-   "V souhrnu nahraďte „25,1 mil. Kč ušetřenými z roku 2025“ za „25,1 mil. Kč, které podle odhadu zbudou z roku 2025“. V přehledu údajů změňte popisek „Peníze ušetřené z roku 2025“ na „Peníze převedené z roku 2025“. Originál (kapitola Financování) sem řadí předpokládané ušetřené nebo nevyčerpané prostředky i peníze na akce převáděné z roku 2025.",
-   "U Wolkerovy a U Krematoria doplňte, že jde o předpokládané částky, například „chodníky ve Wolkerově ulici asi 10,2 mil. Kč“. Originál uvádí „předpokládanou“ částku u obou akcí.",
-   "V přehledu údajů nahraďte „na revitalizaci“ za „na obnovu hřiště“ a „podíl na sdílených daních“ za „podíl obvodu na daních“.",
-   "V přehledu údajů uvádějte hlavní částky v milionech jako v souhrnu, například 99,3 mil. Kč místo 99 308,32 tis. Kč."
-  ],
   "blockers": [],
   "dates": [
    {

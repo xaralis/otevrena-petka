@@ -269,34 +269,30 @@
  "review_note": null,
  "quality": {
   "method": "druhy-model",
-  "level": "pozor",
+  "level": "spolehlive",
   "passed": true,
   "issues": [
-   "Obrázky: Karta nemá žádný obrázek, přitom jde o konkrétní ulice a originál se odvolává na situační plán, takže by plán nebo aspoň mapa čtenáři pomohly."
+   "Termíny, místa, značky i důvod odpovídají originálu, jen místo „Wintrova I“ karta píše obecně „Wintrova ulice“, i když originál nevysvětluje, co „I“ znamená."
   ],
   "marks": {
    "presnost": {
     "score": 4,
-    "reason": "Data, důvod, značky i odpovědné organizace sedí s originálem, jen originál uvádí „Wintrova I“, kdežto karta píše obecně o celé Wintrově ulici."
+    "reason": "Termíny, místa, značky i důvod odpovídají originálu, jen místo „Wintrova I“ karta píše obecně „Wintrova ulice“, i když originál nevysvětluje, co „I“ znamená."
    },
    "uplnost": {
     "score": 4,
-    "reason": "Karta říká co, kde, kdy, koho se to týká a co hrozí, ale neupozorňuje, že přesný rozsah zákazu je jen v situačním plánu, který není k dispozici."
+    "reason": "Karta uvádí co, kde, kdy a koho se to týká, ale čtenáři neřekne, že přesný rozsah zákazu je jen v situačním plánu, který v podkladech chybí."
    },
    "srozumitelnost": {
     "score": 5,
-    "reason": "Text je psaný běžnou češtinou bez úředních obratů a paragrafů a pochopí ho každý řidič."
+    "reason": "Text je psaný běžnou češtinou bez paragrafů a úředních obratů a řidič z něj hned pozná, co mu hrozí."
    },
    "obrazky": {
-    "score": 2,
-    "reason": "Karta nemá žádný obrázek, přitom jde o konkrétní ulice a originál se odvolává na situační plán, takže by plán nebo aspoň mapa čtenáři pomohly."
+    "score": 3,
+    "reason": "Mapa ukazuje správná náměstí, ale chybí na ní Wintrova ulice, která patří do Pardubic V a zákaz se jí také týká."
    }
   },
-  "summary": "Karta s originálem věcně souhlasí, včetně data 23. 11. 2026 i důvodu zákazu, chybí jí jen upozornění na neznámý přesný rozsah ve Wintrově ulici a obrázek nebo mapa místa.",
-  "fixes": [
-   "Do shrnutí doplňte, že přesný rozsah zákazu určuje situační plán, který v podkladech není, a že originál uvádí označení „Wintrova I“. Například: „Originál uvádí ‚Wintrova I‘; přesný úsek ulice i hranice zóny určuje plán, který nemáme k dispozici. Řiďte se značkami na místě.“ Stejné označení použijte i v údaji o místě.",
-   "Vyžádejte si od Magistrátu města Pardubic, odboru dopravy, přílohu č. 2 (situační plán pro obvod Pardubice V, č. j. MmP 205540/2026) a přidejte ji ke kartě. Dokud ji nemáte, přidejte aspoň mapu s vyznačeným náměstím Dukelských hrdinů a Wintrovou ulicí a uveďte, že rozsah zákazu je jen orientační."
-  ],
+  "summary": "Přepis s originálem věcně souhlasí včetně data 23. 11. 2026 a míst v Pardubicích V, jen nezmiňuje, že přesný rozsah zákazu neznáme, a na mapě chybí Wintrova ulice.",
   "blockers": [],
   "dates": [
    {
@@ -309,11 +305,11 @@
     "field": "do",
     "value": "2026-11-23",
     "verdict": "v_dokumentu",
-    "evidence": "Originál uvádí pro obvod Pardubice V jediný den: „23. 11. 2026 MO V“, takže začátek i konec připadají na stejné datum."
+    "evidence": "Originál, strana 2, uvádí pro Pardubice V jediný den platnosti, „23. 11. 2026 MO V“, bez časového rozmezí."
    }
   ],
   "prompt_version": "kvalita-v1",
-  "model": "cli:opus",
-  "scored_at": "2026-11-07T08:58:13+00:00"
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-07T12:30:31+00:00"
  }
 }

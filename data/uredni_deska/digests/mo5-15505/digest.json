@@ -2,9 +2,9 @@
  "notice_id": "mo5-15505",
  "members": [],
  "status": "published",
- "prompt_version": "deska-v2",
+ "prompt_version": "deska-v6",
  "model": "cli:opus",
- "created_at": "2026-11-04T11:20:29+00:00",
+ "created_at": "2026-11-07T09:23:36+00:00",
  "source": {
   "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Devotyho",
   "url": "https://pardubice.eu/uredni-deska/obvody?id=15505",
@@ -12,48 +12,40 @@
   "mo5": true
  },
  "cluster": "doprava",
- "headline": "V Devotyho u domu č. p. 2446 má přibýt zákaz vjezdu vozidel delších než 10 m",
- "summary": "Magistrát navrhuje postavit v ulici Devotyho u domu č. p. 2446 trvalou značku, která zakáže vjezd vozidlům delším než 10 metrů. Po rekonstrukci se zúžila křižovatka ulic Železničního pluku a Devotyho a autobusy, které odjíždějí od ZŠ Benešovo náměstí, jí neprojedou. Úpravu navrhl městský obvod Pardubice V a souhlasí s ní dopravní policie. Zatím jde o návrh: lidé, kterých se to týká, a majitelé nemovitostí k němu mohou poslat připomínky nebo námitky.",
- "where": "Ulice Devotyho u domu č. p. 2446, u křižovatky s ulicí Železničního pluku",
+ "headline": "V ulici Devotyho má přibýt zákaz vjezdu vozidel delších než 10 m, připomínky do 20. 11. 2026",
+ "summary": "Magistrát navrhuje u domu č. p. 2446 v ulici Devotyho stálou značku, která zakazuje vjezd vozidel delších než 10 m, protože po rekonstrukci se zúžil průjezd křižovatkou ulic Železničního pluku a Devotyho a to brání výjezdu autobusů od ZŠ Benešovo nám. Úpravu navrhl městský obvod Pardubice V. Magistrát k návrhu obdržel stanovisko Krajského ředitelství policie Pardubického kraje. Připomínky nebo námitky lze podat do 20. 11. 2026.",
+ "where": "U domu č. p. 2446 v ulici Devotyho, Pardubice",
  "period": {
   "from": null,
   "to": null,
-  "text": "Trvalá značka, termín instalace není uveden. Připomínky lze podat do 20. 11. 2026."
+  "text": null
  },
  "action": {
-  "what": "Připomínky nebo námitky k návrhu (majitelé nemovitostí podávají písemné odůvodněné námitky)",
+  "what": "Podat připomínky nebo námitky k navržené značce. Vlastníci dotčených nemovitostí podávají písemné odůvodněné námitky.",
   "deadline": "2026-11-20",
-  "how": "Písemně na Magistrát města Pardubic, odbor dopravy, nám. Republiky 12, 530 21 Pardubice (vyřizuje Bc. Jiří Kříž, tel. 466 859 366, Jiri.Kriz@mmp.cz), č. j. MmP 196399/2026. K pozdě podaným připomínkám se nepřihlíží."
+  "how": "Magistrát města Pardubic, odbor dopravy, nám. Republiky 12, 530 21 Pardubice (č. j. MmP 196399/2026). Dotazy: Bc. Jiří Kříž, tel. +420 466 859 366, Jiri.Kriz@mmp.cz. K později podaným připomínkám a námitkám se nepřihlíží."
  },
- "affects": "Řidiči dlouhých vozidel (nad 10 m), zejména autobusů, a obyvatelé a majitelé domů v ulici Devotyho",
+ "affects": "Lidé, kterých se úprava dotkne, a vlastníci dotčených nemovitostí; řidiči vozidel delších než 10 m.",
  "facts": [
   {
-   "label": "Co se změní",
-   "value": "Zákaz vjezdu vozidel delších než 10 m (značka B17)"
+   "label": "Co se navrhuje",
+   "value": "Stálá svislá značka B17 s mezí 10 m"
   },
   {
-   "label": "Proč",
-   "value": "Po rekonstrukci se zúžila křižovatka Železničního pluku × Devotyho a autobusy od ZŠ Benešovo nám. z ní nevyjedou"
+   "label": "Důvod",
+   "value": "Po rekonstrukci se zúžil průjezd křižovatkou ulic Železničního pluku a Devotyho, což brání výjezdu autobusů od ZŠ Benešovo nám."
   },
   {
-   "label": "Druh značení",
-   "value": "Trvalá svislá dopravní značka"
-  },
-  {
-   "label": "Navrhl",
+   "label": "Kdo úpravu navrhl",
    "value": "Městský obvod Pardubice V"
   },
   {
-   "label": "Stav",
-   "value": "Návrh – řízení teprve začíná"
+   "label": "Kdo rozhoduje",
+   "value": "Magistrát města Pardubic, odbor dopravy"
   },
   {
-   "label": "Lhůta pro připomínky",
-   "value": "30 dní od zveřejnění, tedy do 20. 11. 2026 (vyvěšeno na desce magistrátu 6. 10., zveřejněno posledním dnem vyvěšení 21. 10.)"
-  },
-  {
-   "label": "Číslo jednací",
-   "value": "MmP 196399/2026"
+   "label": "Lhůta pro připomínky a námitky",
+   "value": "Do 20. 11. 2026"
   }
  ],
  "signs": [
@@ -64,16 +56,15 @@
   }
  ],
  "places": [
-  "Devotyho 2446",
-  "Železničního pluku",
-  "Benešovo náměstí"
+  "Devotyho 2446"
  ],
  "parcels": [],
+ "spending": [],
  "budget": [],
  "drawing": null,
  "parking": null,
- "visual_plan": "Mapa s bodem u domu Devotyho 2446 a vyznačenou křižovatkou s ulicí Železničního pluku a ikonou značky B17 „10 m“. Výkres umístění značky ke zveřejnění nepřiložili.",
- "reviewer_notes": "Lhůta ověřena: vyhláška uvádí vyvěšení na desce magistrátu 6. 10. 2026 → zveřejnění 21. 10. → 20. 11. 2026. 1) Lhůta je dopočtená. Dokument říká: 30 dní ode dne zveřejnění, přičemž dnem zveřejnění je poslední den 15denní vývěsní lhůty. Na desce magistrátu je vyhláška od 6. 10. 2026, takže vývěsní lhůta skončila 21. 10. a 30 dní od toho vychází na 20. 11. 2026. Pokud by rozhodovalo vyvěšení na desce obvodu (20. 10.), vývěsní lhůta skončí 4. 11. a lhůta pro připomínky vyjde na 4. 12. 2026. Bezpečnější je uvést dřívější datum, ale je dobré to ověřit u odboru dopravy. 2) Název oznámení mluví o „přechodné“ úpravě, dokument ale navrhuje trvalé svislé značky. 3) Příloha se situací umístění značky (zmiňuje ji dokument) v souboru není, takže přesné místo a směr platnosti zákazu nejsou známé. 4) Kód B17 se v oznámení neobjevuje s popisem; jde o zákaz vjezdu vozidel, jejichž délka přesahuje vyznačenou mez (zde 10 m). 5) Dokument uvádí jako odpovědnou osobu „p. Brožek“ z úřadu obvodu; v textu karty jsem ho neuvedl.",
+ "visual_plan": "Letecký snímek nebo mapa se značkou domu č. p. 2446 a popiskem „Okolí domu č. p. 2446 v ulici Devotyho, přesné místo značky není známé“, protože dodaný dokument výkres neobsahuje. Pokud odbor dopravy dodá přílohu „situace umístění dopravního značení“, přidat ji na kartu jako obrázek.",
+ "reviewer_notes": "Lhůta je dopočtená: vyvěšení na desce magistrátu 6. 10. 2026 + 15 dnů = zveřejnění 21. 10. 2026 + 30 dnů = 20. 11. 2026. Na desce obvodu bylo oznámení vyvěšeno až 20. 10. 2026 a podle pravidla se od tohoto data nepočítá; při počítání od něj by lhůta vyšla na 4. 12. 2026, proto je vhodné 20. 11. 2026 ověřit u odboru dopravy. Příloha „situace umístění dopravního značení“ je ve vyhlášce uvedená, ale v dodaném PDF není, takže drawing je null a přesné místo značky ani směr jejího platnosti nejsou známé; je potřeba ji vyžádat na tel. 466 859 366. Značku domu č. p. 2446 a popisek musí doplnit až vrstva s mapou, karta předává adresu „Devotyho 2446“ a text popisku; ověřte, že se značka zobrazí na správném domě. Křižovatka s ulicí Železničního pluku je záměrně jen v textu, aby druhá značka na mapě nepůsobila jako místo dopravní značky. Obsah stanoviska policie vyhláška neuvádí; o souhlasu policie psát jen tehdy, když ho odbor dopravy potvrdí. Význam značky B17 (zákaz vjezdu vozidel delších než vyznačená mez) dokument neopisuje, vychází z obecného významu kódu značky; ověřit. Název oznámení na desce mluví o „přechodné“ úpravě, text vyhlášky ale o stálých svislých značkách a změně místní úpravy; karta se drží textu vyhlášky. Dokument neuvádí, odkdy má značka platit, ani zda se zákaz týká školních autobusů nebo konkrétního směru jízdy.",
  "visual": {
   "map": [
    {
@@ -85,256 +76,6 @@
      "coordinates": [
       15.774755,
       50.025676
-     ]
-    }
-   },
-   {
-    "kind": "street",
-    "label": "Železničního pluku",
-    "source_text": "Železničního pluku",
-    "geometry": {
-     "type": "MultiLineString",
-     "coordinates": [
-      [
-       [
-        15.773001,
-        50.027218
-       ],
-       [
-        15.773029,
-        50.028055
-       ]
-      ],
-      [
-       [
-        15.773029,
-        50.028055
-       ],
-       [
-        15.773037,
-        50.028495
-       ]
-      ],
-      [
-       [
-        15.773001,
-        50.027218
-       ],
-       [
-        15.773032,
-        50.027103
-       ]
-      ],
-      [
-       [
-        15.773286,
-        50.024258
-       ],
-       [
-        15.77318,
-        50.025396
-       ]
-      ],
-      [
-       [
-        15.773309,
-        50.023845
-       ],
-       [
-        15.773286,
-        50.024258
-       ]
-      ],
-      [
-       [
-        15.773166,
-        50.025537
-       ],
-       [
-        15.773089,
-        50.026426
-       ]
-      ],
-      [
-       [
-        15.773032,
-        50.027103
-       ],
-       [
-        15.773089,
-        50.026426
-       ]
-      ],
-      [
-       [
-        15.773166,
-        50.025537
-       ],
-       [
-        15.77318,
-        50.025396
-       ]
-      ],
-      [
-       [
-        15.773365,
-        50.023254
-       ],
-       [
-        15.773309,
-        50.023845
-       ]
-      ],
-      [
-       [
-        15.773037,
-        50.028495
-       ],
-       [
-        15.773077,
-        50.029186
-       ]
-      ]
-     ]
-    }
-   },
-   {
-    "kind": "street",
-    "label": "Benešovo náměstí",
-    "source_text": "Benešovo náměstí",
-    "geometry": {
-     "type": "MultiLineString",
-     "coordinates": [
-      [
-       [
-        15.775718,
-        50.024484
-       ],
-       [
-        15.777061,
-        50.024469
-       ]
-      ],
-      [
-       [
-        15.775011,
-        50.02536
-       ],
-       [
-        15.775016,
-        50.025494
-       ]
-      ],
-      [
-       [
-        15.774985,
-        50.024487
-       ],
-       [
-        15.775718,
-        50.024484
-       ]
-      ],
-      [
-       [
-        15.777258,
-        50.026208
-       ],
-       [
-        15.775981,
-        50.026236
-       ]
-      ],
-      [
-       [
-        15.777258,
-        50.026208
-       ],
-       [
-        15.778353,
-        50.026184
-       ]
-      ],
-      [
-       [
-        15.777061,
-        50.024469
-       ],
-       [
-        15.777099,
-        50.024758
-       ]
-      ],
-      [
-       [
-        15.775016,
-        50.025494
-       ],
-       [
-        15.775062,
-        50.026261
-       ]
-      ],
-      [
-       [
-        15.775011,
-        50.02536
-       ],
-       [
-        15.774985,
-        50.024487
-       ]
-      ],
-      [
-       [
-        15.778353,
-        50.026184
-       ],
-       [
-        15.778748,
-        50.026176
-       ]
-      ],
-      [
-       [
-        15.775062,
-        50.026261
-       ],
-       [
-        15.775981,
-        50.026236
-       ]
-      ],
-      [
-       [
-        15.775062,
-        50.026261
-       ],
-       [
-        15.775066,
-        50.026364
-       ]
-      ],
-      [
-       [
-        15.777235,
-        50.025891
-       ],
-       [
-        15.777258,
-        50.026208
-       ]
-      ],
-      [
-       [
-        15.777099,
-        50.024758
-       ],
-       [
-        15.777235,
-        50.025891
-       ]
-      ]
      ]
     }
    }
@@ -374,56 +115,50 @@
   "photo": null,
   "thumb": "nahled.jpg"
  },
- "problems": [],
- "published_at": "2026-11-05T10:00:11+00:00",
- "review_note": null,
+ "problems": [
+  "datum lhůta 2026-11-20 v dokumentu není doslova"
+ ],
  "quality": {
   "method": "druhy-model",
-  "level": "spatne",
-  "passed": false,
+  "level": "spolehlive",
+  "passed": true,
   "issues": [
-   "Karta říká něco jiného než dokument: Karta tvrdí, že s úpravou souhlasí dopravní policie. Originál uvádí jen, že úřad obdržel stanovisko krajského ředitelství policie, a neříká, jak toto stanovisko zní.",
-   "Přesnost: Místo, značka, důvod, navrhovatel i lhůta sedí s originálem, ale tvrzení, že s návrhem souhlasí dopravní policie, v originálu není, protože ten zmiňuje jen obdržené stanovisko policie bez jeho obsahu."
+   "Značka, délka 10 m, důvod, kontakt i lhůta s originálem souhlasí; nepřesné je jen, že úpravu navrhl obvod, protože ten o ni požádal a návrh zpracoval magistrát."
   ],
   "marks": {
    "presnost": {
-    "score": 3,
-    "reason": "Místo, značka, důvod, navrhovatel i lhůta sedí s originálem, ale tvrzení, že s návrhem souhlasí dopravní policie, v originálu není, protože ten zmiňuje jen obdržené stanovisko policie bez jeho obsahu."
+    "score": 4,
+    "reason": "Značka, délka 10 m, důvod, kontakt i lhůta s originálem souhlasí; nepřesné je jen, že úpravu navrhl obvod, protože ten o ni požádal a návrh zpracoval magistrát."
    },
    "uplnost": {
-    "score": 5,
-    "reason": "Karta uvádí, co se mění, kde, proč, koho se to týká, kdo a jak může reagovat a do kdy, a výslovně říká, že termín instalace není uveden."
+    "score": 4,
+    "reason": "Karta uvádí co, kde, koho se to týká, jak se vyjádřit i do kdy, ale neříká, že přesné místo značky určuje plánek, který v dodaném originálu chybí."
    },
    "srozumitelnost": {
     "score": 4,
-    "reason": "Text je psaný běžnou češtinou a značka je vysvětlená, jen místy zůstávají úřední obraty a zkratky jako číslo jednací nebo odůvodněné námitky."
+    "reason": "Text je celkově srozumitelný, jen místy zůstávají úřední obraty jako značka B17 s mezí 10 m nebo obdržené stanovisko."
    },
    "obrazky": {
     "score": 3,
-    "reason": "Letecké snímky odpovídají popsanému okolí, ale velký snímek nemá značku ani popisek a žádný obrázek neukazuje, kde přesně značka bude, protože plánek zmíněný v originálu není k dispozici."
+    "reason": "Letecké snímky odpovídají okolí školy a křižovatky, ale neukazují novou značku ani její přesné umístění a větší snímek nemá žádné označení místa."
    }
   },
-  "summary": "Místo, značka, důvod i lhůta do 20. 11. 2026 s originálem sedí, karta ale navíc tvrdí, že s úpravou souhlasí dopravní policie, což originál neuvádí.",
-  "fixes": [
-   "V souhrnu nahraďte větu „Úpravu navrhl městský obvod Pardubice V a souhlasí s ní dopravní policie.“ větou „Úpravu navrhl městský obvod Pardubice V. Magistrát k návrhu obdržel stanovisko Krajského ředitelství policie Pardubického kraje.“ Originál obsah stanoviska neuvádí; o souhlasu pište jen tehdy, když ho odbor dopravy (tel. 466 859 366) potvrdí.",
-   "K velkému leteckému snímku doplňte značku domu č. p. 2446 a popisek, například „Okolí domu č. p. 2446 v ulici Devotyho, přesné místo značky není známé“. Pokud od odboru dopravy získáte přílohu „situace umístění dopravního značení“, přidejte ji na kartu jako obrázek."
-  ],
-  "blockers": [
-   {
-    "kind": "zavadejici",
-    "what": "Karta tvrdí, že s úpravou souhlasí dopravní policie. Originál uvádí jen, že úřad obdržel stanovisko krajského ředitelství policie, a neříká, jak toto stanovisko zní."
-   }
-  ],
+  "summary": "Přepis v hlavních údajích i ve lhůtě odpovídá originálu, jen nepřesně uvádí, kdo úpravu navrhl, a neupozorňuje, že přesné místo značky není z dodaného originálu známé.",
+  "blockers": [],
   "dates": [
    {
     "field": "lhuta",
     "value": "2026-11-20",
     "verdict": "spocitano_spravne",
-    "evidence": "Originál uvádí vyvěšení na úřední desce magistrátu 6. 10. 2026 a lhůtu 30 dnů ode dne zveřejnění, kterým je poslední den vyvěšení. Výpočet: 6. 10. + 15 dnů = 21. 10. (zveřejnění), 21. 10. + 30 dnů = 20. 11. 2026."
+    "evidence": "V originálu je vyvěšení na desce magistrátu 6. 10. 2026 a lhůta 30 dnů ode dne zveřejnění, kterým je poslední den patnáctidenní vývěsní lhůty: 6. 10. + 15 dnů = 21. 10.; 21. 10. + 30 dnů = 20. 11. 2026."
    }
   ],
   "prompt_version": "kvalita-v1",
   "model": "cli:opus",
-  "scored_at": "2026-11-07T08:56:48+00:00"
- }
+  "scored_at": "2026-11-07T09:25:02+00:00",
+  "attempts": 1
+ },
+ "published_at": "2026-11-07T09:25:02+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
 }

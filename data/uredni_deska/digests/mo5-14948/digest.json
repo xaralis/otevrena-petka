@@ -141,12 +141,6 @@
    }
   },
   "summary": "Přepis s originálem věcně souhlasí: termín, místo i úřední hodiny jsou správně, jen by čtenáři pomohlo přesnější znění nadpisu a jasnější vysvětlení, kdy se vyměření bere jako doručené.",
-  "fixes": [
-   "Nadpis zpřesnit, aby odpovídal okruhu dotčených lidí, například: „Kdo nezaplatil poplatek za odpad za rok 2025 včas nebo v plné výši, může si do 30. 11. 2026 prohlédnout, kolik mu úřad vyměřil“.",
-   "V shrnutí změnit „nezaplatili včas a v plné výši“ na „nezaplatili včas nebo v plné výši“, aby text souhlasil s údajem, koho se oznámení týká.",
-   "Větu o doručení doplnit o dopočítané datum a vyznačit, že jde o výpočet: „Seznam byl zpřístupněn 31. 8. 2026, vyměření se tedy bere jako doručené 30. 9. 2026 (třicátý den po zpřístupnění, datum dopočítané, v originálu není).“ Stejně upravit i řádek „Považuje se za doručené“.",
-   "Možnost odvolání ani jeho lhůtu nedoplňovat jako údaj z originálu, protože v něm nejsou; pokud má být informace na kartě, ověřit ji u ekonomického odboru a uvést její zdroj."
-  ],
   "blockers": [],
   "dates": [
    {

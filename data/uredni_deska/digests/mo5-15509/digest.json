@@ -153,13 +153,6 @@
    }
   },
   "summary": "Přepis s originálem v podstatných údajích souhlasí, místo, termín i rozměry sedí, nadpis ale mírně změkčuje uzavírku chodníku na zúžení a chybí v něm plánek uzavřeného úseku.",
-  "fixes": [
-   "V nadpisu nahraďte „zúží chodník“ za „uzavře část chodníku“, například „Lešení před domem Boženy Němcové 1920 uzavře část chodníku do 30. 11. 2026“. Originál na straně 2 mluví o „uzavírce chodníku a krajnici vozovky“ a o žádné zbývající průchozí šířce neříká nic; podle plánku červený obdélník zabírá zhruba celou šířku chodníku.",
-   "Přidejte jako obrázek situační plánek ze strany 4 originálu, otočený tak, aby se dal číst, a oříznutý bez bloku s elektronickým podpisem. Červeně je v něm vyznačený úsek 6 × 1 m a plánek neobsahuje žádné osobní údaje.",
-   "Na velký letecký snímek doplňte značku místa jako na malém náhledu, aby čtenář poznal, o který dům jde, a ověřte polohu značky u domu č. p. 1920.",
-   "Do textu nebo do údajů doplňte větu: „Proti tomuto opatření se nelze odvolat.“ (originál, strana 2, oddíl Poučení).",
-   "V textu a údajích nahraďte „zařízení staveniště“ srozumitelnějším „stavební zázemí“ a „č. p.“ slovem „číslo popisné“ nebo „dům číslo“."
-  ],
   "blockers": [],
   "dates": [
    {

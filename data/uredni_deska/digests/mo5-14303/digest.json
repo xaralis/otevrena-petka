@@ -5,9 +5,9 @@
   "mo5-14307"
  ],
  "status": "published",
- "prompt_version": "deska-v4",
+ "prompt_version": "deska-v6",
  "model": "cli:opus",
- "created_at": "2026-11-05T10:33:31+00:00",
+ "created_at": "2026-11-07T09:21:05+00:00",
  "source": {
   "title": "Schválená 3. změna rozpočtu MO Pardubice V na r. 2026 a schválená rozpočtová opatření v rámci 3. změny",
   "url": "https://pardubice.eu/uredni-deska/obvody?id=14303",
@@ -15,48 +15,48 @@
   "mo5": true
  },
  "cluster": "rozpocet",
- "headline": "Obvod schválil 3. změnu rozpočtu na rok 2026: peníze ušetřené z loňska jdou hlavně do rezervy",
- "summary": "Zastupitelstvo obvodu Pardubice V schválilo 24. 6. 2026 třetí změnu letošního rozpočtu. Peníze, které loni zbyly nebo přišly z vyúčtování s městem, jdou hlavně do rezervy (asi 1 mil. Kč) a do sociálního fondu zaměstnanců úřadu (863,6 tis. Kč). U dětského hřiště Višňovka v ulici S. K. Neumanna se 590 tis. Kč jen přeúčtovalo z investic na běžné výdaje. Čtyři mateřské školy dostaly celkem 41 tis. Kč na podzimní akce pro děti. Rozpočet obvodu má po změně 114,26 mil. Kč a dokument visí na desce do března 2027.",
+ "headline": "Obvod schválil 3. změnu rozpočtu na rok 2026: zbylé peníze z loňska jdou do rezervy a do sociálního fondu",
+ "summary": "Zastupitelstvo obvodu schválilo 24. 6. 2026 třetí změnu rozpočtu na rok 2026, která zvyšuje jeho zdroje i výdaje o 1 872,18 tis. Kč na 114 260,16 tis. Kč. Z nevyčerpaných peněz z loňska jde 863,6 tis. Kč do sociálního fondu a 711,78 tis. Kč do rezervy rozpočtu, dalších 296,8 tis. Kč do rezervy přišlo z vyúčtování s městem. Čtyři mateřské školy dostaly na své akce celkem 41 tis. Kč a u hřiště Višňovka se 590 tis. Kč přesunulo z investic do běžných výdajů, celková částka na hřiště se nemění. Dokument visí na úřední desce do března 2027.",
  "where": "Městský obvod Pardubice V",
  "period": {
-  "from": "2026-06-24",
+  "from": null,
   "to": null,
-  "text": "Platí od schválení zastupitelstvem 24. 6. 2026, pro rozpočet na rok 2026"
+  "text": "Schváleno 24. 6. 2026, týká se rozpočtu na rok 2026"
  },
  "action": null,
- "affects": "Obyvatelé obvodu Pardubice V, mateřské školy Kamarád, Jesničánky, Motýlek a Sluníčko a zaměstnanci úřadu obvodu (sociální fond)",
+ "affects": "Hospodaření městského obvodu, jeho sociální fond a mateřské školy Kamarád, Jesničánky, Motýlek a Sluníčko",
  "facts": [
   {
-   "label": "Schváleno",
-   "value": "Zastupitelstvo MO Pardubice V, 24. 6. 2026"
+   "label": "Schválilo",
+   "value": "Zastupitelstvo obvodu 24. 6. 2026, usnesení č. 182/2026 Z"
   },
   {
    "label": "Rozpočet po změně",
-   "value": "114 260,16 tis. Kč (dříve 112 387,98 tis. Kč)"
-  },
-  {
-   "label": "Změna celkem",
-   "value": "+1 872,18 tis. Kč"
+   "value": "zdroje i výdaje 114 260,16 tis. Kč (před změnou 112 387,98 tis. Kč)"
   },
   {
    "label": "Rezerva rozpočtu",
-   "value": "+1 008,6 tis. Kč, nově 7 040,48 tis. Kč"
-  },
-  {
-   "label": "Hřiště Višňovka",
-   "value": "590 tis. Kč převedeno z investic na běžné výdaje, celková částka 2 090 tis. Kč se nemění"
-  },
-  {
-   "label": "Příspěvky mateřským školám",
-   "value": "Kamarád 10 tis., Jesničánky 10 tis., Motýlek 12 tis., Sluníčko 9 tis. Kč (celkem 41 tis. Kč)"
-  },
-  {
-   "label": "Akce školek",
-   "value": "Dýňová zahrada, Hravá ekologie u nás, Školka volá, Malí muzikanti, Podzimní slavnosti, S pusinkami, jazýčky, děláme si rozcvičky, Barevný podzim v MŠ"
+   "value": "zvyšuje se o 1 008,58 tis. Kč na 7 040,48 tis. Kč: 711,78 tis. Kč jsou loňské úspory a 296,8 tis. Kč vyúčtování s městem"
   },
   {
    "label": "Sociální fond",
-   "value": "zvýšen o 1 190,6 tis. Kč, nově 2 437 tis. Kč"
+   "value": "fond se zvyšuje o 1 190,6 tis. Kč: 863,6 tis. Kč je doplatek z rozpočtu obvodu a 327 tis. Kč jeho vlastní zůstatek z roku 2025; 1 189,6 tis. Kč z toho jde do rezervy fondu a 1 tis. Kč na bankovní a jiné poplatky"
+  },
+  {
+   "label": "Mateřské školy",
+   "value": "Kamarád 10 tis. Kč, Jesničánky 10 tis. Kč, Motýlek 12 tis. Kč, Sluníčko 9 tis. Kč; peníze jsou vázané na konkrétní akce a školy budou dokládat jejich využití"
+  },
+  {
+   "label": "Akce školek",
+   "value": "Dýňová zahrada; Hravá ekologie u nás, Školka volá, Malí muzikanti; Podzimní slavnosti v MŠ, S pusinkami, jazýčky, děláme si rozcvičky; Barevný podzim v MŠ"
+  },
+  {
+   "label": "Hřiště Višňovka",
+   "value": "590 tis. Kč se přesouvá z investic do běžných výdajů, protože část výdajů byla přehodnocena; celkem zůstává 2 090 tis. Kč"
+  },
+  {
+   "label": "Finanční výbor",
+   "value": "projednal změnu 15. 6. 2026 a doporučil ji ke schválení"
   }
  ],
  "signs": [],
@@ -68,44 +68,37 @@
   "Gorkého 1521"
  ],
  "parcels": [],
+ "spending": [],
  "budget": [
   {
-   "label": "rezerva rozpočtu (loňské úspory)",
+   "label": "rezerva (loňské úspory, vyúčtování s městem)",
    "change": 1008.58
   },
   {
-   "label": "doplatek do sociálního fondu zaměstnanců",
+   "label": "sociální fond (doplatek z rozpočtu obvodu)",
    "change": 863.6
   },
   {
-   "label": "hřiště Višňovka – běžné výdaje",
+   "label": "hřiště Višňovka: běžné výdaje (přesun)",
    "change": 590
   },
   {
-   "label": "hřiště Višňovka – investice (přeúčtováno)",
+   "label": "hřiště Višňovka: investice (přesun)",
    "change": -590
   },
   {
-   "label": "příspěvky školám – nerozdělené",
+   "label": "čtyři mateřské školy – podzimní akce",
+   "change": 41
+  },
+  {
+   "label": "obecná položka příspěvků organizacím města",
    "change": -41
-  },
-  {
-   "label": "MŠ Motýlek – podzimní akce",
-   "change": 12
-  },
-  {
-   "label": "MŠ Kamarád – Dýňová zahrada",
-   "change": 10
-  },
-  {
-   "label": "MŠ Jesničánky – akce pro děti",
-   "change": 10
   }
  ],
  "drawing": null,
  "parking": null,
- "visual_plan": "Sloupcový graf změn: zvlášť přírůstky (rezerva, sociální fond) a přesuny (Višňovka, školky). U školek můžou být na mapě jejich čtyři budovy s částkou a názvem akce.",
- "reviewer_notes": "Dokument je platný od 24. 6. 2026 a na desce visí dlouhodobě. Nejde o novinku a nelze se k němu vyjádřit, proto je action null. Částky jsou v tisících Kč podle Přílohy č. 1. Rezerva rozpočtu je v tabulce uvedena jednou jako 1 008,58 a jednou zaokrouhleně jako 1 008,6 tis. Kč (711,78 + 296,8). Do přehledu budget se nevešel příspěvek MŠ Sluníčko (+9 tis. Kč) a změny uvnitř sociálního fondu (rezerva fondu +1 189,6 tis., poplatky +1 tis.). Sociální fond je samostatný rozpočet, do kterého jde doplatek 863,6 tis. Kč, proto jsem jeho rezervu do budget nedal, aby se částky nesčítaly dvakrát. Termíny akcí školek (září až prosinec 2026) jsou z velké části už za námi.",
+ "visual_plan": "Sloupcový graf změn v tisících Kč: dominují rezerva a sociální fond, přesuny u hřiště a školek se navzájem vyruší a součet dá 1 872,18 tis. Kč. Mapa není potřeba, protože jde o peníze, ne o změnu v terénu.",
+ "reviewer_notes": "Opravy podle kontroly: nadpis, vysvětlení sociálního fondu a školka Sluníčko jsou doplněny. Přehled změn se sečte na 1 872,18 tis. Kč a sedí s tabulkou v příloze č. 1. Řádky školek jsou sloučené do +41 tis. Kč, protože samostatně by přehled měl 9 položek a limit je 8. Odchylka od návrhu kontroly: název „rezerva rozpočtu (loňské úspory a vyúčtování s městem)“ má 54 znaků, limit je 45, proto je zkrácen na „rezerva (loňské úspory, vyúčtování s městem)“; význam zůstává. Věta „visí do března 2027“ zůstala, protože ji potvrzuje záznam na úřední desce: hlavní dokument visí do 1. 3. 2027, obě přílohy do 2. 3. 2027. V samotných PDF toto datum není. K ověření: název „podzimní akce“ je zjednodušení, akce Jesničánek běží od 17. 8. nebo 1. 9. do 31. 12. 2026. Dokument neuvádí, odkdy změna platí, proto je v období jen datum schválení v textu a pole od/do jsou prázdná. Sociální fond má vlastní rozpočet, jeho 327 tis. Kč proto není v přehledu změn rozpočtu obvodu. Dokument zaokrouhluje 711 787,89 Kč na 711,78 tis. Kč, tedy dolů; částka je převzata tak, jak je rozpočtována.",
  "visual": {
   "map": [
    {
@@ -177,64 +170,53 @@
   "thumb": null
  },
  "problems": [],
- "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null,
  "quality": {
   "method": "druhy-model",
-  "level": "spatne",
-  "passed": false,
+  "level": "spolehlive",
+  "passed": true,
   "issues": [
-   "Karta říká něco jiného než dokument: Nadpis tvrdí, že peníze ušetřené z loňska jdou hlavně do rezervy. Podle originálu jde z nevyčerpaných 1 575,38 tis. Kč více do sociálního fondu (863,6 tis. Kč) než do rezervy (711,78 tis. Kč). Rezerva dosahuje 1 008,58 tis. Kč až díky 296,8 tis. Kč z vyúčtování s městem.",
-   "Přesnost: Částky, datum schválení i školky s originálem souhlasí, ale nadpis nepřesně tvrdí, že ušetřené peníze jdou hlavně do rezervy, a datum konce vyvěšení v originále není."
+   "Všechny částky, data i názvy sedí s originálem, jen označení „podzimní akce“ je nepřesné, protože některé akce začínají už v létě a trvají do konce roku."
   ],
   "marks": {
    "presnost": {
-    "score": 3,
-    "reason": "Částky, datum schválení i školky s originálem souhlasí, ale nadpis nepřesně tvrdí, že ušetřené peníze jdou hlavně do rezervy, a datum konce vyvěšení v originále není."
+    "score": 4,
+    "reason": "Všechny částky, data i názvy sedí s originálem, jen označení „podzimní akce“ je nepřesné, protože některé akce začínají už v létě a trvají do konce roku."
    },
    "uplnost": {
-    "score": 4,
-    "reason": "Podstatné údaje jsou uvedené a oprávněně chybí možnost se vyjádřit, jen přehled změn vynechává příspěvek 9 tis. Kč školce Sluníčko a karta nevysvětluje, proč se u sociálního fondu liší dvě částky."
+    "score": 5,
+    "reason": "Karta uvádí, co se schválilo, kdo a kdy to schválil, koho se změna týká i hlavní přesuny peněz; čtenář zde nemá co podávat ani v žádné lhůtě."
    },
    "srozumitelnost": {
     "score": 4,
-    "reason": "Text je psaný běžnou češtinou, jen pojmy jako přeúčtování z investic na běžné výdaje nebo sociální fond zůstávají bez bližšího vysvětlení."
+    "reason": "Text je celkově srozumitelný, ale čtenář se nedozví, k čemu sociální fond slouží, a částky v „tis. Kč“ s desetinnými místy se čtou hůř."
    },
    "obrazky": {
     "score": null,
-    "reason": "Jde o změnu rozpočtu, obrázek by čtenáři nepomohl."
+    "reason": "Karta o změně rozpočtu obrázek nepotřebuje."
    }
   },
-  "summary": "Čísla a datum schválení s originálem souhlasí, ale nadpis zkresluje, kam jdou loňské úspory, protože jich víc míří do sociálního fondu než do rezervy.",
-  "fixes": [
-   "Nadpis změňte, aby neříkal „hlavně do rezervy“, například: „Obvod schválil 3. změnu rozpočtu na rok 2026: zbylé peníze z loňska jdou do rezervy a do sociálního fondu“. Podle originálu jde z nevyčerpaných peněz 863,6 tis. Kč do fondu a 711,78 tis. Kč do rezervy; dalších 296,8 tis. Kč do rezervy přišlo z vyúčtování s městem.",
-   "V přehledu změn přejmenujte položku „rezerva rozpočtu (loňské úspory)“ na „rezerva rozpočtu (loňské úspory a vyúčtování s městem)“, protože částka 1 008,58 tis. Kč zahrnuje 711,78 tis. Kč úspor a 296,8 tis. Kč z vyúčtování.",
-   "Přehled změn doplňte o školku Sluníčko (+9 tis. Kč). Teď se položky sečtou na 1 863,18 tis. Kč místo 1 872,18 tis. Kč. Pokud se řádek nevejde, sloučte tři řádky školek do jednoho „čtyři mateřské školy – podzimní akce“ (+41 tis. Kč), součet pak vyjde.",
-   "U sociálního fondu vysvětlete rozdíl mezi 863,6 tis. Kč v textu a 1 190,6 tis. Kč v údajích, například: „fond se zvyšuje o 1 190,6 tis. Kč: 863,6 tis. Kč je doplatek z rozpočtu obvodu a 327 tis. Kč jeho vlastní zůstatek z roku 2025“.",
-   "Větu „dokument visí na desce do března 2027“ ověřte podle záznamu na úřední desce. Pokud tam datum sejmutí není, větu vypusťte, protože v přiložených dokumentech nestojí."
-  ],
-  "blockers": [
-   {
-    "kind": "zavadejici",
-    "what": "Nadpis tvrdí, že peníze ušetřené z loňska jdou hlavně do rezervy. Podle originálu jde z nevyčerpaných 1 575,38 tis. Kč více do sociálního fondu (863,6 tis. Kč) než do rezervy (711,78 tis. Kč). Rezerva dosahuje 1 008,58 tis. Kč až díky 296,8 tis. Kč z vyúčtování s městem."
-   }
-  ],
+  "summary": "Přepis obstál: částky, data i názvy sedí s originálem a jediná drobná nepřesnost je označení akcí školek jako „podzimní“; dobu vyvěšení do března 2027 originály neuvádějí, proto ji z nich nebylo možné ověřit.",
+  "blockers": [],
   "dates": [
    {
     "field": "od",
-    "value": "2026-06-24",
+    "value": "24. 6. 2026 (datum schválení v textu; začátek platnosti karta neuvádí)",
     "verdict": "v_dokumentu",
-    "evidence": "Originál uvádí schválení usnesením zastupitelstva č. 182/2026 Z ze dne 24. 6. 2026."
+    "evidence": "Hlavní dokument, str. 1: usnesení Zastupitelstva MO Pardubice V č. 182/2026 Z ze dne 24. 6. 2026. Datum účinnosti dokument neuvádí, prázdná pole od/do jsou proto v pořádku."
    },
    {
     "field": "do",
-    "value": "březen 2027 (dokument visí na desce)",
+    "value": "březen 2027 (doba vyvěšení na úřední desce)",
     "verdict": "nelze_overit",
-    "evidence": "Žádný ze tří přiložených dokumentů datum vyvěšení ani sejmutí neuvádí, údaj z nich nelze potvrdit."
+    "evidence": "Datum není v žádném ze tří PDF. Redaktor se odvolává na záznam na úřední desce (hlavní dokument do 1. 3. 2027, přílohy do 2. 3. 2027), ten ale nebyl mezi přílohami. Originály údaji nijak neodporují."
    }
   ],
   "prompt_version": "kvalita-v1",
   "model": "cli:opus",
-  "scored_at": "2026-11-07T08:55:35+00:00"
- }
+  "scored_at": "2026-11-07T09:22:28+00:00",
+  "attempts": 1
+ },
+ "published_at": "2026-11-07T09:22:28+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
 }

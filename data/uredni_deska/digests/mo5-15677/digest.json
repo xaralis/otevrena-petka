@@ -272,12 +272,6 @@
    }
   },
   "summary": "Karta věrně popisuje termín, místo i program ustavujícího zasedání, jen několik úředních výrazů zůstalo nevysvětlených.",
-  "fixes": [
-   "V souhrnu nahraďte „rozhodnou, kdo bude funkci vykonávat jako uvolněný“ za „rozhodnou, které funkce budou zastupitelé vykonávat jako uvolněné, tedy jako své hlavní zaměstnání“. Originál v bodu 6 programu mluví o funkcích, ne o konkrétních lidech.",
-   "V souhrnu a v řádku „Odměny“ vysvětlete výraz „neuvolněným zastupitelům“, například: „zastupitelům, pro které funkce není hlavním zaměstnáním“.",
-   "V souhrnu a v popisu účasti nahraďte nebo vysvětlete výraz „ustavující zasedání“, například: „první zasedání nového zastupitelstva“. Řádek s výzvou „Přijít na ustavující zasedání zastupitelstva“ upravte stejně.",
-   "Zkratku „DK“ v souhrnu, v místě konání a v popisu účasti rozepište na oficiální název domu kultury; originál ji nerozepisuje, proto název před úpravou ověřte."
-  ],
   "blockers": [],
   "dates": [
    {

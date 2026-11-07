@@ -2,9 +2,9 @@
  "notice_id": "mo5-15507",
  "members": [],
  "status": "published",
- "prompt_version": "deska-v2",
+ "prompt_version": "deska-v6",
  "model": "cli:opus",
- "created_at": "2026-11-04T07:35:58+00:00",
+ "created_at": "2026-11-07T09:25:42+00:00",
  "source": {
   "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Dražkovice",
   "url": "https://pardubice.eu/uredni-deska/obvody?id=15507",
@@ -12,48 +12,48 @@
   "mo5": true
  },
  "cluster": "doprava",
- "headline": "Před mateřskou školou v Dražkovicích mají vzniknout parkovací místa pro rodiče, kteří vozí děti",
- "summary": "Odbor dopravy Magistrátu města Pardubic chce před mateřskou školou v Dražkovicích vyhradit parkování pro rodiče, kteří děti do školky vozí nebo si je vyzvedávají. Místa budou vyhrazená ve všední dny od 7 do 8 hodin a od 14 do 16 hodin. Půjde o trvalé značení: svislou značku a vodorovně vyznačená stání. Kdo má k návrhu připomínky nebo námitky, může je magistrátu podat písemně do 26. 11. 2026.",
- "where": "Před mateřskou školou v Dražkovicích (přesné místo je v situačním výkresu, který v příloze na desce chybí)",
+ "headline": "Před mateřskou školou v Dražkovicích má vzniknout vyhrazené parkování pro doprovod dětí",
+ "summary": "Magistrát navrhuje vyhradit před mateřskou školou v Dražkovicích parkování pro doprovod dětí, a to od pondělí do pátku od 7 do 8 a od 14 do 16 hodin. Místa mají označit stálé svislé a vodorovné dopravní značky. Zatím jde o návrh; datum zavedení ani počet míst oznámení neuvádí. Kdo je návrhem dotčený, může do 26. 11. 2026 podat magistrátu připomínky nebo námitky; vlastníci nemovitostí musí podat písemné a odůvodněné námitky.",
+ "where": "Před mateřskou školou v Dražkovicích",
  "period": {
   "from": null,
   "to": null,
-  "text": "Trvalá úprava; parkování je vyhrazené ve všední dny 7–8 a 14–16 h"
+  "text": null
  },
  "action": {
-  "what": "Podat připomínky nebo námitky k návrhu dopravního značení",
+  "what": "Podat připomínky nebo námitky k návrhu",
   "deadline": "2026-11-26",
-  "how": "Písemně na Magistrát města Pardubic, odbor dopravy, nám. Republiky 12, Pardubice. Vyřizuje Luděk Fiedler, tel. 466 859 195, e-mail Ludek.Fiedler@mmp.cz. Vlastníci nemovitostí musí námitky písemně zdůvodnit. K později podaným připomínkám se nepřihlíží."
+  "how": "Na Magistrát města Pardubic, odbor dopravy, nám. Republiky 12, Pardubice. Vlastníci nemovitostí podávají písemné a odůvodněné námitky. K pozdějším podáním se nepřihlíží a zmeškanou lhůtu nelze prominout. Dotazy: odbor dopravy, tel. 466 859 195."
  },
- "affects": "Rodiče, kteří vozí děti do mateřské školy v Dražkovicích, a řidiči, kteří parkují před školkou",
+ "affects": "Doprovod dětí do mateřské školy v Dražkovicích, další osoby dotčené návrhem a dotčení vlastníci nemovitostí.",
  "facts": [
   {
-   "label": "Co se mění",
-   "value": "Vyhrazená parkovací místa pro doprovod dětí do mateřské školy"
+   "label": "Pro koho",
+   "value": "Doprovod dětí do mateřské školy"
   },
   {
-   "label": "Kdy platí vyhrazení",
-   "value": "Pondělí až pátek 7–8 a 14–16 h"
+   "label": "Kdy má vyhrazení platit",
+   "value": "Pondělí až pátek 7–8 a 14–16 hodin"
   },
   {
-   "label": "Druh značení",
-   "value": "Trvalé svislé a vodorovné dopravní značení"
-  },
-  {
-   "label": "Navrhuje",
-   "value": "Magistrát města Pardubic, odbor dopravy"
-  },
-  {
-   "label": "Provede",
-   "value": "Služby města Pardubic a.s."
+   "label": "Důvod",
+   "value": "Zajištění parkování pro doprovod dětí do mateřské školy"
   },
   {
    "label": "Stanovisko policie",
-   "value": "Na žádost policie budou místa vyznačena jen jako šikmá stání (V10e), ne s jiným typem čar (V10d)"
+   "value": "Policie stanovila podmínku, že místa budou na vozovce označena jen značkou V10e, ne V10d."
   },
   {
-   "label": "Lhůta pro připomínky",
-   "value": "30 dnů od zveřejnění, tedy do 26. 11. 2026 (vyvěšeno na desce magistrátu 12. 10., zveřejněno posledním dnem vyvěšení 27. 10.)"
+   "label": "Kdo návrh podal",
+   "value": "Magistrát města Pardubic, odbor dopravy, oddělení koncepce dopravy"
+  },
+  {
+   "label": "Provedení značení",
+   "value": "Služby města Pardubic a.s."
+  },
+  {
+   "label": "Číslo jednací",
+   "value": "MmP 200533/2026"
   }
  ],
  "signs": [
@@ -73,12 +73,16 @@
    "change": "nova"
   }
  ],
- "places": [],
+ "places": [
+  "mateřská škola, Dražkovice"
+ ],
  "parcels": [],
+ "spending": [],
  "budget": [],
  "drawing": null,
- "visual_plan": "Nejlépe se hodí mapa s bodem u mateřské školy v Dražkovicích a k ní obrázky značek IP12 s dodatkovou tabulkou. Situační výkres by byl lepší, ale v přiloženém PDF není.",
- "reviewer_notes": "Lhůtu ověřil člověk: vyhláška šla na desku magistrátu 12. 10. 2026, vývěsní lhůta 15 dní končí 27. 10. (den zveřejnění), 30 dní od něj je 26. 11. 2026. Lhůtu jsem dopočítal. Podle dokumentu běží připomínková lhůta 30 dnů ode dne zveřejnění a za ten se považuje poslední den patnáctidenní vývěsní lhůty. Ta začíná den po vyvěšení, tedy 21. 10. 2026, a končí 4. 11. 2026. Třicet dnů od tohoto dne vychází na 4. 12. 2026. Počítal jsem s vyvěšením na desce městského obvodu 20. 10. Na desce magistrátu mohlo být vyvěšeno jindy, což by lhůtu posunulo, takže je dobré to ověřit. V názvu oznámení stojí „přechodná úprava“, dokument ale mluví o stálém (trvalém) značení. Na kartě uvádím trvalou úpravu. Podle dokumentu má mít vyhláška 3 listy a 1 přílohu (situaci umístění značení), PDF má ale jen 2 strany a výkres chybí. Proto drawing = null a není známá ulice ani adresa školky, takže places zůstalo prázdné. V odůvodnění je u V10d a V10e zkratka „vdz“, což je pravděpodobně vodorovné dopravní značení. Popis „šikmá stání“ u V10e jsem v dokumentu nenašel a doplnil ho podle obecné znalosti značek, takže ho před zveřejněním ověřte, případně ho ve faktech zjednodušte.",
+ "parking": null,
+ "visual_plan": "Mapa Dražkovic s bodem u mateřské školy a vedle ní přehled navržených značek s textem dodatkové tabulky. Situační výkres v dostupném PDF není, proto nejde ukázat přesné umístění ani řadu stání.",
+ "reviewer_notes": "Lhůta 26. 11. 2026 je dopočtená: datum vyvěšení na desce magistrátu v dokumentu není, proto je vzato datum vyhotovení 12. 10. 2026; poslední, tedy 15. den vyvěšení je 27. 10. 2026 a 30 dnů od něj vychází na 26. 11. 2026. Skutečné datum vyvěšení na desce magistrátu je potřeba ověřit. Vyvěšení na desce obvodu (20. 10. 2026) se pro výpočet nepoužívá. Název oznámení mluví o přechodné úpravě, text dokumentu ale o návrhu místní úpravy se stálým značením; karta se řídí textem dokumentu. Dokument uvádí 3 listy a přílohu „situace umístění dopravního značení“, dostupné PDF má ale jen 2 strany a výkres neobsahuje. Ulice, číslo popisné, přesný název školy ani počet míst v dokumentu nejsou; v poli míst je proto jen obecné označení „mateřská škola, Dražkovice“, které je před zobrazením na mapě potřeba ověřit. Popis značek IP12 a V10e karta záměrně neuvádí, protože dokument ho neobsahuje; případně ho ověřte ve vyhlášce o dopravních značkách nebo u odboru dopravy. Formulace „na vozovce“ ve faktu o policii je převzatá ze zadání kontroly a vychází z dokumentového „vdz V10e“. Dokument výslovně nepíše, že značky IP12, E13 a V10e dnes na místě nejsou; stav „nová“ vychází z toho, že je návrh uvádí jako navržené.",
  "visual": {
   "map": [],
   "ortho": null,
@@ -106,58 +110,54 @@
     "change": "nova"
    }
   ],
+  "parking": null,
+  "photo": null,
   "thumb": null
  },
- "problems": [],
- "published_at": "2026-11-05T10:00:11+00:00",
- "review_note": null,
+ "problems": [
+  "datum lhůta 2026-11-26 v dokumentu není doslova"
+ ],
  "quality": {
   "method": "druhy-model",
-  "level": "spatne",
-  "passed": false,
+  "level": "spolehlive",
+  "passed": true,
   "issues": [
-   "Karta říká něco jiného než dokument: Karta tvrdí, že místa budou vyznačena jako šikmá stání a že se odmítnutá varianta liší typem čar. Originál uvádí jen kódy značek a ani jedno z toho neříká, takže čtenář dostává nepodložený popis podoby parkování.",
-   "Přesnost: Místo, časy, značky, kontakt i lhůta sedí s originálem, ale tvrzení o šikmých stáních a jiném typu čar v něm není a písemná forma je tam výslovně uvedená jen u námitek vlastníků nemovitostí."
+   "Místo, časy, značky, lhůta i postup pro námitky sedí s originálem; jen věta, že oznámení neuvádí počet míst, opomíjí přílohu s plánkem, která ve zveřejněném souboru chybí."
   ],
   "marks": {
    "presnost": {
-    "score": 3,
-    "reason": "Místo, časy, značky, kontakt i lhůta sedí s originálem, ale tvrzení o šikmých stáních a jiném typu čar v něm není a písemná forma je tam výslovně uvedená jen u námitek vlastníků nemovitostí."
+    "score": 4,
+    "reason": "Místo, časy, značky, lhůta i postup pro námitky sedí s originálem; jen věta, že oznámení neuvádí počet míst, opomíjí přílohu s plánkem, která ve zveřejněném souboru chybí."
    },
    "uplnost": {
     "score": 5,
-    "reason": "Karta uvádí, co se mění, kde, kdy vyhrazení platí, koho se to týká, jak a do kdy se lze vyjádřit, a výslovně upozorňuje, že přesné místo nelze určit, protože výkres chybí."
+    "reason": "Karta říká, co se navrhuje, kde, kdy má vyhrazení platit, koho se týká, co může čtenář udělat, do kdy a kam se obrátit."
    },
    "srozumitelnost": {
     "score": 4,
-    "reason": "Text je psaný běžnou češtinou, jen u stanoviska policie zůstávají kódy značek, kterým běžný čtenář nemusí rozumět."
+    "reason": "Text je psaný běžnou češtinou, jen označení značek V10e a V10d u stanoviska policie zůstává bez vysvětlení."
    },
    "obrazky": {
     "score": null,
-    "reason": "Karta je bez obrázků a nebylo z čeho je připravit: výkres v dostupném originálu chybí a adresa školky ani ulice v něm uvedená není."
+    "reason": "Karta obrázky nemá a zveřejněný originál neobsahuje výkres ani přesnou adresu, ze kterých by šlo obrázek připravit."
    }
   },
-  "summary": "Přepis ve většině údajů včetně lhůty 26. 11. 2026 odpovídá originálu, před zveřejněním je ale potřeba opravit popis šikmých stání a jiného typu čar, který v originálu není.",
-  "fixes": [
-   "Ve faktu „Stanovisko policie“ nahraďte text za: „Policie stanovila podmínku, že místa budou na vozovce označena jen značkou V10e, ne V10d.“ Slova „šikmá stání“ a „s jiným typem čar“ odstraňte, v originálu nejsou. Popis značky doplňte jen tehdy, pokud ho ověříte v platné vyhlášce o dopravních značkách nebo u odboru dopravy.",
-   "V souhrnu změňte větu o připomínkách na: „Kdo je návrhem dotčený, může do 26. 11. 2026 podat magistrátu připomínky nebo námitky; vlastníci nemovitostí musí podat písemné a odůvodněné námitky.“ V poli „jak“ odstraňte úvodní „Písemně“ a začněte „Na Magistrát města Pardubic, odbor dopravy, nám. Republiky 12, Pardubice.“ Originál písemnou formu výslovně uvádí jen u vlastníků nemovitostí."
-  ],
-  "blockers": [
-   {
-    "kind": "zavadejici",
-    "what": "Karta tvrdí, že místa budou vyznačena jako šikmá stání a že se odmítnutá varianta liší typem čar. Originál uvádí jen kódy značek a ani jedno z toho neříká, takže čtenář dostává nepodložený popis podoby parkování."
-   }
-  ],
+  "summary": "Přepis s originálem věcně souhlasí a čtenáři řekne vše podstatné včetně lhůty 26. 11. 2026, která je správně dopočítaná z data vyhotovení, protože datum vyvěšení v originálu chybí.",
+  "blockers": [],
   "dates": [
    {
     "field": "lhuta",
     "value": "2026-11-26",
     "verdict": "spocitano_spravne",
-    "evidence": "Vyhláška je datovaná 12. 10. 2026 a redaktor uvádí, že člověk ověřil vyvěšení na desce magistrátu v tento den (kolonka v originálu je prázdná). 12. 10. + 15 dnů = 27. 10. (den zveřejnění); 27. 10. + 30 dnů = 26. 11. 2026. Délky lhůt odpovídají poučení v originálu."
+    "evidence": "Originál uvádí 30 dnů ode dne zveřejnění, kterým je poslední den patnáctidenního vyvěšení. Pole pro datum vyvěšení je prázdné, výpočet proto vychází z data vyhotovení: 12. 10. 2026 + 15 dnů = 27. 10. 2026; 27. 10. 2026 + 30 dnů = 26. 11. 2026. Výpočet je správný, skutečné datum vyvěšení na desce magistrátu ale originál nepotvrzuje."
    }
   ],
   "prompt_version": "kvalita-v1",
   "model": "cli:opus",
-  "scored_at": "2026-11-07T08:57:38+00:00"
- }
+  "scored_at": "2026-11-07T09:27:05+00:00",
+  "attempts": 1
+ },
+ "published_at": "2026-11-07T09:27:05+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
 }

@@ -324,11 +324,6 @@
    }
   },
   "summary": "Přepis s originálem souhlasí v místě, termínu, důvodu i značení a nemá žádnou zásadní chybu; chybí jen vedlejší informace, že se proti úpravě nelze odvolat.",
-  "fixes": [
-   "Na konec shrnutí doplňte větu: „Proti této úpravě se nelze odvolat.“ Originál to uvádí na straně 2 v části Poučení.",
-   "Ve shrnutí nahraďte větu o dodatkové tabulce touto: „Konkrétní den vyberou podle počasí. Termín bude uvedený na cedulce pod značkou zákazu stání.“ Originál říká jen, že dodatková tabulka uvede termín platnosti a že práce závisí na počasí; netvrdí, že tabulka určí den.",
-   "Ověřte na úřední desce magistrátu datum vyvěšení, protože v originálu je toto pole prázdné a účinnost nastává pátým dnem po vyvěšení. Pokud by vyšla později než 5. 11. (při vyvěšení 4. 11. by to bylo 9. 11.), upravte začátek období i text v nadpisové části o termínu tak, aby uváděly skutečný první možný den."
-  ],
   "blockers": [],
   "dates": [
    {

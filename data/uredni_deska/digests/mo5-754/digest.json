@@ -128,15 +128,6 @@
    }
   },
   "summary": "Přepis věrně uvádí, kde rozpočtové dokumenty obvodu najdete a které to jsou, jen období vyvěšení nejde podle originálu ověřit a slovo „trvale“ je mírně nepřesné.",
-  "fixes": [
-   "V textu karty nahraďte „Trvale tam je“ za „Dlouhodobě tam je“ a v přehledu údajů změňte popisek „Trvale k dispozici“ na „Dlouhodobě k dispozici“; originál uvádí „Dlouhodobé zveřejnění“.",
-   "V textu karty změňte „se zveřejňují jen na kratší dobu před schválením“ na „se zveřejňují jen krátkodobě“ a popisek „Jen krátce před schválením“ na „Zveřejněno krátkodobě“; originál o načasování před schválením výslovně nemluví.",
-   "V přehledu údajů nahraďte „pravidla rozpočtového provizoria“ výrazem „pravidla pro hospodaření bez schváleného rozpočtu“ a „závěrečný účet s přezkumem hospodaření“ výrazem „závěrečný účet včetně zprávy o kontrole hospodaření“.",
-   "U návrhu závěrečného účtu v přehledu údajů doplňte „včetně zprávy o kontrole hospodaření“, jak to uvádí originál.",
-   "Data vyvěšení 28. 3. 2022 a 11. 1. 2027 porovnejte se záznamem oznámení na úřední desce, protože v originále žádné datum není.",
-   "Na velký letecký snímek doplňte značku místa jako na malém náhledu, nebo ho z karty odeberte; ověřte také, že značka leží na budově Češkova 22, protože originál mapu neobsahuje.",
-   "Ručně otevřete odkaz pardubice.eu/rozpocet-mo5: s originálem se shoduje, ale jeho funkčnost tato kontrola neověřovala."
-  ],
   "blockers": [],
   "dates": [
    {

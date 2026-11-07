@@ -678,10 +678,6 @@
    }
   },
   "summary": "Přepis obstál: všechny údaje o odstávce souhlasí s originálem a chybí jen drobná vylepšení čitelnosti.",
-  "fixes": [
-   "V seznamu míst doplňte k oběma záznamům ulice Čacké část města: „Čacké 125, 128, 131, 132, 133, 136, 150, 154, 155, 229 (Nové Jesenčany)“ a „Čacké 126, 144, 164, 165, 1449, 1450, 1724, 1725, 2662, 2747, 2758 (Zelené Předměstí)“.",
-   "V seznamu pozemků nahraďte zkratky celými slovy, například „p. p. č. 2/30, k. ú. Nové Jesenčany“ na „pozemek č. 2/30, katastrální území Nové Jesenčany“; stejně upravte všech deset položek."
-  ],
   "blockers": [],
   "dates": [
    {

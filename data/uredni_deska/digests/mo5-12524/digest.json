@@ -105,12 +105,6 @@
    }
   },
   "summary": "Přepis obstál: částky, datum schválení i místo k nahlédnutí odpovídají originálu, zpřesnit by šlo jen vysvětlení poklesu výdajů na dopravu a pár pojmů.",
-  "fixes": [
-   "V souhrnu nahraďte větu „Výdaje na dopravu po velkých stavbách v roce 2025 klesají.“ tím, co říká tabulka, např.: „Výdaje na dopravu klesají, hlavně proto, že ubývá investic: 38,1 mil. Kč v roce 2025, 21,9 mil. Kč v roce 2026.“ Originál o „velkých stavbách“ nemluví.",
-   "Větu o penězích od města zpřesněte a doplňte částku, např.: „Město na začátku prosince 2025 zvýšilo podíl obvodu na daních pro rok 2026 o 3,7 mil. Kč. Celá částka jde do rezervy. Pro další roky obvod při stejném tempu růstu počítá se zvýšením o 3,8 až 5,1 mil. Kč, které také jde do rezervy.“",
-   "Pojem „sdílené daně“ vysvětlete, např.: „podíl na daních, který obvod dostává přes město“.",
-   "V údaji o rezervě uveďte přesný název z tabulky: „Rezerva rozpočtu a na krizová opatření“."
-  ],
   "blockers": [],
   "dates": [
    {
