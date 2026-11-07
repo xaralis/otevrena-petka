@@ -353,5 +353,58 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: Shrnutí tvrdí, že peníze půjdou na novou křižovatku ulic Devotyho a Železničního pluku. V originále je nová pouze rozpočtová položka na akci „křižovatka ul. Devotyho-Železničního pluku“; o stavbě nové křižovatky ani o rozsahu prací se v něm nepíše.",
+   "Přesnost: Částky a datum sedí s originálem, ale shrnutí mluví o nové křižovatce, zatímco originál uvádí jen novou rozpočtovou položku na akci u této křižovatky; drobně nepřesné je i zařazení střediska volného času mezi školy."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 2,
+    "reason": "Částky a datum sedí s originálem, ale shrnutí mluví o nové křižovatce, zatímco originál uvádí jen novou rozpočtovou položku na akci u této křižovatky; drobně nepřesné je i zařazení střediska volného času mezi školy."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Čtenář se dozví co, kde, kdy a koho se změna týká, chybí jen vedlejší údaje: že 2 miliony na hřiště jsou odhad a že 60 tisíc z rezervy jde na nový povinný příspěvek na penzijní spoření zaměstnanců."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen některé částky jsou v úředním zápisu v tisících Kč s desetinami, což se čte hůř než miliony."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek odpovídá městské zástavbě v okolí obvodu, ale nic na něm není vyznačeno, takže čtenář křižovatku, hřiště ani kulturní dům nenajde."
+   }
+  },
+  "summary": "Částky a datum schválení odpovídají originálu, jen slovo „nová“ u křižovatky říká víc, než originál uvádí, a letecký snímek nemá vyznačená místa.",
+  "fixes": [
+   "Ve shrnutí nahraďte „na novou křižovatku ulic Devotyho a Železničního pluku (3,5 milionu)“ například textem „na akci u křižovatky ulic Devotyho a Železničního pluku (3,5 milionu)“. Originál neuvádí, co přesně se tam bude dělat, proto to nedomýšlejte.",
+   "U hřiště za OK Centrem doplňte, že 2 miliony jsou odhad, například „celkovou obnovu dětského hřiště za OK Centrem (odhadem 2 miliony)“; originál na straně 1 píše „Jedná se o odhad částky“.",
+   "U příspěvků opravte příjemce: 169,28 tis. Kč na 18 akcí nedostaly jen školy a školky, 3 akce za 28 tis. Kč patří Středisku volného času ALFA Pardubice. Nadpis údaje změňte třeba na „Příspěvky školám, školkám a středisku volného času“ a do shrnutí doplňte totéž. Můžete dodat, že jde o přesun z obecné položky, ne o nové peníze.",
+   "Do přehledu změn doplňte +60 tis. Kč na povinný příspěvek na penzijní spoření zaměstnanců (originál, strana 2, opatření 8). Bez něj není jasné, proč rezerva klesla o 190 tis. Kč, když společenské akce dostaly z rezervy 130 tis. Kč. Položky v přehledu dávají 11 038,6 tis. Kč, s touto položkou a s 1,4 tis. Kč pro VČD na Masopust vychází celých 11 100 tis. Kč.",
+   "Částky v přehledových údajích zapište srozumitelněji: „110,4 milionu Kč (předtím 99,3 milionu Kč)“, „11,1 milionu Kč“, „1,67 milionu Kč“ a „169 280 Kč“.",
+   "Na leteckém snímku vyznačte křižovatku Devotyho – Železničního pluku, hřiště za OK Centrem a prostor před KD Dukla. Pokud polohu nelze spolehlivě ověřit, snímek z karty raději odstraňte. Do seznamu míst na kartě doplňte i OK Centrum."
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "Shrnutí tvrdí, že peníze půjdou na novou křižovatku ulic Devotyho a Železničního pluku. V originále je nová pouze rozpočtová položka na akci „křižovatka ul. Devotyho-Železničního pluku“; o stavbě nové křižovatky ani o rozsahu prací se v něm nepíše."
+   }
+  ],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-03-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 1: rozpočtová opatření schválena usnesením Zastupitelstva MO Pardubice V 172/2026 Z ze dne 11. 3. 2026."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:55:19+00:00"
+ }
 }

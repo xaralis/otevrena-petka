@@ -88,5 +88,50 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Data, částky, akce i čísla usnesení sedí s originálem; jen slova „zatím“ a „spolky“ v originálu nejsou."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Data, částky, akce i čísla usnesení sedí s originálem; jen slova „zatím“ a „spolky“ v originálu nejsou."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Podstatné údaje jsou uvedené, chybí jen upřesnění, že rezervy hradí podporu obou akcí pouze částečně."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen v přehledu údajů zůstala zkratka „MO“."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o změny rozpočtu bez konkrétního místa, obrázek by čtenáři nepomohl."
+   }
+  },
+  "summary": "Přepis s originálem věcně souhlasí, všechna data i částky sedí a chybí jen drobné upřesnění, že rezervy hradí podporu obou akcí pouze částečně.",
+  "fixes": [
+   "V souhrnu doplňte za větu o obou akcích: „Rezervy pokrývají podporu obou akcí jen zčásti.“ V originálu stojí, že programová dotace bude z rezervy hrazena „částečně“; celkovou výši podpory originál neuvádí.",
+   "V souhrnu vypusťte slovo „zatím“ ve větě o dotaci na volby, takže bude znít „kterou uložil do rezervy rozpočtu“. Originál neříká, že jde o dočasné řešení. Opravte přitom i tvar „které“ na „kterou“, protože se vztahuje k dotaci.",
+   "V části „koho se to týká“ nahraďte „Spolky a pořadatelé podpořených akcí“ za „Pořadatelé podpořených akcí“. Originál o spolcích nemluví.",
+   "V přehledu údajů u položky „Schválila“ nahraďte „Rada MO Pardubice V“ za „Rada městského obvodu Pardubice V“."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-04-01",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí: „Rada městského obvodu Pardubice V schválila dne 1. 4. 2026“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:54:25+00:00"
+ }
 }

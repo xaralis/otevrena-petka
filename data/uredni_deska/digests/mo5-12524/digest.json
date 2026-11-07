@@ -78,5 +78,56 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Všechny částky, datum schválení, číslo usnesení i místo k nahlédnutí sedí s originálem; jen vysvětlení poklesu výdajů na dopravu „po velkých stavbách“ v něm takto není a rezerva je v tabulce uvedená společně s rezervou na krizová opatření."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Všechny částky, datum schválení, číslo usnesení i místo k nahlédnutí sedí s originálem; jen vysvětlení poklesu výdajů na dopravu „po velkých stavbách“ v něm takto není a rezerva je v tabulce uvedená společně s rezervou na krizová opatření."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co bylo schváleno, kdy, koho se to týká, jaké jsou hlavní částky a kde lze výhled najít; lhůta pro čtenáře žádná neběží."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou a výhled vysvětluje, jen „sdílené daně“ a „rezerva rozpočtu“ zůstávají bez vysvětlení."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o rozpočtový výhled bez konkrétního místa, obrázek by nepomohl."
+   }
+  },
+  "summary": "Přepis obstál: částky, datum schválení i místo k nahlédnutí odpovídají originálu, zpřesnit by šlo jen vysvětlení poklesu výdajů na dopravu a pár pojmů.",
+  "fixes": [
+   "V souhrnu nahraďte větu „Výdaje na dopravu po velkých stavbách v roce 2025 klesají.“ tím, co říká tabulka, např.: „Výdaje na dopravu klesají, hlavně proto, že ubývá investic: 38,1 mil. Kč v roce 2025, 21,9 mil. Kč v roce 2026.“ Originál o „velkých stavbách“ nemluví.",
+   "Větu o penězích od města zpřesněte a doplňte částku, např.: „Město na začátku prosince 2025 zvýšilo podíl obvodu na daních pro rok 2026 o 3,7 mil. Kč. Celá částka jde do rezervy. Pro další roky obvod při stejném tempu růstu počítá se zvýšením o 3,8 až 5,1 mil. Kč, které také jde do rezervy.“",
+   "Pojem „sdílené daně“ vysvětlete, např.: „podíl na daních, který obvod dostává přes město“.",
+   "V údaji o rezervě uveďte přesný název z tabulky: „Rezerva rozpočtu a na krizová opatření“."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2025 (začátek období výhledu, schváleno 17. 12. 2025)",
+    "verdict": "v_dokumentu",
+    "evidence": "Schválený výhled je nadepsán „na r. 2025-2029“; oznámení o zveřejnění uvádí schválení zastupitelstvem 17. 12. 2025 usnesením č. 161/2025."
+   },
+   {
+    "field": "do",
+    "value": "2029 (konec období výhledu)",
+    "verdict": "v_dokumentu",
+    "evidence": "Nadpis i tabulka schváleného výhledu pokrývají roky 2025 až 2029."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:54:17+00:00"
+ }
 }

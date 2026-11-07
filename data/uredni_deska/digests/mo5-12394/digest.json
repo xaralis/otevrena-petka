@@ -119,5 +119,70 @@
  },
  "problems": [],
  "published_at": "2026-11-04T11:23:32+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "pozor",
+  "passed": true,
+  "issues": [
+   "Úplnost: Podstatné údaje karta má, chybí ale několik vedlejších: čestné prohlášení k vyúčtování, oznámení o vrácení peněz e-mailem, místo, kde najít pravidla a formulář, výjimka pro příspěvkové organizace města a možnost individuální dotace.",
+   "Obrázky: Letecké snímky bez popisku ukazují jedno místo, nejspíš budovu úřadu, ale pravidla se týkají celého obvodu, takže čtenáři nepomáhají a mohou budit dojem, že jde o konkrétní místo."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Částky, kola žádostí, termíny i schválení sedí s originálem; nepřesné jsou jen vedlejší podrobnosti, hlavně označování dokladů, kde originál požaduje označit i originály, nejen kopie."
+   },
+   "uplnost": {
+    "score": 3,
+    "reason": "Podstatné údaje karta má, chybí ale několik vedlejších: čestné prohlášení k vyúčtování, oznámení o vrácení peněz e-mailem, místo, kde najít pravidla a formulář, výjimka pro příspěvkové organizace města a možnost individuální dotace."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen rozpis peněz na rezervy rady, starosty a místostarosty zůstává úřední a bez vysvětlení."
+   },
+   "obrazky": {
+    "score": 2,
+    "reason": "Letecké snímky bez popisku ukazují jedno místo, nejspíš budovu úřadu, ale pravidla se týkají celého obvodu, takže čtenáři nepomáhají a mohou budit dojem, že jde o konkrétní místo."
+   }
+  },
+  "summary": "Karta věrně shrnuje pravidla dotací Pardubic V na rok 2026 včetně částek a termínů, chybí jí však některé drobnější povinnosti příjemců a její letecké snímky čtenáři nepomáhají.",
+  "fixes": [
+   "V části „co udělat“ změňte text o označení dokladů: účetní doklady, originály i kopie, musí být viditelně a nesmazatelně označeny textem „financováno z dotace Městského obvodu Pardubice V“ (čl. 7 odst. 3). Doplňte, že za neoznačené originály hrozí odvod 10 % z dotace (čl. 8 odst. 5).",
+   "Do výčtu náležitostí vyúčtování doplňte čestné prohlášení o využití dotace na stanovený účel (čl. 7 odst. 3).",
+   "K vracení nevyužitých peněz doplňte, že je příjemce ve stejné lhůtě 14 dnů musí také oznámit e-mailem na úřad (čl. 7, druhý odst. 3). Adresa je tam uvedena a jde o úřední kontakt, takže ji lze uvést.",
+   "Doplňte, kde najít pravidla a formulář vyúčtování: pardubice.eu/dotace-mo5, v papírové podobě ekonomický odbor, Češkova 22, kancelář č. 206 (oznámení o zveřejnění).",
+   "U lhůty vyúčtování doplňte, že pokud dotace přišla až po skončení akce, běží 30 dnů ode dne jejího poskytnutí (čl. 7 odst. 1). Totéž zohledněte v řádku „Vyúčtování“ a v shrnutí, kde je jen „do 30 dnů po akci“.",
+   "Upřesněte, že dotace nejsou jen na akce, ale i na aktivity a činnosti, a uveďte pravidlo pro celoroční činnost: v 1. kole lze žádat na výdaje z celého roku, ve 2. kole od 1. 7. a ve 3. kole od 1. 11. do konce roku (čl. 3 odst. 3).",
+   "U 3. kola nahraďte formulaci „jednorázové akce“, kterou originál nepoužívá: aktivity a činnosti od 1. 11. do 31. 12. 2026, akce zahájené od 1. 11. 2026 do 28. 2. 2027 (čl. 3 odst. 3 písm. c).",
+   "K tomu, kdo může žádat, doplňte, že příspěvkové organizace města žádat nemohou (čl. 2 odst. 1).",
+   "Ke skončeným kolům doplňte, že obvod může ve výjimečných případech poskytnout individuální dotace mimo tento program (čl. 2 odst. 2).",
+   "U výjimky z limitu 30 000 Kč doplňte i akce evropského a světového významu (čl. 2 odst. 1). U částky 250 000 Kč uveďte, že jde o předpokládaný objem.",
+   "Letecké snímky z karty odstraňte, protože pravidla se týkají celého obvodu a žádný konkrétní pozemek neřeší. Pokud je chcete nechat, doplňte popisek, že jde o budovu úřadu na adrese Češkova 22, kam se vyúčtování odevzdává, a ověřte, že snímek opravdu ukazuje tuto adresu; z originálů to ověřit nelze."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-01-01",
+    "verdict": "v_dokumentu",
+    "evidence": "Směrnice, čl. 9 odst. 1: vztahuje se na poskytování dotací v roce 2026 „počínaje dnem 1. 1. 2026“."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-31",
+    "verdict": "spocitano_spravne",
+    "evidence": "Výslovně v originálu není; odvozeno z názvu a čl. 9 odst. 1 „v r. 2026“, tedy konec kalendářního roku 2026. Výjimkou jsou akce zahájené v lednu a únoru 2027 (čl. 3 odst. 2 a 3) a karta je uvádí."
+   },
+   {
+    "field": "lhuta",
+    "value": "2027-01-13",
+    "verdict": "v_dokumentu",
+    "evidence": "Směrnice, čl. 7 odst. 1: vyúčtovat do 30 dnů od dosažení účelu dotace, „nejpozději však do 13. 1. 2027“, kromě dotací na akce zahájené v lednu až únoru 2027. Stejný termín je ve vzoru smlouvy."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:54:24+00:00"
+ }
 }

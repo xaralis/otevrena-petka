@@ -1010,5 +1010,57 @@
   "datum do 2026-12-31 v dokumentu není doslova"
  ],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Částky a datum schválení s originálem sedí, jen text naznačuje, že celých 1,95 mil. Kč z poplatku za odpad šlo na hřiště a vnitroblok, i když to bylo 1,2 mil. Kč, a popisek „ušetřeno“ u participativního rozpočtu je zjednodušený."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Částky a datum schválení s originálem sedí, jen text naznačuje, že celých 1,95 mil. Kč z poplatku za odpad šlo na hřiště a vnitroblok, i když to bylo 1,2 mil. Kč, a popisek „ušetřeno“ u participativního rozpočtu je zjednodušený."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Hlavní změny, datum i celkové výdaje na kartě jsou, ale u ulic Lexova, náměstí Dukelských hrdinů a Devotyho–Železničního pluku čtenář nezjistí, co se u nich mění."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen celkové výdaje jsou v údajích uvedené úředním zápisem v tisících Kč a slova jako „vnitroblok“ a „dopadová plocha“ zůstala bez vysvětlení."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecké snímky bez popisku ukazují jen zástavbu, nevysvětlují, co se mění, a jejich přesné místo nejde podle originálu ověřit, protože v něm žádná mapa není."
+   }
+  },
+  "summary": "Přepis obstál: částky i datum schválení odpovídají originálu, jen u poplatku za odpad text nepřesně naznačuje, kolik z něj šlo na hřiště a vnitroblok, a obrázky čtenáři moc nepomáhají.",
+  "fixes": [
+   "V souhrnu oddělte zdroje peněz od celkového výběru poplatku. Místo „a z vyššího výběru poplatku za odpad (o 1,95 mil. Kč víc)“ napište například: „z rezervy a z vyššího výběru poplatku za odpad (na hřiště z něj jde 1,2 mil. Kč, z celkem o 1,95 mil. Kč vyššího příjmu; zbytek jde na oplocení kontejnerů a vybavení pro akce)“.",
+   "V údaji „Výdaje po změně“ nahraďte zápis v tisících běžným tvarem: „112,39 mil. Kč (předtím 110,44 mil. Kč)“.",
+   "V grafu změňte popisek „participativní rozpočet (ušetřeno)“ na „participativní rozpočet (ušetřené a uvolněné peníze)“. Originál uvádí, že část je úspora a část technické navýšení položky.",
+   "Do údajů přidejte položku, která vysvětlí ulice uvedené u místa: na vnitroblok K Blahobytu jde také 260 tis. Kč z akce Lexova a náměstí Dukelských hrdinů a 100 tis. Kč z křižovatky Devotyho – Železničního pluku.",
+   "Oba obrázky doplňte popiskem, co a které místo ukazují. Ověřte, že značka na náhledu leží na vnitrobloku K Blahobytu 2482–2484, a na větším snímku místo vyznačte; pokud to nejde, snímky z karty odeberte, protože originál mapu neobsahuje a jedna značka nepokryje všechna zmíněná místa."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-06-03",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí, že opatření schválilo zastupitelstvo obvodu usnesením č. 179/2026 Z ze dne 3. 6. 2026."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-31",
+    "verdict": "spocitano_spravne",
+    "evidence": "Datum v originálu doslova není. Originál se týká rozpočtu na rok 2026, jehož poslední den je 31. 12. 2026, takže výpočet sedí a text karty mluví přímo o rozpočtu roku 2026."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:55:14+00:00"
+ }
 }

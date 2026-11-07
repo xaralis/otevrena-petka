@@ -165,5 +165,61 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: Nadpis mluví o zákazu parkování a text o zákazech stání, ale originál žádnou značku zákazu stání ani zastavení neuvádí. Stanovené značky omezují hlavně vjezd a odbočení a určují směr jízdy; zamezení parkování je jejich účel, ne samotná úprava.",
+   "Přesnost: Datum, čas, místo, důvod i úřady sedí, ale nadpis a text popisují zákaz parkování a zákazy stání, zatímco originál uvádí uzavírky, zákazy vjezdu a odbočení a přikázaný směr jízdy."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 2,
+    "reason": "Datum, čas, místo, důvod i úřady sedí, ale nadpis a text popisují zákaz parkování a zákazy stání, zatímco originál uvádí uzavírky, zákazy vjezdu a odbočení a přikázaný směr jízdy."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Uvedeno je vše podstatné, co originál obsahuje, jen chybí upozornění, že plán s konkrétními ulicemi a texty dodatkových tabulek není v dostupném dokumentu."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou řečí a čtenář ho pochopí, jen obrat „dodatkové tabulky“ zůstává odborný."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Karta je bez obrázků a dostupný originál neobsahuje plán ani přesnou adresu, ze kterých by se dal připravit užitečný obrázek."
+   }
+  },
+  "summary": "Datum, čas, místo a důvod úpravy sedí s originálem, ale karta nepřesně popisuje samotné omezení: uvádí zákaz parkování a stání, zatímco originál stanovuje hlavně uzavírky, zákazy vjezdu a odbočení a přikázaný směr jízdy.",
+  "fixes": [
+   "Nadpis změňte například na: „Při Velké pardubické 11. 10. 2026 platila na sídlišti Dukla dočasná dopravní omezení proti parkování návštěvníků dostihů“.",
+   "V souhrnu nahraďte závorku „(zákazy vjezdu, odbočení a stání s dodatkovými tabulkami a uzavírky)“ výčtem podle originálu: „(uzavírky, zákazy vjezdu, zákazy odbočení a přikázaný směr jízdy, některé s doplňujícími tabulkami)“. Zákaz stání vypusťte, protože ho originál neuvádí.",
+   "Do souhrnu nebo faktů doplňte: „Plán s konkrétními ulicemi a umístěním značek ani texty doplňujících tabulek nejsou ve zveřejněném dokumentu k dispozici.“"
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "Nadpis mluví o zákazu parkování a text o zákazech stání, ale originál žádnou značku zákazu stání ani zastavení neuvádí. Stanovené značky omezují hlavně vjezd a odbočení a určují směr jízdy; zamezení parkování je jejich účel, ne samotná úprava."
+   }
+  ],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 11. 10. 2026 od 7:00 hod do 16:00 hod.“"
+   },
+   {
+    "field": "do",
+    "value": "2026-10-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 11. 10. 2026 od 7:00 hod do 16:00 hod.“"
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:57:06+00:00"
+ }
 }

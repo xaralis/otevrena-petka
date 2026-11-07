@@ -245,5 +245,62 @@
   "datum lhůta 2026-11-18 v dokumentu není doslova"
  ],
  "published_at": "2026-11-06T16:13:19+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Datum, čas, místo i program sedí s originálem, jen originál mluví o tom, které funkce budou uvolněné, zatímco karta píše, kdo je bude vykonávat."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Datum, čas, místo i program sedí s originálem, jen originál mluví o tom, které funkce budou uvolněné, zatímco karta píše, kdo je bude vykonávat."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se koná, kde, kdy, koho se to týká i co může čtenář udělat, a vynechává jen organizační body programu, například volbu zapisovatele."
+   },
+   "srozumitelnost": {
+    "score": 3,
+    "reason": "Text je přehledný, ale slova „ustavující“, „uvolněný“ a „neuvolněný“ ani zkratka DK nejsou vysvětlené."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Karta obrázky nemá a u pozvánky na zasedání by žádný nepomohl; originál ani neobsahuje výkres."
+   }
+  },
+  "summary": "Karta věrně popisuje termín, místo i program ustavujícího zasedání, jen několik úředních výrazů zůstalo nevysvětlených.",
+  "fixes": [
+   "V souhrnu nahraďte „rozhodnou, kdo bude funkci vykonávat jako uvolněný“ za „rozhodnou, které funkce budou zastupitelé vykonávat jako uvolněné, tedy jako své hlavní zaměstnání“. Originál v bodu 6 programu mluví o funkcích, ne o konkrétních lidech.",
+   "V souhrnu a v řádku „Odměny“ vysvětlete výraz „neuvolněným zastupitelům“, například: „zastupitelům, pro které funkce není hlavním zaměstnáním“.",
+   "V souhrnu a v popisu účasti nahraďte nebo vysvětlete výraz „ustavující zasedání“, například: „první zasedání nového zastupitelstva“. Řádek s výzvou „Přijít na ustavující zasedání zastupitelstva“ upravte stejně.",
+   "Zkratku „DK“ v souhrnu, v místě konání a v popisu účasti rozepište na oficiální název domu kultury; originál ji nerozepisuje, proto název před úpravou ověřte."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-18",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí „18. listopadu 2026 (středa) od 17.00 hod.“; jde jen o jiný zápis téhož data."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-18",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí jediný den konání, „18. listopadu 2026 (středa)“; čas konce neuvádí."
+   },
+   {
+    "field": "lhuta",
+    "value": "2026-11-18",
+    "verdict": "v_dokumentu",
+    "evidence": "Jde o den konání zasedání, „18. listopadu 2026“, ne o lhůtu pro podání; ta v originále není."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:00:52+00:00"
+ }
 }

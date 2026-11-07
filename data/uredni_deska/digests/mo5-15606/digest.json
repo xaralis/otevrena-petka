@@ -41,5 +41,12 @@
   "datum do 2026-12-18 v dokumentu není doslova"
  ],
  "published_at": "2026-11-04T11:23:32+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "sablona",
+  "passed": true,
+  "issues": [],
+  "prompt_version": "kvalita-v1",
+  "scored_at": "2026-11-07T08:58:13+00:00"
+ }
 }

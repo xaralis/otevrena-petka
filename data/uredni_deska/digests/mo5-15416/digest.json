@@ -77,5 +77,49 @@
   "datum od 2026-10-09 v dokumentu není doslova"
  ],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Termín voleb, procenta, počty mandátů, jména zvolených, přednostní hlasy i počty voličů odpovídají originálu a dopočítaná účast 38,9 % je správně."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, kdo kolik získal, kdo se do zastupitelstva nedostal, kdy se volilo, kde a jaká byla účast; originál čtenáři žádnou lhůtu ani úkon neukládá."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Výsledky jsou popsané běžnou češtinou a jediné volební pojmy, jako mandát nebo přednostní hlasy, jsou v textu srozumitelné ze souvislosti."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Karta obrázky nemá a u výsledků voleb by žádný nepomohl."
+   }
+  },
+  "summary": "Přepis obstál: výsledky voleb, mandáty, zvolení zastupitelé, účast i termín odpovídají úřednímu zápisu.",
+  "fixes": [],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-09",
+    "verdict": "v_dokumentu",
+    "evidence": "Záhlaví zápisu i přílohy č. 1 uvádí volby ve dnech „09.10. - 10.10.2026“; první den je jen zapsaný bez roku, proto ho automatická kontrola nenašla doslova."
+   },
+   {
+    "field": "do",
+    "value": "2026-10-10",
+    "verdict": "v_dokumentu",
+    "evidence": "Záhlaví zápisu i přílohy č. 1 uvádí volby ve dnech „09.10. - 10.10.2026“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:56:00+00:00"
+ }
 }

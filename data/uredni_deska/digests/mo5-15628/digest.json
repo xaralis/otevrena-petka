@@ -172,5 +172,51 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:24:41+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, důvod, termín, délka úseku, šířka průchodu, vydavatel i nemožnost odvolání odpovídají originálu včetně přiloženého schématu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Čtenář se dozví co, kde, kdy a koho se to týká; lhůta chybět nemůže, protože jde o vydané opatření, ke kterému se nedá nic podat."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je psaný běžnou češtinou bez paragrafů a úředních obratů a pochopí ho i čtenář bez znalosti úřadů."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Obrázky ukazují správné místo a vyznačený úsek bez osobních údajů, jen číselné značky zakrývají ručně psané rozměry a význam dvou z nich zůstává nevysvětlený, stejně jako v originále."
+   }
+  },
+  "summary": "Přepis s originálem souhlasí ve všech údajích a je srozumitelný; drobnou výhradu lze mít jen k obrázku, kde značky zakrývají ručně psané rozměry.",
+  "fixes": [
+   "Na popsaném obrázku posuňte značky tak, aby nezakrývaly ručně psané rozměry: značku 2 doprava mimo údaj „8 M“ (asi na x 0,45, y 0,74), značku 3 mimo údaj „1,4 m“ (asi na x 0,47, y 0,68) a značku 4 vpravo od údaje „3 M“ (asi na x 0,72, y 0,63)."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-03",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 3. 11. 2026 – 11. 12. 2026“."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 3. 11. 2026 – 11. 12. 2026“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:00:27+00:00"
+ }
 }

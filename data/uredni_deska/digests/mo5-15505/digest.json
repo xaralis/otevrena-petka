@@ -376,5 +376,54 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:00:11+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: Karta tvrdí, že s úpravou souhlasí dopravní policie. Originál uvádí jen, že úřad obdržel stanovisko krajského ředitelství policie, a neříká, jak toto stanovisko zní.",
+   "Přesnost: Místo, značka, důvod, navrhovatel i lhůta sedí s originálem, ale tvrzení, že s návrhem souhlasí dopravní policie, v originálu není, protože ten zmiňuje jen obdržené stanovisko policie bez jeho obsahu."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 3,
+    "reason": "Místo, značka, důvod, navrhovatel i lhůta sedí s originálem, ale tvrzení, že s návrhem souhlasí dopravní policie, v originálu není, protože ten zmiňuje jen obdržené stanovisko policie bez jeho obsahu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, proč, koho se to týká, kdo a jak může reagovat a do kdy, a výslovně říká, že termín instalace není uveden."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou a značka je vysvětlená, jen místy zůstávají úřední obraty a zkratky jako číslo jednací nebo odůvodněné námitky."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecké snímky odpovídají popsanému okolí, ale velký snímek nemá značku ani popisek a žádný obrázek neukazuje, kde přesně značka bude, protože plánek zmíněný v originálu není k dispozici."
+   }
+  },
+  "summary": "Místo, značka, důvod i lhůta do 20. 11. 2026 s originálem sedí, karta ale navíc tvrdí, že s úpravou souhlasí dopravní policie, což originál neuvádí.",
+  "fixes": [
+   "V souhrnu nahraďte větu „Úpravu navrhl městský obvod Pardubice V a souhlasí s ní dopravní policie.“ větou „Úpravu navrhl městský obvod Pardubice V. Magistrát k návrhu obdržel stanovisko Krajského ředitelství policie Pardubického kraje.“ Originál obsah stanoviska neuvádí; o souhlasu pište jen tehdy, když ho odbor dopravy (tel. 466 859 366) potvrdí.",
+   "K velkému leteckému snímku doplňte značku domu č. p. 2446 a popisek, například „Okolí domu č. p. 2446 v ulici Devotyho, přesné místo značky není známé“. Pokud od odboru dopravy získáte přílohu „situace umístění dopravního značení“, přidejte ji na kartu jako obrázek."
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "Karta tvrdí, že s úpravou souhlasí dopravní policie. Originál uvádí jen, že úřad obdržel stanovisko krajského ředitelství policie, a neříká, jak toto stanovisko zní."
+   }
+  ],
+  "dates": [
+   {
+    "field": "lhuta",
+    "value": "2026-11-20",
+    "verdict": "spocitano_spravne",
+    "evidence": "Originál uvádí vyvěšení na úřední desce magistrátu 6. 10. 2026 a lhůtu 30 dnů ode dne zveřejnění, kterým je poslední den vyvěšení. Výpočet: 6. 10. + 15 dnů = 21. 10. (zveřejnění), 21. 10. + 30 dnů = 20. 11. 2026."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:56:48+00:00"
+ }
 }

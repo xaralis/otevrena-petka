@@ -178,5 +178,63 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: Nadpis tvrdí, že peníze ušetřené z loňska jdou hlavně do rezervy. Podle originálu jde z nevyčerpaných 1 575,38 tis. Kč více do sociálního fondu (863,6 tis. Kč) než do rezervy (711,78 tis. Kč). Rezerva dosahuje 1 008,58 tis. Kč až díky 296,8 tis. Kč z vyúčtování s městem.",
+   "Přesnost: Částky, datum schválení i školky s originálem souhlasí, ale nadpis nepřesně tvrdí, že ušetřené peníze jdou hlavně do rezervy, a datum konce vyvěšení v originále není."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 3,
+    "reason": "Částky, datum schválení i školky s originálem souhlasí, ale nadpis nepřesně tvrdí, že ušetřené peníze jdou hlavně do rezervy, a datum konce vyvěšení v originále není."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Podstatné údaje jsou uvedené a oprávněně chybí možnost se vyjádřit, jen přehled změn vynechává příspěvek 9 tis. Kč školce Sluníčko a karta nevysvětluje, proč se u sociálního fondu liší dvě částky."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen pojmy jako přeúčtování z investic na běžné výdaje nebo sociální fond zůstávají bez bližšího vysvětlení."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o změnu rozpočtu, obrázek by čtenáři nepomohl."
+   }
+  },
+  "summary": "Čísla a datum schválení s originálem souhlasí, ale nadpis zkresluje, kam jdou loňské úspory, protože jich víc míří do sociálního fondu než do rezervy.",
+  "fixes": [
+   "Nadpis změňte, aby neříkal „hlavně do rezervy“, například: „Obvod schválil 3. změnu rozpočtu na rok 2026: zbylé peníze z loňska jdou do rezervy a do sociálního fondu“. Podle originálu jde z nevyčerpaných peněz 863,6 tis. Kč do fondu a 711,78 tis. Kč do rezervy; dalších 296,8 tis. Kč do rezervy přišlo z vyúčtování s městem.",
+   "V přehledu změn přejmenujte položku „rezerva rozpočtu (loňské úspory)“ na „rezerva rozpočtu (loňské úspory a vyúčtování s městem)“, protože částka 1 008,58 tis. Kč zahrnuje 711,78 tis. Kč úspor a 296,8 tis. Kč z vyúčtování.",
+   "Přehled změn doplňte o školku Sluníčko (+9 tis. Kč). Teď se položky sečtou na 1 863,18 tis. Kč místo 1 872,18 tis. Kč. Pokud se řádek nevejde, sloučte tři řádky školek do jednoho „čtyři mateřské školy – podzimní akce“ (+41 tis. Kč), součet pak vyjde.",
+   "U sociálního fondu vysvětlete rozdíl mezi 863,6 tis. Kč v textu a 1 190,6 tis. Kč v údajích, například: „fond se zvyšuje o 1 190,6 tis. Kč: 863,6 tis. Kč je doplatek z rozpočtu obvodu a 327 tis. Kč jeho vlastní zůstatek z roku 2025“.",
+   "Větu „dokument visí na desce do března 2027“ ověřte podle záznamu na úřední desce. Pokud tam datum sejmutí není, větu vypusťte, protože v přiložených dokumentech nestojí."
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "Nadpis tvrdí, že peníze ušetřené z loňska jdou hlavně do rezervy. Podle originálu jde z nevyčerpaných 1 575,38 tis. Kč více do sociálního fondu (863,6 tis. Kč) než do rezervy (711,78 tis. Kč). Rezerva dosahuje 1 008,58 tis. Kč až díky 296,8 tis. Kč z vyúčtování s městem."
+   }
+  ],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-06-24",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí schválení usnesením zastupitelstva č. 182/2026 Z ze dne 24. 6. 2026."
+   },
+   {
+    "field": "do",
+    "value": "březen 2027 (dokument visí na desce)",
+    "verdict": "nelze_overit",
+    "evidence": "Žádný ze tří přiložených dokumentů datum vyvěšení ani sejmutí neuvádí, údaj z nich nelze potvrdit."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:55:35+00:00"
+ }
 }

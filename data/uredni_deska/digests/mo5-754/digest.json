@@ -101,5 +101,59 @@
   "datum do 2027-01-11 v dokumentu není doslova"
  ],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Adresa, kancelář, odkaz i seznam dokumentů sedí s originálem, jen slovo „trvale“ je silnější než původní „dlouhodobé zveřejnění“ a doplněk „před schválením“ v originále výslovně není."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Adresa, kancelář, odkaz i seznam dokumentů sedí s originálem, jen slovo „trvale“ je silnější než původní „dlouhodobé zveřejnění“ a doplněk „před schválením“ v originále výslovně není."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se zveřejňuje, kde to najít na webu i na úřadě a koho se to týká, a lhůtu ani úřední hodiny originál neobsahuje."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen v přehledu údajů zůstaly odborné výrazy „rozpočtové provizorium“ a „přezkum hospodaření“."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecké snímky ukazují okolí označeného místa a nejsou na nich čitelné osobní údaje, ale čtenáři k oznámení o dokumentech moc nepřidají, velký snímek nemá značku a originál správnost místa potvrdit nemůže, protože mapu neobsahuje."
+   }
+  },
+  "summary": "Přepis věrně uvádí, kde rozpočtové dokumenty obvodu najdete a které to jsou, jen období vyvěšení nejde podle originálu ověřit a slovo „trvale“ je mírně nepřesné.",
+  "fixes": [
+   "V textu karty nahraďte „Trvale tam je“ za „Dlouhodobě tam je“ a v přehledu údajů změňte popisek „Trvale k dispozici“ na „Dlouhodobě k dispozici“; originál uvádí „Dlouhodobé zveřejnění“.",
+   "V textu karty změňte „se zveřejňují jen na kratší dobu před schválením“ na „se zveřejňují jen krátkodobě“ a popisek „Jen krátce před schválením“ na „Zveřejněno krátkodobě“; originál o načasování před schválením výslovně nemluví.",
+   "V přehledu údajů nahraďte „pravidla rozpočtového provizoria“ výrazem „pravidla pro hospodaření bez schváleného rozpočtu“ a „závěrečný účet s přezkumem hospodaření“ výrazem „závěrečný účet včetně zprávy o kontrole hospodaření“.",
+   "U návrhu závěrečného účtu v přehledu údajů doplňte „včetně zprávy o kontrole hospodaření“, jak to uvádí originál.",
+   "Data vyvěšení 28. 3. 2022 a 11. 1. 2027 porovnejte se záznamem oznámení na úřední desce, protože v originále žádné datum není.",
+   "Na velký letecký snímek doplňte značku místa jako na malém náhledu, nebo ho z karty odeberte; ověřte také, že značka leží na budově Češkova 22, protože originál mapu neobsahuje.",
+   "Ručně otevřete odkaz pardubice.eu/rozpocet-mo5: s originálem se shoduje, ale jeho funkčnost tato kontrola neověřovala."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2022-03-28",
+    "verdict": "nelze_overit",
+    "evidence": "Originál je jednostránkové oznámení bez jakéhokoli data; datum vyvěšení v něm není uvedeno ani jinak zapsané."
+   },
+   {
+    "field": "do",
+    "value": "2027-01-11",
+    "verdict": "nelze_overit",
+    "evidence": "Originál neobsahuje datum sejmutí ani jiné datum a nejde o lhůtu, kterou by šlo dopočítat."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:01:25+00:00"
+ }
 }

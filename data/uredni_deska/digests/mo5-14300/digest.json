@@ -1531,5 +1531,61 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: U největší akce karta uvádí parkování na náměstí Dukelských hrdinů, originál ale mluví o chodníku v ulici Lexova a o úpravě parkových částí náměstí, tedy o parku, ne o parkovacích místech.",
+   "Přesnost: Částky, procenta i datum schválení s originálem sedí, ale u největší akce karta píše o parkování, zatímco originál uvádí parkové části náměstí, a výčet částí obvodu v dokumentech není."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 3,
+    "reason": "Částky, procenta i datum schválení s originálem sedí, ale u největší akce karta píše o parkování, zatímco originál uvádí parkové části náměstí, a výčet částí obvodu v dokumentech není."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co se schválilo, za jaké období, kolik obvod vybral a utratil, na co peníze šly a kde lze dokumenty na internetu i na úřadě nahlédnout."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou a čísla jsou zaokrouhlená, jen pojmy jako závěrečný účet, účetní závěrka nebo upravený rozpočet zůstávají úřední."
+   },
+   "obrazky": {
+    "score": 2,
+    "reason": "Letecký snímek bez popisku ukazuje a špendlíkem označuje jedno místo ve vesnické zástavbě, takže u rozpočtu celého obvodu může mást a nic nevysvětluje."
+   }
+  },
+  "summary": "Hlavní částky, datum schválení i závěr krajského úřadu s originálem souhlasí, opravit je ale třeba popis největší akce, ověřit výčet částí obvodu a zvážit, zda obrázek u rozpočtu pomáhá.",
+  "fixes": [
+   "V řádku „Největší akce“ nahraďte text za: „chodník v ulici Lexova (západ) a úprava parkových částí náměstí Dukelských hrdinů: 15,4 mil. Kč“. Originál: závěrečný účet, tabulka výdajů v kapitole doprava, str. 14 (položka se skutečností 15 363 182,46 Kč).",
+   "V údaji, koho se oznámení týká, zkraťte text na „Obyvatelé obvodu Pardubice V“. Výčet Dukla, Dražkovice, Nové Jesenčany a Svítkov – část v dokumentech není; zpráva krajského úřadu navíc uvádí dotaci na akci ve Svítkově u obvodu Pardubice VI, takže zvlášť zmínku o Svítkově nelze z podkladů potvrdit.",
+   "Letecký snímek a náhled se špendlíkem z karty odstraňte, protože rozpočet se týká celého obvodu. Pokud mají zůstat, doplňte popisek, který konkrétní akci ukazují, a ověřte, že špendlík leží na komunikaci Dražkovice č. p. 153–174."
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "U největší akce karta uvádí parkování na náměstí Dukelských hrdinů, originál ale mluví o chodníku v ulici Lexova a o úpravě parkových částí náměstí, tedy o parku, ne o parkovacích místech."
+   }
+  ],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2025-01-01",
+    "verdict": "v_dokumentu",
+    "evidence": "Závěrečný účet je za rok 2025 a rozbor hospodaření uvádí období leden–prosinec 2025."
+   },
+   {
+    "field": "do",
+    "value": "2025-12-31",
+    "verdict": "v_dokumentu",
+    "evidence": "Rozbor hospodaření je sestaven k 31. 12. 2025; samotné schválení 24. 6. 2026 potvrzuje oznámení na úřední desce."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:04:10+00:00"
+ }
 }

@@ -88,5 +88,46 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Datum, číslo usnesení, čísla změn i všechny částky včetně dopočtených součtů odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, kdo co kdy schválil, kolik peněz a odkud kam se přesouvá, a otevřeně dodává, že příjemce příspěvků originál neuvádí."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen „kapitola 33“ a „rozpočtová opatření“ zůstávají bez vysvětlení."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o přesun peněz v rozpočtu bez konkrétního místa, takže obrázek by nepomohl."
+   }
+  },
+  "summary": "Přepis obstál: všechny částky, datum i číslo usnesení sedí s originálem, jen označení „kapitola 33“ zůstává pro běžného čtenáře nevysvětlené.",
+  "fixes": [
+   "V údaji „Počet změn“ nahraďte „6 rozpočtových opatření (č. 38–43)“ textem „6 změn rozpočtu (vedených pod čísly 38–43)“.",
+   "V textu karty doplňte k „kapitola 33“ vysvětlení, že jde o část rozpočtu a originál neuvádí, co zahrnuje. Význam kapitoly uveďte, jen pokud ho ověříte, například v usnesení rady č. 296/2026 R."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-06-24",
+    "verdict": "v_dokumentu",
+    "evidence": "Nadpis i první věta originálu: „Rada městského obvodu Pardubice V schválila dne 24. 6. 2026 v rámci svého usnesení č. 296/2026 R“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:54:43+00:00"
+ }
 }

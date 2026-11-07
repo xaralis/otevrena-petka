@@ -227,5 +227,55 @@
  },
  "problems": [],
  "published_at": "2026-11-04T11:23:32+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "pozor",
+  "passed": true,
+  "issues": [
+   "Úplnost: Hlavní údaje jsou uvedené, ale text nevysvětluje, že originál stanovuje k označení uzavírky i značky zákazu vjezdu, slepé ulice a objížďky, a neříká ani to, že rozsah upřesňuje chybějící plán."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Místo, termín, důvod, žadatel i to, že se nelze odvolat, souhlasí s originálem; jen upřesnění, že je chodník uzavřený „v místě lešení“, v originále výslovně není."
+   },
+   "uplnost": {
+    "score": 3,
+    "reason": "Hlavní údaje jsou uvedené, ale text nevysvětluje, že originál stanovuje k označení uzavírky i značky zákazu vjezdu, slepé ulice a objížďky, a neříká ani to, že rozsah upřesňuje chybějící plán."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je psaný běžnou češtinou bez paragrafů a úředních obratů a každý pochopí, co se kde a do kdy děje."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecké snímky pomáhají najít ulici a dům, ale neukazují lešení, značky ani úsek se zákazem stání; plán značení v originále není, takže přesnou polohu nelze ověřit."
+   }
+  },
+  "summary": "Karta správně uvádí místo, termín i důvod opatření, jen nevysvětluje, že originál počítá také se značkami pro uzavírku a objížďku, jejichž rozsah bez chybějícího plánu nelze určit.",
+  "fixes": [
+   "Do shrnutí doplňte větu: „Úprava zahrnuje také značky zákazu vjezdu, přikázaného směru, slepé ulice a objížďky, které originál uvádí k označení uzavírky. Plán značení v originále není, proto není jasné, zda se týkají i části silnice nebo vjezdu.“ Stejnou informaci stručně doplňte do skupiny, které se to týká: nejen parkující řidiči a chodci, ale možná i další řidiči v Rokycanově ulici.",
+   "V údaji „Chodník“ nahraďte „uzavřený v místě lešení“ textem „uzavřený; přesný rozsah je v plánu značení, který v originále není“. Originál lešení s uzavírkou chodníku výslovně nespojuje a rozsah neuvádí.",
+   "V seznamu značek uveďte E13 dvakrát, stejně jako originál: jednou u B28 a E8d pro zákaz stání a jednou u Z2, B1, C2c, IP10a a IS11a pro uzavírku."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-20",
+    "verdict": "v_dokumentu",
+    "evidence": "Strana 2 originálu: „Platnost úpravy: 20. 10. 2026 – 15. 12. 2026“."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-15",
+    "verdict": "v_dokumentu",
+    "evidence": "Strana 2 originálu: „Platnost úpravy: 20. 10. 2026 – 15. 12. 2026“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:57:34+00:00"
+ }
 }

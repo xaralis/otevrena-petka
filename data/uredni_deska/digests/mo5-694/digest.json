@@ -63,5 +63,56 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Seznam údajů, věkové hranice i datum odpovídají originálu; jen omezení na lidi s trvalým pobytem v obvodu a formulace „platí od“ v originále výslovně nejsou."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Seznam údajů, věkové hranice i datum odpovídají originálu; jen omezení na lidi s trvalým pobytem v obvodu a formulace „platí od“ v originále výslovně nejsou."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta uvádí všechny čtyři poplatky a omezení na české občany, ale neříká, že ostatní údaje se hlásit musí dál, a neupřesňuje, že u dítěte a u poplatníka jde o jméno, rodné číslo a trvalý pobyt."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou bez paragrafů, jen věta „jde o dítě, kterému bude 6 let“ je trochu nejasná, protože neříká, které údaje o dítěti se nemusí hlásit."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o obecný přehled údajů k poplatkům bez konkrétního místa, obrázek by nepomohl."
+   }
+  },
+  "summary": "Přepis věrně a srozumitelně popisuje, co se u poplatků za odpad a za psa nemusí hlásit; drobné výhrady má jen k upřesnění, koho se to týká, a k tomu, že nezmiňuje povinnost hlásit ostatní údaje dál.",
+  "fixes": [
+   "V řádku „koho se to týká“ nahraďte „Lidé s trvalým pobytem v obvodu Pardubice V s českým občanstvím, kteří platí poplatek za odpad nebo za psa“ za „Občané České republiky, kteří platí poplatek za odpad nebo za psa úřadu obvodu Pardubice V“; podmínka trvalého pobytu v obvodu v originále není.",
+   "V souhrnu i v položkách upřesněte, že u dítěte, které v daném roce dovrší 6 let, a u poplatníka, který dovrší 65 let, se nemusí hlásit jméno, rodné číslo a trvalý pobyt.",
+   "Do souhrnu doplňte větu: „Ostatní údaje, které v seznamu nejsou, se hlásí dál.“ Vychází to z toho, že originál vyjímá jen vyjmenované údaje.",
+   "U období změňte „platí od 21. 3. 2022“ na „vydáno 21. 3. 2022“, protože originál uvádí jen datum vydání, ne začátek platnosti."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2022-03-21",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál končí větou „V Pardubicích dne 21. 3. 2022“. Je to datum vydání, samostatné datum začátku platnosti originál neuvádí."
+   },
+   {
+    "field": "do",
+    "value": "bez data konce (na kartě „na desce visí dlouhodobě“)",
+    "verdict": "nelze_overit",
+    "evidence": "Originál neuvádí konec platnosti ani dobu vyvěšení, proto z něj údaj o dlouhodobém vyvěšení ověřit nelze."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:01:13+00:00"
+ }
 }

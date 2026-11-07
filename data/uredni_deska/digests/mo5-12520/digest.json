@@ -771,5 +771,57 @@
   "datum do 2026-12-31 v dokumentu není doslova"
  ],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Všechny částky a data sedí se schváleným rozpočtem, nepřesné jsou jen dvě formulace: chodníky ve Wolkerově se podle originálu rekonstruují, nejsou nové, a 25,1 mil. Kč nejsou jen úspory, ale i předpokládané nevyčerpané a převáděné peníze."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Všechny částky a data sedí se schváleným rozpočtem, nepřesné jsou jen dvě formulace: chodníky ve Wolkerově se podle originálu rekonstruují, nejsou nové, a 25,1 mil. Kč nejsou jen úspory, ale i předpokládané nevyčerpané a převáděné peníze."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co bylo schváleno a kdy, na co peníze půjdou, koho se rozpočet týká a kde si ho lze prohlédnout; lhůta u rozpočtu žádná není."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou a participativní rozpočet vysvětluje, jen v přehledu zůstává několik úředních výrazů a částek v tisících Kč."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Karta o rozpočtu obrázky nemá a žádný by čtenáři nepomohl."
+   }
+  },
+  "summary": "Přepis obstál: částky, datum schválení i místa, kde si lze rozpočet prohlédnout, odpovídají schválenému rozpočtu a zpřesnit by se měly jen dvě formulace.",
+  "fixes": [
+   "V souhrnu nahraďte „do nových chodníků ve Wolkerově ulici“ za „do rekonstrukce chodníků ve Wolkerově ulici“. Originál (komentář k dopravě) popisuje rekonstrukci, při níž asfalt nahradí zámková dlažba.",
+   "V souhrnu nahraďte „25,1 mil. Kč ušetřenými z roku 2025“ za „25,1 mil. Kč, které podle odhadu zbudou z roku 2025“. V přehledu údajů změňte popisek „Peníze ušetřené z roku 2025“ na „Peníze převedené z roku 2025“. Originál (kapitola Financování) sem řadí předpokládané ušetřené nebo nevyčerpané prostředky i peníze na akce převáděné z roku 2025.",
+   "U Wolkerovy a U Krematoria doplňte, že jde o předpokládané částky, například „chodníky ve Wolkerově ulici asi 10,2 mil. Kč“. Originál uvádí „předpokládanou“ částku u obou akcí.",
+   "V přehledu údajů nahraďte „na revitalizaci“ za „na obnovu hřiště“ a „podíl na sdílených daních“ za „podíl obvodu na daních“.",
+   "V přehledu údajů uvádějte hlavní částky v milionech jako v souhrnu, například 99,3 mil. Kč místo 99 308,32 tis. Kč."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-01-01",
+    "verdict": "spocitano_spravne",
+    "evidence": "Originál mluví o rozpočtu na r. 2026 bez výslovného data začátku; rozpočet na kalendářní rok 2026 tedy začíná 1. 1. 2026. Schválení 17. 12. 2025 je v originále doslova."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-31",
+    "verdict": "spocitano_spravne",
+    "evidence": "Originál mluví o rozpočtu na r. 2026 bez výslovného data konce; rozpočet na kalendářní rok 2026 tedy končí 31. 12. 2026. Hlášení automatické kontroly proto není chyba."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:54:04+00:00"
+ }
 }

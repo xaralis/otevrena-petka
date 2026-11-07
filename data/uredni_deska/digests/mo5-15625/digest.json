@@ -424,5 +424,52 @@
  },
  "problems": [],
  "published_at": "2026-11-05T09:31:58+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, důvod, termín včetně hodin, značky i uvedené firmy a úřady se shodují s originálem a jeho situačním plánem."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Co, kde, kdy a koho se to týká na kartě je a odvolat se nelze, chybí jen vedlejší informace o přemisťování zaparkovaných aut a o dočasném zrušení značky jednosměrného provozu."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je psaný běžnou češtinou bez paragrafů a úředních obratů a vysvětluje, co se pro řidiče i chodce změní."
+   },
+   "obrazky": {
+    "score": 5,
+    "reason": "Situační plán z originálu i letecký snímek ukazují správnou křižovatku a čísla na plánu sedí na místo uzavírky, zábranu, zákaz zastavení i rušenou značku."
+   }
+  },
+  "summary": "Přepis s originálem souhlasí ve všech podstatných údajích včetně místa a termínu, chybí jen dvě vedlejší informace o parkujících autech a dočasně zrušené značce.",
+  "fixes": [
+   "Do shrnutí nebo do části „koho se to týká“ doplnit praktický dopad pro parkující, například: „Auta zaparkovaná v místě, kde bude platit zákaz zastavení, mohou být přemístěna.“ Originál to uvádí na straně 2 (vymístění parkujících vozidel podle § 19a zákona o pozemních komunikacích).",
+   "Popisek čísla 5 na plánu upřesnit z obecného „dosavadní dopravní značka“ na „Dočasně přestává platit značka jednosměrného provozu (IP 4b)“. Plán v originálu na straně 5 uvádí „zrušení platnosti SDZ IP 4b“. Nepsat, že v ulici bude obousměrný provoz, pokud to redaktor neověří u odboru dopravy, protože text originálu to výslovně neříká."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-09",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Termín: od 8:00 hod. 9. 11. 2026“; stejně i v odůvodnění na straně 3. Den v týdnu (pondělí) na kartě odpovídá kalendáři."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-13",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „do 16:00 hod. 13. 11. 2026“; stejně i v odůvodnění na straně 3. Den v týdnu (pátek) na kartě odpovídá kalendáři."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:59:19+00:00"
+ }
 }

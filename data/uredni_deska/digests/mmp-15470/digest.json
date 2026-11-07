@@ -653,5 +653,52 @@
  },
  "problems": [],
  "published_at": "2026-11-04T11:23:32+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Datum, čas, číslo odstávky, provozovatel, ulice, čísla domů, pozemky i kontakty přesně odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co se stane, kde a kdy, koho se to týká a na co si dát pozor; originál žádnou lhůtu ani povinný úkon pro běžné domácnosti neuvádí."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen v seznamu pozemků zůstaly úřední zkratky a u dvou seznamů domů v ulici Čacké není poznat, ke které části města patří."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Obrázek je mapa z originálu se správným územím a správně vysvětlenými značkami, jen je kvůli množství čísel a malému měřítku hůř čitelná pro hledání konkrétního domu."
+   }
+  },
+  "summary": "Přepis obstál: všechny údaje o odstávce souhlasí s originálem a chybí jen drobná vylepšení čitelnosti.",
+  "fixes": [
+   "V seznamu míst doplňte k oběma záznamům ulice Čacké část města: „Čacké 125, 128, 131, 132, 133, 136, 150, 154, 155, 229 (Nové Jesenčany)“ a „Čacké 126, 144, 164, 165, 1449, 1450, 1724, 1725, 2662, 2747, 2758 (Zelené Předměstí)“.",
+   "V seznamu pozemků nahraďte zkratky celými slovy, například „p. p. č. 2/30, k. ú. Nové Jesenčany“ na „pozemek č. 2/30, katastrální území Nové Jesenčany“; stejně upravte všech deset položek."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-05",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí „dne 5. 11. 2026 od 7:30 do 15:30 hodin“; tento den je podle kalendáře čtvrtek."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-05",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí odstávku jediný den, 5. 11. 2026, do 15:30."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:53:33+00:00"
+ }
 }

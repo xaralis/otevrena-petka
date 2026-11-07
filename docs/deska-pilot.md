@@ -8,7 +8,7 @@ ven bez člověka, pokud obstojí v kontrole. Kód: `src/petka/uredni_deska/dige
 ## Denní běh (naplánovaná session Claude Code na homelab VM)
 
 ```bash
-cd ~/Workspace/otevrena-petka && git pull
+cd ~/Workspace/otevrena-petka && git pull --rebase --autostash
 LLM_BACKEND=claude-cli uv run usneseni deska-auto     # napsat, ohodnotit, vydat, nebo nechat čekat
 scripts/deska-sync.sh                                 # hned vidět na webu
 git add data/uredni_deska/digests && git commit -m "deska: <titulky>" && git push

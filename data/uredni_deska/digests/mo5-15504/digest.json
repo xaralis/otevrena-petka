@@ -193,5 +193,73 @@
   "datum od 2026-10-11 v dokumentu není doslova"
  ],
  "published_at": "2026-11-04T11:23:32+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Na obrázku je čitelná SPZ, obličej nebo jméno soukromé osoby: Na fotce parkoviště je na tabulce pod modrou značkou čitelná registrační značka vozidla soukromé osoby."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místa, data platnosti, druh změny, značky i informace, že se nelze odvolat, souhlasí s oběma rozhodnutími."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí co, kde, kdy a koho se to týká a správně říká, že se proti úpravám nelze odvolat a veřejnost nemá žádnou lhůtu."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen dvě položky v seznamu značek mají kód dodatkové tabulky bez vysvětlení."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Fotka pochází z přílohy rozhodnutí a ukazuje parkoviště u č. p. 481, ale je na ní čitelná značka vozidla, letecký snímek nemá vyznačené místo a č. p. 1313 není vyznačeno nikde."
+   }
+  },
+  "summary": "Text karty s oběma rozhodnutími souhlasí, na fotce parkoviště je ale čitelná registrační značka vozidla, kterou je před zveřejněním nutné zakrýt.",
+  "fixes": [
+   "Na obrázku s fotkou parkoviště u č. p. 481 rozmažte nebo zakryjte text na malé tabulce pod modrou značkou P se symbolem vozíku (levá značka uprostřed snímku); je tam registrační značka vozidla.",
+   "Popisek fotky upravte, protože na ní už je vyznačené stání a značka s jiným údajem o vozidle, než uvádí rozhodnutí. Navrhované znění: „Parkoviště u domu Češkova 481, snímek z přílohy rozhodnutí; stav před provedením nové úpravy nebo sousední stání nelze z originálu určit.“",
+   "Na letecký snímek doplňte značky obou míst (parkoviště u č. p. 481 a vozovka před č. p. 1313), nebo ho z karty odeberte; teď na něm není vyznačeno nic. Značku pro č. p. 1313 doplňte i do náhledu, který má jen jeden bod.",
+   "V seznamu značek doplňte k oběma položkám E13 popis bez značky vozidla: u odstraňované „dodatková tabulka s původním údajem o vozidle – Češkova 1313“, u nové „dodatková tabulka s novým údajem o vozidle – Češkova 1313“."
+  ],
+  "blockers": [
+   {
+    "kind": "obrazek_osobni_udaje",
+    "what": "Na fotce parkoviště je na tabulce pod modrou značkou čitelná registrační značka vozidla soukromé osoby."
+   }
+  ],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Rozhodnutí MmP 196078/2026, str. 2: „Platnost úpravy: 11. října 2026 – 1. února 2029“. Datum je zapsané slovně, proto ho automatická kontrola nenašla doslova."
+   },
+   {
+    "field": "do",
+    "value": "2029-02-01",
+    "verdict": "v_dokumentu",
+    "evidence": "Rozhodnutí MmP 196078/2026, str. 2: „11. října 2026 – 1. února 2029“; konec platnosti u č. p. 1313."
+   },
+   {
+    "field": "od",
+    "value": "2026-10-24",
+    "verdict": "v_dokumentu",
+    "evidence": "Rozhodnutí MmP 205861/2026, str. 2: „Platnost úpravy: 24. 10. 2026 – 23. 10. 2031“; začátek platnosti u č. p. 481."
+   },
+   {
+    "field": "do",
+    "value": "2031-10-23",
+    "verdict": "v_dokumentu",
+    "evidence": "Rozhodnutí MmP 205861/2026, str. 2: „Platnost úpravy: 24. 10. 2026 – 23. 10. 2031“; nejzazší konec platnosti na kartě."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:56:57+00:00"
+ }
 }

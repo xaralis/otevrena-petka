@@ -448,5 +448,57 @@
  },
  "problems": [],
  "published_at": "2026-11-05T09:31:58+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "pozor",
+  "passed": true,
+  "issues": [
+   "Úplnost: Podstatné informace karta má, ale neříká, že přesné místo přechodu není známé, že úprava navazuje na dřívější opatření a mění jeho termín, ani že se začíná uplatňovat až po vyvěšení vyhlášky."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Termíny, počet dětí, časy, důvod, postoj policie i firma sedí s originálem, jen umístění vyznačené plochy „vedle“ přechodu v textu výslovně není a bez chybějícího výkresu ho nelze ověřit."
+   },
+   "uplnost": {
+    "score": 3,
+    "reason": "Podstatné informace karta má, ale neříká, že přesné místo přechodu není známé, že úprava navazuje na dřívější opatření a mění jeho termín, ani že se začíná uplatňovat až po vyvěšení vyhlášky."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je psaný běžnou češtinou bez paragrafů a úředních obratů a značky jsou vysvětlené slovy."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecké snímky ukazují okolí školy se značkou u její budovy, ale místo přechodu, vyznačenou plochu ani budovu družiny neukazují, takže čtenáři pomáhají jen s orientací."
+   }
+  },
+  "summary": "Přepis údaje z originálu podává věrně a srozumitelně, chybí v něm ale několik vedlejších souvislostí, hlavně upozornění, že přesné místo přechodu není ze zveřejněné části známé.",
+  "fixes": [
+   "Do popisu místa doplňte, že družina je v budově č. p. 1981 (originál, strana 2), a napište: „Přesné místo přechodu není známé, protože výkres uvedený jako příloha ve zveřejněném dokumentu chybí.“",
+   "Do přehledu údajů přidejte: „Navazuje na dřívější opatření MmP 184423/2026, proti němuž se mění termín úpravy“ (originál, strana 3). Než ponecháte formulaci „přibude“ a značky jako nové, ověřte, zda přechod podle dřívějšího opatření už není namalovaný.",
+   "Ke dni začátku platnosti doplňte, že vyhláška nabývá účinnosti pátý den po vyvěšení (originál, strana 3). Pokud z úřední desky potvrdíte vyvěšení 4. 11. 2026, uveďte: „Vyhláška byla vyvěšena 4. 11. 2026, účinnosti nabývá 9. 11. 2026, i když je v ní platnost uvedena od 31. 10. 2026.“",
+   "Ve větě o vyznačené ploše nahraďte „Vedle něj vyznačí“ formulací „V místě, kde děti vstupují do silnice, vyznačí“, protože originál mluví o výhledu v místě vstupu chodců do vozovky a umístění vedle přechodu neuvádí. Stejně upravte i údaj „Co přibude“.",
+   "K leteckému snímku doplňte popisek, že značka ukazuje budovu školy, ne místo přechodu. Pokud úřad dodá chybějící výkres, přidejte ho na kartu."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-31",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 31. 10. 2026 – 30. 10. 2027“. Originál zároveň říká, že pátý den po vyvěšení je dnem nabytí účinnosti; datum vyvěšení je v něm nevyplněné, takže údaj redaktora o vyvěšení 4. 11. (a tedy účinnosti 9. 11.) z něj ověřit nelze."
+   },
+   {
+    "field": "do",
+    "value": "2027-10-30",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 31. 10. 2026 – 30. 10. 2027“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:00:09+00:00"
+ }
 }

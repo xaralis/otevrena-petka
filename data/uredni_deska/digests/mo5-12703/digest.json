@@ -68,5 +68,47 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Datum, číslo usnesení, částka i položky s originálem sedí, jen věta o rozpočtu „v rovnováze“ v originále není: ten uvádí pouze, že příjmy i výdaje vzrostly o stejnou částku."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Datum, číslo usnesení, částka i položky s originálem sedí, jen věta o rozpočtu „v rovnováze“ v originále není: ten uvádí pouze, že příjmy i výdaje vzrostly o stejnou částku."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co se změnilo, kdo a kdy to schválil a o jakou částku jde; čtenář nemá co dělat ani v žádné lhůtě a dárce ani konkrétní akci originál neuvádí."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Úřední text je převedený do běžné češtiny, částka je napsaná v korunách a kapitola rozpočtu je vysvětlená slovy."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o změnu rozpočtu bez konkrétního místa, obrázek by čtenáři nepomohl."
+   }
+  },
+  "summary": "Přepis s originálem věcně souhlasí, datum, částka 6 560 Kč i položky rozpočtu sedí; jen věta o rozpočtu „v rovnováze“ jde nad rámec originálu.",
+  "fixes": [
+   "V shrnutí nahraďte větu „Celkový rozpočet tím zůstává v rovnováze.“ větou „Příjmy i výdaje obvodu tak vzrostly o stejnou částku, rozdíl mezi nimi se nemění.“ Originál o vyrovnanosti celého rozpočtu nic neříká, uvádí jen zvýšení obou položek o tutéž částku."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-01-28",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál: „Rada městského obvodu Pardubice V schválila dne 28. 1. 2026 v rámci svého usnesení 267/2026 R rozpočtové opatření“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:54:06+00:00"
+ }
 }

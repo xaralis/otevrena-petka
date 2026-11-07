@@ -297,5 +297,55 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:24:41+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Místo, termín, důvod, značky i odpovědný subjekt sedí s originálem; jen to, že konkrétní den určí tabulka pod značkou a že hrozí odtah, je odvozené, originál to výslovně neříká."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Místo, termín, důvod, značky i odpovědný subjekt sedí s originálem; jen to, že konkrétní den určí tabulka pod značkou a že hrozí odtah, je odvozené, originál to výslovně neříká."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Čtenář se dozví co, kde, kdy, koho se to týká a co má udělat; chybí jen vedlejší informace, že se proti úpravě nelze odvolat."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen výrazy jako dodatková tabulka nebo označení silnice II/324 zůstávají úřední."
+   },
+   "obrazky": {
+    "score": 5,
+    "reason": "Letecký snímek ukazuje správný nárožní dům a výkres s očíslovanými popisky správně vysvětluje zábor i dočasné značení; čísla sice zakrývají některé nápisy, ale popisky je nahrazují a na kartě je i výkres bez čísel."
+   }
+  },
+  "summary": "Přepis s originálem souhlasí v místě, termínu, důvodu i značení a nemá žádnou zásadní chybu; chybí jen vedlejší informace, že se proti úpravě nelze odvolat.",
+  "fixes": [
+   "Na konec shrnutí doplňte větu: „Proti této úpravě se nelze odvolat.“ Originál to uvádí na straně 2 v části Poučení.",
+   "Ve shrnutí nahraďte větu o dodatkové tabulce touto: „Konkrétní den vyberou podle počasí. Termín bude uvedený na cedulce pod značkou zákazu stání.“ Originál říká jen, že dodatková tabulka uvede termín platnosti a že práce závisí na počasí; netvrdí, že tabulka určí den.",
+   "Ověřte na úřední desce magistrátu datum vyvěšení, protože v originálu je toto pole prázdné a účinnost nastává pátým dnem po vyvěšení. Pokud by vyšla později než 5. 11. (při vyvěšení 4. 11. by to bylo 9. 11.), upravte začátek období i text v nadpisové části o termínu tak, aby uváděly skutečný první možný den."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-05",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 5. 11. 2026 – 11. 11. 2026 (1 den v uvedeném termínu)“. Datum vyvěšení je v originálu prázdné, takže den nabytí účinnosti (pátý den po vyvěšení) z něj ověřit nejde; samotný začátek období ale s originálem souhlasí."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 5. 11. 2026 – 11. 11. 2026 (1 den v uvedeném termínu)“; termín je i v rukopisné legendě výkresu."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T09:00:18+00:00"
+ }
 }

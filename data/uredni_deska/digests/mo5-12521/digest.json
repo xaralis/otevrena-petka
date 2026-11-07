@@ -75,5 +75,53 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Všechny částky, procenta a data sedí s originálem; nepřesné je jen zjednodušení v nadpisu „na rok 2026“ a nedoložená věta o tom, jak směrnice visela na desce."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Všechny částky, procenta a data sedí s originálem; nepřesné je jen zjednodušení v nadpisu „na rok 2026“ a nedoložená věta o tom, jak směrnice visela na desce."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta říká, co se mění, koho se to týká a od kdy, chybí jen vedlejší podmínky nároku, například že většinu příspěvků nedostanou lidé na zkrácený úvazek nebo na dohodu."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen několik výrazů zůstalo úředních a bez vysvětlení, například „uvolněný člen zastupitelstva“, „příspěvek na reprezentaci“ a „zdravotní indispozice“."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Karta je bez obrázků a u vnitřních pravidel fondu by žádný nepomohl."
+   }
+  },
+  "summary": "Přepis obstál: všechny částky, procenta a data sedí s originálem, drobné výhrady má jen k nadpisu, jedné větě o zveřejnění a několika úředním výrazům.",
+  "fixes": [
+   "Nadpis: místo „na rok 2026“ napište „od roku 2026“. Směrnice podle článku 6 platí od 1. 1. 2026 a konec platnosti neuvádí, takže nejde o pravidla jen na jeden rok.",
+   "Poslední věta shrnutí: údaj, že je směrnice přílohou rozpočtu na rok 2026, v originálech není. Ponechte ho, jen pokud ho potvrzuje záznam na úřední desce; jinak ho vypusťte.",
+   "Poslední věta shrnutí: „nejdřív v návrhu se zvýrazněnými změnami, pak ve schválené podobě“ nahraďte větou „Směrnice je na desce ve verzi se zvýrazněnými změnami i v čisté verzi.“ Podle poznámek redaktora obě zveřejnění obsahují obě verze a jejich obsah se neliší; všechny čtyři soubory zároveň uvádějí schválení 17. 12. 2025.",
+   "Doplňte do faktů položku „Kdo příspěvky nedostane“: „lidé na zkrácený úvazek (kromě příspěvku na jídlo, který se jim poměrně krátí), lidé na dohodu o provedení práce nebo o pracovní činnosti, lidé na mateřské dovolené a zaměstnanci přijatí na základě dohody s úřadem práce (ti mají nárok na příspěvek na jídlo)“. Podle článku 3 odst. 7 navíc na mateřské dovolené platí výjimka s odkazem na odst. 3 téhož článku; její obsah originál nevysvětluje.",
+   "Doplňte k příspěvku na volný čas a k penzijnímu a životnímu pojištění, že konkrétní částku v rámci limitu určuje tajemník úřadu (článek 4 odst. 4 a 5).",
+   "Položku „Penzijní a životní pojištění“ doplňte o dlouhodobý investiční produkt, na který lze příspěvek podle článku 4 odst. 5 také použít.",
+   "Vysvětlete úřední výrazy: „uvolněný člen zastupitelstva“ nahraďte slovem „starosta“; „zdravotní indispozici“ nahraďte slovy „krátkodobou zdravotní potíž“; u „příspěvku na reprezentaci“ uveďte, že jde o peníze vyplácené v červnu a listopadu těm, kdo v pololetí odpracovali aspoň 60 dnů."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-01-01",
+    "verdict": "v_dokumentu",
+    "evidence": "Článek 6 odst. 1 směrnice: „Podle této směrnice se postupuje od 1. 1. 2026.“ Konec platnosti originál neuvádí, karta ho správně nemá."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:53:50+00:00"
+ }
 }

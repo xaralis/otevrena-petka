@@ -167,5 +167,57 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:58:30+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "pozor",
+  "passed": true,
+  "issues": [
+   "Obrázky: Letecký snímek zachycuje okolí a kruhový objezd, ale nadjezd je jen na okraji a není vyznačený; náhled ukazuje jen domy a sportovní areál bez nadjezdu."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Termíny, místo, směry, objížďky i omezení MHD sedí s originály; jen to, že se v obou dnech opravdu pracovalo a uzavírka skončila, karta uvádí jako jistotu, i když originály práce jen povolují."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Čtenář se dozví co, kde, kdy, koho se to týkalo i všechny objížďky a že už nemusí nic dělat, protože uzavírka podle povolených termínů minula."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je celkově srozumitelný, ale zůstalo v něm několik odborných výrazů, například mimoúrovňová křižovatka, výlukový jízdní řád, stažené sběrače a neobratné „sjezdy byly objízdné“."
+   },
+   "obrazky": {
+    "score": 2,
+    "reason": "Letecký snímek zachycuje okolí a kruhový objezd, ale nadjezd je jen na okraji a není vyznačený; náhled ukazuje jen domy a sportovní areál bez nadjezdu."
+   }
+  },
+  "summary": "Přepis s originály souhlasí v termínech, místě, objížďkách i dopadu na MHD, slabší jsou hlavně obrázky, které nadjezd neukazují ani nevyznačují.",
+  "fixes": [
+   "Obrázky: vystřihnout letecký snímek i náhled tak, aby ve středu byla mimoúrovňová křižovatka silnic I/36 a I/37 v Doubravicích, a nadjezd vyznačit. Teď je střed snímku u ulice Doubravická a náhled nadjezd vůbec neobsahuje. Ulici Doubravická ponechat nanejvýš jako vedlejší místo: v originále se objevuje jen jako jedno z míst pro značku (stanovení, podmínka 2a), práce tam neprobíhaly.",
+   "Značka IP 22 (ověření žádané v poznámce redaktora): ve stanovení z 22. 10. 2026 v podmínce 2a zůstává a text na kartě s ní doslova souhlasí. Odůvodnění na str. 3 říká, že krajský úřad vzatou zpět „podmínku č. 2“ ze stanovení už vypustil, takže vydaný text podmínek by měl být už bez ní; samotné stanovisko policie ale v balíčku není, proto nelze z originálů stoprocentně vyloučit, že se zpětvzetí týkalo právě této značky. Jistotu dá dotaz na odbor dopravy a silničního hospodářství krajského úřadu; bez ověření značku raději vynechat, protože po skončení uzavírky čtenáři stejně nepomůže. Pokud zůstane, doplnit, že byla jen přechodná a kde stála: před křižovatkou I/36 a II/324, za kruhovým objezdem I/36 a III/32224 a za kruhovým objezdem III/32224 s ulicí Doubravická. Pozor také na to, že značka uvádí 28. 10., zatímco objížďka po II/324 je v originále popsaná u 31. 10.; je to rozpor přímo v originále.",
+   "Ve shrnutí větu „Uzavírka už skončila, takže teď už nic dělat nemusíte.“ formulovat podle toho, co originály doložit mohou, například: „Uzavírka byla povolena jen na tyto dva dny, takže teď už nic dělat nemusíte.“ Originály jsou z doby před pracemi a skutečný průběh nepotvrzují. Stejně tak u „Stavbu prováděla“ lze použít „Uzavírku si vyžádala“, protože originál firmu uvádí jako žadatele a odpovědnou právnickou osobu.",
+   "Ve shrnutí nahradit „část sjezdů byla objízdná přes…“ jasnější větou, například „řidiči, kteří nemohli využít uzavřené sjezdy, jezdili přes…“.",
+   "Zjednodušit odborné výrazy: „mimoúrovňová křižovatka“ na „křižovatka s nadjezdem“, „se staženými sběrači“ na „bez připojení k trolejím“, „bez výlukového jízdního řádu“ na „bez zvláštního jízdního řádu pro uzavírku“."
+  ],
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-28",
+    "verdict": "v_dokumentu",
+    "evidence": "Stanovení i rozhodnutí uvádějí: „28. 10. 2026 – směr Pardubice, Centrum – Pardubice, Semtín včetně větví mimoúrovňové křižovatky.“"
+   },
+   {
+    "field": "do",
+    "value": "2026-10-31",
+    "verdict": "v_dokumentu",
+    "evidence": "Stanovení i rozhodnutí uvádějí: „31. 10. 2026 – Směr Pardubice, Semtín – Pardubice, Centrum“; celkový termín je „28. 10. 2026 a 31. 10. 2026“, tedy dva samostatné dny, jak to správně uvádí i karta."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:59:37+00:00"
+ }
 }

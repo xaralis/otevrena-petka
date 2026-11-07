@@ -110,5 +110,54 @@
  },
  "problems": [],
  "published_at": "2026-11-05T10:00:11+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: Karta tvrdí, že místa budou vyznačena jako šikmá stání a že se odmítnutá varianta liší typem čar. Originál uvádí jen kódy značek a ani jedno z toho neříká, takže čtenář dostává nepodložený popis podoby parkování.",
+   "Přesnost: Místo, časy, značky, kontakt i lhůta sedí s originálem, ale tvrzení o šikmých stáních a jiném typu čar v něm není a písemná forma je tam výslovně uvedená jen u námitek vlastníků nemovitostí."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 3,
+    "reason": "Místo, časy, značky, kontakt i lhůta sedí s originálem, ale tvrzení o šikmých stáních a jiném typu čar v něm není a písemná forma je tam výslovně uvedená jen u námitek vlastníků nemovitostí."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, kdy vyhrazení platí, koho se to týká, jak a do kdy se lze vyjádřit, a výslovně upozorňuje, že přesné místo nelze určit, protože výkres chybí."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen u stanoviska policie zůstávají kódy značek, kterým běžný čtenář nemusí rozumět."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Karta je bez obrázků a nebylo z čeho je připravit: výkres v dostupném originálu chybí a adresa školky ani ulice v něm uvedená není."
+   }
+  },
+  "summary": "Přepis ve většině údajů včetně lhůty 26. 11. 2026 odpovídá originálu, před zveřejněním je ale potřeba opravit popis šikmých stání a jiného typu čar, který v originálu není.",
+  "fixes": [
+   "Ve faktu „Stanovisko policie“ nahraďte text za: „Policie stanovila podmínku, že místa budou na vozovce označena jen značkou V10e, ne V10d.“ Slova „šikmá stání“ a „s jiným typem čar“ odstraňte, v originálu nejsou. Popis značky doplňte jen tehdy, pokud ho ověříte v platné vyhlášce o dopravních značkách nebo u odboru dopravy.",
+   "V souhrnu změňte větu o připomínkách na: „Kdo je návrhem dotčený, může do 26. 11. 2026 podat magistrátu připomínky nebo námitky; vlastníci nemovitostí musí podat písemné a odůvodněné námitky.“ V poli „jak“ odstraňte úvodní „Písemně“ a začněte „Na Magistrát města Pardubic, odbor dopravy, nám. Republiky 12, Pardubice.“ Originál písemnou formu výslovně uvádí jen u vlastníků nemovitostí."
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "Karta tvrdí, že místa budou vyznačena jako šikmá stání a že se odmítnutá varianta liší typem čar. Originál uvádí jen kódy značek a ani jedno z toho neříká, takže čtenář dostává nepodložený popis podoby parkování."
+   }
+  ],
+  "dates": [
+   {
+    "field": "lhuta",
+    "value": "2026-11-26",
+    "verdict": "spocitano_spravne",
+    "evidence": "Vyhláška je datovaná 12. 10. 2026 a redaktor uvádí, že člověk ověřil vyvěšení na desce magistrátu v tento den (kolonka v originálu je prázdná). 12. 10. + 15 dnů = 27. 10. (den zveřejnění); 27. 10. + 30 dnů = 26. 11. 2026. Délky lhůt odpovídají poučení v originálu."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:57:38+00:00"
+ }
 }

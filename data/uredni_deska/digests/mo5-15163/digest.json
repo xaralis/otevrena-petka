@@ -1442,5 +1442,56 @@
  },
  "problems": [],
  "published_at": "2026-11-04T11:23:32+00:00",
- "review_note": null
+ "review_note": null,
+ "quality": {
+  "method": "druhy-model",
+  "level": "spatne",
+  "passed": false,
+  "issues": [
+   "Karta říká něco jiného než dokument: Nadpis tvrdí, že ušetřené peníze z investic půjdou i na zeleň. Podle originálu je zvýšení o 500 tisíc Kč na zeleň a hřiště placené z vyššího výběru poplatku za komunální odpad, jak ostatně uvádí i text karty. Ani knihovna nedostává peníze přímo z úspor: 96 tisíc Kč jde z rezervy a 36 tisíc Kč z vyšších příjmů.",
+   "Přesnost: Všechny částky, data a místa sedí s originálem, ale nadpis mylně uvádí, že peníze na zeleň pocházejí z úspor na investicích, a text neuvádí, že část z 2,9 milionu pochází z vnitrobloku K Blahobytu."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 3,
+    "reason": "Všechny částky, data a místa sedí s originálem, ale nadpis mylně uvádí, že peníze na zeleň pocházejí z úspor na investicích, a text neuvádí, že část z 2,9 milionu pochází z vnitrobloku K Blahobytu."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Podstatné informace jsou uvedené a žádná lhůta ani možnost reakce v originále není, chybí jen vysvětlení změny u vnitrobloku K Blahobytu a výslovná zmínka, že 1,5 milionu z úspor jde do rezervy."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen v přehledu zůstaly drobnosti jako „114 568,16 tis. Kč“ a zápis křižovatky „ČSA x A. Krause“."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o změnu rozpočtu bez výkresu, obrázek by čtenáři nepomohl."
+   }
+  },
+  "summary": "Částky, datum i místa odpovídají originálu, ale nadpis mylně uvádí, že peníze na zeleň pocházejí z úspor na investicích, ve skutečnosti jsou z vyššího výběru poplatku za odpad.",
+  "fixes": [
+   "Opravit nadpis, například: „Pětka přesouvá peníze: ušetřené miliony z investic půjdou na opravy silnic, zeleň dostane víc z poplatku za odpad“. Knihovnu z nadpisu vypustit, protože jí jde 96 tisíc Kč z rezervy a 36 tisíc Kč z vyšších příjmů.",
+   "Upřesnit v textu původ peněz, například: „Na další opravy silnic a chodníků jde téměř 2,9 milionu Kč: 2 miliony z chodníků ve Wolkerově, 690 tisíc Kč z ulice U Krematoria a 200 tisíc Kč z úprav vnitrobloku K Blahobytu. Dalších 1,5 milionu Kč jde do rezervy rozpočtu: 1 milion z ulice U Krematoria a 500 tisíc Kč z křižovatky Devotyho–Železničního pluku.“",
+   "Vysvětlit vnitroblok K Blahobytu, který je zmíněný jen mezi dotčenými místy. Do přehledu doplnit: „Vnitroblok K Blahobytu 2482–2484: celkem o 200 tisíc Kč méně, tato částka jde na opravy silnic a chodníků; dalších 50 tisíc Kč se jen přesouvá z investičních do běžných výdajů.“",
+   "V přehledu napsat „114 568,16 tis. Kč“ srozumitelněji jako „asi 114,57 milionu Kč“ a „ČSA x A. Krause u č. p. 2372“ jako „na křižovatce ulic ČSA a A. Krause poblíž č. p. 2372“, jak uvádí originál."
+  ],
+  "blockers": [
+   {
+    "kind": "zavadejici",
+    "what": "Nadpis tvrdí, že ušetřené peníze z investic půjdou i na zeleň. Podle originálu je zvýšení o 500 tisíc Kč na zeleň a hřiště placené z vyššího výběru poplatku za komunální odpad, jak ostatně uvádí i text karty. Ani knihovna nedostává peníze přímo z úspor: 96 tisíc Kč jde z rezervy a 36 tisíc Kč z vyšších příjmů."
+   }
+  ],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2. 9. 2026",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí schválení usnesením zastupitelstva č. 190/2026 Z ze dne 2. 9. 2026. Je to datum schválení, jediné datum na kartě; začátek, konec ani lhůta na kartě vyplněné nejsou a originál lhůtu pro veřejnost nestanovuje."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "cli:opus",
+  "scored_at": "2026-11-07T08:56:28+00:00"
+ }
 }
