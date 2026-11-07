@@ -9,7 +9,7 @@ ven bez člověka, pokud obstojí v kontrole. Kód: `src/petka/uredni_deska/dige
 
 ```bash
 cd ~/Workspace/otevrena-petka && git pull --rebase --autostash
-LLM_BACKEND=claude-cli uv run usneseni deska-auto     # napsat, ohodnotit, vydat, nebo nechat čekat
+LLM_BACKEND=claude-cli LLM_CLI_MODEL=claude-sonnet-5-5 uv run usneseni deska-auto     # napsat, ohodnotit, vydat, nebo nechat čekat
 scripts/deska-sync.sh                                 # hned vidět na webu
 git add data/uredni_deska/digests && git commit -m "deska: <titulky>" && git push
 ```
@@ -19,7 +19,7 @@ vydalo, stačí jedna věta.
 
 ## Semafor
 
-Kartu po napsání přečte druhý, nezávislý běh modelu a porovná ji s originály i s obrázky z karty.
+Kartu píše Sonnet a kontroluje silnější Opus (`LLM_REVIEW_MODEL`), protože kontrola rozhoduje, co vyjde bez člověka. Kartu po napsání přečte druhý, nezávislý běh modelu a porovná ji s originály i s obrázky z karty.
 Známkuje 0–5 přesnost, úplnost, srozumitelnost a obrázky podle předem popsaných stupňů. Kód z toho
 udělá jeden ze tří stavů (`score.py`):
 

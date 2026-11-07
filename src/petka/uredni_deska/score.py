@@ -12,10 +12,13 @@ claim, a picture that shows somebody) always stop a card: no average can hide th
 
 import datetime as dt
 import json
+import os
 
 from ..usneseni import llm
 
 PROMPT_VERSION = "kvalita-v1"
+# the check decides what goes out without a person, so it stays on the stronger model whatever writes
+REVIEW_MODEL = os.environ.get("LLM_REVIEW_MODEL", "claude-opus-5-5")
 MAX_ATTEMPTS = 3        # how many times a card is written before it waits for a person
 ACCURACY_MIN = 4        # 3 means an error in a less important fact: not without a person
 LEVELS = {"spolehlive": "Spolehlivé", "pozor": "Buďte obezřetní", "spatne": "Něco je špatně"}
@@ -177,7 +180,7 @@ def prompt(card: dict, images: list[str]) -> str:
 
 def review(card: dict, files: list, images: list[str]) -> dict:
     """The independent read of a card (`files`: the originals and the card's pictures)."""
-    res = llm.structured_files(SYSTEM, prompt(card, images), files, SCHEMA, effort="high")
+    res = llm.structured_files(SYSTEM, prompt(card, images), files, SCHEMA, effort="high", model=REVIEW_MODEL)
     return evaluate(res, card)
 
 
@@ -186,7 +189,7 @@ def evaluate(res: dict, card: dict) -> dict:
     return {"method": "druhy-model", "level": level, "passed": level != "spatne", "issues": issues,
             "marks": res["marks"], "summary": res["summary"], "fixes": res["fixes"], "blockers": res["blockers"],
             "dates": res["dates"], "prompt_version": PROMPT_VERSION,
-            "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",
+            "model": REVIEW_MODEL,
             "scored_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds")}
 
 

@@ -34,8 +34,9 @@ def structured(system: str, user: str, schema: dict, *, effort: str = "high",
 
 
 def structured_files(system: str, user: str, files: list[Path], schema: dict, *,
-                     effort: str = "high", max_tokens: int = 32000) -> dict:
-    """Like `structured`, with PDFs/images for Claude to read (text and pictures)."""
+                     effort: str = "high", max_tokens: int = 32000, model: str | None = None) -> dict:
+    """Like `structured`, with PDFs/images for Claude to read (text and pictures). `model` overrides
+    the backend's default for this call."""
     if BACKEND == "claude-cli":
         # the model may read these files and nothing else: run in their directory and allow
         # Read only there (the attachments come from outside; don't hand them the machine)
@@ -44,7 +45,7 @@ def structured_files(system: str, user: str, files: list[Path], schema: dict, *,
             raise LLMError("claude-cli: attachments must be in one directory")
         listing = "\n".join(f"- {p.resolve()}" for p in files)
         return _cli(system, f"{user}\n\nPřílohy (přečti je nástrojem Read):\n{listing}", schema,
-                    tools="Read", allowed=f"Read({dirs[0]}/**)", cwd=dirs[0])
+                    tools="Read", allowed=f"Read({dirs[0]}/**)", cwd=dirs[0], model=model)
     content = []
     for p in files:
         data = base64.standard_b64encode(p.read_bytes()).decode()
@@ -55,7 +56,7 @@ def structured_files(system: str, user: str, files: list[Path], schema: dict, *,
             media = "image/png" if p.suffix.lower() == ".png" else "image/jpeg"
             content.append({"type": "image", "source": {"type": "base64", "media_type": media, "data": data}})
     content.append({"type": "text", "text": user})
-    return _api(system, content, schema, effort, max_tokens)
+    return _api(system, content, schema, effort, max_tokens, model=model)
 
 
 def transcribe_pdf(path: Path) -> str:
@@ -78,12 +79,13 @@ def transcribe_pdf(path: Path) -> str:
     return out["text"]
 
 
-def _api(system: str, content: list, schema: dict, effort: str, max_tokens: int) -> dict:
+def _api(system: str, content: list, schema: dict, effort: str, max_tokens: int,
+         model: str | None = None) -> dict:
     import anthropic
 
     client = anthropic.Anthropic()
     with client.beta.messages.stream(
-        model=MODEL,
+        model=model or MODEL,
         max_tokens=max_tokens,
         system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": content}],
@@ -105,8 +107,8 @@ def _api(system: str, content: list, schema: dict, effort: str, max_tokens: int)
 
 
 def _cli(system: str, user: str, schema: dict, tools: str = "", add_dir: str | None = None,
-         allowed: str | None = None, cwd: str = "/tmp") -> dict:
-    cmd = ["claude", "-p", "--model", CLI_MODEL, "--output-format", "json",
+         allowed: str | None = None, cwd: str = "/tmp", model: str | None = None) -> dict:
+    cmd = ["claude", "-p", "--model", model or CLI_MODEL, "--output-format", "json",
            "--no-session-persistence", "--setting-sources", "", "--strict-mcp-config",
            "--disable-slash-commands", "--tools", tools, "--system-prompt", system,
            "--json-schema", json.dumps(schema, ensure_ascii=False)]

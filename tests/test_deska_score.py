@@ -130,6 +130,17 @@ def test_working_notes_stay_out_of_a_published_card(tmp_path, monkeypatch):
     assert "fixes_given" not in d and "fixes" not in d["quality"]
 
 
+def test_check_runs_on_its_own_model(monkeypatch):
+    seen = {}
+
+    def fake(system, user, files, schema, **kw):
+        seen.update(kw)
+        return res()
+    monkeypatch.setattr(score.llm, "structured_files", fake)
+    q = score.review(CARD, [], [])
+    assert seen["model"] == score.REVIEW_MODEL == q["model"]
+
+
 def test_first_green_needs_no_second_read(tmp_path, monkeypatch):
     group, calls = setup(tmp_path, monkeypatch, [res()])
     digest._settle(group)
