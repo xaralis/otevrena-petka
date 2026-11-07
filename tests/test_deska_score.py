@@ -138,6 +138,12 @@ def test_usage_adds_up_per_card():
     assert t["calls"] == 2 and t["input"] == 11 and t["output"] == 6 and t["cache_read"] == 2 and t["usd"] == 0.75
 
 
+def test_reviewer_is_told_about_the_interactive_map():
+    p = score.prompt({"visual": {"map": [{"label": "Jana Palacha"}]}}, [])
+    assert "Interaktivní mapa na kartě vyznačuje: Jana Palacha" in p
+    assert "mapa není" in score.prompt({"visual": {}}, [])
+
+
 def test_check_runs_on_its_own_model(monkeypatch):
     seen = {}
 

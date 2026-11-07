@@ -173,6 +173,8 @@ def prompt(card: dict, images: list[str]) -> str:
         "Karta:", json.dumps({k: card.get(k) for k in keys}, ensure_ascii=False, indent=1, default=str),
         "Popisky obrázků:", json.dumps(captions, ensure_ascii=False, default=str),
         f"Obrázky na kartě: {', '.join(images) or 'žádné'}.",
+        f"Interaktivní mapa na kartě vyznačuje: {', '.join(m.get('label', '') for m in visual.get('map') or []) or 'nic, mapa není'}. "
+        "Mapu nevidíš, ale je na kartě: zhodnoť, jestli vyznačuje správná místa, a kartu kvůli ní neber jako kartu bez obrázku.",
         f"Poznámky redaktora: {card.get('reviewer_notes') or '–'}",
         f"Automatická kontrola hlásí: {'; '.join(card.get('problems') or []) or 'nic'}.",
     ])
