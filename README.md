@@ -1,7 +1,7 @@
 # Otevřená Pětka
 
 Portál otevřených dat **městského obvodu Pardubice V**: co rozhodlo zastupitelstvo a rada
-a kdo pro to hlasoval, kde se to děje na mapě, kdo chodí na jednání a co právě visí na
+a kdo jak hlasoval, kde se to děje na mapě, kdo chodí na jednání a co právě visí na
 úřední desce. Web, otevřená data, REST API a jeden MCP server pro Claude a další AI asistenty.
 
 **https://otevrenapetka.cz** · [Data a API](https://otevrenapetka.cz/data) ·

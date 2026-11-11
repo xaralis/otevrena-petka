@@ -25,7 +25,7 @@ SECTIONS = [
             sources=[("Úřední deska MO Pardubice V na pardubice.eu", "https://pardubice.eu/uredni-deska/obvody?district=mo5"),
                      ("Úřední deska Magistrátu města Pardubic", "https://pardubice.eu/uredni-deska")]),
     Section("usneseni", "Usnesení", "Usnesení a hlasování",
-            "Co se rozhodlo a kdo pro to hlasoval?", "live",
+            "Co se rozhodlo a kdo jak hlasoval?", "live",
             sources=[("Zápisy z jednání ZMO a RMO na pardubice.eu", "https://pardubice.eu/zapisy-z-jednani-zmo5")]),
     Section("rozpocet", "Rozpočet", "Rozpočet a hospodaření",
             "Kolik stojí obvod a kam jdou peníze?", "planned",
