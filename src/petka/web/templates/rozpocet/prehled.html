@@ -52,12 +52,12 @@
 <p class="rz-lead">Oblasti podle státní rozpočtové skladby. Klikněte na oblast a uvidíte konkrétní účely i jednotlivé faktury.</p>
 <div style="overflow-x:auto">
 <table class="ledger">
-  <thead><tr><th scope="col">Oblast</th><th scope="col" class="num-cell">Plán</th><th scope="col" style="width:32%">Podíl na celém rozpočtu</th><th scope="col" class="num-cell">Utraceno</th><th scope="col" class="num-cell">Vyčerpáno z plánu oblasti</th></tr></thead>
+  <thead><tr><th scope="col">Oblast</th><th scope="col" class="num-cell">Plán</th><th scope="col" style="width:32%">Podíl na celém rozpočtu</th><th scope="col" class="num-cell">Utraceno</th><th scope="col">Vyčerpáno z plánu oblasti</th></tr></thead>
   <tbody>
   {% for g in groups %}
     <tr><td><a href="{{ base }}/oblasti?rok={{ year }}" style="color:var(--ink);font-weight:600;text-decoration:none">{{ g.name }}</a></td><td class="num-cell">{{ g.plan_label }}</td>
       <td style="vertical-align:middle"><div class="rz-meter"><span class="rz-bar"><i style="width:{{ g.share }}%"></i></span><span style="font-weight:700">{{ g.share if g.share else '<1' }} %</span></div></td>
-      <td class="num-cell">{{ g.actual_label }}</td><td class="num-cell" style="color:var(--ink-2)">{{ g.pct }} %</td></tr>
+      <td class="num-cell">{{ g.actual_label }}</td><td style="vertical-align:middle;width:14%"><div class="rz-meter"><span class="rz-bar thin"><i style="width:{{ g.pct }}%"></i></span><span style="font-size:.9rem;color:var(--ink-2)">{{ g.pct }} %</span></div></td></tr>
   {% endfor %}
   </tbody>
 </table>
