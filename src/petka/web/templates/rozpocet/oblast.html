@@ -14,12 +14,12 @@
       <div class="rz-axis" style="height:220px">{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
       <div class="rz-plot" style="height:220px;gap:0 10px">
         {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
-        {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"></div><span>{{ s.label }}</span></div>{% endfor %}
+        {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
       </div>
       <div></div>
       <div class="rz-years" style="gap:0 10px">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>
     </div>
-    <p class="note">Mil. Kč. Obrys: plán po všech změnách během roku. Výplň: skutečně utraceno.</p>
+    <p class="note">Mil. Kč. Nad sloupcem plán po všech změnách během roku, v tmavé části skutečně utraceno.</p>
 
     <h2>Za co obvod {% if year == years[-1] %}letos platí{% else %}platil v roce {{ year }}{% endif %}</h2>
     {% if items %}

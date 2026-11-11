@@ -799,6 +799,10 @@ body > footer { flex-shrink: 0; }
 .rz-col { position: relative; background: #fff; box-shadow: inset 0 0 0 1.5px var(--field); border-radius: 2px 2px 0 0; display: flex; align-items: flex-end; }
 .rz-col div { width: 100%; background: var(--ink); border-radius: 2px 2px 0 0; }
 .rz-col span { position: absolute; left: -4px; right: -4px; top: -1.4rem; text-align: center; font-size: .82rem; font-weight: 650; }
+.rz-col span { color: var(--ink-2); font-weight: 600; }
+.rz-col div { display: flex; justify-content: center; align-items: flex-start; }
+.rz-col b { margin-top: .3rem; padding: 0 .3rem; font-size: .82rem; font-weight: 700; color: #fff; background: var(--ink); border-radius: 2px; line-height: 1.4; }
+.rz-col b.low { position: absolute; bottom: calc(100% + 1.5rem); margin: 0; color: var(--ink); background: none; }
 .rz-years { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 0 12px; font-size: .88rem; font-weight: 600; text-align: center; padding-top: .4rem; min-width: 28rem; }
 .rz-flow { display: flex; height: 44px; gap: 2px; }
 .rz-flow div:nth-child(1) { background: var(--ink); } .rz-flow div:nth-child(2) { background: var(--ink-2); } .rz-flow div:nth-child(3) { background: var(--field); }

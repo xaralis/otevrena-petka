@@ -41,12 +41,12 @@
   <div class="rz-axis" style="height:280px">{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
   <div class="rz-plot" style="height:280px">
     {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
-    {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"></div><span>{{ s.label }}</span></div>{% endfor %}
+    {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
   </div>
   <div></div>
   <div class="rz-years">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>
 </div>
-<p class="note">Mil. Kč. Číslo nad sloupcem je skutečně utracená částka. Plán je rozpočet schválený zastupitelstvem i se všemi změnami během roku.</p>
+<p class="note">Mil. Kč. Nad sloupcem plán, v tmavé části skutečně utraceno. Plán je rozpočet schválený zastupitelstvem i se všemi změnami během roku.</p>
 
 <h2>Za co obvod {% if year == years[-1] %}letos platí{% else %}platil v roce {{ year }}{% endif %}</h2>
 <p class="rz-lead">Oblasti podle státní rozpočtové skladby. Klikněte na oblast a uvidíte konkrétní účely i jednotlivé faktury.</p>
