@@ -36,10 +36,8 @@
     <p class="note">Částky v tis. Kč{% if year == years[-1] %}, stav k {{ as_of[year]|d }}{% endif %}.</p>
   </div>
   <aside>
-    <p class="side-h">Za co {{ 'letos' if year == years[-1] else 'v roce ' ~ year }} nejvíc</p>
+    <p class="side-h">{{ 'Letos nejnákladnější' if year == years[-1] else 'Nejnákladnější v roce ' ~ year }}</p>
     <ul class="rz-top">{% for t in top %}<li><a href="{{ base }}/oblasti/{{ t.paragraph }}?rok={{ year }}">{{ label.get(t.paragraph|string, t.name) }}</a><b style="white-space:nowrap">{{ mil(t.s) }} mil. Kč</b></li>{% endfor %}</ul>
-    <p class="side-h" style="margin-top:1.6rem">Co ve fakturách chybí</p>
-    <p style="margin:0;color:var(--ink-2)">Datum, číslo dokladu a dodavatel, protože je rozklikávací rozpočet města nezveřejňuje. Popisy přebíráme tak, jak je úřad zapsal při zaúčtování.</p>
     <p class="side-h" style="margin-top:1.6rem">Smlouvy</p>
     <p style="margin:0;color:var(--ink-2)">Smlouvy nad 50 tisíc Kč obvod zveřejňuje v <a href="https://smlouvy.gov.cz/">registru smluv</a>. Propojit je s fakturami chceme v připravované sekci Smlouvy.</p>
   </aside>

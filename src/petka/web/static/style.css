@@ -774,6 +774,8 @@ body > footer { flex-shrink: 0; }
 .rz-bar i { display: block; height: 100%; background: var(--ink); }
 .rz-bar.thin { height: 8px; }
 .rz-bar.thin i { background: var(--ink-2); }
+.rz-bar.zatim i { background: repeating-linear-gradient(135deg, var(--ink) 0 3px, var(--muted) 3px 6px); }
+.rz-meter-l small { display: block; font-size: .8rem; color: var(--muted); margin-bottom: .2rem; }
 .rz-meter { display: flex; align-items: center; gap: .5rem; }
 .rz-meter span:last-child { width: 2.8rem; text-align: right; font-size: .9rem; }
 .rz-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2px; }

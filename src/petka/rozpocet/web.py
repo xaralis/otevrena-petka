@@ -65,8 +65,11 @@ def _year(rok: str, ys: list[int]) -> int:
 def _ctx(request: Request, base: str, tab: str, **kw) -> dict:
     ys = [y["year"] for y in q.years()]
     as_of = {y["year"]: y["as_of"] for y in q.years()}
+    year = kw.get("year")
+    running = bool(year and year == ys[-1] and as_of[year] and as_of[year].year == year)
     return {"base": base, "tab": tab, "years": ys, "as_of": as_of, "today": dt.date.today(),
-            "mil": q.mil, "tis": q.tis, "marks": _marks([s["year"] for s in kw.get("series") or []]), **kw}
+            "mil": q.mil, "tis": q.tis, "marks": _marks([s["year"] for s in kw.get("series") or []]), "running": running,
+            "zatim": " zatím" if running else "", **kw}
 
 
 def _render(request: Request, name: str, ctx: dict):

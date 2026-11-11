@@ -46,8 +46,8 @@
   <div class="rz-gh">
     <div><h2>{{ g.name }}</h2><p class="off">{{ g.official }}</p></div>
     <p class="rz-num"><small>plán</small><b>{{ g.plan_label }}</b></p>
-    <p class="rz-num"><small>utraceno</small><b>{{ g.actual_label }}</b></p>
-    <div class="rz-meter" style="padding-bottom:.35rem"><span class="rz-bar"><i style="width:{{ g.pct }}%"></i></span><span>{{ g.pct }} %</span></div>
+    <p class="rz-num"><small>utraceno{{ zatim }}</small><b>{{ g.actual_label }}</b></p>
+    <div class="rz-meter-l" style="padding-bottom:.35rem"><small>vyčerpáno z plánu{{ zatim }}</small><div class="rz-meter"><span class="rz-bar{{ ' zatim' if running }}"><i style="width:{{ g.pct }}%"></i></span><span>{{ g.pct }} %</span></div></div>
   </div>
   <ol class="rz-rows">
     {% for r in g.rows %}
@@ -55,7 +55,7 @@
       <p>{% if r.code|length == 4 %}<a href="{{ base }}/oblasti/{{ r.code }}?rok={{ year }}">{{ r.label }}</a>{% else %}<b>{{ r.label }}</b>{% endif %} <span class="off">({{ r.official }})</span></p>
       <p class="rz-num">{{ r.plan_label }}</p>
       <p class="rz-num">{{ r.actual_label }}</p>
-      <div class="rz-meter"><span class="rz-bar thin"><i style="width:{{ r.pct }}%"></i></span><span style="font-size:.85rem;color:var(--ink-2)">{{ r.pct ~ ' %' if r.plan else '–' }}</span></div>
+      <div class="rz-meter"><span class="rz-bar thin{{ ' zatim' if running }}"><i style="width:{{ r.pct }}%"></i></span><span style="font-size:.85rem;color:var(--ink-2)">{{ r.pct ~ ' %' if r.plan else '–' }}</span></div>
     </li>
     {% endfor %}
   </ol>
