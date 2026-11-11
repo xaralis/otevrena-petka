@@ -1,0 +1,50 @@
+{% extends "rozpocet/_layout.html" %}
+{% block title %}Jak rozpočet vzniká{% endblock %}
+{% block crumbs %} <span aria-hidden="true">/</span> <span>Jak rozpočet vzniká</span>{% endblock %}
+{% block main %}
+<h2 style="margin-top:0">Jak vznikal rozpočet na rok 2026</h2>
+<p class="rz-lead">Rozpočet platí na kalendářní rok, ale jeho příběh trvá skoro dva roky: začíná na podzim předtím a končí vyúčtováním v létě potom.</p>
+<ol class="tl">
+  <li class="tl-item"><span class="tl-node">1</span><i class="tl-line" aria-hidden="true"></i><div><p class="tl-when">podzim 2025</p><p class="tl-title">Úřad připraví návrh</p><p class="tl-text">S finančním výborem a starostou, podle toho, kolik peněz obvodu pošle město.</p></div></li>
+  <li class="tl-item"><span class="tl-node you">2</span><i class="tl-line" aria-hidden="true"></i><div><p class="tl-when">aspoň 15 dní před jednáním</p><p class="tl-title">Návrh visí na úřední desce<span class="tl-tag">můžete se ozvat</span></p><p class="tl-text">Každý si ho může přečíst a poslat připomínku.</p></div></li>
+  <li class="tl-item"><span class="tl-node">3</span><i class="tl-line" aria-hidden="true"></i><div><p class="tl-when">17. 12. 2025</p><p class="tl-title">Zastupitelstvo rozpočet schválí</p><p class="tl-text">Spolu s výhledem na další roky a pravidly, co smí rada měnit sama.</p></div></li>
+  <li class="tl-item"><span class="tl-node">4</span><i class="tl-line" aria-hidden="true"></i><div><p class="tl-when">během roku 2026</p><p class="tl-title">Rozpočet se mění</p><p class="tl-text">Větší změny schvaluje zastupitelstvo, drobné přesuny rada.</p></div></li>
+  <li class="tl-item"><span class="tl-node">5</span><div><p class="tl-when">do 30. 6. 2027</p><p class="tl-title">Závěrečný účet</p><p class="tl-text">Vyúčtování celého roku s nezávislým přezkumem. Za rok 2025 ho zastupitelstvo schválilo 24. 6. 2026.</p></div></li>
+</ol>
+<p class="note">Lhůty stanoví zákon o rozpočtových pravidlech územních rozpočtů (č. 250/2000 Sb.).</p>
+
+{% if v %}
+<h2>Letos se plán zvedl o {{ mil(v.revised - v.approved) }} mil. Kč</h2>
+<p class="rz-lead">V prosinci počítal rozpočet s výdaji {{ mil(v.approved) }} mil. Kč. Změnami během roku je zastupitelé zvedli na {{ mil(v.revised) }} mil. Kč, většinou o peníze, které obvod ušetřil v minulých letech.</p>
+{% endif %}
+<ol class="rz-chg">{% for d, what, no, uid in changes %}<li><span style="font-weight:650">{{ d }}</span><span>{{ what }}</span><a href="/usneseni/{{ uid }}" style="white-space:nowrap;font-size:.9rem">{{ no }}</a></li>{% endfor %}</ol>
+<p class="note">Podle usnesení rady a zastupitelstva. Kliknutím na číslo otevřete usnesení se vším, co se měnilo.</p>
+
+<h2>Kdo o čem rozhoduje</h2>
+<dl class="rz-roles">
+  <dt>Zastupitelstvo obvodu</dt><dd>Schvaluje rozpočet, výhled na další roky, větší změny rozpočtu a závěrečný účet. Má 15 členů a jedná veřejně.</dd>
+  <dt>Rada obvodu</dt><dd>Připravuje návrh a sama smí přesouvat peníze mezi položkami nebo z rezervy, nejvýš 300 tis. Kč na jednu položku (z rezervy na krizová opatření 200 tis. Kč). O každé takové změně musí informovat zastupitelstvo.</dd>
+  <dt>Finanční výbor</dt><dd>Pomáhá návrh připravit, kontroluje hospodaření a o změnách, které dělá rada, se dozvídá předem.</dd>
+  <dt>Úřad</dt><dd>Připravuje podklady, platí faktury a vede účetnictví. Z něj pochází každé číslo na těchto stránkách.</dd>
+  <dt>Město Pardubice</dt><dd>Podle statutu posílá obvodu většinu peněz: podíl na daních a příspěvky na zeleň a dopravu.</dd>
+</dl>
+
+<h2>Jak do rozpočtu mluvit</h2>
+<div class="rz-ways">
+  <div class="you"><b>Připomínka k návrhu</b><p>Návrh rozpočtu visí aspoň 15 dní na <a href="/uredni-deska">úřední desce</a>. Připomínku můžete poslat písemně předem, nebo ji říct přímo na jednání zastupitelstva.</p></div>
+  <div><b>Pětka sobě</b><p>Participativní rozpočet: projekty, které navrhnou a v hlasování vyberou lidé z obvodu. <a href="https://pardubice.eu/petka-sobe">Jak navrhnout projekt</a></p></div>
+  <div><b>Jednání zastupitelstva</b><p>Jsou veřejná a každý občan obvodu na nich může vystoupit. <a href="/usneseni/jednani">Jednání zastupitelstva</a></p></div>
+</div>
+
+<h2>Slovníček</h2>
+<dl class="rz-terms">
+  <div><dt>Schválený rozpočet</dt><dd>Plán příjmů a výdajů, jak ho zastupitelstvo odhlasovalo na začátku roku.</dd></div>
+  <div><dt>Plán (upravený rozpočet)</dt><dd>Schválený rozpočet i se všemi změnami během roku. Právě s ním porovnáváme, kolik se utratilo.</dd></div>
+  <div><dt>Skutečnost</dt><dd>Kolik peněz opravdu přišlo nebo odešlo z účtu obvodu.</dd></div>
+  <div><dt>Rozpočtové opatření</dt><dd>Změna rozpočtu během roku: přesun peněz mezi účely, nebo zapojení nových příjmů či úspor.</dd></div>
+  <div><dt>Financování</dt><dd>Peníze, které rozdíl mezi příjmy a výdaji pokryjí, u obvodu hlavně úspory z minulých let.</dd></div>
+  <div><dt>Paragraf</dt><dd>Účel výdaje podle státní rozpočtové skladby, třeba 3745 Péče o vzhled obcí a veřejnou zeleň.</dd></div>
+  <div><dt>Položka</dt><dd>Druh výdaje: platy, služby, opravy, stavby. Stejná položka se objevuje u různých účelů.</dd></div>
+  <div><dt>Závěrečný účet</dt><dd>Vyúčtování celého roku, které zastupitelstvo projedná do konce června roku následujícího.</dd></div>
+</dl>
+{% endblock %}

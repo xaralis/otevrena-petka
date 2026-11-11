@@ -24,6 +24,7 @@ from fastapi.staticfiles import StaticFiles
 from .. import db
 from ..ankety import web as ankety_web
 from ..mcp_server import mcp
+from ..rozpocet import web as rozpocet_web
 from ..sections import BY_SLUG, SECTIONS
 from ..uredni_deska import queries as deska_queries, source as deska_source, web as deska_web
 from ..usneseni import queries, search as usneseni_search, web as usneseni_web
@@ -68,6 +69,7 @@ app.include_router(usneseni_web.api)
 app.include_router(deska_web.pages)   # before the planned-section catch-all /{slug}
 app.include_router(deska_web.api)
 app.include_router(ankety_web.api)
+app.include_router(rozpocet_web.pages)  # preview behind a secret token; /rozpocet itself stays planned
 
 
 class _Head:

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head %}<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% block before_hero %}<div class="rz-note-preview"><div class="wrap">Náhled k připomínkám, zatím neveřejný. Odkaz prosím dál nesdílejte.</div></div>{% endblock %}
+{% block hero %}
+<section class="band band-page">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="{{ base }}">Rozpočet</a>{% block crumbs %}{% endblock %}</nav>
+    <h1>{% block h1 %}Kolik obvod utrácí a za co?{% endblock %}</h1>
+    <p class="band-lead">{% block lead %}Peníze Pětky od roku {{ years[0] }}: kolik zastupitelé naplánovali, kolik se opravdu utratilo a za co.{% endblock %}</p>
+    {% block band_extra %}{% endblock %}
+  </div>
+</section>
+<div class="sub-band">
+  <div class="wrap">
+    <nav class="sub-nav" aria-label="Rozpočet">
+      <a href="{{ base }}"{% if tab == 'prehled' %} aria-current="page"{% endif %}>Přehled</a>
+      <a href="{{ base }}/oblasti"{% if tab == 'oblasti' %} aria-current="page"{% endif %}>Oblasti</a>
+      <a href="{{ base }}/faktury"{% if tab == 'faktury' %} aria-current="page"{% endif %}>Faktury</a>
+      <a href="{{ base }}/jak-vznika"{% if tab == 'jak' %} aria-current="page"{% endif %}>Jak rozpočet vzniká</a>
+    </nav>
+  </div>
+</div>
+{% endblock %}

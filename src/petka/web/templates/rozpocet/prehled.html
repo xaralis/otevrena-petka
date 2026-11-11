@@ -1,0 +1,84 @@
+{% extends "rozpocet/_layout.html" %}
+{% from "rozpocet/_macros.html" import year_switch, status with context %}
+{% block title %}Rozpočet {{ year }}{% endblock %}
+{% block main %}
+{% set v = t.vydaje %}{% set p = t.prijmy %}{% set f = t.financovani %}
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-bottom:1.6rem">
+  {{ year_switch(base, year) }}
+  <p class="note" style="margin:0">{{ status(year) }}</p>
+</div>
+
+<h2 style="margin:0 0 1.2rem">{% if year == years[-1] %}Letos zatím{% else %}Rok {{ year }}{% endif %}</h2>
+<div class="rz-cards">
+  <div class="rz-card">
+    <p style="font-weight:650">Utraceno</p>
+    <p class="rz-big">{{ mil(v.actual) }} <small>mil. Kč</small></p>
+    <p style="color:var(--ink-2)">z {{ mil(v.revised) }} mil. Kč, se kterými obvod pro rok {{ year }} počítal</p>
+    {% set n = (v.actual / v.revised * 20)|round|int if v.revised else 0 %}
+    <div class="rz-tiles" role="img" aria-label="utraceno {{ (v.actual / v.revised * 100)|round|int }} procent plánu">{% for i in range(20) %}<i{% if i < n %} class="on"{% endif %}></i>{% endfor %}</div>
+    <p class="note" style="margin:0">{{ (v.actual / v.revised * 100)|round|int }} % plánu.{% if closed_pct is not none %} Rok {{ last_closed }} skončil na {{ closed_pct }} %.{% endif %}</p>
+  </div>
+  <div class="rz-card">
+    <p style="font-weight:650">Přišlo</p>
+    <p class="rz-big">{{ mil(p.actual) }} <small>mil. Kč</small></p>
+    <p style="color:var(--ink-2)">z {{ mil(p.revised) }} mil. Kč, které obvod čekal</p>
+    {% set n = (p.actual / p.revised * 20)|round|int if p.revised else 0 %}
+    <div class="rz-tiles" role="img" aria-label="přišlo {{ (p.actual / p.revised * 100)|round|int }} procent">{% for i in range(20) %}<i{% if i < n and i < 20 %} class="on"{% endif %}></i>{% endfor %}</div>
+    <p class="note" style="margin:0">{{ (p.actual / p.revised * 100)|round|int }} %. Většinu posílá město.</p>
+  </div>
+  <div class="rz-card">
+    <p style="font-weight:650">Dorovná se z úspor</p>
+    <p class="rz-big">{{ mil(f.revised) }} <small>mil. Kč</small></p>
+    <p style="color:var(--ink-2)">Obvod plánuje utratit víc, než dostane. Rozdíl zaplatí z peněz, které ušetřil v minulých letech.</p>
+  </div>
+</div>
+
+<h2>Utrácí se víc, ale plán se nikdy nevyčerpá</h2>
+{% set last = series|selectattr('year', 'equalto', last_closed)|first if last_closed else none %}
+<p class="rz-lead">Od roku {{ first.year }} vzrostly skutečné výdaje obvodu z {{ mil(first.a) }}{% if last %} na {{ mil(last.a) }}{% endif %} mil. Kč. Plánuje se ale pokaždé víc, než se stihne utratit{% if last %}: v roce {{ last.year }} to bylo {{ closed_pct }} % plánu{% endif %}.</p>
+<p class="rz-legend"><span><i class="k-plan"></i>plán včetně změn během roku</span><span><i class="k-spent"></i>skutečně utraceno</span><span><i class="k-now"></i>{{ years[-1] }}: zatím</span></p>
+<div class="rz-chart">
+  <div class="rz-axis" style="height:280px">{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
+  <div class="rz-plot" style="height:280px">
+    {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
+    {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"></div><span>{{ s.label }}</span></div>{% endfor %}
+  </div>
+  <div></div>
+  <div class="rz-years">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>
+</div>
+<p class="note">Mil. Kč. Číslo nad sloupcem je skutečně utracená částka. Plán je rozpočet schválený zastupitelstvem i se všemi změnami během roku.</p>
+
+<h2>Za co obvod {% if year == years[-1] %}letos platí{% else %}platil v roce {{ year }}{% endif %}</h2>
+<p class="rz-lead">Oblasti podle státní rozpočtové skladby. Klikněte na oblast a uvidíte konkrétní účely i jednotlivé faktury.</p>
+<div style="overflow-x:auto">
+<table class="ledger">
+  <thead><tr><th scope="col">Oblast</th><th scope="col" class="num-cell">Plán</th><th scope="col" class="num-cell">Utraceno</th><th scope="col" style="width:30%">Z plánu</th></tr></thead>
+  <tbody>
+  {% for g in groups %}
+    <tr><td><a href="{{ base }}/oblasti?rok={{ year }}" style="color:var(--ink);font-weight:600;text-decoration:none">{{ g.name }}</a></td><td class="num-cell">{{ g.plan_label }}</td><td class="num-cell">{{ g.actual_label }}</td>
+      <td style="vertical-align:middle"><div class="rz-meter"><span class="rz-bar"><i style="width:{{ g.pct }}%"></i></span><span>{{ g.pct }} %</span></div></td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="note">Mil. Kč. Plán celkem {{ mil(v.revised) }}, utraceno {{ mil(v.actual) }}.</p>
+
+{% if from_city %}{% set c = from_city %}
+<h2>Zdroje příjmů obvodu</h2>
+<p class="rz-lead">Obvod nevybírá vlastní daně. Většinu peněz mu každý rok pošle město: podíl na daních podle počtu obyvatel a dva příspěvky, na zeleň a na dopravu. Za svoz odpadu pak část městu vrací.</p>
+<div class="rz-flow" role="img" aria-label="Peníze od města: podíl na daních {{ mil(c.dane) }}, příspěvek na zeleň {{ mil(c.zp) }}, příspěvek na dopravu {{ mil(c.doprava) }} milionu korun">
+  <div style="flex:{{ c.dane }}"></div><div style="flex:{{ c.zp }}"></div><div style="flex:{{ c.doprava }}"></div>
+</div>
+<div class="rz-flow-l" style="grid-template-columns:{{ c.dane }}fr {{ c.zp }}fr {{ c.doprava }}fr">
+  <div><p style="font-weight:650">Podíl na daních</p><p style="font-size:1.4rem;font-weight:800">{{ mil(c.dane) }} mil. Kč</p><p class="note">podle počtu obyvatel</p></div>
+  <div><p style="font-weight:650">Příspěvek na zeleň a čistotu</p><p style="font-size:1.4rem;font-weight:800">{{ mil(c.zp) }} mil. Kč</p><p class="note">údržba zeleně, koše, úklid</p></div>
+  <div><p style="font-weight:650">Příspěvek na silnice a chodníky</p><p style="font-size:1.4rem;font-weight:800">{{ mil(c.doprava) }} mil. Kč</p><p class="note">opravy a zimní údržba</p></div>
+</div>
+<p class="note" style="margin-top:1rem">Od města celkem {{ mil(c.dane + c.zp + c.doprava) }} mil. Kč, zpět za odpad {{ mil(c.zpet) }} mil. Kč. Zdroj: {{ c.zdroj }}.</p>
+{% endif %}
+
+<div class="rz-src">
+  <div><b>Odkud čísla bereme</b><p>Z <a href="https://rozpocet.pardubice.eu/gordic/Rozpocet/index_MC.html?Ico=05274046">rozklikávacího rozpočtu města</a>, který čte přímo účetnictví úřadu. Stahujeme ho každý den.</p></div>
+  <div><b>Co platí</b><p>Závazný je vždy <a href="https://pardubice.eu/rozpocet-mo5">schválený rozpočet a závěrečný účet</a> na webu obvodu. My je jen převádíme do čitelné podoby.</p></div>
+</div>
+{% endblock %}
