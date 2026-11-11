@@ -1,0 +1,275 @@
+{
+ "notice_id": "mo5-15711",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-11T06:26:58+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - parkoviště Zborovské náměstí",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15711",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 15. 11. 2026 do 31. 8. 2028 bude na části parkoviště na Zborovském náměstí zákaz zastavení kvůli stavbě",
+ "summary": "Na parkovišti Zborovského náměstí (bývalá kasárna) bude od 15. 11. 2026 do 31. 8. 2028 přechodně zakázáno zastavení, aby mohla vozidla stavby s technikou a materiálem najíždět na staveniště. Přenosné značky zákazu zastavení s dodatkovou tabulkou, že zákaz platí v úseku dlouhém 20 metrů, označí místo, odkud se musí vozidla vymístit. Opatření vydal magistrát na žádost stavební firmy PKS stavby a.s. Odvolat se proti tomu nelze.",
+ "where": "Parkoviště Zborovské náměstí (bývalá kasárna), Pardubice",
+ "period": {
+  "from": "2026-11-15",
+  "to": "2028-08-31",
+  "text": "15. 11. 2026 – 31. 8. 2028"
+ },
+ "action": null,
+ "affects": "Řidiči, kteří parkují na parkovišti Zborovského náměstí v označeném úseku; vozidla v něm se budou vymisťovat.",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "stavební práce – zajištění nájezdu vozidel stavby s technikou a materiálem na staveniště"
+  },
+  {
+   "label": "Žadatel a odpovědná firma",
+   "value": "PKS stavby a.s., Žďár nad Sázavou"
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy, 10. 11. 2026"
+  },
+  {
+   "label": "Provedení",
+   "value": "přenosné dopravní značky zákazu zastavení, platí v úseku 20 m"
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "Odvolat se proti tomu nelze"
+  },
+  {
+   "label": "Účinnost",
+   "value": "pátý den po vyvěšení; úprava platí od 15. 11. 2026"
+  }
+ ],
+ "signs": [
+  {
+   "code": "B28",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8d",
+   "text": "délka úseku 20 m",
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Zborovské náměstí"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s vyznačeným parkovištěm Zborovského náměstí, ikona značky B28 s tabulkou 20 m a časová osa platnosti.",
+ "reviewer_notes": "Opraveno podle připomínek: zákaz zastavení (B28), E8d 20 m, doplněna délka úseku, srozumitelnější poučení. Situační plán je podle textu přílohou, ale v PDF není vidět (3 strany jen text), proto drawing i parking jsou null. Přesné umístění úseku na parkovišti není v textu uvedeno. Značky jsou přenosné, text E8d „20 m“ je z dokumentu „E8d (20m)“.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Zborovské náměstí",
+    "source_text": "Zborovské náměstí",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.771135,
+        50.023194
+       ],
+       [
+        15.77119,
+        50.022516
+       ]
+      ],
+      [
+       [
+        15.771257,
+        50.021772
+       ],
+       [
+        15.771294,
+        50.021304
+       ]
+      ],
+      [
+       [
+        15.77119,
+        50.022516
+       ],
+       [
+        15.771403,
+        50.022516
+       ]
+      ],
+      [
+       [
+        15.771222,
+        50.022138
+       ],
+       [
+        15.771257,
+        50.021772
+       ]
+      ],
+      [
+       [
+        15.77119,
+        50.022516
+       ],
+       [
+        15.771222,
+        50.022138
+       ]
+      ],
+      [
+       [
+        15.771294,
+        50.021304
+       ],
+       [
+        15.771316,
+        50.02102
+       ]
+      ],
+      [
+       [
+        15.771403,
+        50.022516
+       ],
+       [
+        15.772326,
+        50.022551
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.76740278615864,
+    50.0203678,
+    15.776058213841361,
+    50.023846199999994
+   ],
+   "shapes": [
+    {
+     "kind": "line",
+     "d": "M517.4,140.6 L525.1,286.8"
+    },
+    {
+     "kind": "line",
+     "d": "M534.4,447.2 L539.5,548.1"
+    },
+    {
+     "kind": "line",
+     "d": "M525.1,286.8 L554.6,286.8"
+    },
+    {
+     "kind": "line",
+     "d": "M529.5,368.3 L534.4,447.2"
+    },
+    {
+     "kind": "line",
+     "d": "M525.1,286.8 L529.5,368.3"
+    },
+    {
+     "kind": "line",
+     "d": "M539.5,548.1 L542.5,609.4"
+    },
+    {
+     "kind": "line",
+     "d": "M554.6,286.8 L682.6,279.3"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "B28",
+    "name": "Zákaz zastavení",
+    "image": "B28.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8d",
+    "name": "Úsek platnosti",
+    "image": "E8d.jpg",
+    "text": "délka úseku 20 m",
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, doba platnosti, značky, délka úseku, důvod, žadatel i to, že se nelze odvolat, odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, od kdy do kdy a koho se to týká; přesné umístění úseku v textu originálu není a plánek v přiloženém souboru chybí, což karta poctivě nezmiňuje jako známé."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je převážně srozumitelný, jen slova jako „dodatková tabulka“, „vymístit“ a „pátý den po vyvěšení“ zní úředně."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek ukazuje správnou oblast s parkovištěm v bývalých kasárnách, ale úsek se zákazem nevyznačuje a malý náhled ukazuje spíš park vedle parkoviště."
+   }
+  },
+  "summary": "Přepis věrně odpovídá originálu: dočasný zákaz zastavení v dvacetimetrovém úseku parkoviště na Zborovském náměstí od 15. 11. 2026 do 31. 8. 2028 kvůli stavbě; obrázky ukazují správnou oblast, ale úsek nevyznačují.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-15",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 15. 11. 2026 – 31. 8. 2028 (strana 2)"
+   },
+   {
+    "field": "do",
+    "value": "2028-08-31",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 15. 11. 2026 – 31. 8. 2028 (strana 2)"
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-11T06:27:41+00:00",
+  "attempts": 2,
+  "usage": {
+   "calls": 5,
+   "input": 26,
+   "cache_read": 92631,
+   "cache_write": 51888,
+   "output": 11625,
+   "usd": 0.5141
+  }
+ },
+ "published_at": "2026-11-11T06:27:41+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
