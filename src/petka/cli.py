@@ -21,6 +21,24 @@ DESKA_HELP = """  deska-update        download the úřední deska boards and up
   deska-load          load card directories into the database (after seed / sync)
   deska-receive       replace the cards with a tar from stdin, then load (scripts/deska-sync.sh)"""
 
+ROZPOCET_HELP = """  rozpocet-update [--unit mo5|mmp|all] [ROK…]
+                      download the city's rozklikávací rozpočet (GORDIC) for the unit's due
+                      years (or the given ones) and replace changed years (idempotent)"""
+
+
+def rozpocet_update(args: list[str]) -> int:
+    from .rozpocet import jobs, source
+    units = ["mo5"]
+    if args[:1] == ["--unit"] and len(args) > 1:
+        units = list(source.UNITS) if args[1] == "all" else [args[1]]
+        args = args[2:]
+    if any(u not in source.UNITS for u in units):
+        print(f"unknown unit, use one of: {', '.join(source.UNITS)}, all", file=sys.stderr)
+        return 2
+    report = jobs.update(units, [int(a) for a in args] or None)
+    print(json.dumps(report, ensure_ascii=False, indent=1, default=str))
+    return 1 if report["failures"] else 0
+
 
 def deska_update() -> int:
     from .uredni_deska import jobs
@@ -73,8 +91,12 @@ def main() -> None:
             sys.exit(deska_load())
         if cmd in ("deska-auto", "deska-score", "deska-improve", "deska-drafts", "deska-publish", "deska-reject"):
             sys.exit(deska_cards(cmd, sys.argv[2:]))
+    if cmd == "rozpocet-update":
+        logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
+        sys.exit(rozpocet_update(sys.argv[2:]))
     if cmd in ("-h", "--help", ""):
         print("section úřední deska:\n" + DESKA_HELP + "\n")
+        print("section rozpočet:\n" + ROZPOCET_HELP + "\n")
     usneseni_cli.main()
     if cmd == "bootstrap":
         try:

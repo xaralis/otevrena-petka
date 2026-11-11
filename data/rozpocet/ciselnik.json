@@ -1,0 +1,11492 @@
+{
+"source": "Ministerstvo financí, Monitor státní pokladny – číselníky",
+"url": "https://monitor.statnipokladna.gov.cz/data/xml/<paragraf|polozka>.xml",
+"paragraf": [
+[
+1011,
+"Udržování výrobního potenciálu zemědělství, zemědělský půdní fond a mimoprodukční funkce zemědělství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1012,
+"Podnikání a restrukturalizace v zemědělství a potravinářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1013,
+"Genetický potenciál hospodářských zvířat, osiv a sádí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1014,
+"Ozdravování hospodářských zvířat, polních a speciálních plodin a zvláštní veterinární péče",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1019,
+"Ostatní zemědělská a potravinářská činnost a rozvoj",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1021,
+"Organizace trhu s produkty rostlinné výroby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1022,
+"Organizace trhu s výrobky vzniklými zpracováním produktů rostlinné výroby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1023,
+"Organizace trhu s produkty živočišné výroby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1024,
+"Organizace trhu s výrobky vzniklými zpracováním produktů živočišné výroby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1029,
+"Ostatní záležitosti regulace zemědělské produkce, organizace zemědělského trhu a poskytování podpor",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1031,
+"Pěstební činnost",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1032,
+"Podpora ostatních produkčních činností",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1036,
+"Správa v lesním hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1037,
+"Celospolečenské funkce lesů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1039,
+"Ostatní záležitosti lesního hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1061,
+"Činnost ústředního orgánu státní správy v zemědělství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1062,
+"Činnost ostatních orgánů státní správy v zemědělství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1063,
+"Správa zemědělského majetku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1069,
+"Ostatní správa v zemědělství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1070,
+"Rybářství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1070,
+"Rybářství a myslivost",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1081,
+"Zemědělský výzkum a vývoj",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1082,
+"Lesnický výzkum",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1091,
+"Mezinárodní spolupráce v zemědělství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1092,
+"Mezinárodní spolupráce v lesním hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1098,
+"Ostatní výdaje na zemědělství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+1099,
+"Ostatní výdaje na lesní hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2111,
+"Uhelné hornictví",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2112,
+"Těžba nerostných surovin kromě paliv",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2113,
+"Zpracování ropy a zemního plynu",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2114,
+"Jaderné elektrárny",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2115,
+"Úspora energie a obnovitelné zdroje",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2116,
+"Jaderné palivo a ochrana před ionizujícím zářením",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2117,
+"Elektrická energie",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2118,
+"Energie jiná než elektrická",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2119,
+"Ostatní záležitosti těžebního průmyslu a energetiky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2121,
+"Stavebnictví",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2122,
+"Sběr a zpracování druhotných surovin",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2123,
+"Podpora rozvoje průmyslových zón",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2124,
+"Opatření ke zvýšení konkurenceschopnosti průmyslových odvětví",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2125,
+"Podpora podnikání a inovací",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2129,
+"Ostatní odvětvová a oborová opatření",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2131,
+"Přímá podpora exportu",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2139,
+"Ostatní záležitosti zahraničního obchodu",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2141,
+"Vnitřní obchod",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2142,
+"Ubytování a stravování",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2143,
+"Cestovní ruch",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2144,
+"Ostatní služby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2161,
+"Činnost ústředního orgánu státní správy v odvětví energetiky, průmyslu, stavebnictví, obchodu a služeb",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2162,
+"Činnost ostatních orgánů státní správy v průmyslu, stavebnictví, obchodu a službách",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2169,
+"Ostatní správa v průmyslu, stavebnictví, obchodu a službách",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2181,
+"Výzkum a vývoj v palivech a energetice",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2182,
+"Výzkum a vývoj v průmyslu kromě paliv a energetiky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2183,
+"Výzkum a vývoj ve službách",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2184,
+"Výzkum a vývoj v obchodu a cestovním ruchu",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2185,
+"Výzkum a vývoj ve stavebnictví",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2191,
+"Mezinárodní spolupráce v průmyslu, stavebnictví, obchodu a službách",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2199,
+"Záležitosti průmyslu, stavebnictví, obchodu a služeb jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2211,
+"Dálnice",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2212,
+"Silnice",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2219,
+"Ostatní záležitosti pozemních komunikací",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2221,
+"Provoz veřejné silniční dopravy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2222,
+"Kontrola technické způsobilosti vozidel",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2223,
+"Bezpečnost silničního provozu",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2229,
+"Ostatní záležitosti v silniční dopravě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2231,
+"Vodní cesty",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2232,
+"Provoz vnitrozemské plavby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2233,
+"Záležitosti námořní dopravy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2239,
+"Ostatní záležitosti vnitrozemské plavby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2241,
+"Železniční dráhy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2242,
+"Provoz veřejné železniční dopravy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2243,
+"Drážní vozidla",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2249,
+"Ostatní záležitosti železniční dopravy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2251,
+"Letiště",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2252,
+"Zabezpečení letového provozu",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2253,
+"Provoz civilní letecké dopravy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2259,
+"Ostatní záležitosti civilní letecké dopravy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2261,
+"Činnost ústředních orgánů státní správy v dopravě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2262,
+"Činnost ostatních orgánů státní správy v dopravě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2269,
+"Ostatní správa v dopravě",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2269,
+"Činnost Státního fondu dopravní infrastruktury",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2271,
+"Ostatní dráhy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2272,
+"Provoz ostatních drah",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2279,
+"Záležitosti ostatních drah jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2280,
+"Výzkum a vývoj v dopravě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2291,
+"Mezinárodní spolupráce v dopravě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2292,
+"Dopravní obslužnost veřejnými službami",
+"2018-01-01",
+"2019-12-31"
+],
+[
+2292,
+"Dopravní obslužnost veřejnými službami - linková",
+"2020-01-01",
+"9999-12-31"
+],
+[
+2293,
+"Dopravní obslužnost mimo veřejnou službu",
+"2018-01-01",
+"9999-12-31"
+],
+[
+2294,
+"Dopravní obslužnost veřejnými službami - drážní",
+"2020-01-01",
+"9999-12-31"
+],
+[
+2295,
+"Dopravní obslužnost veřejnými službami - smíšená",
+"2020-01-01",
+"9999-12-31"
+],
+[
+2299,
+"Ostatní záležitosti v dopravě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2310,
+"Pitná voda",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2321,
+"Odvádění a čištění odpadních vod a nakládání s kaly",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2322,
+"Prevence znečišťování vody",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2329,
+"Odvádění a čištění odpadních vod jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2331,
+"Úpravy vodohospodářsky významných a vodárenských toků",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2332,
+"Vodní díla na vodohospodářsky významných a vodárenských tocích",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2333,
+"Úpravy drobných vodních toků",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2334,
+"Revitalizace říčních systémů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2339,
+"Záležitosti vodních toků a vodohospodářských děl jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2341,
+"Vodní díla v zemědělské krajině",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2342,
+"Protierozní ochrana",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2349,
+"Ostatní záležitosti vody v zemědělské krajině",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2361,
+"Činnost ústředních orgánů státní správy ve vodním hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2362,
+"Činnost ostatních orgánů státní správy ve vodním hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2369,
+"Ostatní správa ve vodním hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2380,
+"Vodohospodářský výzkum a vývoj",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2391,
+"Mezinárodní spolupráce v oblasti vodního hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2399,
+"Ostatní záležitosti vodního hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2411,
+"Záležitosti pošt",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2412,
+"Záležitosti telekomunikací",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2413,
+"Záležitosti radiokomunikací",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2419,
+"Ostatní záležitosti spojů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2461,
+"Činnost ústředních orgánů státní správy ve spojích",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2462,
+"Činnost ostatních orgánů státní správy ve spojích",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2469,
+"Ostatní správa ve spojích",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2480,
+"Výzkum a vývoj ve spojích",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2491,
+"Mezinárodní spolupráce ve spojích",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2499,
+"Ostatní záležitosti spojů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2510,
+"Podpora podnikání",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2521,
+"Bezpečnost práce",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2529,
+"Všeobecné pracovní záležitosti jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2531,
+"Centrální banka a měna",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2531,
+"Česká národní banka a měna",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2532,
+"Úřad Národní rozpočtové rady",
+"2018-01-01",
+"9999-12-31"
+],
+[
+2539,
+"Všeobecné finanční záležitosti jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2541,
+"Geologie",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2542,
+"Meteorologie",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2549,
+"Všeobecné hospodářské služby jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2561,
+"Činnost ústředních orgánů státní správy v oblasti hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2562,
+"Činnost ostatních orgánů a organizací v oblasti normalizace, standardizace a metrologie",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2563,
+"Činnost ostatních orgánů státní správy v zeměměřictví a katastru",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2564,
+"Správa národního majetku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2565,
+"Činnost ostatních orgánů státní správy v oblasti bezpečnosti práce",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2569,
+"Všeobecná hospodářská správa jinde nezařazená",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2580,
+"Výzkum a vývoj v oblasti všeobecných hospodářských záležitostí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2590,
+"Mezinárodní spolupráce ve všeobecných hospodářských záležitostech",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2590,
+"Mezinárodní spolupráce ve všeobecných hospodářských záležitostech.",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3111,
+"Mateřské školy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3111,
+"Mateřské školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3112,
+"Mateřské školy pro děti se speciálními vzdělávacími potřebami",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3112,
+"Mateřské školy pro děti se speciálními vzdělávacími potřebami",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3113,
+"Základní školy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3113,
+"Základní školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3114,
+"Základní školy pro žáky se speciálními vzdělávacími potřebami",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3114,
+"Základní školy pro žáky se speciálními vzdělávacími potřebami",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3115,
+"Ostatní záležitosti předškolního vzdělávání",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3115,
+"Ostatní záležitosti předškolního vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3117,
+"První stupeň základních škol",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3117,
+"První stupeň základních škol",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3118,
+"Druhý stupeň základních škol",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3118,
+"Druhý stupeň základních škol",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3119,
+"Ostatní záležitosti základního vzdělávání",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3119,
+"Ostatní záležitosti základního vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3121,
+"Gymnazia",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3121,
+"Gymnázia",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3122,
+"Střední odborné školy",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3122,
+"Střední odborné školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3123,
+"Střední školy poskytující střední vzdělání s výučním listem",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3123,
+"Střední školy poskytující střední vzdělání s výučním listem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3124,
+"Střední školy a konzervatoře pro žáky se speciálními vzdělávacími potřebami",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3124,
+"Střední školy a konzervatoře pro žáky se speciálními vzdělávacími potřebami",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3125,
+"Střediska praktického vyučování a školní hospodářství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3125,
+"Střediska praktického vyučování a školní hospodářství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3126,
+"Konzervatoře",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3126,
+"Konzervatoře",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3127,
+"Střední školy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3127,
+"Střední školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3128,
+"Sportovní školy - gymnázia",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3128,
+"Sportovní školy - gymnázia",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3129,
+"Ostatní zařízení středního vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3129,
+"Ostatní zařízení středního vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3131,
+"Výchovné ústavy a dětské domovy se školou",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3131,
+"Výchovné ústavy a dětské domovy se školou",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3132,
+"Diagnostické ústavy",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3132,
+"Diagnostické ústavy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3133,
+"Dětské domovy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3133,
+"Dětské domovy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3139,
+"Ostatní školská zařízení pro výkon ústavní a ochranné výchovy",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3139,
+"Ostatní školská zařízení pro výkon ústavní a ochranné výchovy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3141,
+"Školní stravování",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3141,
+"Školní stravování",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3142,
+"",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3142,
+"",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3143,
+"Školní družiny a kluby",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3143,
+"Školní družiny a kluby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3144,
+"Školy v přírodě",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3144,
+"Školy v přírodě",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3145,
+"Internáty",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3145,
+"Internáty",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3146,
+"Zařízení výchovného poradenství",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3146,
+"Zařízení výchovného poradenství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3147,
+"Domovy mládeže",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3147,
+"Domovy mládeže",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3148,
+"Střediska výchovné péče",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3148,
+"Střediska výchovné péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3149,
+"Ostatní zařízení související s výchovou a vzděláváním mládeže",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3149,
+"Ostatní zařízení související s výchovou a vzděláváním mládeže",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3150,
+"Vyšší odborné školy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3150,
+"Vyšší odborné školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3211,
+"Vysoké školy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3211,
+"Vysoké školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3212,
+"Výzkum, vývoj a inovace na vysokých školách",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3212,
+"Výzkum, vývoj a inovace na vysokých školách",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3213,
+"Bakalářské studium",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3213,
+"Bakalářské studium",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3214,
+"Magisterské a doktorské studium",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3214,
+"Magisterské a doktorské studium",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3221,
+"Vysokoškolské koleje a menzy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3221,
+"Vysokoškolské koleje a menzy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3229,
+"Ostatní zařízení související s vysokoškolským vzděláváním",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3229,
+"Ostatní zařízení související s vysokoškolským vzděláváním",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3231,
+"Základní umělecké školy",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3231,
+"Základní umělecké školy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3232,
+"Jazykové školy s právem státní jazykové zkoušky",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3232,
+"Jazykové školy s právem státní jazykové zkoušky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3233,
+"Střediska volného času",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3233,
+"Střediska volného času",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3239,
+"Záležitosti zájmového vzdělávání jinde nezařazené",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3239,
+"Záležitosti zájmového vzdělávání jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3261,
+"Činnost ústředního orgánu státní správy ve vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3261,
+"Činnost ústředního orgánu státní správy ve vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3262,
+"Činnost ostatních orgánů státní správy ve vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3262,
+"Činnost ostatních orgánů státní správy ve vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3269,
+"Ostatní správa ve vzdělávání jinde nezařazená",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3269,
+"Ostatní správa ve vzdělávání jinde nezařazená",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3280,
+"Výzkum školství a vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3280,
+"Výzkum školství a vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3291,
+"Mezinárodní spolupráce ve vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3291,
+"Mezinárodní spolupráce ve vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3292,
+"Vzdělávání národnostních menšin a multikulturní výchova",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3292,
+"Vzdělávání národnostních menšin a multikulturní výchova",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3293,
+"Vzdělávací akce k integraci Romů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3293,
+"Vzdělávací akce k integraci Romů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3294,
+"Zařízení pro další vzdělávání pedagogických pracovníků",
+"2015-01-01",
+"2021-12-31"
+],
+[
+3294,
+"Zařízení pro další vzdělávání pedagogických pracovníků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3299,
+"Ostatní záležitosti vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3299,
+"Ostatní záležitosti vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3311,
+"Divadelní činnost",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3311,
+"Divadelní činnost",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3312,
+"Hudební činnost",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3312,
+"Hudební činnost",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3313,
+"Filmová tvorba, distribuce, kina a shromažďování audiovizuálních archiválií",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3313,
+"Filmová tvorba, distribuce, kina a shromažďování audiovizuálních archiválií",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3314,
+"Činnosti knihovnické",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3314,
+"Činnosti knihovnické",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3315,
+"Činnosti muzeí a galerií",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3315,
+"Činnosti muzeí a galerií",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3316,
+"Vydavatelská činnost",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3316,
+"Vydavatelská činnost",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3317,
+"Výstavní činnosti v kultuře",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3317,
+"Výstavní činnosti v kultuře",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3319,
+"Ostatní záležitosti kultury",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3319,
+"Ostatní záležitosti kultury",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3321,
+"Činnosti památkových ústavů, hradů a zámků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3321,
+"Činnosti památkových ústavů, hradů a zámků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3322,
+"Zachování a obnova kulturních památek",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3322,
+"Zachování a obnova kulturních památek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3324,
+"Výkup předmětů kulturní hodnoty",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3324,
+"Výkup předmětů kulturní hodnoty",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3325,
+"Pražský hrad",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3325,
+"Pražský hrad",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3326,
+"Pořízení, zachování a obnova hodnot místního kulturního, národního a historického povědomí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3326,
+"Pořízení, zachování a obnova hodnot místního kulturního, národního a historického povědomí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3329,
+"Ostatní záležitosti ochrany památek a péče o kulturní dědictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3329,
+"Ostatní záležitosti ochrany památek a péče o kulturní dědictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3330,
+"Činnosti registrovaných církví a náboženských společností",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3330,
+"Činnosti registrovaných církví a náboženských společností",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3341,
+"Rozhlas a televize",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3341,
+"Rozhlas a televize",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3349,
+"Ostatní záležitosti sdělovacích prostředků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3349,
+"Ostatní záležitosti sdělovacích prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3361,
+"Činnost ústředního orgánu státní správy v oblasti kultury a církví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3361,
+"Činnost ústředního orgánu státní správy v oblasti kultury a církví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3362,
+"Činnost ostatních orgánů státní správy v oblasti kultury, církví a sdělovacích prostředků",
+"2012-01-01",
+"2021-12-31"
+],
+[
+3362,
+"Činnost ústředního orgánu státní správy v oblasti sdělovacích prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3369,
+"Ostatní správa v oblasti kultury, církví a sdělovacích prostředků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3369,
+"Ostatní správa v oblasti kultury, církví a sdělovacích prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3380,
+"Výzkum a vývoj v oblasti kultury, církví a sdělovacích prostředků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3380,
+"Výzkum a vývoj v oblasti kultury, církví a sdělovacích prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3391,
+"Mezinárodní spolupráce v kultuře, církvích a sdělovacích prostředcích",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3391,
+"Mezinárodní spolupráce v kultuře, církvích a sdělovacích prostředcích",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3392,
+"Zájmová činnost v kultuře",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3392,
+"Zájmová činnost v kultuře",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3399,
+"Ostatní záležitosti kultury, církví a sdělovacích prostředků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3399,
+"Ostatní záležitosti kultury, církví a sdělovacích prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3411,
+"Státní sportovní reprezentace",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3411,
+"Státní sportovní reprezentace",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3411,
+"Státní sportovní reprezentace",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3412,
+"Sportovní zařízení v majetku obcí",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3412,
+"Sportovní zařízení ve vlastnictví obce",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3412,
+"Sportovní zařízení ve vlastnictví obce",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3419,
+"Ostatní sportovní činnost",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3419,
+"Ostatní sportovní činnost",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3419,
+"Ostatní tělovýchovná činnost",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3421,
+"Využití volného času dětí a mládeže",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3421,
+"Využití volného času dětí a mládeže",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3421,
+"Využití volného času dětí a mládeže",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3429,
+"Ostatní zájmová činnost a rekreace",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3429,
+"Ostatní zájmová činnost a rekreace",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3429,
+"Ostatní zájmová činnost a rekreace",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3461,
+"Činnost ústředního orgánu státní správy v oblasti sportu",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3461,
+"Činnost ústředního orgánu státní správy v oblasti sportu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3480,
+"Výzkum v oblasti sportu, zájmové činnosti a rekreace",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3480,
+"Výzkum v oblasti sportu, zájmové činnosti a rekreace",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3480,
+"Výzkum v oblasti tělovýchovy, zájmové činnosti a rekreace",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3511,
+"Všeobecná ambulantní péče",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3511,
+"Všeobecná ambulantní péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3512,
+"Stomatologická péče",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3512,
+"Stomatologická péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3513,
+"Lékařská služba první pomoci",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3513,
+"Lékařská služba první pomoci",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3514,
+"Transfúzní služba a tkáňová zařízení",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3514,
+"Transfúzní služba a tkáňová zařízení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3515,
+"Specializovaná ambulantní zdravotní péče",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3515,
+"Specializovaná ambulantní zdravotní péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3516,
+"Péče v mateřství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3516,
+"Péče v mateřství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3519,
+"Ostatní ambulantní péče",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3519,
+"Ostatní ambulantní péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3521,
+"Fakultní nemocnice",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3521,
+"Fakultní nemocnice",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3521,
+"Fakultní nemocnice",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3522,
+"Ostatní nemocnice",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3522,
+"Ostatní nemocnice",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3522,
+"Ostatní nemocnice",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3523,
+"Odborné léčebné ústavy",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3523,
+"Odborné léčebné ústavy",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3523,
+"Odborné léčebné ústavy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3524,
+"Léčebny dlouhodobě nemocných",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3524,
+"Léčebny dlouhodobě nemocných",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3524,
+"Léčebny dlouhodobě nemocných",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3525,
+"Hospice",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3525,
+"Hospice",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3525,
+"Hospice",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3526,
+"Lázeňské léčebny, ozdravovny, sanatoria",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3526,
+"Lázeňské léčebny, ozdravovny, sanatoria",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3526,
+"Lázeňské léčebny, ozdravovny, sanatoria",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3527,
+"Vysoce specializovaná pracoviště a jednooborové zařízení lůžkové péče",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3527,
+"Vysoce specializovaná pracoviště a jednooborové zařízení lůžkové péče",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3527,
+"Vysoce specializovaná pracoviště a jednooborové zařízení lůžkové péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3529,
+"Ostatní ústavní péče",
+"2010-01-01",
+"2018-12-31"
+],
+[
+3529,
+"Ostatní ústavní péče",
+"2019-01-01",
+"2021-12-31"
+],
+[
+3529,
+"Ostatní ústavní péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3531,
+"Hygienická služba a ochrana veřejného zdraví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3531,
+"Hygienická služba a ochrana veřejného zdraví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3532,
+"Lékárenská služba (léky, protézy a přístroje pro užití vně zdravotnických zařízení)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3532,
+"Lékárenská služba (léky, protézy a přístroje pro užití vně zdravotnických zařízení)",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3533,
+"Zdravotnická záchranná služba",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3533,
+"Zdravotnická záchranná služba",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3534,
+"Doprava ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3534,
+"Doprava ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3539,
+"Ostatní zdravotnická zařízení a služby pro zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3539,
+"Ostatní zdravotnická zařízení a služby pro zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3541,
+"Prevence před drogami, alkoholem, nikotinem a jinými závislostmi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3541,
+"Prevence před drogami, alkoholem, nikotinem aj. závislostmi",
+"2014-01-01",
+"2021-12-31"
+],
+[
+3542,
+"Prevence HIV/AIDS",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3542,
+"Prevence HIV/AIDS",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3543,
+"Pomoc zdravotně postiženým",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3543,
+"Pomoc zdravotně postiženým a chronicky nemocným",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3544,
+"Národní program zdraví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3544,
+"Národní program zdraví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3545,
+"Programy paliativní péče",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3545,
+"Programy paliativní péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3549,
+"Ostatní speciální zdravotnická péče",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3549,
+"Ostatní speciální zdravotnická péče",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3561,
+"Činnost ústředního orgánu státní správy ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3561,
+"Činnost ústředního orgánu státní správy ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3562,
+"Činnost ostatních orgánů státní správy ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3562,
+"Činnost ostatních orgánů státní správy ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3569,
+"Ostatní správa ve zdravotnictví jinde nezařazená",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3569,
+"Ostatní správa ve zdravotnictví jinde nezařazená",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3581,
+"Organizace výzkumu a střediska vědeckých informací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3581,
+"Organizace výzkumu a střediska vědeckých informací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3589,
+"Ostatní výzkum a vývoj ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3589,
+"Ostatní výzkum a vývoj ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3591,
+"Mezinárodní spolupráce ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3591,
+"Mezinárodní spolupráce ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3592,
+"Další vzdělávání pracovníků ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3592,
+"Další vzdělávání pracovníků ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3599,
+"Ostatní činnost ve zdravotnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3599,
+"Ostatní činnost ve zdravotnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3611,
+"Podpora individuální bytové výstavby",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3611,
+"Podpora individuální bytové výstavby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3612,
+"Bytové hospodářství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3612,
+"Bytové hospodářství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3613,
+"Nebytové hospodářství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3613,
+"Nebytové hospodářství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3614,
+"Bytové služby pro vlastní zaměstnance",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3614,
+"Bytové služby pro vlastní zaměstnance",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3615,
+"Podpora stavebního spoření a hypotečních úvěrů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3615,
+"Podpora stavebního spoření a hypotečních úvěrů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3619,
+"Ostatní rozvoj bydlení a bytového hospodářství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3619,
+"Ostatní rozvoj bydlení a bytového hospodářství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3631,
+"Veřejné osvětlení",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3631,
+"Veřejné osvětlení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3632,
+"Pohřebnictví",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3632,
+"Pohřebnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3633,
+"Výstavba a údržba místních inženýrských sítí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3633,
+"Výstavba a údržba místních inženýrských sítí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3634,
+"Lokální zásobování teplem",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3634,
+"Lokální zásobování teplem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3635,
+"Územní plánování",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3635,
+"Územní plánování",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3636,
+"Územní rozvoj",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3636,
+"Územní rozvoj",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3639,
+"Komunální služby a územní rozvoj jinde nezařazené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3639,
+"Komunální služby a územní rozvoj jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3661,
+"Činnost ústředního orgánu státní správy v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3661,
+"Činnost ústředního orgánu státní správy v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3662,
+"Činnost ostatních orgánů státní správy v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3662,
+"Činnost ostatních orgánů státní správy v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3669,
+"Ostatní správa v oblasti bydlení, komunálních služeb a územního rozvoje jinde nezařazená",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3669,
+"Ostatní správa v oblasti v oblasti bydlení, komunálních služeb a územního rozvoje jinde nezařazená",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3680,
+"Výzkum a vývoj v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3680,
+"Výzkum a vývoj v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3691,
+"Mezinárodní spolupráce v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3691,
+"Mezinárodní spolupráce v oblasti bydlení, komunálních služeb a územního rozvoje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3699,
+"Ostatní záležitosti bydlení, komunálních služeb a územního rozvoje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3699,
+"Ostatní záležitosti bydlení, komunálních služeb a územního rozvoje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3711,
+"Odstraňování tuhých emisí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3711,
+"Odstraňování tuhých emisí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3712,
+"Odstraňování plynných emisí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3712,
+"Odstraňování plynných emisí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3713,
+"Změny technologií vytápění",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3713,
+"Změny technologií vytápění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3714,
+"Opatření ke snižování produkce skleníkových plynů a plynů poškozujících ozónovou vrstvu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3714,
+"Opatření ke snižování produkce skleníkových plynů a plynů poškozujících ozónovou vrstvu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3715,
+"Změny výrobních technologií za účelem výrazného odstranění emisí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3715,
+"Změny výrobních technologií za účelem výrazného odstranění emisí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3716,
+"Monitoring ochrany ovzduší",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3716,
+"Monitoring ochrany ovzduší",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3719,
+"Ostatní činnosti k ochraně ovzduší",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3719,
+"Ostatní činnosti k ochraně ovzduší",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3721,
+"Sběr a svoz nebezpečných odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3721,
+"Sběr a svoz nebezpečných odpadů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3722,
+"Sběr a svoz komunálních odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3722,
+"Sběr a svoz komunálních odpadů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3723,
+"Sběr a svoz ostatních odpadů (jiných než nebezpečných a komunálních)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3723,
+"Sběr a svoz ostatních odpadů jiných než nebezpečných a komunálních",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3724,
+"Využívání a zneškodňování nebezpečných odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3724,
+"Využívání a zneškodňování nebezpečných odpadů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3725,
+"Využívání a zneškodňování komunálních odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3725,
+"Využívání a zneškodňování komunálních odpadů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3726,
+"Využívání a zneškodňování ostatních odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3726,
+"Využívání a zneškodňování ostatních odpadů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3727,
+"Prevence vzniku odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3727,
+"Prevence vzniku odpadů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3728,
+"Monitoring nakládání s odpady",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3728,
+"Monitoring nakládání s odpady",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3729,
+"Ostatní nakládání s odpady",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3729,
+"Ostatní nakládání s odpady",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3731,
+"Ochrana půdy a podzemní vody proti znečišťujícím infiltracím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3731,
+"Ochrana půdy a podzemní vody proti znečišťujícím infiltracím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3732,
+"Dekontaminace půd a čištění spodní vody",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3732,
+"Dekontaminace půd a čištění spodní vody",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3733,
+"Monitoring půdy a podzemní vody",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3733,
+"Monitoring půdy a podzemní vody",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3734,
+"Předcházení a sanace zasolení půd",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3734,
+"Předcházení a sanace zasolení půd",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3739,
+"Ostatní ochrana půdy a spodní vody",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3739,
+"Ostatní ochrana půdy a spodní vody",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3741,
+"Ochrana druhů a stanovišť",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3741,
+"Ochrana druhů a stanovišť",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3742,
+"Chráněné části přírody",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3742,
+"Chráněné části přírody",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3743,
+"Rekultivace půdy v důsledku těžební a důlní činnosti, po skládkách odpadů apod.",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3743,
+"Rekultivace půdy v důsledku těžební a důlní činnosti, po skládkách odpadů apod.",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3744,
+"Protierozní, protilavinová a protipožární ochrana",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3744,
+"Protierozní, protilavinová a protipožární ochrana",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3745,
+"Péče o vzhled obcí a veřejnou zeleň",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3745,
+"Péče o vzhled obcí a veřejnou zeleň",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3749,
+"Ostatní činnosti k ochraně přírody a krajiny",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3749,
+"Ostatní činnosti k ochraně přírody a krajiny",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3751,
+"Konstrukce a uplatnění protihlukových zařízení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3751,
+"Konstrukce a uplatnění protihlukových zařízení (protihlukové stěny a bariéry, okna, zapouzdření strojů apod.)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3753,
+"Monitoring ke zjišťování úrovně hluku a vibrací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3753,
+"Monitoring ke zjišťování úrovně hluku a vibrací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3759,
+"Ostatní činnosti k omezení hluku a vibrací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3759,
+"Ostatní činnosti k omezení hluku a vibrací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3761,
+"Činnost ústředního orgánu státní správy v ochraně životního prostředí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3761,
+"Činnost ústředního orgánu státní správy v ochraně životního prostředí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3762,
+"Činnost ostatních orgánů státní správy v ochraně životního prostředí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3762,
+"Činnost ostatních orgánů státní správy v ochraně životního prostředí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3769,
+"Ostatní správa v ochraně životního prostředí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3769,
+"Ostatní správa v ochraně životního prostředí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3771,
+"Protiradonová opatření",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3771,
+"Protiradonová opatření",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3772,
+"Přeprava a nakládání s radioaktivním odpadem",
+"2017-01-01",
+"2021-12-31"
+],
+[
+3772,
+"Přeprava a nakládání s radioaktivním odpadem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3773,
+"Monitoring k zajišťování úrovně radioaktivního záření",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3773,
+"Monitoring k zajišťování úrovně radioaktivního záření",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3779,
+"Ostatní činnosti k ochraně proti záření",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3779,
+"Ostatní činnosti k ochraně proti záření",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3780,
+"Výzkum životního prostředí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3780,
+"Výzkum životního prostředí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3791,
+"Mezinárodní spolupráce v životním prostředí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3791,
+"Mezinárodní spolupráce v životním prostředí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3792,
+"Ekologická výchova a osvěta",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3792,
+"Ekologická výchova a osvěta",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3793,
+"Ekologie v dopravě",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3793,
+"Ekologie v dopravě",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3799,
+"Ostatní ekologické záležitosti",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3799,
+"Ostatní ekologické záležitosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3801,
+"Akademie věd České republiky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3801,
+"Akademie věd České republiky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3802,
+"Grantová agentura České republiky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3802,
+"Grantová agentura České republiky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3803,
+"Technologická agentura České republiky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3803,
+"Technologická agentura České republiky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3809,
+"Ostatní výzkum a vývoj odvětvově nespecifikovaný",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3809,
+"Ostatní výzkum a vývoj odvětvově nespecifikovaný",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3900,
+"Ostatní činnosti související se službami pro fyzické osoby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3900,
+"Ostatní činnosti související se službami pro obyvatelstvo",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4111,
+"Starobní důchody",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4112,
+"Invalidní důchody pro invaliditu třetího stupně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4113,
+"Invalidní důchody pro invaliditu druhého stupně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4114,
+"Vdovské důchody",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4115,
+"Vdovecké důchody",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4116,
+"Sirotčí důchody",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4117,
+"Invalidní důchody pro invaliditu prvního stupně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4119,
+"Ostatní dávky důchodového pojištění",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4121,
+"Nemocenské",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4122,
+"Ošetřovné",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4123,
+"Vyrovnávací příspěvek v těhotenství a mateřství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4124,
+"Peněžitá pomoc v mateřství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4125,
+"Dávky otcovské poporodní péče",
+"2018-01-01",
+"9999-12-31"
+],
+[
+4126,
+"Dlouhodobé ošetřovné",
+"2018-01-01",
+"9999-12-31"
+],
+[
+4129,
+"Dávky nemocenského pojištění jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4131,
+"Přídavek na dítě",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4132,
+"Sociální příplatek",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4133,
+"Porodné",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4134,
+"Rodičovský příspěvek",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4136,
+"Dávky pěstounské péče",
+"2013-01-01",
+"2021-12-31"
+],
+[
+4136,
+"Dávky pěstounské péče a zaopatřovací příspěvky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4138,
+"Pohřebné",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4141,
+"Příspěvek na bydlení",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4142,
+"Příspěvek na školní pomůcky",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4143,
+"Podpora studujícího rodiče",
+"2027-01-01",
+"9999-12-31"
+],
+[
+4144,
+"Příspěvek na vysokoškolské studium",
+"2027-01-01",
+"9999-12-31"
+],
+[
+4149,
+"Dávky státní sociální podpory jinde nezařazené",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4150,
+"",
+"2013-01-01",
+"2020-12-31"
+],
+[
+4150,
+"",
+"2021-01-01",
+"9999-12-31"
+],
+[
+4151,
+"Odchodné",
+"2012-01-01",
+"2020-12-31"
+],
+[
+4151,
+"Odchodné",
+"2021-01-01",
+"9999-12-31"
+],
+[
+4152,
+"Výsluhový příspěvek",
+"2012-01-01",
+"2020-12-31"
+],
+[
+4152,
+"Výsluhový příspěvek",
+"2021-01-01",
+"9999-12-31"
+],
+[
+4153,
+"Úmrtné a příspěvek na pohřeb příslušníka",
+"2012-01-01",
+"2020-12-31"
+],
+[
+4153,
+"Úmrtné a příspěvek na pohřeb příslušníka",
+"2021-01-01",
+"9999-12-31"
+],
+[
+4154,
+"Odbytné",
+"2012-01-01",
+"2020-12-31"
+],
+[
+4154,
+"Odbytné",
+"2021-01-01",
+"9999-12-31"
+],
+[
+4159,
+"Ostatní sociální dávky příslušníků ozbrojených sil a bezpečnostních sborů při skončení služebního poměru",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4159,
+"Ostatní sociální dávky příslušníků ozbrojených sil při skončení služebního poměru",
+"2012-01-01",
+"2020-12-31"
+],
+[
+4159,
+"Ostatní sociální dávky příslušníků ozbrojených sil při skončení služebního poměru",
+"2021-01-01",
+"2021-12-31"
+],
+[
+4161,
+"Úrazový příplatek",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4162,
+"Úrazové vyrovnání",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4163,
+"Bolestné",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4164,
+"Příspěvek za ztížení společenského uplatnění",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4165,
+"Náhrada nákladů spojených s léčením",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4166,
+"Náhrada nákladů spojených s pohřbem",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4167,
+"Jednorázový příspěvek pozůstalému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4168,
+"Úrazová renta pozůstalého",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4169,
+"Ostatní dávky úrazového pojištění",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4171,
+"Příspěvek na živobytí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4172,
+"Doplatek na bydlení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4173,
+"Mimořádná okamžitá pomoc",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4174,
+"Dávky sociální péče pro staré občany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4175,
+"Dávky sociální péče pro rodinu a děti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4176,
+"Dávky sociální péče pro sociálně vyloučené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4177,
+"Mimořádná okamžitá pomoc osobám ohroženým sociálním vyloučením",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4179,
+"Ostatní dávky sociální pomoci",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4181,
+"Příspěvek při péči o osobu blízkou",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4182,
+"Příspěvek na zvláštní pomůcky",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4183,
+"Příspěvek na úpravu a provoz bezbariérového bytu",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4184,
+"Příspěvky na zakoupení, opravu a zvláštní úpravu motorového vozidla",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4185,
+"Příspěvek na provoz motorového vozidla",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4186,
+"Příspěvek na individuální dopravu",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4187,
+"Příspěvek na mobilitu",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4188,
+"Příspěvek na zvláštní pomůcku",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4189,
+"Ostatní dávky zdravotně postiženým občanům",
+"2012-01-01",
+"9999-12-31"
+],
+[
+4191,
+"Státní příspěvky na důchodové připojištění",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4192,
+"Úrokové příspěvky mladým manželstvím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4193,
+"Dávky a odškodnění válečným veteránům a perzekvovaným osobám",
+"2010-01-01",
+"2019-12-31"
+],
+[
+4193,
+"Dávky válečným veteránům a perzekvovaným osobám",
+"2020-01-01",
+"9999-12-31"
+],
+[
+4194,
+"Zvýšení důchodů pro bezmocnost",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4195,
+"Příspěvek na péči",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4196,
+"Náhradní výživné pro nezaopatřené dítě",
+"2021-01-01",
+"9999-12-31"
+],
+[
+4197,
+"Dávka státní sociální pomoci",
+"2025-01-01",
+"9999-12-31"
+],
+[
+4199,
+"Ostatní dávky povahy sociálního zabezpečení jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4210,
+"Podpory v nezaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4221,
+"Rekvalifikace",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4222,
+"Veřejně prospěšné práce",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4223,
+"Společensky účelná pracovní místa",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4225,
+"Podpora zaměstnanosti zdravotně postižených občanů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4226,
+"Ostatní podpora zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4227,
+"Cílené programy k řešení zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4229,
+"Aktivní politika zaměstnanosti jinde nezařazená",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4230,
+"Ochrana zaměstnanců při platební neschopnosti zaměstnavatelů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4240,
+"Příspěvek na podporu zaměstnávání osob se zdravotním postižením na chráněném trhu práce",
+"2018-01-01",
+"9999-12-31"
+],
+[
+4250,
+"Příspěvky na sociální důsledky restrukturalizace",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4280,
+"Výzkum a vývoj v politice zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4311,
+"Základní sociální poradenství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4312,
+"Odborné sociální poradenství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4313,
+"Sociální ústavy pro zdravotně postiženou mládež včetně diagnostických ústavů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4314,
+"Pečovatelská služba",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4315,
+"Sociální hospitalizace",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4316,
+"Domovy důchodců",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4317,
+"Domovy - penziony pro staré občany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4318,
+"Ostatní sociální péče a pomoc starým občanům (kromě ústavní)",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4319,
+"Ostatní výdaje související se sociálním poradenstvím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4322,
+"",
+"2015-01-01",
+"9999-12-31"
+],
+[
+4324,
+"Zařízení pro děti vyžadující okamžitou pomoc",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4329,
+"Ostatní sociální péče a pomoc dětem a mládeži",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4332,
+"",
+"2015-01-01",
+"9999-12-31"
+],
+[
+4333,
+"Domovy-penzióny pro matky s dětmi",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4334,
+"Pečovatelská služba pro rodinu a děti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4339,
+"Ostatní sociální péče a pomoc rodině a manželství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4341,
+"Sociální pomoc osobám v hmotné nouzi a občanům sociálně nepřizpůsobivým",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4342,
+"Sociální péče a pomoc přistěhovalcům a vybraným etnikům",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4343,
+"Sociální pomoc osobám v souvislosti s živelní pohromou nebo požárem",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4344,
+"Sociální poradenství pro staré občany",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4344,
+"Sociální rehabilitace",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4345,
+"Centra sociálně rehabilitačních služeb",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4349,
+"Ostatní sociální péče a pomoc ostatním skupinám fyzických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4349,
+"Ostatní sociální péče a pomoc ostatním skupinám obyvatelstva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4350,
+"Domovy pro seniory",
+"2013-01-01",
+"2018-12-31"
+],
+[
+4350,
+"Domovy pro seniory",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4351,
+"Osobní asistence, pečovatelská služba a podpora samostatného bydlení",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4351,
+"Osobní asistence, pečovatelská služba a podpora samostatného bydlení",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4352,
+"Tísňová péče",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4352,
+"Tísňová péče",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4353,
+"Průvodcovské a předčitatelské služby",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4353,
+"Průvodcovské a předčitatelské služby",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4354,
+"Chráněné bydlení",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4354,
+"Chráněné bydlení",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4355,
+"Týdenní stacionáře",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4355,
+"Týdenní stacionáře",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4356,
+"Denní stacionáře a centra denních služeb",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4356,
+"Denní stacionáře a centra denních služeb",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4357,
+"Domovy pro osoby se zdravotním postižením a domovy se zvláštním režimem",
+"2013-01-01",
+"2018-12-31"
+],
+[
+4357,
+"Domovy pro osoby se zdravotním postižením a domovy se zvláštním režimem",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4358,
+"Sociální služby poskytované ve zdravotnických zařízeních ústavní péče",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4358,
+"Sociální služby poskytované ve zdravotnických zařízeních ústavní péče",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4359,
+"Ostatní služby a činnosti v oblasti sociální péče",
+"2010-01-01",
+"2018-12-31"
+],
+[
+4359,
+"Ostatní služby a činnosti v oblasti sociální péče",
+"2019-01-01",
+"9999-12-31"
+],
+[
+4361,
+"Činnost ústředního orgánu státní správy v sociálním zabezpečení, politice zaměstnanosti a rodinné politice",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4362,
+"Činnost ostatních orgánů státní správy v sociálním zabezpečení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4363,
+"Ostatní orgány státní správy v oblasti politiky zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4369,
+"Ostatní správa v sociálním zabezpečení a politice zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4371,
+"Raná péče a sociálně aktivizační služby pro rodiny s dětmi",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4372,
+"Krizová pomoc",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4373,
+"Domy na půl cesty",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4374,
+"Azylové domy, nízkoprahová denní centra a noclehárny",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4375,
+"Nízkoprahová zařízení pro děti a mládež",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4376,
+"Služby následné péče, terapeutické komunity a kontaktní centra",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4377,
+"Sociálně terapeutické dílny",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4378,
+"Terénní programy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4379,
+"Ostatní služby a činnosti v oblasti sociální prevence",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4380,
+"Výzkum v sociálním zabezpečení a politice zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4391,
+"Mezinárodní spolupráce v sociálním zabezpečení a podpoře zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4392,
+"Inspekce poskytování sociálních služeb",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4399,
+"Ostatní záležitosti sociálních věcí a politiky zaměstnanosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5111,
+"Armáda",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5112,
+"Ostatní ozbrojené síly",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5113,
+"Bezpečnostní složky ozbrojených sil",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5119,
+"Podpůrné složky ozbrojených sil",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5161,
+"Činnost ústředního orgánu státní správy ve vojenské obraně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5162,
+"Činnost ostatních orgánů státní správy ve vojenské obraně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5169,
+"Ostatní správa ve vojenské obraně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5171,
+"Zabezpečení potřeb ozbrojených sil",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5172,
+"Operační příprava státního území",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5179,
+"Ostatní činnosti pro zabezpečení potřeb ozbrojených sil",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5180,
+"Výzkum a vývoj v oblasti obrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5191,
+"Mezinárodní spolupráce v obraně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5192,
+"Zahraniční vojenská pomoc",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5199,
+"Ostatní záležitosti obrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5211,
+"Civilní ochrana-vojenská část",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5211,
+"Civilní ochrana-vojenská část",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5212,
+"Ochrana obyvatelstva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5212,
+"Ochrana obyvatelstva",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5213,
+"Krizová opatření",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5213,
+"Krizová opatření",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5219,
+"Ostatní záležitosti ochrany fyzických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5219,
+"Ostatní záležitosti ochrany obyvatelstva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5220,
+"Hospodářská opatření pro krizové stavy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5261,
+"Státní správa v oblasti hospodářských opatření pro krizové stavy a v oblasti krizového řízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5262,
+"Činnost ostatních orgánů státní správy v oblasti civilního nouzového hospodářství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5269,
+"Ostatní správa v oblasti hospodářských opatření pro krizové stavy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5271,
+"Činnost orgánů krizového řízení na ústřední úrovni a dalších správních úřadů v oblasti krizového řízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5272,
+"Činnost orgánů krizového řízení na územní úrovni a dalších územních správních úřadů v oblasti krizového řízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5273,
+"Ostatní správa v oblasti krizového řízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5274,
+"Podpora krizového řízení a nouzového plánování",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5279,
+"Záležitosti krizového řízení jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5281,
+"Výzkum a vývoj v oblasti ochrany fyzických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5281,
+"Výzkum a vývoj v oblasti ochrany obyvatelstva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5289,
+"Výzkum a vývoj v oblasti krizového řízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5291,
+"Mezinárodní spolupráce v oblasti krizového řízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5292,
+"Poskytnutí vzájemné zahraniční pomoci podle mezinárodních smluv",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5299,
+"Ostatní záležitosti civilní připravenosti na krizové stavy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5311,
+"Bezpečnost a veřejný pořádek",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5312,
+"Opatření proti legalizaci výnosů z trestné činnosti a proti financování terorismu",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5316,
+"Činnost ústředního orgánu státní správy v oblasti bezpečnosti a veřejného pořádku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5317,
+"Hraniční přechody",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5319,
+"Ostatní záležitosti bezpečnosti a veřejného pořádku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5380,
+"Výzkum týkající se bezpečnosti a veřejného pořádku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5391,
+"Mezinárodní spolupráce v oblasti bezpečnosti a veřejného pořádku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5399,
+"Ostatní záležitosti bezpečnosti,veřejného pořádku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5410,
+"Ústavní soud",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5420,
+"Soudy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5430,
+"Státní zastupitelství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5441,
+"Činnost Generálního ředitelství Vězeňské služby a věznic",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5442,
+"Ostatní správa ve vězeňství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5449,
+"Ostatní záležitosti vězeňství",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5450,
+"Činnost probační a mediační služby",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5461,
+"Činnost ústředního orgánu státní správy v oblasti právní ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5462,
+"Činnost ostatních orgánů státní správy v oblasti právní ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5469,
+"Ostatní správa v oblasti právní ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5470,
+"Kancelář Veřejného ochránce práv",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5471,
+"Kancelář finančního arbitra",
+"2012-01-01",
+"9999-12-31"
+],
+[
+5480,
+"Výzkum v oblasti právní ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5491,
+"Mezinárodní spolupráce v oblasti právní ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5499,
+"Ostatní záležitosti právní ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5511,
+"Požární ochrana - profesionální část",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5512,
+"Požární ochrana - dobrovolná část",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5517,
+"Vzdělávací a technická zařízení požární ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5519,
+"Ostatní záležitosti požární ochrany",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5521,
+"Operační a informační střediska integrovaného záchranného systému.",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5522,
+"Ostatní činnosti v integrovaném záchranném systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5529,
+"Ostatní složky a činnosti integrovaného záchranného systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5561,
+"Činnost ústředního orgánu státní správy v požární ochraně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5562,
+"Činnost ústředních orgánů státní správy v integrovaném záchranném systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5563,
+"Činnost ostatních orgánů státní správy v integrovaném záchranném systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5580,
+"Výzkum a vývoj v požární ochraně a integrovaném záchranném systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5591,
+"Mezinárodní spolupráce v oblasti požární ochrany a integrovaném záchranném systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5592,
+"Poskytnutí vzájemné zahraniční pomoci podle mezinárodních smluv",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5599,
+"Ostatní záležitosti požární ochrany a integrovaného záchranného systému",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6111,
+"Parlament",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6112,
+"Zastupitelstva obcí",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6113,
+"Zastupitelstva krajů",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6114,
+"Volby do Parlamentu ČR",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6115,
+"Volby do zastupitelstev územních samosprávných celků",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6116,
+"Celostátní referendum",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6117,
+"Volby do Evropského parlamentu",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6118,
+"Volba prezidenta republiky",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6119,
+"Ostatní zastupitelské orgány a volby",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6120,
+"Kancelář prezidenta republiky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6130,
+"Nejvyšší kontrolní úřad",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6141,
+"Ústřední orgány vnitřní státní správy a jejich dislokovaná pracoviště (nezařazené v jiných funkcích)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6141,
+"Ústřední orgány vnitřní státní správy a jejich dislokovaná pracoviště nezařazené v jiných funkcích",
+"2022-01-01",
+"2025-12-31"
+],
+[
+6141,
+"Ústřední orgány vnitřní státní správy a jejich dislokovaná pracoviště nezařazené v jiných paragrafech",
+"2026-01-01",
+"9999-12-31"
+],
+[
+6142,
+"Finanční správa",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6142,
+"Orgány Finanční správy České republiky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6143,
+"Celní správa",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6143,
+"Orgány Celní správy České republiky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6145,
+"Úřad vlády",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6145,
+"Úřad vlády",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6146,
+"Český statistický úřad",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6146,
+"Český statistický úřad",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6147,
+"",
+"2015-01-01",
+"2021-12-31"
+],
+[
+6147,
+"",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6148,
+"Plánování a statistika",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6148,
+"Plánování a statistika",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6149,
+"Ostatní všeobecná vnitřní správa jinde nezařazená",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6149,
+"Ostatní všeobecná vnitřní správa jinde nezařazená",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6151,
+"Činnost ústředního orgánu státní správy v zahraniční službě",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6151,
+"Činnost ústředního orgánu státní správy v zahraniční službě",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6152,
+"Zastupitelství a stálé mise ČR v zahraničí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6152,
+"Zastupitelství a stálé mise ČR v zahraničí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6153,
+"Ostatní účast v mezinárodních vládních organizacích",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6153,
+"Ostatní účast v mezinárodních vládních organizacích",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6159,
+"Zahraniční služba a záležitosti jinde nezařazené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6159,
+"Zahraniční služba a záležitosti jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6171,
+"Činnost místní správy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6172,
+"Činnost regionální správy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6173,
+"Místní referendum",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6174,
+"Činnost regionálních rad",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6180,
+"Výzkum ve státní správě a samosprávě",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6190,
+"Politické strany a hnutí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6211,
+"Archivní činnost",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6219,
+"Ostatní veřejné služby jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6219,
+"Ostatní veřejné služby jinde nezařazené.",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6221,
+"Humanitární zahraniční pomoc přímá",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6221,
+"Humanitární zahraniční pomoc přímá",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6222,
+"Rozvojová zahraniční pomoc",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6222,
+"Rozvojová zahraniční pomoc",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6223,
+"Mezinárodní spolupráce (jinde nezařazená)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6223,
+"Mezinárodní spolupráce jinde nezařazená",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6224,
+"Humanitární zahraniční pomoc poskytovaná prostřednictvím mezinárodních organizací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6224,
+"Humanitární zahraniční pomoc poskytovaná prostřednictvím mezinárodních organizací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6229,
+"Ostatní zahraniční pomoc",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6229,
+"Ostatní zahraniční pomoc",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6310,
+"Obecné příjmy a výdaje z finančních operací",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6320,
+"Pojištění funkčně nespecifikované",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6330,
+"Převody vlastním fondům v rozpočtech územní úrovně",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6391,
+"Soudní a mimosoudní rehabilitace",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6399,
+"Ostatní finanční operace",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6401,
+"Transfery všeobecné povahy jiným úrovním vlády",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6402,
+"Finanční vypořádání",
+"2021-01-01",
+"9999-12-31"
+],
+[
+6402,
+"Finanční vypořádání minulých let",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6409,
+"Ostatní činnosti jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+]
+],
+"polozka": [
+[
+1111,
+"Daň z příjmů fyzických osob placená plátci",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1111,
+"Příjem z daně z příjmů fyzických osob placené plátci",
+"2022-01-01",
+"2024-12-31"
+],
+[
+1111,
+"Příjem z daně z příjmů fyzických osob placené plátci",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1112,
+"Daň z příjmů fyzických osob placená poplatníky",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1112,
+"Příjem z daně z příjmů fyzických osob placené poplatníky",
+"2022-01-01",
+"2024-12-31"
+],
+[
+1112,
+"Příjem z daně z příjmů fyzických osob placené poplatníky",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1113,
+"Daň z příjmů fyzických osob vybíraná srážkou",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1113,
+"Příjem z daně z příjmů fyzických osob vybírané srážkou podle zvláštní sazby daně",
+"2022-01-01",
+"2024-12-31"
+],
+[
+1113,
+"Příjem z daně z příjmů fyzických osob vybírané srážkou podle zvláštní sazby daně",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1119,
+"Zrušené daně, jejichž předmětem je příjem fyzických osob",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1121,
+"Daň z příjmů právnických osob",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1121,
+"Příjem z daně z příjmů právnických osob",
+"2022-01-01",
+"2024-12-31"
+],
+[
+1121,
+"Příjem z daně z příjmů právnických osob",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1122,
+"Daň z příjmů právnických osob za obce",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1122,
+"Příjem z daně z příjmů právnických osob v případech, kdy poplatníkem je obec, s výjimkou daně vybírané srážkou podle zvláštní sazby daně",
+"2022-01-01",
+"2024-12-31"
+],
+[
+1122,
+"Příjem z daně z příjmů právnických osob v případech, kdy poplatníkem je obec, s výjimkou daně vybírané srážkou podle zvláštní sazby daně",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1123,
+"Daň z příjmů právnických osob za kraje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1123,
+"Příjem z daně z příjmů právnických osob v případech, kdy poplatníkem je kraj, s výjimkou daně vybírané srážkou podle zvláštní sazby daně",
+"2022-01-01",
+"2024-12-31"
+],
+[
+1123,
+"Příjem z daně z příjmů právnických osob v případech, kdy poplatníkem je kraj, s výjimkou daně vybírané srážkou podle zvláštní sazby daně",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1129,
+"Zrušené daně, jejichž předmětem je příjem právnických osob",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1131,
+"Příjem z dorovnávacích daní",
+"2025-01-01",
+"9999-12-31"
+],
+[
+1211,
+"Daň z přidané hodnoty",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1211,
+"Příjem z daně z přidané hodnoty",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1219,
+"Zrušené daně ze zboží a služeb",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1220,
+"Příjem ze spotřební daně z výrobků souvisejících s tabákovými výrobky",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1221,
+"Příjem ze spotřební daně z minerálních olejů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1221,
+"Spotřební daň z minerálních olejů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1222,
+"Příjem ze spotřební daně z lihu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1222,
+"Spotřební daň z lihu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1223,
+"Příjem ze spotřební daně z piva",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1223,
+"Spotřební daň z piva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1224,
+"Příjem ze spotřební daně z vína a meziproduktů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1224,
+"Spotřební daň z vína a meziproduktů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1225,
+"Příjem ze spotřební daně z tabákových výrobků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1225,
+"Spotřební daň z tabákových výrobků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1226,
+"Poplatek za látky poškozující nebo ohrožující ozónovou vrstvu Země",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1226,
+"Příjem z poplatku za látky poškozující nebo ohrožující ozónovou vrstvu Země",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1227,
+"Audiovizuální poplatky",
+"2014-01-01",
+"2021-12-31"
+],
+[
+1227,
+"Příjem z audiovizuálních poplatků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1228,
+"Příjem ze spotřební daně ze surového tabáku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1228,
+"Spotřební daň ze surového tabáku",
+"2016-01-01",
+"2021-12-31"
+],
+[
+1229,
+"Příjem ze spotřební daně ze zahřívaných tabákových výrobků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1229,
+"Spotřební daň ze zahřívaných tabákových výrobků",
+"2020-01-01",
+"2021-12-31"
+],
+[
+1231,
+"Daň ze zemního plynu a některých dalších plynů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1231,
+"Příjem z daně ze zemního plynu a některých dalších plynů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1232,
+"Daň z pevných paliv",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1232,
+"Příjem z daně z pevných paliv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1233,
+"Daň z elektřiny",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1233,
+"Příjem z daně z elektřiny",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1234,
+"Odvod z elektřiny ze slunečního záření",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1234,
+"Příjem z odvodu z elektřiny ze slunečního záření",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1235,
+"Daň z digitálních služeb",
+"2020-01-01",
+"2021-12-31"
+],
+[
+1235,
+"Nepřiřazeno",
+"2022-01-01",
+"2025-12-31"
+],
+[
+1235,
+"Příjem z poplatku za výrobu elektřiny ve výrobně elektřiny využívající energii větru",
+"2026-01-01",
+"9999-12-31"
+],
+[
+1249,
+"Příjem z ostatních spotřebních daní",
+"2027-01-01",
+"9999-12-31"
+],
+[
+1321,
+"Daň silniční",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1321,
+"Příjem z daně silniční",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1322,
+"Poplatek za užívání dálnic a rychlostních silnic",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1322,
+"Příjem z časového poplatku za užívání dálnic a rychlostních silnic",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1323,
+"Příjem z mýtného",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1331,
+"Poplatek za vypouštění odpadních vod do vod povrchových",
+"2020-01-01",
+"2021-12-31"
+],
+[
+1331,
+"Poplatky za vypouštění odpadních vod do vod povrchových",
+"2010-01-01",
+"2019-12-31"
+],
+[
+1331,
+"Příjem z poplatku za vypouštění odpadních vod do vod povrchových",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1332,
+"Poplatky za znečišťování ovzduší",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1332,
+"Příjem z poplatků za znečišťování ovzduší",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1333,
+"Poplatky za uložení odpadů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1333,
+"Příjem z poplatků za ukládání odpadů na skládku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1334,
+"Odvody za odnětí půdy ze zemědělského půdního fondu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1334,
+"Příjem z odvodů za odnětí půdy ze zemědělského půdního fondu podle zákona upravujícího ochranu zemědělského půdního fondu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1335,
+"Poplatky za odnětí pozemků plnění funkcí lesa",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1335,
+"Příjem z poplatku za odnětí pozemku podle lesního zákona",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1336,
+"Poplatek za povolené vypouštění odpadních vod do vod podzemních",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1336,
+"Příjem z poplatku za povolené vypouštění odpadních vod do vod podzemních",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1337,
+"Poplatek za komunální odpad",
+"2012-01-01",
+"2021-12-31"
+],
+[
+1337,
+"Příjem ze zrušeného poplatku za komunální odpad",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1338,
+"Příjem z registračních a evidenčních poplatků za obaly",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1338,
+"Registrační a evidenční poplatky za obaly",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1339,
+"Ostatní poplatky a odvody v oblasti životního prostředí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1339,
+"Příjem z ostatních poplatků a jiných obdobných peněžitých plnění v oblasti životního prostředí a pokuta za nedodaný objem biopaliv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1340,
+"Poplatek za provoz systému shromažďování, sběru, přepravy, třídění, využívání a odstraňování komunálních odpadů",
+"2012-01-01",
+"2021-12-31"
+],
+[
+1341,
+"Poplatek ze psů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1341,
+"Příjem z poplatku ze psů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1342,
+"Poplatek z pobytu",
+"2020-01-01",
+"2021-12-31"
+],
+[
+1342,
+"Poplatek za lázeňský nebo rekreační pobyt",
+"2010-01-01",
+"2019-12-31"
+],
+[
+1342,
+"Příjem z poplatku z pobytu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1343,
+"Poplatek za užívání veřejného prostranství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1343,
+"Příjem z poplatku za užívání veřejného prostranství",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1344,
+"Poplatek ze vstupného",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1344,
+"Příjem z poplatku ze vstupného",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1345,
+"Poplatek z ubytovací kapacity",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1345,
+"Příjem z poplatku za obecní systém odpadového hospodářství a příjem z poplatku za odkládání komunálního odpadu z nemovité věci",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1346,
+"Poplatek za povolení k vjezdu do vybraných míst",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1346,
+"Příjem z poplatku za povolení k vjezdu s motorovým vozidlem do vybraných míst a částí měst",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1348,
+"Poplatek za zhodnocení stavebního pozemku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1348,
+"Příjem z poplatku za zhodnocení stavebního pozemku možností jeho připojení na stavbu vodovodu nebo kanalizace",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1349,
+"Příjem ze zrušených místních poplatků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1349,
+"Zrušené místní poplatky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1353,
+"Příjem za zkoušky z odborné způsobilosti od žadatelů o řidičské oprávnění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1353,
+"Příjmy za zkoušky z odborné způsobilosti od žadatelů o řidičské oprávnění",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1354,
+"Příjem z licencí pro kamionovou dopravu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1354,
+"Příjmy z licencí pro kamionovou dopravu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1356,
+"Příjem z úhrad za dobývání nerostů a poplatků za geologické práce",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1356,
+"Příjmy úhrad za dobývání nerostů a poplatků za geologické práce",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1357,
+"Poplatek za odebrané množství podzemní vody",
+"2020-01-01",
+"2021-12-31"
+],
+[
+1357,
+"Příjem z poplatku za odebrané množství podzemní vody",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1358,
+"Poplatek za využívání zdroje přírodní minerální vody",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1358,
+"Příjem z poplatku za využívání zdroje přírodní minerální vody",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1359,
+"Ostatní odvody z vybraných činností a služeb jinde neuvedené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1359,
+"Příjem z odvodů z vybraných činností a služeb jinde neuvedených",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1361,
+"Příjem ze správních poplatků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1361,
+"Správní poplatky",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1361,
+"Správní poplatky",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1362,
+"Příjem ze soudních poplatků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1362,
+"Soudní poplatky",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1371,
+"Poplatek na činnost Energetického regulačního úřadu",
+"2012-01-01",
+"2021-12-31"
+],
+[
+1371,
+"Příjem z poplatku na činnost Energetického regulačního úřadu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1372,
+"Poplatek Státnímu úřadu pro jadernou bezpečnost za žádost o vydání povolení",
+"2012-01-01",
+"2021-12-31"
+],
+[
+1372,
+"Příjem z poplatku placeného Státnímu úřadu pro jadernou bezpečnost za žádost o vydání povolení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1373,
+"Příjem z udržovacího poplatku Státnímu úřadu pro jadernou bezpečnost",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1373,
+"Udržovací poplatek Státnímu úřadu pro jadernou bezpečnost",
+"2012-01-01",
+"2021-12-31"
+],
+[
+1379,
+"Ostatní poplatky na činnost správních úřadů",
+"2018-01-01",
+"2021-12-31"
+],
+[
+1379,
+"Příjem z ostatních poplatků na činnost správních úřadů v jiných položkách neuvedených",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1381,
+"Daň z hazardních her",
+"2017-01-01",
+"2018-12-31"
+],
+[
+1381,
+"Daň z hazardních her s výjimkou dílčí daně z technických her",
+"2019-01-01",
+"2021-12-31"
+],
+[
+1381,
+"Příjem z daně z hazardních her s výjimkou dílčí daně z technických her za zdaňovací období do konce roku 2023",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1381,
+"Příjem z daně z hazardních her s výjimkou dílčí daně z technických her",
+"2022-01-01",
+"2023-12-31"
+],
+[
+1382,
+"Příjem ze zrušeného odvodu z loterií a podobných her kromě odvodu z výherních hracích přístrojů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1382,
+"Zrušený odvod z loterií a podobných her kromě z výherních hracích přístrojů",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1383,
+"Příjem ze zrušeného odvodu z výherních hracích přístrojů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1383,
+"Zrušený odvod z výherních hracích přístrojů",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1384,
+"Příjem ze zrušeného odvodu za státní dozor",
+"2022-01-01",
+"2023-12-31"
+],
+[
+1384,
+"Zrušený odvod za státní dozor",
+"2017-01-01",
+"2021-12-31"
+],
+[
+1385,
+"Dílčí daň z technických her",
+"2019-01-01",
+"2021-12-31"
+],
+[
+1385,
+"Příjem z dílčí daně z technických her za zdaňovací období do konce roku 2023",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1385,
+"Příjem z dílčí daně z technických her",
+"2022-01-01",
+"2023-12-31"
+],
+[
+1386,
+"Příjem z daně z hazardních her s výjimkou technických her neprovozovaných prostřednictvím internetu",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1387,
+"Příjem z daně z technických her neprovozovaných prostřednictvím internetu",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1388,
+"Příjem z daně z internetových hazardních her",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1389,
+"Příjem z daně z hazardních her provozovaných bez povolení nebo ohlášení",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1401,
+"Clo",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1401,
+"Příjem ze cla vyměřeného do dne 30. dubna 2004",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1409,
+"Příjem ze zrušené dovozní přirážky, dovozní daně a jiných zrušených daní z mezinárodního obchodu a transakcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1409,
+"Zrušené daně z mezinárodního obchodu a transakcí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1511,
+"Daň z nemovitých věcí",
+"2014-01-01",
+"2021-12-31"
+],
+[
+1511,
+"Příjem z daně z nemovitých věcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1521,
+"Daň dědická",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1521,
+"Příjem ze zrušené daně dědické",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1522,
+"Daň darovací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1522,
+"Příjem ze zrušené daně darovací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1523,
+"Daň z nabytí nemovitých věcí",
+"2014-01-01",
+"2020-12-31"
+],
+[
+1523,
+"Příjem ze zrušené daně z nabytí nemovitých věcí a zrušené daně z převodu nemovitostí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1523,
+"Zrušená daň z nabytí nemovitých věcí",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1529,
+"Zrušené daně z majetkových a kapitálových převodů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1611,
+"Pojistné na důchodové pojištění od zaměstnavatelů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1611,
+"Příjem z pojistného na důchodové pojištění od zaměstnavatelů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1612,
+"Pojistné na důchodové pojištění od zaměstnanců",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1612,
+"Pojistné od zaměstnanců",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1612,
+"Příjem z pojistného na důchodové pojištění od zaměstnanců",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1612,
+"Příjem z pojistného od zaměstnanců",
+"2022-01-01",
+"2023-12-31"
+],
+[
+1613,
+"Pojistné na důchodové pojištění od osob samostatně výdělečně činných",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1613,
+"Pojistné na důchodové pojištění od osob samostatně výdělečně činných (dále jen \"OSVČ\")",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1613,
+"Příjem z pojistného na důchodové pojištění od osob samostatně výdělečně činných",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1614,
+"Pojistné na nemocenské pojištění od zaměstnavatelů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1614,
+"Příjem z pojistného na nemocenské pojištění od zaměstnavatelů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1615,
+"Pojistné na nemocenské pojištění od zaměstnanců",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1615,
+"Pojistné na nemocenské pojištění od zaměstnanců",
+"2022-01-01",
+"2023-12-31"
+],
+[
+1615,
+"Příjem z pojistného na nemocenské pojištění od zaměstnanců",
+"2024-01-01",
+"9999-12-31"
+],
+[
+1617,
+"Příjem z příspěvků na státní politiku zaměstnanosti od zaměstnavatelů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1617,
+"Příspěvky na státní politiku zaměstnanosti od zaměstnavatelů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1618,
+"Příjem z příspěvků na státní politiku zaměstnanosti od osob samostatně výdělečně činných",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1618,
+"Příspěvky na státní politiku zaměstnanosti od osob samostatně výdělečně činných",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1618,
+"Příspěvky na státní politiku zaměstnanosti od zaměstnanců",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1621,
+"Příspěvky na státní politiku zaměstnanosti od OSVČ",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1621,
+"Příspěvky na státní politiku zaměstnanosti od OSVČ",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1627,
+"Přirážky k pojistnému",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1627,
+"Přirážky k pojistnému",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1627,
+"Příjem z přirážek k pojistnému",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1628,
+"Příjem z příslušenství pojistného",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1628,
+"Příslušenství pojistného",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1628,
+"Příslušenství pojistného",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1629,
+"Nevyjasněné, neidentifikované a nezařazené příjmy z pojistného na sociální zabezpečení",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1629,
+"Nevyjasněné, neidentifikované a nezařazené příjmy z pojistného na sociální zabezpečení",
+"2021-01-01",
+"2021-12-31"
+],
+[
+1629,
+"Nevyjasněné, neidentifikované a nezařazené příjmy z pojistného na sociální zabezpečení nebo z příspěvku na státní politiku zaměstnanosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1631,
+"Pojistné na veřejné zdravotní pojištění od zaměstnavatelů",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1632,
+"Pojistné na veřejné zdravotní pojištění od zaměstnanců",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1633,
+"Pojistné na veřejné zdravotní pojištění od OSVČ",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1638,
+"Příslušenství pojistného na veřejné zdravotní pojištění",
+"2010-01-01",
+"2020-12-31"
+],
+[
+1691,
+"Zrušené daně a odvody z objemu mezd",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1701,
+"Nerozúčtované, neidentifikované a do jiných položek nezařaditelné daňové příjmy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1701,
+"Nerozúčtované, neidentifikované a nezařaditelné daňové příjmy",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1702,
+"Příjem z prodeje kolkových známek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1702,
+"Tržby z prodeje kolků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1703,
+"Odvody nahrazující zaměstnávání občanů se změněnou pracovní schopností",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1703,
+"Příjem z odvodů nahrazujících zaměstnávání občanů se změněnou pracovní schopností",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1704,
+"Příjem z příslušenství daní a poplatků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+1704,
+"Příslušenství",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1706,
+"Dávky z cukru",
+"2010-01-01",
+"2021-12-31"
+],
+[
+1706,
+"Příjem ze zrušené dávky z cukru",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2111,
+"Příjem z poskytování služeb, výrobků, prací, výkonů a práv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2111,
+"Příjmy z poskytování služeb a výrobků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2112,
+"Příjem z prodeje zboží (již nakoupeného za účelem prodeje)",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2112,
+"Příjmy z prodeje zboží (již nakoupeného za účelem prodeje)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2113,
+"Příjem ze školného",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2113,
+"Příjmy ze školného",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2114,
+"Mýtné",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2115,
+"Příjem z prodeje práv k využívání rádiových kmitočtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2115,
+"Příjmy z prodeje práv k využívání rádiových kmitočtů",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2119,
+"Ostatní příjmy z vlastní činnosti",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2119,
+"Ostatní příjmy z vlastní činnosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2121,
+"Odvody přebytků ústřední banky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2121,
+"Příjem z odvodů zbývajícího zisku České národní banky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2122,
+"Odvody příspěvkových organizací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2122,
+"Příjem z odvodů příspěvkových organizací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2123,
+"Ostatní odvody příspěvkových organizací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2123,
+"Příjem z ostatních odvodů příspěvkových organizací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2124,
+"Odvody školských právnických osob zřízených státem, kraji a obcemi",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2124,
+"Příjem z odvodů školských právnických osob zřízených státem, kraji a obcemi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2125,
+"Převody z fondů státních podniků do státního rozpočtu",
+"2015-01-01",
+"2021-12-31"
+],
+[
+2125,
+"Příjem z převodů z fondů státních podniků do státního rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2129,
+"Ostatní odvody přebytků organizací s přímým vztahem",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2129,
+"Ostatní odvody přebytků osob s přímým vztahem",
+"2027-01-01",
+"9999-12-31"
+],
+[
+2129,
+"Příjem z výnosů z likvidace zbytkových podniků",
+"2022-01-01",
+"2026-12-31"
+],
+[
+2131,
+"Příjem z pronájmu nebo pachtu pozemků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2131,
+"Příjmy z pronájmu pozemků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2132,
+"Příjem z pronájmu nebo pachtu ostatních nemovitých věcí a jejich částí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2132,
+"Příjmy z pronájmu ostatních nemovitých věcí a jejich částí",
+"2018-01-01",
+"2021-12-31"
+],
+[
+2133,
+"Příjem z pronájmu nebo pachtu movitých věcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2133,
+"Příjmy z pronájmu movitých věcí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2139,
+"Ostatní příjmy z pronájmu majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2139,
+"Ostatní příjmy z pronájmu nebo pachtu majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2140,
+"Neúrokové příjmy z finančních derivátů kromě k vlastním dluhopisům",
+"2015-01-01",
+"2021-12-31"
+],
+[
+2140,
+"Neúrokové příjmy z finančních derivátů kromě příjmů z derivátů k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2141,
+"Příjem z úroků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2141,
+"Příjmy z úroků (část)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2142,
+"Příjem z podílů na zisku a dividend",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2142,
+"Příjmy z podílů na zisku a dividend",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2143,
+"Kursové rozdíly v příjmech",
+"2012-01-01",
+"2021-12-31"
+],
+[
+2143,
+"Kursové rozdíly v příjmech",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2144,
+"Příjem z úroků ze státních dluhopisů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2144,
+"Příjmy z úroků ze státních dluhopisů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2145,
+"Příjem z úroků z komunálních dluhopisů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2145,
+"Příjmy z úroků z komunálních dluhopisů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2146,
+"Úrokové příjmy z finančních derivátů k vlastním dluhopisům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+2146,
+"Úrokové příjmy z finančních derivátů k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2147,
+"Neúrokové příjmy z finančních derivátů k vlastním dluhopisům",
+"2015-01-01",
+"2021-12-31"
+],
+[
+2147,
+"Neúrokové příjmy z finančních derivátů k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2148,
+"Úrokové příjmy z finančních derivátů kromě k vlastním dluhopisům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+2148,
+"Úrokové příjmy z finančních derivátů kromě příjmů z derivátů k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2149,
+"Ostatní příjmy z výnosů finančního majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2149,
+"Ostatní příjmy z výnosů finančního majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2151,
+"Soudní poplatky",
+"2010-01-01",
+"2020-12-31"
+],
+[
+2211,
+"Příjem sankčních plateb přijatých od státu, obcí a krajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2211,
+"Sankční platby přijaté od státu, obcí a krajů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2212,
+"Příjem sankčních plateb přijatých od jiných osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2212,
+"Sankční platby přijaté od jiných subjektů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2221,
+"Přijaté vratky nespotřebovaných transferů",
+"2021-01-01",
+"9999-12-31"
+],
+[
+2221,
+"Přijaté vratky transferů od jiných veřejných rozpočtů",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2222,
+"Ostatní příjmy z finančního vypořádání od jiných rozpočtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2222,
+"Ostatní příjmy z finančního vypořádání od jiných veřejných rozpočtů",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2222,
+"Ostatní příjmy z finančního vypořádání předchozích let od jiných veřejných rozpočtů",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2223,
+"Příjem z finančního vypořádání mezi kraji, obcemi a dobrovolnými svazky obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2223,
+"Příjmy z finančního vypořádání mezi krajem a obcemi",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2223,
+"Příjmy z finančního vypořádání minulých let mezi krajem a obcemi",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2224,
+"Příjem z vratek nevyužitých prostředků z Národního fondu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2224,
+"Vratky nevyužitých prostředků z Národního fondu",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2224,
+"Vratky nevyužitých prostředků z Národního fondu",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2225,
+"Příjem z úhrad prostředků vynaložených podle zákona o ochraně zaměstnanců při platební neschopnosti zaměstnavatele a získaných od zaměstnavatelů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2225,
+"Úhrady prostředků vynaložených podle zákona o ochraně zaměstnanců při platební neschopnosti zaměstnavatele",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2225,
+"Úhrady prostředků vynaložených podle zákona o ochraně zaměstnanců při platební neschopnosti zaměstnavatele",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2226,
+"Příjem z finančního vypořádání mezi obcemi a dobrovolnými svazky obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2226,
+"Příjmy z finančního vypořádání mezi obcemi",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2226,
+"Příjmy z finančního vypořádání minulých let mezi obcemi",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2227,
+"Příjem z finančního vypořádání mezi regionální radou a kraji, obcemi a dobrovolnými svazky obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2227,
+"Příjmy z finančního vypořádání mezi regionální radou a kraji, obcemi a dobrovolnými svazky obcí",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2227,
+"Příjmy z finančního vypořádání minulých let mezi regionální radou a kraji, obcemi a dobrovolnými svazky obcí",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2229,
+"Ostatní přijaté vratky transferů",
+"2018-01-01",
+"2020-12-31"
+],
+[
+2229,
+"Ostatní přijaté vratky transferů a podobné příjmy",
+"2021-01-01",
+"9999-12-31"
+],
+[
+2310,
+"Příjem z prodeje krátkodobého a drobného dlouhodobého neinvestičního majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2310,
+"Příjmy z prodeje krátkodobého a drobného dlouhodobého majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2321,
+"Přijaté neinvestiční dary",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2321,
+"Přijaté peněžité neinvestiční dary",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2322,
+"Přijaté pojistné náhrady",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2322,
+"Příjem z pojistných plnění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2324,
+"Přijaté neinvestiční příspěvky a náhrady",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2324,
+"Přijaté nekapitálové příspěvky a náhrady",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2325,
+"Vratky nepoužitých prostředků z Národního fondu pro vyrovnání kursových rozdílů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2325,
+"Vratky prostředků z Národního fondu pro vyrovnání kursových rozdílů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2326,
+"Prostředky přijaté z Národního fondu související s neplněním závazků z mezinárodních smluv",
+"2019-01-01",
+"2021-12-31"
+],
+[
+2326,
+"Prostředky přijaté z Národního fondu související s neplněním závazků z mezinárodních smluv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2326,
+"Vratky prostředků z Národního fondu související s neplněním závazků z mezinárodních smluv",
+"2010-01-01",
+"2018-12-31"
+],
+[
+2327,
+"Úhrada prostředků, které státní rozpočet odvedl Evropské unii za Národní fond",
+"2016-01-01",
+"2021-12-31"
+],
+[
+2327,
+"Úhrada prostředků, které státní rozpočet odvedl Evropské unii za Národní fond",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2328,
+"Neidentifikované příjmy",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2328,
+"Neidentifikované příjmy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2329,
+"Ostatní nedaňové příjmy jinde nezařazené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2329,
+"Ostatní nedaňové příjmy jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2341,
+"Poplatek za využívání zdroje přírodní minerální vody",
+"2010-01-01",
+"2020-12-31"
+],
+[
+2342,
+"Platba k úhradě správy vodních toků a správy povodí",
+"2020-01-01",
+"2021-12-31"
+],
+[
+2342,
+"Platby za odebrané množství podzemní vody a za správu vodních toků",
+"2016-01-01",
+"2019-12-31"
+],
+[
+2342,
+"Příjem plateb k úhradě správy vodních toků a správy povodí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2343,
+"Příjem z dobíhajících úhrad z dobývacího prostoru a z vydobytých nerostů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2343,
+"Příjmy dobíhajících úhrad z dobývacího prostoru a z vydobytých nerostů",
+"2017-01-01",
+"2021-12-31"
+],
+[
+2351,
+"Poplatky za udržování patentu v platnosti",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2351,
+"Příjem z poplatků za udržování patentu v platnosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2352,
+"Poplatky za udržování evropského patentu v platnosti",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2352,
+"Příjem z poplatků za udržování evropského patentu v platnosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2353,
+"Poplatky za udržování dodatkového ochranného osvědčení pro léčiva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2353,
+"Příjem z poplatků za udržování dodatkového ochranného osvědčení pro léčiva",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2361,
+"Pojistné na nemocenské pojištění od OSVČ",
+"2010-01-01",
+"2020-12-31"
+],
+[
+2361,
+"Pojistné na nemocenské pojištění od osob samostatně výdělečně činných",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2361,
+"Příjem z pojistného na nemocenské pojištění od osob samostatně výdělečně činných",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2362,
+"Dobrovolné pojistné na důchodové pojištění",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2362,
+"Příjem z dobrovolného pojistného na důchodové pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2391,
+"Dočasné zatřídění příjmů",
+"2013-01-01",
+"2021-12-31"
+],
+[
+2391,
+"Dočasné zatřídění příjmů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2411,
+"Splátky půjčených prostředků od podnikatelských subjektů-fyzických osob",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2411,
+"Splátky půjčených prostředků od podnikatelů – fyzických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2412,
+"Splátky půjčených prostředků od nefinančních podnikatelů – právnických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2412,
+"Splátky půjčených prostředků od podnikatelských subjektů-právnických osob",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2413,
+"Splátky půjčených prostředků od finančních podnikatelů – právnických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2413,
+"Splátky půjčených prostředků od podnikatelských finančních subjektů-právnických osob",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2414,
+"Splátky půjčených prostředků od podniků ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2414,
+"Splátky půjčených prostředků od podniků ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2420,
+"Splátky půjčených prostředků od obecně prospěšných společností a obdobných osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2420,
+"Splátky půjčených prostředků od obecně prospěšných společností a podobných subjektů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2431,
+"Splátky půjčených prostředků od státního rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2431,
+"Splátky půjčených prostředků od státního rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2432,
+"Splátky půjčených prostředků od státních fondů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2432,
+"Splátky půjčených prostředků od státních fondů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2433,
+"Splátky půjčených prostředků od zvláštních fondů ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2433,
+"Splátky půjčených prostředků od zvláštních fondů ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2434,
+"Splátky půjčených prostředků od fondů sociálního a veřejného zdravotního pojištění",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2434,
+"Splátky půjčených prostředků od fondů sociálního a veřejného zdravotního pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2434,
+"Splátky půjčených prostředků od fondů sociálního a zdravotního pojištění",
+"2010-01-01",
+"2020-12-31"
+],
+[
+2439,
+"Ostatní splátky půjčených prostředků od veřejných rozpočtů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2439,
+"Ostatní splátky půjčených prostředků od veřejných rozpočtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2441,
+"Splátky půjčených prostředků od obcí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2441,
+"Splátky půjčených prostředků od obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2442,
+"Splátky půjčených prostředků od krajů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2442,
+"Splátky půjčených prostředků od krajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2443,
+"Splátky půjčených prostředků od regionálních rad",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2443,
+"Splátky půjčených prostředků od regionálních rad",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2449,
+"Ostatní splátky půjčených prostředků od rozpočtů územní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2449,
+"Ostatní splátky půjčených prostředků od veřejných rozpočtů územní úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2451,
+"Splátky půjčených prostředků od příspěvkových organizací",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2451,
+"Splátky půjčených prostředků od příspěvkových organizací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2452,
+"Splátky půjčených prostředků od vysokých škol",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2452,
+"Splátky půjčených prostředků od vysokých škol",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2459,
+"Splátky půjčených prostředků od ostatních zřízených a podobných osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2459,
+"Splátky půjčených prostředků od ostatních zřízených a podobných subjektů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2460,
+"Splátky půjčených prostředků od fyzických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2460,
+"Splátky půjčených prostředků od obyvatelstva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2470,
+"Splátky půjčených prostředků ze zahraničí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+2481,
+"Příjem od dlužníků za realizace záruk",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2481,
+"Příjmy od dlužníků za realizace záruk",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2482,
+"Splátky od dlužníků za zaplacení dodávek",
+"2010-01-01",
+"2021-12-31"
+],
+[
+2482,
+"Splátky od dlužníků za zaplacení dodávek včetně splátek vládních úvěrů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2511,
+"Podíl na clech",
+"2012-01-01",
+"2021-12-31"
+],
+[
+2511,
+"Podíl na clu vyměřeném ode dne 1. května 2004",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2512,
+"Podíl na dávkách z cukru",
+"2012-01-01",
+"2021-12-31"
+],
+[
+2512,
+"Podíl na dávkách z cukru vybraných Státním zemědělským intervenčním fondem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+2513,
+"Podíl na DPH z telekomunikačních a podobných služeb spravované pro EU",
+"2015-01-01",
+"2020-12-31"
+],
+[
+2513,
+"Podíl na dani z přidané hodnoty z telekomunikačních a podobných služeb spravované pro Evropskou unii",
+"2021-01-01",
+"2021-12-31"
+],
+[
+2513,
+"Podíl na dani z přidané hodnoty ze služeb",
+"2022-01-01",
+"2023-12-31"
+],
+[
+3111,
+"Příjem z prodeje pozemků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3111,
+"Příjmy z prodeje pozemků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3112,
+"Příjem z prodeje ostatních nemovitých věcí a jejich částí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3112,
+"Příjmy z prodeje ostatních nemovitých věcí a jejich částí",
+"2018-01-01",
+"2021-12-31"
+],
+[
+3113,
+"Příjem z prodeje ostatního hmotného dlouhodobého majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3113,
+"Příjmy z prodeje ostatního hmotného dlouhodobého majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3114,
+"Příjem z prodeje nehmotného dlouhodobého majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3114,
+"Příjmy z prodeje nehmotného dlouhodobého majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3119,
+"Ostatní příjmy z prodeje dlouhodobého majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3119,
+"Ostatní příjmy z prodeje dlouhodobého majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3121,
+"Přijaté dary na pořízení dlouhodobého majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3121,
+"Přijaté dary na pořízení dlouhodobého majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3122,
+"Přijaté příspěvky na pořízení dlouhodobého majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3122,
+"Přijaté příspěvky od osob na pořízení dlouhodobého majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3129,
+"Ostatní investiční příjmy jinde nezařazené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3129,
+"Ostatní kapitálové příjmy jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3201,
+"Příjem z prodeje akcií",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3201,
+"Příjmy z prodeje akcií",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3202,
+"Příjem z prodeje majetkových podílů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3202,
+"Příjmy z prodeje majetkových podílů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3203,
+"Příjem z prodeje dluhopisů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+3203,
+"Příjmy z prodeje dluhopisů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3209,
+"Ostatní příjmy z prodeje dlouhodobého finančního majetku",
+"2010-01-01",
+"2021-12-31"
+],
+[
+3209,
+"Ostatní příjmy z prodeje dlouhodobého finančního majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4111,
+"Neinvestiční přijaté transfery z všeobecné pokladní správy státního rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4111,
+"Neinvestiční přijaté transfery z všeobecné pokladní správy státního rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4112,
+"Neinvestiční přijaté transfery ze státního rozpočtu v rámci souhrnného dotačního vztahu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4112,
+"Neinvestiční přijaté transfery ze státního rozpočtu v rámci souhrnného dotačního vztahu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4113,
+"Neinvestiční přijaté transfery ze státních fondů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4113,
+"Neinvestiční přijaté transfery ze státních fondů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4114,
+"Neinvestiční přijaté transfery ze zvláštních fondů ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4114,
+"Neinvestiční přijaté transfery ze zvláštních fondů ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4115,
+"Neinvestiční přijaté transfery od fondů sociálního a veřejného zdravotního pojištění",
+"2021-01-01",
+"2021-12-31"
+],
+[
+4115,
+"Neinvestiční přijaté transfery od fondů sociálního a zdravotního pojištění",
+"2010-01-01",
+"2020-12-31"
+],
+[
+4115,
+"Neinvestiční přijaté transfery od fondů sociálního nebo veřejného zdravotního pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4116,
+"Ostatní neinvestiční přijaté transfery ze státního rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4116,
+"Ostatní neinvestiční přijaté transfery ze státního rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4118,
+"Neinvestiční převody z Národního fondu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4118,
+"Neinvestiční převody z Národního fondu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4119,
+"Ostatní neinvestiční přijaté transfery od rozpočtů ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4119,
+"Ostatní neinvestiční přijaté transfery od rozpočtů ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4121,
+"Neinvestiční přijaté transfery od obcí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4121,
+"Neinvestiční přijaté transfery od obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4122,
+"Neinvestiční přijaté transfery od krajů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4122,
+"Neinvestiční přijaté transfery od krajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4123,
+"Neinvestiční přijaté transfery od regionálních rad",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4129,
+"Ostatní neinvestiční přijaté transfery od rozpočtů územní úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4129,
+"Ostatní neinvestiční přijaté transfery od rozpočtů územní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4131,
+"Převody z vlastních fondů hospodářské (podnikatelské) činnosti",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4131,
+"Převody z vlastních fondů hospodářské (podnikatelské) činnosti",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4131,
+"Převody z vlastních fondů podnikatelské činnosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4132,
+"Převody z ostatních vlastních fondů",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4132,
+"Převody z ostatních vlastních fondů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4132,
+"Převody z ostatních vlastních fondů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4133,
+"Převody z vlastních rezervních fondů (jiných než organizačních složek státu)",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4133,
+"Převody z vlastních rezervních fondů (jiných než organizačních složek státu)",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4133,
+"Převody z vlastních rezervních fondů jiných než organizačních složek státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4134,
+"Převody z rozpočtových účtů",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4134,
+"Převody z rozpočtových účtů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4134,
+"Převody z rozpočtových účtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4135,
+"Převody z rezervních fondů organizačních složek státu",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4135,
+"Převody z rezervních fondů organizačních složek státu",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4135,
+"Převody z rezervních fondů organizačních složek státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4136,
+"Převody z fondu kulturních a sociálních potřeb organizačních složek státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4136,
+"Převody z jiných fondů organizačních složek státu",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4136,
+"Převody z jiných fondů organizačních složek státu",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4137,
+"Neinvestiční převody mezi statutárními městy (hl. m. Prahou) a jejich městskými obvody nebo částmi - příjmy",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4137,
+"Neinvestiční převody mezi statutárními městy včetně hl. m. Prahy a jejich městskými obvody nebo částmi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4137,
+"Převody mezi statutárními městy (hl.m. Prahou) a jejich městskými obvody nebo částmi - příjmy",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4138,
+"Převody z vlastní pokladny",
+"2016-01-01",
+"2019-12-31"
+],
+[
+4138,
+"Převody z vlastní pokladny",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4138,
+"Převody z vlastní pokladny",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4139,
+"Ostatní převody z vlastních fondů",
+"2015-01-01",
+"2019-12-31"
+],
+[
+4139,
+"Ostatní převody z vlastních fondů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4139,
+"Ostatní převody z vlastních fondů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4140,
+"Převody z vlastních fondů přes rok",
+"2017-01-01",
+"9999-12-31"
+],
+[
+4151,
+"Neinvestiční přijaté transfery od cizích států",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4151,
+"Neinvestiční přijaté transfery od jiných států",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4152,
+"Neinvestiční přijaté transfery od mezinárodních institucí a některých cizích orgánů a právnických osob",
+"2015-01-01",
+"2021-12-31"
+],
+[
+4152,
+"Neinvestiční přijaté transfery od mezinárodních organizací a některých zahraničních orgánů a právnických osob",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4153,
+"Neinvestiční transfery přijaté od Evropské unie",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4155,
+"Neinvestiční transfery z finančních mechanismů",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4156,
+"Neinvestiční transfery od NATO",
+"2013-01-01",
+"2021-12-31"
+],
+[
+4156,
+"Neinvestiční transfery od Organizace severoatlantické smlouvy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4159,
+"Ostatní neinvestiční přijaté transfery ze zahraničí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4159,
+"Ostatní neinvestiční transfery přijaté ze zahraničí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4160,
+"Neinvestiční přijaté transfery ze státních finančních aktiv",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4171,
+"Příjem náhrad za nezpůsobenou újmu",
+"2025-01-01",
+"9999-12-31"
+],
+[
+4172,
+"Příjem náhrad škod způsobených nezákonným rozhodnutím nebo nesprávným úředním postupem při výkonu veřejné moci",
+"2025-01-01",
+"9999-12-31"
+],
+[
+4211,
+"Investiční přijaté transfery z všeobecné pokladní správy státního rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4211,
+"Investiční přijaté transfery z všeobecné pokladní správy státního rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4212,
+"Investiční přijaté transfery ze státního rozpočtu v rámci souhrnného dotačního vztahu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4212,
+"Investiční přijaté transfery ze státního rozpočtu v rámci souhrnného dotačního vztahu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4213,
+"Investiční přijaté transfery ze státních fondů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4213,
+"Investiční přijaté transfery ze státních fondů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4214,
+"Investiční přijaté transfery ze zvláštních fondů ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4214,
+"Investiční přijaté transfery ze zvláštních fondů ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4216,
+"Ostatní investiční přijaté transfery ze státního rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4216,
+"Ostatní investiční přijaté transfery ze státního rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4218,
+"Investiční převody z Národního fondu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4218,
+"Investiční převody z Národního fondu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4219,
+"Ostatní investiční přijaté transfery od rozpočtů ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4219,
+"Ostatní investiční přijaté transfery od veřejných rozpočtů ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4221,
+"Investiční přijaté transfery od obcí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4221,
+"Investiční přijaté transfery od obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4222,
+"Investiční přijaté transfery od krajů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4222,
+"Investiční přijaté transfery od krajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4223,
+"Investiční přijaté transfery od regionálních rad",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4229,
+"Ostatní investiční přijaté transfery od rozpočtů územní úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4229,
+"Ostatní investiční přijaté transfery od rozpočtů územní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4231,
+"Investiční přijaté transfery od cizích států",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4231,
+"Investiční přijaté transfery od jiných států",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4232,
+"Investiční přijaté transfery od mezinárodních institucí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+4232,
+"Investiční přijaté transfery od mezinárodních nebo zahraničních institucí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4233,
+"Investiční transfery přijaté od Evropské unie",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4234,
+"Investiční transfery z finančních mechanismů",
+"2013-01-01",
+"9999-12-31"
+],
+[
+4235,
+"Investiční transfery od NATO",
+"2013-01-01",
+"2021-12-31"
+],
+[
+4235,
+"Investiční transfery od Organizace severoatlantické smlouvy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+4240,
+"Investiční přijaté transfery ze státních finančních aktiv",
+"2010-01-01",
+"9999-12-31"
+],
+[
+4251,
+"Investiční převody mezi statutárními městy (hl. m. Prahou) a jejich městskými obvody nebo částmi - příjmy",
+"2020-01-01",
+"2021-12-31"
+],
+[
+4251,
+"Investiční převody mezi statutárními městy včetně hl. m. Prahy a jejich městskými obvody nebo částmi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5011,
+"Platy zaměstnanců v pracovním poměru podle zákoníku práce",
+"2027-01-01",
+"9999-12-31"
+],
+[
+5011,
+"Platy zaměstnanců v pracovním poměru vyjma zaměstnanců na služebních místech",
+"2016-01-01",
+"2021-12-31"
+],
+[
+5011,
+"Platy zaměstnanců v pracovním poměru vyjma zaměstnanců na služebních místech",
+"2022-01-01",
+"2026-12-31"
+],
+[
+5012,
+"Platy zaměstnanců bezpečnostních sborů a ozbrojených sil ve služebním poměru",
+"2016-01-01",
+"2021-12-31"
+],
+[
+5012,
+"Platy zaměstnanců bezpečnostních sborů a ozbrojených sil ve služebním poměru",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5013,
+"Platy státních zaměstnanců v pracovním poměru podle zákona o státních zaměstnancích",
+"2027-01-01",
+"9999-12-31"
+],
+[
+5013,
+"Platy zaměstnanců na služebních místech podle zákona o státní službě",
+"2016-01-01",
+"2021-12-31"
+],
+[
+5013,
+"Platy zaměstnanců na služebních místech podle zákona o státní službě",
+"2022-01-01",
+"2026-12-31"
+],
+[
+5014,
+"Platy zaměstnanců v pracovním poměru odvozované od platů ústavních činitelů",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5014,
+"Platy zaměstnanců v pracovním poměru odvozované od platů ústavních činitelů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5019,
+"Ostatní platy",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5019,
+"Ostatní platy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5021,
+"Ostatní osobní výdaje",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5021,
+"Ostatní osobní výdaje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5022,
+"Platy představitelů státní moci a některých orgánů",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5022,
+"Platy představitelů státní moci a některých orgánů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5023,
+"Odměny členů zastupitelstev obcí a krajů",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5023,
+"Odměny členů zastupitelstev obcí a krajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5024,
+"Odstupné",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5024,
+"Odstupné",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5025,
+"Odbytné",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5025,
+"Odbytné vyplácené státním zaměstnancům ve správních úřadech",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5026,
+"Odchodné",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5026,
+"Odchodné",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5027,
+"Peněžní náležitosti vojáků v záloze ve službě",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5027,
+"Peněžní náležitosti vojáků v záloze ve službě",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5028,
+"Kázeňské odměny poskytnuté formou peněžitých darů",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5028,
+"Kázeňské odměny poskytnuté formou peněžitých darů příslušníkům bezpečnostních sborů a vojákům z povolání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5029,
+"Ostatní platby za provedenou práci jinde nezařazené",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5029,
+"Ostatní platby za provedenou práci jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5031,
+"Povinné pojistné na sociální zabezpečení a příspěvek na státní politiku zaměstnanosti",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5031,
+"Povinné pojistné na sociální zabezpečení a příspěvek na státní politiku zaměstnanosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5032,
+"Povinné pojistné na veřejné zdravotní pojištění",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5032,
+"Povinné pojistné na veřejné zdravotní pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5038,
+"Pojistné na zákonné pojištění odpovědnosti zaměstnavatele za škodu při pracovním úrazu nebo nemoci z povolání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5038,
+"Povinné pojistné na úrazové pojištění",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5039,
+"Ostatní povinné pojistné placené zaměstnavatelem",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5039,
+"Ostatní povinné pojistné placené zaměstnavatelem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5041,
+"Odměny za užití duševního vlastnictví",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5041,
+"Odměny za užití duševního vlastnictví",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5042,
+"Odměny za užití počítačových programů",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5042,
+"Odměny za užití počítačových programů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5051,
+"Mzdové náhrady",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5051,
+"Platové a mzdové náhrady",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5061,
+"Mzdy podle cizího práva",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5061,
+"Mzdy podle cizího práva",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5122,
+"Podlimitní věcná břemena",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5122,
+"Podlimitní věcná břemena",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5123,
+"Podlimitní technické zhodnocení",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5123,
+"Podlimitní technické zhodnocení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5131,
+"Potraviny",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5131,
+"Potraviny",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5132,
+"Ochranné pomůcky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5132,
+"Ochranné pomůcky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5133,
+"Léky a zdravotnický materiál",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5133,
+"Léky a zdravotnický materiál",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5134,
+"Prádlo, oděv a obuv",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5134,
+"Prádlo, oděv a obuv s výjimkou ochranných pomůcek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5135,
+"Učebnice a bezplatně poskytované školní potřeby",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5135,
+"Učebnice a školní potřeby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5136,
+"Knihy a obdobné listinné informační prostředky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5136,
+"Knihy, učební pomůcky a tisk",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5137,
+"Drobný dlouhodobý hmotný majetek",
+"2021-01-01",
+"2021-12-31"
+],
+[
+5137,
+"Drobný dlouhodobý hmotný majetek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5137,
+"Drobný hmotný dlouhodobý majetek",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5138,
+"Nákup zboží (za účelem dalšího prodeje)",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5138,
+"Nákup zboží za účelem dalšího prodeje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5139,
+"Nákup materiálu jinde nezařazený",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5139,
+"Nákup materiálu jinde nezařazený",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5141,
+"Úroky vlastní",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5141,
+"Úroky vlastní",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5142,
+"Kursové rozdíly ve výdajích",
+"2012-01-01",
+"2021-12-31"
+],
+[
+5142,
+"Kursové rozdíly ve výdajích",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5143,
+"Úroky vzniklé převzetím cizích závazků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5143,
+"Úroky vzniklé převzetím cizích závazků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5144,
+"Poplatky dluhové služby",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5144,
+"Úplaty dluhové služby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5145,
+"Neúrokové výdaje na finanční deriváty k vlastním dluhopisům",
+"2015-01-01",
+"2021-12-31"
+],
+[
+5145,
+"Neúrokové výdaje na finanční deriváty k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5146,
+"Úrokové výdaje na finanční deriváty k vlastním dluhopisům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5146,
+"Úrokové výdaje na finanční deriváty k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5147,
+"Úrokové výdaje na finanční deriváty kromě k vlastním dluhopisům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5147,
+"Úrokové výdaje na finanční deriváty kromě výdajů na deriváty k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5148,
+"Neúrokové výdaje na finanční deriváty kromě k vlastním dluhopisům",
+"2015-01-01",
+"2021-12-31"
+],
+[
+5148,
+"Neúrokové výdaje na finanční deriváty kromě výdajů na deriváty k vlastním dluhopisům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5149,
+"Ostatní úroky a ostatní finanční výdaje",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5149,
+"Ostatní úroky a ostatní finanční výdaje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5151,
+"Studená voda",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5151,
+"Studená voda včetně stočného a úplaty za odvod dešťových vod",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5152,
+"Teplo",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5152,
+"Teplo",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5153,
+"Plyn",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5153,
+"Plyn",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5154,
+"Elektrická energie",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5154,
+"Elektrická energie",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5155,
+"Pevná paliva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5155,
+"Pevná paliva",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5156,
+"Pohonné hmoty a maziva",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5156,
+"Pohonné hmoty a maziva",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5157,
+"Teplá voda",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5157,
+"Teplá voda",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5159,
+"Nákup ostatních paliv a energie",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5159,
+"Nákup ostatních paliv a energie",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5161,
+"Poštovní služby",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5161,
+"Poštovní služby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5162,
+"Služby elektronických komunikací",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5162,
+"Služby elektronických komunikací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5163,
+"Služby peněžních ústavů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5163,
+"Služby peněžních ústavů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5164,
+"Nájemné",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5164,
+"Nájemné",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5165,
+"Nájemné za půdu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5165,
+"Zemědělské pachtovné",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5166,
+"Konzultační, poradenské a právní služby",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5166,
+"Konzultační, poradenské a právní služby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5167,
+"Služby školení a vzdělávání",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5167,
+"Služby školení a vzdělávání",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5168,
+"Zpracování dat a služby související s informačními a komunikačními technologiemi",
+"2015-01-01",
+"2021-12-31"
+],
+[
+5168,
+"Zpracování dat a služby související s informačními a komunikačními technologiemi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5169,
+"Nákup ostatních služeb",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5169,
+"Nákup ostatních služeb",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5171,
+"Opravy a udržování",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5171,
+"Opravy a udržování",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5172,
+"Podlimitní programové vybavení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5172,
+"Programové vybavení",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5173,
+"Cestovné",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5173,
+"Cestovné",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5173,
+"Cestovné (tuzemské i zahraniční)",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5175,
+"Pohoštění",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5175,
+"Pohoštění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5176,
+"Účastnické poplatky na konference",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5176,
+"Účastnické úplaty na konference",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5177,
+"Neaktivní",
+"2018-01-01",
+"2018-12-31"
+],
+[
+5177,
+"Nákup archiválií",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5177,
+"Nákup archiválií",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5178,
+"Nájemné za nájem s právem koupě",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5178,
+"Nájemné za nájem s právem koupě",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5179,
+"Ostatní nákupy jinde nezařazené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5179,
+"Ostatní nákupy jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5181,
+"Poskytnuté zálohy vnitřním organizačním jednotkám",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5181,
+"Převody vnitřním organizačním jednotkám",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5181,
+"Převody vnitřním organizačním jednotkám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5182,
+"Poskytované zálohy vlastní pokladně",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5182,
+"Převody vlastní pokladně",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5182,
+"Převody vlastní pokladně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5183,
+"Výdaje na realizaci záruk",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5183,
+"Výdaje na realizaci záruk",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5183,
+"Výdaje na realizaci záruk",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5184,
+"Výdaje na vládní úvěry",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5184,
+"Výdaje na vládní úvěry",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5184,
+"Výdaje na vládní úvěry",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5185,
+"Převody do elektronických peněženek",
+"2018-01-01",
+"2018-12-31"
+],
+[
+5185,
+"Převody do elektronických peněženek",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5185,
+"Převody do elektronických peněženek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5189,
+"Jistoty",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5189,
+"Ostatní poskytované zálohy a jistiny",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5189,
+"Vratky jistot",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5191,
+"Zaplacené sankce",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5191,
+"Zaplacené sankce a odstupné",
+"2021-01-01",
+"2021-12-31"
+],
+[
+5191,
+"Zaplacené sankce a odstupné",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5192,
+"Poskytnuté náhrady",
+"2015-01-01",
+"2021-12-31"
+],
+[
+5192,
+"Poskytnuté náhrady",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5193,
+"Výdaje na dopravní územní obslužnost",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5193,
+"Výdaje na dopravní územní obslužnost",
+"2022-01-01",
+"2022-12-31"
+],
+[
+5194,
+"Výdaje na věcné dary",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5194,
+"Věcné dary",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5195,
+"Odvody za neplnění povinnosti zaměstnávat zdravotně postižené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5195,
+"Odvody za neplnění povinnosti zaměstnávat zdravotně postižené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5196,
+"Náhrady a příspěvky související s výkonem ústavní funkce a funkce soudce",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5196,
+"Náhrady a příspěvky související s výkonem ústavní funkce a funkce soudce",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5197,
+"Náhrady zvýšených nákladů spojených s výkonem funkce v zahraničí",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5197,
+"Náhrady zvýšených nákladů spojených s výkonem funkce v zahraničí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5198,
+"Finanční náhrady v rámci majetkového vyrovnání s církvemi",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5198,
+"Finanční náhrady v rámci majetkového vyrovnání s církvemi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5199,
+"Ostatní výdaje související s neinvestičními nákupy",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5199,
+"Ostatní výdaje související s neinvestičními nákupy",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5211,
+"Neinvestiční transfery finančním institucím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5211,
+"Neinvestiční transfery finančním institucím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5212,
+"Neinvestiční transfery nefinančním podnikatelskýmsubjektům-fyzickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5212,
+"Neinvestiční transfery nefinančním podnikatelům - fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5213,
+"Neinvestiční transfery nefinančním podnikatelským subjektům-právnickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5213,
+"Neinvestiční transfery nefinančním podnikatelům - právnickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5214,
+"Neinvestiční transfery finančním a podobným institucím ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5214,
+"Neinvestiční transfery finančním a podobným institucím ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5215,
+"Neinvestiční transfery vybraným podnikatelským subjektům ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5215,
+"Neinvestiční transfery vybraným podnikatelům ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5216,
+"Neinvestiční transfery obecním a krajským nemocnicím - obchodním společnostem",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5216,
+"Neinvestiční transfery obecním a krajským nemocnicím - obchodním společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5219,
+"Ostatní neinvestiční transfery podnikatelským subjektům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5219,
+"Ostatní neinvestiční transfery podnikatelům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5221,
+"Neinvestiční transfery fundacím, ústavům a obecně prospěšným společnostem",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5221,
+"Neinvestiční transfery fundacím, ústavům a obecně prospěšným společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5221,
+"Neinvestiční transfery obecně prospěšným společnostem",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5222,
+"Neinvestiční transfery spolkům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5222,
+"Neinvestiční transfery spolkům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5223,
+"Neinvestiční transfery církvím a náboženským společnostem",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5223,
+"Neinvestiční transfery církvím a náboženským společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5224,
+"Neinvestiční transfery politickým stranám a hnutím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5224,
+"Neinvestiční transfery politickým stranám a hnutím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5225,
+"Neinvestiční transfery společenstvím vlastníků jednotek",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5225,
+"Neinvestiční transfery společenstvím vlastníků jednotek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5229,
+"Ostatní neinvestiční transfery neziskovým a podobným organizacím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5229,
+"Ostatní neinvestiční transfery neziskovým a podobným osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5230,
+"Neinvestiční nedotační transfery podnikatelským subjektům",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5240,
+"Neinvestiční nedotační transfery neziskovým a podobným organizacím",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5250,
+"Refundace poloviny náhrady mzdy za dočasnou pracovní neschopnost",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5311,
+"Neinvestiční transfery státnímu rozpočtu",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5311,
+"Neinvestiční transfery státnímu rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5312,
+"Neinvestiční transfery státním fondům",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5312,
+"Neinvestiční transfery státním fondům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5313,
+"Neinvestiční transfery zvláštním fondům ústřední úrovně",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5313,
+"Neinvestiční transfery zvláštním fondům ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5314,
+"Neinvestiční transfery fondům sociálního a veřejného zdravotního pojištění",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5314,
+"Neinvestiční transfery fondům sociálního a veřejného zdravotního pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5315,
+"Odvod daně za zaměstnance",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5315,
+"Odvod daně za zaměstnance",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5316,
+"Odvod pojistného na sociální zabezpečení a příspěvku na státní politiku zaměstnanosti za zaměstnance",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5316,
+"Odvod pojistného na sociální zabezpečení a příspěvku na státní politiku zaměstnanosti za zaměstnance",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5317,
+"Odvod pojistného na veřejné zdravotní pojištění za zaměstnance",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5317,
+"Odvod pojistného na veřejné zdravotní pojištění za zaměstnance",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5318,
+"Neinvestiční transfery prostředků do státních finančních aktiv",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5318,
+"Neinvestiční transfery prostředků do státních finančních aktiv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5319,
+"Ostatní neinvestiční transfery jiným veřejným rozpočtům",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5319,
+"Ostatní neinvestiční transfery jiným veřejným rozpočtům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5321,
+"Neinvestiční transfery obcím",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5321,
+"Neinvestiční transfery obcím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5322,
+"Neinvestiční transfery obcím v rámci souhrnného dotačního vztahu",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5322,
+"Neinvestiční transfery obcím v rámci souhrnného dotačního vztahu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5323,
+"Neinvestiční transfery krajům",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5323,
+"Neinvestiční transfery krajům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5324,
+"Neinvestiční transfery krajům v rámci souhrnného dotačního vztahu",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5324,
+"Neinvestiční transfery krajům v rámci souhrnného dotačního vztahu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5325,
+"Neinvestiční transfery regionálním radám",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5325,
+"Neinvestiční transfery regionálním radám",
+"2022-01-01",
+"2022-12-31"
+],
+[
+5329,
+"Ostatní neinvestiční transfery rozpočtům územní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5329,
+"Ostatní neinvestiční transfery veřejným rozpočtům územní úrovně",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5331,
+"Neinvestiční příspěvky zřízeným příspěvkovým organizacím",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5331,
+"Neinvestiční příspěvky zřízeným příspěvkovým organizacím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5332,
+"Neinvestiční transfery veřejným vysokým školám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5332,
+"Neinvestiční transfery vysokým školám",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5333,
+"Neinvestiční transfery školským právnickým osobám zřízeným státem, kraji a obcemi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5333,
+"Neinvestiční transfery školským právnickým osobámzřízeným státem, kraji a obcemi",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5334,
+"Neinvestiční transfery veřejným výzkumným institucím",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5334,
+"Neinvestiční transfery veřejným výzkumným institucím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5335,
+"Neinvestiční transfery veřejným kulturním institucím",
+"2025-01-01",
+"9999-12-31"
+],
+[
+5335,
+"Neplatná RP",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5335,
+"Neplatná RP",
+"2022-01-01",
+"2024-12-31"
+],
+[
+5336,
+"Neinvestiční transfery zřízeným příspěvkovým organizacím",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5336,
+"Neinvestiční transfery zřízeným příspěvkovým organizacím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5339,
+"Neinvestiční transfery cizím příspěvkovým organizacím",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5339,
+"Neinvestiční transfery cizím příspěvkovým organizacím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5341,
+"Převody vlastním fondům hospodářské (podnikatelské) činnosti",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5341,
+"Převody vlastním fondům hospodářské (podnikatelské) činnosti",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5341,
+"Převody vlastním fondům podnikatelské činnosti",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5342,
+"Převody fondu kulturních a sociálních potřeb a sociálnímu fondu obcí a krajů",
+"2017-01-01",
+"2018-12-31"
+],
+[
+5342,
+"Základní příděl fondu kulturních a sociálních potřeb a sociálnímu fondu obcí a krajů",
+"2019-01-01",
+"2019-12-31"
+],
+[
+5342,
+"Základní příděl fondu kulturních a sociálních potřeb a sociálnímu fondu obcí a krajů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5342,
+"Základní příděl fondu kulturních a sociálních potřeb a sociálnímu fondu obcí a krajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5343,
+"Převody na účty nemající povahu veřejných rozpočtů",
+"2018-01-01",
+"2019-12-31"
+],
+[
+5343,
+"Převody na účty nemající povahu veřejných rozpočtů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5343,
+"Převody na účty nemající povahu veřejných rozpočtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5344,
+"Převody vlastním rezervním fondům územních rozpočtů",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5344,
+"Převody vlastním rezervním fondům územních rozpočtů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5344,
+"Převody vlastním rezervním fondům územních rozpočtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5345,
+"Převody vlastním rozpočtovým účtům",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5345,
+"Převody vlastním rozpočtovým účtům",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5345,
+"Převody vlastním rozpočtovým účtům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5346,
+"Převody do fondů organizačních složek státu",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5346,
+"Převody do fondů organizačních složek státu",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5346,
+"Převody do fondů organizačních složek státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5347,
+"Neinvestiční převody mezi statutárními městy (hl. m. Prahou) a jejich městskými obvody nebo částmi - výdaje",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5347,
+"Neinvestiční převody mezi statutárními městy včetně hl. m. Prahy a jejich městskými obvody nebo částmi – výdaje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5347,
+"Převody mezi statutárními městy (hl.m.Prahou) a jejich městskými obvody nebo částmi - výdaje",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5348,
+"Převody do vlastní pokladny",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5348,
+"Převody do vlastní pokladny",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5348,
+"Převody do vlastní pokladny",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5349,
+"Ostatní převody vlastním fondům",
+"2017-01-01",
+"2019-12-31"
+],
+[
+5349,
+"Ostatní převody vlastním fondům",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5349,
+"Ostatní převody vlastním fondům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5350,
+"Převody do vlastních fondů přes rok",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5350,
+"Převody do vlastních fondů přes rok",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5361,
+"Nákup kolků",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5361,
+"Nákup kolků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5362,
+"Platby daní a poplatků státnímu rozpočtu",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5362,
+"Platby daní státnímu rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5363,
+"Úhrady sankcí jiným rozpočtům",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5363,
+"Úhrady sankcí jiným rozpočtům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5364,
+"Vratky transferů poskytnutých z veřejných rozpočtů",
+"2020-01-01",
+"2021-12-31"
+],
+[
+5364,
+"Vratky transferů poskytnutých z veřejných rozpočtů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5364,
+"Vratky transferů poskytnutých z veřejných rozpočtů ústřední úrovně",
+"2018-01-01",
+"2019-12-31"
+],
+[
+5365,
+"Platby daní a poplatků krajům, obcím a státním fondům",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5365,
+"Platby daní krajům, obcím a státním fondům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5366,
+"Výdaje z finančního vypořádání mezi krajem a obcemi",
+"2021-01-01",
+"2021-12-31"
+],
+[
+5366,
+"Výdaje z finančního vypořádání mezi krajem a obcemi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5366,
+"Výdaje z finančního vypořádání minulých let mezi krajem a obcemi",
+"2017-01-01",
+"2020-12-31"
+],
+[
+5367,
+"Výdaje z finančního vypořádání mezi obcemi",
+"2021-01-01",
+"2021-12-31"
+],
+[
+5367,
+"Výdaje z finančního vypořádání mezi obcemi",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5367,
+"Výdaje z finančního vypořádání minulých let mezi obcemi",
+"2017-01-01",
+"2020-12-31"
+],
+[
+5368,
+"Výdaje z finančního vypořádání mezi regionální radou a kraji, obcemi a dobrovolnými svazky obcí",
+"2021-01-01",
+"2021-12-31"
+],
+[
+5368,
+"Výdaje z finančního vypořádání mezi regionální radou a kraji, obcemi a dobrovolnými svazky obcí",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5368,
+"Výdaje z finančního vypořádání minulých let mezi regionální radou a kraji, obcemi a dobrovolnými svazky obcí",
+"2017-01-01",
+"2020-12-31"
+],
+[
+5369,
+"Ostatní neinvestiční transfery jiným veřejným rozpočtům",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5369,
+"Ostatní neinvestiční transfery jiným veřejným rozpočtům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5410,
+"Sociální dávky",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5410,
+"Sociální dávky",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5421,
+"Náhrady z úrazového pojištění",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5421,
+"Plnění z úrazového pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5422,
+"Náhrady povahy rehabilitací",
+"2010-01-01",
+"2019-12-31"
+],
+[
+5423,
+"Náhrady mezd podle zákona o ochraně zaměstnanců při platební neschopnosti zaměstnavatele",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5423,
+"Náhrady mezd podle zákona č. 118/2000 Sb.",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5424,
+"Náhrady mezd a příspěvky v době nemoci nebo karantény",
+"2022-01-01",
+"2023-12-31"
+],
+[
+5424,
+"Náhrady mezd v době nemoci",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5425,
+"Příspěvek na náklady pohřbu dárce orgánu a náhrada poskytovaná žijícímu dárci",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5425,
+"Příspěvek na náklady pohřbu dárce orgánu a náhrada poskytovaná žijícímu dárci",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5429,
+"Ostatní náhrady placené obyvatelstvu",
+"2010-01-01",
+"2019-12-31"
+],
+[
+5491,
+"Stipendia žákům, studentům a doktorandům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5491,
+"Stipendia žákům, studentům a doktorandům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5492,
+"Dary fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5492,
+"Dary obyvatelstvu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5493,
+"Účelové neinvestiční transfery fyzickým osobám",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5493,
+"Účelové neinvestiční transfery fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5494,
+"Neinvestiční transfery fyzickým osobám nemající povahu daru",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5494,
+"Neinvestiční transfery obyvatelstvu nemající charakter daru",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5495,
+"Stabilizační příspěvek vojákům",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5495,
+"Stabilizační příspěvek vojákům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5496,
+"Služební příspěvek vojákům na bydlení",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5496,
+"Služební příspěvek vojákům na bydlení",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5497,
+"Náborový příspěvek",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5497,
+"Náborový příspěvek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5498,
+"Kvalifikační příspěvek a jednorázová peněžní výpomoc vojákům",
+"2018-01-01",
+"2021-12-31"
+],
+[
+5498,
+"Kvalifikační příspěvek a jednorázová peněžní výpomoc vojákům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5499,
+"Ostatní neinvestiční transfery fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5499,
+"Ostatní neinvestiční transfery obyvatelstvu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5511,
+"Neinvestiční transfery mezinárodním vládním organizacím",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5512,
+"Neinvestiční transfery nadnárodním orgánům",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5513,
+"Vratky neoprávněně použitých nebo zadržených prostředků Evropské unie",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5513,
+"Vratky neoprávněně použitých nebo zadržených prostředků Evropské unii",
+"2017-01-01",
+"2021-12-31"
+],
+[
+5514,
+"Odvody vlastních zdrojů Evropské unie do rozpočtu Evropské unie podle daně z přidané hodnoty",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5515,
+"Odvody vlastních zdrojů Evropské unie do rozpočtu Evropské unie podle hrubého národního důchodu",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5516,
+"Odvody Evropské unii ke krytí záporných úroků",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5517,
+"Odvody vlastních zdrojů Evropské unie do rozpočtu Evropské unie podle objemu nerecyklovaných plastových obalů",
+"2021-01-01",
+"9999-12-31"
+],
+[
+5520,
+"Neinvestiční transfery cizím státům",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5531,
+"Peněžní dary do zahraničí",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5532,
+"Ostatní neinvestiční transfery do zahraničí",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5541,
+"Členské příspěvky mezinárodním vládním organizacím",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5542,
+"Členské příspěvky mezinárodním nevládním organizacím",
+"2017-01-01",
+"9999-12-31"
+],
+[
+5611,
+"Neinvestiční půjčené prostředky finančním institucím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5611,
+"Neinvestiční půjčené prostředky finančním institucím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5612,
+"Neinvestiční půjčené prostředky nefinančním podnikatelským subjektům-fyzickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5612,
+"Neinvestiční půjčené prostředky nefinančním podnikatelům – fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5613,
+"Neinvestiční půjčené prostředky nefinančním podnikatelským subjektům-právnickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5613,
+"Neinvestiční půjčené prostředky nefinančním podnikatelům - právnickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5614,
+"Neinvestiční půjčené prostředky finančním a podobným institucím ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5614,
+"Neinvestiční půjčené prostředky finančním a podobným institucím ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5615,
+"Neinvestiční půjčené prostředky vybraným podnikatelským subjektům ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5615,
+"Neinvestiční půjčené prostředky vybraným podnikatelům ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5619,
+"Ostatní neinvestiční půjčené prostředky podnikatelským subjektům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5619,
+"Ostatní neinvestiční půjčené prostředky podnikatelům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5621,
+"Neinvestiční půjčené prostředky fundacím, ústavům a obecně prospěšným společnostem",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5621,
+"Neinvestiční půjčené prostředky fundacím, ústavům a obecně prospěšným společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5621,
+"Neinvestiční půjčené prostředky obecně prospěšným společnostem",
+"2010-01-01",
+"2018-12-31"
+],
+[
+5622,
+"Neinvestiční půjčené prostředky spolkům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+5622,
+"Neinvestiční půjčené prostředky spolkům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5623,
+"Neinvestiční půjčené prostředky církvím a náboženským společnostem",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5623,
+"Neinvestiční půjčené prostředky církvím a náboženským společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5624,
+"Neinvestiční půjčené prostředky společenstvím vlastníků jednotek",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5624,
+"Neinvestiční půjčené prostředky společenstvím vlastníků jednotek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5629,
+"Ostatní neinvestiční půjčené prostředky neziskovým a podobným organizacím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5629,
+"Ostatní neinvestiční půjčené prostředky neziskovým a podobným osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5631,
+"Neinvestiční půjčené prostředky státnímu rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5631,
+"Neinvestiční půjčené prostředky státnímu rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5632,
+"Neinvestiční půjčené prostředky státním fondům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5632,
+"Neinvestiční půjčené prostředky státním fondům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5633,
+"Neinvestiční půjčené prostředky zvláštním fondům ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5633,
+"Neinvestiční půjčené prostředky zvláštním fondům ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5634,
+"Neinvestiční půjčené prostředky fondům sociálního a veřejného zdravotního pojištění",
+"2021-01-01",
+"2021-12-31"
+],
+[
+5634,
+"Neinvestiční půjčené prostředky fondům sociálního a veřejného zdravotního pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5634,
+"Neinvestiční půjčené prostředky fondům sociálního a zdravotního pojištění",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5639,
+"Ostatní neinvestiční půjčené prostředky jiným veřejným rozpočtům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5639,
+"Ostatní neinvestiční půjčené prostředky jiným veřejným rozpočtům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5641,
+"Neinvestiční půjčené prostředky obcím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5641,
+"Neinvestiční půjčené prostředky obcím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5642,
+"Neinvestiční půjčené prostředky krajům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5642,
+"Neinvestiční půjčené prostředky krajům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5643,
+"Neinvestiční půjčené prostředky regionálním radám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5649,
+"Ostatní neinvestiční půjčené prostředky rozpočtům územní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5649,
+"Ostatní neinvestiční půjčené prostředky veřejným rozpočtům územní úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5651,
+"Neinvestiční půjčené prostředky zřízeným příspěvkovým organizacím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5652,
+"Neinvestiční půjčené prostředky veřejným vysokým školám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5652,
+"Neinvestiční půjčené prostředky vysokým školám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5659,
+"Neinvestiční půjčené prostředky ostatním příspěvkovým organizacím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5659,
+"Neinvestiční půjčené prostředky příspěvkovým organizacím zřízeným jinými zřizovateli",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5660,
+"Neinvestiční půjčené prostředky fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5660,
+"Neinvestiční půjčené prostředky obyvatelstvu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5670,
+"Neinvestiční půjčené prostředky do zahraničí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5710,
+"Převody Národnímu fondu na spolufinancování programu Phare",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5711,
+"Převody Národnímu fondu ke kompenzaci nesrovnalostí",
+"2021-01-01",
+"9999-12-31"
+],
+[
+5719,
+"Ostatní neinvestiční převody Národnímu fondu",
+"2021-01-01",
+"9999-12-31"
+],
+[
+5720,
+"Převody Národnímu fondu na spolufinancování programu Ispa",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5730,
+"Převody Národnímu fondu na spolufinancování programu Sapard",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5740,
+"Převody Národnímu fondu na spolufinancování komunitárních programů",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5750,
+"Převody Národnímu fondu na spolufinancování ostatních programů Evropské unie a ČR",
+"2016-01-01",
+"2020-12-31"
+],
+[
+5760,
+"Převody Národnímu fondu na spolufinancování související s poskytnutím pomoci ČR ze zahraničí",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5770,
+"Převody ze státního rozpočtu do Národního fondu na vyrovnání kursových rozdílů",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5790,
+"Ostatní převody do Národního fondu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+5811,
+"Výdaje na náhrady za nezpůsobenou újmu",
+"2019-01-01",
+"2021-12-31"
+],
+[
+5811,
+"Výdaje na náhrady za nezpůsobenou újmu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5812,
+"Výdaje na náhrady škod způsobených nezákonným rozhodnutím nebo nesprávným úředním postupem při výkonu veřejné moci",
+"2022-01-01",
+"9999-12-31"
+],
+[
+5901,
+"Nespecifikované rezervy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5902,
+"Ostatní výdaje z finančního vypořádání",
+"2021-01-01",
+"9999-12-31"
+],
+[
+5902,
+"Ostatní výdaje z finančního vypořádání minulých let",
+"2010-01-01",
+"2020-12-31"
+],
+[
+5903,
+"Rezerva na krizová opatření",
+"2019-01-01",
+"9999-12-31"
+],
+[
+5904,
+"Převody domněle neoprávněně použitých dotací zpět poskytovateli",
+"2019-01-01",
+"9999-12-31"
+],
+[
+5905,
+"Výdaje na plnění nahrazující úroky",
+"2025-01-01",
+"9999-12-31"
+],
+[
+5909,
+"Ostatní neinvestiční výdaje jinde nezařazené",
+"2010-01-01",
+"9999-12-31"
+],
+[
+5991,
+"Dočasné zatřídění výdajů",
+"2013-01-01",
+"9999-12-31"
+],
+[
+6111,
+"Programové vybavení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6112,
+"Ocenitelná práva",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6113,
+"Nehmotné výsledky výzkumné a obdobné činnosti",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6119,
+"Ostatní nákup dlouhodobého nehmotného majetku",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6121,
+"Budovy, haly a stavby",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6121,
+"Stavby",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6122,
+"Stroje, přístroje a zařízení",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6123,
+"Dopravní prostředky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6124,
+"Pěstitelské celky trvalých porostů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6125,
+"Informační a komunikační technologie",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6125,
+"Výpočetní technika",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6127,
+"Kulturní předměty",
+"2017-01-01",
+"9999-12-31"
+],
+[
+6129,
+"Nákup dlouhodobého hmotného majetku jinde nezařazený",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6129,
+"Nákup ostatního dlouhodobého hmotného majetku",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6130,
+"Pozemky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6141,
+"Právo stavby",
+"2017-01-01",
+"9999-12-31"
+],
+[
+6142,
+"Nadlimitní věcná břemena",
+"2017-01-01",
+"9999-12-31"
+],
+[
+6201,
+"Nákup akcií",
+"2017-01-01",
+"2021-12-31"
+],
+[
+6201,
+"Nákup akcií",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6202,
+"Nákup majetkových podílů",
+"2017-01-01",
+"2021-12-31"
+],
+[
+6202,
+"Nákup majetkových podílů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6209,
+"Nákup majetkových nároků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6209,
+"Nákup ostatních majetkových nároků",
+"2017-01-01",
+"2021-12-31"
+],
+[
+6211,
+"Vklady do nadací",
+"2017-01-01",
+"2021-12-31"
+],
+[
+6211,
+"Vklady do nadací",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6212,
+"Vklady do nadačních fondů",
+"2017-01-01",
+"2021-12-31"
+],
+[
+6212,
+"Vklady do nadačních fondů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6213,
+"Vklady do ústavů",
+"2017-01-01",
+"2021-12-31"
+],
+[
+6213,
+"Vklady do ústavů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6311,
+"Investiční transfery finančním institucím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6311,
+"Investiční transfery finančním institucím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6312,
+"Investiční transfery nefinančním podnikatelským subjektům-fyzickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6312,
+"Investiční transfery nefinančním podnikatelům - fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6313,
+"Investiční transfery nefinančním podnikatelským subjektům-právnickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6313,
+"Investiční transfery nefinančním podnikatelům - právnickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6314,
+"Investiční transfery finančním a podobným institucím ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6314,
+"Investiční transfery finančním a podobným institucím ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6315,
+"Investiční transfery vybraným podnikatelským subjektům ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6315,
+"Investiční transfery vybraným podnikatelům ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6316,
+"Investiční transfery obecním a krajským nemocnicím - obchodním společnostem",
+"2019-01-01",
+"2021-12-31"
+],
+[
+6316,
+"Investiční transfery obecním a krajským nemocnicím - obchodním společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6319,
+"Ostatní investiční transfery podnikatelským subjektům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6319,
+"Ostatní investiční transfery podnikatelům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6321,
+"Investiční transfery fundacím, ústavům a obecně prospěšným společnostem",
+"2019-01-01",
+"2021-12-31"
+],
+[
+6321,
+"Investiční transfery fundacím, ústavům a obecně prospěšným společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6321,
+"Investiční transfery obecně prospěšným společnostem",
+"2010-01-01",
+"2018-12-31"
+],
+[
+6322,
+"Investiční transfery spolkům",
+"2014-01-01",
+"2021-12-31"
+],
+[
+6322,
+"Investiční transfery spolkům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6323,
+"Investiční transfery církvím a náboženským společnostem",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6323,
+"Investiční transfery církvím a náboženským společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6324,
+"Investiční transfery společenstvím vlastníků jednotek",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6324,
+"Investiční transfery společenstvím vlastníků jednotek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6329,
+"Ostatní investiční transfery neziskovým a podobným organizacím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6329,
+"Ostatní investiční transfery neziskovým a podobným osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6331,
+"Investiční transfery státnímu rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6331,
+"Investiční transfery státnímu rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6332,
+"Investiční transfery státním fondům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6332,
+"Investiční transfery státním fondům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6333,
+"Investiční transfery zvláštním fondům ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6333,
+"Investiční transfery zvláštním fondům ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6334,
+"Investiční transfery fondům sociálního a veřejného zdravotního pojištění",
+"2021-01-01",
+"2021-12-31"
+],
+[
+6334,
+"Investiční transfery fondům sociálního a veřejného zdravotního pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6334,
+"Investiční transfery fondům sociálního a zdravotního pojištění",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6335,
+"Investiční transfery státním finančním aktivům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6335,
+"Investiční transfery státním finančním aktivům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6339,
+"Investiční transfery jiným rozpočtům ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6339,
+"Investiční transfery jiným veřejným rozpočtům ústřední úrovně",
+"2021-01-01",
+"2021-12-31"
+],
+[
+6339,
+"Ostatní investiční transfery jiným veřejným rozpočtům",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6341,
+"Investiční transfery obcím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6341,
+"Investiční transfery obcím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6342,
+"Investiční transfery krajům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6342,
+"Investiční transfery krajům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6343,
+"Investiční transfery obcím v rámci souhrnného dotačního vztahu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6343,
+"Investiční transfery obcím v rámci souhrnného dotačního vztahu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6344,
+"Investiční transfery krajům v rámci souhrnného dotačního vztahu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6344,
+"Investiční transfery krajům v rámci souhrnného dotačního vztahu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6345,
+"Investiční transfery regionálním radám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6345,
+"Investiční transfery regionálním radám",
+"2022-01-01",
+"2022-12-31"
+],
+[
+6349,
+"Ostatní investiční transfery rozpočtům územní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6349,
+"Ostatní investiční transfery veřejným rozpočtům územní úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6351,
+"Investiční transfery zřízeným příspěvkovým organizacím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6352,
+"Investiční transfery veřejným vysokým školám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6352,
+"Investiční transfery vysokým školám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6353,
+"Investiční transfery školským právnickým osobám zřízeným státem, kraji a obcemi",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6354,
+"Investiční transfery veřejným výzkumným institucím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6355,
+"Investiční transfery veřejným kulturním institucím",
+"2025-01-01",
+"9999-12-31"
+],
+[
+6355,
+"Neplatná RP",
+"2014-01-01",
+"2024-12-31"
+],
+[
+6356,
+"Jiné investiční transfery zřízeným příspěvkovým organizacím",
+"2012-01-01",
+"9999-12-31"
+],
+[
+6359,
+"Investiční transfery ostatním příspěvkovým organizacím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6359,
+"Investiční transfery příspěvkovým organizacím zřízeným jinými zřizovateli",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6361,
+"Investiční převody do rezervního fondu organizačních složek státu",
+"2010-01-01",
+"2019-12-31"
+],
+[
+6361,
+"Investiční převody do rezervního fondu organizačních složek státu",
+"2020-01-01",
+"2021-12-31"
+],
+[
+6361,
+"Investiční převody do rezervního fondu organizačních složek státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6362,
+"Převody investičních prostředků zpět do FKSP",
+"2017-01-01",
+"2019-12-31"
+],
+[
+6362,
+"Převody investičních prostředků zpět do FKSP",
+"2020-01-01",
+"2020-12-31"
+],
+[
+6362,
+"Převody investičních prostředků zpět do fondu kulturních a sociálních potřeb",
+"2021-01-01",
+"2021-12-31"
+],
+[
+6362,
+"Převody investičních prostředků zpět do fondu kulturních a sociálních potřeb",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6363,
+"Investiční převody mezi statutárními městy (hl. m. Prahou) a jejich městskými obvody nebo částmi - výdaje",
+"2020-01-01",
+"2021-12-31"
+],
+[
+6363,
+"Investiční převody mezi statutárními městy včetně hl. m. Prahy a jejich městskými obvody nebo částmi - výdaje",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6371,
+"Účelové investiční transfery nepodnikajícím fyzickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6371,
+"Účelové investiční transfery nepodnikajícím fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6379,
+"Ostatní investiční transfery fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6379,
+"Ostatní investiční transfery obyvatelstvu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6380,
+"Investiční transfery do zahraničí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6411,
+"Investiční půjčené prostředky finančním institucím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6411,
+"Investiční půjčené prostředky finančním institucím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6412,
+"Investiční půjčené prostředky nefinančním podnikatelským subjektům-fyzickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6412,
+"Investiční půjčené prostředky nefinančním podnikatelům - fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6413,
+"Investiční půjčené prostředky nefinančním podnikatelským subjektům-právnickým osobám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6413,
+"Investiční půjčené prostředky nefinančním podnikatelům - právnickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6414,
+"Investiční půjčené prostředky finančním a podobným institucím ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6414,
+"Investiční půjčené prostředky finančním a podobným institucím ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6415,
+"Investiční půjčené prostředky vybraným podnikatelským subjektům ve vlastnictví státu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6415,
+"Investiční půjčené prostředky vybraným podnikatelům ve vlastnictví státu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6419,
+"Ostatní investiční půjčené prostředky podnikatelským subjektům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6419,
+"Ostatní investiční půjčené prostředky podnikatelům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6421,
+"Investiční půjčené prostředky fundacím, ústavům a obecně prospěšným společnostem",
+"2019-01-01",
+"2021-12-31"
+],
+[
+6421,
+"Investiční půjčené prostředky fundacím, ústavům a obecně prospěšným společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6421,
+"Investiční půjčené prostředky obecně prospěšným společnostem",
+"2010-01-01",
+"2018-12-31"
+],
+[
+6422,
+"Investiční půjčené prostředky spolkům",
+"2018-01-01",
+"2021-12-31"
+],
+[
+6422,
+"Investiční půjčené prostředky spolkům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6423,
+"Investiční půjčené prostředky církvím a náboženským společnostem",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6423,
+"Investiční půjčené prostředky církvím a náboženským společnostem",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6424,
+"Investiční půjčené prostředky společenstvím vlastníků jednotek",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6424,
+"Investiční půjčené prostředky společenstvím vlastníků jednotek",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6429,
+"Ostatní investiční půjčené prostředky neziskovým a podobným organizacím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6429,
+"Ostatní investiční půjčené prostředky neziskovým a podobným osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6431,
+"Investiční půjčené prostředky státnímu rozpočtu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6431,
+"Investiční půjčené prostředky státnímu rozpočtu",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6432,
+"Investiční půjčené prostředky státním fondům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6432,
+"Investiční půjčené prostředky státním fondům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6433,
+"Investiční půjčené prostředky zvláštním fondům ústřední úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6433,
+"Investiční půjčené prostředky zvláštním fondům ústřední úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6434,
+"Investiční půjčené prostředky fondům sociálního a veřejného zdravotního pojištění",
+"2021-01-01",
+"2021-12-31"
+],
+[
+6434,
+"Investiční půjčené prostředky fondům sociálního a veřejného zdravotního pojištění",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6434,
+"Investiční půjčené prostředky fondům sociálního a zdravotního pojištění",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6439,
+"Ostatní investiční půjčené prostředky jiným rozpočtům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6439,
+"Ostatní investiční půjčené prostředky jiným veřejným rozpočtům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6441,
+"Investiční půjčené prostředky obcím",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6441,
+"Investiční půjčené prostředky obcím",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6442,
+"Investiční půjčené prostředky krajům",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6442,
+"Investiční půjčené prostředky krajům",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6443,
+"Investiční půjčené prostředky regionálním radám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6449,
+"Ostatní investiční půjčené prostředky rozpočtům místní úrovně",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6449,
+"Ostatní investiční půjčené prostředky veřejným rozpočtům místní úrovně",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6451,
+"Investiční půjčené prostředky zřízeným příspěvkovým organizacím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6452,
+"Investiční půjčené prostředky veřejným vysokým školám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6452,
+"Investiční půjčené prostředky vysokým školám",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6459,
+"Investiční půjčené prostředky ostatním příspěvkovým organizacím",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6460,
+"Investiční půjčené prostředky fyzickým osobám",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6460,
+"Investiční půjčené prostředky obyvatelstvu",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6470,
+"Investiční půjčené prostředky do zahraničí",
+"2010-01-01",
+"9999-12-31"
+],
+[
+6710,
+"Investiční převody Národnímu fondu na spolufinancování programu Phare",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6711,
+"Investiční převody Národnímu fondu",
+"2021-01-01",
+"9999-12-31"
+],
+[
+6720,
+"Investiční převody Národnímu fondu na spolufinancování programu Ispa",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6730,
+"Investiční převody Národnímu fondu na spolufinancování programu Sapard",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6740,
+"Investiční převody Národnímu fondu na spolufinancování komunitárních programů",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6750,
+"Investiční převody Národnímu fondu na spolufinancování ostatních programů Evropské unie a ČR",
+"2016-01-01",
+"2020-12-31"
+],
+[
+6760,
+"Investiční převody Národnímu fondu na spolufinancování související s poskytnutím pomoci ČR ze zahraničí",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6790,
+"Ostatní investiční převody do Národního fondu",
+"2010-01-01",
+"2020-12-31"
+],
+[
+6901,
+"Rezervy investičních výdajů",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6901,
+"Rezervy kapitálových výdajů",
+"2010-01-01",
+"2021-12-31"
+],
+[
+6909,
+"Ostatní investiční výdaje jinde nezařazené",
+"2022-01-01",
+"9999-12-31"
+],
+[
+6909,
+"Ostatní kapitálové výdaje jinde nezařazené",
+"2010-01-01",
+"2021-12-31"
+],
+[
+8111,
+"Krátkodobé vydané dluhopisy",
+"2012-01-01",
+"9999-12-31"
+],
+[
+8112,
+"Uhrazené splátky krátkodobých vydaných dluhopisů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8113,
+"Krátkodobé přijaté půjčené prostředky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8114,
+"Uhrazené splátky krátkodobých přijatých půjčených prostředků",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8115,
+"Změny stavu krátkodobých prostředků na bankovních účtech kromě změn stavů účtů státních finančních aktiv, které tvoří kapitolu OSFA",
+"2017-01-01",
+"2021-12-31"
+],
+[
+8115,
+"Změny stavu krátkodobých prostředků na bankovních účtech kromě změn stavů účtů státních finančních aktiv, které tvoří kapitolu Operace státních finančních aktiv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+8116,
+"Změny stavu bankovních účtů krátkodobých prostředků státních finančních aktiv, které tvoří kapitolu OSFA",
+"2017-01-01",
+"2021-12-31"
+],
+[
+8116,
+"Změny stavu bankovních účtů krátkodobých prostředků státních finančních aktiv, které tvoří kapitolu Operace státních finančních aktiv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+8117,
+"Aktivní krátkodobé operace řízení likvidity - příjmy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8118,
+"Aktivní krátkodobé operace řízení likvidity - výdaje",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8121,
+"Dlouhodobé vydané dluhopisy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8122,
+"Uhrazené splátky dlouhodobých vydaných dluhopisů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8123,
+"Dlouhodobé přijaté půjčené prostředky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8124,
+"Uhrazené splátky dlouhodobých přijatých půjčených prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+8124,
+"Uhrazené splátky dlouhodobých přijatých půjčenýchprostředků",
+"2012-01-01",
+"2021-12-31"
+],
+[
+8125,
+"Změna stavu dlouhodobých prostředků na bankovních účtech",
+"2015-01-01",
+"9999-12-31"
+],
+[
+8127,
+"Aktivní dlouhodobé operace řízení likvidity - příjmy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8128,
+"Aktivní dlouhodobé operace řízení likvidity - výdaje",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8211,
+"Krátkodobé vydané dluhopisy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8212,
+"Uhrazené splátky krátkodobých vydaných dluhopisů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8213,
+"Krátkodobé přijaté půjčené prostředky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8214,
+"Uhrazené splátky krátkodobých přijatých půjčených prostředků",
+"2022-01-01",
+"9999-12-31"
+],
+[
+8214,
+"Uhrazené splátky krátkodobých přijatých půjčenýchprostředků",
+"2010-01-01",
+"2021-12-31"
+],
+[
+8215,
+"Změna stavu bankovních účtů krátkodobých prostředků ze zahraničí jiných než ze zahraničních dlouhodobých úvěrů",
+"2013-01-01",
+"9999-12-31"
+],
+[
+8216,
+"Změna stavu bankovních účtů krátkodobých prostředků z dlouhodobých úvěrů ze zahraničí",
+"2013-01-01",
+"9999-12-31"
+],
+[
+8217,
+"Aktivní krátkodobé operace řízení likvidity - příjmy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8218,
+"Aktivní krátkodobé operace řízení likvidity - výdaje",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8221,
+"Dlouhodobé vydané dluhopisy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8222,
+"Uhrazené splátky dlouhodobých vydaných dluhopisů",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8223,
+"Dlouhodobé přijaté půjčené prostředky",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8224,
+"Uhrazené splátky dlouhodobých přijatých půjčených prostředků",
+"2012-01-01",
+"9999-12-31"
+],
+[
+8225,
+"Změna stavu dlouhodobých prostředků na bankovních účtech",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8227,
+"Aktivní dlouhodobé operace řízení likvidity - příjmy",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8228,
+"Aktivní dlouhodobé operace řízení likvidity - výdaje",
+"2010-01-01",
+"9999-12-31"
+],
+[
+8300,
+"Pohyby na účtech pro financování nepatřící na jiné financující položky",
+"2012-01-01",
+"9999-12-31"
+],
+[
+8301,
+"Převody ve vztahu k úvěrům od Evropské investiční banky",
+"2013-01-01",
+"9999-12-31"
+],
+[
+8302,
+"Operace na bankovních účtech státních finančních aktiv, které tvoří kapitolu OSFA",
+"2013-01-01",
+"2021-12-31"
+],
+[
+8302,
+"Operace na bankovních účtech státních finančních aktiv, které tvoří kapitolu Operace státních finančních aktiv",
+"2022-01-01",
+"9999-12-31"
+],
+[
+8413,
+"Krátkodobé přijaté půjčené prostředky",
+"2018-01-01",
+"9999-12-31"
+],
+[
+8414,
+"Uhrazené splátky krátkodobých přijatých půjčených prostředků",
+"2018-01-01",
+"9999-12-31"
+],
+[
+8417,
+"Krátkodobé aktivní financování z jaderného účtu a účtu rezervy důchodového pojištění - příjmy",
+"2018-01-01",
+"9999-12-31"
+],
+[
+8418,
+"Krátkodobé aktivní financování z jaderného účtu a účtu rezervy důchodového pojištění - výdaje",
+"2018-01-01",
+"9999-12-31"
+],
+[
+8427,
+"Dlouhodobé aktivní financování z jaderného účtu a účtu rezervy důchodového pojištění - příjmy",
+"2018-01-01",
+"9999-12-31"
+],
+[
+8428,
+"Dlouhodobé aktivní financování z jaderného účtu a účtu rezervy důchodového pojištění - výdaje",
+"2018-01-01",
+"9999-12-31"
+],
+[
+8901,
+"Operace z peněžních účtů organizace nemající charakter příjmů a výdajů vládního sektoru",
+"2010-01-01",
+"2021-12-31"
+],
+[
+8901,
+"Operace z peněžních účtů rozpočtové jednotky nemající charakter příjmů a výdajů vládního sektoru",
+"2022-01-01",
+"9999-12-31"
+],
+[
+8902,
+"Nerealizované kursové rozdíly pohybů na devizových účtech",
+"2012-01-01",
+"9999-12-31"
+],
+[
+8905,
+"Nepřevedené částky vyrovnávající schodek a saldo státní pokladny",
+"2015-01-01",
+"9999-12-31"
+]
+]
+}
