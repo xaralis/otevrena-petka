@@ -7,7 +7,7 @@ a kdo jak hlasoval, kde se to děje na mapě, kdo chodí na jednání a co práv
 **https://otevrenapetka.cz** · [Data a API](https://otevrenapetka.cz/data) ·
 [OpenAPI](https://otevrenapetka.cz/api/docs) · MCP: `https://otevrenapetka.cz/mcp`
 
-Projekt Filipa Vařechy, starosty MO Pardubice V. Vzniká vedle webu města, protože zavádění
+Projekt Filipa Vařechy, budoucího starosty MO Pardubice V. Vzniká vedle webu města, protože zavádění
 takových funkcí na pardubice.eu trvá dlouho; cílem je předat ho do správy statutárního města
 Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokumenty.
 
