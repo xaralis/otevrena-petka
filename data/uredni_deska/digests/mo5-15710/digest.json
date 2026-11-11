@@ -1,0 +1,1593 @@
+{
+ "notice_id": "mo5-15710",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-11T06:49:26+00:00",
+ "source": {
+  "title": "Změna rozhodnutí - povolení stavby - chodníky Staňkova",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15710",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "stavby",
+ "headline": "Povolení stavby chodníků ve Staňkově ulici doplnili o pokácení jednoho topolu černého.",
+ "summary": "Stavební úřad magistrátu změnil povolení stavby chodníků ve Staňkově ulici z 9. 9. 2026. Původní rozhodnutí nezmiňovalo pokácení topolu černého, přestože ho počítalo souhlasné environmentální stanovisko. Nově je kácení povoleno za podmínek ochrany přírody. Ostatní části povolení (rekonstrukce chodníků, zvýšené křižovatky, zklidnění dopravy) platí dál beze změny.",
+ "where": "Staňkova, Pardubice",
+ "period": {
+  "from": "2026-11-03",
+  "to": null,
+  "text": "Rozhodnutí je z 3. 11. 2026; povolení stavby platí 2 roky od nabytí právní moci."
+ },
+ "action": {
+  "what": "Odvolat se proti rozhodnutí může účastník řízení (např. soused nebo vlastník dotčeného pozemku).",
+  "deadline": null,
+  "how": "Odvolání se podává do 15 dnů ode dne oznámení rozhodnutí, a to ke stavebnímu úřadu Magistrátu města Pardubic (Štrossova 44) pro Krajský úřad Pardubického kraje."
+ },
+ "affects": "Obyvatelé a vlastníci pozemků a domů v okolí Staňkovy ulice (Zelené Předměstí) a uživatelé chodníků.",
+ "facts": [
+  {
+   "label": "Stavba",
+   "value": "Chodníky v ulici Staňkova – rekonstrukce povrchu chodníků a komunikace, zklidnění dopravy"
+  },
+  {
+   "label": "Stavebník",
+   "value": "Městský obvod Pardubice V"
+  },
+  {
+   "label": "Rozhodl",
+   "value": "Magistrát města Pardubic, stavební úřad"
+  },
+  {
+   "label": "Důvod změny",
+   "value": "Odvolání stavebníka: ve výroku chybělo povolení kácet topol černý (obvod kmene 350 cm, p. p. č. 2291/4)"
+  },
+  {
+   "label": "Podmínky kácení",
+   "value": "Kácet jen od 15. 9. do 15. 3.; úřad informovat nejméně 10 dnů předem; ponechané dřeviny chránit; po stavbě výsadba keřů a stromů"
+  },
+  {
+   "label": "Zvýšené křižovatky",
+   "value": "Rožkova, Češkova, V Ráji; křižovatka s ulicí ČS armády zůstane beze změny"
+  },
+  {
+   "label": "Šířka chodníků",
+   "value": "3 m v okolí ZŠ (ČS armády – Rožkova), jinde 2 m"
+  },
+  {
+   "label": "Platnost povolení",
+   "value": "2 roky od nabytí právní moci; stavbu nutno před zahájením oznámit"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Staňkova",
+  "ČS armády",
+  "Rožkova",
+  "Češkova",
+  "V Ráji"
+ ],
+ "parcels": [
+  "p. p. č. 2291/4, k. ú. Pardubice",
+  "p. p. č. 2292/9, k. ú. Pardubice",
+  "p. p. č. 2292/10, k. ú. Pardubice",
+  "p. p. č. 2309/4, k. ú. Pardubice",
+  "p. p. č. 2315/39, k. ú. Pardubice",
+  "p. p. č. 2316/1, k. ú. Pardubice",
+  "p. p. č. 2316/20, k. ú. Pardubice",
+  "p. p. č. 2318/17, k. ú. Pardubice",
+  "p. p. č. 2318/51, k. ú. Pardubice",
+  "p. p. č. 2583/1, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15710-1.pdf",
+  "page": 10,
+  "box": [
+   0.11,
+   0.09,
+   0.65,
+   0.96
+  ],
+  "caption": "Koordinační situační výkres chodníků ve Staňkově ulici"
+ },
+ "parking": null,
+ "visual_plan": "Mapa Staňkovy ulice s vyznačenými pozemky a situační výkres z přílohy; ukáže rozsah stavby a zvýšené křižovatky.",
+ "reviewer_notes": "Lhůta pro odvolání je 15 dnů od oznámení rozhodnutí. Dokument se doručuje veřejnou vyhláškou a datum vyvěšení na desce magistrátu v něm není (pole „Vyvěšeno dne“ je prázdné), proto konkrétní datum lhůty neuvádím. Před zveřejněním ověřte. Odvolání podal už stavebník a úřad mu vyhověl v autoremeduře. Ve stanovisku je pozemek „229/10“, pravděpodobně překlep za 2292/10, použil jsem 2292/10 z výroku. Adresy a jména soukromých osob jsem vynechal.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2291/4, k. ú. Pardubice",
+    "source_text": "p. p. č. 2291/4, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.766734,
+        50.023194
+       ],
+       [
+        15.766209,
+        50.023191
+       ],
+       [
+        15.765953,
+        50.023204
+       ],
+       [
+        15.7634,
+        50.023195
+       ],
+       [
+        15.763383,
+        50.023201
+       ],
+       [
+        15.76337,
+        50.023214
+       ],
+       [
+        15.763389,
+        50.023053
+       ],
+       [
+        15.763421,
+        50.023064
+       ],
+       [
+        15.766189,
+        50.02307
+       ],
+       [
+        15.76622,
+        50.02308
+       ],
+       [
+        15.76791,
+        50.023084
+       ],
+       [
+        15.767889,
+        50.023192
+       ],
+       [
+        15.766734,
+        50.023194
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2292/9, k. ú. Pardubice",
+    "source_text": "p. p. č. 2292/9, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.765964,
+        50.024171
+       ],
+       [
+        15.765915,
+        50.024089
+       ],
+       [
+        15.765994,
+        50.023227
+       ],
+       [
+        15.765953,
+        50.023204
+       ],
+       [
+        15.766124,
+        50.023195
+       ],
+       [
+        15.766016,
+        50.024295
+       ],
+       [
+        15.765964,
+        50.024171
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2292/10, k. ú. Pardubice",
+    "source_text": "p. p. č. 2292/10, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.766043,
+        50.024941
+       ],
+       [
+        15.766035,
+        50.025014
+       ],
+       [
+        15.765952,
+        50.025013
+       ],
+       [
+        15.765939,
+        50.025195
+       ],
+       [
+        15.765813,
+        50.02519
+       ],
+       [
+        15.765915,
+        50.024089
+       ],
+       [
+        15.765964,
+        50.024171
+       ],
+       [
+        15.766016,
+        50.024295
+       ],
+       [
+        15.766124,
+        50.023195
+       ],
+       [
+        15.766209,
+        50.023191
+       ],
+       [
+        15.766043,
+        50.024941
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2309/4, k. ú. Pardubice",
+    "source_text": "p. p. č. 2309/4, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.763511,
+        50.020633
+       ],
+       [
+        15.763628,
+        50.020643
+       ],
+       [
+        15.76361,
+        50.020868
+       ],
+       [
+        15.763468,
+        50.022215
+       ],
+       [
+        15.763374,
+        50.023037
+       ],
+       [
+        15.763389,
+        50.023053
+       ],
+       [
+        15.763272,
+        50.024142
+       ],
+       [
+        15.763103,
+        50.025853
+       ],
+       [
+        15.763002,
+        50.026821
+       ],
+       [
+        15.76301,
+        50.026842
+       ],
+       [
+        15.76302,
+        50.026852
+       ],
+       [
+        15.763047,
+        50.026862
+       ],
+       [
+        15.762761,
+        50.02685
+       ],
+       [
+        15.762782,
+        50.026849
+       ],
+       [
+        15.762801,
+        50.026842
+       ],
+       [
+        15.762818,
+        50.026828
+       ],
+       [
+        15.762829,
+        50.02681
+       ],
+       [
+        15.763439,
+        50.020823
+       ],
+       [
+        15.763466,
+        50.020631
+       ],
+       [
+        15.763511,
+        50.020633
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2315/39, k. ú. Pardubice",
+    "source_text": "p. p. č. 2315/39, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.76841,
+        50.023193
+       ],
+       [
+        15.768099,
+        50.023192
+       ],
+       [
+        15.76812,
+        50.023084
+       ],
+       [
+        15.769198,
+        50.023086
+       ],
+       [
+        15.769185,
+        50.023193
+       ],
+       [
+        15.76841,
+        50.023193
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2316/1, k. ú. Pardubice",
+    "source_text": "p. p. č. 2316/1, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.770855,
+        50.023174
+       ],
+       [
+        15.770819,
+        50.023148
+       ],
+       [
+        15.771004,
+        50.021088
+       ],
+       [
+        15.77109,
+        50.020914
+       ],
+       [
+        15.771141,
+        50.020909
+       ],
+       [
+        15.771207,
+        50.020882
+       ],
+       [
+        15.771246,
+        50.020839
+       ],
+       [
+        15.77118,
+        50.021177
+       ],
+       [
+        15.771149,
+        50.021513
+       ],
+       [
+        15.771169,
+        50.02183
+       ],
+       [
+        15.771053,
+        50.023078
+       ],
+       [
+        15.771028,
+        50.023126
+       ],
+       [
+        15.770997,
+        50.023152
+       ],
+       [
+        15.770957,
+        50.023169
+       ],
+       [
+        15.770886,
+        50.023177
+       ],
+       [
+        15.77083,
+        50.023176
+       ],
+       [
+        15.770855,
+        50.023174
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2316/20, k. ú. Pardubice",
+    "source_text": "p. p. č. 2316/20, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.769403,
+        50.023095
+       ],
+       [
+        15.770819,
+        50.023148
+       ],
+       [
+        15.770855,
+        50.023174
+       ],
+       [
+        15.77083,
+        50.023176
+       ],
+       [
+        15.770886,
+        50.023177
+       ],
+       [
+        15.770957,
+        50.023169
+       ],
+       [
+        15.770997,
+        50.023152
+       ],
+       [
+        15.771028,
+        50.023126
+       ],
+       [
+        15.771053,
+        50.023078
+       ],
+       [
+        15.771029,
+        50.023261
+       ],
+       [
+        15.771008,
+        50.023245
+       ],
+       [
+        15.770983,
+        50.023237
+       ],
+       [
+        15.770981,
+        50.023263
+       ],
+       [
+        15.769391,
+        50.023201
+       ],
+       [
+        15.769403,
+        50.023095
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2318/17, k. ú. Pardubice",
+    "source_text": "p. p. č. 2318/17, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.768774,
+        50.026235
+       ],
+       [
+        15.768797,
+        50.026236
+       ],
+       [
+        15.768829,
+        50.025891
+       ],
+       [
+        15.768833,
+        50.025892
+       ],
+       [
+        15.768836,
+        50.025862
+       ],
+       [
+        15.768832,
+        50.025862
+       ],
+       [
+        15.768845,
+        50.025713
+       ],
+       [
+        15.768849,
+        50.025713
+       ],
+       [
+        15.768852,
+        50.025683
+       ],
+       [
+        15.768848,
+        50.025683
+       ],
+       [
+        15.768855,
+        50.025607
+       ],
+       [
+        15.768851,
+        50.025607
+       ],
+       [
+        15.768863,
+        50.025454
+       ],
+       [
+        15.768882,
+        50.025319
+       ],
+       [
+        15.769,
+        50.025251
+       ],
+       [
+        15.769174,
+        50.02331
+       ],
+       [
+        15.769196,
+        50.023112
+       ],
+       [
+        15.769205,
+        50.022968
+       ],
+       [
+        15.769379,
+        50.021031
+       ],
+       [
+        15.769592,
+        50.021041
+       ],
+       [
+        15.769549,
+        50.021547
+       ],
+       [
+        15.769457,
+        50.022465
+       ],
+       [
+        15.769397,
+        50.023174
+       ],
+       [
+        15.769391,
+        50.023201
+       ],
+       [
+        15.769312,
+        50.024051
+       ],
+       [
+        15.769317,
+        50.024052
+       ],
+       [
+        15.769272,
+        50.024524
+       ],
+       [
+        15.769214,
+        50.024521
+       ],
+       [
+        15.769172,
+        50.024585
+       ],
+       [
+        15.76917,
+        50.024611
+       ],
+       [
+        15.769265,
+        50.024613
+       ],
+       [
+        15.769207,
+        50.025297
+       ],
+       [
+        15.769233,
+        50.025509
+       ],
+       [
+        15.769225,
+        50.025585
+       ],
+       [
+        15.769211,
+        50.025584
+       ],
+       [
+        15.769209,
+        50.025611
+       ],
+       [
+        15.769176,
+        50.02561
+       ],
+       [
+        15.769175,
+        50.025619
+       ],
+       [
+        15.769166,
+        50.025621
+       ],
+       [
+        15.769162,
+        50.02566
+       ],
+       [
+        15.769171,
+        50.025662
+       ],
+       [
+        15.769134,
+        50.026084
+       ],
+       [
+        15.76905,
+        50.026968
+       ],
+       [
+        15.769039,
+        50.02703
+       ],
+       [
+        15.769043,
+        50.02703
+       ],
+       [
+        15.769042,
+        50.027066
+       ],
+       [
+        15.76903,
+        50.02716
+       ],
+       [
+        15.768826,
+        50.027152
+       ],
+       [
+        15.768903,
+        50.026356
+       ],
+       [
+        15.768774,
+        50.026235
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2318/51, k. ú. Pardubice",
+    "source_text": "p. p. č. 2318/51, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.768466,
+        50.021
+       ],
+       [
+        15.768523,
+        50.021002
+       ],
+       [
+        15.767813,
+        50.024681
+       ],
+       [
+        15.767714,
+        50.024673
+       ],
+       [
+        15.767687,
+        50.024817
+       ],
+       [
+        15.767787,
+        50.024825
+       ],
+       [
+        15.767679,
+        50.025409
+       ],
+       [
+        15.767551,
+        50.026032
+       ],
+       [
+        15.767505,
+        50.026294
+       ],
+       [
+        15.767428,
+        50.026654
+       ],
+       [
+        15.767393,
+        50.026843
+       ],
+       [
+        15.767373,
+        50.026924
+       ],
+       [
+        15.76736,
+        50.027014
+       ],
+       [
+        15.767356,
+        50.027013
+       ],
+       [
+        15.767342,
+        50.027093
+       ],
+       [
+        15.767143,
+        50.027074
+       ],
+       [
+        15.767266,
+        50.026429
+       ],
+       [
+        15.767272,
+        50.026429
+       ],
+       [
+        15.767281,
+        50.026378
+       ],
+       [
+        15.767275,
+        50.026378
+       ],
+       [
+        15.767468,
+        50.025402
+       ],
+       [
+        15.767496,
+        50.025222
+       ],
+       [
+        15.767563,
+        50.0249
+       ],
+       [
+        15.767628,
+        50.024537
+       ],
+       [
+        15.767972,
+        50.022755
+       ],
+       [
+        15.768035,
+        50.022439
+       ],
+       [
+        15.768145,
+        50.021943
+       ],
+       [
+        15.768313,
+        50.020993
+       ],
+       [
+        15.768344,
+        50.020995
+       ],
+       [
+        15.768414,
+        50.021126
+       ],
+       [
+        15.768442,
+        50.020999
+       ],
+       [
+        15.768466,
+        50.021
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2583/1, k. ú. Pardubice",
+    "source_text": "p. p. č. 2583/1, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.770574,
+        50.028243
+       ],
+       [
+        15.770654,
+        50.027375
+       ],
+       [
+        15.77065,
+        50.027343
+       ],
+       [
+        15.770683,
+        50.027142
+       ],
+       [
+        15.770824,
+        50.025543
+       ],
+       [
+        15.771035,
+        50.023283
+       ],
+       [
+        15.771029,
+        50.023261
+       ],
+       [
+        15.771059,
+        50.023016
+       ],
+       [
+        15.771169,
+        50.02183
+       ],
+       [
+        15.771149,
+        50.021513
+       ],
+       [
+        15.77118,
+        50.021177
+       ],
+       [
+        15.771246,
+        50.020839
+       ],
+       [
+        15.771271,
+        50.020567
+       ],
+       [
+        15.771308,
+        50.020326
+       ],
+       [
+        15.77177,
+        50.01524
+       ],
+       [
+        15.771764,
+        50.015214
+       ],
+       [
+        15.771776,
+        50.015076
+       ],
+       [
+        15.771787,
+        50.01507
+       ],
+       [
+        15.771814,
+        50.014791
+       ],
+       [
+        15.771805,
+        50.014791
+       ],
+       [
+        15.77188,
+        50.014004
+       ],
+       [
+        15.771891,
+        50.013999
+       ],
+       [
+        15.772045,
+        50.014012
+       ],
+       [
+        15.771999,
+        50.014454
+       ],
+       [
+        15.771951,
+        50.015089
+       ],
+       [
+        15.771475,
+        50.020327
+       ],
+       [
+        15.771433,
+        50.020852
+       ],
+       [
+        15.771387,
+        50.021279
+       ],
+       [
+        15.770523,
+        50.030605
+       ],
+       [
+        15.770487,
+        50.03078
+       ],
+       [
+        15.770438,
+        50.031329
+       ],
+       [
+        15.770308,
+        50.031306
+       ],
+       [
+        15.770359,
+        50.030777
+       ],
+       [
+        15.770356,
+        50.030599
+       ],
+       [
+        15.770574,
+        50.028243
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Staňkova",
+    "source_text": "Staňkova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.769293,
+        50.023139
+       ],
+       [
+        15.768,
+        50.023145
+       ]
+      ],
+      [
+       [
+        15.769293,
+        50.023139
+       ],
+       [
+        15.770789,
+        50.023196
+       ],
+       [
+        15.771135,
+        50.023194
+       ]
+      ],
+      [
+       [
+        15.765417,
+        50.023134
+       ],
+       [
+        15.766125,
+        50.023137
+       ]
+      ],
+      [
+       [
+        15.766125,
+        50.023137
+       ],
+       [
+        15.768,
+        50.023145
+       ]
+      ],
+      [
+       [
+        15.763301,
+        50.023128
+       ],
+       [
+        15.765417,
+        50.023134
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Rožkova",
+    "source_text": "Rožkova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.765646,
+        50.028043
+       ],
+       [
+        15.765718,
+        50.027271
+       ],
+       [
+        15.765768,
+        50.027044
+       ]
+      ],
+      [
+       [
+        15.766053,
+        50.023911
+       ],
+       [
+        15.766018,
+        50.02419
+       ]
+      ],
+      [
+       [
+        15.766053,
+        50.023911
+       ],
+       [
+        15.766125,
+        50.023137
+       ]
+      ],
+      [
+       [
+        15.765529,
+        50.029039
+       ],
+       [
+        15.765452,
+        50.029927
+       ]
+      ],
+      [
+       [
+        15.765529,
+        50.029039
+       ],
+       [
+        15.765646,
+        50.028043
+       ]
+      ],
+      [
+       [
+        15.766018,
+        50.02419
+       ],
+       [
+        15.765933,
+        50.025274
+       ]
+      ],
+      [
+       [
+        15.765845,
+        50.026104
+       ],
+       [
+        15.765806,
+        50.026496
+       ]
+      ],
+      [
+       [
+        15.765933,
+        50.025274
+       ],
+       [
+        15.765845,
+        50.026104
+       ]
+      ],
+      [
+       [
+        15.765806,
+        50.026496
+       ],
+       [
+        15.765768,
+        50.027044
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Češkova",
+    "source_text": "Češkova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.768839,
+        50.028167
+       ],
+       [
+        15.768749,
+        50.029167
+       ]
+      ],
+      [
+       [
+        15.769491,
+        50.020947
+       ],
+       [
+        15.769421,
+        50.02167
+       ],
+       [
+        15.769399,
+        50.022059
+       ]
+      ],
+      [
+       [
+        15.768998,
+        50.026289
+       ],
+       [
+        15.76893,
+        50.027193
+       ]
+      ],
+      [
+       [
+        15.769498,
+        50.01959
+       ],
+       [
+        15.769556,
+        50.019789
+       ],
+       [
+        15.769573,
+        50.019968
+       ],
+       [
+        15.769501,
+        50.020797
+       ]
+      ],
+      [
+       [
+        15.76906,
+        50.025382
+       ],
+       [
+        15.769037,
+        50.025454
+       ],
+       [
+        15.768994,
+        50.025964
+       ],
+       [
+        15.768998,
+        50.026289
+       ]
+      ],
+      [
+       [
+        15.769213,
+        50.024092
+       ],
+       [
+        15.769293,
+        50.023139
+       ]
+      ],
+      [
+       [
+        15.769213,
+        50.024092
+       ],
+       [
+        15.769113,
+        50.025249
+       ],
+       [
+        15.76906,
+        50.025382
+       ]
+      ],
+      [
+       [
+        15.76893,
+        50.027193
+       ],
+       [
+        15.768917,
+        50.027453
+       ],
+       [
+        15.768839,
+        50.028167
+       ]
+      ],
+      [
+       [
+        15.769399,
+        50.022059
+       ],
+       [
+        15.769293,
+        50.023139
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "V Ráji",
+    "source_text": "V Ráji",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.768,
+        50.023145
+       ],
+       [
+        15.767844,
+        50.023985
+       ]
+      ],
+      [
+       [
+        15.766866,
+        50.03075
+       ],
+       [
+        15.766852,
+        50.029432
+       ],
+       [
+        15.766868,
+        50.029094
+       ]
+      ],
+      [
+       [
+        15.76759,
+        50.025333
+       ],
+       [
+        15.767409,
+        50.026234
+       ]
+      ],
+      [
+       [
+        15.768226,
+        50.022015
+       ],
+       [
+        15.768438,
+        50.02091
+       ]
+      ],
+      [
+       [
+        15.766868,
+        50.029094
+       ],
+       [
+        15.767058,
+        50.028097
+       ]
+      ],
+      [
+       [
+        15.768438,
+        50.02091
+       ],
+       [
+        15.768472,
+        50.020729
+       ],
+       [
+        15.768492,
+        50.020477
+       ],
+       [
+        15.76845,
+        50.02019
+       ]
+      ],
+      [
+       [
+        15.76759,
+        50.025333
+       ],
+       [
+        15.767844,
+        50.023985
+       ]
+      ],
+      [
+       [
+        15.768281,
+        50.019214
+       ],
+       [
+        15.768327,
+        50.019354
+       ],
+       [
+        15.76845,
+        50.02019
+       ]
+      ],
+      [
+       [
+        15.768,
+        50.023145
+       ],
+       [
+        15.768076,
+        50.022817
+       ],
+       [
+        15.768226,
+        50.022015
+       ]
+      ],
+      [
+       [
+        15.767231,
+        50.027124
+       ],
+       [
+        15.767409,
+        50.026234
+       ]
+      ],
+      [
+       [
+        15.767058,
+        50.028097
+       ],
+       [
+        15.767231,
+        50.027124
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Koordinační situační výkres chodníků ve Staňkově ulici",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.317,
+     "y": 0.307,
+     "text": "zvýšená křižovatka, zklidnění dopravy (platí beze změny)",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.246,
+     "y": 0.515,
+     "text": "zvýšená křižovatka (platí beze změny)",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.72,
+     "y": 0.5,
+     "text": "další zvýšená křižovatka (platí beze změny)",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.59,
+     "y": 0.804,
+     "text": "zvýšená křižovatka (platí beze změny)",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.8,
+     "y": 0.15,
+     "text": "oranžově: rekonstruované chodníky podél Staňkovy (beze změny)",
+     "kind": "stavajici"
+    }
+   ],
+   "legend": [
+    {
+     "color": "oranžová",
+     "meaning": "chodníky"
+    },
+    {
+     "color": "tmavě šedá",
+     "meaning": "zvýšené křižovatky"
+    }
+   ]
+  },
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Hlavní údaje sedí s originálem: kdo rozhodl, datum, který topol na kterém pozemku, podmínky kácení, křižovatky, šířky chodníků i kam podat odvolání; jen výsadbu keřů a stromů karta uvádí mezi podmínkami kácení, i když v originálu je to jen záměr investora."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Hlavní údaje sedí s originálem: kdo rozhodl, datum, který topol na kterém pozemku, podmínky kácení, křižovatky, šířky chodníků i kam podat odvolání; jen výsadbu keřů a stromů karta uvádí mezi podmínkami kácení, i když v originálu je to jen záměr investora."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta říká co, kde, koho se to týká a jak se odvolat, ale nevysvětluje, od kdy běží 15denní lhůta u lidí, kterým se rozhodnutí doručuje veřejnou vyhláškou, a neříká, kde ve Staňkově ulici topol roste."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je převážně srozumitelný, místy ale zůstávají úřední obraty jako „nabytí právní moci“, „účastník řízení“ nebo zkratka „p. p. č.“."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Výkres z originálu ukazuje správnou ulici a mapa vyznačuje správné pozemky, jenže jediná skutečná změna, tedy kácení topolu, na obrázku vyznačená není a čísla ukazují čtyři zvýšené křižovatky, zatímco text uvádí tři."
+   }
+  },
+  "summary": "Karta věrně popisuje, že stavební úřad doplnil do povolení chodníků ve Staňkově ulici kácení jednoho topolu; chybí jen vysvětlení, od kdy běží lhůta pro odvolání, a obrázek neukazuje místo, kde strom roste.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-03",
+    "verdict": "v_dokumentu",
+    "evidence": "Záhlaví originálu: „Pardubice, dne 3.11.2026“."
+   },
+   {
+    "field": "lhuta",
+    "value": "15 dnů ode dne oznámení rozhodnutí (bez konkrétního data)",
+    "verdict": "v_dokumentu",
+    "evidence": "Poučení: „Proti tomuto rozhodnutí se lze odvolat do 15 ti dnů ode dne jeho oznámení“. Datum vyvěšení v originálu chybí (políčko „Vyvěšeno dne“ je prázdné), konkrétní den proto spočítat nelze a je správně, že karta žádný neuvádí."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-11T06:50:12+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 14,
+   "cache_read": 80013,
+   "cache_write": 46753,
+   "output": 8451,
+   "usd": 0.5077
+  }
+ },
+ "published_at": "2026-11-11T06:50:12+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

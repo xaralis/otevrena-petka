@@ -1,0 +1,224 @@
+{
+ "notice_id": "mo5-15699",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-11T06:52:18+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Češkova",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15699",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 14. 11. do 20. 12. 2026 bude v Češkově část stezky pro chodce a cyklisty zabraná lešením.",
+ "summary": "Kvůli zateplování domu bude na stezce pro chodce a cyklisty v ulici Češkova před domy č. p. 677 a 1358 stát stavební lešení. Pracovní místo označí firma Setertix Group s.r.o. dopravním zařízením (značka Z2). Úprava platí od 14. 11. do 20. 12. 2026. Chodci a cyklisté by si měli dát pozor na označené pracovní místo.",
+ "where": "Ulice Češkova, stezka pro chodce a cyklisty před domy č. p. 677 a 1358",
+ "period": {
+  "from": "2026-11-14",
+  "to": "2026-12-20",
+  "text": "14. 11. 2026 – 20. 12. 2026"
+ },
+ "action": null,
+ "affects": "Chodci a cyklisté na stezce v Češkově před domy č. p. 677 a 1358.",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "stavební lešení při zateplení přilehlého domu"
+  },
+  {
+   "label": "Platnost",
+   "value": "14. 11. 2026 – 20. 12. 2026"
+  },
+  {
+   "label": "Zodpovídá za provedení",
+   "value": "Setertix Group s.r.o."
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "proti opatření nejsou přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Češkova 677",
+  "Češkova 1358"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15699-1.pdf",
+  "page": 4,
+  "box": [
+   0.11,
+   0.08,
+   0.74,
+   0.8
+  ],
+  "caption": "Fotka místa v Češkově, kde bude pracovní místo (stezka podél domu)"
+ },
+ "parking": null,
+ "visual_plan": "Mapa Češkovy s označenými domy č. p. 677 a 1358 a fotka místa z přílohy; krátce uvést dobu platnosti.",
+ "reviewer_notes": "Opatření platí od 14. 11. 2026, k 11. 11. 2026 tedy ještě nezačalo. Lhůta pro připomínky není, opravné prostředky nejsou přípustné. Fotka na straně 4 je v PDF otočená o 90°, výřez je odhad. Schéma B/17 TP66 na straně 5 je jen obecné schéma. Datum vyvěšení na desce magistrátu v dokumentu chybí.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Češkova 677",
+    "source_text": "Češkova 677",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.769063,
+      50.027653
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Češkova 1358",
+    "source_text": "Češkova 1358",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.769079,
+      50.027478
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.766831497667186,
+    50.0266655,
+    15.771310502332815,
+    50.0284655
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      597.9,
+      338.5
+     ]
+    },
+    {
+     "kind": "point",
+     "xy": [
+      602.1,
+      411.5
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Fotka místa v Češkově, kde bude pracovní místo (stezka podél domu)",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.54,
+     "y": 0.6,
+     "text": "červeně vyznačeno: tady bude stát lešení u domu",
+     "kind": "nove"
+    },
+    {
+     "x": 0.7,
+     "y": 0.78,
+     "text": "stezka pro chodce a cyklisty: pozor na pracovní místo",
+     "kind": "stavajici"
+    }
+   ],
+   "legend": [
+    {
+     "color": "červená",
+     "meaning": "část stezky zabraná lešením"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, důvod, platnost od 14. 11. do 20. 12. 2026, značka Z2, odpovědná firma i to, že se nelze odvolat, odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co se děje, kde, kdy a koho se to týká; připomínky ani odvolání originál nepřipouští, takže čtenář nemusí nic dělat."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný, jen kód značky Z2 není vysvětlený a věta o opravných prostředcích zní úředně."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Fotka ukazuje správné místo a čísla jsou na správných místech, ale je otočená o 90° stejně jako v originálu, takže se v ní čtenář špatně vyzná."
+   }
+  },
+  "summary": "Karta věrně popisuje dočasné omezení stezky v ulici Češkova kvůli lešení od 14. 11. do 20. 12. 2026; slabší je jen otočená fotka a nevysvětlená značka Z2.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-14",
+    "verdict": "v_dokumentu",
+    "evidence": "Strana 2: „Platnost úpravy: 14. 11. 2026 – 20. 12. 2026“."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-20",
+    "verdict": "v_dokumentu",
+    "evidence": "Strana 2: „Platnost úpravy: 14. 11. 2026 – 20. 12. 2026“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-11T06:52:37+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 14,
+   "cache_read": 42981,
+   "cache_write": 32090,
+   "output": 5015,
+   "usd": 0.2689
+  }
+ },
+ "published_at": "2026-11-11T06:52:37+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

@@ -1,0 +1,361 @@
+{
+ "notice_id": "mo5-15700",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-11T06:51:27+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Na Spravedlnosti",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15700",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 16. 11. do 16. 12. 2026 bude v ulici Na Spravedlnosti uzavřená stezka pro chodce a cyklisty",
+ "summary": "Kvůli stavebním ppracím (demolice přilehlých objektů) bude od 16. 11. 2026 do 16. 12. 2026 uzavřena stezka pro chodce a cyklisty v ulici Na Spravedlnosti proti domu č. p. 2011. Uzavřený úsek je na výkresu 45 m dlouhý a bude oplocený mobilním oplocením. Chodci mají přejít na druhý chodník. Úpravu vydal Magistrát města Pardubic.",
+ "where": "Na Spravedlnosti, proti domu č. p. 2011",
+ "period": {
+  "from": "2026-11-16",
+  "to": "2026-12-16",
+  "text": "16. 11. 2026 – 16. 12. 2026"
+ },
+ "action": null,
+ "affects": "Chodci a cyklisté na stezce v ulici Na Spravedlnosti u domu č. p. 2011",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "stavební práce (demolice přilehlých objektů)"
+  },
+  {
+   "label": "Délka uzavírky",
+   "value": "podle situačního plánu asi 45 m"
+  },
+  {
+   "label": "Provádí",
+   "value": "StaMat CZ, s.r.o."
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "proti opatření nejsou přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "Z2",
+   "text": "dle schématu B/17 TP66 (zábrany)",
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": "STEZKA ZA xx METRŮ UZAVŘENA",
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Na Spravedlnosti",
+  "Na Spravedlnosti 2011"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15700-1.pdf",
+  "page": 4,
+  "box": [
+   0.12,
+   0.06,
+   0.89,
+   0.9
+  ],
+  "caption": "Situační plán uzavřeného úseku chodníku v ulici Na Spravedlnosti (45 m)"
+ },
+ "parking": null,
+ "visual_plan": "Mapa s vyznačeným uzavřeným úsekem chodníku a situační výkres z přílohy; ukáže přesně, kde chodci neprojdou.",
+ "reviewer_notes": "Lhůta pro připomínky není, jde o stanovení bez návrhu, takže action je null. Datum vyvěšení na desce magistrátu v dokumentu není (vyhotoveno 9. 11. 2026). Úpravě předchází platnost od 16. 11. 2026; účinnost je pátý den po vyvěšení. Text E13 má v dokumentu zástupné „xx“ metrů. Výkres je otočený o 90°.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Na Spravedlnosti",
+    "source_text": "Na Spravedlnosti",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.781447,
+        50.030546
+       ],
+       [
+        15.780538,
+        50.029104
+       ],
+       [
+        15.780487,
+        50.029052
+       ],
+       [
+        15.780406,
+        50.029025
+       ],
+       [
+        15.779953,
+        50.029032
+       ]
+      ],
+      [
+       [
+        15.775171,
+        50.029144
+       ],
+       [
+        15.777069,
+        50.029111
+       ]
+      ],
+      [
+       [
+        15.775171,
+        50.029144
+       ],
+       [
+        15.773652,
+        50.029184
+       ]
+      ],
+      [
+       [
+        15.770562,
+        50.029244
+       ],
+       [
+        15.773077,
+        50.029186
+       ]
+      ],
+      [
+       [
+        15.773652,
+        50.029184
+       ],
+       [
+        15.773077,
+        50.029186
+       ]
+      ],
+      [
+       [
+        15.777069,
+        50.029111
+       ],
+       [
+        15.777784,
+        50.029096
+       ]
+      ],
+      [
+       [
+        15.779953,
+        50.029032
+       ],
+       [
+        15.779796,
+        50.029039
+       ]
+      ],
+      [
+       [
+        15.777784,
+        50.029096
+       ],
+       [
+        15.779121,
+        50.029076
+       ]
+      ],
+      [
+       [
+        15.779796,
+        50.029039
+       ],
+       [
+        15.77935,
+        50.029053
+       ],
+       [
+        15.779121,
+        50.029076
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Boženy Vikové-Kunětické 2011",
+    "source_text": "Na Spravedlnosti 2011",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.777388,
+      50.028985
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.775148497667185,
+    50.028085,
+    15.779627502332815,
+    50.029885
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Situační plán uzavřeného úseku chodníku v ulici Na Spravedlnosti (45 m)",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.5,
+     "y": 0.45,
+     "text": "Uzavřený úsek stezky, 45 m, oplocený mobilním oplocením",
+     "kind": "nove"
+    },
+    {
+     "x": 0.39,
+     "y": 0.27,
+     "text": "Mobilní oplocení s červenobílou páskou",
+     "kind": "nove"
+    },
+    {
+     "x": 0.42,
+     "y": 0.06,
+     "text": "Zákaz vstupu chodců: přejděte na druhý chodník",
+     "kind": "nove"
+    },
+    {
+     "x": 0.3,
+     "y": 0.87,
+     "text": "Zákaz vstupu chodců: přejděte na druhý chodník",
+     "kind": "nove"
+    },
+    {
+     "x": 0.28,
+     "y": 0.6,
+     "text": "Parkovací stání u uzavřeného úseku",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.25,
+     "y": 0.4,
+     "text": "Ulice Na Spravedlnosti",
+     "kind": "misto"
+    }
+   ],
+   "legend": [
+    {
+     "color": "modrá",
+     "meaning": "uzavřený úsek stezky s oplocením"
+    },
+    {
+     "color": "červená čárkovaná",
+     "meaning": "mobilní oplocení s červenobílou páskou"
+    },
+    {
+     "color": "oranžový křížek",
+     "meaning": "značky zákazu vstupu chodců na obou koncích úseku"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": "dle schématu B/17 TP66 (zábrany)",
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "STEZKA ZA xx METRŮ UZAVŘENA",
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Termín, místo, důvod, firma i dopravní značky odpovídají originálu, délka 45 m je opsaná ze situačního plánu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se uzavírá, kde, kdy, koho se to týká a jak obejít uzavřený úsek. Připomínky ani odvolání podat nejde, takže jako akce nic nechybí."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný, ale je v něm překlep, úřední obrat „opravné prostředky“ a text značky se zástupným „xx metrů“, který může čtenáře zmást."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Otočený výkres s očíslovanými popisky správně ukazuje uzavřený úsek, oplocení i místa se značkami. Letecký snímek a náhled jsou jen orientační."
+   }
+  },
+  "summary": "Karta věrně popisuje měsíční uzavírku stezky pro chodce a cyklisty v ulici Na Spravedlnosti. Termín, místo a důvod sedí s originálem, opravit je potřeba jen drobnosti v textu.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-16",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 16. 11. 2026 – 16. 12. 2026“"
+   },
+   {
+    "field": "do",
+    "value": "2026-12-16",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 16. 11. 2026 – 16. 12. 2026“"
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-11T06:51:50+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 14,
+   "cache_read": 38608,
+   "cache_write": 27779,
+   "output": 4868,
+   "usd": 0.2594
+  }
+ },
+ "published_at": "2026-11-11T06:51:50+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

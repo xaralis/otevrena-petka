@@ -1,0 +1,268 @@
+{
+ "notice_id": "mo5-15702",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-11T06:50:31+00:00",
+ "source": {
+  "title": "Vyrozumění - zahájení řízení - Pod Břízkami",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15702",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "stavby",
+ "headline": "Stavební úřad zahájil řízení o přestavbě domu čp. 800 v ulici Pod Břízkami na posilovnu pro sportovce",
+ "summary": "Firma Nexum Care chce v objektu čp. 800 v ulici Pod Břízkami změnit užívání na relaxační a posilující prostory pro vrcholové sportovce. Jde o vnitřní úpravy, nové šatny, posilovnu, rekuperaci a dvě tepelná čerpadla na fasádě do ulice U Suchého dubu. Provoz má být jen ve dne. Účastníci řízení mohou do 15 dnů od doručení oznámení podat námitky.",
+ "where": "objekt čp. 800, ulice Pod Břízkami, Pardubice",
+ "period": {
+  "from": "2026-10-29",
+  "to": null,
+  "text": "Řízení bylo zahájeno 29. 10. 2026, kdy stavebník podal žádost."
+ },
+ "action": {
+  "what": "Účastníci řízení mohou podat námitky s uvedením důvodů a nahlížet do podkladů; dotčené orgány mohou uplatnit závazná stanoviska.",
+  "deadline": null,
+  "how": "Písemně u Magistrátu města Pardubic, stavebního úřadu (Štrossova 44). Nahlížení do podkladů: úřední dny pondělí a středa 8–11 a 12–17 hod., jindy po telefonické domluvě (referentka Zita Petrusová, tel. 466 859 157). Lhůta je 15 dnů od doručení oznámení; pozdější námitky se nezohlední."
+ },
+ "affects": "Účastníci řízení, zejména sousedé (např. dům čp. 2817 v ulici U Suchého dubu a čp. 1140 v ulici Pod Břízkami), dotčené orgány a obvod Pardubice V.",
+ "facts": [
+  {
+   "label": "Žadatel",
+   "value": "Nexum Care s.r.o."
+  },
+  {
+   "label": "Žádost podána",
+   "value": "29. 10. 2026"
+  },
+  {
+   "label": "Záměr",
+   "value": "Vnitřní úpravy a změna užívání na relaxační a posilující prostory pro sportovce; v 1. PP šatny se sprchami, v 1. NP posilovna a trénink pro hokejisty"
+  },
+  {
+   "label": "Technologie",
+   "value": "Nová rekuperace v 1. PP s výdechem do ulice Pod Břízkami; 2 venkovní tepelná čerpadla na fasádě do ulice U Suchého dubu"
+  },
+  {
+   "label": "Hluk",
+   "value": "Denní limit 45 dB(A) splněn; noční limit 35 dB(A) podle hlukové studie splněn není, provoz má být jen ve dne"
+  },
+  {
+   "label": "Parkování",
+   "value": "4 stání na pozemku čp. 800"
+  },
+  {
+   "label": "Provoz",
+   "value": "Pouze v denní dobu"
+  },
+  {
+   "label": "Spisová značka",
+   "value": "SÚ 213470/2026/Pet"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Pod Břízkami 800",
+  "U Suchého dubu 2817",
+  "Pod Břízkami 1140"
+ ],
+ "parcels": [
+  "st. p. č. 6234, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s objektem čp. 800 a sousedními domy (U Suchého dubu 2817, Pod Břízkami 1140); doplnit krátký výčet změn a lhůtu pro námitky.",
+ "reviewer_notes": "Lhůta je 15 dnů od DORUČENÍ oznámení; datum doručení v dokumentu není, proto je deadline null (nedopočítáno). Na desce visí od 10. 11. do 27. 11. 2026. Ověřit, kdy se oznámení považuje za doručené. Jména zástupce žadatele jsem neuváděl. Čísla popisná 2817 a 1140 jsou sousední domy uvedené v hlukové části.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "st. p. č. 6234, k. ú. Pardubice",
+    "source_text": "st. p. č. 6234, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.774866,
+        50.020658
+       ],
+       [
+        15.774845,
+        50.020516
+       ],
+       [
+        15.775354,
+        50.020485
+       ],
+       [
+        15.775361,
+        50.020534
+       ],
+       [
+        15.775375,
+        50.020534
+       ],
+       [
+        15.775376,
+        50.020545
+       ],
+       [
+        15.775363,
+        50.020546
+       ],
+       [
+        15.775376,
+        50.020627
+       ],
+       [
+        15.774866,
+        50.020658
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Pod Břízkami 800",
+    "source_text": "Pod Břízkami 800",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.775109,
+      50.020577
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "U Suchého dubu 2817",
+    "source_text": "U Suchého dubu 2817",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.774604,
+      50.020507
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Pod Břízkami 1140",
+    "source_text": "Pod Břízkami 1140",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.77438,
+      50.020643
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.772638497667186,
+    50.0196715,
+    15.777117502332816,
+    50.021471500000004
+   ],
+   "shapes": [
+    {
+     "kind": "area",
+     "d": "M596.8,339.0 L591.2,398.1 L727.5,411.0 L729.4,390.6 L733.2,390.6 L733.4,386.0 L729.9,385.6 L733.4,351.9 L596.8,339.0 Z"
+    },
+    {
+     "kind": "point",
+     "xy": [
+      661.9,
+      372.7
+     ]
+    },
+    {
+     "kind": "point",
+     "xy": [
+      526.6,
+      401.9
+     ]
+    },
+    {
+     "kind": "point",
+     "xy": [
+      466.6,
+      345.2
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Žadatel, datum podání žádosti, pozemek, obsah záměru, údaje o hluku, parkování, úřední hodiny i lhůta odpovídají originálu, jen slovo „přestavba“ v nadpisu zní větší, než jsou skutečné úpravy, které se týkají jen vnitřku domu."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Žadatel, datum podání žádosti, pozemek, obsah záměru, údaje o hluku, parkování, úřední hodiny i lhůta odpovídají originálu, jen slovo „přestavba“ v nadpisu zní větší, než jsou skutečné úpravy, které se týkají jen vnitřku domu."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta uvádí, co se mění, kde, kdo může podat námitky, jak a v jaké lhůtě, ale lhůta „15 dnů od doručení“ nemá konkrétní datum a karta nevysvětluje, kdy se oznámení považuje za doručené."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je převážně srozumitelný, ale zůstávají v něm úřední zkratky a pojmy jako 1. PP, 1. NP, rekuperace, dotčené orgány a závazná stanoviska."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Letecký snímek a mapa ukazují dotčený dům na rohu ulic s parkovacími místy na pozemku a vyznačují dům i sousední domy z hlukové části originálu. Samotné vnitřní úpravy ale obrázek ukázat nemůže."
+   }
+  },
+  "summary": "Karta věrně shrnuje oznámení o zahájení řízení o úpravách domu čp. 800 v ulici Pod Břízkami na prostory pro sportovce. Údaje sedí s originálem, jen nadpis mluví o „přestavbě“, ačkoli jde o vnitřní úpravy, a v textu zůstalo několik úředních zkratek.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-29",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál: stavebník „dne 29.10.2026 podal žádost“ a „Řízení o povolení záměru bylo zahájeno dnem podání žádosti.“"
+   },
+   {
+    "field": "lhuta",
+    "value": "null (15 dnů od doručení)",
+    "verdict": "nelze_overit",
+    "evidence": "Originál uvádí „15 dnů od doručení tohoto oznámení“ a účastníkům se doručuje doručenkou. Den doručení v originálu není, takže konkrétní datum nelze správně dopočítat a ponechání bez data je v pořádku."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-11T06:51:00+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 8,
+   "cache_read": 28058,
+   "cache_write": 10159,
+   "output": 5223,
+   "usd": 0.1654
+  }
+ },
+ "published_at": "2026-11-11T06:51:00+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
