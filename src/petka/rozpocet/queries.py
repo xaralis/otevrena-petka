@@ -28,6 +28,11 @@ def pct(a: float, r: float) -> int:
     return min(100, round(a / r * 100)) if r else 0
 
 
+def share(part: float, total: float) -> int:
+    """Part of the whole budget in whole percent; under one shows as 0."""
+    return round(part / total * 100) if total else 0
+
+
 def signed(d: float) -> str:
     return "0,0" if abs(d) < 50 else ("+" if d > 0 else "−") + mil(abs(d))
 
@@ -75,7 +80,8 @@ def group(cur: dict, prev: dict, view: str = "plan") -> tuple[list[dict], dict]:
         rows.sort(key=lambda r: -r["plan"] if view == "plan" else -r["d"])
         r, a = plan(cur, ps), sum(cur.get(p, (0, 0))[1] for p in ps)
         return {"name": name, "official": official, "plan": r, "actual": a, "plan_label": mil(r),
-                "actual_label": mil(a), "pct": pct(a, r), "rows": rows, **_change(r, plan(prev, ps), top)}
+                "actual_label": mil(a), "pct": pct(a, r), "share": share(r, total), "rows": rows,
+                **_change(r, plan(prev, ps), top)}
 
     groups = [mk(names.oddil(k)[0], f"oddíl {k} {names.oddil(k)[1]}" if k != "odvod" else names.oddil(k)[1], ps)
               for k, ps in big]

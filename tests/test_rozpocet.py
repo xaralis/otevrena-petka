@@ -194,3 +194,9 @@ def test_preview_needs_the_token(monkeypatch):
     monkeypatch.setenv("ROZPOCET_NAHLED_TOKEN", "")
     with pytest.raises(HTTPException):          # no token configured: the preview doesn't exist
         web._check("")
+
+
+def test_group_share_of_whole_budget():
+    groups, _ = queries.group({"6171": (300, 100, ""), "2219": (700, 0, "")}, {}, "plan")
+    assert [(g["name"], g["share"], g["pct"]) for g in groups] == [("Silnice a chodníky", 70, 0),
+                                                                  ("Chod úřadu a zastupitelstvo", 30, 33)]
