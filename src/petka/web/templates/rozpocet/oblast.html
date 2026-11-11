@@ -14,6 +14,7 @@
       <div class="rz-axis" style="height:220px">{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
       <div class="rz-plot" style="height:220px;gap:0 10px">
         {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
+        {% for m in marks %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 10px) * {{ m.i }} / {{ m.n }} - 10px / 2);width:calc((100% + 10px) * {{ m.k }} / {{ m.n }})"><b>{{ m.label }}</b></div>{% endfor %}
         {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
       </div>
       <div></div>

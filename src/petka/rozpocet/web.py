@@ -25,6 +25,20 @@ PER_PAGE = 20
 FROM_CITY = {2026: {"dane": 25276.5, "zp": 23503.5, "doprava": 12432.8, "zpet": 8026.0,
                     "zdroj": "rozpočet města Pardubic na rok 2026, s. 126"}}
 
+# Periods marked in the charts: (first year, last year, label)
+MARKS = [(2020, 2021, "covid")]
+
+
+def _marks(years: list[int]) -> list[dict]:
+    """Bands behind chart columns, as column index and count."""
+    out = []
+    for a, b, label in MARKS:
+        idx = [i for i, y in enumerate(years) if a <= y <= b]
+        if idx:
+            out.append({"i": idx[0], "k": len(idx), "n": len(years), "label": label})
+    return out
+
+
 # Changes of the 2026 budget (usnesení RMO/ZMO in the Usnesení section)
 CHANGES = {2026: [
     ("17. 12. 2025", "Zastupitelstvo schválilo rozpočet", "159/2025 Z", "159-2025-z"),
@@ -52,7 +66,7 @@ def _ctx(request: Request, base: str, tab: str, **kw) -> dict:
     ys = [y["year"] for y in q.years()]
     as_of = {y["year"]: y["as_of"] for y in q.years()}
     return {"base": base, "tab": tab, "years": ys, "as_of": as_of, "today": dt.date.today(),
-            "mil": q.mil, "tis": q.tis, **kw}
+            "mil": q.mil, "tis": q.tis, "marks": _marks([s["year"] for s in kw.get("series") or []]), **kw}
 
 
 def _render(request: Request, name: str, ctx: dict):
