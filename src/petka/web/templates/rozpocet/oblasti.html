@@ -3,15 +3,15 @@
 {% block title %}Oblasti rozpočtu {{ year }}{% endblock %}
 {% block crumbs %} <span aria-hidden="true">/</span> <span>Oblasti</span>{% endblock %}
 {% block main %}
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-bottom:.8rem">
+<div id="vyber" style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-bottom:.8rem;scroll-margin-top:1rem">
   {{ year_switch(base ~ '/oblasti', year, '&pohled=zmena' if view == 'zmena' else '') }}
   {% if (year - 1) in years %}
   <nav class="switch" aria-label="Pohled" style="margin:0;--sw:13rem">
-    <a href="{{ base }}/oblasti?rok={{ year }}"{% if view == 'plan' %} aria-current="page"{% endif %}>Plán a utraceno</a><a href="{{ base }}/oblasti?rok={{ year }}&amp;pohled=zmena"{% if view == 'zmena' %} aria-current="page"{% endif %}>Co se změnilo proti {{ year - 1 }}</a><a href="{{ base }}/oblasti?rok={{ year }}&amp;pohled=vyvoj"{% if view == 'vyvoj' %} aria-current="page"{% endif %}>Vývoj v letech</a>
+    <a href="{{ base }}/oblasti?rok={{ year }}#vyber"{% if view == 'plan' %} aria-current="page"{% endif %}>Plán a utraceno</a><a href="{{ base }}/oblasti?rok={{ year }}&amp;pohled=zmena#vyber"{% if view == 'zmena' %} aria-current="page"{% endif %}>Co se změnilo proti {{ year - 1 }}</a><a href="{{ base }}/oblasti?rok={{ year }}&amp;pohled=vyvoj#vyber"{% if view == 'vyvoj' %} aria-current="page"{% endif %}>Vývoj v letech</a>
   </nav>
   {% endif %}
 </div>
-<p class="note" style="margin:0 0 2.2rem">{% if view == 'vyvoj' %}Každá oblast od roku {{ years[0] }}: obrys je plán, výplň skutečně utraceno. Každý graf má vlastní měřítko, maximum je napsané vlevo nahoře.{% elif view == 'zmena' %}Plán na rok {{ year }} proti plánu na rok {{ year - 1 }}, osa v mil. Kč. Seřazeno od největšího nárůstu po největší pokles. Částky uvidíte po najetí na řádek.{% else %}Plán na rok {{ year }}: {{ mil(total) }} mil. Kč. {{ status(year) }}{% endif %}</p>
+<p class="note" style="margin:0 0 2.2rem">{% if view == 'vyvoj' %}Každá oblast od roku {{ years[0] }}: obrys je plán, výplň skutečně utraceno. Každý graf má vlastní měřítko, maximum je napsané vlevo nahoře.{% elif view == 'zmena' %}Plán na rok {{ year }} proti plánu na rok {{ year - 1 }}, osa v mil. Kč. Seřazeno od největšího nárůstu po největší pokles. Částky uvidíte po najetí na čáru. Účely pod 50 tis. Kč v obou letech vynecháváme.{% else %}Plán na rok {{ year }}: {{ mil(total) }} mil. Kč. {{ status(year) }}{% endif %}</p>
 
 {% if view == 'zmena' %}
 <div class="rz-scale">
@@ -22,7 +22,7 @@
 {% endif %}
 
 {% macro dumbbell(x) -%}
-<div class="db" title="{{ year - 1 }}: {{ mil(x.before) }} → {{ year }}: {{ mil(x.plan) }} mil. Kč"><i class="db-axis"></i><i class="db-line" style="left:{{ x.line_left }}%;width:{{ x.line_w }}%"></i><i class="db-prev" style="left:{{ x.prev_pos }}%"></i><i class="db-cur" style="left:{{ x.cur_pos }}%"></i></div>
+<div class="db rz-tip" data-tip="{{ year - 1 }}: {{ mil(x.before) }} → {{ year }}: {{ mil(x.plan) }} mil. Kč"><i class="db-axis"></i><i class="db-line" style="left:{{ x.line_left }}%;width:{{ x.line_w }}%"></i><i class="db-prev" style="left:{{ x.prev_pos }}%"></i><i class="db-cur" style="left:{{ x.cur_pos }}%"></i></div>
 {%- endmacro %}
 
 {% if view == 'vyvoj' %}
@@ -33,7 +33,7 @@
     <div><h2>{{ t.name }}</h2><p class="off">{{ t.official }}</p></div>
     <div class="rz-spark" role="img" aria-label="{{ t.name }}: {% for p in t.points %}{{ p.title }}{{ '; ' if not loop.last }}{% endfor %}">
       <span class="rz-spark-top">max. {{ t.top }} mil. Kč</span>
-      {% for p in t.points %}<div class="rz-spark-col" title="{{ p.title }}"><i class="r" style="height:{{ p.r_h }}%"></i><i class="a{{ ' now' if p.year == years[-1] and running }}" style="height:{{ p.a_h }}%"></i></div>{% endfor %}
+      {% for p in t.points %}<div class="rz-spark-col rz-tip" data-tip="{{ p.year }}: plán {{ mil(p.r) }} · utraceno {{ mil(p.a) }} mil. Kč"><i class="r" style="height:{{ p.r_h }}%"></i><i class="a{{ ' now' if p.year == years[-1] and running }}" style="height:{{ p.a_h }}%"></i></div>{% endfor %}
       <span class="rz-spark-y">{{ years[0] }}</span><span class="rz-spark-y end">{{ years[-1] }}</span>
     </div>
     <p class="rz-num"><small>utraceno {{ t.first.year }}</small><b>{{ mil(t.first.a) }}</b> <span class="rz-unit">mil. Kč</span></p>
@@ -49,14 +49,14 @@
 <section class="rz-g">
   {% if view == 'zmena' %}
   <div class="rz-gh ch t-{{ g.tone }}">
-    <div><h2>{{ g.name }}</h2><p class="off dtl">{{ year - 1 }}: {{ mil(g.before) }} → {{ year }}: {{ g.plan_label }} mil. Kč</p></div>
+    <h2>{{ g.name }}</h2>
     {{ dumbbell(g) }}
     <p class="rz-d">{{ g.d_label }}</p>
   </div>
   <ol class="rz-rows">
     {% for r in g.rows %}
     <li class="rz-r ch t-{{ r.tone }}">
-      <p>{% if r.code|length == 4 %}<a href="{{ base }}/oblasti/{{ r.code }}?rok={{ year }}">{{ r.label }}</a>{% else %}<b>{{ r.label }}</b>{% endif %}<span class="off dtl" style="display:block">{{ year - 1 }}: {{ mil(r.before) }} → {{ year }}: {{ r.plan_label }} mil. Kč</span></p>
+      <p>{% if r.code|length == 4 %}<a href="{{ base }}/oblasti/{{ r.code }}?rok={{ year }}">{{ r.label }}</a>{% else %}<b>{{ r.label }}</b>{% endif %}</p>
       {{ dumbbell(r) }}
       <p class="rz-d">{{ r.d_label }}</p>
     </li>

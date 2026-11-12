@@ -1048,3 +1048,23 @@ th .rz-unit, .rz-colhead .rz-unit, .rz-num .rz-unit, .rz-top .rz-unit, .rz-mu .r
 .rz-abbr { display: grid; grid-template-columns: auto 1fr; gap: .2rem .8rem; margin: 0; color: var(--ink-2); }
 .rz-abbr dt { font-weight: 650; color: var(--ink); }
 .rz-abbr dd { margin: 0; }
+
+/* live tooltips on chart columns and dumbbells (CSS only) */
+.rz-tip { position: relative; }
+.rz-tip:hover { z-index: 6; }
+.rz-tip:hover::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: #fff; font-size: .78rem; font-weight: 600; line-height: 1.3; padding: .3rem .55rem; border-radius: 3px;
+  white-space: nowrap; pointer-events: none; z-index: 7; }
+.rz-spark-col.rz-tip:first-child:hover::after, .rz-col.rz-tip:first-of-type:hover::after { left: 0; transform: none; }
+.rz-spark-col.rz-tip:nth-last-child(3):hover::after, .rz-col.rz-tip:last-of-type:hover::after { left: auto; right: 0; transform: none; }
+.rz-spark-col.rz-tip:hover .r, .rz-col.rz-tip:hover { box-shadow: inset 0 0 0 2px var(--ink); }
+.db.rz-tip:hover::after { bottom: calc(100% + 2px); }
+/* compact change view */
+.rz-gh.ch { padding-bottom: .3rem; }
+.rz-gh.ch h2 { font-size: 1.1rem; margin: 0; }
+.rz-r.ch { padding: .25rem 0; }
+.rz-r.ch > :first-child { font-size: .95rem; }
+.rz-g:has(.ch) { margin-bottom: 1.4rem; }
+.db { height: 18px; }
+.db-axis { top: 8px; } .db-line { top: 6px; } .db-prev, .db-cur { top: 2px; }
+.rz-gh.ch .rz-d { font-size: 1.05rem; }

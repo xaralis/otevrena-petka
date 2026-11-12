@@ -3,7 +3,7 @@
 {% block title %}Rozpočet {{ year }}{% endblock %}
 {% block main %}
 {% set v = t.vydaje %}{% set p = t.prijmy %}{% set f = t.financovani %}
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-bottom:1.6rem">
+<div id="vyber" style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-bottom:1.6rem;scroll-margin-top:1rem">
   {{ year_switch(base, year) }}
   <p class="note" style="margin:0">{{ status(year) }}</p>
 </div>
@@ -42,7 +42,7 @@
   <div class="rz-plot" style="height:280px">
     {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
         {% for m in marks %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 12px) * {{ m.a }} / {{ m.n }} - 12px * {{ m.fa }});width:calc((100% + 12px) * {{ m.b - m.a }} / {{ m.n }} - 12px * {{ m.fb - m.fa }})"><b>{{ m.label }}</b></div>{% endfor %}
-    {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
+    {% for s in series %}<div class="rz-col rz-tip" style="height:{{ s.r_h }}px" data-tip="{{ s.year }}: plán {{ mil(s.r) }} · utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
   </div>
   <div></div>
   <div class="rz-years">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>

@@ -53,6 +53,8 @@ def group(cur: dict, prev: dict, view: str = "plan") -> tuple[list[dict], dict]:
     total = sum(x[0] for x in cur.values())
     codes = [p for p in {**prev, **cur} if (cur.get(p, (0, 0))[0] or cur.get(p, (0, 0))[1]
                                             or (view == "zmena" and prev.get(p, (0,))[0]))]
+    if view == "zmena":   # the change view skips purposes under 50 tis. Kč in both years
+        codes = [p for p in codes if max(cur.get(p, (0,))[0], prev.get(p, (0,))[0]) >= 50]
     by: dict[str, list[str]] = {}
     for p in codes:
         by.setdefault(names.key(p), []).append(p)

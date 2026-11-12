@@ -5,7 +5,7 @@
 {% block h1 %}{{ label }}{% endblock %}
 {% block lead %}{{ about or ('Paragraf ' ~ par ~ ' ' ~ official ~ ' rozpočtové skladby.') }}{% endblock %}
 {% block main %}
-<div style="margin-bottom:1.6rem">{{ year_switch(base ~ '/oblasti/' ~ par, year) }}</div>
+<div id="vyber" style="margin-bottom:1.6rem;scroll-margin-top:1rem">{{ year_switch(base ~ '/oblasti/' ~ par, year) }}</div>
 <div class="rz-two">
   <div>
     <h2 style="margin-top:0">Kolik to stálo rok od roku</h2>
@@ -15,7 +15,7 @@
       <div class="rz-plot" style="height:220px;gap:0 10px">
         {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
         {% for m in marks %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 10px) * {{ m.a }} / {{ m.n }} - 10px * {{ m.fa }});width:calc((100% + 10px) * {{ m.b - m.a }} / {{ m.n }} - 10px * {{ m.fb - m.fa }})"><b>{{ m.label }}</b></div>{% endfor %}
-        {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
+        {% for s in series %}<div class="rz-col rz-tip" style="height:{{ s.r_h }}px" data-tip="{{ s.year }}: plán {{ mil(s.r) }} · utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
       </div>
       <div></div>
       <div class="rz-years" style="gap:0 10px">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>

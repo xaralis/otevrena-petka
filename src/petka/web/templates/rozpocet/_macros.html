@@ -1,5 +1,5 @@
 {% macro year_switch(url, current, extra='') -%}
-<nav class="switch" aria-label="Rok" style="margin:0;--sw:6rem">{% for y in years %}<a href="{{ url }}?rok={{ y }}{{ extra }}"{% if y == current %} aria-current="page"{% endif %}>{{ y }}</a>{% endfor %}</nav>
+<nav class="switch" aria-label="Rok" style="margin:0;--sw:6rem">{% for y in years %}<a href="{{ url }}?rok={{ y }}{{ extra }}#vyber"{% if y == current %} aria-current="page"{% endif %}>{{ y }}</a>{% endfor %}</nav>
 {%- endmacro %}
 {% macro status(year) -%}
 {% if year == years[-1] and as_of[year] and as_of[year].year == year %}Stav ke dni {{ as_of[year]|d }}. Rok ještě běží, čísla budou růst.{% else %}Rok {{ year }} je uzavřený, čísla jsou konečná.{% endif %}
