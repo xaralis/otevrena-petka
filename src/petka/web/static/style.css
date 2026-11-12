@@ -56,9 +56,6 @@ sup { font-size: .7em; color: var(--muted); }
   padding-top: .9rem; padding-bottom: .9rem; border-bottom: 1px solid rgba(255,255,255,.28); }
 .brand { color: #fff; text-decoration: none; font-size: 1.15rem; font-stretch: 85%; }
 .brand b { font-weight: 800; }
-.top nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
-.top nav a { color: #fff; text-decoration: none; font-weight: 500; padding: .65rem 0; margin: -.45rem 0; border-bottom: 2px solid transparent; }
-.top nav a:hover, .top nav a[aria-current] { border-bottom-color: #fff; }
 .top :focus-visible, .band :focus-visible { outline-color: #fff; }
 .band { background: var(--red); color: #fff; }
 .band .wrap { padding-top: 1.6rem; padding-bottom: 2.4rem; }
@@ -262,7 +259,6 @@ footer p { max-width: 80ch; }
 }
 @media (max-width: 600px) {
   html { font-size: 16px; }
-  .top nav { gap: 1rem; }
   .band .wrap { padding-bottom: 1.8rem; }
   .search { flex-direction: column; align-items: stretch; }
   .sentence p { line-height: 2.2; font-size: 1rem; }
@@ -344,19 +340,8 @@ footer p { max-width: 80ch; }
 /* ---- portal ------------------------------------------------------------------------- */
 .brand { font-size: 1.25rem; font-stretch: 85%; letter-spacing: -.01em; }
 .brand b { font-weight: 800; }
-/* nav links stretch to the hairline so the active underline sits on it */
 .top-inner { padding-bottom: 0; align-items: stretch; }
 .brand { align-self: center; padding-bottom: .9rem; }
-.portal-nav { display: flex; gap: 0 1.3rem; flex-wrap: wrap; align-items: stretch; }
-.portal-nav a { display: flex; align-items: center; margin: 0; padding: .2rem 0 .9rem; font-weight: 650; border-bottom: 3px solid transparent; }
-.portal-nav a:hover, .portal-nav a[aria-current] { border-bottom-color: #fff; }
-/* planned sections: lighter weight and a dashed underline – not dimmed, so they keep contrast */
-.portal-nav a.soon { font-weight: 400; }
-.portal-nav a.soon > :first-child { }
-.portal-nav a.soon { text-decoration: underline dashed 1px rgba(255,255,255,.65); text-underline-offset: .3em; }
-/* "Data a API" is a utility, not a section */
-.portal-nav a.util { margin-left: .4rem; padding-left: 1.3rem; border-left: 1px solid rgba(255,255,255,.4); font-weight: 400; }
-.portal-nav a.util[aria-current], .portal-nav a.util:hover { border-bottom-color: #fff; }
 
 /* section tabs on the band's lower edge, the active one merges into the page */
 .sub-band { background: var(--red); }
@@ -425,13 +410,6 @@ pre { white-space: pre-wrap; word-break: break-all; }
 }
 @media (max-width: 600px) {
   .hide-m { display: none; }
-  .top-inner { flex-direction: column; align-items: stretch; gap: .2rem; padding-top: .7rem; }
-  .brand { padding-bottom: .2rem; align-self: flex-start; }
-  .top .portal-nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 0 1.1rem; font-size: .95rem;
-    -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); padding-right: 1.5rem; }
-  .top .portal-nav::-webkit-scrollbar { display: none; }
-  .top .portal-nav a { white-space: nowrap; padding-bottom: .7rem; margin: 0; flex: none; }
-  .top .portal-nav a.util { padding-left: 1.1rem; margin-left: 0; }
   .sub-nav { gap: 0; margin-inline: -.55rem; }
   .sub-nav a { font-size: .9rem; padding: .45rem .55rem .5rem; }
   .band-section .band-lead { font-size: .95rem; }
@@ -447,36 +425,22 @@ pre { white-space: pre-wrap; word-break: break-all; }
 .band-section h1 { max-width: 32ch; font-size: clamp(1.6rem, 3vw, 2.2rem); }
 .band-page h1 { font-size: clamp(2rem, 4.2vw, 3rem); }
 .brand { align-self: flex-end; padding-bottom: 1.05rem; }
-.portal-nav a.soon[aria-current] { text-decoration: none; }
-.util-m { display: none; }
 .examples li { font-size: 1.05rem; font-weight: 400; }
 @supports (field-sizing: content) {
   @media (min-width: 601px) { .sentence select, .sentence input { field-sizing: content; min-width: 4em; } }
 }
 @media (max-width: 600px) {
-  .top-inner { display: grid; grid-template-columns: 1fr auto; }
-  .brand { align-self: center; padding-bottom: .2rem; }
-  .util-m { display: block; align-self: center; color: #fff; font-weight: 400; font-size: .92rem; padding: .3rem 0 .2rem; }
-  .top .portal-nav { grid-column: 1 / -1; }
-  .top .portal-nav a.util { display: none; }
   .switch { display: inline-flex; flex-direction: row; }
   .switch a + a { border-top: 0; }
   .switch a { padding: .45rem .7rem; font-size: .9rem; }
 }
 .ledger.catalog td a { color: var(--red-ink); text-decoration: underline; }
-.top .portal-nav a { margin: 0; }
 
 /* ---- round 3: header, construction, footer, about ---------------------------------------- */
 /* header without hairlines: the active page is a solid white bar, a section under
    construction carries a striped bar like barrier tape */
 .top-inner { border-bottom: 0; padding-top: .9rem; }
 .brand { align-self: center; padding-bottom: .9rem; }
-.top .portal-nav a { border-bottom: 0; padding: .35rem 0 .75rem; position: relative; text-decoration: none; }
-.top .portal-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: .35rem; height: 3px; }
-.top .portal-nav a[aria-current]::after, .top .portal-nav a:hover::after { background: #fff; }
-.top .portal-nav a.soon::after { background: repeating-linear-gradient(135deg, #fff 0 4px, transparent 4px 8px); height: 4px; opacity: .9; }
-.top .portal-nav a.soon[aria-current]::after { background: repeating-linear-gradient(135deg, #fff 0 4px, transparent 4px 8px); opacity: 1; height: 5px; }
-.top .portal-nav a.util { border-left: 0; padding-left: 0; margin-left: 1.2rem; font-weight: 400; }
 .band { border-top: 1px solid rgba(255,255,255,.22); }
 .sub-band { border-top: 0; }
 
@@ -503,17 +467,50 @@ body > footer { flex-shrink: 0; }
 .search-plain input[type=search]::placeholder { color: var(--muted); }
 .search-plain button { background: var(--ink); color: #fff; }
 
-@media (max-width: 600px) {
-  .top-inner { padding-top: .6rem; }
-  .top .portal-nav a.util { display: none; }
-}
 .top-inner { align-items: center; }
 .brand { padding: .35rem 0 .75rem; align-self: auto; }
 .band { border-top: 0; }
-@media (max-width: 600px) { .top-inner { align-items: stretch; } .brand { padding: .2rem 0; } }
 @media (max-width: 600px) { .parts-summary.b-zmo { grid-template-columns: minmax(0, 1fr); } .parts-summary.b-zmo li { gap: .3rem; } }
 .brand { display: inline-flex; align-items: center; gap: .55rem; }
 .brand img { width: 1.75em; height: 1.75em; flex: none; }
+
+/* header: the portal's areas (level 1) on the red bar, the pages of the current area (level 2)
+   on a darker strip under it (petka.nav). Phones: the brand and "Menu", which opens the whole
+   list full screen (menu.js; without JS the menu is the #menu :target). */
+.top-inner { display: flex; flex-wrap: nowrap; align-items: center; gap: 2rem; min-height: 4.2rem; padding-top: 0; padding-bottom: 0; }
+.top .brand { padding: 0; align-self: center; }
+.l1 { display: flex; align-items: stretch; gap: .4rem; margin-left: auto; align-self: stretch; }
+.l1 a { display: flex; align-items: center; padding: 0 .9rem; color: #fff; font-weight: 650; font-size: 1.05rem; text-decoration: none; border-radius: 3px 3px 0 0; white-space: nowrap; }
+.l1 a:hover { background: rgba(0,0,0,.12); }
+.l1 a[aria-current], .l1 a[aria-current]:hover { background: var(--red-ink); }
+.l1 a.u { margin-left: 1rem; font-weight: 500; }
+.l2 { background: var(--red-ink); }
+.l2 nav { display: flex; gap: .2rem; min-height: 2.8rem; align-items: stretch; }
+.l2 a { display: flex; align-items: center; padding: 0 .9rem; color: #fff; font-size: .95rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
+.l2 a:first-child { margin-left: -.9rem; }
+.l2 a:hover { background: rgba(0,0,0,.12); }
+.l2 a[aria-current] { font-weight: 700; box-shadow: inset 0 -3px 0 #fff; }
+.l2 a.soon > span:first-child { text-decoration: underline dashed 1px rgba(255,255,255,.65); text-underline-offset: .3em; }
+.l2 :focus-visible, .mm-top :focus-visible { outline-color: #fff; }
+.mb, .mm { display: none; }
+@media (max-width: 900px) {
+  .top-inner { min-height: 3.5rem; gap: 1rem; }
+  .l1, .l2 { display: none; }
+  .mb { display: inline-flex; align-items: center; gap: .5rem; min-height: 2.75rem; margin-left: auto; padding: .4rem .2rem .4rem .6rem;
+    color: #fff; font-weight: 650; text-decoration: none; }
+  html:not(.js-menu) .mm:target, .mm.open { display: block; position: fixed; inset: 0; z-index: 50; overflow-y: auto; background: #fff; }
+  html.mm-on { overflow: hidden; }
+  .mm-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; padding: 0 1.25rem; background: var(--red); }
+  .mm-top .mb-x { display: inline-flex; gap: .45rem; padding: .4rem .9rem; color: var(--red-ink); background: #fff; border-radius: 3px; }
+  .mm-list { padding: .4rem 1.25rem 1.6rem; }
+  .mm-list h2 { margin: 1.4rem 0 .3rem; font-size: .95rem; font-weight: 650; letter-spacing: 0; color: var(--muted); }
+  .mm-list a { display: block; min-height: 2.75rem; margin: 0 -.8rem; padding: .75rem .8rem; color: var(--ink); text-decoration: none; border-radius: 3px; }
+  .mm-list a[aria-current] { background: var(--grey); }
+  .mm-list b { display: block; font-size: 1.1rem; font-weight: 650; }
+  .mm-list span { display: block; font-size: .9rem; color: var(--ink-2); }
+  .mm-list small { margin-left: .4rem; font-size: .72rem; font-weight: 650; color: var(--muted); }
+  .mm-f { margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--grey); }
+}
 .foot-brand { display: flex; align-items: center; gap: .5rem; }
 .foot-brand img { width: 1.6em; height: 1.6em; }
 /* attendance */
@@ -732,8 +729,6 @@ body > footer { flex-shrink: 0; }
 .draft-problems ul { margin: .3rem 0 0; padding-left: 1.2rem; }
 .draft-review { background: var(--grey); padding: .8rem 1rem; margin: 0 0 1.4rem; max-width: 62ch; font-size: .95rem; }
 .draft-review p { margin: 0 0 .4rem; }
-@media (max-width: 600px) {
-}
 /* reviewers' preview of cards */
 .review-bar { background: #fff4e5; border-bottom: 3px solid var(--abst-tile); font-size: .95rem; }
 .review-inner { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.4rem; padding-top: .6rem; padding-bottom: .6rem; }

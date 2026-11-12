@@ -21,7 +21,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from .. import db, obvody
+from .. import db, nav, obvody
 from ..mcp_server import mcp
 from ..sections import BY_SLUG, REGISTRY, SECTIONS
 from . import og
@@ -272,7 +272,7 @@ async def og_image(request: Request, path: str):
 @app.get("/{slug}", response_class=HTMLResponse, include_in_schema=False)
 def planned_section(request: Request, slug: str):
     s = BY_SLUG.get(slug)
-    if not s or s.status != "planned":
+    if not s or (s.status != "planned" and slug not in nav.SOON):
         raise HTTPException(404)
     return tpl.TemplateResponse(request, "planned.html", {"s": s})
 

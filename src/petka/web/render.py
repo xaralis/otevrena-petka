@@ -9,7 +9,7 @@ from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
 
-from .. import obvody
+from .. import nav, obvody
 from ..sections import BY_SLUG, REGISTRY, SECTIONS
 
 HERE = Path(__file__).parent
@@ -50,6 +50,7 @@ tpl.env.globals.update(asset=asset, CONTACT="filip.varecha@pirati.cz",
                        PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/"),
                        SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME,
                        obvod=obvody.DEFAULT)
+tpl.env.globals.update(nav.TEMPLATE_GLOBALS)
 tpl.env.filters["d"] = _date
 
 for _s in REGISTRY:

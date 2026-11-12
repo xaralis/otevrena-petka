@@ -1,7 +1,7 @@
 """The registry of the portal's sections (the interface is petka.section.Section).
 
 A section with code supplies its own record (`<package>/section.py`); a planned section
-without code is only metadata here. Order is the order of the header navigation."""
+without code is only metadata here. The header navigation groups them itself (petka.nav)."""
 
 from .ankety.section import SECTION as ANKETY
 from .cisteni.section import SECTION as CISTENI
@@ -23,7 +23,13 @@ SMLOUVY = Section(
              ("Hlídač státu", "https://www.hlidacstatu.cz/")],
 )
 
-REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, ANKETY, PODNETY, CISTENI]
+UZAVIRKY = Section(
+    "uzavirky", "Uzavírky", "Uzavírky",
+    "Kde se teď nedá projet?", "planned",
+    sources=[("Dopravní informace NDIC", "https://www.dopravniinfo.cz/")],
+)
+
+REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI]
 
 SECTIONS = [s for s in REGISTRY if s.listed]    # what the portal's pages show
 BY_SLUG = {s.slug: s for s in REGISTRY}
