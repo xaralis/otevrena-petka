@@ -1,5 +1,5 @@
 import json
-from petka.uredni_deska import digest
+from petka.uredni_deska import cards, digest
 
 
 def n(id, title, board="mo5", published="2026-10-20"):
@@ -85,15 +85,14 @@ def _card(root, nid, mo5, status="draft"):
          "source": {"title": "t", "url": "u", "board": "mmp", "mo5": mo5}}))
 
 
-def test_publish_refuses_cards_outside_mo5_and_reject_takes_cards_down(tmp_path, monkeypatch):
-    monkeypatch.setattr(digest, "DRAFTS", tmp_path / "drafts")
-    monkeypatch.setattr(digest, "DIGESTS", tmp_path / "digests")
+def test_publish_refuses_cards_outside_mo5_and_reject_takes_cards_down(tmp_path):
+    store = cards.CardStore(tmp_path)
     _card(tmp_path / "drafts", "mmp-1", False)
     _card(tmp_path / "drafts", "mo5-2", True)
-    report = digest.publish(["mmp-1", "mo5-2"])
+    report = digest.publish(["mmp-1", "mo5-2"], store=store)
     assert report[0]["error"] and report[1] == "mo5-2"
     assert not (tmp_path / "digests" / "mmp-1").exists()
-    assert digest.reject(["mo5-2"]) == ["mo5-2"]
+    assert digest.reject(["mo5-2"], store=store) == ["mo5-2"]
     assert not (tmp_path / "digests" / "mo5-2").exists()
     assert json.loads((tmp_path / "drafts" / "mo5-2" / "digest.json").read_text())["status"] == "rejected"
 
@@ -156,10 +155,9 @@ ANSWER = {"cluster": "doprava", "headline": "Uzavírka ulice", "summary": "Ulice
           "spending": [], "budget": [], "drawing": None, "parking": None, "visual_plan": "Značka.", "reviewer_notes": ""}
 
 
-def test_draft_runs_end_to_end_with_a_fake_writer(tmp_path, monkeypatch):
+def test_draft_runs_end_to_end_with_a_fake_writer(tmp_path):
     from petka import llm
-    monkeypatch.setattr(digest, "DRAFTS", tmp_path / "drafts")
-    monkeypatch.setattr(digest, "WORK", tmp_path / "work")
+    store = cards.CardStore(tmp_path / "data", work=tmp_path / "work")
     (tmp_path / "work" / "mo5-7").mkdir(parents=True)
     (tmp_path / "work" / "mo5-7" / "mo5-7-1.pdf").write_bytes(_pdf("Uzavirka od 24. 11. 2026"))  # already downloaded
     seen = []
@@ -171,8 +169,8 @@ def test_draft_runs_end_to_end_with_a_fake_writer(tmp_path, monkeypatch):
             seen.append({"user": user, "files": [p.name for p in files]})
             return json.loads(json.dumps(ANSWER))
 
-    out = digest.draft([NOTICE], llm=Writer())
-    d = json.loads((out / "digest.json").read_text())
+    d = digest.draft([NOTICE], llm=Writer(), store=store)
+    assert store.read("mo5-7") == json.loads(json.dumps(d))
     assert seen == [{"user": seen[0]["user"], "files": ["mo5-7-1.pdf"]}] and "Uzavírka Jana Palacha" in seen[0]["user"]
     assert d["status"] == "draft" and d["model"] == "fake:writer" and d["notice_id"] == "mo5-7"
     assert d["problems"] == []                          # the date is in the document

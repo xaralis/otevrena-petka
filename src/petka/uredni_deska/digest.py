@@ -1,9 +1,7 @@
 """Úřední deska "pro lidi": each notice retold in plain Czech, with a picture where one helps.
 
-A digest is a directory `<root>/<notice id>/` with `digest.json` and its images:
-
-    data/uredni_deska/drafts/<id>/    proposals waiting for a person (not in git)
-    data/uredni_deska/digests/<id>/   approved and published (in git, seeded into the cluster)
+A card (digest) is a directory with `digest.json` and its images; cards.py keeps them (drafts
+waiting for a person, not in git; published cards, in git and seeded into the cluster).
 
 Workflow (docs/deska-pilot.md): `deska-auto` writes a card for each new notice that concerns MO V,
 an independent Claude run scores it against the sources (score.py) and a good card goes out; the
@@ -15,6 +13,7 @@ Personal data from the notices (applicants, number plates, birth dates) never go
 """
 
 import datetime as dt
+import functools
 import json
 import logging
 import os
@@ -30,15 +29,12 @@ from .. import llm as llms
 from ..usneseni import geo
 from ..usneseni.store import ROOT
 from . import parking, photo, score, source
+from .cards import CardStore, strip_internal
 from .jobs import REDACTED_TITLE
 
 log = logging.getLogger(__name__)
 
 PROMPT_VERSION = "deska-v6"
-DATA = Path(os.environ.get("DATA_DIR", ROOT / "data")) / "uredni_deska"
-SEED = ROOT / "data" / "uredni_deska"
-DRAFTS, DIGESTS = DATA / "drafts", DATA / "digests"
-WORK = Path(os.environ.get("DESKA_WORK", "/tmp/petka-deska"))
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 SIGNS = yaml.safe_load((ROOT / "config" / "uredni_deska" / "znacky.yaml").read_text()) \
     if (ROOT / "config" / "uredni_deska" / "znacky.yaml").exists() else {}
@@ -108,21 +104,16 @@ def groups(items: list[dict]) -> list[list[dict]]:
     return sorted(out, key=lambda g: g[0]["published"] or "", reverse=True)
 
 
-def existing() -> set[str]:
+def existing(store: CardStore | None = None) -> set[str]:
     """Notice ids that already have a digest (draft, published or rejected) – leaders and members."""
-    ids = set()
-    for root in (DRAFTS, DIGESTS):
-        for f in root.glob("*/digest.json"):
-            d = json.loads(f.read_text())
-            ids |= {d["notice_id"], *d.get("members", [])}
-    return ids
+    return (store or CardStore()).ids()
 
 
 # --- attachments -------------------------------------------------------------------------------
 
-def download(group: list[dict]) -> list[Path]:
-    """The group's attachments (PDFs) into WORK/<leader id>/; returns local paths."""
-    d = WORK / group[0]["id"]
+def download(group: list[dict], d: Path) -> list[Path]:
+    """The group's attachments (PDFs) into `d` (the leader's scratch directory); returns local
+    paths. A file already there is not fetched again."""
     d.mkdir(parents=True, exist_ok=True)
     paths = []
     with httpx.Client(timeout=60, headers=source.HEADERS, follow_redirects=True) as c:
@@ -521,10 +512,10 @@ def check(d: dict, text: str) -> list[str]:
     return problems
 
 
-def annotated_drawing(d: dict, out: Path, llm: llms.LLM) -> dict:
+def annotated_drawing(d: dict, out: Path, llm: llms.LLM, work: Path) -> dict:
     """The office's drawing with numbered markers Claude puts on what changes (only on things
     the drawing shows), the explanations go under it."""
-    work = WORK / d.get("_id", out.name) / "vykres"
+    work = work / "vykres"
     work.mkdir(parents=True, exist_ok=True)
     shutil.copy2(out / "vykres.png", work / "vykres.png")
     res = llm.structured_files(photo.ANNOTATE_SYSTEM,
@@ -540,14 +531,14 @@ def _centre(f: dict) -> tuple[float, float]:
 
 
 def street_photo(notice: dict, d: dict, feats: list[dict], visual: dict, out: Path,
-                 llm: llms.LLM) -> dict | None:
+                 llm: llms.LLM, work: Path) -> dict | None:
     """Nearest Panoramax picture of the place, 'dnes' and 'po změně' (signs placed by Claude
     against the drawing). None when there is no picture or Claude can't match it to the drawing."""
     target = _centre(next((f for f in feats if f["kind"] == "address"), feats[0]))
     feature = photo.nearest(*target)
     if not feature:
         return None
-    work = WORK / notice["id"] / "foto"
+    work = work / "foto"
     work.mkdir(parents=True, exist_ok=True)
     c = photo.candidates(feature, target, work)
     inputs = list(c["files"])
@@ -575,14 +566,15 @@ def street_photo(notice: dict, d: dict, feats: list[dict], visual: dict, out: Pa
 
 # --- making a draft ----------------------------------------------------------------------------
 
-def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | None = None) -> Path:
-    """Propose a digest for one notice group; writes DRAFTS/<leader id>/digest.json (+ images).
+def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | None = None,
+          store: CardStore | None = None) -> dict:
+    """Propose a card for one notice group and save it as a draft (with its images); returns it.
     `fixes`: what the quality check wants changed in the previous version; `llm`: the writer."""
-    llm = llm or llms.default()
+    llm, store = llm or llms.default(), store or CardStore()
     leader = group[0]
-    out = DRAFTS / leader["id"]
-    out.mkdir(parents=True, exist_ok=True)
-    files = download(group)
+    out = store.new_draft(leader["id"])
+    work = store.scratch(leader["id"])
+    files = download(group, work)
     text = pdf_text(files)
     if leader["kind"] == "doruceni":
         d = delivery(group)
@@ -600,7 +592,7 @@ def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | Non
     visual["drawing"] = drawing_crop(d["drawing"], files, out / "vykres.png") if d.get("drawing") else None
     if visual["drawing"] and d["cluster"] in ("doprava", "stavby"):
         try:
-            visual["drawing"].update(annotated_drawing(d, out, llm))
+            visual["drawing"].update(annotated_drawing(d, out, llm, work))
         except Exception as e:
             log.warning("%s: drawing annotation failed: %s", leader["id"], e)
     visual["signs"] = signs(d["signs"])
@@ -615,7 +607,7 @@ def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | Non
     visual["photo"] = None
     if d["cluster"] == "doprava" and feats:
         try:
-            visual["photo"] = street_photo(leader, d, feats, visual, out, llm)
+            visual["photo"] = street_photo(leader, d, feats, visual, out, llm, work)
         except Exception as e:
             log.warning("%s: street photo failed: %s", leader["id"], e)
     visual["thumb"] = thumbnail(out, visual)
@@ -626,8 +618,8 @@ def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | Non
         "source": _source(leader, d["cluster"]), "fixes_given": fixes or [],
         **d, "visual": visual, "problems": problems,
     }
-    (out / "digest.json").write_text(json.dumps(digest, ensure_ascii=False, indent=1, default=str) + "\n")
-    return out
+    store.write(digest)
+    return digest
 
 
 # Every notice posted on the board gets a card while it hangs there – also when its event is over
@@ -635,17 +627,17 @@ def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | Non
 # see those notices on the page too, and an unexplained official title reads as a gap.
 
 
-def drafts(ids: list[str] | None = None) -> list[dict]:
+def drafts(ids: list[str] | None = None, store: CardStore | None = None) -> list[dict]:
     """Draft digests for posted MO V notices without a card (or the given ids). Returns a short
     report per draft."""
-    have = set() if ids else existing()
+    store = store or CardStore()
+    have = set() if ids else store.ids()
     todo = [g for g in groups(notices(mo5=not ids)) if (g[0]["id"] in ids if ids else
             not ({n["id"] for n in g} & have))]
     report = []
     for g in todo:
         try:
-            p = draft(g)
-            d = json.loads((p / "digest.json").read_text())
+            d = draft(g, store=store)
             report.append({"id": g[0]["id"], "members": len(g) - 1, "cluster": d["cluster"],
                            "headline": d["headline"], "problems": d["problems"]})
         except Exception as e:
@@ -655,24 +647,29 @@ def drafts(ids: list[str] | None = None) -> list[dict]:
 
 
 # --- quality check and autonomous publishing (score.py) ---------------------------------------
+# The pipeline works with three parts, all passed in so tests can swap them:
+#   store     where cards live (cards.CardStore)
+#   writer    (group, fixes) -> the new draft card, saved in the store (draft() by default)
+#   reviewer  (card, files, image names) -> quality (score.review by default)
 
-def _save(folder: Path, d: dict) -> None:
-    (folder / "digest.json").write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
+def _parts(store, writer, reviewer):
+    store = store or CardStore()
+    return store, writer or functools.partial(draft, store=store), reviewer or score.review
 
 
-def assess(group: list[dict], folder: Path, d: dict) -> dict:
-    """Score the card in `folder` against its sources and store the result in it."""
+def assess(group: list[dict], d: dict, store: CardStore, reviewer) -> dict:
+    """Score a stored card against its sources and store the result with it."""
     if group[0]["kind"] == "doruceni":   # the fixed text from delivery(), no model involved
         q = score.template()
     else:
-        files = download(group)
-        work = WORK / group[0]["id"]
+        work = store.scratch(group[0]["id"])
+        files = download(group, work)
         images = []
-        for p in sorted(folder.iterdir()):
+        for p in sorted(store.where(d).iterdir()):
             if p.suffix.lower() in (".png", ".jpg", ".jpeg"):   # one directory for the model's Read
                 shutil.copy2(p, work / f"karta-{p.name}")
                 images.append(work / f"karta-{p.name}")
-        q = score.review(d, files + images, [p.name for p in images])
+        q = reviewer(d, files + images, [p.name for p in images])
         public = json.dumps({k: q[k] for k in ("summary", "marks", "issues", "fixes", "blockers", "dates")},
                             ensure_ascii=False)
         leak = private_data(public, pdf_text(files))    # these sentences go on the page and into git
@@ -681,18 +678,14 @@ def assess(group: list[dict], folder: Path, d: dict) -> dict:
                      issues=["Hodnocení obsahovalo osobní údaje, proto tu není. Kartu musí zkontrolovat člověk."],
                      marks={k: {**m, "reason": ""} for k, m in q["marks"].items()})
     d["quality"] = q
-    _save(folder, d)
+    store.write(d)
     return q
 
 
-def _waiting() -> dict[str, dict]:
+def _waiting(store: CardStore) -> dict[str, dict]:
     """Drafts nobody has scored yet (a failed check, a card from before scoring)."""
-    out = {}
-    for f in DRAFTS.glob("*/digest.json"):
-        d = json.loads(f.read_text())
-        if d["status"] == "draft" and "quality" not in d:
-            out[d["notice_id"]] = d
-    return out
+    return {d["notice_id"]: d for d in store.cards(published=False)
+            if d["status"] == "draft" and "quality" not in d}
 
 
 def _group_of(d: dict) -> list[dict]:
@@ -708,16 +701,14 @@ def _group_of(d: dict) -> list[dict]:
     return rows
 
 
-def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
+def _settle(group: list[dict], fixes: list[str] | None = None, *, store: CardStore, writer, reviewer) -> dict:
     """One group through writing, the check, rewrites while they can help, and out or to a person."""
     leader = group[0]["id"]
     usage = llms.track_usage()
-    folder = DRAFTS / leader
-    d = json.loads((folder / "digest.json").read_text()) if (folder / "digest.json").exists() else None
+    d = store.read(leader)
     if not d or d["status"] != "draft":
-        folder = draft(group, fixes=fixes)
-        d = json.loads((folder / "digest.json").read_text())
-    q = assess(group, folder, d)
+        d = writer(group, fixes)
+    q = assess(group, d, store, reviewer)
     # written to fix findings, so it has to pass two reads as well; the draft remembers that, in case
     # its check failed and a later run picks it up
     fixes = list(fixes or d.get("fixes_given") or [])
@@ -729,32 +720,32 @@ def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
             # a rewritten card must pass a second, separate read in a row
             if (attempts == 1 and not rewritten) or confirmed:
                 break
-            q, confirmed = assess(group, folder, d), True
+            q, confirmed = assess(group, d, store, reviewer), True
             if score.goes_out(q):
                 break
         if not score.retryable(q) or attempts >= score.MAX_ATTEMPTS:
             break
         fixes += [f for f in q["fixes"] if f not in fixes]     # earlier findings must stay fixed
-        folder = draft(group, fixes=fixes)
-        d = json.loads((folder / "digest.json").read_text())
-        q, confirmed = assess(group, folder, d), False
+        d = writer(group, fixes)
+        q, confirmed = assess(group, d, store, reviewer), False
         attempts += 1
     d["quality"].update(attempts=attempts, usage=usage)
-    _save(folder, d)
+    store.write(d)
     row = {"id": leader, "headline": d["headline"], "cluster": d["cluster"], "level": q.get("level"), "attempts": attempts, "usage": usage}
     if score.goes_out(q):
-        res = publish([leader], reviewed_by="model")
+        res = publish([leader], reviewed_by="model", store=store)
         if res and isinstance(res[0], str):
             return {**row, "state": "vydano"}
         return {**row, "state": "ceka", "why": [res[0]["error"]] if res else ["nevydáno"]}
     return {**row, "state": "ceka", "why": q["issues"]}
 
 
-def auto(ids: list[str] | None = None) -> list[dict]:
+def auto(ids: list[str] | None = None, store: CardStore | None = None, writer=None, reviewer=None) -> list[dict]:
     """Every posted MO V notice without a card (or the given ids): write, check, publish or hold.
     A failure leaves the rest running; an unscored draft is picked up by the next run."""
-    have = set() if ids else existing()
-    waiting = {} if ids else _waiting()
+    store, writer, reviewer = _parts(store, writer, reviewer)
+    have = set() if ids else store.ids()
+    waiting = {} if ids else _waiting(store)
     posted = groups(notices(mo5=not ids))
     todo = [g for g in posted if (g[0]["id"] in ids if ids else not ({n["id"] for n in g} & have))]
     for nid, d in waiting.items():
@@ -765,47 +756,48 @@ def auto(ids: list[str] | None = None) -> list[dict]:
     report = []
     for g in todo:
         try:
-            report.append(_settle(g))
+            report.append(_settle(g, store=store, writer=writer, reviewer=reviewer))
         except Exception as e:
             log.exception("auto %s failed", g[0]["id"])
             report.append({"id": g[0]["id"], "state": "chyba", "error": str(e)})
     return report
 
 
-def improve(ids: list[str] | None = None) -> list[dict]:
+def improve(ids: list[str] | None = None, store: CardStore | None = None, writer=None, reviewer=None,
+            group_of=_group_of) -> list[dict]:
     """Rewrite published cards the check isn't happy with. The better version replaces the card only
     when it comes out green; otherwise the published card stays exactly as it was."""
+    store, writer, reviewer = _parts(store, writer, reviewer)
     report = []
-    for f in sorted(DIGESTS.glob("*/digest.json")):
-        d = json.loads(f.read_text())
+    for d in store.cards(published=True):
         q = d.get("quality") or {}
         if (ids and d["notice_id"] not in ids) or q.get("level") not in ("pozor", "spatne"):
             continue
         nid = d["notice_id"]
         try:
-            row = _settle(_group_of(d), fixes=q.get("issues"))
+            row = _settle(group_of(d), fixes=q.get("issues"), store=store, writer=writer, reviewer=reviewer)
         except Exception as e:
             log.exception("improve %s failed", nid)
             row = {"id": nid, "state": "chyba", "error": str(e)}
         if row["state"] != "vydano":
             row["state"] = "ponechano" if row["state"] == "ceka" else row["state"]
-            if (DRAFTS / nid).exists():
-                shutil.rmtree(DRAFTS / nid)
+            store.discard_draft(nid)
         report.append(row)
     return report
 
 
-def rescore(ids: list[str] | None = None) -> list[dict]:
+def rescore(ids: list[str] | None = None, store: CardStore | None = None, reviewer=None,
+            group_of=_group_of) -> list[dict]:
     """Score published cards (all, or the given ids) without changing anything else about them.
     A red light here only reports: those cards went through a person."""
+    store, _, reviewer = _parts(store, None, reviewer)
     report = []
-    for f in sorted(DIGESTS.glob("*/digest.json")):
-        d = json.loads(f.read_text())
+    for d in store.cards(published=True):
         if ids and d["notice_id"] not in ids:
             continue
         try:
-            q = assess(_group_of(d), f.parent, d)
-            _save(f.parent, _strip_internal(d))
+            q = assess(group_of(d), d, store, reviewer)
+            store.write(strip_internal(d))
             report.append({"id": d["notice_id"], "headline": d["headline"], "level": q.get("level"),
                            "why": q["issues"]})
         except Exception as e:
@@ -822,146 +814,43 @@ def _source(n: dict, cluster: str) -> dict:
     return {"title": n["title"], "url": n["url"], "board": n["board"], "mo5": n.get("is_mo5")}
 
 
-def _strip_internal(d: dict) -> dict:
-    """Working notes for rewrites stay out of what goes on the web and into git: unlike the sentences
-    shown to readers, they may quote the document more closely."""
-    d.pop("fixes_given", None)
-    if d.get("quality"):
-        d["quality"].pop("fixes", None)
-    return d
-
-
-def publish(ids: list[str], note: str | None = None, reviewed_by: str = "clovek") -> list:
-    """Approve drafts: move them to DIGESTS with status published (then commit and sync).
+def publish(ids: list[str], note: str | None = None, reviewed_by: str = "clovek",
+            store: CardStore | None = None) -> list:
+    """Approve drafts: publish them in the store (then commit and sync).
     Cards for notices that aren't about MO V (drafted by id, e.g. to try something) are refused.
     `reviewed_by` says on the card who let it out: a person, or the quality check alone."""
+    store = store or CardStore()
     done = []
     for nid in ids:
-        src, dst = DRAFTS / nid, DIGESTS / nid
-        if not (src / "digest.json").exists():
+        d = store.read(nid)
+        if d is None:
             continue
-        d = json.loads((src / "digest.json").read_text())
         if d.get("source", {}).get("mo5") is False:
             done.append({"id": nid, "error": "oznámení se netýká MO V, kartu nevydávám"})
             continue
-        if d["cluster"] == "doruceni":
-            d["source"] |= {"title": REDACTED_TITLE, "url": ""}
-        d.update(status="published", published_at=dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
-                 review_note=note, reviewed_by=reviewed_by)
-        if reviewed_by == "clovek" and d.get("quality", {}).get("level"):
-            # a person has read it, and possibly fixed what the check found
-            d["quality"].update(level="spolehlive", issues=[], approved_by_person=True)
-        _strip_internal(d)
-        (src / "digest.json").write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
-        if dst.exists():
-            shutil.rmtree(dst)
-        dst.parent.mkdir(parents=True, exist_ok=True)
-        shutil.move(str(src), str(dst))
+        store.publish(nid, note, reviewed_by)
         done.append(nid)
     return done
 
 
-def reject(ids: list[str], note: str | None = None) -> list[str]:
+def reject(ids: list[str], note: str | None = None, store: CardStore | None = None) -> list[str]:
     """Keep a rejected draft (so it isn't proposed again) but never show it publicly."""
-    done = []
-    for nid in ids:
-        if (DIGESTS / nid / "digest.json").exists():    # already published: take it back down
-            if (DRAFTS / nid).exists():
-                shutil.rmtree(DRAFTS / nid)
-            shutil.move(str(DIGESTS / nid), str(DRAFTS / nid))
-        f = DRAFTS / nid / "digest.json"
-        if f.exists():
-            d = json.loads(f.read_text())
-            d.update(status="rejected", review_note=note)
-            f.write_text(json.dumps(d, ensure_ascii=False, indent=1, default=str) + "\n")
-            done.append(nid)
-    return done
+    store = store or CardStore()
+    return [nid for nid in ids if store.reject(nid, note)]
 
 
 # --- database (in the cluster: after seed/sync) -------------------------------------------------
 
-def seed() -> None:
-    """Published digests from the image (git) into DATA – they are the reviewed version."""
-    if DATA.resolve() == SEED.resolve() or not (SEED / "digests").exists():
-        return
-    for src in (SEED / "digests").rglob("*"):
-        if src.is_file():
-            dst = DIGESTS / src.relative_to(SEED / "digests")
-            if not dst.exists() or dst.read_bytes() != src.read_bytes():
-                dst.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(src, dst)
+def seed(store: CardStore | None = None) -> None:
+    """Published cards from the image (git) into the data directory – they are the reviewed version."""
+    (store or CardStore()).seed()
 
 
-def receive(stream) -> dict:
-    """Replace the cards in DATA with a tar of `drafts/` and `digests/` (from scripts/deska-sync.sh):
-    drafts are swapped wholesale (approved or dropped ones disappear), approved cards are updated
-    and those taken back down (`deska-reject` on a published card) are removed."""
-    import tarfile
-    import tempfile
-    DATA.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(dir=DATA, prefix=".incoming-") as tmp:
-        with tarfile.open(fileobj=stream, mode="r|") as tar:
-            tar.extractall(tmp, filter="data")       # no absolute paths, links or devices
-        new = Path(tmp)
-        if (new / "drafts").is_dir():
-            old = DATA / ".drafts-old"
-            if old.exists():
-                shutil.rmtree(old)
-            if DRAFTS.exists():
-                DRAFTS.rename(old)
-            (new / "drafts").rename(DRAFTS)
-            if old.exists():
-                shutil.rmtree(old)
-        n = 0
-        if (new / "digests").is_dir() and DIGESTS.is_dir():
-            # the tar holds every approved card; one missing from it was taken back down
-            keep = {d.name for d in (new / "digests").iterdir()}
-            for d in DIGESTS.iterdir():
-                if d.is_dir() and d.name not in keep:
-                    shutil.rmtree(d)
-        for src in (new / "digests").glob("*/*") if (new / "digests").is_dir() else []:
-            dst = DIGESTS / src.relative_to(new / "digests")
-            dst.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(src, dst)
-            n += 1
-    return {"drafts": len(list(DRAFTS.glob("*/digest.json"))), "published_files": n}
+def receive(stream, store: CardStore | None = None) -> dict:
+    """Replace the cards with a tar from scripts/deska-sync.sh (see CardStore.receive)."""
+    return (store or CardStore()).receive(stream)
 
 
-def load(conn) -> int:
-    """Bring notice_digests in line with the digest directories (drafts and published)."""
-    rows = []
-    for root in (DIGESTS, DRAFTS):
-        for f in root.glob("*/digest.json"):
-            d = json.loads(f.read_text())
-            if root == DRAFTS and (DIGESTS / d["notice_id"]).exists():
-                continue                    # an approved copy wins over a stale draft
-            rows.append(d)
-    known = {r["id"] for r in conn.execute("SELECT id FROM notices")}
-    conn.execute("DELETE FROM notice_digests")
-    n = 0
-    for d in rows:
-        if d["notice_id"] not in known:
-            continue
-        conn.execute(
-            """INSERT INTO notice_digests (notice_id, members, status, cluster, data, prompt_version,
-                 created_at, published_at, review_note)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-            (d["notice_id"], [m for m in d.get("members", []) if m in known], d["status"], d["cluster"],
-             json.dumps(d, ensure_ascii=False, default=str), d.get("prompt_version"), d.get("created_at"),
-             d.get("published_at"), d.get("review_note")))
-        n += 1
-    return n
-
-
-def asset_path(nid: str, name: str, draft: bool = False) -> Path | None:
-    """An image of a card: published ones for everybody, drafts only for the reviewers'
-    preview (and never those of a rejected draft)."""
-    if not re.fullmatch(r"[a-z0-9]+-\d+", nid) or not re.fullmatch(r"[a-z0-9_-]+\.(png|jpg|jpeg|svg)", name):
-        return None
-    root = DRAFTS if draft else DIGESTS
-    meta, p = root / nid / "digest.json", root / nid / name
-    if not (meta.is_file() and p.is_file()):
-        return None
-    if json.loads(meta.read_text()).get("status") != ("draft" if draft else "published"):
-        return None
-    return p
+def load(conn, store: CardStore | None = None) -> int:
+    """Bring notice_digests in line with the card directories (drafts and published)."""
+    return (store or CardStore()).load(conn)

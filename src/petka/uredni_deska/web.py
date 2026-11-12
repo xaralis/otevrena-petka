@@ -11,6 +11,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 
 from ..web.render import tpl
 from . import digest as digests, queries, source
+from .cards import CardStore
 
 pages = APIRouter(prefix="/uredni-deska", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/uredni-deska", tags=["úřední deska"])
@@ -172,7 +173,7 @@ NO_INDEX = {"X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store"}
 @pages.get("/navrhy/obrazky/{nid}/{name}")
 def draft_image(request: Request, nid: str, name: str):
     _reviewer(request)
-    p = digests.asset_path(nid, name, draft=True)
+    p = CardStore().asset_path(nid, name, draft=True)
     if not p:
         raise HTTPException(404)
     return FileResponse(p, headers={"Cache-Control": "no-store"})
@@ -197,7 +198,7 @@ def draft_page(request: Request, nid: str):
 
 @pages.get("/obrazky/{nid}/{name}")
 def card_image(nid: str, name: str):
-    p = digests.asset_path(nid, name)
+    p = CardStore().asset_path(nid, name)
     if not p:
         raise HTTPException(404)
     return FileResponse(p, headers={"Cache-Control": "public, max-age=86400"})
