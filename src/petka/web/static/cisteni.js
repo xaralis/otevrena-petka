@@ -59,7 +59,10 @@
                        paint: { "line-color": ["get", "color"], "line-width": ["get", "width"], "line-dasharray": [1.5, 1.2] } });
         const b = new maplibregl.LngLatBounds();
         const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
-        fc.features.forEach((f) => walk(f.geometry.coordinates));
+        // the overview fits what is still to be cleaned this year (a long street with nothing
+        // left would zoom the map out to the fields); fall back to everything
+        const upcoming = all ? fc.features.filter((f) => f.properties.rank > 0) : [];
+        (upcoming.length ? upcoming : fc.features).forEach((f) => walk(f.geometry.coordinates));
         if (!b.isEmpty()) map.fitBounds(b, { padding: all ? 20 : 40, maxZoom: 17, duration: 0 });
         if (all) popups(map, el);
       });
