@@ -11,12 +11,10 @@ import datetime as dt
 import hashlib
 import json
 import logging
-import os
 import time
 
-import httpx
-
-from .. import db, obvody
+from .. import jobs as runner, obvody
+from ..jobs import Unit
 from . import source
 
 log = logging.getLogger(__name__)
@@ -105,41 +103,34 @@ def store(conn, unit: str, year: int, files: dict[str, bytes], parsed: dict) -> 
     return True
 
 
+def _unit(unit: str, year: int) -> Unit:
+    def run(conn, client) -> dict:
+        files = source.fetch_all(unit, year, client)
+        parsed = parse(files, year)
+        changed = store(conn, unit, year, files, parsed)
+        return {"as_of": parsed["as_of"], "changed": changed,
+                "lines": len(parsed["lines"]), "invoices": len(parsed["invoices"])}
+    return Unit((unit, year), f"{unit} {year}", run)
+
+
 def update(units: list[str] | None = None, years: list[int] | None = None,
            today: dt.date | None = None) -> dict:
     """Download and store the given (or due) years of each unit. A year that fails is
     reported and left as it was; the others still update."""
-    db.migrate()
     today = today or dt.date.today()
-    report, failures = {}, []
-    with httpx.Client(timeout=source.TIMEOUT, follow_redirects=True, headers=source.HEADERS) as client, \
-            db.connect() as conn:
-        for unit in units or [obvody.DEFAULT.id]:
+    report_units = units or [obvody.DEFAULT.id]
+
+    def todo(conn, client):
+        for unit in report_units:
             known = {r["year"]: r["checked"] for r in conn.execute(
                 "SELECT year, checked_at::date AS checked FROM budget_years WHERE unit = %s", (unit,))}
-            todo = years or years_to_refresh(today, known)
-            report[unit] = {}
-            for i, year in enumerate(todo):
+            for i, year in enumerate(years or years_to_refresh(today, known)):
                 if i:
                     time.sleep(source.PAUSE)
-                try:
-                    files = source.fetch_all(unit, year, client)
-                    parsed = parse(files, year)
-                    changed = store(conn, unit, year, files, parsed)
-                    conn.commit()
-                    summary = {"as_of": parsed["as_of"], "changed": changed,
-                               "lines": len(parsed["lines"]), "invoices": len(parsed["invoices"])}
-                except Exception as e:
-                    conn.rollback()
-                    log.exception("rozpočet %s %s failed", unit, year)
-                    failures.append(f"{unit} {year}: {e}")
-                    summary = {"error": str(e)}
-                report[unit][year] = summary
-                log.info("rozpočet %s %s: %s", unit, year, summary)
-    if failures and os.environ.get("SENTRY_DSN"):
-        import sentry_sdk
-        sentry_sdk.init(os.environ["SENTRY_DSN"])
-        sentry_sdk.capture_message("rozpocet-update: " + "; ".join(failures), level="error")
-        sentry_sdk.flush()
-    report["failures"] = failures
-    return report
+                yield _unit(unit, year)
+
+    report = runner.run("rozpocet-update", "rozpočet", todo, logger=log,
+                        client={"timeout": source.TIMEOUT, "follow_redirects": True, "headers": source.HEADERS})
+    # a unit with nothing due still shows up, as before
+    failures = report.pop("failures")
+    return {**{u: report.get(u, {}) for u in report_units}, "failures": failures}

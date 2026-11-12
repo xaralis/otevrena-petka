@@ -9,12 +9,11 @@ is not stored at all: on these boards it repeats the title and adds dates of bir
 
 import json
 import logging
-import os
 
-import httpx
 from psycopg.types.json import Jsonb
 
-from .. import db
+from .. import jobs as runner
+from ..jobs import Unit
 from . import source
 
 log = logging.getLogger(__name__)
@@ -72,45 +71,39 @@ def _save_board(conn, b: source.Board) -> dict:
     return conn.execute("SELECT * FROM notice_boards WHERE id = %s", (b.id,)).fetchone()
 
 
+def _unit(b: source.Board, state: dict) -> Unit:
+    def run(conn, client) -> dict:
+        f = source.fetch(b, state["etag"], state["last_modified"], client)
+        if f.status == 304:
+            conn.execute("UPDATE notices SET last_seen = now() WHERE board = %s AND removed_at IS NULL", (b.id,))
+            summary = {"unchanged": True}
+        else:
+            rows = source.parse(json.loads(f.body), b)
+            summary = sync(conn, b, rows)
+            conn.execute(
+                """UPDATE notice_boards SET etag = %s, last_modified = %s, n_items = %s,
+                     changed_at = CASE WHEN sha256 IS DISTINCT FROM %s THEN now() ELSE changed_at END,
+                     sha256 = %s WHERE id = %s""",
+                (f.etag, f.last_modified, len(rows), f.sha256, f.sha256, b.id))
+        conn.execute("UPDATE notice_boards SET checked_at = now() WHERE id = %s", (b.id,))
+        return summary
+    return Unit((b.id,), b.id, run)
+
+
 def update(boards: list[source.Board] | None = None) -> dict:
     """Fetch every board and bring the table in line. Returns {board: summary}; a board that
     fails is reported and left as it was, the others still update."""
-    db.migrate()
-    report, failures = {}, []
-    with httpx.Client(timeout=source.TIMEOUT, follow_redirects=True) as client, db.connect() as conn:
+    def units(conn, client):
         for b in boards or source.BOARDS:
             state = _save_board(conn, b)
             conn.commit()
-            try:
-                f = source.fetch(b, state["etag"], state["last_modified"], client)
-                if f.status == 304:
-                    conn.execute("UPDATE notices SET last_seen = now() WHERE board = %s AND removed_at IS NULL", (b.id,))
-                    summary = {"unchanged": True}
-                else:
-                    rows = source.parse(json.loads(f.body), b)
-                    summary = sync(conn, b, rows)
-                    conn.execute(
-                        """UPDATE notice_boards SET etag = %s, last_modified = %s, n_items = %s,
-                             changed_at = CASE WHEN sha256 IS DISTINCT FROM %s THEN now() ELSE changed_at END,
-                             sha256 = %s WHERE id = %s""",
-                        (f.etag, f.last_modified, len(rows), f.sha256, f.sha256, b.id))
-                conn.execute("UPDATE notice_boards SET checked_at = now() WHERE id = %s", (b.id,))
-                conn.commit()
-            except Exception as e:
-                conn.rollback()
-                log.exception("deska %s failed", b.id)
-                failures.append(f"{b.id}: {e}")
-                summary = {"error": str(e)}
-            report[b.id] = summary
-            log.info("deska %s: %s", b.id, summary)
+            yield _unit(b, state)
+
+    def finish(conn) -> None:
         n = redact(conn)
         conn.commit()
         if n:
             log.info("deska: %d taken-down delivery notices anonymised", n)
-    if failures and os.environ.get("SENTRY_DSN"):
-        import sentry_sdk
-        sentry_sdk.init(os.environ["SENTRY_DSN"])
-        sentry_sdk.capture_message("deska-update: " + "; ".join(failures), level="error")
-        sentry_sdk.flush()
-    report["failures"] = failures
-    return report
+
+    return runner.run("deska-update", "deska", units, client={"timeout": source.TIMEOUT, "follow_redirects": True},
+                      finish=finish, logger=log)

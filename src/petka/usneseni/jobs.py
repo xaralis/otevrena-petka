@@ -452,11 +452,9 @@ def _report(changed, processed, failures) -> None:
     if failures:
         msg += "; " + "; ".join(failures)
     log.info(msg)
-    if failures and os.environ.get("SENTRY_DSN"):
-        import sentry_sdk
-        sentry_sdk.init(os.environ["SENTRY_DSN"])
-        sentry_sdk.capture_message(msg, level="error")
-        sentry_sdk.flush()
+    if failures:
+        from ..jobs import sentry_alert
+        sentry_alert(msg)
     push = os.environ.get("KUMA_PUSH_URL")
     if push and not failures:
         import httpx
