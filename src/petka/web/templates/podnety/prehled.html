@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{#- Podněty: the period's reports. Desktop: tiles with one shared detail panel, the bar, map and
+    newest side by side, the worst category, the table. Phone: one column, blocks in the order
+    .pd-o1 … .pd-o5; .pd-d / .pd-m carry the desktop and the shorter phone wording. -#}
+{% block title %}Co lidé hlásí a jak se to řeší?{% endblock %}
+{% block description %}Podněty, které lidé v obvodu posílají městu přes aplikaci Dej Tip: kolik jich je, kolik se vyřešilo, jak dlouho čekají a kde.{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
+
+{% macro dist(items, cls='') %}
+<ul class="pd-dist{{ ' ' ~ cls if cls }}">
+  {% for b in items %}<li class="{{ 'pd-muted' if b.muted }}{{ ' pd-hot' if cls and loop.last }}"><span><span class="pd-d">{{ b.label }}</span><span class="pd-m">{{ b.label_m }}</span></span><i><s style="width:{{ b.pct }}%"></s></i><b>{{ b.n }}</b></li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro mini(c) -%}
+<span class="pd-mini" role="img" aria-label="vyřešeno {{ c.vyreseno }}, čeká {{ c.ceka }}, předáno jinam {{ c.jinam }}, nelze vyřídit {{ c.nelze }}">{% if c.vyreseno %}<i class="pd-k-ok" style="width:{{ c.pct.vyreseno }}%"></i>{% endif %}{% if c.ceka %}<i class="pending-alert" style="width:{{ c.pct.ceka }}%"></i>{% endif %}{% if c.jinam %}<i class="pd-k-away" style="width:{{ c.pct.jinam }}%"></i>{% endif %}{% if c.nelze %}<i class="pd-k-cant" style="width:{{ c.pct.nelze }}%"></i>{% endif %}</span>
+{%- endmacro %}
+
+{% block hero %}
+<section class="band band-page">
+  <div class="wrap">
+    <h1>Co lidé hlásí a jak se to řeší?</h1>
+    <p class="band-lead"><span class="pd-d">Rozbitá lavička, černá skládka, nesvítící lampa: podněty, které lidé posílají městu přes aplikaci Dej Tip. Ty z obvodu většinou vyřizuje přímo úřad městského obvodu.</span><span class="pd-m">Podněty, které lidé posílají městu přes aplikaci Dej Tip. Ty z obvodu většinou vyřizuje přímo úřad městského obvodu.</span></p>
+    <a class="btn btn-on-red pd-cta" href="{{ report }}">Nahlásit závadu přes Dej Tip</a>
+  </div>
+</section>
+{% endblock %}
+
+{% block main %}
+<nav class="switch pd-switch" aria-label="Období">{% for o in switch %}<a href="{{ link(o.key, detail=detail if detail != 'ceka' else '') }}"{% if o.on %} aria-current="page"{% endif %}><span class="pd-d">{{ o.label }}</span><span class="pd-m">{{ o.label_m }}</span></a>{% endfor %}</nav>
+
+{% if not s.n %}
+<p class="pd-empty">Za toto období v obvodu žádné podněty nemáme.</p>
+{% else %}
+{% set c = s.count %}
+<div class="pd-kpi" id="kpi">
+  {% set tiles = [
+    ('mesice', s.n, 'podnětů ' ~ per.phrase, 'podnětů ' ~ per.phrase_m, 'Po měsících'),
+    ('vyreseno', c.vyreseno, 'vyřešeno (' ~ s.done_pct ~ ' %)', 'vyřešeno (' ~ s.done_pct ~ ' %)', 'Za jak dlouho'),
+    ('ceka', c.ceka, 'čeká na vyřízení', 'čeká na vyřízení', 'Jak dlouho už'),
+    ('odpoved', s.first_response, 'do první odpovědi úřadu, obvykle', 'do první odpovědi, obvykle', 'Rozložení')] %}
+  {% for key, big, label, label_m, more in tiles %}
+  <a href="{{ q(detail='zadny' if detail == key else key) }}#kpi" data-pd-tile="{{ key }}" aria-controls="kpi-panel" aria-expanded="{{ 'true' if detail == key else 'false' }}"><b>{{ big }}</b><span><span class="pd-d">{{ label }}</span><span class="pd-m">{{ label_m }}</span></span><em>{{ more }}</em></a>
+  {% endfor %}
+</div>
+
+<div id="kpi-panel" class="pd-panel">
+  <section data-pd-detail="mesice" aria-label="Podněty po měsících"{% if detail != 'mesice' %} hidden{% endif %}>
+    {% set m = s.months %}
+    <h2><span class="pd-d">Podněty po měsících</span><span class="pd-m">Po měsících</span></h2>
+    <div class="rz-chart pd-chart" role="img" aria-label="{{ m.label }}">
+      <div class="rz-axis pd-ph"><b class="rz-axis-u">podnětů</b>{% for t in m.ticks %}<span style="bottom:calc(var(--ph) * {{ t.f }})">{{ t.v }}</span>{% endfor %}</div>
+      <div class="rz-plot pd-ph">
+        {% for t in m.ticks %}<i style="bottom:calc(var(--ph) * {{ t.f }})"></i>{% endfor %}
+        {% for col in m.cols %}<div class="rz-col rz-tip" style="height:calc(var(--ph) * {{ col.h }})" data-tip="{{ col.tip }}"><div class="{{ 'now' if col.now }}" style="height:calc(var(--ph) * {{ col.dh }})">{% if col.done %}<b{% if col.dh * 200 < 24 %} class="low"{% endif %}>{{ col.done }}</b>{% endif %}</div><span>{{ col.n }}</span></div>{% endfor %}
+      </div>
+      <div></div>
+      <div class="rz-years pd-yr">{% for col in m.cols %}<span><span class="pd-d">{{ col.abbr }}<small>{{ col.y }}</small></span><span class="pd-m">{{ col.m }}{% if col.year_m %}<small>{{ col.year_m }}</small>{% endif %}</span></span>{% endfor %}</div>
+    </div>
+    <p class="pd-note pd-under"><span class="pd-d">Nad sloupcem všechny podněty za měsíc, v tmavé části vyřešené.{% if m.busiest %} Nejvíc jich přišlo {{ w.join(m.busiest) }}.{% endif %}</span><span class="pd-m">Nad sloupcem všechny podněty, tmavě vyřešené.{% if m.busiest %} Nejvíc {{ w.join(m.busiest) }}.{% endif %}</span></p>
+  </section>
+
+  <section data-pd-detail="vyreseno" aria-label="Za jak dlouho se podněty vyřešily"{% if detail != 'vyreseno' %} hidden{% endif %}>
+    <h2><span class="pd-d">Za jak dlouho se podněty vyřešily</span><span class="pd-m">Za jak dlouho se vyřešily</span></h2>
+    {{ dist(s.resolved_in) }}
+    {% set k = s.silent_resolved %}
+    <p class="pd-note pd-under"><span class="pd-d">Počítáme od podání do poslední odpovědi úřadu.{% if k == 1 %} U 1 vyřešeného podnětu úřad stav změnil bez odpovědi, dobu u něj neznáme.{% elif k %} U {{ k }} vyřešených podnětů úřad stav změnil bez odpovědi, dobu u nich neznáme.{% endif %}</span><span class="pd-m">Od podání do poslední odpovědi úřadu.{% if k %} U {{ k }} {{ plural(k, 'podnětu', 'podnětů', 'podnětů') }} úřad stav změnil bez odpovědi.{% endif %}</span></p>
+  </section>
+
+  <section data-pd-detail="ceka" aria-label="Jak dlouho už podněty čekají"{% if detail != 'ceka' %} hidden{% endif %}>
+    <h2><span class="pd-d">Jak dlouho už podněty čekají</span><span class="pd-m">Jak dlouho už čekají</span></h2>
+    <div class="pd-cols">
+      {{ dist(s.waiting_for, 'pd-w') }}
+      {% if s.waiting_cats %}
+      <div class="pd-d">
+        <p class="side-h">Čeho se týkají</p>
+        <ul class="pd-plain">
+          {% for x in s.waiting_cats %}<li><a href="{{ q(kategorie=x.id) }}#kde">{{ x.name }}</a><b>{{ x.n }}</b></li>{% endfor %}
+          {% if s.waiting_rest %}<li><span>ostatní</span><b>{{ s.waiting_rest }}</b></li>{% endif %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    {% set a, b = s.in_progress, s.received %}
+    <p class="pd-note pd-under"><span class="pd-d">{{ a }} {{ plural(a, 'podnět má', 'podněty mají', 'podnětů má') }} stav „v řešení“, {{ b }} {{ plural(b, 'je zatím jen přijatý', 'jsou zatím jen přijaté', 'je zatím jen přijatých') }}.{% if s.oldest_waiting %} Nejstarší čekající podnět v tomto období je {{ w.from_date(s.oldest_waiting) }}.{% endif %} <a href="{{ q(stav='ceka') }}#kde">Čekající podněty na mapě</a></span><span class="pd-m">{% if s.waiting_top_m %}Nejčastěji {{ w.join(s.waiting_top_m) }}. {% endif %}{{ a }} {{ plural(a, 'je', 'jsou', 'je') }} v řešení, {{ b }} zatím jen {{ plural(b, 'přijatý', 'přijaté', 'přijatých') }}. <a href="{{ q(stav='ceka') }}#kde">Čekající na mapě</a></span></p>
+  </section>
+
+  <section data-pd-detail="odpoved" aria-label="Kdy úřad poprvé odpoví"{% if detail != 'odpoved' %} hidden{% endif %}>
+    <h2>Kdy úřad poprvé odpoví</h2>
+    {{ dist(s.answered_in) }}
+    {% set h, k = s.handled, s.silent_resolved_handled %}
+    <p class="pd-note pd-under"><span class="pd-d">Z {{ h }} {{ plural(h, 'podnětu', 'podnětů', 'podnětů') }}, které řeší obvod (bez městské policie a zastávek MHD).{% if s.first_response != '–' %} „{{ s.first_response }}“ je medián u podnětů, na které úřad odpověděl.{% endif %}{% if k %} Bez odpovědi {{ plural(k, 'zůstal i 1 podnět, který', 'zůstaly i ' ~ k ~ ' podněty, které', 'zůstalo i ' ~ k ~ ' podnětů, které') }} úřad označil jako {{ plural(k, 'vyřešený', 'vyřešené', 'vyřešené') }}.{% endif %}</span><span class="pd-m">Z {{ h }} {{ plural(h, 'podnětu', 'podnětů', 'podnětů') }}, které řeší obvod.{% if s.first_response != '–' %} {{ s.first_response }} je medián u těch, kde úřad odpověděl.{% endif %}</span></p>
+  </section>
+</div>
+
+<div class="pd-bar" role="img" aria-label="Vyřešeno {{ c.vyreseno }}, čeká {{ c.ceka }}, předáno jinam {{ c.jinam }}, nelze vyřídit {{ c.nelze }}">
+  <i class="pd-k-ok" style="width:{{ s.pct.vyreseno }}%"></i><i class="pending-alert" style="width:{{ s.pct.ceka }}%"></i><i class="pd-k-away" style="width:{{ s.pct.jinam }}%"></i><i class="pd-k-cant" style="width:{{ s.pct.nelze }}%"></i>
+</div>
+<p class="pd-lg"><span><i class="pd-k-ok"></i><span>vyřešeno<span class="pd-d"> {{ c.vyreseno }}</span></span></span><span><i class="pending-alert"></i><span>čeká<span class="pd-d"> {{ c.ceka }}</span></span></span><span><i class="pd-k-away"></i><span>předáno jinam<span class="pd-d"> (městská policie, dopravní podnik, mimo obvod) {{ c.jinam }}</span></span></span><span><i class="pd-k-cant"></i><span>nelze vyřídit<span class="pd-d"> {{ c.nelze }}</span></span></span></p>
+
+<div class="pd-flow">
+  <div class="pd-two">
+    <section class="pd-o2" id="kde" aria-labelledby="pd-kde-h">
+      <h2 id="pd-kde-h" class="pd-h2">Kde</h2>
+      {% if only is not none %}<p class="pd-only">Na mapě jen {{ 'čekající podněty' if only == 'čekající podněty' else '„' ~ only ~ '“' }}. <a href="{{ q() }}#kde">Zobrazit všechny</a></p>{% endif %}
+      <div class="map pd-map" data-pd-map data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" role="region" aria-label="Mapa obvodu s podněty seskupenými do teček podle místa; stejné údaje jsou níže v tabulce podle druhu"></div>
+      <script type="application/json" id="pd-grid">{{ grid|safe }}</script>
+      <p class="pd-lg pd-map-lg"><span><i class="pd-k-dot"></i><span class="pd-d">podněty v okolí, čím větší, tím víc</span><span class="pd-m">podněty, čím větší, tím víc</span></span><span><i class="pending-alert pd-k-round"></i>z toho čekají</span></p>
+      <p class="pd-cap"><span class="pd-d">Podněty ukazujeme seskupené po blocích, ne jednotlivě. Klepnutím na tečku zobrazíte, čeho se týkají.</span><span class="pd-m">Podněty jsou seskupené po blocích. Klepnutím na tečku zobrazíte, čeho se týkají.</span></p>
+    </section>
+    <aside class="pd-o4" aria-labelledby="pd-new-h">
+      <p class="side-h" id="pd-new-h">Nejnovější</p>
+      <ul class="rows rows-compact pd-new">
+        {% for r in s.newest %}{% set word, cls = status_word(r) %}
+        <li class="row"><span class="row-meta">{{ w.dm(r.reported_at) }}</span><div><b>{{ r.category }}</b>{% if r.street %}<p class="row-meta">{{ r.street }}</p>{% endif %}</div><span class="pd-stw"><span class="{{ cls }}">{{ word }}</span></span></li>
+        {% endfor %}
+      </ul>
+      <a class="btn btn-o btn-block pd-all" href="{{ report }}">Zobrazit vše na Dej Tipu</a>
+    </aside>
+  </div>
+
+  {% set hl = s.highlight %}
+  {% if hl %}
+  <section class="pd-hl pd-o1" aria-labelledby="pd-hl-h">
+    <h2 id="pd-hl-h"><span class="pd-d">{{ hl.title }}</span><span class="pd-m">{{ hl.title_m }}</span></h2>
+    <p><span class="pd-d">Z {{ hl.n }} podnětů {{ hl.full }} {{ per.phrase }} je vyřešených {{ hl.vyreseno }} a {{ w.waits(hl.ceka) }}. Nejstarší z nich je {{ w.from_date(hl.oldest) }}{% if hl.street %} ({{ hl.street }}){% endif %}.</span><span class="pd-m">Z {{ hl.n }} podnětů {{ hl.full }} je vyřešených {{ hl.vyreseno }} a {{ w.waits(hl.ceka) }}. Nejstarší je {{ w.from_date(hl.oldest) }}{% if hl.street %} ({{ hl.street }}){% endif %}.</span></p>
+    <p class="pd-d pd-hl-a"><a href="{{ q(kategorie=hl.id) }}#kde">Podněty {{ w.phrase(hl.name)[0] }} na mapě</a></p>
+  </section>
+  {% endif %}
+
+  <section class="pd-o3" id="druhy" aria-labelledby="pd-druhy-h">
+    <h2 id="pd-druhy-h" class="pd-h2">Podle druhu</h2>
+    <table class="ledger pd-t pd-d">
+      <thead><tr><th>Čeho se týkají</th><th class="num-cell">Podnětů</th><th class="num-cell">Vyřešeno</th><th class="num-cell">Čeká</th><th><span class="sr">Podíl</span></th><th class="num-cell">Vyřešeno obvykle za</th></tr></thead>
+      <tbody>
+      {% for k in s.categories %}
+        <tr><td><a href="{{ q(kategorie=k.id) }}#kde">{{ k.name }}</a>{% if k.note %}<br><span class="pd-note">{{ k.note }}</span>{% endif %}</td><td class="num-cell">{{ k.n }}</td><td class="num-cell">{{ '–' if k.forwarded else k.vyreseno }}</td><td class="num-cell">{{ '–' if k.forwarded else k.ceka }}</td><td>{{ mini(k) }}</td><td class="num-cell">{{ k.median }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% set regular = s.categories|rejectattr('forwarded')|list %}
+    <ul class="pd-cat pd-m">
+      {% for k in s.categories %}
+      <li{% if not k.forwarded and loop.index > 6 and not all_kinds %} class="pd-more"{% endif %}><div class="pd-cat-h"><a href="{{ q(kategorie=k.id) }}#kde">{{ k.name }}</a><span>{{ k.n }}</span></div>{{ mini(k) }}<p>{% if k.forwarded %}{{ k.note[:1]|upper }}{{ k.note[1:] }}.{% else %}{{ k.vyreseno }} vyřešeno, {{ w.waits(k.ceka) }}{% if k.median != '–' %}. Obvykle {{ k.median }}{% endif %}{% endif %}</p></li>
+      {% endfor %}
+    </ul>
+    {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a href="{{ q(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
+    <p class="pd-note pd-src pd-d">„Vyřešeno obvykle za“ je medián doby od podání do poslední odpovědi úřadu u vyřešených podnětů. Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace dvakrát denně. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
+  </section>
+
+  <p class="pd-src-m pd-m pd-o5">Zdroj: aplikace Dej Tip statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace dvakrát denně.</p>
+</div>
+{% endif %}
+{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('podnety.js') }}" defer></script>{% endblock %}

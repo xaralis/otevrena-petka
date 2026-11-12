@@ -1,13 +1,13 @@
 """Podněty as a section of the portal (see petka.section): citizens' reports from the city's
-Dej Tip app. API and MCP only for now (the city app and the portal's map will read it), so not
-listed; /podnety is the planned-section page."""
+Dej Tip app. The page works at /podnety, with the API and MCP, but the section is not listed yet
+(launched later)."""
 
 from ..section import Section
 
 
 def _routers() -> list:
     from . import web
-    return [web.api]
+    return [web.pages, web.api]
 
 
 def _mcp():
@@ -22,7 +22,7 @@ def _commands():
 
 SECTION = Section(
     "podnety", "Podněty", "Podněty občanů",
-    "Co lidé v obvodu hlásí a jak se to řeší?", "planned", listed=False,
+    "Co lidé hlásí a jak se to řeší?", "live", listed=False,
     examples=["Co lidé nahlásili v mé ulici?",
               "Kolik podnětů k zeleni úřad vyřešil?",
               "Jak dlouho trvá vyřízení podnětu?"],

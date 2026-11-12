@@ -92,6 +92,30 @@ def summary(obvod: str, date_from: dt.date | None = None) -> dict:
             "statuses": [{**s, "name": source.STATUSES.get(s["status"], str(s["status"]))} for s in stats]}
 
 
+def period_rows(obvod: str, start: dt.date, end: dt.date) -> list[dict]:
+    """The obvod's reports with start <= reported_at < end (dates), what the page counts."""
+    with db.pool().connection() as conn:
+        return conn.execute("""SELECT id, category_id, category, status, reported_at, lat, lng, street,
+                                      first_note_at, last_note_at
+                               FROM citizen_reports WHERE obvod = %s AND reported_at >= %s AND reported_at < %s
+                               ORDER BY reported_at""", (obvod, start, end)).fetchall()
+
+
+def years(obvod: str) -> list[int]:
+    with db.pool().connection() as conn:
+        return [r["y"] for r in conn.execute(
+            "SELECT DISTINCT extract(year FROM reported_at)::int AS y FROM citizen_reports WHERE obvod = %s",
+            (obvod,))]
+
+
+def checked(obvod: str) -> dt.datetime | None:
+    """When the job last downloaded the obvod successfully ("Stav k"): every run touches
+    last_seen of every report it got."""
+    with db.pool().connection() as conn:
+        r = conn.execute("SELECT max(last_seen) AS t FROM citizen_reports WHERE obvod = %s", (obvod,)).fetchone()
+    return r["t"] if r else None
+
+
 # --- GeoJSON --------------------------------------------------------------------------------
 
 def feature(r: dict) -> dict:
