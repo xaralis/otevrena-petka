@@ -170,6 +170,18 @@ def _dist(a, b) -> float:
     return math.hypot(a[0] - b[0], a[1] - b[1])
 
 
+def reach(line: LineString, p: Point, q: Point | None) -> LineString:
+    """`line` with the end nearest to p carried on to q, the point on the cross street: RÚIAN's
+    reference lines stop a few metres short of a junction, so a cut stretch would end in the
+    middle of nowhere on the map. Only for short gaps (≤ SNAP)."""
+    if q is None or not 0.5 < p.distance(q) <= SNAP:
+        return line
+    cs = list(line.coords)
+    if Point(cs[0]).distance(p) <= Point(cs[-1]).distance(p):
+        return LineString([q.coords[0]] + cs)
+    return LineString(cs + [q.coords[0]])
+
+
 def cut(line, p1: Point, p2: Point) -> LineString | None:
     """The shortest way along `line`'s own network between the points nearest to p1 and p2.
     Loose ends closer than JOIN_END are joined, separate parts bridged up to JOIN_GAP (RÚIAN
@@ -297,31 +309,31 @@ class Geo:
         return pts, miss
 
     def endpoint(self, text: str, main_line, main: str):
-        """(point on the main line, why) for 'ul. Dašická', 'č. p. 531', 'Sukovy třídy';
-        (None, why) when it isn't one."""
+        """(point on the main line, why, point on the cross street or None) for 'ul. Dašická',
+        'č. p. 531', 'Sukovy třídy'; (None, why, None) when it isn't one."""
         t = text.strip()
         if "c. p." in t:
             nums = numbers(t)
             pts, _ = self.addr_points(nums[:1], near=main_line, street=main)
             if pts:
-                return main_line.interpolate(main_line.project(pts[0])), f"čp {nums[0]}"
-            return None, f"čp {nums[:1]} not found"
+                return main_line.interpolate(main_line.project(pts[0])), f"čp {nums[0]}", None
+            return None, f"čp {nums[:1]} not found", None
         found = [f[0] for f in self.names.find(t) if f[0] != main]
         if not found:
             fz = self.names.fuzzy(t)
             found = [fz] if fz and fz != main else []
             if found and self.line(found[0]) is not None and main_line.distance(self.line(found[0])) > SNAP:
-                return None, f"fuzzy '{found[0]}' too far"
+                return None, f"fuzzy '{found[0]}' too far", None
         if not found:
-            return None, f"no street in '{t}'"
+            return None, f"no street in '{t}'", None
         other = self.line(found[0])
         if other is None:
-            return None, f"{found[0]}: no geometry"
+            return None, f"{found[0]}: no geometry", None
         d = main_line.distance(other)
         if d > SNAP_MAX:
-            return None, f"{found[0]} {d:.0f} m away"
-        p, _ = ops.nearest_points(main_line, other)
-        return p, found[0] + (f" (~{d:.0f} m)" if d > SNAP else "")
+            return None, f"{found[0]} {d:.0f} m away", None
+        p, q = ops.nearest_points(main_line, other)
+        return p, found[0] + (f" (~{d:.0f} m)" if d > SNAP else ""), q
 
     def block(self, names: list[str]):
         """The block the named streets enclose, or None when they don't close a ring."""
@@ -356,18 +368,19 @@ class Geo:
         bare = main and not re.search(r"\d|parkovist|vnitroblo|mezi|slepa|cast|chodnik|stezk|tocn", tail)
 
         if main_line is not None and pat == "usek od-k" and seg:
-            p1 = p2 = None
+            p1 = p2 = q1 = q2 = None
             why1 = why2 = "no split"
             od = core.find(" od ") + 4 if " od " in core else core.find("od ") + 3
             rest = re.split(r",|\bvc\.|\s-\s|\(", core[od:])[0]
             for sp in re.finditer(r"\s(?:k|ke|po|do)\s", rest):
-                p1, why1 = self.endpoint(rest[:sp.start()], main_line, main)
-                p2, why2 = self.endpoint(rest[sp.end():], main_line, main)
+                p1, why1, q1 = self.endpoint(rest[:sp.start()], main_line, main)
+                p2, why2, q2 = self.endpoint(rest[sp.end():], main_line, main)
                 if p1 is not None and p2 is not None:
                     break
             if p1 is not None and p2 is not None:
                 geom = cut(main_line, p1, p2)
                 if geom is not None and geom.length > 5:
+                    geom = reach(reach(geom, p1, q1), p2, q2)
                     rec.update(method="segment", status="auto", note=f"{why1} → {why2}")
                 else:
                     geom = None

@@ -43,7 +43,11 @@
         fc.features = fc.features.filter((f) => f.geometry);
         if (all) colour(fc, el.dataset.today); else street(fc);
         map.addSource("cl", { type: "geojson", data: fc });
-        const poly = ["==", ["geometry-type"], "Polygon"], line = ["==", ["geometry-type"], "LineString"];
+        const poly = ["match", ["geometry-type"], ["Polygon", "MultiPolygon"], true, false];
+        const line = ["match", ["geometry-type"], ["LineString", "MultiLineString"], true, false];
+        // widths grow with zoom; a white casing keeps the stretches crisp over the base map
+        const w = (extra) => ["interpolate", ["linear"], ["zoom"],
+          ...[[12, 0.75], [15, 1], [18, 1.8]].flatMap(([z, k]) => [z, ["*", ["+", ["get", "width"], extra], k]])];
         const solid = ["==", ["get", "dash"], false], dashed = ["==", ["get", "dash"], true];
         map.addLayer({ id: "cl-fill", type: "fill", source: "cl", filter: poly,
                        paint: { "fill-color": ["get", "color"], "fill-opacity": 0.28 } });
@@ -51,12 +55,19 @@
                        paint: { "line-color": ["get", "color"], "line-width": 1.5 } });
         map.addLayer({ id: "cl-edge-d", type: "line", source: "cl", filter: ["all", poly, dashed],
                        paint: { "line-color": ["get", "color"], "line-width": 1.5, "line-dasharray": [2, 2] } });
+        map.addLayer({ id: "cl-case", type: "line", source: "cl", filter: line,
+                       layout: { "line-cap": "round", "line-join": "round" },
+                       paint: { "line-color": "#ffffff", "line-width": w(3) } });
         map.addLayer({ id: "cl-line", type: "line", source: "cl", filter: ["all", line, solid],
                        layout: { "line-cap": "round", "line-join": "round" },
-                       paint: { "line-color": ["get", "color"], "line-width": ["get", "width"] } });
+                       paint: { "line-color": ["get", "color"], "line-width": w(0) } });
         map.addLayer({ id: "cl-line-d", type: "line", source: "cl", filter: ["all", line, dashed],
                        layout: { "line-join": "round" },
-                       paint: { "line-color": ["get", "color"], "line-width": ["get", "width"], "line-dasharray": [1.5, 1.2] } });
+                       paint: { "line-color": ["get", "color"], "line-width": w(0), "line-dasharray": [1.5, 1.2] } });
+        // keep the base map's street and place names above our lines
+        const labels = map.getStyle().layers.find((l) => l.type === "symbol");
+        if (labels) ["cl-fill", "cl-edge", "cl-edge-d", "cl-case", "cl-line", "cl-line-d"]
+          .forEach((id) => map.getLayer(id) && map.moveLayer(id, labels.id));
         const b = new maplibregl.LngLatBounds();
         const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
         // the overview fits what is still to be cleaned this year (a long street with nothing
