@@ -25,17 +25,23 @@ PER_PAGE = 20
 FROM_CITY = {2026: {"dane": 25276.5, "zp": 23503.5, "doprava": 12432.8, "zpet": 8026.0,
                     "zdroj": "rozpočet města Pardubic na rok 2026, s. 126"}}
 
-# Periods marked in the charts: (first year, last year, label)
-MARKS = [(2020, 2021, "covid")]
+# Periods marked in the charts: (from, to, label). Covid: the first state of emergency
+# (12. 3. 2020) to shops and restaurants reopening at the end of May 2021.
+MARKS = [(dt.date(2020, 3, 12), dt.date(2021, 5, 31), "covid 3/2020–5/2021")]
 
 
 def _marks(years: list[int]) -> list[dict]:
-    """Bands behind chart columns, as column index and count."""
+    """Bands behind year columns: a and b are positions in columns (index + fraction of the
+    year), fa and fb the fractions, which the template needs to step over the gaps."""
     out = []
-    for a, b, label in MARKS:
-        idx = [i for i, y in enumerate(years) if a <= y <= b]
-        if idx:
-            out.append({"i": idx[0], "k": len(idx), "n": len(years), "label": label})
+    for start, end, label in MARKS:
+        if start.year not in years or end.year not in years:
+            continue
+        frac = lambda d: (d - dt.date(d.year, 1, 1)).days / (dt.date(d.year + 1, 1, 1) - dt.date(d.year, 1, 1)).days
+        fa, fb = frac(start), frac(end)
+        a, b = years.index(start.year) + fa, years.index(end.year) + fb
+        out.append({"a": round(a, 3), "b": round(b, 3), "fa": round(fa, 3), "fb": round(fb, 3),
+                    "n": len(years), "label": label})
     return out
 
 

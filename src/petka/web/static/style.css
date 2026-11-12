@@ -799,7 +799,7 @@ body > footer { flex-shrink: 0; }
 .rz-plot { position: relative; border-bottom: 2px solid var(--ink); display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 0 12px; align-items: end; min-width: 28rem; }
 .rz-plot > i { position: absolute; left: 0; right: 0; height: 1px; background: var(--grey); }
 .rz-mark { position: absolute; top: -1.6rem; bottom: 0; background: repeating-linear-gradient(135deg, #f1f3f5 0 6px, var(--grey) 6px 12px); border-radius: 3px 3px 0 0; }
-.rz-mark b { position: absolute; top: .1rem; left: 0; right: 0; text-align: center; font-size: .78rem; font-weight: 650; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.rz-mark b { position: absolute; top: .1rem; left: 0; right: 0; text-align: center; font-size: .78rem; font-weight: 650; color: var(--muted); white-space: nowrap; }
 .rz-col { z-index: 1; }
 .rz-col { position: relative; background: #fff; box-shadow: inset 0 0 0 1.5px var(--field); border-radius: 2px 2px 0 0; display: flex; align-items: flex-end; }
 .rz-col div { width: 100%; background: var(--ink); border-radius: 2px 2px 0 0; }

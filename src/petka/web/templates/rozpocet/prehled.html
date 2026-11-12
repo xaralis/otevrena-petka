@@ -41,13 +41,13 @@
   <div class="rz-axis" style="height:280px">{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
   <div class="rz-plot" style="height:280px">
     {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
-        {% for m in marks %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 12px) * {{ m.i }} / {{ m.n }} - 12px / 2);width:calc((100% + 12px) * {{ m.k }} / {{ m.n }})"><b>{{ m.label }}</b></div>{% endfor %}
+        {% for m in marks %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 12px) * {{ m.a }} / {{ m.n }} - 12px * {{ m.fa }});width:calc((100% + 12px) * {{ m.b - m.a }} / {{ m.n }} - 12px * {{ m.fb - m.fa }})"><b>{{ m.label }}</b></div>{% endfor %}
     {% for s in series %}<div class="rz-col" style="height:{{ s.r_h }}px" title="{{ s.year }}: plán {{ mil(s.r) }}, utraceno {{ mil(s.a) }} mil. Kč"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px"><b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b></div><span>{{ mil(s.r) }}</span></div>{% endfor %}
   </div>
   <div></div>
   <div class="rz-years">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>
 </div>
-<p class="note">Mil. Kč. Nad sloupcem plán, v tmavé části skutečně utraceno. Plán je rozpočet schválený zastupitelstvem i se všemi změnami během roku. Šrafovaně roky covidu: v roce 2020 se utratila jen polovina plánu.</p>
+<p class="note">Mil. Kč. Nad sloupcem plán, v tmavé části skutečně utraceno. Plán je rozpočet schválený zastupitelstvem i se všemi změnami během roku. Šrafovaně období, kdy covid nejvíc zasáhl ekonomiku: od prvního nouzového stavu v březnu 2020 po otevření obchodů a restaurací v květnu 2021. V roce 2020 se utratila jen polovina plánu.</p>
 
 <h2>Za co obvod {% if year == years[-1] %}letos platí{% else %}platil v roce {{ year }}{% endif %}</h2>
 <p class="rz-lead">Oblasti podle státní rozpočtové skladby. Klikněte na oblast a uvidíte konkrétní účely i jednotlivé faktury.</p>
