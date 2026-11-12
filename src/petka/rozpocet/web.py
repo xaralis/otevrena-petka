@@ -113,11 +113,14 @@ def areas(request: Request, token: str, rok: str = "", pohled: str = ""):
     base = _check(token)
     ys = [y["year"] for y in q.years()]
     year = _year(rok, ys)
-    view = "zmena" if pohled == "zmena" and (year - 1) in ys else "plan"
-    groups, axis = q.group(q.by_paragraph(year), q.by_paragraph(year - 1), view)
+    view = pohled if pohled in ("zmena", "vyvoj") else "plan"
+    if view == "zmena" and (year - 1) not in ys:
+        view = "plan"
+    groups, axis = q.group(q.by_paragraph(year), q.by_paragraph(year - 1), "zmena" if view == "zmena" else "plan")
     total = sum(g["plan"] for g in groups)
+    trends = q.trends(groups, {y: q.by_paragraph(y) for y in ys}, year) if view == "vyvoj" else []
     return _render(request, "oblasti.html", _ctx(request, base, "oblasti", year=year, view=view,
-                                                  groups=groups, axis=axis, total=total))
+                                                  groups=groups, axis=axis, total=total, trends=trends))
 
 
 @pages.get("/oblasti/{par}", response_class=HTMLResponse)

@@ -11,7 +11,7 @@
     <h2 style="margin-top:0">Kolik to stálo rok od roku</h2>
     <p class="rz-legend"><span><i class="k-plan"></i>plán včetně změn</span><span><i class="k-spent"></i>skutečně utraceno</span><span><i class="k-now"></i>{{ years[-1] }}: zatím</span></p>
     <div class="rz-chart">
-      <div class="rz-axis" style="height:220px">{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
+      <div class="rz-axis" style="height:220px"><b class="rz-axis-u">mil. Kč</b>{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
       <div class="rz-plot" style="height:220px;gap:0 10px">
         {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
         {% for m in marks %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 10px) * {{ m.a }} / {{ m.n }} - 10px * {{ m.fa }});width:calc((100% + 10px) * {{ m.b - m.a }} / {{ m.n }} - 10px * {{ m.fb - m.fa }})"><b>{{ m.label }}</b></div>{% endfor %}
@@ -20,32 +20,34 @@
       <div></div>
       <div class="rz-years" style="gap:0 10px">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>
     </div>
-    <p class="note">Mil. Kč. Nad sloupcem plán po všech změnách během roku, v tmavé části skutečně utraceno.</p>
+    <p class="note">Nad sloupcem plán po všech změnách během roku, v tmavé části skutečně utraceno.</p>
 
     <h2>Za co obvod {% if year == years[-1] %}letos platí{% else %}platil v roce {{ year }}{% endif %}</h2>
     {% if items %}
     <div style="overflow-x:auto">
-    <table class="ledger">
-      <thead><tr><th scope="col">Položka</th><th scope="col" class="num-cell">Plán</th><th scope="col" class="num-cell">Utraceno</th></tr></thead>
-      <tbody>{% for i in items %}<tr><td>{{ i.item_name }} {% if i.item %}<span class="muted small">pol. {{ i.item }}</span>{% endif %}</td><td class="num-cell">{{ tis(i.r) }}</td><td class="num-cell">{{ tis(i.a) }}</td></tr>{% endfor %}</tbody>
+    <table class="ledger rz-items">
+      <thead><tr><th scope="col">Položka</th><th scope="col" class="num-cell nowrap">Plán <span class="rz-unit">tis. Kč</span></th><th scope="col" class="num-cell nowrap">Utraceno{{ zatim }} <span class="rz-unit">tis. Kč</span></th></tr></thead>
+      <tbody>{% for i in items %}<tr><td>{{ i.label }} {% if i.item %}<span class="muted small">pol. {{ i.item }}</span>{% endif %}</td><td class="num-cell" data-u="plán">{{ tis(i.r) }}</td><td class="num-cell" data-u="utraceno{{ zatim }}">{{ tis(i.a) }}</td></tr>{% endfor %}</tbody>
     </table>
     </div>
-    <p class="note">Tis. Kč.{% if rest_n %} Dalších {{ rest_n }} drobných položek za {{ tis(rest_sum) }} tis. Kč.{% endif %}</p>
+    <p class="note">{% if rest_n %}Dalších {{ rest_n }} drobných položek za {{ tis(rest_sum) }} tis. Kč.{% endif %}</p>
     {% else %}<p class="muted">V roce {{ year }} tu obvod nic neplánoval.</p>{% endif %}
 
     <h2>Největší faktury roku {{ year }}</h2>
     {% if invoices %}
     <p class="rz-lead">{{ 'Zatím' if year == years[-1] else 'Celkem' }} {{ inv_n }} faktur za {{ mil(inv_sum) }} mil. Kč. Dodavatele rozklikávací rozpočet města neuvádí.</p>
-    <ol class="rz-inv">{% for f in invoices %}<li><div><p style="font-weight:600">{{ describe(f.description) }}</p><p class="meta">{{ kinds.get(f.item|string, f.item_name) }}</p></div><p class="amt">{{ '%.2f'|format(f.amount)|replace('.', ',') }}</p></li>{% endfor %}</ol>
-    <p class="note">Tis. Kč. <a href="{{ base }}/faktury?rok={{ year }}&amp;oblast={{ par[:2] }}">Všechny faktury v oblasti</a></p>
+    <ol class="rz-inv">{% for f in invoices %}<li><div><p style="font-weight:600">{{ describe(f.description) }}</p><p class="meta">{{ kinds.get(f.item|string, f.item_name) }}</p></div><p class="amt">{{ tis(f.amount * 1000) }} Kč</p></li>{% endfor %}</ol>
+    <p class="note"><a href="{{ base }}/faktury?rok={{ year }}&amp;oblast={{ par[:2] }}">Všechny faktury v oblasti</a></p>
     {% else %}<p class="muted">Žádné faktury.</p>{% endif %}
   </div>
   <aside>
+    <p class="side-h">{{ 'Letos' if year == years[-1] else 'Rok ' ~ year }}</p>
+    <p class="rz-big" style="font-size:2.2rem;margin:.2rem 0 0">{{ mil(now[0]) }} <span class="rz-unit">mil. Kč</span></p>
+    <p style="margin:0;color:var(--ink-2)">plán, <b>{{ share }} %</b> rozpočtu obvodu</p>
+    <span class="rz-combo" role="img" aria-label="{{ share }} procent rozpočtu obvodu, z toho utraceno {{ (now[1] / now[0] * 100)|round|int if now[0] else 0 }} procent"><i style="width:{{ [share, 1]|max }}%"><i class="{{ 'zatim' if running }}" style="width:{{ (now[1] / now[0] * 100)|round|int if now[0] else 0 }}%"></i></i></span>
+    <p style="margin:0;color:var(--ink-2)">utraceno{{ zatim }} {{ mil(now[1]) }} mil. Kč ({{ (now[1] / now[0] * 100)|round|int if now[0] else 0 }} % plánu)</p>
+    <div style="height:1.4rem"></div>
     <dl class="facts">
-      <dt>{{ 'Letos' if year == years[-1] else 'Rok ' ~ year }}</dt>
-      <dd>plán {{ mil(now[0]) }} mil. Kč<br>utraceno {{ mil(now[1]) }} mil. Kč{% if now[0] %}, tedy {{ (now[1] / now[0] * 100)|round|int }} %{% endif %}</dd>
-      <dt>Z celého rozpočtu obvodu</dt>
-      <dd>{{ share }} %</dd>
       <dt>V účetnictví</dt>
       <dd>paragraf {{ par }}, {{ official }}</dd>
     </dl>

@@ -347,3 +347,21 @@ def code_for(name: str | None, kind: str, year: int) -> int | None:
         if hits:
             return None
     return None
+
+
+@functools.cache
+def _names(kind: str) -> dict[int, str]:
+    """Code -> official name from the MF codelist (the latest valid entry)."""
+    data = json.loads(CISELNIK.read_text())
+    out: dict[int, str] = {}
+    for code, name, start, end in sorted(data[kind], key=lambda r: r[2]):
+        out[code] = name
+    return out
+
+
+def official(kind: str, code) -> str | None:
+    """The full official name of a paragraf / položka (GORDIC shortens and truncates them)."""
+    try:
+        return _names(kind).get(int(code))
+    except (TypeError, ValueError):
+        return None

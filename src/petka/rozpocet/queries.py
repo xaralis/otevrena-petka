@@ -6,7 +6,7 @@ import re
 
 from .. import db
 from ..uredni_deska.queries import tsquery
-from . import names
+from . import names, source
 
 UNIT = "mo5"
 SMALL = 0.01          # oblasti under 1 % of the year's plan go to "Ostatní"
@@ -92,6 +92,29 @@ def group(cur: dict, prev: dict, view: str = "plan") -> tuple[list[dict], dict]:
     return groups, axis
 
 
+def trends(groups: list[dict], by_year: dict[int, dict], year: int) -> list[dict]:
+    """Each oblast of `groups` (the selected year's) over all years: plan and spent per year,
+    on the oblast's own scale (small multiples). Ostatní sums whatever is not a named oblast."""
+    named = {names.key(r["code"]) for g in groups if g["name"] != "Ostatní" for r in g["rows"]}
+    out = []
+    for g in groups:
+        keys = {names.key(r["code"]) for r in g["rows"]}
+        pick = (lambda p: names.key(p) not in named) if g["name"] == "Ostatní" else (lambda p: names.key(p) in keys)
+        pts = []
+        for y in sorted(by_year):
+            d = by_year[y]
+            pts.append({"year": y, "r": sum(x[0] for p, x in d.items() if pick(p)),
+                        "a": sum(x[1] for p, x in d.items() if pick(p))})
+        top = max([max(p["r"], p["a"]) for p in pts] + [1])
+        for p in pts:
+            p.update(r_h=round(p["r"] / top * 100), a_h=round(p["a"] / top * 100), now=p["year"] == year,
+                     title=f"{p['year']}: plán {mil(p['r'])}, utraceno {mil(p['a'])} mil. Kč")
+        first = next((p for p in pts if p["a"]), pts[0])
+        out.append({"name": g["name"], "official": g["official"], "points": pts, "top": mil(top),
+                    "first": first, "last_closed": next((p for p in reversed(pts) if p["year"] < max(by_year)), pts[-1])})
+    return out
+
+
 # --- database ------------------------------------------------------------------------------
 
 def _code(paragraph, name: str) -> str:
@@ -113,7 +136,8 @@ def by_paragraph(year: int, unit: str = UNIT) -> dict:
     out: dict = {}
     for x in rows:
         c = _code(x["paragraph"], x["paragraph_name"])
-        r, a, n = out.get(c, (0, 0, x["paragraph_name"]))
+        name = "bez paragrafu" if c == "odvod" else (source.official("paragraf", c) or x["paragraph_name"])
+        r, a, n = out.get(c, (0, 0, name))
         out[c] = (r + float(x["r"]), a + float(x["a"]), n)
     return out
 
@@ -136,6 +160,14 @@ def paragraph_series(par: str, unit: str = UNIT) -> list[dict]:
 
 
 def paragraph_items(par: str, year: int, unit: str = UNIT) -> list[dict]:
+    """Položky of a paragraf with a plain label (names.POLOZKA, else the full official name)."""
+    rows = _items(par, year, unit)
+    for r in rows:
+        r["label"] = names.POLOZKA.get(str(r["item"])) or source.official("polozka", r["item"]) or r["item_name"]
+    return rows
+
+
+def _items(par: str, year: int, unit: str = UNIT) -> list[dict]:
     with db.pool().connection() as conn:
         return conn.execute(
             """SELECT item, item_name, sum(revised)::float AS r, sum(actual)::float AS a FROM budget_lines

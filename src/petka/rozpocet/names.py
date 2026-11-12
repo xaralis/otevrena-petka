@@ -73,3 +73,22 @@ ABOUT = {
     "3421": "Dětská hřiště a akce pro děti a mládež.",
     "3723": "Vysypávání košů a svoz odpadu z veřejných ploch.",
 }
+
+# položky (druhové třídění) people meet in the detail of an oblast; others show the official name
+POLOZKA = {
+    "5011": "Platy zaměstnanců", "5019": "Ostatní platy", "5021": "Dohody a ostatní osobní výdaje",
+    "5023": "Odměny zastupitelů", "5031": "Sociální pojištění", "5032": "Zdravotní pojištění",
+    "5038": "Pojištění odpovědnosti zaměstnavatele", "5039": "Ostatní povinné pojistné",
+    "5132": "Ochranné pomůcky", "5133": "Léky a zdravotnický materiál", "5134": "Pracovní oděvy",
+    "5136": "Knihy a tiskoviny", "5137": "Drobný majetek", "5139": "Materiál",
+    "5151": "Voda", "5152": "Teplo", "5153": "Plyn", "5154": "Elektřina", "5156": "Pohonné hmoty",
+    "5161": "Poštovní služby", "5162": "Telefony a internet", "5163": "Bankovní poplatky",
+    "5164": "Nájemné", "5166": "Poradenské a právní služby", "5167": "Školení",
+    "5168": "Zpracování dat a IT služby", "5169": "Služby", "5171": "Opravy a údržba",
+    "5172": "Software do 80 tisíc Kč", "5173": "Cestovné", "5175": "Pohoštění", "5192": "Náhrady",
+    "5194": "Věcné dary", "5123": "Technické zhodnocení do 80 tisíc Kč",
+    "5199": "Ostatní výdaje", "5362": "Daně státu",
+    "5222": "Příspěvky spolkům", "5229": "Příspěvky neziskovým organizacím",
+    "5492": "Dary občanům", "5499": "Příspěvky občanům",
+    "6111": "Software", "6121": "Stavby", "6122": "Stroje a zařízení", "6123": "Dopravní prostředky",
+}
