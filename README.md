@@ -20,6 +20,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
 | Podněty | ve výstavbě | zatím jen API a MCP: podněty z aplikace Dej Tip v obvodu a jejich stav ([docs/dejtip.md](docs/dejtip.md)) |
+| Čištění ulic | připraveno, zatím mimo navigaci | blokové čištění podle harmonogramu Služeb města Pardubic: termíny, mapa úseků, kalendář k odběru (ICS), API a MCP |
 
 ### Usnesení
 
@@ -73,6 +74,24 @@ a z desky magistrátu to, co obvod výslovně jmenuje v názvu, odboru nebo čí
 Popis oznámení (často s datem narození) se neukládá. U sejmutých doručení písemnosti se
 skryje jméno adresáta, přílohy, odkaz i čísla spisu.
 
+### Čištění ulic
+
+Zdroj je Excel harmonogramu blokového čištění, který [Služby města Pardubic](https://smp-pce.cz/udrzba-komunikaci/cisteni-komunikaci)
+odkazují na své stránce (název souboru obsahuje časové razítko, hledá se podle vzoru). Je jeden
+pro celé město. `usneseni cisteni-update` (denně) ho stáhne, a když se obsah změnil:
+
+- opraví chyby tabulky: řádky bez data, které pokračují textem místa z řádku nad nimi, nadpisy
+  mezi řádky, rok, který nesedí na sousedy (2025 uprostřed 2026);
+- nová místa (klíčem je normalizovaný text „Místo“) umístí podle RÚIAN: celá ulice, úsek „od ul. A
+  k ul. B“ vyříznutý po síti ulice, plocha u čísel popisných, vnitroblok mezi ulicemi. Obvod
+  místa se počítá z jeho geometrie, nikdy předem. Odpovědi ČÚZK se ukládají do tabulky `ruian_cache`;
+- budoucí termíny nahradí podle nového souboru, proběhlé ponechá.
+
+Co text neumístí (zhruba pětina míst), lze zakreslit ručně do `data/cisteni/overrides.geojson`:
+FeatureCollection, u každého prvku `properties.key` = klíč místa z `/api/v1/cisteni`
+a volitelně `properties.note`. Ruční geometrie má přednost před automatickou (stav `manual`).
+`--znovu` přepočítá geometrii všech míst (po změně algoritmu).
+
 ## Otevřená data, API a MCP
 
 - **Data**: `/data` na webu. Usnesení jako CSV + JSON s
@@ -87,7 +106,7 @@ skryje jméno adresáta, přílohy, odkaz i čísla spisu.
   ```
 
   Nástroje: `hledej_usneseni`, `usneseni_detail`, `usneseni_k_mistu`, `jednani`, `clenove`,
-  `hlasovani_clena`, `statistika`, `uredni_deska_hledej`.
+  `hlasovani_clena`, `statistika`, `uredni_deska_hledej`, `podnety`, `cisteni`.
 
 ## Soukromí a přístupnost
 
@@ -107,6 +126,7 @@ mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Po
 | `src/petka/usneseni/` | sekce Usnesení: pipeline, geokódování, hledání, web, API, MCP |
 | `src/petka/uredni_deska/` | sekce Úřední deska: stahování, web, API, MCP |
 | `src/petka/podnety/` | sekce Podněty: zrcadlo podnětů z Dej Tipu, API (GeoJSON), MCP |
+| `src/petka/cisteni/` | sekce Čištění ulic: harmonogram SmP, geokódování úseků z RÚIAN, stránky, ICS, API, MCP |
 | `migrations/` | schéma Postgresu (spouští se samo při startu) |
 | `data/usneseni/sources.json` | index zveřejněných PDF (URL, sha256) |
 | `data/usneseni/text/` | text každého zápisu |
@@ -114,6 +134,7 @@ mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Po
 | `data/usneseni/overrides/` | ručně ověřené výjimky (nesrovnalost je opravdu ve zdrojovém dokumentu) |
 | `data/usneseni/embeddings.jsonl` | embeddingy, aby se při obnově databáze nepočítaly znovu |
 | `data/usneseni/geo.json`, `geo_cache.json` | geometrie míst a odpovědi ČÚZK (dotazuje se jen nové) |
+| `data/cisteni/overrides.geojson` | ručně zakreslené úseky čištění, které text harmonogramu neumístí (viz níže) |
 | `config/usneseni/` | členové podle volby.cz (`scripts/members_from_volby.py`), témata |
 | `docs/` | formát otevřených dat, zpracování jednání subagenty, skici značky |
 
@@ -130,6 +151,7 @@ EMBED_URL=http://localhost:8080 uv run usneseni embed   # volitelně: llama.cpp 
 uv run usneseni export
 uv run usneseni deska-update                    # úřední deska
 uv run usneseni podnety-update                  # podněty z Dej Tipu
+uv run usneseni cisteni-update                  # harmonogram blokového čištění (denně)
 uv run usneseni serve --port 8099
 uv run pytest
 ```
