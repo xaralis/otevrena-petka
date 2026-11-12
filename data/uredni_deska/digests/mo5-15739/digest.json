@@ -1,0 +1,150 @@
+{
+ "notice_id": "mo5-15739",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-12T13:24:52+00:00",
+ "source": {
+  "title": "Rozpočtová opatření schválená Radou MO Pardubice V dne 11. 11. 2026",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15739",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "rozpocet",
+ "headline": "Rada obvodu 11. 11. 2026 přesunula 67 500 Kč z rezerv na dotace pro tři akce",
+ "summary": "Rada městského obvodu Pardubice V schválila čtyři přesuny peněz v rozpočtu, celkem 67 500 Kč. Peníze se berou z rezerv starosty, rady a místostarosty a jdou na příspěvky pro tři akce: Tenisový turnaj ve čtyřhře, Mikulášskou besídku pro děti a Adventní jarmark. Celkové výdaje obvodu se tím nemění.",
+ "where": "Městský obvod Pardubice V",
+ "period": {
+  "from": "2026-11-11",
+  "to": null,
+  "text": "Schváleno 11. 11. 2026, na úřední desce do 1. 3. 2027"
+ },
+ "action": null,
+ "affects": "Pořadatelé a návštěvníci akcí, na které rada schválila dotace; rozpočet obvodu",
+ "facts": [
+  {
+   "label": "Usnesení rady",
+   "value": "č. 313/2026 R ze dne 11. 11. 2026"
+  },
+  {
+   "label": "Tenisový turnaj ve čtyřhře",
+   "value": "20 000 Kč z rezervy starosty"
+  },
+  {
+   "label": "Mikulášská besídka pro děti",
+   "value": "30 000 Kč z rezervy rady"
+  },
+  {
+   "label": "Adventní jarmark",
+   "value": "7 500 Kč z rezervy rady a 10 000 Kč z rezervy místostarosty"
+  },
+  {
+   "label": "Celkem přesunuto",
+   "value": "67 500 Kč"
+  }
+ ],
+ "signs": [],
+ "places": [],
+ "parcels": [],
+ "spending": [],
+ "budget": [
+  {
+   "label": "Mikulášská besídka (dotace)",
+   "change": 30
+  },
+  {
+   "label": "Tenisový turnaj (dotace)",
+   "change": 20
+  },
+  {
+   "label": "Adventní jarmark (z rezervy rady)",
+   "change": 7.5
+  },
+  {
+   "label": "Adventní jarmark (z rezervy místostarosty)",
+   "change": 10
+  },
+  {
+   "label": "rezerva rady",
+   "change": -37.5
+  },
+  {
+   "label": "rezerva starosty",
+   "change": -20
+  },
+  {
+   "label": "rezerva místostarosty",
+   "change": -10
+  }
+ ],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Jednoduchá tabulka nebo sloupcový graf čtyř přesunů z rezerv na tři akce; příloha je jen text, výkres není.",
+ "reviewer_notes": "Částky přepsány z přílohy (20.000, 30.000, 7.500, 10.000 Kč), součet 67 500 Kč spočítán. U bodu 2 je v textu nejasná formulace „v kapitole 30.000,- Kč“, kapitola 33 u něj výslovně uvedena není. Úbytky z rezerv v budget jsou odvozeny (rada 30 + 7,5 = 37,5 tis. Kč).",
+ "visual": {
+  "map": [],
+  "ortho": null,
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Datum schválení, číslo usnesení, všechny čtyři částky, rezervy i názvy akcí sedí s originálem a součet 67 500 Kč je správně."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, kdo co schválil, kolik peněz se přesouvá, odkud a na které akce, a u rozpočtového oznámení čtenář nic podávat nemusí."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je napsaný běžnou češtinou bez kapitol a položek rozpočtu, srozumitelně pro každého."
+   },
+   "obrazky": {
+    "score": null,
+    "reason": "Jde o přesun peněz v rozpočtu bez konkrétního místa, obrázek ani mapa by nepomohly."
+   }
+  },
+  "summary": "Přepis obstál: částky, akce, rezervy i datum schválení odpovídají originálu, jen datum, do kdy je oznámení na desce, z přiloženého dokumentu ověřit nejde.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-11",
+    "verdict": "v_dokumentu",
+    "evidence": "Nadpis i text originálu: „schválila dne 11. 11. 2026 v rámci svého usnesení č. 313/2026 R“."
+   },
+   {
+    "field": "do",
+    "value": "1. 3. 2027 (jen v textu období, doba vyvěšení na desce)",
+    "verdict": "nelze_overit",
+    "evidence": "Originál datum sejmutí z úřední desky neuvádí; údaj pochází nejspíš z údajů desky, které ke kontrole přiložené nebyly."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-12T13:25:06+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 10,
+   "cache_read": 18922,
+   "cache_write": 17544,
+   "output": 4126,
+   "usd": 0.1587
+  }
+ },
+ "published_at": "2026-11-12T13:25:06+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
