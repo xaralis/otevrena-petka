@@ -273,7 +273,7 @@ def test_ics_shape_folding_and_uid():
     long = "Wolkerova – komunikace a parkoviště před č. p. 2116–2118 plošně, včetně spojovací komunikace Gorkého – Jilemnického"
     its = [item(D(2026, 11, 26)), item(D(2026, 12, 3), text=long), item(D(2026, 12, 4), time=dt.time(6), before=True),
            item(D(2026, 12, 5), time=None)]
-    body = ics.calendar(its, "Blokové čištění – Wolkerova", STAMP, lambda i: "https://otevrenapetka.cz/cisteni/ulice/wolkerova")
+    body = ics.calendar(its, "Blokové čištění – Wolkerova", STAMP, lambda i: "https://otevrenapetka.cz/blokove-cisteni/ulice/wolkerova")
     raw = body.encode()
     assert all(len(line) <= 75 for line in raw.split(b"\r\n")) and body.endswith("\r\n") and "\n" not in body.replace("\r\n", "")
     cal = Calendar.from_ical(body)
@@ -336,65 +336,65 @@ def get(path, **kw):
 
 
 def test_overview(fixture):
-    r = get("/cisteni")
+    r = get("/blokove-cisteni")
     assert r.status_code == 200 and fixture["obvod"] == "mo5" and fixture["since"] == D(2026, 1, 1)
     h = r.text
     for s in ("Kdy proběhne čištění mojí ulice?", "Příštích 7 dní", "Kalendář jen pro vaše ulice",
               "Harmonogram do konce roku", "Příští týden", "Stav k 12. 11. 2026", "letos 5 termínů na 5 místech",
-              "Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.", 'href="/cisteni/ulice/wolkerova.ics"',
+              "Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.", 'href="/blokove-cisteni/ulice/wolkerova.ics"',
               "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni"'):
         assert s in h, s
     assert "aplikac" not in h.lower()
-    assert 'href="/cisteni"' not in h.split("</header>")[0]       # not in the navigation yet
-    assert get("/cisteni?probehle=1").text.count("Letošní proběhlé termíny") >= 1
+    assert 'href="/blokove-cisteni"' not in h.split("</header>")[0]       # not in the navigation yet
+    assert get("/blokove-cisteni?probehle=1").text.count("Letošní proběhlé termíny") >= 1
 
 
 def test_search(fixture):
-    r = get("/cisteni", params={"ulice": "WOLKEROVÁ"})
-    assert r.status_code == 303 and r.headers["location"] == "/cisteni/ulice/wolkerova"
-    r = get("/cisteni", params={"ulice": "ova"})       # Wolkerova, Sokolovská, Lexova
-    assert r.status_code == 200 and "je víc" in r.text and "/cisteni/ulice/lexova" in r.text
-    assert "nemáme" in get("/cisteni", params={"ulice": "Nádražní"}).text
+    r = get("/blokove-cisteni", params={"ulice": "WOLKEROVÁ"})
+    assert r.status_code == 303 and r.headers["location"] == "/blokove-cisteni/ulice/wolkerova"
+    r = get("/blokove-cisteni", params={"ulice": "ova"})       # Wolkerova, Sokolovská, Lexova
+    assert r.status_code == 200 and "je víc" in r.text and "/blokove-cisteni/ulice/lexova" in r.text
+    assert "nemáme" in get("/blokove-cisteni", params={"ulice": "Nádražní"}).text
 
 
 def test_street_page(fixture):
-    r = get("/cisteni/ulice/wolkerova")
+    r = get("/blokove-cisteni/ulice/wolkerova")
     assert r.status_code == 200
     h = r.text
     for s in ("Příští čištění", "26. 11.", "čtvrtek od 7:00, za 14 dní", "Celá ulice, obě strany.",
-              "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/cisteni/kalendar.ics?ulice=wolkerova",
-              "Letos v ulici Wolkerova", "příští", "cl-past", "Okolní ulice", "/cisteni/ulice/sokolovska",
+              "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/blokove-cisteni/kalendar.ics?ulice=wolkerova",
+              "Letos v ulici Wolkerova", "příští", "cl-past", "Okolní ulice", "/blokove-cisteni/ulice/sokolovska",
               "Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace", "ve čtvrtek 26. 11. od 7:00",
               "Přidat i další ulice"):
         assert s in h, s
     assert "Ulice je teď uzavřená" not in h and "aplikac" not in h.lower()
     fc = json.loads(h.split('id="cl-street-json">')[1].split("</script>")[0])
     assert {f["properties"]["when"] for f in fc["features"]} == {"next", "past"}
-    assert get("/cisteni/ulice/neni").status_code == 404
+    assert get("/blokove-cisteni/ulice/neni").status_code == 404
 
 
 def test_calendar_page_without_js(fixture):
-    r = get("/cisteni/kalendar", params=[("ulice", "wolkerova"), ("pridat", "lexova")])
+    r = get("/blokove-cisteni/kalendar", params=[("ulice", "wolkerova"), ("pridat", "lexova")])
     assert r.status_code == 200
     assert "Přidat 2 ulice do kalendáře" in r.text
-    assert "webcal://otevrenapetka.cz/cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text
-    assert "https://otevrenapetka.cz/cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text.replace("http://", "https://")
+    assert "webcal://otevrenapetka.cz/blokove-cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text
+    assert "https://otevrenapetka.cz/blokove-cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text.replace("http://", "https://")
 
 
 def test_absolute_links_ignore_the_host_header(fixture):
-    r = TestClient(app).get("/cisteni/kalendar", params={"ulice": "wolkerova"}, headers={"host": "localhost:8000"})
+    r = TestClient(app).get("/blokove-cisteni/kalendar", params={"ulice": "wolkerova"}, headers={"host": "localhost:8000"})
     assert r.status_code == 200 and "localhost" not in r.text
 
 
 def test_feeds(fixture):
-    r = get("/cisteni/kalendar.ics", params={"ulice": "wolkerova,lexova"})
+    r = get("/blokove-cisteni/kalendar.ics", params={"ulice": "wolkerova,lexova"})
     assert r.status_code == 200 and r.headers["content-type"].startswith("text/calendar")
     cal = Calendar.from_ical(r.text)
     assert len(list(cal.walk("VEVENT"))) == 3 and "Wolkerova\\, Lexova" in str(cal["X-WR-CALNAME"])   # X- property: kept escaped
     assert fixture["slugs"] == ["wolkerova", "lexova"]
-    r = get("/cisteni/ulice/wolkerova.ics")
+    r = get("/blokove-cisteni/ulice/wolkerova.ics")
     assert r.status_code == 200 and len(list(Calendar.from_ical(r.text).walk("VEVENT"))) == 2
-    assert get("/cisteni/kalendar.ics").status_code == 404
+    assert get("/blokove-cisteni/kalendar.ics").status_code == 404
 
 
 def test_api_shape(fixture):

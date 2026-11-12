@@ -1,5 +1,5 @@
 """Čištění ulic as a section of the portal (see petka.section): when the town's blokové čištění
-comes to a street, from the harmonogram of Služby města Pardubic. The pages work at /cisteni,
+comes to a street, from the harmonogram of Služby města Pardubic. The pages work at /blokove-cisteni,
 but the section is not listed yet (launched later)."""
 
 from ..section import Section
@@ -26,7 +26,7 @@ def _template():
 
 
 SECTION = Section(
-    "cisteni", "Čištění ulic", "Čištění ulic",
+    "blokove-cisteni", "Čištění ulic", "Čištění ulic",
     "Kdy proběhne čištění mojí ulice?", "live", listed=False,
     examples=["Kdy se čistí Wolkerova?",
               "Kde se čistí příští týden?",

@@ -8,7 +8,7 @@
   <div class="wrap">
     <h1>Kdy proběhne čištění mojí ulice?</h1>
     <p class="band-lead"><span class="cl-only-d">Blokové čištění v obvodu podle harmonogramu Služeb města Pardubic. V den čištění platí v úseku od rána zákaz stání podle dopravních značek.</span><span class="cl-only-m">Blokové čištění v obvodu podle harmonogramu Služeb města Pardubic. V den čištění platí v úseku od rána zákaz stání.</span></p>
-    <form class="search cl-search" method="get" action="/cisteni" role="search">
+    <form class="search cl-search" method="get" action="/blokove-cisteni" role="search">
       <label class="sr" for="ul">Vaše ulice</label>
       <input id="ul" name="ulice" type="search" list="cl-streets" data-combo value="{{ query }}" autocomplete="off" placeholder="Vaše ulice, třeba Wolkerova nebo Lexova">
       <button type="submit">Najít</button>
@@ -16,7 +16,7 @@
     {% if found is not none %}
     <div class="cl-found" role="status">
       {% if found %}<p>Ulic odpovídajících „{{ query }}“ je víc:</p>
-      <ul>{% for s in found %}<li><a href="/cisteni/ulice/{{ s }}">{{ names[s] }}</a></li>{% endfor %}</ul>
+      <ul>{% for s in found %}<li><a href="/blokove-cisteni/ulice/{{ s }}">{{ names[s] }}</a></li>{% endfor %}</ul>
       {% else %}<p>Ulici „{{ query }}“ v letošním harmonogramu obvodu nemáme. Zkuste jen část názvu, nebo ji najděte na mapě.</p>{% endif %}
     </div>
     {% endif %}
@@ -47,7 +47,7 @@
     <section class="cl-o2" aria-labelledby="cl-cal-h">
       <h2 class="side-h cl-h2" id="cl-cal-h">Kalendář jen pro vaše ulice</h2>
       <p class="cl-muted"><span class="cl-only-d">Vyberte ulice, kde parkujete. Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</span><span class="cl-only-m">Vyberte ulice, kde parkujete. Termíny se v kalendáři samy aktualizují.</span></p>
-      <form class="cl-pick" method="get" action="/cisteni/kalendar" aria-label="Ulice do kalendáře" data-cl-pick>
+      <form class="cl-pick" method="get" action="/blokove-cisteni/kalendar" aria-label="Ulice do kalendáře" data-cl-pick>
         <div class="chips" data-cl-chips></div>
         <label class="sr" for="addst">Přidat ulici</label>
         <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" data-combo autocomplete="off" placeholder="+ přidat ulici">
@@ -62,7 +62,7 @@
   <section class="cl-harm cl-o5" aria-labelledby="cl-harm-h">
   {% if past is not none %}
     <h2 id="cl-harm-h" class="cl-h2m">Letošní proběhlé termíny</h2>
-    <p class="cl-lead"><a href="/cisteni">Zpět na termíny do konce roku</a></p>
+    <p class="cl-lead"><a href="/blokove-cisteni">Zpět na termíny do konce roku</a></p>
     {% for g in past|groupby('date.month')|reverse %}
     <p class="cl-wk">{{ g.grouper|cl_month }}</p>
     {{ table(g.list) }}
@@ -80,7 +80,7 @@
     {% else %}
     <p class="cl-muted">Letos už žádné čištění v obvodu nezbývá.</p>
     {% endfor %}
-    {% if n_past %}<p class="cl-pastlink"><a href="/cisteni?probehle=1#cl-harm-h">Letošní proběhlé termíny ({{ n_past }})</a></p>{% endif %}
+    {% if n_past %}<p class="cl-pastlink"><a href="/blokove-cisteni?probehle=1#cl-harm-h">Letošní proběhlé termíny ({{ n_past }})</a></p>{% endif %}
   {% endif %}
   </section>
 </div>

@@ -5,7 +5,7 @@
 {% block hero %}
 <section class="band band-page">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/cisteni">Čištění ulic</a> <span aria-hidden="true">/</span> <span>{{ name }}</span></nav>
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/blokove-cisteni">Čištění ulic</a> <span aria-hidden="true">/</span> <span>{{ name }}</span></nav>
     <h1>{{ name }}</h1>
     <p class="band-lead cl-only-d">{% if next %}Příští blokové čištění je {{ next|cl_on }} {{ next|cl_dm }}{% if first.time %} {{ first|cl_clock }}{% endif %}{% if whole and first.side %}, {{ side_on[first.side] }} v celé délce{% elif whole %}, v celé délce ulice{% else %}: {{ on_next|map(attribute='short')|join('; ') }}{% endif %}.{% else %}Letos už se v ulici čistit nebude.{% endif %}</p>
   </div>
@@ -61,7 +61,7 @@
       <p class="side-h" id="cl-cal-h">Do kalendáře</p>
       <p class="cl-muted">Termíny {{ gen }} se vám v kalendáři samy aktualizují, když je Služby města změní.</p>
       <a class="btn btn-block" href="{{ webcal }}">Termíny {{ gen }} do kalendáře</a>
-      <p class="cl-note">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku. <a href="/cisteni">Přidat i další ulice</a></p>
+      <p class="cl-note">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku. <a href="/blokove-cisteni">Přidat i další ulice</a></p>
     </section>
     <section class="cl-o3" aria-label="Mapa ulice">
       <div class="map cl-map cl-map-street" data-cl-map="street" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="cl-street-json" role="region" aria-label="Mapa ulice {{ name }}: černě úseky čištěné {{ next|cl_dm if next else 'příště' }}, šedě úseky čištěné letos dříve"></div>
@@ -72,7 +72,7 @@
       {% if near %}
       <p class="side-h" id="cl-near-h">Okolní ulice</p>
       <ul class="cl-near">
-        {% for n in near %}<li><a href="/cisteni/ulice/{{ n.slug }}">{{ n.street }}</a><span>{% if n.next %}{{ n.next|cl_wd }} {{ n.next|cl_dm }}{% else %}letos už ne{% endif %}</span></li>{% endfor %}
+        {% for n in near %}<li><a href="/blokove-cisteni/ulice/{{ n.slug }}">{{ n.street }}</a><span>{% if n.next %}{{ n.next|cl_wd }} {{ n.next|cl_dm }}{% else %}letos už ne{% endif %}</span></li>{% endfor %}
       </ul>
       {% endif %}
     </section>

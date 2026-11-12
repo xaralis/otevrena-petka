@@ -5,7 +5,7 @@
 {% block hero %}
 <section class="band band-page">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/cisteni">Čištění ulic</a> <span aria-hidden="true">/</span> <span>Kalendář</span></nav>
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/blokove-cisteni">Čištění ulic</a> <span aria-hidden="true">/</span> <span>Kalendář</span></nav>
     <h1>Kalendář jen pro vaše ulice</h1>
     <p class="band-lead">Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</p>
   </div>
@@ -14,7 +14,7 @@
 {% block main %}
 <div class="cl-narrow">
   {% if missing %}<p class="cl-found-m" role="status">Ulici „{{ missing }}“ v letošním harmonogramu obvodu nemáme, nebo jich odpovídá víc. Zkuste přesný název.</p>{% endif %}
-  <form class="cl-pick" method="get" action="/cisteni/kalendar" aria-label="Ulice do kalendáře">
+  <form class="cl-pick" method="get" action="/blokove-cisteni/kalendar" aria-label="Ulice do kalendáře">
     {% if chosen %}
     <fieldset class="chips"><legend class="sr">Vybrané ulice</legend>
       {% for s, n in chosen %}<label class="chip"><input type="checkbox" name="ulice" value="{{ s }}" checked> {{ n }}</label>{% endfor %}

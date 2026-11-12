@@ -1,7 +1,7 @@
 // Čištění ulic: the maps (self-hosted MapLibre + PMTiles, like map.js) and the calendar picker.
 // <div data-cl-map="all" data-src="/api/v1/cisteni" data-today="YYYY-MM-DD"> colours the obvod's
 // places by their next cleaning; <div data-cl-map="street" data-inline="id"> draws one street.
-// The picker remembers its streets in localStorage; without JS the form goes to /cisteni/kalendar.
+// The picker remembers its streets in localStorage; without JS the form goes to /blokove-cisteni/kalendar.
 (function () {
   const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097", OFF = "#d6dbe0";
 
@@ -113,7 +113,7 @@
         head.className = "map-pop-h";
         if (f.slug) {
           const a = document.createElement("a");
-          a.href = "/cisteni/ulice/" + f.slug;
+          a.href = "/blokove-cisteni/ulice/" + f.slug;
           a.textContent = f.street;
           head.append(a);
         } else head.textContent = texts[0];
@@ -148,7 +148,7 @@
   function plural(n, one, few, many) { return n === 1 ? one : n >= 2 && n <= 4 ? few : many; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(picked.filter((s) => checked.has(s)))); } catch (e) { /* private window */ } }
   function url(scheme) {
-    return scheme + "://" + location.host + "/cisteni/kalendar.ics?ulice=" + picked.filter((s) => checked.has(s)).join(",");
+    return scheme + "://" + location.host + "/blokove-cisteni/kalendar.ics?ulice=" + picked.filter((s) => checked.has(s)).join(",");
   }
   function render() {
     chips.textContent = "";
