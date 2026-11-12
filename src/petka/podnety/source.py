@@ -92,7 +92,7 @@ def street(address: str | None) -> str | None:
     return name if re.search(r"[^\W\d_]", name) else None
 
 
-_NOTE_DATE = re.compile(r"(\d\d)\.(\d\d)\.(\d{4}) (\d\d):(\d\d)(?::(\d\d))?")
+_NOTE_DATE = re.compile(r"(\d\d)\.(\d\d)\.(\d{4}) (\d\d):(\d\d)(?::(\d\d))?¦")   # an entry's own date
 
 
 def note_dates(note: str | None) -> tuple[dt.datetime | None, dt.datetime | None]:
@@ -100,8 +100,12 @@ def note_dates(note: str | None) -> tuple[dt.datetime | None, dt.datetime | None
     "date¦e-mail¦text" entries; only the dates are read, the rest never leaves this function."""
     if not isinstance(note, str):
         return None, None
-    found = [dt.datetime(int(y), int(mo), int(d), int(h), int(mi), int(sec or 0))
-             for d, mo, y, h, mi, sec in _NOTE_DATE.findall(note)]
+    found = []
+    for d, mo, y, h, mi, sec in _NOTE_DATE.findall(note):
+        try:
+            found.append(dt.datetime(int(y), int(mo), int(d), int(h), int(mi), int(sec or 0)))
+        except ValueError:      # a broken date must not stop the job
+            pass
     return (min(found), max(found)) if found else (None, None)
 
 

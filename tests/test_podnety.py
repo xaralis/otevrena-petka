@@ -50,6 +50,7 @@ def test_note_dates_only_the_dates_of_every_entry():
     assert source.note_dates(note) == (dt.datetime(2025, 1, 2, 8, 32, 12), dt.datetime(2025, 2, 3, 10))
     assert source.note_dates(None) == (None, None)
     assert source.note_dates("bez data") == (None, None)
+    assert source.note_dates("31.02.2025 08:00:00¦a@example.cz¦x") == (None, None)
 
 
 def test_street_without_number_postcode_or_part():
