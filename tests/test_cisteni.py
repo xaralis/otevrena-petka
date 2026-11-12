@@ -345,7 +345,7 @@ def test_overview(fixture):
               "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni"'):
         assert s in h, s
     assert "aplikac" not in h.lower()
-    assert 'href="/blokove-cisteni"' not in h.split("</header>")[0]       # not in the navigation yet
+    assert 'href="/blokove-cisteni" aria-current="true">Veřejný prostor' in h.split("</header>")[0]
     assert get("/blokove-cisteni?probehle=1").text.count("Letošní proběhlé termíny") >= 1
 
 
