@@ -17,7 +17,7 @@ def test_from_host():
 
 def test_mo5_record_matches_what_the_sections_used():
     o = obvody.MO5
-    assert (o.id, o.gordic, o.district_id) == ("mo5", "05274046", 5)
+    assert (o.id, o.gordic, o.district_id, o.momc) == ("mo5", "05274046", 5, 557072)
     b = source.BY_ID["mo5"]
     assert (b.name, b.url, b.page) == ("Úřední deska MO Pardubice V",
                                        "https://pardubice.eu/export/official-board-json?district_id=5",

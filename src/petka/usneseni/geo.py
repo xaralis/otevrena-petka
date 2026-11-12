@@ -29,6 +29,7 @@ from collections import Counter, defaultdict
 
 import httpx
 
+from .. import obvody
 from .store import DATA, _write
 from .text import fold, slug
 
@@ -37,7 +38,7 @@ log = logging.getLogger(__name__)
 SERVICE = "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer"
 L_ADDRESS, L_STREET, L_PARCEL, L_MOMC, L_PART = 1, 4, 5, 8, 11
 OBEC = 555134            # Pardubice
-MOMC = 557072            # Pardubice V
+MOMC = obvody.DEFAULT.momc  # Pardubice V
 BBOX = (15.70, 49.98, 15.85, 50.07)
 KU = {  # katastrální území that the minutes mention -> RÚIAN code
     "pardubice": 717657, "drazkovice": 632252, "nove jesencany": 718084,
