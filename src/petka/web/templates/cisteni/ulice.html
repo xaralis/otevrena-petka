@@ -15,14 +15,13 @@
 <div class="cl-two">
   <div class="cl-col">
     <section class="cl-o1" aria-label="Příští čištění">
-      <div class="cl-big">
+      <div class="cl-big{% if not next %} cl-big-none{% endif %}">
         {% if next %}
         <span class="cl-big-l">Příští čištění</span>
         <span class="cl-big-d">{{ next|cl_dm }}</span>
         <span class="cl-big-w">{{ next|cl_weekday }}{% if first.time %} {{ first|cl_clock }}{% endif %}, {{ cl_until(next, today) }}</span>
         <span class="cl-big-s">{% if whole %}Celá ulice{% if first.side %}, {{ {'obe': 'obě strany', 'prava': 'pravá strana', 'leva': 'levá strana'}[first.side] }}{% endif %}.{% else %}{{ on_next|map(attribute='short')|join('; ')|cl_cap1 }}.{% endif %} Auto přeparkujte nejpozději večer předem.</span>
         {% else %}
-        <span class="cl-big-l">Příští čištění</span>
         <span class="cl-big-w">Letos už se v ulici čistit nebude.</span>
         <span class="cl-big-s">Termíny na příští rok přidáme, jakmile je Služby města zveřejní.</span>
         {% endif %}
@@ -42,7 +41,7 @@
     <section class="cl-o4" aria-labelledby="cl-year-h">
       <h2 id="cl-year-h" class="cl-h2m cl-year-h">Letos v ulici {{ name }}</h2>
       <table class="ledger cl-t cl-only-d">
-        <thead><tr><th>Kdy</th><th>Kde, jak to píše harmonogram</th></tr></thead>
+        <thead><tr><th>Kdy</th><th>Lokalita podle harmonogramu Služeb</th></tr></thead>
         <tbody>
         {% for i in rows %}
           <tr{% if i.date < today %} class="cl-past"{% endif %}><td class="cl-when"><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }}</b> {{ i|cl_clock }}{% if i.date == next %}<span class="cl-tag">příští</span>{% endif %}</td><td>{{ i.text }}</td></tr>

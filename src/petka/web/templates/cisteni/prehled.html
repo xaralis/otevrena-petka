@@ -10,7 +10,7 @@
     <p class="band-lead"><span class="cl-only-d">Blokové čištění v obvodu podle harmonogramu Služeb města Pardubic. V den čištění platí v úseku od rána zákaz stání podle dopravních značek.</span><span class="cl-only-m">Blokové čištění v obvodu podle harmonogramu Služeb města Pardubic. V den čištění platí v úseku od rána zákaz stání.</span></p>
     <form class="search cl-search" method="get" action="/cisteni" role="search">
       <label class="sr" for="ul">Vaše ulice</label>
-      <input id="ul" name="ulice" type="search" list="cl-streets" value="{{ query }}" autocomplete="off" placeholder="Vaše ulice, třeba Wolkerova nebo Lexova">
+      <input id="ul" name="ulice" type="search" list="cl-streets" data-combo value="{{ query }}" autocomplete="off" placeholder="Vaše ulice, třeba Wolkerova nebo Lexova">
       <button type="submit">Najít</button>
     </form>
     {% if found is not none %}
@@ -50,7 +50,7 @@
       <form class="cl-pick" method="get" action="/cisteni/kalendar" aria-label="Ulice do kalendáře" data-cl-pick>
         <div class="chips" data-cl-chips></div>
         <label class="sr" for="addst">Přidat ulici</label>
-        <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" autocomplete="off" placeholder="+ přidat ulici">
+        <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" data-combo autocomplete="off" placeholder="+ přidat ulici">
         <button class="btn btn-block" type="submit" data-cl-go>Přidat ulice do kalendáře</button>
         <a class="cl-hint" href="#" data-cl-https hidden>Adresa kalendáře pro ruční přidání</a>
         <span class="cl-hint">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.</span>
@@ -85,4 +85,4 @@
   </section>
 </div>
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('cisteni.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('cisteni.js') }}" defer></script>{% endblock %}

@@ -1094,6 +1094,22 @@ a.btn-o:hover, .ledger td a.btn-o:hover, .band a.btn-on-red:hover { color: #fff;
 .chip:has(input:focus-visible) { outline: 3px solid var(--ink); outline-offset: 2px; }
 .chip-add { flex: 1 1 100%; font: inherit; min-height: 2.75rem; padding: .3rem 0; border: 0; border-bottom: 2px solid var(--ink); background: transparent; color: var(--ink); }
 .chip-add::placeholder { color: var(--muted); }
+.chip-add { -webkit-appearance: none; appearance: none; border-radius: 0; }
+.chip-add:focus { outline: none; border-bottom-width: 4px; padding-bottom: calc(.3rem - 2px); }
+
+/* combobox (našeptávač): combo.js turns <input list> + <datalist> into this listbox */
+.combo { position: relative; flex: 1 1 auto; min-width: 0; display: flex; }
+.chips .combo, .cl-pick .combo { flex: 1 1 100%; }
+.combo > input { flex: 1; min-width: 0; }
+.combo-list { position: absolute; z-index: 20; top: 100%; left: 0; right: 0; margin: 4px 0 0; padding: 0; list-style: none;
+  max-height: 18rem; overflow-y: auto; background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 3px;
+  font-size: 1rem; font-weight: 400; text-align: left; }
+.combo-opt { padding: .65rem .9rem; min-height: 2.75rem; box-sizing: border-box; cursor: pointer; }
+.combo-opt + .combo-opt { border-top: 1px solid var(--grey); }
+.combo-opt b { font-weight: 700; }
+.combo-opt:hover, .combo-opt[aria-selected="true"] { background: var(--grey); }
+.band:has(.combo) { position: relative; z-index: 30; }   /* the open list overlaps the page below the band */
+.chip-add::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
 
 /* Čištění ulic. Desktop: two columns; phone: one, its blocks in the order .cl-o1 … .cl-o6 */
 .cl-two { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: 0 2.4rem; margin-top: 2.2rem; align-items: start; }
@@ -1157,6 +1173,8 @@ a.cl-hint { color: var(--red-ink); }
 .cl-big-d { grid-row: span 2; font-size: 3.6rem; font-weight: 800; font-stretch: 88%; letter-spacing: -.02em; line-height: 1; }
 .cl-big-w { font-size: 1.3rem; font-weight: 650; }
 .cl-big-s { color: var(--ink-2); }
+.cl-big-none { grid-template-columns: 1fr; gap: .35rem; }
+.cl-big-none .cl-big-w { font-size: 1.45rem; }
 .cl-act { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
 .cl-cal-box { margin-bottom: 1.6rem; }
 .cl-cal-box .cl-muted { margin-bottom: .7rem; }

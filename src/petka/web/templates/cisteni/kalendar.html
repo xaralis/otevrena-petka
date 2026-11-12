@@ -21,7 +21,7 @@
     </fieldset>
     {% endif %}
     <label class="sr" for="addst">Přidat ulici</label>
-    <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" autocomplete="off" placeholder="+ přidat ulici">
+    <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" data-combo autocomplete="off" placeholder="+ přidat ulici">
     <datalist id="cl-streets">{% for s, n in names.items() %}<option value="{{ n }}"></option>{% endfor %}</datalist>
     <button class="btn btn-o btn-block" type="submit">Upravit výběr</button>
   </form>
@@ -33,3 +33,4 @@
   {% endif %}
 </div>
 {% endblock %}
+{% block scripts %}<script src="{{ asset('combo.js') }}" defer></script>{% endblock %}
