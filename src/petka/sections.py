@@ -4,6 +4,7 @@ A section with code supplies its own record (`<package>/section.py`); a planned 
 without code is only metadata here. Order is the order of the header navigation."""
 
 from .ankety.section import SECTION as ANKETY
+from .cisteni.section import SECTION as CISTENI
 from .podnety.section import SECTION as PODNETY
 from .rozpocet.section import SECTION as ROZPOCET
 from .section import Section
@@ -22,7 +23,7 @@ SMLOUVY = Section(
              ("Hlídač státu", "https://www.hlidacstatu.cz/")],
 )
 
-REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, ANKETY, PODNETY]
+REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, ANKETY, PODNETY, CISTENI]
 
 SECTIONS = [s for s in REGISTRY if s.listed]    # what the portal's pages show
 BY_SLUG = {s.slug: s for s in REGISTRY}

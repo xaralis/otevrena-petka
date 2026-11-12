@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Kalendář blokového čištění{% endblock %}
+{% block description %}Termíny blokového čištění vybraných ulic jako kalendář k odběru pro Google Kalendář, Apple Kalendář i Outlook.{% endblock %}
+{% block head %}<meta name="robots" content="noindex">{% endblock %}
+{% block hero %}
+<section class="band band-page">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/cisteni">Čištění ulic</a> <span aria-hidden="true">/</span> <span>Kalendář</span></nav>
+    <h1>Kalendář jen pro vaše ulice</h1>
+    <p class="band-lead">Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</p>
+  </div>
+</section>
+{% endblock %}
+{% block main %}
+<div class="cl-narrow">
+  {% if missing %}<p class="cl-found-m" role="status">Ulici „{{ missing }}“ v letošním harmonogramu obvodu nemáme, nebo jich odpovídá víc. Zkuste přesný název.</p>{% endif %}
+  <form class="cl-pick" method="get" action="/cisteni/kalendar" aria-label="Ulice do kalendáře">
+    {% if chosen %}
+    <fieldset class="chips"><legend class="sr">Vybrané ulice</legend>
+      {% for s, n in chosen %}<label class="chip"><input type="checkbox" name="ulice" value="{{ s }}" checked> {{ n }}</label>{% endfor %}
+    </fieldset>
+    {% endif %}
+    <label class="sr" for="addst">Přidat ulici</label>
+    <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" autocomplete="off" placeholder="+ přidat ulici">
+    <datalist id="cl-streets">{% for s, n in names.items() %}<option value="{{ n }}"></option>{% endfor %}</datalist>
+    <button class="btn btn-o btn-block" type="submit">Upravit výběr</button>
+  </form>
+  {% if chosen %}
+  <p class="cl-act"><a class="btn btn-block" href="{{ webcal }}">Přidat {{ chosen|length }} {{ cl_plural(chosen|length, 'ulici', 'ulice', 'ulic') }} do kalendáře</a></p>
+  <p class="cl-hint">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku. Když se kalendář neotevře sám, přidejte ho podle adresy: <a href="{{ https }}">{{ https }}</a></p>
+  {% else %}
+  <p class="cl-muted">Vyberte aspoň jednu ulici.</p>
+  {% endif %}
+</div>
+{% endblock %}

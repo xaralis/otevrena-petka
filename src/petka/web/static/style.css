@@ -1068,3 +1068,149 @@ th .rz-unit, .rz-colhead .rz-unit, .rz-num .rz-unit, .rz-top .rz-unit, .rz-mu .r
 .db { height: 18px; }
 .db-axis { top: 8px; } .db-line { top: 6px; } .db-prev, .db-cur { top: 2px; }
 .rz-gh.ch .rz-d { font-size: 1.05rem; }
+
+/* buttons (an <a> or <button>; one radius everywhere, like .search button) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 2.75rem; padding: .5rem 1.1rem; font: inherit; font-weight: 700; font-size: 1rem; line-height: 1.2; text-decoration: none; color: #fff; background: var(--ink); border: 0; border-radius: 3px; cursor: pointer; }
+.btn:hover { background: #000; }
+.btn-o { color: var(--ink); background: #fff; box-shadow: inset 0 0 0 2px var(--ink); }
+.btn-o:hover { color: #fff; background: var(--ink); }
+.btn-on-red { color: var(--red-ink); background: #fff; }
+.btn-on-red:hover { color: #fff; background: var(--ink); }
+.btn-s { min-height: 2.2rem; padding: .2rem .75rem; font-size: .88rem; font-weight: 650; box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn-block { display: flex; width: 100%; }
+.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.band .btn:focus-visible { outline-color: #fff; }
+/* links in the band and in ledgers have their own colour; a button keeps its own */
+a.btn, a.btn:visited, .band a.btn, .ledger td a.btn { color: #fff; text-decoration: none; }
+a.btn-o, a.btn-o:visited, .ledger td a.btn-o { color: var(--ink); }
+.band a.btn-on-red, .band a.btn-on-red:visited { color: var(--red-ink); text-decoration: none; }
+a.btn-o:hover, .ledger td a.btn-o:hover, .band a.btn-on-red:hover { color: #fff; background: var(--ink); text-decoration: none; }
+
+/* chips (multi-select of things like streets; a real checkbox inside a label) */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: .8rem 0; padding: 0; border: 0; }
+.chip { display: inline-flex; align-items: center; gap: .45rem; min-height: 2.75rem; padding: .2rem .85rem .2rem .65rem; background: #fff; box-shadow: inset 0 0 0 1.5px var(--rule); border-radius: 3px; font-weight: 600; cursor: pointer; }
+.chip:has(input:checked) { background: var(--grey); box-shadow: none; }
+.chip input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--ink); }
+.chip:has(input:focus-visible) { outline: 3px solid var(--ink); outline-offset: 2px; }
+.chip-add { flex: 1 1 100%; font: inherit; min-height: 2.75rem; padding: .3rem 0; border: 0; border-bottom: 2px solid var(--ink); background: transparent; color: var(--ink); }
+.chip-add::placeholder { color: var(--muted); }
+
+/* Čištění ulic. Desktop: two columns; phone: one, its blocks in the order .cl-o1 … .cl-o6 */
+.cl-two { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: 0 2.4rem; margin-top: 2.2rem; align-items: start; }
+.cl-harm { grid-column: 1 / -1; }
+.cl-only-m { display: none !important; }
+.cl-muted { margin: 0; color: var(--ink-2); }
+.cl-map { height: auto; aspect-ratio: 760 / 560; margin: 0; }
+.cl-map-street { aspect-ratio: 600 / 440; }
+.cl-lg { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: .88rem; color: var(--ink-2); margin: .7rem 0 0; }
+.cl-lg span { display: inline-flex; align-items: center; gap: .45rem; }
+.cl-lg i, .cl-lg-street i { display: inline-block; width: 1.6rem; height: 0; border-top: 4px solid var(--ink); }
+.cl-lg .cl-lg-7 { border-top: 5px solid var(--red); }
+.cl-lg .cl-lg-later { border-top: 3px solid #8a9097; }
+.cl-lg .cl-lg-none { border-top: 2px solid var(--off); }
+.cl-lg .cl-lg-ap { border-top: 3px dashed var(--ink); }
+.cl-lg-street { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin-top: .5rem; }
+.cl-lg-street i { width: 1.4rem; vertical-align: middle; margin-right: .4rem; }
+.cl-lg-street .cl-lg-next { border-top-width: 5px; }
+.cl-lg-street .cl-lg-later { border-top: 3px dashed var(--ink); }
+.cl-lg-street .cl-lg-past { border-top-color: #8a9097; }
+.cl-cap { font-size: .88rem; color: var(--muted); margin: .6rem 0 0; max-width: 68ch; }
+.cl-src-block { margin-top: 1.6rem; }
+.cl-src-block p { margin: 0; color: var(--ink-2); max-width: 68ch; }
+.cl-src-block p.side-h { color: var(--ink); margin-bottom: .3rem; }
+.cl-next { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.cl-next a { display: grid; grid-template-columns: 4.2rem 1fr; gap: 0 .8rem; padding: .75rem .9rem; background: var(--grey); color: var(--ink); text-decoration: none; }
+.cl-next a:hover { outline: 2px solid var(--red); outline-offset: -2px; }
+.cl-d { grid-row: span 2; font-weight: 700; font-size: 1.25rem; line-height: 1.1; white-space: nowrap; }
+.cl-d small { display: block; font-size: .78rem; font-weight: 500; color: var(--ink-2); }
+.cl-w { font-weight: 650; }
+.cl-s { font-size: .88rem; color: var(--ink-2); }
+.cl-soon .cl-d { color: var(--red-ink); }
+.cl-h2 { font-size: 1rem; }
+.cl-o2 .side-h { margin-top: 1.8rem; }
+.cl-pick { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+.cl-pick .chips { margin: 0; flex: 1 1 100%; }
+.cl-pick .chips:empty { display: none; }
+.cl-pick .btn { margin-top: .4rem; }
+.cl-pick .btn[aria-disabled=true] { opacity: .55; cursor: default; }
+.cl-hint { font-size: .85rem; color: var(--muted); }
+a.cl-hint { color: var(--red-ink); }
+.cl-search { margin-top: 1.4rem; }
+.cl-found { margin-top: 1rem; }
+.cl-found p { margin: 0; }
+.cl-found ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+.cl-harm h2 { margin: 3rem 0 0; }
+.cl-lead { margin: .4rem 0 0; color: var(--ink-2); max-width: 68ch; }
+.cl-wk { font-size: 1.15rem; font-weight: 650; margin: 2.2rem 0 .5rem; }
+.cl-wk span { font-weight: 400; color: var(--muted); }
+.cl-t td { vertical-align: middle; }
+.cl-t td.cl-when { white-space: nowrap; width: 9.5rem; }
+.cl-t td.cl-ics { text-align: right; white-space: nowrap; width: 8rem; }
+.cl-cal::before { content: ""; width: .85rem; height: .85rem; flex: none; background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23191c1f' stroke-width='1.6'%3E%3Crect x='1.5' y='3' width='13' height='11.5'/%3E%3Cpath d='M1.5 6.5h13M5 1v3.5M11 1v3.5'/%3E%3C/svg%3E"); }
+.cl-cal:hover::before { filter: invert(1); }
+.cl-ap { font-size: .82rem; color: var(--muted); font-style: italic; }
+.cl-pastlink { margin: 1.4rem 0 3rem; }
+.cl-harm .cl-muted { margin-top: 1rem; }
+/* one street */
+.cl-big { display: grid; grid-template-columns: auto 1fr; gap: .2rem 1.6rem; align-items: center; padding: 1.4rem 1.6rem; background: var(--grey); }
+.cl-big-l { grid-column: 1 / -1; font-size: .9rem; color: var(--ink-2); }
+.cl-big-d { grid-row: span 2; font-size: 3.6rem; font-weight: 800; font-stretch: 88%; letter-spacing: -.02em; line-height: 1; }
+.cl-big-w { font-size: 1.3rem; font-weight: 650; }
+.cl-big-s { color: var(--ink-2); }
+.cl-act { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
+.cl-cal-box { margin-bottom: 1.6rem; }
+.cl-cal-box .cl-muted { margin-bottom: .7rem; }
+.cl-note { margin: .5rem 0 0; font-size: .85rem; color: var(--muted); }
+.cl-year-h { margin: 2.6rem 0 .6rem; }
+.cl-src { font-size: .82rem; color: var(--muted); margin: .8rem 0 0; }
+.cl-past td { color: var(--muted); }
+.cl-past td b { font-weight: 500; }
+.cl-tag { display: inline-block; font-size: .78rem; font-weight: 650; padding: .05rem .45rem; border-radius: 2px; background: var(--ink); color: #fff; margin-left: .4rem; vertical-align: .1em; }
+.cl-near { list-style: none; margin: 0; padding: 0; }
+.cl-near li { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--off); }
+.cl-near li span { color: var(--ink-2); white-space: nowrap; }
+.cl-o5 .side-h, .cl-o6 .side-h { margin-top: 1.6rem; }
+.cl-list { list-style: none; margin: 0; padding: 0; }
+.cl-list li { padding: .75rem .85rem; }
+.cl-list li:nth-child(odd) { background: var(--grey); }
+.cl-list b { display: block; }
+.cl-list span { font-size: .92rem; color: var(--ink-2); }
+.cl-list .cl-past b, .cl-list .cl-past span { color: var(--muted); font-weight: 500; }
+.cl-list .cl-tag { color: #fff; }
+/* closures (NDIC), not filled yet: see cisteni/ulice.html */
+.cl-alert { margin-top: 2rem; padding: 1.1rem 1.3rem; background: #fff; border: 1px solid var(--rule); }
+.cl-alert h2 { font-size: 1.15rem; margin: 0 0 .4rem; display: flex; gap: .5rem; align-items: center; }
+.cl-alert blockquote { margin: .6rem 0 0; padding: .7rem .9rem; background: var(--grey); color: var(--ink-2); font-size: .95rem; border: 0; }
+.cl-narrow { max-width: 36rem; margin: 2rem 0 3rem; }
+.cl-narrow .cl-act { margin-top: 1.2rem; }
+.cl-found-m { color: var(--red-ink); }
+.map-pop .cl-pop-d { margin: 0 0 .2rem; }
+@media (max-width: 900px) {
+  .cl-only-d { display: none !important; }
+  .cl-only-m { display: revert !important; }
+  .cl-two { display: flex; flex-direction: column; align-items: stretch; margin-top: 1.6rem; }
+  .cl-col { display: contents; }
+  .cl-o1 { order: 1; } .cl-o2 { order: 2; } .cl-o3 { order: 3; } .cl-o4 { order: 4; } .cl-o5 { order: 5; } .cl-o6 { order: 6; }
+  .cl-o2 .side-h { margin-top: 0; }
+  .cl-h2m, .cl-harm h2 { font-size: 1.3rem; margin: 2.2rem 0 .6rem; }
+  .cl-o2 .cl-h2 { font-size: 1.3rem; margin: 2rem 0 .4rem; }
+  .cl-o3 .cl-h2m { margin-top: 2.2rem; }
+  .cl-lg { gap: .35rem 1rem; font-size: .85rem; margin-top: .6rem; }
+  .cl-lg i { width: 1.4rem; }
+  .cl-cap { font-size: .85rem; margin-top: .5rem; }
+  .cl-next a { grid-template-columns: 4rem 1fr; padding: .75rem .85rem; min-height: 2.75rem; }
+  .cl-d { font-size: 1.15rem; }
+  .cl-d small { font-size: .75rem; }
+  .cl-wk { font-size: 1.05rem; margin: 1.8rem 0 .5rem; }
+  .cl-above { margin-top: .4rem; }
+  .cl-src-block { margin: 2.2rem 0 2.5rem; }
+  .cl-pastlink { margin: 1.4rem 0 0; }
+  .cl-big { grid-template-columns: 1fr; gap: .15rem; padding: 1.1rem; margin-top: 0; }
+  .cl-big-d { grid-row: auto; font-size: 3rem; }
+  .cl-big-w { font-size: 1.15rem; margin-top: .3rem; }
+  .cl-o3 .cl-map-street { margin-top: 1.6rem; }
+  .cl-o4 .cl-h2m { margin: 2rem 0 .6rem; }
+  .cl-near li { padding: .7rem 0; }
+  .cl-o5 .side-h { margin-top: 2rem; }
+  .cl-src-m { margin: 2rem 0 2.5rem; color: var(--ink-2); font-size: .92rem; }
+}
