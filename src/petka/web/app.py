@@ -21,7 +21,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from .. import db
+from .. import db, obvody
 from ..mcp_server import mcp
 from ..sections import BY_SLUG, REGISTRY, SECTIONS
 from . import og
@@ -79,6 +79,18 @@ class _Head:
         await self.app(scope, receive, send)
 
 
+class _Obvod:
+    """Which obvod the request is for, from its host (ADR 0001): request.state.obvod."""
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "http":
+            host = next((v.decode("latin-1") for k, v in scope["headers"] if k == b"host"), None)
+            scope.setdefault("state", {})["obvod"] = obvody.from_host(host)
+        await self.app(scope, receive, send)
+
+
 class _Gzip:
     """Compress pages and data files, but leave the MCP endpoint's responses alone."""
     def __init__(self, app):
@@ -91,6 +103,7 @@ class _Gzip:
         await self.app(scope, receive, send)
 
 
+app.add_middleware(_Obvod)
 app.add_middleware(_Gzip)
 app.add_middleware(_Head)
 
@@ -172,9 +185,9 @@ def apple_touch_icon():
 
 
 @app.get("/site.webmanifest", include_in_schema=False)
-def manifest():
+def manifest(request: Request):
     return JSONResponse({
-        "name": "Otevřená Pětka", "short_name": "Pětka", "lang": "cs", "start_url": "/",
+        "name": request.state.obvod.brand, "short_name": "Pětka", "lang": "cs", "start_url": "/",
         "display": "browser", "background_color": "#ffffff", "theme_color": "#de091c",
         "icons": [{"src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
                   {"src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png"}],

@@ -16,7 +16,7 @@ import time
 
 import httpx
 
-from .. import db
+from .. import db, obvody
 from . import source
 
 log = logging.getLogger(__name__)
@@ -114,7 +114,7 @@ def update(units: list[str] | None = None, years: list[int] | None = None,
     report, failures = {}, []
     with httpx.Client(timeout=source.TIMEOUT, follow_redirects=True, headers=source.HEADERS) as client, \
             db.connect() as conn:
-        for unit in units or ["mo5"]:
+        for unit in units or [obvody.DEFAULT.id]:
             known = {r["year"]: r["checked"] for r in conn.execute(
                 "SELECT year, checked_at::date AS checked FROM budget_years WHERE unit = %s", (unit,))}
             todo = years or years_to_refresh(today, known)

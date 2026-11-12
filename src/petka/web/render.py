@@ -9,6 +9,7 @@ from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
 
+from .. import obvody
 from ..sections import BY_SLUG, REGISTRY, SECTIONS
 
 HERE = Path(__file__).parent
@@ -35,12 +36,20 @@ def _date(d) -> str:
     return f"{d.day}. {d.month}. {d.year}" if d else ""
 
 
-SITE_NAME = "Otevřená Pětka"
+SITE_NAME = obvody.DEFAULT.brand     # outside a request (tests, macros); a page gets its obvod's
 
-tpl = Jinja2Templates(directory=HERE / "templates")
+
+def _obvod(request) -> dict:
+    """Every page knows its obvod (set by the app from the host, petka.web.app)."""
+    o = getattr(request.state, "obvod", None) or obvody.DEFAULT
+    return {"obvod": o, "SITE_NAME": o.brand}
+
+
+tpl = Jinja2Templates(directory=HERE / "templates", context_processors=[_obvod])
 tpl.env.globals.update(asset=asset, CONTACT="filip.varecha@pirati.cz",
                        PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/"),
-                       SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
+                       SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME,
+                       obvod=obvody.DEFAULT)
 tpl.env.filters["d"] = _date
 
 for _s in REGISTRY:

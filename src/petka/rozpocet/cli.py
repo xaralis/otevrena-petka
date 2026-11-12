@@ -7,7 +7,8 @@ from ..section import Command
 
 
 def _args(p) -> None:
-    p.add_argument("--unit", default="mo5", metavar="mo5|mmp|all")
+    from .. import obvody
+    p.add_argument("--unit", default=obvody.DEFAULT.id, metavar="mo5|mmp|all")
     p.add_argument("years", nargs="*", type=int, metavar="ROK")
 
 

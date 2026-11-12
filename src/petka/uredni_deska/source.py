@@ -26,6 +26,7 @@ from urllib.parse import parse_qs, urlparse
 
 import httpx
 
+from .. import obvody
 from ..usneseni.text import fold
 
 FEED = "https://pardubice.eu/export/official-board-json"
@@ -40,9 +41,14 @@ class Board:
     mo5: bool       # everything on it concerns MO Pardubice V
 
 
+def obvod_board(o: obvody.Obvod) -> Board:
+    """The úřední deska of an obvod: its own board in the city's feed."""
+    return Board(o.id, f"Úřední deska {o.abbr}", f"{FEED}?district_id={o.district_id}",
+                 f"https://pardubice.eu/uredni-deska/obvody?district={o.id}", True)
+
+
 BOARDS = [
-    Board("mo5", "Úřední deska MO Pardubice V", f"{FEED}?district_id=5",
-          "https://pardubice.eu/uredni-deska/obvody?district=mo5", True),
+    obvod_board(obvody.DEFAULT),
     Board("mmp", "Úřední deska Magistrátu města Pardubic", FEED,
           "https://pardubice.eu/uredni-deska", False),
 ]

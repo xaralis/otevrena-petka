@@ -4,11 +4,11 @@ database."""
 
 import re
 
-from .. import db
+from .. import db, obvody
 from ..uredni_deska.queries import tsquery
 from . import names, source
 
-UNIT = "mo5"
+UNIT = obvody.DEFAULT.id     # web pages still use the default obvod
 SMALL = 0.01          # oblasti under 1 % of the year's plan go to "Ostatní"
 
 
