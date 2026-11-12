@@ -126,3 +126,55 @@ def test_card_thumb_prefers_main_sign_then_photo_then_icon():
     assert digest.card_thumb({"cluster": "stavby", "visual": {"thumb": "nahled.jpg"}})["kind"] == "photo"
     assert digest.card_thumb({"cluster": "poplatky", "visual": {"thumb": "nahled.jpg"}})["kind"] == "icon"
     assert digest.card_thumb({"cluster": "doruceni", "visual": {}}) == {"kind": "icon", "id": "doruceni"}
+
+
+# --- drafting end to end, with a fake writer ---------------------------------------------------
+
+def _pdf(text: str) -> bytes:
+    """A one-page PDF with a text layer (enough for pdftotext)."""
+    stream = f"BT /F1 12 Tf 72 720 Td ({text}) Tj ET".encode()
+    objs = [b"<< /Type /Catalog /Pages 2 0 R >>", b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+            b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>",
+            b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
+            b"<< /Length %d >>\nstream\n" % len(stream) + stream + b"\nendstream"]
+    out, offs = b"%PDF-1.4\n", []
+    for i, o in enumerate(objs, 1):
+        offs.append(len(out))
+        out += b"%d 0 obj\n" % i + o + b"\nendobj\n"
+    xref = len(out)
+    out += b"xref\n0 %d\n0000000000 65535 f \n" % (len(objs) + 1) + b"".join(b"%010d 00000 n \n" % o for o in offs)
+    return out + b"trailer\n<< /Size %d /Root 1 0 R >>\nstartxref\n%d\n%%%%EOF\n" % (len(objs) + 1, xref)
+
+
+NOTICE = {"id": "mo5-7", "kind": "ostatni", "title": "Uzavírka Jana Palacha", "published": "2026-11-10",
+          "valid_until": "2026-11-25", "board": "mo5", "department": "OD", "url": "https://deska/7", "is_mo5": True,
+          "attachments": [{"url": "https://deska/7/priloha.pdf"}]}
+
+ANSWER = {"cluster": "doprava", "headline": "Uzavírka ulice", "summary": "Ulice bude zavřená.", "where": "Jana Palacha",
+          "period": {"from": "2026-11-24", "to": None, "text": "od 24. 11. 2026"}, "action": None, "affects": None,
+          "facts": [], "signs": [{"code": "B 1", "text": None, "change": "nova"}], "places": [], "parcels": [],
+          "spending": [], "budget": [], "drawing": None, "parking": None, "visual_plan": "Značka.", "reviewer_notes": ""}
+
+
+def test_draft_runs_end_to_end_with_a_fake_writer(tmp_path, monkeypatch):
+    from petka import llm
+    monkeypatch.setattr(digest, "DRAFTS", tmp_path / "drafts")
+    monkeypatch.setattr(digest, "WORK", tmp_path / "work")
+    (tmp_path / "work" / "mo5-7").mkdir(parents=True)
+    (tmp_path / "work" / "mo5-7" / "mo5-7-1.pdf").write_bytes(_pdf("Uzavirka od 24. 11. 2026"))  # already downloaded
+    seen = []
+
+    class Writer(llm.LLM):
+        model_id = "fake:writer"
+
+        def structured_files(self, system, user, files, schema, **kw):
+            seen.append({"user": user, "files": [p.name for p in files]})
+            return json.loads(json.dumps(ANSWER))
+
+    out = digest.draft([NOTICE], llm=Writer())
+    d = json.loads((out / "digest.json").read_text())
+    assert seen == [{"user": seen[0]["user"], "files": ["mo5-7-1.pdf"]}] and "Uzavírka Jana Palacha" in seen[0]["user"]
+    assert d["status"] == "draft" and d["model"] == "fake:writer" and d["notice_id"] == "mo5-7"
+    assert d["problems"] == []                          # the date is in the document
+    assert [s["code"] for s in d["visual"]["signs"]] == ["B1"] and d["visual"]["photo"] is None
+    assert d["source"]["url"] == "https://deska/7"

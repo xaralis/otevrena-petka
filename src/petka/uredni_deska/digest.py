@@ -8,7 +8,7 @@ A digest is a directory `<root>/<notice id>/` with `digest.json` and its images:
 Workflow (docs/deska-pilot.md): `deska-auto` writes a card for each new notice that concerns MO V,
 an independent Claude run scores it against the sources (score.py) and a good card goes out; the
 rest wait for a person at /uredni-deska/navrhy (`deska-publish`, `deska-reject`).
-Text comes from Claude (usneseni/llm.py, `api` or `claude-cli`); everything visual is
+Text comes from Claude (petka/llm.py, `api` or `claude-cli`); everything visual is
 deterministic: places via RÚIAN (usneseni/geo.py), an orthophoto crop from ČÚZK with the
 place drawn on it, a crop of the office's own drawing from the PDF, sign pictures by code.
 Personal data from the notices (applicants, number plates, birth dates) never goes in.
@@ -26,7 +26,8 @@ from pathlib import Path
 import httpx
 import yaml
 
-from ..usneseni import geo, llm
+from .. import llm as llms
+from ..usneseni import geo
 from ..usneseni.store import ROOT
 from . import parking, photo, score, source
 from .jobs import REDACTED_TITLE
@@ -520,7 +521,7 @@ def check(d: dict, text: str) -> list[str]:
     return problems
 
 
-def annotated_drawing(d: dict, out: Path) -> dict:
+def annotated_drawing(d: dict, out: Path, llm: llms.LLM) -> dict:
     """The office's drawing with numbered markers Claude puts on what changes (only on things
     the drawing shows), the explanations go under it."""
     work = WORK / d.get("_id", out.name) / "vykres"
@@ -538,7 +539,8 @@ def _centre(f: dict) -> tuple[float, float]:
     return sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
 
 
-def street_photo(notice: dict, d: dict, feats: list[dict], visual: dict, out: Path) -> dict | None:
+def street_photo(notice: dict, d: dict, feats: list[dict], visual: dict, out: Path,
+                 llm: llms.LLM) -> dict | None:
     """Nearest Panoramax picture of the place, 'dnes' and 'po změně' (signs placed by Claude
     against the drawing). None when there is no picture or Claude can't match it to the drawing."""
     target = _centre(next((f for f in feats if f["kind"] == "address"), feats[0]))
@@ -573,9 +575,10 @@ def street_photo(notice: dict, d: dict, feats: list[dict], visual: dict, out: Pa
 
 # --- making a draft ----------------------------------------------------------------------------
 
-def draft(group: list[dict], fixes: list[str] | None = None) -> Path:
+def draft(group: list[dict], fixes: list[str] | None = None, llm: llms.LLM | None = None) -> Path:
     """Propose a digest for one notice group; writes DRAFTS/<leader id>/digest.json (+ images).
-    `fixes`: what the quality check wants changed in the previous version."""
+    `fixes`: what the quality check wants changed in the previous version; `llm`: the writer."""
+    llm = llm or llms.default()
     leader = group[0]
     out = DRAFTS / leader["id"]
     out.mkdir(parents=True, exist_ok=True)
@@ -597,7 +600,7 @@ def draft(group: list[dict], fixes: list[str] | None = None) -> Path:
     visual["drawing"] = drawing_crop(d["drawing"], files, out / "vykres.png") if d.get("drawing") else None
     if visual["drawing"] and d["cluster"] in ("doprava", "stavby"):
         try:
-            visual["drawing"].update(annotated_drawing(d, out))
+            visual["drawing"].update(annotated_drawing(d, out, llm))
         except Exception as e:
             log.warning("%s: drawing annotation failed: %s", leader["id"], e)
     visual["signs"] = signs(d["signs"])
@@ -612,13 +615,13 @@ def draft(group: list[dict], fixes: list[str] | None = None) -> Path:
     visual["photo"] = None
     if d["cluster"] == "doprava" and feats:
         try:
-            visual["photo"] = street_photo(leader, d, feats, visual, out)
+            visual["photo"] = street_photo(leader, d, feats, visual, out, llm)
         except Exception as e:
             log.warning("%s: street photo failed: %s", leader["id"], e)
     visual["thumb"] = thumbnail(out, visual)
     digest = {
         "notice_id": leader["id"], "members": [n["id"] for n in group[1:]], "status": "draft",
-        "prompt_version": PROMPT_VERSION, "model": llm.MODEL if llm.BACKEND == "api" else f"cli:{llm.CLI_MODEL}",
+        "prompt_version": PROMPT_VERSION, "model": llm.model_id,
         "created_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "source": _source(leader, d["cluster"]), "fixes_given": fixes or [],
         **d, "visual": visual, "problems": problems,
@@ -708,7 +711,7 @@ def _group_of(d: dict) -> list[dict]:
 def _settle(group: list[dict], fixes: list[str] | None = None) -> dict:
     """One group through writing, the check, rewrites while they can help, and out or to a person."""
     leader = group[0]["id"]
-    usage = llm.track_usage()
+    usage = llms.track_usage()
     folder = DRAFTS / leader
     d = json.loads((folder / "digest.json").read_text()) if (folder / "digest.json").exists() else None
     if not d or d["status"] != "draft":

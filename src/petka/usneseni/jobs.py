@@ -398,7 +398,7 @@ def bootstrap() -> None:
 # --- update (cron) ------------------------------------------------------------------------
 
 def update() -> None:
-    from . import llm
+    from .. import llm
 
     store.seed()
     failures = []
@@ -414,7 +414,7 @@ def update() -> None:
             failures.append(f"{mid}: gave up after {MAX_ATTEMPTS} attempts, needs a person")
             continue
         try:
-            m = pipeline.process(mid, via=llm.BACKEND)
+            m = pipeline.process(mid, via=llm.default().backend)
             log.info(pipeline.summarize(m))
         except Exception as e:
             log.exception("process %s failed", mid)

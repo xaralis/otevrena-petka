@@ -131,7 +131,7 @@ def test_working_notes_stay_out_of_a_published_card(tmp_path, monkeypatch):
 
 
 def test_usage_adds_up_per_card():
-    from petka.usneseni import llm
+    from petka import llm
     t = llm.track_usage()
     llm._add_usage({"input_tokens": 10, "output_tokens": 5, "cache_read_input_tokens": 2}, 0.5)
     llm._add_usage({"input_tokens": 1, "output_tokens": 1}, 0.25)
@@ -144,14 +144,15 @@ def test_reviewer_is_told_about_the_interactive_map():
     assert "mapa není" in score.prompt({"visual": {}}, [])
 
 
-def test_check_runs_on_its_own_model(monkeypatch):
+def test_check_runs_on_its_own_model():
+    from petka import llm
     seen = {}
 
-    def fake(system, user, files, schema, **kw):
-        seen.update(kw)
-        return res()
-    monkeypatch.setattr(score.llm, "structured_files", fake)
-    q = score.review(CARD, [], [])
+    class Reviewer(llm.LLM):
+        def structured_files(self, system, user, files, schema, **kw):
+            seen.update(kw)
+            return res()
+    q = score.review(CARD, [], [], llm=Reviewer())
     assert seen["model"] == score.REVIEW_MODEL == q["model"]
 
 

@@ -14,7 +14,7 @@ import datetime as dt
 import json
 import os
 
-from ..usneseni import llm
+from .. import llm as llms
 
 PROMPT_VERSION = "kvalita-v1"
 # the check decides what goes out without a person, so it stays on the stronger model whatever writes
@@ -180,9 +180,9 @@ def prompt(card: dict, images: list[str]) -> str:
     ])
 
 
-def review(card: dict, files: list, images: list[str]) -> dict:
+def review(card: dict, files: list, images: list[str], llm: llms.LLM | None = None) -> dict:
     """The independent read of a card (`files`: the originals and the card's pictures)."""
-    res = llm.structured_files(SYSTEM, prompt(card, images), files, SCHEMA, effort="high", model=REVIEW_MODEL)
+    res = (llm or llms.default()).structured_files(SYSTEM, prompt(card, images), files, SCHEMA, effort="high", model=REVIEW_MODEL)
     return evaluate(res, card)
 
 

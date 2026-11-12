@@ -10,7 +10,7 @@ from functools import cache
 
 import yaml
 
-from . import llm
+from .. import llm
 from .members import CONFIG
 
 PROMPT_VERSION = "enrich-v1"
@@ -93,7 +93,7 @@ def payload(meeting, text_lines: list[str]) -> str:
 
 
 def enrich(meeting, text_lines: list[str]) -> dict:
-    return llm.structured(system(), payload(meeting, text_lines), SCHEMA, effort="medium")
+    return llm.default().structured(system(), payload(meeting, text_lines), SCHEMA, effort="medium")
 
 
 def check(meeting, enriched: dict) -> list[str]:

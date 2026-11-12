@@ -1,6 +1,6 @@
 """Steps from the published PDF to stored parse/enrich results, and the agent workflow.
 
-`fetch` indexes and downloads; `process` runs parse + enrich through `llm` (API or CLI);
+`fetch` indexes and downloads; `process` runs parse + enrich through `petka.llm` (API or CLI);
 `agent_prepare_*` / `agent_accept_*` let a Claude Code subagent do the LLM part by hand:
 it reads the prepared prompt files, writes JSON into work/<id>/, and `accept` validates it
 exactly like `process` would before storing it.
@@ -109,8 +109,8 @@ def meeting(mid: str) -> builder.Meeting | None:
 def process(mid: str, via: str) -> builder.Meeting:
     src = source(mid)
     if src.get("needs_transcription") and not store.text_path(mid).exists():
-        from . import llm
-        store._write(store.text_path(mid), llm.transcribe_pdf(store.DATA / "pdf" / f"{mid}.pdf"))
+        from .. import llm
+        store._write(store.text_path(mid), llm.default().transcribe_pdf(store.DATA / "pdf" / f"{mid}.pdf"))
     if not store.extracted(mid, "parse"):
         store.save_extracted(mid, "parse", parser.PROMPT_VERSION,
                              parser.parse(store.text(mid)), via)

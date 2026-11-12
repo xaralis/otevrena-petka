@@ -62,11 +62,11 @@ def main() -> None:
             print(pipeline.summarize(m))
         sys.exit(1 if bad else 0)
     elif a.cmd == "process":
-        from . import llm
+        from .. import llm
         for mid in a.ids or pipeline.meeting_ids():
             if store.extracted(mid, "parse") and store.extracted(mid, "enrich"):
                 continue
-            m = pipeline.process(mid, via=llm.BACKEND)
+            m = pipeline.process(mid, via=llm.default().backend)
             print(pipeline.summarize(m))
     elif a.cmd.startswith("agent-prepare-"):
         fn = getattr(pipeline, a.cmd.replace("-", "_"))

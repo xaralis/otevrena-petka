@@ -9,7 +9,7 @@ Vote counts the model returns are re-checked against the raw vote line in `valid
 
 import re
 
-from . import llm
+from .. import llm
 
 PROMPT_VERSION = "parse-v1"
 
@@ -116,7 +116,7 @@ def number_lines(text: str) -> tuple[list[str], str]:
 
 def parse(text: str) -> dict:
     _, numbered = number_lines(text)
-    return llm.structured(SYSTEM, numbered, SCHEMA, effort="high")
+    return llm.default().structured(SYSTEM, numbered, SCHEMA, effort="high")
 
 
 # --- deterministic helpers used by validation ------------------------------------------
