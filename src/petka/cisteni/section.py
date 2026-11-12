@@ -1,6 +1,6 @@
 """Čištění ulic as a section of the portal (see petka.section): when the town's blokové čištění
 comes to a street, from the harmonogram of Služby města Pardubic. The pages work at /blokove-cisteni,
-but the section is not listed yet (launched later)."""
+reached from the header under Veřejný prostor (petka.nav), not listed on /prehled."""
 
 from ..section import Section
 

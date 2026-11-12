@@ -1,6 +1,6 @@
 """Podněty as a section of the portal (see petka.section): citizens' reports from the city's
-Dej Tip app. The page works at /podnety, with the API and MCP, but the section is not listed yet
-(launched later)."""
+Dej Tip app. The page at /podnety ("Závady" under Veřejný prostor in the header, petka.nav), with
+the API and MCP; not listed on /prehled."""
 
 from ..section import Section
 

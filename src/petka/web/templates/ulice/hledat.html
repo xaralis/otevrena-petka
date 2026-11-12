@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% from "ulice/_macros.html" import street_search, datalist %}
+{% block title %}Hledat ulici{% endblock %}
+{% block hero %}
+<section class="band band-section">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/">Celý obvod</a> <span aria-hidden="true">/</span> <span>Ulice</span></nav>
+    <h1>{% if found %}Ulic odpovídajících „{{ query }}“ je víc{% elif query %}Ulici „{{ query }}“ v obvodu nemáme{% else %}Podívejte se na svou ulici{% endif %}</h1>
+  </div>
+</section>
+{% endblock %}
+{% block main %}
+{{ datalist(names) }}
+<div class="ul-narrow">
+  {% if found %}
+  <ul class="cl-near">{% for s, n in found %}<li><a href="/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
+  {% else %}
+  {% if query %}<p class="cl-muted">Hledáme v ulicích městského obvodu Pardubice V. Zkuste jen část názvu.</p>{% endif %}
+  {{ street_search('ul', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova') }}
+  {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}

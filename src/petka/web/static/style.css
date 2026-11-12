@@ -1443,6 +1443,7 @@ a.cl-hint { color: var(--red-ink); }
 .ul-lg-wait { background: repeating-linear-gradient(135deg, var(--red) 0 2px, #f4a3aa 2px 4px); }
 .feed .row { grid-template-columns: 4.2rem minmax(0, 1fr); gap: 0 1rem; padding: .75rem .9rem; }
 .feed-d { font-weight: 750; white-space: nowrap; }
+.feed-d small { display: block; font-size: .78rem; font-weight: 500; }
 .feed-s { margin: 0; font-size: .78rem; font-weight: 650; color: var(--muted); }
 .feed-t { margin: 0; }
 .feed-t a { color: var(--ink); font-weight: 600; text-decoration: none; }
@@ -1492,4 +1493,43 @@ a.cl-hint { color: var(--red-ink); }
   .end-about { order: 2; }
   .end-about h2 { margin: 2rem 0 .5rem; font-size: 1.2rem; }
   .end-ask h2 { font-size: 1.2rem; margin-bottom: .9rem; }
+}
+
+/* one street (petka.ulice): the boxes are the podněty tiles, the lists the čištění ones */
+.ul-loc { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+.ul-other { display: flex; align-items: flex-end; gap: .8rem; min-width: 20rem; }
+.ul-other .combo { flex: 1; }
+.ul-other input { flex: 1; min-width: 0; font: inherit; font-size: 1.05rem; color: #fff; background: transparent; border: 0; border-bottom: 2px solid #fff;
+  padding: .3rem 0; border-radius: 0; -webkit-appearance: none; appearance: none; }
+.ul-other input::placeholder { color: rgba(255,255,255,.75); }
+.ul-other input:focus { outline: none; border-bottom-width: 4px; padding-bottom: calc(.3rem - 2px); }
+.ul-other input::-webkit-search-cancel-button { display: none; }
+.ul-other button { font: inherit; font-weight: 700; color: var(--red-ink); background: #fff; border: 0; border-radius: 3px; padding: .55rem 1rem; cursor: pointer; }
+.ul-other button:hover { color: #fff; background: var(--ink); }
+.ul-kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ul-kpi a { padding-bottom: 1.1rem; }
+.ul-kpi a:has(em) { padding-bottom: 2.6rem; }
+.ul-kpi small { font-size: .82rem; font-weight: 650; color: var(--muted); }
+.ul-kpi b { margin-top: .2rem; }
+.ul-kpi b.ul-red { color: var(--red-ink); }
+.ul-map-street { aspect-ratio: 600 / 440; }
+.cl-lg-street .ul-lg-street { border-top: 8px solid rgba(25,28,31,.14); }
+.cl-lg-street .ul-lg-rep, .cl-lg-street .ul-lg-wait { width: .8rem; height: .8rem; border: 0; border-radius: 50%; vertical-align: -1px; }
+.ul-lg-rep { background: #fff; box-shadow: inset 0 0 0 1.8px var(--ink); }
+.ul-all { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2.4rem; margin: 3rem 0 0; align-items: start; }
+.feed-m .seats-cap { color: var(--ink-2); }
+.ul-narrow { max-width: 44rem; margin: 2rem 0 1rem; }
+.ul-narrow .sbox { margin-top: 1.2rem; }
+@media (max-width: 900px) {
+  .ul-loc { display: block; }
+  .ul-other { min-width: 0; margin-top: 1rem; gap: .6rem; }
+  .ul-kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.4rem; }
+  .ul-kpi a { padding: .8rem .85rem; }
+  .ul-kpi a:has(em) { padding-bottom: 2.3rem; }
+  .ul-kpi small { font-size: .75rem; }
+  .ul-kpi a:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .ul-kpi b { font-size: 1.5rem; }
+  .ul-two + .ul-all, .ul-kpi + .ul-two { margin-top: 1.8rem; }
+  .ul-all { display: block; margin: 0; }
+  .ul-all .ul-h { margin: 1.8rem 0 .6rem; font-size: 1.15rem; }
 }

@@ -12,8 +12,8 @@ from dataclasses import dataclass
 
 from .. import db
 from ..cisteni import queries as cq
-from ..cisteni.words import SIDE_ON, clock
-from ..podnety import queries as pq, stats as ps
+from ..cisteni.words import clock
+from ..podnety import stats as ps
 from ..usneseni import search as us
 from ..uredni_deska.queries import tsquery as deska_tsquery
 

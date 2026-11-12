@@ -14,7 +14,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 
 from .. import nav
 from ..cisteni import queries as cq
-from ..podnety import queries as pq, stats as ps, words as pw
+from ..podnety import queries as pq, stats as ps
 from ..usneseni import queries as uq, search as us
 from ..usneseni.text import slug as to_slug
 from ..uredni_deska import queries as dq
@@ -26,8 +26,13 @@ TZ = ZoneInfo("Europe/Prague")
 SOON = 14       # days: the front page's map shows cleanings this close
 
 
+def _now() -> dt.datetime:
+    """Local time without a zone, as podněty are stored."""
+    return dt.datetime.now(TZ).replace(tzinfo=None)
+
+
 def _today() -> dt.date:
-    return dt.datetime.now(TZ).date()
+    return _now().date()
 
 
 def _names(obvod: str) -> dict[str, str]:
@@ -71,7 +76,7 @@ def home(request: Request):
         text, href = q.next_cleaning_line([i for i in future if i["date"] == nd])
         items.append({"date": nd, "source": "Blokové čištění", "text": text, "href": href, "next": True})
 
-    now = dt.datetime.now(TZ).replace(tzinfo=None)
+    now = _now()
     per = ps.period("12m", today)
     rows = pq.period_rows(obvod, per.start, per.end)
     s = ps.summary(rows, per, now)
