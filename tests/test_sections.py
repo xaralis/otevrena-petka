@@ -17,7 +17,8 @@ def test_registry():
     assert [s.slug for s in SECTIONS] == ["uredni-deska", "usneseni", "rozpocet", "smlouvy"]
     assert "ankety" in BY_SLUG and not BY_SLUG["ankety"].listed
     assert BY_SLUG["rozpocet"].status == "planned" and BY_SLUG["rozpocet"].routers   # preview mounted
-    assert {s.slug for s in WITH_CODE} == {"uredni-deska", "usneseni", "rozpocet", "ankety"}
+    assert "podnety" in BY_SLUG and not BY_SLUG["podnety"].listed
+    assert {s.slug for s in WITH_CODE} == {"uredni-deska", "usneseni", "rozpocet", "ankety", "podnety"}
 
 
 @pytest.mark.parametrize("s", WITH_CODE, ids=lambda s: s.slug)

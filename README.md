@@ -19,6 +19,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 | [Úřední deska](https://otevrenapetka.cz/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
+| Podněty | ve výstavbě | zatím jen API a MCP: podněty z aplikace Dej Tip v obvodu a jejich stav ([docs/dejtip.md](docs/dejtip.md)) |
 
 ### Usnesení
 
@@ -105,6 +106,7 @@ mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Po
 | `src/petka/mcp_server.py` | jeden MCP server pro celý portál |
 | `src/petka/usneseni/` | sekce Usnesení: pipeline, geokódování, hledání, web, API, MCP |
 | `src/petka/uredni_deska/` | sekce Úřední deska: stahování, web, API, MCP |
+| `src/petka/podnety/` | sekce Podněty: zrcadlo podnětů z Dej Tipu, API (GeoJSON), MCP |
 | `migrations/` | schéma Postgresu (spouští se samo při startu) |
 | `data/usneseni/sources.json` | index zveřejněných PDF (URL, sha256) |
 | `data/usneseni/text/` | text každého zápisu |
@@ -127,6 +129,7 @@ uv run usneseni load                            # databáze z data/
 EMBED_URL=http://localhost:8080 uv run usneseni embed   # volitelně: llama.cpp server s bge-m3
 uv run usneseni export
 uv run usneseni deska-update                    # úřední deska
+uv run usneseni podnety-update                  # podněty z Dej Tipu
 uv run usneseni serve --port 8099
 uv run pytest
 ```

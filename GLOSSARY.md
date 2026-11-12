@@ -13,6 +13,8 @@ Doménové pojmy portálu. Kód, testy a návrhy používají tyhle názvy.
 - **Usnesení** – rozhodnutí zastupitelstva (ZMO) nebo rady (RMO) obvodu; nepřijatý návrh
   s číslem usnesením není.
 - **Oznámení** – položka úřední desky (deska obvodu nebo magistrátu).
+- **Podnět** – hlášení občana z městské aplikace Dej Tip (závada, černá skládka, poděkování…)
+  s kategorií, místem a stavem, který nastavuje úřad (Evidováno, V řešení, Vyřešeno…).
 - **Karta** – srozumitelné převyprávění oznámení („pro lidi“), psané LLM a kontrolované
   druhým modelem. Stavy: draft → published / rejected. Semafor kvality: spolehlivé,
   buďte obezřetní, nespolehlivé.
