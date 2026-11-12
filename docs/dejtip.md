@@ -52,7 +52,7 @@ a na konci jsou tři sloupce navíc. Pozice jsme určili z reálné odpovědi (3
 | 9 | LNG | zeměpisná délka | ano |
 | 10 | CS_IMAGEURL | fotka | ne |
 | 11 | CS_ADMINURL | fotka v administraci | ne |
-| 12 | NOTE | „datum¦e-mail úředníka¦text“ – poznámky úřadu | **nikdy** |
+| 12 | NOTE | „datum¦e-mail úředníka¦text“ – poznámky úřadu | jen datum první a poslední poznámky |
 | 13 | CATEGORYID | id kategorie | ano |
 | 14 | DISTANCETOADDRESS | vzdálenost bodu od adresy (m) | ne |
 | 15 | TEMAID | téma (vždy 1) | ne |
