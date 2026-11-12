@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{#- The front page. The hero is an illustrative example (Wolkerova on Dukla), drawn over a fixed
+    map image: on wide screens the facts hang on leader lines, on phones they are numbered under
+    a strip of the map. Below it the street search and the whole obvod from live data. -#}
+{% from "ulice/_macros.html" import feed as feed_rows, street_search, datalist %}
+{% block title %}Co se děje na Pětce?{% endblock %}
+{% block description %}Kdy se čistí vaše ulice, co se v ní rozhodlo, co lidé hlásí a co visí na úřední desce: městský obvod Pardubice V na jednom místě a lidskou řečí. Nezávislý projekt, nejde o web úřadu.{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
+
+{% macro sheet(month, day) %}<span class="csh"><span class="csh-m">{{ month }}</span><span class="csh-d">{{ day }}</span></span>{% endmacro %}
+{% macro vote15(tile) %}<span class="seats" style="--n:15;--q:8;--tile:{{ tile }};--gap:3px" role="img" aria-label="9 pro, 2 proti, 1 se zdržel, 3 nehlasovali; potřeba 8">{% for _ in range(9) %}<i class="t-pro"></i>{% endfor %}<i class="t-proti"></i><i class="t-proti"></i><i class="t-zdrzel"></i><i class="t-nehl"></i><i class="t-nehl"></i><i class="t-nehl"></i><b class="notch" aria-hidden="true"></b></span>{% endmacro %}
+{% macro bubble() %}<svg width="30" height="28" viewBox="0 0 30 28" aria-hidden="true" class="cq"><path d="M3 2h24a1.5 1.5 0 0 1 1.5 1.5v15A1.5 1.5 0 0 1 27 20H13l-6.5 6v-6H3a1.5 1.5 0 0 1-1.5-1.5v-15A1.5 1.5 0 0 1 3 2z" fill="#191c1f"/><path d="M9.5 13.5c0-2.6 1.3-4.3 3.4-5l.6 1.1c-1.1.5-1.7 1.3-1.8 2.2h1.6v3.2H9.5zm6.6 0c0-2.6 1.3-4.3 3.4-5l.6 1.1c-1.1.5-1.7 1.3-1.8 2.2h1.6v3.2h-3.8z" fill="#fff"/></svg>{% endmacro %}
+{% set TAPE = "M780,362 L835,367 L882,374 L896,376 L925,379 L974,385 L981,386 L1043,393 L1075,397 L1090,398 L1168,396 L1211,392 L1255,390 L1316,386 L1353,384 L1377,382 L1415,380 L1450,378" %}
+{% set PINS = [(779, 403), (882, 411), (885, 395), (973, 404), (1027, 387), (1281, 433), (1317, 427), (1322, 437), (1326, 396)] %}
+{% set SOURCES %}<p class="src-h">Kde získáváme informace?</p>
+<ul class="srcs"><li>Zápisy z jednání</li><li>Úřední deska</li><li>Harmonogram čištění</li><li>Hlášení závad</li><li>Dopravní informace</li></ul>{% endset %}
+{% set LEAD %}Kdy se čistí vaše ulice nebo proč je rozkopaná, se dnes dá zjistit jen z&nbsp;úředních dokumentů rozesetých po různých webech. Otevřená Pětka vše spojuje dohromady a řekne vám to srozumitelně.{% endset %}
+
+{% block hero %}
+<section class="hv" aria-labelledby="hv-h">
+  <div class="hv-stage">
+    <picture><source srcset="{{ asset('home/hero-dukla.webp') }}" type="image/webp"><img class="hv-map" src="{{ asset('home/hero-dukla.png') }}" width="1600" height="760" alt="Mapa sídliště Dukla s uzavřenou Wolkerovou a místy nahlášených závad"></picture>
+    <div class="hv-fade" aria-hidden="true"></div>
+    <svg class="hv-lines" viewBox="0 0 1600 760" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke-width="2">
+      <defs><pattern id="hv-tape" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)" stroke="none"><rect width="16" height="16" fill="#fff"/><rect width="8" height="16" fill="#de091c"/></pattern></defs>
+      <path class="tape" d="{{ TAPE }}" pathLength="1" stroke="#191c1f" stroke-width="25" stroke-linejoin="round"/>
+      <path class="tape" d="{{ TAPE }}" pathLength="1" stroke="url(#hv-tape)" stroke-width="20" stroke-linejoin="round"/>
+      {% for x, y in PINS %}<circle class="pin" style="animation-delay:{{ '%.2f'|format(4.15 + 0.06 * loop.index0) }}s" cx="{{ x }}" cy="{{ y }}" r="8" fill="#191c1f" stroke="#fff" stroke-width="2.5"/>{% endfor %}
+      <g class="ld ld1"><path d="M910 89 L882 372" pathLength="1"/><circle cx="882" cy="374" r="5" stroke-width="2.5" fill="#fff"/></g>
+      <g class="ld ld2"><path d="M1412 95 L1377 378" pathLength="1"/><circle cx="1377" cy="382" r="5" stroke-width="2.5" fill="#fff"/></g>
+      <g class="ld ld3"><path d="M1000 505 L1088 402" pathLength="1"/><circle cx="1090" cy="398" r="5" stroke-width="2.5" fill="#fff"/></g>
+      <g class="ld ld4"><path d="M1372 545 L1319 436" pathLength="1"/></g>
+    </svg>
+    <div class="hv-lead">
+      <div class="wrap">
+        <div class="hv-txt">
+          <h1 id="hv-h"><span>Co se děje na&nbsp;Pětce?</span><span>Vše na jednom místě a&nbsp;lidskou řečí.</span></h1>
+          <p class="lead">{{ LEAD }}</p>
+          {{ SOURCES }}
+        </div>
+      </div>
+    </div>
+    <div class="co c1" style="left:51%;top:9%">{{ sheet('listopad', 26) }}<span class="co-t"><b>Blokové čištění</b><span>ve čtvrtek od 7:00</span></span></div>
+    <div class="co c2" style="right:2.5%;top:12%"><span class="ctape" aria-hidden="true"></span><span class="co-t"><b>Zavřeno do 30.&nbsp;11.</b><span>kvůli opravě povrchu</span></span></div>
+    <div class="co c3" style="left:52%;top:66%"><span class="co-t">{{ vote15('12px') }}<b>Chodníky ano, vnitrobloky ne</b><span>zastupitelstvo 2023, 9 pro a 2 proti</span></span></div>
+    <div class="co c4" style="right:2.5%;top:70%">{{ bubble() }}<span class="co-t"><b>9 nahlášených závad</b><span>všechny vyřízené</span></span></div>
+    <span class="hv-tag">Příklad: Wolkerova, sídliště Dukla</span>
+  </div>
+</section>
+
+<section class="hm" aria-labelledby="hm-h">
+  <div class="wrap">
+    <h1 id="hm-h"><span>Co se děje na&nbsp;Pětce?</span><span>Vše na jednom místě a&nbsp;lidskou řečí.</span></h1>
+    <p class="lead">{{ LEAD }}</p>
+  </div>
+  <figure class="hm-map">
+    <svg viewBox="745 245 750 320" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa sídliště Dukla s uzavřenou Wolkerovou a místy nahlášených závad">
+      <defs><pattern id="hm-tape" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="16" height="16" fill="#fff"/><rect width="8" height="16" fill="#de091c"/></pattern></defs>
+      <image href="{{ asset('home/hero-dukla.webp') }}" x="0" y="0" width="1600" height="760"/>
+      <path class="tape" d="{{ TAPE }}" pathLength="1" fill="none" stroke="#191c1f" stroke-width="27" stroke-linejoin="round"/>
+      <path class="tape" d="{{ TAPE }}" pathLength="1" fill="none" stroke="url(#hm-tape)" stroke-width="21" stroke-linejoin="round"/>
+      {% for x, y in PINS %}<circle class="pin" style="animation-delay:{{ '%.2f'|format(3 + 0.05 * loop.index0) }}s" cx="{{ x }}" cy="{{ y }}" r="10" fill="#191c1f" stroke="#fff" stroke-width="3"/>{% endfor %}
+      {% for n, mx, my, px, py, delay in [(1, 850, 290, 882, 374, 1.2), (2, 1400, 300, 1377, 382, 1.6), (3, 1060, 480, 1090, 398, 2.0), (4, 1250, 520, 1281, 433, 2.4)] %}
+      <g class="mk" style="animation-delay:{{ delay }}s"><path d="M{{ mx }} {{ my }} L{{ px }} {{ py }}" stroke="#191c1f" stroke-width="3"/><circle cx="{{ px }}" cy="{{ py }}" r="6" fill="#fff" stroke="#191c1f" stroke-width="3"/><circle cx="{{ mx }}" cy="{{ my }}" r="24" fill="#191c1f" stroke="#fff" stroke-width="3"/><text x="{{ mx }}" y="{{ my + 9 }}" text-anchor="middle" font-size="26" font-weight="800" fill="#fff">{{ n }}</text></g>
+      {% endfor %}
+    </svg>
+    <figcaption class="hm-tag">Příklad: Wolkerova, sídliště Dukla</figcaption>
+  </figure>
+  <div class="wrap">
+    <ol class="hm-facts">
+      <li style="animation-delay:1.3s"><span class="n">1</span>{{ sheet('listopad', 26) }}<span class="co-t"><b>Blokové čištění</b><span>ve čtvrtek od 7:00</span></span></li>
+      <li style="animation-delay:1.7s"><span class="n">2</span><span class="ctape" aria-hidden="true"></span><span class="co-t"><b>Zavřeno do 30.&nbsp;11.</b><span>kvůli opravě povrchu</span></span></li>
+      <li style="animation-delay:2.1s"><span class="n">3</span><span class="co-t">{{ vote15('11px') }}<b>Chodníky ano, vnitrobloky ne</b><span>zastupitelstvo 2023, 9 pro a 2 proti</span></span></li>
+      <li style="animation-delay:2.5s"><span class="n">4</span>{{ bubble() }}<span class="co-t"><b>9 nahlášených závad</b><span>všechny vyřízené</span></span></li>
+    </ol>
+    {{ SOURCES }}
+  </div>
+</section>
+{% endblock %}
+
+{% block main %}
+{{ datalist(names) }}
+<section class="find" aria-labelledby="find-h">
+  <h2 id="find-h">Podívejte se na svou ulici</h2>
+  {{ street_search('ul', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova') }}
+  <p class="find-note">Hledáme v ulicích obvodu Pardubice V.<span class="cl-only-d"> Hledáte spíš rozhodnutí? Prohledejte <a href="/usneseni">{{ ustats.resolutions|ul_thousands }} usnesení</a> od roku {{ ustats.first_date.year }}.</span></p>
+</section>
+
+<section class="dash" aria-labelledby="dash-h">
+  <h2 id="dash-h" class="dash-h">Celý obvod</h2>
+  <div class="ul-two">
+    <div class="ul-o2">
+      <h3 class="ul-h">Na mapě</h3>
+      <div class="map ul-map" data-ul-map="obvod" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="ul-map-json" role="region" aria-label="Mapa obvodu: úseky blokového čištění v příštích dvou týdnech a místa, kde čekají nahlášené závady; stejné údaje jsou vedle v přehledu"></div>
+      <script type="application/json" id="ul-map-json">{{ geojson|tojson }}</script>
+      <p class="cl-lg" aria-label="Legenda mapy">
+        {% if has_week %}<span><i class="cl-lg-7"></i>čištění do týdne</span>{% endif %}
+        {% if has_two %}<span><i></i><span class="cl-only-d">do dvou týdnů</span><span class="cl-only-m">do 2 týdnů</span></span>{% endif %}
+        {% if has_waiting %}<span><i class="ul-lg-wait"></i>čekající závady</span>{% endif %}
+      </p>
+    </div>
+    <div class="ul-o1">
+      <h3 class="ul-h">Co se děje</h3>
+      {{ feed_rows(feed) }}
+    </div>
+  </div>
+
+  <div class="areas">
+    {% for label, items in areas %}
+    <div>
+      <h3 class="ul-h">{{ label }}</h3>
+      <ul class="cl-near">
+        {% for i in items %}<li{% if i.soon %} class="soon"{% endif %}><a href="{{ i.href }}">{{ i.label }}</a><span>{{ info.get(i.href) or 'připravujeme' }}</span></li>{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="end" aria-label="O portálu">
+  <div class="end-about">
+    <h2>Kdo za tím stojí a proč</h2>
+    <p class="cl-only-d">Otevřenou Pětku připravil Filip Vařecha, starosta městského obvodu Pardubice V. Vzniká vedle oficiálního webu města, protože tam by podobné novinky trvaly dlouho. Tady je zkoušíme hned a ukazujeme, jak by mohly fungovat.</p>
+    <p class="cl-only-d">Cílem je předat portál do správy statutárního města Pardubice. Do té doby nejde o oficiální web města a závazné jsou vždy původní dokumenty.</p>
+    <p class="cl-only-m">Otevřenou Pětku připravil Filip Vařecha, starosta městského obvodu Pardubice V. Cílem je předat portál do správy statutárního města Pardubice. Do té doby nejde o oficiální web města a závazné jsou vždy původní dokumenty.</p>
+  </div>
+  <div class="end-ask">
+    <h2>Připraveno pro agenty</h2>
+    <div class="chat" aria-label="Ukázka rozhovoru s AI asistentem">
+      <p class="chat-q">Jak hlasovala rada o opravě Wolkerovy?</p>
+      <div class="chat-a"><svg class="bot" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><line x1="22" y1="4" x2="22" y2="11" stroke="#191c1f" stroke-width="2.5"/><circle cx="22" cy="5" r="3.5" fill="#de091c" stroke="#191c1f" stroke-width="2"/><rect x="6" y="11" width="32" height="26" rx="6" fill="#fff" stroke="#191c1f" stroke-width="2.5"/><rect x="2" y="19" width="4" height="10" rx="1.5" fill="#191c1f"/><rect x="38" y="19" width="4" height="10" rx="1.5" fill="#191c1f"/><circle cx="16" cy="22" r="3.2" fill="#191c1f"/><circle cx="28" cy="22" r="3.2" fill="#191c1f"/><path d="M15 30h14" stroke="#191c1f" stroke-width="2.5" stroke-linecap="round"/></svg><div class="chat-b"><p>Rada 23. 9. 2026 schválila přímé zadání opravy asfaltu, nejvýš za 1,15 mil. Kč. Pro bylo všech 5 radních.</p><span class="seats" style="--n:5;--q:3;--tile:12px;--gap:3px" role="img" aria-label="5 pro z 5"><i class="t-pro"></i><i class="t-pro"></i><i class="t-pro"></i><i class="t-pro"></i><i class="t-pro"></i><b class="notch" aria-hidden="true"></b></span><a class="chat-ref" href="/usneseni/310-2026-r">usnesení 310/2026 R</a></div></div>
+    </div>
+    <p class="end-t">Takhle se můžete zeptat svého AI asistenta, pokud umí MCP (třeba Claude). Odpoví s čísly usnesení a odkazy, které si ověříte. <a href="/data#mcp">Jak to nastavit</a></p>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}

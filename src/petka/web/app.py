@@ -139,8 +139,8 @@ async def server_error(request: Request, exc: Exception):
 
 # --- portal pages -------------------------------------------------------------------------
 
-# The front page is the úřední deska pro lidi (its own address stays canonical)
-FRONT_PAGE = "uredni-deska"
+# The front page: a street search and what is going on in the obvod (petka.ulice)
+FRONT_PAGE = "ulice"
 app.add_api_route("/", BY_SLUG[FRONT_PAGE].front(), response_class=HTMLResponse, include_in_schema=False)
 
 

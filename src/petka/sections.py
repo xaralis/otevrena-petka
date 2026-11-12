@@ -8,6 +8,7 @@ from .cisteni.section import SECTION as CISTENI
 from .podnety.section import SECTION as PODNETY
 from .rozpocet.section import SECTION as ROZPOCET
 from .section import Section
+from .ulice.section import SECTION as ULICE
 from .uredni_deska.section import SECTION as UREDNI_DESKA
 from .usneseni.section import SECTION as USNESENI
 
@@ -29,7 +30,7 @@ UZAVIRKY = Section(
     sources=[("Dopravní informace NDIC", "https://www.dopravniinfo.cz/")],
 )
 
-REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI]
+REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI, ULICE]
 
 SECTIONS = [s for s in REGISTRY if s.listed]    # what the portal's pages show
 BY_SLUG = {s.slug: s for s in REGISTRY}
