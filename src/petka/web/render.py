@@ -1,18 +1,15 @@
-"""Shared Jinja environment for the portal and its sections."""
+"""Shared Jinja environment for the portal and its sections. Section-specific globals and
+filters come from each section's `template` hook (petka.section)."""
 
 import datetime as dt
 import functools
 import hashlib
 import os
-import re
 from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
 
-from ..sections import BY_SLUG, SECTIONS
-from ..uredni_deska.score import LEADS, LEVELS, breakdown
-from ..usneseni import queries
-from ..usneseni.text import strip_titles
+from ..sections import BY_SLUG, REGISTRY, SECTIONS
 
 HERE = Path(__file__).parent
 
@@ -24,73 +21,8 @@ def asset_version(path: str) -> str:
     return hashlib.sha256(f.read_bytes()).hexdigest()[:10] if f.is_file() else "0"
 
 
-def _card_thumb(d: dict) -> dict:
-    from ..uredni_deska.digest import card_thumb
-    return card_thumb(d)
-
-
-def _clusters() -> dict:
-    from ..uredni_deska.digest import CLUSTERS
-    return CLUSTERS
-
-
-# Spending by chapter: the 5 largest + the rest (a donut reads up to ~6 parts). Categorical hues in a
-# fixed order (validated: CVD and normal-vision separation pass on white; three are under 3:1 contrast,
-# so the legend carries every value as text), grey for the rest.
-DONUT_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4"]
-DONUT_REST = "#a8a7a1"
-
-
-def _donut(items: list[dict], top: int = 5, r: float = 90, w: float = 34) -> list[dict]:
-    """Slices with SVG paths (centre 100,100) for spending items {label, amount}; largest first."""
-    import math
-    items = sorted((i for i in items if (i.get("amount") or 0) > 0), key=lambda i: -i["amount"])
-    if len(items) > top:      # never a cycled hue: everything past the 5th is grey
-        rest = items[top:]
-        items = items[:top] + [{"label": "Ostatní" if len(rest) > 1 else rest[0]["label"],
-                                "amount": sum(i["amount"] for i in rest), "rest": True}]
-    total = sum(i["amount"] for i in items) or 1
-    out, a0 = [], -math.pi / 2
-    for k, i in enumerate(items):
-        frac = i["amount"] / total
-        a1 = a0 + 2 * math.pi * frac
-        big = 1 if a1 - a0 > math.pi else 0
-        ri = r - w
-        pt = lambda rad, ang: f"{100 + rad * math.cos(ang):.2f},{100 + rad * math.sin(ang):.2f}"
-        if frac >= 0.9999:      # a single slice: two half arcs
-            d = (f"M{pt(r, a0)}A{r},{r} 0 1 1 {pt(r, a0 + math.pi)}A{r},{r} 0 1 1 {pt(r, a0)}"
-                 f"M{pt(ri, a0)}A{ri},{ri} 0 1 0 {pt(ri, a0 + math.pi)}A{ri},{ri} 0 1 0 {pt(ri, a0)}Z")
-        else:
-            d = (f"M{pt(r, a0)}A{r},{r} 0 {big} 1 {pt(r, a1)}L{pt(ri, a1)}"
-                 f"A{ri},{ri} 0 {big} 0 {pt(ri, a0)}Z")
-        out.append({"label": i["label"], "amount": i["amount"], "pct": 100 * frac, "d": d,
-                    "color": DONUT_REST if i.get("rest") else DONUT_COLORS[k]})
-        a0 = a1
-    return out
-
-
-_ADDRESSEE = re.compile(r"adresátem je\s+(.+?)\s*$", re.I)
-_SALUTATION = re.compile(r"^(?:(?:pan|paní|pí|p\.)\s+)+", re.I)
-
-
-def _headline(d: dict, n: dict) -> str:
-    """The card's headline as shown. A delivery names its addressee like the office's title does, but
-    only while it hangs: the title of a taken-down delivery is redacted, and the generic headline is back.
-    Page titles and share images keep the stored headline (they get cached outside our reach)."""
-    m = _ADDRESSEE.search(n.get("title") or "") if d.get("cluster") == "doruceni" and not n.get("redacted") else None
-    if not m:
-        return d["headline"]
-    name = _SALUTATION.sub("", m[1]).strip()
-    return f"Úřad doručuje písemnost: {name.title() if name.isupper() else name}"
-
-
 def asset(path: str) -> str:
     return f"/static/{path}?v={asset_version(path)}"
-SITE_NAME = "Otevřená Pětka"
-
-tpl = Jinja2Templates(directory=HERE / "templates")
-tpl.env.globals.update(QUALITY_LEVELS=LEVELS, QUALITY_LEADS=LEADS, quality_breakdown=breakdown, asset=asset, donut=_donut, headline=_headline, CLUSTERS=_clusters(), card_thumb=_card_thumb, ICONS=set(re.findall(r'<symbol id="([a-z]+)"', (HERE / 'static' / 'deska-ikony.svg').read_text())), CONTACT="filip.varecha@pirati.cz", PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/"), STATUS=queries.STATUS_LABEL, BODY=queries.BODY_LABEL,
-                       CHOICE=queries.CHOICE_LABEL, SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 
 
 def _date(d) -> str:
@@ -103,11 +35,16 @@ def _date(d) -> str:
     return f"{d.day}. {d.month}. {d.year}" if d else ""
 
 
-def _initials(name: str) -> str:
-    """'Ing. Lic. Jaroslav Kňava' -> 'JK', 'Jiří Rejda, DiS.' -> 'JR' (tile labels)."""
-    t = strip_titles(name)
-    return (t[0][0] + t[-1][0]) if len(t) > 1 else (t[0][:2] if t else "?")
+SITE_NAME = "Otevřená Pětka"
 
-
+tpl = Jinja2Templates(directory=HERE / "templates")
+tpl.env.globals.update(asset=asset, CONTACT="filip.varecha@pirati.cz",
+                       PUBLIC_URL=os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/"),
+                       SECTIONS=SECTIONS, SECTION=BY_SLUG, SITE_NAME=SITE_NAME)
 tpl.env.filters["d"] = _date
-tpl.env.filters["initials"] = _initials
+
+for _s in REGISTRY:
+    if _s.template:
+        _globals, _filters = _s.template()
+        tpl.env.globals.update(_globals)
+        tpl.env.filters.update(_filters)

@@ -100,7 +100,8 @@ mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Po
 | cesta | co |
 |---|---|
 | `src/petka/web/` | portál: FastAPI aplikace, šablony, styly, statické soubory (včetně mapy) |
-| `src/petka/sections.py` | seznam sekcí portálu a jejich stav |
+| `src/petka/section.py` | co sekce portálu dodává (metadata, routery, MCP, příkazy, šablony, sitemap) |
+| `src/petka/sections.py` | registr sekcí; sekce s kódem má vlastní `<balíček>/section.py` |
 | `src/petka/mcp_server.py` | jeden MCP server pro celý portál |
 | `src/petka/usneseni/` | sekce Usnesení: pipeline, geokódování, hledání, web, API, MCP |
 | `src/petka/uredni_deska/` | sekce Úřední deska: stahování, web, API, MCP |

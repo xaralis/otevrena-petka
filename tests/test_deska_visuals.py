@@ -27,7 +27,7 @@ def test_bearing_and_distance():
 
 
 def test_spending_donut_folds_the_rest_and_never_cycles_colours():
-    from petka.web.render import DONUT_COLORS, DONUT_REST, _donut
+    from petka.uredni_deska.render import DONUT_COLORS, DONUT_REST, donut as _donut
     items = [{"label": f"k{i}", "amount": 100 - i} for i in range(8)]
     sl = _donut(items)
     assert [s["label"] for s in sl] == ["k0", "k1", "k2", "k3", "k4", "Ostatní"]
@@ -55,7 +55,7 @@ def test_delivery_card_names_the_addressee_only_while_it_hangs():
 
 
 def test_delivery_headline_names_the_addressee_while_it_hangs():
-    from petka.web.render import _headline
+    from petka.uredni_deska.render import headline as _headline
     d = {"cluster": "doruceni", "headline": "Úřad doručuje písemnost veřejnou vyhláškou"}
     t = "Veřejná vyhláška - oznámení o uložení … ze dne 20. 10. 2026, jejímž adresátem je pan pan Alnajari Wasel"
     assert _headline(d, {"title": t}) == "Úřad doručuje písemnost: Alnajari Wasel"

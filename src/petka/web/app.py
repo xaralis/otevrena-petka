@@ -22,12 +22,8 @@ from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .. import db
-from ..ankety import web as ankety_web
 from ..mcp_server import mcp
-from ..rozpocet import web as rozpocet_web
-from ..sections import BY_SLUG, SECTIONS
-from ..uredni_deska import queries as deska_queries, source as deska_source, web as deska_web
-from ..usneseni import queries, search as usneseni_search, web as usneseni_web
+from ..sections import BY_SLUG, REGISTRY, SECTIONS
 from . import og
 from .render import HERE, asset_version, tpl
 
@@ -64,12 +60,11 @@ class _Static(StaticFiles):
 
 app.mount("/static", _Static(directory=HERE / "static"), name="static")
 app.router.routes.extend(mcp.streamable_http_app().routes)  # POST /mcp
-app.include_router(usneseni_web.pages)
-app.include_router(usneseni_web.api)
-app.include_router(deska_web.pages)   # before the planned-section catch-all /{slug}
-app.include_router(deska_web.api)
-app.include_router(ankety_web.api)
-app.include_router(rozpocet_web.pages)  # preview behind a secret token; /rozpocet itself stays planned
+# every section's routers, before the planned-section catch-all /{slug} (a planned section may
+# mount some already: the rozpočet preview behind a secret token, /rozpocet itself stays planned)
+for s in REGISTRY:
+    for router in (s.routers() if s.routers else []):
+        app.include_router(router)
 
 
 class _Head:
@@ -131,31 +126,28 @@ async def server_error(request: Request, exc: Exception):
 
 # --- portal pages -------------------------------------------------------------------------
 
-@app.get("/", response_class=HTMLResponse, include_in_schema=False)
-def front(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: str = "", zneni: str = "",
-          strana: str = "1"):
-    """The front page is the úřední deska pro lidi (its own address stays canonical)."""
-    return deska_web.home(request, q=q, kde=kde, sejmute=sejmute, druh=druh, zneni=zneni, strana=strana)
+# The front page is the úřední deska pro lidi (its own address stays canonical)
+FRONT_PAGE = "uredni-deska"
+app.add_api_route("/", BY_SLUG[FRONT_PAGE].front(), response_class=HTMLResponse, include_in_schema=False)
+
+
+def _merged(hook: str) -> dict:
+    """The context the sections give one portal page (each section its own keys)."""
+    ctx = {}
+    for s in REGISTRY:
+        if getattr(s, hook):
+            ctx.update(getattr(s, hook)())
+    return ctx
 
 
 @app.get("/prehled", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request):
-    hits, _ = usneseni_search.search("", filters=usneseni_search.Filters(status="usneseni"), limit=3)
-    # the newest notices of MO V, leaving out deliveries to named people (not news, and personal)
-    notices = [n for n in deska_queries.search(limit=12)[0] if n["kind"] != "doruceni"][:3]
-    return tpl.TemplateResponse(request, "home.html", {
-        "stats": queries.stats(), "latest": [h.row for h in hits],
-        "deska": deska_queries.stats(), "notices": notices,
-    })
+    return tpl.TemplateResponse(request, "home.html", _merged("home"))
 
 
 @app.get("/data", response_class=HTMLResponse, include_in_schema=False)
 def catalog(request: Request):
-    return tpl.TemplateResponse(request, "data.html", {
-        "stats": queries.stats(), "base": PUBLIC_URL,
-        "tables": queries.opendata_tables(), "updated": usneseni_web.opendata_updated(),
-        "deska": deska_queries.stats(), "deska_source": deska_source,
-    })
+    return tpl.TemplateResponse(request, "data.html", {**_merged("catalog"), "base": PUBLIC_URL})
 
 
 @app.get("/data/usneseni", include_in_schema=False)
@@ -197,16 +189,12 @@ def robots():
 
 @app.get("/sitemap.xml", include_in_schema=False)
 def sitemap():
-    pages = ["/prehled", "/data", "/soukromi", "/pristupnost", "/usneseni", "/usneseni/mapa", "/usneseni/jednani",
-             "/usneseni/clenove", "/usneseni/clenove/ucast", "/usneseni/metodika", "/uredni-deska"]
-    pages += [f"/{s.slug}" for s in SECTIONS if s.status == "planned"]
-    urls = [(u, None) for u in pages]
+    urls = [(u, None) for u in ["/prehled", "/data", "/soukromi", "/pristupnost"]]
+    urls += [(f"/{s.slug}", None) for s in SECTIONS if s.status == "planned"]
     with db.pool().connection() as conn:
-        urls += [(f"/usneseni/jednani/{r['id']}", r["date"]) for r in conn.execute(
-            "SELECT id, date FROM meetings ORDER BY date DESC")]
-        urls += [(f"/usneseni/{r['uid']}", r["date"]) for r in conn.execute(
-            "SELECT uid, date FROM resolutions ORDER BY date DESC, seq DESC")]
-        urls += [(f"/usneseni/clenove/{r['id']}", None) for r in conn.execute("SELECT id FROM members ORDER BY id")]
+        for s in REGISTRY:
+            if s.sitemap:
+                urls += s.sitemap(conn)
     body = "".join(f"<url><loc>{escape(PUBLIC_URL + u)}</loc>{f'<lastmod>{d.isoformat()}</lastmod>' if d else ''}</url>"
                    for u, d in urls)
     return Response('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
