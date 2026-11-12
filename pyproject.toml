@@ -20,6 +20,7 @@ dependencies = [
     "pydantic>=2.10",
     "pyyaml>=6",
     "sentry-sdk>=2.20",
+    "shapely>=2",
     "uvicorn[standard]>=0.34",
 ]
 
@@ -28,7 +29,10 @@ usneseni = "petka.cli:main"
 petka = "petka.cli:main"
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = [
+    "icalendar>=6",
+    "pytest>=8",
+]
 
 [build-system]
 requires = ["hatchling"]
