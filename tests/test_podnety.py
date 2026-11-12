@@ -37,10 +37,19 @@ def test_positions_and_sanitize_keep_only_public_fields():
     r = source.sanitize(source.parse(answer([row()]))[0])
     assert r == {"id": 10000000001, "category_id": 19, "category": "Chodník", "status": 1,
                  "reported_at": dt.datetime(2026, 11, 1, 12, 57), "lat": 50.0301, "lng": 15.7602,
-                 "street": "Na Záboří", "momc": MO5}
+                 "street": "Na Záboří", "momc": MO5,
+                 "first_note_at": dt.datetime(2026, 11, 12, 10), "last_note_at": dt.datetime(2026, 11, 12, 10)}
     stored = json.dumps(r, default=str)
     for s in SECRETS + ("223", "53002", "Nové Jesenčany", "@"):
         assert s not in stored
+
+
+def test_note_dates_only_the_dates_of_every_entry():
+    note = ("02.01.2025 08:32:12¦a@example.cz¦Předáno OŽP 15.01.2025 09:00 jinak"
+            "03.02.2025 10:00:00¦b@example.cz¦Vyřešeno")
+    assert source.note_dates(note) == (dt.datetime(2025, 1, 2, 8, 32, 12), dt.datetime(2025, 2, 3, 10))
+    assert source.note_dates(None) == (None, None)
+    assert source.note_dates("bez data") == (None, None)
 
 
 def test_street_without_number_postcode_or_part():
@@ -158,7 +167,7 @@ def test_store_tracks_status_changes_and_drops(conn):
     assert r["status"] == 3 and r["status_changed_at"] is not None
     cols = {c.name for c in conn.execute("SELECT * FROM citizen_reports LIMIT 0").description}
     assert cols == {"id", "obvod", "momc", "category_id", "category", "status", "reported_at", "lat", "lng",
-                    "street", "first_seen", "last_seen", "status_changed_at"}
+                    "street", "first_seen", "last_seen", "status_changed_at", "first_note_at", "last_note_at"}
 
     hits = queries.near("mo5", lat, lng, radius=500)
     assert [h["id"] for h in hits] == [-901] and 200 < hits[0]["distance"] < 240

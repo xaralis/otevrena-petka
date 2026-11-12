@@ -40,13 +40,14 @@ def store(conn, obvod: str, keep: list[dict], drop: list[int]) -> dict:
         before = known.get(r["id"])
         conn.execute(
             """INSERT INTO citizen_reports (id, obvod, momc, category_id, category, status, reported_at,
-                                            lat, lng, street)
+                                            lat, lng, street, first_note_at, last_note_at)
                VALUES (%(id)s, %(obvod)s, %(momc)s, %(category_id)s, %(category)s, %(status)s,
-                       %(reported_at)s, %(lat)s, %(lng)s, %(street)s)
+                       %(reported_at)s, %(lat)s, %(lng)s, %(street)s, %(first_note_at)s, %(last_note_at)s)
                ON CONFLICT (id) DO UPDATE SET obvod = EXCLUDED.obvod, momc = EXCLUDED.momc,
                  category_id = EXCLUDED.category_id, category = EXCLUDED.category, status = EXCLUDED.status,
                  reported_at = EXCLUDED.reported_at, lat = EXCLUDED.lat, lng = EXCLUDED.lng,
-                 street = EXCLUDED.street, last_seen = now(),
+                 street = EXCLUDED.street, first_note_at = EXCLUDED.first_note_at,
+                 last_note_at = EXCLUDED.last_note_at, last_seen = now(),
                  status_changed_at = CASE WHEN citizen_reports.status <> EXCLUDED.status THEN now()
                                           ELSE citizen_reports.status_changed_at END""",
             {**r, "obvod": obvod})

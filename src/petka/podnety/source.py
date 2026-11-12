@@ -12,7 +12,8 @@ the real answer on 12. 11. 2026 (3 602 rows from 2025 on), see docs/dejtip.md.
 Most of a row is not ours to publish: the reporter's comment, the office's notes with an
 official's e-mail, photo and admin URLs, the device and an official's login. `sanitize` keeps
 only what the public map shows anyway, minus the house number, and nothing else ever leaves
-this module.
+this module. Of the office's notes we keep only their dates (when the office first and last
+wrote to a report), never their text or author.
 """
 
 import datetime as dt
@@ -29,7 +30,7 @@ HEADERS = {"User-Agent": "otevrena-petka (+https://otevrenapetka.cz)",
            "Content-Type": "application/json; charset=utf-8"}
 
 # positions in a row (checked 12. 11. 2026); everything not named here is never read
-ID, CATEGORY, ADDRESS, LAT, LNG, CATEGORY_ID, STATUS, DATE, MOMC = 0, 5, 6, 8, 9, 13, 17, 18, 19
+ID, CATEGORY, ADDRESS, LAT, LNG, NOTE, CATEGORY_ID, STATUS, DATE, MOMC = 0, 5, 6, 8, 9, 12, 13, 17, 18, 19
 WIDTH = 23
 
 # c_status.csv on amg.dejtip.eu/upload/data/; the categories come with each row (KAT_TYPE)
@@ -91,13 +92,27 @@ def street(address: str | None) -> str | None:
     return name if re.search(r"[^\W\d_]", name) else None
 
 
+_NOTE_DATE = re.compile(r"(\d\d)\.(\d\d)\.(\d{4}) (\d\d):(\d\d)(?::(\d\d))?")
+
+
+def note_dates(note: str | None) -> tuple[dt.datetime | None, dt.datetime | None]:
+    """When the office first and last wrote to a report. NOTE is one or more
+    "date¦e-mail¦text" entries; only the dates are read, the rest never leaves this function."""
+    if not isinstance(note, str):
+        return None, None
+    found = [dt.datetime(int(y), int(mo), int(d), int(h), int(mi), int(sec or 0))
+             for d, mo, y, h, mi, sec in _NOTE_DATE.findall(note)]
+    return (min(found), max(found)) if found else (None, None)
+
+
 def sanitize(row: list) -> dict:
-    """The only fields of a row we keep: id, category, status, date, position, street and
-    the obvod's code."""
+    """The only fields of a row we keep: id, category, status, date, position, street, the
+    obvod's code and the dates of the office's notes."""
+    first_note, last_note = note_dates(row[NOTE])
     return {"id": row[ID], "category_id": row[CATEGORY_ID], "category": (row[CATEGORY] or "").strip(),
             "status": row[STATUS], "reported_at": dt.datetime.strptime(row[DATE], "%d.%m.%Y %H:%M"),
             "lat": float(row[LAT]), "lng": float(row[LNG]), "street": street(row[ADDRESS]),
-            "momc": row[MOMC]}
+            "momc": row[MOMC], "first_note_at": first_note, "last_note_at": last_note}
 
 
 def reports(rows: list[list], momc: int) -> tuple[list[dict], list[int]]:
