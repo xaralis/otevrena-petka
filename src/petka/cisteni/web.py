@@ -13,6 +13,7 @@ obvod is the request's (petka.obvody).
 
 import datetime as dt
 import json
+import os
 from urllib.parse import quote
 
 from fastapi import APIRouter, HTTPException, Query, Request
@@ -38,9 +39,16 @@ def _state(today: dt.date) -> dict:
     return {"checked": checked.date() if checked else None, "today": today, "source": source.PAGE}
 
 
+def _origin() -> str:
+    """The portal's public origin for absolute links (calendar feeds are cached and copied
+    into other apps, so never the request's Host header)."""
+    return os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
+
+
 def _subscribe(request: Request, slugs: list[str]) -> dict:
     path = "/cisteni/kalendar.ics?ulice=" + ",".join(quote(s) for s in slugs)
-    return {"webcal": f"webcal://{request.url.netloc}{path}", "https": f"{request.url.scheme}://{request.url.netloc}{path}"}
+    origin = _origin()
+    return {"webcal": "webcal://" + origin.split("://", 1)[1] + path, "https": origin + path}
 
 
 @pages.get("", response_class=HTMLResponse)
@@ -88,7 +96,7 @@ def subscribe_page(request: Request, ulice: list[str] = Query(default=[]), prida
 
 
 def _feed(request: Request, its: list[dict], name: str) -> Response:
-    base = f"{request.url.scheme}://{request.url.netloc}"
+    base = _origin()
     body = ics.calendar(its, name, dt.datetime.now(dt.UTC),
                         lambda i: f"{base}/cisteni/ulice/{i['slug']}" if i["slug"] else f"{base}/cisteni")
     return Response(body, media_type="text/calendar; charset=utf-8",
@@ -140,7 +148,7 @@ def street(request: Request, slug: str):
     return tpl.TemplateResponse(request, "cisteni/ulice.html", {
         **_state(today), "name": name, "slug": slug, "gen": genitive(name), "next": nxt, "on_next": on_next,
         "first": on_next[0] if on_next else None,
-        "whole": whole, "rows": rows, "geojson": json.dumps({"type": "FeatureCollection", "features": feats}),
+        "whole": whole, "rows": rows, "geojson": {"type": "FeatureCollection", "features": feats},
         "has_later": any(f["properties"]["when"] == "later" for f in feats),
         "has_past": any(f["properties"]["when"] == "past" for f in feats),
         "near": q.nearby(slug, every, geoms, today), **_subscribe(request, [slug]),

@@ -381,6 +381,11 @@ def test_calendar_page_without_js(fixture):
     assert "https://otevrenapetka.cz/cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text.replace("http://", "https://")
 
 
+def test_absolute_links_ignore_the_host_header(fixture):
+    r = TestClient(app).get("/cisteni/kalendar", params={"ulice": "wolkerova"}, headers={"host": "localhost:8000"})
+    assert r.status_code == 200 and "localhost" not in r.text
+
+
 def test_feeds(fixture):
     r = get("/cisteni/kalendar.ics", params={"ulice": "wolkerova,lexova"})
     assert r.status_code == 200 and r.headers["content-type"].startswith("text/calendar")

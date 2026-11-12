@@ -66,7 +66,7 @@
     </section>
     <section class="cl-o3" aria-label="Mapa ulice">
       <div class="map cl-map cl-map-street" data-cl-map="street" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="cl-street-json" role="region" aria-label="Mapa ulice {{ name }}: černě úseky čištěné {{ next|cl_dm if next else 'příště' }}, šedě úseky čištěné letos dříve"></div>
-      <script type="application/json" id="cl-street-json">{{ geojson|safe }}</script>
+      <script type="application/json" id="cl-street-json">{{ geojson|tojson }}</script>
       <p class="cl-src cl-lg-street">{% if next %}<span><i class="cl-lg-next"></i>{{ next|cl_dm }}</span>{% endif %}{% if has_later %}<span><i class="cl-lg-later"></i>později letos</span>{% endif %}{% if has_past %}<span><i class="cl-lg-past"></i>letos už proběhlo</span>{% endif %}</p>
     </section>
     <section class="cl-o5" aria-labelledby="cl-near-h">
