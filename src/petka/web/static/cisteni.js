@@ -82,6 +82,7 @@
         const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
         bounds.forEach((f) => walk(f.geometry.coordinates));
         if (!b.isEmpty()) map.fitBounds(b, { padding: all ? 20 : 40, maxZoom: 17, duration: 0 });
+        if (!all && el.dataset.name) map.once("idle", () => osmStreet(map, el.dataset.name, fc));
         if (all) {
           // a wide invisible line over the stretches makes them easy to point at
           map.addLayer({ id: "cl-hit", type: "line", source: "cl", filter: line,
@@ -101,6 +102,27 @@
       Object.assign(p, { color, width, rank, dash: p.status === "approx" || p.status === "partial" });
     });
     fc.features.sort((a, b) => a.properties.rank - b.properties.rank);   // the nearest drawn on top
+  }
+
+  // RÚIAN's line of a street can run along neighbouring roads (Benešovo náměstí is drawn round
+  // the whole block), so the street is the base map's road of that name where OpenStreetMap
+  // knows it, RÚIAN's line only where it doesn't
+  function osmStreet(map, name, fc) {
+    const fold = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const want = fold(name);
+    const roads = map.querySourceFeatures("protomaps", { sourceLayer: "roads" })
+      .filter((f) => f.properties.name && fold(f.properties.name) === want
+                     && /LineString/.test(f.geometry.type));
+    if (!roads.length) return;
+    const lines = roads.flatMap((f) => (f.geometry.type === "LineString" ? [f.geometry.coordinates] : f.geometry.coordinates));
+    const own = { type: "Feature", geometry: { type: "MultiLineString", coordinates: lines },
+                  properties: { kind: "street", color: INK, width: 3, dash: false, key: "street" } };
+    const rest = fc.features.filter((f) => f.properties.kind !== "street" && !/Polygon/.test(f.geometry.type));
+    map.getSource("cl").setData({ type: "FeatureCollection", features: [own, ...rest] });
+    const b = new maplibregl.LngLatBounds();
+    lines.forEach((l) => l.forEach((c) => b.extend(c)));
+    rest.forEach((f) => (function walk(c) { typeof c[0] === "number" ? b.extend(c) : c.forEach(walk); })(f.geometry.coordinates));
+    map.fitBounds(b, { padding: 40, maxZoom: 17, duration: 0 });
   }
 
   // one street: its line in ink, the stretches still to be cleaned on it thicker

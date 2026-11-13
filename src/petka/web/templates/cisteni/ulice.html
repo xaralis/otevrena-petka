@@ -70,7 +70,7 @@
     </section>
     <section class="cl-o3" aria-label="Mapa ulice">
       {% if geojson.features %}
-      <div class="map cl-map cl-map-street" data-cl-map="street" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="cl-street-json" role="region" aria-label="Mapa ulice {{ name }}"></div>
+      <div class="map cl-map cl-map-street" data-cl-map="street" data-name="{{ name }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="cl-street-json" role="region" aria-label="Mapa ulice {{ name }}"></div>
       <script type="application/json" id="cl-street-json">{{ geojson|tojson }}</script>
       {% endif %}
     </section>
