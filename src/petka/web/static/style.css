@@ -1650,3 +1650,6 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ul-pin { position: absolute; right: .35rem; top: .45rem; display: grid; place-items: center; width: 2rem; height: 2rem; padding: 0;
   border: 0; border-radius: 3px; background: transparent; color: var(--ink-2); cursor: pointer; }
 .ul-pin:hover, .ul-pin:focus-visible { background: var(--ink); color: #fff; outline: none; }
+
+/* the first heading of a page's content sits right under the band, as every other first block */
+main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
