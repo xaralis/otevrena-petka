@@ -1431,7 +1431,6 @@ a.cl-hint { color: var(--red-ink); }
 .sbox button { flex: none; display: inline-flex; align-items: center; min-height: 3.6rem; padding: 0 2rem; font: inherit; font-size: 1.15rem; font-weight: 750; color: #fff; background: var(--red); border: 0; border-radius: 3px; cursor: pointer; }
 .sbox button:hover { background: var(--ink); }
 .sbox .combo-list { top: calc(100% + .7rem); left: -3.6rem; }
-.find-note { margin: .9rem 0 0; font-size: .9rem; color: var(--muted); }
 
 /* the whole obvod */
 .dash-h { margin: 3.6rem 0 1.2rem; font-size: 2.4rem; font-weight: 800; font-stretch: 85%; letter-spacing: -.02em; line-height: 1; }
