@@ -114,14 +114,14 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
   </article>
 
   <article class="sec">
-    <div class="sec-head"><b>Blokové čištění</b><span>v provozu, zatím mimo menu</span></div>
+    <div class="sec-head"><b>Blokové čištění</b><span>v provozu</span></div>
     <div class="cell"><h4>Zdroj</h4><p>Excel s harmonogramem Služeb města Pardubic, denně ve 4:23.</p></div>
     <div class="cell"><h4>Zpracování</h4><ul><li>Pravidla opraví chyby v tabulce.</li><li>Popis „od ul. A k ul. B“ se přiloží na čáru ulice a ořízne na křižovatkách.</li><li>Asi pětinu míst nejde z textu umístit, ty se kreslí ručně.</li></ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Mapa a stránka každé ulice</li><li>Kalendář do telefonu (ICS), API, MCP</li><li>Mapa Aktuálně</li></ul></div>
   </article>
 
   <article class="sec">
-    <div class="sec-head"><b>Závady</b><span>v provozu, zatím mimo menu</span></div>
+    <div class="sec-head"><b>Podněty</b><span>v provozu</span></div>
     <div class="cell"><h4>Zdroj</h4><p>Hlášení z Dej Tipu pro celé město, z nich ta z obvodu. Poprvé 2 roky zpět, pak 6× denně (každé 4 hodiny) posledních 120 dní.</p></div>
     <div class="cell"><h4>Zpracování</h4><ul><li>Kategorie, stav a doba vyřízení.</li><li>Ukládá se jen ulice bez čísla domu, ne komentář občana ani poznámky úředníků.</li></ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Přehled podle kategorií a stavu, mapa</li><li>Stránky ulic, API, MCP</li></ul></div>
@@ -144,7 +144,7 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
   <article class="sec">
     <div class="sec-head"><b>Ulice a úvodní stránka</b><span>v provozu</span></div>
     <div class="cell"><h4>Zdroj</h4><p>Ulice města z RÚIAN, do obvodu patří ty, které v něm leží alespoň zčásti (teď 66). Obnovuje se jednou měsíčně.</p></div>
-    <div class="cell"><h4>Zpracování</h4><ul><li>Skládá ostatní sekce podle ulice: čištění, usnesení, závady, oznámení.</li><li>Mapa Aktuálně: čištění na 7 dní a platná omezení z desky.</li></ul></div>
+    <div class="cell"><h4>Zpracování</h4><ul><li>Skládá ostatní sekce podle ulice: čištění, usnesení, podněty, oznámení.</li><li>Mapa Aktuálně: čištění na 7 dní a platná omezení z desky.</li></ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Úvodní stránka s vyhledáním ulice a mapou Aktuálně</li><li>Stránka každé ulice</li></ul></div>
   </article>
 
@@ -172,18 +172,18 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
     <section><h3>Ukládáme</h3><ul>
       <li>Veřejná rozhodnutí a hlasování zastupitelů</li>
       <li>Oznámení desky: název, druh, data, odkazy na originál</li>
-      <li>U závad kategorii, stav, data a ulici bez čísla domu</li>
+      <li>U podnětů kategorii, stav, data, ulici bez čísla domu, popis se skrytými kontakty a odkaz na veřejnou fotku</li>
       <li>U dopravních oznámení platnost, důvod a značky</li>
     </ul></section>
     <section class="no"><h3>Neukládáme</h3><ul>
       <li>Popis oznámení na desce (bývá v něm datum narození), u doručovaných písemností po sejmutí ani jméno</li>
       <li>Žadatele, jména úředníků, telefony a e-maily</li>
-      <li>Komentáře a fotky občanů z Dej Tipu, poznámky úředníků</li>
+      <li>Telefony a e-maily v popisech od občanů, neveřejné fotky, poznámky úředníků</li>
       <li>Nic, co by identifikovalo hlasujícího v anketě</li>
     </ul></section>
   </div>
 
-  <p class="note">Stav k 13. 11. 2026. Časy stahování čištění, závad a ulic platí od nejbližšího nasazení.</p>
+  <p class="note">Stav k 13. 11. 2026. Časy stahování čištění, podnětů a ulic platí od nejbližšího nasazení.</p>
 </main>
 </body>
 </html>
