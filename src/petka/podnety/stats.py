@@ -1,5 +1,5 @@
 """What the /verejny-prostor/zavady page says about the reports of one period: how many, how they stand, how
-long they take, by month, by category and on a grid map. Pure functions over report rows
+long they take, by month, by category and on the map. Pure functions over report rows
 (dicts as stored in citizen_reports), testable without a database.
 
 Every report has one outcome:
@@ -28,7 +28,7 @@ OUTCOMES = ("vyreseno", "ceka", "jinam", "nelze")
 
 MIN_MEDIAN = 5                  # fewer resolved reports with a note than this: no "obvykle za"
 MIN_HIGHLIGHT = 10              # a category needs this many reports in the period to be highlighted
-CELL = 150                      # metres, the map's grid
+CELL = 150                      # metres, the grid of a street page's map (ulice)
 TOP = 5                         # "Čeho se týkají": this many categories, then "ostatní"
 
 
@@ -215,7 +215,67 @@ def highlight(rows: list[dict], cats: list[dict], p: Period) -> dict | None:
             "full": full, "oldest": oldest["reported_at"].date(), "street": oldest["street"]}
 
 
-# --- the map --------------------------------------------------------------------------------
+# --- the map ---------------------------------------------------------------------------------
+
+STAV = (("", "Vše"), ("ceka", "Čeká"), ("vyreseno", "Vyřešeno"))     # the filter above the map
+LIST = 15                       # rows of the list beside the map, and how many "Další podněty" adds
+
+
+def stav_key(v: str) -> str:
+    return v if v in dict(STAV) else ""
+
+
+def druh_key(v: str, rows: list[dict]) -> int | None:
+    """The category filter: a category id that the period has, else None (every category)."""
+    v = (v or "").strip()
+    return int(v) if v.isdigit() and any(r["category_id"] == int(v) for r in rows) else None
+
+
+def matches(r: dict, stav: str = "", druh: int | None = None) -> bool:
+    return (not stav or outcome(r) == stav) and (druh is None or r["category_id"] == druh)
+
+
+def facets(rows: list[dict], stav: str, druh: int | None) -> dict:
+    """The counts the filters show: each state within the chosen category, each category
+    within the chosen state (in the table's order), as a faceted search does."""
+    in_druh = [r for r in rows if matches(r, "", druh)]
+    in_stav = [r for r in rows if matches(r, stav)]
+    by: dict[int, int] = {}
+    for r in in_stav:
+        by[r["category_id"]] = by.get(r["category_id"], 0) + 1
+    return {"stav": [{"key": k, "label": label, "n": sum(matches(r, k) for r in in_druh), "on": k == stav}
+                     for k, label in STAV],
+            "druh": [{"id": c["id"], "name": c["name"], "n": by.get(c["id"], 0), "on": c["id"] == druh}
+                     for c in categories(rows)],
+            "all": len(in_stav)}
+
+
+def iso(t: dt.datetime | None) -> str | None:
+    return t.isoformat(timespec="minutes") if t else None
+
+
+def points(rows: list[dict], now: dt.datetime) -> dict:
+    """Every report of the period as a point for the map and its card: category, street (no
+    house number), the outcome as the page names it, the dates, how long it waits, the masked
+    description and a public photo. The filters run in the browser over these."""
+    feats = []
+    for r in sorted(rows, key=lambda r: (r["reported_at"], r["id"]), reverse=True):
+        o = outcome(r)
+        props = {"id": r["id"], "o": o, "w": WORD[o][0], "k": r["category_id"], "c": r["category"],
+                 "s": r["street"], "t": iso(r["reported_at"]), "a": iso(r.get("first_note_at")),
+                 "d": r.get("description"), "p": r.get("photo_url")}
+        if o == "ceka":
+            props["wd"] = max(0, (now - r["reported_at"]).days)
+        feats.append({"type": "Feature", "id": r["id"],
+                      "geometry": {"type": "Point", "coordinates": [round(r["lng"], 6), round(r["lat"], 6)]},
+                      "properties": {k: v for k, v in props.items() if v is not None}})
+    if not feats:
+        return {"type": "FeatureCollection", "features": [], "bounds": None}
+    lngs = [f["geometry"]["coordinates"][0] for f in feats]
+    lats = [f["geometry"]["coordinates"][1] for f in feats]
+    return {"type": "FeatureCollection", "features": feats,
+            "bounds": [[min(lngs), min(lats)], [max(lngs), max(lats)]]}
+
 
 def grid(rows: list[dict], cell: float = CELL) -> dict:
     """The reports counted on a grid of about `cell` metres, one point per cell at its centre
@@ -283,7 +343,6 @@ def summary(rows: list[dict], p: Period, now: dt.datetime) -> dict:
         "months": months(rows, p, today),
         "categories": cats,
         "highlight": highlight(rows, cats, p),
-        "newest": sorted(rows, key=lambda r: (r["reported_at"], r["id"]), reverse=True)[:6],
     }
 
 

@@ -155,6 +155,36 @@ def test_grid_counts_cells_never_points():
     assert stats.grid([])["features"] == []
 
 
+def test_points_carry_the_card_and_forwarded_never_wait():
+    rows = [rep(1, 1, at=NOW - 3 * D, first=NOW - 3 * D + 2 * H, street="Wolkerova"),
+            rep(2, 3, at=NOW - D, street=None),
+            rep(3, 1, "Městská policie", 25, at=NOW - 2 * D)]
+    rows[0].update(description="Rozbitá dlažba", photo_url="https://www.dejtip.eu/_fotoobce/x.jpeg")
+    g = stats.points(rows, NOW)
+    assert [f["id"] for f in g["features"]] == [2, 3, 1]                         # newest first
+    p = {f["id"]: f["properties"] for f in g["features"]}
+    assert p[1] == {"id": 1, "o": "ceka", "w": "čeká", "k": 19, "c": "Chodník", "s": "Wolkerova",
+                    "t": "2026-11-09T14:00", "a": "2026-11-09T16:00", "d": "Rozbitá dlažba",
+                    "p": "https://www.dejtip.eu/_fotoobce/x.jpeg", "wd": 3}
+    assert "s" not in p[2] and "d" not in p[2] and "p" not in p[2] and "wd" not in p[2]
+    assert (p[3]["o"], p[3]["w"]) == ("jinam", "předáno")                        # status 1, yet forwarded
+    assert g["features"][0]["geometry"]["coordinates"] == [15.76, 50.03]
+    assert stats.points([], NOW) == {"type": "FeatureCollection", "features": [], "bounds": None}
+
+
+def test_facets_count_each_filter_within_the_other():
+    rows = [rep(1, 1), rep(2, 3), rep(3, 3), rep(4, 1, "Autovrak", 17), rep(5, 1, "Městská policie", 25)]
+    f = stats.facets(rows, "", None)
+    assert [(x["key"], x["n"]) for x in f["stav"]] == [("", 5), ("ceka", 2), ("vyreseno", 2)]
+    assert {x["name"]: x["n"] for x in f["druh"]} == {"Chodník": 3, "Autovrak": 1, "Městská policie": 1}
+    f = stats.facets(rows, "ceka", 19)
+    assert [(x["key"], x["n"], x["on"]) for x in f["stav"]] == [("", 3, False), ("ceka", 1, True), ("vyreseno", 2, False)]
+    assert {x["name"]: x["n"] for x in f["druh"]} == {"Chodník": 1, "Autovrak": 1, "Městská policie": 0}
+    assert f["all"] == 2
+    assert stats.druh_key("19", rows) == 19 and stats.druh_key("99", rows) is None and stats.druh_key("x", rows) is None
+    assert stats.stav_key("ceka") == "ceka" and stats.stav_key("jinam") == ""
+
+
 # --- the page -------------------------------------------------------------------------------
 
 ROWS = ([rep(i, 3, at=NOW - (i + 1) * D, first=NOW - (i + 1) * D + 5 * H, last=NOW - i * D) for i in range(12)]
@@ -217,11 +247,26 @@ def test_page_content(page):
     assert "Nejdéle čekají podněty k hřištím" in m
     assert "předávají se strážníkům, stav v Dej Tipu se nemění" in m
     assert '<span class="st">vyřešeno</span>' in m and '<span class="st st-no">čeká</span>' in m
-    assert "Zobrazit vše na Dej Tipu" in m and "stav k 12. 11. 2026" in m
+    assert "stav k 12. 11. 2026" in m
     assert "Všechny podněty" not in m and "Co tu neuvidíte" not in m
     assert "aplikac" not in m.replace("aplikace Dej Tip", "").replace("aplikace <a", "")   # no app of ours
     assert "Jiránkova" in m                                                  # newest, street only
-    assert '"street"' not in m.split('id="pd-grid">')[1].split("</script>")[0]
+    assert "Podněty ukazujeme seskupené" not in m and "Nejnovější" not in m
+    assert "Klik na shluk mapu přiblíží, najetím na podnět zobrazíte jeho detail." in m
+    # the list: newest first, one row a link to the report on Dej Tip; the description only in the card
+    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    assert "V mapě 26 podnětů, nejnovější" in side and side.count("<li ") == 15
+    assert re.findall(r'<li data-id="(\d+)"', side)[:4] == ["203", "200", "201", "0"]
+    assert 'href="https://amg.dejtip.eu/pardubice/?id=200"' in side
+    assert '<span class="pd-rd">12.\u00a011.</span><span class="pd-rt"><b>Městská policie</b><span>Jiránkova</span></span><span class="st">předáno</span>' in side
+    assert 'href="/verejny-prostor/zavady?pocet=30#kde" data-pd-rows-more>Další podněty' in side
+    # the filters: counts for the period, links and a GET form without JS
+    assert '<a href="/verejny-prostor/zavady#kde" data-stav="" aria-current="true">Vše <b>26</b></a>' in m
+    assert '<a href="/verejny-prostor/zavady?stav=ceka#kde" data-stav="ceka">Čeká <b>11</b></a>' in m
+    assert '<option value="20">Pískoviště, hřiště, sportoviště (10)</option>' in m
+    assert '<a href="/verejny-prostor/zavady?druh=20#kde">Pískoviště, hřiště, sportoviště</a>' in m      # the table
+    pts = m.split('id="pd-points">')[1].split("</script>")[0]
+    assert '"o": "jinam", "w": "předáno"' in pts and "Jiránkova" in pts
 
 
 def test_no_middle_dot_anywhere_in_the_page(page):
@@ -241,8 +286,27 @@ def test_periods_and_links(page):
     assert '<a href="/verejny-prostor/zavady?detail=mesice"><span class="pd-d">Posledních 12 měsíců' in html
     assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=mesice" aria-current="page"' in html
     assert "podnětů v roce 2026" in html
-    html = page("/verejny-prostor/zavady?obdobi=2026&kategorie=20")
-    assert "Na mapě jen „Pískoviště, hřiště, sportoviště“" in html
+    html = page("/verejny-prostor/zavady?obdobi=2026&kategorie=20")          # an older link
+    assert '<option value="20" selected>' in html
+
+
+def test_filters_without_js(page):
+    m = main(page("/verejny-prostor/zavady?obdobi=2026&stav=ceka&druh=20&detail=mesice"))
+    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    assert "V mapě 10 podnětů, nejnovější" in side and side.count("<li ") == 10 and "Další podněty" not in side
+    assert all(x in side for x in ("Sokolovská", "čeká")) and "vyřešeno" not in side
+    assert 'data-stav="ceka" aria-current="true">Čeká <b>10</b>' in m
+    assert '<option value="20" selected>Pískoviště, hřiště, sportoviště (10)</option>' in m
+    assert '<option value="19">Chodník (1)</option>' in m                                  # waiting Chodník
+    for hidden in ('name="obdobi" value="2026"', 'name="detail" value="mesice"', 'name="stav" value="ceka"'):
+        assert f'<input type="hidden" {hidden}>' in m
+    # the period switch and the tiles keep the filter
+    assert 'href="/verejny-prostor/zavady?detail=mesice&amp;stav=ceka&amp;druh=20"' in m
+    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny&amp;stav=ceka&amp;druh=20#kpi"' in m
+    m = main(page("/verejny-prostor/zavady?stav=vyreseno&pocet=30"))
+    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    assert side.count("<li ") == 12 and "čeká" not in side
+    assert stats.LIST == 15
     assert web.link("12m") == "/verejny-prostor/zavady" and web.link("2025", detail="", kategorie=3) == "/verejny-prostor/zavady?obdobi=2025&kategorie=3"
 
 

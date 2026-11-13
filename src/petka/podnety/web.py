@@ -1,10 +1,11 @@
 """Podněty: the page /verejny-prostor/zavady and the API under /api/v1/podnety for the city app. The obvod is
 the request's (petka.obvody); everything else comes as query parameters.
 
-    /verejny-prostor/zavady            the period's reports in numbers, on a grid map and by category
+    /verejny-prostor/zavady            the period's reports in numbers, on the map and by category
                         ?obdobi=12m|<year>  ?detail=mesice|vyreseno|ceka|odpoved (the open tile,
-                        for a browser without JS)  ?kategorie=<id> or ?stav=ceka narrow the map
-                        ?druhy=vse lists every category on a phone
+                        for a browser without JS)  ?stav=ceka|vyreseno and ?druh=<category id>
+                        filter the map and its list (podnety.js does the same in place),
+                        ?pocet=N rows of the list  ?druhy=vse lists every category on a phone
 """
 
 import datetime as dt
@@ -40,26 +41,28 @@ def link(period: str, **params) -> str:
 
 
 @pages.get("", response_class=HTMLResponse)
-def overview(request: Request, obdobi: str = "12m", detail: str = DEFAULT_DETAIL, kategorie: str = "",
-             stav: str = "", druhy: str = ""):
+def overview(request: Request, obdobi: str = "12m", detail: str = DEFAULT_DETAIL, stav: str = "", druh: str = "",
+             kategorie: str = "", druhy: str = "", pocet: int = stats.LIST):
     now = _now()
     obvod = request.state.obvod.id
     p = stats.period(obdobi, now.date())
     rows = queries.period_rows(obvod, p.start, p.end)
     s = stats.summary(rows, p, now)
-    on_map, only = rows, None
-    if kategorie.strip().isdigit():
-        on_map = [r for r in rows if r["category_id"] == int(kategorie)]
-        only = on_map[0]["category"] if on_map else None
-    elif stav == "ceka":
-        on_map, only = [r for r in rows if stats.outcome(r) == "ceka"], "čekající podněty"
+    detail = detail if detail in DETAILS else DEFAULT_DETAIL
+    stav, kind = stats.stav_key(stav), stats.druh_key(druh or kategorie, rows)    # kategorie: older links
+    shown = sorted((r for r in rows if stats.matches(r, stav, kind)), key=lambda r: (r["reported_at"], r["id"]),
+                   reverse=True)
+    pocet = max(stats.LIST, min(pocet, len(shown)))
+    keep = {"detail": "" if detail == DEFAULT_DETAIL else detail, "stav": stav, "druh": kind or ""}
     checked = queries.checked(obvod)
     return tpl.TemplateResponse(request, "podnety/prehled.html", {
-        "per": p, "s": s, "switch": stats.switch(queries.years(obvod), p.key),
-        "detail": detail if detail in DETAILS else DEFAULT_DETAIL,
-        "q": lambda **kw: link(p.key, **kw), "link": link, "only": only, "all_kinds": druhy == "vse",
-        "grid": json.dumps(stats.grid(on_map), ensure_ascii=False).replace("<", "\\u003c"),
-        "checked": checked.date() if checked else None, "report": REPORT,
+        "per": p, "s": s, "switch": stats.switch(queries.years(obvod), p.key), "detail": detail,
+        "q": lambda **kw: link(p.key, **kw), "link": link, "all_kinds": druhy == "vse",
+        "f": lambda **kw: link(p.key, **{**keep, **kw}), "keep": keep,
+        "stav": stav, "druh": kind, "facets": stats.facets(rows, stav, kind),
+        "shown": shown[:pocet], "shown_n": len(shown), "more": pocet + stats.LIST if pocet < len(shown) else None,
+        "points": json.dumps(stats.points(rows, now), ensure_ascii=False).replace("<", "\\u003c"),
+        "checked": checked.date() if checked else None, "report": REPORT, "detail_url": source.detail,
         "status_word": stats.status_word, "w": words, "plural": words.plural,
     })
 

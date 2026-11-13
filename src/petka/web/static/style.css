@@ -1275,18 +1275,42 @@ a.cl-hint { color: var(--red-ink); }
 .pd-lg { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; font-size: .88rem; color: var(--ink-2); margin: 0; }
 .pd-lg > span { display: inline-flex; align-items: center; gap: .4rem; }
 .pd-lg i { display: inline-block; flex: none; width: .8rem; height: .8rem; border-radius: 2px; }
-.pd-lg .pd-k-dot { background: #fff; box-shadow: inset 0 0 0 1.8px var(--ink); border-radius: 50%; }
-.pd-lg .pd-k-round { border-radius: 50%; }
 .pd-two { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: 2.4rem; margin-top: 2.6rem; align-items: start; }
 .pd-h2 { margin: 0 0 .6rem; }
 .pd-map { height: auto; aspect-ratio: 760 / 560; margin: 0; border-color: var(--rule); }
 .pd-map-lg { margin-top: .7rem; }
-.pd-only { margin: 0 0 .6rem; color: var(--ink-2); }
 .pd-cap { font-size: .88rem; color: var(--muted); margin: .6rem 0 0; max-width: 68ch; }
-.pd-new .row { grid-template-columns: 4.4rem minmax(0, 1fr) auto; }
-.pd-new .row > .row-meta { margin: 0; }
-.pd-stw { padding-top: .1rem; }
-.pd-all { margin-top: .8rem; }
+/* „Kde“: filters over the map and its list; the list shows what the map shows, newest first */
+.pd-kde { margin-top: 2.6rem; }
+.pd-kde .pd-two { margin-top: 0; }
+.pd-flt { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; margin: 0 0 .9rem; }
+.pd-seg { margin: 0; }
+.pd-seg a { display: inline-flex; gap: .3em; padding: .35rem .8rem; font-weight: 650; font-size: .92rem; }
+.pd-seg a + a { border-left: 2px solid var(--ink); }
+.pd-seg b { font-weight: 650; }
+.pd-sel { display: inline-flex; align-items: center; gap: .5rem; max-width: 100%; font-weight: 650; font-size: .92rem; }
+.pd-sel select { min-width: 0; max-width: 100%; font: inherit; font-weight: 600; color: var(--ink); padding: .35rem .6rem; border: 2px solid var(--ink); border-radius: 3px; background: #fff; }
+.pd-go { min-height: 0; padding: .35rem .9rem; font-size: .92rem; }
+.pd-go[hidden], .pd-rows-more[hidden] { display: none; }
+.pd-mapw { position: relative; }
+.pd-side .side-h { margin-top: 0; }
+.pd-rows { list-style: none; margin: 0; padding: 0; }
+.pd-rows a { display: grid; grid-template-columns: 3.1rem minmax(0, 1fr) auto; gap: .1rem .6rem; align-items: baseline; padding: .38rem .55rem;
+  font-size: .86rem; line-height: 1.25; color: var(--ink); text-decoration: none; }
+.pd-rows li:nth-child(odd) a { background: var(--grey); }
+.pd-rows li.on a, .pd-rows a:hover, .pd-rows a:focus-visible { background: #d6dbe0; }
+.pd-rows a:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+.pd-rd { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pd-rt { min-width: 0; }
+.pd-rt b { display: block; font-weight: 700; }
+.pd-rt span { display: block; color: var(--muted); font-size: .8rem; }
+.pd-rows .st { white-space: nowrap; }
+.pd-rows-more { display: inline-block; margin-top: .8rem; font-weight: 650; }
+@media (max-width: 600px) { .pd-seg a + a { border-left: 0; } }   /* the phone .switch draws its own lines */
+.pd-lg .pd-k-pt { width: 14px; height: 14px; box-sizing: border-box; border: 2px solid var(--ink); border-radius: 50%; }
+.pd-lg .pd-k-pt:not(.pending-alert) { background: #fff; }
+.pd-lg .pd-k-cl { display: inline-grid; place-items: center; width: 24px; height: 24px; box-sizing: border-box; border: 2px solid var(--ink);
+  border-radius: 50%; background: #fff; color: var(--ink); font-style: normal; font-size: .6rem; font-weight: 800; }
 .pd-hl { margin-top: 2.6rem; padding: 1.2rem 1.4rem; background: var(--grey); }
 .pd-hl h2 { margin: 0 0 .4rem; font-size: 1.25rem; }
 .pd-hl p { margin: 0; max-width: 68ch; color: var(--ink-2); }
@@ -1304,7 +1328,6 @@ a.cl-hint { color: var(--red-ink); }
 .pd-cat-h span { font-variant-numeric: tabular-nums; font-weight: 650; }
 .pd-cat .pd-mini { width: auto; height: 9px; margin: .45rem 0 .3rem; }
 .pd-cat p { margin: 0; font-size: .85rem; color: var(--ink-2); }
-.map-pop .pd-pop-w { color: var(--red-ink); font-weight: 650; }
 @media (max-width: 900px) {
   .pd-d { display: none !important; }
   .pd-m { display: revert !important; }
@@ -1331,14 +1354,18 @@ a.cl-hint { color: var(--red-ink); }
   .pd-lg { gap: .3rem 1rem; font-size: .85rem; }
   .pd-flow { display: flex; flex-direction: column; }
   .pd-two { display: contents; }
-  .pd-o1 { order: 1; } .pd-o2 { order: 2; } .pd-o3 { order: 3; } .pd-o4 { order: 4; } .pd-o5 { order: 5; }
+  .pd-o1 { order: 1; } .pd-o2 { order: 2; } .pd-o3 { order: 3; } .pd-o5 { order: 5; }
   .pd-h2 { font-size: 1.3rem; margin: 2rem 0 .6rem; }
   .pd-o3 > .pd-h2 { margin-top: 2rem; }
   .pd-map-lg { margin-top: .6rem; }
   .pd-cap { font-size: .85rem; margin-top: .5rem; }
-  .pd-o4 .side-h { margin-top: 2rem; }
-  .pd-new .row { grid-template-columns: 3.6rem minmax(0, 1fr) auto; gap: .2rem 1rem; }
-  .pd-new .row:nth-child(n+5) { display: none; }
+  .pd-kde { margin-top: 0; }
+  .pd-flt { gap: .6rem 1rem; }
+  .pd-seg { --sw: 5.5rem; width: 100%; }
+  .pd-sel { width: 100%; }
+  .pd-sel select { flex: 1; }
+  .pd-map { aspect-ratio: auto; height: min(70vh, 460px); }
+  .pd-side .side-h { margin-top: 1.6rem; }
   .pd-hl { margin-top: 2rem; padding: 1rem; }
   .pd-hl h2 { font-size: 1.15rem; }
   .pd-more { display: none; }
@@ -1497,6 +1524,25 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ak-cla.ak-l .ak-tip { right: 16px; }
 .on > .ak-tip, :focus-visible > .ak-tip { opacity: 1; visibility: visible; }
 .ak-tip b { font-size: .9rem; font-weight: 750; }
+/* the card variant (mapTip.card, the podněty map): optional photo, what and where, the
+   reporter's words clamped to three lines, a few facts and a link; placed by the script, kept
+   open while pointed at so its toggle and link can be used */
+.ak-tip.ak-card { left: 0; top: 0; transform: none; z-index: 5; width: 300px; max-width: calc(100% - 16px); box-sizing: border-box; padding: 0; gap: 0;
+  overflow: hidden; font-size: .86rem; box-shadow: 0 2px 10px rgba(25, 28, 31, .18); }
+.ak-card.on { opacity: 1; visibility: visible; pointer-events: auto; }
+.ak-card img { display: block; width: 100%; height: 170px; object-fit: cover; background: var(--grey); }
+.ak-card-b { display: flex; flex-direction: column; gap: .1rem; padding: .6rem .75rem .7rem; }
+.ak-card-b > b { font-size: 1rem; font-weight: 750; }
+.ak-card-b > span { color: var(--ink-2); }
+.ak-card-q { margin: .4rem 0 0; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.ak-card-q.open { display: block; max-height: 7rem; overflow-y: auto; overscroll-behavior: contain; }
+.ak-card-more { align-self: flex-start; margin-top: .15rem; padding: 0; font: inherit; font-size: .82rem; font-weight: 650; color: var(--red-ink); background: none; border: 0; text-decoration: underline; cursor: pointer; }
+.ak-card dl { display: grid; gap: .1rem; margin: .45rem 0 .5rem; }
+.ak-card dl div { display: flex; justify-content: space-between; gap: 1rem; }
+.ak-card dt { color: var(--muted); }
+.ak-card dd { margin: 0; font-weight: 650; text-align: right; }
+.ak-card a { align-self: flex-start; font-weight: 650; }
+
 .ak-tw { font-weight: 650; color: var(--ink-2); }
 .ak-lg i.ak-lg-cl { border-top: 5px solid var(--field); }
 /* an area (parkoviště, vnitroblok) cleaned whole: a dashed square; on the overview a strip on
@@ -1519,6 +1565,8 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ak-list li { grid-template-columns: 5rem minmax(0, 1fr); margin: 0; padding: .65rem 0; font-size: .95rem; border-radius: 0; border-bottom: 1px solid var(--off); }
   .ak-list-r li { grid-template-columns: minmax(0, 1fr) auto; }
   .ak-tip { max-width: 200px; }
+  .ak-tip.ak-card { width: 280px; max-width: calc(100% - 16px); }
+  .ak-card img { height: 130px; }
 }
 
 /* who is behind it, and asking an AI assistant */
