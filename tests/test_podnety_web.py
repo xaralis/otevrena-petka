@@ -357,3 +357,24 @@ def test_the_bar_has_a_segment_per_outcome(page):
                                          "nepřísluší obvodu 1nelze vyřídit 1")      # no chybné: none in the period
     mini = re.findall(r'<span class="pd-mini" role="img" aria-label="([^"]*)">', m)
     assert "vyřešeno 0, čeká 0, předáno jinam 1, nepřísluší obvodu 0, nelze vyřídit 0, chybné nebo nepravdivé 0" in mini
+
+
+def test_street_filter(page, monkeypatch):
+    from petka.ulice import streets as ust
+    line = {"type": "LineString", "coordinates": [[15.75, 50.02], [15.76, 50.02]]}
+    monkeypatch.setattr(ust, "streets", lambda obvod: {
+        "sokolovska": ust.Street("sokolovska", "Sokolovská", 1, line, 1.0),
+        "jirankova": ust.Street("jirankova", "Jiránkova", 2, line, 1.0)})
+    assert stats.on_street(rep(street="SOKOLOVSKA "), "Sokolovská") and not stats.on_street(rep(street=None), "Sokolovská")
+    m = main(page("/verejny-prostor/podnety?ulice=sokolovska"))
+    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    assert "V mapě 10 podnětů, nejnovější" in side and "Wolkerova" not in side
+    assert 'data-stav="" aria-current="true">Čeká <b>10</b>' in m and 'data-stav="vse">Vše <b>10</b>' in m
+    assert '<input type="hidden" name="ulice" value="sokolovska">' in m
+    assert 'Ulice <b>Sokolovská</b> <a href="/verejny-prostor/podnety#kde" data-pd-street-clear>Všechny ulice</a>' in m
+    assert 'href="/verejny-prostor/podnety?stav=vse&amp;ulice=sokolovska#kde" data-stav="vse"' in m      # the filters keep it
+    m = main(page("/verejny-prostor/podnety?ulice=jirankova&stav=vse&druh=25"))
+    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    assert side.count("<li ") == 1 and "Městská policie" in side
+    m = main(page("/verejny-prostor/podnety?ulice=neni"))                     # not a street of the obvod: ignored
+    assert "data-pd-street" not in m and "V mapě 11 podnětů" in m

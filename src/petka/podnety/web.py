@@ -4,7 +4,8 @@ the request's (petka.obvody); everything else comes as query parameters.
     /verejny-prostor/podnety            the period's reports in numbers, on the map and by category
                         ?obdobi=12m|<year>  ?detail=mesice|vyreseno|ceka|odpoved (the open tile,
                         for a browser without JS)  ?stav=vyreseno|vse (waiting by default) and ?druh=<category id>
-                        filter the map and its list (podnety.js does the same in place),
+                        filter the map and its list (podnety.js does the same in place), as does
+                        ?ulice=<slug> (one street of the obvod, by the name Dej Tip gives),
                         ?pocet=N rows of the list  ?druhy=vse lists every category on a phone
 """
 
@@ -42,24 +43,29 @@ def link(period: str, **params) -> str:
 
 @pages.get("", response_class=HTMLResponse)
 def overview(request: Request, obdobi: str = "12m", detail: str = DEFAULT_DETAIL, stav: str = "", druh: str = "",
-             kategorie: str = "", druhy: str = "", pocet: int = stats.LIST):
+             kategorie: str = "", druhy: str = "", pocet: int = stats.LIST, ulice: str = ""):
     now = _now()
     obvod = request.state.obvod.id
     p = stats.period(obdobi, now.date())
     rows = queries.period_rows(obvod, p.start, p.end)
     s = stats.summary(rows, p, now)
     detail = detail if detail in DETAILS else DEFAULT_DETAIL
-    stav, kind = stats.stav_key(stav), stats.druh_key(druh or kategorie, rows)    # kategorie: older links
-    shown = sorted((r for r in rows if stats.matches(r, stav, kind)), key=lambda r: (r["reported_at"], r["id"]),
+    # ?ulice=<slug>: the map, its list and the filters' counts only for one street of the obvod
+    from ..ulice.streets import streets
+    street = streets(obvod).get(ulice.strip()) if ulice.strip() else None
+    here = [r for r in rows if stats.on_street(r, street.name)] if street else rows
+    stav, kind = stats.stav_key(stav), stats.druh_key(druh or kategorie, here)    # kategorie: older links
+    shown = sorted((r for r in here if stats.matches(r, stav, kind)), key=lambda r: (r["reported_at"], r["id"]),
                    reverse=True)
     pocet = max(stats.LIST, min(pocet, len(shown)))
-    keep = {"detail": "", "stav": stats.stav_url(stav), "druh": kind or ""}    # links never carry the open tile
+    keep = {"detail": "", "stav": stats.stav_url(stav), "druh": kind or "",    # links never carry the open tile
+            "ulice": street.slug if street else ""}
     checked = queries.checked(obvod)
     return tpl.TemplateResponse(request, "podnety/prehled.html", {
         "per": p, "s": s, "switch": stats.switch(queries.years(obvod), p.key), "detail": detail,
         "q": lambda **kw: link(p.key, **kw), "link": link, "all_kinds": druhy == "vse",
         "f": lambda **kw: link(p.key, **{**keep, **kw}), "keep": keep,
-        "stav": stav, "druh": kind, "facets": stats.facets(rows, stav, kind),
+        "stav": stav, "druh": kind, "facets": stats.facets(here, stav, kind), "street": street,
         "shown": shown[:pocet], "shown_n": len(shown), "more": pocet + stats.LIST if pocet < len(shown) else None,
         "points": json.dumps(stats.points(rows, now), ensure_ascii=False).replace("<", "\\u003c"),
         "checked": checked.date() if checked else None, "report": REPORT, "detail_url": source.detail,

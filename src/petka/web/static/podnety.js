@@ -10,7 +10,6 @@
 //            pointed at, a click or a tap pins it, a click elsewhere or Escape closes it
 //   list     the reports in view after the filters, newest first, 15 at a time
 (function () {
-  const INK = "#191c1f", RED = "#de091c", PINK = "#f4a3aa";
   const LIST = 15;
 
   // --- tiles ----------------------------------------------------------------------------------
@@ -39,7 +38,7 @@
   // --- „Kde“ ---------------------------------------------------------------------------------
   const el = document.querySelector("[data-pd-map]");
   const form = document.querySelector("[data-pd-filter]");
-  if (!el || !form || !window.maplibregl || !window.pmtiles || !window.mapTip) return;
+  if (!el || !form || !window.maplibregl || !window.pmtiles || !window.mapTip || !window.reportMap) return;
   const data = JSON.parse(document.getElementById("pd-points").textContent);
   const feats = data.features;                      // newest first
   const byId = new Map(feats.map((f) => [f.properties.id, f]));
@@ -49,7 +48,7 @@
   const seg = form.querySelectorAll("[data-stav]");
   const select = form.querySelector("select[name=druh]");
   const go = form.querySelector(".pd-go");
-  const DETAIL = "https://amg.dejtip.eu/pardubice/?id=";
+  const DETAIL = window.reportMap ? window.reportMap.DETAIL : "";
   if (go) go.hidden = true;
 
   // the filter, from the address the server rendered
@@ -59,7 +58,13 @@
   let stav = ["vyreseno", "vse"].includes(params.get("stav")) ? params.get("stav") : "";
   let druh = /^\d+$/.test(params.get("druh") || params.get("kategorie") || "") ? +(params.get("druh") || params.get("kategorie")) : null;
   if (druh !== null && !known(druh)) druh = null;
-  const match = (p, st, dr) => (st === "vse" || p.o === (st || "ceka")) && (dr === null || p.k === dr);
+  // ?ulice=<slug>: one street, its name in the chip the server rendered ("Všechny ulice" clears it)
+  const fold = (t) => (t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  const chip = form.querySelector("[data-pd-street]");
+  let street = chip ? fold(chip.dataset.pdStreet) : null;
+  const slug = params.get("ulice");
+  const match = (p, st, dr) => (st === "vse" || p.o === (st || "ceka")) && (dr === null || p.k === dr)
+    && (street === null || fold(p.s) === street);
   const current = () => feats.filter((f) => match(f.properties, stav, druh));
   Array.from(select.options).forEach((o) => (o.dataset.name = o.textContent.replace(/ \(\d+\)$/, "")));
 
@@ -80,6 +85,7 @@
     const url = new URL(location.href);
     stav ? url.searchParams.set("stav", stav) : url.searchParams.delete("stav");
     druh !== null ? url.searchParams.set("druh", druh) : url.searchParams.delete("druh");
+    street !== null ? url.searchParams.set("ulice", slug) : url.searchParams.delete("ulice");
     ["kategorie", "pocet"].forEach((k) => url.searchParams.delete(k));
     url.hash = "";
     history.replaceState(null, "", url);
@@ -88,6 +94,7 @@
       const u = new URL(a.href);
       stav ? u.searchParams.set("stav", stav) : u.searchParams.delete("stav");
       druh !== null ? u.searchParams.set("druh", druh) : u.searchParams.delete("druh");
+      street !== null ? u.searchParams.set("ulice", slug) : u.searchParams.delete("ulice");
       a.href = u.pathname + u.search + u.hash;
     });
     let h = form.querySelector("input[name=stav]");
@@ -95,7 +102,7 @@
     if (h) { if (stav) h.value = stav; else h.remove(); }
   }
 
-  let apply = () => {};          // the map's part, once it is there
+  let apply = () => {}, fitAll = () => {};      // the map's part, once it is there
   function filter(st, dr) {
     stav = st;
     druh = dr !== null && known(dr) ? dr : null;
@@ -105,6 +112,15 @@
   }
   counts();
   seg.forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); filter(a.dataset.stav, druh); }));
+  if (chip) chip.querySelector("[data-pd-street-clear]").addEventListener("click", (e) => {
+    e.preventDefault();
+    street = null;
+    chip.remove();
+    const h = form.querySelector("input[name=ulice]");
+    if (h) h.remove();
+    filter(stav, druh);
+    fitAll();          // the whole obvod again
+  });
   select.addEventListener("change", () => filter(stav, select.value ? +select.value : null));
   form.addEventListener("submit", (e) => { e.preventDefault(); filter(stav, select.value ? +select.value : null); });
   // the table, the waiting categories, the highlight: links to #kde set the filter and scroll
@@ -151,84 +167,17 @@
     return b;
   }
 
-  // the hatch of .pending-alert, at pixelRatio 2: pink with red stripes 3 px wide every 6 px
-  function hatch(g, size) {
-    g.fillStyle = PINK; g.fillRect(0, 0, size, size);
-    g.strokeStyle = RED; g.lineWidth = 6;
-    for (let x = -size; x < 2 * size; x += 12) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x + size, size); g.stroke(); }
-  }
-  function canvas(css) {
-    const c = document.createElement("canvas");
-    c.width = c.height = css * 2;
-    return [c, c.getContext("2d")];
-  }
-  // one report: a 14 px circle with a 2 px ink border, white or hatched
-  function point(waiting) {
-    const [c, g] = canvas(18), m = 18;
-    g.save(); g.beginPath(); g.arc(m, m, 14, 0, 2 * Math.PI); g.clip();
-    if (waiting) hatch(g, 36); else { g.fillStyle = "#fff"; g.fill(); }
-    g.restore();
-    g.beginPath(); g.arc(m, m, 13, 0, 2 * Math.PI); g.lineWidth = 4; g.strokeStyle = INK; g.stroke();
-    return g.getImageData(0, 0, 36, 36);
-  }
-  // a cluster of n, w of them waiting: radius 10 + 1.7 √n px, the hatched wedge from twelve
-  // o'clock, an ink ring, a white middle with the count
-  function cluster(n, w) {
-    const r = 10 + 1.7 * Math.sqrt(n), css = Math.ceil(2 * r + 4), [c, g] = canvas(css), m = css, R = 2 * r;
-    g.beginPath(); g.arc(m, m, R, 0, 2 * Math.PI); g.fillStyle = "#fff"; g.fill();
-    if (w > 0) {
-      g.save(); g.beginPath(); g.moveTo(m, m);
-      g.arc(m, m, R, -Math.PI / 2, -Math.PI / 2 + 2 * Math.PI * Math.min(1, w / n)); g.closePath(); g.clip();
-      hatch(g, 2 * css); g.restore();
-    }
-    g.beginPath(); g.arc(m, m, R - 2, 0, 2 * Math.PI); g.lineWidth = 4; g.strokeStyle = INK; g.stroke();
-    g.beginPath(); g.arc(m, m, R - 10, 0, 2 * Math.PI); g.fillStyle = "#fff"; g.fill();
-    g.fillStyle = INK; g.font = '800 23px "Bricolage Grotesque", system-ui, sans-serif';
-    g.textAlign = "center"; g.textBaseline = "middle";
-    g.fillText(String(n), m, m + 1);
-    return g.getImageData(0, 0, 2 * css, 2 * css);
-  }
-
-  // --- words of the card and the list ---
-  const plural = (n, one, few, many) => (n === 1 ? one : n >= 2 && n <= 4 ? few : many);
-  const thisYear = new Date().getFullYear();
-  function dm(iso) { const [y, mo, d] = iso.slice(0, 10).split("-").map(Number); return `${d}. ${mo}.` + (y !== thisYear ? ` ${y}` : ""); }
-  function when(iso) {
-    const h = +iso.slice(11, 13), mi = iso.slice(14, 16);
-    return `${dm(iso)} ${[2, 3, 4, 12, 13, 14, 20, 21, 22, 23].includes(h) ? "ve" : "v"} ${h}:${mi}`;
-  }
-  // the card's status is Dej Tip's own word (red while it waits); how long it waits is a fact of its own
-  function state(p) {
-    return [p.w, p.o === "ceka" ? "st-no" : ""];
-  }
-  function waiting(p) {
-    if (p.o !== "ceka") return null;
-    const n = p.wd || 0;
-    return n < 1 ? "od dneška" : `${n} ${plural(n, "den", "dny", "dní")}`;
-  }
+  const R = window.reportMap, plural = R.plural, dm = R.dm;
 
   function draw(map) {
     const empty = { type: "FeatureCollection", features: [] };
-    map.addImage("pd-pt", point(false), { pixelRatio: 2 });
-    map.addImage("pd-pt-w", point(true), { pixelRatio: 2 });
-    map.on("styleimagemissing", (e) => {
-      const m = /^pd-c-(\d+)-(\d+)$/.exec(e.id);
-      if (m && !map.hasImage(e.id)) map.addImage(e.id, cluster(+m[1], +m[2]), { pixelRatio: 2 });
-    });
+    R.images(map, "pd");
     const shown = () => ({ type: "FeatureCollection", features: current() });
-    map.addSource("pd", { type: "geojson", data: shown(), cluster: true, clusterRadius: 44, clusterMaxZoom: 16,
-                          clusterProperties: { waiting: ["+", ["case", ["==", ["get", "o"], "ceka"], 1, 0]] } });
+    map.addSource("pd", { type: "geojson", data: shown(), ...R.clustered });
     map.addSource("pd-hl", { type: "geojson", data: empty });
-    const solo = { "icon-allow-overlap": true, "icon-ignore-placement": true };
-    map.addLayer({ id: "pd-pt", type: "symbol", source: "pd", filter: ["!", ["has", "point_count"]],
-                   layout: { ...solo, "icon-image": ["case", ["==", ["get", "o"], "ceka"], "pd-pt-w", "pd-pt"],
-                             "symbol-sort-key": ["case", ["==", ["get", "o"], "ceka"], 1, 0] } });
-    map.addLayer({ id: "pd-cl", type: "symbol", source: "pd", filter: ["has", "point_count"],
-                   layout: { ...solo, "icon-image": ["concat", "pd-c-", ["to-string", ["get", "point_count"]], "-",
-                                                     ["to-string", ["get", "waiting"]]],
-                             "symbol-sort-key": ["get", "point_count"] } });
+    R.layers(map, "pd", "pd");
     map.addLayer({ id: "pd-ring", type: "circle", source: "pd-hl",
-                   paint: { "circle-radius": 11, "circle-opacity": 0, "circle-stroke-color": INK, "circle-stroke-width": 3 } });
+                   paint: { "circle-radius": 11, "circle-opacity": 0, "circle-stroke-color": R.INK, "circle-stroke-width": 3 } });
 
     // --- the card ---
     let open = null, pinned = false, card = null, timer = null;
@@ -242,18 +191,9 @@
     function show(id) {
       clearTimeout(timer);
       if (open !== id) {
-        const f = byId.get(id), p = f.properties;
-        const [word, cls] = state(p);
-        const facts = [["nahlášeno", when(p.t)]];
-        if (p.a) facts.push(["odpověď úřadu", when(p.a)]);
-        facts.push(["stav", word, cls]);
-        const long = waiting(p);
-        if (long) facts.push(["čeká", long]);
+        const f = byId.get(id);
         if (card) card.remove();
-        card = window.mapTip.card({
-          photo: p.p, alt: `Fotka z podnětu: ${p.c}${p.s ? ", " + p.s : ""}`, title: p.c, place: p.s, text: p.d,
-          facts, href: DETAIL + p.id, link: "Otevřít na Dej Tipu",
-        }, place);
+        card = R.card(f.properties, place);
         card.addEventListener("mouseenter", () => clearTimeout(timer));
         card.addEventListener("mouseleave", () => { if (!pinned) later(); });
         wrap.appendChild(card);
@@ -345,6 +285,7 @@
     map.on("moveend", () => render(true));
     render(true);
 
+    fitAll = () => { const fs = current(); if (fs.length) map.fitBounds(bounds(fs), { padding: 30, maxZoom: 16 }); };
     apply = () => {
       close();
       map.getSource("pd").setData(shown());

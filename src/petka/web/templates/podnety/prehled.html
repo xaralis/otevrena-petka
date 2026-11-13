@@ -112,6 +112,8 @@
         {% for k in facets.druh %}<option value="{{ k.id }}"{% if k.on %} selected{% endif %}>{{ k.name }} ({{ k.n }})</option>
         {% endfor %}
       </select></label>
+      {% if street %}<input type="hidden" name="ulice" value="{{ street.slug }}">
+      <p class="pd-street" data-pd-street="{{ street.name }}">Ulice <b>{{ street.name }}</b> <a href="{{ f(ulice='') }}#kde" data-pd-street-clear>Všechny ulice</a></p>{% endif %}
       <button class="btn btn-o pd-go" type="submit">Zobrazit</button>
     </form>
     <div class="pd-two">
@@ -157,4 +159,4 @@
 </div>
 {% endif %}
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('podnety.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('reports.js') }}" defer></script><script src="{{ asset('podnety.js') }}" defer></script>{% endblock %}

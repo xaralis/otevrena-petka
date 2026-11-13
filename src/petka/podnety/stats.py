@@ -257,6 +257,12 @@ def matches(r: dict, stav: str = "", druh: int | None = None) -> bool:
     return (not stav or outcome(r) == stav) and (druh is None or r["category_id"] == druh)
 
 
+def on_street(r: dict, name: str) -> bool:
+    """Whether a report is filed under the street `name` (case and accents aside)."""
+    from ..usneseni.text import fold
+    return bool(r.get("street")) and fold(r["street"].strip()) == fold(name.strip())
+
+
 def facets(rows: list[dict], stav: str, druh: int | None) -> dict:
     """The counts the filters show: each state within the chosen category, each category
     within the chosen state (in the table's order), as a faceted search does."""
