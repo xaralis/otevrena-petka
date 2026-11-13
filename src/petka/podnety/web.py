@@ -23,7 +23,7 @@ pages = APIRouter(prefix="/verejny-prostor/podnety", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/podnety", tags=["podněty"])
 
 DETAILS = ("mesice", "vyreseno", "ceka", "odpoved", "zadny")     # zadny: every tile closed
-DEFAULT_DETAIL = "ceka"
+DEFAULT_DETAIL = "mesice"     # the first tile opens by default
 REPORT = source.HOME
 TZ = ZoneInfo("Europe/Prague")
 

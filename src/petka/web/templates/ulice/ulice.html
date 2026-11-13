@@ -53,6 +53,7 @@
 
 <section class="ul-akt" id="aktualne" aria-labelledby="ul-akt-h">
   <h2 id="ul-akt-h">Aktuálně</h2>
+  <p class="label ul-akt-sub">Za posledních 30 dnů a co se chystá</p>
   <div class="ul-akt-map">
     <div class="ul-mapw">
       <div class="map ul-map" data-ul-map data-name="{{ s.name }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-icons="{{ asset('deska-ikony.svg') }}" data-inline="ul-map-json" role="region" aria-label="Mapa ulice {{ s.name }}: podněty, blokové čištění a oznámení z úřední desky; stejné údaje jsou v seznamu"></div>
@@ -74,7 +75,7 @@
     {% if rows %}
     <ol class="pd-rows ul-rows" data-ul-rows>
       {% for r in rows %}{% set tag = 'a' if r.href else 'span' %}
-      <li data-row="{{ r.key }}"{% if r.past %} class="ul-past"{% endif %}><{{ tag }}{% if r.href %} href="{{ r.href }}"{% if r.ext %} target="_blank" rel="noopener"{% endif %}{% else %} tabindex="0"{% endif %}><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></{{ tag }}></li>
+      <li data-row="{{ r.key }}" class="{{ 'ul-past' if r.past }}{{ ' ul-mapped' if r.on_map }}"><{{ tag }}{% if r.href %} href="{{ r.href }}"{% if r.ext %} target="_blank" rel="noopener"{% endif %}{% else %} tabindex="0"{% endif %}><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></{{ tag }}>{% if r.on_map %}<button type="button" class="ul-pin" data-ul-pin="{{ r.key }}" aria-label="Ukázat na mapě: {{ r.title }}" title="Ukázat na mapě"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg></button>{% endif %}</li>
       {% endfor %}
     </ol>
     {% if more %}<a class="pd-rows-more more" href="?radky=vse#aktualne">Starší události {{ loc }}</a>{% endif %}
@@ -90,11 +91,11 @@
   <div>
     <h3>Všechno k ulici {{ s.name }}</h3>
     <ul class="link-list">
-      <li><a href="{{ q_url }}">Rozhodnutí</a></li>
-      <li><a href="{{ cl_href }}">Blokové čištění</a></li>
-      <li><a href="{{ pd_url }}">Podněty</a></li>
-      <li><a href="{{ deska_url }}">Úřední deska</a></li>
-      <li class="soon"><a href="/verejny-prostor/uzavirky">Uzavírky</a><span>připravujeme</span></li>
+      <li><a href="{{ q_url }}">Rozhodnutí</a><span class="ak-n"><b>{{ n_res|ul_thousands }}</b> od roku 2018</span></li>
+      <li><a href="{{ cl_href }}">Blokové čištění</a><span class="ak-n">{% set nc = (cl.upcoming|length) + (cl.past|length) %}{% if nc %}<b>{{ nc }}</b> {{ 'termín' if nc == 1 else ('termíny' if nc < 5 else 'termínů') }} letos{% else %}letos ne{% endif %}</span></li>
+      <li><a href="{{ pd_url }}">Podněty</a><span class="ak-n">{% if rep.ceka %}<b>{{ rep.ceka }}</b> {{ 'čeká' if rep.ceka == 1 or rep.ceka > 4 else 'čekají' }}, {% endif %}<b>{{ rep.n }}</b> celkem</span></li>
+      <li><a href="{{ deska_url }}">Úřední deska</a><span class="ak-n">{% if n_notices %}<b>{{ n_notices }}</b> visí{% else %}teď nic nevisí{% endif %}</span></li>
+      <li class="soon"><a href="/verejny-prostor/uzavirky">Uzavírky</a><span class="ak-n">připravujeme</span></li>
     </ul>
   </div>
   {% if around %}

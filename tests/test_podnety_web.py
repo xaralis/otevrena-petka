@@ -241,8 +241,8 @@ def test_each_detail_is_rendered_open(page, detail):
 
 
 def test_default_and_closed(page):
-    assert open_detail(page("/verejny-prostor/podnety")) == ["ceka"]
-    assert open_detail(page("/verejny-prostor/podnety?detail=nesmysl")) == ["ceka"]
+    assert open_detail(page("/verejny-prostor/podnety")) == ["mesice"]
+    assert open_detail(page("/verejny-prostor/podnety?detail=nesmysl")) == ["mesice"]
     html = page("/verejny-prostor/podnety?detail=zadny")
     assert open_detail(html) == [] and 'aria-expanded="true"' not in html
 

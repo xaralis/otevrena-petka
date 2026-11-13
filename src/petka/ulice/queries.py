@@ -86,8 +86,8 @@ def next_cleaning_line(its: list[dict]) -> tuple[str, str | None]:
 # sub (the grey line), status (word, classes of .st), href, and what it points at on the map:
 # ids (reports), keys (cleaned places), mark (a notice's marker).
 
-ROWS = 8                # rows of „Aktuálně“ before „Starší události“
-CURRENT = 90            # days back that still count as „aktuálně“
+ROWS = 12               # rows of „Aktuálně“ at most before „Starší události“
+CURRENT = 30            # „Aktuálně“: the last 30 days, and what is still to come
 RECENT = 30             # days: a report this new keeps its own row, older resolved ones are summed by month
 PASSED = {"Městská policie": "předáno strážníkům", "Zastávky MHD": "předáno dopravnímu podniku"}
 KIND_ORDER = {"cl": 0, "deska": 1, "res": 2, "rep": 3, "month": 4}     # on one day, upcoming things first
@@ -183,16 +183,10 @@ def notice_row(m: dict, today: dt.date) -> dict:
 
 
 def current(rows: list[dict], today: dt.date) -> list[dict]:
-    """What „Aktuálně“ shows by default: cleaning still to come (the past ones are in the street's
-    harmonogram), anything from the last CURRENT days and every report that still waits."""
+    """What „Aktuálně“ shows by default: the last CURRENT days and what is still to come (an
+    upcoming cleaning); older things, waiting reports included, are a click away."""
     since = today - dt.timedelta(days=CURRENT)
-    def keep(r):
-        if r["kind"] == "cl":
-            return r["date"] >= today
-        if r["kind"] == "rep" and "st-no" in r["status"][1]:
-            return True
-        return r["date"] >= since
-    return [r for r in rows if keep(r)]
+    return [r for r in rows if r["date"] >= since]
 
 
 def rows(*groups: list[dict]) -> list[dict]:

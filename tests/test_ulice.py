@@ -368,13 +368,13 @@ def test_street_page(fixture):
               '<section class="ul-cl" id="cisteni"', "Lokalita podle harmonogramu Služeb", "cl-past",
               "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
               'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"', "Blokové čištění v celém obvodu",
-              '<li><a href="#cisteni">Blokové čištění</a></li>', "Odkud to víme", "Stavby a řízení: změna rozhodnutí",
-              f"rada, usnesení 310/2026{NB}R", 
-              "Všechno k ulici Wolkerova", '<li><a href="/radnice/uredni-deska?q=Wolkerova">Úřední deska</a></li>',
+              '<li><a href="#cisteni">Blokové čištění</a><span class="ak-n">', "Odkud to víme", "Stavby a řízení: změna rozhodnutí",
+               
+              "Všechno k ulici Wolkerova", '<li><a href="/radnice/uredni-deska?q=Wolkerova">Úřední deska</a><span class="ak-n">',
               'href="/verejny-prostor/uzavirky"', "Okolní ulice", '<li><a href="/verejny-prostor/ulice/lexova">Lexova</a></li>',
               'data-icons="/static/deska-ikony.svg', "petkamap.js", "ulice.js"):
         assert s in h, s
-    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "teď nic nevisí", "Související rozhodnutí", "pd-kpi",
+    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "Související rozhodnutí", "pd-kpi",
               "Jiná ulice", "crumbs", "/verejny-prostor/blokove-cisteni/ulice/wolkerova\""):
         assert s not in m, s
     keys = [k for k in __import__("re").findall(r'<li data-row="([^"]+)"', m)]
@@ -433,4 +433,6 @@ def test_current_rows():
     rows = [r("cl", dt.date(2026, 11, 26)), r("cl", dt.date(2026, 9, 17)), r("rep", dt.date(2025, 4, 10), ("evidováno", "st st-no")),
             r("rep", dt.date(2026, 6, 1)), r("res", dt.date(2026, 9, 23)), r("month", dt.date(2026, 10, 2))]
     got = q.current(rows, today)
-    assert [x["date"] for x in got] == [dt.date(2026, 11, 26), dt.date(2025, 4, 10), dt.date(2026, 9, 23), dt.date(2026, 10, 2)]
+    assert [x["date"] for x in got] == [dt.date(2026, 11, 26)]          # the last 30 days and what is to come
+    got = q.current(rows + [r("rep", dt.date(2026, 10, 20))], today)
+    assert [x["date"] for x in got] == [dt.date(2026, 11, 26), dt.date(2026, 10, 20)]

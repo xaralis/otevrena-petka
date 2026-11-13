@@ -1642,3 +1642,11 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ul-all { display: block; margin: 0 0 2.6rem; }
   .ul-all h3 { margin: 2.2rem 0 .5rem; }
 }
+
+/* „Aktuálně“ on a street page: a row with something on the map has a control that shows it there */
+.ul-akt-sub { margin: -.6rem 0 1rem; color: var(--muted); }
+.ul-rows li { position: relative; }
+.ul-rows li.ul-mapped > a, .ul-rows li.ul-mapped > span { padding-right: 2.8rem; }
+.ul-pin { position: absolute; right: .35rem; top: .45rem; display: grid; place-items: center; width: 2rem; height: 2rem; padding: 0;
+  border: 0; border-radius: 3px; background: transparent; color: var(--ink-2); cursor: pointer; }
+.ul-pin:hover, .ul-pin:focus-visible { background: var(--ink); color: #fff; outline: none; }

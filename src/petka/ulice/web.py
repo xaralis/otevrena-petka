@@ -159,6 +159,11 @@ def street(request: Request, slug: str, radky: str = ""):
     points = ps.points(reps, now)["features"]
     for f in points:
         f["properties"]["row"] = row_of.get(f["properties"]["id"])
+    # rows with something on the map get a control that shows it there
+    mapped = ({f["properties"]["row"] for f in points} | {f["properties"]["row"] for f in cleaning}
+              | {f"d{m['id']}" for m in marks})
+    for r in rows:
+        r["on_map"] = r["key"] in mapped
     data = {"street": s.geometry, "reports": {"type": "FeatureCollection", "features": points},
             "cleaning": {"type": "FeatureCollection", "features": cleaning}, "anchors": anchors,
             "marks": [{k: m[k] for k in ("id", "nid", "kind", "traffic", "what", "when", "label", "lng", "lat")}
@@ -174,7 +179,7 @@ def street(request: Request, slug: str, radky: str = ""):
         "rep": rep, "rep_chart": q.report_chart(reps, today), "pd_url": pd_url,
         "n_res": n_res, "last_res": res[0] if res else None, "res_chart": q.resolution_chart(res, today),
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
-        "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name),
+        "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "n_notices": _safe(q.notices_posted, s.name),
         "rows": rows if radky == "vse" else q.current(rows, today)[:q.ROWS],
         "more": radky != "vse" and len(rows) > len(q.current(rows, today)[:q.ROWS]), "data": data,
         "has": {"next": any(not f["properties"]["past"] and not f["properties"]["area"] for f in cleaning),

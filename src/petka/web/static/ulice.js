@@ -26,6 +26,7 @@
   const byId = new Map(reports.map((f) => [f.properties.id, f]));
   const idsOf = {};
   reports.forEach((f) => { if (f.properties.row) (idsOf[f.properties.row] ||= []).push(f.properties.id); });
+  const list = document.querySelector("[data-ul-rows]");
   const rowEl = (k) => (list ? list.querySelector(`li[data-row="${k}"]`) : null);
   const ahead = (f) => !f.properties.past;
 
@@ -78,6 +79,20 @@
       link.pin(fromReport(f.properties.id));    // the card has a toggle and a link: a click (a tap) pins it
     });
     if (list) list.querySelectorAll("li[data-row]").forEach((li) => link.wire(li.firstElementChild, () => fromRow(li.dataset.row)));
+    // the control beside a row: the map moves to what the row is about and keeps it shown
+    const featuresOf = (k) => [
+      ...(idsOf[k] || []).map((id) => byId.get(id)),
+      ...data.cleaning.features.filter((f) => f.properties.row === k),
+      ...data.marks.filter((m) => m.row === k),
+      ...data.anchors.filter((a) => a.row === k),
+    ];
+    if (list) list.querySelectorAll("[data-ul-pin]").forEach((b) => b.addEventListener("click", (e) => {
+      e.preventDefault();
+      const k = b.dataset.ulPin;
+      P.fit(map, featuresOf(k), { duration: 500, maxZoom: 17.5, padding: 60 });
+      if (window.matchMedia("(max-width: 900px)").matches) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      map.once("moveend", () => link.pin(fromRow(k)));
+    }));
     Object.entries(mark).forEach(([k, e]) => link.wire(e, () => ({ keys: [k], ids: [], card: null })));
   });
 })();
