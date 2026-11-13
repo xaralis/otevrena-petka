@@ -5,7 +5,6 @@
 {% block hero %}
 <section class="band band-section">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/verejny-prostor/blokove-cisteni">Blokové čištění ulic</a> <span aria-hidden="true">/</span> <span>{{ name }}</span></nav>
     <h1>{{ name }}</h1>
     <p class="band-lead cl-only-d">{% if next %}Příští blokové čištění je {{ next|cl_on }} {{ next|cl_dm }}{% if first.time %} {{ first|cl_clock }}{% endif %}{% if whole and first.side %}, {{ side_on[first.side] }} v celé délce{% elif whole %}, v celé délce ulice{% else %}: {{ on_next|map(attribute='short')|join('; ') }}{% endif %}.{% else %}Letos už se v ulici čistit nebude.{% endif %}</p>
   </div>
