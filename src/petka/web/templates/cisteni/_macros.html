@@ -46,3 +46,34 @@
 {% macro area_icon(size=14) -%}
 <svg viewBox="0 0 16 16" width="{{ size }}" height="{{ size }}" aria-hidden="true" focusable="false"><rect x="2" y="2" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2"/></svg>
 {%- endmacro %}
+
+{#- „Příští čištění“: the sign and the next date (`panel` of words.next_panel), or greyed out
+    with the last date this year (`last`); `in_harm` false: the street isn't in the harmonogram;
+    `link` (href, text) adds a link under the text -#}
+{% macro next_sign(panel, last=None, in_harm=True, link=None) %}
+<div class="cl-nx{% if not panel %} cl-nx-none{% endif %}">
+  {% if panel %}
+  {{ sign(panel.plate[0], panel.plate[1]) }}
+  <div class="cl-nx-t">
+    <span class="cl-nx-ey">{{ panel.lead }}<b>{{ panel.count }}</b>.</span>
+    <h2 class="cl-nx-h">{{ panel.on }} <em>{{ panel.date }}</em>{% if panel.clock %} {{ panel.clock }}{% endif %}</h2>
+    <p>Čistí se {{ panel.where }}. {{ panel.move }}<b>{{ panel.by }}</b>.</p>
+    {% if link %}<a class="cl-nx-a" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
+  </div>
+  {% elif in_harm %}
+  {{ sign('letos', 'už ne', off=True) }}
+  <div class="cl-nx-t">
+    <h2 class="cl-nx-h">Letos už se tu čistit nebude</h2>
+    <p>{% if last %}Naposledy se čistilo <b>{{ last }}</b> {% endif %}Termíny na příští rok doplníme, jakmile je Služby města zveřejní.</p>
+    {% if link %}<a class="cl-nx-a" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
+  </div>
+  {% else %}
+  {{ sign('letos', 'ne', off=True) }}
+  <div class="cl-nx-t">
+    <h2 class="cl-nx-h">Blokově se tu letos nečistí</h2>
+    <p>Ulice není v letošním harmonogramu Služeb města.</p>
+    {% if link %}<a class="cl-nx-a" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}

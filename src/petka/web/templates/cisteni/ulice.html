@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "cisteni/_macros.html" import sign %}
+{% from "cisteni/_macros.html" import next_sign %}
 {% block title %}{{ name }}: blokové čištění{% endblock %}
 {% block description %}Kdy proběhne blokové čištění v ulici {{ name }}: příští termín, mapa úseků a všechny letošní termíny podle harmonogramu Služeb města Pardubic.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -14,22 +14,7 @@
 <div class="cl-two">
   <div class="cl-col">
     <section class="cl-o1" aria-label="Příští čištění">
-      <div class="cl-nx{% if not next %} cl-nx-none{% endif %}">
-        {% if panel %}
-        {{ sign(panel.plate[0], panel.plate[1]) }}
-        <div class="cl-nx-t">
-          <span class="cl-nx-ey">{{ panel.lead }}<b>{{ panel.count }}</b>.</span>
-          <h2 class="cl-nx-h">{{ panel.on }} <em>{{ panel.date }}</em>{% if panel.clock %} {{ panel.clock }}{% endif %}</h2>
-          <p>Čistí se {{ panel.where }}. {{ panel.move }}<b>{{ panel.by }}</b>.</p>
-        </div>
-        {% else %}
-        {{ sign('letos', 'už ne', off=True) }}
-        <div class="cl-nx-t">
-          <h2 class="cl-nx-h">Letos už se tu čistit nebude</h2>
-          <p>{% if last %}Naposledy se čistilo <b>{{ last }}</b> {% endif %}Termíny na příští rok doplníme, jakmile je Služby města zveřejní.</p>
-        </div>
-        {% endif %}
-      </div>
+      {{ next_sign(panel, last) }}
       <div class="cl-act cl-only-m">
         <a class="btn btn-block" href="{{ webcal }}">Termíny do kalendáře</a>
         <a class="cl-hint" href="{{ ics }}">Stáhnout jako soubor .ics</a>

@@ -121,6 +121,27 @@ def genitive(name: str) -> str:
     return f"ulice {name}"
 
 
+def _simple(name: str) -> bool:
+    """A one-word adjective name we decline ('Wolkerova', 'Sokolovská'); the rest get 'ulice'."""
+    return " " not in name and name.endswith(("ova", "á"))
+
+
+def accusative(name: str) -> str:
+    """'Wolkerova' -> 'Wolkerovu', 'Sokolovská' -> 'Sokolovskou', else 'ulici Josefa Ressla'."""
+    if not _simple(name):
+        return f"ulici {name}"
+    return name[:-1] + ("u" if name.endswith("ova") else "ou")
+
+
+def locative(name: str) -> str:
+    """With its preposition: 'v Jiránkově', 've Wolkerově', 'v Sokolovské', else 'v ulici
+    Josefa Ressla'."""
+    if not _simple(name):
+        return f"v ulici {name}"
+    word = name[:-1] + ("ě" if name.endswith("ova") else "é")
+    return ("ve " if places.fold(name[0]) in "vfw" else "v ") + word
+
+
 def span(a: dt.date, b: dt.date) -> str:
     """'16.–22. 11.', '30. 11.–6. 12.', '18. 11.'."""
     if a == b:
