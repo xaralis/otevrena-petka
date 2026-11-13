@@ -90,6 +90,17 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
   <div class="cols-h" aria-hidden="true"><span>Sekce</span><span>Zdroj</span><span>Zpracování</span><span>Výstupy</span></div>
 
   <article class="sec">
+    <div class="sec-head"><b>Úřední deska</b><span>v provozu</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Exporty úřední desky MO V a magistrátu v otevřeném formátu (OFN), každou hodinu.</p></div>
+    <div class="cell"><h4>Zpracování</h4><ul>
+      <li>Oznámení se zařadí do 15 druhů podle názvu. Z magistrátní desky jen ta, která se týkají obvodu.</li>
+      <li>Z PDF dopravních oznámení pravidla přečtou platnost, důvod a dopravní značky.</li>
+      <li>Polidštěné karty: <span class="ai">AI</span> napíše návrh, silnější model ho oznámkuje (semafor). „Spolehlivé“ vyjdou samy, ostatní <span class="who">schvaluje starosta</span>.</li>
+    </ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Deska s polidštěnými kartami, detail oznámení</li><li>Mapa Aktuálně a stránky ulic</li><li>RSS, CSV, JSON, API, MCP</li></ul></div>
+  </article>
+
+  <article class="sec">
     <div class="sec-head"><b>Usnesení</b><span>v provozu</span></div>
     <div class="cell"><h4>Zdroj</h4><p>PDF zápisů zastupitelstva a rady na pardubice.eu, od roku 2018. Spouští se ručně po zveřejnění nového zápisu.</p></div>
     <div class="cell"><h4>Zpracování</h4><ul>
@@ -100,17 +111,6 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
       <li>Místa a pozemky se přiloží na mapu (RÚIAN, katastr).</li>
     </ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Vyhledávání (fulltext a podle významu), mapa, jednání, zastupitelé a jejich hlasování</li><li>Archiv PDF, RSS, CSV, JSON, GeoJSON, API, MCP</li></ul></div>
-  </article>
-
-  <article class="sec">
-    <div class="sec-head"><b>Úřední deska</b><span>v provozu</span></div>
-    <div class="cell"><h4>Zdroj</h4><p>Exporty úřední desky MO V a magistrátu v otevřeném formátu (OFN), každou hodinu.</p></div>
-    <div class="cell"><h4>Zpracování</h4><ul>
-      <li>Oznámení se zařadí do 15 druhů podle názvu. Z magistrátní desky jen ta, která se týkají obvodu.</li>
-      <li>Z PDF dopravních oznámení pravidla přečtou platnost, důvod a dopravní značky.</li>
-      <li>Polidštěné karty: <span class="ai">AI</span> napíše návrh, silnější model ho oznámkuje (semafor). „Spolehlivé“ vyjdou samy, ostatní <span class="who">schvaluje starosta</span>.</li>
-    </ul></div>
-    <div class="cell"><h4>Výstupy</h4><ul><li>Deska s polidštěnými kartami, detail oznámení</li><li>Mapa Aktuálně a stránky ulic</li><li>RSS, CSV, JSON, API, MCP</li></ul></div>
   </article>
 
   <article class="sec">
