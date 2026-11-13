@@ -1249,7 +1249,8 @@ a.cl-hint { color: var(--red-ink); }
 .pd-panel:not(:has(> section:not([hidden]))) { display: none; }
 .pd-panel h2 { margin: 0 0 1rem; font-size: 1.2rem; }
 .pd-under { margin: .7rem 0 0; }
-.pd-chart { --ph: 200px; }
+.pd-chart { --ph: 200px; overflow: visible; }   /* fits from 600px up; the edge labels may stick out a little */
+.pd-chart .rz-col b.low { display: none; }       /* a short resolved part keeps its number in the tooltip, not over the total */
 .pd-ph { height: var(--ph); }
 .pd-chart .rz-col div:not(.now) b { background: var(--ink); }
 .pd-yr small { display: block; font-size: .75rem; font-weight: 400; color: var(--muted); }
