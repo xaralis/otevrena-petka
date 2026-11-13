@@ -76,14 +76,14 @@
       <div class="pd-d">
         <p class="side-h">Čeho se týkají</p>
         <ul class="pd-plain">
-          {% for x in s.waiting_cats %}<li><a href="{{ f(druh=x.id, stav='') }}#kde">{{ x.name }}</a><b>{{ x.n }}</b></li>{% endfor %}
+          {% for x in s.waiting_cats %}<li><a href="{{ f(druh=x.id, stav='', detail='') }}#kde">{{ x.name }}</a><b>{{ x.n }}</b></li>{% endfor %}
           {% if s.waiting_rest %}<li><span>ostatní</span><b>{{ s.waiting_rest }}</b></li>{% endif %}
         </ul>
       </div>
       {% endif %}
     </div>
     {% set a, b = s.in_progress, s.received %}
-    <p class="pd-note pd-under"><span class="pd-d">{{ a }} {{ plural(a, 'podnět má', 'podněty mají', 'podnětů má') }} stav „v řešení“, {{ b }} {{ plural(b, 'je zatím jen přijatý', 'jsou zatím jen přijaté', 'je zatím jen přijatých') }}.{% if s.oldest_waiting %} Nejstarší čekající podnět v tomto období je {{ w.from_date(s.oldest_waiting) }}.{% endif %} <a href="{{ f(stav='ceka', druh='') }}#kde">Čekající podněty na mapě</a></span><span class="pd-m">{% if s.waiting_top_m %}Nejčastěji {{ w.join(s.waiting_top_m) }}. {% endif %}{{ a }} {{ plural(a, 'je', 'jsou', 'je') }} v řešení, {{ b }} zatím jen {{ plural(b, 'přijatý', 'přijaté', 'přijatých') }}. <a href="{{ f(stav='ceka', druh='') }}#kde">Čekající na mapě</a></span></p>
+    <p class="pd-note pd-under"><span class="pd-d">{{ a }} {{ plural(a, 'podnět má', 'podněty mají', 'podnětů má') }} stav „v řešení“, {{ b }} {{ plural(b, 'je zatím jen přijatý', 'jsou zatím jen přijaté', 'je zatím jen přijatých') }}.{% if s.oldest_waiting %} Nejstarší čekající podnět v tomto období je {{ w.from_date(s.oldest_waiting) }}.{% endif %} <a href="{{ f(stav='', druh='', detail='') }}#kde">Čekající podněty na mapě</a></span><span class="pd-m">{% if s.waiting_top_m %}Nejčastěji {{ w.join(s.waiting_top_m) }}. {% endif %}{{ a }} {{ plural(a, 'je', 'jsou', 'je') }} v řešení, {{ b }} zatím jen {{ plural(b, 'přijatý', 'přijaté', 'přijatých') }}. <a href="{{ f(stav='', druh='', detail='') }}#kde">Čekající na mapě</a></span></p>
   </section>
 
   <section data-pd-detail="odpoved" aria-label="Kdy úřad poprvé odpoví"{% if detail != 'odpoved' %} hidden{% endif %}>
@@ -139,14 +139,14 @@
       <thead><tr><th>Čeho se týkají</th><th class="num-cell">Podnětů</th><th class="num-cell">Vyřešeno</th><th class="num-cell">Čeká</th><th><span class="sr">Podíl</span></th><th class="num-cell">Obvyklá doba do vyřešení</th></tr></thead>
       <tbody>
       {% for k in s.categories %}
-        <tr><td><a href="{{ f(druh=k.id) }}#kde">{{ k.name }}</a>{% if k.note %}<br><span class="pd-note">{{ k.note }}</span>{% endif %}</td><td class="num-cell">{{ k.n }}</td><td class="num-cell">{{ '–' if k.forwarded else k.vyreseno }}</td><td class="num-cell">{{ '–' if k.forwarded else k.ceka }}</td><td>{{ mini(k) }}</td><td class="num-cell">{{ k.median }}</td></tr>
+        <tr><td><a href="{{ f(druh=k.id, detail='') }}#kde">{{ k.name }}</a>{% if k.note %}<br><span class="pd-note">{{ k.note }}</span>{% endif %}</td><td class="num-cell">{{ k.n }}</td><td class="num-cell">{{ '–' if k.forwarded else k.vyreseno }}</td><td class="num-cell">{{ '–' if k.forwarded else k.ceka }}</td><td>{{ mini(k) }}</td><td class="num-cell">{{ k.median }}</td></tr>
       {% endfor %}
       </tbody>
     </table>
     {% set regular = s.categories|rejectattr('forwarded')|list %}
     <ul class="pd-cat pd-m">
       {% for k in s.categories %}
-      <li{% if not k.forwarded and loop.index > 6 and not all_kinds %} class="pd-more"{% endif %}><div class="pd-cat-h"><a href="{{ f(druh=k.id) }}#kde">{{ k.name }}</a><span>{{ k.n }}</span></div>{{ mini(k) }}<p>{% if k.forwarded %}{{ k.note[:1]|upper }}{{ k.note[1:] }}.{% else %}{{ k.vyreseno }} vyřešeno, {{ w.waits(k.ceka) }}{% if k.median != '–' %}. Obvykle {{ k.median }}{% endif %}{% endif %}</p></li>
+      <li{% if not k.forwarded and loop.index > 6 and not all_kinds %} class="pd-more"{% endif %}><div class="pd-cat-h"><a href="{{ f(druh=k.id, detail='') }}#kde">{{ k.name }}</a><span>{{ k.n }}</span></div>{{ mini(k) }}<p>{% if k.forwarded %}{{ k.note[:1]|upper }}{{ k.note[1:] }}.{% else %}{{ k.vyreseno }} vyřešeno, {{ w.waits(k.ceka) }}{% if k.median != '–' %}. Obvykle {{ k.median }}{% endif %}{% endif %}</p></li>
       {% endfor %}
     </ul>
     {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a href="{{ f(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
