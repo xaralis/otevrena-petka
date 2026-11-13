@@ -1179,7 +1179,6 @@ a.cl-hint { color: var(--red-ink); }
 .cl-src { font-size: .82rem; color: var(--muted); margin: .8rem 0 0; }
 .cl-past td { color: var(--muted); }
 .cl-past td b { font-weight: 500; }
-.cl-tag { display: inline-block; font-size: .78rem; font-weight: 650; padding: .05rem .45rem; border-radius: 2px; background: var(--ink); color: #fff; margin-left: .4rem; vertical-align: .1em; }
 .cl-near { list-style: none; margin: 0; padding: 0; }
 .cl-near li { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--off); }
 .cl-near li span { color: var(--ink-2); white-space: nowrap; }
@@ -1190,7 +1189,6 @@ a.cl-hint { color: var(--red-ink); }
 .cl-list b { display: block; }
 .cl-list span { font-size: .92rem; color: var(--ink-2); }
 .cl-list .cl-past b, .cl-list .cl-past span { color: var(--muted); font-weight: 500; }
-.cl-list .cl-tag { color: #fff; }
 /* closures (NDIC), not filled yet: see cisteni/ulice.html */
 .cl-alert { margin-top: 2rem; padding: 1.1rem 1.3rem; background: #fff; border: 1px solid var(--rule); }
 .cl-alert h2 { font-size: 1.15rem; margin: 0 0 .4rem; display: flex; gap: .5rem; align-items: center; }
