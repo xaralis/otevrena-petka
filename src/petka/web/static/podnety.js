@@ -1,5 +1,4 @@
-// Podněty: the tiles open one shared detail panel in place (without JS each tile is a link to
-// ?detail=…, which the server renders open), the phone's "Všech N druhů", and „Kde“: the map
+// Podněty: the phone's "Všech N druhů" and „Kde“ (the tiles are kpi.js): the map
 // (petkamap.js) with its filters and list.
 //   filters  Vše / Čeká / Vyřešeno and Druh, with counts; without JS links and a GET form, here
 //            applied in place (history.replaceState); any link to #kde on the page sets them too
@@ -11,21 +10,6 @@
 //   list     the reports in view after the filters, newest first, 15 at a time
 (function () {
   const LIST = 15;
-
-  // --- tiles ----------------------------------------------------------------------------------
-  const tiles = document.querySelectorAll("[data-pd-tile]");
-  const details = document.querySelectorAll("[data-pd-detail]");
-  tiles.forEach((t) => {
-    t.setAttribute("role", "button");
-    t.addEventListener("click", (e) => {
-      e.preventDefault();
-      const key = t.dataset.pdTile, open = t.getAttribute("aria-expanded") !== "true";
-      tiles.forEach((x) => x.setAttribute("aria-expanded", String(open && x === t)));
-      details.forEach((d) => (d.hidden = !(open && d.dataset.pdDetail === key)));
-      // the open tile stays out of the address: it is a view, not something to link to
-    });
-    t.addEventListener("keydown", (e) => { if (e.key === " ") { e.preventDefault(); t.click(); } });
-  });
 
   // --- every category on a phone --------------------------------------------------------------
   const more = document.querySelector("[data-pd-more]");

@@ -1558,33 +1558,14 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .end-ask h2 { margin-bottom: .9rem; }
 }
 
-/* one street (petka.ulice): the sign panel of the cleaning page and two quiet facts with small
-   charts, „Aktuálně“ (the street's map | everything dated, rows like the podněty list), links.
-   Names start with ul- (.flip, .st, .tip are taken). */
+/* one street (petka.ulice): the tiles of the Podněty page over one panel (below), „Aktuálně“
+   (the street's map | what is current, rows like the podněty list), links; .ul-top is the
+   sign panel of a street that is only in the harmonogram. Names start with ul- (.flip, .st,
+   .tip are taken). */
 .ul-top { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 2.6rem; margin-top: 0; align-items: stretch; }
 .ul-sign { display: flex; }
 .ul-sign .cl-nx { flex: 1; }
 .cl-nx-a { display: inline-block; margin-top: .55rem; }
-.ul-facts { display: flex; flex-direction: column; justify-content: center; }
-.ul-fact { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.6rem; align-items: end; }
-.ul-fact + .ul-fact { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--off); }
-.ul-big { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; margin: .3rem 0 .2rem; }
-.ul-big b { font-size: var(--big); font-weight: 800; font-stretch: 85%; letter-spacing: -.02em; line-height: 1; }
-.ul-big b.ul-red { color: var(--red-ink); }
-.ul-big span { color: var(--ink-2); }
-.ul-ft p:not(.ul-big) { margin: .2rem 0 0; font-size: .92rem; color: var(--ink-2); }
-.ul-ft > a { display: inline-block; margin-top: .45rem; }
-/* the charts: one column a month (a year), one tile an item, from the bottom */
-.ul-chart { display: flex; flex-direction: column; gap: .25rem; width: max-content; max-width: 100%; margin: 0 0 .2rem; }
-.ul-tiles { display: flex; align-items: flex-end; gap: 3px; height: 66px; }
-.ul-tiles-m { gap: 2px; }
-.ul-col { display: flex; flex-direction: column-reverse; gap: var(--gap, 2px); width: 12px; }
-.ul-tiles-m .ul-col { width: 7px; }
-.ul-col i { display: block; width: 100%; background: var(--field); border-radius: 1px; }
-.ul-tiles-m .ul-col i { background: #b9c0c7; }
-.ul-tiles-m .ul-col i.ul-tw { background: var(--red); }
-.ul-tiles-m .ul-col i.ul-tp { background: #fff; box-shadow: inset 0 0 0 1px var(--ink); }
-.ul-ax { display: flex; justify-content: space-between; gap: 1rem; font-size: .75rem; color: var(--muted); }
 /* „Aktuálně“ */
 .ul-akt { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 1.2rem 2.2rem; margin-top: 3rem; align-items: start; }
 .ul-akt > h2 { grid-column: 1 / -1; margin: 0; }
@@ -1626,8 +1607,6 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ul-cl-grid { display: block; }
   .ul-cl-grid aside { margin-top: 2rem; }
   .cl-nx-a { margin-top: .4rem; }
-  .ul-fact, .ul-fact + .ul-fact { display: block; margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--off); }
-  .ul-fact .ul-chart { margin: .9rem 0 0; }
   .ul-akt { display: block; margin-top: 2rem; }
   .ul-akt > h2 { margin: 0 0 .8rem; }
   .ul-akt > .ul-akt-sub { margin: -.5rem 0 1rem; }
@@ -1654,3 +1633,20 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 
 /* the first heading of a page's content sits right under the band, as every other first block */
 main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
+
+/* a street's tiles: the Podněty page's, three of them; no red in the open (dark) tile */
+.ul-kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pd-kpi b .ul-red { color: var(--red); font-size: inherit; }
+.pd-kpi b.ul-red { color: var(--red-ink); }
+.pd-kpi a[aria-expanded="true"] .ul-red, .pd-kpi a[aria-expanded="true"] b.ul-red { color: #fff; }
+.ul-panel .cl-nx { background: none; padding: 0; }   /* the sign panel sits on the panel's grey */
+.ul-panel-more { display: inline-block; margin-top: .9rem; }
+.ul-res { list-style: none; margin: 0; padding: 0; }
+.ul-res li { padding: .55rem 0; border-bottom: 1px solid var(--off); line-height: 1.35; }
+.ul-res small { display: block; margin-bottom: .1rem; font-size: .8rem; color: var(--muted); }
+.ul-res a { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+@media (max-width: 900px) {
+  .ul-kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ul-kpi a:first-child { grid-column: 1 / -1; }   /* the next cleaning the full width, the two facts under it */
+  .ul-panel .pd-cols > div + div { margin-top: 1.8rem; }
+}

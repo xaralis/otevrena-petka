@@ -151,16 +151,14 @@ def test_short_title_and_charts():
     assert q.short_title("Investiční záměry k realizaci") == "investiční záměry k realizaci"
     assert q.short_title("MHD v ulici") == "MHD v ulici"
     assert q.short_title("Slovo " * 30, 20).endswith("…") and len(q.short_title("Slovo " * 30, 20)) <= 21
-    small = q.stack([["", "", "ul-tw"], []])
-    assert small == {"cols": [[("", 5), ("", 5), ("ul-tw", 5)], []], "gap": 2}
-    big = q.stack([[""] * 20 + ["ul-tw"] * 2])["cols"][0]
-    assert [c for c, _ in big] == ["", "ul-tw"] and sum(h for _, h in big) <= 66
     rows = [rep(1, 3, dt.datetime(2026, 5, 3)), rep(2, 1, dt.datetime(2026, 11, 1)), rep(3, 1, NOW, "Městská policie")]
-    c = q.report_chart(rows, TODAY)
-    assert (c["first"], c["last"], len(c["cols"])) == ("prosinec 2025", "listopad 2026", 12)    # at least a year
-    assert [k for k, _ in c["cols"][-1]] == ["ul-tp", "ul-tw"] and q.report_chart([], TODAY) is None
-    y = q.resolution_chart([{"date": D(2019, 1, 1)}, {"date": D(2026, 3, 1)}], TODAY)
-    assert (y["first"], y["last"], len(y["cols"])) == ("2018", "2026", 9) and "2019 1" in y["label"]
+    c = q.report_months(rows, TODAY)                      # the Podněty page's chart, at least a year
+    assert ([(x["y"], x["m"]) for x in c["cols"][::11]], len(c["cols"])) == ([(2025, 12), (2026, 11)], 12)
+    assert (c["cols"][-1]["n"], c["cols"][5]["n"], c["cols"][5]["done"]) == (2, 1, 1) and q.report_months([], TODAY) is None
+    assert q.report_kinds(rows, 1) == ([{"id": 19, "name": "Chodník", "n": 2}], 1)
+    y = q.resolution_years([{"date": D(2019, 1, 1)}, {"date": D(2026, 3, 1)}], TODAY)
+    assert ([x["abbr"] for x in y["cols"][::8]], len(y["cols"])) == (["2018", "2026"], 9) and "2019 1" in y["label"]
+    assert y["cols"][1]["n"] == y["cols"][1]["done"] == 1 and q.resolution_years([], TODAY) is None
 
 
 def test_declension():
@@ -358,11 +356,14 @@ def test_street_page(fixture):
     m = h.split('<main id="obsah"', 1)[1].split("</main>", 1)[0]
     for s in ("<h1>Wolkerova</h1>", "Kde se v ulici čistí, co se o ní rozhodlo a co v ní lidé hlásí.",
               "Příští čištění za ", f"<em>26.{NB}11.</em>", "Čistí se v celé ulici, po obou stranách.",
-              '<a class="cl-nx-a more" href="#cisteni">Celý harmonogram ulice</a>',
-              "Podněty z Dej Tipu", "<b>nic nečeká</b>", "1 nahlášený od května 2026, 1 vyřešený.",
-              '<a class="more" href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Podněty ve Wolkerově</a>',
-              "Rozhodnutí rady a zastupitelstva", "<b>19</b><span>usnesení zmiňuje Wolkerovu</span>",
-              f"Naposledy 23.{NB}9., přímé zadání opravy asfaltu.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení',
+              '<a class="cl-nx-a more" href="#cisteni">Celý harmonogram</a>',
+              # three tiles over one panel as on the Podněty page, the cleaning open
+              'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"', f'<b>čt <span class="ul-red">26.{NB}11.</span></b>',
+              'data-pd-tile="podnety" aria-controls="ul-panel" aria-expanded="false"', "<b>nic nečeká</b>",
+              "<span>1 podnět z Dej Tipu od května 2026, 1 vyřešený</span>", '<section data-pd-detail="podnety" aria-label="Podněty po měsících" hidden>',
+              '<a class="more ul-panel-more" href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Podněty ve Wolkerově na mapě</a>',
+              "<b>19</b><span>usnesení rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
+              'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení', "kpi.js",
               '<h2 id="ul-akt-h">Aktuálně</h2>',
               # the street's cleaning, a page of its own until 13. 11. 2026
               '<section class="ul-cl" id="cisteni"', "Lokalita podle harmonogramu Služeb", "cl-past",
@@ -374,7 +375,7 @@ def test_street_page(fixture):
               'href="/verejny-prostor/uzavirky"', "Okolní ulice", '<li><a href="/verejny-prostor/ulice/lexova">Lexova</a></li>',
               'data-icons="/static/deska-ikony.svg', "petkamap.js", "ulice.js"):
         assert s in h, s
-    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "Související rozhodnutí", "pd-kpi",
+    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "Související rozhodnutí",
               "Jiná ulice", "crumbs", "/verejny-prostor/blokove-cisteni/ulice/wolkerova\""):
         assert s not in m, s
     keys = [k for k in __import__("re").findall(r'<li data-row="([^"]+)"', m)]
@@ -444,3 +445,16 @@ def test_current_rows():
     assert [x["date"] for x in got] == [dt.date(2026, 11, 26), dt.date(2026, 10, 20)]
     waiting = {**r("rep", dt.date(2025, 4, 10), ("evidováno", "st st-no")), "open": True}
     assert q.current(rows + [waiting], today)[-1] is waiting          # a report still waiting is current, however old
+
+
+def test_street_tiles_open_by_detail(fixture, monkeypatch):
+    m = get("/verejny-prostor/ulice/wolkerova", params={"detail": "usneseni"}).text
+    assert 'data-pd-tile="usneseni" aria-controls="ul-panel" aria-expanded="true"' in m
+    assert '<section data-pd-detail="usneseni" aria-label="Usnesení po letech">' in m
+    assert '<section data-pd-detail="cisteni" aria-label="Příští blokové čištění" hidden>' in m
+    assert 'href="?detail=zadny#prehled" data-pd-tile="usneseni"' in m          # the open tile closes itself
+    m = get("/verejny-prostor/ulice/wolkerova", params={"detail": "nesmysl"}).text
+    assert 'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"' in m
+    monkeypatch.setattr(q, "street_reports", lambda obvod, name: [])
+    m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
+    assert "<b>letos ne</b>" in m and "<b>žádné</b><span>podněty z Dej Tipu</span>" in m and "<b>žádné</b><span>usnesení o ulici od roku 2018</span>" in m

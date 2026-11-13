@@ -1,54 +1,75 @@
 {% extends "base.html" %}
-{#- One street: the next cleaning and two quiet facts with small charts (reports by month,
-    resolutions by year), „Aktuálně“ (the street's map | everything dated on it, newest first;
-    rows and map point at each other, ulice.js), the street's cleaning (#cisteni) and links to
-    the rest. Phone: one column, the list under the map. -#}
+{#- One street: three tiles over one panel as on the Podněty page (the next cleaning, the
+    reports by month, the resolutions by year; kpi.js), „Aktuálně“ (the street's map | what is
+    current on it; rows and map point at each other, ulice.js), the street's cleaning
+    (#cisteni) and links to the rest. Phone: one column, the list under the map. -#}
 {% from "cisteni/_macros.html" import next_sign, area_icon, street_cleaning %}
-{% from "_portal.html" import band, source %}
+{% from "_portal.html" import band, source, column_chart %}
 {% block title %}{{ s.name }}{% endblock %}
 {% block description %}Ulice {{ s.name }} v obvodu Pardubice V: příští blokové čištění, podněty z Dej Tipu, rozhodnutí rady a zastupitelstva a co visí na úřední desce.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
 
-{#- a small stacked chart (petka.ulice.queries.stack) with its first and last label under it -#}
-{% macro chart(c, cls='') %}
-<div class="ul-chart"><span class="ul-tiles{{ ' ' ~ cls if cls }}" role="img" aria-label="{{ c.label }}" style="--gap:{{ c.gap }}px">{% for col in c.cols %}<span class="ul-col" title="{{ c.titles[loop.index0] }}">{% for k, h in col %}<i{% if k %} class="{{ k }}"{% endif %} style="height:{{ h }}px"></i>{% endfor %}</span>{% endfor %}</span><span class="ul-ax"><span>{{ c.first }}</span><span>{{ c.last }}</span></span></div>
-{% endmacro %}
+{#- a tile over the shared panel, as on the Podněty page (kpi.js); the big line and its label from the caller -#}
+{% macro tile(key, more) -%}
+<a href="?detail={{ 'zadny' if detail == key else key }}#prehled" data-pd-tile="{{ key }}" aria-controls="ul-panel" aria-expanded="{{ 'true' if detail == key else 'false' }}">{{ caller() }}<em>{{ more }}</em></a>
+{%- endmacro %}
 
 {% block hero %}{{ band(s.name, 'Kde se v ulici čistí, co se o ní rozhodlo a co v ní lidé hlásí.' ~ (' Část ulice patří k sousednímu obvodu.' if s.share < 0.95 else '')) }}{% endblock %}
 
 {% block main %}
-<div class="ul-top">
-  <section class="ul-sign" aria-label="Příští blokové čištění">
-    {{ next_sign(panel, last, in_harm, (cl_href, 'Celý harmonogram ulice' if in_harm else 'Blokové čištění v obvodu')) }}
+<div class="pd-kpi ul-kpi" id="prehled">
+  {% call tile('cisteni', 'Kdy přeparkovat' if next_date else 'Harmonogram') %}{% if next_date %}<b>{{ next_date|cl_wd }} <span class="ul-red">{{ panel.date }}</span></b><span>příští blokové čištění{{ ', ' ~ panel.clock if panel.clock }}</span>{% elif in_harm %}<b>letos už ne</b><span>blokové čištění{% if last %}, naposledy {{ last }}{% endif %}</span>{% else %}<b>letos ne</b><span>ulice není v harmonogramu čištění</span>{% endif %}{% endcall %}
+  {% call tile('podnety', 'Po měsících') %}{% if rep.n %}{% if rep.ceka %}<b class="ul-red">{{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}</b>{% else %}<b>nic nečeká</b>{% endif %}<span>{{ rep.n }} {{ cl_plural(rep.n, 'podnět', 'podněty', 'podnětů') }} z Dej Tipu {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešený', 'vyřešené', 'vyřešených') }}</span>{% else %}<b>žádné</b><span>podněty z Dej Tipu</span>{% endif %}{% endcall %}
+  {% call tile('usneseni', 'Po letech') %}{% if n_res %}<b>{{ n_res|ul_thousands }}</b><span>usnesení rady a zastupitelstva od roku 2018</span>{% else %}<b>žádné</b><span>usnesení o ulici od roku 2018</span>{% endif %}{% endcall %}
+</div>
+
+<div id="ul-panel" class="pd-panel ul-panel">
+  <section data-pd-detail="cisteni" aria-label="Příští blokové čištění"{% if detail != 'cisteni' %} hidden{% endif %}>
+    {{ next_sign(panel, last, in_harm, (cl_href, 'Celý harmonogram' if in_harm else 'Blokové čištění v obvodu')) }}
   </section>
-  <div class="ul-facts">
-    <section class="ul-fact" aria-labelledby="ul-pod-h">
-      <div class="ul-ft">
-        <p class="label" id="ul-pod-h">Podněty z Dej Tipu</p>
-        {% if rep.n %}
-        <p class="ul-big">{% if rep.ceka %}<b class="ul-red">{{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}</b>{% else %}<b>nic nečeká</b>{% endif %}</p>
-        <p>{{ rep.n }} {{ cl_plural(rep.n, 'nahlášený', 'nahlášené', 'nahlášených') }} {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešený', 'vyřešené', 'vyřešených') }}.</p>
-        <a class="more" href="{{ pd_url }}">Podněty {{ loc }}</a>
-        {% else %}
-        <p>Přes Dej Tip tu zatím nikdo nic nenahlásil.</p>
-        {% endif %}
+
+  <section data-pd-detail="podnety" aria-label="Podněty po měsících"{% if detail != 'podnety' %} hidden{% endif %}>
+    <h2>Podněty po měsících</h2>
+    {% if rep_months %}
+    <div class="pd-cols">
+      <div>
+        {{ column_chart(rep_months, 'podnětů') }}
+        <p class="pd-note pd-under">Nad sloupcem všechny podněty za měsíc, v tmavé části vyřešené.{% if rep_months.busiest %} Nejvíc jich přišlo {{ rep_months.busiest|join(' a ') }}.{% endif %}</p>
       </div>
-      {% if rep_chart %}{{ chart(rep_chart, 'ul-tiles-m') }}{% endif %}
-    </section>
-    <section class="ul-fact" aria-labelledby="ul-res-h">
-      <div class="ul-ft">
-        <p class="label" id="ul-res-h">Rozhodnutí rady a zastupitelstva</p>
-        {% if n_res %}
-        <p class="ul-big"><b>{{ n_res }}</b><span>usnesení {{ cl_plural(n_res, 'zmiňuje', 'zmiňují', 'zmiňuje') }} {{ acc }}</span></p>
-        {% if last_res %}{% set d = last_res.date %}<p>Naposledy {{ d|ul_dm if d.year == today.year else d|ul_dmy }}, {% set t = short_title(last_res.title or last_res.agenda_title or ('usnesení ' ~ last_res.number)) %}{{ t }}{{ '' if t.endswith('…') else '.' }}</p>{% endif %}
-        <a class="more" href="{{ q_url }}">{{ 'Celé usnesení' if n_res == 1 else 'Všechna ' ~ n_res ~ ' usnesení' if n_res < 5 else 'Všech ' ~ n_res ~ ' usnesení' }}</a>
-        {% else %}
-        <p>Žádné usnesení od roku 2018 ulici nezmiňuje.</p>
-        {% endif %}
+      <div>
+        <h3 class="side-h">Čeho se týkaly</h3>
+        <ul class="link-list">
+          {% for k in kinds %}<li><a href="{{ pd_kind }}{{ k.id }}#kde">{{ k.name }}</a><b>{{ k.n }}</b></li>{% endfor %}
+          {% if kinds_rest %}<li><span>ostatní</span><b>{{ kinds_rest }}</b></li>{% endif %}
+        </ul>
+        <a class="more ul-panel-more" href="{{ pd_url }}">Podněty {{ loc }} na mapě</a>
       </div>
-      {% if res_chart %}{{ chart(res_chart) }}{% endif %}
-    </section>
-  </div>
+    </div>
+    {% else %}
+    <p>Přes Dej Tip tu zatím nikdo nic nenahlásil. <a class="more" href="/verejny-prostor/podnety">Podněty v obvodu</a></p>
+    {% endif %}
+  </section>
+
+  <section data-pd-detail="usneseni" aria-label="Usnesení po letech"{% if detail != 'usneseni' %} hidden{% endif %}>
+    <h2>Usnesení po letech</h2>
+    {% if res_years %}
+    <div class="pd-cols">
+      <div>
+        {{ column_chart(res_years, 'usnesení', inner=False) }}
+        <p class="pd-note pd-under">Usnesení rady a zastupitelstva, která {{ cl_plural(n_res, 'zmiňuje', 'zmiňují', 'zmiňují') }} {{ acc }}.{% if res_years.busiest %} Nejvíc {{ res_years.busiest|join(' a ') }}.{% endif %}</p>
+      </div>
+      <div>
+        <h3 class="side-h">Naposledy</h3>
+        <ul class="ul-res">
+          {% for r in res_last %}<li><small>{{ r.date|ul_dmy }}</small><a href="{{ r.href }}">{{ r.title }}</a></li>{% endfor %}
+        </ul>
+        <a class="more ul-panel-more" href="{{ q_url }}">{{ 'Celé usnesení' if n_res == 1 else 'Všechna ' ~ n_res ~ ' usnesení' if n_res < 5 else 'Všech ' ~ n_res ~ ' usnesení' }}</a>
+      </div>
+    </div>
+    {% else %}
+    <p>Žádné usnesení od roku 2018 ulici nezmiňuje.</p>
+    {% endif %}
+  </section>
 </div>
 
 <section class="ul-akt" id="aktualne" aria-labelledby="ul-akt-h">
@@ -107,4 +128,4 @@
 </div>
 {% call source(cl_checked) %}Termíny čištění jsou z harmonogramu <a href="{{ cl_source }}">Služeb města Pardubic</a>, podněty z aplikace <a href="https://amg.dejtip.eu/pardubice/">Dej Tip</a>, rozhodnutí ze zápisů rady a zastupitelstva a oznámení z úřední desky na pardubice.eu. Data k ulici najdete v části <a href="/data">Data a API</a>.{% endcall %}
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('kpi.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}

@@ -37,3 +37,18 @@
   <p>{{ caller() }}{% if checked %} Stav k {{ checked|d }}.{% endif %}</p>
 </section>
 {%- endmacro %}
+
+{#- a column chart (Podněty by month, a street's resolutions by year): every column its total
+    over it and its dark part (`done`), with its number inside unless `inner` is false; `m` as
+    podnety.stats.months -#}
+{% macro column_chart(m, unit, inner=True) -%}
+<div class="rz-chart pd-chart" role="img" aria-label="{{ m.label }}">
+  <div class="rz-axis pd-ph"><b class="rz-axis-u">{{ unit }}</b>{% for t in m.ticks %}<span style="bottom:calc(var(--ph) * {{ t.f }})">{{ t.v }}</span>{% endfor %}</div>
+  <div class="rz-plot pd-ph">
+    {% for t in m.ticks %}<i style="bottom:calc(var(--ph) * {{ t.f }})"></i>{% endfor %}
+    {% for col in m.cols %}<div class="rz-col rz-tip" style="height:calc(var(--ph) * {{ col.h }})" data-tip="{{ col.tip }}"><div class="{{ 'now' if col.now }}" style="height:calc(var(--ph) * {{ col.dh }})">{% if inner and col.done %}<b{% if col.dh * 200 < 24 %} class="low"{% endif %}>{{ col.done }}</b>{% endif %}</div><span>{{ col.n if col.n }}</span></div>{% endfor %}
+  </div>
+  <div></div>
+  <div class="rz-years pd-yr">{% for col in m.cols %}<span><span class="pd-d">{{ col.abbr }}{% if col.y %}<small>{{ col.y }}</small>{% endif %}</span><span class="pd-m">{{ col.m if col.m is defined else col.abbr }}{% if col.year_m %}<small>{{ col.year_m }}</small>{% endif %}</span></span>{% endfor %}</div>
+</div>
+{%- endmacro %}

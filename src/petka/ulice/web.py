@@ -98,11 +98,15 @@ def search(request: Request, q: str = "", z: str = ""):
         "miss": query if query and not found else ""})
 
 
+DETAILS = ("cisteni", "podnety", "usneseni", "zadny")     # the tiles' panels; zadny: all closed
+
+
 @pages.get("/verejny-prostor/ulice/{slug}", response_class=HTMLResponse)
-def street(request: Request, slug: str, radky: str = ""):
-    """One street: the next cleaning, the reports and the decisions in short, „Aktuálně“ (the
-    map of the street and everything dated on it, newest first, q.ROWS at a time; ?radky=vse
-    lists every row without JS) and links to the rest."""
+def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"):
+    """One street: three tiles (the next cleaning, the reports, the decisions) over one panel
+    as on the Podněty page (?detail= the open one, without JS), „Aktuálně“ (the map of the
+    street and what is current on it, the list beside it; ?radky=vse everything), its cleaning
+    (#cisteni) and links to the rest."""
     now = _now()
     today = now.date()
     obvod = request.state.obvod.id
@@ -177,14 +181,18 @@ def street(request: Request, slug: str, radky: str = ""):
                       | {"row": f"d{m['id']}"} for m in marks]}
 
     rep = q.reports(reps)
+    kinds, kinds_rest = q.report_kinds(reps)
     pd_checked = _safe(pq.checked, obvod)
     pd_url = f"/verejny-prostor/podnety?ulice={slug}" + ("" if rep["ceka"] else "&stav=vse") + "#kde"
     return tpl.TemplateResponse(request, "ulice/ulice.html", {
         "today": today, "s": s, "names": names, "cl": cl, "cl_href": cl_href, "in_harm": bool(its),
         "panel": cw.next_panel(cl.on_next, today) if cl.on_next else None,
         "last": cw.nbdm(cl.past[0]["date"]) if cl.past else None,
-        "rep": rep, "rep_chart": q.report_chart(reps, today), "pd_url": pd_url,
-        "n_res": n_res, "last_res": res[0] if res else None, "res_chart": q.resolution_chart(res, today),
+        "rep": rep, "rep_months": q.report_months(reps, today), "kinds": kinds, "kinds_rest": kinds_rest,
+        "pd_url": pd_url, "pd_kind": f"/verejny-prostor/podnety?ulice={slug}&stav=vse&druh=",
+        "n_res": n_res, "res_years": q.resolution_years(res, today), "res_last": [q.resolution_row(r, today) for r in res[:3]],
+        "detail": detail if detail in DETAILS else "cisteni",
+        "next_date": cl.on_next[0]["date"] if cl.on_next else None,
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
         "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "n_notices": _safe(q.notices_posted, s.name),
         "rows": shown, "more": len(rows) > len(shown), "data": data,

@@ -4,7 +4,7 @@
     .pd-o1 … .pd-o5; .pd-d / .pd-m carry the desktop and the shorter phone wording. -#}
 {% block title %}Co lidé hlásí a jak se to řeší?{% endblock %}
 {% block description %}Podněty, které lidé v obvodu posílají městu přes aplikaci Dej Tip: kolik jich je, kolik se vyřešilo, jak dlouho čekají a kde.{% endblock %}
-{% from "_portal.html" import band, source %}
+{% from "_portal.html" import band, source, column_chart %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
 
 {% macro dist(items, cls='') %}
@@ -46,15 +46,7 @@
   <section data-pd-detail="mesice" aria-label="Podněty po měsících"{% if detail != 'mesice' %} hidden{% endif %}>
     {% set m = s.months %}
     <h2><span class="pd-d">Podněty po měsících</span><span class="pd-m">Po měsících</span></h2>
-    <div class="rz-chart pd-chart" role="img" aria-label="{{ m.label }}">
-      <div class="rz-axis pd-ph"><b class="rz-axis-u">podnětů</b>{% for t in m.ticks %}<span style="bottom:calc(var(--ph) * {{ t.f }})">{{ t.v }}</span>{% endfor %}</div>
-      <div class="rz-plot pd-ph">
-        {% for t in m.ticks %}<i style="bottom:calc(var(--ph) * {{ t.f }})"></i>{% endfor %}
-        {% for col in m.cols %}<div class="rz-col rz-tip" style="height:calc(var(--ph) * {{ col.h }})" data-tip="{{ col.tip }}"><div class="{{ 'now' if col.now }}" style="height:calc(var(--ph) * {{ col.dh }})">{% if col.done %}<b{% if col.dh * 200 < 24 %} class="low"{% endif %}>{{ col.done }}</b>{% endif %}</div><span>{{ col.n }}</span></div>{% endfor %}
-      </div>
-      <div></div>
-      <div class="rz-years pd-yr">{% for col in m.cols %}<span><span class="pd-d">{{ col.abbr }}<small>{{ col.y }}</small></span><span class="pd-m">{{ col.m }}{% if col.year_m %}<small>{{ col.year_m }}</small>{% endif %}</span></span>{% endfor %}</div>
-    </div>
+    {{ column_chart(m, 'podnětů') }}
     <p class="pd-note pd-under"><span class="pd-d">Nad sloupcem všechny podněty za měsíc, v tmavé části vyřešené.{% if m.busiest %} Nejvíc jich přišlo {{ w.join(m.busiest) }}.{% endif %}</span><span class="pd-m">Nad sloupcem všechny podněty, tmavě vyřešené.{% if m.busiest %} Nejvíc {{ w.join(m.busiest) }}.{% endif %}</span></p>
   </section>
 
@@ -155,4 +147,4 @@
 {% endif %}
 {% call source(checked) %}Podněty jsou z aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice, stahujeme je každé 4 hodiny. Jako data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/data#podnety">API</a>.{% endcall %}
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('podnety.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('kpi.js') }}" defer></script><script src="{{ asset('podnety.js') }}" defer></script>{% endblock %}

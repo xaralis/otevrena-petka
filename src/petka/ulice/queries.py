@@ -207,69 +207,49 @@ def short_title(t: str, n: int = 70) -> str:
     return t
 
 
-def stack(cols: list[list[str]], height: int = 66, tile: int = 5, gap: int = 2) -> dict:
-    """A small stacked chart: each column a list of classes from the bottom, one per item. Where
-    the tallest fits as tiles (tile px, gap px), one tile per item; otherwise one segment per run
-    of a class, scaled to `height`. {cols: [[(class, px)]], gap}"""
-    top = max((len(c) for c in cols), default=0)
-    if top * (tile + gap) - gap <= height:
-        return {"cols": [[(c, tile) for c in col] for col in cols], "gap": gap}
-    out = []
-    for col in cols:
-        runs: list[list] = []
-        for c in col:
-            if runs and runs[-1][0] == c:
-                runs[-1][1] += 1
-            else:
-                runs.append([c, 1])
-        out.append([(c, max(1, round(k * (height - 2 * len(runs)) / top))) for c, k in runs])
-    return {"cols": out, "gap": 1}
-
-
 MONTHS_BACK = 24        # the reports' chart: at most this many months before this one, at least 11
 
 
-def report_chart(rows: list[dict], today: dt.date) -> dict | None:
-    """The reports by month, from the first (at most MONTHS_BACK back, at least a year) to this
-    month: resolved and closed grey at the bottom, forwarded outlined, waiting red on top."""
+def report_months(rows: list[dict], today: dt.date) -> dict | None:
+    """The reports by month for the column chart of the Podněty page (podnety.stats.months):
+    from the first report (at most MONTHS_BACK months back, at least a year) to today."""
     if not rows:
         return None
-    first = min(r["reported_at"] for r in rows)
+    first = min(r["reported_at"] for r in rows).date()
     back = min(MONTHS_BACK, max(11, (today.year - first.year) * 12 + today.month - first.month))
     y, m = today.year, today.month - back
     while m < 1:
         y, m = y - 1, m + 12
-    months = []
-    while (y, m) <= (today.year, today.month):
-        months.append((y, m))
-        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
-    order = {"ceka": 2, "predano": 1}
-    cls = {"ceka": "ul-tw", "predano": "ul-tp"}
-    by: dict = {k: [] for k in months}
-    for r in rows:
-        k = (r["reported_at"].year, r["reported_at"].month)
-        if k in by:
-            by[k].append(ps.outcome(r))
-    cols = [[cls.get(o, "") for o in sorted(os, key=lambda o: order.get(o, 0))] for os in by.values()]
-    from ..podnety import words as pw
-    word = lambda ym: f"{pw.MONTH[ym[1] - 1]} {ym[0]}"
-    return {**stack(cols), "first": word(months[0]), "last": word(months[-1]),
-            "label": f"Podněty podle měsíců od {pw.MONTH_GEN[months[0][1] - 1]} {months[0][0]}: šedě vyřízené, "
-                     "červeně čekající, obrysem předané jinam",
-            "titles": [f"{word(k)}: {len(v)}" for k, v in by.items()]}
+    p = ps.Period("ulice", dt.date(y, m, 1), today + dt.timedelta(days=1), "", "")
+    return ps.months(rows, p, today)
+
+
+def report_kinds(rows: list[dict], n: int = 5) -> tuple[list[dict], int]:
+    """What the street's reports were about: the n most common categories (id, name, count)
+    and how many reports the rest are."""
+    from collections import Counter
+    c = Counter((r["category_id"], r["category"]) for r in rows)
+    top = sorted(c.items(), key=lambda kv: (-kv[1], kv[0][1]))
+    return [{"id": i, "name": name, "n": k} for (i, name), k in top[:n]], sum(k for _, k in top[n:])
 
 
 FIRST_YEAR = 2018       # the resolutions we have start here
 
 
-def resolution_chart(res: list[dict], today: dt.date) -> dict | None:
+def resolution_years(res: list[dict], today: dt.date) -> dict | None:
+    """The resolutions by year in the shape of podnety.stats.months (every column all dark)."""
     if not res:
         return None
     years = list(range(FIRST_YEAR, today.year + 1))
     n = {y: sum(r["date"].year == y for r in res) for y in years}
-    return {**stack([[""] * n[y] for y in years], tile=5, gap=2), "first": str(years[0]), "last": str(years[-1]),
-            "label": "Usnesení podle let: " + ", ".join(f"{y} {n[y]}" for y in years),
-            "titles": [f"{y}: {n[y]}" for y in years]}
+    step = ps.nice_step(max(n.values()))
+    top = step * max(1, -(-max(n.values()) // step))
+    busiest = sorted((y for y in years if n[y]), key=lambda y: (-n[y], -y))[:2]
+    return {"cols": [{"n": n[y], "done": n[y], "h": n[y] / top, "dh": n[y] / top, "now": False,
+                      "tip": f"{y}: {n[y]} usnesení", "abbr": str(y), "year_m": None} for y in years],
+            "ticks": [{"v": v, "f": v / top} for v in range(0, top + 1, step)],
+            "busiest": [f"v roce {y} ({n[y]})" for y in busiest],
+            "label": "Usnesení podle let: " + ", ".join(f"{y} {n[y]}" for y in years)}
 
 
 # --- reading ----------------------------------------------------------------------------------
