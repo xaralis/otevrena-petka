@@ -1467,6 +1467,7 @@ a.cl-hint { color: var(--red-ink); }
 /* the whole obvod */
 .dash-h { margin: 3.6rem 0 1.2rem; font-size: 2.4rem; font-weight: 800; font-stretch: 85%; letter-spacing: -.02em; line-height: 1; }
 .ul-two { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.4rem; margin-top: 2.2rem; align-items: start; }
+.ul-all { margin: 3rem 0 1rem; }
 .ul-h { margin: 0 0 .7rem; font-size: 1.25rem; font-weight: 750; letter-spacing: -.01em; }
 .ul-map { height: auto; aspect-ratio: 760 / 520; margin: 0; }
 .cl-lg .ul-lg-wait { width: .85rem; height: .85rem; border: 0; border-radius: 50%; }

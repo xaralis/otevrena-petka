@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% from "ulice/_macros.html" import street_search, datalist %}
-{% block title %}Hledat ulici{% endblock %}
+{% block title %}{% if found %}Ulice „{{ query }}“{% else %}Ulice{% endif %}{% endblock %}
 {% block hero %}
 <section class="band band-section">
   <div class="wrap">
-    <h1>{% if found %}Ulic odpovídajících „{{ query }}“ je víc{% else %}Podívejte se na svou ulici{% endif %}</h1>
+    <h1>{% if found %}Ulic odpovídajících „{{ query }}“ je víc{% else %}Co se děje v mé ulici?{% endif %}</h1>
+    {% if not found %}<p class="band-lead">Pro každou ulici obvodu na jednom místě: co visí na úřední desce, co o ní rozhodla rada a zastupitelstvo, kdy se v ní čistí a co v ní lidé hlásí.</p>{% endif %}
   </div>
 </section>
 {% endblock %}
@@ -14,8 +15,14 @@
   {% if found %}
   <ul class="cl-near">{% for s, n in found %}<li><a href="/verejny-prostor/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
   {% else %}
-  {{ street_search('ul', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova') }}
+  {{ street_search('ul', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova', miss, 'Tahle ulice v městském obvodě Pardubice V není.' if miss else '') }}
   {% endif %}
 </div>
+{% if not found %}
+<section class="ul-all" aria-labelledby="ul-all-h">
+  <h2 id="ul-all-h" class="ul-h">Všechny ulice obvodu</h2>
+  <ul class="street-index">{% for s, n in every %}<li><a href="/verejny-prostor/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
+</section>
+{% endif %}
 {% endblock %}
 {% block scripts %}<script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}

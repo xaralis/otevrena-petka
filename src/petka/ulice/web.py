@@ -55,6 +55,7 @@ def home(request: Request):
     ustats, dstats = uq.stats(), dq.stats()
     # the right side of each link row: one number and what it counts, the same shape everywhere
     info = {
+        "/verejny-prostor/ulice": (q.thousands(len(names)), "ulic obvodu"),
         "/radnice/usneseni": (q.thousands(ustats["resolutions"]), "usnesení"),
         "/radnice/zastupitele": ("15", "zastupitelů"),
         "/radnice/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
@@ -79,16 +80,20 @@ def home(request: Request):
 # --- streets ----------------------------------------------------------------------------------
 
 @pages.get("/verejny-prostor/ulice", response_class=HTMLResponse)
-def search(request: Request, q: str = ""):
+def search(request: Request, q: str = "", z: str = ""):
+    """The Ulice page: the search and every street of the obvod. A search from the front page
+    (z=uvod) that finds nothing goes back there with the hint under its field."""
     names = _names(request.state.obvod.id)
     query = q.strip()
     found = st.find(query, names) if query else []
     if len(found) == 1:
         return RedirectResponse(f"/verejny-prostor/ulice/{found[0]}", status_code=303)
-    if query and not found:    # back to the search on the front page, with the hint under the field
+    if query and not found and z == "uvod":
         return RedirectResponse(f"/?ulice={quote_plus(query)}#hledat", status_code=303)
+    every = sorted(names.items(), key=lambda kv: st.fold(kv[1]))
     return tpl.TemplateResponse(request, "ulice/hledat.html", {
-        "query": query, "found": [(s, names[s]) for s in found], "names": names})
+        "query": query, "found": [(s, names[s]) for s in found], "names": names, "every": every,
+        "miss": query if query and not found else ""})
 
 
 @pages.get("/verejny-prostor/ulice/{slug}", response_class=HTMLResponse)

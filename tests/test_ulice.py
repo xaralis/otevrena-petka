@@ -292,8 +292,12 @@ def test_search_redirects_or_lists(fixture):
     assert r.status_code == 303 and r.headers["location"] == "/verejny-prostor/ulice/wolkerova"
     r = get("/verejny-prostor/ulice", params={"q": "ova"})
     assert r.status_code == 200 and "je víc" in r.text and 'href="/verejny-prostor/ulice/lexova"' in r.text
-    r = get("/verejny-prostor/ulice", params={"q": "Nádražní"})
+    r = get("/verejny-prostor/ulice", params={"q": "Nádražní", "z": "uvod"})      # from the front page: back there
     assert r.status_code == 303 and r.headers["location"] == "/?ulice=N%C3%A1dra%C5%BEn%C3%AD#hledat"
+    r = get("/verejny-prostor/ulice", params={"q": "Nádražní"})                    # from the Ulice page: the hint there
+    assert r.status_code == 200 and "Tahle ulice v městském obvodě Pardubice V není." in r.text
+    h = get("/verejny-prostor/ulice").text
+    assert "Co se děje v mé ulici?" in h and "Všechny ulice obvodu" in h and 'href="/verejny-prostor/ulice/wolkerova"' in h
     h = get("/", params={"ulice": "Nádražní"}).text
     assert "Tahle ulice v městském obvodě Pardubice V není." in h and 'value="Nádražní"' in h
 

@@ -11,11 +11,12 @@
 {% endmacro %}
 
 {#- The search for a street: a big field with the magnifier, suggestions from the obvod's streets. -#}
-{% macro street_search(id, placeholder, short, value="", error="") %}
+{% macro street_search(id, placeholder, short, value="", error="", origin="") %}
 <form class="sbox" role="search" method="get" action="/verejny-prostor/ulice">
   <svg class="mag" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>
   <label for="{{ id }}" class="sr">Ulice</label>
   <input id="{{ id }}" name="q" type="search" list="ul-streets" data-combo data-short="{{ short }}" placeholder="{{ placeholder }}" autocomplete="off" required{% if value %} value="{{ value }}"{% endif %}{% if error %} aria-invalid="true" aria-describedby="{{ id }}-err"{% endif %}>
+  {% if origin %}<input type="hidden" name="z" value="{{ origin }}">{% endif %}
   <button type="submit">Ukázat</button>
 </form>
 {% if error %}<p class="sbox-err" id="{{ id }}-err" role="alert">{{ error }}</p>{% endif %}
