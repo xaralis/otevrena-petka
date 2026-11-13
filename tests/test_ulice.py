@@ -378,7 +378,9 @@ def test_street_page(fixture):
               "Jiná ulice", "crumbs", "/verejny-prostor/blokove-cisteni/ulice/wolkerova\""):
         assert s not in m, s
     keys = [k for k in __import__("re").findall(r'<li data-row="([^"]+)"', m)]
-    assert keys == ["c20261126", "dm0", "z310-2026-r", "c20260917", "r1"]          # newest first, the coming cleaning on top
+    assert keys == ["c20261126", "dm0"]          # the last 30 days and the coming cleaning on top
+    allkeys = __import__("re").findall(r'<li data-row="([^"]+)"', get("/verejny-prostor/ulice/wolkerova?radky=vse").text)
+    assert allkeys == ["c20261126", "dm0", "z310-2026-r", "c20260917", "r1"]     # ?radky=vse: everything, newest first
     d = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
     assert [(f["properties"]["row"], f["properties"]["past"]) for f in d["cleaning"]["features"]] == [("c20260917", True), ("c20261126", False)]
     assert [f["properties"]["row"] for f in d["reports"]["features"]] == ["r1"] and d["reports"]["features"][0]["properties"]["o"] == "vyreseno"
