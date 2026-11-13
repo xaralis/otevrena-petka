@@ -98,14 +98,14 @@
       {% if has_other %}<span><i class="ak-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>další oznámení z úřední desky, ikona podle druhu</span>{% endif %}
     </p>
     <div class="co ak-box ak-box-l">
-      <h3 class="ak-h">Blokové čištění tento týden</h3>
+      <p class="ak-h">Blokové čištění tento týden</p>
       {% if days %}<ol class="ak-list">
         {% for d in days %}<li tabindex="0" data-day="{{ loop.index0 }}"><span class="ak-d">{{ d.day }}</span><span>{{ d.text }}</span></li>
         {% endfor %}</ol>
-      {% else %}<p class="ak-sub">Do týdne se nikde nečistí. <a href="/verejny-prostor/blokove-cisteni">Celý harmonogram</a></p>{% endif %}
+      {% else %}<p class="ak-sub">Do týdne se nikde nečistí. <a class="more" href="/verejny-prostor/blokove-cisteni">Celý harmonogram</a></p>{% endif %}
     </div>
     <div class="co ak-box ak-box-r">
-      <h3 class="ak-h">Dopravní omezení</h3>
+      <p class="ak-h">Dopravní omezení</p>
       <p class="ak-sub">podle oznámení na úřední desce</p>
       {% if traffic %}<ol class="ak-list ak-list-r">
         {% for m in traffic %}<li tabindex="0" data-mark="{{ m.id }}" aria-label="{{ m.label }}"><span>{{ m.street }}</span><span class="ak-d">{{ m.box }}</span></li>
@@ -118,7 +118,7 @@
     {% for label, items in areas %}
     <div>
       <h3 class="ul-h">{{ label }}</h3>
-      <ul class="cl-near">
+      <ul class="link-list">
         {% for i in items %}<li{% if i.soon %} class="soon"{% endif %}><a href="{{ i.href }}">{{ i.label }}</a>{% set f = info.get(i.href) %}<span class="ak-n">{% if f %}<b>{{ f[0] }}</b> {{ f[1] }}{% else %}připravujeme{% endif %}</span></li>{% endfor %}
       </ul>
     </div>
