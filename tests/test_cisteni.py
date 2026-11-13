@@ -389,7 +389,7 @@ def test_street_page(fixture):
     h = r.text
     for s in ("Příští čištění", "26. 11.", "čtvrtek od 7:00, za 14 dní", "Celá ulice, obě strany.",
               "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
-              "Harmonogram čištění pro letošek", "příští", "cl-past", "Okolní ulice", "/verejny-prostor/blokove-cisteni/ulice/sokolovska",
+              "Harmonogram čištění pro letošek", "cl-past", "Okolní ulice", "/verejny-prostor/blokove-cisteni/ulice/sokolovska",
               "Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace", "ve čtvrtek 26. 11. od 7:00",
               "Přidat i další ulice"):
         assert s in h, s

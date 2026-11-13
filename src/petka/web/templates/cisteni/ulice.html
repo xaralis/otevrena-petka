@@ -43,13 +43,13 @@
         <thead><tr><th>Kdy</th><th>Lokalita podle harmonogramu Služeb</th></tr></thead>
         <tbody>
         {% for i in rows %}
-          <tr{% if i.date < today %} class="cl-past"{% endif %}><td class="cl-when"><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }}</b> {{ i|cl_clock }}{% if i.date == next %}<span class="cl-tag">příští</span>{% endif %}</td><td>{{ i.text }}</td></tr>
+          <tr{% if i.date < today %} class="cl-past"{% endif %}><td class="cl-when"><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }}</b> {{ i|cl_clock }}</td><td>{{ i.text }}</td></tr>
         {% endfor %}
         </tbody>
       </table>
       <ul class="cl-list cl-only-m">
         {% for i in rows %}
-        <li{% if i.date < today %} class="cl-past"{% endif %}><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }} {{ i|cl_clock }}{% if i.date == next %}<span class="cl-tag">příští</span>{% endif %}</b><span>{{ i.text }}</span></li>
+        <li{% if i.date < today %} class="cl-past"{% endif %}><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }} {{ i|cl_clock }}</b><span>{{ i.text }}</span></li>
         {% endfor %}
       </ul>
       <p class="cl-src">Popisy jsou v původním znění harmonogramu. Proběhlé termíny jsou šedě.</p>
