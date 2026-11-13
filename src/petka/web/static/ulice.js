@@ -11,22 +11,9 @@
 // point or the cluster it is in outlined, a single report's card), a feature its row.
 // Data: <script id=ul-map-json> from ulice/web.py street().
 (function () {
-  const STEP = 18;        // rows „Další“ adds, q.ROWS
 
   if (window.matchMedia("(max-width: 600px)").matches)
     document.querySelectorAll("input[data-short]").forEach((i) => (i.placeholder = i.dataset.short));
-
-  const list = document.querySelector("[data-ul-rows]");
-  const more = document.querySelector("[data-ul-more]");
-  if (list && more) {
-    more.setAttribute("role", "button");
-    more.addEventListener("click", (e) => {
-      e.preventDefault();
-      const hidden = list.querySelectorAll("li[hidden]");
-      Array.from(hidden).slice(0, STEP).forEach((li) => (li.hidden = false));
-      if (hidden.length <= STEP) more.remove();
-    });
-  }
 
   const el = document.querySelector("[data-ul-map]");
   const P = window.petkaMap;

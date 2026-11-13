@@ -74,10 +74,10 @@
     {% if rows %}
     <ol class="pd-rows ul-rows" data-ul-rows>
       {% for r in rows %}{% set tag = 'a' if r.href else 'span' %}
-      <li data-row="{{ r.key }}"{% if r.past %} class="ul-past"{% endif %}{% if loop.index > limit %} hidden{% endif %}><{{ tag }}{% if r.href %} href="{{ r.href }}"{% if r.ext %} target="_blank" rel="noopener"{% endif %}{% else %} tabindex="0"{% endif %}><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></{{ tag }}></li>
+      <li data-row="{{ r.key }}"{% if r.past %} class="ul-past"{% endif %}><{{ tag }}{% if r.href %} href="{{ r.href }}"{% if r.ext %} target="_blank" rel="noopener"{% endif %}{% else %} tabindex="0"{% endif %}><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></{{ tag }}></li>
       {% endfor %}
     </ol>
-    {% if rows|length > limit %}<a class="pd-rows-more more" href="?radky=vse#aktualne" data-ul-more>Další události {{ loc }}</a>{% endif %}
+    {% if more %}<a class="pd-rows-more more" href="?radky=vse#aktualne">Starší události {{ loc }}</a>{% endif %}
     {% else %}
     <p class="cl-muted">Zatím o ulici nic nevíme.</p>
     {% endif %}

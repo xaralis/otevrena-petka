@@ -368,8 +368,8 @@ def test_street_page(fixture):
               '<section class="ul-cl" id="cisteni"', "Lokalita podle harmonogramu Služeb", "cl-past",
               "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
               'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"', "Blokové čištění v celém obvodu",
-              '<li><a href="#cisteni">Blokové čištění</a></li>', "Odkud to víme", "Stavby a řízení: změna rozhodnutí", "Lavičky, zábradlí",
-              f"rada, usnesení 310/2026{NB}R", '<span class="st ul-done">proběhlo</span>',
+              '<li><a href="#cisteni">Blokové čištění</a></li>', "Odkud to víme", "Stavby a řízení: změna rozhodnutí",
+              f"rada, usnesení 310/2026{NB}R", 
               "Všechno k ulici Wolkerova", '<li><a href="/radnice/uredni-deska?q=Wolkerova">Úřední deska</a></li>',
               'href="/verejny-prostor/uzavirky"', "Okolní ulice", '<li><a href="/verejny-prostor/ulice/lexova">Lexova</a></li>',
               'data-icons="/static/deska-ikony.svg', "petkamap.js", "ulice.js"):
@@ -391,10 +391,10 @@ def test_street_page_rows_beyond_the_first(fixture, monkeypatch):
     many = [rep(100 + i, 3, NOW - dt.timedelta(days=i % 20)) for i in range(25)]
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: many if name == "Wolkerova" else [])
     m = get("/verejny-prostor/ulice/wolkerova").text
-    assert m.count("<li data-row=") == 29 and m.count(" hidden><a") == 29 - q.ROWS
-    assert 'href="?radky=vse#aktualne" data-ul-more>Další události ve Wolkerově</a>' in m
+    assert m.count("<li data-row=") == q.ROWS                                    # only what is current, capped
+    assert 'href="?radky=vse#aktualne">Starší události ve Wolkerově</a>' in m
     m = get("/verejny-prostor/ulice/wolkerova?radky=vse").text
-    assert " hidden><a" not in m and "data-ul-more" not in m
+    assert m.count("<li data-row=") > q.ROWS and "Starší události" not in m
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
     assert "Přes Dej Tip tu zatím nikdo nic nenahlásil." in m and "Žádné usnesení od roku 2018 ulici nezmiňuje." in m
     assert "Blokově se tu letos nečistí" in m and "Ulice není v letošním harmonogramu" in m
@@ -425,3 +425,12 @@ def test_db_queries():
     assert n >= len(res) and all(r["date"] for r in res)
     assert isinstance(q.notices_posted("Wolkerova"), int)
     assert all(r["street"] == "Wolkerova" for r in q.street_reports("mo5", "wolkerova"))
+
+
+def test_current_rows():
+    today = dt.date(2026, 11, 13)
+    r = lambda kind, d, st=("vyřešeno", "st"): {"kind": kind, "date": d, "status": st}
+    rows = [r("cl", dt.date(2026, 11, 26)), r("cl", dt.date(2026, 9, 17)), r("rep", dt.date(2025, 4, 10), ("evidováno", "st st-no")),
+            r("rep", dt.date(2026, 6, 1)), r("res", dt.date(2026, 9, 23)), r("month", dt.date(2026, 10, 2))]
+    got = q.current(rows, today)
+    assert [x["date"] for x in got] == [dt.date(2026, 11, 26), dt.date(2025, 4, 10), dt.date(2026, 9, 23), dt.date(2026, 10, 2)]
