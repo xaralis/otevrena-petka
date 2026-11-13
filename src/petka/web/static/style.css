@@ -1481,7 +1481,7 @@ a.cl-hint { color: var(--red-ink); }
 .ak-mk { width: 22px; height: 22px; }
 .ak-mk > i, .ak-lg .ak-lg-mk { display: grid; place-items: center; width: 22px; height: 22px; box-sizing: border-box; border: 2px solid var(--ink); border-radius: 3px; background: #fff; color: var(--ink); }
 .ak-mk-t > i, .ak-lg .ak-mk-t { background: repeating-linear-gradient(135deg, var(--red) 0 4px, #fff 4px 8px); }
-a.ak-mk { cursor: pointer; }
+a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ak-mk svg { display: block; }
 .ak-mk:focus-visible, .ak-cla:focus-visible { outline: none; }
 .ak-mk.on > i, .ak-mk:focus-visible > i { outline: 3px solid var(--ink); outline-offset: 3px; }

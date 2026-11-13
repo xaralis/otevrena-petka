@@ -225,7 +225,8 @@ def week_cleanings(its: list[dict], geoms: dict, today: dt.date) -> dict:
     for sid, xs in streets.items():
         lng, lat = point_on(geoms[xs[0]["key"]])
         when = cleaning_when(xs)
-        anchors.append({"sid": sid, "street": xs[0]["street"], "when": when, "lng": lng, "lat": lat,
+        href = f"/blokove-cisteni/ulice/{xs[0]['slug']}" if xs[0]["slug"] else "/blokove-cisteni"
+        anchors.append({"sid": sid, "street": xs[0]["street"], "when": when, "lng": lng, "lat": lat, "href": href,
                         "label": f"Blokové čištění: {xs[0]['street']}, {days([x['date'] for x in xs])}"})
     rows = []
     for d in sorted({i["date"] for i in week}):

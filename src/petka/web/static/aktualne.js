@@ -69,7 +69,8 @@
     data.lines.features.forEach((f) => (keysOf[f.properties.sid] ||= []).push(f.properties.key));
     const anchor = {}, mark = {};
     data.anchors.forEach((a) => {
-      const e = document.createElement("span");
+      const e = document.createElement("a");     // the street's cleaning page
+      e.href = a.href;
       e.className = "ak-cla";
       e.tabIndex = 0;
       e.setAttribute("aria-label", a.label);
@@ -124,12 +125,16 @@
     const pin = (st, same) => { pinned = same ? null : st; apply(pinned); };
     const sameAs = (st) => pinned && st.els.length && pinned.els[0] === st.els[0] && pinned.keys.join() === st.keys.join();
 
-    map.on("mousemove", "ak-cl-hit", (e) => hover(street(e.features[0].properties.sid)));
-    map.on("mouseleave", "ak-cl-hit", () => hover(null));
+    map.on("mousemove", "ak-cl-hit", (e) => { map.getCanvas().style.cursor = "pointer"; hover(street(e.features[0].properties.sid)); });
+    map.on("mouseleave", "ak-cl-hit", () => { map.getCanvas().style.cursor = ""; hover(null); });
     map.on("click", (e) => {
       if (e.originalEvent.target.closest && e.originalEvent.target.closest(".ak-mk, .ak-cla")) return;
       const f = map.queryRenderedFeatures(e.point, { layers: ["ak-cl-hit"] })[0];
       const st = f ? street(f.properties.sid) : null;
+      // a stretch opens its street's cleaning page like a marker opens its notice: at once on
+      // wide screens, on phones with a second tap
+      const a = f && anchor[f.properties.sid];
+      if (a && a.href && (!narrow() || sameAs(st))) { window.location.href = a.href; return; }
       pin(st, st && sameAs(st));
     });
     const wire = (e, make) => {
