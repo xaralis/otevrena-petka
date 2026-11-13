@@ -1630,6 +1630,7 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ul-fact .ul-chart { margin: .9rem 0 0; }
   .ul-akt { display: block; margin-top: 2rem; }
   .ul-akt > h2 { margin: 0 0 .8rem; }
+  .ul-akt > .ul-akt-sub { margin: -.5rem 0 1rem; }
   .ul-akt-map { position: static; }
   .ul-mapw { margin: 0 -1.25rem; }
   .ul-map { aspect-ratio: 390 / 460; max-height: 70vh; border-left: 0; border-right: 0; }
@@ -1644,7 +1645,7 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 }
 
 /* „Aktuálně“ on a street page: a row with something on the map has a control that shows it there */
-.ul-akt-sub { margin: -.6rem 0 1rem; color: var(--muted); }
+.ul-akt-sub { grid-column: 1 / -1; margin: -.8rem 0 0; color: var(--muted); }
 .ul-rows li { position: relative; }
 .ul-rows li.ul-mapped > a, .ul-rows li.ul-mapped > span { padding-right: 2.8rem; }
 .ul-pin { position: absolute; right: .35rem; top: .45rem; display: grid; place-items: center; width: 2rem; height: 2rem; padding: 0;
