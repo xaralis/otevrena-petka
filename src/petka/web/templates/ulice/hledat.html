@@ -19,8 +19,8 @@
   {% endif %}
 </div>
 {% if not found %}
-<section class="ul-all" aria-labelledby="ul-all-h">
-  <h2 id="ul-all-h" class="ul-h">Všechny ulice obvodu</h2>
+<section class="ul-index" aria-labelledby="ul-index-h">
+  <h2 id="ul-index-h" class="ul-h">Všechny ulice obvodu</h2>
   <ul class="street-index">{% for s, n in every %}<li><a href="/verejny-prostor/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
 </section>
 {% endif %}
