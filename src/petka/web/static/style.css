@@ -1423,6 +1423,8 @@ a.cl-hint { color: var(--red-ink); }
 .find { position: relative; z-index: 2; margin-top: -5.4rem; }   /* heading on the hero, the field across its lower edge */
 .find h2 { margin: 0; font-size: 1.6rem; font-weight: 800; font-stretch: 88%; }
 .sbox { display: flex; align-items: center; gap: .9rem; margin-top: 1rem; border: 3px solid var(--ink); border-radius: 3px; padding: .45rem .45rem .45rem 1.1rem; background: #fff; }
+.sbox-err { margin: .6rem 0 0; color: var(--red-ink); font-weight: 650; }
+.sbox:has([aria-invalid]) { border-color: var(--red-ink); }
 .sbox:focus-within { box-shadow: 0 0 0 4px rgba(222,9,28,.25); }
 .sbox .mag { flex: none; color: var(--ink); }
 .sbox input { flex: 1; min-width: 0; font: inherit; font-size: 1.9rem; font-weight: 550; color: var(--ink); border: 0; padding: .35rem 0; background: transparent; outline: none; -webkit-appearance: none; appearance: none; border-radius: 0; }

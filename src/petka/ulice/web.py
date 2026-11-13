@@ -98,7 +98,8 @@ def home(request: Request):
              ("Finance a ankety", g["Finance"].items + g["Zapojte se"].items)]
     waiting = [r for r in rows if ps.outcome(r) == "ceka"]
     return tpl.TemplateResponse(request, "ulice/home.html", {
-        "today": today, "names": names, "feed": q.feed(items, q.FEED_HOME), "areas": areas, "info": info,
+        "today": today, "names": names, "miss": request.query_params.get("ulice", "").strip()[:80],
+        "feed": q.feed(items, q.FEED_HOME), "areas": areas, "info": info,
         "ustats": ustats, "geojson": overview_map(its, cq.geometries(obvod), waiting, today),
         "has_week": any(i["date"] <= today + dt.timedelta(days=7) for i in future),
         "has_two": any(7 < (i["date"] - today).days <= SOON for i in future), "has_waiting": bool(waiting),
@@ -114,6 +115,8 @@ def search(request: Request, q: str = ""):
     found = st.find(query, names) if query else []
     if len(found) == 1:
         return RedirectResponse(f"/ulice/{found[0]}", status_code=303)
+    if query and not found:    # back to the search on the front page, with the hint under the field
+        return RedirectResponse(f"/?ulice={quote_plus(query)}#hledat", status_code=303)
     return tpl.TemplateResponse(request, "ulice/hledat.html", {
         "query": query, "found": [(s, names[s]) for s in found], "names": names})
 

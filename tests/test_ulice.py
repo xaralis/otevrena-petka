@@ -196,7 +196,10 @@ def test_search_redirects_or_lists(fixture):
     assert r.status_code == 303 and r.headers["location"] == "/ulice/wolkerova"
     r = get("/ulice", params={"q": "ova"})
     assert r.status_code == 200 and "je víc" in r.text and 'href="/ulice/lexova"' in r.text
-    assert "v obvodu nemáme" in get("/ulice", params={"q": "Nádražní"}).text
+    r = get("/ulice", params={"q": "Nádražní"})
+    assert r.status_code == 303 and r.headers["location"] == "/?ulice=N%C3%A1dra%C5%BEn%C3%AD#hledat"
+    h = get("/", params={"ulice": "Nádražní"}).text
+    assert "Tahle ulice v městském obvodě Pardubice V není." in h and 'value="Nádražní"' in h
 
 
 def test_street_page(fixture):
