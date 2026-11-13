@@ -74,6 +74,7 @@ def overview(request: Request, ulice: str = "", probehle: str = ""):
         **_state(today), "week": week, "groups": groups, "names": names, "query": ulice.strip(),
         "found": found, "past": sorted(past, key=lambda i: i["date"], reverse=True) if probehle else None,
         "n_past": len(past), "n_dates": len(its), "n_places": len({i["key"] for i in its}),
+        "anchors": q.map_anchors(its, q.geometries(obvod), today),
     })
 
 

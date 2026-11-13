@@ -1134,6 +1134,7 @@ a.btn-o:hover, .ledger td a.btn-o:hover, .band a.btn-on-red:hover { color: #fff;
 .cl-next { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .cl-next a { display: grid; grid-template-columns: 4.2rem 1fr; gap: 0 .8rem; padding: .75rem .9rem; background: var(--grey); color: var(--ink); text-decoration: none; }
 .cl-next a:hover { outline: 2px solid var(--red); outline-offset: -2px; }
+.cl-next li.on a { background: var(--off); }      /* its stretch is pointed at on the map */
 .cl-d { grid-row: span 2; font-weight: 700; font-size: 1.25rem; line-height: 1.1; white-space: nowrap; }
 .cl-d small { display: block; font-size: .78rem; font-weight: 500; color: var(--ink-2); }
 .cl-w { font-weight: 650; }
@@ -1199,7 +1200,6 @@ a.cl-hint { color: var(--red-ink); }
 .cl-narrow { max-width: 36rem; margin: 2rem 0 3rem; }
 .cl-narrow .cl-act { margin-top: 1.2rem; }
 .cl-found-m { color: var(--red-ink); }
-.map-pop .cl-pop-d { margin: 0 0 .2rem; }
 @media (max-width: 900px) {
   .cl-only-d { display: none !important; }
   .cl-only-m { display: revert !important; }

@@ -8,7 +8,7 @@
 {% macro next_list(its, soon=False) %}
 <ul class="cl-next">
   {% for i in its %}
-  <li{% if soon %} class="cl-soon"{% endif %}><a href="{{ '/blokove-cisteni/ulice/' ~ i.slug if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
+  <li{% if soon %} class="cl-soon" data-cl-key="{{ i.key }}"{% endif %}><a href="{{ '/blokove-cisteni/ulice/' ~ i.slug if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
   {% endfor %}
 </ul>
 {% endmacro %}

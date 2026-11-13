@@ -1,6 +1,10 @@
 // Čištění ulic: the maps (self-hosted MapLibre + PMTiles, like map.js) and the calendar picker.
-// <div data-cl-map="all" data-src="/api/v1/cisteni" data-today="YYYY-MM-DD"> colours the obvod's
-// places by their next cleaning; <div data-cl-map="street" data-inline="id"> draws one street.
+// <div data-cl-map="all" data-src="/api/v1/cisteni" data-today="YYYY-MM-DD" data-anchors="id">
+// colours the obvod's places by their next cleaning and behaves like the front page's map
+// (aktualne.js): pointing at a stretch inks it and shows its tooltip (maptip.js) on a focusable
+// zero-size anchor, a click opens its street (on phones the second tap), and the rows of
+// „Příštích 7 dní“ ([data-cl-key]) light up with their stretches both ways.
+// <div data-cl-map="street" data-inline="id"> draws one street.
 // The picker remembers its streets in localStorage; without JS the form goes to /blokove-cisteni/kalendar.
 (function () {
   const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097", OFF = "#d6dbe0";
@@ -42,28 +46,30 @@
         const fc = await data;
         fc.features = fc.features.filter((f) => f.geometry);
         if (all) colour(fc, el.dataset.today); else street(fc);
-        map.addSource("cl", { type: "geojson", data: fc });
+        map.addSource("cl", { type: "geojson", data: fc, promoteId: "key" });
         const poly = ["match", ["geometry-type"], ["Polygon", "MultiPolygon"], true, false];
         const line = ["match", ["geometry-type"], ["LineString", "MultiLineString"], true, false];
         // widths grow with zoom; a white casing keeps the stretches crisp over the base map
         const w = (extra) => ["interpolate", ["linear"], ["zoom"],
           ...[[12, 0.75], [15, 1], [18, 1.8]].flatMap(([z, k]) => [z, ["*", ["+", ["get", "width"], extra], k]])];
         const solid = ["==", ["get", "dash"], false], dashed = ["==", ["get", "dash"], true];
+        // the stretch pointed at (feature-state "on") turns ink, the same width and dashes
+        const color = ["case", ["boolean", ["feature-state", "on"], false], INK, ["get", "color"]];
         map.addLayer({ id: "cl-fill", type: "fill", source: "cl", filter: poly,
-                       paint: { "fill-color": ["get", "color"], "fill-opacity": 0.28 } });
+                       paint: { "fill-color": color, "fill-opacity": 0.28 } });
         map.addLayer({ id: "cl-edge", type: "line", source: "cl", filter: ["all", poly, solid],
-                       paint: { "line-color": ["get", "color"], "line-width": 1.5 } });
+                       paint: { "line-color": color, "line-width": 1.5 } });
         map.addLayer({ id: "cl-edge-d", type: "line", source: "cl", filter: ["all", poly, dashed],
-                       paint: { "line-color": ["get", "color"], "line-width": 1.5, "line-dasharray": [2, 2] } });
+                       paint: { "line-color": color, "line-width": 1.5, "line-dasharray": [2, 2] } });
         map.addLayer({ id: "cl-case", type: "line", source: "cl", filter: line,
                        layout: { "line-cap": "round", "line-join": "round" },
                        paint: { "line-color": "#ffffff", "line-width": w(3) } });
         map.addLayer({ id: "cl-line", type: "line", source: "cl", filter: ["all", line, solid],
                        layout: { "line-cap": "round", "line-join": "round" },
-                       paint: { "line-color": ["get", "color"], "line-width": w(0) } });
+                       paint: { "line-color": color, "line-width": w(0) } });
         map.addLayer({ id: "cl-line-d", type: "line", source: "cl", filter: ["all", line, dashed],
                        layout: { "line-join": "round" },
-                       paint: { "line-color": ["get", "color"], "line-width": w(0), "line-dasharray": [1.5, 1.2] } });
+                       paint: { "line-color": color, "line-width": w(0), "line-dasharray": [1.5, 1.2] } });
         // keep the base map's street and place names above our lines
         const labels = map.getStyle().layers.find((l) => l.type === "symbol");
         if (labels) ["cl-fill", "cl-edge", "cl-edge-d", "cl-case", "cl-line", "cl-line-d"]
@@ -75,7 +81,12 @@
         const upcoming = all ? fc.features.filter((f) => f.properties.rank > 0) : [];
         (upcoming.length ? upcoming : fc.features).forEach((f) => walk(f.geometry.coordinates));
         if (!b.isEmpty()) map.fitBounds(b, { padding: all ? 20 : 40, maxZoom: 17, duration: 0 });
-        if (all) popups(map, el);
+        if (all) {
+          // a wide invisible line over the stretches makes them easy to point at
+          map.addLayer({ id: "cl-hit", type: "line", source: "cl", filter: line,
+                         paint: { "line-color": INK, "line-opacity": 0, "line-width": 16 } });
+          tips(map, el);
+        }
       });
     });
   }
@@ -100,42 +111,82 @@
     });
   }
 
-  function popups(map, el) {
-    const layers = ["cl-fill", "cl-line", "cl-line-d"];
-    const popup = new maplibregl.Popup({ closeButton: true, maxWidth: "320px", focusAfterOpen: false });
-    layers.forEach((id) => {
-      map.on("mouseenter", id, () => (map.getCanvas().style.cursor = "pointer"));
-      map.on("mouseleave", id, () => (map.getCanvas().style.cursor = ""));
+  // the overview's tooltips and highlights, the same way as aktualne.js: pointing shows, a click
+  // or a tap pins (phones have no hover), a click elsewhere on the map unpins
+  function tips(map, el) {
+    const narrow = () => window.matchMedia("(max-width: 900px)").matches;
+    const src = document.getElementById(el.dataset.anchors);
+    // a stretch: its places' keys (both sides of a street drawn as one line), its anchor, its rows
+    const stretch = {}, of = {};
+    (src ? JSON.parse(src.textContent) : []).forEach((a) => {
+      const e = document.createElement(a.href ? "a" : "span");    // the street's cleaning page
+      if (a.href) e.href = a.href;
+      e.className = "ak-cla";
+      e.tabIndex = 0;
+      e.setAttribute("aria-label", a.label);
+      e.appendChild(window.mapTip.make(a.street, a.what, a.when));
+      new maplibregl.Marker({ element: e }).setLngLat([a.lng, a.lat]).addTo(map);
+      const s = stretch[a.keys[0]] = { keys: a.keys, anchor: e, rows: [] };
+      a.keys.forEach((k) => (of[k] = s));
     });
-    const dm = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${d}. ${m}.`; };
+    document.querySelectorAll("[data-cl-key]").forEach((r) => {
+      const k = r.dataset.clKey;
+      (of[k] ||= { keys: [k], anchor: null, rows: [] }).rows.push(r);   // a place not on the map lights only itself
+    });
+
+    let pinned = null, shown = null;
+    function apply(s) {
+      if (shown === s) return;
+      if (shown) shown.keys.forEach((k) => map.setFeatureState({ source: "cl", id: k }, { on: false }));
+      document.querySelectorAll(".ak-cla.on, [data-cl-key].on").forEach((e) => e.classList.remove("on", "ak-l"));
+      shown = s;
+      if (!s) return;
+      s.keys.forEach((k) => map.setFeatureState({ source: "cl", id: k }, { on: true }));
+      s.rows.forEach((r) => r.classList.add("on"));
+      if (s.anchor) {
+        s.anchor.classList.add("on");
+        window.mapTip.side(s.anchor, el.getBoundingClientRect().right);
+      }
+    }
+    const hover = (s) => apply(s || pinned);
+    const pin = (s) => { pinned = s && s === pinned ? null : s; apply(pinned); };
+
+    const layers = ["cl-hit", "cl-fill"];
+    const at = (p) => { const f = map.queryRenderedFeatures(p, { layers })[0]; return f ? of[f.properties.key] || null : null; };
+    map.on("mousemove", (e) => {
+      const s = at(e.point);
+      map.getCanvas().style.cursor = s ? "pointer" : "";
+      hover(s);
+    });
+    map.on("mouseout", () => { map.getCanvas().style.cursor = ""; hover(null); });
     map.on("click", (e) => {
-      const p = e.point, pad = 5;
-      const hits = map.queryRenderedFeatures([[p.x - pad, p.y - pad], [p.x + pad, p.y + pad]], { layers });
-      if (!hits.length) return;
-      const seen = new Set(), box = document.createElement("div");
-      box.className = "map-pop";
-      hits.forEach((h) => {
-        const f = h.properties;
-        if (seen.has(f.key)) return;
-        seen.add(f.key);
-        const texts = typeof f.texts === "string" ? JSON.parse(f.texts) : f.texts;
-        const dates = typeof f.dates === "string" ? JSON.parse(f.dates) : f.dates;
-        const head = document.createElement("p");
-        head.className = "map-pop-h";
-        if (f.slug) {
-          const a = document.createElement("a");
-          a.href = "/blokove-cisteni/ulice/" + f.slug;
-          a.textContent = f.street;
-          head.append(a);
-        } else head.textContent = texts[0];
-        const t = document.createElement("p");
-        t.textContent = texts[0];
-        const d = document.createElement("p");
-        d.className = "cl-pop-d";
-        d.textContent = dates.map((x) => dm(x.date) + (x.time ? (x.before ? " před " : " od ") + x.time.replace(/^0/, "") : "")).join(", ");
-        box.append(head, t, d);
+      if (e.originalEvent.target.closest && e.originalEvent.target.closest(".ak-cla")) return;
+      const s = at(e.point), a = s && s.anchor;
+      // a stretch opens its street's page: at once on wide screens, on phones with a second tap
+      if (a && a.href && (!narrow() || pinned === s)) { window.location.href = a.href; return; }
+      pin(s);
+    });
+    new Set(Object.values(of)).forEach((s) => {
+      const a = s.anchor;
+      if (a) {
+        a.addEventListener("mouseenter", () => hover(s));
+        a.addEventListener("mouseleave", () => hover(null));
+        a.addEventListener("focus", () => hover(s));
+        a.addEventListener("blur", () => hover(null));
+        a.addEventListener("click", (ev) => {
+          ev.stopPropagation();
+          if (a.href && (!narrow() || pinned === s)) return;
+          ev.preventDefault();
+          pin(s);
+        });
+      }
+      // the rows stay plain links to their streets; pointing at one or focusing it shows its stretch
+      s.rows.forEach((r) => {
+        r.addEventListener("mouseenter", () => hover(s));
+        r.addEventListener("mouseleave", () => hover(null));
+        r.addEventListener("focusin", () => hover(s));
+        r.addEventListener("focusout", () => hover(null));
       });
-      popup.setLngLat(e.lngLat).setDOMContent(box).addTo(map);
     });
   }
 

@@ -7,7 +7,9 @@ street on the border is listed in both obvody.
 """
 
 import datetime as dt
+import json
 import math
+import re
 from collections import defaultdict
 
 from .. import db
@@ -80,6 +82,37 @@ def find(q: str, names: dict[str, str]) -> list[str]:
 
 def next_date(its: list[dict], today: dt.date) -> dt.date | None:
     return min((i["date"] for i in its if i["date"] >= today), default=None)
+
+
+def map_anchors(its: list[dict], geoms: dict[str, dict], today: dt.date) -> list[dict]:
+    """One anchor per stretch on the overview map (where its tooltip hangs, focusable). Places
+    drawn as the same line (the left and the right side of a street) are one stretch with all
+    their `keys`. The street, the stretch's short wording, its dates still to come this year
+    with their sides like on the front page (or when it was cleaned) and its street's page. The
+    soonest first, so the keyboard meets them in that order."""
+    from ..ulice.queries import cleaning_when, days, point_on
+    by: dict[str, list[dict]] = {}
+    for i in its:
+        if i["key"] in geoms:
+            by.setdefault(json.dumps(geoms[i["key"]], sort_keys=True), []).append(i)
+    out = []
+    for xs in by.values():
+        i = xs[0]
+        ahead = [x for x in xs if x["date"] >= today]
+        when = cleaning_when(ahead) if ahead else "letos proběhlo " + days([x["date"] for x in xs])
+        # the side goes to the dates line
+        what = re.sub(r",?\s*(obě strany|pravá strana|levá strana)$", "", i["short"]) if i["side"] else i["short"]
+        what = what if i["slug"] and what else "Blokové čištění"
+        lng, lat = point_on(geoms[i["key"]])
+        out.append({"keys": list(dict.fromkeys(x["key"] for x in xs)), "street": i["street"], "what": what,
+                    "when": when, "lng": lng, "lat": lat,
+                    "href": f"/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else None,
+                    "label": f"Blokové čištění: {i['street']}, " + (f"{what}, " if what != "Blokové čištění" else "") + when,
+                    "next": min(x["date"] for x in ahead) if ahead else None})
+    out.sort(key=lambda a: (a["next"] is None, a["next"] or dt.date.min, places.fold(a["street"])))
+    for a in out:
+        del a["next"]
+    return out
 
 
 def _coords(g: dict):

@@ -347,6 +347,32 @@ def test_overview(fixture):
     assert "aplikac" not in h.lower()
     assert 'href="/blokove-cisteni" aria-current="true">Veřejný prostor' in h.split("</header>")[0]
     assert get("/blokove-cisteni?probehle=1").text.count("Letošní proběhlé termíny") >= 1
+    # the map's anchors and the week's rows share the place key, so they light up together
+    anchors = json.loads(h.split('<script type="application/json" id="cl-anchors">')[1].split("</script>")[0])
+    jr = next(k for a in anchors for k in a["keys"] if k.startswith("josefa ressla"))
+    assert f'data-cl-key="{jr}"' in h and 'data-anchors="cl-anchors"' in h
+
+
+def test_map_anchors():
+    t = D(2026, 11, 12)
+    right = "Josefa Ressla od ul. Lexova - pravá strana komunikace"
+    its = [item(D(2026, 7, 27), text="Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace"),
+           item(D(2026, 11, 18), "Josefa Ressla", text=right, side="prava"),
+           item(D(2026, 11, 19), "Josefa Ressla", text="Josefa Ressla od ul. Lexova - levá strana komunikace", side="leva"),
+           item(D(2026, 12, 3), "Josefa Ressla", text=right, side="prava"),
+           item(D(2026, 11, 26), None, text="Vnitroblok za školou", side=None),
+           item(D(2026, 12, 1), "Lexova", located=False)]
+    other = {"type": "LineString", "coordinates": [[15.75, 50.02], [15.75, 50.03]]}
+    geoms = {i["key"]: GEOM if i["street"] == "Josefa Ressla" else other for i in its if i["located"]}
+    geoms[its[0]["key"]] = {"type": "LineString", "coordinates": [[15.70, 50.0], [15.71, 50.0]]}
+    a = queries.map_anchors(its, geoms, t)
+    assert [(x["street"], x["what"], x["when"], x["href"]) for x in a] == [
+        ("Josefa Ressla", "od Lexova", "pravá strana 18.\u00a011. a 3.\u00a012., levá 19.\u00a011.", "/blokove-cisteni/ulice/josefa-ressla"),
+        ("Vnitroblok za školou", "Blokové čištění", "26.\u00a011.", None),
+        ("Wolkerova", "od Čs. armády k Lexova", "letos proběhlo 27.\u00a07.", "/blokove-cisteni/ulice/wolkerova")]
+    assert len(a[0]["keys"]) == 2                                   # both sides drawn as one line are one stretch
+    assert a[0]["label"].startswith("Blokové čištění: Josefa Ressla, od Lexova, pravá strana")
+    assert (a[0]["lng"], a[0]["lat"]) == (15.765, 50.03)
 
 
 def test_search(fixture):
