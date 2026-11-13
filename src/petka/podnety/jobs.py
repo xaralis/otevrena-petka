@@ -1,6 +1,6 @@
 """`petka podnety-update`: mirror the Dej Tip reports of each obvod. Idempotent; once a day is
 plenty for the status changes, but the page promises "aktualizace dvakrát denně", so the
-cluster runs it twice a day.
+cluster runs it every four hours.
 
 The first run of an obvod takes two years back; later runs take the last 120 days, which is
 where reports still change status (an older report that changes is caught on a backfill with
