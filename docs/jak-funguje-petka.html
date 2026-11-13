@@ -115,14 +115,14 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
 
   <article class="sec">
     <div class="sec-head"><b>Blokové čištění</b><span>v provozu, zatím mimo menu</span></div>
-    <div class="cell"><h4>Zdroj</h4><p>Excel s harmonogramem Služeb města Pardubic. <span class="gap">Pravidelné stahování zatím není nastavené.</span></p></div>
+    <div class="cell"><h4>Zdroj</h4><p>Excel s harmonogramem Služeb města Pardubic, denně ve 4:23.</p></div>
     <div class="cell"><h4>Zpracování</h4><ul><li>Pravidla opraví chyby v tabulce.</li><li>Popis „od ul. A k ul. B“ se přiloží na čáru ulice a ořízne na křižovatkách.</li><li>Asi pětinu míst nejde z textu umístit, ty se kreslí ručně.</li></ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Mapa a stránka každé ulice</li><li>Kalendář do telefonu (ICS), API, MCP</li><li>Mapa Aktuálně</li></ul></div>
   </article>
 
   <article class="sec">
     <div class="sec-head"><b>Závady</b><span>v provozu, zatím mimo menu</span></div>
-    <div class="cell"><h4>Zdroj</h4><p>Hlášení z Dej Tipu pro celé město, z nich ta z obvodu. Poprvé 2 roky zpět, pak posledních 120 dní. <span class="gap">Pravidelné stahování zatím není nastavené.</span></p></div>
+    <div class="cell"><h4>Zdroj</h4><p>Hlášení z Dej Tipu pro celé město, z nich ta z obvodu. Poprvé 2 roky zpět, pak 2× denně (6:17 a 18:17) posledních 120 dní.</p></div>
     <div class="cell"><h4>Zpracování</h4><ul><li>Kategorie, stav a doba vyřízení.</li><li>Ukládá se jen ulice bez čísla domu, ne komentář občana ani poznámky úředníků.</li></ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Přehled podle kategorií a stavu, mapa</li><li>Stránky ulic, API, MCP</li></ul></div>
   </article>
@@ -143,7 +143,7 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
 
   <article class="sec">
     <div class="sec-head"><b>Ulice a úvodní stránka</b><span>v provozu</span></div>
-    <div class="cell"><h4>Zdroj</h4><p>Ulice města z RÚIAN, do obvodu patří ty, které v něm leží alespoň zčásti (teď 66). <span class="gap">Načítá se jednorázově ručně.</span></p></div>
+    <div class="cell"><h4>Zdroj</h4><p>Ulice města z RÚIAN, do obvodu patří ty, které v něm leží alespoň zčásti (teď 66). Obnovuje se jednou měsíčně.</p></div>
     <div class="cell"><h4>Zpracování</h4><ul><li>Skládá ostatní sekce podle ulice: čištění, usnesení, závady, oznámení.</li><li>Mapa Aktuálně: čištění na 7 dní a platná omezení z desky.</li></ul></div>
     <div class="cell"><h4>Výstupy</h4><ul><li>Úvodní stránka s vyhledáním ulice a mapou Aktuálně</li><li>Stránka každé ulice</li></ul></div>
   </article>
@@ -183,7 +183,7 @@ h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4
     </ul></section>
   </div>
 
-  <p class="note">Stav k 13. 11. 2026. Červeně jsou místa, kde chybí pravidelné stahování: blokové čištění, závady a ulice se zatím spouštějí ručně.</p>
+  <p class="note">Stav k 13. 11. 2026. Časy stahování čištění, závad a ulic platí od nejbližšího nasazení.</p>
 </main>
 </body>
 </html>
