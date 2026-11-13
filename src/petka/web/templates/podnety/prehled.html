@@ -146,10 +146,10 @@
       {% endfor %}
     </ul>
     {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a href="{{ q(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
-    <p class="pd-note pd-src pd-d">„Vyřešeno obvykle za“ je medián doby od podání do poslední odpovědi úřadu u vyřešených podnětů. Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace dvakrát denně. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
+    <p class="pd-note pd-src pd-d">„Vyřešeno obvykle za“ je medián doby od podání do poslední odpovědi úřadu u vyřešených podnětů. Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
   </section>
 
-  <p class="pd-src-m pd-m pd-o5">Zdroj: aplikace Dej Tip statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace dvakrát denně.</p>
+  <p class="pd-src-m pd-m pd-o5">Zdroj: aplikace Dej Tip statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny.</p>
 </div>
 {% endif %}
 {% endblock %}
