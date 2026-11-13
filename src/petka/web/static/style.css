@@ -210,6 +210,9 @@ blockquote { white-space: pre-line; margin: .3rem 0 0; padding: .6rem 1rem; bord
 .switch { display: inline-flex; border: 2px solid var(--ink); border-radius: 3px; margin: 0 0 1.4rem; flex-wrap: wrap; }
 .switch a { padding: .35rem .9rem; text-decoration: none; color: var(--ink); font-weight: 600; font-size: .95rem; }
 .switch a[aria-current] { background: var(--ink); color: #fff; }
+.data-tabs { margin-top: .4rem; }
+.data-tab > h2:first-child { margin-top: .4rem; }
+[data-tabs-on] .data-tab > h2:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* meetings calendar */
 .year-no { font-size: 2.6rem; font-weight: 800; font-stretch: 85%; color: var(--ink); margin: 2.4rem 0 .4rem; letter-spacing: -.03em; }
