@@ -96,7 +96,9 @@ def period_rows(obvod: str, start: dt.date, end: dt.date) -> list[dict]:
     """The obvod's reports with start <= reported_at < end (dates), what the page counts."""
     with db.pool().connection() as conn:
         return conn.execute("""SELECT id, category_id, category, status, reported_at, lat, lng, street,
-                                      first_note_at, last_note_at, description, photo_url
+                                      first_note_at, last_note_at, description, photo_url,
+                                      (SELECT min(s.seen_at) AT TIME ZONE 'Europe/Prague' FROM citizen_report_statuses s
+                                        WHERE s.id = citizen_reports.id AND s.status = 3 AND NOT s.initial) AS resolved_seen_at
                                FROM citizen_reports WHERE obvod = %s AND reported_at >= %s AND reported_at < %s
                                ORDER BY reported_at""", (obvod, start, end)).fetchall()
 

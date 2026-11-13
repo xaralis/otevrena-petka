@@ -95,8 +95,10 @@ def hours_between(a: dt.datetime | None, b: dt.datetime | None) -> float | None:
 
 
 def resolution_days(r: dict) -> float | None:
-    """From the report to the office's last note (for a closed report, about when it closed)."""
-    h = hours_between(r["reported_at"], r.get("last_note_at"))
+    """From the report to when Dej Tip marked it „Vyřešeno“: the change our job saw (to within
+    its four hours), else the office's last note (it writes one when it closes a report, our
+    best guess for reports closed before the job ran), else unknown."""
+    h = hours_between(r["reported_at"], r.get("resolved_seen_at") or r.get("last_note_at"))
     return None if h is None else h / 24
 
 
@@ -125,7 +127,7 @@ def buckets(values: list[float | None], edges: list[float], labels: list[tuple[s
 
 
 RESOLVED_IN = ([1, 7, 30], [("do 1 dne", "do 1 dne"), ("1 až 7 dní", "1–7 dní"), ("1 až 4 týdny", "1–4 týdny"),
-                            ("déle než měsíc", "přes měsíc")], ("bez reakce úřadu", "bez reakce"))
+                            ("déle než měsíc", "přes měsíc")], ("vyřešeno, nevíme kdy", "nevíme kdy"))
 WAITING_FOR = ([7, 30, 91], [("do týdne", "do týdne"), ("1 až 4 týdny", "1–4 týdny"),
                              ("1 až 3 měsíce", "1–3 měsíce"), ("déle než 3 měsíce", "přes 3 měsíce")], None)
 ANSWERED_IN = ([4, 24, 72], [("do 4 hodin", "do 4 hodin"), ("4 až 24 hodin", "4–24 hodin"), ("1 až 3 dny", "1–3 dny"),
@@ -340,7 +342,7 @@ def summary(rows: list[dict], p: Period, now: dt.datetime) -> dict:
         "done_pct": round(100 * count["vyreseno"] / n) if n else 0,
         "first_response": w.hours(statistics.median(answered)) if answered else "–",
         "resolved_in": buckets([resolution_days(r) for r in resolved], *RESOLVED_IN),
-        "silent_resolved": sum(r.get("last_note_at") is None for r in resolved),
+        "silent_resolved": sum(resolution_days(r) is None for r in resolved),
         "waiting_for": buckets([(now - r["reported_at"]).total_seconds() / 86400 for r in waiting], *WAITING_FOR),
         "waiting_cats": [{"id": i, "name": nm, "n": k} for (i, nm), k in top[:TOP]],
         "waiting_rest": sum(k for _, k in top[TOP:]),

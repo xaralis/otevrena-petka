@@ -65,7 +65,7 @@
     <h2><span class="pd-d">Za jak dlouho se podněty vyřešily</span><span class="pd-m">Za jak dlouho se vyřešily</span></h2>
     {{ dist(s.resolved_in) }}
     {% set k = s.silent_resolved %}
-    <p class="pd-note pd-under"><span class="pd-d">Počítáme od podání do poslední odpovědi úřadu.{% if k == 1 %} U 1 vyřešeného podnětu úřad stav změnil bez odpovědi, dobu u něj neznáme.{% elif k %} U {{ k }} vyřešených podnětů úřad stav změnil bez odpovědi, dobu u nich neznáme.{% endif %}</span><span class="pd-m">Od podání do poslední odpovědi úřadu.{% if k %} U {{ k }} {{ plural(k, 'podnětu', 'podnětů', 'podnětů') }} úřad stav změnil bez odpovědi.{% endif %}</span></p>
+    <p class="pd-note pd-under"><span class="pd-d">Počítáme od podání do chvíle, kdy Dej Tip podnět přepnul na „vyřešeno“. U podnětů vyřešených dřív, než jsme stav začali sledovat, podle poslední odpovědi úřadu.{% if k == 1 %} U 1 podnětu nevíme ani to, dobu neznáme.{% elif k %} U {{ k }} podnětů nevíme ani to, dobu neznáme.{% endif %}</span><span class="pd-m">Od podání do poslední odpovědi úřadu.{% if k %} U {{ k }} {{ plural(k, 'podnětu', 'podnětů', 'podnětů') }} úřad stav změnil bez odpovědi.{% endif %}</span></p>
   </section>
 
   <section data-pd-detail="ceka" aria-label="Jak dlouho už podněty čekají"{% if detail != 'ceka' %} hidden{% endif %}>
@@ -150,7 +150,7 @@
       {% endfor %}
     </ul>
     {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a href="{{ f(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
-    <p class="pd-note pd-src pd-d">„Obvyklá doba do vyřešení“ je medián doby od podání do poslední odpovědi úřadu u vyřešených podnětů. Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
+    <p class="pd-note pd-src pd-d">„Obvyklá doba do vyřešení“ je medián doby od podání do chvíle, kdy Dej Tip podnět přepnul na „vyřešeno“ (u starších podle poslední odpovědi úřadu). Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
   </section>
 
   <p class="pd-src-m pd-m pd-o5">Zdroj: aplikace Dej Tip statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny.</p>

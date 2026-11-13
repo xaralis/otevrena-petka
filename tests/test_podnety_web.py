@@ -327,3 +327,11 @@ def test_db_queries():
     assert all(dt.datetime(2025, 1, 1) <= r["reported_at"] < dt.datetime(2026, 1, 1) for r in rows)
     assert queries.period_rows("neni", dt.date(2025, 1, 1), dt.date(2026, 1, 1)) == []
     assert queries.years("neni") == []
+
+
+def test_resolution_time_from_the_status_change():
+    t0 = dt.datetime(2026, 11, 1, 8)
+    seen = {"reported_at": t0, "resolved_seen_at": t0 + dt.timedelta(days=2), "last_note_at": t0 + dt.timedelta(days=9)}
+    assert stats.resolution_days(seen) == 2                                   # the change we saw wins
+    assert stats.resolution_days({"reported_at": t0, "last_note_at": t0 + dt.timedelta(days=9)}) == 9   # older: the last note
+    assert stats.resolution_days({"reported_at": t0}) is None                 # neither: unknown
