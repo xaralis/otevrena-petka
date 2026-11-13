@@ -1417,8 +1417,8 @@ a.cl-hint { color: var(--red-ink); }
 }
 
 /* the street search: a big boxed field, over the hero's lower edge on the front page */
-.find { position: relative; z-index: 2; margin-top: calc(-2.5rem - 1px); padding: calc(2rem + 1px) 0 2.6rem;   /* the hero's grey goes on under the map, the search sits on it whole */
-  background: var(--grey); box-shadow: 0 0 0 100vmax var(--grey); clip-path: inset(0 -100vmax); }
+.find { position: relative; z-index: 30; margin-top: calc(-2.5rem - 1px); padding: calc(2rem + 1px) 0 2.6rem; }   /* the hero's grey goes on under the map, the search sits on it whole; the open list overlaps the map below */
+.find::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--grey); box-shadow: 0 0 0 100vmax var(--grey); clip-path: inset(0 -100vmax); }   /* full-width grey, clipped on the pseudo-element so the list is not */
 .find h2 { margin: 0; }
 .sbox { display: flex; align-items: center; gap: .9rem; margin-top: 1rem; border: 3px solid var(--ink); border-radius: 3px; padding: .45rem .45rem .45rem 1.1rem; background: #fff; }
 .sbox-err { margin: .6rem 0 0; color: var(--red-ink); font-weight: 650; }
