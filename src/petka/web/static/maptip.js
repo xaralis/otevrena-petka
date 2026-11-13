@@ -1,6 +1,7 @@
 // The maps' tooltip (CSS .ak-tip): a white card hung on a marker or a zero-size anchor, shown
-// while it is .on or focused. Shared by aktualne.js (the front page) and cisteni.js (the
-// blokové čištění maps); its card variant (.ak-card, placed by `place`) by podnety.js.
+// while it is .on or focused, and its card variant (.ak-card, placed by `place`). Used by the
+// portal's map module petkamap.js and the pages on it (aktualne.js, cisteni.js, podnety.js,
+// ulice.js).
 window.mapTip = {
   // street in bold, what it is, when (the dates line); the element's aria-label says the same
   make(street, what, when) {

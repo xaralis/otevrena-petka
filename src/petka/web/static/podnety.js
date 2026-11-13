@@ -1,6 +1,6 @@
 // Podněty: the tiles open one shared detail panel in place (without JS each tile is a link to
 // ?detail=…, which the server renders open), the phone's "Všech N druhů", and „Kde“: the map
-// (self-hosted MapLibre + PMTiles, like cisteni.js) with its filters and list.
+// (petkamap.js) with its filters and list.
 //   filters  Vše / Čeká / Vyřešeno and Druh, with counts; without JS links and a GET form, here
 //            applied in place (history.replaceState); any link to #kde on the page sets them too
 //   map      clusters: a white disc sized by the count, a red-hatched wedge for the share that
@@ -38,7 +38,7 @@
   // --- „Kde“ ---------------------------------------------------------------------------------
   const el = document.querySelector("[data-pd-map]");
   const form = document.querySelector("[data-pd-filter]");
-  if (!el || !form || !window.maplibregl || !window.pmtiles || !window.mapTip || !window.reportMap) return;
+  if (!el || !form || !window.maplibregl || !window.pmtiles || !window.mapTip || !window.petkaMap) return;
   const data = JSON.parse(document.getElementById("pd-points").textContent);
   const feats = data.features;                      // newest first
   const byId = new Map(feats.map((f) => [f.properties.id, f]));
@@ -48,7 +48,7 @@
   const seg = form.querySelectorAll("[data-stav]");
   const select = form.querySelector("select[name=druh]");
   const go = form.querySelector(".pd-go");
-  const DETAIL = window.reportMap ? window.reportMap.DETAIL : "";
+  const DETAIL = window.petkaMap ? window.petkaMap.DETAIL : "";
   if (go) go.hidden = true;
 
   // the filter, from the address the server rendered
@@ -136,110 +136,40 @@
     });
   });
 
-  // --- the map itself ---
-  const protocol = new pmtiles.Protocol();
-  maplibregl.addProtocol("pmtiles", protocol.tile);
-  const abs = (u) => location.origin + u;
-  const font = document.fonts && document.fonts.load ? document.fonts.load('800 12px "Bricolage Grotesque"').catch(() => {}) : Promise.resolve();
-  Promise.all([fetch(el.dataset.style).then((r) => r.json()), font]).then(([s]) => {
-    s.sprite = abs(s.sprite);
-    s.glyphs = abs(s.glyphs);
-    s.sources.protomaps.url = "pmtiles://" + abs(el.dataset.tiles);
-    const b = bounds(current().length ? current() : feats);
-    const map = new maplibregl.Map({
-      container: el, style: s, bounds: b || undefined, fitBoundsOptions: { padding: 30, maxZoom: 16 },
-      minZoom: 11, maxZoom: 18, attributionControl: { compact: true }, cooperativeGestures: true,
-      locale: {
-        "CooperativeGesturesHandler.WindowsHelpText": "Mapu přiblížíte s klávesou Ctrl a kolečkem myši",
-        "CooperativeGesturesHandler.MacHelpText": "Mapu přiblížíte s klávesou ⌘ a kolečkem myši",
-        "CooperativeGesturesHandler.MobileHelpText": "Mapou posunete dvěma prsty",
-        "NavigationControl.ZoomIn": "Přiblížit", "NavigationControl.ZoomOut": "Oddálit",
-      },
-    });
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
-    map.on("load", () => draw(map));
-  });
-
-  function bounds(fs) {
-    if (!fs.length) return null;
-    const b = new maplibregl.LngLatBounds();
-    fs.forEach((f) => b.extend(f.geometry.coordinates));
-    return b;
-  }
-
-  const R = window.reportMap, plural = R.plural, dm = R.dm;
+  // --- the map itself (petkamap.js) ---
+  const P = window.petkaMap, plural = P.plural, dm = P.dm;
+  const bounds = (fs) => P.bounds(fs);
+  const start = bounds(current().length ? current() : feats);
+  P.create(el, { bounds: start || undefined, fitBoundsOptions: { padding: 30, maxZoom: 16 }, maxBounds: null, maxZoom: 18, font: true })
+    .then(draw);
 
   function draw(map) {
-    const empty = { type: "FeatureCollection", features: [] };
-    R.images(map, "pd");
     const shown = () => ({ type: "FeatureCollection", features: current() });
-    map.addSource("pd", { type: "geojson", data: shown(), ...R.clustered });
-    map.addSource("pd-hl", { type: "geojson", data: empty });
-    R.layers(map, "pd", "pd");
-    map.addLayer({ id: "pd-ring", type: "circle", source: "pd-hl",
-                   paint: { "circle-radius": 11, "circle-opacity": 0, "circle-stroke-color": R.INK, "circle-stroke-width": 3 } });
+    let close = () => {};
+    const rep = P.reports(map, { id: "pd", data: shown(), wrap, closeOutside: () => close() });
+    const card = rep.card;
 
-    // --- the card ---
-    let open = null, pinned = false, card = null, timer = null;
-    const place = () => {
-      if (!card || open === null) return;
-      if (card.fit) card.fit();
-      const p = map.project(byId.get(open).geometry.coordinates);
-      if (p.x < -10 || p.y < -10 || p.x > el.clientWidth + 10 || p.y > el.clientHeight + 10) { close(); return; }
-      window.mapTip.place(card, p.x, p.y, el.clientWidth, el.clientHeight);
-    };
-    function show(id) {
-      clearTimeout(timer);
-      if (open !== id) {
-        const f = byId.get(id);
-        if (card) card.remove();
-        card = R.card(f.properties, place);
-        card.addEventListener("mouseenter", () => clearTimeout(timer));
-        card.addEventListener("mouseleave", () => { if (!pinned) later(); });
-        wrap.appendChild(card);
-        open = id;
-        map.getSource("pd-hl").setData({ type: "FeatureCollection", features: [f] });
-      }
-      place();
-      card.classList.add("on");
+    // a state is a report's id; pointing shows its card and outlines it, a click pins it
+    const link = P.linker((id) => {
       list.querySelectorAll("li.on").forEach((li) => li.classList.remove("on"));
+      if (id === null) { card.hide(); rep.ring([]); return; }
+      card.show(id, { enter: () => link.keep(), leave: () => link.leave() });
+      rep.ring([byId.get(id)]);
       const row = list.querySelector(`li[data-id="${id}"]`);
       if (row) row.classList.add("on");
-    }
-    function close() {
-      clearTimeout(timer);
-      pinned = false;
-      open = null;
-      if (card) { card.remove(); card = null; }
-      map.getSource("pd-hl").setData(empty);
-      list.querySelectorAll("li.on").forEach((li) => li.classList.remove("on"));
-    }
-    const later = () => { clearTimeout(timer); timer = setTimeout(close, 250); };
+    }, { delay: 250, stick: true, within: () => [wrap, list] });
+    close = link.close;
 
-    map.on("mouseenter", "pd-cl", () => (map.getCanvas().style.cursor = "pointer"));
-    map.on("mouseleave", "pd-cl", () => (map.getCanvas().style.cursor = ""));
-    map.on("mousemove", "pd-pt", (e) => {
-      map.getCanvas().style.cursor = "pointer";
-      if (!pinned) show(e.features[0].properties.id);
-    });
-    map.on("mouseleave", "pd-pt", () => { map.getCanvas().style.cursor = ""; if (!pinned) later(); });
+    map.on("mouseenter", rep.cl, () => (map.getCanvas().style.cursor = "pointer"));
+    map.on("mouseleave", rep.cl, () => (map.getCanvas().style.cursor = ""));
+    map.on("mousemove", rep.pt, (e) => { map.getCanvas().style.cursor = "pointer"; link.hover(e.features[0].properties.id); });
+    map.on("mouseleave", rep.pt, () => { map.getCanvas().style.cursor = ""; link.leave(); });
     map.on("click", (e) => {
-      const f = map.queryRenderedFeatures(e.point, { layers: ["pd-pt", "pd-cl"] })[0];
-      if (!f) { close(); return; }
-      if (f.layer.id === "pd-cl") {
-        close();
-        map.getSource("pd").getClusterExpansionZoom(f.properties.cluster_id)
-          .then((z) => map.easeTo({ center: f.geometry.coordinates, zoom: Math.min(z, map.getMaxZoom()) }));
-        return;
-      }
+      const f = map.queryRenderedFeatures(e.point, { layers: [rep.pt, rep.cl] })[0];
+      if (!f) { link.close(); return; }
+      if (f.layer.id === rep.cl) { link.close(); rep.zoomInto(f); return; }
       // a report: the card has a toggle and a link, so a click (a tap on phones) pins it
-      show(f.properties.id);
-      pinned = true;
-    });
-    map.on("move", place);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && open !== null) close(); });
-    document.addEventListener("click", (e) => {
-      if (pinned && !wrap.contains(e.target) && !list.contains(e.target)) close();
+      link.pin(f.properties.id);
     });
 
     // --- the list: what the map shows ---
@@ -261,16 +191,13 @@
       a.target = "_blank"; a.rel = "noopener";     // the report opens on Dej Tip beside this page
       const d = document.createElement("span"), t = document.createElement("span"), b = document.createElement("b"),
             s = document.createElement("span");
-      d.className = "pd-rd"; d.textContent = dm(p.t).replace(/ \d{4}$/, "");
+      d.className = "pd-rd"; d.textContent = dm(p.t).replace(/ \d{4}$/, "");
       t.className = "pd-rt"; b.textContent = p.c; t.appendChild(b);
       if (p.s) { const st = document.createElement("span"); st.textContent = p.s; t.appendChild(st); }
       s.className = p.o === "ceka" ? "st st-no" : "st"; s.textContent = p.w;
       a.append(d, t, s);
       li.appendChild(a);
-      a.addEventListener("mouseenter", () => { if (!pinned) show(p.id); });
-      a.addEventListener("focus", () => { if (!pinned) show(p.id); });
-      a.addEventListener("mouseleave", () => { if (!pinned) later(); });
-      a.addEventListener("blur", () => { if (!pinned) later(); });
+      link.wire(a, () => p.id);
       return li;
     }
     function render(reset) {
@@ -280,20 +207,19 @@
       head.textContent = `V mapě ${inView.length} ${plural(inView.length, "podnět", "podněty", "podnětů")}, nejnovější`;
       list.replaceChildren(...inView.slice(0, limit).map(row));
       moreLink.hidden = inView.length <= limit;
-      if (open !== null) { const r = list.querySelector(`li[data-id="${open}"]`); if (r) r.classList.add("on"); }
+      if (card.id !== null) { const r = list.querySelector(`li[data-id="${card.id}"]`); if (r) r.classList.add("on"); }
     }
     map.on("moveend", () => render(true));
     render(true);
 
-    fitAll = () => { const fs = current(); if (fs.length) map.fitBounds(bounds(fs), { padding: 30, maxZoom: 16 }); };
+    fitAll = () => P.fit(map, current(), { padding: 30, maxZoom: 16 });
     apply = () => {
-      close();
-      map.getSource("pd").setData(shown());
+      link.close();
+      rep.setData(shown());
       // nothing of the new choice in view: show all of it
       const b = map.getBounds(), fs = current();
-      if (fs.length && !fs.some((f) => b.contains(f.geometry.coordinates))) {
-        map.fitBounds(bounds(fs), { padding: 30, maxZoom: 16 });
-      } else render(true);
+      if (fs.length && !fs.some((f) => b.contains(f.geometry.coordinates))) P.fit(map, fs, { padding: 30, maxZoom: 16 });
+      else render(true);
     };
   }
 })();

@@ -366,7 +366,7 @@ def test_street_page(fixture):
               f"rada, usnesení 310/2026{NB}R", '<span class="st ul-done">proběhlo</span>',
               "Všechno k ulici Wolkerova", '<li><a href="/radnice/uredni-deska?q=Wolkerova">Úřední deska</a></li>',
               'href="/verejny-prostor/uzavirky"', "Okolní ulice", '<li><a href="/verejny-prostor/ulice/lexova">Lexova</a></li>',
-              'data-icons="/static/deska-ikony.svg', "reports.js", "ulice.js"):
+              'data-icons="/static/deska-ikony.svg', "petkamap.js", "ulice.js"):
         assert s in h, s
     for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "teď nic nevisí", "Související rozhodnutí", "pd-kpi"):
         assert s not in m, s
