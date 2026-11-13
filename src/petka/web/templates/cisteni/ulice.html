@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "cisteni/_macros.html" import sign %}
 {% block title %}{{ name }}: blokové čištění{% endblock %}
 {% block description %}Kdy proběhne blokové čištění v ulici {{ name }}: příští termín, mapa úseků a všechny letošní termíny podle harmonogramu Služeb města Pardubic.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -14,15 +15,20 @@
 <div class="cl-two">
   <div class="cl-col">
     <section class="cl-o1" aria-label="Příští čištění">
-      <div class="cl-big{% if not next %} cl-big-none{% endif %}">
-        {% if next %}
-        <span class="cl-big-l">Příští čištění</span>
-        <span class="cl-big-d">{{ next|cl_dm }}</span>
-        <span class="cl-big-w">{{ next|cl_weekday }}{% if first.time %} {{ first|cl_clock }}{% endif %}, {{ cl_until(next, today) }}</span>
-        <span class="cl-big-s">{% if whole %}Celá ulice{% if first.side %}, {{ {'obe': 'obě strany', 'prava': 'pravá strana', 'leva': 'levá strana'}[first.side] }}{% endif %}.{% else %}{{ on_next|map(attribute='short')|join('; ')|cl_cap1 }}.{% endif %} Auto přeparkujte nejpozději večer předem.</span>
+      <div class="cl-nx{% if not next %} cl-nx-none{% endif %}">
+        {% if panel %}
+        {{ sign(panel.plate[0], panel.plate[1]) }}
+        <div class="cl-nx-t">
+          <span class="cl-nx-ey">{{ panel.lead }}<b>{{ panel.count }}</b>.</span>
+          <h2 class="cl-nx-h">{{ panel.on }} <em>{{ panel.date }}</em>{% if panel.clock %} {{ panel.clock }}{% endif %}</h2>
+          <p>Čistí se {{ panel.where }}. {{ panel.move }}<b>{{ panel.by }}</b>.</p>
+        </div>
         {% else %}
-        <span class="cl-big-w">Letos už se v ulici čistit nebude.</span>
-        <span class="cl-big-s">Termíny na příští rok přidáme, jakmile je Služby města zveřejní.</span>
+        {{ sign('letos', 'už ne', off=True) }}
+        <div class="cl-nx-t">
+          <h2 class="cl-nx-h">Letos už se tu čistit nebude</h2>
+          <p>{% if last %}Naposledy se čistilo <b>{{ last }}</b> {% endif %}Termíny na příští rok doplníme, jakmile je Služby města zveřejní.</p>
+        </div>
         {% endif %}
       </div>
       <div class="cl-act cl-only-m">
@@ -63,9 +69,10 @@
       <p class="cl-note">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku. <a href="/verejny-prostor/blokove-cisteni">Přidat i další ulice</a></p>
     </section>
     <section class="cl-o3" aria-label="Mapa ulice">
-      <div class="map cl-map cl-map-street" data-cl-map="street" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="cl-street-json" role="region" aria-label="Mapa ulice {{ name }}: černě úseky čištěné {{ next|cl_dm if next else 'příště' }}, šedě úseky čištěné letos dříve"></div>
+      {% if geojson.features %}
+      <div class="map cl-map cl-map-street" data-cl-map="street" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="cl-street-json" role="region" aria-label="Mapa ulice {{ name }}"></div>
       <script type="application/json" id="cl-street-json">{{ geojson|tojson }}</script>
-      <p class="cl-src cl-lg-street">{% if next %}<span><i class="cl-lg-next"></i>{{ next|cl_dm }}</span>{% endif %}{% if has_later %}<span><i class="cl-lg-later"></i>později letos</span>{% endif %}{% if has_past %}<span><i class="cl-lg-past"></i>letos už proběhlo</span>{% endif %}</p>
+      {% endif %}
     </section>
     <section class="cl-o5" aria-labelledby="cl-near-h">
       {% if near %}

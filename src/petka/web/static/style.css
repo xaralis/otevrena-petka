@@ -1164,13 +1164,14 @@ a.cl-hint { color: var(--red-ink); }
 .cl-pastlink { margin: 1.4rem 0 3rem; }
 .cl-harm .cl-muted { margin-top: 1rem; }
 /* one street */
-.cl-big { display: grid; grid-template-columns: auto 1fr; gap: .2rem 1.6rem; align-items: center; padding: 1.4rem 1.6rem; background: var(--grey); }
-.cl-big-l { grid-column: 1 / -1; font-size: .9rem; color: var(--ink-2); }
-.cl-big-d { grid-row: span 2; font-size: 3.6rem; font-weight: 800; font-stretch: 88%; letter-spacing: -.02em; line-height: 1; }
-.cl-big-w { font-size: 1.3rem; font-weight: 650; }
-.cl-big-s { color: var(--ink-2); }
-.cl-big-none { grid-template-columns: 1fr; gap: .35rem; }
-.cl-big-none .cl-big-w { font-size: 1.45rem; }
+/* the next cleaning: the „Zákaz zastavení“ sign with its plate, then the date and what to do */
+.cl-nx { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 1.6rem; align-items: center; padding: 1.4rem 1.6rem; background: var(--grey); border-radius: 3px; }
+.cl-sign { display: block; width: 96px; height: auto; }
+.cl-nx-ey { display: block; font-size: .9rem; font-weight: 650; color: var(--ink-2); margin-bottom: .15rem; }
+.cl-nx-h { margin: 0; font-size: 2rem; line-height: 1.05; font-weight: 800; font-stretch: 85%; letter-spacing: -.02em; text-wrap: balance; }
+.cl-nx-h em { font-style: normal; color: var(--red-ink); }
+.cl-nx-t p { margin: .5rem 0 0; color: var(--ink-2); }
+.cl-nx-ey b, .cl-nx-t p b { font-weight: 750; color: var(--ink); }
 .cl-act { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
 .cl-cal-box { margin-bottom: 1.6rem; }
 .cl-cal-box .cl-muted { margin-bottom: .7rem; }
@@ -1216,9 +1217,9 @@ a.cl-hint { color: var(--red-ink); }
   .cl-above { margin-top: .4rem; }
   .cl-src-block { margin: 2.2rem 0 2.5rem; }
   .cl-pastlink { margin: 1.4rem 0 0; }
-  .cl-big { grid-template-columns: 1fr; gap: .15rem; padding: 1.1rem; margin-top: 0; }
-  .cl-big-d { grid-row: auto; font-size: 3rem; }
-  .cl-big-w { font-size: 1.15rem; margin-top: .3rem; }
+  .cl-nx { grid-template-columns: 64px minmax(0, 1fr); gap: 1rem; align-items: start; padding: 1.1rem; }
+  .cl-sign { width: 64px; }
+  .cl-nx-h { font-size: 1.55rem; }
   .cl-o3 .cl-map-street { margin-top: 1.6rem; }
   .cl-o4 .cl-h2m { margin: 2rem 0 .6rem; }
   .cl-near li { padding: .7rem 0; }
@@ -1497,6 +1498,12 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ak-tip b { font-size: .9rem; font-weight: 750; }
 .ak-tw { font-weight: 650; color: var(--ink-2); }
 .ak-lg i.ak-lg-cl { border-top: 5px solid var(--field); }
+/* an area (parkoviště, vnitroblok) cleaned whole: a dashed square; on the overview a strip on
+   the bottom edge in its stretches' colour (--strip) */
+.ak-mk-a > i { box-shadow: inset 0 -3px 0 var(--strip, transparent); }
+.cl-lg i.cl-lg-area { display: inline-grid; place-items: center; width: 18px; height: 18px; box-sizing: border-box;
+  border: 2px solid var(--ink); border-radius: 3px; background: #fff; color: var(--ink); vertical-align: middle; }
+.cl-lg-area svg { display: block; }
 .ak-lg i.ak-lg-mk { width: 16px; height: 16px; border-top-width: 2px; }
 /* step by step: the boxes rise (.co), then the marks drop in */
 .ak-mk { opacity: 0; animation: hv-in .25s ease-out forwards; }

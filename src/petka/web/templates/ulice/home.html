@@ -3,6 +3,7 @@
     map image: on wide screens the facts hang on leader lines, on phones they are numbered under
     a strip of the map. Below it the street search and the whole obvod from live data. -#}
 {% from "ulice/_macros.html" import street_search, datalist %}
+{% from "cisteni/_macros.html" import area_icon %}
 {% block title %}Co se děje na Pětce?{% endblock %}
 {% block description %}Kdy se čistí vaše ulice, co se v ní rozhodlo, co lidé hlásí a co visí na úřední desce: městský obvod Pardubice V na jednom místě a lidskou řečí. Nezávislý projekt, nejde o web úřadu.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -92,6 +93,7 @@
     <script type="application/json" id="ak-json">{{ akt|tojson }}</script>
     <p class="cl-lg ak-lg" aria-label="Legenda mapy">
       {% if days %}<span><i class="ak-lg-cl"></i>blokové čištění tento týden</span>{% endif %}
+      {% if akt.anchors|selectattr('area')|list %}<span><i class="cl-lg-area">{{ area_icon(11) }}</i>parkoviště nebo vnitroblok, čistí se celé</span>{% endif %}
       {% if traffic %}<span><i class="ak-lg-mk ak-mk-t"></i>dopravní omezení, místo podle názvu ulice</span>{% endif %}
       {% if has_other %}<span><i class="ak-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>další oznámení z úřední desky, ikona podle druhu</span>{% endif %}
     </p>

@@ -8,6 +8,7 @@ text, href, and optionally status (word, classes of .st), vote (the resolution's
 next (the next cleaning, drawn dark)."""
 
 import datetime as dt
+import re
 from dataclasses import dataclass
 
 from .. import db
@@ -209,31 +210,43 @@ def cleaning_when(its: list[dict]) -> str:
 
 def week_cleanings(its: list[dict], geoms: dict, today: dt.date) -> dict:
     """Cleanings in the next WEEK days: the located places as lines (`key`, `sid` = the street),
-    one anchor per street (where its tooltip hangs) and the box's rows by day."""
+    one anchor per street (where its tooltip hangs) and the box's rows by day. An area (a
+    parkoviště or a vnitroblok, drawn as a polygon) is its own `sid` and its anchor is a marker
+    (`area`) at a point inside; the map draws its outline only while it is pointed at."""
     from ..cisteni.words import WD
+    is_area = cq.is_area
     week = [i for i in its if today <= i["date"] <= today + dt.timedelta(days=WEEK) and i["key"] in geoms]
+
+    def sid(i: dict) -> str:
+        return i["key"] if is_area(geoms[i["key"]]) else i["slug"] or i["key"]
+
     lines, seen = [], set()
     for i in week:
         if i["key"] not in seen:
             seen.add(i["key"])
             lines.append({"type": "Feature", "geometry": geoms[i["key"]],
-                          "properties": {"key": i["key"], "sid": i["slug"] or i["key"]}})
+                          "properties": {"key": i["key"], "sid": sid(i), "area": is_area(geoms[i["key"]])}})
     streets: dict[str, list[dict]] = {}
     for i in week:
-        streets.setdefault(i["slug"] or i["key"], []).append(i)
+        streets.setdefault(sid(i), []).append(i)
     anchors = []
-    for sid, xs in streets.items():
+    for s, xs in streets.items():
+        area = is_area(geoms[xs[0]["key"]])
         lng, lat = point_on(geoms[xs[0]["key"]])
         when = cleaning_when(xs)
         href = f"/verejny-prostor/blokove-cisteni/ulice/{xs[0]['slug']}" if xs[0]["slug"] else "/verejny-prostor/blokove-cisteni"
-        anchors.append({"sid": sid, "street": xs[0]["street"], "when": when, "lng": lng, "lat": lat, "href": href,
-                        "label": f"Blokové čištění: {xs[0]['street']}, {days([x['date'] for x in xs])}"})
+        what = (re.sub(r",?\s*(obě strany|pravá strana|levá strana)$", "", xs[0]["short"]) or "Blokové čištění") \
+            if area and xs[0]["slug"] else "Blokové čištění"
+        anchors.append({"sid": s, "street": xs[0]["street"], "what": what, "when": when, "lng": lng, "lat": lat,
+                        "href": href, "area": area,
+                        "label": f"Blokové čištění: {xs[0]['street']}, " + (f"{what}, " if what != "Blokové čištění" else "")
+                                 + days([x["date"] for x in xs])})
     rows = []
     for d in sorted({i["date"] for i in week}):
         on = [i for i in week if i["date"] == d]
         rows.append({"date": d, "day": f"{WD[d.weekday()]} {dm(d)}", "text": next_cleaning_line(on)[0],
                      "keys": list(dict.fromkeys(i["key"] for i in on)),
-                     "sids": list(dict.fromkeys(i["slug"] or i["key"] for i in on))})
+                     "sids": list(dict.fromkeys(sid(i) for i in on))})
     return {"lines": {"type": "FeatureCollection", "features": lines}, "anchors": anchors, "rows": rows}
 
 

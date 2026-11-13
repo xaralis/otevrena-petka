@@ -108,14 +108,37 @@ def map_anchors(its: list[dict], geoms: dict[str, dict], today: dt.date) -> list
         what = what if i["slug"] and what else "Blokové čištění"
         lng, lat = point_on(geoms[i["key"]])
         out.append({"keys": list(dict.fromkeys(x["key"] for x in xs)), "street": i["street"], "what": what,
-                    "when": when, "lng": lng, "lat": lat,
-                    "href": f"/verejny-prostor/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else None,
+                    "when": when, "lng": lng, "lat": lat, "area": is_area(geoms[i["key"]]),
+                    "href":f"/verejny-prostor/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else None,
                     "label": f"Blokové čištění: {i['street']}, " + (f"{what}, " if what != "Blokové čištění" else "") + when,
                     "next": min(x["date"] for x in ahead)})
     out.sort(key=lambda a: (a["next"], places.fold(a["street"])))
     for a in out:
         del a["next"]
     return out
+
+
+ON_STREET = 25         # metres: a stretch this close to the street's line lies on it
+
+
+def on_street(stretch: dict, street: dict, tol: float = ON_STREET) -> bool:
+    """Whether a cleaned stretch (a line) lies on the street's RÚIAN line: at most a tenth of it
+    further than `tol` metres away. The harmonogram files places under a street that can lie
+    elsewhere (a block whose houses have the street's addresses)."""
+    from shapely.affinity import scale
+    from shapely.geometry import shape
+    if stretch["type"] not in ("LineString", "MultiLineString"):
+        return False
+    a, b = shape(stretch), shape(street)
+    k = math.cos(math.radians(b.centroid.y))
+    a, b = (scale(g, 111_320 * k, 110_540, origin=(0, 0)) for g in (a, b))   # roughly metres
+    return a.length > 0 and a.difference(b.buffer(tol)).length <= 0.1 * a.length
+
+
+def is_area(g: dict | None) -> bool:
+    """A parkoviště or vnitroblok: cleaned whole, drawn as a polygon (its shape is an estimate).
+    The maps show it as a marker at a point inside and its outline only while pointed at."""
+    return bool(g) and g["type"] in ("Polygon", "MultiPolygon")
 
 
 def _coords(g: dict):

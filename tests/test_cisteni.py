@@ -328,6 +328,9 @@ def fixture(monkeypatch):
     monkeypatch.setattr(queries, "geometries", lambda obvod: geoms)
     monkeypatch.setattr(queries, "checked", lambda: dt.datetime(2026, 11, 12, 6, 0))
     monkeypatch.setattr(web, "_today", lambda: TODAY)
+    from petka.ulice import streets as ust
+    road = {"type": "LineString", "coordinates": [[15.759, 50.03], [15.771, 50.03]]}
+    monkeypatch.setattr(ust, "streets", lambda obvod: {"wolkerova": ust.Street("wolkerova", "Wolkerova", 1, road, 1.0)})
     return seen
 
 
@@ -373,6 +376,28 @@ def test_map_anchors():
     assert len(a[0]["keys"]) == 2                                   # both sides drawn as one line are one stretch
     assert a[0]["label"].startswith("Blokové čištění: Josefa Ressla, od Lexova, pravá strana")
     assert (a[0]["lng"], a[0]["lat"]) == (15.765, 50.03)
+    assert not any(x["area"] for x in a)
+
+
+def test_on_street():
+    road = {"type": "LineString", "coordinates": [[15.76, 50.03], [15.77, 50.03]]}
+    near = {"type": "LineString", "coordinates": [[15.761, 50.0301], [15.769, 50.0301]]}     # ~11 m off
+    away = {"type": "LineString", "coordinates": [[15.761, 50.031], [15.769, 50.031]]}       # ~110 m off
+    sq = {"type": "Polygon", "coordinates": [[[15.76, 50.03], [15.77, 50.03], [15.77, 50.031], [15.76, 50.03]]]}
+    assert queries.on_street(near, road) and not queries.on_street(away, road) and not queries.on_street(sq, road)
+
+
+def test_areas_are_markers_on_the_overview():
+    t = D(2026, 11, 12)
+    sq = {"type": "Polygon", "coordinates": [[[15.75, 50.02], [15.76, 50.02], [15.76, 50.03], [15.75, 50.03], [15.75, 50.02]]]}
+    park = "Wolkerova - parkoviště u č. p. 2122-2123"
+    its = [item(D(2026, 9, 2), text=park, method="area"), item(D(2026, 11, 26), text=park, method="area"),
+           item(D(2026, 11, 4), "Benešovo náměstí", text="Benešovo náměstí - místní komunikace za ZŠ - obě strany komunikace",
+                method="area"),
+           item(D(2026, 11, 26))]
+    geoms = {i["key"]: sq for i in its[:3]} | {its[3]["key"]: GEOM}
+    assert queries.is_area(sq) and not queries.is_area(GEOM) and not queries.is_area(None)
+    assert [x["area"] for x in queries.map_anchors(its, geoms, t)] == [True, False]
 
 
 def test_search(fixture):
@@ -383,11 +408,14 @@ def test_search(fixture):
     assert "nemáme" in get("/verejny-prostor/blokove-cisteni", params={"ulice": "Nádražní"}).text
 
 
-def test_street_page(fixture):
+def test_street_page(fixture, monkeypatch):
     r = get("/verejny-prostor/blokove-cisteni/ulice/wolkerova")
     assert r.status_code == 200
     h = r.text
-    for s in ("Příští čištění", "26. 11.", "čtvrtek od 7:00, za 14 dní", "Celá ulice, obě strany.",
+    nb = "\u00a0"
+    for s in (f"Příští čištění za <b>14{nb}dní</b>.", f"Ve čtvrtek <em>26.{nb}11.</em> od{nb}7:00",
+              f"Čistí se v celé ulici, po obou stranách. Auto přeparkujte nejpozději <b>ve středu 25.{nb}11. večer</b>.",
+              'class="cl-sign"', f">26.{nb}11.</text>",
               "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
               "Harmonogram čištění pro letošek", "cl-past", "Okolní ulice", "/verejny-prostor/blokove-cisteni/ulice/sokolovska",
               "Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace", "ve čtvrtek 26. 11. od 7:00",
@@ -395,8 +423,53 @@ def test_street_page(fixture):
         assert s in h, s
     assert "Ulice je teď uzavřená" not in h and "aplikac" not in h.lower()
     fc = json.loads(h.split('id="cl-street-json">')[1].split("</script>")[0])
-    assert {f["properties"]["when"] for f in fc["features"]} == {"next", "past"}
+    # the map shows the street's own line and, thicker, the stretches still to come on it
+    assert [(f["properties"]["kind"], f["geometry"]) for f in fc["features"]] == [
+        ("street", {"type": "LineString", "coordinates": [[15.759, 50.03], [15.771, 50.03]]}), ("stretch", GEOM)]
+    assert "letos už proběhlo" not in h and "Legenda" not in h.split('id="cl-street-json"')[1].split("</section>")[0]
     assert get("/verejny-prostor/blokove-cisteni/ulice/neni").status_code == 404
+    # nothing left this year: the greyed sign and when it was last cleaned
+    h = get("/verejny-prostor/blokove-cisteni/ulice/josefa-ressla").text
+    assert "Letos už" not in h
+    monkeypatch.setattr(web, "_today", lambda: D(2026, 12, 1))
+    h = get("/verejny-prostor/blokove-cisteni/ulice/josefa-ressla").text
+    for s in ("Letos už se tu čistit nebude", f"Naposledy se čistilo <b>18.{nb}11.</b> Termíny na příští rok doplníme",
+              ">letos</text>", ">už ne</text>"):
+        assert s in h, s
+    assert 'id="cl-street-json"' not in h          # no RÚIAN line and nothing to come: no map
+
+
+@pytest.mark.parametrize("d, want", [
+    (D(2026, 11, 12), ("Čistí se ", "dnes", "Auto přeparkujte ", "co nejdřív")),
+    (D(2026, 11, 13), ("Příští čištění ", "zítra", "Auto přeparkujte nejpozději ", "dnes večer")),
+    (D(2026, 11, 15), ("Příští čištění za ", "3\u00a0dny", "Auto přeparkujte nejpozději ", "v sobotu 14.\u00a011. večer")),
+    (D(2026, 11, 26), ("Příští čištění za ", "14\u00a0dní", "Auto přeparkujte nejpozději ", "ve středu 25.\u00a011. večer")),
+])
+def test_next_panel_countdown_and_the_evening_before(d, want):
+    p = words.next_panel([item(d)], D(2026, 11, 12))
+    assert (p["lead"], p["count"], p["move"], p["by"]) == want
+
+
+@pytest.mark.parametrize("d, on", [(D(2026, 11, 16), "V pondělí"), (D(2026, 11, 17), "V úterý"),
+                                   (D(2026, 11, 18), "Ve středu"), (D(2026, 11, 19), "Ve čtvrtek"),
+                                   (D(2026, 11, 20), "V pátek"), (D(2026, 11, 21), "V sobotu"), (D(2026, 11, 22), "V neděli")])
+def test_next_panel_weekday(d, on):
+    p = words.next_panel([item(d)], D(2026, 11, 12))
+    assert p["on"] == on and p["date"] == f"{d.day}.\u00a011." and p["clock"] == "od\u00a07:00"
+
+
+def test_next_panel_without_time_and_where():
+    p = words.next_panel([item(D(2026, 12, 9), time=None)], D(2026, 11, 12))
+    assert p["clock"] == "" and p["plate"] == ["9.\u00a012.", ""]
+    seg = lambda text, side="obe": item(D(2026, 12, 9), "Sokolovská", text=text, side=side, method="segment")
+    assert words.where([seg("Sokolovská od ul. kpt. Nálepky k ul. Wolkerova - obě strany komunikace")]) == \
+        "od kpt. Nálepky k Wolkerova, po obou stranách"
+    assert words.where([seg("Sokolovská od ul. Lexova - pravá strana komunikace", "prava"),
+                        seg("Sokolovská od ul. Jiránkova - pravá strana komunikace", "prava")]) == \
+        "od Lexova a od Jiránkova, po pravé straně"
+    assert words.where([seg("Sokolovská - Vnitrobloková komunikace před č. p. 2070", None)]) == \
+        "vnitrobloková komunikace před č. p. 2070"
+    assert words.where([item(D(2026, 12, 9), side="leva")]) == "v celé ulici, po levé straně"
 
 
 def test_calendar_page_without_js(fixture):

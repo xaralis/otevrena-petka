@@ -185,6 +185,21 @@ def test_week_cleanings():
     assert q.week_cleanings(its, geoms, D(2026, 11, 11))["rows"][-1]["day"] == "st 18.\u00a011."     # a week, both ends in
 
 
+def test_week_cleanings_area_is_its_own_marker():
+    park = item(D(2026, 11, 13), "Wolkerova", text="Wolkerova - parkoviště u č. p. 2122-2123", method="area")
+    its = [item(D(2026, 11, 13)), park]
+    sq = {"type": "Polygon", "coordinates": [[[15.75, 50.02], [15.76, 50.02], [15.76, 50.03], [15.75, 50.03], [15.75, 50.02]]]}
+    geoms = {its[0]["key"]: line((15.75, 50.02), (15.76, 50.02)), park["key"]: sq}
+    w = q.week_cleanings(its, geoms, TODAY)
+    by = {a["sid"]: a for a in w["anchors"]}
+    assert set(by) == {"wolkerova", park["key"]}
+    a = by[park["key"]]
+    assert a["area"] and not by["wolkerova"]["area"] and a["what"] == "parkoviště u č. p. 2122-2123"
+    assert 15.75 < a["lng"] < 15.76 and 50.02 < a["lat"] < 50.03                    # inside the area
+    assert w["rows"][0]["sids"] == ["wolkerova", park["key"]]
+    assert [f["properties"]["area"] for f in w["lines"]["features"]] == [False, True]
+
+
 def test_board_marks():
     marks = q.board_marks(NOTICES, {s.slug: s for s in STREETS}, TODAY)
     assert [(m["nid"], m["street"]) for m in marks] == [("n4", "Wolkerova"), ("n1", "Lexova"), ("n5", "Josefa Ressla")]

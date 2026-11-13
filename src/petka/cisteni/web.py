@@ -21,7 +21,7 @@ from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Resp
 
 from ..web.render import tpl
 from . import ics, queries as q, source
-from .words import SIDE_ON, genitive, merged, weeks
+from .words import SIDE_ON, genitive, merged, nbdm, next_panel, weeks
 
 pages = APIRouter(prefix="/verejny-prostor/blokove-cisteni", include_in_schema=False)
 
@@ -137,21 +137,23 @@ def street(request: Request, slug: str):
     rows = upcoming + sorted((i for i in its if i["date"] < today), key=lambda i: i["date"], reverse=True)
     on_next = [i for i in its if i["date"] == nxt]
     geoms = q.geometries(obvod)
-    feats = []
-    for i in its:
-        if i["key"] in geoms:
-            when = "next" if i["date"] == nxt else "past" if i["date"] < today else "later"
-            feats.append({"type": "Feature", "geometry": geoms[i["key"]],
-                          "properties": {"when": when, "label": i["text"], "date": i["date"].isoformat()}})
-    # the next cleaning first, so it is drawn on top of the same place's other dates
-    feats.sort(key=lambda f: {"next": 2, "later": 1, "past": 0}[f["properties"]["when"]])
+    # the map shows the street itself (its RÚIAN line) and, thicker, the stretches still to be
+    # cleaned that lie on it; without the street's line just those stretches; the dates are in
+    # the table and places filed under the street that lie elsewhere stay off
+    from ..ulice.streets import streets as ruian_streets
+    road = ruian_streets(obvod).get(slug)
+    ahead = list({i["key"]: geoms[i["key"]] for i in upcoming if i["key"] in geoms
+                  and geoms[i["key"]]["type"] in ("LineString", "MultiLineString")}.values())
+    feats = [{"type": "Feature", "geometry": road.geometry, "properties": {"kind": "street"}}] if road else []
+    feats += [{"type": "Feature", "geometry": g, "properties": {"kind": "stretch"}}
+              for g in ahead if not road or q.on_street(g, road.geometry)]
     whole = all(i["method"] == "whole" for i in on_next)
+    past = [i["date"] for i in its if i["date"] < today]
     return tpl.TemplateResponse(request, "cisteni/ulice.html", {
         **_state(today), "name": name, "slug": slug, "gen": genitive(name), "next": nxt, "on_next": on_next,
         "first": on_next[0] if on_next else None,
+        "panel": next_panel(on_next, today) if on_next else None, "last": nbdm(max(past)) if past else None,
         "whole": whole, "rows": rows, "geojson": {"type": "FeatureCollection", "features": feats},
-        "has_later": any(f["properties"]["when"] == "later" for f in feats),
-        "has_past": any(f["properties"]["when"] == "past" for f in feats),
         "near": q.nearby(slug, every, geoms, today), **_subscribe(request, [slug]),
         "ics": f"/verejny-prostor/blokove-cisteni/ulice/{slug}.ics", "side_on": SIDE_ON})
 

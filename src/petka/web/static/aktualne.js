@@ -1,6 +1,8 @@
 // The front page's „Aktuálně“ (self-hosted MapLibre + PMTiles, like ulice.js): one map with
 //   lines    this week's blokové čištění, grey; the street pointed at (or its day in the box) black
-//   anchors  one per cleaned street, where its tooltip hangs (focusable, zero size)
+//   anchors  one per cleaned street, where its tooltip hangs (focusable, zero size); an area
+//            (parkoviště, vnitroblok) is a marker with a dashed square instead of a line, its
+//            estimated outline drawn thin and dashed only while it is pointed at
 //   marks    úřední deska notices that name a street: hatched = a traffic measure, white with the
 //            kind's icon = anything else; DOM markers, so they take focus and show a tooltip
 // Rows of the two boxes point at their features. Pointing shows, a click or a tap pins (phones
@@ -41,15 +43,18 @@
   function draw(map) {
     const w = (extra) => ["interpolate", ["linear"], ["zoom"], 12, 4 + extra, 15, 6 + extra, 18, 9 + extra];
     map.addSource("ak-cl", { type: "geojson", data: data.lines });
-    const line = { type: "line", source: "ak-cl", layout: { "line-cap": "round", "line-join": "round" } };
+    const street = ["!", ["get", "area"]], lit = (keys) => ["in", ["get", "key"], ["literal", keys]];
+    const line = { type: "line", source: "ak-cl", filter: street, layout: { "line-cap": "round", "line-join": "round" } };
     const fade = reduce ? {} : { "line-opacity": 0, "line-opacity-transition": { duration: 500, delay: 0 } };
     map.addLayer({ ...line, id: "ak-cl-case", paint: { "line-color": "#ffffff", "line-width": w(4), ...fade } });
     map.addLayer({ ...line, id: "ak-cl", paint: { "line-color": GREY, "line-width": w(0), ...fade } });
-    map.addLayer({ ...line, id: "ak-cl-on", filter: ["in", ["get", "key"], ["literal", []]],
+    map.addLayer({ ...line, id: "ak-cl-on", filter: ["all", street, lit([])],
                    paint: { "line-color": INK, "line-width": w(0) } });
+    map.addLayer({ id: "ak-cl-area", type: "line", source: "ak-cl", filter: ["all", ["get", "area"], lit([])],
+                   paint: { "line-color": INK, "line-width": 1.5, "line-dasharray": [2, 2] } });
     map.addLayer({ ...line, id: "ak-cl-hit", paint: { "line-color": INK, "line-opacity": 0, "line-width": 22 } });
     const labels = map.getStyle().layers.find((l) => l.type === "symbol" && !l.id.startsWith("ak-"));
-    if (labels) ["ak-cl-case", "ak-cl", "ak-cl-on"].forEach((id) => map.moveLayer(id, labels.id));
+    if (labels) ["ak-cl-case", "ak-cl", "ak-cl-on", "ak-cl-area"].forEach((id) => map.moveLayer(id, labels.id));
     if (!reduce) setTimeout(() => ["ak-cl-case", "ak-cl"].forEach((id) => map.setPaintProperty(id, "line-opacity", 1)), 400);
 
     // what each street, day and mark lights up
@@ -59,10 +64,11 @@
     data.anchors.forEach((a) => {
       const e = document.createElement("a");     // the street's cleaning page
       e.href = a.href;
-      e.className = "ak-cla";
+      e.className = a.area ? "ak-mk ak-mk-a" : "ak-cla";
       e.tabIndex = 0;
       e.setAttribute("aria-label", a.label);
-      e.appendChild(tip(a.street, "Blokové čištění", a.when));
+      if (a.area) e.appendChild(window.mapTip.area());
+      e.appendChild(tip(a.street, a.what || "Blokové čištění", a.when));
       anchor[a.sid] = e;
       new maplibregl.Marker({ element: e }).setLngLat([a.lng, a.lat]).addTo(map);
     });
@@ -86,7 +92,7 @@
       mark[m.id] = e;
       new maplibregl.Marker({ element: e }).setLngLat([m.lng, m.lat]).addTo(map);
     });
-    const street = (sid) => ({ els: [anchor[sid]].filter(Boolean), keys: keysOf[sid] || [] });
+    const cleaned = (sid) => ({ els: [anchor[sid]].filter(Boolean), keys: keysOf[sid] || [] });
     const day = (i, row) => {
       const d = data.days[i];
       return { els: [row, ...d.sids.map((s) => anchor[s]).filter(Boolean)], keys: d.keys };
@@ -96,7 +102,8 @@
     let pinned = null;
     function apply(st) {
       stage.querySelectorAll(".on").forEach((e) => e.classList.remove("on", "ak-l"));
-      map.setFilter("ak-cl-on", ["in", ["get", "key"], ["literal", st ? st.keys : []]]);
+      map.setFilter("ak-cl-on", ["all", street, lit(st ? st.keys : [])]);
+      map.setFilter("ak-cl-area", ["all", ["get", "area"], lit(st ? st.keys : [])]);
       if (!st) return;
       const edge = el.getBoundingClientRect().right, rbox = stage.querySelector(".ak-box-r");
       const r = rbox && !narrow() ? rbox.getBoundingClientRect() : null;
@@ -110,12 +117,12 @@
     const pin = (st, same) => { pinned = same ? null : st; apply(pinned); };
     const sameAs = (st) => pinned && st.els.length && pinned.els[0] === st.els[0] && pinned.keys.join() === st.keys.join();
 
-    map.on("mousemove", "ak-cl-hit", (e) => { map.getCanvas().style.cursor = "pointer"; hover(street(e.features[0].properties.sid)); });
+    map.on("mousemove", "ak-cl-hit", (e) => { map.getCanvas().style.cursor = "pointer"; hover(cleaned(e.features[0].properties.sid)); });
     map.on("mouseleave", "ak-cl-hit", () => { map.getCanvas().style.cursor = ""; hover(null); });
     map.on("click", (e) => {
       if (e.originalEvent.target.closest && e.originalEvent.target.closest(".ak-mk, .ak-cla")) return;
       const f = map.queryRenderedFeatures(e.point, { layers: ["ak-cl-hit"] })[0];
-      const st = f ? street(f.properties.sid) : null;
+      const st = f ? cleaned(f.properties.sid) : null;
       // a stretch opens its street's cleaning page like a marker opens its notice: at once on
       // wide screens, on phones with a second tap
       const a = f && anchor[f.properties.sid];
@@ -138,7 +145,7 @@
       });
     };
     Object.entries(mark).forEach(([id, e]) => wire(e, () => one(id)));
-    Object.entries(anchor).forEach(([sid, e]) => wire(e, () => street(sid)));
+    Object.entries(anchor).forEach(([sid, e]) => wire(e, () => cleaned(sid)));
     stage.querySelectorAll("[data-day]").forEach((r) => wire(r, () => day(+r.dataset.day, r)));
     stage.querySelectorAll("[data-mark]").forEach((r) => wire(r, () => one(r.dataset.mark, r)));
 

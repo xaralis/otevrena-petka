@@ -13,12 +13,13 @@
 </ul>
 {% endmacro %}
 
-{% macro legend() %}
+{% macro legend(areas=False) %}
 <p class="cl-lg" aria-label="Legenda mapy">
   <span><i class="cl-lg-7"></i>do týdne</span>
   <span><i class="cl-lg-14"></i>do dvou týdnů</span>
   <span><i class="cl-lg-later"></i><span class="cl-only-d">později letos</span><span class="cl-only-m">později</span></span>
   <span><i class="cl-lg-ap"></i><span class="cl-only-d">poloha přibližná</span><span class="cl-only-m">přibližně</span></span>
+  {% if areas %}<span><i class="cl-lg-area">{{ area_icon(11) }}</i>parkoviště nebo vnitroblok, čistí se celé</span>{% endif %}
 </p>
 {% endmacro %}
 
@@ -34,3 +35,14 @@
   </tbody>
 </table>
 {% endmacro %}
+
+{#- the B28 sign „Zákaz zastavení“ on a post with its plate (the date and time); `off` greys it
+    out for a street with nothing left this year -#}
+{% macro sign(top, bottom='', off=False) -%}
+<svg class="cl-sign" viewBox="0 0 100 152" aria-hidden="true" focusable="false"><rect x="47" y="96" width="6" height="56" fill="#8a9097"/><circle cx="50" cy="48" r="46" fill="{{ '#b9c0c7' if off else '#de091c' }}"/><circle cx="50" cy="48" r="35" fill="{{ '#d6dbe0' if off else '#1d5fb4' }}"/><path d="M26 72 74 24M26 24 74 72" stroke="{{ '#b9c0c7' if off else '#de091c' }}" stroke-width="10"/><rect x="12" y="100" width="76" height="34" rx="3" fill="#fff" stroke="#191c1f" stroke-width="2.5"/>{% if bottom %}<text x="50" y="114" text-anchor="middle" font-size="12" font-weight="800" fill="#191c1f">{{ top }}</text><text x="50" y="128" text-anchor="middle" font-size="11" font-weight="650" fill="#191c1f">{{ bottom }}</text>{% else %}<text x="50" y="121.5" text-anchor="middle" font-size="12" font-weight="800" fill="#191c1f">{{ top }}</text>{% endif %}</svg>
+{%- endmacro %}
+
+{#- the map's marker for an area (parkoviště, vnitroblok): a dashed square -#}
+{% macro area_icon(size=14) -%}
+<svg viewBox="0 0 16 16" width="{{ size }}" height="{{ size }}" aria-hidden="true" focusable="false"><rect x="2" y="2" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2"/></svg>
+{%- endmacro %}

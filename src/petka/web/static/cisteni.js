@@ -4,7 +4,11 @@
 // (aktualne.js): pointing at a stretch inks it and shows its tooltip (maptip.js) on a focusable
 // zero-size anchor, a click opens its street (on phones the second tap), and the rows of
 // „Příštích 7 dní“ ([data-cl-key]) light up with their stretches both ways.
-// <div data-cl-map="street" data-inline="id"> draws one street.
+// On the overview an area (a parkoviště or a vnitroblok, a polygon whose shape is our estimate)
+// is a marker at a point inside (window.mapTip.area), the same family as the front page's; its
+// outline shows as a thin dashed line only while the marker (or its row) is pointed at.
+// <div data-cl-map="street" data-inline="id"> shows one street: its RÚIAN line in ink and,
+// thicker, the stretches still to be cleaned on it; no tooltips (the dates are in the table).
 // The picker remembers its streets in localStorage; without JS the form goes to /verejny-prostor/blokove-cisteni/kalendar.
 (function () {
   const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097";
@@ -47,8 +51,11 @@
         // the overview shows only what is still to come this year (the API is asked from today)
         fc.features = fc.features.filter((f) => f.geometry && (!all || f.properties.next));
         if (all) colour(fc, el.dataset.today); else street(fc);
-        map.addSource("cl", { type: "geojson", data: fc, promoteId: "key" });
-        const poly = ["match", ["geometry-type"], ["Polygon", "MultiPolygon"], true, false];
+        const lines = fc.features.filter((f) => !/Polygon/.test(f.geometry.type));
+        const bounds = fc.features;
+        map.addSource("cl", { type: "geojson", data: { ...fc, features: lines }, promoteId: "key" });
+        // the areas: on the overview their outlines only for the keys pointed at
+        map.addSource("cl-areas", { type: "geojson", data: { ...fc, features: fc.features.filter((f) => /Polygon/.test(f.geometry.type)) } });
         const line = ["match", ["geometry-type"], ["LineString", "MultiLineString"], true, false];
         // widths grow with zoom; a white casing keeps the stretches crisp over the base map
         const w = (extra) => ["interpolate", ["linear"], ["zoom"],
@@ -56,12 +63,8 @@
         const solid = ["==", ["get", "dash"], false], dashed = ["==", ["get", "dash"], true];
         // the stretch pointed at (feature-state "on") turns ink, the same width and dashes
         const color = ["case", ["boolean", ["feature-state", "on"], false], INK, ["get", "color"]];
-        map.addLayer({ id: "cl-fill", type: "fill", source: "cl", filter: poly,
-                       paint: { "fill-color": color, "fill-opacity": 0.28 } });
-        map.addLayer({ id: "cl-edge", type: "line", source: "cl", filter: ["all", poly, solid],
-                       paint: { "line-color": color, "line-width": 1.5 } });
-        map.addLayer({ id: "cl-edge-d", type: "line", source: "cl", filter: ["all", poly, dashed],
-                       paint: { "line-color": color, "line-width": 1.5, "line-dasharray": [2, 2] } });
+        map.addLayer({ id: "cl-area", type: "line", source: "cl-areas", filter: ["in", ["get", "key"], ["literal", []]],
+                       paint: { "line-color": INK, "line-width": 1.5, "line-dasharray": [2, 2] } });
         map.addLayer({ id: "cl-case", type: "line", source: "cl", filter: line,
                        layout: { "line-cap": "round", "line-join": "round" },
                        paint: { "line-color": "#ffffff", "line-width": w(3) } });
@@ -73,17 +76,17 @@
                        paint: { "line-color": color, "line-width": w(0), "line-dasharray": [1.5, 1.2] } });
         // keep the base map's street and place names above our lines
         const labels = map.getStyle().layers.find((l) => l.type === "symbol");
-        if (labels) ["cl-fill", "cl-edge", "cl-edge-d", "cl-case", "cl-line", "cl-line-d"]
+        if (labels) ["cl-area", "cl-case", "cl-line", "cl-line-d"]
           .forEach((id) => map.getLayer(id) && map.moveLayer(id, labels.id));
         const b = new maplibregl.LngLatBounds();
         const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
-        fc.features.forEach((f) => walk(f.geometry.coordinates));
+        bounds.forEach((f) => walk(f.geometry.coordinates));
         if (!b.isEmpty()) map.fitBounds(b, { padding: all ? 20 : 40, maxZoom: 17, duration: 0 });
         if (all) {
           // a wide invisible line over the stretches makes them easy to point at
           map.addLayer({ id: "cl-hit", type: "line", source: "cl", filter: line,
                          paint: { "line-color": INK, "line-opacity": 0, "line-width": 16 } });
-          tips(map, el);
+          tips(map, el, fc);
         }
       });
     });
@@ -100,18 +103,16 @@
     fc.features.sort((a, b) => a.properties.rank - b.properties.rank);   // the nearest drawn on top
   }
 
-  // one street: the next cleaning ink, later ones ink dashed, past ones grey
+  // one street: its line in ink, the stretches still to be cleaned on it thicker
   function street(fc) {
-    const look = { next: [INK, 5, false], later: [INK, 3, true], past: [GREY, 4, false] };
-    fc.features.forEach((f) => {
-      const [color, width, dash] = look[f.properties.when];
-      Object.assign(f.properties, { color, width, dash });
-    });
+    fc.features.forEach((f) => Object.assign(f.properties, { color: INK, width: f.properties.kind === "stretch" ? 6 : 3, dash: false }));
   }
 
   // the overview's tooltips and highlights, the same way as aktualne.js: pointing shows, a click
   // or a tap pins (phones have no hover), a click elsewhere on the map unpins
-  function tips(map, el) {
+  function tips(map, el, fc) {
+    const strip = {};
+    fc.features.forEach((f) => (strip[f.properties.key] = f.properties.color));
     const narrow = () => window.matchMedia("(max-width: 900px)").matches;
     const src = document.getElementById(el.dataset.anchors);
     // a stretch: its places' keys (both sides of a street drawn as one line), its anchor, its rows
@@ -119,9 +120,15 @@
     (src ? JSON.parse(src.textContent) : []).forEach((a) => {
       const e = document.createElement(a.href ? "a" : "span");    // the street's cleaning page
       if (a.href) e.href = a.href;
-      e.className = "ak-cla";
+      e.className = a.area ? "ak-mk ak-mk-a" : "ak-cla";
       e.tabIndex = 0;
       e.setAttribute("aria-label", a.label);
+      if (a.area) {
+        // an area's status: a strip on the marker's bottom edge in its stretches' colour
+        const i = window.mapTip.area();
+        i.style.setProperty("--strip", strip[a.keys[0]] || GREY);
+        e.appendChild(i);
+      }
       e.appendChild(window.mapTip.make(a.street, a.what, a.when));
       new maplibregl.Marker({ element: e }).setLngLat([a.lng, a.lat]).addTo(map);
       const s = stretch[a.keys[0]] = { keys: a.keys, anchor: e, rows: [] };
@@ -136,7 +143,9 @@
     function apply(s) {
       if (shown === s) return;
       if (shown) shown.keys.forEach((k) => map.setFeatureState({ source: "cl", id: k }, { on: false }));
-      document.querySelectorAll(".ak-cla.on, [data-cl-key].on").forEach((e) => e.classList.remove("on", "ak-l"));
+      el.querySelectorAll(".ak-cla.on, .ak-mk.on").forEach((e) => e.classList.remove("on", "ak-l"));
+      document.querySelectorAll("[data-cl-key].on").forEach((e) => e.classList.remove("on"));
+      map.setFilter("cl-area", ["in", ["get", "key"], ["literal", s ? s.keys : []]]);
       shown = s;
       if (!s) return;
       s.keys.forEach((k) => map.setFeatureState({ source: "cl", id: k }, { on: true }));
@@ -149,16 +158,18 @@
     const hover = (s) => apply(s || pinned);
     const pin = (s) => { pinned = s && s === pinned ? null : s; apply(pinned); };
 
-    const layers = ["cl-hit", "cl-fill"];
+    const layers = ["cl-hit"];
     const at = (p) => { const f = map.queryRenderedFeatures(p, { layers })[0]; return f ? of[f.properties.key] || null : null; };
     map.on("mousemove", (e) => {
+      // a marker (an area) handles its own pointing
+      if (e.originalEvent.target.closest && e.originalEvent.target.closest(".ak-mk")) return;
       const s = at(e.point);
       map.getCanvas().style.cursor = s ? "pointer" : "";
       hover(s);
     });
     map.on("mouseout", () => { map.getCanvas().style.cursor = ""; hover(null); });
     map.on("click", (e) => {
-      if (e.originalEvent.target.closest && e.originalEvent.target.closest(".ak-cla")) return;
+      if (e.originalEvent.target.closest && e.originalEvent.target.closest(".ak-cla, .ak-mk")) return;
       const s = at(e.point), a = s && s.anchor;
       // a stretch opens its street's page: at once on wide screens, on phones with a second tap
       if (a && a.href && (!narrow() || pinned === s)) { window.location.href = a.href; return; }

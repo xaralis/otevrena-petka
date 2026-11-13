@@ -3,6 +3,7 @@ name, and the harmonogram grouped by week. Pure; templates get them via the sect
 `template` hook."""
 
 import datetime as dt
+import re
 
 from . import places
 
@@ -33,6 +34,72 @@ def clock(i: dict) -> str:
 def until(d: dt.date, today: dt.date) -> str:
     n = (d - today).days
     return "dnes" if n == 0 else "zítra" if n == 1 else f"za {n} {plural(n, 'den', 'dny', 'dní')}"
+
+
+NB = " "
+SIDE_PO = {"obe": "po obou stranách", "prava": "po pravé straně", "leva": "po levé straně"}
+_SIDE_END = re.compile(r",\s*(obě strany|pravá strana|levá strana)$")
+_SIDE_WORD = {"obě strany": "obe", "pravá strana": "prava", "levá strana": "leva"}
+# a short wording that starts with one of these is an ordinary noun, lowercase after „Čistí se“
+_COMMON = ("vnitroblo", "mistni", "komunikace", "parkoviste", "chodnik", "propoj", "spojovaci")
+
+
+def nbdm(d: dt.date) -> str:
+    """'9. 12.' kept on one line."""
+    return f"{d.day}.{NB}{d.month}."
+
+
+def where(its: list[dict]) -> str:
+    """What is cleaned on one day of a street, to follow „Čistí se “: 'v celé ulici, po obou
+    stranách', 'od kpt. Nálepky k Wolkerova, po pravé straně', 'parkoviště před č. p. 1'. Names
+    stay in the case the harmonogram uses."""
+    parts: list[tuple[str, str | None]] = []
+    for i in its:
+        if i["method"] == "whole" or not i["short"] or i["short"].startswith("v celé délce"):
+            text, side = "v celé ulici", i["side"]
+        else:
+            text, side = i["short"], None
+            m = _SIDE_END.search(text)
+            if m:
+                text, side = text[:m.start()], _SIDE_WORD[m[1]]
+            if places.fold(text).startswith(_COMMON):
+                text = text[:1].lower() + text[1:]
+        if (text, side) not in parts:
+            parts.append((text, side))
+    sides = {s for _, s in parts}
+    if len(parts) > 1 and len(sides) == 1:
+        side = sides.pop()
+        texts = [t for t, _ in parts]
+        joined = ("; ".join(texts) if any("," in t for t in texts) else
+                  ", ".join(texts[:-1]) + " a " + texts[-1])
+        return joined + (f", {SIDE_PO[side]}" if side in SIDE_PO else "")
+    return "; ".join(t + (f", {SIDE_PO[s]}" if s in SIDE_PO else "") for t, s in parts)
+
+
+def next_panel(on_next: list[dict], today: dt.date) -> dict:
+    """The street page's „Příští čištění“ panel for the places cleaned on the next date: the
+    countdown line (`lead` + bold `count`), the heading (`on` + red `date` + `clock`), what is
+    cleaned (`where`), by when to move the car (`move` + bold `by`) and the sign's plate."""
+    first = on_next[0]
+    d = first["date"]
+    n = (d - today).days
+    if n == 0:
+        lead, count = "Čistí se ", "dnes"
+    elif n == 1:
+        lead, count = "Příští čištění ", "zítra"
+    else:
+        lead, count = "Příští čištění za ", f"{n}{NB}{plural(n, 'den', 'dny', 'dní')}"
+    eve = d - dt.timedelta(days=1)
+    if n == 0:
+        move, by = "Auto přeparkujte ", "co nejdřív"
+    elif n == 1:
+        move, by = "Auto přeparkujte nejpozději ", "dnes večer"
+    else:
+        move, by = "Auto přeparkujte nejpozději ", f"{ON_DAY[eve.weekday()]} {nbdm(eve)} večer"
+    on = ON_DAY[d.weekday()]
+    return {"lead": lead, "count": count, "on": on[:1].upper() + on[1:], "date": nbdm(d),
+            "clock": clock(first).replace(" ", NB), "where": where(on_next), "move": move, "by": by,
+            "plate": [nbdm(d), clock(first).replace(" ", NB)]}
 
 
 def genitive(name: str) -> str:
