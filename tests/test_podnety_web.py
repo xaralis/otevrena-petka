@@ -254,7 +254,7 @@ def test_page_content(page):
     assert "aplikac" not in m.replace("aplikace Dej Tip", "").replace("aplikace <a", "")   # no app of ours
     assert "Jiránkova" in m                                                  # newest, street only
     assert "Podněty ukazujeme seskupené" not in m and "Nejnovější" not in m
-    assert "Klik na shluk mapu přiblíží, najetím na podnět zobrazíte jeho detail." in m
+    assert "Klik na shluk" not in m
     # the list (every state): newest first, one row a link to the report on Dej Tip; the description only in the card
     side = main(page("/verejny-prostor/zavady?stav=vse")).split('class="pd-side"')[1].split("</aside>")[0]
     assert "V mapě 26 podnětů, nejnovější" in side and side.count("<li ") == 15

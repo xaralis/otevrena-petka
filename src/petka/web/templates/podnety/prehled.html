@@ -119,7 +119,6 @@
         <div class="pd-mapw"><div class="map pd-map" data-pd-map data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" role="region" aria-label="Mapa obvodu s podněty; stejné podněty jsou vedle v seznamu a v číslech níže v tabulce podle druhu"></div></div>
         <script type="application/json" id="pd-points">{{ points|safe }}</script>
         <p class="pd-lg pd-map-lg"><span><i class="pd-k-pt"></i>vyřešené a ostatní</span><span><i class="pd-k-pt pending-alert"></i>čeká na vyřízení</span><span><i class="pd-k-cl">12</i>víc podnětů blízko sebe</span></p>
-        <p class="pd-cap">Klik na shluk mapu přiblíží, najetím na podnět zobrazíte jeho detail.</p>
       </div>
       <aside class="pd-side" aria-labelledby="pd-side-h">
         <p class="side-h" id="pd-side-h" aria-live="polite">V mapě {{ shown_n }} {{ plural(shown_n, 'podnět', 'podněty', 'podnětů') }}, nejnovější</p>
