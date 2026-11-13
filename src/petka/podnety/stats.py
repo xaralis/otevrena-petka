@@ -125,7 +125,7 @@ def buckets(values: list[float | None], edges: list[float], labels: list[tuple[s
 
 
 RESOLVED_IN = ([1, 7, 30], [("do 1 dne", "do 1 dne"), ("1 až 7 dní", "1–7 dní"), ("1 až 4 týdny", "1–4 týdny"),
-                            ("déle než měsíc", "přes měsíc")], ("úřad nic nenapsal", "bez odpovědi"))
+                            ("déle než měsíc", "přes měsíc")], ("bez reakce úřadu", "bez reakce"))
 WAITING_FOR = ([7, 30, 91], [("do týdne", "do týdne"), ("1 až 4 týdny", "1–4 týdny"),
                              ("1 až 3 měsíce", "1–3 měsíce"), ("déle než 3 měsíce", "přes 3 měsíce")], None)
 ANSWERED_IN = ([4, 24, 72], [("do 4 hodin", "do 4 hodin"), ("4 až 24 hodin", "4–24 hodin"), ("1 až 3 dny", "1–3 dny"),
