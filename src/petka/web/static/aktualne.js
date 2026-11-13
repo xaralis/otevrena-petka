@@ -7,7 +7,7 @@
 // have no hover); a click elsewhere on the map unpins. Data: <script id=…> from ulice/web.py.
 (function () {
   const el = document.querySelector("[data-ak-map]");
-  if (!el || !window.maplibregl || !window.pmtiles) return;
+  if (!el || !window.maplibregl || !window.pmtiles || !window.mapTip) return;
   const GREY = "#7d838b", INK = "#191c1f";
   const data = JSON.parse(document.getElementById(el.dataset.inline).textContent);
   const stage = el.closest(".ak");
@@ -36,19 +36,7 @@
     map.on("load", () => draw(map));
   });
 
-  function tip(street, what, when) {
-    const t = document.createElement("span");
-    t.className = "ak-tip";
-    t.setAttribute("aria-hidden", "true");      // the element's aria-label says the same
-    [["b", street], ["span", what], ["span", when]].forEach(([tag, text], i) => {
-      if (!text) return;
-      const x = document.createElement(tag);
-      if (i === 2) x.className = "ak-tw";
-      x.textContent = text;
-      t.appendChild(x);
-    });
-    return t;
-  }
+  const tip = window.mapTip.make;
 
   function draw(map) {
     const w = (extra) => ["interpolate", ["linear"], ["zoom"], 12, 4 + extra, 15, 6 + extra, 18, 9 + extra];
@@ -115,10 +103,7 @@
       st.els.forEach((e) => {
         e.classList.add("on");
         // the tooltip goes to the left where it would run off the map or over the right box
-        if (!e.matches(".ak-mk, .ak-cla")) return;
-        const at = e.getBoundingClientRect(), t = e.querySelector(".ak-tip");
-        const end = at.right + 30 + (t ? t.offsetWidth : 230);
-        e.classList.toggle("ak-l", end > edge - 8 || (r && end > r.left && at.top < r.bottom + 40));
+        if (e.matches(".ak-mk, .ak-cla")) window.mapTip.side(e, edge, r);
       });
     }
     const hover = (st) => apply(st || pinned);
