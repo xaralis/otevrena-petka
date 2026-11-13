@@ -10,7 +10,10 @@ COLUMNS = """n.id, n.board, n.url, n.title, n.published, n.valid_until, n.agenda
              n.reference, n.file_mark, n.department, n.attachments, n.is_mo5, n.redacted,
              n.first_seen, n.last_seen, n.removed_at,
              (n.removed_at AT TIME ZONE 'Europe/Prague')::date AS removed_on,
-             (SELECT d.data FROM notice_digests d WHERE d.notice_id = n.id AND d.status = 'published') AS digest"""
+             (SELECT d.data FROM notice_digests d WHERE d.notice_id = n.id AND d.status = 'published') AS digest,
+             (SELECT jsonb_build_object('valid_from', m.valid_from, 'valid_to', m.valid_to, 'reason', m.reason,
+                                        'signs', m.signs, 'what', m.what)
+              FROM notice_measures m WHERE m.notice_id = n.id) AS measure"""
 
 # annexes shown inside a published card don't get a row of their own
 NOT_MEMBER = """NOT EXISTS (SELECT 1 FROM notice_digests x WHERE x.status = 'published' AND n.id = ANY(x.members))"""

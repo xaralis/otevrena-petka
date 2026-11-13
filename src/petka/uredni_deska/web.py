@@ -124,7 +124,9 @@ def api_notices(q: str = "", mo5: bool = True, active: bool = True, kind: str | 
     """Oznámení z úřední desky, nejnovější první. `mo5=true` (výchozí) = jen to, co se týká
     MO Pardubice V (vše z desky obvodu + oznámení magistrátu, která obvod výslovně jmenují);
     `mo5=false` = i celá deska magistrátu. `active=false` = sejmutá oznámení (archiv).
-    `q` hledá v názvu, čísle jednacím a odboru (bez diakritiky, předpony slov)."""
+    `q` hledá v názvu, čísle jednacím a odboru (bez diakritiky, předpony slov).
+    U dopravních opatření obvodu je `measure`: platnost (`valid_from`, `valid_to`), důvod, kódy
+    značek a jedna věta, co opatření dělá, přečtené z přiloženého PDF (jinak null)."""
     rows, total = queries.search(q, mo5, active, kind, limit=limit, offset=offset)
     return {"total": total, "results": rows}
 
