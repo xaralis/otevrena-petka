@@ -85,6 +85,7 @@
     <script type="application/json" id="ul-map-json">{{ data|tojson }}</script>
   </div>
   <div class="ul-akt-list">
+    <div class="ul-akt-lh"><h3>Co se v ulici děje</h3>{% if rows %}<span>nejnovější nahoře, {{ rows|length }} {{ cl_plural(rows|length, 'záznam', 'záznamy', 'záznamů') }}</span>{% endif %}</div>
     {% if rows %}
     <ol class="pd-rows ul-rows" data-ul-rows>
       {% for r in rows %}{% set tag = 'a' if r.href else 'span' %}
@@ -96,6 +97,7 @@
     <p class="cl-muted">Zatím o ulici nic nevíme.</p>
     {% endif %}
   </div>
+  </div>
   <p class="cl-lg ul-lg" aria-label="Legenda mapy">
     <span><i class="ul-lg-street"></i>{{ s.name }}</span>
     {% if has.next %}<span><i class="ul-lg-cl"></i>blokové čištění</span>{% endif %}
@@ -106,7 +108,6 @@
     {% if has.traffic %}<span><i class="ul-lg-mk ak-mk-t"></i>dopravní omezení</span>{% endif %}
     {% if has.other %}<span><i class="ul-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>oznámení z úřední desky</span>{% endif %}
     </p>
-  </div>
 </section>
 
 {{ street_cleaning(cl_rows, gen, today, webcal, ics) }}

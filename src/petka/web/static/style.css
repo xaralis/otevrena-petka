@@ -1569,17 +1569,20 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 /* „Aktuálně“ */
 .ul-akt { margin-top: 3rem; }
 .ul-akt > h2 { margin: 0 0 1rem; }
-/* the map and its list in one frame, the legend under both: the list as tall as the map, scrolling inside */
-.ul-box { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: 540px auto; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+/* the map and its list in one ink frame as the front page's boxes, the list a column of its own (as tall as the map, scrolling inside), the legend under the frame */
+.ul-box { display: grid; grid-template-columns: minmax(0, 1fr) 370px; height: 560px; border: 2px solid var(--ink); border-radius: 3px; overflow: hidden; }
 .ul-akt-map { min-height: 0; }
 .ul-mapw { position: relative; height: 100%; }
 .ul-map { height: 100%; width: 100%; margin: 0; border: 0; border-radius: 0; }
-.ul-akt-list { display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--rule); }
+.ul-akt-list { display: flex; flex-direction: column; min-height: 0; border-left: 2px solid var(--ink); }
+.ul-akt-lh { padding: .8rem .9rem .6rem; border-bottom: 1px solid var(--off); }
+.ul-akt-lh h3 { margin: 0; font-size: 1.05rem; }
+.ul-akt-lh span { font-size: .82rem; color: var(--muted); }
 .ul-akt-list .ul-rows { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
 .ul-akt-list .pd-rows-more { margin: .7rem .9rem .8rem; align-self: flex-start; }
 .ul-akt-list > .cl-muted { margin: 0; padding: 1rem; }
-.ul-box > .ul-lg { grid-column: 1 / -1; margin: 0; padding: .6rem .9rem; background: var(--grey); }   /* the grey alone sets it apart, no rule over it */
-.ul-box .ul-rows li > a, .ul-box .ul-rows li > span { grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .5rem; padding-right: 2.8rem; }   /* the narrow column: a short date, every status in one line with the pins */
+.ul-akt > .ul-lg { margin: .7rem 0 0; }
+.ul-box .ul-rows li > a, .ul-box .ul-rows li > span { grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .5rem; padding-left: .9rem; padding-right: 2.8rem; }   /* the narrow column: a short date, every status in one line with the pins */
 /* rows split by hairlines as the link lists, no stripes; grey only for the row lit (pointed at, or from the map) */
 .ul-box .ul-rows li { border-bottom: 1px solid var(--off); }
 .ul-box .ul-rows li:nth-child(odd) > a, .ul-box .ul-rows li:nth-child(odd) > span { background: none; }
@@ -1621,11 +1624,16 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .cl-nx-a { margin-top: .4rem; }
   .ul-akt { margin-top: 2rem; }
   .ul-akt > h2 { margin: 0 0 .8rem; }
-  .ul-box { display: flex; flex-direction: column; border: 0; overflow: visible; }   /* the map, its legend, the list */
-  .ul-box > .ul-lg { order: 1; padding: 0; margin-top: .7rem; background: none; border: 0; }
-  .ul-akt-list { order: 2; border: 0; }
+  .ul-akt { display: flex; flex-direction: column; }
+  .ul-box { display: contents; }   /* the map, its legend, the list */
+  .ul-akt-map { order: 1; }
+  .ul-akt > .ul-lg { order: 2; }
+  .ul-akt-list { order: 3; border: 0; margin-top: 1.4rem; }
+  .ul-akt-lh { padding: 0 0 .5rem; }
+  .ul-akt-list .ul-rows { margin-top: 0; }
+  .ul-box .ul-rows li > a, .ul-box .ul-rows li > span { padding-left: 0; }
   .ul-akt-list .ul-rows { overflow: visible; }
-  .ul-akt-list .pd-rows-more { padding: 0; margin-top: .8rem; border: 0; }
+  .ul-akt-list .pd-rows-more { padding: 0; margin: .8rem 0 0; border: 0; }
   .ul-mapw { margin: 0 -1.25rem; height: auto; }
   .ul-map { height: auto; aspect-ratio: 390 / 460; max-height: 70vh; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .ul-sheet .ak-tip.ak-card { position: static; display: grid; grid-template-columns: 120px minmax(0, 1fr); width: auto; max-width: none; margin: .8rem 0 0;
