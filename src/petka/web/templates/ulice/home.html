@@ -2,7 +2,7 @@
 {#- The front page. The hero is an illustrative example (Wolkerova on Dukla), drawn over a fixed
     map image: on wide screens the facts hang on leader lines, on phones they are numbered under
     a strip of the map. Below it the street search and the whole obvod from live data. -#}
-{% from "ulice/_macros.html" import feed as feed_rows, street_search, datalist %}
+{% from "ulice/_macros.html" import street_search, datalist %}
 {% block title %}Co se děje na Pětce?{% endblock %}
 {% block description %}Kdy se čistí vaše ulice, co se v ní rozhodlo, co lidé hlásí a co visí na úřední desce: městský obvod Pardubice V na jednom místě a lidskou řečí. Nezávislý projekt, nejde o web úřadu.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -86,21 +86,29 @@
 </section>
 
 <section class="dash" aria-labelledby="dash-h">
-  <h2 id="dash-h" class="dash-h">Celý obvod</h2>
-  <div class="ul-two">
-    <div class="ul-o2">
-      <h3 class="ul-h">Na mapě</h3>
-      <div class="map ul-map" data-ul-map="obvod" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="ul-map-json" role="region" aria-label="Mapa obvodu: úseky blokového čištění v příštích dvou týdnech a místa, kde čekají nahlášené závady; stejné údaje jsou vedle v přehledu"></div>
-      <script type="application/json" id="ul-map-json">{{ geojson|tojson }}</script>
-      <p class="cl-lg" aria-label="Legenda mapy">
-        {% if has_week %}<span><i class="cl-lg-7"></i>čištění do týdne</span>{% endif %}
-        {% if has_two %}<span><i></i><span class="cl-only-d">do dvou týdnů</span><span class="cl-only-m">do 2 týdnů</span></span>{% endif %}
-        {% if has_waiting %}<span><i class="ul-lg-wait"></i>čekající závady</span>{% endif %}
-      </p>
+  <h2 id="dash-h" class="dash-h">Aktuálně</h2>
+  <div class="ak">
+    <div class="map ak-map" data-ak-map data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-icons="{{ asset('deska-ikony.svg') }}" data-inline="ak-json" role="region" aria-label="Mapa obvodu: blokové čištění tento týden a oznámení z úřední desky u ulic; stejné údaje jsou i v přehledech u mapy"></div>
+    <script type="application/json" id="ak-json">{{ akt|tojson }}</script>
+    <p class="cl-lg ak-lg" aria-label="Legenda mapy">
+      {% if days %}<span><i class="ak-lg-cl"></i>blokové čištění tento týden</span>{% endif %}
+      {% if traffic %}<span><i class="ak-lg-mk ak-mk-t"></i>dopravní omezení, místo podle názvu ulice</span>{% endif %}
+      {% if has_other %}<span><i class="ak-lg-mk"><svg width="11" height="11" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>další oznámení z úřední desky, ikona podle druhu</span>{% endif %}
+    </p>
+    <div class="co ak-box ak-box-l">
+      <h3 class="ak-h">Blokové čištění tento týden</h3>
+      {% if days %}<ol class="ak-list">
+        {% for d in days %}<li tabindex="0" data-day="{{ loop.index0 }}"><span class="ak-d">{{ d.day }}</span><span>{{ d.text }}</span></li>
+        {% endfor %}</ol>
+      {% else %}<p class="ak-sub">Do týdne se nikde nečistí. <a href="/blokove-cisteni">Celý harmonogram</a></p>{% endif %}
     </div>
-    <div class="ul-o1">
-      <h3 class="ul-h">Co se děje</h3>
-      {{ feed_rows(feed, today.year) }}
+    <div class="co ak-box ak-box-r">
+      <h3 class="ak-h">Dopravní omezení</h3>
+      <p class="ak-sub">podle oznámení na úřední desce</p>
+      {% if traffic %}<ol class="ak-list ak-list-r">
+        {% for m in traffic %}<li tabindex="0" data-mark="{{ m.id }}" aria-label="{{ m.label }}"><span>{{ m.street }}</span><span class="ak-d">{{ m.box }}</span></li>
+        {% endfor %}</ol>
+      {% else %}<p class="ak-sub">Teď žádné nevisí.</p>{% endif %}
     </div>
   </div>
 
@@ -133,4 +141,4 @@
   </div>
 </section>
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script><script src="{{ asset('aktualne.js') }}" defer></script>{% endblock %}

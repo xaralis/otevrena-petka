@@ -17,7 +17,6 @@ from ..podnety import stats as ps
 from ..usneseni import search as us
 from ..uredni_deska.queries import tsquery as deska_tsquery
 
-FEED_HOME = 7           # items of "Co se děje" on the front page
 FEED_STREET = 8
 SIDES = {"obe": "obě strany", "prava": "pravá strana", "leva": "levá strana"}
 
@@ -104,12 +103,6 @@ def report_item(r: dict, href: str) -> dict:
             "href": href, "status": ps.status_word(r)}
 
 
-def notice_item(n: dict) -> dict:
-    head = (n.get("digest") or {}).get("headline")
-    return {"date": n["published"], "source": "Úřední deska", "text": head or n["title"],
-            "href": f"/uredni-deska/{n['id']}"}
-
-
 def feed(items: list[dict], n: int) -> list[dict]:
     """The `next` item (an upcoming cleaning) first, then the rest newest first, n in all."""
     first = [i for i in items if i.get("next")][:1]
@@ -145,7 +138,146 @@ def notices_posted(name: str) -> int:
                                AND n.tsv @@ to_tsquery('simple', %s)""", (tq,)).fetchone()["n"]
 
 
-def latest_notices(n: int = 3) -> list[dict]:
-    from ..uredni_deska import queries as dq
-    # deliveries to named people are not news (and personal), as on /prehled
-    return [x for x in dq.search(limit=20)[0] if x["kind"] != "doruceni"][:n]
+# --- "Aktuálně": the front page's map --------------------------------------------------------
+
+WEEK = 7                # days ahead: cleanings shown, traffic measures that start soon enough
+NB = " "
+SIDE_SHORT = {"obe": "obě", "prava": "pravá", "leva": "levá"}
+
+
+def dm(d: dt.date) -> str:
+    """'18. 11.' with a non-breaking space."""
+    return f"{d.day}.{NB}{d.month}."
+
+
+def dmy(d: dt.date) -> str:
+    return f"{dm(d)}{NB}{d.year}"
+
+
+def days(ds: list[dt.date]) -> str:
+    """'18. 11.', '18. a 19. 11.', '18., 19. a 20. 11.', '30. 11. a 1. 12.' (the month always there)."""
+    ds = sorted(set(ds))
+    if len({(d.year, d.month) for d in ds}) == 1:
+        head = [f"{d.day}." for d in ds[:-1]] + [dm(ds[-1])]
+    else:
+        head = [dm(d) for d in ds]
+    return head[0] if len(head) == 1 else ", ".join(head[:-1]) + " a " + head[-1]
+
+
+def period(a: dt.date | None, b: dt.date | None) -> str:
+    """'16. 11. – 16. 12. 2026', '15. 11. 2026 – 31. 8. 2028', '5. 11. 2026'."""
+    if a and b and a != b:
+        return f"{dm(a) if a.year == b.year else dmy(a)} – {dmy(b)}"
+    return dmy(b or a)
+
+
+def short_until(a: dt.date | None, b: dt.date, today: dt.date) -> str:
+    """The box's right column: 'od 20. 11.' (not yet), 'do 16. 12.', 'do 31. 8. 2028'."""
+    if a and a > today:
+        return "od " + (dm(a) if a.year == today.year else dmy(a))
+    return "do " + (dm(b) if b.year == today.year else dmy(b))
+
+
+def point_on(geometry: dict, at: float = 0.5) -> tuple[float, float]:
+    """A point on a street's line `at` of its length (its longest connected piece)."""
+    from shapely.geometry import shape
+    from shapely.ops import linemerge
+    g = shape(geometry)
+    if g.geom_type == "MultiLineString":
+        g = linemerge(g)
+    if g.geom_type == "MultiLineString":
+        g = max(g.geoms, key=lambda x: x.length)
+    if g.geom_type == "LineString":
+        p = g.interpolate(at, normalized=True)
+    else:
+        p = g.representative_point()
+    return round(p.x, 6), round(p.y, 6)
+
+
+def cleaning_when(its: list[dict]) -> str:
+    """A street's cleanings in the week as its tooltip line: 'obě strany 20. 11.', 'pravá strana
+    18. 11., levá 19. 11.', '18. a 19. 11.' (the sheet doesn't say the side)."""
+    by: dict = {}
+    for i in sorted(its, key=lambda i: i["date"]):
+        by.setdefault(i["side"], []).append(i["date"])
+    parts = []
+    for n, (side, ds) in enumerate(by.items()):
+        word = (SIDES if n == 0 else SIDE_SHORT).get(side)
+        parts.append(f"{word} {days(ds)}" if word else days(ds))
+    return ", ".join(parts)
+
+
+def week_cleanings(its: list[dict], geoms: dict, today: dt.date) -> dict:
+    """Cleanings in the next WEEK days: the located places as lines (`key`, `sid` = the street),
+    one anchor per street (where its tooltip hangs) and the box's rows by day."""
+    from ..cisteni.words import WD
+    week = [i for i in its if today <= i["date"] <= today + dt.timedelta(days=WEEK) and i["key"] in geoms]
+    lines, seen = [], set()
+    for i in week:
+        if i["key"] not in seen:
+            seen.add(i["key"])
+            lines.append({"type": "Feature", "geometry": geoms[i["key"]],
+                          "properties": {"key": i["key"], "sid": i["slug"] or i["key"]}})
+    streets: dict[str, list[dict]] = {}
+    for i in week:
+        streets.setdefault(i["slug"] or i["key"], []).append(i)
+    anchors = []
+    for sid, xs in streets.items():
+        lng, lat = point_on(geoms[xs[0]["key"]])
+        when = cleaning_when(xs)
+        anchors.append({"sid": sid, "street": xs[0]["street"], "when": when, "lng": lng, "lat": lat,
+                        "label": f"Blokové čištění: {xs[0]['street']}, {days([x['date'] for x in xs])}"})
+    rows = []
+    for d in sorted({i["date"] for i in week}):
+        on = [i for i in week if i["date"] == d]
+        rows.append({"date": d, "day": f"{WD[d.weekday()]} {dm(d)}", "text": next_cleaning_line(on)[0],
+                     "keys": list(dict.fromkeys(i["key"] for i in on)),
+                     "sids": list(dict.fromkeys(i["slug"] or i["key"] for i in on))})
+    return {"lines": {"type": "FeatureCollection", "features": lines}, "anchors": anchors, "rows": rows}
+
+
+def board_marks(notices: list[dict], streets: dict, today: dt.date) -> list[dict]:
+    """Notices on the board that name a street of the obvod, one mark per street, on its line.
+    Traffic orders show their measure's validity (gone once it ended, not yet when it starts
+    more than WEEK days ahead); the others, and orders we couldn't read, when they were posted."""
+    from ..uredni_deska.measures import streets_in, subject
+    from ..uredni_deska.source import KIND_LABEL
+    by_name = {s.name: s for s in streets.values()}
+    out, seen, on_street = [], set(), {}
+    for n in sorted(notices, key=lambda n: (n["published"] or dt.date.min, n["id"]), reverse=True):
+        found = streets_in(n["title"], list(by_name))
+        if not found:
+            continue
+        traffic = n["kind"] == "doprava"
+        a, b = n.get("valid_from"), n.get("valid_to")
+        if traffic and b and (b < today or (a and a > today + dt.timedelta(days=WEEK))):
+            continue
+        if traffic:
+            what = n.get("what") or "Přechodná úprava provozu"
+        else:
+            what = f"{KIND_LABEL.get(n['kind'], 'Úřední deska')}: {subject(n['title'], found)}"
+        dated = traffic and b
+        when = period(a, b) if dated else (f"vyvěšeno {dm(n['published'])}" if n["published"] else "")
+        for name in found:
+            key = (name, what, when)
+            if key in seen:          # an annex or the same order posted twice
+                continue
+            seen.add(key)
+            k = on_street[name] = on_street.get(name, -1) + 1
+            lng, lat = point_on(by_name[name].geometry, (0.5, 0.32, 0.68, 0.2, 0.8)[k % 5])
+            label = (f"Dopravní omezení: {name}, {what}" if traffic else f"{name}, {what}") + (f", {when}" if when else "")
+            out.append({"id": f"m{len(out)}", "nid": n["id"], "kind": n["kind"], "traffic": traffic,
+                        "street": name, "what": what, "when": when, "label": label,
+                        "box": short_until(a, b, today) if dated else when, "lng": lng, "lat": lat,
+                        "order": (a > today, a if a and a > today else b) if dated else (True, dt.date.max)})
+    return out
+
+
+def place_notices() -> list[dict]:
+    """Posted notices of the obvod that can be about a place, with what we read from them."""
+    from ..uredni_deska.measures import PLACE_KINDS
+    with db.pool().connection() as conn:
+        return conn.execute(
+            """SELECT n.id, n.title, n.kind, n.published, m.valid_from, m.valid_to, m.what
+               FROM notices n LEFT JOIN notice_measures m ON m.notice_id = n.id
+               WHERE n.is_mo5 AND n.removed_at IS NULL AND n.kind = ANY(%s)""", (list(PLACE_KINDS),)).fetchall()

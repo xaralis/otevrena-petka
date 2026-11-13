@@ -1,6 +1,7 @@
 """The front page and the street pages. The obvod is the request's (petka.obvody).
 
-    /                    a street search, what is going on in the whole obvod, the areas
+    /                    a street search, „Aktuálně“ (this week's cleanings and the board's notices
+                         on one map), the areas
     /ulice?q=<name>      the search: one street goes straight to its page, more are listed
     /ulice/<slug>        one street: next cleaning, decisions, reports, map, everything dated
 """
@@ -15,15 +16,13 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from .. import nav
 from ..cisteni import queries as cq
 from ..podnety import queries as pq, stats as ps
-from ..usneseni import queries as uq, search as us
-from ..usneseni.text import slug as to_slug
+from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
 from ..web.render import tpl
 from . import queries as q, streets as st
 
 pages = APIRouter(include_in_schema=False)
 TZ = ZoneInfo("Europe/Prague")
-SOON = 14       # days: the front page's map shows cleanings this close
 
 
 def _now() -> dt.datetime:
@@ -39,52 +38,20 @@ def _names(obvod: str) -> dict[str, str]:
     return {s.slug: s.name for s in st.streets(obvod).values()}
 
 
-def _report_href(r: dict, names: dict[str, str]) -> str:
-    s = to_slug(r["street"]) if r.get("street") else None
-    return f"/ulice/{s}" if s in names else "/podnety"
-
-
 # --- the front page ---------------------------------------------------------------------------
-
-def overview_map(its: list[dict], geoms: dict, waiting: list[dict], today: dt.date) -> dict:
-    """Cleanings in the next SOON days (`when`: week, two) and the cells with waiting reports
-    (grouped like on /podnety, never a report's own position)."""
-    nxt: dict[str, dict] = {}
-    for i in its:
-        if today <= i["date"] <= today + dt.timedelta(days=SOON) and i["key"] in geoms and i["key"] not in nxt:
-            nxt[i["key"]] = i
-    feats = [{"type": "Feature", "geometry": geoms[k],
-              "properties": {"kind": "cleaning", "when": "week" if (i["date"] - today).days <= 7 else "two",
-                             "street": i["street"], "slug": i["slug"], "text": i["text"], "date": i["date"].isoformat()}}
-             for k, i in nxt.items()]
-    feats.sort(key=lambda f: f["properties"]["when"] == "week")       # the nearest on top
-    cells = ps.grid(waiting)["features"]
-    for c in cells:
-        c["properties"] = {"kind": "reports", "n": c["properties"]["n"], "waiting": c["properties"]["waiting"]}
-    return {"type": "FeatureCollection", "features": feats + cells}
-
 
 def home(request: Request):
     today = _today()
     obvod = request.state.obvod.id
-    names = _names(obvod)
+    every = st.streets(obvod)
+    names = {s.slug: s.name for s in every.values()}
     its = cq.items(obvod, cq.year_start(today))
-    future = [i for i in its if i["date"] >= today]
-    nd = cq.next_date(future, today)
-    items = []
-    if nd:
-        text, href = q.next_cleaning_line([i for i in future if i["date"] == nd])
-        items.append({"date": nd, "source": "Blokové čištění", "text": text, "href": href, "next": True})
+    week = q.week_cleanings(its, cq.geometries(obvod), today)
+    marks = q.board_marks(q.place_notices(), every, today)
+    traffic = sorted((m for m in marks if m["traffic"]), key=lambda m: m["order"])
 
-    now = _now()
     per = ps.period("12m", today)
-    rows = pq.period_rows(obvod, per.start, per.end)
-    s = ps.summary(rows, per, now)
-    items += [q.report_item(r, _report_href(r, names)) for r in s["newest"][:3]]
-    items += [q.notice_item(n) for n in q.latest_notices(2)]
-    hits, _ = us.search("", filters=us.Filters(status="usneseni"), limit=2)
-    items += [q.resolution_item(h.row) for h in hits]
-
+    s = ps.summary(pq.period_rows(obvod, per.start, per.end), per, _now())
     ustats, dstats = uq.stats(), dq.stats()
     info = {
         "/usneseni": f"{q.thousands(ustats['resolutions'])} usnesení ze {ustats['meetings']} jednání od roku {ustats['first_date'].year}",
@@ -96,13 +63,15 @@ def home(request: Request):
     g = {x.label: x for x in nav.GROUPS}
     areas = [("Radnice", g["Radnice"].items), ("Veřejný prostor", g["Veřejný prostor"].items),
              ("Finance a ankety", g["Finance"].items + g["Zapojte se"].items)]
-    waiting = [r for r in rows if ps.outcome(r) == "ceka"]
+    data = {"lines": week["lines"], "anchors": week["anchors"],
+            "days": [{"keys": d["keys"], "sids": d["sids"]} for d in week["rows"]],
+            "marks": [{k: m[k] for k in ("id", "kind", "traffic", "street", "what", "when", "label", "lng", "lat")}
+                      for m in marks]}
     return tpl.TemplateResponse(request, "ulice/home.html", {
         "today": today, "names": names, "miss": request.query_params.get("ulice", "").strip()[:80],
-        "feed": q.feed(items, q.FEED_HOME), "areas": areas, "info": info,
-        "ustats": ustats, "geojson": overview_map(its, cq.geometries(obvod), waiting, today),
-        "has_week": any(i["date"] <= today + dt.timedelta(days=7) for i in future),
-        "has_two": any(7 < (i["date"] - today).days <= SOON for i in future), "has_waiting": bool(waiting),
+        "areas": areas, "info": info, "ustats": ustats,
+        "days": week["rows"], "traffic": traffic, "has_other": any(not m["traffic"] for m in marks),
+        "akt": data,
     })
 
 

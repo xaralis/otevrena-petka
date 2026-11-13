@@ -1,7 +1,5 @@
-// The front page and the street pages: the maps (self-hosted MapLibre + PMTiles, like cisteni.js
-// and podnety.js) and the short placeholder of the street search on phones.
-//   <div data-ul-map="obvod" data-inline="id">  cleanings in the next two weeks (red within a week,
-//        ink within two) and the ~150 m cells where reports wait (hatched, area by count)
+// The street pages' map (self-hosted MapLibre + PMTiles, like cisteni.js and podnety.js) and the
+// short placeholder of the street search on phones (the front page's map is aktualne.js).
 //   <div data-ul-map="street" data-inline="id"> the street from RÚIAN, its cleanings (the next ink,
 //        later dashed, past grey) and its reports by cell (white disc, hatched part waiting)
 (function () {
@@ -18,7 +16,6 @@
   maps.forEach(setup);
 
   function setup(el) {
-    const obvod = el.dataset.ulMap === "obvod";
     const fc = JSON.parse(document.getElementById(el.dataset.inline).textContent);
     const abs = (u) => location.origin + u;
     fetch(el.dataset.style).then((r) => r.json()).then((s) => {
@@ -37,13 +34,12 @@
         },
       });
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
-      map.on("load", () => draw(map, fc, obvod));
+      map.on("load", () => draw(map, fc));
     });
   }
 
-  function draw(map, fc, obvod) {
-    const look = obvod ? { week: [RED, 5, false], two: [INK, 4, false] }
-      : { next: [INK, 5, false], later: [INK, 3, true], past: [GREY, 4, false] };
+  function draw(map, fc) {
+    const look = { next: [INK, 5, false], later: [INK, 3, true], past: [GREY, 4, false] };
     fc.features.forEach((f) => {
       const p = f.properties;
       if (p.kind === "cleaning") [p.color, p.width, p.dash] = look[p.when];
@@ -66,10 +62,9 @@
                    layout: { "line-join": "round" },
                    paint: { "line-color": ["get", "color"], "line-width": w(0), "line-dasharray": [1.5, 1.2] } });
     // reports by cell: radius ~ sqrt(count), like /podnety
-    const key = obvod ? "waiting" : "n";
     const r = ["interpolate", ["linear"], ["zoom"], ...[[12, 3], [15, 6], [17, 10]].flatMap(([z, k]) =>
-      [z, ["max", 3, ["*", k, ["sqrt", ["get", key]]]]])];
-    if (!obvod) map.addLayer({ id: "ul-rep", type: "circle", source: "ul", filter: is("reports"),
+      [z, ["max", 3, ["*", k, ["sqrt", ["get", "n"]]]]])];
+    map.addLayer({ id: "ul-rep", type: "circle", source: "ul", filter: is("reports"),
                                paint: { "circle-radius": r, "circle-color": "#fff", "circle-opacity": .92,
                                         "circle-stroke-color": INK, "circle-stroke-width": 1.6 } });
     const size = ["interpolate", ["linear"], ["zoom"], ...[[12, 3], [15, 6], [17, 10]].flatMap(([z, k]) =>
@@ -81,9 +76,8 @@
 
     const b = new maplibregl.LngLatBounds();
     const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
-    const fit = obvod ? fc.features : fc.features.filter((f) => f.properties.kind !== "reports");
-    fit.forEach((f) => walk(f.geometry.coordinates));
-    if (!b.isEmpty()) map.fitBounds(b, { padding: obvod ? 20 : 40, maxZoom: 17, duration: 0 });
+    fc.features.filter((f) => f.properties.kind !== "reports").forEach((f) => walk(f.geometry.coordinates));
+    if (!b.isEmpty()) map.fitBounds(b, { padding: 40, maxZoom: 17, duration: 0 });
   }
 
   function hatch() {

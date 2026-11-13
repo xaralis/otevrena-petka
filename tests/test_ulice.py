@@ -114,13 +114,11 @@ def test_feed_puts_the_next_cleaning_first_then_newest():
     assert [i["text"] for i in q.feed(items, 3)] == ["next", "b", "a"]
 
 
-def test_items_of_resolutions_and_notices():
+def test_items_of_resolutions():
     r = {"uid": "310-2026-r", "number": "310/2026 R", "body": "rmo", "date": D(2026, 9, 23), "title": "Přímé zadání",
          "agenda_title": None, "mainvote": {"pro": 5}}
     assert q.resolution_item(r) | {} == {"date": D(2026, 9, 23), "source": "Rada", "number": "310/2026 R",
                                          "text": "Přímé zadání", "href": "/usneseni/310-2026-r", "vote": {"pro": 5}, "body": "rmo"}
-    n = {"id": "n1", "published": D(2026, 11, 10), "title": "VV - OOP", "digest": {"headline": "Úprava provozu"}}
-    assert q.notice_item(n)["text"] == "Úprava provozu" and q.notice_item(n | {"digest": None})["text"] == "VV - OOP"
     assert q.thousands(1026) == "1 026"
 
 
@@ -139,6 +137,69 @@ STREETS = st.in_obvod([[1, "Wolkerova"], [2, "Lexova"], [3, "Josefa Ressla"]],
                       {1: line((15.755, 50.026), (15.763, 50.026)), 2: line((15.759, 50.022), (15.759, 50.03)),
                        3: line((15.753, 50.024), (15.758, 50.024))},
                       {"type": "Polygon", "coordinates": [[[15.7, 49.9], [15.9, 49.9], [15.9, 50.1], [15.7, 50.1], [15.7, 49.9]]]})
+
+
+OOP = "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - "
+
+
+def notice(id, title, kind="doprava", published=D(2026, 11, 4), a=None, b=None, what=None):
+    return {"id": id, "title": title, "kind": kind, "published": published, "valid_from": a, "valid_to": b, "what": what}
+
+
+NOTICES = [
+    notice("n1", OOP + "Lexova", a=D(2026, 11, 10), b=D(2026, 11, 20), what="Uzavřená stezka kvůli stavebním pracím"),
+    notice("n2", OOP + "Wolkerova", b=D(2026, 11, 11), a=D(2026, 11, 5), what="Zábrany"),           # over
+    notice("n3", OOP + "Wolkerova", a=D(2026, 11, 20), b=D(2026, 12, 1), what="Zábrany"),           # starts too late
+    notice("n4", "Změna rozhodnutí - povolení stavby - chodníky Wolkerova", "stavby", D(2026, 11, 10)),
+    notice("n5", OOP + "Josefa Ressla", published=D(2026, 11, 3)),                                  # not read
+    notice("n6", OOP + "Nádražní", a=D(2026, 11, 10), b=D(2026, 11, 20)),                            # not in the obvod
+]
+
+
+def test_dates_on_the_map():
+    nb = "\u00a0"
+    assert q.days([D(2026, 11, 19), D(2026, 11, 18)]) == f"18. a 19.{nb}11."
+    assert q.days([D(2026, 11, 18), D(2026, 11, 19), D(2026, 11, 20)]) == f"18., 19. a 20.{nb}11."
+    assert q.days([D(2026, 11, 30), D(2026, 12, 1)]) == f"30.{nb}11. a 1.{nb}12."
+    assert q.period(D(2026, 11, 16), D(2026, 12, 16)) == f"16.{nb}11. – 16.{nb}12.{nb}2026"
+    assert q.period(D(2026, 11, 15), D(2028, 8, 31)) == f"15.{nb}11.{nb}2026 – 31.{nb}8.{nb}2028"
+    assert q.period(D(2026, 11, 5), D(2026, 11, 5)) == f"5.{nb}11.{nb}2026"
+    assert q.short_until(D(2026, 11, 20), D(2027, 1, 7), TODAY) == f"od 20.{nb}11."
+    assert q.short_until(D(2026, 11, 3), D(2026, 12, 11), TODAY) == f"do 11.{nb}12."
+    assert q.short_until(D(2026, 11, 3), D(2028, 8, 31), TODAY) == f"do 31.{nb}8.{nb}2028"
+
+
+def test_week_cleanings():
+    its = [item(D(2026, 11, 18), "Josefa Ressla", side="prava"), item(D(2026, 11, 19), "Josefa Ressla", side="leva"),
+           item(D(2026, 11, 18), "Wolkerova", side="prava"), item(D(2026, 11, 13), "Lexova"), item(D(2026, 11, 26)),
+           item(D(2026, 11, 10), "Lexova")]
+    geoms = {i["key"]: line((15.75, 50.02), (15.76, 50.02)) for i in its}
+    w = q.week_cleanings(its, geoms, TODAY)
+    assert [(r["day"], r["text"]) for r in w["rows"]] == [
+        ("pá 13.\u00a011.", "Lexova, obě strany"), ("st 18.\u00a011.", "Josefa Ressla a Wolkerova, pravá strana"),
+        ("čt 19.\u00a011.", "Josefa Ressla, levá strana")]
+    when = {a["sid"]: a["when"] for a in w["anchors"]}
+    assert when == {"josefa-ressla": "pravá strana 18.\u00a011., levá 19.\u00a011.", "wolkerova": "pravá strana 18.\u00a011.",
+                    "lexova": "obě strany 13.\u00a011."}
+    assert w["anchors"][0]["lng"] == 15.755 and len(w["lines"]["features"]) == 3      # one per place; 26. 11. and the past left out
+    assert q.week_cleanings(its, geoms, D(2026, 11, 11))["rows"][-1]["day"] == "st 18.\u00a011."     # a week, both ends in
+
+
+def test_board_marks():
+    marks = q.board_marks(NOTICES, {s.slug: s for s in STREETS}, TODAY)
+    assert [(m["nid"], m["street"]) for m in marks] == [("n4", "Wolkerova"), ("n1", "Lexova"), ("n5", "Josefa Ressla")]
+    wol, lex, jr = marks
+    assert (lex["what"], lex["when"], lex["box"]) == ("Uzavřená stezka kvůli stavebním pracím",
+                                                     "10.\u00a011. – 20.\u00a011.\u00a02026", "do 20.\u00a011.")
+    assert lex["label"] == "Dopravní omezení: Lexova, Uzavřená stezka kvůli stavebním pracím, 10.\u00a011. – 20.\u00a011.\u00a02026"
+    assert (wol["what"], wol["when"], wol["traffic"]) == ("Stavby a řízení: změna rozhodnutí, povolení stavby, chodníky",
+                                                         "vyvěšeno 10.\u00a011.", False)
+    assert (jr["what"], jr["when"]) == ("Přechodná úprava provozu", "vyvěšeno 3.\u00a011.")
+    assert (lex["lng"], lex["lat"]) == (15.759, 50.026)        # the middle of the street's line
+    # two marks on one street don't sit on each other
+    two = q.board_marks([NOTICES[0], notice("n7", OOP + "Lexova", a=TODAY, b=TODAY, what="Jiné")],
+                        {s.slug: s for s in STREETS}, TODAY)
+    assert two[0]["lat"] != two[1]["lat"]
 
 
 @pytest.fixture
@@ -161,8 +222,7 @@ def fixture(monkeypatch):
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: [r for r in reps if r["street"] == name])
     monkeypatch.setattr(q, "resolutions", lambda name: (res, 19) if name == "Wolkerova" else ([], 0))
     monkeypatch.setattr(q, "notices_posted", lambda name: 0)
-    monkeypatch.setattr(q, "latest_notices", lambda n: [{"id": "n1", "published": D(2026, 11, 10), "title": "Změna povolení stavby",
-                                                         "digest": None}])
+    monkeypatch.setattr(q, "place_notices", lambda: NOTICES)
     monkeypatch.setattr(us, "search", lambda *a, **kw: ([Hit(res[0])], {"total": 1}))
     monkeypatch.setattr(uq, "stats", lambda: {"resolutions": 1026, "meetings": 184, "first_date": D(2018, 1, 10)})
     monkeypatch.setattr(dq, "stats", lambda: {"posted_mo5": 75, "posted": 303})
@@ -178,16 +238,19 @@ def test_front_page(fixture):
     assert r.status_code == 200
     h = r.text
     for s in ("Co se děje na&nbsp;Pětce?", "Příklad: Wolkerova, sídliště Dukla", "Podívejte se na svou ulici",
-              'action="/ulice"', '<option value="Wolkerova">', "Celý obvod", "Co se děje",
-              "Josefa Ressla, pravá strana", "Lexova</a> <span class=\"st st-no\">čeká</span>",
-              "Změna povolení stavby", "Přímé zadání opravy asfaltu", "1 026 usnesení ze 184 jednání od roku 2018",
-              "75 oznámení k obvodu, 228 magistrátu", "3 termínů na 3 místech letos", "Kdo za tím stojí a proč",
-              "Připraveno pro agenty", "hv-tag"):
+              'action="/ulice"', '<option value="Wolkerova">', '<h2 id="dash-h" class="dash-h">Aktuálně</h2>',
+              "Blokové čištění tento týden", '<span class="ak-d">st 18.\u00a011.</span><span>Josefa Ressla, pravá strana</span>',
+              "Dopravní omezení", "podle oznámení na úřední desce", '<span>Lexova</span><span class="ak-d">do 20.\u00a011.</span>',
+              "dopravní omezení, místo podle názvu ulice", "další oznámení z úřední desky, ikona podle druhu",
+              "1\u00a0026 usnesení ze 184 jednání od roku 2018", "75 oznámení k obvodu, 228 magistrátu",
+              "3 termínů na 3 místech letos", "Kdo za tím stojí a proč", "Připraveno pro agenty", "hv-tag", "aktualne.js"):
         assert s in h, s
-    assert '<li class="row next"><span class="feed-d">18. 11.</span>' in h
-    fc = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
-    kinds = {(f["properties"]["kind"], f["properties"].get("when")) for f in fc["features"]}
-    assert kinds == {("cleaning", "week"), ("cleaning", "two"), ("reports", None)}
+    for s in ("Celý obvod", "Co se děje</h3>", "Nádražní"):
+        assert s not in h, s
+    d = json.loads(h.split('id="ak-json">')[1].split("</script>")[0])
+    assert [f["properties"]["sid"] for f in d["lines"]["features"]] == ["josefa-ressla"]      # 26. 11. is too far
+    assert d["anchors"][0]["when"] == "pravá strana 18.\u00a011." and d["days"][0]["sids"] == ["josefa-ressla"]
+    assert [(m["street"], m["traffic"]) for m in d["marks"]] == [("Wolkerova", False), ("Lexova", True), ("Josefa Ressla", True)]
     assert "aria-current" not in h.split('class="l1"')[1].split("</nav>")[0]      # no area is current
 
 
