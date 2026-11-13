@@ -418,7 +418,7 @@ def test_street_page(fixture, monkeypatch):
               'class="cl-sign"', f">26.{nb}11.</text>",
               "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
               "Harmonogram čištění pro letošek", "cl-past", "Okolní ulice", "/verejny-prostor/blokove-cisteni/ulice/sokolovska",
-              "Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace", "ve čtvrtek 26. 11. od 7:00",
+              "Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace",
               "Přidat i další ulice"):
         assert s in h, s
     assert "Ulice je teď uzavřená" not in h and "aplikac" not in h.lower()

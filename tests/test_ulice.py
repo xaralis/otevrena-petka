@@ -311,7 +311,7 @@ def test_street_page(fixture):
         assert s in h, s
     assert "Uzavírka</small>" not in h          # no data on closures yet: no box
     fc = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
-    assert [f["properties"].get("when") for f in fc["features"] if f["properties"]["kind"] != "reports"] == [None, "past", "next"]
+    assert [f["properties"].get("when") for f in fc["features"] if f["properties"]["kind"] != "reports"] == [None, "next"]          # past cleanings stay off the map
     assert get("/ulice/neni").status_code == 404
 
 

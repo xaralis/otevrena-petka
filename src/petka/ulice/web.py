@@ -115,12 +115,15 @@ def street(request: Request, slug: str):
     items += [q.report_item(r, "/verejny-prostor/zavady") | {"text": r["category"]} for r in reps[:4]]
 
     geoms = cq.geometries(obvod)
+    # the map shows the street itself and, on it, the stretches still to be cleaned (the next ink,
+    # later dashed); places filed under the street that lie elsewhere and past cleanings stay off,
+    # like on the cleaning page of the street
     feats = [{"type": "Feature", "geometry": s.geometry, "properties": {"kind": "street"}}]
-    order = {"past": 0, "later": 1, "next": 2}
-    for i in sorted(its, key=lambda i: order["next" if i["date"] == cl.next else "past" if i["date"] < today else "later"]):
-        if i["key"] in geoms:
-            when = "next" if i["date"] == cl.next else "past" if i["date"] < today else "later"
-            feats.append({"type": "Feature", "geometry": geoms[i["key"]],
+    for i in sorted((i for i in its if i["date"] >= today), key=lambda i: i["date"] == cl.next):
+        g = geoms.get(i["key"])
+        if g and g["type"] in ("LineString", "MultiLineString") and cq.on_street(g, s.geometry):
+            when = "next" if i["date"] == cl.next else "later"
+            feats.append({"type": "Feature", "geometry": g,
                           "properties": {"kind": "cleaning", "when": when, "text": i["text"], "date": i["date"].isoformat()}})
     cells = ps.grid(reps)["features"]
     for c in cells:
@@ -134,6 +137,6 @@ def street(request: Request, slug: str):
         "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "in_harm": bool(its),
         "feed": q.feed(items, q.FEED_STREET), "around": st.around(slug, every),
         "geojson": {"type": "FeatureCollection", "features": feats + cells},
-        "has_next": "next" in whens, "has_later": "later" in whens, "has_past": "past" in whens,
+        "has_next": "next" in whens, "has_later": "later" in whens,
         "has_reports": bool(cells), "since_word": q.since_word,
     })

@@ -37,13 +37,12 @@
 <div class="ul-two">
   <div class="ul-o2">
     <h2 class="ul-h">Na mapě</h2>
-    <div class="map ul-map ul-map-street" data-ul-map="street" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="ul-map-json" role="region" aria-label="Mapa ulice {{ s.name }} s úseky blokového čištění a nahlášenými závadami; stejné údaje jsou v přehledu"></div>
+    <div class="map ul-map ul-map-street" data-ul-map="street" data-name="{{ s.name }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="ul-map-json" role="region" aria-label="Mapa ulice {{ s.name }} s úseky blokového čištění a nahlášenými závadami; stejné údaje jsou v přehledu"></div>
     <script type="application/json" id="ul-map-json">{{ geojson|tojson }}</script>
     <p class="cl-lg cl-lg-street" aria-label="Legenda mapy">
       <span><i class="ul-lg-street"></i>ulice</span>
       {% if has_next %}<span><i class="cl-lg-next"></i>čištění {{ cl.next|cl_dm }}</span>{% endif %}
       {% if has_later %}<span><i class="cl-lg-later"></i>později letos</span>{% endif %}
-      {% if has_past %}<span><i class="cl-lg-past"></i>letos už proběhlo</span>{% endif %}
       {% if has_reports %}<span><i class="ul-lg-rep"></i>závady</span>{% if rep.ceka %}<span><i class="ul-lg-wait"></i>čekající</span>{% endif %}{% endif %}
     </p>
   </div>

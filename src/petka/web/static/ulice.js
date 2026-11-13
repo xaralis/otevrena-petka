@@ -1,9 +1,9 @@
 // The street pages' map (self-hosted MapLibre + PMTiles, like cisteni.js and podnety.js) and the
 // short placeholder of the street search on phones (the front page's map is aktualne.js).
-//   <div data-ul-map="street" data-inline="id"> the street from RÚIAN, its cleanings (the next ink,
-//        later dashed, past grey) and its reports by cell (white disc, hatched part waiting)
+//   <div data-ul-map="street" data-inline="id"> the street, the cleanings still to come on it (the
+//        next ink, later dashed) and its reports by cell (white disc, hatched part waiting)
 (function () {
-  const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097", PINK = "#f4a3aa";
+  const RED = "#de091c", INK = "#191c1f", PINK = "#f4a3aa";
   const HATCH = 128;     // px of the hatched disc image, added at pixelRatio 2
 
   if (window.matchMedia("(max-width: 600px)").matches)
@@ -39,7 +39,7 @@
   }
 
   function draw(map, fc) {
-    const look = { next: [INK, 5, false], later: [INK, 3, true], past: [GREY, 4, false] };
+    const look = { next: [INK, 5, false], later: [INK, 3, true] };
     fc.features.forEach((f) => {
       const p = f.properties;
       if (p.kind === "cleaning") [p.color, p.width, p.dash] = look[p.when];
@@ -78,6 +78,27 @@
     const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
     fc.features.filter((f) => f.properties.kind !== "reports").forEach((f) => walk(f.geometry.coordinates));
     if (!b.isEmpty()) map.fitBounds(b, { padding: 40, maxZoom: 17, duration: 0 });
+    const name = map.getContainer().dataset.name;
+    if (name) map.once("idle", () => osmStreet(map, name, fc));
+  }
+
+  // RÚIAN's line of a street can run along neighbouring roads (Benešovo náměstí goes round the
+  // whole block), so the street is the base map's road of that name where OpenStreetMap knows
+  // it, RÚIAN's line only where it doesn't (the same in cisteni.js)
+  function osmStreet(map, name, fc) {
+    const fold = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const roads = map.querySourceFeatures("protomaps", { sourceLayer: "roads" })
+      .filter((f) => f.properties.name && fold(f.properties.name) === fold(name) && /LineString/.test(f.geometry.type));
+    if (!roads.length) return;
+    const lines = roads.flatMap((f) => (f.geometry.type === "LineString" ? [f.geometry.coordinates] : f.geometry.coordinates));
+    const rest = fc.features.filter((f) => f.properties.kind !== "street");
+    map.getSource("ul").setData({ type: "FeatureCollection", features: [
+      { type: "Feature", geometry: { type: "MultiLineString", coordinates: lines }, properties: { kind: "street" } }, ...rest] });
+    const b = new maplibregl.LngLatBounds();
+    lines.forEach((l) => l.forEach((c) => b.extend(c)));
+    rest.filter((f) => f.properties.kind === "cleaning").forEach((f) =>
+      (function walk(c) { typeof c[0] === "number" ? b.extend(c) : c.forEach(walk); })(f.geometry.coordinates));
+    map.fitBounds(b, { padding: 40, maxZoom: 17, duration: 0 });
   }
 
   function hatch() {
