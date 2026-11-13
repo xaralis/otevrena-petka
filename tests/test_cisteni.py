@@ -342,9 +342,9 @@ def test_overview(fixture):
     for s in ("Kdy proběhne čištění mojí ulice?", "Příštích 7 dní", "Kalendář jen pro vaše ulice",
               "Harmonogram do konce roku", "Příští týden", "Stav k 12. 11. 2026", "letos 5 termínů na 5 místech",
               "Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.", 'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"',
-              "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni"'):
+              "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni?od=2026-11-12"'):
         assert s in h, s
-    assert "aplikac" not in h.lower()
+    assert "aplikac" not in h.lower() and "letos už ne" not in h
     assert 'href="/verejny-prostor/blokove-cisteni" aria-current="true">Veřejný prostor' in h.split("</header>")[0]
     assert get("/verejny-prostor/blokove-cisteni?probehle=1").text.count("Letošní proběhlé termíny") >= 1
     # the map's anchors and the week's rows share the place key, so they light up together
@@ -357,6 +357,7 @@ def test_map_anchors():
     t = D(2026, 11, 12)
     right = "Josefa Ressla od ul. Lexova - pravá strana komunikace"
     its = [item(D(2026, 7, 27), text="Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace"),
+           item(D(2026, 9, 2), "Josefa Ressla", text=right, side="prava"),     # past: not in the tooltip
            item(D(2026, 11, 18), "Josefa Ressla", text=right, side="prava"),
            item(D(2026, 11, 19), "Josefa Ressla", text="Josefa Ressla od ul. Lexova - levá strana komunikace", side="leva"),
            item(D(2026, 12, 3), "Josefa Ressla", text=right, side="prava"),
@@ -368,8 +369,7 @@ def test_map_anchors():
     a = queries.map_anchors(its, geoms, t)
     assert [(x["street"], x["what"], x["when"], x["href"]) for x in a] == [
         ("Josefa Ressla", "od Lexova", "pravá strana 18.\u00a011. a 3.\u00a012., levá 19.\u00a011.", "/verejny-prostor/blokove-cisteni/ulice/josefa-ressla"),
-        ("Vnitroblok za školou", "Blokové čištění", "26.\u00a011.", None),
-        ("Wolkerova", "od Čs. armády k Lexova", "letos proběhlo 27.\u00a07.", "/verejny-prostor/blokove-cisteni/ulice/wolkerova")]
+        ("Vnitroblok za školou", "Blokové čištění", "26.\u00a011.", None)]   # Wolkerova: nothing left this year
     assert len(a[0]["keys"]) == 2                                   # both sides drawn as one line are one stretch
     assert a[0]["label"].startswith("Blokové čištění: Josefa Ressla, od Lexova, pravá strana")
     assert (a[0]["lng"], a[0]["lat"]) == (15.765, 50.03)

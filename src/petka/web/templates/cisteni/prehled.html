@@ -29,7 +29,7 @@
   <div class="cl-col">
     <section class="cl-o3" aria-labelledby="cl-map-h">
       <h2 id="cl-map-h" class="cl-only-m cl-h2m">Na mapě</h2>
-      <div class="map cl-map" data-cl-map="all" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-src="/api/v1/cisteni" data-today="{{ today.isoformat() }}" data-anchors="cl-anchors" role="region" aria-label="Mapa obvodu s úseky blokového čištění obarvenými podle nejbližšího termínu; stejné údaje jsou níže jako seznam"></div>
+      <div class="map cl-map" data-cl-map="all" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-src="/api/v1/cisteni?od={{ today.isoformat() }}" data-today="{{ today.isoformat() }}" data-anchors="cl-anchors" role="region" aria-label="Mapa obvodu s úseky blokového čištění obarvenými podle nejbližšího termínu; stejné údaje jsou níže jako seznam"></div>
       <script type="application/json" id="cl-anchors">{{ anchors|tojson }}</script>
       {{ legend() }}
       <p class="cl-cap"><span class="cl-only-d">Úseky jsme podle textu harmonogramu umístili na mapu sami, čárkované jen přibližně. Platí vždy text termínu v seznamu. Najetím na úsek zobrazíte jeho termín, klepnutím stránku ulice.</span><span class="cl-only-m">Úseky jsme na mapu umístili podle textu harmonogramu, čárkované jen přibližně. Platí text termínu.</span></p>

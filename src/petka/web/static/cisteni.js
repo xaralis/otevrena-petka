@@ -7,7 +7,7 @@
 // <div data-cl-map="street" data-inline="id"> draws one street.
 // The picker remembers its streets in localStorage; without JS the form goes to /verejny-prostor/blokove-cisteni/kalendar.
 (function () {
-  const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097", OFF = "#d6dbe0";
+  const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097";
 
   // --- maps -----------------------------------------------------------------------------------
   const maps = document.querySelectorAll("[data-cl-map]");
@@ -44,7 +44,8 @@
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
       map.on("load", async () => {
         const fc = await data;
-        fc.features = fc.features.filter((f) => f.geometry);
+        // the overview shows only what is still to come this year (the API is asked from today)
+        fc.features = fc.features.filter((f) => f.geometry && (!all || f.properties.next));
         if (all) colour(fc, el.dataset.today); else street(fc);
         map.addSource("cl", { type: "geojson", data: fc, promoteId: "key" });
         const poly = ["match", ["geometry-type"], ["Polygon", "MultiPolygon"], true, false];
@@ -76,10 +77,7 @@
           .forEach((id) => map.getLayer(id) && map.moveLayer(id, labels.id));
         const b = new maplibregl.LngLatBounds();
         const walk = (c) => (typeof c[0] === "number" ? b.extend(c) : c.forEach(walk));
-        // the overview fits what is still to be cleaned this year (a long street with nothing
-        // left would zoom the map out to the fields); fall back to everything
-        const upcoming = all ? fc.features.filter((f) => f.properties.rank > 0) : [];
-        (upcoming.length ? upcoming : fc.features).forEach((f) => walk(f.geometry.coordinates));
+        fc.features.forEach((f) => walk(f.geometry.coordinates));
         if (!b.isEmpty()) map.fitBounds(b, { padding: all ? 20 : 40, maxZoom: 17, duration: 0 });
         if (all) {
           // a wide invisible line over the stretches makes them easy to point at
@@ -91,12 +89,12 @@
     });
   }
 
-  // nearest date: ≤ 7 days red, ≤ 14 ink, later this year grey, none left pale; approximate dashed
+  // nearest date: ≤ 7 days red, ≤ 14 ink, later this year grey; approximate dashed
   function colour(fc, today) {
     const t0 = Date.parse(today);
     fc.features.forEach((f) => {
-      const p = f.properties, days = p.next ? (Date.parse(p.next) - t0) / 864e5 : null;
-      const [color, width, rank] = days === null ? [OFF, 2, 0] : days <= 7 ? [RED, 5, 3] : days <= 14 ? [INK, 4, 2] : [GREY, 3, 1];
+      const p = f.properties, days = (Date.parse(p.next) - t0) / 864e5;
+      const [color, width, rank] = days <= 7 ? [RED, 5, 3] : days <= 14 ? [INK, 4, 2] : [GREY, 3, 1];
       Object.assign(p, { color, width, rank, dash: p.status === "approx" || p.status === "partial" });
     });
     fc.features.sort((a, b) => a.properties.rank - b.properties.rank);   // the nearest drawn on top
