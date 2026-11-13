@@ -29,7 +29,7 @@
     {% elif in_harm %}<b>letos už ne</b><span>termíny na příští rok přidáme, až je Služby města zveřejní</span>
     {% else %}<b>není</b><span>ulice letos není v harmonogramu Služeb města</span>{% endif %}</a>
   <a href="{{ q_url }}"><small>Související rozhodnutí</small><b>{{ n_res }}</b><span>rada a zastupitelstvo od roku 2018{% if last_res %}, naposledy {{ last_res|cl_dm if last_res.year == today.year else last_res|d }}{% endif %}</span><em>Zobrazit</em></a>
-  <a href="/verejny-prostor/zavady"><small>Závady</small>
+  <a href="/verejny-prostor/podnety"><small>Podněty</small>
     <b{% if rep.ceka %} class="ul-red"{% endif %}>{% if not nrep %}žádné{% elif rep.ceka %}{{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}{% else %}nic nečeká{% endif %}</b>
     <span>{% if nrep %}{{ nrep }} {{ cl_plural(nrep, 'nahlášená', 'nahlášené', 'nahlášených') }} {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešená', 'vyřešené', 'vyřešených') }}{% else %}nikdo nic nenahlásil přes Dej Tip{% endif %}</span></a>
 </div>
@@ -43,7 +43,7 @@
       <span><i class="ul-lg-street"></i>ulice</span>
       {% if has_next %}<span><i class="cl-lg-next"></i>čištění {{ cl.next|cl_dm }}</span>{% endif %}
       {% if has_later %}<span><i class="cl-lg-later"></i>později letos</span>{% endif %}
-      {% if has_reports %}<span><i class="ul-lg-rep"></i>závady</span>{% if rep.ceka %}<span><i class="ul-lg-wait"></i>čekající</span>{% endif %}{% endif %}
+      {% if has_reports %}<span><i class="ul-lg-rep"></i>podněty</span>{% if rep.ceka %}<span><i class="ul-lg-wait"></i>čekající</span>{% endif %}{% endif %}
     </p>
   </div>
   <div class="ul-o1">
@@ -59,7 +59,7 @@
       <li><a href="{{ q_url }}">Rozhodnutí</a><span>{% if n_res %}{{ n_res }}, naposledy {{ last_res|cl_dm if last_res.year == today.year else last_res|d }}{% else %}žádné{% endif %}</span></li>
       <li><a href="/verejny-prostor/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}">Blokové čištění</a><span>{% if cl.next %}příště {{ cl.next|cl_dm }}{% elif in_harm %}letos už ne{% else %}není v harmonogramu{% endif %}</span></li>
       <li class="soon"><a href="/verejny-prostor/uzavirky">Uzavírky</a><span>připravujeme</span></li>
-      <li><a href="/verejny-prostor/zavady">Závady</a><span>{% if nrep %}{{ nrep }} {{ rep.since|ul_since }}{% if rep.ceka %}, {{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}{% else %}, nic nečeká{% endif %}{% else %}žádné{% endif %}</span></li>
+      <li><a href="/verejny-prostor/podnety">Podněty</a><span>{% if nrep %}{{ nrep }} {{ rep.since|ul_since }}{% if rep.ceka %}, {{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}{% else %}, nic nečeká{% endif %}{% else %}žádné{% endif %}</span></li>
       <li><a href="{{ deska_url }}">Úřední deska</a><span>{% if n_notices %}{{ n_notices }} {{ cl_plural(n_notices, 'oznámení visí', 'oznámení visí', 'oznámení visí') }}{% else %}teď nic nevisí{% endif %}</span></li>
     </ul>
   </div>

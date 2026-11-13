@@ -61,7 +61,7 @@ GROUPS = [
         Item("Blokové čištění ulic", "/verejny-prostor/blokove-cisteni", "Kdy proběhne čištění mojí ulice?",
              "blokove-cisteni", was="/blokove-cisteni"),
         Item("Uzavírky", "/verejny-prostor/uzavirky", "Kde se teď nedá projet?", "uzavirky", was="/uzavirky"),
-        Item("Závady", "/verejny-prostor/zavady", "Co lidé hlásí a jak se to řeší?", "podnety", was="/podnety"),
+        Item("Podněty", "/verejny-prostor/podnety", "Co lidé hlásí a jak se to řeší?", "podnety", was="/podnety"),
     ]),
     Group("Zapojte se", "/zapojte-se", [
         Item("Ankety", "/zapojte-se/ankety", "Co si myslíte?", "ankety", planned=True, was="/ankety"),
@@ -78,7 +78,9 @@ PATHS = {i.slug: i.href for g in GROUPS for i in g.items if i.slug}   # section 
 
 # old prefix -> new prefix, longest first: /usneseni/clenove goes to /radnice/zastupitele, not
 # to /radnice/usneseni/clenove
-MOVED = sorted(((i.was, i.href) for g in GROUPS for i in g.items if i.was), key=lambda m: -len(m[0]))
+MOVED = sorted([(i.was, i.href) for g in GROUPS for i in g.items if i.was]
+               + [("/verejny-prostor/zavady", "/verejny-prostor/podnety")],    # „Závady“ until 13. 11. 2026
+               key=lambda m: -len(m[0]))
 
 
 def _under(path: str, href: str) -> bool:

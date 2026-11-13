@@ -14,7 +14,7 @@
 {% set TAPE = "M780,362 L835,367 L882,374 L896,376 L925,379 L974,385 L981,386 L1043,393 L1075,397 L1090,398 L1168,396 L1211,392 L1255,390 L1316,386 L1353,384 L1377,382 L1415,380 L1450,378" %}
 {% set PINS = [(779, 403), (882, 411), (885, 395), (973, 404), (1027, 387), (1281, 433), (1317, 427), (1322, 437), (1326, 396)] %}
 {% set SOURCES %}<p class="src-h">Kde získáváme informace?</p>
-<ul class="srcs"><li>Zápisy z jednání</li><li>Úřední deska</li><li>Harmonogram čištění</li><li>Hlášení závad</li><li>Dopravní informace</li></ul>{% endset %}
+<ul class="srcs"><li>Zápisy z jednání</li><li>Úřední deska</li><li>Harmonogram čištění</li><li>Podněty občanů</li><li>Dopravní informace</li></ul>{% endset %}
 {% set LEAD %}Kdy proběhne blokové čištění, nebo proč je vaše ulice zrovna rozkopaná, dnes lze zjistit jen z&nbsp;úředních dokumentů rozesetých po různých městských webech. Otevřená Pětka vše spojuje dohromady a řekne vám to srozumitelně.{% endset %}
 
 {% block hero %}
@@ -44,7 +44,7 @@
     <div class="co c1" style="left:51%;top:9%">{{ sheet('listopad', 26) }}<span class="co-t"><b>Blokové čištění</b><span>ve čtvrtek od 7:00</span></span></div>
     <div class="co c2" style="right:2.5%;top:12%"><span class="ctape" aria-hidden="true"></span><span class="co-t"><b>Zavřeno do 30.&nbsp;11.</b><span>kvůli opravě povrchu</span></span></div>
     <div class="co c3" style="left:52%;top:66%"><span class="co-t">{{ vote15('12px') }}<b>Chodníky ano, vnitrobloky ne</b><span>zastupitelstvo 2023, 9 pro a 2 proti</span></span></div>
-    <div class="co c4" style="right:2.5%;top:70%">{{ bubble() }}<span class="co-t"><b>9 nahlášených závad</b><span>všechny vyřízené</span></span></div>
+    <div class="co c4" style="right:2.5%;top:70%">{{ bubble() }}<span class="co-t"><b>9 nahlášených podnětů</b><span>všechny vyřízené</span></span></div>
     <span class="hv-tag">Příklad: Wolkerova, sídliště Dukla</span>
   </div>
 </section>
@@ -72,7 +72,7 @@
       <li style="animation-delay:1.3s"><span class="n">1</span>{{ sheet('listopad', 26) }}<span class="co-t"><b>Blokové čištění</b><span>ve čtvrtek od 7:00</span></span></li>
       <li style="animation-delay:1.7s"><span class="n">2</span><span class="ctape" aria-hidden="true"></span><span class="co-t"><b>Zavřeno do 30.&nbsp;11.</b><span>kvůli opravě povrchu</span></span></li>
       <li style="animation-delay:2.1s"><span class="n">3</span><span class="co-t">{{ vote15('11px') }}<b>Chodníky ano, vnitrobloky ne</b><span>zastupitelstvo 2023, 9 pro a 2 proti</span></span></li>
-      <li style="animation-delay:2.5s"><span class="n">4</span>{{ bubble() }}<span class="co-t"><b>9 nahlášených závad</b><span>všechny vyřízené</span></span></li>
+      <li style="animation-delay:2.5s"><span class="n">4</span>{{ bubble() }}<span class="co-t"><b>9 nahlášených podnětů</b><span>všechny vyřízené</span></span></li>
     </ol>
     {{ SOURCES }}
   </div>

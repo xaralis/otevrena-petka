@@ -60,7 +60,7 @@ def home(request: Request):
         "/radnice/zastupitele": ("15", "zastupitelů"),
         "/radnice/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
         "/verejny-prostor/blokove-cisteni": (q.thousands(len(its)), "termínů letos"),
-        "/verejny-prostor/zavady": (q.thousands(s["n"]), "hlášení za rok"),
+        "/verejny-prostor/podnety": (q.thousands(s["n"]), "hlášení za rok"),
     }
     g = {x.label: x for x in nav.GROUPS}
     areas = [("Radnice", g["Radnice"].items), ("Veřejný prostor", g["Veřejný prostor"].items),
@@ -117,7 +117,7 @@ def street(request: Request, slug: str):
     items += [{"date": i["date"], "source": "Blokové čištění", "text": i["short"] or i["text"],
                "href": f"/verejny-prostor/blokove-cisteni/ulice/{slug}"} for i in cl.past[:3]]
     items += [q.resolution_item(r) for r in res]
-    items += [q.report_item(r, "/verejny-prostor/zavady") | {"text": r["category"]} for r in reps[:4]]
+    items += [q.report_item(r, "/verejny-prostor/podnety") | {"text": r["category"]} for r in reps[:4]]
 
     geoms = cq.geometries(obvod)
     # the map shows the street itself and, on it, the stretches still to be cleaned (the next ink,

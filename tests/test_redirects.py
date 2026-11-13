@@ -37,7 +37,7 @@ c = TestClient(app, follow_redirects=False)
     ("/blokove-cisteni/ulice/wolkerova", "/verejny-prostor/blokove-cisteni/ulice/wolkerova"),
     ("/blokove-cisteni/kalendar", "/verejny-prostor/blokove-cisteni/kalendar"),
     ("/uzavirky", "/verejny-prostor/uzavirky"),
-    ("/podnety", "/verejny-prostor/zavady"),
+    ("/podnety", "/verejny-prostor/podnety"),
     ("/ankety", "/zapojte-se/ankety"),
 ])
 def test_old_pages_redirect_for_good(old, new):
@@ -48,7 +48,7 @@ def test_old_pages_redirect_for_good(old, new):
 
 @pytest.mark.parametrize("old, new", [
     ("/usneseni?q=parkov%C3%A1n%C3%AD&rezim=fulltext", "/radnice/usneseni?q=parkov%C3%A1n%C3%AD&rezim=fulltext"),
-    ("/podnety?obdobi=2025&detail=mesice", "/verejny-prostor/zavady?obdobi=2025&detail=mesice"),
+    ("/podnety?obdobi=2025&detail=mesice", "/verejny-prostor/podnety?obdobi=2025&detail=mesice"),
     ("/blokove-cisteni/kalendar?ulice=wolkerova&ulice=lexova", "/verejny-prostor/blokove-cisteni/kalendar?ulice=wolkerova&ulice=lexova"),
 ])
 def test_query_is_kept(old, new):

@@ -99,7 +99,7 @@ def resolution_item(r: dict) -> dict:
 
 
 def report_item(r: dict, href: str) -> dict:
-    return {"date": r["reported_at"].date(), "source": "Závady",
+    return {"date": r["reported_at"].date(), "source": "Podněty",
             "text": r["category"] + (f", {r['street']}" if r.get("street") else ""),
             "href": href, "status": ps.status_word(r)}
 

@@ -1,4 +1,4 @@
-"""The /verejny-prostor/zavady page: outcomes (the forwarded rule), periods, buckets, medians, the month series,
+"""The /verejny-prostor/podnety page: outcomes (the forwarded rule), periods, buckets, medians, the month series,
 the grid map and the routes. Rows are made up; the page's queries are replaced, except in the
 database test, which skips without one."""
 
@@ -234,21 +234,21 @@ def open_detail(html: str) -> list[str]:
 
 @pytest.mark.parametrize("detail", ["mesice", "vyreseno", "ceka", "odpoved"])
 def test_each_detail_is_rendered_open(page, detail):
-    html = page(f"/verejny-prostor/zavady?detail={detail}")
+    html = page(f"/verejny-prostor/podnety?detail={detail}")
     assert open_detail(html) == [detail]
     assert html.count('aria-expanded="true"') == 1
     assert f'data-pd-tile="{detail}" aria-controls="kpi-panel" aria-expanded="true"' in html
 
 
 def test_default_and_closed(page):
-    assert open_detail(page("/verejny-prostor/zavady")) == ["ceka"]
-    assert open_detail(page("/verejny-prostor/zavady?detail=nesmysl")) == ["ceka"]
-    html = page("/verejny-prostor/zavady?detail=zadny")
+    assert open_detail(page("/verejny-prostor/podnety")) == ["ceka"]
+    assert open_detail(page("/verejny-prostor/podnety?detail=nesmysl")) == ["ceka"]
+    html = page("/verejny-prostor/podnety?detail=zadny")
     assert open_detail(html) == [] and 'aria-expanded="true"' not in html
 
 
 def test_page_content(page):
-    html = page("/verejny-prostor/zavady")
+    html = page("/verejny-prostor/podnety")
     assert page.seen["obvod"] == "mo5" and page.seen["start"] == dt.date(2025, 11, 12)
     m = main(html)
     assert "Co lidé hlásí a jak se to řeší?" in html and "Nahlásit závadu přes Dej Tip" in html
@@ -256,7 +256,7 @@ def test_page_content(page):
     assert "Nejdéle čekají" not in m                                       # no highlight box any more
     assert "předávají se strážníkům, stav v Dej Tipu se nemění" in m
     assert '<span class="st st-no">' in m and '<span class="st">vyřešeno</span>' not in m.split('class="pd-side"')[1]
-    assert '<span class="st">vyřešeno</span>' in main(page("/verejny-prostor/zavady?stav=vse"))   # every state
+    assert '<span class="st">vyřešeno</span>' in main(page("/verejny-prostor/podnety?stav=vse"))   # every state
     assert "stav k 12. 11. 2026" in m
     assert "Všechny podněty" not in m and "Co tu neuvidíte" not in m
     assert "aplikac" not in m.replace("aplikace Dej Tip", "").replace("aplikace <a", "")   # no app of ours
@@ -264,44 +264,44 @@ def test_page_content(page):
     assert "Podněty ukazujeme seskupené" not in m and "Nejnovější" not in m
     assert "Klik na shluk" not in m
     # the list (every state): newest first, one row a link to the report on Dej Tip; the description only in the card
-    side = main(page("/verejny-prostor/zavady?stav=vse")).split('class="pd-side"')[1].split("</aside>")[0]
+    side = main(page("/verejny-prostor/podnety?stav=vse")).split('class="pd-side"')[1].split("</aside>")[0]
     assert "V mapě 26 podnětů, nejnovější" in side and side.count("<li ") == 15
     assert re.findall(r'<li data-id="(\d+)"', side)[:4] == ["203", "200", "201", "0"]
     assert 'href="https://amg.dejtip.eu/pardubice/?id=200"' in side
     assert '<span class="pd-rd">12.\u00a011.</span><span class="pd-rt"><b>Městská policie</b><span>Jiránkova</span></span><span class="st">předáno</span>' in side
-    assert 'href="/verejny-prostor/zavady?stav=vse&amp;pocet=30#kde" data-pd-rows-more>Další podněty' in side
+    assert 'href="/verejny-prostor/podnety?stav=vse&amp;pocet=30#kde" data-pd-rows-more>Další podněty' in side
     # the filters: counts for the period, links and a GET form without JS
-    assert '<a href="/verejny-prostor/zavady#kde" data-stav="" aria-current="true">Čeká <b>11</b></a>' in m   # the default
-    assert '<a href="/verejny-prostor/zavady?stav=vse#kde" data-stav="vse">Vše <b>26</b></a>' in m
+    assert '<a href="/verejny-prostor/podnety#kde" data-stav="" aria-current="true">Čeká <b>11</b></a>' in m   # the default
+    assert '<a href="/verejny-prostor/podnety?stav=vse#kde" data-stav="vse">Vše <b>26</b></a>' in m
     assert '<option value="20">Pískoviště, hřiště, sportoviště (10)</option>' in m
-    assert '<a href="/verejny-prostor/zavady?druh=20#kde">Pískoviště, hřiště, sportoviště</a>' in m      # the table
+    assert '<a href="/verejny-prostor/podnety?druh=20#kde">Pískoviště, hřiště, sportoviště</a>' in m      # the table
     pts = m.split('id="pd-points">')[1].split("</script>")[0]
     assert '"o": "predano", "w": "předáno"' in pts and "Jiránkova" in pts
 
 
 def test_no_middle_dot_anywhere_in_the_page(page):
-    for path in ("/verejny-prostor/zavady", "/verejny-prostor/zavady?detail=mesice", "/verejny-prostor/zavady?detail=odpoved", "/verejny-prostor/zavady?obdobi=2025"):
+    for path in ("/verejny-prostor/podnety", "/verejny-prostor/podnety?detail=mesice", "/verejny-prostor/podnety?detail=odpoved", "/verejny-prostor/podnety?obdobi=2025"):
         assert "·" not in main(page(path))
     assert "·" not in open(web.__file__.replace("podnety/web.py", "web/templates/podnety/prehled.html")).read()
     assert "·" not in open(web.__file__.replace("podnety/web.py", "web/static/podnety.js")).read()
 
 
 def test_periods_and_links(page):
-    page("/verejny-prostor/zavady?obdobi=2025")
+    page("/verejny-prostor/podnety?obdobi=2025")
     assert page.seen["start"] == dt.date(2025, 1, 1) and page.seen["end"] == dt.date(2026, 1, 1)
-    html = page("/verejny-prostor/zavady?obdobi=2026&detail=mesice")
+    html = page("/verejny-prostor/podnety?obdobi=2026&detail=mesice")
     assert page.seen["end"] == dt.date(2026, 11, 13)
-    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=vyreseno#kpi"' in html
-    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny#kpi"' in html          # the open tile closes
-    assert '<a href="/verejny-prostor/zavady"><span class="pd-d">Posledních 12 měsíců' in html       # links leave the open tile out
-    assert 'href="/verejny-prostor/zavady?obdobi=2026" aria-current="page"' in html
+    assert 'href="/verejny-prostor/podnety?obdobi=2026&amp;detail=vyreseno#kpi"' in html
+    assert 'href="/verejny-prostor/podnety?obdobi=2026&amp;detail=zadny#kpi"' in html          # the open tile closes
+    assert '<a href="/verejny-prostor/podnety"><span class="pd-d">Posledních 12 měsíců' in html       # links leave the open tile out
+    assert 'href="/verejny-prostor/podnety?obdobi=2026" aria-current="page"' in html
     assert "podnětů v roce 2026" in html
-    html = page("/verejny-prostor/zavady?obdobi=2026&kategorie=20")          # an older link
+    html = page("/verejny-prostor/podnety?obdobi=2026&kategorie=20")          # an older link
     assert '<option value="20" selected>' in html
 
 
 def test_filters_without_js(page):
-    m = main(page("/verejny-prostor/zavady?obdobi=2026&stav=ceka&druh=20&detail=mesice"))
+    m = main(page("/verejny-prostor/podnety?obdobi=2026&stav=ceka&druh=20&detail=mesice"))
     side = m.split('class="pd-side"')[1].split("</aside>")[0]
     assert "V mapě 10 podnětů, nejnovější" in side and side.count("<li ") == 10 and "Další podněty" not in side
     assert all(x in side for x in ("Sokolovská", 'class="st st-no"')) and "vyřešeno" not in side
@@ -312,18 +312,18 @@ def test_filters_without_js(page):
         assert f'<input type="hidden" {hidden}>' in m
     assert 'name="stav"' not in m.split("data-pd-filter")[1].split("</form>")[0].replace('aria-label="Stav', '')
     # the period switch and the tiles keep the filter
-    assert 'href="/verejny-prostor/zavady?druh=20"' in m
-    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny&amp;druh=20#kpi"' in m
-    m = main(page("/verejny-prostor/zavady?stav=vyreseno&pocet=30"))
+    assert 'href="/verejny-prostor/podnety?druh=20"' in m
+    assert 'href="/verejny-prostor/podnety?obdobi=2026&amp;detail=zadny&amp;druh=20#kpi"' in m
+    m = main(page("/verejny-prostor/podnety?stav=vyreseno&pocet=30"))
     side = m.split('class="pd-side"')[1].split("</aside>")[0]
     assert side.count("<li ") == 12 and "st-no" not in side
     assert stats.LIST == 15
-    assert web.link("12m") == "/verejny-prostor/zavady" and web.link("2025", detail="", kategorie=3) == "/verejny-prostor/zavady?obdobi=2025&kategorie=3"
+    assert web.link("12m") == "/verejny-prostor/podnety" and web.link("2025", detail="", kategorie=3) == "/verejny-prostor/podnety?obdobi=2025&kategorie=3"
 
 
 def test_empty_period(page, monkeypatch):
     monkeypatch.setattr(queries, "period_rows", lambda *a: [])
-    assert "žádné podněty nemáme" in page("/verejny-prostor/zavady?obdobi=2026")
+    assert "žádné podněty nemáme" in page("/verejny-prostor/podnety?obdobi=2026")
 
 
 def test_db_queries():
@@ -346,7 +346,7 @@ def test_resolution_time_from_the_status_change():
 
 
 def test_the_bar_has_a_segment_per_outcome(page):
-    m = main(page("/verejny-prostor/zavady"))
+    m = main(page("/verejny-prostor/podnety"))
     bar = m.split('<div class="pd-bar"')[1].split("</div>")[0]
     assert ('aria-label="Vyřešeno 12, čeká 11, předáno jinam 1, nepřísluší obvodu 1, nelze vyřídit 1, '
             'chybné nebo nepravdivé 0"') in bar

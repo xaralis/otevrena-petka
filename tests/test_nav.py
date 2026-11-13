@@ -17,7 +17,7 @@ from petka.web.app import app
     ("/radnice/uredni-deska", "Radnice", "Úřední deska"),
     ("/finance/rozpocet", "Finance", "Rozpočet"),
     ("/verejny-prostor/blokove-cisteni/ulice/wolkerova", "Veřejný prostor", "Blokové čištění ulic"),
-    ("/verejny-prostor/zavady", "Veřejný prostor", "Závady"),
+    ("/verejny-prostor/podnety", "Veřejný prostor", "Podněty"),
     ("/verejny-prostor/ulice/wolkerova", "Veřejný prostor", "Ulice"),
     ("/zapojte-se/ankety", "Zapojte se", "Ankety"),
 ])
@@ -63,4 +63,4 @@ def test_planned_pages_last_in_each_area():
         soon = [i.soon for i in g.items]
         assert soon == sorted(soon), g.label
     vp = next(g for g in nav.GROUPS if g.label == "Veřejný prostor")
-    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Závady", "Uzavírky"]
+    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Podněty", "Uzavírky"]

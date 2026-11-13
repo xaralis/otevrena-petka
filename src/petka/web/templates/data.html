@@ -4,7 +4,7 @@
 {% block hero %}{{ hero('Data a API', [], 'Všechno, co tu vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.') }}{% endblock %}
 {% block main %}
 <div class="prose wide">
-<nav class="switch data-tabs" aria-label="Data podle sekce" data-tabs><a href="#usneseni" data-tab="usneseni">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#zavady" data-tab="zavady">Závady</a></nav>
+<nav class="switch data-tabs" aria-label="Data podle sekce" data-tabs><a href="#usneseni" data-tab="usneseni">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a></nav>
 <section class="data-tab" id="usneseni" data-panel="usneseni">
 <h2>Usnesení a hlasování</h2>
 <p>{{ stats.meetings }} jednání rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}, poslední {{ stats.last_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Doplňuje se po zveřejnění každého zápisu. Jak data vznikají a co z nich je odvozené, popisuje <a href="/radnice/usneseni/metodika">metodika</a>.</p>
@@ -48,8 +48,8 @@
 </table>
 
 </section>
-<section class="data-tab" id="zavady" data-panel="zavady">
-<h2>Závady (podněty z Dej Tipu)</h2>
+<section class="data-tab" id="podnety" data-panel="podnety">
+<h2>Podněty z Dej Tipu</h2>
 <p>Podněty, které lidé v obvodu poslali přes aplikaci Dej Tip: {{ pd_cat.total }} od {{ pd_cat.first|d if pd_cat.first }}{% if pd_cat.checked %}, naposledy staženo {{ pd_cat.checked|d }}{% endif %}. Kategorie, stav podle Dej Tipu, data a poloha; místo jen jako ulice bez čísla domu. Popis od občana má skryté telefony a e-maily, fotka je jen tam, kde ji autor zveřejnil. Poznámky úřadu neukládáme.</p>
 <table class="ledger catalog">
   <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>

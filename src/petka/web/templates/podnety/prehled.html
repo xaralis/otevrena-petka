@@ -102,7 +102,7 @@
 <div class="pd-flow">
   <section class="pd-o2 pd-kde" id="kde" aria-labelledby="pd-kde-h">
     <h2 id="pd-kde-h" class="pd-h2">Kde</h2>
-    <form class="pd-flt" method="get" action="/verejny-prostor/zavady#kde" data-pd-filter>
+    <form class="pd-flt" method="get" action="/verejny-prostor/podnety#kde" data-pd-filter>
       <nav class="switch pd-seg" aria-label="Stav podnětů">{% for x in facets.stav %}<a href="{{ f(stav=x.url) }}#kde" data-stav="{{ x.url }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>
       {% if per.key != '12m' %}<input type="hidden" name="obdobi" value="{{ per.key }}">{% endif %}
       {% if keep.detail %}<input type="hidden" name="detail" value="{{ keep.detail }}">{% endif %}
