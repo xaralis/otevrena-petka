@@ -17,6 +17,7 @@ from petka.uredni_deska import queries as dq
 from petka.web.app import app
 
 D = dt.date
+D_ = lambda y, m, d: dt.datetime(y, m, d, 10, 0)
 TODAY = D(2026, 11, 12)
 NOW = dt.datetime(2026, 11, 12, 14, 0)
 
@@ -78,9 +79,8 @@ def test_cleaning():
     assert cl.next == D(2026, 11, 26) and cl.whole and cl.side == "obě strany" and cl.time == "od 7:00"
     assert [i["date"] for i in cl.past] == [D(2026, 9, 17), D(2026, 7, 27)]
     assert len(cl.upcoming) == 2
-    assert q.cleaning_text(cl) == "Celá ulice, obě strany, od 7:00"
     part = q.cleaning([item(D(2026, 11, 20), text="Wolkerova - parkoviště u č. p. 2122-2123", method="segment")], TODAY)
-    assert not part.whole and q.cleaning_text(part).startswith("Parkoviště u č. p. 2122-2123")
+    assert not part.whole
     none = q.cleaning([item(D(2026, 3, 1))], TODAY)
     assert none.next is None and none.on_next == [] and not none.whole and none.time == ""
 
@@ -97,29 +97,78 @@ def rep(id, status, at, category="Chodník", street="Wolkerova"):
             "lat": 50.03, "lng": 15.76, "street": street}
 
 
-def test_reports_and_their_items():
+def test_reports_counts():
     rows = [rep(1, 3, NOW - dt.timedelta(days=3)), rep(2, 1, NOW - dt.timedelta(days=400)),
             rep(3, 1, NOW, "Městská policie")]
     r = q.reports(rows)
     assert (r["n"], r["vyreseno"], r["ceka"], r["predano"]) == (3, 1, 1, 1)
     assert r["since"] == NOW - dt.timedelta(days=400) and q.since_word(r["since"]) == "od října 2025"
     assert q.reports([])["since"] is None and q.since_word(None) == ""
-    i = q.report_item(rows[1], "/verejny-prostor/ulice/wolkerova")
-    assert i["text"] == "Chodník, Wolkerova" and i["status"] == ("evidováno", "st st-no") and i["source"] == "Podněty"
+    assert q.thousands(1026) == "1\u00a0026"
 
 
-def test_feed_puts_the_next_cleaning_first_then_newest():
-    items = [{"date": D(2026, 9, 23), "text": "a"}, {"date": D(2026, 11, 26), "text": "next", "next": True},
-             {"date": D(2026, 11, 10), "text": "b"}, {"date": None, "text": "no date"}, {"date": D(2026, 6, 1), "text": "c"}]
-    assert [i["text"] for i in q.feed(items, 3)] == ["next", "b", "a"]
+NB = "\u00a0"
 
 
-def test_items_of_resolutions():
-    r = {"uid": "310-2026-r", "number": "310/2026 R", "body": "rmo", "date": D(2026, 9, 23), "title": "Přímé zadání",
-         "agenda_title": None, "mainvote": {"pro": 5}}
-    assert q.resolution_item(r) | {} == {"date": D(2026, 9, 23), "source": "Rada", "number": "310/2026 R",
-                                         "text": "Přímé zadání", "href": "/radnice/usneseni/310-2026-r", "vote": {"pro": 5}, "body": "rmo"}
-    assert q.thousands(1026) == "1 026"
+def test_report_rows_keep_new_and_waiting_and_sum_older_by_month():
+    h = dt.timedelta(hours=1)
+    rows = [rep(1, 1, NOW - 2 * 24 * h, "Autovrak"),                                  # waits: own row
+            dict(rep(2, 3, NOW - 10 * 24 * h, "Odpadky, černá skládka"), first_note_at=NOW - 10 * 24 * h + 16 * h),
+            rep(3, 1, NOW - 60 * 24 * h, "Městská policie"),                          # forwarded: own row
+            rep(4, 3, D_(2026, 9, 3), "Odpadky, černá skládka"), rep(5, 3, D_(2026, 9, 9), "Odpadky, černá skládka"),
+            rep(6, 3, D_(2026, 9, 20), "Jiné"),                                        # september: summed
+            rep(7, 3, D_(2026, 7, 2), "Veřejná zeleň"),                                # alone in its month: itself
+            rep(8, 3, D_(2025, 6, 2), "Jiné"), rep(9, 3, D_(2025, 6, 5), "Jiné")]
+    out = {r["key"]: r for r in q.report_rows(rows, NOW, "wolkerova")}
+    assert set(out) == {"r1", "r2", "r3", "m202609", "r7", "m202506"}
+    assert (out["r1"]["sub"], out["r1"]["status"]) == (f"čeká 2{NB}dny", ("evidováno", "st st-no"))
+    assert out["r2"]["sub"] == f"odpověď úřadu za 16{NB}h" and out["r2"]["ext"] and "?id=2" in out["r2"]["href"]
+    assert out["r3"]["sub"] == "předáno strážníkům" and out["r3"]["status"][0] == "předáno"
+    m = out["m202609"]
+    assert (m["label"], m["year"], m["title"], m["sub"]) == ("září", None, f"3{NB}podněty", f"odpadky{NB}2, jiné{NB}1")
+    assert m["ids"] == [4, 5, 6] and m["date"] == D(2026, 9, 20) and "ulice=wolkerova" in m["href"]
+    assert (out["m202506"]["label"], out["m202506"]["year"]) == ("červen", 2025)
+    assert out["r7"]["sub"] == "podnět z Dej Tipu"
+
+
+def test_rows_newest_first_with_cleanings_resolutions_and_notices():
+    its = [item(D(2026, 9, 17), text="Wolkerova - parkoviště u č. p. 2122-2123", method="segment"), item(D(2026, 11, 26))]
+    cl = q.cleaning_rows(its, TODAY, "/verejny-prostor/blokove-cisteni/ulice/wolkerova")
+    assert [(r["label"], r["status"]) for r in cl] == [(f"17.{NB}9.", ("proběhlo", "st ul-done")), (f"26.{NB}11.", (f"za{NB}14{NB}dní", "st"))]
+    assert cl[0]["sub"] == f"parkoviště u č.{NB}p.{NB}2122–2123" and cl[1]["sub"] == f"v celé ulici, po obou stranách, od{NB}7:00"
+    res = q.resolution_row({"uid": "u", "number": "310/2026 R", "body": "rmo", "date": D(2026, 9, 23), "title": "Asfalt",
+                            "agenda_title": None, "status": "castecne"}, TODAY)
+    assert (res["sub"], res["status"]) == (f"rada, usnesení 310/2026{NB}R", ("částečně", "st st-part"))
+    marks = q.board_marks(NOTICES, {s.slug: s for s in STREETS if s.name == "Lexova"}, TODAY)
+    n = q.notice_row(marks[0], TODAY)
+    assert (n["title"], n["sub"], n["status"], n["href"]) == ("Uzavřená stezka kvůli stavebním pracím",
+        f"úřední deska, 10.{NB}11. – 20.{NB}11.{NB}2026", (f"do 20.{NB}11.", "st"), "/radnice/uredni-deska/n1")
+    rows = q.rows(cl, [res], [n], q.report_rows([rep(1, 1, NOW)], NOW, "wolkerova"))
+    assert [r["kind"] for r in rows] == ["cl", "rep", "deska", "res", "cl"]
+
+
+def test_short_title_and_charts():
+    assert q.short_title("Investiční záměry k realizaci") == "investiční záměry k realizaci"
+    assert q.short_title("MHD v ulici") == "MHD v ulici"
+    assert q.short_title("Slovo " * 30, 20).endswith("…") and len(q.short_title("Slovo " * 30, 20)) <= 21
+    small = q.stack([["", "", "ul-tw"], []])
+    assert small == {"cols": [[("", 5), ("", 5), ("ul-tw", 5)], []], "gap": 2}
+    big = q.stack([[""] * 20 + ["ul-tw"] * 2])["cols"][0]
+    assert [c for c, _ in big] == ["", "ul-tw"] and sum(h for _, h in big) <= 66
+    rows = [rep(1, 3, dt.datetime(2026, 5, 3)), rep(2, 1, dt.datetime(2026, 11, 1)), rep(3, 1, NOW, "Městská policie")]
+    c = q.report_chart(rows, TODAY)
+    assert (c["first"], c["last"], len(c["cols"])) == ("prosinec 2025", "listopad 2026", 12)    # at least a year
+    assert [k for k, _ in c["cols"][-1]] == ["ul-tp", "ul-tw"] and q.report_chart([], TODAY) is None
+    y = q.resolution_chart([{"date": D(2019, 1, 1)}, {"date": D(2026, 3, 1)}], TODAY)
+    assert (y["first"], y["last"], len(y["cols"])) == ("2018", "2026", 9) and "2019 1" in y["label"]
+
+
+def test_declension():
+    from petka.cisteni import words as cw
+    assert [cw.locative(n) for n in ("Jiránkova", "Wolkerova", "Sokolovská", "Josefa Ressla")] == \
+        ["v Jiránkově", "ve Wolkerově", "v Sokolovské", "v ulici Josefa Ressla"]
+    assert [cw.accusative(n) for n in ("Jiránkova", "Sokolovská", "S. K. Neumanna")] == \
+        ["Jiránkovu", "Sokolovskou", "ulici S. K. Neumanna"]
 
 
 def test_loose_matches_are_not_counted(monkeypatch):
@@ -306,17 +355,42 @@ def test_street_page(fixture):
     r = get("/verejny-prostor/ulice/wolkerova")
     assert r.status_code == 200
     h = r.text
-    for s in ("<h1>Wolkerova</h1>", "Příští blokové čištění", "26. 11.", "čtvrtek od 7:00, obě strany",
-              "Související rozhodnutí", "<b>19</b>", "naposledy 23. 9.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext"',
-              "nic nečeká", "1 nahlášená od května 2026, 1 vyřešená", "Co se tu děje", "Celá ulice, obě strany, od 7:00",
-              "Rada, usnesení 310/2026 R", "5 pro; potřeba 3", "parkoviště u č. p. 2122-2123",
-              "Lavičky, zábradlí", "Všechno k ulici Wolkerova", "teď nic nevisí", "Okolní ulice", 'href="/verejny-prostor/ulice/lexova"',
-              'href="/verejny-prostor/uzavirky"'):
+    m = h.split('<main id="obsah"', 1)[1].split("</main>", 1)[0]
+    for s in ("<h1>Wolkerova</h1>", "Příští čištění za ", f"<em>26.{NB}11.</em>", "Čistí se v celé ulici, po obou stranách.",
+              '<a class="cl-nx-a" href="/verejny-prostor/blokove-cisteni/ulice/wolkerova">Harmonogram ulice</a>',
+              "Podněty z Dej Tipu", "<b>nic nečeká</b>", "1 nahlášený od května 2026, 1 vyřešený.",
+              '<a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Podněty ve Wolkerově</a>',
+              "Rozhodnutí rady a zastupitelstva", "<b>19</b><span>usnesení zmiňuje Wolkerovu</span>",
+              f"Naposledy 23.{NB}9., přímé zadání opravy asfaltu.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Zobrazit',
+              '<h2 id="ul-akt-h" class="ul-h2">Aktuálně</h2>', "Stavby a řízení: změna rozhodnutí", "Lavičky, zábradlí",
+              f"rada, usnesení 310/2026{NB}R", '<span class="st ul-done">proběhlo</span>',
+              "Všechno k ulici Wolkerova", '<li><a href="/radnice/uredni-deska?q=Wolkerova">Úřední deska</a></li>',
+              'href="/verejny-prostor/uzavirky"', "Okolní ulice", '<li><a href="/verejny-prostor/ulice/lexova">Lexova</a></li>',
+              'data-icons="/static/deska-ikony.svg', "reports.js", "ulice.js"):
         assert s in h, s
-    assert "Uzavírka</small>" not in h          # no data on closures yet: no box
-    fc = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
-    assert [f["properties"].get("when") for f in fc["features"] if f["properties"]["kind"] != "reports"] == [None, "next"]          # past cleanings stay off the map
+    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "teď nic nevisí", "Související rozhodnutí", "pd-kpi"):
+        assert s not in m, s
+    keys = [k for k in __import__("re").findall(r'<li data-row="([^"]+)"', m)]
+    assert keys == ["c20261126", "dm0", "z310-2026-r", "c20260917", "r1"]          # newest first, the coming cleaning on top
+    d = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
+    assert [(f["properties"]["row"], f["properties"]["past"]) for f in d["cleaning"]["features"]] == [("c20260917", True), ("c20261126", False)]
+    assert [f["properties"]["row"] for f in d["reports"]["features"]] == ["r1"] and d["reports"]["features"][0]["properties"]["o"] == "vyreseno"
+    assert [(x["row"], x["traffic"]) for x in d["marks"]] == [("dm0", False)] and [a["row"] for a in d["anchors"]] == ["c20260917", "c20261126"]
+    assert d["street"]["type"] == "LineString"
     assert get("/verejny-prostor/ulice/neni").status_code == 404
+
+
+def test_street_page_rows_beyond_the_first(fixture, monkeypatch):
+    many = [rep(100 + i, 3, NOW - dt.timedelta(days=i % 20)) for i in range(25)]
+    monkeypatch.setattr(q, "street_reports", lambda obvod, name: many if name == "Wolkerova" else [])
+    m = get("/verejny-prostor/ulice/wolkerova").text
+    assert m.count("<li data-row=") == 29 and m.count(" hidden><a") == 29 - q.ROWS
+    assert 'href="?radky=vse#aktualne" data-ul-more>Další</a>' in m
+    m = get("/verejny-prostor/ulice/wolkerova?radky=vse").text
+    assert " hidden><a" not in m and "data-ul-more" not in m
+    m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
+    assert "Přes Dej Tip tu zatím nikdo nic nenahlásil." in m and "Žádné usnesení od roku 2018 ulici nezmiňuje." in m
+    assert "Blokově se tu letos nečistí" in m
 
 
 def test_db_queries():

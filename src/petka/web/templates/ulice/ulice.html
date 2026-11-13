@@ -1,16 +1,25 @@
 {% extends "base.html" %}
-{#- One street: what the other sections know about it. Desktop: the boxes, map | feed, everything
-    | the streets around. Phone: one column, the feed before the map. -#}
-{% from "ulice/_macros.html" import feed as feed_rows, datalist %}
+{#- One street: the next cleaning and two quiet facts with small charts (reports by month,
+    resolutions by year), „Aktuálně“ (the street's map | everything dated on it, newest first;
+    rows and map point at each other, ulice.js) and links to the rest. Phone: one column, the
+    list under the map. -#}
+{% from "ulice/_macros.html" import datalist %}
+{% from "cisteni/_macros.html" import next_sign, area_icon %}
 {% block title %}{{ s.name }}{% endblock %}
-{% block description %}Ulice {{ s.name }} v obvodu Pardubice V: příští blokové čištění, rozhodnutí rady a zastupitelstva, nahlášené závady a co visí na úřední desce.{% endblock %}
+{% block description %}Ulice {{ s.name }} v obvodu Pardubice V: příští blokové čištění, podněty z Dej Tipu, rozhodnutí rady a zastupitelstva a co visí na úřední desce.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
+
+{#- a small stacked chart (petka.ulice.queries.stack) with its first and last label under it -#}
+{% macro chart(c, cls='') %}
+<div class="ul-chart"><span class="ul-tiles{{ ' ' ~ cls if cls }}" role="img" aria-label="{{ c.label }}" style="--gap:{{ c.gap }}px">{% for col in c.cols %}<span class="ul-col" title="{{ c.titles[loop.index0] }}">{% for k, h in col %}<i{% if k %} class="{{ k }}"{% endif %} style="height:{{ h }}px"></i>{% endfor %}</span>{% endfor %}</span><span class="ul-ax"><span>{{ c.first }}</span><span>{{ c.last }}</span></span></div>
+{% endmacro %}
+
 {% block hero %}
 <section class="band band-section">
   <div class="wrap ul-loc">
     <div>
       <h1>{{ s.name }}</h1>
-      <p class="band-lead">{{ obvod.name }}{% if s.share < 0.95 %}, část ulice patří k sousednímu obvodu{% endif %}.</p>
+      {% if s.share < 0.95 %}<p class="ul-part">Část ulice patří k sousednímu obvodu.</p>{% endif %}
     </div>
     <form class="ul-other" role="search" method="get" action="/verejny-prostor/ulice">
       <label for="ul2" class="sr">Jiná ulice</label>
@@ -20,47 +29,85 @@
   </div>
 </section>
 {% endblock %}
+
 {% block main %}
 {{ datalist(names) }}
-{% set nrep = rep.n %}
-<div class="pd-kpi ul-kpi">
-  <a href="/verejny-prostor/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}"><small>Příští blokové čištění</small>
-    {% if cl.next %}<b>{{ cl.next|cl_dm }}</b><span>{{ cl.next|cl_weekday }}{% if cl.time %} {{ cl.time }}{% endif %}{% if cl.whole and cl.side %}, {{ cl.side }}{% endif %}</span>
-    {% elif in_harm %}<b>letos už ne</b><span>termíny na příští rok přidáme, až je Služby města zveřejní</span>
-    {% else %}<b>není</b><span>ulice letos není v harmonogramu Služeb města</span>{% endif %}</a>
-  <a href="{{ q_url }}"><small>Související rozhodnutí</small><b>{{ n_res }}</b><span>rada a zastupitelstvo od roku 2018{% if last_res %}, naposledy {{ last_res|cl_dm if last_res.year == today.year else last_res|d }}{% endif %}</span><em>Zobrazit</em></a>
-  <a href="/verejny-prostor/podnety"><small>Podněty</small>
-    <b{% if rep.ceka %} class="ul-red"{% endif %}>{% if not nrep %}žádné{% elif rep.ceka %}{{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}{% else %}nic nečeká{% endif %}</b>
-    <span>{% if nrep %}{{ nrep }} {{ cl_plural(nrep, 'nahlášená', 'nahlášené', 'nahlášených') }} {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešená', 'vyřešené', 'vyřešených') }}{% else %}nikdo nic nenahlásil přes Dej Tip{% endif %}</span></a>
+<div class="ul-top">
+  <section class="ul-sign" aria-label="Příští blokové čištění">
+    {{ next_sign(panel, last, in_harm, (cl_href, 'Harmonogram ulice' if in_harm else 'Harmonogram obvodu')) }}
+  </section>
+  <div class="ul-facts">
+    <section class="ul-fact" aria-labelledby="ul-pod-h">
+      <div class="ul-ft">
+        <h2 id="ul-pod-h">Podněty z Dej Tipu</h2>
+        {% if rep.n %}
+        <p class="ul-big">{% if rep.ceka %}<b class="ul-red">{{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}</b>{% else %}<b>nic nečeká</b>{% endif %}</p>
+        <p>{{ rep.n }} {{ cl_plural(rep.n, 'nahlášený', 'nahlášené', 'nahlášených') }} {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešený', 'vyřešené', 'vyřešených') }}.</p>
+        <a href="{{ pd_url }}">Podněty {{ loc }}</a>
+        {% else %}
+        <p>Přes Dej Tip tu zatím nikdo nic nenahlásil.</p>
+        {% endif %}
+      </div>
+      {% if rep_chart %}{{ chart(rep_chart, 'ul-tiles-m') }}{% endif %}
+    </section>
+    <section class="ul-fact" aria-labelledby="ul-res-h">
+      <div class="ul-ft">
+        <h2 id="ul-res-h">Rozhodnutí rady a zastupitelstva</h2>
+        {% if n_res %}
+        <p class="ul-big"><b>{{ n_res }}</b><span>usnesení {{ cl_plural(n_res, 'zmiňuje', 'zmiňují', 'zmiňuje') }} {{ acc }}</span></p>
+        {% if last_res %}{% set d = last_res.date %}<p>Naposledy {{ d|ul_dm if d.year == today.year else d|ul_dmy }}, {% set t = short_title(last_res.title or last_res.agenda_title or ('usnesení ' ~ last_res.number)) %}{{ t }}{{ '' if t.endswith('…') else '.' }}</p>{% endif %}
+        <a href="{{ q_url }}">Zobrazit</a>
+        {% else %}
+        <p>Žádné usnesení od roku 2018 ulici nezmiňuje.</p>
+        {% endif %}
+      </div>
+      {% if res_chart %}{{ chart(res_chart) }}{% endif %}
+    </section>
+  </div>
 </div>
 
-<div class="ul-two">
-  <div class="ul-o2">
-    <h2 class="ul-h">Na mapě</h2>
-    <div class="map ul-map ul-map-street" data-ul-map="street" data-name="{{ s.name }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="ul-map-json" role="region" aria-label="Mapa ulice {{ s.name }} s úseky blokového čištění a nahlášenými závadami; stejné údaje jsou v přehledu"></div>
-    <script type="application/json" id="ul-map-json">{{ geojson|tojson }}</script>
-    <p class="cl-lg cl-lg-street" aria-label="Legenda mapy">
-      <span><i class="ul-lg-street"></i>ulice</span>
-      {% if has_next %}<span><i class="cl-lg-next"></i>čištění {{ cl.next|cl_dm }}</span>{% endif %}
-      {% if has_later %}<span><i class="cl-lg-later"></i>později letos</span>{% endif %}
-      {% if has_reports %}<span><i class="ul-lg-rep"></i>podněty</span>{% if rep.ceka %}<span><i class="ul-lg-wait"></i>čekající</span>{% endif %}{% endif %}
+<section class="ul-akt" id="aktualne" aria-labelledby="ul-akt-h">
+  <h2 id="ul-akt-h" class="ul-h2">Aktuálně</h2>
+  <div class="ul-akt-map">
+    <div class="ul-mapw">
+      <div class="map ul-map" data-ul-map data-name="{{ s.name }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-icons="{{ asset('deska-ikony.svg') }}" data-inline="ul-map-json" role="region" aria-label="Mapa ulice {{ s.name }}: podněty, blokové čištění a oznámení z úřední desky; stejné údaje jsou v seznamu"></div>
+    </div>
+    <div class="ul-sheet" data-ul-sheet></div>
+    <script type="application/json" id="ul-map-json">{{ data|tojson }}</script>
+    <p class="cl-lg ul-lg" aria-label="Legenda mapy">
+      <span><i class="ul-lg-street"></i>{{ s.name }}</span>
+      {% if has.next %}<span><i class="ul-lg-cl"></i>blokové čištění</span>{% endif %}
+      {% if has.area %}<span><i class="ul-lg-box">{{ area_icon(11) }}</i>parkoviště nebo vnitroblok, čistí se celé</span>{% endif %}
+      {% if has.reports %}<span><i class="ul-lg-pt"></i>podnět</span>{% endif %}
+      {% if has.waiting %}<span><i class="ul-lg-pt pending-alert"></i>čeká na vyřízení</span>{% endif %}
+      {% if has.cluster %}<span><i class="ul-lg-n">12</i>víc podnětů blízko sebe</span>{% endif %}
+      {% if has.traffic %}<span><i class="ul-lg-mk ak-mk-t"></i>dopravní omezení</span>{% endif %}
+      {% if has.other %}<span><i class="ul-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>oznámení z úřední desky</span>{% endif %}
     </p>
   </div>
-  <div class="ul-o1">
-    <h2 class="ul-h">Co se tu děje</h2>
-    {% if feed %}{{ feed_rows(feed, today.year, votes=True) }}{% else %}<p class="cl-muted">Zatím o ulici nic nevíme.</p>{% endif %}
+  <div class="ul-akt-list">
+    {% if rows %}
+    <ol class="pd-rows ul-rows" data-ul-rows>
+      {% for r in rows %}{% set tag = 'a' if r.href else 'span' %}
+      <li data-row="{{ r.key }}"{% if r.past %} class="ul-past"{% endif %}{% if loop.index > limit %} hidden{% endif %}><{{ tag }}{% if r.href %} href="{{ r.href }}"{% if r.ext %} target="_blank" rel="noopener"{% endif %}{% else %} tabindex="0"{% endif %}><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></{{ tag }}></li>
+      {% endfor %}
+    </ol>
+    {% if rows|length > limit %}<a class="pd-rows-more" href="?radky=vse#aktualne" data-ul-more>Další</a>{% endif %}
+    {% else %}
+    <p class="cl-muted">Zatím o ulici nic nevíme.</p>
+    {% endif %}
   </div>
-</div>
+</section>
 
 <div class="ul-all">
   <div>
     <h2 class="ul-h">Všechno k ulici {{ s.name }}</h2>
     <ul class="cl-near">
-      <li><a href="{{ q_url }}">Rozhodnutí</a><span>{% if n_res %}{{ n_res }}, naposledy {{ last_res|cl_dm if last_res.year == today.year else last_res|d }}{% else %}žádné{% endif %}</span></li>
-      <li><a href="/verejny-prostor/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}">Blokové čištění</a><span>{% if cl.next %}příště {{ cl.next|cl_dm }}{% elif in_harm %}letos už ne{% else %}není v harmonogramu{% endif %}</span></li>
+      <li><a href="{{ q_url }}">Rozhodnutí</a></li>
+      <li><a href="{{ cl_href }}">Blokové čištění</a></li>
+      <li><a href="{{ pd_url }}">Podněty</a></li>
+      <li><a href="{{ deska_url }}">Úřední deska</a></li>
       <li class="soon"><a href="/verejny-prostor/uzavirky">Uzavírky</a><span>připravujeme</span></li>
-      <li><a href="/verejny-prostor/podnety">Podněty</a><span>{% if nrep %}{{ nrep }} {{ rep.since|ul_since }}{% if rep.ceka %}, {{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}{% else %}, nic nečeká{% endif %}{% else %}žádné{% endif %}</span></li>
-      <li><a href="{{ deska_url }}">Úřední deska</a><span>{% if n_notices %}{{ n_notices }} {{ cl_plural(n_notices, 'oznámení visí', 'oznámení visí', 'oznámení visí') }}{% else %}teď nic nevisí{% endif %}</span></li>
     </ul>
   </div>
   {% if around %}
@@ -71,4 +118,4 @@
   {% endif %}
 </div>
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('reports.js') }}" defer></script><script src="{{ asset('ulice.js') }}" defer></script>{% endblock %}

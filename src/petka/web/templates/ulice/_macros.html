@@ -1,14 +1,4 @@
 {#- Pieces of the front page and the street pages (petka.ulice). -#}
-{% from "usneseni/_macros.html" import seats %}
-
-{#- "Co se děje": dated rows of everything (petka.ulice.queries.feed); the next cleaning dark. -#}
-{% macro feed(items, year, votes=False) %}
-<ol class="rows rows-compact feed">
-  {% for i in items %}
-  <li class="row{{ ' next' if i.next }}"><span class="feed-d">{{ i.date|cl_dm }}{% if i.date.year != year %}<small>{{ i.date.year }}</small>{% endif %}</span><div><p class="feed-s">{{ i.source }}{% if votes and i.number %}, usnesení {{ i.number }}{% endif %}</p><p class="feed-t"><a href="{{ i.href }}">{{ i.text }}</a>{% if i.status %} <span class="{{ i.status[1] }}">{{ i.status[0] }}</span>{% endif %}</p>{% if votes and i.vote and i.vote.pro is not none and not i.vote.parts %}<p class="feed-m">{{ seats(i.vote, i.body) }}</p>{% endif %}</div></li>
-  {% endfor %}
-</ol>
-{% endmacro %}
 
 {#- The search for a street: a big field with the magnifier, suggestions from the obvod's streets. -#}
 {% macro street_search(id, placeholder, short, value="", error="", origin="") %}

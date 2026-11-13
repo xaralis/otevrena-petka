@@ -2,10 +2,9 @@
 (petka.cisteni), podněty (petka.podnety), usnesení (full-text search, petka.usneseni.search)
 and the úřední deska (petka.uredni_deska).
 
-Reading is here; shaping (the next cleaning, the reports' counts, one dated feed of everything)
-is pure and testable without a database. A feed item is a dict: date, source (the grey line),
-text, href, and optionally status (word, classes of .st), vote (the resolution's main vote),
-next (the next cleaning, drawn dark)."""
+Reading is here; shaping (the next cleaning, the reports' counts, the rows of a street's
+„Aktuálně“ and its two small charts, the front page's map) is pure and testable without a
+database."""
 
 import datetime as dt
 import re
@@ -17,8 +16,8 @@ from ..cisteni.words import clock
 from ..podnety import stats as ps
 from ..usneseni import search as us
 from ..uredni_deska.queries import tsquery as deska_tsquery
+from ..usneseni.text import fold
 
-FEED_STREET = 8
 SIDES = {"obe": "obě strany", "prava": "pravá strana", "leva": "levá strana"}
 
 
@@ -52,17 +51,6 @@ def cleaning(its: list[dict], today: dt.date) -> Cleaning:
                     sorted((i for i in its if i["date"] < today), key=lambda i: i["date"], reverse=True))
 
 
-def cleaning_text(cl: Cleaning) -> str:
-    """What the next cleaning covers: 'Celá ulice, obě strany, od 7:00', or the places' short
-    wording from the harmonogram."""
-    if cl.whole:
-        text = "Celá ulice" + (f", {cl.side}" if cl.side else "")
-    else:
-        text = "; ".join(dict.fromkeys(i["short"] or i["text"] for i in cl.on_next))
-        text = text[:1].upper() + text[1:]
-    return text + (f", {cl.time}" if cl.time else "")
-
-
 def thousands(n: int) -> str:
     """'1 026' (a non-breaking space between thousands)."""
     return f"{n:,}".replace(",", "\u00a0")
@@ -92,35 +80,199 @@ def next_cleaning_line(its: list[dict]) -> tuple[str, str | None]:
     return text, f"/verejny-prostor/blokove-cisteni/ulice/{slug}" if slug else "/verejny-prostor/blokove-cisteni"
 
 
-def resolution_item(r: dict) -> dict:
-    return {"date": r["date"], "source": "Zastupitelstvo" if r["body"] == "zmo" else "Rada",
-            "number": r["number"], "text": r["title"] or r["agenda_title"] or f"Usnesení {r['number']}",
-            "href": f"/radnice/usneseni/{r['uid']}", "vote": r.get("mainvote"), "body": r["body"]}
+# --- one street: „Aktuálně“ and the two facts ---------------------------------------------------
+# A row of the list is a dict: key (what the map knows it by), kind (rep, month, cl, res, deska),
+# date (for the order), label (the date column; `year` under it when not this year), title (bold),
+# sub (the grey line), status (word, classes of .st), href, and what it points at on the map:
+# ids (reports), keys (cleaned places), mark (a notice's marker).
+
+ROWS = 18               # rows shown before „Další“
+RECENT = 30             # days: a report this new keeps its own row, older resolved ones are summed by month
+PASSED = {"Městská policie": "předáno strážníkům", "Zastávky MHD": "předáno dopravnímu podniku"}
+KIND_ORDER = {"cl": 0, "deska": 1, "res": 2, "rep": 3, "month": 4}     # on one day, upcoming things first
 
 
-def report_item(r: dict, href: str) -> dict:
-    return {"date": r["reported_at"].date(), "source": "Podněty",
-            "text": r["category"] + (f", {r['street']}" if r.get("street") else ""),
-            "href": href, "status": ps.status_word(r)}
+def _label(d: dt.date, today: dt.date) -> dict:
+    return {"label": dm(d), "year": d.year if d.year != today.year else None}
 
 
-def feed(items: list[dict], n: int) -> list[dict]:
-    """The `next` item (an upcoming cleaning) first, then the rest newest first, n in all."""
-    first = [i for i in items if i.get("next")][:1]
-    rest = sorted((i for i in items if not i.get("next") and i["date"]), key=lambda i: i["date"], reverse=True)
-    return (first + rest)[:n]
+def report_sub(r: dict, now: dt.datetime) -> str:
+    """The grey line of one report: 'čeká 2 dny', 'předáno strážníkům', 'odpověď úřadu za 16 h'."""
+    from ..podnety import words as pw
+    o = ps.outcome(r)
+    if o == "ceka":
+        n = max(0, (now - r["reported_at"]).days)
+        return "čeká od dneška" if n < 1 else f"čeká {n}{NB}{pw.plural(n, 'den', 'dny', 'dní')}"
+    if o == "predano":
+        return PASSED.get(r["category"], "předáno jinam")
+    h = ps.response_hours(r)
+    return f"odpověď úřadu za {pw.hours(h).replace(' ', NB)}" if h is not None else "podnět z Dej Tipu"
+
+
+def report_rows(rows: list[dict], now: dt.datetime, slug: str) -> list[dict]:
+    """A street's reports as rows: each of the last RECENT days and each not resolved on its
+    own, older resolved ones one row per month ('červen: 6 podnětů – odpadky 3, jiné 2'; a
+    month with one keeps it as itself)."""
+    from collections import Counter
+    from ..podnety import source, words as pw
+    today, cut = now.date(), now - dt.timedelta(days=RECENT)
+    out, months = [], {}
+
+    def one(r):
+        d = r["reported_at"].date()
+        return {"key": f"r{r['id']}", "kind": "rep", "date": d, **_label(d, today), "title": r["category"],
+                "sub": report_sub(r, now), "status": ps.status_word(r), "href": source.detail(r["id"]),
+                "ext": True, "ids": [r["id"]]}
+
+    for r in rows:
+        if r["reported_at"] >= cut or ps.outcome(r) != "vyreseno":
+            out.append(one(r))
+        else:
+            months.setdefault((r["reported_at"].year, r["reported_at"].month), []).append(r)
+    for (y, m), rs in months.items():
+        if len(rs) == 1:
+            out.append(one(rs[0]))
+            continue
+        c = Counter(pw.short(r["category"]) for r in rs)
+        out.append({"key": f"m{y}{m:02d}", "kind": "month", "date": max(r["reported_at"].date() for r in rs),
+                    "label": pw.MONTH[m - 1], "year": y if y != today.year else None,
+                    "title": pw.podnetu(len(rs)).replace(" ", NB),
+                    "sub": ", ".join(f"{k}{NB}{v}" for k, v in sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))),
+                    "status": ("vyřešeno", "st"), "href": f"/verejny-prostor/podnety?ulice={slug}&stav=vyreseno#kde",
+                    "ids": [r["id"] for r in rs]})
+    return out
+
+
+def cleaning_rows(its: list[dict], today: dt.date, href: str) -> list[dict]:
+    """This year's cleanings of the street, one row a day: the places in the harmonogram's
+    words, „proběhlo“ or how soon."""
+    from ..cisteni import words as cw
+    out = []
+    for d in sorted({i["date"] for i in its}):
+        on = [i for i in its if i["date"] == d]
+        past = d < today
+        sub = re.sub(r"(\d)-(\d)", "\\1–\\2", cw.where(on)).replace("č. p. ", f"č.{NB}p.{NB}")
+        if not past and clock(on[0]):
+            sub += ", " + clock(on[0]).replace(" ", NB)
+        out.append({"key": f"c{d:%Y%m%d}", "kind": "cl", "date": d, **_label(d, today), "title": "Blokové čištění",
+                    "sub": sub, "status": ("proběhlo", "st ul-done") if past else (cw.until(d, today).replace(" ", NB), "st"),
+                    "href": href, "past": past, "keys": list(dict.fromkeys(i["key"] for i in on))})
+    return out
+
+
+RES_WORD = {"prijato": ("přijato", "st st-ok"), "castecne": ("částečně", "st st-part")}
+
+
+def resolution_row(r: dict, today: dt.date) -> dict:
+    status = ("zrušeno", "st") if r.get("revoked_by") else RES_WORD.get(r.get("status"), ("přijato", "st st-ok"))
+    body = "zastupitelstvo" if r["body"] == "zmo" else "rada"
+    return {"key": f"z{r['uid']}", "kind": "res", "date": r["date"], **_label(r["date"], today),
+            "title": r["title"] or r["agenda_title"] or f"Usnesení {r['number']}",
+            "sub": f"{body}, usnesení {r['number'].replace(' ', NB)}", "status": status,
+            "href": f"/radnice/usneseni/{r['uid']}"}
+
+
+def notice_row(m: dict, today: dt.date) -> dict:
+    """A notice of the úřední deska that names the street (a mark of board_marks)."""
+    d = m.get("date") or today
+    return {"key": f"d{m['id']}", "kind": "deska", "date": d, **_label(d, today), "title": m["what"],
+            "sub": "úřední deska" + (f", {m['when']}" if m["when"] and m["traffic"] else ""),
+            "status": (m["box"], "st") if m["traffic"] else ("visí", "st"),
+            "href": f"/radnice/uredni-deska/{m['nid']}" if m["nid"] else None, "mark": m["id"]}
+
+
+def rows(*groups: list[dict]) -> list[dict]:
+    """Every row newest first (upcoming cleanings on top); on one day by KIND_ORDER."""
+    every = [r for g in groups for r in g]
+    return sorted(every, key=lambda r: (r["date"], -KIND_ORDER[r["kind"]]), reverse=True)
+
+
+def short_title(t: str, n: int = 70) -> str:
+    """A resolution's title to follow 'Naposledy 3. 6., ': lower case (unless it starts with an
+    abbreviation), cut at a word to about n characters."""
+    t = " ".join(t.split())
+    if len(t) > 1 and t[1].islower():
+        t = t[:1].lower() + t[1:]
+    if len(t) > n:
+        t = t[:n].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
+    return t
+
+
+def stack(cols: list[list[str]], height: int = 66, tile: int = 5, gap: int = 2) -> dict:
+    """A small stacked chart: each column a list of classes from the bottom, one per item. Where
+    the tallest fits as tiles (tile px, gap px), one tile per item; otherwise one segment per run
+    of a class, scaled to `height`. {cols: [[(class, px)]], gap}"""
+    top = max((len(c) for c in cols), default=0)
+    if top * (tile + gap) - gap <= height:
+        return {"cols": [[(c, tile) for c in col] for col in cols], "gap": gap}
+    out = []
+    for col in cols:
+        runs: list[list] = []
+        for c in col:
+            if runs and runs[-1][0] == c:
+                runs[-1][1] += 1
+            else:
+                runs.append([c, 1])
+        out.append([(c, max(1, round(k * (height - 2 * len(runs)) / top))) for c, k in runs])
+    return {"cols": out, "gap": 1}
+
+
+MONTHS_BACK = 24        # the reports' chart: at most this many months before this one, at least 11
+
+
+def report_chart(rows: list[dict], today: dt.date) -> dict | None:
+    """The reports by month, from the first (at most MONTHS_BACK back, at least a year) to this
+    month: resolved and closed grey at the bottom, forwarded outlined, waiting red on top."""
+    if not rows:
+        return None
+    first = min(r["reported_at"] for r in rows)
+    back = min(MONTHS_BACK, max(11, (today.year - first.year) * 12 + today.month - first.month))
+    y, m = today.year, today.month - back
+    while m < 1:
+        y, m = y - 1, m + 12
+    months = []
+    while (y, m) <= (today.year, today.month):
+        months.append((y, m))
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    order = {"ceka": 2, "predano": 1}
+    cls = {"ceka": "ul-tw", "predano": "ul-tp"}
+    by: dict = {k: [] for k in months}
+    for r in rows:
+        k = (r["reported_at"].year, r["reported_at"].month)
+        if k in by:
+            by[k].append(ps.outcome(r))
+    cols = [[cls.get(o, "") for o in sorted(os, key=lambda o: order.get(o, 0))] for os in by.values()]
+    from ..podnety import words as pw
+    word = lambda ym: f"{pw.MONTH[ym[1] - 1]} {ym[0]}"
+    return {**stack(cols), "first": word(months[0]), "last": word(months[-1]),
+            "label": f"Podněty podle měsíců od {pw.MONTH_GEN[months[0][1] - 1]} {months[0][0]}: šedě vyřízené, "
+                     "červeně čekající, obrysem předané jinam",
+            "titles": [f"{word(k)}: {len(v)}" for k, v in by.items()]}
+
+
+FIRST_YEAR = 2018       # the resolutions we have start here
+
+
+def resolution_chart(res: list[dict], today: dt.date) -> dict | None:
+    if not res:
+        return None
+    years = list(range(FIRST_YEAR, today.year + 1))
+    n = {y: sum(r["date"].year == y for r in res) for y in years}
+    return {**stack([[""] * n[y] for y in years], tile=5, gap=2), "first": str(years[0]), "last": str(years[-1]),
+            "label": "Usnesení podle let: " + ", ".join(f"{y} {n[y]}" for y in years),
+            "titles": [f"{y}: {n[y]}" for y in years]}
 
 
 # --- reading ----------------------------------------------------------------------------------
 
 def street_reports(obvod: str, name: str) -> list[dict]:
-    with db.pool().connection() as conn:
-        return conn.execute("""SELECT id, category_id, category, status, reported_at, lat, lng, street
-                               FROM citizen_reports WHERE obvod = %s AND lower(street) = lower(%s)
-                               ORDER BY reported_at DESC, id DESC""", (obvod, name)).fetchall()
+    """Every report filed under the street (its name as Dej Tip writes it, case and accents
+    aside), newest first, with what the map's card shows."""
+    from ..podnety.queries import street_rows
+    return sorted(street_rows(obvod, fold(name)), key=lambda r: (r["reported_at"], r["id"]), reverse=True)
 
 
-def resolutions(name: str, limit: int = 4) -> tuple[list[dict], int]:
+def resolutions(name: str, limit: int = 300) -> tuple[list[dict], int]:
     """Resolutions that name the street, newest first, and how many there are: whole-word full
     text only (a loose match of any one word of "Boženy Němcové" says nothing about the street)."""
     hits, info = us.search(name, "fulltext", us.Filters(status="usneseni"), limit=limit, newest_first=True)
@@ -308,7 +460,7 @@ def board_marks(notices: list[dict], streets: dict, today: dt.date, avoid: list[
             label = (f"Dopravní omezení: {name}, {what}" if traffic else f"{name}, {what}") + (f", {when}" if when else "")
             out.append({"id": f"m{len(out)}", "nid": link, "kind": n["kind"], "traffic": traffic,
                         "street": name, "what": what, "when": when, "label": label,
-                        "box": short_until(a, b, today) if dated else when, "lng": lng, "lat": lat,
+                        "box": short_until(a, b, today) if dated else when, "lng": lng, "lat": lat, "date": n["published"],
                         "order": (a > today, a if a and a > today else b) if dated else (True, dt.date.max)})
     return out
 

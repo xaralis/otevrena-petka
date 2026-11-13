@@ -14,7 +14,7 @@ from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 
 from .. import nav
-from ..cisteni import queries as cq
+from ..cisteni import queries as cq, words as cw
 from ..podnety import queries as pq, stats as ps
 from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
@@ -97,8 +97,12 @@ def search(request: Request, q: str = "", z: str = ""):
 
 
 @pages.get("/verejny-prostor/ulice/{slug}", response_class=HTMLResponse)
-def street(request: Request, slug: str):
-    today = _today()
+def street(request: Request, slug: str, radky: str = ""):
+    """One street: the next cleaning, the reports and the decisions in short, „Aktuálně“ (the
+    map of the street and everything dated on it, newest first, q.ROWS at a time; ?radky=vse
+    lists every row without JS) and links to the rest."""
+    now = _now()
+    today = now.date()
     obvod = request.state.obvod.id
     every = st.streets(obvod)
     s = every.get(slug)
@@ -109,39 +113,55 @@ def street(request: Request, slug: str):
     cl = q.cleaning(its, today)
     reps = q.street_reports(obvod, s.name)
     res, n_res = q.resolutions(s.name)
-
-    items = []
-    if cl.next:
-        items.append({"date": cl.next, "source": "Blokové čištění", "next": True, "text": q.cleaning_text(cl),
-                      "href": f"/verejny-prostor/blokove-cisteni/ulice/{slug}"})
-    items += [{"date": i["date"], "source": "Blokové čištění", "text": i["short"] or i["text"],
-               "href": f"/verejny-prostor/blokove-cisteni/ulice/{slug}"} for i in cl.past[:3]]
-    items += [q.resolution_item(r) for r in res]
-    items += [q.report_item(r, "/verejny-prostor/podnety") | {"text": r["category"]} for r in reps[:4]]
-
     geoms = cq.geometries(obvod)
-    # the map shows the street itself and, on it, the stretches still to be cleaned (the next ink,
-    # later dashed); places filed under the street that lie elsewhere and past cleanings stay off,
-    # like on the cleaning page of the street
-    feats = [{"type": "Feature", "geometry": s.geometry, "properties": {"kind": "street"}}]
-    for i in sorted((i for i in its if i["date"] >= today), key=lambda i: i["date"] == cl.next):
-        g = geoms.get(i["key"])
-        if g and g["type"] in ("LineString", "MultiLineString") and cq.on_street(g, s.geometry):
-            when = "next" if i["date"] == cl.next else "later"
-            feats.append({"type": "Feature", "geometry": g,
-                          "properties": {"kind": "cleaning", "when": when, "text": i["text"], "date": i["date"].isoformat()}})
-    cells = ps.grid(reps)["features"]
-    for c in cells:
-        c["properties"] = {"kind": "reports", "n": c["properties"]["n"], "waiting": c["properties"]["waiting"]}
-    whens = {f["properties"].get("when") for f in feats}
+    cl_href = f"/verejny-prostor/blokove-cisteni/ulice/{slug}" if its else "/verejny-prostor/blokove-cisteni"
 
+    # the map: the street, its cleaned places (a line on the street's own line, an area filed
+    # under it; places filed under the street that lie elsewhere stay off, like on the
+    # cleaning page), its reports and the notices that name it
+    def on_map(g: dict | None) -> bool:
+        return bool(g) and (cq.is_area(g) or (g["type"] in ("LineString", "MultiLineString") and cq.on_street(g, s.geometry)))
+
+    cl_rows = q.cleaning_rows(its, today, cl_href)
+    cleaning, anchors = [], []
+    for r in cl_rows:
+        gs = [(k, geoms[k]) for k in r["keys"] if on_map(geoms.get(k))]
+        r["keys"] = [k for k, _ in gs]
+        for k, g in gs:
+            cleaning.append({"type": "Feature", "geometry": g,
+                             "properties": {"key": k, "row": r["key"], "past": r["past"], "area": cq.is_area(g)}})
+        if gs:
+            lng, lat = q.point_on(gs[0][1])
+            anchors.append({"row": r["key"], "lng": lng, "lat": lat, "title": f"Blokové čištění {r['label']}",
+                            "text": r["sub"], "when": r["status"][0], "label": f"Blokové čištění {r['label']}, {r['sub']}"})
+    ahead = [f["geometry"] for f in cleaning if not f["properties"]["past"]]
+    marks = q.board_marks(q.place_notices(), {slug: s}, today, ahead)
+    rep_rows = q.report_rows(reps, now, slug)
+    rows = q.rows(rep_rows, cl_rows, [q.resolution_row(r, today) for r in res], [q.notice_row(m, today) for m in marks])
+    row_of = {i: r["key"] for r in rep_rows for i in r["ids"]}
+    points = ps.points(reps, now)["features"]
+    for f in points:
+        f["properties"]["row"] = row_of.get(f["properties"]["id"])
+    data = {"street": s.geometry, "reports": {"type": "FeatureCollection", "features": points},
+            "cleaning": {"type": "FeatureCollection", "features": cleaning}, "anchors": anchors,
+            "marks": [{k: m[k] for k in ("id", "nid", "kind", "traffic", "what", "when", "label", "lng", "lat")}
+                      | {"row": f"d{m['id']}"} for m in marks]}
+
+    rep = q.reports(reps)
+    pd_url = f"/verejny-prostor/podnety?ulice={slug}" + ("" if rep["ceka"] else "&stav=vse") + "#kde"
     return tpl.TemplateResponse(request, "ulice/ulice.html", {
-        "today": today, "s": s, "names": names, "cl": cl, "rep": q.reports(reps), "n_res": n_res,
-        "last_res": res[0]["date"] if res else None, "n_notices": q.notices_posted(s.name),
+        "today": today, "s": s, "names": names, "cl": cl, "cl_href": cl_href, "in_harm": bool(its),
+        "panel": cw.next_panel(cl.on_next, today) if cl.on_next else None,
+        "last": cw.nbdm(cl.past[0]["date"]) if cl.past else None,
+        "rep": rep, "rep_chart": q.report_chart(reps, today), "pd_url": pd_url,
+        "n_res": n_res, "last_res": res[0] if res else None, "res_chart": q.resolution_chart(res, today),
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
-        "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "in_harm": bool(its),
-        "feed": q.feed(items, q.FEED_STREET), "around": st.around(slug, every),
-        "geojson": {"type": "FeatureCollection", "features": feats + cells},
-        "has_next": "next" in whens, "has_later": "later" in whens,
-        "has_reports": bool(cells), "since_word": q.since_word,
+        "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name),
+        "rows": rows, "limit": len(rows) if radky == "vse" else q.ROWS, "data": data,
+        "has": {"next": any(not f["properties"]["past"] and not f["properties"]["area"] for f in cleaning),
+                "area": any(not f["properties"]["past"] and f["properties"]["area"] for f in cleaning),
+                "reports": bool(points), "waiting": bool(rep["ceka"]), "cluster": len(points) > 1,
+                "traffic": any(m["traffic"] for m in marks), "other": any(not m["traffic"] for m in marks)},
+        "around": st.around(slug, every), "short_title": q.short_title,
+        "loc": cw.locative(s.name), "acc": cw.accusative(s.name),
     })

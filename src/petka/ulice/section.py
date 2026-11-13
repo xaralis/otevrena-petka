@@ -22,7 +22,8 @@ def _commands():
 
 def _template():
     from . import queries
-    return {}, {"ul_thousands": queries.thousands, "ul_since": queries.since_word}
+    return {}, {"ul_thousands": queries.thousands, "ul_since": queries.since_word,
+                "ul_dm": queries.dm, "ul_dmy": queries.dmy}
 
 
 SECTION = Section(
