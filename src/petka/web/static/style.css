@@ -1567,11 +1567,19 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ul-sign .cl-nx { flex: 1; }
 .cl-nx-a { display: inline-block; margin-top: .55rem; }
 /* „Aktuálně“ */
-.ul-akt { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 1.2rem 2.2rem; margin-top: 3rem; align-items: start; }
-.ul-akt > h2 { grid-column: 1 / -1; margin: 0; }
-.ul-akt-map { position: sticky; top: 1rem; }
-.ul-mapw { position: relative; }
-.ul-map { height: auto; aspect-ratio: 600 / 740; max-height: calc(100vh - 7rem); width: 100%; margin: 0; border-color: var(--rule); }
+.ul-akt { margin-top: 3rem; }
+.ul-akt > h2 { margin: 0 0 1rem; }
+/* the map and its list in one frame: the list as tall as the map, scrolling inside; the legend under both */
+.ul-box { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: 540px auto; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+.ul-akt-map { min-height: 0; }
+.ul-mapw { position: relative; height: 100%; }
+.ul-map { height: 100%; width: 100%; margin: 0; border: 0; border-radius: 0; }
+.ul-akt-list { display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--rule); }
+.ul-akt-list .ul-rows { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.ul-akt-list .pd-rows-more { margin: 0; padding: .7rem .9rem; border-top: 1px solid var(--off); }
+.ul-akt-list > .cl-muted { margin: 0; padding: 1rem; }
+.ul-box > .ul-lg { grid-column: 1 / -1; margin: 0; padding: .6rem .9rem; background: var(--grey); border-top: 1px solid var(--rule); }
+.ul-box .ul-rows li > a, .ul-box .ul-rows li > span { grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .5rem; padding-right: 2.8rem; }   /* the narrow column: a short date, every status in one line with the pins */
 .ul-sheet:empty { display: none; }
 .ul-lg { gap: .35rem 1.2rem; }
 .ul-lg i.ul-lg-street { width: 1.6rem; border-top: 8px solid rgba(25,28,31,.14); }
@@ -1607,12 +1615,15 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ul-cl-grid { display: block; }
   .ul-cl-grid aside { margin-top: 2rem; }
   .cl-nx-a { margin-top: .4rem; }
-  .ul-akt { display: block; margin-top: 2rem; }
+  .ul-akt { margin-top: 2rem; }
   .ul-akt > h2 { margin: 0 0 .8rem; }
-  .ul-akt > .ul-akt-sub { margin: -.5rem 0 1rem; }
-  .ul-akt-map { position: static; }
-  .ul-mapw { margin: 0 -1.25rem; }
-  .ul-map { aspect-ratio: 390 / 460; max-height: 70vh; border-left: 0; border-right: 0; }
+  .ul-box { display: flex; flex-direction: column; border: 0; overflow: visible; }   /* the map, its legend, the list */
+  .ul-box > .ul-lg { order: 1; padding: 0; margin-top: .7rem; background: none; border: 0; }
+  .ul-akt-list { order: 2; border: 0; }
+  .ul-akt-list .ul-rows { overflow: visible; }
+  .ul-akt-list .pd-rows-more { padding: 0; margin-top: .8rem; border: 0; }
+  .ul-mapw { margin: 0 -1.25rem; height: auto; }
+  .ul-map { height: auto; aspect-ratio: 390 / 460; max-height: 70vh; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .ul-sheet .ak-tip.ak-card { position: static; display: grid; grid-template-columns: 120px minmax(0, 1fr); width: auto; max-width: none; margin: .8rem 0 0;
     opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
   .ul-sheet .ak-card:not(:has(> img)) { display: block; }
@@ -1624,7 +1635,6 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 }
 
 /* „Aktuálně“ on a street page: a row with something on the map has a control that shows it there */
-.ul-akt-sub { grid-column: 1 / -1; margin: -.8rem 0 0; color: var(--muted); }
 .ul-rows li { position: relative; }
 .ul-rows li.ul-mapped > a, .ul-rows li.ul-mapped > span { padding-right: 2.8rem; }
 .ul-pin { position: absolute; right: .35rem; top: .45rem; display: grid; place-items: center; width: 2rem; height: 2rem; padding: 0;

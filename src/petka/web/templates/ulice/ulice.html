@@ -76,23 +76,13 @@
 
 <section class="ul-akt" id="aktualne" aria-labelledby="ul-akt-h">
   <h2 id="ul-akt-h">Aktuálně</h2>
-  <p class="label ul-akt-sub">Co se chystá, co se stalo za posledních 30 dnů a podněty, které ještě čekají</p>
+  <div class="ul-box">
   <div class="ul-akt-map">
     <div class="ul-mapw">
       <div class="map ul-map" data-ul-map data-name="{{ s.name }}" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-icons="{{ asset('deska-ikony.svg') }}" data-inline="ul-map-json" role="region" aria-label="Mapa ulice {{ s.name }}: podněty, blokové čištění a oznámení z úřední desky; stejné údaje jsou v seznamu"></div>
     </div>
     <div class="ul-sheet" data-ul-sheet></div>
     <script type="application/json" id="ul-map-json">{{ data|tojson }}</script>
-    <p class="cl-lg ul-lg" aria-label="Legenda mapy">
-      <span><i class="ul-lg-street"></i>{{ s.name }}</span>
-      {% if has.next %}<span><i class="ul-lg-cl"></i>blokové čištění</span>{% endif %}
-      {% if has.area %}<span><i class="ul-lg-box">{{ area_icon(11) }}</i>parkoviště nebo vnitroblok, čistí se celé</span>{% endif %}
-      {% if has.reports %}<span><i class="ul-lg-pt"></i>podnět</span>{% endif %}
-      {% if has.waiting %}<span><i class="ul-lg-pt pending-alert"></i>čeká na vyřízení</span>{% endif %}
-      {% if has.cluster %}<span><i class="ul-lg-n">12</i>víc podnětů blízko sebe</span>{% endif %}
-      {% if has.traffic %}<span><i class="ul-lg-mk ak-mk-t"></i>dopravní omezení</span>{% endif %}
-      {% if has.other %}<span><i class="ul-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>oznámení z úřední desky</span>{% endif %}
-    </p>
   </div>
   <div class="ul-akt-list">
     {% if rows %}
@@ -105,6 +95,17 @@
     {% else %}
     <p class="cl-muted">Zatím o ulici nic nevíme.</p>
     {% endif %}
+  </div>
+  <p class="cl-lg ul-lg" aria-label="Legenda mapy">
+    <span><i class="ul-lg-street"></i>{{ s.name }}</span>
+    {% if has.next %}<span><i class="ul-lg-cl"></i>blokové čištění</span>{% endif %}
+    {% if has.area %}<span><i class="ul-lg-box">{{ area_icon(11) }}</i>parkoviště nebo vnitroblok, čistí se celé</span>{% endif %}
+    {% if has.reports %}<span><i class="ul-lg-pt"></i>podnět</span>{% endif %}
+    {% if has.waiting %}<span><i class="ul-lg-pt pending-alert"></i>čeká na vyřízení</span>{% endif %}
+    {% if has.cluster %}<span><i class="ul-lg-n">12</i>víc podnětů blízko sebe</span>{% endif %}
+    {% if has.traffic %}<span><i class="ul-lg-mk ak-mk-t"></i>dopravní omezení</span>{% endif %}
+    {% if has.other %}<span><i class="ul-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>oznámení z úřední desky</span>{% endif %}
+    </p>
   </div>
 </section>
 

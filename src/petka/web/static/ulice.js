@@ -46,6 +46,14 @@
     const mark = P.marks(map, data.marks.map((m) => ({ ...m, title: m.what, what: "Úřední deska" })), { icons: el.dataset.icons, key: "row" });
 
     // a state: {keys: [row keys], ids: [report ids outlined], card: a report's id or null}
+    // a row lit from the map comes into view in its list, which scrolls on its own beside the map
+    // (the page stays put); on a phone the list is not a box of its own
+    const reveal = (r) => {
+      if (!r || !list || list.scrollHeight <= list.clientHeight) return;
+      const lt = list.getBoundingClientRect(), rt = r.getBoundingClientRect();
+      if (rt.top < lt.top) list.scrollTop -= lt.top - rt.top;
+      else if (rt.bottom > lt.bottom) list.scrollTop += rt.bottom - lt.bottom;
+    };
     const fromRow = (k) => { const ids = idsOf[k] || []; return { keys: [k], ids, card: ids.length === 1 ? ids[0] : null }; };
     const fromReport = (id) => ({ keys: [byId.get(id).properties.row].filter(Boolean), ids: [id], card: id });
     const link = P.linker((st) => {
@@ -53,6 +61,7 @@
       const keys = st ? st.keys : [];
       cl.lit(keys);
       keys.forEach((k) => { const r = rowEl(k); if (r) r.classList.add("on"); });
+      if (keys.length) reveal(rowEl(keys[0]));
       P.light(keys.flatMap((k) => [anchor[k], mark[k]]), el.getBoundingClientRect().right);
       rep.ring((st ? st.ids : []).map((id) => rep.owner(id)));
       if (st && st.card != null) rep.card.show(st.card, { enter: () => link.keep(), leave: () => link.leave() });
