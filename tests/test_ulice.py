@@ -457,4 +457,4 @@ def test_street_tiles_open_by_detail(fixture, monkeypatch):
     assert 'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"' in m
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: [])
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
-    assert "<b>letos ne</b>" in m and "<b>žádné</b><span>podněty z Dej Tipu</span>" in m and "<b>žádné</b><span>usnesení o ulici od roku 2018</span>" in m
+    assert "<b>letos bez čištění</b><span>ulice není v harmonogramu</span>" in m and "<b>žádné</b><span>podněty z Dej Tipu</span>" in m and "<b>žádné</b><span>usnesení o ulici od roku 2018</span>" in m
