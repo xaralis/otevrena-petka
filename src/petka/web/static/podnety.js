@@ -252,6 +252,8 @@
         const facts = [["nahlášeno", when(p.t)]];
         if (p.a) facts.push(["odpověď úřadu", when(p.a)]);
         facts.push(["stav", word, cls]);
+        const long = waiting(p);
+        if (long) facts.push(["čeká", long]);
         if (card) card.remove();
         card = window.mapTip.card({
           photo: p.p, alt: `Fotka z podnětu: ${p.c}${p.s ? ", " + p.s : ""}`, title: p.c, place: p.s, text: p.d,
