@@ -108,11 +108,15 @@
       stage.querySelectorAll(".on").forEach((e) => e.classList.remove("on", "ak-l"));
       map.setFilter("ak-cl-on", ["in", ["get", "key"], ["literal", st ? st.keys : []]]);
       if (!st) return;
-      const box = el.getBoundingClientRect();
+      const edge = el.getBoundingClientRect().right, rbox = stage.querySelector(".ak-box-r");
+      const r = rbox && !narrow() ? rbox.getBoundingClientRect() : null;
       st.els.forEach((e) => {
         e.classList.add("on");
-        // near the right edge the tooltip goes to the left
-        if (e.matches(".ak-mk, .ak-cla")) e.classList.toggle("ak-l", e.getBoundingClientRect().left - box.left > box.width - 260);
+        // the tooltip goes to the left where it would run off the map or over the right box
+        if (!e.matches(".ak-mk, .ak-cla")) return;
+        const at = e.getBoundingClientRect(), t = e.querySelector(".ak-tip");
+        const end = at.right + 30 + (t ? t.offsetWidth : 230);
+        e.classList.toggle("ak-l", end > edge - 8 || (r && end > r.left && at.top < r.bottom + 40));
       });
     }
     const hover = (st) => apply(st || pinned);
