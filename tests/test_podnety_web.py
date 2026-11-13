@@ -28,15 +28,23 @@ def rep(id=1, status=1, category="Chodník", category_id=19, at=NOW - 10 * D, fi
 
 def test_forwarded_categories_are_named_and_never_wait():
     assert stats.FORWARDED == ("Městská policie", "Zastávky MHD")
-    assert stats.outcome(rep(status=1, category="Městská policie")) == "jinam"
-    assert stats.outcome(rep(status=2, category="Zastávky MHD")) == "jinam"
-    assert stats.outcome(rep(status=3, category="Městská policie")) == "jinam"
-    assert [stats.outcome(rep(status=s)) for s in (1, 2, 9, 3, 4, 6, 8)] == \
-        ["ceka", "ceka", "ceka", "vyreseno", "nelze", "jinam", "jinam"]
+    assert stats.outcome(rep(status=1, category="Městská policie")) == "predano"
+    assert stats.outcome(rep(status=2, category="Zastávky MHD")) == "predano"
+    assert stats.outcome(rep(status=3, category="Městská policie")) == "predano"
+
+
+def test_each_dejtip_status_has_its_outcome():
+    assert {s: stats.outcome(rep(status=s)) for s in range(1, 10)} == {
+        1: "ceka", 2: "ceka", 3: "vyreseno", 4: "nelze", 5: "chybne", 6: "neprislusi", 7: "chybne",
+        8: "predano", 9: "ceka"}
+    for c in stats.FORWARDED:                                      # forwarded: předáno whatever the status
+        assert {stats.outcome(rep(status=s, category=c)) for s in range(1, 10)} == {"predano"}
+    assert stats.OUTCOMES == ("vyreseno", "ceka", "predano", "neprislusi", "nelze", "chybne")
+    assert [k for k, *_ in stats.SEGMENTS] == list(stats.OUTCOMES)
 
 
 def test_the_four_outcomes_add_up_like_the_sanity_check():
-    # 12. 11. 2026, last 12 months: 446 = 294 vyřešeno + 94 čeká + 55 jinam + 3 nelze
+    # 12. 11. 2026, last 12 months: 446 = 294 vyřešeno + 94 čeká + 41 předáno + 14 nepřísluší + 3 nelze
     rows = ([rep(i, 3) for i in range(294)] + [rep(1000 + i, 1) for i in range(60)]
             + [rep(2000 + i, 2) for i in range(34)]
             + [rep(3000 + i, 1, "Městská policie", 25) for i in range(33)]
@@ -45,7 +53,7 @@ def test_the_four_outcomes_add_up_like_the_sanity_check():
             + [rep(7000 + i, 4) for i in range(3)])
     s = stats.summary(rows, stats.period("12m", TODAY), NOW)
     assert s["n"] == 446
-    assert s["count"] == {"vyreseno": 294, "ceka": 94, "jinam": 55, "nelze": 3}
+    assert s["count"] == {"vyreseno": 294, "ceka": 94, "predano": 41, "neprislusi": 14, "nelze": 3, "chybne": 0}
     assert s["done_pct"] == 66 and s["handled"] == 410
     assert (s["in_progress"], s["received"]) == (34, 60)
     mp = next(c for c in s["categories"] if c["name"] == "Městská policie")
@@ -167,7 +175,7 @@ def test_points_carry_the_card_and_forwarded_never_wait():
                     "t": "2026-11-09T14:00", "a": "2026-11-09T16:00", "d": "Rozbitá dlažba",
                     "p": "https://www.dejtip.eu/_fotoobce/x.jpeg", "wd": 3}
     assert "s" not in p[2] and "d" not in p[2] and "p" not in p[2] and "wd" not in p[2]
-    assert (p[3]["o"], p[3]["w"]) == ("jinam", "předáno")                        # status 1, yet forwarded
+    assert (p[3]["o"], p[3]["w"]) == ("predano", "předáno")                        # status 1, yet forwarded
     assert g["features"][0]["geometry"]["coordinates"] == [15.76, 50.03]
     assert stats.points([], NOW) == {"type": "FeatureCollection", "features": [], "bounds": None}
 
@@ -182,7 +190,7 @@ def test_facets_count_each_filter_within_the_other():
     assert {x["name"]: x["n"] for x in f["druh"]} == {"Chodník": 1, "Autovrak": 1, "Městská policie": 0}
     assert f["all"] == 2
     assert stats.druh_key("19", rows) == 19 and stats.druh_key("99", rows) is None and stats.druh_key("x", rows) is None
-    assert stats.stav_key("ceka") == "ceka" and stats.stav_key("jinam") == "ceka" and stats.stav_key("vse") == ""
+    assert stats.stav_key("ceka") == "ceka" and stats.stav_key("predano") == "ceka" and stats.stav_key("vse") == ""
     assert [stats.stav_url(k) for k in ("ceka", "vyreseno", "")] == ["", "vyreseno", "vse"]
 
 
@@ -268,7 +276,7 @@ def test_page_content(page):
     assert '<option value="20">Pískoviště, hřiště, sportoviště (10)</option>' in m
     assert '<a href="/verejny-prostor/zavady?druh=20#kde">Pískoviště, hřiště, sportoviště</a>' in m      # the table
     pts = m.split('id="pd-points">')[1].split("</script>")[0]
-    assert '"o": "jinam", "w": "předáno"' in pts and "Jiránkova" in pts
+    assert '"o": "predano", "w": "předáno"' in pts and "Jiránkova" in pts
 
 
 def test_no_middle_dot_anywhere_in_the_page(page):
@@ -335,3 +343,17 @@ def test_resolution_time_from_the_status_change():
     assert stats.resolution_days(seen) == 2                                   # the change we saw wins
     assert stats.resolution_days({"reported_at": t0, "last_note_at": t0 + dt.timedelta(days=9)}) == 9   # older: the last note
     assert stats.resolution_days({"reported_at": t0}) is None                 # neither: unknown
+
+
+def test_the_bar_has_a_segment_per_outcome(page):
+    m = main(page("/verejny-prostor/zavady"))
+    bar = m.split('<div class="pd-bar"')[1].split("</div>")[0]
+    assert ('aria-label="Vyřešeno 12, čeká 11, předáno jinam 1, nepřísluší obvodu 1, nelze vyřídit 1, '
+            'chybné nebo nepravdivé 0"') in bar
+    assert re.findall(r'<i class="([\w-]+)" style="width:([\d.]+)%"', bar) == [
+        ("pd-k-ok", "46.2"), ("pending-alert", "42.3"), ("pd-k-away", "3.8"), ("pd-k-np", "3.8"), ("pd-k-cant", "3.8")]
+    lg = m.split('<p class="pd-lg">')[1].split("</p>")[0]
+    assert re.sub(r"<[^>]+>", "", lg) == ("vyřešeno 12čeká 11předáno jinam (městská policie, dopravní podnik, jiný úřad) 1"
+                                         "nepřísluší obvodu 1nelze vyřídit 1")      # no chybné: none in the period
+    mini = re.findall(r'<span class="pd-mini" role="img" aria-label="([^"]*)">', m)
+    assert "vyřešeno 0, čeká 0, předáno jinam 1, nepřísluší obvodu 0, nelze vyřídit 0, chybné nebo nepravdivé 0" in mini

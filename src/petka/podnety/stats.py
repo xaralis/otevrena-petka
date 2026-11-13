@@ -3,10 +3,13 @@ long they take, by month, by category and on the map. Pure functions over report
 (dicts as stored in citizen_reports), testable without a database.
 
 Every report has one outcome:
-  vyreseno  Dej Tip status 3
-  ceka      statuses 1 Evidováno, 2 V řešení, 9 Zařazeno do plánu
-  jinam     statuses 6 Nepřísluší and 8 Předáno, and every report of a FORWARDED category
-  nelze     statuses 4 Nelze vyřídit, 5 Chybné/nepravdivé, 7 Spam (closed without a fix)
+  vyreseno    Dej Tip status 3
+  ceka        statuses 1 Evidováno, 2 V řešení, 9 Zařazeno do plánu
+  predano     status 8 Předáno, and every report of a FORWARDED category whatever its status
+  neprislusi  status 6 Nepřísluší (not the obvod's to solve)
+  nelze       status 4 Nelze vyřídit
+  chybne      statuses 5 Chybné/nepravdivé and 7 Spam
+The filter above the map offers only ceka and vyreseno; the four closed ones show under Vše.
 Each report is labelled with its own Dej Tip status (status_word), so the page says what Dej Tip
 says; only the FORWARDED ones read „předáno“.
 FORWARDED categories are handled outside the office (the strážníci, the transport company):
@@ -21,12 +24,14 @@ from dataclasses import dataclass
 from . import words as w
 
 RESOLVED = 3
-UNRESOLVABLE = (4, 5, 7)
+UNRESOLVABLE = 4
+WRONG = (5, 7)
+NOT_OURS = 6
 WAITING = (1, 2, 9)
 IN_PROGRESS = (2, 9)            # "v řešení" (9 = zařazeno do plánu), the rest of WAITING is only received
-PASSED_ON = (6, 8)
+PASSED_ON = 8
 FORWARDED = ("Městská policie", "Zastávky MHD")
-OUTCOMES = ("vyreseno", "ceka", "jinam", "nelze")
+OUTCOMES = ("vyreseno", "ceka", "predano", "neprislusi", "nelze", "chybne")     # the bar's order
 
 MIN_MEDIAN = 5                  # fewer resolved reports with a note than this: no "obvykle za"
 MIN_HIGHLIGHT = 10              # a category needs this many reports in the period to be highlighted
@@ -39,12 +44,16 @@ def forwarded(r: dict) -> bool:
 
 
 def outcome(r: dict) -> str:
-    if forwarded(r) or r["status"] in PASSED_ON:
-        return "jinam"
+    if forwarded(r) or r["status"] == PASSED_ON:
+        return "predano"
     if r["status"] == RESOLVED:
         return "vyreseno"
-    if r["status"] in UNRESOLVABLE:
+    if r["status"] == NOT_OURS:
+        return "neprislusi"
+    if r["status"] == UNRESOLVABLE:
         return "nelze"
+    if r["status"] in WRONG:
+        return "chybne"
     return "ceka"
 
 
@@ -359,8 +368,14 @@ def summary(rows: list[dict], p: Period, now: dt.datetime) -> dict:
     }
 
 
-WORD = {"vyreseno": ("vyřešeno", "st"), "ceka": ("čeká", "st st-no"), "jinam": ("předáno", "st"),
-        "nelze": ("nelze vyřídit", "st")}
+WORD = {"vyreseno": ("vyřešeno", "st"), "ceka": ("čeká", "st st-no"), "predano": ("předáno", "st"),
+        "neprislusi": ("nepřísluší", "st"), "nelze": ("nelze vyřídit", "st"), "chybne": ("chybné", "st")}
+# The distribution bar under the tiles, its legend and the table's mini bars, in OUTCOMES order:
+# (outcome, class of the segment, label, the legend's explanation on a desktop)
+SEGMENTS = (("vyreseno", "pd-k-ok", "vyřešeno", ""), ("ceka", "pending-alert", "čeká", ""),
+            ("predano", "pd-k-away", "předáno jinam", "městská policie, dopravní podnik, jiný úřad"),
+            ("neprislusi", "pd-k-np", "nepřísluší obvodu", ""), ("nelze", "pd-k-cant", "nelze vyřídit", ""),
+            ("chybne", "pd-k-bad", "chybné nebo nepravdivé", ""))
 # Dej Tip's own status names as the page writes them (lower case, the long ones shortened)
 STATUS_WORD = {1: "evidováno", 2: "v řešení", 3: "vyřešeno", 4: "nelze vyřídit", 5: "chybné",
                6: "nepřísluší", 7: "spam", 8: "předáno", 9: "v plánu"}
@@ -371,5 +386,5 @@ def status_word(r: dict) -> tuple[str, str]:
     report „předáno“ (Dej Tip keeps it „evidováno“ for good). (word, classes of the existing .st)"""
     o = outcome(r)
     if forwarded(r):
-        return WORD["jinam"]
+        return WORD["predano"]
     return STATUS_WORD.get(r["status"], WORD[o][0]), WORD[o][1]

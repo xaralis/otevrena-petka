@@ -101,7 +101,7 @@ def test_reports_and_their_items():
     rows = [rep(1, 3, NOW - dt.timedelta(days=3)), rep(2, 1, NOW - dt.timedelta(days=400)),
             rep(3, 1, NOW, "Městská policie")]
     r = q.reports(rows)
-    assert (r["n"], r["vyreseno"], r["ceka"], r["jinam"]) == (3, 1, 1, 1)
+    assert (r["n"], r["vyreseno"], r["ceka"], r["predano"]) == (3, 1, 1, 1)
     assert r["since"] == NOW - dt.timedelta(days=400) and q.since_word(r["since"]) == "od října 2025"
     assert q.reports([])["since"] is None and q.since_word(None) == ""
     i = q.report_item(rows[1], "/ulice/wolkerova")

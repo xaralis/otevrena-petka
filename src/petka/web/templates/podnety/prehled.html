@@ -14,7 +14,7 @@
 {% endmacro %}
 
 {% macro mini(c) -%}
-<span class="pd-mini" role="img" aria-label="vyřešeno {{ c.vyreseno }}, čeká {{ c.ceka }}, předáno jinam {{ c.jinam }}, nelze vyřídit {{ c.nelze }}">{% if c.vyreseno %}<i class="pd-k-ok" style="width:{{ c.pct.vyreseno }}%"></i>{% endif %}{% if c.ceka %}<i class="pending-alert" style="width:{{ c.pct.ceka }}%"></i>{% endif %}{% if c.jinam %}<i class="pd-k-away" style="width:{{ c.pct.jinam }}%"></i>{% endif %}{% if c.nelze %}<i class="pd-k-cant" style="width:{{ c.pct.nelze }}%"></i>{% endif %}</span>
+<span class="pd-mini" role="img" aria-label="{% for k, _, label, _ in segments %}{{ label }} {{ c[k] }}{{ ', ' if not loop.last }}{% endfor %}">{% for k, cls, _, _ in segments if c[k] %}<i class="{{ cls }}" style="width:{{ c.pct[k] }}%"></i>{% endfor %}</span>
 {%- endmacro %}
 
 {% block hero %}
@@ -94,10 +94,10 @@
   </section>
 </div>
 
-<div class="pd-bar" role="img" aria-label="Vyřešeno {{ c.vyreseno }}, čeká {{ c.ceka }}, předáno jinam {{ c.jinam }}, nelze vyřídit {{ c.nelze }}">
-  <i class="pd-k-ok" style="width:{{ s.pct.vyreseno }}%"></i><i class="pending-alert" style="width:{{ s.pct.ceka }}%"></i><i class="pd-k-away" style="width:{{ s.pct.jinam }}%"></i><i class="pd-k-cant" style="width:{{ s.pct.nelze }}%"></i>
+<div class="pd-bar" role="img" aria-label="{% for k, _, label, _ in segments %}{{ label[:1]|upper if loop.first else label[:1] }}{{ label[1:] }} {{ c[k] }}{{ ', ' if not loop.last }}{% endfor %}">
+  {% for k, cls, _, _ in segments if c[k] %}<i class="{{ cls }}" style="width:{{ s.pct[k] }}%"></i>{% endfor %}
 </div>
-<p class="pd-lg"><span><i class="pd-k-ok"></i><span>vyřešeno<span class="pd-d"> {{ c.vyreseno }}</span></span></span><span><i class="pending-alert"></i><span>čeká<span class="pd-d"> {{ c.ceka }}</span></span></span><span><i class="pd-k-away"></i><span>předáno jinam<span class="pd-d"> (městská policie, dopravní podnik, mimo obvod) {{ c.jinam }}</span></span></span><span><i class="pd-k-cant"></i><span>nelze vyřídit<span class="pd-d"> {{ c.nelze }}</span></span></span></p>
+<p class="pd-lg">{% for k, cls, label, why in segments if c[k] %}<span><i class="{{ cls }}"></i><span>{{ label }}<span class="pd-d">{% if why %} ({{ why }}){% endif %} {{ c[k] }}</span></span></span>{% endfor %}</p>
 
 <div class="pd-flow">
   <section class="pd-o2 pd-kde" id="kde" aria-labelledby="pd-kde-h">

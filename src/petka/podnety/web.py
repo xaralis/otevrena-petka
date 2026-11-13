@@ -63,7 +63,7 @@ def overview(request: Request, obdobi: str = "12m", detail: str = DEFAULT_DETAIL
         "shown": shown[:pocet], "shown_n": len(shown), "more": pocet + stats.LIST if pocet < len(shown) else None,
         "points": json.dumps(stats.points(rows, now), ensure_ascii=False).replace("<", "\\u003c"),
         "checked": checked.date() if checked else None, "report": REPORT, "detail_url": source.detail,
-        "status_word": stats.status_word, "w": words, "plural": words.plural,
+        "status_word": stats.status_word, "segments": stats.SEGMENTS, "w": words, "plural": words.plural,
     })
 
 
