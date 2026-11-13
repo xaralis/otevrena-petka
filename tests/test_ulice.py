@@ -87,7 +87,7 @@ def test_cleaning():
 
 def test_next_cleaning_line():
     its = [item(D(2026, 11, 18), "Josefa Ressla", side="prava"), item(D(2026, 11, 18), "Milheimova", side="prava")]
-    assert q.next_cleaning_line(its) == ("Josefa Ressla a Milheimova, pravá strana", "/verejny-prostor/blokove-cisteni/ulice/josefa-ressla")
+    assert q.next_cleaning_line(its) == ("Josefa Ressla a Milheimova, pravá strana", "/verejny-prostor/ulice/josefa-ressla#cisteni")
     three = its + [item(D(2026, 11, 18), "Lexova")]
     assert q.next_cleaning_line(three)[0] == "Josefa Ressla, Milheimova a Lexova"
 
@@ -356,19 +356,26 @@ def test_street_page(fixture):
     assert r.status_code == 200
     h = r.text
     m = h.split('<main id="obsah"', 1)[1].split("</main>", 1)[0]
-    for s in ("<h1>Wolkerova</h1>", "Příští čištění za ", f"<em>26.{NB}11.</em>", "Čistí se v celé ulici, po obou stranách.",
-              '<a class="cl-nx-a" href="/verejny-prostor/blokove-cisteni/ulice/wolkerova">Harmonogram ulice</a>',
+    for s in ("<h1>Wolkerova</h1>", "Kde se v ulici čistí, co se o ní rozhodlo a co v ní lidé hlásí.",
+              "Příští čištění za ", f"<em>26.{NB}11.</em>", "Čistí se v celé ulici, po obou stranách.",
+              '<a class="cl-nx-a more" href="#cisteni">Celý harmonogram ulice</a>',
               "Podněty z Dej Tipu", "<b>nic nečeká</b>", "1 nahlášený od května 2026, 1 vyřešený.",
-              '<a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Podněty ve Wolkerově</a>',
+              '<a class="more" href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Podněty ve Wolkerově</a>',
               "Rozhodnutí rady a zastupitelstva", "<b>19</b><span>usnesení zmiňuje Wolkerovu</span>",
-              f"Naposledy 23.{NB}9., přímé zadání opravy asfaltu.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Zobrazit',
-              '<h2 id="ul-akt-h" class="ul-h2">Aktuálně</h2>', "Stavby a řízení: změna rozhodnutí", "Lavičky, zábradlí",
+              f"Naposledy 23.{NB}9., přímé zadání opravy asfaltu.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení',
+              '<h2 id="ul-akt-h">Aktuálně</h2>',
+              # the street's cleaning, a page of its own until 13. 11. 2026
+              '<section class="ul-cl" id="cisteni"', "Lokalita podle harmonogramu Služeb", "cl-past",
+              "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
+              'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"', "Blokové čištění v celém obvodu",
+              '<li><a href="#cisteni">Blokové čištění</a></li>', "Odkud to víme", "Stavby a řízení: změna rozhodnutí", "Lavičky, zábradlí",
               f"rada, usnesení 310/2026{NB}R", '<span class="st ul-done">proběhlo</span>',
               "Všechno k ulici Wolkerova", '<li><a href="/radnice/uredni-deska?q=Wolkerova">Úřední deska</a></li>',
               'href="/verejny-prostor/uzavirky"', "Okolní ulice", '<li><a href="/verejny-prostor/ulice/lexova">Lexova</a></li>',
               'data-icons="/static/deska-ikony.svg', "petkamap.js", "ulice.js"):
         assert s in h, s
-    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "teď nic nevisí", "Související rozhodnutí", "pd-kpi"):
+    for s in ("Městský obvod Pardubice V", "Najeďte", "·", "Závad", "teď nic nevisí", "Související rozhodnutí", "pd-kpi",
+              "Jiná ulice", "crumbs", "/verejny-prostor/blokove-cisteni/ulice/wolkerova\""):
         assert s not in m, s
     keys = [k for k in __import__("re").findall(r'<li data-row="([^"]+)"', m)]
     assert keys == ["c20261126", "dm0", "z310-2026-r", "c20260917", "r1"]          # newest first, the coming cleaning on top
@@ -385,12 +392,22 @@ def test_street_page_rows_beyond_the_first(fixture, monkeypatch):
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: many if name == "Wolkerova" else [])
     m = get("/verejny-prostor/ulice/wolkerova").text
     assert m.count("<li data-row=") == 29 and m.count(" hidden><a") == 29 - q.ROWS
-    assert 'href="?radky=vse#aktualne" data-ul-more>Další</a>' in m
+    assert 'href="?radky=vse#aktualne" data-ul-more>Další události ve Wolkerově</a>' in m
     m = get("/verejny-prostor/ulice/wolkerova?radky=vse").text
     assert " hidden><a" not in m and "data-ul-more" not in m
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
     assert "Přes Dej Tip tu zatím nikdo nic nenahlásil." in m and "Žádné usnesení od roku 2018 ulici nezmiňuje." in m
-    assert "Blokově se tu letos nečistí" in m
+    assert "Blokově se tu letos nečistí" in m and "Ulice není v letošním harmonogramu" in m
+
+
+def test_cleaning_of_a_street_outside_the_obvod(fixture, monkeypatch):
+    # in the harmonogram but not one of the obvod's streets: a page with only its cleaning
+    monkeypatch.setattr(st, "streets", lambda obvod: {s.slug: s for s in STREETS if s.slug != "josefa-ressla"})
+    r = get("/verejny-prostor/ulice/josefa-ressla")
+    assert r.status_code == 200
+    for s in ("<h1>Josefa Ressla</h1>", '<section class="ul-cl" id="cisteni"', "do kalendáře", "Odkud to víme", "cl-sign"):
+        assert s in r.text, s
+    assert "Aktuálně" not in r.text and get("/verejny-prostor/ulice/neni").status_code == 404
 
 
 def test_db_queries():

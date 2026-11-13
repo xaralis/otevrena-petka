@@ -371,7 +371,7 @@ def test_map_anchors():
     geoms[its[0]["key"]] = {"type": "LineString", "coordinates": [[15.70, 50.0], [15.71, 50.0]]}
     a = queries.map_anchors(its, geoms, t)
     assert [(x["street"], x["what"], x["when"], x["href"]) for x in a] == [
-        ("Josefa Ressla", "od Lexova", "pravá strana 18.\u00a011. a 3.\u00a012., levá 19.\u00a011.", "/verejny-prostor/blokove-cisteni/ulice/josefa-ressla"),
+        ("Josefa Ressla", "od Lexova", "pravá strana 18.\u00a011. a 3.\u00a012., levá 19.\u00a011.", "/verejny-prostor/ulice/josefa-ressla#cisteni"),
         ("Vnitroblok za školou", "Blokové čištění", "26.\u00a011.", None)]   # Wolkerova: nothing left this year
     assert len(a[0]["keys"]) == 2                                   # both sides drawn as one line are one stretch
     assert a[0]["label"].startswith("Blokové čištění: Josefa Ressla, od Lexova, pravá strana")
@@ -400,43 +400,23 @@ def test_areas_are_markers_on_the_overview():
     assert [x["area"] for x in queries.map_anchors(its, geoms, t)] == [True, False]
 
 
-def test_search(fixture):
+def test_search_goes_to_ulice(fixture):
+    # the street search left the band (13. 11. 2026): a link from before finds the street on Ulice
     r = get("/verejny-prostor/blokove-cisteni", params={"ulice": "WOLKEROVÁ"})
-    assert r.status_code == 303 and r.headers["location"] == "/verejny-prostor/blokove-cisteni/ulice/wolkerova"
-    r = get("/verejny-prostor/blokove-cisteni", params={"ulice": "ova"})       # Wolkerova, Sokolovská, Lexova
-    assert r.status_code == 200 and "je víc" in r.text and "/verejny-prostor/blokove-cisteni/ulice/lexova" in r.text
-    assert "nemáme" in get("/verejny-prostor/blokove-cisteni", params={"ulice": "Nádražní"}).text
+    assert r.status_code == 303 and r.headers["location"] == "/verejny-prostor/ulice?q=WOLKEROV%C3%81"
+    h = get("/verejny-prostor/blokove-cisteni").text
+    assert 'href="/verejny-prostor/ulice">najděte svou ulici</a>' in h and 'role="search"' not in h.split("</section>")[0]
+    assert 'href="/verejny-prostor/ulice/wolkerova#cisteni"' in h and "Odkud to víme" in h
+    assert 'class="btn btn-o btn-s cl-cal"' not in h and 'class="cl-cal"' in h        # a text link in the rows
 
 
-def test_street_page(fixture, monkeypatch):
-    r = get("/verejny-prostor/blokove-cisteni/ulice/wolkerova")
-    assert r.status_code == 200
-    h = r.text
-    nb = "\u00a0"
-    for s in (f"Příští čištění za <b>14{nb}dní</b>.", f"Ve čtvrtek <em>26.{nb}11.</em> od{nb}7:00",
-              f"Čistí se v celé ulici, po obou stranách. Auto přeparkujte nejpozději <b>ve středu 25.{nb}11. večer</b>.",
-              'class="cl-sign"', f">26.{nb}11.</text>",
-              "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",
-              "Harmonogram čištění pro letošek", "cl-past", "Okolní ulice", "/verejny-prostor/blokove-cisteni/ulice/sokolovska",
-              "Wolkerova od ul. Čs. armády k ul. Lexova - obě strany komunikace",
-              "Přidat i další ulice"):
-        assert s in h, s
-    assert "Ulice je teď uzavřená" not in h and "aplikac" not in h.lower()
-    fc = json.loads(h.split('id="cl-street-json">')[1].split("</script>")[0])
-    # the map shows the street's own line and, thicker, the stretches still to come on it
-    assert [(f["properties"]["kind"], f["geometry"]) for f in fc["features"]] == [
-        ("street", {"type": "LineString", "coordinates": [[15.759, 50.03], [15.771, 50.03]]}), ("stretch", GEOM)]
-    assert "letos už proběhlo" not in h and "Legenda" not in h.split('id="cl-street-json"')[1].split("</section>")[0]
-    assert get("/verejny-prostor/blokove-cisteni/ulice/neni").status_code == 404
-    # nothing left this year: the greyed sign and when it was last cleaned
-    h = get("/verejny-prostor/blokove-cisteni/ulice/josefa-ressla").text
-    assert "Letos už" not in h
-    monkeypatch.setattr(web, "_today", lambda: D(2026, 12, 1))
-    h = get("/verejny-prostor/blokove-cisteni/ulice/josefa-ressla").text
-    for s in ("Letos už se tu čistit nebude", f"Naposledy se čistilo <b>18.{nb}11.</b> Termíny na příští rok doplníme",
-              ">letos</text>", ">už ne</text>"):
-        assert s in h, s
-    assert 'id="cl-street-json"' not in h          # no RÚIAN line and nothing to come: no map
+def test_street_page_moved_into_the_street(fixture):
+    # the street's cleaning is a section of its page: the old page redirects there for good,
+    # its calendar stays where people subscribed to it
+    for old in ("/verejny-prostor/blokove-cisteni/ulice/wolkerova", "/verejny-prostor/blokove-cisteni/ulice/neni"):
+        r = get(old)
+        assert r.status_code == 301 and r.headers["location"] == old.replace("/blokove-cisteni/ulice/", "/ulice/") + "#cisteni"
+    assert get("/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics").status_code == 200
 
 
 @pytest.mark.parametrize("d, want", [

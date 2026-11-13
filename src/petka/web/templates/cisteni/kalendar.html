@@ -2,14 +2,8 @@
 {% block title %}Kalendář blokového čištění{% endblock %}
 {% block description %}Termíny blokového čištění vybraných ulic jako kalendář k odběru pro Google Kalendář, Apple Kalendář i Outlook.{% endblock %}
 {% block head %}<meta name="robots" content="noindex">{% endblock %}
-{% block hero %}
-<section class="band band-section">
-  <div class="wrap">
-    <h1>Kalendář jen pro vaše ulice</h1>
-    <p class="band-lead">Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</p>
-  </div>
-</section>
-{% endblock %}
+{% from "_portal.html" import band %}
+{% block hero %}{{ band('Kalendář jen pro vaše ulice', 'Termíny blokového čištění se vám v kalendáři samy aktualizují, když je Služby města změní.') }}{% endblock %}
 {% block main %}
 <div class="cl-narrow">
   {% if missing %}<p class="cl-found-m" role="status">Ulici „{{ missing }}“ v letošním harmonogramu obvodu nemáme, nebo jich odpovídá víc. Zkuste přesný název.</p>{% endif %}

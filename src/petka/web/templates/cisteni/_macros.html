@@ -8,7 +8,7 @@
 {% macro next_list(its, soon=False) %}
 <ul class="cl-next">
   {% for i in its %}
-  <li{% if soon %} class="cl-soon" data-cl-key="{{ i.key }}"{% endif %}><a href="{{ '/verejny-prostor/blokove-cisteni/ulice/' ~ i.slug if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
+  <li{% if soon %} class="cl-soon" data-cl-key="{{ i.key }}"{% endif %}><a href="{{ '/verejny-prostor/ulice/' ~ i.slug ~ '#cisteni' if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
   {% endfor %}
 </ul>
 {% endmacro %}
@@ -29,8 +29,8 @@
   <tbody>
   {% for i in its %}
     <tr><td class="cl-when"><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }}</b> {{ i|cl_clock }}</td>
-      <td>{% if i.slug %}<a href="/verejny-prostor/blokove-cisteni/ulice/{{ i.slug }}">{{ i.street }}</a> {{ i.short }}{% else %}{{ i.text }}{% endif %}{{ ap(i) }}</td>
-      <td class="cl-ics">{% if i.slug %}<a class="btn btn-o btn-s cl-cal" href="/verejny-prostor/blokove-cisteni/ulice/{{ i.slug }}.ics">Do kalendáře<span class="sr">: {{ i.street }}</span></a>{% endif %}</td></tr>
+      <td>{% if i.slug %}<a href="/verejny-prostor/ulice/{{ i.slug }}#cisteni">{{ i.street }}</a> {{ i.short }}{% else %}{{ i.text }}{% endif %}{{ ap(i) }}</td>
+      <td class="cl-ics">{% if i.slug %}<a class="cl-cal" href="/verejny-prostor/blokove-cisteni/ulice/{{ i.slug }}.ics">Do kalendáře<span class="sr">: {{ i.street }}</span></a>{% endif %}</td></tr>
   {% endfor %}
   </tbody>
 </table>
@@ -51,29 +51,61 @@
     with the last date this year (`last`); `in_harm` false: the street isn't in the harmonogram;
     `link` (href, text) adds a link under the text -#}
 {% macro next_sign(panel, last=None, in_harm=True, link=None) %}
-<div class="cl-nx{% if not panel %} cl-nx-none{% endif %}">
+<div class="cl-nx panel{% if not panel %} cl-nx-none{% endif %}">
   {% if panel %}
   {{ sign(panel.plate[0], panel.plate[1]) }}
   <div class="cl-nx-t">
-    <span class="cl-nx-ey">{{ panel.lead }}<b>{{ panel.count }}</b>.</span>
-    <h2 class="cl-nx-h">{{ panel.on }} <em>{{ panel.date }}</em>{% if panel.clock %} {{ panel.clock }}{% endif %}</h2>
+    <span class="cl-nx-ey label">{{ panel.lead }}<b>{{ panel.count }}</b>.</span>
+    <p class="cl-nx-h big">{{ panel.on }} <em>{{ panel.date }}</em>{% if panel.clock %} {{ panel.clock }}{% endif %}</p>
     <p>Čistí se {{ panel.where }}. {{ panel.move }}<b>{{ panel.by }}</b>.</p>
-    {% if link %}<a class="cl-nx-a" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
+    {% if link %}<a class="cl-nx-a more" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
   </div>
   {% elif in_harm %}
   {{ sign('letos', 'už ne', off=True) }}
   <div class="cl-nx-t">
-    <h2 class="cl-nx-h">Letos už se tu čistit nebude</h2>
+    <p class="cl-nx-h big">Letos už se tu čistit nebude</p>
     <p>{% if last %}Naposledy se čistilo <b>{{ last }}</b> {% endif %}Termíny na příští rok doplníme, jakmile je Služby města zveřejní.</p>
-    {% if link %}<a class="cl-nx-a" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
+    {% if link %}<a class="cl-nx-a more" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
   </div>
   {% else %}
   {{ sign('letos', 'ne', off=True) }}
   <div class="cl-nx-t">
-    <h2 class="cl-nx-h">Blokově se tu letos nečistí</h2>
+    <p class="cl-nx-h big">Blokově se tu letos nečistí</p>
     <p>Ulice není v letošním harmonogramu Služeb města.</p>
-    {% if link %}<a class="cl-nx-a" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
+    {% if link %}<a class="cl-nx-a more" href="{{ link[0] }}">{{ link[1] }}</a>{% endif %}
   </div>
   {% endif %}
 </div>
+{% endmacro %}
+
+{#- „Blokové čištění“ on a street's page (#cisteni): this year's dates in the harmonogram's own
+    words, past ones grey, and the street's calendar -#}
+{% macro street_cleaning(rows, gen, today, webcal, ics) %}
+<section class="ul-cl" id="cisteni" aria-labelledby="cisteni-h">
+  <h2 id="cisteni-h">Blokové čištění</h2>
+  {% if rows %}
+  <div class="ul-cl-grid">
+    <div>
+      <table class="ledger cl-t">
+        <thead><tr><th>Kdy</th><th>Lokalita podle harmonogramu Služeb</th></tr></thead>
+        <tbody>
+        {% for i in rows %}
+          <tr{% if i.date < today %} class="cl-past"{% endif %}><td class="cl-when"><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }}</b> {{ i|cl_clock }}</td><td>{{ i.text }}</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      <p class="cl-src">Popisy jsou v původním znění harmonogramu. Proběhlé termíny jsou šedě.</p>
+    </div>
+    <aside aria-labelledby="cl-cal-h">
+      <h3 id="cl-cal-h">Do kalendáře</h3>
+      <p>Termíny {{ gen }} se vám v kalendáři samy aktualizují, když je Služby města změní.</p>
+      <p><a class="btn" href="{{ webcal }}">Termíny {{ gen }} do kalendáře</a></p>
+      <p class="cl-note">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku. Kalendář si můžete i <a href="{{ ics }}">stáhnout jako soubor .ics</a> nebo <a href="/verejny-prostor/blokove-cisteni#cl-cal-h">přidat i další ulice</a>.</p>
+      <p><a class="more" href="/verejny-prostor/blokove-cisteni">Blokové čištění v celém obvodu</a></p>
+    </aside>
+  </div>
+  {% else %}
+  <p class="cl-muted">Ulice není v letošním harmonogramu Služeb města Pardubic. <a class="more" href="/verejny-prostor/blokove-cisteni">Blokové čištění v celém obvodu</a></p>
+  {% endif %}
+</section>
 {% endmacro %}

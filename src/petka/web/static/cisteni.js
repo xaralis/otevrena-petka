@@ -99,10 +99,6 @@
     });
   }
 
-  // the phone's search field is narrow: a short placeholder
-  const search = document.querySelector(".cl-search input");
-  if (search && window.matchMedia("(max-width: 900px)").matches) search.placeholder = "Vaše ulice";
-
   // --- the calendar picker --------------------------------------------------------------------
   const form = document.querySelector("[data-cl-pick]");
   if (!form) return;

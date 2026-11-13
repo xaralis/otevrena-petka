@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{#- A street of the cleaning harmonogram that isn't one of the obvod's streets: its page has only
+    the cleaning (ulice/web.py street()). -#}
+{% from "cisteni/_macros.html" import next_sign, street_cleaning %}
+{% from "_portal.html" import band, source %}
+{% block title %}{{ name }}: blokové čištění{% endblock %}
+{% block description %}Kdy proběhne blokové čištění v ulici {{ name }}: příští termín a všechny letošní termíny podle harmonogramu Služeb města Pardubic.{% endblock %}
+{% block hero %}{{ band(name, 'Kdy se tu čistí a do kdy je potřeba přeparkovat.') }}{% endblock %}
+{% block main %}
+<div class="ul-top">
+  <section class="ul-sign" aria-label="Příští blokové čištění">{{ next_sign(panel, last, in_harm, ('#cisteni', 'Celý harmonogram ulice')) }}</section>
+</div>
+{{ street_cleaning(cl_rows, gen, today, webcal, ics) }}
+{% call source(cl_checked) %}Termíny jsou z harmonogramu <a href="{{ cl_source }}">Služeb města Pardubic</a>; když se termín změní, upravíme ho do druhého dne. Termíny jako data: <a href="{{ ics }}">kalendář .ics</a> a <a href="/data#blokove-cisteni">API</a>.{% endcall %}
+{% endblock %}

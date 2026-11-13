@@ -14,6 +14,7 @@ Při odpovědích:
   nejpozději večer předem.
 - Platí text harmonogramu (`misto`), polohu na mapě jsme odvodili sami (`poloha`: auto,
   approx = přibližně, manual = neurčená nebo ručně zakreslená).
+- Stránka ulice s celým harmonogramem: https://otevrenapetka.cz/verejny-prostor/ulice/<slug>#cisteni
 - Kalendář ulice k odběru: https://otevrenapetka.cz/verejny-prostor/blokove-cisteni/ulice/<slug>.ics
 """
 
@@ -47,7 +48,9 @@ def cisteni(ulice: str | None = None, od: str | None = None, limit: int = 50,
         "terminy": [{"datum": i["date"].isoformat(), "den": words.WEEKDAY[i["date"].weekday()],
                      "cas": words.clock(i) or None, "ulice": i["street"], "misto": i["text"],
                      "poloha": i["status"] if i["located"] else "neurcena",
-                     **({"kalendar": f"https://otevrenapetka.cz/verejny-prostor/blokove-cisteni/ulice/{i['slug']}.ics"} if i["slug"] else {})}
+                     **({"stranka": "https://otevrenapetka.cz" + queries.street_url(i["slug"]),
+                         "kalendar": f"https://otevrenapetka.cz/verejny-prostor/blokove-cisteni/ulice/{i['slug']}.ics"}
+                        if i["slug"] else {})}
                     for i in rows[:max(1, min(limit, 300))]],
         "zdroj": source.PAGE,
     }

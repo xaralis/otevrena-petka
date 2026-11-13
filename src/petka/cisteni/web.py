@@ -2,9 +2,10 @@
 obvod is the request's (petka.obvody).
 
     /verejny-prostor/blokove-cisteni                      overview: the next 7 days, a calendar for your streets, the map
-                                  and the harmonogram by week (?ulice= finds a street,
-                                  ?probehle=1 lists this year's past cleanings instead)
-    /verejny-prostor/blokove-cisteni/ulice/<slug>         one street: the next cleaning, its map, this year's dates
+                                  and the harmonogram by week (?probehle=1 lists this year's past
+                                  cleanings instead; ?ulice= from before goes to the street search)
+    /verejny-prostor/blokove-cisteni/ulice/<slug>         301 to the street's page, its section „Blokové
+                                  čištění“ (/verejny-prostor/ulice/<slug>#cisteni, petka.ulice)
     /verejny-prostor/blokove-cisteni/kalendar             the subscription link for chosen streets (the form without JS)
     /verejny-prostor/blokove-cisteni/kalendar.ics         feed of chosen streets (?ulice=slug,slug)
     /verejny-prostor/blokove-cisteni/ulice/<slug>.ics     feed of one street
@@ -12,7 +13,6 @@ obvod is the request's (petka.obvody).
 """
 
 import datetime as dt
-import json
 import os
 from urllib.parse import quote
 
@@ -21,7 +21,7 @@ from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Resp
 
 from ..web.render import tpl
 from . import ics, queries as q, source
-from .words import SIDE_ON, genitive, merged, nbdm, next_panel, weeks
+from .words import merged, weeks
 
 pages = APIRouter(prefix="/verejny-prostor/blokove-cisteni", include_in_schema=False)
 
@@ -45,7 +45,7 @@ def _origin() -> str:
     return os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 
 
-def _subscribe(request: Request, slugs: list[str]) -> dict:
+def subscribe(slugs: list[str]) -> dict:
     path = "/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=" + ",".join(quote(s) for s in slugs)
     origin = _origin()
     return {"webcal": "webcal://" + origin.split("://", 1)[1] + path, "https": origin + path}
@@ -57,11 +57,8 @@ def overview(request: Request, ulice: str = "", probehle: str = ""):
     obvod = request.state.obvod.id
     its = q.items(obvod, q.year_start(today))
     names = q.streets(its)
-    found = None
-    if ulice.strip():
-        found = q.find(ulice, names)
-        if len(found) == 1:
-            return RedirectResponse(f"/verejny-prostor/blokove-cisteni/ulice/{found[0]}", status_code=303)
+    if ulice.strip():           # the search that used to be in the band: streets are found on Ulice
+        return RedirectResponse("/verejny-prostor/ulice?q=" + quote(ulice.strip()), status_code=303)
     future = [i for i in its if i["date"] >= today]
     past = [i for i in its if i["date"] < today]
     week = [i for i in future if i["date"] <= today + dt.timedelta(days=WEEK)]
@@ -71,8 +68,7 @@ def overview(request: Request, ulice: str = "", probehle: str = ""):
         g["phone"] = merged(rest) if g["key"][0] == "m" else rest
         g["above"] = len(g["items"]) - len(rest)
     return tpl.TemplateResponse(request, "cisteni/prehled.html", {
-        **_state(today), "week": week, "groups": groups, "names": names, "query": ulice.strip(),
-        "found": found, "past": sorted(past, key=lambda i: i["date"], reverse=True) if probehle else None,
+        **_state(today), "week": week, "groups": groups, "names": names, "past": sorted(past, key=lambda i: i["date"], reverse=True) if probehle else None,
         "n_past": len(past), "n_dates": len(its), "n_places": len({i["key"] for i in its}),
         "anchors": q.map_anchors(its, q.geometries(obvod), today),
     })
@@ -93,13 +89,13 @@ def subscribe_page(request: Request, ulice: list[str] = Query(default=[]), prida
             missing = pridat.strip()
     return tpl.TemplateResponse(request, "cisteni/kalendar.html", {
         **_state(today), "chosen": [(s, names[s]) for s in chosen], "missing": missing, "names": names,
-        **(_subscribe(request, chosen) if chosen else {})})
+        **(subscribe(chosen) if chosen else {})})
 
 
 def _feed(request: Request, its: list[dict], name: str) -> Response:
     base = _origin()
     body = ics.calendar(its, name, dt.datetime.now(dt.UTC),
-                        lambda i: f"{base}/verejny-prostor/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else f"{base}/verejny-prostor/blokove-cisteni")
+                        lambda i: base + q.street_url(i["slug"]))
     return Response(body, media_type="text/calendar; charset=utf-8",
                     headers={"Cache-Control": "public, max-age=3600",
                              "Content-Disposition": 'inline; filename="cisteni.ics"'})
@@ -123,39 +119,10 @@ def street_feed(request: Request, slug: str):
     return _feed(request, its, f"Blokové čištění – {its[0]['street']}")
 
 
-@pages.get("/ulice/{slug}", response_class=HTMLResponse)
-def street(request: Request, slug: str):
-    today = _today()
-    obvod = request.state.obvod.id
-    every = q.items(obvod, q.year_start(today))
-    its = [i for i in every if i["slug"] == slug]
-    if not its:
-        raise HTTPException(404)
-    name = its[0]["street"]
-    nxt = q.next_date(its, today)
-    upcoming = [i for i in its if i["date"] >= today]
-    rows = upcoming + sorted((i for i in its if i["date"] < today), key=lambda i: i["date"], reverse=True)
-    on_next = [i for i in its if i["date"] == nxt]
-    geoms = q.geometries(obvod)
-    # the map shows the street itself (its RÚIAN line) and, thicker, the stretches still to be
-    # cleaned that lie on it; without the street's line just those stretches; the dates are in
-    # the table and places filed under the street that lie elsewhere stay off
-    from ..ulice.streets import streets as ruian_streets
-    road = ruian_streets(obvod).get(slug)
-    ahead = list({i["key"]: geoms[i["key"]] for i in upcoming if i["key"] in geoms
-                  and geoms[i["key"]]["type"] in ("LineString", "MultiLineString")}.values())
-    feats = [{"type": "Feature", "geometry": road.geometry, "properties": {"kind": "street"}}] if road else []
-    feats += [{"type": "Feature", "geometry": g, "properties": {"kind": "stretch"}}
-              for g in ahead if not road or q.on_street(g, road.geometry)]
-    whole = all(i["method"] == "whole" for i in on_next)
-    past = [i["date"] for i in its if i["date"] < today]
-    return tpl.TemplateResponse(request, "cisteni/ulice.html", {
-        **_state(today), "name": name, "slug": slug, "gen": genitive(name), "next": nxt, "on_next": on_next,
-        "first": on_next[0] if on_next else None,
-        "panel": next_panel(on_next, today) if on_next else None, "last": nbdm(max(past)) if past else None,
-        "whole": whole, "rows": rows, "geojson": {"type": "FeatureCollection", "features": feats},
-        "near": q.nearby(slug, every, geoms, today), **_subscribe(request, [slug]),
-        "ics": f"/verejny-prostor/blokove-cisteni/ulice/{slug}.ics", "side_on": SIDE_ON})
+@pages.get("/ulice/{slug}")
+def street(slug: str):
+    """The street's cleaning is a section of the street's page now (13. 11. 2026)."""
+    return RedirectResponse(q.street_url(slug), status_code=301)
 
 
 # --- API ------------------------------------------------------------------------------------

@@ -77,7 +77,7 @@ def next_cleaning_line(its: list[dict]) -> tuple[str, str | None]:
     if len(sides) == 1 and None not in sides:
         text += ", " + SIDES[sides.pop()]
     slug = next((i["slug"] for i in its if i["slug"]), None)
-    return text, f"/verejny-prostor/blokove-cisteni/ulice/{slug}" if slug else "/verejny-prostor/blokove-cisteni"
+    return text, cq.street_url(slug)
 
 
 # --- one street: „Aktuálně“ and the two facts ---------------------------------------------------
@@ -386,7 +386,7 @@ def week_cleanings(its: list[dict], geoms: dict, today: dt.date) -> dict:
         area = is_area(geoms[xs[0]["key"]])
         lng, lat = point_on(geoms[xs[0]["key"]])
         when = cleaning_when(xs)
-        href = f"/verejny-prostor/blokove-cisteni/ulice/{xs[0]['slug']}" if xs[0]["slug"] else "/verejny-prostor/blokove-cisteni"
+        href = cq.street_url(xs[0]["slug"])
         what = (re.sub(r",?\s*(obě strany|pravá strana|levá strana)$", "", xs[0]["short"]) or "Blokové čištění") \
             if area and xs[0]["slug"] else "Blokové čištění"
         anchors.append({"sid": s, "street": xs[0]["street"], "what": what, "when": when, "lng": lng, "lat": lat,

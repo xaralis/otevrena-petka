@@ -3,7 +3,8 @@
     /                    a street search, „Aktuálně“ (this week's cleanings and the board's notices
                          on one map), the areas
     /verejny-prostor/ulice?q=<name>   the search: one street goes straight to its page, more are listed
-    /verejny-prostor/ulice/<slug>     one street: next cleaning, decisions, reports, map, everything dated
+    /verejny-prostor/ulice/<slug>     one street: next cleaning, decisions, reports, map, everything dated,
+                                      and the street's cleaning (#cisteni, it was a page of its own)
 """
 
 import datetime as dt
@@ -14,7 +15,8 @@ from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 
 from .. import nav
-from ..cisteni import queries as cq, words as cw
+from ..cisteni import queries as cq, source as csource, words as cw
+from ..cisteni.web import subscribe
 from ..podnety import queries as pq, stats as ps
 from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
@@ -106,15 +108,30 @@ def street(request: Request, slug: str, radky: str = ""):
     obvod = request.state.obvod.id
     every = st.streets(obvod)
     s = every.get(slug)
-    if not s:
-        raise HTTPException(404)
-    names = {x.slug: x.name for x in every.values()}
     its = [i for i in cq.items(obvod, cq.year_start(today)) if i["slug"] == slug]
+    if not s and not its:
+        raise HTTPException(404)
     cl = q.cleaning(its, today)
+    checked = _safe(cq.checked)
+    cleaning_ctx = {
+        "cl_rows": [i for i in its if i["date"] >= today] + sorted((i for i in its if i["date"] < today),
+                                                                  key=lambda i: i["date"], reverse=True),
+        "gen": cw.genitive(its[0]["street"] if its else s.name), **subscribe([slug]),
+        "ics": f"/verejny-prostor/blokove-cisteni/ulice/{slug}.ics",
+        "cl_source": csource.PAGE, "cl_checked": checked.date() if checked else None,
+    }
+    if not s:
+        # a street of the harmonogram that isn't one of the obvod's streets (RÚIAN): only its
+        # cleaning, the page the cleaning had of its own before it became a section of this one
+        return tpl.TemplateResponse(request, "ulice/jen_cisteni.html", {
+            "today": today, "name": its[0]["street"], "in_harm": True, **cleaning_ctx,
+            "panel": cw.next_panel(cl.on_next, today) if cl.on_next else None,
+            "last": cw.nbdm(cl.past[0]["date"]) if cl.past else None})
+    names = {x.slug: x.name for x in every.values()}
     reps = q.street_reports(obvod, s.name)
     res, n_res = q.resolutions(s.name)
     geoms = cq.geometries(obvod)
-    cl_href = f"/verejny-prostor/blokove-cisteni/ulice/{slug}" if its else "/verejny-prostor/blokove-cisteni"
+    cl_href = "#cisteni" if its else "/verejny-prostor/blokove-cisteni"
 
     # the map: the street, its cleaned places (a line on the street's own line, an area filed
     # under it; places filed under the street that lie elsewhere stay off, like on the
@@ -148,6 +165,7 @@ def street(request: Request, slug: str, radky: str = ""):
                       | {"row": f"d{m['id']}"} for m in marks]}
 
     rep = q.reports(reps)
+    pd_checked = _safe(pq.checked, obvod)
     pd_url = f"/verejny-prostor/podnety?ulice={slug}" + ("" if rep["ceka"] else "&stav=vse") + "#kde"
     return tpl.TemplateResponse(request, "ulice/ulice.html", {
         "today": today, "s": s, "names": names, "cl": cl, "cl_href": cl_href, "in_harm": bool(its),
@@ -163,5 +181,14 @@ def street(request: Request, slug: str, radky: str = ""):
                 "reports": bool(points), "waiting": bool(rep["ceka"]), "cluster": len(points) > 1,
                 "traffic": any(m["traffic"] for m in marks), "other": any(not m["traffic"] for m in marks)},
         "around": st.around(slug, every), "short_title": q.short_title,
-        "loc": cw.locative(s.name), "acc": cw.accusative(s.name),
+        "loc": cw.locative(s.name), "acc": cw.accusative(s.name), **cleaning_ctx,
+        "pd_checked": pd_checked.date() if pd_checked else None,
     })
+
+
+def _safe(f, *args):
+    """When a source was last fetched, for „Odkud to víme“; None when it can't be told."""
+    try:
+        return f(*args)
+    except Exception:
+        return None

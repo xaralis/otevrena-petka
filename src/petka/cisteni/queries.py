@@ -109,13 +109,19 @@ def map_anchors(its: list[dict], geoms: dict[str, dict], today: dt.date) -> list
         lng, lat = point_on(geoms[i["key"]])
         out.append({"keys": list(dict.fromkeys(x["key"] for x in xs)), "street": i["street"], "what": what,
                     "when": when, "lng": lng, "lat": lat, "area": is_area(geoms[i["key"]]),
-                    "href":f"/verejny-prostor/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else None,
+                    "href": street_url(i["slug"]) if i["slug"] else None,
                     "label": f"Blokové čištění: {i['street']}, " + (f"{what}, " if what != "Blokové čištění" else "") + when,
                     "next": min(x["date"] for x in ahead)})
     out.sort(key=lambda a: (a["next"], places.fold(a["street"])))
     for a in out:
         del a["next"]
     return out
+
+
+def street_url(slug: str | None) -> str:
+    """Where a street's cleaning is shown: the section „Blokové čištění“ of the street's page
+    (petka.ulice), the overview for a place without a street."""
+    return f"/verejny-prostor/ulice/{slug}#cisteni" if slug else "/verejny-prostor/blokove-cisteni"
 
 
 ON_STREET = 25         # metres: a stretch this close to the street's line lies on it

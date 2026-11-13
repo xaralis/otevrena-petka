@@ -1,27 +1,11 @@
 {% extends "base.html" %}
-{% from "cisteni/_macros.html" import next_list, ap, legend, table %}
+{% from "cisteni/_macros.html" import next_list, ap, legend, table %}{% from "_portal.html" import band, source %}
 {% block title %}Kdy proběhne čištění mojí ulice?{% endblock %}
 {% block description %}Blokové čištění ulic v obvodu podle harmonogramu Služeb města Pardubic: termíny, mapa úseků a kalendář jen pro vaše ulice.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
 {% block hero %}
-<section class="band band-section">
-  <div class="wrap">
-    <h1>Kdy proběhne čištění mojí ulice?</h1>
-    <p class="band-lead"><span class="cl-only-d">Blokové čištění v obvodu podle harmonogramu Služeb města Pardubic. V den čištění platí v úseku od rána zákaz stání podle dopravních značek.</span><span class="cl-only-m">Blokové čištění v obvodu podle harmonogramu Služeb města Pardubic. V den čištění platí v úseku od rána zákaz stání.</span></p>
-    <form class="search cl-search" method="get" action="/verejny-prostor/blokove-cisteni" role="search">
-      <label class="sr" for="ul">Vaše ulice</label>
-      <input id="ul" name="ulice" type="search" list="cl-streets" data-combo value="{{ query }}" autocomplete="off" placeholder="Vaše ulice, třeba Wolkerova nebo Lexova">
-      <button type="submit">Najít</button>
-    </form>
-    {% if found is not none %}
-    <div class="cl-found" role="status">
-      {% if found %}<p>Ulic odpovídajících „{{ query }}“ je víc:</p>
-      <ul>{% for s in found %}<li><a href="/verejny-prostor/blokove-cisteni/ulice/{{ s }}">{{ names[s] }}</a></li>{% endfor %}</ul>
-      {% else %}<p>Ulici „{{ query }}“ v letošním harmonogramu obvodu nemáme. Zkuste jen část názvu, nebo ji najděte na mapě.</p>{% endif %}
-    </div>
-    {% endif %}
-  </div>
-</section>
+{% set lead %}Podle harmonogramu Služeb města Pardubic; v den čištění platí v úseku od rána zákaz stání. Klepněte na úsek v mapě nebo na termín, nebo <a href="/verejny-prostor/ulice">najděte svou ulici</a>.{% endset %}
+{{ band('Kdy proběhne čištění mojí ulice?', lead) }}
 {% endblock %}
 {% block main %}
 <datalist id="cl-streets">{% for s, n in names.items() %}<option value="{{ n }}"></option>{% endfor %}</datalist>
@@ -34,19 +18,14 @@
       {{ legend(anchors|selectattr('area')|list) }}
       <p class="cl-cap"><span class="cl-only-d">Úseky jsme podle textu harmonogramu umístili na mapu sami, čárkované jen přibližně. Platí vždy text termínu v seznamu. Najetím na úsek zobrazíte jeho termín, klepnutím stránku ulice.</span><span class="cl-only-m">Úseky jsme na mapu umístili podle textu harmonogramu, čárkované jen přibližně. Platí text termínu.</span></p>
     </section>
-    <section class="cl-o6 cl-src-block" aria-labelledby="cl-src-h">
-      <p class="side-h" id="cl-src-h">Odkud to víme</p>
-      <p class="cl-only-d">Harmonogram vydávají <a href="{{ source }}">Služby města Pardubic</a> jako tabulku pro celé město. Každý den ji stahujeme a vybíráme úseky v obvodu: letos {{ n_dates }} {{ cl_plural(n_dates, 'termín', 'termíny', 'termínů') }} na {{ n_places }} {{ cl_plural(n_places, 'místě', 'místech', 'místech') }}.{% if checked %} Stav k {{ checked|d }}.{% endif %} Úseky jako data: <a href="/api/v1/cisteni">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
-      <p class="cl-only-m">Z harmonogramu <a href="{{ source }}">Služeb města Pardubic</a>, který každý den stahujeme. Letos {{ n_dates }} {{ cl_plural(n_dates, 'termín', 'termíny', 'termínů') }} na {{ n_places }} {{ cl_plural(n_places, 'místě', 'místech', 'místech') }} v obvodu.{% if checked %} Stav k {{ checked|d }}.{% endif %}</p>
-    </section>
   </div>
   <aside class="cl-col">
     <section class="cl-o1" aria-labelledby="cl-week-h">
-      <p class="side-h" id="cl-week-h">Příštích 7 dní</p>
+      <h3 class="side-h" id="cl-week-h">Příštích 7 dní</h3>
       {% if week %}{{ next_list(week, soon=True) }}{% else %}<p class="cl-muted">V příštích sedmi dnech se v obvodu nečistí.</p>{% endif %}
     </section>
     <section class="cl-o2" aria-labelledby="cl-cal-h">
-      <h2 class="side-h cl-h2" id="cl-cal-h">Kalendář jen pro vaše ulice</h2>
+      <h3 id="cl-cal-h">Kalendář jen pro vaše ulice</h3>
       <p class="cl-muted"><span class="cl-only-d">Vyberte ulice, kde parkujete. Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</span><span class="cl-only-m">Vyberte ulice, kde parkujete. Termíny se v kalendáři samy aktualizují.</span></p>
       <form class="cl-pick" method="get" action="/verejny-prostor/blokove-cisteni/kalendar" aria-label="Ulice do kalendáře" data-cl-pick>
         <div class="chips" data-cl-chips></div>
@@ -63,16 +42,16 @@
   <section class="cl-harm cl-o5" aria-labelledby="cl-harm-h">
   {% if past is not none %}
     <h2 id="cl-harm-h" class="cl-h2m">Letošní proběhlé termíny</h2>
-    <p class="cl-lead"><a href="/verejny-prostor/blokove-cisteni">Zpět na termíny do konce roku</a></p>
+    <p class="cl-lead"><a class="more" href="/verejny-prostor/blokove-cisteni">Termíny do konce roku</a></p>
     {% for g in past|groupby('date.month')|reverse %}
-    <p class="cl-wk">{{ g.grouper|cl_month }}</p>
+    <h3 class="cl-wk">{{ g.grouper|cl_month }}</h3>
     {{ table(g.list) }}
     {% endfor %}
   {% else %}
     <h2 id="cl-harm-h" class="cl-h2m"><span class="cl-only-d">Harmonogram do konce roku</span><span class="cl-only-m">Do konce roku</span></h2>
     <p class="cl-lead cl-only-d">Popisy úseků jsme zkrátili. Přesné znění harmonogramu najdete v detailu ulice.</p>
     {% for g in groups %}
-    <p class="cl-wk">{{ g.label }} <span>{{ g.range }}</span></p>
+    <h3 class="cl-wk">{{ g.label }} <span>{{ g.range }}</span></h3>
     <div class="cl-only-d">{{ table(g['items']) }}</div>
     <div class="cl-only-m">
       {% if g.phone %}{{ next_list(g.phone) }}{% endif %}
@@ -81,9 +60,10 @@
     {% else %}
     <p class="cl-muted">Letos už žádné čištění v obvodu nezbývá.</p>
     {% endfor %}
-    {% if n_past %}<p class="cl-pastlink"><a href="/verejny-prostor/blokove-cisteni?probehle=1#cl-harm-h">Letošní proběhlé termíny ({{ n_past }})</a></p>{% endif %}
+    {% if n_past %}<p class="cl-pastlink"><a class="more" href="/verejny-prostor/blokove-cisteni?probehle=1#cl-harm-h">Letošní proběhlé termíny ({{ n_past }})</a></p>{% endif %}
   {% endif %}
   </section>
 </div>
+{% call source(checked) %}Harmonogram vydávají <a href="{{ source }}">Služby města Pardubic</a> jako tabulku pro celé město; každý den ji stahujeme a vybíráme úseky v obvodu, letos {{ n_dates }} {{ cl_plural(n_dates, 'termín', 'termíny', 'termínů') }} na {{ n_places }} {{ cl_plural(n_places, 'místě', 'místech', 'místech') }}. Úseky jako data: <a href="/api/v1/cisteni">GeoJSON</a> a <a href="/data#blokove-cisteni">API</a>.{% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('cisteni.js') }}" defer></script>{% endblock %}
