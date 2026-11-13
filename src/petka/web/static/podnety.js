@@ -64,10 +64,11 @@
   // the filter, from the address the server rendered
   const params = new URLSearchParams(location.search);
   const known = (k) => feats.some((f) => f.properties.k === k);
-  let stav = ["ceka", "vyreseno"].includes(params.get("stav")) ? params.get("stav") : "";
+  // the state as the address writes it: "" = waiting (the default), "vyreseno", "vse" = every state
+  let stav = ["vyreseno", "vse"].includes(params.get("stav")) ? params.get("stav") : "";
   let druh = /^\d+$/.test(params.get("druh") || params.get("kategorie") || "") ? +(params.get("druh") || params.get("kategorie")) : null;
   if (druh !== null && !known(druh)) druh = null;
-  const match = (p, st, dr) => (!st || p.o === st) && (dr === null || p.k === dr);
+  const match = (p, st, dr) => (st === "vse" || p.o === (st || "ceka")) && (dr === null || p.k === dr);
   const current = () => feats.filter((f) => match(f.properties, stav, druh));
   Array.from(select.options).forEach((o) => (o.dataset.name = o.textContent.replace(/ \(\d+\)$/, "")));
 

@@ -217,12 +217,21 @@ def highlight(rows: list[dict], cats: list[dict], p: Period) -> dict | None:
 
 # --- the map ---------------------------------------------------------------------------------
 
-STAV = (("", "Vše"), ("ceka", "Čeká"), ("vyreseno", "Vyřešeno"))     # the filter above the map
+STAV = (("ceka", "Čeká"), ("vyreseno", "Vyřešeno"), ("", "Vše"))     # the filter above the map, waiting first
 LIST = 15                       # rows of the list beside the map, and how many "Další podněty" adds
 
 
 def stav_key(v: str) -> str:
-    return v if v in dict(STAV) else ""
+    """The state filter from the address: none means the default, the waiting reports; "vse"
+    means every state (matches() takes "" for that)."""
+    if v == "vse":
+        return ""
+    return v if v in dict(STAV) and v else "ceka"
+
+
+def stav_url(k: str) -> str:
+    """The state filter as the address writes it: the default (waiting) left out, every state "vse"."""
+    return "" if k == "ceka" else ("vse" if k == "" else k)
 
 
 def druh_key(v: str, rows: list[dict]) -> int | None:
@@ -243,7 +252,7 @@ def facets(rows: list[dict], stav: str, druh: int | None) -> dict:
     by: dict[int, int] = {}
     for r in in_stav:
         by[r["category_id"]] = by.get(r["category_id"], 0) + 1
-    return {"stav": [{"key": k, "label": label, "n": sum(matches(r, k) for r in in_druh), "on": k == stav}
+    return {"stav": [{"key": k, "url": stav_url(k), "label": label, "n": sum(matches(r, k) for r in in_druh), "on": k == stav}
                      for k, label in STAV],
             "druh": [{"id": c["id"], "name": c["name"], "n": by.get(c["id"], 0), "on": c["id"] == druh}
                      for c in categories(rows)],

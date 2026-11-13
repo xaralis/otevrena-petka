@@ -3,7 +3,7 @@ the request's (petka.obvody); everything else comes as query parameters.
 
     /verejny-prostor/zavady            the period's reports in numbers, on the map and by category
                         ?obdobi=12m|<year>  ?detail=mesice|vyreseno|ceka|odpoved (the open tile,
-                        for a browser without JS)  ?stav=ceka|vyreseno and ?druh=<category id>
+                        for a browser without JS)  ?stav=vyreseno|vse (waiting by default) and ?druh=<category id>
                         filter the map and its list (podnety.js does the same in place),
                         ?pocet=N rows of the list  ?druhy=vse lists every category on a phone
 """
@@ -53,7 +53,7 @@ def overview(request: Request, obdobi: str = "12m", detail: str = DEFAULT_DETAIL
     shown = sorted((r for r in rows if stats.matches(r, stav, kind)), key=lambda r: (r["reported_at"], r["id"]),
                    reverse=True)
     pocet = max(stats.LIST, min(pocet, len(shown)))
-    keep = {"detail": "" if detail == DEFAULT_DETAIL else detail, "stav": stav, "druh": kind or ""}
+    keep = {"detail": "" if detail == DEFAULT_DETAIL else detail, "stav": stats.stav_url(stav), "druh": kind or ""}
     checked = queries.checked(obvod)
     return tpl.TemplateResponse(request, "podnety/prehled.html", {
         "per": p, "s": s, "switch": stats.switch(queries.years(obvod), p.key), "detail": detail,

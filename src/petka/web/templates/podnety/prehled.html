@@ -76,7 +76,7 @@
       <div class="pd-d">
         <p class="side-h">Čeho se týkají</p>
         <ul class="pd-plain">
-          {% for x in s.waiting_cats %}<li><a href="{{ f(druh=x.id, stav='ceka') }}#kde">{{ x.name }}</a><b>{{ x.n }}</b></li>{% endfor %}
+          {% for x in s.waiting_cats %}<li><a href="{{ f(druh=x.id, stav='') }}#kde">{{ x.name }}</a><b>{{ x.n }}</b></li>{% endfor %}
           {% if s.waiting_rest %}<li><span>ostatní</span><b>{{ s.waiting_rest }}</b></li>{% endif %}
         </ul>
       </div>
@@ -103,10 +103,10 @@
   <section class="pd-o2 pd-kde" id="kde" aria-labelledby="pd-kde-h">
     <h2 id="pd-kde-h" class="pd-h2">Kde</h2>
     <form class="pd-flt" method="get" action="/verejny-prostor/zavady#kde" data-pd-filter>
-      <nav class="switch pd-seg" aria-label="Stav podnětů">{% for x in facets.stav %}<a href="{{ f(stav=x.key) }}#kde" data-stav="{{ x.key }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>
+      <nav class="switch pd-seg" aria-label="Stav podnětů">{% for x in facets.stav %}<a href="{{ f(stav=x.url) }}#kde" data-stav="{{ x.url }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>
       {% if per.key != '12m' %}<input type="hidden" name="obdobi" value="{{ per.key }}">{% endif %}
       {% if keep.detail %}<input type="hidden" name="detail" value="{{ keep.detail }}">{% endif %}
-      {% if stav %}<input type="hidden" name="stav" value="{{ stav }}">{% endif %}
+      {% if keep.stav %}<input type="hidden" name="stav" value="{{ keep.stav }}">{% endif %}
       <label class="pd-sel">Druh <select name="druh">
         <option value="">všechny ({{ facets.all }})</option>
         {% for k in facets.druh %}<option value="{{ k.id }}"{% if k.on %} selected{% endif %}>{{ k.name }} ({{ k.n }})</option>
