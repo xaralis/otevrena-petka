@@ -78,7 +78,8 @@
       new maplibregl.Marker({ element: e }).setLngLat([a.lng, a.lat]).addTo(map);
     });
     data.marks.forEach((m, i) => {
-      const e = document.createElement("span");
+      const e = document.createElement(m.nid ? "a" : "span");    // the marker opens its notice
+      if (m.nid) e.href = "/uredni-deska/" + encodeURIComponent(m.nid);
       e.className = "ak-mk" + (m.traffic ? " ak-mk-t" : "");
       e.tabIndex = 0;
       e.setAttribute("aria-label", m.label);
@@ -87,7 +88,7 @@
       if (!m.traffic) {
         const NS = "http://www.w3.org/2000/svg";
         const svg = document.createElementNS(NS, "svg"), use = document.createElementNS(NS, "use");
-        svg.setAttribute("width", "12"); svg.setAttribute("height", "12"); svg.setAttribute("aria-hidden", "true");
+        svg.setAttribute("width", "19"); svg.setAttribute("height", "19"); svg.setAttribute("aria-hidden", "true");
         use.setAttribute("href", el.dataset.icons + "#" + m.kind);
         svg.appendChild(use);
         box.appendChild(svg);
@@ -136,7 +137,15 @@
       e.addEventListener("mouseleave", () => hover(null));
       e.addEventListener("focus", () => hover(make()));
       e.addEventListener("blur", () => hover(null));
-      e.addEventListener("click", (ev) => { ev.stopPropagation(); const st = make(); pin(st, sameAs(st)); });
+      e.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        const st = make();
+        // a marker is a link: on wide screens it opens the notice straight away, on phones the
+        // first tap shows the tooltip and a second tap on the same marker opens it
+        if (e.href && (!narrow() || sameAs(st))) return;
+        ev.preventDefault();
+        pin(st, sameAs(st));
+      });
     };
     Object.entries(mark).forEach(([id, e]) => wire(e, () => one(id)));
     Object.entries(anchor).forEach(([sid, e]) => wire(e, () => street(sid)));

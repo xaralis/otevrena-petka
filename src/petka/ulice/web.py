@@ -65,7 +65,7 @@ def home(request: Request):
              ("Finance a ankety", g["Finance"].items + g["Zapojte se"].items)]
     data = {"lines": week["lines"], "anchors": week["anchors"],
             "days": [{"keys": d["keys"], "sids": d["sids"]} for d in week["rows"]],
-            "marks": [{k: m[k] for k in ("id", "kind", "traffic", "street", "what", "when", "label", "lng", "lat")}
+            "marks": [{k: m[k] for k in ("id", "nid", "kind", "traffic", "street", "what", "when", "label", "lng", "lat")}
                       for m in marks]}
     return tpl.TemplateResponse(request, "ulice/home.html", {
         "today": today, "names": names, "miss": request.query_params.get("ulice", "").strip()[:80],

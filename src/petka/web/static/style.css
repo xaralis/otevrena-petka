@@ -1478,9 +1478,10 @@ a.cl-hint { color: var(--red-ink); }
 .ak-list-r .ak-d { font-weight: 650; color: var(--ink-2); }
 /* marks on the map: MapLibre places them; above the boxes only while shown */
 .ak-mk, .ak-cla { z-index: 2; cursor: default; }
-.ak-mk { width: 18px; height: 18px; }
-.ak-mk > i, .ak-lg .ak-lg-mk { display: grid; place-items: center; width: 18px; height: 18px; border: 2px solid var(--ink); border-radius: 3px; background: #fff; color: var(--ink); }
-.ak-mk-t > i, .ak-lg .ak-mk-t { background: repeating-linear-gradient(135deg, var(--red) 0 3px, #fff 3px 6px); }
+.ak-mk { width: 22px; height: 22px; }
+.ak-mk > i, .ak-lg .ak-lg-mk { display: grid; place-items: center; width: 22px; height: 22px; box-sizing: border-box; border: 2px solid var(--ink); border-radius: 3px; background: #fff; color: var(--ink); }
+.ak-mk-t > i, .ak-lg .ak-mk-t { background: repeating-linear-gradient(135deg, var(--red) 0 4px, #fff 4px 8px); }
+a.ak-mk { cursor: pointer; }
 .ak-mk svg { display: block; }
 .ak-mk:focus-visible, .ak-cla:focus-visible { outline: none; }
 .ak-mk.on > i, .ak-mk:focus-visible > i { outline: 3px solid var(--ink); outline-offset: 3px; }
