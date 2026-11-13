@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% from "_portal.html" import band %}
 {% block title %}Data a API{% endblock %}
-{% block hero %}{{ band('Data a API', 'Všechno, co tu vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.', tabs=[('Usnesení', '#usneseni', True), ('Úřední deska', '#uredni-deska', False), ('Blokové čištění ulic', '#blokove-cisteni', False), ('Podněty', '#podnety', False)], label='Data podle sekce', data_tabs=True) }}{% endblock %}
+{% block hero %}{{ band('Data a API', 'Všechno, co tu vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.') }}{% endblock %}
 {% block main %}
 <div class="prose wide">
+<h2>Datové sady</h2>
+<nav class="switch" aria-label="Datová sada" data-tabs><a href="#usneseni" data-tab="usneseni" aria-current="true">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a></nav>
 <section class="data-tab" id="usneseni" data-panel="usneseni">
 <h2>Usnesení a hlasování</h2>
 <p>{{ stats.meetings }} jednání rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}, poslední {{ stats.last_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Doplňuje se po zveřejnění každého zápisu. Jak data vznikají a co z nich je odvozené, popisuje <a href="/radnice/usneseni/metodika">metodika</a>.</p>
