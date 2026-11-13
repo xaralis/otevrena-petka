@@ -30,11 +30,13 @@
   const rowEl = (k) => (list ? list.querySelector(`li[data-row="${k}"]`) : null);
   const ahead = (f) => !f.properties.past;
 
-  // the street in view from the start (RÚIAN's line), the base map's road once it is loaded
-  P.create(el, { bounds: P.bounds([data.street]) || undefined, fitBoundsOptions: { padding: 40, maxZoom: 17 }, font: true }).then((map) => {
+  // in view from the start: the street (RÚIAN's line, the base map's road once it is loaded) and
+  // everything the list shows on the map, so no row points off the map
+  const shown = [...reports, ...data.marks];
+  P.create(el, { bounds: P.bounds([data.street, ...shown]) || undefined, fitBoundsOptions: { padding: 40, maxZoom: 17 }, font: true }).then((map) => {
     const sl = P.street(map, { id: "ul-street", geometry: data.street, name: el.dataset.name,
                                paint: { "line-color": P.INK, "line-opacity": 0.14, "line-width": ["interpolate", ["linear"], ["zoom"], 13, 8, 18, 22] },
-                               refit: (b) => P.fit(map, [...(b ? [b.toArray()] : []), ...data.cleaning.features.filter(ahead)]) });
+                               refit: (b) => P.fit(map, [...(b ? [b.toArray()] : []), ...data.cleaning.features.filter(ahead), ...shown]) });
     const cl = P.cleaning(map, { id: "ul-cl", data: data.cleaning, scheme: "grey", by: "row", hit: 22, areas: "fill",
                                  show: ["==", ["get", "past"], false] });
     P.belowLabels(map, sl);
