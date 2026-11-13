@@ -163,7 +163,7 @@ def test_points_carry_the_card_and_forwarded_never_wait():
     g = stats.points(rows, NOW)
     assert [f["id"] for f in g["features"]] == [2, 3, 1]                         # newest first
     p = {f["id"]: f["properties"] for f in g["features"]}
-    assert p[1] == {"id": 1, "o": "ceka", "w": "čeká", "k": 19, "c": "Chodník", "s": "Wolkerova",
+    assert p[1] == {"id": 1, "o": "ceka", "w": "evidováno", "k": 19, "c": "Chodník", "s": "Wolkerova",
                     "t": "2026-11-09T14:00", "a": "2026-11-09T16:00", "d": "Rozbitá dlažba",
                     "p": "https://www.dejtip.eu/_fotoobce/x.jpeg", "wd": 3}
     assert "s" not in p[2] and "d" not in p[2] and "p" not in p[2] and "wd" not in p[2]
@@ -245,9 +245,9 @@ def test_page_content(page):
     m = main(html)
     assert "Co lidé hlásí a jak se to řeší?" in html and "Nahlásit závadu přes Dej Tip" in html
     assert "<b>26</b>" in m and "vyřešeno (46 %)" in m                     # 12 of 26
-    assert "Nejdéle čekají podněty k hřištím" in m
+    assert "Nejdéle čekají" not in m                                       # no highlight box any more
     assert "předávají se strážníkům, stav v Dej Tipu se nemění" in m
-    assert '<span class="st st-no">čeká</span>' in m and '<span class="st">vyřešeno</span>' not in m.split('class="pd-side"')[1]
+    assert '<span class="st st-no">' in m and '<span class="st">vyřešeno</span>' not in m.split('class="pd-side"')[1]
     assert '<span class="st">vyřešeno</span>' in main(page("/verejny-prostor/zavady?stav=vse"))   # every state
     assert "stav k 12. 11. 2026" in m
     assert "Všechny podněty" not in m and "Co tu neuvidíte" not in m
@@ -296,7 +296,7 @@ def test_filters_without_js(page):
     m = main(page("/verejny-prostor/zavady?obdobi=2026&stav=ceka&druh=20&detail=mesice"))
     side = m.split('class="pd-side"')[1].split("</aside>")[0]
     assert "V mapě 10 podnětů, nejnovější" in side and side.count("<li ") == 10 and "Další podněty" not in side
-    assert all(x in side for x in ("Sokolovská", "čeká")) and "vyřešeno" not in side
+    assert all(x in side for x in ("Sokolovská", 'class="st st-no"')) and "vyřešeno" not in side
     assert 'data-stav="" aria-current="true">Čeká <b>10</b>' in m          # the default, left out of the address
     assert '<option value="20" selected>Pískoviště, hřiště, sportoviště (10)</option>' in m
     assert '<option value="19">Chodník (1)</option>' in m                                  # waiting Chodník
@@ -308,7 +308,7 @@ def test_filters_without_js(page):
     assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny&amp;druh=20#kpi"' in m
     m = main(page("/verejny-prostor/zavady?stav=vyreseno&pocet=30"))
     side = m.split('class="pd-side"')[1].split("</aside>")[0]
-    assert side.count("<li ") == 12 and "čeká" not in side
+    assert side.count("<li ") == 12 and "st-no" not in side
     assert stats.LIST == 15
     assert web.link("12m") == "/verejny-prostor/zavady" and web.link("2025", detail="", kategorie=3) == "/verejny-prostor/zavady?obdobi=2025&kategorie=3"
 

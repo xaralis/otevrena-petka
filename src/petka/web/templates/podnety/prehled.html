@@ -125,7 +125,7 @@
         <p class="side-h" id="pd-side-h" aria-live="polite">V mapě {{ shown_n }} {{ plural(shown_n, 'podnět', 'podněty', 'podnětů') }}, nejnovější</p>
         <ol class="pd-rows" data-pd-rows>
           {% for r in shown %}{% set word, cls = status_word(r) %}
-          <li data-id="{{ r.id }}"><a href="{{ detail_url(r.id) }}"><span class="pd-rd">{{ w.dm(r.reported_at)|replace(' ', ' ') }}</span><span class="pd-rt"><b>{{ r.category }}</b>{% if r.street %}<span>{{ r.street }}</span>{% endif %}</span><span class="{{ cls }}">{{ word }}</span></a></li>
+          <li data-id="{{ r.id }}"><a href="{{ detail_url(r.id) }}" target="_blank" rel="noopener"><span class="pd-rd">{{ w.dm(r.reported_at)|replace(' ', ' ') }}</span><span class="pd-rt"><b>{{ r.category }}</b>{% if r.street %}<span>{{ r.street }}</span>{% endif %}</span><span class="{{ cls }}">{{ word }}</span></a></li>
           {% endfor %}
         </ol>
         {% if more %}<a class="pd-rows-more" href="{{ f(pocet=more) }}#kde" data-pd-rows-more>Další podněty</a>{% endif %}
@@ -133,14 +133,6 @@
     </div>
   </section>
 
-  {% set hl = s.highlight %}
-  {% if hl %}
-  <section class="pd-hl pd-o1" aria-labelledby="pd-hl-h">
-    <h2 id="pd-hl-h"><span class="pd-d">{{ hl.title }}</span><span class="pd-m">{{ hl.title_m }}</span></h2>
-    <p><span class="pd-d">Z {{ hl.n }} podnětů {{ hl.full }} {{ per.phrase }} je vyřešených {{ hl.vyreseno }} a {{ w.waits(hl.ceka) }}. Nejstarší z nich je {{ w.from_date(hl.oldest) }}{% if hl.street %} ({{ hl.street }}){% endif %}.</span><span class="pd-m">Z {{ hl.n }} podnětů {{ hl.full }} je vyřešených {{ hl.vyreseno }} a {{ w.waits(hl.ceka) }}. Nejstarší je {{ w.from_date(hl.oldest) }}{% if hl.street %} ({{ hl.street }}){% endif %}.</span></p>
-    <p class="pd-d pd-hl-a"><a href="{{ f(druh=hl.id) }}#kde">Podněty {{ w.phrase(hl.name)[0] }} na mapě</a></p>
-  </section>
-  {% endif %}
 
   <section class="pd-o3" id="druhy" aria-labelledby="pd-druhy-h">
     <h2 id="pd-druhy-h" class="pd-h2">Podle druhu</h2>

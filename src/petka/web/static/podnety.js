@@ -321,6 +321,7 @@
       const li = document.createElement("li"), a = document.createElement("a");
       li.dataset.id = p.id;
       a.href = DETAIL + p.id;
+      a.target = "_blank"; a.rel = "noopener";     // the report opens on Dej Tip beside this page
       const d = document.createElement("span"), t = document.createElement("span"), b = document.createElement("b"),
             s = document.createElement("span");
       d.className = "pd-rd"; d.textContent = dm(p.t).replace(/ \d{4}$/, "");

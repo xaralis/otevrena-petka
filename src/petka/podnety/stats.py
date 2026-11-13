@@ -6,7 +6,9 @@ Every report has one outcome:
   vyreseno  Dej Tip status 3
   ceka      statuses 1 Evidováno, 2 V řešení, 9 Zařazeno do plánu
   jinam     statuses 6 Nepřísluší and 8 Předáno, and every report of a FORWARDED category
-  nelze     status 4
+  nelze     statuses 4 Nelze vyřídit, 5 Chybné/nepravdivé, 7 Spam (closed without a fix)
+Each report is labelled with its own Dej Tip status (status_word), so the page says what Dej Tip
+says; only the FORWARDED ones read „předáno“.
 FORWARDED categories are handled outside the office (the strážníci, the transport company):
 their reports stay "Evidováno" in Dej Tip for good, so counting them as waiting would blame the
 obvod for what it never gets to solve."""
@@ -19,7 +21,7 @@ from dataclasses import dataclass
 from . import words as w
 
 RESOLVED = 3
-UNRESOLVABLE = 4
+UNRESOLVABLE = (4, 5, 7)
 WAITING = (1, 2, 9)
 IN_PROGRESS = (2, 9)            # "v řešení" (9 = zařazeno do plánu), the rest of WAITING is only received
 PASSED_ON = (6, 8)
@@ -41,7 +43,7 @@ def outcome(r: dict) -> str:
         return "jinam"
     if r["status"] == RESOLVED:
         return "vyreseno"
-    if r["status"] == UNRESOLVABLE:
+    if r["status"] in UNRESOLVABLE:
         return "nelze"
     return "ceka"
 
@@ -270,7 +272,7 @@ def points(rows: list[dict], now: dt.datetime) -> dict:
     feats = []
     for r in sorted(rows, key=lambda r: (r["reported_at"], r["id"]), reverse=True):
         o = outcome(r)
-        props = {"id": r["id"], "o": o, "w": WORD[o][0], "k": r["category_id"], "c": r["category"],
+        props = {"id": r["id"], "o": o, "w": status_word(r)[0], "k": r["category_id"], "c": r["category"],
                  "s": r["street"], "t": iso(r["reported_at"]), "a": iso(r.get("first_note_at")),
                  "d": r.get("description"), "p": r.get("photo_url")}
         if o == "ceka":
@@ -357,8 +359,15 @@ def summary(rows: list[dict], p: Period, now: dt.datetime) -> dict:
 
 WORD = {"vyreseno": ("vyřešeno", "st"), "ceka": ("čeká", "st st-no"), "jinam": ("předáno", "st"),
         "nelze": ("nelze vyřídit", "st")}
+# Dej Tip's own status names as the page writes them (lower case, the long ones shortened)
+STATUS_WORD = {1: "evidováno", 2: "v řešení", 3: "vyřešeno", 4: "nelze vyřídit", 5: "chybné",
+               6: "nepřísluší", 7: "spam", 8: "předáno", 9: "v plánu"}
 
 
 def status_word(r: dict) -> tuple[str, str]:
-    """The status as the page writes it: (word, classes of the existing .st)."""
-    return WORD[outcome(r)]
+    """The status as the page writes it: Dej Tip's own status, red while it waits; a FORWARDED
+    report „předáno“ (Dej Tip keeps it „evidováno“ for good). (word, classes of the existing .st)"""
+    o = outcome(r)
+    if forwarded(r):
+        return WORD["jinam"]
+    return STATUS_WORD.get(r["status"], WORD[o][0]), WORD[o][1]

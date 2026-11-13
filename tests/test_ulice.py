@@ -105,7 +105,7 @@ def test_reports_and_their_items():
     assert r["since"] == NOW - dt.timedelta(days=400) and q.since_word(r["since"]) == "od října 2025"
     assert q.reports([])["since"] is None and q.since_word(None) == ""
     i = q.report_item(rows[1], "/ulice/wolkerova")
-    assert i["text"] == "Chodník, Wolkerova" and i["status"] == ("čeká", "st st-no") and i["source"] == "Závady"
+    assert i["text"] == "Chodník, Wolkerova" and i["status"] == ("evidováno", "st st-no") and i["source"] == "Závady"
 
 
 def test_feed_puts_the_next_cleaning_first_then_newest():
