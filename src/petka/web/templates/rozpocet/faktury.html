@@ -1,6 +1,5 @@
 {% extends "rozpocet/_layout.html" %}
 {% block title %}Faktury {{ year }}{% endblock %}
-{% block crumbs %} <span aria-hidden="true">/</span> <span>Faktury</span>{% endblock %}
 {% block band_extra %}
 <form class="search" style="margin-top:1.4rem" action="{{ base }}/faktury" method="get">
   <input type="hidden" name="rok" value="{{ year }}">
@@ -39,11 +38,11 @@
     {% if year == years[-1] %}<p class="note">Stav k {{ as_of[year]|d }}.</p>{% endif %}
   </div>
   <aside>
-    <p class="side-h">{{ 'Letos nejnákladnější' if year == years[-1] else 'Nejnákladnější v roce ' ~ year }}</p>
+    <h3 class="side-h">{{ 'Letos nejnákladnější' if year == years[-1] else 'Nejnákladnější v roce ' ~ year }}</h3>
     <ul class="rz-top">{% for t in top %}<li><a href="{{ base }}/oblasti/{{ t.paragraph }}?rok={{ year }}">{{ label.get(t.paragraph|string, t.name) }}</a><span style="white-space:nowrap"><b>{{ mil(t.s) }}</b> <span class="rz-unit">mil. Kč</span></span></li>{% endfor %}</ul>
-    <p class="side-h" style="margin-top:1.6rem">Zkratky v popisech</p>
+    <h3 class="side-h" style="margin-top:1.6rem">Zkratky v popisech</h3>
     <dl class="rz-abbr"><dt>DH</dt><dd>dětské hřiště</dd><dt>VDZ</dt><dd>vodorovné dopravní značení</dd><dt>PD</dt><dd>projektová dokumentace</dd><dt>TDI</dt><dd>technický dozor investora</dd><dt>MO V</dt><dd>městský obvod Pardubice V</dd></dl>
-    <p class="side-h" style="margin-top:1.6rem">Smlouvy</p>
+    <h3 class="side-h" style="margin-top:1.6rem">Smlouvy</h3>
     <p style="margin:0;color:var(--ink-2)">Smlouvy nad 50 tisíc Kč obvod zveřejňuje v <a href="https://smlouvy.gov.cz/">registru smluv</a>. Propojit je s fakturami chceme v připravované sekci Smlouvy.</p>
   </aside>
 </div>

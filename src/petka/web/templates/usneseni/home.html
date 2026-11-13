@@ -1,20 +1,17 @@
 {% extends "base.html" %}
-{% from "usneseni/_macros.html" import row, legend %}
+{% from "usneseni/_macros.html" import row, legend %}{% from "_portal.html" import band, source %}
 {% block hero %}
-<section class="band band-section band-home{{ ' compact' if q }}">
-  <div class="wrap">
-    <h1>{{ SECTION['usneseni'].question }}</h1>
+{% set lead %}Všechna usnesení rady a zastupitelstva od roku {{ stats.first_date.year if stats.first_date else 2018 }} a jak kdo hlasoval. Hledá se podle slov i podle smyslu v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích.{% endset %}
+{% call band(SECTION['usneseni'].question, lead, tabs=section_tabs(request.url.path), label='Usnesení') %}
     <form class="search" method="get" action="/radnice/usneseni" role="search">
       <label for="q" class="sr">Hledat v usneseních</label>
-      <input id="q" type="search" name="q" value="{{ q }}" placeholder="Napište, co hledáte" autocomplete="off">
+      <input id="q" type="search" name="q" value="{{ q }}" placeholder="Třeba parkování v Jesničánkách" autocomplete="off">
       <button type="submit">Hledat</button>
       {% for k, val in f.items() if val and not (k == 'stav' and val == 'usneseni') %}<input type="hidden" name="{{ k }}" value="{{ val }}">{% endfor %}
       {% if rezim != 'hybrid' %}<input type="hidden" name="rezim" value="{{ rezim }}">{% endif %}
       {% if razeni != 'datum' %}<input type="hidden" name="razeni" value="{{ razeni }}">{% endif %}
     </form>
-    {% if not q %}<p class="band-lead">Třeba <a href="/radnice/usneseni?q=parkov%C3%A1n%C3%AD+Jesni%C4%8D%C3%A1nky">parkování v Jesničánkách</a>, <a href="/radnice/usneseni?q=dotace+pro+spolky">dotace pro spolky</a>, <a href="/radnice/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/radnice/usneseni?q=prodej+pozemku">prodej pozemku</a>. <span class="hide-m">Hledá se podle slov i podle smyslu, v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích od roku {{ stats.first_date.year if stats.first_date else 2018 }}.</span></p>{% endif %}
-  </div>
-</section>
+{% endcall %}
 {% endblock %}
 {% block main %}
 <form class="sentence" method="get" action="/radnice/usneseni" aria-label="Filtry">
@@ -59,10 +56,11 @@
   {% if pages > 1 %}
   {% set base = request.query_params|string|replace('&strana=' ~ strana, '')|replace('strana=' ~ strana, '') %}
   <nav class="pager" aria-label="Stránkování">
-    {% if strana > 1 %}<a href="?{{ base }}&strana={{ strana-1 }}">Předchozí</a>{% else %}<span></span>{% endif %}
+    {% if strana > 1 %}<a class="more" href="?{{ base }}&strana={{ strana-1 }}">Předchozí usnesení</a>{% else %}<span></span>{% endif %}
     <span>{{ strana }} / {{ pages }}</span>
-    {% if strana < pages %}<a href="?{{ base }}&strana={{ strana+1 }}">Další</a>{% else %}<span></span>{% endif %}
+    {% if strana < pages %}<a class="more" href="?{{ base }}&strana={{ strana+1 }}">Další usnesení</a>{% else %}<span></span>{% endif %}
   </nav>
   {% endif %}
 </section>
+{% call source(usn_updated()) %}Usnesení a hlasování přebíráme ze zápisů z jednání rady a zastupitelstva na <a href="https://pardubice.eu/zapisy-z-jednani-zmo5">pardubice.eu</a>. Všechna usnesení si stáhnete v části <a href="/data#usneseni">Data a API</a>.{% endcall %}
 {% endblock %}

@@ -257,7 +257,7 @@ def test_page_content(page):
     assert "předávají se strážníkům, stav v Dej Tipu se nemění" in m
     assert '<span class="st st-no">' in m and '<span class="st">vyřešeno</span>' not in m.split('class="pd-side"')[1]
     assert '<span class="st">vyřešeno</span>' in main(page("/verejny-prostor/podnety?stav=vse"))   # every state
-    assert "stav k 12. 11. 2026" in m
+    assert "Stav k 12. 11. 2026." in m and "Odkud to víme" in m
     assert "Všechny podněty" not in m and "Co tu neuvidíte" not in m
     assert "aplikac" not in m.replace("aplikace Dej Tip", "").replace("aplikace <a", "")   # no app of ours
     assert "Jiránkova" in m                                                  # newest, street only

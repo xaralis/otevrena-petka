@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band %}
 {% block title %}Návrhy karet úřední desky{% endblock %}
 {% block head %}<meta name="robots" content="noindex, nofollow">{% endblock %}
-{% block hero %}{{ hero("Návrhy ke kontrole", [], 'Karty, které automatická kontrola nepustila ven, nebo které na ni teprve čekají. Veřejnost je nevidí. Otevřete ukázku a napište v session, co vydat, upravit nebo zahodit.', kind='section') }}{% endblock %}
+{% block hero %}{{ band("Návrhy ke kontrole", 'Karty, které automatická kontrola nepustila ven, nebo které na ni teprve čekají. Veřejnost je nevidí. Otevřete ukázku a napište v session, co vydat, upravit nebo zahodit.' ) }}{% endblock %}
 {% block main %}
 {% if not rows %}<div class="empty"><p>Žádné návrhy nečekají na kontrolu.</p></div>{% endif %}
 <ol class="rows draft-list">

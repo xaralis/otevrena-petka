@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% from "usneseni/_macros.html" import vote, row, legend %}{% from "_portal.html" import hero %}
+{% from "usneseni/_macros.html" import vote, row, legend %}{% from "_portal.html" import band, source %}
 {% set kind = {'radne':'řádné','mimoradne':'mimořádné','ustavujici':'ustavující'}[m.kind] %}
 {% block title %}{{ m.number }}. jednání {{ 'zastupitelstva' if m.body == 'zmo' else 'rady' }} {{ m.date|d }}{% endblock %}
-{% block hero %}{{ hero(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), [('Jednání', '/radnice/usneseni/jednani'), (m.date|d, None)], m.place, kind='section') }}{% endblock %}
+{% block hero %}{{ band(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), ('Jednání ' ~ (m.date|d) ~ (', ' ~ m.place if m.place else '') ~ '.'), tabs=section_tabs(request.url.path), label='Usnesení') }}{% endblock %}
 {% block main %}
 <div class="detail">
   <div class="detail-main">
@@ -27,11 +27,11 @@
     {% endif %}
   </div>
   <aside class="detail-side">
-    <h2 class="side-h">Přítomni</h2>
+    <h3 class="side-h">Přítomni</h3>
     <p class="people">{% for x in m.present %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
-    {% if m.excused %}<h2 class="side-h">Omluveni</h2><p class="people">{% for x in m.excused %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
-    {% if m.absent %}<h2 class="side-h">Chyběli</h2><p class="people">{% for x in m.absent %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
-    <p class="source"><a href="{{ m.source_url }}">Zápis na pardubice.eu</a><br><a href="/radnice/usneseni/pdf/{{ m.id }}.pdf">Archivní kopie zápisu</a></p>
+    {% if m.excused %}<h3 class="side-h">Omluveni</h3><p class="people">{% for x in m.excused %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+    {% if m.absent %}<h3 class="side-h">Chyběli</h3><p class="people">{% for x in m.absent %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
   </aside>
 </div>
+{% call source(usn_updated()) %}Všechno o jednání je ze <a href="{{ m.source_url }}">zápisu na pardubice.eu</a>, který si uchováváme i jako <a href="/radnice/usneseni/pdf/{{ m.id }}.pdf">archivní kopii</a>. Usnesení jako data najdete v části <a href="/data#usneseni">Data a API</a>.{% endcall %}
 {% endblock %}

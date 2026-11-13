@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band %}
 {% block title %}{{ title }}{% endblock %}
-{% block hero %}{{ hero(title) }}{% endblock %}
+{% block hero %}{{ band(title, text) }}{% endblock %}
 {% block main %}
 <div class="prose">
-  <p class="lead-text">{{ text }}</p>
   <form class="search search-plain" method="get" action="/radnice/usneseni" role="search">
     <label for="q" class="sr">Hledat v usneseních</label>
     <input id="q" type="search" name="q" placeholder="Hledat v usneseních" autocomplete="off">

@@ -107,4 +107,24 @@ def current(path: str) -> tuple[Group | None, Item | None]:
     return best or (None, None)
 
 
-TEMPLATE_GLOBALS = {"NAV": GROUPS, "NAV_UTIL": UTIL, "nav_current": current}
+# The sub-pages of a page in the header, as tabs on the band's lower edge (_portal.html band).
+# A tab is current for its href and everything under it; the first tab takes what no other
+# tab claims (a resolution's detail is under „Usnesení“, a member's under „Podle stran“).
+TABS = {
+    "/radnice/usneseni": [("Usnesení", "/radnice/usneseni"), ("Mapa", "/radnice/usneseni/mapa"),
+                          ("Jednání", "/radnice/usneseni/jednani"), ("Metodika", "/radnice/usneseni/metodika")],
+    "/radnice/zastupitele": [("Podle stran", "/radnice/zastupitele"),
+                             ("Účast na jednáních", "/radnice/zastupitele/ucast")],
+}
+
+
+def section_tabs(path: str) -> list[tuple[str, str, bool]]:
+    """The tabs of the page a path belongs to, [(label, href, current)], [] for none."""
+    for root, tabs in TABS.items():
+        if _under(path, root):
+            on = next((h for _, h in tabs[1:] if _under(path, h)), tabs[0][1])
+            return [(label, h, h == on) for label, h in tabs]
+    return []
+
+
+TEMPLATE_GLOBALS = {"NAV": GROUPS, "NAV_UTIL": UTIL, "nav_current": current, "section_tabs": section_tabs}

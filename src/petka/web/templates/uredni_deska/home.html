@@ -1,21 +1,24 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band, source %}
 {% from "uredni_deska/_macros.html" import notice, card %}
 {% set S = SECTION['uredni-deska'] %}
 {% block title %}Úřední deska pro lidi – MO Pardubice V{% endblock %}
 {% block head %}<link rel="alternate" type="application/rss+xml" title="Úřední deska pro lidi – MO Pardubice V" href="/radnice/uredni-deska/rss.xml">{% endblock %}
 {% block description %}Co právě visí na úřední desce městského obvodu Pardubice V a magistrátu: vyhledávání, archiv sejmutých oznámení, otevřená data a API. Stahováno z oficiálních dat města.{% endblock %}
-{% block hero %}{{ hero(S.question, [], 'Úřední deska pro lidi: oznámení týkající se městského obvodu Pardubice V na jednom místě, přepsaná do běžné řeči. Úřední znění s č. j. a přílohami zůstává u každého. Bereme ji z oficiálních otevřených dat města, závazné jsou dokumenty na pardubice.eu.', kind='section') }}{% endblock %}
-{% block main %}
-<form class="search search-plain" method="get" action="/radnice/uredni-deska" role="search">
+{% block hero %}
+{% call band(S.question, 'Co úřad vyvěsil a týká se obvodu, srozumitelně a s odkazem na úřední znění, které je vždy závazné.') %}
+<form class="search" method="get" action="/radnice/uredni-deska" role="search">
   <label for="q" class="sr">Hledat na úřední desce</label>
-  <input id="q" type="search" name="q" value="{{ q }}" placeholder="Hledat na desce" autocomplete="off">
+  <input id="q" type="search" name="q" value="{{ q }}" placeholder="Hledat v oznámeních" autocomplete="off">
   {% if kde %}<input type="hidden" name="kde" value="{{ kde }}">{% endif %}
   {% if sejmute %}<input type="hidden" name="sejmute" value="1">{% endif %}
   {% if druh %}<input type="hidden" name="druh" value="{{ druh }}">{% endif %}
   {% if official %}<input type="hidden" name="zneni" value="uredni">{% endif %}
   <button type="submit">Hledat</button>
 </form>
+{% endcall %}
+{% endblock %}
+{% block main %}
 
 <div class="deska-switches">
   <nav class="switch" aria-label="Čí oznámení">
@@ -67,17 +70,13 @@
   {% endif %}
   {% if pages > 1 %}
   <nav class="pager" aria-label="Stránkování">
-    {% if strana > 1 %}<a href="{{ url(strana=strana-1) }}">Předchozí</a>{% else %}<span></span>{% endif %}
+    {% if strana > 1 %}<a class="more" href="{{ url(strana=strana-1) }}">Předchozí oznámení</a>{% else %}<span></span>{% endif %}
     <span>{{ strana }} / {{ pages }}</span>
-    {% if strana < pages %}<a href="{{ url(strana=strana+1) }}">Další</a>{% else %}<span></span>{% endif %}
+    {% if strana < pages %}<a class="more" href="{{ url(strana=strana+1) }}">Další oznámení</a>{% else %}<span></span>{% endif %}
   </nav>
   {% endif %}
 </section>
 
-<section class="deska-about prose" aria-labelledby="deska-about-h">
-  <h2 id="deska-about-h">Odkud to je</h2>
-  <p>Pravidelně stahujeme oficiální strojově čitelnou úřední desku podle <a href="https://ofn.gov.cz/úřední-desky/2021-07-20/">otevřené formální normy</a>: <a href="{{ boards[0].page }}">desku obvodu Pardubice V</a> a <a href="{{ boards[1].page }}">desku magistrátu</a>. Pod „Pardubice V“ je všechno z desky obvodu a z desky magistrátu to, co obvod výslovně jmenuje. Když oznámení z desky zmizí, necháme ho v archivu sejmutých.</p>
-  <p>Celý seznam si můžete stáhnout jako <a href="/radnice/uredni-deska/data/notices.csv">CSV</a> nebo <a href="/radnice/uredni-deska/data/notices.json">JSON</a>, odebírat jako <a href="/radnice/uredni-deska/rss.xml">RSS</a> (úřední znění: <a href="/radnice/uredni-deska/rss.xml?zneni=uredni">RSS</a>), napojit přes <a href="/data#uredni-deska">API</a> nebo se na něj zeptat AI asistenta. U oznámení o doručení písemnosti po sejmutí neuvádíme jméno adresáta.</p>
-</section>
+{% call source(stats.checked_local) %}Pravidelně stahujeme oficiální strojově čitelnou úřední desku <a href="{{ boards[0].page }}">obvodu Pardubice V</a> a <a href="{{ boards[1].page }}">magistrátu</a> podle <a href="https://ofn.gov.cz/úřední-desky/2021-07-20/">otevřené formální normy</a>; pod „Pardubice V“ je všechno z desky obvodu a z desky magistrátu to, co obvod výslovně jmenuje, a sejmutá oznámení zůstávají v archivu. Seznam jako <a href="/radnice/uredni-deska/data/notices.csv">CSV</a>, <a href="/radnice/uredni-deska/data/notices.json">JSON</a> a <a href="/radnice/uredni-deska/rss.xml">RSS</a> najdete i v části <a href="/data#uredni-deska">Data a API</a>.{% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ asset('flip.js') }}" defer></script>{% endblock %}

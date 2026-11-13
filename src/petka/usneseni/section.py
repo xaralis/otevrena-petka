@@ -28,9 +28,21 @@ def _initials(name: str) -> str:
     return (t[0][0] + t[-1][0]) if len(t) > 1 else (t[0][:2] if t else "?")
 
 
+def _updated():
+    """When the last minutes were loaded („Odkud to víme“ on the section's pages); None
+    without a database."""
+    from . import queries
+    try:
+        u = queries.stats()["updated_at"]
+    except Exception:
+        return None
+    return u.date() if u else None
+
+
 def _template():
     from . import queries
-    return ({"STATUS": queries.STATUS_LABEL, "BODY": queries.BODY_LABEL, "CHOICE": queries.CHOICE_LABEL},
+    return ({"STATUS": queries.STATUS_LABEL, "BODY": queries.BODY_LABEL, "CHOICE": queries.CHOICE_LABEL,
+             "usn_updated": _updated},
             {"initials": _initials})
 
 

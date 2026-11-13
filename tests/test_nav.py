@@ -64,3 +64,30 @@ def test_planned_pages_last_in_each_area():
         assert soon == sorted(soon), g.label
     vp = next(g for g in nav.GROUPS if g.label == "Veřejný prostor")
     assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Podněty", "Uzavírky"]
+
+
+# --- the one page template: band, tabs, „Odkud to víme“ ----------------------------------------
+
+def test_section_tabs():
+    assert nav.section_tabs("/radnice/usneseni/311-2026-r") == [
+        ("Usnesení", "/radnice/usneseni", True), ("Mapa", "/radnice/usneseni/mapa", False),
+        ("Jednání", "/radnice/usneseni/jednani", False), ("Metodika", "/radnice/usneseni/metodika", False)]
+    assert [on for _, _, on in nav.section_tabs("/radnice/usneseni/jednani/rmo-2026-09-23-66")] == [False, False, True, False]
+    assert [on for _, _, on in nav.section_tabs("/radnice/zastupitele/ucast")] == [False, True]
+    assert [on for _, _, on in nav.section_tabs("/radnice/zastupitele/jiri-havrda")] == [True, False]
+    assert nav.section_tabs("/verejny-prostor/ulice") == []
+
+
+@pytest.mark.parametrize("path", ["/pristupnost", "/soukromi", "/finance/smlouvy", "/neni-tu"])
+def test_one_band_no_crumbs(path):
+    h = TestClient(app).get(path).text
+    band = h.split('<section class="band', 1)[1].split("</section>", 1)[0]
+    assert "<h1>" in band and 'class="band-lead"' in band
+    assert "crumbs" not in h and "sub-band" not in h and "band-page" not in h and "band-section" not in h
+
+
+def test_planned_page_lists_without_bullets():
+    h = TestClient(app).get("/finance/smlouvy").text
+    m = h.split("<main", 1)[1]
+    assert 'class="tape"' in m and 'class="link-list"' in m and 'class="links"' not in m
+    assert 'planned-side panel' in m and "Odkud to víme" in m

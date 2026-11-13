@@ -1,26 +1,26 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band, source %}
 {% block title %}{{ s.title }}{% endblock %}
-{% block hero %}{{ hero(s.question, [], s.title ~ ' – ve výstavbě.') }}{% endblock %}
+{% block hero %}{{ band(s.question, s.title ~ ': tahle část portálu je ve výstavbě. Do té doby najdete odpovědi v usneseních a přímo u zdroje.') }}{% endblock %}
 {% block main %}
 <div class="tape" role="note"><p><b>Ve výstavbě.</b> Tahle část portálu ještě není hotová. Níže najdete, co už jde dohledat v usneseních a kde hledat mezitím.</p></div>
 <div class="planned-page">
   <div class="prose">
     {% if s.bridges %}
-    <h2>Už teď najdete v usneseních</h2>
-    <ul class="links">{% for label, url in s.bridges %}<li><a href="{{ url }}">{{ label|capitalize }}</a></li>{% endfor %}</ul>
+    <h3>Už teď najdete v usneseních</h3>
+    <ul class="link-list">{% for label, url in s.bridges %}<li><a href="{{ url }}">{{ label|capitalize }}</a></li>{% endfor %}</ul>
     {% endif %}
     {% if s.sources %}
-    <h2>Mezitím hledejte přímo u zdroje</h2>
-    <ul class="links">{% for label, url in s.sources %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
+    <h3>Mezitím hledejte přímo u zdroje</h3>
+    <ul class="link-list">{% for label, url in s.sources %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}</ul>
     {% endif %}
-    <p class="muted">Z těchto zdrojů budeme data brát. Stejně jako u usnesení bude každý údaj odkazovat na původní dokument, půjde stáhnout a dotazovat přes API i AI asistenty. Pomoct můžete na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>.</p>
   </div>
   {% if s.examples %}
-  <aside class="planned-side">
-    <h2>Na co tu jednou najdete odpověď</h2>
-    <ul class="examples">{% for q in s.examples %}<li>„{{ q }}“</li>{% endfor %}</ul>
+  <aside class="planned-side panel">
+    <h3>Na co tu jednou najdete odpověď</h3>
+    <ul class="link-list">{% for q in s.examples %}<li>„{{ q }}“</li>{% endfor %}</ul>
   </aside>
   {% endif %}
 </div>
+{% call source() %}Data budeme brát {% if s.sources %}z {% for label, url in s.sources %}<a href="{{ url }}">{{ label }}</a>{{ ' a z ' if not loop.last }}{% endfor %}{% else %}z veřejných zdrojů města{% endif %} a jako u usnesení bude každý údaj odkazovat na původní dokument. Co už máme, je v části <a href="/data">Data a API</a>; pomoct můžete na <a href="https://github.com/xaralis/otevrena-petka">GitHubu</a>.{% endcall %}
 {% endblock %}

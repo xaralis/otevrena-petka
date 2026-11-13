@@ -1,17 +1,13 @@
 {% extends "base.html" %}
-{% from "usneseni/_macros.html" import vote, seats %}
+{% from "usneseni/_macros.html" import vote, seats %}{% from "_portal.html" import band, source %}
 {% block title %}{% if r.status == 'neprijato' %}Nepřijatý návrh ({{ r.number }}){% else %}Usnesení {{ r.number }}{% endif %}: {{ r.title or '' }}{% endblock %}
 {% block description %}{{ (r.summary or r.title or '')|truncate(300) }}{% endblock %}
 {% set eff = r.revoked_by|selectattr('effective')|list %}
 {% set eff_full = eff|rejectattr('scope', 'equalto', 'cast')|list %}
 {% block hero %}
-<section class="band band-section">
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/radnice/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. {{ 'mimořádné ' if r.meeting_kind == 'mimoradne' }}jednání {{ 'zastupitelstva' if r.body == 'zmo' else 'rady' }}, {{ r.date|d }}</a>{% if r.agenda_title %} <span aria-hidden="true">/</span> bod {{ r.agenda_no }}{% endif %}</nav>
-    <p class="no no-big no-{{ r.status }}{% if eff_full %} no-revoked{% elif eff %} no-amended{% endif %}">{{ r.number }}</p>
-    <h1>{% if r.status == 'neprijato' %}Návrh: {% endif %}{{ r.title or r.agenda_title or ('Usnesení ' ~ r.number) }}</h1>
-  </div>
-</section>
+{% set pre %}<p class="no no-big no-{{ r.status }}{% if eff_full %} no-revoked{% elif eff %} no-amended{% endif %}">{{ r.number }}</p>{% endset %}
+{% set lead %}{{ 'Nepřijatý návrh' if r.status == 'neprijato' else 'Usnesení' }} <a href="/radnice/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. {{ 'mimořádného ' if r.meeting_kind == 'mimoradne' }}jednání {{ 'zastupitelstva' if r.body == 'zmo' else 'rady' }} z {{ r.date|d }}</a>{% if r.agenda_title %}, bod {{ r.agenda_no }}{% endif %}.{% endset %}
+{{ band(('Návrh: ' if r.status == 'neprijato' else '') ~ (r.title or r.agenda_title or ('Usnesení ' ~ r.number)), lead, tabs=section_tabs(request.url.path), pre=pre, label='Usnesení') }}
 {% endblock %}
 {% block main %}
 <div class="detail">
@@ -69,9 +65,9 @@
       <dt>Název a shrnutí</dt><dd>odvozené strojově, závazné je znění usnesení</dd>
       {% if r.keywords %}<dt>Hledat podobné</dt><dd>{% for k in r.keywords %}<a href="/radnice/usneseni?q={{ k|urlencode }}">{{ k }}</a>{{ ', ' if not loop.last }}{% endfor %}</dd>{% endif %}
     </dl>
-    <p class="source"><a href="{{ r.source_url }}">Zápis na pardubice.eu</a><br><a href="/radnice/usneseni/pdf/{{ r.meeting_id }}.pdf">Archivní kopie zápisu</a><br><a href="/api/v1/usneseni/resolutions/{{ r.uid }}">Data ve formátu JSON</a></p>
   </aside>
 </div>
+{% call source(usn_updated()) %}Znění a hlasování jsou ze <a href="{{ r.source_url }}">zápisu na pardubice.eu</a>, který si uchováváme i jako <a href="/radnice/usneseni/pdf/{{ r.meeting_id }}.pdf">archivní kopii</a>. Usnesení jako data: <a href="/api/v1/usneseni/resolutions/{{ r.uid }}">JSON</a>.{% endcall %}
 {% endblock %}
 {% block head %}{% if r.geo %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endif %}{% endblock %}
 {% block scripts %}{% if r.geo %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('map/map.js') }}" defer></script>{% endif %}{% endblock %}

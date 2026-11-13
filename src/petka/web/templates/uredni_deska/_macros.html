@@ -101,7 +101,7 @@
 <p class="lead-text">{{ d.summary }}</p>
 {% if d.action %}
 <div class="act">
-  <h2 class="act-h">{% if d.action.deadline %}Do {{ d.action.deadline|d }}: {% endif %}{{ d.action.what }}</h2>
+  <h3 class="act-h">{% if d.action.deadline %}Do {{ d.action.deadline|d }}: {% endif %}{{ d.action.what }}</h3>
   <p>{{ d.action.how }}</p>
 </div>
 {% endif %}

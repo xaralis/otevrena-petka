@@ -4,6 +4,7 @@
     .pd-o1 … .pd-o5; .pd-d / .pd-m carry the desktop and the shorter phone wording. -#}
 {% block title %}Co lidé hlásí a jak se to řeší?{% endblock %}
 {% block description %}Podněty, které lidé v obvodu posílají městu přes aplikaci Dej Tip: kolik jich je, kolik se vyřešilo, jak dlouho čekají a kde.{% endblock %}
+{% from "_portal.html" import band, source %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
 
 {% macro dist(items, cls='') %}
@@ -18,13 +19,9 @@
 {%- endmacro %}
 
 {% block hero %}
-<section class="band band-section">
-  <div class="wrap">
-    <h1>Co lidé hlásí a jak se to řeší?</h1>
-    <p class="band-lead"><span class="pd-d">Rozbitá lavička, černá skládka, nesvítící lampa: podněty, které lidé posílají městu přes aplikaci Dej Tip. Ty z obvodu většinou vyřizuje přímo úřad městského obvodu.</span><span class="pd-m">Podněty, které lidé posílají městu přes aplikaci Dej Tip. Ty z obvodu většinou vyřizuje přímo úřad městského obvodu.</span></p>
+{% call band('Co lidé hlásí a jak se to řeší?', 'Rozbitá lavička, černá skládka, nesvítící lampa: podněty, které lidé posílají městu přes aplikaci Dej Tip. Ty z obvodu většinou vyřizuje přímo úřad obvodu.') %}
     <a class="btn btn-on-red pd-cta" href="{{ report }}">Nahlásit závadu přes Dej Tip</a>
-  </div>
-</section>
+{% endcall %}
 {% endblock %}
 
 {% block main %}
@@ -74,8 +71,8 @@
       {{ dist(s.waiting_for, 'pd-w') }}
       {% if s.waiting_cats %}
       <div class="pd-d">
-        <p class="side-h">Čeho se týkají</p>
-        <ul class="pd-plain">
+        <h3 class="side-h">Čeho se týkají</h3>
+        <ul class="link-list">
           {% for x in s.waiting_cats %}<li><a href="{{ f(druh=x.id, stav='', detail='') }}#kde">{{ x.name }}</a><b>{{ x.n }}</b></li>{% endfor %}
           {% if s.waiting_rest %}<li><span>ostatní</span><b>{{ s.waiting_rest }}</b></li>{% endif %}
         </ul>
@@ -114,7 +111,7 @@
       </select></label>
       {% if street %}<input type="hidden" name="ulice" value="{{ street.slug }}">
       <p class="pd-street" data-pd-street="{{ street.name }}">Ulice <b>{{ street.name }}</b> <a href="{{ f(ulice='') }}#kde" data-pd-street-clear>Všechny ulice</a></p>{% endif %}
-      <button class="btn btn-o pd-go" type="submit">Zobrazit</button>
+      <button class="btn pd-go" type="submit">Ukázat</button>
     </form>
     <div class="pd-two">
       <div class="pd-mapcol">
@@ -123,13 +120,13 @@
         <p class="pd-lg pd-map-lg"><span><i class="pd-k-pt"></i>vyřešené a ostatní</span><span><i class="pd-k-pt pending-alert"></i>čeká na vyřízení</span><span><i class="pd-k-cl">12</i>víc podnětů blízko sebe</span></p>
       </div>
       <aside class="pd-side" aria-labelledby="pd-side-h">
-        <p class="side-h" id="pd-side-h" aria-live="polite">V mapě {{ shown_n }} {{ plural(shown_n, 'podnět', 'podněty', 'podnětů') }}, nejnovější</p>
+        <h3 class="side-h" id="pd-side-h" aria-live="polite">V mapě {{ shown_n }} {{ plural(shown_n, 'podnět', 'podněty', 'podnětů') }}, nejnovější</h3>
         <ol class="pd-rows" data-pd-rows>
           {% for r in shown %}{% set word, cls = status_word(r) %}
           <li data-id="{{ r.id }}"><a href="{{ detail_url(r.id) }}" target="_blank" rel="noopener"><span class="pd-rd">{{ w.dm(r.reported_at)|replace(' ', ' ') }}</span><span class="pd-rt"><b>{{ r.category }}</b>{% if r.street %}<span>{{ r.street }}</span>{% endif %}</span><span class="{{ cls }}">{{ word }}</span></a></li>
           {% endfor %}
         </ol>
-        {% if more %}<a class="pd-rows-more" href="{{ f(pocet=more) }}#kde" data-pd-rows-more>Další podněty</a>{% endif %}
+        {% if more %}<a class="pd-rows-more more" href="{{ f(pocet=more) }}#kde" data-pd-rows-more>Další podněty</a>{% endif %}
       </aside>
     </div>
   </section>
@@ -151,12 +148,11 @@
       <li{% if not k.forwarded and loop.index > 6 and not all_kinds %} class="pd-more"{% endif %}><div class="pd-cat-h"><a href="{{ f(druh=k.id, detail='') }}#kde">{{ k.name }}</a><span>{{ k.n }}</span></div>{{ mini(k) }}<p>{% if k.forwarded %}{{ k.note[:1]|upper }}{{ k.note[1:] }}.{% else %}{{ k.vyreseno }} vyřešeno, {{ w.waits(k.ceka) }}{% if k.median != '–' %}. Obvykle {{ k.median }}{% endif %}{% endif %}</p></li>
       {% endfor %}
     </ul>
-    {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a href="{{ f(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
-    <p class="pd-note pd-src pd-d">„Obvyklá doba do vyřešení“ je medián doby od podání do chvíle, kdy Dej Tip podnět přepnul na „vyřešeno“ (u starších podle poslední odpovědi úřadu). Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
+    {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a class="more" href="{{ f(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
+    <p class="pd-note pd-table-note pd-d">„Obvyklá doba do vyřešení“ je medián doby od podání do chvíle, kdy Dej Tip podnět přepnul na „vyřešeno“ (u starších podle poslední odpovědi úřadu). Pomlčka znamená, že odpovědí je málo.</p>
   </section>
-
-  <p class="pd-src-m pd-m pd-o5">Zdroj: aplikace Dej Tip statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny.</p>
 </div>
 {% endif %}
+{% call source(checked) %}Podněty jsou z aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice, stahujeme je každé 4 hodiny. Jako data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/data#podnety">API</a>.{% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('podnety.js') }}" defer></script>{% endblock %}

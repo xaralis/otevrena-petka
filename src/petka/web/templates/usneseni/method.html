@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band %}
 {% block title %}Usnesení: metodika{% endblock %}
-{% block hero %}{{ hero("Metodika", [], "Odkud data o usneseních pocházejí, jak je čteme a co z nich odvozujeme.", kind="section") }}{% endblock %}
+{% block hero %}{{ band("Metodika", "Odkud data o usneseních pocházejí, jak je čteme a co z nich odvozujeme.", tabs=section_tabs(request.url.path), label="Usnesení") }}{% endblock %}
 {% block main %}
 <div class="prose wide">
 <ul class="method">

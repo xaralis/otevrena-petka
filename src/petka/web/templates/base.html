@@ -28,9 +28,8 @@
 {% block head %}{% endblock %}
 </head>
 {% set p = request.url.path %}
-{% set in_usneseni = (p == '/radnice/usneseni' or p.startswith('/radnice/usneseni/')) and not error_page %}
 {% set cur_g, cur_i = nav_current(p) if not error_page else (none, none) %}
-<body class="{{ 'in-section' if in_usneseni }}">
+<body>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="top">
   <div class="wrap top-inner">
@@ -66,18 +65,6 @@
 </div>
 {% block before_hero %}{% endblock %}
 {% block hero %}{% endblock %}
-{% if in_usneseni %}
-<div class="sub-band">
-  <div class="wrap">
-    <nav class="sub-nav" aria-label="Usnesení">
-      <a href="/radnice/usneseni" {% if not p.startswith('/radnice/usneseni/jednani') and not p.startswith('/radnice/usneseni/metodika') and not p.startswith('/radnice/usneseni/mapa') %}aria-current="page"{% endif %}>Usnesení</a>
-      <a href="/radnice/usneseni/mapa" {% if p.startswith('/radnice/usneseni/mapa') %}aria-current="page"{% endif %}>Mapa</a>
-      <a href="/radnice/usneseni/jednani" {% if p.startswith('/radnice/usneseni/jednani') %}aria-current="page"{% endif %}>Jednání</a>
-      <a href="/radnice/usneseni/metodika" {% if p.startswith('/radnice/usneseni/metodika') %}aria-current="page"{% endif %}>Metodika</a>
-    </nav>
-  </div>
-</div>
-{% endif %}
 <main id="obsah" class="wrap">{% block main %}{% endblock %}</main>
 <footer>
   <div class="wrap foot">

@@ -1,7 +1,6 @@
 {% extends "rozpocet/_layout.html" %}
 {% from "rozpocet/_macros.html" import year_switch, status with context %}
 {% block title %}Oblasti rozpočtu {{ year }}{% endblock %}
-{% block crumbs %} <span aria-hidden="true">/</span> <span>Oblasti</span>{% endblock %}
 {% block main %}
 <div id="vyber" style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;margin-bottom:.8rem;scroll-margin-top:1rem">
   {{ year_switch(base ~ '/oblasti', year, '&pohled=zmena' if view == 'zmena' else '') }}
@@ -30,7 +29,7 @@
 <ol class="rz-trends">
 {% for t in trends %}
   <li>
-    <div><h2>{{ t.name }}</h2><p class="off">{{ t.official }}</p></div>
+    <div><h3>{{ t.name }}</h3><p class="off">{{ t.official }}</p></div>
     <div class="rz-spark" role="img" aria-label="{{ t.name }}: {% for p in t.points %}{{ p.title }}{{ '; ' if not loop.last }}{% endfor %}">
       <span class="rz-spark-top">max. {{ t.top }} mil. Kč</span>
       {% for p in t.points %}<div class="rz-spark-col rz-tip" data-tip="{{ p.year }}: plán {{ mil(p.r) }} · utraceno {{ mil(p.a) }} mil. Kč"><i class="r" style="height:{{ p.r_h }}%"></i><i class="a{{ ' now' if p.year == years[-1] and running }}" style="height:{{ p.a_h }}%"></i></div>{% endfor %}

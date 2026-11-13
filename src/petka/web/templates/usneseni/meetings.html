@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band, source %}
 {% block title %}Jednání zastupitelstva a rady Pardubice V{% endblock %}
-{% block hero %}{{ hero('Jednání', [], 'Zastupitelstvo se schází zhruba jednou za čtvrt roku, rada jednou až dvakrát do měsíce.', kind='section') }}{% endblock %}
+{% block hero %}{{ band('Jednání', 'Zastupitelstvo se schází zhruba jednou za čtvrt roku, rada jednou až dvakrát do měsíce.', tabs=section_tabs(request.url.path), label='Usnesení') }}{% endblock %}
 {% block main %}
 <nav class="switch" aria-label="Orgán">
   <a href="/radnice/usneseni/jednani" {% if not organ %}aria-current="page"{% endif %}>Obojí</a>
@@ -24,4 +24,5 @@
   </ol>
 </section>
 {% endfor %}
+{% call source(usn_updated()) %}Usnesení a hlasování přebíráme ze zápisů z jednání rady a zastupitelstva na <a href="https://pardubice.eu/zapisy-z-jednani-zmo5">pardubice.eu</a>. Všechna usnesení si stáhnete v části <a href="/data#usneseni">Data a API</a>.{% endcall %}
 {% endblock %}

@@ -35,16 +35,6 @@
 {%- if r.revoked_by %}; později <span class="st st-no">{{ 'změněno' if r.revoked_by.startswith('meni') else 'zrušeno' }}{{ ' zčásti' if ':cast:' in r.revoked_by }}</span>{% endif %}
 {%- endmacro %}
 
-{% macro hero(title, crumbs=[], lead=None) -%}
-<section class="band">
-  <div class="wrap">
-    {% if crumbs %}<nav class="crumbs" aria-label="Drobečková navigace">{% for label, href in crumbs %}{% if href %}<a href="{{ href }}">{{ label }}</a>{% else %}<span>{{ label }}</span>{% endif %}{% if not loop.last %} <span aria-hidden="true">/</span> {% endif %}{% endfor %}</nav>{% endif %}
-    <h1>{{ title }}</h1>
-    {% if lead %}<p class="band-lead">{{ lead }}</p>{% endif %}
-  </div>
-</section>
-{%- endmacro %}
-
 {% macro row(r, show_body=True) -%}
 <li class="row">
   <div class="row-no">{{ number(r) }}</div>

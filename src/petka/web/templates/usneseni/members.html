@@ -1,12 +1,8 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band, source %}
 {% block title %}Zastupitelé městského obvodu Pardubice V{% endblock %}
-{% block hero %}{{ hero('Zastupitelé', [], 'Patnáct zastupitelů, z nich pět v radě. Kandidátky podle výsledků voleb na volby.cz.', kind='section') }}{% endblock %}
+{% block hero %}{{ band('Zastupitelé', 'Patnáct zastupitelů, z nich pět v radě, podle kandidátek, za které byli zvoleni.', tabs=section_tabs(request.url.path)) }}{% endblock %}
 {% block main %}
-<nav class="switch" aria-label="Pohled">
-  <a href="/radnice/zastupitele" aria-current="page">Podle stran</a>
-  <a href="/radnice/zastupitele/ucast">Účast na jednáních</a>
-</nav>
 {% for term, clubs in terms.items() %}
 <section class="year">
   <h2 class="year-no">{{ term|replace('-', '–') }}</h2>
@@ -22,4 +18,5 @@
   {% endfor %}
 </section>
 {% endfor %}
+{% call source(usn_updated()) %}Kandidátky a výsledky voleb jsou z <a href="https://www.volby.cz">volby.cz</a>, členství v radě, nástupy náhradníků a prezence ze zápisů z jednání na <a href="https://pardubice.eu/zapisy-z-jednani-zmo5">pardubice.eu</a>. Seznam zastupitelů je v části <a href="/data#usneseni">Data a API</a>.{% endcall %}
 {% endblock %}

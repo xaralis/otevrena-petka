@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band %}
 {% block title %}Data a API{% endblock %}
-{% block hero %}{{ hero('Data a API', [], 'Všechno, co tu vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.') }}{% endblock %}
+{% block hero %}{{ band('Data a API', 'Všechno, co tu vidíte, si můžete stáhnout, napojit do vlastní aplikace nebo se na to zeptat AI asistenta. Licence CC BY 4.0.', tabs=[('Usnesení', '#usneseni', True), ('Úřední deska', '#uredni-deska', False), ('Blokové čištění ulic', '#blokove-cisteni', False), ('Podněty', '#podnety', False)], label='Data podle sekce', data_tabs=True) }}{% endblock %}
 {% block main %}
 <div class="prose wide">
-<nav class="switch data-tabs" aria-label="Data podle sekce" data-tabs><a href="#usneseni" data-tab="usneseni">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a></nav>
 <section class="data-tab" id="usneseni" data-panel="usneseni">
 <h2>Usnesení a hlasování</h2>
 <p>{{ stats.meetings }} jednání rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}, poslední {{ stats.last_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Doplňuje se po zveřejnění každého zápisu. Jak data vznikají a co z nich je odvozené, popisuje <a href="/radnice/usneseni/metodika">metodika</a>.</p>
@@ -62,7 +61,7 @@
 
 </section>
 <h2>Ve výstavbě</h2>
-<p>{% for s in SECTIONS if s.status == 'planned' %}<a href="{{ s.path }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>
+<p>{% for s in SECTIONS if s.status == 'planned' %}<a class="soon" href="{{ s.path }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>
 
 <h2 id="api">REST API</h2>
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>

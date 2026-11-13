@@ -1,7 +1,6 @@
 {% extends "rozpocet/_layout.html" %}
 {% from "rozpocet/_macros.html" import year_switch with context %}
 {% block title %}{{ label }} – rozpočet {{ year }}{% endblock %}
-{% block crumbs %} <span aria-hidden="true">/</span> <a href="{{ base }}/oblasti?rok={{ year }}">{{ oddil[0] }}</a> <span aria-hidden="true">/</span> <span>§ {{ par }} {{ official }}</span>{% endblock %}
 {% block h1 %}{{ label }}{% endblock %}
 {% block lead %}{{ about or ('Paragraf ' ~ par ~ ' ' ~ official ~ ' rozpočtové skladby.') }}{% endblock %}
 {% block main %}
@@ -41,7 +40,7 @@
     {% else %}<p class="muted">Žádné faktury.</p>{% endif %}
   </div>
   <aside>
-    <p class="side-h">{{ 'Letos' if year == years[-1] else 'Rok ' ~ year }}</p>
+    <h3 class="side-h">{{ 'Letos' if year == years[-1] else 'Rok ' ~ year }}</h3>
     <p class="rz-big" style="font-size:2.2rem;margin:.2rem 0 0">{{ mil(now[0]) }} <span class="rz-unit">mil. Kč</span></p>
     <p style="margin:0;color:var(--ink-2)">plán, <b>{{ share }} %</b> rozpočtu obvodu</p>
     <span class="rz-combo" role="img" aria-label="{{ share }} procent rozpočtu obvodu, z toho utraceno {{ (now[1] / now[0] * 100)|round|int if now[0] else 0 }} procent"><i style="width:{{ [share, 1]|max }}%"><i class="{{ 'zatim' if running }}" style="width:{{ (now[1] / now[0] * 100)|round|int if now[0] else 0 }}%"></i></i></span>

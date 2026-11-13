@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band %}
 {% block title %}Prohlášení o přístupnosti{% endblock %}
 {% block description %}Prohlášení o přístupnosti portálu Otevřená Pětka podle normy EN 301 549 a WCAG 2.1 na úrovni AA.{% endblock %}
-{% block hero %}{{ hero('Prohlášení o přístupnosti', [], 'Web má být použitelný pro každého, včetně lidí se zdravotním postižením.') }}{% endblock %}
+{% block hero %}{{ band('Prohlášení o přístupnosti', 'Web má být použitelný pro každého, včetně lidí se zdravotním postižením.') }}{% endblock %}
 {% block main %}
 <div class="prose">
 <p>Otevřená Pětka usiluje o to, aby portál {{ PUBLIC_URL|replace('https://', '') }} byl přístupný podle zákona č. 99/2019 Sb., o přístupnosti internetových stránek a mobilních aplikací, a harmonizované normy EN 301 549, která odkazuje na WCAG 2.1 na úrovni AA. Portál neprovozuje povinný subjekt podle tohoto zákona; prohlášení vydáváme dobrovolně, protože portál má jednou převzít statutární město Pardubice.</p>

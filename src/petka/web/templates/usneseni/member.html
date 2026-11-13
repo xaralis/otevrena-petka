@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% from "_portal.html" import hero %}
+{% from "_portal.html" import band, source %}
 {% block title %}{{ m.name }}: jak hlasoval{% endblock %}
-{% block hero %}{{ hero(m.name, [], (m.terms|map(attribute="list")|first), kind='section') }}{% endblock %}
+{% block hero %}{{ band(m.name, 'Zastupitel' ~ ('ka' if m.name.split(',')[0].split()[-1].endswith('á') else '') ~ ' za ' ~ (m.terms|map(attribute="list")|first) ~ ': jak hlasoval' ~ ('a' if m.name.split(',')[0].split()[-1].endswith('á') else '') ~ ' a na kolika jednáních byl' ~ ('a' if m.name.split(',')[0].split()[-1].endswith('á') else '') ~ '.', tabs=section_tabs(request.url.path), label='Zastupitelé') }}{% endblock %}
 {% block main %}
 <div class="detail">
   <div class="detail-main">
@@ -26,16 +26,16 @@
     </table>
     {% if pages > 1 %}
     <nav class="pager" aria-label="Stránkování">
-      {% if strana > 1 %}<a href="?{{ 'odlisne=1&' if odlisne }}strana={{ strana-1 }}">Předchozí</a>{% else %}<span></span>{% endif %}
+      {% if strana > 1 %}<a class="more" href="?{{ 'odlisne=1&' if odlisne }}strana={{ strana-1 }}">Předchozí hlasování</a>{% else %}<span></span>{% endif %}
       <span>{{ strana }} / {{ pages }} <small class="muted">({{ total }} hlasování)</small></span>
-      {% if strana < pages %}<a href="?{{ 'odlisne=1&' if odlisne }}strana={{ strana+1 }}">Další</a>{% else %}<span></span>{% endif %}
+      {% if strana < pages %}<a class="more" href="?{{ 'odlisne=1&' if odlisne }}strana={{ strana+1 }}">Další hlasování</a>{% else %}<span></span>{% endif %}
     </nav>
     {% endif %}
   </div>
   <aside class="detail-side">
-    <h2 class="side-h">Mandáty</h2>
+    <h3 class="side-h">Mandáty</h3>
     <ul class="plain">{% for t in m.terms %}<li>{{ t.term }}: {{ t.list }}{% if t.in_rada %}, v radě{% endif %}{% if not t.elected %}, jako náhradník{% endif %}</li>{% endfor %}</ul>
-    <h2 class="side-h">Účast na jednáních</h2>
+    <h3 class="side-h">Účast na jednáních</h3>
     {% for a in presence %}{% set n = a.meetings|length %}
     <div class="att">
       <p class="att-h">{{ 'Zastupitelstvo' if a.body == 'zmo' else 'Rada' }} {{ a.term|replace('-', '–') }}: <b>{{ (100 * a.present / n)|round|int }} %</b> <span class="muted">({{ a.present }} z {{ n }})</span></p>
@@ -43,7 +43,8 @@
     </div>
     {% endfor %}
     <p class="legend att-legend"><span><i class="a-present"></i>přítomen</span><span><i class="a-excused"></i>omluven</span><span><i class="a-absent"></i>chyběl</span></p>
-    {% if presence %}<p class="note"><a href="/radnice/zastupitele/ucast?obdobi={{ presence[0].term }}">Srovnání se všemi zastupiteli</a></p>{% endif %}
+    {% if presence %}<p><a class="more" href="/radnice/zastupitele/ucast?obdobi={{ presence[0].term }}">Srovnání se všemi zastupiteli</a></p>{% endif %}
   </aside>
 </div>
+{% call source(usn_updated()) %}Kandidátky a výsledky voleb jsou z <a href="https://www.volby.cz">volby.cz</a>, členství v radě, nástupy náhradníků a prezence ze zápisů z jednání na <a href="https://pardubice.eu/zapisy-z-jednani-zmo5">pardubice.eu</a>. Seznam zastupitelů je v části <a href="/data#usneseni">Data a API</a>.{% endcall %}
 {% endblock %}

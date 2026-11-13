@@ -1,10 +1,39 @@
-{#- kind: page (portal pages, planned sections) | section (inside a live section) -#}
-{% macro hero(title, crumbs=[], lead=None, kind='page') -%}
-<section class="band band-{{ kind }}">
-  <div class="wrap">
-    {% if crumbs %}<nav class="crumbs" aria-label="Drobečková navigace">{% for label, href in crumbs %}{% if href %}<a href="{{ href }}">{{ label }}</a>{% else %}<span>{{ label }}</span>{% endif %}{% if not loop.last %} <span aria-hidden="true">/</span> {% endif %}{% endfor %}</nav>{% endif %}
+{#- The one page template: every page opens with band() and every section page ends with
+    source(). HTML that can't be a plain argument (the band's search, the source sentence)
+    comes through caller():
+
+      {% call band('Usnesení', lead, tabs=section_tabs(request.url.path)) %}<form …>{% endcall %}
+      {% call source(checked) %}Usnesení přebíráme ze zápisů na <a …>pardubice.eu</a>.{% endcall %}
+
+    title      the page's h1 (40 px, the same on every page)
+    lead       one or two sentences under it; a {% set %} block may carry links (a detail's
+               parent that the menu doesn't show)
+    tabs       the section's sub-pages on the band's lower edge: [(label, href, current), …]
+               (petka.nav.section_tabs); data_tabs: in-page tabs over #panels (tabs.js)
+    pre        a line above the h1 (the resolution's number) -#}
+{% macro band(title, lead=None, tabs=None, pre=None, label=None, data_tabs=False) -%}
+<section class="band{% if tabs %} band-tabs{% endif %}">
+  <div class="wrap band-in">
+    {% if pre %}{{ pre }}{% endif %}
     <h1>{{ title }}</h1>
     {% if lead %}<p class="band-lead">{{ lead }}</p>{% endif %}
+    {% if caller %}{{ caller() }}{% endif %}
   </div>
+  {% if tabs %}
+  <div class="wrap band-tabs-row">
+    <nav class="sub-nav" aria-label="{{ label or title }}"{% if data_tabs %} data-tabs{% endif %}>
+      {%- for t_label, t_href, t_on in tabs %}<a href="{{ t_href }}"{% if data_tabs %} data-tab="{{ t_href[1:] }}"{% endif %}{% if t_on %} aria-current="page"{% endif %}>{{ t_label }}</a>{% endfor -%}
+    </nav>
+  </div>
+  {% endif %}
+</section>
+{%- endmacro %}
+
+{#- „Odkud to víme“: the last block of a section page, one sentence with the source's link and
+    where the same is as data; `checked` adds „Stav k <date>.“ -#}
+{% macro source(checked=None) -%}
+<section class="src" aria-labelledby="src-h">
+  <h3 id="src-h">Odkud to víme</h3>
+  <p>{{ caller() }}{% if checked %} Stav k {{ checked|d }}.{% endif %}</p>
 </section>
 {%- endmacro %}
