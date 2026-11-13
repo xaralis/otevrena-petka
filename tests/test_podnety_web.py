@@ -293,8 +293,8 @@ def test_periods_and_links(page):
     assert page.seen["end"] == dt.date(2026, 11, 13)
     assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=vyreseno#kpi"' in html
     assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny#kpi"' in html          # the open tile closes
-    assert '<a href="/verejny-prostor/zavady?detail=mesice"><span class="pd-d">Posledních 12 měsíců' in html
-    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=mesice" aria-current="page"' in html
+    assert '<a href="/verejny-prostor/zavady"><span class="pd-d">Posledních 12 měsíců' in html       # links leave the open tile out
+    assert 'href="/verejny-prostor/zavady?obdobi=2026" aria-current="page"' in html
     assert "podnětů v roce 2026" in html
     html = page("/verejny-prostor/zavady?obdobi=2026&kategorie=20")          # an older link
     assert '<option value="20" selected>' in html
@@ -308,11 +308,11 @@ def test_filters_without_js(page):
     assert 'data-stav="" aria-current="true">Čeká <b>10</b>' in m          # the default, left out of the address
     assert '<option value="20" selected>Pískoviště, hřiště, sportoviště (10)</option>' in m
     assert '<option value="19">Chodník (1)</option>' in m                                  # waiting Chodník
-    for hidden in ('name="obdobi" value="2026"', 'name="detail" value="mesice"'):
+    for hidden in ('name="obdobi" value="2026"',):
         assert f'<input type="hidden" {hidden}>' in m
     assert 'name="stav"' not in m.split("data-pd-filter")[1].split("</form>")[0].replace('aria-label="Stav', '')
     # the period switch and the tiles keep the filter
-    assert 'href="/verejny-prostor/zavady?detail=mesice&amp;druh=20"' in m
+    assert 'href="/verejny-prostor/zavady?druh=20"' in m
     assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny&amp;druh=20#kpi"' in m
     m = main(page("/verejny-prostor/zavady?stav=vyreseno&pocet=30"))
     side = m.split('class="pd-side"')[1].split("</aside>")[0]

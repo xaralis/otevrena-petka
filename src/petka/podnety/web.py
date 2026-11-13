@@ -53,7 +53,7 @@ def overview(request: Request, obdobi: str = "12m", detail: str = DEFAULT_DETAIL
     shown = sorted((r for r in rows if stats.matches(r, stav, kind)), key=lambda r: (r["reported_at"], r["id"]),
                    reverse=True)
     pocet = max(stats.LIST, min(pocet, len(shown)))
-    keep = {"detail": "" if detail == DEFAULT_DETAIL else detail, "stav": stats.stav_url(stav), "druh": kind or ""}
+    keep = {"detail": "", "stav": stats.stav_url(stav), "druh": kind or ""}    # links never carry the open tile
     checked = queries.checked(obvod)
     return tpl.TemplateResponse(request, "podnety/prehled.html", {
         "per": p, "s": s, "switch": stats.switch(queries.years(obvod), p.key), "detail": detail,

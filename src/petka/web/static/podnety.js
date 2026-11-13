@@ -23,16 +23,7 @@
       const key = t.dataset.pdTile, open = t.getAttribute("aria-expanded") !== "true";
       tiles.forEach((x) => x.setAttribute("aria-expanded", String(open && x === t)));
       details.forEach((d) => (d.hidden = !(open && d.dataset.pdDetail === key)));
-      const url = new URL(location.href);
-      if (open) url.searchParams.set("detail", key); else url.searchParams.set("detail", "zadny");
-      url.hash = "";
-      history.replaceState(null, "", url);
-      // the period switch keeps what is open
-      document.querySelectorAll(".pd-switch a").forEach((a) => {
-        const u = new URL(a.href);
-        if (open && key === "ceka") u.searchParams.delete("detail"); else u.searchParams.set("detail", open ? key : "zadny");
-        a.href = u.pathname + u.search;
-      });
+      // the open tile stays out of the address: it is a view, not something to link to
     });
     t.addEventListener("keydown", (e) => { if (e.key === " ") { e.preventDefault(); t.click(); } });
   });
