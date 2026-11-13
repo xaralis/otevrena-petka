@@ -1580,6 +1580,10 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ul-akt-list > .cl-muted { margin: 0; padding: 1rem; }
 .ul-box > .ul-lg { grid-column: 1 / -1; margin: 0; padding: .6rem .9rem; background: var(--grey); }   /* the grey alone sets it apart, no rule over it */
 .ul-box .ul-rows li > a, .ul-box .ul-rows li > span { grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .5rem; padding-right: 2.8rem; }   /* the narrow column: a short date, every status in one line with the pins */
+/* rows split by hairlines as the link lists, no stripes; grey only for the row lit (pointed at, or from the map) */
+.ul-box .ul-rows li { border-bottom: 1px solid var(--off); }
+.ul-box .ul-rows li:nth-child(odd) > a, .ul-box .ul-rows li:nth-child(odd) > span { background: none; }
+.ul-box .ul-rows li.on > a, .ul-box .ul-rows li.on > span, .ul-box .ul-rows li > a:hover, .ul-box .ul-rows li > span:hover { background: var(--grey); }
 .ul-sheet:empty { display: none; }
 .ul-lg { gap: .35rem 1.2rem; }
 .ul-lg i.ul-lg-street { width: 1.6rem; border-top: 8px solid rgba(25,28,31,.14); }
