@@ -136,7 +136,7 @@
   <section class="pd-o3" id="druhy" aria-labelledby="pd-druhy-h">
     <h2 id="pd-druhy-h" class="pd-h2">Podle druhu</h2>
     <table class="ledger pd-t pd-d">
-      <thead><tr><th>Čeho se týkají</th><th class="num-cell">Podnětů</th><th class="num-cell">Vyřešeno</th><th class="num-cell">Čeká</th><th><span class="sr">Podíl</span></th><th class="num-cell">Vyřešeno obvykle za</th></tr></thead>
+      <thead><tr><th>Čeho se týkají</th><th class="num-cell">Podnětů</th><th class="num-cell">Vyřešeno</th><th class="num-cell">Čeká</th><th><span class="sr">Podíl</span></th><th class="num-cell">Obvyklá doba do vyřešení</th></tr></thead>
       <tbody>
       {% for k in s.categories %}
         <tr><td><a href="{{ f(druh=k.id) }}#kde">{{ k.name }}</a>{% if k.note %}<br><span class="pd-note">{{ k.note }}</span>{% endif %}</td><td class="num-cell">{{ k.n }}</td><td class="num-cell">{{ '–' if k.forwarded else k.vyreseno }}</td><td class="num-cell">{{ '–' if k.forwarded else k.ceka }}</td><td>{{ mini(k) }}</td><td class="num-cell">{{ k.median }}</td></tr>
@@ -150,7 +150,7 @@
       {% endfor %}
     </ul>
     {% if regular|length > 6 and not all_kinds %}<p class="pd-m pd-allkinds"><a href="{{ f(druhy='vse') }}#druhy" data-pd-more>Všech {{ s.categories|length }} druhů</a></p>{% endif %}
-    <p class="pd-note pd-src pd-d">„Vyřešeno obvykle za“ je medián doby od podání do poslední odpovědi úřadu u vyřešených podnětů. Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
+    <p class="pd-note pd-src pd-d">„Obvyklá doba do vyřešení“ je medián doby od podání do poslední odpovědi úřadu u vyřešených podnětů. Pomlčka znamená, že odpovědí je málo. Zdroj: aplikace <a href="{{ report }}">Dej Tip</a> statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny. Data: <a href="/api/v1/podnety">GeoJSON</a> a <a href="/api/docs">API</a>.</p>
   </section>
 
   <p class="pd-src-m pd-m pd-o5">Zdroj: aplikace Dej Tip statutárního města Pardubice{% if checked %}, stav k {{ checked|d }}{% endif %}, aktualizace každé 4 hodiny.</p>

@@ -133,7 +133,7 @@ ANSWERED_IN = ([4, 24, 72], [("do 4 hodin", "do 4 hodin"), ("4 až 24 hodin", "4
 
 
 def median_days(rs: list[dict]) -> str:
-    """"Vyřešeno obvykle za": the median resolution of resolved reports with a note, or "–"
+    """"Obvyklá doba do vyřešení": the median resolution of resolved reports with a note, or "–"
     with fewer than MIN_MEDIAN of them."""
     ds = [d for d in (resolution_days(r) for r in rs if outcome(r) == "vyreseno") if d is not None]
     return w.days(statistics.median(ds)) if len(ds) >= MIN_MEDIAN else "–"
