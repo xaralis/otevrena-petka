@@ -181,7 +181,8 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
                       | {"row": f"d{m['id']}"} for m in marks]}
 
     rep = q.reports(reps)
-    kinds, kinds_rest = q.report_kinds(reps)
+    since = ps.period("12m", today).start          # the panel's chart and kinds: the Podněty page's 12 months
+    kinds, kinds_rest = q.report_kinds([r for r in reps if r["reported_at"].date() >= since])
     pd_checked = _safe(pq.checked, obvod)
     pd_url = f"/verejny-prostor/podnety?ulice={slug}" + ("" if rep["ceka"] else "&stav=vse") + "#kde"
     return tpl.TemplateResponse(request, "ulice/ulice.html", {

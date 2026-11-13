@@ -1642,7 +1642,7 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
 .ul-panel .cl-nx { background: none; padding: 0; }   /* the sign panel sits on the panel's grey */
 .ul-panel-more { display: inline-block; margin-top: .9rem; }
 .ul-res { list-style: none; margin: 0; padding: 0; }
-.ul-res li { padding: .55rem 0; border-bottom: 1px solid var(--off); line-height: 1.35; }
+.ul-res li { padding: .45rem 0; line-height: 1.35; }
 .ul-res small { display: block; margin-bottom: .1rem; font-size: .8rem; color: var(--muted); }
 .ul-res a { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 @media (max-width: 900px) {
@@ -1650,3 +1650,6 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
   .ul-kpi a:first-child { grid-column: 1 / -1; }   /* the next cleaning the full width, the two facts under it */
   .ul-panel .pd-cols > div + div { margin-top: 1.8rem; }
 }
+
+/* lists on a panel's grey go without the rules between rows */
+.pd-panel .link-list li { border-bottom: 0; padding: .4rem 0; }

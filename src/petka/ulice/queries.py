@@ -207,20 +207,12 @@ def short_title(t: str, n: int = 70) -> str:
     return t
 
 
-MONTHS_BACK = 24        # the reports' chart: at most this many months before this one, at least 11
-
-
 def report_months(rows: list[dict], today: dt.date) -> dict | None:
-    """The reports by month for the column chart of the Podněty page (podnety.stats.months):
-    from the first report (at most MONTHS_BACK months back, at least a year) to today."""
-    if not rows:
+    """The reports of the last 12 months by month: the Podněty page's chart and period
+    (podnety.stats.months), None when there were none."""
+    p = ps.period("12m", today)
+    if not any(r["reported_at"].date() >= p.start for r in rows):
         return None
-    first = min(r["reported_at"] for r in rows).date()
-    back = min(MONTHS_BACK, max(11, (today.year - first.year) * 12 + today.month - first.month))
-    y, m = today.year, today.month - back
-    while m < 1:
-        y, m = y - 1, m + 12
-    p = ps.Period("ulice", dt.date(y, m, 1), today + dt.timedelta(days=1), "", "")
     return ps.months(rows, p, today)
 
 

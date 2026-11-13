@@ -19,8 +19,8 @@
 {% block main %}
 <div class="pd-kpi ul-kpi" id="prehled">
   {% call tile('cisteni', 'Kdy přeparkovat' if next_date else 'Harmonogram') %}{% if next_date %}<b>{{ next_date|cl_wd }} <span class="ul-red">{{ panel.date }}</span></b><span>příští blokové čištění{{ ', ' ~ panel.clock if panel.clock }}</span>{% elif in_harm %}<b>letos už bez čištění</b><span>{% if last %}naposledy proběhlo {{ last }}{% else %}blokové čištění{% endif %}</span>{% else %}<b>letos bez čištění</b><span>ulice není v harmonogramu</span>{% endif %}{% endcall %}
-  {% call tile('podnety', 'Po měsících') %}{% if rep.n %}{% if rep.ceka %}<b class="ul-red">{{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}</b>{% else %}<b>nic nečeká</b>{% endif %}<span>{{ rep.n }} {{ cl_plural(rep.n, 'podnět', 'podněty', 'podnětů') }} z Dej Tipu {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešený', 'vyřešené', 'vyřešených') }}</span>{% else %}<b>žádné</b><span>podněty z Dej Tipu</span>{% endif %}{% endcall %}
-  {% call tile('usneseni', 'Po letech') %}{% if n_res %}<b>{{ n_res|ul_thousands }}</b><span>usnesení rady a zastupitelstva od roku 2018</span>{% else %}<b>žádné</b><span>usnesení o ulici od roku 2018</span>{% endif %}{% endcall %}
+  {% call tile('podnety', 'Po měsících') %}{% if rep.n %}{% if rep.ceka %}<b class="ul-red">{{ rep.ceka }} {{ cl_plural(rep.ceka, 'nevyřízený podnět', 'nevyřízené podněty', 'nevyřízených podnětů') }}</b>{% else %}<b>nic nečeká</b>{% endif %}<span>{{ rep.n }} {{ cl_plural(rep.n, 'podnět', 'podněty', 'podnětů') }} {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešený', 'vyřešené', 'vyřešených') }}</span>{% else %}<b>žádné</b><span>podněty z Dej Tipu</span>{% endif %}{% endcall %}
+  {% call tile('usneseni', 'Po letech') %}<b>{{ n_res|ul_thousands if n_res else 'žádné' }} usnesení</b><span>rady a zastupitelstva od roku 2018</span>{% endcall %}
 </div>
 
 <div id="ul-panel" class="pd-panel ul-panel">
@@ -29,12 +29,12 @@
   </section>
 
   <section data-pd-detail="podnety" aria-label="Podněty po měsících"{% if detail != 'podnety' %} hidden{% endif %}>
-    <h2>Podněty po měsících</h2>
+    <h2>Podněty za posledních 12 měsíců</h2>
     {% if rep_months %}
     <div class="pd-cols">
       <div>
         {{ column_chart(rep_months, 'podnětů') }}
-        <p class="pd-note pd-under">Nad sloupcem všechny podněty za měsíc, v tmavé části vyřešené.{% if rep_months.busiest %} Nejvíc jich přišlo {{ rep_months.busiest|join(' a ') }}.{% endif %}</p>
+        <p class="pd-note pd-under">Nad sloupcem všechny podněty za měsíc, v tmavé části vyřešené.{% if rep_months.cols|map(attribute='n')|max > 1 %} Nejvíc jich přišlo {{ rep_months.busiest|join(' a ') }}.{% endif %}</p>
       </div>
       <div>
         <h3 class="side-h">Čeho se týkaly</h3>
@@ -45,6 +45,8 @@
         <a class="more ul-panel-more" href="{{ pd_url }}">Podněty {{ loc }} na mapě</a>
       </div>
     </div>
+    {% elif rep.n %}
+    <p>Za posledních 12 měsíců tu nikdo nic nenahlásil. <a class="more" href="{{ pd_url }}">Starší podněty {{ loc }}</a></p>
     {% else %}
     <p>Přes Dej Tip tu zatím nikdo nic nenahlásil. <a class="more" href="/verejny-prostor/podnety">Podněty v obvodu</a></p>
     {% endif %}
@@ -56,7 +58,7 @@
     <div class="pd-cols">
       <div>
         {{ column_chart(res_years, 'usnesení', inner=False) }}
-        <p class="pd-note pd-under">Usnesení rady a zastupitelstva, která {{ cl_plural(n_res, 'zmiňuje', 'zmiňují', 'zmiňují') }} {{ acc }}.{% if res_years.busiest %} Nejvíc {{ res_years.busiest|join(' a ') }}.{% endif %}</p>
+        <p class="pd-note pd-under">Usnesení rady a zastupitelstva, která {{ cl_plural(n_res, 'zmiňuje', 'zmiňují', 'zmiňují') }} {{ acc }}.{% if res_years.cols|map(attribute='n')|max > 1 %} Nejvíc {{ res_years.busiest|join(' a ') }}.{% endif %}</p>
       </div>
       <div>
         <h3 class="side-h">Naposledy</h3>

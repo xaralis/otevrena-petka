@@ -152,9 +152,10 @@ def test_short_title_and_charts():
     assert q.short_title("MHD v ulici") == "MHD v ulici"
     assert q.short_title("Slovo " * 30, 20).endswith("…") and len(q.short_title("Slovo " * 30, 20)) <= 21
     rows = [rep(1, 3, dt.datetime(2026, 5, 3)), rep(2, 1, dt.datetime(2026, 11, 1)), rep(3, 1, NOW, "Městská policie")]
-    c = q.report_months(rows, TODAY)                      # the Podněty page's chart, at least a year
-    assert ([(x["y"], x["m"]) for x in c["cols"][::11]], len(c["cols"])) == ([(2025, 12), (2026, 11)], 12)
-    assert (c["cols"][-1]["n"], c["cols"][5]["n"], c["cols"][5]["done"]) == (2, 1, 1) and q.report_months([], TODAY) is None
+    c = q.report_months(rows, TODAY)                      # the Podněty page's chart and its 12 months
+    assert ([(x["y"], x["m"]) for x in c["cols"][::12]], len(c["cols"])) == ([(2025, 11), (2026, 11)], 13)
+    assert (c["cols"][-1]["n"], c["cols"][6]["n"], c["cols"][6]["done"]) == (2, 1, 1) and q.report_months([], TODAY) is None
+    assert q.report_months([rep(9, 3, dt.datetime(2025, 1, 5))], TODAY) is None       # nothing in the 12 months
     assert q.report_kinds(rows, 1) == ([{"id": 19, "name": "Chodník", "n": 2}], 1)
     y = q.resolution_years([{"date": D(2019, 1, 1)}, {"date": D(2026, 3, 1)}], TODAY)
     assert ([x["abbr"] for x in y["cols"][::8]], len(y["cols"])) == (["2018", "2026"], 9) and "2019 1" in y["label"]
@@ -360,9 +361,9 @@ def test_street_page(fixture):
               # three tiles over one panel as on the Podněty page, the cleaning open
               'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"', f'<b>čt <span class="ul-red">26.{NB}11.</span></b>',
               'data-pd-tile="podnety" aria-controls="ul-panel" aria-expanded="false"', "<b>nic nečeká</b>",
-              "<span>1 podnět z Dej Tipu od května 2026, 1 vyřešený</span>", '<section data-pd-detail="podnety" aria-label="Podněty po měsících" hidden>',
+              "<span>1 podnět od května 2026, 1 vyřešený</span>", '<section data-pd-detail="podnety" aria-label="Podněty po měsících" hidden>',
               '<a class="more ul-panel-more" href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Podněty ve Wolkerově na mapě</a>',
-              "<b>19</b><span>usnesení rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
+              "<b>19 usnesení</b><span>rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
               'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení', "kpi.js",
               '<h2 id="ul-akt-h">Aktuálně</h2>',
               # the street's cleaning, a page of its own until 13. 11. 2026
@@ -457,4 +458,4 @@ def test_street_tiles_open_by_detail(fixture, monkeypatch):
     assert 'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"' in m
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: [])
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
-    assert "<b>letos bez čištění</b><span>ulice není v harmonogramu</span>" in m and "<b>žádné</b><span>podněty z Dej Tipu</span>" in m and "<b>žádné</b><span>usnesení o ulici od roku 2018</span>" in m
+    assert "<b>letos bez čištění</b><span>ulice není v harmonogramu</span>" in m and "<b>žádné</b><span>podněty z Dej Tipu</span>" in m and "<b>žádné usnesení</b><span>rady a zastupitelstva od roku 2018</span>" in m

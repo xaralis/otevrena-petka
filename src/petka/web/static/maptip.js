@@ -109,7 +109,8 @@ window.mapTip = {
       left = clamp(x - cw / 2, m, w - cw - m);
       top = y + gap + ch <= h - m ? y + gap : y - gap - ch >= m ? y - gap - ch : clamp(y - ch / 2, m, h - ch - m);
     }
-    card.style.left = Math.round(Math.max(m, left)) + "px";
-    card.style.top = Math.round(Math.max(m, top)) + "px";
+    // a point off the map (a row whose report lies outside the view) still gets its card inside
+    card.style.left = Math.round(Math.max(m, Math.min(left, w - cw - m))) + "px";
+    card.style.top = Math.round(Math.max(m, Math.min(top, h - ch - m))) + "px";
   },
 };

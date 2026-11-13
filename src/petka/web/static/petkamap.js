@@ -316,8 +316,8 @@ window.petkaMap = (function () {
       if (hooks.enter) card.el.addEventListener("mouseenter", hooks.enter);
       if (hooks.leave) card.el.addEventListener("mouseleave", hooks.leave);
       if (opts.sheet && narrow()) opts.sheet.replaceChildren(card.el); else opts.wrap.appendChild(card.el);
+      card.el.classList.add("on");       // shown first: a hidden card measures 0 wide and place() would let it run off the map
       card.place();
-      card.el.classList.add("on");
       return card.el;
     };
     card.hide = () => { if (card.el) card.el.remove(); card.el = null; card.id = null; };
