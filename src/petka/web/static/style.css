@@ -1353,8 +1353,8 @@ a.cl-hint { color: var(--red-ink); }
 .hv { position: relative; overflow: hidden; background: var(--grey); color: var(--ink); }
 .hv-stage { position: relative; aspect-ratio: 1600 / 760; width: 100%; }
 .hv-map { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hv-fade { position: absolute; inset: 0; background: linear-gradient(90deg, var(--grey) 0, var(--grey) 28%, rgba(232,236,240,.88) 40%, rgba(232,236,240,0) 58%); }
-.hv-lead { position: absolute; inset: 0 0 5.6rem; display: flex; align-items: center; }   /* clear of the search over the lower edge */
+.hv-fade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(232,236,240,0) 70%, var(--grey) 96%), linear-gradient(90deg, var(--grey) 0, var(--grey) 28%, rgba(232,236,240,.88) 40%, rgba(232,236,240,0) 58%); }
+.hv-lead { position: absolute; inset: 0; display: flex; align-items: center; }
 .hv-lead .wrap { width: 100%; }
 .hv-txt { max-width: 28rem; }
 .hv h1, .hm h1 { margin: 0; font-weight: 800; font-stretch: 80%; letter-spacing: -.035em; }
@@ -1398,7 +1398,7 @@ a.cl-hint { color: var(--red-ink); }
   .hv-lines .pin, .hm .pin, .hm .mk { transform: none; animation: none; }
   .hv-lines .ld circle, .co, .hm-facts li { opacity: 1; transform: none; animation: none; }
 }
-.hm { display: none; background: var(--grey); color: var(--ink); padding: 1.4rem 0 6rem; }
+.hm { display: none; background: var(--grey); color: var(--ink); padding: 1.4rem 0 1rem; }
 
 .hm-map { position: relative; margin: 1.2rem 0 0; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
 .hm-map svg { display: block; width: 100%; aspect-ratio: 750 / 320; height: auto; }
@@ -1417,7 +1417,8 @@ a.cl-hint { color: var(--red-ink); }
 }
 
 /* the street search: a big boxed field, over the hero's lower edge on the front page */
-.find { position: relative; z-index: 2; margin-top: -5.4rem; }   /* heading on the hero, the field across its lower edge */
+.find { position: relative; z-index: 2; margin-top: calc(-2.5rem - 1px); padding: calc(2rem + 1px) 0 2.6rem;   /* the hero's grey goes on under the map, the search sits on it whole */
+  background: var(--grey); box-shadow: 0 0 0 100vmax var(--grey); clip-path: inset(0 -100vmax); }
 .find h2 { margin: 0; }
 .sbox { display: flex; align-items: center; gap: .9rem; margin-top: 1rem; border: 3px solid var(--ink); border-radius: 3px; padding: .45rem .45rem .45rem 1.1rem; background: #fff; }
 .sbox-err { margin: .6rem 0 0; color: var(--red-ink); font-weight: 650; }
@@ -1542,7 +1543,6 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .chat-ref { display: table; margin-top: .4rem; font-size: .85rem; font-weight: 650; }
 .end .end-t { margin: 1.8rem 0 0; }
 @media (max-width: 900px) {
-  .find { margin-top: -4.4rem; }
   .sbox { gap: .5rem; margin-top: .8rem; padding: .35rem .35rem .35rem .7rem; }
   .sbox .mag { width: 22px; height: 22px; }
   .sbox input { font-size: 1.25rem; }
