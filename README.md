@@ -74,6 +74,12 @@ a z desky magistrátu to, co obvod výslovně jmenuje v názvu, odboru nebo čí
 Popis oznámení (často s datem narození) se neukládá. U sejmutých doručení písemnosti se
 skryje jméno adresáta, přílohy, odkaz i čísla spisu.
 
+U nových dopravních opatření obvodu stejný job přečte přiložené PDF (`pdftotext`) a uloží
+platnost úpravy („Platnost úpravy“, „Termín“), důvod, kódy značek a jednu větu, co opatření
+dělá (`notice_measures`, pravidla v `uredni_deska/measures.py`). Doba vyvěšení totiž o platnosti
+nic neříká. Žadatele, úředníky ani kontakty neukládáme. Úvodní stránka z toho kreslí mapu
+„Aktuálně“: opatření a další oznámení u ulic obvodu a blokové čištění na týden dopředu.
+
 ### Čištění ulic
 
 Zdroj je Excel harmonogramu blokového čištění, který [Služby města Pardubic](https://smp-pce.cz/udrzba-komunikaci/cisteni-komunikaci)
