@@ -1,4 +1,4 @@
-# Dej Tip – podněty občanů (12. 11. 2026)
+# Dej Tip – podněty občanů (13. 11. 2026)
 
 Dej Tip je městská aplikace na hlášení závad a podnětů (mobilní aplikace a formulář na webu).
 Veřejná mapa: https://amg.dejtip.eu/pardubice/. Sekce `podnety` z ní přebírá podněty obvodu
@@ -47,16 +47,16 @@ a na konci jsou tři sloupce navíc. Pozice jsme určili z reálné odpovědi (3
 | 4 | ACCURACY | přesnost GPS | ne |
 | 5 | KAT_TYPE | název kategorie | ano |
 | 6 | ADDRESS | „Pardubice, Ulice 123, Pardubice, PSČ, část obce“ | jen ulice |
-| 7 | COMMENT01 | popis od občana | **nikdy** |
+| 7 | COMMENT01 | popis od občana | ano, telefony a e-maily skryté („[telefon]“, „[e-mail]“) |
 | 8 | LAT | zeměpisná šířka | ano |
 | 9 | LNG | zeměpisná délka | ano |
-| 10 | CS_IMAGEURL | fotka | ne |
-| 11 | CS_ADMINURL | fotka v administraci | ne |
+| 10 | CS_IMAGEURL | fotka (`http://www.dejtip.eu/_fotoobce/…`) | jen adresu, a jen když `PHOTOISPUBLIC` = 1; ukládáme jako https |
+| 11 | CS_ADMINURL | fotka v administraci | **nikdy** |
 | 12 | NOTE | „datum¦e-mail úředníka¦text“ – poznámky úřadu | jen datum první a poslední poznámky |
 | 13 | CATEGORYID | id kategorie | ano |
 | 14 | DISTANCETOADDRESS | vzdálenost bodu od adresy (m) | ne |
 | 15 | TEMAID | téma (vždy 1) | ne |
-| 16 | PHOTOISPUBLIC | 0/1 | ne |
+| 16 | PHOTOISPUBLIC | 0/1, autor fotku zveřejnil | čteme, neukládáme |
 | 17 | STATUS | stav 1–9, 99 | ano |
 | 18 | TIP_DATE | „dd.mm.rrrr HH:MM“ | ano |
 | 19 | CS_MUNICODE | kód obvodu (MOMC) | ano |
@@ -70,20 +70,32 @@ spadne, místo aby do ulice zapsal třeba popis od občana.
 ## Co ukládáme a proč ne víc
 
 Tabulka `citizen_reports`: id, kategorie (id a název), stav, datum nahlášení, souřadnice,
-ulice bez čísla domu, obvod (náš id a `CS_MUNICODE`) a kdy jsme podnět poprvé a naposledy
-viděli a kdy se mu změnil stav. `citizen_report_statuses` drží každý stav s datem, kdy jsme ho
+ulice bez čísla domu, obvod (náš id a `CS_MUNICODE`), data první a poslední poznámky úřadu,
+popis od občana se skrytými kontakty (`description`), adresa veřejné fotky (`photo_url`) a kdy
+jsme podnět poprvé a naposledy viděli a kdy se mu změnil stav. `citizen_report_statuses` drží každý stav s datem, kdy jsme ho
 uviděli (první řádek je `initial`: podnět ho už měl, datum je jen horní mez); z toho půjde
 spočítat dobu vyřízení.
 
+Popis a fotka (rozhodnutí starosty 13. 11. 2026):
+
+- **Popis od občana** (`COMMENT01`) ukazujeme v bublině podnětu na mapě a vydáváme v API, protože
+  bez něj z kategorie a ulice nepoznáte, o co jde. Mapa Dej Tipu ho ukazuje taky. Lidé ale
+  píšou volně, a tak telefonní čísla (devět číslic po trojicích či bez mezer, i s +420) a
+  e-mailové adresy nahrazujeme „[telefon]“ a „[e-mail]“ už při stahování (`source.mask`);
+  původní text neukládáme. Data („12. 11. 2026“) a čísla popisná („2517-2521“) zůstávají.
+  Jméno v textu takhle skrýt nejde; kdo ho napíše do veřejné aplikace, zveřejní ho i tam.
+- **Fotka** (`CS_IMAGEURL`) jen tam, kde ji autor na Dej Tipu označil jako veřejnou
+  (`PHOTOISPUBLIC` = 1); jinak adresu vůbec neuložíme. Fotku nekopírujeme, stránka ji načítá
+  přímo z Dej Tipu (https://www.dejtip.eu/_fotoobce/…, https funguje, ověřeno 13. 11. 2026).
+
 Proč ne zbytek:
 
-- **Popis od občana** (`COMMENT01`) píšou lidé volně: jména, telefony, spory se sousedy. Mapa
-  Dej Tipu ho ukazuje, ale my ho jako trvalý strojově čitelný archiv nabízet nechceme.
 - **Poznámky úřadu** (`NOTE`) obsahují e-mail úředníka, **login** (pozice 21) jméno úředníka.
+  Bereme jen data první a poslední poznámky; text necháváme na Dej Tipu, odkaz vede na podnět.
 - **Číslo domu, PSČ, část obce**: podnět u domu prozrazuje, kdo bydlí kde; ulice na mapu
   a hledání stačí. Adresa, která není ulice (jen číslo popisné), zůstane bez ulice.
-- **Fotky a odkazy do administrace**, **zařízení a přesnost GPS**: nic z toho portál
-  nepotřebuje.
+- **Odkaz do administrace** (`CS_ADMINURL`), **neveřejné fotky**, **zařízení a přesnost GPS**:
+  nic z toho portál nepotřebuje.
 
 ## Okno stahování
 
@@ -94,9 +106,9 @@ mění stav. Starší změnu i starší historii (zdroj má podněty od roku 202
 
 ## Odkaz na jeden podnět
 
-Každý záznam v API má `detail` na mapu https://amg.dejtip.eu/pardubice/. Skript mapy
-(`app.min.js`) skládá u INCIDENTID odkaz s `?id=` a nabízí ho zkopírovat do schránky, takže
-`https://amg.dejtip.eu/pardubice/?id=<INCIDENTID>` nejspíš otevře konkrétní podnět – neověřeno.
+`https://amg.dejtip.eu/pardubice/?id=<INCIDENTID>` otevře mapu Dej Tipu na konkrétním podnětu
+(ověřeno 13. 11. 2026; skript mapy `app.min.js` stejný odkaz nabízí zkopírovat). Každý záznam
+v API ho má v `detail` (`source.detail`), stránka podnětů na něj odkazuje z bubliny i seznamu.
 
 ## Pro vlastní formulář: jak Dej Tip přijímá nové podněty
 

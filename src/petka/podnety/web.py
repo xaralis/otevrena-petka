@@ -97,7 +97,9 @@ def reports(request: Request, kategorie: str = "", stav: str = "", od: str = "",
 
     kategorie, stav: id z číselníků Dej Tip, víc oddělených čárkou. od, do: den nahlášení
     RRRR-MM-DD (včetně). near=lat,lng a r (metry, nejvýš 5000): jen podněty v tom okruhu,
-    s `distance`. Místo jen jako ulice bez čísla domu, bez popisu od občana i poznámek úřadu."""
+    s `distance`. Místo jen jako ulice bez čísla domu. `description` je popis od občana se
+    skrytými telefony a e-maily, `photo` fotka jen tam, kde ji autor na Dej Tipu zveřejnil
+    (načítá se z Dej Tipu), `detail` odkaz na podnět v Dej Tipu. Poznámky úřadu ne."""
     f = queries.Filters(request.state.obvod.id, _ints(kategorie, "kategorie"), _ints(stav, "stav"),
                         _date(od, "od"), _date(do, "do"), _point(near), max(1, min(r, 5000)))
     rows = queries.search(f, max(1, limit))

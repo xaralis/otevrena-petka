@@ -9,11 +9,13 @@ of the městský obvod, obvody.Obvod.momc). Rows are positional arrays. The map'
 column of its own: NOTE carries "date¦official's e-mail¦text". Positions below were checked on
 the real answer on 12. 11. 2026 (3 602 rows from 2025 on), see docs/dejtip.md.
 
-Most of a row is not ours to publish: the reporter's comment, the office's notes with an
-official's e-mail, photo and admin URLs, the device and an official's login. `sanitize` keeps
-only what the public map shows anyway, minus the house number, and nothing else ever leaves
-this module. Of the office's notes we keep only their dates (when the office first and last
-wrote to a report), never their text or author.
+Most of a row is not ours to publish: the office's notes with an official's e-mail, the admin
+URL, the device and an official's login. `sanitize` keeps only what the public map shows
+anyway, minus the house number, and nothing else ever leaves this module. The reporter's
+description is kept with phone numbers and e-mail addresses masked (`mask`), the photo's URL
+only when the reporter made the photo public (the starosta's decision of 13. 11. 2026). Of the
+office's notes we keep only their dates (when the office first and last wrote to a report),
+never their text or author.
 """
 
 import datetime as dt
@@ -23,14 +25,15 @@ import re
 import httpx
 
 URL = "https://amg.dejtip.eu/DbConn/handler.aspx/Database"
-HOME = "https://amg.dejtip.eu/pardubice/"       # the public map; no link to one report is known
+HOME = "https://amg.dejtip.eu/pardubice/"       # the public map; ?id=<INCIDENTID> opens one report
 CITY = "pardubice"
 TIMEOUT = httpx.Timeout(120, connect=15)       # two years of the city is ~1.3 MB, built slowly
 HEADERS = {"User-Agent": "otevrena-petka (+https://otevrenapetka.cz)",
            "Content-Type": "application/json; charset=utf-8"}
 
 # positions in a row (checked 12. 11. 2026); everything not named here is never read
-ID, CATEGORY, ADDRESS, LAT, LNG, NOTE, CATEGORY_ID, STATUS, DATE, MOMC = 0, 5, 6, 8, 9, 12, 13, 17, 18, 19
+ID, CATEGORY, ADDRESS, COMMENT, LAT, LNG, IMAGE, NOTE, CATEGORY_ID = 0, 5, 6, 7, 8, 9, 10, 12, 13
+PHOTO_PUBLIC, STATUS, DATE, MOMC = 16, 17, 18, 19
 WIDTH = 23
 
 # c_status.csv on amg.dejtip.eu/upload/data/; the categories come with each row (KAT_TYPE)
@@ -109,14 +112,50 @@ def note_dates(note: str | None) -> tuple[dt.datetime | None, dt.datetime | None
     return (min(found), max(found)) if found else (None, None)
 
 
+def detail(report_id: int) -> str:
+    """The report on Dej Tip's public map (checked 13. 11. 2026: the map opens that report)."""
+    return f"{HOME}?id={report_id}"
+
+
+# A phone number: Czech nine digits, grouped 3-3-3 (by spaces, dashes, dots or nothing) or
+# 3-2-2-2, with or without +420 / 00420. Digits glued to letters, slashes or more digits are
+# not one (an IČO, a č. p. "2517/21", "2517-2521", a date "12. 11. 2026" never match).
+_PHONE = re.compile(r"(?<![\w/+])(?:(?:\+|00)\s?420[ .-]?)?(?:[1-9]\d{2}[ .-]?\d{3}[ .-]?\d{3}"
+                    r"|[1-9]\d{2} \d{2} \d{2} \d{2})(?![\w/])")
+_EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+DESCRIPTION_MAX = 2000      # characters; Dej Tip's longest are well under it
+
+
+def mask(text: str | None) -> str | None:
+    """The reporter's description with phone numbers and e-mail addresses replaced by
+    „[telefon]“ and „[e-mail]“; None when there is nothing to say."""
+    if not isinstance(text, str) or not text.strip():
+        return None
+    text = _EMAIL.sub("[e-mail]", text.strip())
+    return _PHONE.sub("[telefon]", text)[:DESCRIPTION_MAX]
+
+
+def photo(url: str | None, public) -> str | None:
+    """The photo's URL only when the reporter made it public (PHOTOISPUBLIC = 1). Dej Tip gives
+    http://www.dejtip.eu/…; the same host serves it over https (checked 13. 11. 2026), which a
+    https page needs. Any other host only as https."""
+    if public != 1 or not isinstance(url, str):
+        return None
+    url = url.strip()
+    if url.startswith("http://www.dejtip.eu/"):
+        url = "https://" + url[len("http://"):]
+    return url if url.startswith("https://") and not any(c in url for c in ' "<>') else None
+
+
 def sanitize(row: list) -> dict:
     """The only fields of a row we keep: id, category, status, date, position, street, the
-    obvod's code and the dates of the office's notes."""
+    obvod's code, the dates of the office's notes, the masked description and a public photo."""
     first_note, last_note = note_dates(row[NOTE])
     return {"id": row[ID], "category_id": row[CATEGORY_ID], "category": (row[CATEGORY] or "").strip(),
             "status": row[STATUS], "reported_at": dt.datetime.strptime(row[DATE], "%d.%m.%Y %H:%M"),
             "lat": float(row[LAT]), "lng": float(row[LNG]), "street": street(row[ADDRESS]),
-            "momc": row[MOMC], "first_note_at": first_note, "last_note_at": last_note}
+            "momc": row[MOMC], "first_note_at": first_note, "last_note_at": last_note,
+            "description": mask(row[COMMENT]), "photo_url": photo(row[IMAGE], row[PHOTO_PUBLIC])}
 
 
 def reports(rows: list[list], momc: int) -> tuple[list[dict], list[int]]:

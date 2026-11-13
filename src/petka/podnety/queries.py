@@ -96,7 +96,7 @@ def period_rows(obvod: str, start: dt.date, end: dt.date) -> list[dict]:
     """The obvod's reports with start <= reported_at < end (dates), what the page counts."""
     with db.pool().connection() as conn:
         return conn.execute("""SELECT id, category_id, category, status, reported_at, lat, lng, street,
-                                      first_note_at, last_note_at
+                                      first_note_at, last_note_at, description, photo_url
                                FROM citizen_reports WHERE obvod = %s AND reported_at >= %s AND reported_at < %s
                                ORDER BY reported_at""", (obvod, start, end)).fetchall()
 
@@ -124,7 +124,8 @@ def feature(r: dict) -> dict:
              "reported_at": r["reported_at"].isoformat(timespec="minutes"), "street": r["street"],
              "obvod": r["obvod"],
              "status_changed_at": r["status_changed_at"].isoformat() if r.get("status_changed_at") else None,
-             "detail": source.HOME}
+             "description": r.get("description"), "photo": r.get("photo_url"),
+             "detail": source.detail(r["id"])}
     if "distance" in r:
         props["distance"] = r["distance"]
     return {"type": "Feature", "id": r["id"],

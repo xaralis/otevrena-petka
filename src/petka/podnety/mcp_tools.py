@@ -13,7 +13,9 @@ Při odpovědích:
 - Podněty jsou hlášení lidí, ne zjištění úřadu; počet podnětů neříká, jak velký problém je.
 - Stav je to, co v Dej Tipu nastavil úřad. `zmena_stavu` = kdy jsme změnu zaznamenali my
   (denní kontrola), ne kdy ji úřad provedl.
-- Popis od občana, fotky a poznámky úřadu nepřebíráme; pro ně odkaž na mapu Dej Tipu.
+- `popis` je popis od občana se skrytými telefony a e-maily („[telefon]“, „[e-mail]“); `foto`
+  jen tam, kde ji autor na Dej Tipu zveřejnil. Poznámky úřadu nepřebíráme; pro ně odkaž
+  na podnět (`odkaz`).
 - Chybné, spamové a smazané podněty vynecháváme.
 """
 
@@ -55,7 +57,8 @@ def podnety(lat: float | None = None, lng: float | None = None, okruh: int = 500
         "vysledky": [{
             "id": r["id"], "kategorie": r["category"], "stav": source.STATUSES.get(r["status"]),
             "nahlaseno": r["reported_at"].isoformat(timespec="minutes"), "ulice": r["street"],
-            "lat": r["lat"], "lng": r["lng"],
+            "lat": r["lat"], "lng": r["lng"], "popis": r.get("description"), "foto": r.get("photo_url"),
+            "odkaz": source.detail(r["id"]),
             "zmena_stavu": str(r["status_changed_at"]) if r["status_changed_at"] else None,
             **({"vzdalenost_m": r["distance"]} if "distance" in r else {}),
         } for r in rows],
