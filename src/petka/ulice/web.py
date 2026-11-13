@@ -155,10 +155,17 @@ def street(request: Request, slug: str, radky: str = ""):
     marks = q.board_marks(q.place_notices(), {slug: s}, today, ahead)
     rep_rows = q.report_rows(reps, now, slug)
     rows = q.rows(rep_rows, cl_rows, [q.resolution_row(r, today) for r in res], [q.notice_row(m, today) for m in marks])
+    shown = rows if radky == "vse" else q.current(rows, today)[:q.ROWS]
+    # the map shows what the rows show, nothing more
+    keys = {r["key"] for r in shown}
     row_of = {i: r["key"] for r in rep_rows for i in r["ids"]}
     points = ps.points(reps, now)["features"]
     for f in points:
         f["properties"]["row"] = row_of.get(f["properties"]["id"])
+    points = [f for f in points if f["properties"]["row"] in keys]
+    cleaning = [f for f in cleaning if f["properties"]["row"] in keys]
+    anchors = [a for a in anchors if a["row"] in keys]
+    marks = [m for m in marks if f"d{m['id']}" in keys]
     # rows with something on the map get a control that shows it there
     mapped = ({f["properties"]["row"] for f in points} | {f["properties"]["row"] for f in cleaning}
               | {f"d{m['id']}" for m in marks})
@@ -180,8 +187,7 @@ def street(request: Request, slug: str, radky: str = ""):
         "n_res": n_res, "last_res": res[0] if res else None, "res_chart": q.resolution_chart(res, today),
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
         "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "n_notices": _safe(q.notices_posted, s.name),
-        "rows": rows if radky == "vse" else q.current(rows, today)[:q.ROWS],
-        "more": radky != "vse" and len(rows) > len(q.current(rows, today)[:q.ROWS]), "data": data,
+        "rows": shown, "more": len(rows) > len(shown), "data": data,
         "has": {"next": any(not f["properties"]["past"] and not f["properties"]["area"] for f in cleaning),
                 "area": any(not f["properties"]["past"] and f["properties"]["area"] for f in cleaning),
                 "reports": bool(points), "waiting": bool(rep["ceka"]), "cluster": len(points) > 1,

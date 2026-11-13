@@ -123,7 +123,7 @@ def report_rows(rows: list[dict], now: dt.datetime, slug: str) -> list[dict]:
         d = r["reported_at"].date()
         return {"key": f"r{r['id']}", "kind": "rep", "date": d, **_label(d, today), "title": r["category"],
                 "sub": report_sub(r, now), "status": ps.status_word(r), "href": source.detail(r["id"]),
-                "ext": True, "ids": [r["id"]]}
+                "ext": True, "ids": [r["id"]], "open": ps.outcome(r) == "ceka"}
 
     for r in rows:
         if r["reported_at"] >= cut or ps.outcome(r) != "vyreseno":
@@ -183,10 +183,11 @@ def notice_row(m: dict, today: dt.date) -> dict:
 
 
 def current(rows: list[dict], today: dt.date) -> list[dict]:
-    """What „Aktuálně“ shows by default: the last CURRENT days and what is still to come (an
-    upcoming cleaning); older things, waiting reports included, are a click away."""
+    """What „Aktuálně“ shows by default, in the list and on the map alike: what is still to come
+    (an upcoming cleaning), the last CURRENT days and reports still waiting, however old (an
+    open report is current); the rest is a click away."""
     since = today - dt.timedelta(days=CURRENT)
-    return [r for r in rows if r["date"] >= since]
+    return [r for r in rows if r["date"] >= since or r.get("open")]
 
 
 def rows(*groups: list[dict]) -> list[dict]:

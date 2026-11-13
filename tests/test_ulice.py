@@ -381,6 +381,10 @@ def test_street_page(fixture):
     assert keys == ["c20261126", "dm0"]          # the last 30 days and the coming cleaning on top
     allkeys = __import__("re").findall(r'<li data-row="([^"]+)"', get("/verejny-prostor/ulice/wolkerova?radky=vse").text)
     assert allkeys == ["c20261126", "dm0", "z310-2026-r", "c20260917", "r1"]     # ?radky=vse: everything, newest first
+    d = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])     # the map shows what the rows show
+    assert [f["properties"]["row"] for f in d["cleaning"]["features"]] == ["c20261126"] and d["reports"]["features"] == []
+    assert [x["row"] for x in d["marks"]] == ["dm0"] and [a["row"] for a in d["anchors"]] == ["c20261126"]
+    h = get("/verejny-prostor/ulice/wolkerova?radky=vse").text
     d = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
     assert [(f["properties"]["row"], f["properties"]["past"]) for f in d["cleaning"]["features"]] == [("c20260917", True), ("c20261126", False)]
     assert [f["properties"]["row"] for f in d["reports"]["features"]] == ["r1"] and d["reports"]["features"][0]["properties"]["o"] == "vyreseno"
@@ -438,3 +442,5 @@ def test_current_rows():
     assert [x["date"] for x in got] == [dt.date(2026, 11, 26)]          # the last 30 days and what is to come
     got = q.current(rows + [r("rep", dt.date(2026, 10, 20))], today)
     assert [x["date"] for x in got] == [dt.date(2026, 11, 26), dt.date(2026, 10, 20)]
+    waiting = {**r("rep", dt.date(2025, 4, 10), ("evidováno", "st st-no")), "open": True}
+    assert q.current(rows + [waiting], today)[-1] is waiting          # a report still waiting is current, however old
