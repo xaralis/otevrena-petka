@@ -66,6 +66,11 @@ GROUPS = [
         Item("Ankety", "/zapojte-se/ankety", "Co si myslíte?", "ankety", planned=True, was="/ankety"),
     ]),
 ]
+# pages that exist come first in every area, the "připravujeme" ones at its end (they move up
+# by themselves once their section goes live)
+for _g in GROUPS:
+    _g.items.sort(key=lambda i: i.soon)
+
 UTIL = Item("Data a API", "/data", "Stáhnout data, API a MCP pro AI asistenty")
 SOON = {i.href for g in GROUPS for i in g.items if i.soon}   # served by the planned-section page
 PATHS = {i.slug: i.href for g in GROUPS for i in g.items if i.slug}   # section slug -> its page

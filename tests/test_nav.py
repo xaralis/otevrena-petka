@@ -55,3 +55,11 @@ def test_header_rows_and_phone_menu():
 def test_planned_items_have_a_page(path):
     r = TestClient(app).get(path)
     assert r.status_code == 200 and "ve výstavbě" in r.text
+
+
+def test_planned_pages_last_in_each_area():
+    for g in nav.GROUPS:
+        soon = [i.soon for i in g.items]
+        assert soon == sorted(soon), g.label
+    vp = next(g for g in nav.GROUPS if g.label == "Veřejný prostor")
+    assert [i.label for i in vp.items] == ["Blokové čištění ulic", "Závady", "Uzavírky"]
