@@ -1,23 +1,27 @@
 {% extends "base.html" %}
-{% from "ulice/_macros.html" import street_search, datalist %}
+{% from "ulice/_macros.html" import datalist %}
 {% block title %}{% if found %}Ulice „{{ query }}“{% else %}Ulice{% endif %}{% endblock %}
 {% block hero %}
 <section class="band band-section">
   <div class="wrap">
     <h1>{% if found %}Ulic odpovídajících „{{ query }}“ je víc{% else %}Co se děje v mé ulici?{% endif %}</h1>
-    {% if not found %}<p class="band-lead">Pro každou ulici obvodu na jednom místě: co visí na úřední desce, co o ní rozhodla rada a zastupitelstvo, kdy se v ní čistí a co v ní lidé hlásí.</p>{% endif %}
+    {% if not found %}<p class="band-lead">Pro každou ulici obvodu na jednom místě: co visí na úřední desce, co o ní rozhodla rada a zastupitelstvo, kdy se v ní čistí a co v ní lidé hlásí.</p>
+    <form class="search cl-search" method="get" action="/verejny-prostor/ulice" role="search">
+      <label class="sr" for="ul">Vaše ulice</label>
+      <input id="ul" name="q" type="search" list="ul-streets" data-combo value="{{ miss }}" autocomplete="off" placeholder="Vaše ulice, třeba Wolkerova"{% if miss %} aria-invalid="true" aria-describedby="ul-err"{% endif %}>
+      <button type="submit">Ukázat</button>
+    </form>
+    {% if miss %}<div class="cl-found" role="status" id="ul-err"><p>Tahle ulice v městském obvodě Pardubice V není.</p></div>{% endif %}{% endif %}
   </div>
 </section>
 {% endblock %}
 {% block main %}
 {{ datalist(names) }}
+{% if found %}
 <div class="ul-narrow">
-  {% if found %}
   <ul class="cl-near">{% for s, n in found %}<li><a href="/verejny-prostor/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
-  {% else %}
-  {{ street_search('ul', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova', miss, 'Tahle ulice v městském obvodě Pardubice V není.' if miss else '') }}
-  {% endif %}
 </div>
+{% endif %}
 {% if not found %}
 <section class="ul-index" aria-labelledby="ul-index-h">
   <h2 id="ul-index-h" class="ul-h">Všechny ulice obvodu</h2>
