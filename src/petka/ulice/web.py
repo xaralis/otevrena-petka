@@ -2,8 +2,8 @@
 
     /                    a street search, „Aktuálně“ (this week's cleanings and the board's notices
                          on one map), the areas
-    /ulice?q=<name>      the search: one street goes straight to its page, more are listed
-    /ulice/<slug>        one street: next cleaning, decisions, reports, map, everything dated
+    /verejny-prostor/ulice?q=<name>   the search: one street goes straight to its page, more are listed
+    /verejny-prostor/ulice/<slug>     one street: next cleaning, decisions, reports, map, everything dated
 """
 
 import datetime as dt
@@ -78,20 +78,20 @@ def home(request: Request):
 
 # --- streets ----------------------------------------------------------------------------------
 
-@pages.get("/ulice", response_class=HTMLResponse)
+@pages.get("/verejny-prostor/ulice", response_class=HTMLResponse)
 def search(request: Request, q: str = ""):
     names = _names(request.state.obvod.id)
     query = q.strip()
     found = st.find(query, names) if query else []
     if len(found) == 1:
-        return RedirectResponse(f"/ulice/{found[0]}", status_code=303)
+        return RedirectResponse(f"/verejny-prostor/ulice/{found[0]}", status_code=303)
     if query and not found:    # back to the search on the front page, with the hint under the field
         return RedirectResponse(f"/?ulice={quote_plus(query)}#hledat", status_code=303)
     return tpl.TemplateResponse(request, "ulice/hledat.html", {
         "query": query, "found": [(s, names[s]) for s in found], "names": names})
 
 
-@pages.get("/ulice/{slug}", response_class=HTMLResponse)
+@pages.get("/verejny-prostor/ulice/{slug}", response_class=HTMLResponse)
 def street(request: Request, slug: str):
     today = _today()
     obvod = request.state.obvod.id

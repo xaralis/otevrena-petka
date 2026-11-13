@@ -12,7 +12,7 @@
 {{ datalist(names) }}
 <div class="ul-narrow">
   {% if found %}
-  <ul class="cl-near">{% for s, n in found %}<li><a href="/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
+  <ul class="cl-near">{% for s, n in found %}<li><a href="/verejny-prostor/ulice/{{ s }}">{{ n }}</a></li>{% endfor %}</ul>
   {% else %}
   {{ street_search('ul', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova') }}
   {% endif %}

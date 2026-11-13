@@ -104,7 +104,7 @@ def test_reports_and_their_items():
     assert (r["n"], r["vyreseno"], r["ceka"], r["predano"]) == (3, 1, 1, 1)
     assert r["since"] == NOW - dt.timedelta(days=400) and q.since_word(r["since"]) == "od října 2025"
     assert q.reports([])["since"] is None and q.since_word(None) == ""
-    i = q.report_item(rows[1], "/ulice/wolkerova")
+    i = q.report_item(rows[1], "/verejny-prostor/ulice/wolkerova")
     assert i["text"] == "Chodník, Wolkerova" and i["status"] == ("evidováno", "st st-no") and i["source"] == "Závady"
 
 
@@ -271,7 +271,7 @@ def test_front_page(fixture):
     assert r.status_code == 200
     h = r.text
     for s in ("Co se děje na&nbsp;Pětce?", "Příklad: Wolkerova, sídliště Dukla", "Podívejte se na svou ulici",
-              'action="/ulice"', '<option value="Wolkerova">', '<h2 id="dash-h" class="dash-h">Aktuálně</h2>',
+              'action="/verejny-prostor/ulice"', '<option value="Wolkerova">', '<h2 id="dash-h" class="dash-h">Aktuálně</h2>',
               "Blokové čištění tento týden", '<span class="ak-d">st 18.\u00a011.</span><span>Josefa Ressla, pravá strana</span>',
               "Dopravní omezení", "podle oznámení na úřední desce", '<span>Lexova</span><span class="ak-d">do 20.\u00a011.</span>',
               "dopravní omezení, místo podle názvu ulice", "další oznámení z úřední desky, ikona podle druhu",
@@ -288,31 +288,31 @@ def test_front_page(fixture):
 
 
 def test_search_redirects_or_lists(fixture):
-    r = get("/ulice", params={"q": "WOLKEROVÁ"})
-    assert r.status_code == 303 and r.headers["location"] == "/ulice/wolkerova"
-    r = get("/ulice", params={"q": "ova"})
-    assert r.status_code == 200 and "je víc" in r.text and 'href="/ulice/lexova"' in r.text
-    r = get("/ulice", params={"q": "Nádražní"})
+    r = get("/verejny-prostor/ulice", params={"q": "WOLKEROVÁ"})
+    assert r.status_code == 303 and r.headers["location"] == "/verejny-prostor/ulice/wolkerova"
+    r = get("/verejny-prostor/ulice", params={"q": "ova"})
+    assert r.status_code == 200 and "je víc" in r.text and 'href="/verejny-prostor/ulice/lexova"' in r.text
+    r = get("/verejny-prostor/ulice", params={"q": "Nádražní"})
     assert r.status_code == 303 and r.headers["location"] == "/?ulice=N%C3%A1dra%C5%BEn%C3%AD#hledat"
     h = get("/", params={"ulice": "Nádražní"}).text
     assert "Tahle ulice v městském obvodě Pardubice V není." in h and 'value="Nádražní"' in h
 
 
 def test_street_page(fixture):
-    r = get("/ulice/wolkerova")
+    r = get("/verejny-prostor/ulice/wolkerova")
     assert r.status_code == 200
     h = r.text
     for s in ("<h1>Wolkerova</h1>", "Příští blokové čištění", "26. 11.", "čtvrtek od 7:00, obě strany",
               "Související rozhodnutí", "<b>19</b>", "naposledy 23. 9.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext"',
               "nic nečeká", "1 nahlášená od května 2026, 1 vyřešená", "Co se tu děje", "Celá ulice, obě strany, od 7:00",
               "Rada, usnesení 310/2026 R", "5 pro; potřeba 3", "parkoviště u č. p. 2122-2123",
-              "Lavičky, zábradlí", "Všechno k ulici Wolkerova", "teď nic nevisí", "Okolní ulice", 'href="/ulice/lexova"',
+              "Lavičky, zábradlí", "Všechno k ulici Wolkerova", "teď nic nevisí", "Okolní ulice", 'href="/verejny-prostor/ulice/lexova"',
               'href="/verejny-prostor/uzavirky"'):
         assert s in h, s
     assert "Uzavírka</small>" not in h          # no data on closures yet: no box
     fc = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])
     assert [f["properties"].get("when") for f in fc["features"] if f["properties"]["kind"] != "reports"] == [None, "next"]          # past cleanings stay off the map
-    assert get("/ulice/neni").status_code == 404
+    assert get("/verejny-prostor/ulice/neni").status_code == 404
 
 
 def test_db_queries():

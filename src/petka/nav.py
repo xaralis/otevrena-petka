@@ -57,6 +57,7 @@ GROUPS = [
         Item("Smlouvy", "/finance/smlouvy", "Kdo pro obvod pracuje a za kolik?", "smlouvy", was="/smlouvy"),
     ]),
     Group("Veřejný prostor", "/verejny-prostor", [
+        Item("Ulice", "/verejny-prostor/ulice", "Co se děje v mé ulici?", was="/ulice"),
         Item("Blokové čištění ulic", "/verejny-prostor/blokove-cisteni", "Kdy proběhne čištění mojí ulice?",
              "blokove-cisteni", was="/blokove-cisteni"),
         Item("Uzavírky", "/verejny-prostor/uzavirky", "Kde se teď nedá projet?", "uzavirky", was="/uzavirky"),

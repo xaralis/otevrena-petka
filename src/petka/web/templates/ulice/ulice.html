@@ -12,7 +12,7 @@
       <h1>{{ s.name }}</h1>
       <p class="band-lead">{{ obvod.name }}{% if s.share < 0.95 %}, část ulice patří k sousednímu obvodu{% endif %}.</p>
     </div>
-    <form class="ul-other" role="search" method="get" action="/ulice">
+    <form class="ul-other" role="search" method="get" action="/verejny-prostor/ulice">
       <label for="ul2" class="sr">Jiná ulice</label>
       <input id="ul2" name="q" type="search" list="ul-streets" data-combo placeholder="Jiná ulice" autocomplete="off" required>
       <button type="submit">Ukázat</button>
@@ -24,7 +24,7 @@
 {{ datalist(names) }}
 {% set nrep = rep.n %}
 <div class="pd-kpi ul-kpi">
-  <a href="/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}"><small>Příští blokové čištění</small>
+  <a href="/verejny-prostor/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}"><small>Příští blokové čištění</small>
     {% if cl.next %}<b>{{ cl.next|cl_dm }}</b><span>{{ cl.next|cl_weekday }}{% if cl.time %} {{ cl.time }}{% endif %}{% if cl.whole and cl.side %}, {{ cl.side }}{% endif %}</span>
     {% elif in_harm %}<b>letos už ne</b><span>termíny na příští rok přidáme, až je Služby města zveřejní</span>
     {% else %}<b>není</b><span>ulice letos není v harmonogramu Služeb města</span>{% endif %}</a>
@@ -57,7 +57,7 @@
     <h2 class="ul-h">Všechno k ulici {{ s.name }}</h2>
     <ul class="cl-near">
       <li><a href="{{ q_url }}">Rozhodnutí</a><span>{% if n_res %}{{ n_res }}, naposledy {{ last_res|cl_dm if last_res.year == today.year else last_res|d }}{% else %}žádné{% endif %}</span></li>
-      <li><a href="/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}">Blokové čištění</a><span>{% if cl.next %}příště {{ cl.next|cl_dm }}{% elif in_harm %}letos už ne{% else %}není v harmonogramu{% endif %}</span></li>
+      <li><a href="/verejny-prostor/blokove-cisteni{{ '/ulice/' ~ s.slug if in_harm }}">Blokové čištění</a><span>{% if cl.next %}příště {{ cl.next|cl_dm }}{% elif in_harm %}letos už ne{% else %}není v harmonogramu{% endif %}</span></li>
       <li class="soon"><a href="/verejny-prostor/uzavirky">Uzavírky</a><span>připravujeme</span></li>
       <li><a href="/verejny-prostor/zavady">Závady</a><span>{% if nrep %}{{ nrep }} {{ rep.since|ul_since }}{% if rep.ceka %}, {{ rep.ceka }} {{ cl_plural(rep.ceka, 'čeká', 'čekají', 'čeká') }}{% else %}, nic nečeká{% endif %}{% else %}žádné{% endif %}</span></li>
       <li><a href="{{ deska_url }}">Úřední deska</a><span>{% if n_notices %}{{ n_notices }} {{ cl_plural(n_notices, 'oznámení visí', 'oznámení visí', 'oznámení visí') }}{% else %}teď nic nevisí{% endif %}</span></li>
@@ -66,7 +66,7 @@
   {% if around %}
   <div>
     <h2 class="ul-h">Okolní ulice</h2>
-    <ul class="cl-near">{% for a in around %}<li><a href="/ulice/{{ a.slug }}">{{ a.name }}</a></li>{% endfor %}</ul>
+    <ul class="cl-near">{% for a in around %}<li><a href="/verejny-prostor/ulice/{{ a.slug }}">{{ a.name }}</a></li>{% endfor %}</ul>
   </div>
   {% endif %}
 </div>

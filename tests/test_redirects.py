@@ -33,6 +33,7 @@ c = TestClient(app, follow_redirects=False)
     ("/rozpocet/nahled/tajne/oblasti", "/finance/rozpocet/nahled/tajne/oblasti"),
     ("/smlouvy", "/finance/smlouvy"),
     ("/blokove-cisteni", "/verejny-prostor/blokove-cisteni"),
+    ("/ulice/wolkerova", "/verejny-prostor/ulice/wolkerova"),
     ("/blokove-cisteni/ulice/wolkerova", "/verejny-prostor/blokove-cisteni/ulice/wolkerova"),
     ("/blokove-cisteni/kalendar", "/verejny-prostor/blokove-cisteni/kalendar"),
     ("/uzavirky", "/verejny-prostor/uzavirky"),
@@ -65,7 +66,7 @@ def test_head_redirects_too():
     assert (r.status_code, r.headers["location"]) == (301, "/radnice/zastupitele")
 
 
-@pytest.mark.parametrize("path", ["/api/v1/usneseni/stats", "/data/usneseni", "/usneseni-x", "/ulice/wolkerova",
+@pytest.mark.parametrize("path", ["/api/v1/usneseni/stats", "/data/usneseni", "/usneseni-x", "/ulice-x",
                                   "/radnice/usneseni", "/radnice/zastupitele", "/data", "/"])
 def test_what_stays(path):
     assert nav.moved(path) is None
@@ -75,7 +76,7 @@ def test_what_stays(path):
     ("/radnice", "/radnice/uredni-deska"),
     ("/radnice/", "/radnice/uredni-deska"),
     ("/finance", "/finance/rozpocet"),
-    ("/verejny-prostor", "/verejny-prostor/blokove-cisteni"),
+    ("/verejny-prostor", "/verejny-prostor/ulice"),
     ("/zapojte-se", "/zapojte-se/ankety"),
 ])
 def test_area_goes_to_its_first_page(area, first):

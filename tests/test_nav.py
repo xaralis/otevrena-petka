@@ -18,6 +18,7 @@ from petka.web.app import app
     ("/finance/rozpocet", "Finance", "Rozpočet"),
     ("/verejny-prostor/blokove-cisteni/ulice/wolkerova", "Veřejný prostor", "Blokové čištění ulic"),
     ("/verejny-prostor/zavady", "Veřejný prostor", "Závady"),
+    ("/verejny-prostor/ulice/wolkerova", "Veřejný prostor", "Ulice"),
     ("/zapojte-se/ankety", "Zapojte se", "Ankety"),
 ])
 def test_current(path, group, item):
@@ -25,7 +26,7 @@ def test_current(path, group, item):
     assert (g.label, i.label) == (group, item)
 
 
-@pytest.mark.parametrize("path", ["/", "/data", "/ulice/wolkerova", "/usneseni-x", "/prehled"])
+@pytest.mark.parametrize("path", ["/", "/data", "/usneseni-x", "/prehled"])
 def test_outside_the_areas(path):
     assert nav.current(path) == (None, None)
 
@@ -36,14 +37,14 @@ def test_planned_pages_and_where_an_area_links():
     by = {g.label: g for g in nav.GROUPS}
     assert by["Radnice"].href == "/radnice/uredni-deska"
     assert by["Finance"].href == "/finance/rozpocet"            # nothing live yet: the first page
-    assert by["Veřejný prostor"].href == "/verejny-prostor/blokove-cisteni"
+    assert by["Veřejný prostor"].href == "/verejny-prostor/ulice"
     assert nav.SOON == {"/finance/rozpocet", "/finance/smlouvy", "/verejny-prostor/uzavirky", "/zapojte-se/ankety"}
 
 
 def test_header_rows_and_phone_menu():
     c = TestClient(app)
     html = c.get("/verejny-prostor/blokove-cisteni/kalendar").text
-    assert '<a href="/verejny-prostor/blokove-cisteni" aria-current="true">Veřejný prostor</a>' in html
+    assert '<a href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor</a>' in html
     assert 'aria-label="Sekce v oblasti Veřejný prostor"' in html
     assert '<a href="/verejny-prostor/uzavirky" class="soon"><span>Uzavírky</span><span class="sr"> (připravujeme)</span></a>' in html
     assert 'id="menu"' in html and 'href="#menu" role="button" aria-expanded="false"' in html
@@ -62,4 +63,4 @@ def test_planned_pages_last_in_each_area():
         soon = [i.soon for i in g.items]
         assert soon == sorted(soon), g.label
     vp = next(g for g in nav.GROUPS if g.label == "Veřejný prostor")
-    assert [i.label for i in vp.items] == ["Blokové čištění ulic", "Závady", "Uzavírky"]
+    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Závady", "Uzavírky"]

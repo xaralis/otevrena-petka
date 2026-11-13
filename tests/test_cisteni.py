@@ -348,7 +348,7 @@ def test_overview(fixture):
               "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni?od=2026-11-12"'):
         assert s in h, s
     assert "aplikac" not in h.lower() and "letos už ne" not in h
-    assert 'href="/verejny-prostor/blokove-cisteni" aria-current="true">Veřejný prostor' in h.split("</header>")[0]
+    assert 'href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor' in h.split("</header>")[0]
     assert get("/verejny-prostor/blokove-cisteni?probehle=1").text.count("Letošní proběhlé termíny") >= 1
     # the map's anchors and the week's rows share the place key, so they light up together
     anchors = json.loads(h.split('<script type="application/json" id="cl-anchors">')[1].split("</script>")[0])
