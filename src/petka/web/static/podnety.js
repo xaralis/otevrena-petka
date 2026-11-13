@@ -206,10 +206,14 @@
     const h = +iso.slice(11, 13), mi = iso.slice(14, 16);
     return `${dm(iso)} ${[2, 3, 4, 12, 13, 14, 20, 21, 22, 23].includes(h) ? "ve" : "v"} ${h}:${mi}`;
   }
+  // the card's status is Dej Tip's own word (red while it waits); how long it waits is a fact of its own
   function state(p) {
-    if (p.o !== "ceka") return [p.w, ""];
+    return [p.w, p.o === "ceka" ? "st-no" : ""];
+  }
+  function waiting(p) {
+    if (p.o !== "ceka") return null;
     const n = p.wd || 0;
-    return [n < 1 ? "čeká od dneška" : `čeká ${n} ${plural(n, "den", "dny", "dní")}`, "st-no"];
+    return n < 1 ? "od dneška" : `${n} ${plural(n, "den", "dny", "dní")}`;
   }
 
   function draw(map) {
