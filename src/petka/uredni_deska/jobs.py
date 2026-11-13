@@ -1,5 +1,6 @@
 """`usneseni deska-update`: download the boards, upsert their notices, mark the ones that
-left the feed as taken down. Idempotent; run it as often as you like (hourly is plenty).
+left the feed as taken down, then read the new traffic orders' PDFs for how long they hold
+(petka.uredni_deska.measures). Idempotent; run it as often as you like (hourly is plenty).
 
 Privacy: a delivery notice (doručení písemnosti) names the person it is addressed to. The
 city publishes that only while the notice is posted, so once it is taken down we keep the
@@ -14,7 +15,7 @@ from psycopg.types.json import Jsonb
 
 from .. import jobs as runner
 from ..jobs import Unit
-from . import source
+from . import measures, source
 
 log = logging.getLogger(__name__)
 
@@ -98,6 +99,8 @@ def update(boards: list[source.Board] | None = None) -> dict:
             state = _save_board(conn, b)
             conn.commit()
             yield _unit(b, state)
+        if boards is None:
+            yield Unit(("measures",), "measures", lambda conn, client: measures.refresh(conn))
 
     def finish(conn) -> None:
         n = redact(conn)
