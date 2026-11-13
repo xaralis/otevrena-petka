@@ -117,7 +117,7 @@
     <div>
       <h3 class="ul-h">{{ label }}</h3>
       <ul class="cl-near">
-        {% for i in items %}<li{% if i.soon %} class="soon"{% endif %}><a href="{{ i.href }}">{{ i.label }}</a><span>{{ info.get(i.href) or 'připravujeme' }}</span></li>{% endfor %}
+        {% for i in items %}<li{% if i.soon %} class="soon"{% endif %}><a href="{{ i.href }}">{{ i.label }}</a>{% set f = info.get(i.href) %}<span class="ak-n">{% if f %}<b>{{ f[0] }}</b> {{ f[1] }}{% else %}připravujeme{% endif %}</span></li>{% endfor %}
       </ul>
     </div>
     {% endfor %}

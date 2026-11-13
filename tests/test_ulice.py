@@ -260,8 +260,8 @@ def test_front_page(fixture):
               "Blokové čištění tento týden", '<span class="ak-d">st 18.\u00a011.</span><span>Josefa Ressla, pravá strana</span>',
               "Dopravní omezení", "podle oznámení na úřední desce", '<span>Lexova</span><span class="ak-d">do 20.\u00a011.</span>',
               "dopravní omezení, místo podle názvu ulice", "další oznámení z úřední desky, ikona podle druhu",
-              "1\u00a0026 usnesení ze 184 jednání od roku 2018", "75 oznámení k obvodu, 228 magistrátu",
-              "3 termínů na 3 místech letos", "Kdo za tím stojí a proč", "Připraveno pro agenty", "hv-tag", "aktualne.js"):
+              "<b>1\u00a0026</b> usnesení", "<b>75</b> oznámení visí",
+              "<b>3</b> termínů letos", "Kdo za tím stojí a proč", "Připraveno pro agenty", "hv-tag", "aktualne.js"):
         assert s in h, s
     for s in ("Celý obvod", "Co se děje</h3>", "Nádražní"):
         assert s not in h, s

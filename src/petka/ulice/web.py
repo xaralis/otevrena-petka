@@ -53,12 +53,13 @@ def home(request: Request):
     per = ps.period("12m", today)
     s = ps.summary(pq.period_rows(obvod, per.start, per.end), per, _now())
     ustats, dstats = uq.stats(), dq.stats()
+    # the right side of each link row: one number and what it counts, the same shape everywhere
     info = {
-        "/usneseni": f"{q.thousands(ustats['resolutions'])} usnesení ze {ustats['meetings']} jednání od roku {ustats['first_date'].year}",
-        "/usneseni/clenove": "15 zastupitelů a jak kdo hlasuje",
-        "/uredni-deska": f"{dstats['posted_mo5']} oznámení k obvodu, {dstats['posted'] - dstats['posted_mo5']} magistrátu",
-        "/blokove-cisteni": f"{len(its)} termínů na {len({i['key'] for i in its})} místech letos",
-        "/podnety": f"{s['n']} hlášení za rok, {s['done_pct']} % vyřešeno",
+        "/usneseni": (q.thousands(ustats["resolutions"]), "usnesení"),
+        "/usneseni/clenove": ("15", "zastupitelů"),
+        "/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
+        "/blokove-cisteni": (q.thousands(len(its)), "termínů letos"),
+        "/podnety": (q.thousands(s["n"]), "hlášení za rok"),
     }
     g = {x.label: x for x in nav.GROUPS}
     areas = [("Radnice", g["Radnice"].items), ("Veřejný prostor", g["Veřejný prostor"].items),

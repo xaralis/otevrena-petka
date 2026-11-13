@@ -34,7 +34,7 @@ def test_planned_pages_and_where_an_area_links():
     soon = {i.label for g in nav.GROUPS for i in g.items if i.soon}
     assert soon == {"Rozpočet", "Smlouvy", "Uzavírky", "Ankety"}
     by = {g.label: g for g in nav.GROUPS}
-    assert by["Radnice"].href == "/usneseni"
+    assert by["Radnice"].href == "/uredni-deska"
     assert by["Finance"].href == "/rozpocet"            # nothing live yet: the first page
     assert by["Veřejný prostor"].href == "/blokove-cisteni"
     assert nav.SOON == {"rozpocet", "smlouvy", "uzavirky", "ankety"}

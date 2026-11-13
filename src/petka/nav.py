@@ -38,9 +38,9 @@ class Group:
 
 GROUPS = [
     Group("Radnice", [
+        Item("Úřední deska", "/uredni-deska", "Co úřad právě vyvěsil?", "uredni-deska"),
         Item("Usnesení", "/usneseni", "Co se rozhodlo a kdo jak hlasoval?", "usneseni"),
         Item("Zastupitelé", "/usneseni/clenove", "Kdo obvod vede a jak hlasuje?"),
-        Item("Úřední deska", "/uredni-deska", "Co úřad právě vyvěsil?", "uredni-deska"),
     ]),
     Group("Finance", [
         Item("Rozpočet", "/rozpocet", "Kolik obvod utrácí a za co?", "rozpocet"),
