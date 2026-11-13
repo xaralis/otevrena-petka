@@ -47,7 +47,7 @@ def home(request: Request):
     names = {s.slug: s.name for s in every.values()}
     its = cq.items(obvod, cq.year_start(today))
     week = q.week_cleanings(its, cq.geometries(obvod), today)
-    marks = q.board_marks(q.place_notices(), every, today)
+    marks = q.board_marks(q.place_notices(), every, today, [f["geometry"] for f in week["lines"]["features"]])
     traffic = sorted((m for m in marks if m["traffic"]), key=lambda m: m["order"])
 
     per = ps.period("12m", today)

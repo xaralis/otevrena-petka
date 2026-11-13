@@ -236,14 +236,38 @@ def week_cleanings(its: list[dict], geoms: dict, today: dt.date) -> dict:
     return {"lines": {"type": "FeatureCollection", "features": lines}, "anchors": anchors, "rows": rows}
 
 
-def board_marks(notices: list[dict], streets: dict, today: dt.date) -> list[dict]:
+SPOTS = (0.5, 0.32, 0.68, 0.2, 0.8, 0.1, 0.9, 0.4, 0.6)
+CLEAR = 0.001         # degrees, ~70–110 m here, about a marker at the overview zoom: a mark this close to a cleaned stretch or another mark covers it
+
+
+def board_marks(notices: list[dict], streets: dict, today: dt.date, avoid: list[dict] | None = None) -> list[dict]:
     """Notices on the board that name a street of the obvod, one mark per street, on its line.
     Traffic orders show their measure's validity (gone once it ended, not yet when it starts
-    more than WEEK days ahead); the others, and orders we couldn't read, when they were posted."""
+    more than WEEK days ahead); the others, and orders we couldn't read, when they were posted.
+    A notice with a published plain-language card speaks with the card's headline, and an annex
+    shown inside another notice's card is that card: one mark and one link per card. Marks keep
+    clear of the `avoid` geometries (this week's cleaned stretches) and of each other where the
+    street allows, so each stays pointable."""
+    from shapely.geometry import Point, shape
+    from shapely.ops import unary_union
     from ..uredni_deska.measures import streets_in, subject
     from ..uredni_deska.source import KIND_LABEL
     by_name = {s.name: s for s in streets.values()}
-    out, seen, on_street = [], set(), {}
+    blocked = [unary_union([shape(g) for g in avoid])] if avoid else []
+    out, seen = [], set()
+
+    def spot(geometry: dict) -> tuple[float, float]:
+        best, far = None, -1.0
+        for at in SPOTS:
+            lng, lat = point_on(geometry, at)
+            p = Point(lng, lat)
+            d = min([g.distance(p) for g in blocked] + [p.distance(Point(m["lng"], m["lat"])) for m in out] + [9.0])
+            if d >= CLEAR:
+                return lng, lat
+            if d > far:
+                best, far = (lng, lat), d
+        return best
+
     for n in sorted(notices, key=lambda n: (n["published"] or dt.date.min, n["id"]), reverse=True):
         found = streets_in(n["title"], list(by_name))
         if not found:
@@ -252,21 +276,23 @@ def board_marks(notices: list[dict], streets: dict, today: dt.date) -> list[dict
         a, b = n.get("valid_from"), n.get("valid_to")
         if traffic and b and (b < today or (a and a > today + dt.timedelta(days=WEEK))):
             continue
-        if traffic:
+        if n.get("card"):
+            what = n["card"]
+        elif traffic:
             what = n.get("what") or "Přechodná úprava provozu"
         else:
             what = f"{KIND_LABEL.get(n['kind'], 'Úřední deska')}: {subject(n['title'], found)}"
         dated = traffic and b
         when = period(a, b) if dated else (f"vyvěšeno {dm(n['published'])}" if n["published"] else "")
+        link = n.get("owner") or n["id"]      # the card's notice where this one is its annex
         for name in found:
             key = (name, what, when)
-            if key in seen:          # an annex or the same order posted twice
+            if key in seen or (link, name) in seen:   # an annex or the same order posted twice
                 continue
-            seen.add(key)
-            k = on_street[name] = on_street.get(name, -1) + 1
-            lng, lat = point_on(by_name[name].geometry, (0.5, 0.32, 0.68, 0.2, 0.8)[k % 5])
+            seen.update({key, (link, name)})
+            lng, lat = spot(by_name[name].geometry)
             label = (f"Dopravní omezení: {name}, {what}" if traffic else f"{name}, {what}") + (f", {when}" if when else "")
-            out.append({"id": f"m{len(out)}", "nid": n["id"], "kind": n["kind"], "traffic": traffic,
+            out.append({"id": f"m{len(out)}", "nid": link, "kind": n["kind"], "traffic": traffic,
                         "street": name, "what": what, "when": when, "label": label,
                         "box": short_until(a, b, today) if dated else when, "lng": lng, "lat": lat,
                         "order": (a > today, a if a and a > today else b) if dated else (True, dt.date.max)})
@@ -278,6 +304,9 @@ def place_notices() -> list[dict]:
     from ..uredni_deska.measures import PLACE_KINDS
     with db.pool().connection() as conn:
         return conn.execute(
-            """SELECT n.id, n.title, n.kind, n.published, m.valid_from, m.valid_to, m.what
+            """SELECT n.id, n.title, n.kind, n.published, m.valid_from, m.valid_to, m.what,
+                      COALESCE(d.data->>'headline', o.data->>'headline') AS card, o.notice_id AS owner
                FROM notices n LEFT JOIN notice_measures m ON m.notice_id = n.id
+               LEFT JOIN notice_digests d ON d.notice_id = n.id AND d.status = 'published'
+               LEFT JOIN notice_digests o ON o.status = 'published' AND n.id = ANY(o.members)
                WHERE n.is_mo5 AND n.removed_at IS NULL AND n.kind = ANY(%s)""", (list(PLACE_KINDS),)).fetchall()

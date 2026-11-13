@@ -195,11 +195,29 @@ def test_board_marks():
     assert (wol["what"], wol["when"], wol["traffic"]) == ("Stavby a řízení: změna rozhodnutí, povolení stavby, chodníky",
                                                          "vyvěšeno 10.\u00a011.", False)
     assert (jr["what"], jr["when"]) == ("Přechodná úprava provozu", "vyvěšeno 3.\u00a011.")
-    assert (lex["lng"], lex["lat"]) == (15.759, 50.026)        # the middle of the street's line
+    from shapely.geometry import Point, shape
+    on = shape(next(s for s in STREETS if s.name == "Lexova").geometry)
+    assert on.distance(Point(lex["lng"], lex["lat"])) < 1e-9                   # on the street's line
+    assert Point(lex["lng"], lex["lat"]).distance(Point(wol["lng"], wol["lat"])) >= q.CLEAR   # clear of the other mark
     # two marks on one street don't sit on each other
     two = q.board_marks([NOTICES[0], notice("n7", OOP + "Lexova", a=TODAY, b=TODAY, what="Jiné")],
                         {s.slug: s for s in STREETS}, TODAY)
     assert two[0]["lat"] != two[1]["lat"]
+
+
+def test_board_marks_keep_clear_of_cleaning():
+    lex = next(s for s in STREETS if s.name == "Lexova")
+    free = q.board_marks([NOTICES[0]], {lex.slug: lex}, TODAY)[0]
+    moved = q.board_marks([NOTICES[0]], {lex.slug: lex}, TODAY, avoid=[{"type": "Point", "coordinates": [free["lng"], free["lat"]]}])[0]
+    assert (moved["lng"], moved["lat"]) != (free["lng"], free["lat"])
+
+
+def test_board_marks_speak_with_the_card():
+    card = dict(NOTICES[0], card="Stezka v Lexově bude měsíc zavřená")
+    annex = dict(notice("n8", OOP + "Lexova", a=D(2026, 11, 10), b=D(2026, 11, 20), what="Zábrany"), owner="n1",
+                 card="Stezka v Lexově bude měsíc zavřená")
+    marks = q.board_marks([card, annex], {s.slug: s for s in STREETS}, TODAY)
+    assert [(m["nid"], m["what"]) for m in marks] == [("n1", "Stezka v Lexově bude měsíc zavřená")]   # one mark, one link
 
 
 @pytest.fixture
