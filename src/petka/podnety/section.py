@@ -20,6 +20,12 @@ def _commands():
     return COMMANDS
 
 
+def _catalog() -> dict:
+    from ..obvody import DEFAULT
+    from . import queries
+    return {"pd_cat": queries.summary(DEFAULT.id)}
+
+
 SECTION = Section(
     "podnety", "Podněty", "Podněty občanů",
     "Co lidé hlásí a jak se to řeší?", "live", listed=False,
@@ -27,5 +33,5 @@ SECTION = Section(
               "Kolik podnětů k zeleni úřad vyřešil?",
               "Jak dlouho trvá vyřízení podnětu?"],
     sources=[("Dej Tip – mapa podnětů v Pardubicích", "https://amg.dejtip.eu/pardubice/")],
-    routers=_routers, mcp=_mcp, commands=_commands,
+    routers=_routers, mcp=_mcp, commands=_commands, catalog=_catalog,
 )

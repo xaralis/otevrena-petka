@@ -29,6 +29,29 @@
 <p>Původní zdroj jsou otevřená data města ve formátu <a href="{{ deska_source.OFN }}">OFN Úřední deska</a>: {% for b in deska_source.BOARDS %}<a href="{{ b.url }}">{{ b.name|replace('Úřední deska ', 'deska ') }}</a>{{ ' a ' if not loop.last }}{% endfor %} (deska magistrátu je i v <a href="{{ deska_source.NKOD }}">Národním katalogu otevřených dat</a>).</p>
 <p>Co právě visí a týká se Pětky, můžete odebírat jako <a href="/radnice/uredni-deska/rss.xml">RSS</a>: polidštěné znění tam, kde ho máme, jinak úřední. Jen úřední názvy: <a href="/radnice/uredni-deska/rss.xml?zneni=uredni">RSS v úředním znění</a>. U doručení písemností kanál jméno adresáta nikdy neuvádí.</p>
 
+<h2 id="blokove-cisteni">Blokové čištění ulic</h2>
+<p>Harmonogram blokového čištění Služeb města Pardubic pro obvod: {{ cl_cat.dates }} termínů letos na {{ cl_cat.places }} místech{% if cl_cat.checked %}, naposledy staženo {{ cl_cat.checked|d }}{% endif %}. Každé místo s termíny a polohou na mapě. Poloha je odvozená z textu harmonogramu, závazný je vždy text.</p>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
+  <tbody>
+    <tr><td><b>Místa a termíny</b></td><td>Jedno místo harmonogramu s ulicí, textem, termíny a polohou (GeoJSON), letošní rok; filtr podle ulic <code>?ulice=wolkerova,lexova</code> a od data <code>?od=RRRR-MM-DD</code>.</td>
+        <td class="nowrap"><a href="/api/v1/cisteni">GeoJSON</a></td></tr>
+    <tr><td><b>Kalendář</b></td><td>Termíny vybraných ulic do kalendáře v telefonu; odběr se sám aktualizuje, když Služby města termín změní.</td>
+        <td class="nowrap"><a href="/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova">ICS</a></td></tr>
+  </tbody>
+</table>
+
+<h2 id="zavady">Závady (podněty z Dej Tipu)</h2>
+<p>Podněty, které lidé v obvodu poslali přes aplikaci Dej Tip: {{ pd_cat.total }} od {{ pd_cat.first|d if pd_cat.first }}{% if pd_cat.checked %}, naposledy staženo {{ pd_cat.checked|d }}{% endif %}. Kategorie, stav podle Dej Tipu, data a poloha; místo jen jako ulice bez čísla domu. Popis od občana má skryté telefony a e-maily, fotka je jen tam, kde ji autor zveřejnil. Poznámky úřadu neukládáme.</p>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
+  <tbody>
+    <tr><td><b>Podněty</b></td><td>Jeden podnět s kategorií, stavem, daty nahlášení a odpovědi úřadu, polohou, popisem a odkazem na Dej Tip (GeoJSON, nejnovější první); filtry <code>?kategorie=</code>, <code>?stav=</code>, <code>?od=</code>, <code>?do=</code>, <code>?near=lat,lng&amp;r=500</code>.</td>
+        <td class="nowrap"><a href="/api/v1/podnety">GeoJSON</a></td></tr>
+  </tbody>
+</table>
+<p>Původní zdroj: <a href="https://amg.dejtip.eu/pardubice/">mapa Dej Tipu statutárního města Pardubice</a>.</p>
+
 <h2>Ve výstavbě</h2>
 <p>{% for s in SECTIONS if s.status == 'planned' %}<a href="{{ s.path }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>
 
@@ -37,7 +60,9 @@
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
 curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'
-curl '{{ base }}/api/v1/uredni-deska/notices?q=rozpočet&amp;active=false'</pre>
+curl '{{ base }}/api/v1/uredni-deska/notices?q=rozpočet&amp;active=false'
+curl '{{ base }}/api/v1/cisteni?ulice=wolkerova'
+curl '{{ base }}/api/v1/podnety?stav=1,2&amp;near=50.0254,15.7553&amp;r=300'</pre>
 
 <h2 id="mcp">AI asistenti (MCP)</h2>
 <p>Jeden MCP server pro celý portál, bez přihlášení a jen pro čtení. V Claude.ai ho přidáte v Nastavení mezi konektory jako vlastní konektor s adresou:</p>

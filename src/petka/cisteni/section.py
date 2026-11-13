@@ -25,6 +25,14 @@ def _template():
     return words.TEMPLATE_GLOBALS, words.TEMPLATE_FILTERS
 
 
+def _catalog() -> dict:
+    import datetime as dt
+    from ..obvody import DEFAULT
+    from . import queries
+    its = queries.items(DEFAULT.id, queries.year_start(dt.date.today()))
+    return {"cl_cat": {"dates": len(its), "places": len({i["key"] for i in its}), "checked": queries.checked()}}
+
+
 SECTION = Section(
     "blokove-cisteni", "Čištění ulic", "Čištění ulic",
     "Kdy proběhne čištění mojí ulice?", "live", listed=False,
@@ -32,5 +40,5 @@ SECTION = Section(
               "Kde se čistí příští týden?",
               "Jak dostanu termíny čištění do kalendáře?"],
     sources=[("Služby města Pardubic – čištění komunikací", "https://smp-pce.cz/udrzba-komunikaci/cisteni-komunikaci")],
-    routers=_routers, mcp=_mcp, commands=_commands, template=_template,
+    routers=_routers, mcp=_mcp, commands=_commands, template=_template, catalog=_catalog,
 )
