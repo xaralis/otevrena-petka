@@ -1569,16 +1569,16 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 /* „Aktuálně“ */
 .ul-akt { margin-top: 3rem; }
 .ul-akt > h2 { margin: 0 0 1rem; }
-/* the map and its list in one frame: the list as tall as the map, scrolling inside; the legend under both */
-.ul-box { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: 540px auto; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+/* the map and its list side by side, joined by the legend under both: the list as tall as the map, scrolling inside */
+.ul-box { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); grid-template-rows: 540px auto; column-gap: 1.2rem; }
 .ul-akt-map { min-height: 0; }
 .ul-mapw { position: relative; height: 100%; }
-.ul-map { height: 100%; width: 100%; margin: 0; border: 0; border-radius: 0; }
-.ul-akt-list { display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--rule); }
+.ul-map { height: 100%; width: 100%; margin: 0; border: 0; border-radius: 3px 3px 0 0; }
+.ul-akt-list { display: flex; flex-direction: column; min-height: 0; }
 .ul-akt-list .ul-rows { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
-.ul-akt-list .pd-rows-more { margin: 0; padding: .7rem .9rem; border-top: 1px solid var(--off); }
+.ul-akt-list .pd-rows-more { margin: .8rem 0 .9rem; align-self: flex-start; }
 .ul-akt-list > .cl-muted { margin: 0; padding: 1rem; }
-.ul-box > .ul-lg { grid-column: 1 / -1; margin: 0; padding: .6rem .9rem; background: var(--grey); border-top: 1px solid var(--rule); }
+.ul-box > .ul-lg { grid-column: 1 / -1; margin: 0; padding: .6rem .9rem; background: var(--grey); border-radius: 0 0 3px 3px; }   /* the one thing joining map and list */
 .ul-box .ul-rows li > a, .ul-box .ul-rows li > span { grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .5rem; padding-right: 2.8rem; }   /* the narrow column: a short date, every status in one line with the pins */
 .ul-sheet:empty { display: none; }
 .ul-lg { gap: .35rem 1.2rem; }
