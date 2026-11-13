@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Jak funguje Otevřená Pětka</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap">
+<style>
+/* Layout: red band, then a four-step pipeline overview, then one row per section (source → processing → outputs), then shared pieces */
+:root {
+  --red: #de091c; --red-ink: #b00716; --ink: #191c1f; --ink-2: #3b3f44; --muted: #5f6368;
+  --grey: #e8ecf0; --off: #d6dbe0; --bg: #ffffff; --card: #ffffff; --on-red: #ffffff; --warn: #965200;
+  --display: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --red: #e8303f; --red-ink: #ff7a84; --ink: #eef1f4; --ink-2: #c9cfd6; --muted: #a3aab2;
+  --grey: #23282d; --off: #3a4047; --bg: #15181b; --card: #1c2024; --warn: #e3a35a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --red: #e8303f; --red-ink: #ff7a84; --ink: #eef1f4; --ink-2: #c9cfd6; --muted: #a3aab2;
+  --grey: #23282d; --off: #3a4047; --bg: #15181b; --card: #1c2024; --warn: #e3a35a; color-scheme: dark }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--display); font-size: 16px; line-height: 1.5; }
+a { color: var(--red-ink); text-underline-offset: .18em; }
+code { font-size: .88em; background: var(--grey); padding: .05rem .3rem; border-radius: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; }
+.band { background: var(--red); color: var(--on-red); padding-block: 2.2rem 2.4rem; }
+.band h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; font-stretch: 85%; letter-spacing: -.02em; line-height: 1; text-wrap: balance; }
+.band p { margin: .8rem 0 0; max-width: 64ch; font-size: 1.1rem; }
+main { padding-block: 1rem 3rem; }
+h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 88%; margin: 2.6rem 0 .4rem; text-wrap: balance; }
+.lead { margin: 0 0 1.2rem; color: var(--ink-2); max-width: 70ch; }
+
+/* the four steps */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.step { border: 2px solid var(--ink); border-radius: 3px; padding: .8rem .9rem; background: var(--card); min-width: 0; }
+.step h3 { margin: 0 0 .3rem; font-size: 1.05rem; display: flex; gap: .5rem; align-items: baseline; }
+.n { display: inline-grid; place-items: center; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--ink); color: var(--bg); font-size: .85rem; font-weight: 800; }
+.step p { margin: 0; font-size: .92rem; color: var(--ink-2); }
+
+/* sections */
+.sec { display: grid; grid-template-columns: 13rem minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0 1.4rem; padding: 1.1rem 0; border-bottom: 1px solid var(--off); }
+.sec-head { grid-row: span 1; }
+.sec-head b { display: block; font-size: 1.15rem; font-weight: 800; font-stretch: 90%; }
+.sec-head span { display: block; font-size: .85rem; color: var(--muted); margin-top: .15rem; }
+.cell h4 { margin: 0 0 .2rem; font-size: .8rem; font-weight: 700; color: var(--muted); }
+.cell p, .cell ul { margin: 0; font-size: .93rem; color: var(--ink-2); }
+.cell ul { padding: 0; list-style: none; display: grid; gap: .2rem; }
+.cols-h { display: grid; grid-template-columns: 13rem minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0 1.4rem; padding-bottom: .5rem; border-bottom: 2px solid var(--ink); font-weight: 700; font-size: .95rem; }
+.ai { color: var(--warn); font-weight: 650; }
+.who { font-weight: 650; color: var(--ink); }
+.gap { color: var(--red-ink); font-weight: 650; }
+
+/* shared pieces */
+.shared { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2rem; }
+.shared div { padding: .65rem 0; border-bottom: 1px solid var(--off); }
+.shared dt { font-weight: 700; }
+.shared dd { margin: .15rem 0 0; color: var(--ink-2); font-size: .95rem; }
+.data { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem; }
+.data h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
+.data ul { margin: 0; padding: 0; list-style: none; }
+.data li { padding: .45rem 0; border-bottom: 1px solid var(--off); font-size: .95rem; color: var(--ink-2); }
+.data .no h3 { color: var(--red-ink); }
+.note { margin-top: 2.6rem; font-size: .88rem; color: var(--muted); max-width: 75ch; }
+
+@media (max-width: 900px) {
+  .steps, .shared, .data { grid-template-columns: minmax(0, 1fr); }
+  .cols-h { display: none; }
+  .sec { grid-template-columns: minmax(0, 1fr); gap: .7rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="band"><div class="wrap">
+  <h1>Jak funguje Otevřená Pětka</h1>
+  <p>Portál bere veřejné dokumenty a data z různých městských webů, zpracuje je a ukazuje lidskou řečí, s odkazem na originál. Tady je, odkud co bereme, co s tím děláme a kde to pak najdete.</p>
+</div></header>
+
+<main class="wrap">
+  <h2>Ve čtyřech krocích</h2>
+  <p class="lead">Každá část portálu (sekce) má stejný postup. Liší se jen zdroj a to, kolik práce dá převod do srozumitelné podoby.</p>
+  <div class="steps">
+    <section class="step"><h3><span class="n">1</span>Stažení</h3><p>Pravidelná úloha stáhne zdroj: PDF zápisů, export úřední desky, Excel s harmonogramem, data Dej Tipu nebo rozpočtu.</p></section>
+    <section class="step"><h3><span class="n">2</span>Zpracování</h3><p>Pravidla vytáhnou údaje, přiloží je na mapu ulic z RÚIAN a zkontrolují součty. AI pomáhá jen tam, kde je to označené.</p></section>
+    <section class="step"><h3><span class="n">3</span>Uložení</h3><p>Výsledek jde do databáze. Zdrojem pravdy jsou ale soubory v gitu, databázi jde kdykoli postavit znovu.</p></section>
+    <section class="step"><h3><span class="n">4</span>Výstupy</h3><p>Webové stránky, mapy, kalendáře, stažitelná data, API a přístup pro AI asistenty (MCP).</p></section>
+  </div>
+
+  <h2>Sekce</h2>
+  <p class="lead">U každé sekce: odkud data jsou a jak často se stahují, co s nimi děláme a kde se objeví.</p>
+  <div class="cols-h" aria-hidden="true"><span>Sekce</span><span>Zdroj</span><span>Zpracování</span><span>Výstupy</span></div>
+
+  <article class="sec">
+    <div class="sec-head"><b>Usnesení</b><span>v provozu</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>PDF zápisů zastupitelstva a rady na pardubice.eu, od roku 2018. Spouští se ručně po zveřejnění nového zápisu.</p></div>
+    <div class="cell"><h4>Zpracování</h4><ul>
+      <li>Text z PDF; sken bez textu přepíše <span class="ai">AI</span>.</li>
+      <li><span class="ai">AI</span> jen ukáže, kde v zápisu je které usnesení. Znění se bere doslova z PDF.</li>
+      <li>Pravidla přepočítají hlasování a výsledek podle kvóra. Nesoulad jde k ruční kontrole.</li>
+      <li><span class="ai">AI</span> doplní titulek, shrnutí, témata a místa. Na webu jsou označené jako odvozené.</li>
+      <li>Místa a pozemky se přiloží na mapu (RÚIAN, katastr).</li>
+    </ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Vyhledávání (fulltext a podle významu), mapa, jednání, zastupitelé a jejich hlasování</li><li>Archiv PDF, RSS, CSV, JSON, GeoJSON, API, MCP</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Úřední deska</b><span>v provozu</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Exporty úřední desky MO V a magistrátu v otevřeném formátu (OFN), každou hodinu.</p></div>
+    <div class="cell"><h4>Zpracování</h4><ul>
+      <li>Oznámení se zařadí do 15 druhů podle názvu. Z magistrátní desky jen ta, která se týkají obvodu.</li>
+      <li>Z PDF dopravních oznámení pravidla přečtou platnost, důvod a dopravní značky.</li>
+      <li>Polidštěné karty: <span class="ai">AI</span> napíše návrh, silnější model ho oznámkuje (semafor). „Spolehlivé“ vyjdou samy, ostatní <span class="who">schvaluje starosta</span>.</li>
+    </ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Deska s polidštěnými kartami, detail oznámení</li><li>Mapa Aktuálně a stránky ulic</li><li>RSS, CSV, JSON, API, MCP</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Blokové čištění</b><span>v provozu, zatím mimo menu</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Excel s harmonogramem Služeb města Pardubic. <span class="gap">Pravidelné stahování zatím není nastavené.</span></p></div>
+    <div class="cell"><h4>Zpracování</h4><ul><li>Pravidla opraví chyby v tabulce.</li><li>Popis „od ul. A k ul. B“ se přiloží na čáru ulice a ořízne na křižovatkách.</li><li>Asi pětinu míst nejde z textu umístit, ty se kreslí ručně.</li></ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Mapa a stránka každé ulice</li><li>Kalendář do telefonu (ICS), API, MCP</li><li>Mapa Aktuálně</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Závady</b><span>v provozu, zatím mimo menu</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Hlášení z Dej Tipu pro celé město, z nich ta z obvodu. Poprvé 2 roky zpět, pak posledních 120 dní. <span class="gap">Pravidelné stahování zatím není nastavené.</span></p></div>
+    <div class="cell"><h4>Zpracování</h4><ul><li>Kategorie, stav a doba vyřízení.</li><li>Ukládá se jen ulice bez čísla domu, ne komentář občana ani poznámky úředníků.</li></ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Přehled podle kategorií a stavu, mapa</li><li>Stránky ulic, API, MCP</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Rozpočet</b><span>připravujeme, zatím jen náhled</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Rozklikávací rozpočet města (GORDIC), export za MO V od roku 2018, denně v 5:41.</p></div>
+    <div class="cell"><h4>Zpracování</h4><ul><li>Rok se přepíše jen při změně, staré verze se schovávají.</li><li>Třídění podle oddílů rozpočtové skladby. Bez AI.</li></ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Neveřejný náhled: oblasti a faktury</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Ankety</b><span>v provozu, jen pro aplikaci</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Hlasy z aplikace Otevřené Pardubice.</p></div>
+    <div class="cell"><h4>Zpracování</h4><ul><li>Hlas se ukládá pod náhodný otisk instalace aplikace, nikoho neidentifikuje.</li></ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>API pro aplikaci</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Ulice a úvodní stránka</b><span>v provozu</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Ulice města z RÚIAN, do obvodu patří ty, které v něm leží alespoň zčásti (teď 66). <span class="gap">Načítá se jednorázově ručně.</span></p></div>
+    <div class="cell"><h4>Zpracování</h4><ul><li>Skládá ostatní sekce podle ulice: čištění, usnesení, závady, oznámení.</li><li>Mapa Aktuálně: čištění na 7 dní a platná omezení z desky.</li></ul></div>
+    <div class="cell"><h4>Výstupy</h4><ul><li>Úvodní stránka s vyhledáním ulice a mapou Aktuálně</li><li>Stránka každé ulice</li></ul></div>
+  </article>
+
+  <article class="sec">
+    <div class="sec-head"><b>Smlouvy a Uzavírky</b><span>připravujeme</span></div>
+    <div class="cell"><h4>Zdroj</h4><p>Registr smluv a Hlídač státu. Uzavírky z NDIC (licence schválená, posílají data na naši adresu).</p></div>
+    <div class="cell"><h4>Zpracování</h4><p>Zatím nic.</p></div>
+    <div class="cell"><h4>Výstupy</h4><p>Stránka „připravujeme“ s odkazy na zdroje.</p></div>
+  </article>
+
+  <h2>Společné části</h2>
+  <dl class="shared">
+    <div><dt>Úlohy</dt><dd>Každá sekce má své příkazy pro stažení a zpracování. Selhání jedné části nezastaví ostatní a ozve se jedno upozornění v monitoringu chyb.</dd></div>
+    <div><dt>Databáze</dt><dd>Postgres. Je odvozená: zdrojem pravdy jsou zpracovaná data v gitu, jednou týdně se z provozu stáhnou zpět jako otevřená data.</dd></div>
+    <div><dt>Mapy</dt><dd>Vlastní mapový podklad Pardubic z OpenStreetMap, uložený u nás. Nic se nenačítá od třetích stran, žádné cookies ani analytika.</dd></div>
+    <div><dt>Více obvodů</dt><dd>Jeden portál pro víc obvodů, obvod se pozná podle adresy webu. Zatím jen Pardubice V, zájem má MO IV.</dd></div>
+    <div><dt>AI</dt><dd>Model Claude (Anthropic) pro čtení zápisů, shrnutí usnesení a návrhy karet desky. Vyhledávání podle významu běží na vlastním serveru (model bge-m3).</dd></div>
+    <div><dt>Provoz</dt><dd>Domácí server (Kubernetes), nové verze staví GitHub Actions, nasazuje se přes Flux po schválení.</dd></div>
+    <div><dt>Pro AI asistenty</dt><dd>Veřejný server MCP jen pro čtení, bez přihlášení. Používá ho i bot v koaličním chatu.</dd></div>
+    <div><dt>Další zdroje za běhu</dt><dd>ČÚZK (RÚIAN, ortofoto), fotky ulic z Panoramaxu, značky z Wikimedia Commons.</dd></div>
+  </dl>
+
+  <h2>Osobní údaje</h2>
+  <div class="data">
+    <section><h3>Ukládáme</h3><ul>
+      <li>Veřejná rozhodnutí a hlasování zastupitelů</li>
+      <li>Oznámení desky: název, druh, data, odkazy na originál</li>
+      <li>U závad kategorii, stav, data a ulici bez čísla domu</li>
+      <li>U dopravních oznámení platnost, důvod a značky</li>
+    </ul></section>
+    <section class="no"><h3>Neukládáme</h3><ul>
+      <li>Popis oznámení na desce (bývá v něm datum narození), u doručovaných písemností po sejmutí ani jméno</li>
+      <li>Žadatele, jména úředníků, telefony a e-maily</li>
+      <li>Komentáře a fotky občanů z Dej Tipu, poznámky úředníků</li>
+      <li>Nic, co by identifikovalo hlasujícího v anketě</li>
+    </ul></section>
+  </div>
+
+  <p class="note">Stav k 13. 11. 2026. Červeně jsou místa, kde chybí pravidelné stahování: blokové čištění, závady a ulice se zatím spouštějí ručně.</p>
+</main>
+</body>
+</html>
