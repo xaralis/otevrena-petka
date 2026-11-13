@@ -1,4 +1,4 @@
-"""The /podnety page: outcomes (the forwarded rule), periods, buckets, medians, the month series,
+"""The /verejny-prostor/zavady page: outcomes (the forwarded rule), periods, buckets, medians, the month series,
 the grid map and the routes. Rows are made up; the page's queries are replaced, except in the
 database test, which skips without one."""
 
@@ -195,21 +195,21 @@ def open_detail(html: str) -> list[str]:
 
 @pytest.mark.parametrize("detail", ["mesice", "vyreseno", "ceka", "odpoved"])
 def test_each_detail_is_rendered_open(page, detail):
-    html = page(f"/podnety?detail={detail}")
+    html = page(f"/verejny-prostor/zavady?detail={detail}")
     assert open_detail(html) == [detail]
     assert html.count('aria-expanded="true"') == 1
     assert f'data-pd-tile="{detail}" aria-controls="kpi-panel" aria-expanded="true"' in html
 
 
 def test_default_and_closed(page):
-    assert open_detail(page("/podnety")) == ["ceka"]
-    assert open_detail(page("/podnety?detail=nesmysl")) == ["ceka"]
-    html = page("/podnety?detail=zadny")
+    assert open_detail(page("/verejny-prostor/zavady")) == ["ceka"]
+    assert open_detail(page("/verejny-prostor/zavady?detail=nesmysl")) == ["ceka"]
+    html = page("/verejny-prostor/zavady?detail=zadny")
     assert open_detail(html) == [] and 'aria-expanded="true"' not in html
 
 
 def test_page_content(page):
-    html = page("/podnety")
+    html = page("/verejny-prostor/zavady")
     assert page.seen["obvod"] == "mo5" and page.seen["start"] == dt.date(2025, 11, 12)
     m = main(html)
     assert "Co lidé hlásí a jak se to řeší?" in html and "Nahlásit závadu přes Dej Tip" in html
@@ -225,30 +225,30 @@ def test_page_content(page):
 
 
 def test_no_middle_dot_anywhere_in_the_page(page):
-    for path in ("/podnety", "/podnety?detail=mesice", "/podnety?detail=odpoved", "/podnety?obdobi=2025"):
+    for path in ("/verejny-prostor/zavady", "/verejny-prostor/zavady?detail=mesice", "/verejny-prostor/zavady?detail=odpoved", "/verejny-prostor/zavady?obdobi=2025"):
         assert "·" not in main(page(path))
     assert "·" not in open(web.__file__.replace("podnety/web.py", "web/templates/podnety/prehled.html")).read()
     assert "·" not in open(web.__file__.replace("podnety/web.py", "web/static/podnety.js")).read()
 
 
 def test_periods_and_links(page):
-    page("/podnety?obdobi=2025")
+    page("/verejny-prostor/zavady?obdobi=2025")
     assert page.seen["start"] == dt.date(2025, 1, 1) and page.seen["end"] == dt.date(2026, 1, 1)
-    html = page("/podnety?obdobi=2026&detail=mesice")
+    html = page("/verejny-prostor/zavady?obdobi=2026&detail=mesice")
     assert page.seen["end"] == dt.date(2026, 11, 13)
-    assert 'href="/podnety?obdobi=2026&amp;detail=vyreseno#kpi"' in html
-    assert 'href="/podnety?obdobi=2026&amp;detail=zadny#kpi"' in html          # the open tile closes
-    assert '<a href="/podnety?detail=mesice"><span class="pd-d">Posledních 12 měsíců' in html
-    assert 'href="/podnety?obdobi=2026&amp;detail=mesice" aria-current="page"' in html
+    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=vyreseno#kpi"' in html
+    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=zadny#kpi"' in html          # the open tile closes
+    assert '<a href="/verejny-prostor/zavady?detail=mesice"><span class="pd-d">Posledních 12 měsíců' in html
+    assert 'href="/verejny-prostor/zavady?obdobi=2026&amp;detail=mesice" aria-current="page"' in html
     assert "podnětů v roce 2026" in html
-    html = page("/podnety?obdobi=2026&kategorie=20")
+    html = page("/verejny-prostor/zavady?obdobi=2026&kategorie=20")
     assert "Na mapě jen „Pískoviště, hřiště, sportoviště“" in html
-    assert web.link("12m") == "/podnety" and web.link("2025", detail="", kategorie=3) == "/podnety?obdobi=2025&kategorie=3"
+    assert web.link("12m") == "/verejny-prostor/zavady" and web.link("2025", detail="", kategorie=3) == "/verejny-prostor/zavady?obdobi=2025&kategorie=3"
 
 
 def test_empty_period(page, monkeypatch):
     monkeypatch.setattr(queries, "period_rows", lambda *a: [])
-    assert "žádné podněty nemáme" in page("/podnety?obdobi=2026")
+    assert "žádné podněty nemáme" in page("/verejny-prostor/zavady?obdobi=2026")
 
 
 def test_db_queries():

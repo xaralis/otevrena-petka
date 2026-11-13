@@ -94,7 +94,7 @@
         box.append(head);
         items.slice(0, 8).forEach((r) => {
           const a = document.createElement("a");
-          a.href = "/usneseni/" + r.uid;
+          a.href = "/radnice/usneseni/" + r.uid;
           const n = document.createElement("b"); n.textContent = r.number + " ";
           a.append(n, document.createTextNode(r.title || ""));
           const d = document.createElement("small");

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_portal.html" import hero %}
 {% block title %}{{ m.name }}: jak hlasoval{% endblock %}
-{% block hero %}{{ hero(m.name, [("Zastupitelé", "/usneseni/clenove")], (m.terms|map(attribute="list")|first), kind='section') }}{% endblock %}
+{% block hero %}{{ hero(m.name, [("Zastupitelé", "/radnice/zastupitele")], (m.terms|map(attribute="list")|first), kind='section') }}{% endblock %}
 {% block main %}
 <div class="detail">
   <div class="detail-main">
@@ -17,7 +17,7 @@
       {% for v in votes %}
       <tr>
         <td class="nowrap" data-label="">{{ v.date|d }}</td>
-        <td>{% if v.uid %}<a href="/usneseni/{{ v.uid }}"><span class="no no-{{ v.status }}">{{ v.number }}</span> {{ v.title or "" }}</a>{% else %}{{ (v.subject or 'hlasování bez čísla')|capitalize }}{% endif %}{% if v.part %}<br><small class="muted">{{ v.part }}</small>{% endif %}</td>
+        <td>{% if v.uid %}<a href="/radnice/usneseni/{{ v.uid }}"><span class="no no-{{ v.status }}">{{ v.number }}</span> {{ v.title or "" }}</a>{% else %}{{ (v.subject or 'hlasování bez čísla')|capitalize }}{% endif %}{% if v.part %}<br><small class="muted">{{ v.part }}</small>{% endif %}</td>
         <td data-label="Hlasoval"><span class="choice c-{{ v.choice }}{{ ' inferred' if v.provenance == 'inferred' }}"{% if v.provenance == 'inferred' %} title="dopočítáno z prezence a součtů"{% endif %}>{{ CHOICE[v.choice] }}</span></td>
         <td class="nowrap" data-label="Dopadlo">{{ 'prošlo' if v.outcome == 'prijato' else ('neprošlo' if v.outcome == 'neprijato' else 'nejasné') }} <small class="muted">({{ v.n_pro }} pro, {{ v.n_proti }} proti)</small></td>
       </tr>
@@ -43,7 +43,7 @@
     </div>
     {% endfor %}
     <p class="legend att-legend"><span><i class="a-present"></i>přítomen</span><span><i class="a-excused"></i>omluven</span><span><i class="a-absent"></i>chyběl</span></p>
-    {% if presence %}<p class="note"><a href="/usneseni/clenove/ucast?obdobi={{ presence[0].term }}">Srovnání se všemi zastupiteli</a></p>{% endif %}
+    {% if presence %}<p class="note"><a href="/radnice/zastupitele/ucast?obdobi={{ presence[0].term }}">Srovnání se všemi zastupiteli</a></p>{% endif %}
   </aside>
 </div>
 {% endblock %}

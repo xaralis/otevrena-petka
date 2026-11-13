@@ -5,7 +5,7 @@ waiting for a person, not in git; published cards, in git and seeded into the cl
 
 Workflow (docs/deska-pilot.md): `deska-auto` writes a card for each new notice that concerns MO V,
 an independent Claude run scores it against the sources (score.py) and a good card goes out; the
-rest wait for a person at /uredni-deska/navrhy (`deska-publish`, `deska-reject`).
+rest wait for a person at /radnice/uredni-deska/navrhy (`deska-publish`, `deska-reject`).
 Text comes from Claude (petka/llm.py, `api` or `claude-cli`); everything visual is
 deterministic: places via RÚIAN (usneseni/geo.py), an orthophoto crop from ČÚZK with the
 place drawn on it, a crop of the office's own drawing from the PDF, sign pictures by code.

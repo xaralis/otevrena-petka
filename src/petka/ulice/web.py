@@ -55,11 +55,11 @@ def home(request: Request):
     ustats, dstats = uq.stats(), dq.stats()
     # the right side of each link row: one number and what it counts, the same shape everywhere
     info = {
-        "/usneseni": (q.thousands(ustats["resolutions"]), "usnesení"),
-        "/usneseni/clenove": ("15", "zastupitelů"),
-        "/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
-        "/blokove-cisteni": (q.thousands(len(its)), "termínů letos"),
-        "/podnety": (q.thousands(s["n"]), "hlášení za rok"),
+        "/radnice/usneseni": (q.thousands(ustats["resolutions"]), "usnesení"),
+        "/radnice/zastupitele": ("15", "zastupitelů"),
+        "/radnice/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
+        "/verejny-prostor/blokove-cisteni": (q.thousands(len(its)), "termínů letos"),
+        "/verejny-prostor/zavady": (q.thousands(s["n"]), "hlášení za rok"),
     }
     g = {x.label: x for x in nav.GROUPS}
     areas = [("Radnice", g["Radnice"].items), ("Veřejný prostor", g["Veřejný prostor"].items),
@@ -108,11 +108,11 @@ def street(request: Request, slug: str):
     items = []
     if cl.next:
         items.append({"date": cl.next, "source": "Blokové čištění", "next": True, "text": q.cleaning_text(cl),
-                      "href": f"/blokove-cisteni/ulice/{slug}"})
+                      "href": f"/verejny-prostor/blokove-cisteni/ulice/{slug}"})
     items += [{"date": i["date"], "source": "Blokové čištění", "text": i["short"] or i["text"],
-               "href": f"/blokove-cisteni/ulice/{slug}"} for i in cl.past[:3]]
+               "href": f"/verejny-prostor/blokove-cisteni/ulice/{slug}"} for i in cl.past[:3]]
     items += [q.resolution_item(r) for r in res]
-    items += [q.report_item(r, "/podnety") | {"text": r["category"]} for r in reps[:4]]
+    items += [q.report_item(r, "/verejny-prostor/zavady") | {"text": r["category"]} for r in reps[:4]]
 
     geoms = cq.geometries(obvod)
     feats = [{"type": "Feature", "geometry": s.geometry, "properties": {"kind": "street"}}]
@@ -130,8 +130,8 @@ def street(request: Request, slug: str):
     return tpl.TemplateResponse(request, "ulice/ulice.html", {
         "today": today, "s": s, "names": names, "cl": cl, "rep": q.reports(reps), "n_res": n_res,
         "last_res": res[0]["date"] if res else None, "n_notices": q.notices_posted(s.name),
-        "q_url": "/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
-        "deska_url": "/uredni-deska?q=" + quote_plus(s.name), "in_harm": bool(its),
+        "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
+        "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "in_harm": bool(its),
         "feed": q.feed(items, q.FEED_STREET), "around": st.around(slug, every),
         "geojson": {"type": "FeatureCollection", "features": feats + cells},
         "has_next": "next" in whens, "has_later": "later" in whens, "has_past": "past" in whens,

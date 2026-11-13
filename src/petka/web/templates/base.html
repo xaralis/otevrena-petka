@@ -11,7 +11,7 @@
 <link rel="icon" href="{{ asset('icons/favicon.svg') }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="alternate" type="application/atom+xml" title="Nová usnesení MO Pardubice V" href="/usneseni/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Nová usnesení MO Pardubice V" href="/radnice/usneseni/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ SITE_NAME }}">
 <meta property="og:locale" content="cs_CZ">
@@ -28,7 +28,7 @@
 {% block head %}{% endblock %}
 </head>
 {% set p = request.url.path %}
-{% set in_usneseni = p.startswith('/usneseni') and not p.startswith('/usneseni/clenove') and not error_page %}
+{% set in_usneseni = (p == '/radnice/usneseni' or p.startswith('/radnice/usneseni/')) and not error_page %}
 {% set cur_g, cur_i = nav_current(p) if not error_page else (none, none) %}
 <body class="{{ 'in-section' if in_usneseni }}">
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
@@ -70,10 +70,10 @@
 <div class="sub-band">
   <div class="wrap">
     <nav class="sub-nav" aria-label="Usnesení">
-      <a href="/usneseni" {% if not p.startswith('/usneseni/jednani') and not p.startswith('/usneseni/metodika') and not p.startswith('/usneseni/mapa') %}aria-current="page"{% endif %}>Usnesení</a>
-      <a href="/usneseni/mapa" {% if p.startswith('/usneseni/mapa') %}aria-current="page"{% endif %}>Mapa</a>
-      <a href="/usneseni/jednani" {% if p.startswith('/usneseni/jednani') %}aria-current="page"{% endif %}>Jednání</a>
-      <a href="/usneseni/metodika" {% if p.startswith('/usneseni/metodika') %}aria-current="page"{% endif %}>Metodika</a>
+      <a href="/radnice/usneseni" {% if not p.startswith('/radnice/usneseni/jednani') and not p.startswith('/radnice/usneseni/metodika') and not p.startswith('/radnice/usneseni/mapa') %}aria-current="page"{% endif %}>Usnesení</a>
+      <a href="/radnice/usneseni/mapa" {% if p.startswith('/radnice/usneseni/mapa') %}aria-current="page"{% endif %}>Mapa</a>
+      <a href="/radnice/usneseni/jednani" {% if p.startswith('/radnice/usneseni/jednani') %}aria-current="page"{% endif %}>Jednání</a>
+      <a href="/radnice/usneseni/metodika" {% if p.startswith('/radnice/usneseni/metodika') %}aria-current="page"{% endif %}>Metodika</a>
     </nav>
   </div>
 </div>

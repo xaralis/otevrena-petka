@@ -1,6 +1,6 @@
-"""Rozpočet section, preview: pages under /rozpocet/nahled/<token> for review before launch.
+"""Rozpočet section, preview: pages under /finance/rozpocet/nahled/<token> for review before launch.
 
-The public /rozpocet stays the planned-section page. The preview is reachable only with the
+The public /finance/rozpocet stays the planned-section page. The preview is reachable only with the
 token from ROZPOCET_NAHLED_TOKEN (a secret in the cluster); a wrong or missing token is a 404,
 and every page says noindex. No link on the site leads here.
 """
@@ -15,7 +15,7 @@ from fastapi.responses import HTMLResponse
 from ..web.render import tpl
 from . import names, queries as q
 
-pages = APIRouter(prefix="/rozpocet/nahled/{token}", include_in_schema=False)
+pages = APIRouter(prefix="/finance/rozpocet/nahled/{token}", include_in_schema=False)
 
 NO_INDEX = {"X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store", "Referrer-Policy": "no-referrer"}
 PER_PAGE = 20
@@ -61,7 +61,7 @@ def _check(token: str) -> str:
     want = os.environ.get("ROZPOCET_NAHLED_TOKEN", "")
     if len(want) < 16 or not hmac.compare_digest(token, want):
         raise HTTPException(404)
-    return f"/rozpocet/nahled/{token}"
+    return f"/finance/rozpocet/nahled/{token}"
 
 
 def _year(rok: str, ys: list[int]) -> int:

@@ -15,8 +15,8 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 
 | sekce | stav | co umí |
 |---|---|---|
-| [Usnesení](https://otevrenapetka.cz/usneseni) | běží | usnesení a hlasování ZMO a RMO od roku 2018, hledání slovy i podle smyslu, hlasy zastupitelů, mapa, účast na jednáních |
-| [Úřední deska](https://otevrenapetka.cz/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
+| [Usnesení](https://otevrenapetka.cz/radnice/usneseni) | běží | usnesení a hlasování ZMO a RMO od roku 2018, hledání slovy i podle smyslu, hlasy zastupitelů, mapa, účast na jednáních |
+| [Úřední deska](https://otevrenapetka.cz/radnice/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
 | Podněty | ve výstavbě | zatím jen API a MCP: podněty z aplikace Dej Tip v obvodu a jejich stav ([docs/dejtip.md](docs/dejtip.md)) |
@@ -101,7 +101,7 @@ a volitelně `properties.note`. Ruční geometrie má přednost před automatick
 ## Otevřená data, API a MCP
 
 - **Data**: `/data` na webu. Usnesení jako CSV + JSON s
-  [Frictionless `datapackage.json`](https://otevrenapetka.cz/usneseni/data/datapackage.json),
+  [Frictionless `datapackage.json`](https://otevrenapetka.cz/radnice/usneseni/data/datapackage.json),
   místa i jako GeoJSON, úřední deska jako CSV + JSON. Formát popisuje
   [docs/otevrena-data.md](docs/otevrena-data.md), včetně doporučení pro úřad.
 - **REST API**: `/api/v1/usneseni/…` a `/api/v1/uredni-deska/…`, OpenAPI na `/api/docs`.

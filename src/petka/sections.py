@@ -18,8 +18,8 @@ SMLOUVY = Section(
     examples=["Kdo opravoval chodníky a za kolik?",
               "Které zakázky šly bez soutěže?",
               "S kým má obvod nejvíc smluv?"],
-    bridges=[("přímá zadání zakázek", "/usneseni?q=p%C5%99%C3%ADm%C3%A9+zad%C3%A1n%C3%AD"),
-             ("výběrová řízení a jejich výsledky", "/usneseni?tema=zakazky")],
+    bridges=[("přímá zadání zakázek", "/radnice/usneseni?q=p%C5%99%C3%ADm%C3%A9+zad%C3%A1n%C3%AD"),
+             ("výběrová řízení a jejich výsledky", "/radnice/usneseni?tema=zakazky")],
     sources=[("Registr smluv", "https://smlouvy.gov.cz/"),
              ("Hlídač státu", "https://www.hlidacstatu.cz/")],
 )

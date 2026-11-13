@@ -10,7 +10,7 @@
   <tbody>
   {% for r in rows %}{% set pct = (100 * r.present / r.total) if r.total else 0 %}
   <tr>
-    <td><a href="/usneseni/clenove/{{ r.id }}">{{ r.name }}</a><br><small class="muted">{{ r.list or '' }}</small></td>
+    <td><a href="/radnice/zastupitele/{{ r.id }}">{{ r.name }}</a><br><small class="muted">{{ r.list or '' }}</small></td>
     <td class="num-cell nowrap"><b>{{ pct|round|int }} %</b><br><small class="muted">{{ r.present }} z {{ r.total }}</small></td>
     <td class="rank-bar-c" aria-hidden="true"><span class="rank-bar"><i style="width: {{ pct|round(1) }}%"></i></span></td>
     <td class="nowrap">{% if r.excused %}omluven {{ r.excused }}×{% endif %}{% if r.excused and r.absent %}, {% endif %}{% if r.absent %}chyběl {{ r.absent }}×{% endif %}{% if not r.excused and not r.absent %}<span class="muted">nikdy</span>{% endif %}</td>
@@ -21,8 +21,8 @@
 {%- endmacro %}
 {% block main %}
 <nav class="switch" aria-label="Pohled">
-  <a href="/usneseni/clenove">Podle stran</a>
-  <a href="/usneseni/clenove/ucast" aria-current="page">Účast na jednáních</a>
+  <a href="/radnice/zastupitele">Podle stran</a>
+  <a href="/radnice/zastupitele/ucast" aria-current="page">Účast na jednáních</a>
 </nav>
 <p class="term-pick">Volební období: {% for t in terms %}{% if t == term %}<b aria-current="page">{{ t|replace('-', '–') }}</b>{% else %}<a href="?obdobi={{ t }}">{{ t|replace('-', '–') }}</a>{% endif %}{{ ' ' if not loop.last }}{% endfor %}</p>
 <p class="note">Podíl jednání, na kterých byl zastupitel podle prezence v zápisu přítomen, z jednání konaných v době jeho mandátu (náhradník se počítá od nástupu). Pozdní příchod nebo dřívější odchod se počítá jako účast.</p>

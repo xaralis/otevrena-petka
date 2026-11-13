@@ -61,7 +61,7 @@
     map.addLayer({ id: "ul-line-d", type: "line", source: "ul", filter: ["all", is("cleaning"), ["==", ["get", "dash"], true]],
                    layout: { "line-join": "round" },
                    paint: { "line-color": ["get", "color"], "line-width": w(0), "line-dasharray": [1.5, 1.2] } });
-    // reports by cell: radius ~ sqrt(count), like /podnety
+    // reports by cell: radius ~ sqrt(count), like /verejny-prostor/zavady
     const r = ["interpolate", ["linear"], ["zoom"], ...[[12, 3], [15, 6], [17, 10]].flatMap(([z, k]) =>
       [z, ["max", 3, ["*", k, ["sqrt", ["get", "n"]]]]])];
     map.addLayer({ id: "ul-rep", type: "circle", source: "ul", filter: is("reports"),

@@ -7,7 +7,7 @@
 {% block hero %}
 <section class="band band-section">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. {{ 'mimořádné ' if r.meeting_kind == 'mimoradne' }}jednání {{ 'zastupitelstva' if r.body == 'zmo' else 'rady' }}, {{ r.date|d }}</a>{% if r.agenda_title %} <span aria-hidden="true">/</span> bod {{ r.agenda_no }}{% endif %}</nav>
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="/radnice/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. {{ 'mimořádné ' if r.meeting_kind == 'mimoradne' }}jednání {{ 'zastupitelstva' if r.body == 'zmo' else 'rady' }}, {{ r.date|d }}</a>{% if r.agenda_title %} <span aria-hidden="true">/</span> bod {{ r.agenda_no }}{% endif %}</nav>
     <p class="no no-big no-{{ r.status }}{% if eff_full %} no-revoked{% elif eff %} no-amended{% endif %}">{{ r.number }}</p>
     <h1>{% if r.status == 'neprijato' %}Návrh: {% endif %}{{ r.title or r.agenda_title or ('Usnesení ' ~ r.number) }}</h1>
   </div>
@@ -27,8 +27,8 @@
     {% elif nparts %}
     <ul class="parts-summary b-{{ r.body }}">{% for v in r.votes if v.part %}<li><span class="ps-seats">{{ seats({'pro': v.n_pro, 'proti': v.n_proti, 'zdrzel': v.n_zdrzel, 'nehl': v.n_nehlasoval or 0, 'quorum': v.quorum, 'parts': 0}, r.body, 's', False) }}</span><span>{{ v.part }} – <b class="o-{{ v.outcome or 'none' }}">{{ 'prošlo' if v.outcome == 'prijato' else ('neprošlo' if v.outcome == 'neprijato' else 'nejasné') }}</b>{% if v.motion_text %}<small class="part-preview">{{ v.motion_text|truncate(320) }}</small>{% endif %}</span></li>{% endfor %}</ul>
     {% endif %}
-    {% for x in eff %}<p class="revoked-note">Později {{ 'zrušeno' if x.type == 'rusi' else 'změněno' }}{% if x.scope == 'cast' %} zčásti ({{ x.detail }}){% endif %} usnesením <a href="/usneseni/{{ x.uid }}">{{ x.number }}</a> ze {{ x.date|d }}.</p>{% endfor %}
-    {% for x in r.revoked_by if not x.effective %}<p class="muted">Návrh na {{ 'zrušení' if x.type == 'rusi' else 'změnu' }} (<a href="/usneseni/{{ x.uid }}">{{ x.number }}</a>, {{ x.date|d }}) neprošel, usnesení dál platí.</p>{% endfor %}
+    {% for x in eff %}<p class="revoked-note">Později {{ 'zrušeno' if x.type == 'rusi' else 'změněno' }}{% if x.scope == 'cast' %} zčásti ({{ x.detail }}){% endif %} usnesením <a href="/radnice/usneseni/{{ x.uid }}">{{ x.number }}</a> ze {{ x.date|d }}.</p>{% endfor %}
+    {% for x in r.revoked_by if not x.effective %}<p class="muted">Návrh na {{ 'zrušení' if x.type == 'rusi' else 'změnu' }} (<a href="/radnice/usneseni/{{ x.uid }}">{{ x.number }}</a>, {{ x.date|d }}) neprošel, usnesení dál platí.</p>{% endfor %}
 
     {% if r.summary %}<p class="summary"><span class="derived-mark">Strojové shrnutí:</span> {{ r.summary }}</p>{% endif %}
 
@@ -41,7 +41,7 @@
     {% endif %}
     {% if r.responsible or r.deadline %}<p class="muted small">{% if r.responsible %}Zodpovídá {{ r.responsible }}.{% endif %} {% if r.deadline %}Termín {{ r.deadline }}.{% endif %}</p>{% endif %}
     {% for x in r.revokes %}
-    <p class="muted small">{{ 'Ruší' if x.type == 'rusi' else 'Mění' }}{% if x.scope == 'cast' %} ({{ x.detail }}){% endif %} usnesení {% if x.target_uid %}<a href="/usneseni/{{ x.target_uid }}">{{ x.target_number }}</a>{% else %}{{ x.target_number }}, které je starší než tato databáze{% endif %}{% if not x.effective %}, ale samo neprošlo, takže nic neruší{% endif %}.</p>
+    <p class="muted small">{{ 'Ruší' if x.type == 'rusi' else 'Mění' }}{% if x.scope == 'cast' %} ({{ x.detail }}){% endif %} usnesení {% if x.target_uid %}<a href="/radnice/usneseni/{{ x.target_uid }}">{{ x.target_number }}</a>{% else %}{{ x.target_number }}, které je starší než tato databáze{% endif %}{% if not x.effective %}, ale samo neprošlo, takže nic neruší{% endif %}.</p>
     {% endfor %}
 
     {% if r.geo %}
@@ -54,22 +54,22 @@
 
     <h2>Hlasování</h2>
     {% for v in r.votes %}{{ vote(v, r.body, r.votes|length > 1) }}{% else %}<p class="note">K usnesení se v zápisu nenašlo hlasování.</p>{% endfor %}
-    <p class="note"><sup>*</sup> Zápisy jmenují jen ty, kdo hlasovali jinak než většina. Ostatní přítomní jsou dopočítaní ze součtů. <a href="/usneseni/metodika">Jak to počítáme</a></p>
+    <p class="note"><sup>*</sup> Zápisy jmenují jen ty, kdo hlasovali jinak než většina. Ostatní přítomní jsou dopočítaní ze součtů. <a href="/radnice/usneseni/metodika">Jak to počítáme</a></p>
   </div>
 
   <aside class="detail-side">
     <dl class="facts">
-      <dt>Rozhodl{{ 'o' if r.body == 'zmo' else 'a' }}</dt><dd>{{ 'Zastupitelstvo' if r.body == 'zmo' else 'Rada' }} MO Pardubice V, <a href="/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. jednání {{ r.date|d }}</a></dd>
+      <dt>Rozhodl{{ 'o' if r.body == 'zmo' else 'a' }}</dt><dd>{{ 'Zastupitelstvo' if r.body == 'zmo' else 'Rada' }} MO Pardubice V, <a href="/radnice/usneseni/jednani/{{ r.meeting_id }}">{{ r.meeting_number }}. jednání {{ r.date|d }}</a></dd>
       {% if r.agenda_title %}<dt>Bod programu</dt><dd>{{ r.agenda_no }} {{ r.agenda_title }}</dd>{% endif %}
       {% if r.places %}<dt>Kde</dt><dd>{{ r.places|join(', ') }}</dd>{% endif %}
       {% if r.parcels %}<dt>Pozemky</dt><dd>{{ r.parcels|join('; ') }}</dd>{% endif %}
       {% if r.organizations %}<dt>Kdo</dt><dd>{{ r.organizations|join(', ') }}</dd>{% endif %}
       {% if r.amounts %}<dt>Částky</dt><dd>{{ r.amounts|join('; ') }}</dd>{% endif %}
-      {% if r.topics %}<dt>Témata</dt><dd>{% for t in r.topics %}<a href="/usneseni?tema={{ t }}">{{ vocab.topics[t] }}</a>{{ ', ' if not loop.last }}{% endfor %}</dd>{% endif %}
+      {% if r.topics %}<dt>Témata</dt><dd>{% for t in r.topics %}<a href="/radnice/usneseni?tema={{ t }}">{{ vocab.topics[t] }}</a>{{ ', ' if not loop.last }}{% endfor %}</dd>{% endif %}
       <dt>Název a shrnutí</dt><dd>odvozené strojově, závazné je znění usnesení</dd>
-      {% if r.keywords %}<dt>Hledat podobné</dt><dd>{% for k in r.keywords %}<a href="/usneseni?q={{ k|urlencode }}">{{ k }}</a>{{ ', ' if not loop.last }}{% endfor %}</dd>{% endif %}
+      {% if r.keywords %}<dt>Hledat podobné</dt><dd>{% for k in r.keywords %}<a href="/radnice/usneseni?q={{ k|urlencode }}">{{ k }}</a>{{ ', ' if not loop.last }}{% endfor %}</dd>{% endif %}
     </dl>
-    <p class="source"><a href="{{ r.source_url }}">Zápis na pardubice.eu</a><br><a href="/usneseni/pdf/{{ r.meeting_id }}.pdf">Archivní kopie zápisu</a><br><a href="/api/v1/usneseni/resolutions/{{ r.uid }}">Data ve formátu JSON</a></p>
+    <p class="source"><a href="{{ r.source_url }}">Zápis na pardubice.eu</a><br><a href="/radnice/usneseni/pdf/{{ r.meeting_id }}.pdf">Archivní kopie zápisu</a><br><a href="/api/v1/usneseni/resolutions/{{ r.uid }}">Data ve formátu JSON</a></p>
   </aside>
 </div>
 {% endblock %}

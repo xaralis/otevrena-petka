@@ -46,4 +46,4 @@ def test_section_is_wired(s, capsys):
 
 def test_rozpocet_preview_is_mounted_and_public_page_stays_planned():
     prefixes = {r.original_router.prefix for r in app.routes if hasattr(r, "original_router")}
-    assert "/rozpocet/nahled/{token}" in prefixes and "/rozpocet" not in prefixes
+    assert "/finance/rozpocet/nahled/{token}" in prefixes and "/finance/rozpocet" not in prefixes

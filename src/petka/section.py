@@ -47,3 +47,11 @@ class Section:
     home: Callable[[], dict] | None = None               # context for the overview page /prehled
     catalog: Callable[[], dict] | None = None            # context for the data catalog /data
     bootstrap: Callable[[], None] | None = None          # run by `petka bootstrap` (init container)
+
+    @property
+    def path(self) -> str:
+        """The URL of the section's page: where the header menu puts it (petka.nav, e.g.
+        /radnice/usneseni), /<slug> for a section outside the menu. The slug stays the
+        section's name in the API, MCP and data."""
+        from .nav import PATHS     # nav reads the registry, so only when asked
+        return PATHS.get(self.slug, "/" + self.slug)

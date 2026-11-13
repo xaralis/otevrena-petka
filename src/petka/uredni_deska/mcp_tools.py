@@ -45,7 +45,7 @@ def uredni_deska_hledej(dotaz: str = "", jen_mo5: bool = True, sejmute: bool = F
             "prilohy": [{"nazev": a["title"], "url": a["url"]} for a in r["attachments"]],
         } for r in rows],
         "zdroj": [b.page for b in source.BOARDS],
-        "web": f"{PUBLIC_URL}/uredni-deska",
+        "web": f"{PUBLIC_URL}/radnice/uredni-deska",
     }
     if not rows:
         out["poznamka"] = ("Nic nenalezeno. Zkuste jiná nebo kratší slova, jen_mo5: false (celé město) "

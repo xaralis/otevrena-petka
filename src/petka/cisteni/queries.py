@@ -106,7 +106,7 @@ def map_anchors(its: list[dict], geoms: dict[str, dict], today: dt.date) -> list
         lng, lat = point_on(geoms[i["key"]])
         out.append({"keys": list(dict.fromkeys(x["key"] for x in xs)), "street": i["street"], "what": what,
                     "when": when, "lng": lng, "lat": lat,
-                    "href": f"/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else None,
+                    "href": f"/verejny-prostor/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else None,
                     "label": f"Blokové čištění: {i['street']}, " + (f"{what}, " if what != "Blokové čištění" else "") + when,
                     "next": min(x["date"] for x in ahead) if ahead else None})
     out.sort(key=lambda a: (a["next"] is None, a["next"] or dt.date.min, places.fold(a["street"])))

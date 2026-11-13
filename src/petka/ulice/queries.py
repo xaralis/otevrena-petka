@@ -88,13 +88,13 @@ def next_cleaning_line(its: list[dict]) -> tuple[str, str | None]:
     if len(sides) == 1 and None not in sides:
         text += ", " + SIDES[sides.pop()]
     slug = next((i["slug"] for i in its if i["slug"]), None)
-    return text, f"/blokove-cisteni/ulice/{slug}" if slug else "/blokove-cisteni"
+    return text, f"/verejny-prostor/blokove-cisteni/ulice/{slug}" if slug else "/verejny-prostor/blokove-cisteni"
 
 
 def resolution_item(r: dict) -> dict:
     return {"date": r["date"], "source": "Zastupitelstvo" if r["body"] == "zmo" else "Rada",
             "number": r["number"], "text": r["title"] or r["agenda_title"] or f"Usnesení {r['number']}",
-            "href": f"/usneseni/{r['uid']}", "vote": r.get("mainvote"), "body": r["body"]}
+            "href": f"/radnice/usneseni/{r['uid']}", "vote": r.get("mainvote"), "body": r["body"]}
 
 
 def report_item(r: dict, href: str) -> dict:
@@ -225,7 +225,7 @@ def week_cleanings(its: list[dict], geoms: dict, today: dt.date) -> dict:
     for sid, xs in streets.items():
         lng, lat = point_on(geoms[xs[0]["key"]])
         when = cleaning_when(xs)
-        href = f"/blokove-cisteni/ulice/{xs[0]['slug']}" if xs[0]["slug"] else "/blokove-cisteni"
+        href = f"/verejny-prostor/blokove-cisteni/ulice/{xs[0]['slug']}" if xs[0]["slug"] else "/verejny-prostor/blokove-cisteni"
         anchors.append({"sid": sid, "street": xs[0]["street"], "when": when, "lng": lng, "lat": lat, "href": href,
                         "label": f"Blokové čištění: {xs[0]['street']}, {days([x['date'] for x in xs])}"})
     rows = []

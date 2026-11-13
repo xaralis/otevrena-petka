@@ -1,7 +1,7 @@
-"""Podněty: the page /podnety and the API under /api/v1/podnety for the city app. The obvod is
+"""Podněty: the page /verejny-prostor/zavady and the API under /api/v1/podnety for the city app. The obvod is
 the request's (petka.obvody); everything else comes as query parameters.
 
-    /podnety            the period's reports in numbers, on a grid map and by category
+    /verejny-prostor/zavady            the period's reports in numbers, on a grid map and by category
                         ?obdobi=12m|<year>  ?detail=mesice|vyreseno|ceka|odpoved (the open tile,
                         for a browser without JS)  ?kategorie=<id> or ?stav=ceka narrow the map
                         ?druhy=vse lists every category on a phone
@@ -17,7 +17,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from ..web.render import tpl
 from . import queries, source, stats, words
 
-pages = APIRouter(prefix="/podnety", include_in_schema=False)
+pages = APIRouter(prefix="/verejny-prostor/zavady", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/podnety", tags=["podněty"])
 
 DETAILS = ("mesice", "vyreseno", "ceka", "odpoved", "zadny")     # zadny: every tile closed
@@ -32,11 +32,11 @@ def _now() -> dt.datetime:
 
 
 def link(period: str, **params) -> str:
-    """'/podnety?obdobi=2025&detail=mesice': the period kept (unless the default), empty
+    """'/verejny-prostor/zavady?obdobi=2025&detail=mesice': the period kept (unless the default), empty
     parameters left out."""
     ps = {"obdobi": "" if period == "12m" else period, **params}
     query = "&".join(f"{k}={v}" for k, v in ps.items() if v)
-    return "/podnety" + ("?" + query if query else "")
+    return "/verejny-prostor/zavady" + ("?" + query if query else "")
 
 
 @pages.get("", response_class=HTMLResponse)

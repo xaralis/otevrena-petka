@@ -87,7 +87,7 @@ def test_cleaning():
 
 def test_next_cleaning_line():
     its = [item(D(2026, 11, 18), "Josefa Ressla", side="prava"), item(D(2026, 11, 18), "Milheimova", side="prava")]
-    assert q.next_cleaning_line(its) == ("Josefa Ressla a Milheimova, pravá strana", "/blokove-cisteni/ulice/josefa-ressla")
+    assert q.next_cleaning_line(its) == ("Josefa Ressla a Milheimova, pravá strana", "/verejny-prostor/blokove-cisteni/ulice/josefa-ressla")
     three = its + [item(D(2026, 11, 18), "Lexova")]
     assert q.next_cleaning_line(three)[0] == "Josefa Ressla, Milheimova a Lexova"
 
@@ -118,7 +118,7 @@ def test_items_of_resolutions():
     r = {"uid": "310-2026-r", "number": "310/2026 R", "body": "rmo", "date": D(2026, 9, 23), "title": "Přímé zadání",
          "agenda_title": None, "mainvote": {"pro": 5}}
     assert q.resolution_item(r) | {} == {"date": D(2026, 9, 23), "source": "Rada", "number": "310/2026 R",
-                                         "text": "Přímé zadání", "href": "/usneseni/310-2026-r", "vote": {"pro": 5}, "body": "rmo"}
+                                         "text": "Přímé zadání", "href": "/radnice/usneseni/310-2026-r", "vote": {"pro": 5}, "body": "rmo"}
     assert q.thousands(1026) == "1 026"
 
 
@@ -288,11 +288,11 @@ def test_street_page(fixture):
     assert r.status_code == 200
     h = r.text
     for s in ("<h1>Wolkerova</h1>", "Příští blokové čištění", "26. 11.", "čtvrtek od 7:00, obě strany",
-              "Související rozhodnutí", "<b>19</b>", "naposledy 23. 9.", 'href="/usneseni?q=Wolkerova&amp;rezim=fulltext"',
+              "Související rozhodnutí", "<b>19</b>", "naposledy 23. 9.", 'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext"',
               "nic nečeká", "1 nahlášená od května 2026, 1 vyřešená", "Co se tu děje", "Celá ulice, obě strany, od 7:00",
               "Rada, usnesení 310/2026 R", "5 pro; potřeba 3", "parkoviště u č. p. 2122-2123",
               "Lavičky, zábradlí", "Všechno k ulici Wolkerova", "teď nic nevisí", "Okolní ulice", 'href="/ulice/lexova"',
-              'href="/uzavirky"'):
+              'href="/verejny-prostor/uzavirky"'):
         assert s in h, s
     assert "Uzavírka</small>" not in h          # no data on closures yet: no box
     fc = json.loads(h.split('id="ul-map-json">')[1].split("</script>")[0])

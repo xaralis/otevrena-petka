@@ -187,7 +187,7 @@ def test_preview_needs_the_token(monkeypatch):
     from fastapi import HTTPException
     from petka.rozpocet import web
     monkeypatch.setenv("ROZPOCET_NAHLED_TOKEN", "a" * 24)
-    assert web._check("a" * 24) == "/rozpocet/nahled/" + "a" * 24
+    assert web._check("a" * 24) == "/finance/rozpocet/nahled/" + "a" * 24
     for bad in ("", "b" * 24, "a" * 23):
         with pytest.raises(HTTPException):
             web._check(bad)

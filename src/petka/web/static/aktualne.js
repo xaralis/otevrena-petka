@@ -68,7 +68,7 @@
     });
     data.marks.forEach((m, i) => {
       const e = document.createElement(m.nid ? "a" : "span");    // the marker opens its notice
-      if (m.nid) e.href = "/uredni-deska/" + encodeURIComponent(m.nid);
+      if (m.nid) e.href = "/radnice/uredni-deska/" + encodeURIComponent(m.nid);
       e.className = "ak-mk" + (m.traffic ? " ak-mk-t" : "");
       e.tabIndex = 0;
       e.setAttribute("aria-label", m.label);

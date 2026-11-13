@@ -2,7 +2,7 @@
 {% from "usneseni/_macros.html" import vote, row, legend %}{% from "_portal.html" import hero %}
 {% set kind = {'radne':'řádné','mimoradne':'mimořádné','ustavujici':'ustavující'}[m.kind] %}
 {% block title %}{{ m.number }}. jednání {{ 'zastupitelstva' if m.body == 'zmo' else 'rady' }} {{ m.date|d }}{% endblock %}
-{% block hero %}{{ hero(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), [('Jednání', '/usneseni/jednani'), (m.date|d, None)], m.place, kind='section') }}{% endblock %}
+{% block hero %}{{ hero(m.number ~ '. ' ~ kind ~ ' jednání ' ~ ('zastupitelstva' if m.body == 'zmo' else 'rady'), [('Jednání', '/radnice/usneseni/jednani'), (m.date|d, None)], m.place, kind='section') }}{% endblock %}
 {% block main %}
 <div class="detail">
   <div class="detail-main">
@@ -28,10 +28,10 @@
   </div>
   <aside class="detail-side">
     <h2 class="side-h">Přítomni</h2>
-    <p class="people">{% for x in m.present %}<a href="/usneseni/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
-    {% if m.excused %}<h2 class="side-h">Omluveni</h2><p class="people">{% for x in m.excused %}<a href="/usneseni/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
-    {% if m.absent %}<h2 class="side-h">Chyběli</h2><p class="people">{% for x in m.absent %}<a href="/usneseni/clenove/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
-    <p class="source"><a href="{{ m.source_url }}">Zápis na pardubice.eu</a><br><a href="/usneseni/pdf/{{ m.id }}.pdf">Archivní kopie zápisu</a></p>
+    <p class="people">{% for x in m.present %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
+    {% if m.excused %}<h2 class="side-h">Omluveni</h2><p class="people">{% for x in m.excused %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+    {% if m.absent %}<h2 class="side-h">Chyběli</h2><p class="people">{% for x in m.absent %}<a href="/radnice/zastupitele/{{ x }}">{{ m.names.get(x, x) }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+    <p class="source"><a href="{{ m.source_url }}">Zápis na pardubice.eu</a><br><a href="/radnice/usneseni/pdf/{{ m.id }}.pdf">Archivní kopie zápisu</a></p>
   </aside>
 </div>
 {% endblock %}

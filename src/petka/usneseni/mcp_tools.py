@@ -29,7 +29,7 @@ Při odpovědích:
 - Usnesení mohou být později zrušena (revokována) nebo změněna jiným usnesením – viz
   `zruseno_nebo_zmeneno` (jen `ucinne: true` platí; zrušení, které neprošlo, nic nemění).
 - Prázdný výsledek neznamená, že se o věci nikdy nejednalo – zkus jiná slova nebo režim.
-- Odkazuj na usnesení číslem a URL {PUBLIC_URL}/usneseni/<uid>, zdroj je `source_url`.
+- Odkazuj na usnesení číslem a URL {PUBLIC_URL}/radnice/usneseni/<uid>, zdroj je `source_url`.
 """
 
 
@@ -44,7 +44,7 @@ def _member_id(name_or_id: str | None) -> str | None:
 
 
 def _url(uid: str) -> str:
-    return f"{PUBLIC_URL}/usneseni/{uid}"
+    return f"{PUBLIC_URL}/radnice/usneseni/{uid}"
 
 
 def hledej_usneseni(
@@ -142,7 +142,7 @@ def usneseni_k_mistu(misto: str, jen_platna: bool = True, limit: int = 30) -> di
                 h["mista"].append(x["label"])
     out = list(hits.values())
     return {"misto": misto, "pocet": len(out), "usneseni": out[:limit],
-            "mapa": f"{PUBLIC_URL}/usneseni/mapa",
+            "mapa": f"{PUBLIC_URL}/radnice/usneseni/mapa",
             "poznamka": "Jen místa, která šlo podle zápisu jednoznačně umístit; nenalezeno ≠ nikdy neřešeno."}
 
 

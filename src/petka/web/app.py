@@ -10,7 +10,7 @@ import html
 import os
 import re
 from collections import OrderedDict
-from urllib.parse import parse_qs
+from urllib.parse import parse_qs, quote
 
 from xml.sax.saxutils import escape
 
@@ -60,8 +60,8 @@ class _Static(StaticFiles):
 
 app.mount("/static", _Static(directory=HERE / "static"), name="static")
 app.router.routes.extend(mcp.streamable_http_app().routes)  # POST /mcp
-# every section's routers, before the planned-section catch-all /{slug} (a planned section may
-# mount some already: the rozpočet preview behind a secret token, /rozpocet itself stays planned)
+# every section's routers, before the planned-section pages (a planned section may mount some
+# already: the rozpočet preview behind a secret token, /finance/rozpocet itself stays planned)
 for s in REGISTRY:
     for router in (s.routers() if s.routers else []):
         app.include_router(router)
@@ -76,6 +76,33 @@ class _Head:
     async def __call__(self, scope, receive, send):
         if scope["type"] == "http" and scope["method"] == "HEAD":
             scope = dict(scope, method="GET")
+        await self.app(scope, receive, send)
+
+
+class _Moved:
+    """The URLs from before the header areas (petka.nav.MOVED): a page answers with a permanent
+    redirect to the same subpath and query under its new prefix. A feed or a calendar (.xml,
+    .ics) is served in place instead – some calendar apps and feed readers don't follow
+    redirects, and the subscriptions people have must keep working. An area's own URL
+    (/radnice) goes to its first page, as its link in the header does."""
+    SUBSCRIPTIONS = (".ics", ".xml")
+
+    def __init__(self, app):
+        self.app = app
+        self.areas = {g.path: g for g in nav.GROUPS}
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "http":
+            path = scope["path"]
+            if (g := self.areas.get(path.rstrip("/"))):
+                return await RedirectResponse(g.href, status_code=302)(scope, receive, send)
+            if (new := nav.moved(path)):
+                if path.endswith(self.SUBSCRIPTIONS):
+                    scope = dict(scope, path=new, raw_path=quote(new).encode())
+                else:
+                    qs = scope.get("query_string", b"").decode("latin-1")
+                    url = quote(new) + ("?" + qs if qs else "")
+                    return await RedirectResponse(url, status_code=301)(scope, receive, send)
         await self.app(scope, receive, send)
 
 
@@ -103,6 +130,7 @@ class _Gzip:
         await self.app(scope, receive, send)
 
 
+app.add_middleware(_Moved)
 app.add_middleware(_Obvod)
 app.add_middleware(_Gzip)
 app.add_middleware(_Head)
@@ -203,7 +231,7 @@ def robots():
 @app.get("/sitemap.xml", include_in_schema=False)
 def sitemap():
     urls = [(u, None) for u in ["/prehled", "/data", "/soukromi", "/pristupnost"]]
-    urls += [(f"/{s.slug}", None) for s in SECTIONS if s.status == "planned"]
+    urls += [(s.path, None) for s in SECTIONS if s.status == "planned"]
     with db.pool().connection() as conn:
         for s in REGISTRY:
             if s.sitemap:
@@ -253,14 +281,14 @@ async def og_image(request: Request, path: str):
     if request.headers.get("x-petka-og") or not _OG_PATH.fullmatch(path) or path.startswith("og/"):
         raise HTTPException(404)        # the header marks our own request: never render recursively
     page = "/" if path == "index.png" else "/" + path[:-4]
+    page = nav.moved(page) or page      # a page's image from before the areas (/og/usneseni/…)
     async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app, raise_app_exceptions=False),
                                  base_url=PUBLIC_URL) as client:
         r = await client.get(page, headers={"accept": "text/html", "x-petka-og": "1"})
     m = _OG_TITLE.search(r.text) if r.status_code == 200 and r.headers.get("content-type", "").startswith("text/html") else None
     if not m:
         raise HTTPException(404)
-    section = BY_SLUG.get(page.strip("/").split("/")[0])
-    key = (page, html.unescape(m[1]), section.title if section else "")
+    key = (page, html.unescape(m[1]), _kicker(page))
     if key not in _og_cache:
         _og_cache[key] = await asyncio.to_thread(og.render, key[1], key[2])
         while len(_og_cache) > 300:
@@ -268,13 +296,25 @@ async def og_image(request: Request, path: str):
     return Response(_og_cache[key], media_type="image/png", headers={"Cache-Control": "public, max-age=86400"})
 
 
-# catch-all for planned sections – keep it last
-@app.get("/{slug}", response_class=HTMLResponse, include_in_schema=False)
-def planned_section(request: Request, slug: str):
-    s = BY_SLUG.get(slug)
-    if not s or (s.status != "planned" and slug not in nav.SOON):
-        raise HTTPException(404)
-    return tpl.TemplateResponse(request, "planned.html", {"s": s})
+def _kicker(page: str) -> str:
+    """The line above the title in a page's share image: its section (or its item in the header)."""
+    _, item = nav.current(page)
+    s = BY_SLUG.get(item.slug if item else page.strip("/").split("/")[0])
+    return s.title if s else (item.label if item else "")
+
+
+# the planned sections' pages, at their place in the header – keep them last (a section's own
+# routers come first)
+def _planned_page(s):
+    def page(request: Request):
+        return tpl.TemplateResponse(request, "planned.html", {"s": s})
+    return page
+
+
+for _s in REGISTRY:
+    if _s.status == "planned" or _s.path in nav.SOON:
+        app.add_api_route(_s.path, _planned_page(_s), methods=["GET"], response_class=HTMLResponse,
+                          include_in_schema=False)
 
 
 __all__ = ["app", "SECTIONS"]

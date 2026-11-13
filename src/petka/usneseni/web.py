@@ -1,4 +1,5 @@
-"""Usnesení section: pages under /usneseni, data files under /usneseni/data, API under
+"""Usnesení section: pages under /radnice/usneseni, data files under /radnice/usneseni/data, the
+zastupitelé under /radnice/zastupitele (their own item in the header, petka.nav), API under
 /api/v1/usneseni."""
 
 import datetime as dt
@@ -11,7 +12,8 @@ from ..web.render import tpl
 from . import embed, queries, search, store
 from .enrich import vocab
 
-pages = APIRouter(prefix="/usneseni", include_in_schema=False)
+pages = APIRouter(prefix="/radnice/usneseni", include_in_schema=False)
+members = APIRouter(prefix="/radnice/zastupitele", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/usneseni", tags=["usnesení"])
 
 
@@ -76,7 +78,7 @@ def map_page(request: Request, organ: str = "", rok: str = "", tema: str = "", s
     })
 
 
-@pages.get("/clenove", response_class=HTMLResponse)
+@members.get("", response_class=HTMLResponse)
 def members_page(request: Request):
     terms: dict[str, dict[str, list]] = {}
     # seats are what the election gave (volby.cz), so someone elected who never sat still counts
@@ -89,7 +91,7 @@ def members_page(request: Request):
     return tpl.TemplateResponse(request, "usneseni/members.html", {"terms": clubs})
 
 
-@pages.get("/clenove/ucast", response_class=HTMLResponse)
+@members.get("/ucast", response_class=HTMLResponse)
 def attendance_page(request: Request, obdobi: str = ""):
     terms = [t for t in queries.terms() if t >= "2018"]
     term = obdobi if obdobi in terms else terms[0]
@@ -103,7 +105,7 @@ def attendance_page(request: Request, obdobi: str = ""):
 MEMBER_PER_PAGE = 50
 
 
-@pages.get("/clenove/{mid}", response_class=HTMLResponse)
+@members.get("/{mid}", response_class=HTMLResponse)
 def member_page(request: Request, mid: str, odlisne: bool = False, strana: str = "1"):
     m = queries.member(mid)
     if not m:
@@ -130,7 +132,8 @@ def member_page(request: Request, mid: str, odlisne: bool = False, strana: str =
 
 @pages.get("/feed.xml", include_in_schema=False)
 def feed():
-    """Atom feed of the newest resolutions (rejected proposals left out), for feed readers."""
+    """Atom feed of the newest resolutions (rejected proposals left out), for feed readers. The ids
+    keep the URLs from before 13. 11. 2026 (/usneseni/…): readers know entries by them."""
     import os
     from xml.sax.saxutils import escape
     base = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
@@ -139,14 +142,14 @@ def feed():
     body_name = {"zmo": "zastupitelstvo", "rmo": "rada"}
     entries = "".join(
         f"""<entry><id>{base}/usneseni/{r['uid']}</id><title>{escape(r['number'] + ': ' + (r['title'] or ''))}</title>
-<link href="{base}/usneseni/{r['uid']}"/><updated>{r['date'].isoformat()}T00:00:00Z</updated>
+<link href="{base}/radnice/usneseni/{r['uid']}"/><updated>{r['date'].isoformat()}T00:00:00Z</updated>
 <category term="{r['body']}" label="{body_name.get(r['body'], r['body'])}"/>
 <summary>{escape(r['summary'] or '')}</summary></entry>""" for r in rows)
     updated = rows[0]["date"].isoformat() if rows else "2018-01-01"
     xml = f"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="cs"><id>{base}/usneseni/feed.xml</id>
-<title>Usnesení MO Pardubice V – Otevřená Pětka</title><link rel="self" href="{base}/usneseni/feed.xml"/>
-<link href="{base}/usneseni"/><updated>{updated}T00:00:00Z</updated><author><name>Otevřená Pětka</name></author>
+<title>Usnesení MO Pardubice V – Otevřená Pětka</title><link rel="self" href="{base}/radnice/usneseni/feed.xml"/>
+<link href="{base}/radnice/usneseni"/><updated>{updated}T00:00:00Z</updated><author><name>Otevřená Pětka</name></author>
 {entries}</feed>"""
     return Response(xml, media_type="application/atom+xml")
 

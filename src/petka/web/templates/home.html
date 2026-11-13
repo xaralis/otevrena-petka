@@ -9,12 +9,12 @@
   <div class="wrap">
     <h1>Co dělá městský obvod Pardubice&nbsp;V</h1>
     <p class="band-lead">Dohledejte, jak rozhodla rada a zastupitelstvo, u každého rozhodnutí s odkazem na původní zápis, a co právě visí na úřední desce. Rozpočet a smlouvy přibudou.</p>
-    <form class="search" method="get" action="/usneseni" role="search">
+    <form class="search" method="get" action="/radnice/usneseni" role="search">
       <label for="q" class="sr">Hledat v usneseních</label>
       <input id="q" type="search" name="q" placeholder="Hledat v usneseních" autocomplete="off">
       <button type="submit">Hledat</button>
     </form>
-    <p class="band-lead small">Třeba <a href="/usneseni?q=parkov%C3%A1n%C3%AD+Jesni%C4%8D%C3%A1nky">parkování v Jesničánkách</a>, <a href="/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/usneseni?q=prodej+pozemku">prodej pozemku</a>.</p>
+    <p class="band-lead small">Třeba <a href="/radnice/usneseni?q=parkov%C3%A1n%C3%AD+Jesni%C4%8D%C3%A1nky">parkování v Jesničánkách</a>, <a href="/radnice/usneseni?q=d%C4%9Btsk%C3%A9+h%C5%99i%C5%A1t%C4%9B">dětské hřiště</a> nebo <a href="/radnice/usneseni?q=prodej+pozemku">prodej pozemku</a>.</p>
   </div>
 </section>
 {% endblock %}
@@ -27,34 +27,34 @@
 
 <section class="index" aria-label="Co tu najdete">
   <article class="index-row live">
-    <h2><a href="/usneseni">{{ U.question }}</a></h2>
+    <h2><a href="/radnice/usneseni">{{ U.question }}</a></h2>
     <div class="index-meta">
       <p class="index-name">{{ U.title }}</p>
-      <p><a href="/usneseni">{{ stats.resolutions }} usnesení</a> a <a href="/usneseni?stav=neprijato">{{ stats.rejected }} nepřijatých návrhů</a> z <a href="/usneseni/jednani">{{ stats.meetings }} jednání</a> od roku {{ stats.first_date.year }}.</p>
+      <p><a href="/radnice/usneseni">{{ stats.resolutions }} usnesení</a> a <a href="/radnice/usneseni?stav=neprijato">{{ stats.rejected }} nepřijatých návrhů</a> z <a href="/radnice/usneseni/jednani">{{ stats.meetings }} jednání</a> od roku {{ stats.first_date.year }}.</p>
     </div>
     <div class="index-latest">
       <p class="index-sub">Nejnovější rozhodnutí</p>
       <ol class="rows rows-compact">{% for r in latest %}{{ row(r) }}{% endfor %}</ol>
-      <p><a href="/usneseni">Všechna usnesení</a></p>
+      <p><a href="/radnice/usneseni">Všechna usnesení</a></p>
     </div>
   </article>
   <article class="index-row live">
-    <h2><a href="/uredni-deska">{{ D.question }}</a></h2>
+    <h2><a href="/radnice/uredni-deska">{{ D.question }}</a></h2>
     <div class="index-meta">
       <p class="index-name">{{ D.title }}</p>
-      <p>Teď visí <a href="/uredni-deska">{{ deska.posted_mo5 }} oznámení</a>, která se týkají obvodu{% if deska.posted > deska.posted_mo5 %}, a dalších <a href="/uredni-deska?kde=mesto">{{ deska.posted - deska.posted_mo5 }}</a> na desce magistrátu{% endif %}. Sejmutá zůstávají v archivu.</p>
+      <p>Teď visí <a href="/radnice/uredni-deska">{{ deska.posted_mo5 }} oznámení</a>, která se týkají obvodu{% if deska.posted > deska.posted_mo5 %}, a dalších <a href="/radnice/uredni-deska?kde=mesto">{{ deska.posted - deska.posted_mo5 }}</a> na desce magistrátu{% endif %}. Sejmutá zůstávají v archivu.</p>
     </div>
     {% if notices %}
     <div class="index-latest">
       <p class="index-sub">Naposledy vyvěšeno</p>
       <ol class="rows rows-compact notices">{% for n in notices %}{{ notice(n, files=False) }}{% endfor %}</ol>
-      <p><a href="/uredni-deska">Celá úřední deska</a></p>
+      <p><a href="/radnice/uredni-deska">Celá úřední deska</a></p>
     </div>
     {% endif %}
   </article>
   {% for s in SECTIONS if s.status == 'planned' %}
   <article class="index-row planned">
-    <h2><a href="/{{ s.slug }}">{{ s.question }}</a></h2>
+    <h2><a href="{{ s.path }}">{{ s.question }}</a></h2>
     <div class="index-meta">
       <p class="index-name">{{ s.title }} <span class="tape-label">ve výstavbě</span></p>
       {% if s.bridges %}<p>Už teď najdete v usneseních {% for label, url in s.bridges %}<a href="{{ url }}">{{ label }}</a>{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}

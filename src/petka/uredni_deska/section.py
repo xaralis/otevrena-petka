@@ -29,7 +29,7 @@ def _template():
 
 
 def _sitemap(conn) -> list:
-    return [("/uredni-deska", None)]
+    return [("/radnice/uredni-deska", None)]
 
 
 def _home() -> dict:

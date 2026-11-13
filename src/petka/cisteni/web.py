@@ -1,13 +1,13 @@
 """Čištění ulic: pages under /cisteni, calendar feeds and the API under /api/v1/cisteni. The
 obvod is the request's (petka.obvody).
 
-    /blokove-cisteni                      overview: the next 7 days, a calendar for your streets, the map
+    /verejny-prostor/blokove-cisteni                      overview: the next 7 days, a calendar for your streets, the map
                                   and the harmonogram by week (?ulice= finds a street,
                                   ?probehle=1 lists this year's past cleanings instead)
-    /blokove-cisteni/ulice/<slug>         one street: the next cleaning, its map, this year's dates
-    /blokove-cisteni/kalendar             the subscription link for chosen streets (the form without JS)
-    /blokove-cisteni/kalendar.ics         feed of chosen streets (?ulice=slug,slug)
-    /blokove-cisteni/ulice/<slug>.ics     feed of one street
+    /verejny-prostor/blokove-cisteni/ulice/<slug>         one street: the next cleaning, its map, this year's dates
+    /verejny-prostor/blokove-cisteni/kalendar             the subscription link for chosen streets (the form without JS)
+    /verejny-prostor/blokove-cisteni/kalendar.ics         feed of chosen streets (?ulice=slug,slug)
+    /verejny-prostor/blokove-cisteni/ulice/<slug>.ics     feed of one street
     /api/v1/cisteni               the places as GeoJSON with their dates
 """
 
@@ -23,7 +23,7 @@ from ..web.render import tpl
 from . import ics, queries as q, source
 from .words import SIDE_ON, genitive, merged, weeks
 
-pages = APIRouter(prefix="/blokove-cisteni", include_in_schema=False)
+pages = APIRouter(prefix="/verejny-prostor/blokove-cisteni", include_in_schema=False)
 
 WEEK = 7       # "Příštích 7 dní": today and the seven days after it
 api = APIRouter(prefix="/api/v1/cisteni", tags=["čištění ulic"])
@@ -46,7 +46,7 @@ def _origin() -> str:
 
 
 def _subscribe(request: Request, slugs: list[str]) -> dict:
-    path = "/blokove-cisteni/kalendar.ics?ulice=" + ",".join(quote(s) for s in slugs)
+    path = "/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=" + ",".join(quote(s) for s in slugs)
     origin = _origin()
     return {"webcal": "webcal://" + origin.split("://", 1)[1] + path, "https": origin + path}
 
@@ -61,7 +61,7 @@ def overview(request: Request, ulice: str = "", probehle: str = ""):
     if ulice.strip():
         found = q.find(ulice, names)
         if len(found) == 1:
-            return RedirectResponse(f"/blokove-cisteni/ulice/{found[0]}", status_code=303)
+            return RedirectResponse(f"/verejny-prostor/blokove-cisteni/ulice/{found[0]}", status_code=303)
     future = [i for i in its if i["date"] >= today]
     past = [i for i in its if i["date"] < today]
     week = [i for i in future if i["date"] <= today + dt.timedelta(days=WEEK)]
@@ -99,7 +99,7 @@ def subscribe_page(request: Request, ulice: list[str] = Query(default=[]), prida
 def _feed(request: Request, its: list[dict], name: str) -> Response:
     base = _origin()
     body = ics.calendar(its, name, dt.datetime.now(dt.UTC),
-                        lambda i: f"{base}/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else f"{base}/blokove-cisteni")
+                        lambda i: f"{base}/verejny-prostor/blokove-cisteni/ulice/{i['slug']}" if i["slug"] else f"{base}/verejny-prostor/blokove-cisteni")
     return Response(body, media_type="text/calendar; charset=utf-8",
                     headers={"Cache-Control": "public, max-age=3600",
                              "Content-Disposition": 'inline; filename="cisteni.ics"'})
@@ -153,7 +153,7 @@ def street(request: Request, slug: str):
         "has_later": any(f["properties"]["when"] == "later" for f in feats),
         "has_past": any(f["properties"]["when"] == "past" for f in feats),
         "near": q.nearby(slug, every, geoms, today), **_subscribe(request, [slug]),
-        "ics": f"/blokove-cisteni/ulice/{slug}.ics", "side_on": SIDE_ON})
+        "ics": f"/verejny-prostor/blokove-cisteni/ulice/{slug}.ics", "side_on": SIDE_ON})
 
 
 # --- API ------------------------------------------------------------------------------------

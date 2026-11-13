@@ -8,7 +8,7 @@
 {% macro next_list(its, soon=False) %}
 <ul class="cl-next">
   {% for i in its %}
-  <li{% if soon %} class="cl-soon" data-cl-key="{{ i.key }}"{% endif %}><a href="{{ '/blokove-cisteni/ulice/' ~ i.slug if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
+  <li{% if soon %} class="cl-soon" data-cl-key="{{ i.key }}"{% endif %}><a href="{{ '/verejny-prostor/blokove-cisteni/ulice/' ~ i.slug if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
   {% endfor %}
 </ul>
 {% endmacro %}
@@ -29,8 +29,8 @@
   <tbody>
   {% for i in its %}
     <tr><td class="cl-when"><b>{{ i.date|cl_wd }} {{ i.date|cl_dm }}</b> {{ i|cl_clock }}</td>
-      <td>{% if i.slug %}<a href="/blokove-cisteni/ulice/{{ i.slug }}">{{ i.street }}</a> {{ i.short }}{% else %}{{ i.text }}{% endif %}{{ ap(i) }}</td>
-      <td class="cl-ics">{% if i.slug %}<a class="btn btn-o btn-s cl-cal" href="/blokove-cisteni/ulice/{{ i.slug }}.ics">Do kalendáře<span class="sr">: {{ i.street }}</span></a>{% endif %}</td></tr>
+      <td>{% if i.slug %}<a href="/verejny-prostor/blokove-cisteni/ulice/{{ i.slug }}">{{ i.street }}</a> {{ i.short }}{% else %}{{ i.text }}{% endif %}{{ ap(i) }}</td>
+      <td class="cl-ics">{% if i.slug %}<a class="btn btn-o btn-s cl-cal" href="/verejny-prostor/blokove-cisteni/ulice/{{ i.slug }}.ics">Do kalendáře<span class="sr">: {{ i.street }}</span></a>{% endif %}</td></tr>
   {% endfor %}
   </tbody>
 </table>

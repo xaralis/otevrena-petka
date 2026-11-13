@@ -1,4 +1,4 @@
-"""Úřední deska section: page under /uredni-deska, data files under /uredni-deska/data,
+"""Úřední deska section: page under /radnice/uredni-deska, data files under /radnice/uredni-deska/data,
 API under /api/v1/uredni-deska."""
 
 import csv
@@ -13,7 +13,7 @@ from ..web.render import tpl
 from . import digest as digests, queries, source
 from .cards import CardStore
 
-pages = APIRouter(prefix="/uredni-deska", include_in_schema=False)
+pages = APIRouter(prefix="/radnice/uredni-deska", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/uredni-deska", tags=["úřední deska"])
 
 PER_PAGE = 20
@@ -34,13 +34,13 @@ def home(request: Request, q: str = "", kde: str = "", sejmute: str = "", druh: 
     def url(**change) -> str:
         """This page with some parameters changed; empty ones dropped, back to page 1."""
         params = {k: v for k, v in {**state, **change}.items() if v}
-        return "/uredni-deska" + ("?" + urlencode(params) if params else "")
+        return "/radnice/uredni-deska" + ("?" + urlencode(params) if params else "")
 
     return tpl.TemplateResponse(request, "uredni_deska/home.html", {
         **state, "mo5": mo5, "active": active, "official": official, "url": url,
         "rows": rows, "total": total, "strana": strana, "pages": -(-total // PER_PAGE),
         "kinds": queries.kinds(mo5, active), "stats": queries.stats(), "boards": source.BOARDS,
-        "canonical": "/uredni-deska",
+        "canonical": "/radnice/uredni-deska",
     })
 
 
@@ -92,7 +92,8 @@ def rss(zneni: str = ""):
     items = []
     for n in rows:
         d = None if official else n["digest"]
-        link = f"{base}/uredni-deska/{n['id']}"
+        link = f"{base}/radnice/uredni-deska/{n['id']}"
+        guid = f"{base}/uredni-deska/{n['id']}"    # the URL before 13. 11. 2026: readers know items by it
         if n["kind"] == "doruceni":
             title, text = "Doručení písemnosti veřejnou vyhláškou", "Úřad doručuje písemnost vyvěšením na úřední desce."
         elif d:
@@ -102,13 +103,13 @@ def rss(zneni: str = ""):
         if n["reference"] and n["kind"] != "doruceni":
             text += f" (č. j. {n['reference']})"
         when = format_datetime(datetime.combine(n["published"], time(8), timezone.utc)) if n["published"] else ""
-        items.append(f"""<item><title>{escape(title)}</title><link>{link}</link><guid isPermaLink="true">{link}</guid>
+        items.append(f"""<item><title>{escape(title)}</title><link>{link}</link><guid isPermaLink="false">{guid}</guid>
 <description>{escape(text)}</description><category>{escape(n['kind_label'])}</category>{f'<pubDate>{when}</pubDate>' if when else ''}</item>""")
     name = "Úřední deska MO Pardubice V (úřední znění)" if official else "Úřední deska pro lidi – MO Pardubice V"
     xml = f"""<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
-<title>{name}</title><link>{base}/uredni-deska</link>
-<atom:link href="{base}/uredni-deska/rss.xml{'?zneni=uredni' if official else ''}" rel="self" type="application/rss+xml"/>
+<title>{name}</title><link>{base}/radnice/uredni-deska</link>
+<atom:link href="{base}/radnice/uredni-deska/rss.xml{'?zneni=uredni' if official else ''}" rel="self" type="application/rss+xml"/>
 <description>Co právě visí na úřední desce a týká se městského obvodu Pardubice V. Závazné jsou dokumenty na pardubice.eu.</description>
 <language>cs</language>
 {chr(10).join(items)}

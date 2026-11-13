@@ -5,7 +5,7 @@
 // zero-size anchor, a click opens its street (on phones the second tap), and the rows of
 // „Příštích 7 dní“ ([data-cl-key]) light up with their stretches both ways.
 // <div data-cl-map="street" data-inline="id"> draws one street.
-// The picker remembers its streets in localStorage; without JS the form goes to /blokove-cisteni/kalendar.
+// The picker remembers its streets in localStorage; without JS the form goes to /verejny-prostor/blokove-cisteni/kalendar.
 (function () {
   const RED = "#de091c", INK = "#191c1f", GREY = "#8a9097", OFF = "#d6dbe0";
 
@@ -210,7 +210,7 @@
   function plural(n, one, few, many) { return n === 1 ? one : n >= 2 && n <= 4 ? few : many; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(picked.filter((s) => checked.has(s)))); } catch (e) { /* private window */ } }
   function url(scheme) {
-    return scheme + "://" + location.host + "/blokove-cisteni/kalendar.ics?ulice=" + picked.filter((s) => checked.has(s)).join(",");
+    return scheme + "://" + location.host + "/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=" + picked.filter((s) => checked.has(s)).join(",");
   }
   function render() {
     chips.textContent = "";

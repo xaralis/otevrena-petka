@@ -2,13 +2,13 @@
 
 from ..section import Section
 
-PAGES = ["/usneseni", "/usneseni/mapa", "/usneseni/jednani", "/usneseni/clenove", "/usneseni/clenove/ucast",
-         "/usneseni/metodika"]
+PAGES = ["/radnice/usneseni", "/radnice/usneseni/mapa", "/radnice/usneseni/jednani", "/radnice/usneseni/metodika",
+         "/radnice/zastupitele", "/radnice/zastupitele/ucast"]
 
 
 def _routers() -> list:
     from . import web
-    return [web.pages, web.api]
+    return [web.members, web.pages, web.api]
 
 
 def _mcp():
@@ -36,11 +36,11 @@ def _template():
 
 def _sitemap(conn) -> list:
     urls = [(u, None) for u in PAGES]
-    urls += [(f"/usneseni/jednani/{r['id']}", r["date"]) for r in conn.execute(
+    urls += [(f"/radnice/usneseni/jednani/{r['id']}", r["date"]) for r in conn.execute(
         "SELECT id, date FROM meetings ORDER BY date DESC")]
-    urls += [(f"/usneseni/{r['uid']}", r["date"]) for r in conn.execute(
+    urls += [(f"/radnice/usneseni/{r['uid']}", r["date"]) for r in conn.execute(
         "SELECT uid, date FROM resolutions ORDER BY date DESC, seq DESC")]
-    urls += [(f"/usneseni/clenove/{r['id']}", None) for r in conn.execute("SELECT id FROM members ORDER BY id")]
+    urls += [(f"/radnice/zastupitele/{r['id']}", None) for r in conn.execute("SELECT id FROM members ORDER BY id")]
     return urls
 
 

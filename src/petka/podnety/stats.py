@@ -1,4 +1,4 @@
-"""What the /podnety page says about the reports of one period: how many, how they stand, how
+"""What the /verejny-prostor/zavady page says about the reports of one period: how many, how they stand, how
 long they take, by month, by category and on a grid map. Pure functions over report rows
 (dicts as stored in citizen_reports), testable without a database.
 

@@ -4,9 +4,9 @@
 {% block hero %}{{ hero('Jednání', [], 'Zastupitelstvo se schází zhruba jednou za čtvrt roku, rada jednou až dvakrát do měsíce.', kind='section') }}{% endblock %}
 {% block main %}
 <nav class="switch" aria-label="Orgán">
-  <a href="/usneseni/jednani" {% if not organ %}aria-current="page"{% endif %}>Obojí</a>
-  <a href="/usneseni/jednani?organ=zmo" {% if organ=='zmo' %}aria-current="page"{% endif %}><i class="key key-zmo" aria-hidden="true"></i>Zastupitelstvo</a>
-  <a href="/usneseni/jednani?organ=rmo" {% if organ=='rmo' %}aria-current="page"{% endif %}><i class="key key-rmo" aria-hidden="true"></i>Rada</a>
+  <a href="/radnice/usneseni/jednani" {% if not organ %}aria-current="page"{% endif %}>Obojí</a>
+  <a href="/radnice/usneseni/jednani?organ=zmo" {% if organ=='zmo' %}aria-current="page"{% endif %}><i class="key key-zmo" aria-hidden="true"></i>Zastupitelstvo</a>
+  <a href="/radnice/usneseni/jednani?organ=rmo" {% if organ=='rmo' %}aria-current="page"{% endif %}><i class="key key-rmo" aria-hidden="true"></i>Rada</a>
 </nav>
 {% for year, group in meetings|groupby('date.year')|reverse %}
 <section class="year">
@@ -14,7 +14,7 @@
   <ol class="cal">
     {% for m in group|sort(attribute='date', reverse=True) %}
     <li class="cal-{{ m.body }}">
-      <a href="/usneseni/jednani/{{ m.id }}">
+      <a href="/radnice/usneseni/jednani/{{ m.id }}">
         <span class="cal-date">{{ m.date.day }}. {{ m.date.month }}.</span>
         <span class="cal-what">{{ 'Zastupitelstvo' if m.body=='zmo' else 'Rada' }}{% if m.kind=='mimoradne' %}, mimořádné{% endif %}</span>
         <span class="cal-n">{{ m.n_resolutions }} usnesení{% if m.n_partial %} ({{ m.n_partial }} zčásti){% endif %}{% if m.n_rejected %}, {{ m.n_rejected }} nepřijat{{ 'ý návrh' if m.n_rejected == 1 else 'é návrhy' if m.n_rejected < 5 else 'ých návrhů' }}{% endif %}{% if m.status != 'ok' %}, čeká na kontrolu{% endif %}</span>
