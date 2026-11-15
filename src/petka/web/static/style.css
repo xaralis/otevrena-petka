@@ -1656,6 +1656,7 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
 .mbox-rows li.on > a, .mbox-rows li.on > span, .mbox-rows li > a:hover, .mbox-rows li > span:hover { background: var(--grey); }
 .mbox-more { align-self: flex-start; margin: .7rem 1rem .8rem; }
 .mbox-col > .cl-muted { margin: 0; padding: 1rem; }
+.mbox-rows .pd-rd small { display: block; font-size: .75rem; color: var(--muted); }   /* a weekday or a year under the date */
 .mbox-sec > .cl-lg, .mbox-sec > .pd-lg { margin: .7rem 0 0; }
 @media (max-width: 900px) {
   .mbox-sec { display: flex; flex-direction: column; }
@@ -1663,7 +1664,7 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
   .mbox-map { order: 1; margin: 0 -1.25rem; height: auto; }
   .mbox-map > div:not(.map) { height: auto; }
   .mbox-map .map { height: auto; aspect-ratio: 390 / 460; max-height: 70vh; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-  .mbox-sec > .cl-lg, .mbox-sec > .pd-lg { order: 2; }
+  .mbox-sec > .cl-lg, .mbox-sec > .pd-lg, .mbox-sec > .cl-cap { order: 2; }
   .mbox-col { order: 3; margin-top: 1.4rem; border: 0; }
   .mbox-h { padding: 0 0 .5rem; }
   .mbox-rows { overflow: visible; }
@@ -1672,3 +1673,9 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
 }
 
 .mbox-rows li.ul-mapped > a, .mbox-rows li.ul-mapped > span { padding-right: 2.8rem; }   /* room for the street rows' pin */
+
+/* Blokové čištění: the map with its column, then the calendar picker beside nothing, a block of its own */
+.cl-mapsec { margin-top: 2.2rem; }
+.cl-cal { max-width: 34rem; margin-top: 2.6rem; }
+.cl-cal .cl-o2 > h3 { margin-top: 0; }
+.cl-mapsec .cl-cap { margin: .4rem 0 0; }

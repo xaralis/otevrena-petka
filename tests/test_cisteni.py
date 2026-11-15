@@ -342,7 +342,8 @@ def test_overview(fixture):
     r = get("/verejny-prostor/blokove-cisteni")
     assert r.status_code == 200 and fixture["obvod"] == "mo5" and fixture["since"] == D(2026, 1, 1)
     h = r.text
-    for s in ("Kdy proběhne čištění mojí ulice?", "Příštích 7 dní", "Kalendář jen pro vaše ulice",
+    for s in ("Kdy proběhne čištění mojí ulice?", "Kdy se kde čistí", 'class="pd-rows mbox-rows"', "Kalendář jen pro vaše ulice",
+              'aria-current="true">7 dní <b>', '<a href="/verejny-prostor/blokove-cisteni?obdobi=rok">Letos <b>4</b></a>',
               "Harmonogram do konce roku", "Příští týden", "Stav k 12. 11. 2026", "letos 5 termínů na 5 místech",
               "Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.", 'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"',
               "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni?od=2026-11-12"'):
@@ -354,6 +355,8 @@ def test_overview(fixture):
     anchors = json.loads(h.split('<script type="application/json" id="cl-anchors">')[1].split("</script>")[0])
     jr = next(k for a in anchors for k in a["keys"] if k.startswith("josefa ressla"))
     assert f'data-cl-key="{jr}"' in h and 'data-anchors="cl-anchors"' in h
+    h = get("/verejny-prostor/blokove-cisteni", params={"obdobi": "rok"}).text      # the whole year beside the map
+    assert 'aria-current="true">Letos <b>4</b>' in h and h.split('class="pd-rows mbox-rows"')[1].split("</ol>")[0].count("<li ") == 4
 
 
 def test_map_anchors():

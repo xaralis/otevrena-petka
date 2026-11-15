@@ -53,8 +53,11 @@ def subscribe(slugs: list[str]) -> dict:
     return {"webcal": "webcal://" + origin.split("://", 1)[1] + path, "https": origin + path}
 
 
+PERIODS = (("7", "7 dní", WEEK), ("14", "14 dní", 2 * WEEK), ("rok", "Letos", None))    # the list beside the map
+
+
 @pages.get("", response_class=HTMLResponse)
-def overview(request: Request, ulice: str = "", probehle: str = ""):
+def overview(request: Request, ulice: str = "", probehle: str = "", obdobi: str = "7"):
     today = _today()
     obvod = request.state.obvod.id
     its = q.items(obvod, q.year_start(today))
@@ -64,13 +67,18 @@ def overview(request: Request, ulice: str = "", probehle: str = ""):
     future = [i for i in its if i["date"] >= today]
     past = [i for i in its if i["date"] < today]
     week = [i for i in future if i["date"] <= today + dt.timedelta(days=WEEK)]
+    obdobi = obdobi if obdobi in {k for k, _, _ in PERIODS} else "7"
+    within = lambda days: [i for i in future if days is None or i["date"] <= today + dt.timedelta(days=days)]
+    periods = [{"key": k, "label": label, "n": len(within(days)), "on": k == obdobi,
+                "href": "/verejny-prostor/blokove-cisteni" + ("" if k == "7" else f"?obdobi={k}")} for k, label, days in PERIODS]
+    listed = within(dict((k, d) for k, _, d in PERIODS)[obdobi])
     groups = weeks(future, today)
     for g in groups:
         rest = [i for i in g["items"] if i not in week]
         g["phone"] = merged(rest) if g["key"][0] == "m" else rest
         g["above"] = len(g["items"]) - len(rest)
     return tpl.TemplateResponse(request, "cisteni/prehled.html", {
-        **_state(today), "week": week, "groups": groups, "names": names, "past": sorted(past, key=lambda i: i["date"], reverse=True) if probehle else None,
+        **_state(today), "week": week, "listed": listed, "periods": periods, "groups": groups, "names": names, "past": sorted(past, key=lambda i: i["date"], reverse=True) if probehle else None,
         "n_past": len(past), "n_dates": len(its), "n_places": len({i["key"] for i in its}),
         "anchors": q.map_anchors(its, q.geometries(obvod), today),
     })

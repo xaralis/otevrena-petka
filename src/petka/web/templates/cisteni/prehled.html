@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "cisteni/_macros.html" import next_list, ap, legend, table %}{% from "_portal.html" import band, source %}
+{% from "cisteni/_macros.html" import next_list, ap, legend, table, map_rows %}{% from "_portal.html" import band, source %}
 {% block title %}Kdy proběhne čištění mojí ulice?{% endblock %}
 {% block description %}Blokové čištění ulic v obvodu podle harmonogramu Služeb města Pardubic: termíny, mapa úseků a kalendář jen pro vaše ulice.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -9,22 +9,28 @@
 {% endblock %}
 {% block main %}
 <datalist id="cl-streets">{% for s, n in names.items() %}<option value="{{ n }}"></option>{% endfor %}</datalist>
-<div class="cl-two">
-  <div class="cl-col">
-    <section class="cl-o3" aria-labelledby="cl-map-h">
-      <h2 id="cl-map-h" class="cl-only-m cl-h2m">Na mapě</h2>
+<section class="mbox-sec cl-mapsec" aria-labelledby="cl-map-h">
+  <div class="sec-head">
+    <h2 id="cl-map-h">Na mapě</h2>
+    <nav class="switch pd-seg" aria-label="Které termíny">{% for x in periods %}<a href="{{ x.href }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>
+  </div>
+  <div class="mbox">
+    <div class="mbox-map">
       <div class="map cl-map" data-cl-map="all" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-src="/api/v1/cisteni?od={{ today.isoformat() }}" data-today="{{ today.isoformat() }}" data-anchors="cl-anchors" role="region" aria-label="Mapa obvodu s úseky blokového čištění obarvenými podle nejbližšího termínu; stejné údaje jsou níže jako seznam"></div>
       <script type="application/json" id="cl-anchors">{{ anchors|tojson }}</script>
-      {{ legend(anchors|selectattr('area')|list) }}
-      <p class="cl-cap"><span class="cl-only-d">Úseky jsme podle textu harmonogramu umístili na mapu sami, čárkované jen přibližně. Platí vždy text termínu v seznamu. Najetím na úsek zobrazíte jeho termín, klepnutím stránku ulice.</span><span class="cl-only-m">Úseky jsme na mapu umístili podle textu harmonogramu, čárkované jen přibližně. Platí text termínu.</span></p>
-    </section>
+    </div>
+    <aside class="mbox-col" aria-labelledby="cl-week-h">
+      <div class="mbox-h"><h3 id="cl-week-h">Kdy se kde čistí</h3><p>{% if listed %}nejbližší nahoře, {{ listed|length }} {{ cl_plural(listed|length, 'termín', 'termíny', 'termínů') }}{% else %}{{ 'v příštích sedmi dnech' if periods[0].on else ('v příštích čtrnácti dnech' if periods[1].on else 'letos už') }} se v obvodu nečistí{% endif %}</p></div>
+      {% if listed %}{{ map_rows(listed, today) }}{% endif %}
+      <a class="more mbox-more" href="#cl-cal-h">Termíny do kalendáře</a>
+    </aside>
   </div>
-  <aside class="cl-col">
-    <section class="cl-o1" aria-labelledby="cl-week-h">
-      <h3 class="side-h" id="cl-week-h">Příštích 7 dní</h3>
-      {% if week %}{{ next_list(week, soon=True) }}{% else %}<p class="cl-muted">V příštích sedmi dnech se v obvodu nečistí.</p>{% endif %}
-    </section>
-    <section class="cl-o2" aria-labelledby="cl-cal-h">
+  {{ legend(anchors|selectattr('area')|list) }}
+  <p class="cl-cap"><span class="cl-only-d">Úseky jsme podle textu harmonogramu umístili na mapu sami, čárkované jen přibližně. Platí vždy text termínu v seznamu. Najetím na úsek zobrazíte jeho termín, klepnutím stránku ulice.</span><span class="cl-only-m">Úseky jsme na mapu umístili podle textu harmonogramu, čárkované jen přibližně. Platí text termínu.</span></p>
+</section>
+
+<div class="cl-cal">
+  <section class="cl-o2" aria-labelledby="cl-cal-h">
       <h3 id="cl-cal-h">Kalendář jen pro vaše ulice</h3>
       <p class="cl-muted"><span class="cl-only-d">Vyberte ulice, kde parkujete. Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</span><span class="cl-only-m">Vyberte ulice, kde parkujete. Termíny se v kalendáři samy aktualizují.</span></p>
       <form class="cl-pick" method="get" action="/verejny-prostor/blokove-cisteni/kalendar" aria-label="Ulice do kalendáře" data-cl-pick>
@@ -36,8 +42,8 @@
         <span class="cl-hint">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.</span>
       </form>
       <script type="application/json" id="cl-names">{{ names|tojson }}</script>
-    </section>
-  </aside>
+  </section>
+</div>
 
   <section class="cl-harm cl-o5" aria-labelledby="cl-harm-h">
   {% if past is not none %}
@@ -55,7 +61,7 @@
     <div class="cl-only-d">{{ table(g['items']) }}</div>
     <div class="cl-only-m">
       {% if g.phone %}{{ next_list(g.phone) }}{% endif %}
-      {% if g.above %}<p class="cl-cap cl-above">{{ 'a ' if g.phone else '' }}{{ g.above }} {{ cl_plural(g.above, 'termín', 'termíny', 'termínů') }} výše v „Příštích 7 dní“</p>{% endif %}
+      {% if g.above %}<p class="cl-cap cl-above">{{ 'a ' if g.phone else '' }}{{ g.above }} {{ cl_plural(g.above, 'termín', 'termíny', 'termínů') }} výše u mapy</p>{% endif %}
     </div>
     {% else %}
     <p class="cl-muted">Letos už žádné čištění v obvodu nezbývá.</p>
@@ -63,7 +69,6 @@
     {% if n_past %}<p class="cl-pastlink"><a class="more" href="/verejny-prostor/blokove-cisteni?probehle=1#cl-harm-h">Letošní proběhlé termíny ({{ n_past }})</a></p>{% endif %}
   {% endif %}
   </section>
-</div>
 {% call source(checked) %}Harmonogram vydávají <a href="{{ source }}">Služby města Pardubic</a> jako tabulku pro celé město; každý den ji stahujeme a vybíráme úseky v obvodu, letos {{ n_dates }} {{ cl_plural(n_dates, 'termín', 'termíny', 'termínů') }} na {{ n_places }} {{ cl_plural(n_places, 'místě', 'místech', 'místech') }}. Úseky jako data: <a href="/api/v1/cisteni">GeoJSON</a> a <a href="/data#blokove-cisteni">API</a>.{% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('cisteni.js') }}" defer></script>{% endblock %}

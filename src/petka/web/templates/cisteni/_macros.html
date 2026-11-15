@@ -13,6 +13,16 @@
 </ul>
 {% endmacro %}
 
+{#- rows of the map's column (_portal mbox): date and weekday, street, short wording and time,
+    how soon; each lights its stretch on the map ([data-cl-key], cisteni.js) -#}
+{% macro map_rows(its, today) %}
+<ol class="pd-rows mbox-rows">
+  {% for i in its %}
+  <li data-cl-key="{{ i.key }}"><a href="{{ '/verejny-prostor/ulice/' ~ i.slug ~ '#cisteni' if i.slug else '#cl-harm-h' }}"><span class="pd-rd">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="pd-rt"><b>{{ i.street if i.slug else i.text }}</b><span>{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></span><span class="st">{{ cl_until(i.date, today) }}</span></a></li>
+  {% endfor %}
+</ol>
+{% endmacro %}
+
 {% macro legend(areas=False) %}
 <p class="cl-lg" aria-label="Legenda mapy">
   <span><i class="cl-lg-7"></i>do týdne</span>
