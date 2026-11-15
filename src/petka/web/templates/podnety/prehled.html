@@ -31,7 +31,7 @@
 <p class="pd-empty">Za toto období v obvodu žádné podněty nemáme.</p>
 {% else %}
 {% set c = s.count %}
-<div class="pd-kpi" id="kpi">
+<div class="pd-kpi" id="kpi" data-kpi-remember="podnety">
   {% set tiles = [
     ('mesice', s.n, 'podnětů ' ~ per.phrase, 'podnětů ' ~ per.phrase_m, 'Po měsících'),
     ('vyreseno', c.vyreseno, 'vyřešeno (' ~ s.done_pct ~ ' %)', 'vyřešeno (' ~ s.done_pct ~ ' %)', 'Za jak dlouho'),
