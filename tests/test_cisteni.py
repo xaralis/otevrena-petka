@@ -220,6 +220,50 @@ def test_vnitroblok_is_the_block_the_streets_close(geo):
     assert 400 < c.x < 500 and 100 < c.y < 200 and g.area < 500 * 300
 
 
+class NamesRuian(FakeRuian):
+    """FakeRuian plus Dlouhá třída crossing Hlavní at x = 300, Příčná in two numbered parts (I far
+    north, II crossing Hlavní at x = 800), K Hlavní joining Hlavní and Horní at x = 0, and
+    Spojovací and Staročernská somewhere."""
+    STREETS = FakeRuian.STREETS + [[6, "Dlouhá třída"], [7, "Příčná I"], [8, "Příčná II"], [9, "K Hlavní"],
+                                   [10, "Spojovací"], [11, "Staročernská"]]
+    LINES = {**FakeRuian.LINES, 6: line((300, -200), (300, 400)), 7: line((900, 2000), (900, 3000)),
+             8: line((800, -200), (800, 400)), 9: line((0, 0), (0, 300))}
+
+
+@pytest.fixture(scope="module")
+def geo2():
+    return geocode.Geo(NamesRuian())
+
+
+def test_names_without_trida_and_numbered_parts(geo2):
+    r = geo2.place(places.place_key("Hlavní od ul. Dlouhá k ul. Příčná - obě strany komunikace"))
+    assert (r["method"], r["status"], r["note"]) == ("segment", "auto", "Dlouhá třída → Příčná II")   # the part that crosses
+    xs = [c[0] for c in geocode.to_m(r["geometry"]).coords]
+    assert min(xs) == pytest.approx(300, abs=1) and max(xs) == pytest.approx(800, abs=1)
+    assert geo2.names.find("protihlukova stena i/37") == []       # 'I' of Příčná I is no street
+    assert geo2.names.find("spojovaci komunikace k hale") == []   # a connecting road, not Spojovací
+    assert [f[0] for f in geo2.names.find("od ul. spojovaci")] == ["Spojovací"]
+    assert [f[0] for f in geo2.names.find("po ul. starocenska")] == ["Staročernská"]   # the sheet's misspelling
+
+
+def test_od_a_street_named_k(geo2):
+    r = geo2.place(places.place_key("Boční od ul. K Hlavní - obě strany komunikace"))
+    assert (r["method"], r["status"]) == ("whole", "auto")            # no end given: the whole street, as "Boční od X"
+    r = geo2.place(places.place_key("Boční - celá od ul. K Hlavní"))
+    assert (r["method"], r["status"]) == ("whole", "auto")
+    r = geo2.place(places.place_key("Boční - od ul. K Hlavní, vč. parkovišť"))
+    assert (r["method"], r["status"], r["note"]) == ("whole", "approx", "od X, end not given")
+
+
+def test_street_with_its_parking_is_the_street(geo2):
+    for text in ("Boční, vč. parkoviště", "Boční vč. parkovišť a chodníků - obě strany komunikace",
+                 "Boční vč. slepé části"):
+        r = geo2.place(places.place_key(text))
+        assert (r["method"], r["status"]) == ("whole", "auto"), text
+    r = geo2.place(places.place_key("Boční po ul. Hlavní vč. parkovišť"))     # a stretch without its start
+    assert r["geometry"] is None
+
+
 def test_obvod_ids_and_numbers():
     assert geocode.obvod_id("Pardubice V") == "mo5" and geocode.obvod_id("Pardubice VIII") == "mo8"
     assert geocode.obvod_id("Pardubice") is None

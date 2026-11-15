@@ -2,12 +2,13 @@
 
 What a place's text says and what we draw (`method`, with `status` auto unless said):
 
-- "Wolkerova", "Wolkerova v celé délce", "… celá": the whole street line (`whole`).
+- "Wolkerova", "Wolkerova v celé délce", "… celá", "Kostelní, vč. parkoviště": the whole street
+  line (`whole`).
 - "X od ul. A k/po ul. B": X cut between the points where A and B come closest to it, along
   X's own network (shortest path, gaps in RÚIAN lines bridged), `segment`. An endpoint can be
   a čp. ("k č. p. 1334"). A cross street is found by name in its Czech case forms; a fuzzy
   match (word stems) only for endpoints, and only when that street comes close to X.
-- "X od ul. A" without an end: the whole street, `approx`.
+- "X od ul. A" without an end (also "od ul. K Lesu"): the whole street, `approx`.
 - "parkoviště před č. p. 2116–2118": the hull of those buildings' address points, buffered,
   `hull` (`partial` when some čp. weren't found; a spread over ~700 m means a wrong building
   and is rejected).
@@ -55,9 +56,14 @@ MIN_SHARE = 0.05    # an obvod with less than this share of a place doesn't have
 MAX_RANGE = 12      # "2449-52" is four houses; "153-174" is two ends of a stretch
 
 GENERIC = {"namesti": "nam.", "trida": "tr.", "nabrezi": "nabr."}
+# other names the harmonogram uses, and its misspellings
 ALIASES = {"csa": "Čs. armády", "ceskoslovenske armady": "Čs. armády", "cs. armady": "Čs. armády",
-           "resslova": "Josefa Ressla", "dukelske namesti": "náměstí Dukelských hrdinů"}
+           "resslova": "Josefa Ressla", "dukelske namesti": "náměstí Dukelských hrdinů",
+           "pernerovo namesti": "náměstí Jana Pernera", "starocenska": "Staročernská"}
 NUM_RE = re.compile(r"(?<![\w/])(\d{1,4})(?:/\d+[a-z]?)?(?:\s*-\s*(?:c\. p\. ?)?(\d{1,4}))?(?![\w/])")
+# what a street's cleaning includes besides the roadway ("vč. parkovišť a chodníků")
+INCL = r"(?:parkovist\w*|slepe casti|chodniku|stredu parku)"
+NOT_BARE = r"\d|parkovist|vnitroblo|mezi|slepa|cast|chodnik|stezk|tocn"
 ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8}
 
 
@@ -121,12 +127,15 @@ def _cases(k: str) -> set[str]:
 
 class Streets:
     """Street names of the town inside a place's key: exact, abbreviated ('nam.', 'a. krause'),
-    by the last word ('palacha'), in case forms; a variant shared by two streets is dropped."""
+    by the last word ('palacha'), without a trailing 'třída' ('palackeho'), in case forms; a
+    variant shared by two streets is dropped. A street in numbered parts ('Wintrova I',
+    'Wintrova II') is also found by its bare name; `siblings` lists the parts."""
 
     def __init__(self, rows: list[list]):
         self.kod = {name: kod for kod, name in rows}
         exact = {key(n): n for n in self.kod}
         variants = defaultdict(set)
+        bases = defaultdict(set)
         for k, n in exact.items():
             ws = k.split()
             for g, ab in GENERIC.items():
@@ -134,10 +143,20 @@ class Streets:
                     variants[" ".join(ab if x == g else x for x in ws)].add(n)
             if len(ws) >= 2 and all(x.isalpha() and len(x) > 2 for x in ws[:-1]) and not set(ws) & set(GENERIC):
                 variants[" ".join(x[0] + "." for x in ws[:-1]) + " " + ws[-1]].add(n)
-                variants[ws[-1]].add(n)
+                if len(ws[-1]) > 2:          # not 'i' of 'Wintrova I'
+                    variants[ws[-1]].add(n)
+            if len(ws) >= 2 and ws[-1] == "trida":
+                variants[" ".join(ws[:-1])].add(n)
+            if len(ws) >= 2 and ws[-1].upper() in ROMAN:
+                bases[" ".join(ws[:-1])].add(n)
             for v in _cases(k):
                 variants[v].add(n)
         index = {v: next(iter(ns)) for v, ns in variants.items() if len(ns) == 1 and v not in exact}
+        self.siblings = {}
+        for b, ns in bases.items():
+            if b not in exact and b not in index:
+                index[b] = min(ns)
+                self.siblings.update({n: sorted(ns) for n in ns})
         index.update(exact)
         index.update({k.replace("-", " "): n for k, n in exact.items() if "-" in k})
         index.update({a: n for a, n in ALIASES.items() if n in self.kod})
@@ -147,7 +166,9 @@ class Streets:
 
     def find(self, s: str) -> list[tuple[str, int, int]]:
         """[(name, start, end)] of the streets in a key()-ed string."""
-        return [(self.index[m[0]], m.start(), m.end()) for m in self.rx.finditer(s)]
+        # "spojovací komunikace" is a connecting road, not the street Spojovací
+        return [(self.index[m[0]], m.start(), m.end()) for m in self.rx.finditer(s)
+                if not s.startswith(" komunikac", m.end())]
 
     def fuzzy(self, s: str) -> str | None:
         """The longest name whose every word's stem (all but the last two letters, at least
@@ -326,6 +347,9 @@ class Geo:
                 return None, f"fuzzy '{found[0]}' too far", None
         if not found:
             return None, f"no street in '{t}'", None
+        # 'ul. Wintrova': the part of it that comes closest
+        found[0] = min(self.names.siblings.get(found[0], [found[0]]),
+                       key=lambda n: main_line.distance(self.line(n)) if self.line(n) is not None else math.inf)
         other = self.line(found[0])
         if other is None:
             return None, f"{found[0]}: no geometry", None
@@ -334,6 +358,12 @@ class Geo:
             return None, f"{found[0]} {d:.0f} m away", None
         p, q = ops.nearest_points(main_line, other)
         return p, found[0] + (f" (~{d:.0f} m)" if d > SNAP else ""), q
+
+    def _one_street(self, text: str) -> bool:
+        """Whether `text` ('ul. K Rybníčku') is one street's name and nothing else."""
+        t = re.sub(r"^(ul\.|ulice|ulici)\s*", "", text.strip())
+        f = self.names.find(t)
+        return len(f) == 1 and f[0][1] == 0 and f[0][2] == len(t)
 
     def block(self, names: list[str]):
         """The block the named streets enclose, or None when they don't close a ring."""
@@ -365,7 +395,15 @@ class Geo:
         seg = re.match(r"^(?P<m>.+?)\s*-?\s*\bod (?P<a>.+?)\s+(?:k|ke|po|do)\s+(?P<b>.+?)(?:,|\bvc\.|\s-\s|\(|$)", core)
         only_from = re.match(r"^(?P<m>.+?)\s*-?\s*\bod (?P<a>.+?)(?:,|\bvc\.|\s-\s|$)", core)
         tail = core[found[0][2]:] if main and found and found[0][0] == main else core[len(main or ""):]
-        bare = main and not re.search(r"\d|parkovist|vnitroblo|mezi|slepa|cast|chodnik|stezk|tocn", tail)
+        bare = main and not re.search(NOT_BARE, tail)
+        # "Kostelní, vč. parkoviště", "V Zahrádkách vč. slepé části": the street with what
+        # belongs to it, drawn as the street; not a stretch ("od ul. A vč. parkovišť")
+        incl = re.sub(rf"\bvc\.\s*{INCL}(?:\s*(?:,|\ba\b)\s*{INCL})*", "", tail)
+        bare = bare or (main and not re.search(NOT_BARE, incl) and not re.search(r"\b(od|po|k|ke|do)\b", incl))
+        # "Dlouhá od ul. K Rybníčku": the k of a street's name is no end of the stretch
+        if pat == "usek od-k" and only_from and re.match(r"(ul\. )?ke? ", only_from["a"]) \
+                and self._one_street(only_from["a"]):
+            pat = "jen od"
 
         if main_line is not None and pat == "usek od-k" and seg:
             p1 = p2 = q1 = q2 = None
@@ -394,7 +432,10 @@ class Geo:
             rec.update(method="whole", status="auto")
         elif main_line is not None and pat == "jen od" and only_from and "c. p." not in core:
             geom = main_line
-            rec.update(method="whole", status="approx", note="od X, end not given")
+            if re.search(r"\bcela\b", core):        # "Na Hrázi - celá od ul. K Lesu"
+                rec.update(method="whole", status="auto", note="celá od X")
+            else:
+                rec.update(method="whole", status="approx", note="od X, end not given")
 
         if geom is None and "c. p." in core:
             nums = numbers(core[core.find("c. p."):])
