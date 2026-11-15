@@ -94,7 +94,17 @@
       if (f.layer.id === rep.cl) { link.close(); rep.zoomInto(f); return; }
       link.pin(fromReport(f.properties.id));    // the card has a toggle and a link: a click (a tap) pins it
     });
-    if (list) list.querySelectorAll("li[data-row]").forEach((li) => link.wire(li.firstElementChild, () => fromRow(li.dataset.row)));
+    // pointing at a row shows its place – only where the card floats over the map; under the map
+    // (a narrow window, the card in the sheet) it would push the list away from the pointer, so
+    // there a row shows its place on a click (below)
+    const floats = window.matchMedia("(min-width: 901px) and (hover: hover)");
+    if (list) list.querySelectorAll("li[data-row]").forEach((li) => {
+      const a = li.firstElementChild, make = () => fromRow(li.dataset.row);
+      a.addEventListener("mouseenter", () => { if (floats.matches) link.hover(make()); });
+      a.addEventListener("mouseleave", () => { if (floats.matches) link.leave(); });
+      a.addEventListener("focus", () => { if (floats.matches) link.hover(make()); });
+      a.addEventListener("blur", () => { if (floats.matches) link.leave(); });
+    });
     // the control beside a row, and a click on a row with a place: the map moves to what the row
     // is about and keeps it shown
     const featuresOf = (k) => [

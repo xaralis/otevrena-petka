@@ -1600,7 +1600,7 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ul-akt { margin-top: 2rem; }
   .ul-sheet .ak-tip.ak-card { position: static; display: grid; grid-template-columns: 120px minmax(0, 1fr); width: auto; max-width: none; margin: .8rem 0 0;
     opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
-  .ul-sheet .ak-card:not(:has(> img)) { display: block; }
+  .ul-sheet .ak-tip.ak-card:not(:has(> img)) { display: block; }   /* as specific as the grid above, or it loses */
   .ul-sheet .ak-card img { height: 100%; min-height: 150px; }
   .ul-rows { margin-top: 1.2rem; }
   .ul-rows li > a, .ul-rows li > span { grid-template-columns: 4.1rem minmax(0, 1fr) auto; gap: .1rem .6rem; padding: .5rem; font-size: .88rem; }
