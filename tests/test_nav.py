@@ -41,7 +41,10 @@ def test_planned_pages_and_where_an_area_links():
     assert nav.SOON == {"/finance/rozpocet", "/finance/smlouvy", "/verejny-prostor/uzavirky", "/zapojte-se/ankety"}
 
 
-def test_header_rows_and_phone_menu():
+def test_header_rows_and_phone_menu(monkeypatch):
+    from petka.cisteni import web as cweb
+    monkeypatch.setattr(cweb.q, "items", lambda obvod, since, slugs=None: [])    # no database needed
+    monkeypatch.setattr(cweb.q, "checked", lambda: None)
     c = TestClient(app)
     html = c.get("/verejny-prostor/blokove-cisteni/kalendar").text
     assert '<a href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor</a>' in html
