@@ -255,7 +255,7 @@ def test_page_content(page):
     assert "<b>26</b>" in m and "vyřešeno (46 %)" in m                     # 12 of 26
     assert "Nejdéle čekají" not in m                                       # no highlight box any more
     assert "předávají se strážníkům, stav v Dej Tipu se nemění" in m
-    assert '<span class="st st-no">' in m and '<span class="st">vyřešeno</span>' not in m.split('class="pd-side"')[1]
+    assert '<span class="st st-no">' in m and '<span class="st">vyřešeno</span>' not in m.split('class="mbox-col pd-side"')[1]
     assert '<span class="st">vyřešeno</span>' in main(page("/verejny-prostor/podnety?stav=vse"))   # every state
     assert "Stav k 12. 11. 2026." in m and "Odkud to víme" in m
     assert "Všechny podněty" not in m and "Co tu neuvidíte" not in m
@@ -264,8 +264,8 @@ def test_page_content(page):
     assert "Podněty ukazujeme seskupené" not in m and "Nejnovější" not in m
     assert "Klik na shluk" not in m
     # the list (every state): newest first, one row a link to the report on Dej Tip; the description only in the card
-    side = main(page("/verejny-prostor/podnety?stav=vse")).split('class="pd-side"')[1].split("</aside>")[0]
-    assert "V mapě 26 podnětů, nejnovější" in side and side.count("<li ") == 15
+    side = main(page("/verejny-prostor/podnety?stav=vse")).split('class="mbox-col pd-side"')[1].split("</aside>")[0]
+    assert "26 podnětů v mapě, nejnovější nahoře" in side and side.count("<li ") == 15
     assert re.findall(r'<li data-id="(\d+)"', side)[:4] == ["203", "200", "201", "0"]
     assert 'href="https://amg.dejtip.eu/pardubice/?id=200"' in side
     assert '<span class="pd-rd">12.\u00a011.</span><span class="pd-rt"><b>Městská policie</b><span>Jiránkova</span></span><span class="st">předáno</span>' in side
@@ -302,8 +302,8 @@ def test_periods_and_links(page):
 
 def test_filters_without_js(page):
     m = main(page("/verejny-prostor/podnety?obdobi=2026&stav=ceka&druh=20&detail=mesice"))
-    side = m.split('class="pd-side"')[1].split("</aside>")[0]
-    assert "V mapě 10 podnětů, nejnovější" in side and side.count("<li ") == 10 and "Další podněty" not in side
+    side = m.split('class="mbox-col pd-side"')[1].split("</aside>")[0]
+    assert "10 podnětů v mapě, nejnovější nahoře" in side and side.count("<li ") == 10 and "Další podněty" not in side
     assert all(x in side for x in ("Sokolovská", 'class="st st-no"')) and "vyřešeno" not in side
     assert 'data-stav="" aria-current="true">Čeká <b>10</b>' in m          # the default, left out of the address
     assert '<option value="20" selected>Pískoviště, hřiště, sportoviště (10)</option>' in m
@@ -315,7 +315,7 @@ def test_filters_without_js(page):
     assert 'href="/verejny-prostor/podnety?druh=20"' in m
     assert 'href="/verejny-prostor/podnety?obdobi=2026&amp;detail=zadny&amp;druh=20#kpi"' in m
     m = main(page("/verejny-prostor/podnety?stav=vyreseno&pocet=30"))
-    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    side = m.split('class="mbox-col pd-side"')[1].split("</aside>")[0]
     assert side.count("<li ") == 12 and "st-no" not in side
     assert stats.LIST == 15
     assert web.link("12m") == "/verejny-prostor/podnety" and web.link("2025", detail="", kategorie=3) == "/verejny-prostor/podnety?obdobi=2025&kategorie=3"
@@ -367,14 +367,14 @@ def test_street_filter(page, monkeypatch):
         "jirankova": ust.Street("jirankova", "Jiránkova", 2, line, 1.0)})
     assert stats.on_street(rep(street="SOKOLOVSKA "), "Sokolovská") and not stats.on_street(rep(street=None), "Sokolovská")
     m = main(page("/verejny-prostor/podnety?ulice=sokolovska"))
-    side = m.split('class="pd-side"')[1].split("</aside>")[0]
-    assert "V mapě 10 podnětů, nejnovější" in side and "Wolkerova" not in side
+    side = m.split('class="mbox-col pd-side"')[1].split("</aside>")[0]
+    assert "10 podnětů v mapě, nejnovější nahoře" in side and "Wolkerova" not in side
     assert 'data-stav="" aria-current="true">Čeká <b>10</b>' in m and 'data-stav="vse">Vše <b>10</b>' in m
     assert '<input type="hidden" name="ulice" value="sokolovska">' in m
     assert 'Ulice <b>Sokolovská</b> <a href="/verejny-prostor/podnety#kde" data-pd-street-clear>Všechny ulice</a>' in m
     assert 'href="/verejny-prostor/podnety?stav=vse&amp;ulice=sokolovska#kde" data-stav="vse"' in m      # the filters keep it
     m = main(page("/verejny-prostor/podnety?ulice=jirankova&stav=vse&druh=25"))
-    side = m.split('class="pd-side"')[1].split("</aside>")[0]
+    side = m.split('class="mbox-col pd-side"')[1].split("</aside>")[0]
     assert side.count("<li ") == 1 and "Městská policie" in side
     m = main(page("/verejny-prostor/podnety?ulice=neni"))                     # not a street of the obvod: ignored
-    assert "data-pd-street" not in m and "V mapě 11 podnětů" in m
+    assert "data-pd-street" not in m and "11 podnětů v mapě" in m

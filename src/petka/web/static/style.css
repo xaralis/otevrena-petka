@@ -1554,25 +1554,6 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .cl-nx-a { display: inline-block; margin-top: .55rem; }
 /* „Aktuálně“ */
 .ul-akt { margin-top: 3rem; }
-.ul-akt > h2 { margin: 0 0 1rem; }
-/* the map and its list in one ink frame as the front page's boxes, the list a column of its own (as tall as the map, scrolling inside), the legend under the frame */
-.ul-box { display: grid; grid-template-columns: minmax(0, 1fr) 370px; height: 560px; border: 2px solid var(--ink); border-radius: 3px; overflow: hidden; }
-.ul-akt-map { min-height: 0; }
-.ul-mapw { position: relative; height: 100%; }
-.ul-map { height: 100%; width: 100%; margin: 0; border: 0; border-radius: 0; }
-.ul-akt-list { display: flex; flex-direction: column; min-height: 0; border-left: 2px solid var(--ink); }
-.ul-akt-lh { padding: .8rem .9rem .6rem; border-bottom: 1px solid var(--off); }
-.ul-akt-lh h3 { margin: 0; font-size: 1.05rem; }
-.ul-akt-lh span { font-size: .82rem; color: var(--muted); }
-.ul-akt-list .ul-rows { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
-.ul-akt-list .pd-rows-more { margin: .7rem .9rem .8rem; align-self: flex-start; }
-.ul-akt-list > .cl-muted { margin: 0; padding: 1rem; }
-.ul-akt > .ul-lg { margin: .7rem 0 0; }
-.ul-box .ul-rows li > a, .ul-box .ul-rows li > span { grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .5rem; padding-left: .9rem; padding-right: 2.8rem; }   /* the narrow column: a short date, every status in one line with the pins */
-/* rows split by hairlines as the link lists, no stripes; grey only for the row lit (pointed at, or from the map) */
-.ul-box .ul-rows li { border-bottom: 1px solid var(--off); }
-.ul-box .ul-rows li:nth-child(odd) > a, .ul-box .ul-rows li:nth-child(odd) > span { background: none; }
-.ul-box .ul-rows li.on > a, .ul-box .ul-rows li.on > span, .ul-box .ul-rows li > a:hover, .ul-box .ul-rows li > span:hover { background: var(--grey); }
 .ul-sheet:empty { display: none; }
 .ul-lg { gap: .35rem 1.2rem; }
 .ul-lg i.ul-lg-street { width: 1.6rem; border-top: 8px solid rgba(25,28,31,.14); }
@@ -1609,19 +1590,6 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ul-cl-grid aside { margin-top: 2rem; }
   .cl-nx-a { margin-top: .4rem; }
   .ul-akt { margin-top: 2rem; }
-  .ul-akt > h2 { margin: 0 0 .8rem; }
-  .ul-akt { display: flex; flex-direction: column; }
-  .ul-box { display: contents; }   /* the map, its legend, the list */
-  .ul-akt-map { order: 1; }
-  .ul-akt > .ul-lg { order: 2; }
-  .ul-akt-list { order: 3; border: 0; margin-top: 1.4rem; }
-  .ul-akt-lh { padding: 0 0 .5rem; }
-  .ul-akt-list .ul-rows { margin-top: 0; }
-  .ul-box .ul-rows li > a, .ul-box .ul-rows li > span { padding-left: 0; }
-  .ul-akt-list .ul-rows { overflow: visible; }
-  .ul-akt-list .pd-rows-more { padding: 0; margin: .8rem 0 0; border: 0; }
-  .ul-mapw { margin: 0 -1.25rem; height: auto; }
-  .ul-map { height: auto; aspect-ratio: 390 / 460; max-height: 70vh; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .ul-sheet .ak-tip.ak-card { position: static; display: grid; grid-template-columns: 120px minmax(0, 1fr); width: auto; max-width: none; margin: .8rem 0 0;
     opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
   .ul-sheet .ak-card:not(:has(> img)) { display: block; }
@@ -1662,3 +1630,45 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
 
 /* lists on a panel's grey go without the rules between rows */
 .pd-panel .link-list li { border-bottom: 0; padding: .4rem 0; }
+
+/* --- the map with its column (one look for every map with a list: a street's Aktuálně, Blokové
+   čištění, Podněty; later Uzavírky). The section's heading row carries its filters on the right
+   (.sec-head); the ink frame holds the map and a 370 px column: its heading and one line of
+   count and order, then the rows (hairlines, grey only for the row lit), scrolling inside, the
+   link to more at the bottom. The legend sits under the frame. On a phone: no frame, the map
+   the full width, the legend, then the column without its own scroll (.mbox-sec orders them). */
+.sec-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem 1.6rem; margin: 0 0 1rem; }
+.sec-head > h2 { margin: 0; }
+.sec-head .switch { margin: 0; }
+.mbox { display: grid; grid-template-columns: minmax(0, 1fr) 370px; height: 560px; border: 2px solid var(--ink); border-radius: 3px; overflow: hidden; }
+.mbox-map { position: relative; min-height: 0; }
+.mbox-map .map { height: 100%; width: 100%; margin: 0; border: 0; border-radius: 0; aspect-ratio: auto; max-height: none; }
+.mbox-map > div:not(.map) { height: 100%; }   /* a page's own wrapper around the map (cards are placed in it) */
+.mbox-col { display: flex; flex-direction: column; min-height: 0; border-left: 2px solid var(--ink); background: #fff; }
+.mbox-h { padding: .8rem 1rem .7rem; border-bottom: 1px solid var(--off); }
+.mbox-h h3 { margin: 0; font-size: var(--h3); }
+.mbox-h p { margin: .1rem 0 0; font-size: .875rem; color: var(--muted); }
+.mbox-rows { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; list-style: none; margin: 0; padding: 0; }
+.mbox-rows li { position: relative; border-bottom: 1px solid var(--off); }
+.mbox-rows li > a, .mbox-rows li > span { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: .1rem .6rem; align-items: baseline;
+  padding: .55rem 1rem; color: var(--ink); text-decoration: none; background: none; }
+.mbox-rows li:nth-child(odd) > a, .mbox-rows li:nth-child(odd) > span { background: none; }
+.mbox-rows li.on > a, .mbox-rows li.on > span, .mbox-rows li > a:hover, .mbox-rows li > span:hover { background: var(--grey); }
+.mbox-more { align-self: flex-start; margin: .7rem 1rem .8rem; }
+.mbox-col > .cl-muted { margin: 0; padding: 1rem; }
+.mbox-sec > .cl-lg, .mbox-sec > .pd-lg { margin: .7rem 0 0; }
+@media (max-width: 900px) {
+  .mbox-sec { display: flex; flex-direction: column; }
+  .mbox { display: contents; }
+  .mbox-map { order: 1; margin: 0 -1.25rem; height: auto; }
+  .mbox-map > div:not(.map) { height: auto; }
+  .mbox-map .map { height: auto; aspect-ratio: 390 / 460; max-height: 70vh; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .mbox-sec > .cl-lg, .mbox-sec > .pd-lg { order: 2; }
+  .mbox-col { order: 3; margin-top: 1.4rem; border: 0; }
+  .mbox-h { padding: 0 0 .5rem; }
+  .mbox-rows { overflow: visible; }
+  .mbox-rows li > a, .mbox-rows li > span { padding-left: 0; }
+  .mbox-more { margin: .8rem 0 0; }
+}
+
+.mbox-rows li.ul-mapped > a, .mbox-rows li.ul-mapped > span { padding-right: 2.8rem; }   /* room for the street rows' pin */

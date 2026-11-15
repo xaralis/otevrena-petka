@@ -160,7 +160,7 @@
     let limit = LIST;
     const moreLink = document.querySelector("[data-pd-rows-more]") || (() => {
       const a = document.createElement("a");
-      a.className = "pd-rows-more"; a.href = "#kde"; a.dataset.pdRowsMore = "";
+      a.className = "pd-rows-more more mbox-more"; a.href = "#kde"; a.dataset.pdRowsMore = "";
       list.after(a);
       return a;
     })();
@@ -188,7 +188,7 @@
       if (reset) limit = LIST;
       const b = map.getBounds();
       const inView = current().filter((f) => b.contains(f.geometry.coordinates));
-      head.textContent = `V mapě ${inView.length} ${plural(inView.length, "podnět", "podněty", "podnětů")}, nejnovější`;
+      head.textContent = `${inView.length} ${plural(inView.length, "podnět", "podněty", "podnětů")} v mapě, nejnovější nahoře`;
       list.replaceChildren(...inView.slice(0, limit).map(row));
       moreLink.hidden = inView.length <= limit;
       if (card.id !== null) { const r = list.querySelector(`li[data-id="${card.id}"]`); if (r) r.classList.add("on"); }

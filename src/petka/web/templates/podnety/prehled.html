@@ -89,7 +89,8 @@
 <p class="pd-lg">{% for k, cls, label, why in segments if c[k] %}<span><i class="{{ cls }}"></i><span>{{ label }}<span class="pd-d">{% if why %} ({{ why }}){% endif %} {{ c[k] }}</span></span></span>{% endfor %}</p>
 
 <div class="pd-flow">
-  <section class="pd-o2 pd-kde" id="kde" aria-labelledby="pd-kde-h">
+  <section class="pd-o2 pd-kde mbox-sec" id="kde" aria-labelledby="pd-kde-h">
+    <div class="sec-head">
     <h2 id="pd-kde-h" class="pd-h2">Kde</h2>
     <form class="pd-flt" method="get" action="/verejny-prostor/podnety#kde" data-pd-filter>
       <nav class="switch pd-seg" aria-label="Stav podnětů">{% for x in facets.stav %}<a href="{{ f(stav=x.url) }}#kde" data-stav="{{ x.url }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>
@@ -105,22 +106,23 @@
       <p class="pd-street" data-pd-street="{{ street.name }}">Ulice <b>{{ street.name }}</b> <a href="{{ f(ulice='') }}#kde" data-pd-street-clear>Všechny ulice</a></p>{% endif %}
       <button class="btn pd-go" type="submit">Ukázat</button>
     </form>
-    <div class="pd-two">
-      <div class="pd-mapcol">
+    </div>
+    <div class="mbox">
+      <div class="mbox-map pd-mapcol">
         <div class="pd-mapw"><div class="map pd-map" data-pd-map data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" role="region" aria-label="Mapa obvodu s podněty; stejné podněty jsou vedle v seznamu a v číslech níže v tabulce podle druhu"></div></div>
         <script type="application/json" id="pd-points">{{ points|safe }}</script>
-        <p class="pd-lg pd-map-lg"><span><i class="pd-k-pt"></i>vyřešené a ostatní</span><span><i class="pd-k-pt pending-alert"></i>čeká na vyřízení</span><span><i class="pd-k-cl">12</i>víc podnětů blízko sebe</span></p>
       </div>
-      <aside class="pd-side" aria-labelledby="pd-side-h">
-        <h3 class="side-h" id="pd-side-h" aria-live="polite">V mapě {{ shown_n }} {{ plural(shown_n, 'podnět', 'podněty', 'podnětů') }}, nejnovější</h3>
-        <ol class="pd-rows" data-pd-rows>
+      <aside class="mbox-col pd-side" aria-labelledby="pd-side-t">
+        <div class="mbox-h"><h3 id="pd-side-t">Podněty na mapě</h3><p id="pd-side-h" aria-live="polite">{{ shown_n }} {{ plural(shown_n, 'podnět', 'podněty', 'podnětů') }} v mapě, nejnovější nahoře</p></div>
+        <ol class="pd-rows mbox-rows" data-pd-rows>
           {% for r in shown %}{% set word, cls = status_word(r) %}
           <li data-id="{{ r.id }}"><a href="{{ detail_url(r.id) }}" target="_blank" rel="noopener"><span class="pd-rd">{{ w.dm(r.reported_at)|replace(' ', ' ') }}</span><span class="pd-rt"><b>{{ r.category }}</b>{% if r.street %}<span>{{ r.street }}</span>{% endif %}</span><span class="{{ cls }}">{{ word }}</span></a></li>
           {% endfor %}
         </ol>
-        {% if more %}<a class="pd-rows-more more" href="{{ f(pocet=more) }}#kde" data-pd-rows-more>Další podněty</a>{% endif %}
+        {% if more %}<a class="pd-rows-more more mbox-more" href="{{ f(pocet=more) }}#kde" data-pd-rows-more>Další podněty</a>{% endif %}
       </aside>
     </div>
+    <p class="pd-lg pd-map-lg mbox-lg"><span><i class="pd-k-pt"></i>vyřešené a ostatní</span><span><i class="pd-k-pt pending-alert"></i>čeká na vyřízení</span><span><i class="pd-k-cl">12</i>víc podnětů blízko sebe</span></p>
   </section>
 
 
