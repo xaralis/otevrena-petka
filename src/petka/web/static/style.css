@@ -1631,8 +1631,15 @@ main > :first-child > h2:first-child, main > h2:first-child, main > :first-child
 .ul-res small { display: block; margin-bottom: .1rem; font-size: .8rem; color: var(--muted); }
 .ul-res a { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 @media (max-width: 900px) {
-  .ul-kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ul-kpi a:first-child { grid-column: 1 / -1; }   /* the next cleaning the full width, the two facts under it */
+  /* tiles one under another, the panel right under the open one (not under all three) */
+  .ul-tiles { display: flex; flex-direction: column; gap: 2px; margin-top: 1.2rem; }
+  .ul-kpi { display: contents; }
+  .ul-kpi a { order: 0; padding: .9rem 1rem 2.2rem; }
+  .ul-kpi a:nth-child(2) { order: 2; } .ul-kpi a:nth-child(3) { order: 4; }
+  .ul-tiles .ul-panel { order: 5; margin-top: 0; }
+  .ul-tiles:has([data-pd-tile="cisteni"][aria-expanded="true"]) .ul-panel { order: 1; }
+  .ul-tiles:has([data-pd-tile="podnety"][aria-expanded="true"]) .ul-panel { order: 3; }
+  .ul-kpi b { font-size: 1.75rem; }
   .ul-panel .pd-cols > div + div { margin-top: 1.8rem; }
 }
 
