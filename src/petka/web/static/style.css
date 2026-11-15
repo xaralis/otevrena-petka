@@ -1616,7 +1616,7 @@ main > :first-child > h2:first-child, main > h2:first-child, main > :first-child
 
 /* a street's tiles: the Podněty page's, three of them; no red in the open (dark) tile */
 .ul-kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.pd-kpi b .ul-red { color: var(--red); font-size: inherit; }
+.pd-kpi b .ul-red { color: var(--red-ink); font-size: inherit; }   /* the same red as the waiting count beside it */
 .pd-kpi b.ul-red { color: var(--red-ink); }
 .pd-kpi a[aria-expanded="true"] .ul-red, .pd-kpi a[aria-expanded="true"] b.ul-red { color: #fff; }
 .ul-panel .cl-nx { background: none; padding: 0; }   /* the sign panel sits on the panel's grey */
