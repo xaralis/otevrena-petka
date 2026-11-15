@@ -136,7 +136,7 @@ def report_rows(rows: list[dict], now: dt.datetime, slug: str) -> list[dict]:
             continue
         c = Counter(pw.short(r["category"]) for r in rs)
         out.append({"key": f"m{y}{m:02d}", "kind": "month", "date": max(r["reported_at"].date() for r in rs),
-                    "label": pw.MONTH[m - 1], "year": y if y != today.year else None,
+                    "label": pw.MONTH_ABBR[m - 1], "year": y if y != today.year else None,   # short: the date column is narrow
                     "title": pw.podnetu(len(rs)).replace(" ", NB),
                     "sub": ", ".join(f"{k}{NB}{v}" for k, v in sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))),
                     "status": ("vyřešeno", "st"), "href": f"/verejny-prostor/podnety?ulice={slug}&stav=vyreseno#kde",

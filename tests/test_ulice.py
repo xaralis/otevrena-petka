@@ -125,9 +125,9 @@ def test_report_rows_keep_new_and_waiting_and_sum_older_by_month():
     assert out["r2"]["sub"] == f"odpověď úřadu za 16{NB}h" and out["r2"]["ext"] and "?id=2" in out["r2"]["href"]
     assert out["r3"]["sub"] == "předáno strážníkům" and out["r3"]["status"][0] == "předáno"
     m = out["m202609"]
-    assert (m["label"], m["year"], m["title"], m["sub"]) == ("září", None, f"3{NB}podněty", f"odpadky{NB}2, jiné{NB}1")
+    assert (m["label"], m["year"], m["title"], m["sub"]) == ("zář", None, f"3{NB}podněty", f"odpadky{NB}2, jiné{NB}1")
     assert m["ids"] == [4, 5, 6] and m["date"] == D(2026, 9, 20) and "ulice=wolkerova" in m["href"]
-    assert (out["m202506"]["label"], out["m202506"]["year"]) == ("červen", 2025)
+    assert (out["m202506"]["label"], out["m202506"]["year"]) == ("čvn", 2025)
     assert out["r7"]["sub"] == "podnět z Dej Tipu"
 
 
