@@ -1338,7 +1338,9 @@ a.cl-hint { color: var(--red-ink); }
   .pd-o3 > .pd-h2 { margin-top: 2.4rem; }
   .pd-map-lg { margin-top: .6rem; }
   .pd-cap { font-size: .85rem; margin-top: .5rem; }
-  .pd-kde { margin-top: 2.4rem; }   /* its heading sits in .sec-head (no margin of its own) */
+  .pd-kde { margin-top: 2.4rem; }
+  .pd-cat { margin: 0 -1.25rem; }   /* the category rows the full width, text on the page's gutter */
+  .pd-cat li { padding-left: 1.25rem; padding-right: 1.25rem; }   /* its heading sits in .sec-head (no margin of its own) */
   .pd-flt { gap: .6rem 1rem; }
   .pd-seg { --sw: 5.5rem; width: 100%; }
   .pd-sel { width: 100%; }
