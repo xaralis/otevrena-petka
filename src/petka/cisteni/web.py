@@ -12,6 +12,9 @@ API cover the whole town and take `?obvod=` (ADR 0002).
     /verejny-prostor/blokove-cisteni/ulice/<slug>.ics     feed of one street
     /verejny-prostor/blokove-cisteni/data/terminy.{json,csv}  one row a place and date
     /api/v1/cisteni               the places as GeoJSON with their dates and obvody
+
+The exports and the API send a weak ETag of the sheet's last check, the day and the parameters
+(petka.web.etag); If-None-Match with it gives 304.
 """
 
 import csv
@@ -23,7 +26,8 @@ from urllib.parse import quote
 from fastapi import APIRouter, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 
-from ..obvody import ObvodParam
+from ..obvody import ObvodFilter, ObvodParam
+from ..web import etag
 from ..web.render import tpl
 from . import ics, queries as q, source
 from .words import merged, weeks
@@ -159,28 +163,51 @@ def features(its: list[dict], geoms: dict[str, dict], today: dt.date) -> dict:
             "attribution": "Služby města Pardubic (" + source.PAGE + "), polohy © ČÚZK RÚIAN, odvozené"}
 
 
+API_CACHE = "public, max-age=600"
+EXPORT_CACHE = "public, max-age=3600"
+
+
+def _cached(request: Request, what: str, today: dt.date, obvod: ObvodFilter, *params,
+            cache: str) -> tuple[dict, Response | None]:
+    """The answer's headers (ETag of the sheet's last check, the day, which answer and its
+    parameters) and a 304 when the client has it already. The day is in the tag because
+    `next` and the default start of the year move with it."""
+    checked = q.checked()
+    tag = etag.weak(checked.isoformat() if checked else "", today.isoformat(), what, ",".join(obvod.ids), *params)
+    headers = {"ETag": tag, "Cache-Control": cache}
+    return headers, etag.not_modified(headers) if etag.fresh(request, tag) else None
+
+
 @pages.get("/data/terminy.json")
-def data_json(obvod: ObvodParam):
+def data_json(request: Request, obvod: ObvodParam):
     """This year's cleanings of the town (or `?obvod=`), one row a place and date."""
-    rows = [{**r, "date": r["date"].isoformat()} for r in q.export_rows(q.year_start(_today()), obvod)]
-    return JSONResponse(rows, headers={"Content-Disposition": 'inline; filename="terminy.json"'})
+    today = _today()
+    headers, unchanged = _cached(request, "terminy.json", today, obvod, cache=EXPORT_CACHE)
+    if unchanged:
+        return unchanged
+    rows = [{**r, "date": r["date"].isoformat()} for r in q.export_rows(q.year_start(today), obvod)]
+    return JSONResponse(rows, headers={**headers, "Content-Disposition": 'inline; filename="terminy.json"'})
 
 
 @pages.get("/data/terminy.csv")
-def data_csv(obvod: ObvodParam):
+def data_csv(request: Request, obvod: ObvodParam):
+    today = _today()
+    headers, unchanged = _cached(request, "terminy.csv", today, obvod, cache=EXPORT_CACHE)
+    if unchanged:
+        return unchanged
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=q.EXPORT_FIELDS)
     w.writeheader()
-    for r in q.export_rows(q.year_start(_today()), obvod):
+    for r in q.export_rows(q.year_start(today), obvod):
         w.writerow({**r, "date": r["date"].isoformat(), "time": r["time"] or "", "side": r["side"] or "",
                     "street": r["street"] or "", "before": "true" if r["before"] else "false",
                     "obvody": ";".join(r["obvody"])})
     return Response(buf.getvalue(), media_type="text/csv; charset=utf-8",
-                    headers={"Content-Disposition": 'inline; filename="terminy.csv"'})
+                    headers={**headers, "Content-Disposition": 'inline; filename="terminy.csv"'})
 
 
 @api.get("")
-def cleanings(obvod: ObvodParam, ulice: str = "", od: str = ""):
+def cleanings(request: Request, obvod: ObvodParam, ulice: str = "", od: str = ""):
     """Blokové čištění v Pardubicích jako GeoJSON: jedno místo z harmonogramu = jeden feature
     s termíny. Celé město, jen některé obvody s `?obvod=mo5` (víc oddělte čárkou).
 
@@ -189,12 +216,17 @@ def cleanings(obvod: ObvodParam, ulice: str = "", od: str = ""):
     5 % jeho délky nebo plochy); místo bez polohy má `geometry: null`. `status`: auto = poloha
     z textu harmonogramu, approx/partial = přibližně, manual = ručně zakreslené nebo (bez
     geometrie) neurčené.
-    `next` = nejbližší termín od dneška. Platí text harmonogramu (`texts`), poloha je odvozená."""
+    `next` = nejbližší termín od dneška. Platí text harmonogramu (`texts`), poloha je odvozená.
+    Odpověď má ETag; s `If-None-Match` vrátí 304, dokud se harmonogram znovu nezkontroluje."""
     today = _today()
     try:
         since = dt.date.fromisoformat(od) if od.strip() else q.year_start(today)
     except ValueError:
         raise HTTPException(422, "od: datum RRRR-MM-DD")
     slugs = [s.strip() for s in ulice.split(",") if s.strip()] or None
+    headers, unchanged = _cached(request, "api", today, obvod, since.isoformat(), ",".join(slugs or []),
+                                 cache=API_CACHE)
+    if unchanged:
+        return unchanged
     return JSONResponse(features(q.items(obvod, since, slugs), q.geometries(obvod), today),
-                        media_type="application/geo+json", headers={"Cache-Control": "public, max-age=600"})
+                        media_type="application/geo+json", headers=headers)

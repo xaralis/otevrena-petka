@@ -663,6 +663,7 @@ def test_export_of_the_whole_town(monkeypatch):
            "place": "Wolkerova v celé délce - obě strany komunikace", "side": "obe", "obvody": ["mo5"],
            "location": "auto", "place_key": "wolkerova v cele delce"}
     monkeypatch.setattr(web.q, "export_rows", lambda since, where=obvody.WHOLE_TOWN: seen.append(where) or [row])
+    monkeypatch.setattr(web.q, "checked", lambda: None)               # never checked: still answers
     r = get("/verejny-prostor/blokove-cisteni/data/terminy.csv")
     assert r.status_code == 200 and r.headers["content-type"].startswith("text/csv")
     lines = r.text.splitlines()
@@ -672,3 +673,40 @@ def test_export_of_the_whole_town(monkeypatch):
     assert j[0]["date"] == "2026-11-26"
     assert seen == [obvody.ObvodFilter(), obvody.ObvodFilter(("mo1", "mo4"))]      # the town, then two obvody
     assert get("/verejny-prostor/blokove-cisteni/data/terminy.csv", params={"obvod": "mo9"}).status_code == 422
+
+
+def test_etag_and_304_from_the_last_check_and_the_parameters(fixture, monkeypatch):
+    """The API and both exports send a weak ETag of the sheet's last check, the day and the
+    parameters; If-None-Match with it gives 304, a new check or another day a new answer."""
+    state = {"checked": dt.datetime(2026, 11, 12, 6, 0, tzinfo=dt.timezone.utc), "today": TODAY}
+    monkeypatch.setattr(queries, "checked", lambda: state["checked"])
+    monkeypatch.setattr(web, "_today", lambda: state["today"])
+    monkeypatch.setattr(web.q, "export_rows", lambda since, where=obvody.WHOLE_TOWN: [])
+
+    def ask(path, tag=None, **params):
+        return TestClient(app).get(path, params=params, headers={"host": "otevrenapetka.cz",
+                                                                 **({"if-none-match": tag} if tag else {})})
+
+    paths = ("/api/v1/cisteni", "/verejny-prostor/blokove-cisteni/data/terminy.json",
+             "/verejny-prostor/blokove-cisteni/data/terminy.csv")
+    tags = set()
+    for path in paths:
+        r = ask(path)
+        tag = r.headers["etag"]
+        assert r.status_code == 200 and tag.startswith('W/"') and r.headers["cache-control"].startswith("public")
+        r = ask(path, tag)
+        assert r.status_code == 304 and r.headers["etag"] == tag and not r.content
+        assert ask(path, tag.removeprefix("W/")).status_code == 304
+        assert ask(path, tag, obvod="mo5").status_code == 200
+        assert ask(path, tag, obvod="mo5").headers["etag"] == ask(path, obvod=" MO5 ").headers["etag"]
+        tags.add(tag)
+    assert len(tags) == 3                                               # each answer its own tag
+    api = paths[0]
+    tag = ask(api).headers["etag"]
+    assert ask(api, tag, ulice="wolkerova").status_code == 200
+    assert ask(api, tag, od="2026-11-01").status_code == 200
+    state["today"] = TODAY + dt.timedelta(days=1)                       # `next` moves with the day
+    assert ask(api, tag).status_code == 200
+    tag = ask(api).headers["etag"]
+    state["checked"] += dt.timedelta(days=1)                            # the sheet checked again
+    assert ask(api, tag).status_code == 200

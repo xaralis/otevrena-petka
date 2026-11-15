@@ -13,6 +13,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from fastapi.responses import JSONResponse, Response
 
 from ..obvody import ObvodParam
+from ..web import etag
 from . import export
 from . import queries as q
 
@@ -36,9 +37,8 @@ def _answer(request: Request, what: str, obvod, kinds, shape, media_type: str) -
         raise HTTPException(503, "Místa ještě nejsou sestavená, zkuste to později.")
     tag = export.etag(built, what, obvod, kinds)
     headers = {"ETag": tag, "Cache-Control": CACHE}
-    sent = {t.strip().removeprefix("W/") for t in request.headers.get("if-none-match", "").split(",")}
-    if tag.removeprefix("W/") in sent or "*" in sent:
-        return Response(status_code=304, headers=headers)
+    if etag.fresh(request, tag):
+        return etag.not_modified(headers)
     places = export.chosen(q.places(built), obvod, kinds)
     return JSONResponse(shape(built, places), media_type=media_type, headers=headers)
 

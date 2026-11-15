@@ -3,9 +3,9 @@ the whole town or a filter of obvody and kinds. Pure; petka.mista.queries reads 
 """
 
 import datetime as dt
-import hashlib
 
 from ..obvody import ObvodFilter
+from ..web.etag import weak
 from .osm import KINDS
 
 VERSION = 2
@@ -58,5 +58,4 @@ def geojson(built: dt.datetime, places: list[dict]) -> dict:
 
 def etag(built: dt.datetime, what: str, obvod: ObvodFilter, kinds: tuple[str, ...]) -> str:
     """A weak ETag (gzip changes the bytes, not the content) of a build and a filter."""
-    h = hashlib.sha256(f"{_iso(built)}|{what}|{','.join(obvod.ids)}|{','.join(kinds)}".encode()).hexdigest()
-    return f'W/"{h[:24]}"'
+    return weak(_iso(built), what, ",".join(obvod.ids), ",".join(kinds))
