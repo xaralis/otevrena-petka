@@ -1306,6 +1306,7 @@ a.cl-hint { color: var(--red-ink); }
   .pd-switch { --sw: 6rem; margin-top: 1.4rem; }
   /* the tiles (Podněty, a street) one under another, the panel right under the open one */
   .kpi-wrap { display: flex; flex-direction: column; gap: 2px; margin: 1.2rem -1.25rem 0; }   /* tiles and panel the full width */
+  main > .kpi-wrap:first-child { margin-top: calc(-1 * var(--main-top, 2.5rem)); }   /* the first block of the page: right under the band, no white gap */
   .kpi-wrap .pd-kpi a, .kpi-wrap > .pd-panel { border-radius: 0; padding-left: 1.25rem; padding-right: 1.25rem; }
   .kpi-wrap .pd-kpi em { left: 1.25rem; }
   .kpi-wrap .pd-kpi a[aria-expanded="true"]::after { left: 1.6rem; }
