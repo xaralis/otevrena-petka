@@ -14,6 +14,11 @@ Doménové pojmy portálu. Kód, testy a návrhy používají tyhle názvy.
   Rozpočet, Smlouvy, Ankety). Má stav `live` / `planned`.
 - **Usnesení** – rozhodnutí zastupitelstva (ZMO) nebo rady (RMO) obvodu; nepřijatý návrh
   s číslem usnesením není.
+- **Místo** – bod z OpenStreetMap v exportu Místa (`/api/v1/mista`): obchod s potravinami,
+  bankomat, lékárna, kde se najíst, památka, veřejné WC, pošta („Co je v okolí“ aplikace
+  Pardubice do kapsy), stojan na kola, kontejner na tříděný odpad nebo sběrný dvůr. V kódu
+  `kind` (`potraviny` … `dvur`), u kontejneru a dvora `odpad` (`papir`, `plast`, …). Licence
+  ODbL, ne CC BY.
 - **Oznámení** – položka úřední desky (deska obvodu nebo magistrátu).
 - **Podnět** – hlášení občana z městské aplikace Dej Tip (závada, černá skládka, poděkování…)
   s kategorií, místem a stavem, který nastavuje úřad (Evidováno, V řešení, Vyřešeno…).

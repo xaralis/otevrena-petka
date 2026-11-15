@@ -101,6 +101,20 @@ určuje; zbytek zůstává bez polohy. Ruční geometrie má přednost před aut
 a projeví se při příštím uložení: když se tabulka změní, nebo s `--force`. `--znovu` přepočítá
 geometrii všech míst (po změně algoritmu) a ruční přidá také.
 
+### Místa
+
+Místa celého města z [OpenStreetMap](https://www.openstreetmap.org/) v jednom souboru: to, co
+aplikace Pardubice do kapsy ukazuje v „Co je v okolí“ (potraviny, bankomaty, lékárny, kde se
+najíst, památky, veřejná WC, pošty), stojany na kola, kontejnery na tříděný odpad a sběrné
+dvory. Sekce nemá stránky, je jen v Data a API. `usneseni mista-update` (denně) pošle jeden
+dotaz na Overpass API pro celé statutární město, každé místo zařadí do obvodu podle polygonů
+obvodů z RÚIAN (`ruian_cache`) a tabulku `mista_places` nahradí v jedné transakci. Sestavení,
+které má celkem nebo v některém druhu (s aspoň 10 místy) méně než 70 % míst posledního
+přijatého, odmítne (Overpass občas vrátí jen část území), zapíše ho do `mista_builds`, úloha
+skončí chybou a dál se servíruje poslední přijaté; po skutečném úbytku v OSM ho uloží `--force`.
+`--soubor odpoved.json` načte uloženou odpověď Overpassu. Formát: [docs/mista.md](docs/mista.md).
+Server Overpassu jde změnit proměnnou `OVERPASS_URL`.
+
 ## Otevřená data, API a MCP
 
 - **Data**: `/data` na webu. Usnesení jako CSV + JSON s
@@ -108,7 +122,8 @@ geometrii všech míst (po změně algoritmu) a ruční přidá také.
   místa i jako GeoJSON, úřední deska jako CSV + JSON. Formát popisuje
   [docs/otevrena-data.md](docs/otevrena-data.md), včetně doporučení pro úřad.
 - **REST API**: `/api/v1/usneseni/…` a `/api/v1/uredni-deska/…`, OpenAPI na `/api/docs`.
-  Zdroje za celé město (blokové čištění) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md)).
+  Místa: `/api/v1/mista` a `/api/v1/mista.geojson` ([docs/mista.md](docs/mista.md)).
+  Zdroje za celé město (blokové čištění, místa) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md)).
 - **MCP** (bez přihlášení, jen čtení):
 
   ```bash
@@ -137,6 +152,7 @@ mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Po
 | `src/petka/uredni_deska/` | sekce Úřední deska: stahování, web, API, MCP |
 | `src/petka/podnety/` | sekce Podněty: zrcadlo podnětů z Dej Tipu, API (GeoJSON), MCP |
 | `src/petka/cisteni/` | sekce Čištění ulic: harmonogram SmP, geokódování úseků z RÚIAN, stránky, ICS, API, MCP |
+| `src/petka/mista/` | sekce Místa: místa z OpenStreetMap (Overpass), obvod podle RÚIAN, API (JSON, GeoJSON) |
 | `migrations/` | schéma Postgresu (spouští se samo při startu) |
 | `data/usneseni/sources.json` | index zveřejněných PDF (URL, sha256) |
 | `data/usneseni/text/` | text každého zápisu |
@@ -162,6 +178,7 @@ uv run usneseni export
 uv run usneseni deska-update                    # úřední deska
 uv run usneseni podnety-update                  # podněty z Dej Tipu
 uv run usneseni cisteni-update                  # harmonogram blokového čištění (denně)
+uv run usneseni mista-update                    # místa z OpenStreetMap (denně)
 uv run usneseni serve --port 8099
 uv run pytest
 ```
@@ -191,3 +208,5 @@ Zdrojové dokumenty jsou úřední dokumenty zveřejněné městem. Mapové podk
 blokového čištění (`data/cisteni/overrides.geojson`) jsou z RÚIAN © ČÚZK (CC BY 4.0)
 a z OpenStreetMap © přispěvatelé OpenStreetMap
 ([ODbL](https://opendatacommons.org/licenses/odbl/)); které z nich, říká `note` u každého prvku.
+Místa (`/api/v1/mista`) jsou databáze odvozená z OpenStreetMap, proto pod
+[ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/), © přispěvatelé OpenStreetMap.
