@@ -1,16 +1,13 @@
 {% extends "base.html" %}
-{% from "usneseni/_macros.html" import row, legend %}{% from "_portal.html" import band, source %}
+{% from "usneseni/_macros.html" import row, legend %}{% from "_portal.html" import band, source, search_box %}
 {% block hero %}
 {% set lead %}Všechna usnesení rady a zastupitelstva od roku {{ stats.first_date.year if stats.first_date else 2018 }} a jak kdo hlasoval. Hledá se podle slov i podle smyslu v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích.{% endset %}
 {% call band(SECTION['usneseni'].question, lead, tabs=section_tabs(request.url.path), label='Usnesení') %}
-    <form class="search" method="get" action="/radnice/usneseni" role="search">
-      <label for="q" class="sr">Hledat v usneseních</label>
-      <input id="q" type="search" name="q" value="{{ q }}" placeholder="Třeba parkování v Jesničánkách" autocomplete="off">
-      <button type="submit">Hledat</button>
+    {% call search_box("q", "/radnice/usneseni", "Hledat v usneseních", "Třeba parkování v Jesničánkách nebo 154/2025", q) %}
       {% for k, val in f.items() if val and not (k == 'stav' and val == 'usneseni') %}<input type="hidden" name="{{ k }}" value="{{ val }}">{% endfor %}
       {% if rezim != 'hybrid' %}<input type="hidden" name="rezim" value="{{ rezim }}">{% endif %}
       {% if razeni != 'datum' %}<input type="hidden" name="razeni" value="{{ razeni }}">{% endif %}
-    </form>
+    {% endcall %}
 {% endcall %}
 {% endblock %}
 {% block main %}

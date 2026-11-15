@@ -4,14 +4,10 @@
 {% set U = SECTION['usneseni'] %}
 {% set D = SECTION['uredni-deska'] %}
 {% block title %}Otevřená data Pardubic V{% endblock %}
-{% from "_portal.html" import band %}
+{% from "_portal.html" import band, search_box %}
 {% block hero %}
 {% call band('Co dělá městský obvod Pardubice V', 'Jak rozhodla rada a zastupitelstvo, u každého rozhodnutí s odkazem na původní zápis, a co právě visí na úřední desce. Rozpočet a smlouvy přibudou.') %}
-    <form class="search" method="get" action="/radnice/usneseni" role="search">
-      <label for="q" class="sr">Hledat v usneseních</label>
-      <input id="q" type="search" name="q" placeholder="Třeba parkování v Jesničánkách" autocomplete="off">
-      <button type="submit">Hledat</button>
-    </form>
+    {{ search_box("q", "/radnice/usneseni", "Hledat v usneseních", "Třeba parkování v Jesničánkách") }}
 {% endcall %}
 {% endblock %}
 {% block main %}

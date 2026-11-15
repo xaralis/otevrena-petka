@@ -1,14 +1,10 @@
 {% extends "base.html" %}
-{% from "_portal.html" import band %}
+{% from "_portal.html" import band, search_box %}
 {% block title %}{{ title }}{% endblock %}
 {% block hero %}{{ band(title, text) }}{% endblock %}
 {% block main %}
 <div class="prose">
-  <form class="search search-plain" method="get" action="/radnice/usneseni" role="search">
-    <label for="q" class="sr">Hledat v usneseních</label>
-    <input id="q" type="search" name="q" placeholder="Hledat v usneseních" autocomplete="off">
-    <button type="submit">Hledat</button>
-  </form>
+  {{ search_box("q", "/radnice/usneseni", "Hledat v usneseních", "Hledat v usneseních") }}
   <p>Nebo pokračujte na <a href="/">úvodní stránku</a>, <a href="/radnice/usneseni/jednani">přehled jednání</a> či <a href="/data">data a API</a>.</p>
 </div>
 {% endblock %}

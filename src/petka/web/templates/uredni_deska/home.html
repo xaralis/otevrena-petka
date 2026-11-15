@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_portal.html" import band, source %}
+{% from "_portal.html" import band, source, search_box %}
 {% from "uredni_deska/_macros.html" import notice, card %}
 {% set S = SECTION['uredni-deska'] %}
 {% block title %}Úřední deska pro lidi – MO Pardubice V{% endblock %}
@@ -7,15 +7,12 @@
 {% block description %}Co právě visí na úřední desce městského obvodu Pardubice V a magistrátu: vyhledávání, archiv sejmutých oznámení, otevřená data a API. Stahováno z oficiálních dat města.{% endblock %}
 {% block hero %}
 {% call band(S.question, 'Co úřad vyvěsil a týká se obvodu, srozumitelně a s odkazem na úřední znění, které je vždy závazné.') %}
-<form class="search" method="get" action="/radnice/uredni-deska" role="search">
-  <label for="q" class="sr">Hledat na úřední desce</label>
-  <input id="q" type="search" name="q" value="{{ q }}" placeholder="Hledat v oznámeních" autocomplete="off">
+{% call search_box("q", "/radnice/uredni-deska", "Hledat na úřední desce", "Hledat v oznámeních", q) %}
   {% if kde %}<input type="hidden" name="kde" value="{{ kde }}">{% endif %}
   {% if sejmute %}<input type="hidden" name="sejmute" value="1">{% endif %}
   {% if druh %}<input type="hidden" name="druh" value="{{ druh }}">{% endif %}
   {% if official %}<input type="hidden" name="zneni" value="uredni">{% endif %}
-  <button type="submit">Hledat</button>
-</form>
+{% endcall %}
 {% endcall %}
 {% endblock %}
 {% block main %}

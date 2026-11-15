@@ -52,3 +52,17 @@
   <div class="rz-years pd-yr">{% for col in m.cols %}<span><span class="pd-d">{{ col.abbr }}{% if col.y %}<small>{{ col.y }}</small>{% endif %}</span><span class="pd-m">{{ col.m if col.m is defined else col.abbr }}{% if col.year_m %}<small>{{ col.year_m }}</small>{% endif %}</span></span>{% endfor %}</div>
 </div>
 {%- endmacro %}
+
+{#- the one search field of the portal: a white box with a magnifier and a dark button, in a
+    band and on a page alike; hidden inputs (filters to keep) from the caller; `attrs` go on the
+    input as they are (the street search's datalist and combo), `error` under the box -#}
+{% macro search_box(id, action, label, placeholder, value="", button="Hledat", name="q", attrs="", error="", short="") -%}
+<form class="sbox" role="search" method="get" action="{{ action }}">
+  <svg class="mag" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>
+  <label for="{{ id }}" class="sr">{{ label }}</label>
+  <input id="{{ id }}" name="{{ name }}" type="search" placeholder="{{ placeholder }}" autocomplete="off"{% if short %} data-short="{{ short }}"{% endif %}{% if value %} value="{{ value }}"{% endif %}{% if attrs %} {{ attrs|safe }}{% endif %}{% if error %} aria-invalid="true" aria-describedby="{{ id }}-err"{% endif %}>
+  {% if caller %}{{ caller() }}{% endif %}
+  <button type="submit">{{ button }}</button>
+</form>
+{% if error %}<p class="sbox-err" id="{{ id }}-err" role="alert">{{ error }}</p>{% endif %}
+{%- endmacro %}

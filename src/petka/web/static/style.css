@@ -91,15 +91,6 @@ sup { font-size: .7em; color: var(--muted); }
 .band h1 { font-size: var(--h1); font-weight: 800; font-stretch: 85%; line-height: 1.05; letter-spacing: -.02em; margin: 0; max-width: 30ch; overflow-wrap: break-word; }
 .band a { color: #fff; }
 .band-lead { margin: .55rem 0 0; max-width: 60ch; font-size: 18px; line-height: 1.45; }
-.search { display: flex; align-items: flex-end; gap: 1rem; margin-top: 1.15rem; max-width: 760px; }
-.search input[type=search] { flex: 1; min-width: 0; font: inherit; font-size: 1.45rem; font-weight: 500;
-  color: #fff; background: transparent; border: 0; border-bottom: 3px solid #fff; padding: .15rem 0 .35rem; border-radius: 0; }
-.search input[type=search]::placeholder { color: rgba(255,255,255,.78); }
-.search input[type=search]:focus { outline: none; border-bottom-width: 5px; padding-bottom: .2rem; }
-.search input[type=search]::-webkit-search-cancel-button { filter: invert(1); }
-.search button { font: inherit; font-weight: 700; font-size: 1rem; color: var(--red-ink); background: #fff; border: 0;
-  padding: .6rem 1.2rem; cursor: pointer; border-radius: 3px; }
-.search button:hover { background: var(--ink); color: #fff; }
 
 main { padding-top: 2.5rem; padding-bottom: 3.5rem; }
 main > :first-child { margin-top: 0; }
@@ -283,7 +274,6 @@ footer p { max-width: 80ch; }
 @media (max-width: 600px) {
   html { font-size: 16px; }
   .band .wrap { padding-bottom: 1.8rem; }
-  .search { flex-direction: column; align-items: stretch; }
   .sentence p { line-height: 2.2; font-size: 1rem; }
   .row { padding: 1rem .8rem; }
   .seats-l { --gap: 2px; grid-template-columns: repeat(var(--n), minmax(0, 2.35rem)); }
@@ -460,10 +450,6 @@ body { min-height: 100vh; display: flex; flex-direction: column; background: #ff
 body > main { flex: 1 0 auto; width: 100%; }
 body > footer { flex-shrink: 0; }
 
-.search-plain { margin: 1.2rem 0; max-width: 640px; }
-.search-plain input[type=search] { color: var(--ink); border-bottom-color: var(--ink); }
-.search-plain input[type=search]::placeholder { color: var(--muted); }
-.search-plain button { background: var(--ink); color: #fff; }
 
 .top-inner { align-items: center; }
 .brand { padding: .35rem 0 .75rem; align-self: auto; }
@@ -1062,7 +1048,7 @@ th .rz-unit, .rz-colhead .rz-unit, .rz-num .rz-unit, .rz-top .rz-unit, .rz-mu .r
 .db-axis { top: 8px; } .db-line { top: 6px; } .db-prev, .db-cur { top: 2px; }
 .rz-gh.ch .rz-d { font-size: 1.05rem; }
 
-/* buttons (an <a> or <button>; one radius everywhere, like .search button) */
+/* buttons (an <a> or <button>; one radius everywhere, like the search box's button) */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 2.75rem; padding: .5rem 1.1rem; font: inherit; font-weight: 700; font-size: 1rem; line-height: 1.2; text-decoration: none; color: #fff; background: var(--ink); border: 0; border-radius: 3px; cursor: pointer; }
 .btn:hover { background: #000; }
 .btn-o { color: var(--ink); background: #fff; box-shadow: inset 0 0 0 2px var(--ink); }

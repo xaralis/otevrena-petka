@@ -1,12 +1,8 @@
 {% extends "rozpocet/_layout.html" %}
+{% from "_portal.html" import search_box %}
 {% block title %}Faktury {{ year }}{% endblock %}
 {% block band_extra %}
-<form class="search" style="margin-top:1.4rem" action="{{ base }}/faktury" method="get">
-  <input type="hidden" name="rok" value="{{ year }}">
-  <label class="sr" for="fq">Hledat ve fakturách</label>
-  <input id="fq" name="hledat" type="search" value="{{ hledat }}" placeholder="Co hledáte? Třeba chodník, Lexova nebo seč">
-  <button type="submit">Hledat</button>
-</form>
+{% call search_box("fq", base ~ "/faktury", "Hledat ve fakturách", "Co hledáte? Třeba chodník, Lexova nebo seč", hledat, name="hledat") %}<input type="hidden" name="rok" value="{{ year }}">{% endcall %}
 {% endblock %}
 {% block main %}
 <form class="sentence" action="{{ base }}/faktury" method="get" aria-label="Filtry">
