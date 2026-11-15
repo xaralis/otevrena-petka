@@ -99,7 +99,7 @@
       ...data.anchors.filter((a) => a.row === k),
     ];
     const focus = (k) => {
-      P.fit(map, featuresOf(k), { duration: 500, maxZoom: 17.5, padding: 60 });
+      P.fit(map, featuresOf(k), { duration: 500, maxZoom: 17, padding: 70 });   // as a row of Blokové čištění
       if (window.matchMedia("(max-width: 900px)").matches) el.scrollIntoView({ behavior: "smooth", block: "center" });
       map.once("moveend", () => link.pin(fromRow(k)));
     };
