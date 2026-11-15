@@ -90,19 +90,29 @@
       link.pin(fromReport(f.properties.id));    // the card has a toggle and a link: a click (a tap) pins it
     });
     if (list) list.querySelectorAll("li[data-row]").forEach((li) => link.wire(li.firstElementChild, () => fromRow(li.dataset.row)));
-    // the control beside a row: the map moves to what the row is about and keeps it shown
+    // the control beside a row, and a click on a row with a place: the map moves to what the row
+    // is about and keeps it shown
     const featuresOf = (k) => [
       ...(idsOf[k] || []).map((id) => byId.get(id)),
       ...data.cleaning.features.filter((f) => f.properties.row === k),
       ...data.marks.filter((m) => m.row === k),
       ...data.anchors.filter((a) => a.row === k),
     ];
-    if (list) list.querySelectorAll("[data-ul-pin]").forEach((b) => b.addEventListener("click", (e) => {
-      e.preventDefault();
-      const k = b.dataset.ulPin;
+    const focus = (k) => {
       P.fit(map, featuresOf(k), { duration: 500, maxZoom: 17.5, padding: 60 });
       if (window.matchMedia("(max-width: 900px)").matches) el.scrollIntoView({ behavior: "smooth", block: "center" });
       map.once("moveend", () => link.pin(fromRow(k)));
+    };
+    if (list) list.querySelectorAll("[data-ul-pin]").forEach((b) => b.addEventListener("click", (e) => {
+      e.preventDefault();
+      focus(b.dataset.ulPin);
+    }));
+    // a row with a place on the map: a click shows it there (its card links on, to Dej Tip or the
+    // notice); a row without one (a resolution) stays a link
+    if (list) list.querySelectorAll("li.ul-mapped[data-row] > a").forEach((a) => a.addEventListener("click", (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;      // a new tab when asked for
+      e.preventDefault();
+      focus(a.parentElement.dataset.row);
     }));
     Object.entries(mark).forEach(([k, e]) => link.wire(e, () => ({ keys: [k], ids: [], card: null })));
   });

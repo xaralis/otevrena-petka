@@ -1249,7 +1249,7 @@ a.cl-hint { color: var(--red-ink); }
 .pd-seg a + a { border-left: 2px solid var(--ink); }
 .pd-seg a { align-items: center; gap: .45em; }
 /* a switch's count: a small pill, so it reads apart from the label (light on the dark current one) */
-.pd-seg b { display: inline-block; min-width: 1.5em; padding: .1em .45em; border-radius: 999px; background: var(--grey);
+.pd-seg b { display: inline-block; min-width: 1.5em; padding: .1em .45em; border-radius: 3px; background: var(--grey);
   color: var(--ink-2); font-size: .78em; font-weight: 650; line-height: 1.35; text-align: center; font-variant-numeric: tabular-nums; }
 .pd-seg a[aria-current] b { background: rgba(255, 255, 255, .2); color: #fff; }
 .pd-sel { display: inline-flex; align-items: center; gap: .5rem; max-width: 100%; font-weight: 650; font-size: .92rem; }
@@ -1612,7 +1612,7 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
 .ul-pin:hover, .ul-pin:focus-visible { background: var(--ink); color: #fff; outline: none; }
 
 /* the first heading of a page's content sits right under the band, as every other first block */
-main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
+main > :first-child > h2:first-child, main > h2:first-child, main > :first-child > p:first-child, main > p:first-child { margin-top: 0; }
 
 /* a street's tiles: the Podněty page's, three of them; no red in the open (dark) tile */
 .ul-kpi { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1679,7 +1679,8 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
 .mbox-rows li.ul-mapped > a, .mbox-rows li.ul-mapped > span { padding-right: 2.8rem; }   /* room for the street rows' pin */
 
 /* Blokové čištění: the map with its column, then the calendar picker beside nothing, a block of its own */
-.cl-mapsec { margin-top: 2.2rem; }
+.cl-mapsec { margin-top: 0; }   /* the first block of the page: main's own top padding is enough */
 .cl-cal { max-width: 34rem; margin-top: 2.6rem; }
 .cl-cal .cl-o2 > h3 { margin-top: 0; }
 .cl-mapsec .cl-cap { margin: .4rem 0 0; }
+main > .sec-head:first-child, main > :first-child > .sec-head:first-child { margin-top: 0; }

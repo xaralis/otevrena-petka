@@ -3,8 +3,8 @@
 // colours the obvod's places by their next cleaning (≤ 7 days red, ≤ 14 ink, later grey,
 // approximate dashed) and behaves like the front page's map (aktualne.js): pointing at a stretch
 // inks it and shows its tooltip on a focusable zero-size anchor, a click opens its street (on
-// phones the second tap), and the rows of „Příštích 7 dní“ ([data-cl-key]) light up with their
-// stretches both ways. An area (a parkoviště or a vnitroblok, a polygon whose shape is our
+// phones the second tap), and the rows beside the map ([data-cl-key]) light up with their
+// stretches both ways; a click on a row moves the map to its stretch. An area (a parkoviště or a vnitroblok, a polygon whose shape is our
 // estimate) is a marker at a point inside; its outline shows dashed only while pointed at.
 // <div data-cl-map="street" data-inline="id"> shows one street: its line in ink and, thicker,
 // the stretches still to be cleaned on it; no tooltips (the dates are in the table).
@@ -94,8 +94,18 @@
     });
     new Set(Object.values(of)).forEach((s) => {
       if (s.anchor) link.wire(s.anchor, () => s, { pins: true });
-      // the rows stay plain links to their streets; pointing at one or focusing it shows its stretch
+      // pointing at a row or focusing it shows its stretch; a click moves the map to it and keeps
+      // it shown (its tooltip links to the street); a row whose place is not on the map stays a link
       s.rows.forEach((r) => link.wire(r, () => s, { within: true }));
+      const feats = fc.features.filter((f) => s.keys.includes(f.properties.key));
+      if (!feats.length) return;
+      s.rows.forEach((r) => r.querySelector("a").addEventListener("click", (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;      // a new tab when asked for
+        e.preventDefault();
+        P.fit(map, feats, { duration: 500, maxZoom: 17, padding: 70 });
+        if (P.narrow()) el.scrollIntoView({ behavior: "smooth", block: "center" });
+        map.once("moveend", () => link.pin(s));
+      }));
     });
   }
 

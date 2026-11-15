@@ -172,7 +172,7 @@
       const li = document.createElement("li"), a = document.createElement("a");
       li.dataset.id = p.id;
       a.href = DETAIL + p.id;
-      a.target = "_blank"; a.rel = "noopener";     // the report opens on Dej Tip beside this page
+      a.target = "_blank"; a.rel = "noopener";     // without the click handler (a new tab asked for): Dej Tip beside this page
       const d = document.createElement("span"), t = document.createElement("span"), b = document.createElement("b"),
             s = document.createElement("span");
       d.className = "pd-rd"; d.textContent = dm(p.t).replace(/ \d{4}$/, "");
@@ -182,6 +182,15 @@
       a.append(d, t, s);
       li.appendChild(a);
       link.wire(a, () => p.id);
+      // a click shows the report on the map (zoomed in out of its cluster) with its card pinned;
+      // Dej Tip is the card's link (a new tab when asked for: ctrl/cmd/middle click)
+      a.addEventListener("click", (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+        e.preventDefault();
+        map.easeTo({ center: f.geometry.coordinates, zoom: Math.max(map.getZoom(), 17), duration: 500 });
+        if (window.matchMedia("(max-width: 900px)").matches) el.scrollIntoView({ behavior: "smooth", block: "center" });
+        map.once("moveend", () => link.pin(p.id));
+      });
       return li;
     }
     function render(reset) {
