@@ -12,8 +12,13 @@
 // Data: <script id=ul-map-json> from ulice/web.py street().
 (function () {
 
-  if (window.matchMedia("(max-width: 600px)").matches)
-    document.querySelectorAll("input[data-short]").forEach((i) => (i.placeholder = i.dataset.short));
+  // a narrow field takes the short placeholder ("Třeba Wolkerova"), measured, not by the window
+  const fit = () => document.querySelectorAll("input[data-short]").forEach((i) => {
+    i.dataset.long ||= i.placeholder;
+    if (i.offsetWidth) i.placeholder = i.offsetWidth < 380 ? i.dataset.short : i.dataset.long;
+  });
+  fit();
+  window.addEventListener("resize", fit);
 
   const el = document.querySelector("[data-ul-map]");
   const P = window.petkaMap;

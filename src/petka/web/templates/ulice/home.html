@@ -53,6 +53,7 @@
   <div class="wrap">
     <h1 id="hm-h"><span>Co se děje na&nbsp;Pětce?</span><span>Vše na jednom místě a&nbsp;lidskou řečí.</span></h1>
     <p class="lead">{{ LEAD }}</p>
+    <div class="find-m">{{ street_search('ul-m', 'Napište ulici, třeba Wolkerova', 'Třeba Wolkerova', miss, 'Tahle ulice v městském obvodě Pardubice V není.' if miss else '', 'uvod') }}</div>
   </div>
   <figure class="hm-map">
     <svg viewBox="745 245 750 320" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa sídliště Dukla s uzavřenou Wolkerovou a místy nahlášených závad">
