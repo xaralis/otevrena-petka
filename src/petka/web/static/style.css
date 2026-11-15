@@ -1649,6 +1649,7 @@ main > :first-child > h2:first-child, main > h2:first-child { margin-top: 0; }
 .pd-kpi a[aria-expanded="true"] .ul-red, .pd-kpi a[aria-expanded="true"] b.ul-red { color: #fff; }
 .ul-panel .cl-nx { background: none; padding: 0; }   /* the sign panel sits on the panel's grey */
 .ul-panel-more { display: inline-block; margin-top: .9rem; }
+.pd-cols .ul-panel-h { margin-top: 1.6rem; }   /* the second list of the panel's side */
 .ul-res { list-style: none; margin: 0; padding: 0; }
 .ul-res li { padding: .45rem 0; line-height: 1.35; }
 .ul-res small { display: block; margin-bottom: .1rem; font-size: .8rem; color: var(--muted); }

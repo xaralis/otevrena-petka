@@ -42,7 +42,13 @@
           {% for k in kinds %}<li><a href="{{ pd_kind }}{{ k.id }}#kde">{{ k.name }}</a><b>{{ k.n }}</b></li>{% endfor %}
           {% if kinds_rest %}<li><span>ostatní</span><b>{{ kinds_rest }}</b></li>{% endif %}
         </ul>
-        <a class="more ul-panel-more" href="{{ pd_url }}">Podněty {{ loc }} na mapě</a>
+        <h3 class="side-h ul-panel-h">Podněty {{ loc }} na mapě</h3>
+        <ul class="link-list">
+          {% set base = '/verejny-prostor/podnety?ulice=' ~ s.slug %}
+          <li><a href="{{ base }}#kde">Čekající</a><b>{{ rep.ceka }}</b></li>
+          <li><a href="{{ base }}&amp;stav=vyreseno#kde">Vyřešené</a><b>{{ rep.vyreseno }}</b></li>
+          <li><a href="{{ base }}&amp;stav=vse#kde">Všechny</a><b>{{ rep.n }}</b></li>
+        </ul>
       </div>
     </div>
     {% elif rep.n %}
