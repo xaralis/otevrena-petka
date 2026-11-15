@@ -1113,10 +1113,6 @@ a.btn-o:hover, .ledger td a.btn-o:hover, .band a.btn-on-red:hover { color: #fff;
 .cl-lg-street .cl-lg-later { border-top: 3px dashed var(--ink); }
 .cl-lg-street .cl-lg-past { border-top-color: #8a9097; }
 .cl-cap { font-size: .88rem; color: var(--muted); margin: .6rem 0 0; max-width: 68ch; }
-.cl-next { list-style: none; margin: 0; padding: 0; display: grid; }
-.cl-next a { display: grid; grid-template-columns: 4.2rem 1fr; gap: 0 .8rem; padding: .75rem .9rem; color: var(--ink); text-decoration: none; }
-.cl-next li:nth-child(odd) a { background: var(--grey); }
-.cl-next a:hover, .cl-next li.on a { background: var(--off); }   /* .on: its stretch is pointed at on the map */
 .cl-d { grid-row: span 2; font-weight: 700; font-size: 1.25rem; line-height: 1.1; white-space: nowrap; }
 .cl-d small { display: block; font-size: .78rem; font-weight: 500; color: var(--ink-2); }
 .cl-w { font-weight: 650; }
@@ -1180,7 +1176,6 @@ a.cl-hint { color: var(--red-ink); }
   .cl-lg { gap: .35rem 1rem; font-size: .85rem; margin-top: .6rem; }
   .cl-lg i { width: 1.4rem; }
   .cl-cap { font-size: .85rem; margin-top: .5rem; }
-  .cl-next a { grid-template-columns: 4rem 1fr; padding: .75rem .85rem; min-height: 2.75rem; }
   .cl-d { font-size: 1.15rem; }
   .cl-d small { font-size: .75rem; }
   .cl-wk { margin: 1.8rem 0 .5rem; }
@@ -1432,7 +1427,7 @@ a.cl-hint { color: var(--red-ink); }
 .find h2 { margin: 0; }
 .find-m { position: relative; z-index: 30; margin: 1.2rem 0 .4rem; }   /* the phone's search: right under the lead, above the map's cut-out */
 @media (min-width: 1001px) { .find-m { display: none; } }
-@media (max-width: 1000px) { .find { display: none; } }
+@media (max-width: 1000px) { .find { display: none; } .find + .dash > .dash-h { margin-top: 0; } }   /* the search is up in the hero: Aktuálně is the page's first block */
 .sbox { display: flex; align-items: center; gap: .9rem; margin-top: 1rem; border: 3px solid var(--ink); border-radius: 3px; padding: .45rem .45rem .45rem 1.1rem; background: #fff; }
 .sbox-err { margin: .6rem 0 0; color: var(--red-ink); font-weight: 650; }
 .sbox:has([aria-invalid]) { border-color: var(--red-ink); }

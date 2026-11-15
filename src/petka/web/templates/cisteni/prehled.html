@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "cisteni/_macros.html" import next_list, ap, legend, table, map_rows %}{% from "_portal.html" import band, source %}
+{% from "cisteni/_macros.html" import ap, legend, table, map_rows %}{% from "_portal.html" import band, source %}
 {% block title %}Kdy proběhne čištění mojí ulice?{% endblock %}
 {% block description %}Blokové čištění ulic v obvodu podle harmonogramu Služeb města Pardubic: termíny, mapa úseků a kalendář jen pro vaše ulice.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -60,7 +60,7 @@
     <h3 class="cl-wk">{{ g.label }} <span>{{ g.range }}</span></h3>
     <div class="cl-only-d">{{ table(g['items']) }}</div>
     <div class="cl-only-m">
-      {% if g.phone %}{{ next_list(g.phone) }}{% endif %}
+      {% if g.phone %}{{ map_rows(g.phone, today) }}{% endif %}
       {% if g.above %}<p class="cl-cap cl-above">{{ 'a ' if g.phone else '' }}{{ g.above }} {{ cl_plural(g.above, 'termín', 'termíny', 'termínů') }} výše u mapy</p>{% endif %}
     </div>
     {% else %}

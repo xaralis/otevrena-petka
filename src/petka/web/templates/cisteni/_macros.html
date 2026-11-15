@@ -4,15 +4,6 @@
 {% if not i.located %} <span class="cl-ap">není na mapě</span>{% elif i.status != 'auto' %} <span class="cl-ap">poloha přibližná</span>{% endif %}
 {%- endmacro %}
 
-{#- the grey cards: date and weekday, street, short wording and time -#}
-{% macro next_list(its, soon=False) %}
-<ul class="cl-next">
-  {% for i in its %}
-  <li{% if soon %} class="cl-soon" data-cl-key="{{ i.key }}"{% endif %}><a href="{{ '/verejny-prostor/ulice/' ~ i.slug ~ '#cisteni' if i.slug else '#cl-harm-h' }}"><span class="cl-d">{{ i.date|cl_dm }}<small>{{ i.date|cl_weekday }}</small></span><span class="cl-w">{{ i.street if i.slug else i.text }}</span><span class="cl-s">{{ i.short }}{% if i.short and (i|cl_clock) %}, {% endif %}{{ i|cl_clock }}{{ ap(i) }}</span></a></li>
-  {% endfor %}
-</ul>
-{% endmacro %}
-
 {#- rows of the map's column (_portal mbox): date and weekday, street, short wording and time,
     how soon; each lights its stretch on the map ([data-cl-key], cisteni.js) -#}
 {% macro map_rows(its, today) %}
