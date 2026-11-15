@@ -1245,7 +1245,7 @@ a.cl-hint { color: var(--red-ink); }
 .pd-map-lg { margin-top: .7rem; }
 .pd-cap { font-size: .88rem; color: var(--muted); margin: .6rem 0 0; max-width: 68ch; }
 /* „Kde“: filters over the map and its list; the list shows what the map shows, newest first */
-.pd-kde { margin-top: 2.6rem; }
+.pd-kde { margin-top: 3rem; }
 .pd-kde .pd-two { margin-top: 0; }
 .pd-flt { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; margin: 0 0 .9rem; }
 .pd-seg { margin: 0; }
@@ -1338,7 +1338,7 @@ a.cl-hint { color: var(--red-ink); }
   .pd-o3 > .pd-h2 { margin-top: 2.4rem; }
   .pd-map-lg { margin-top: .6rem; }
   .pd-cap { font-size: .85rem; margin-top: .5rem; }
-  .pd-kde { margin-top: 0; }
+  .pd-kde { margin-top: 2.4rem; }   /* its heading sits in .sec-head (no margin of its own) */
   .pd-flt { gap: .6rem 1rem; }
   .pd-seg { --sw: 5.5rem; width: 100%; }
   .pd-sel { width: 100%; }
