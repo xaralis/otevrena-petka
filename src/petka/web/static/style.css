@@ -1305,7 +1305,10 @@ a.cl-hint { color: var(--red-ink); }
   .band a.pd-cta { display: flex; margin-top: 1.2rem; }
   .pd-switch { --sw: 6rem; margin-top: 1.4rem; }
   /* the tiles (Podněty, a street) one under another, the panel right under the open one */
-  .kpi-wrap { display: flex; flex-direction: column; gap: 2px; margin-top: 1.2rem; }
+  .kpi-wrap { display: flex; flex-direction: column; gap: 2px; margin: 1.2rem -1.25rem 0; }   /* tiles and panel the full width */
+  .kpi-wrap .pd-kpi a, .kpi-wrap > .pd-panel { border-radius: 0; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .kpi-wrap .pd-kpi em { left: 1.25rem; }
+  .kpi-wrap .pd-kpi a[aria-expanded="true"]::after { left: 1.6rem; }
   .kpi-wrap > .pd-kpi { display: contents; }
   .kpi-wrap > .pd-panel { margin-top: 0; order: 9; }
   .pd-kpi a { padding: .9rem 1rem 2.2rem; }
