@@ -182,7 +182,15 @@ def notice_row(m: dict, today: dt.date) -> dict:
             "href": f"/radnice/uredni-deska/{m['nid']}" if m["nid"] else None, "mark": m["id"]}
 
 
-VIEWS = (("", "Aktuální"), ("ceka", "Čekající podněty"), ("vyreseno", "Vyřešené podněty"), ("vse", "Vše"))   # ?radky=
+VIEWS = (("", "Aktuální", "Co se chystá, co se stalo za posledních 30 dnů a podněty, které ještě čekají"),
+         ("ceka", "Čekající podněty", "Podněty z Dej Tipu, které úřad ještě nevyřídil"),
+         ("vyreseno", "Vyřešené podněty", "Podněty z Dej Tipu, které úřad vyřešil"),
+         ("vse", "Celá historie", "Všechno, co o ulici víme: čištění, podněty, usnesení a úřední deska"))   # ?radky=
+
+
+def count(rows: list[dict]) -> int:
+    """How many things the rows are: a month's row of older resolved reports counts its reports."""
+    return sum(len(r["ids"]) if r.get("kind") == "month" else 1 for r in rows)
 
 
 def view(rows: list[dict], key: str, today: dt.date) -> list[dict]:

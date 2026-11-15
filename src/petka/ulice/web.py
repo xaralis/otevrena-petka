@@ -159,7 +159,7 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
     marks = q.board_marks(q.place_notices(), {slug: s}, today, ahead)
     rep_rows = q.report_rows(reps, now, slug)
     rows = q.rows(rep_rows, cl_rows, [q.resolution_row(r, today) for r in res], [q.notice_row(m, today) for m in marks])
-    radky = radky if radky in dict(q.VIEWS) else ""
+    radky = radky if radky in {k for k, _, _ in q.VIEWS} else ""
     shown = q.view(rows, radky, today)
     # the map shows what the rows show, nothing more
     keys = {r["key"] for r in shown}
@@ -203,9 +203,9 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
         "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "n_notices": _safe(q.notices_posted, s.name),
         "rows": shown, "data": data,
-        "views": [{"label": label, "n": len(q.view(rows, k, today)), "on": k == radky,
+        "views": [{"label": label, "hint": hint, "n": q.count(q.view(rows, k, today)), "on": k == radky,
                    "href": f"/verejny-prostor/ulice/{slug}" + (f"?radky={k}" if k else "") + "#aktualne"}
-                  for k, label in q.VIEWS if k in ("", "vse") or q.view(rows, k, today)],
+                  for k, label, hint in q.VIEWS if k in ("", "vse") or q.view(rows, k, today)],
         "has": {"next": any(not f["properties"]["past"] and not f["properties"]["area"] for f in cleaning),
                 "area": any(not f["properties"]["past"] and f["properties"]["area"] for f in cleaning),
                 "reports": bool(points), "waiting": bool(rep["ceka"]), "cluster": len(points) > 1,

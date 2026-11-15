@@ -100,7 +100,7 @@
 <section class="ul-akt mbox-sec" id="aktualne" aria-labelledby="ul-akt-h">
   <div class="sec-head">
     <h2 id="ul-akt-h">Aktuálně</h2>
-    {% if rows or views[1].n %}<nav class="switch pd-seg" aria-label="Které události">{% for x in views %}<a href="{{ x.href }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>{% endif %}
+    {% if rows or views[1].n %}<nav class="switch pd-seg" aria-label="Které události">{% for x in views %}<a href="{{ x.href }}" title="{{ x.hint }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>{% endif %}
   </div>
   <div class="mbox">
   <div class="mbox-map ul-akt-map">

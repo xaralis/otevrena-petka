@@ -402,9 +402,9 @@ def test_street_page_rows_beyond_the_first(fixture, monkeypatch):
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: many if name == "Wolkerova" else [])
     m = get("/verejny-prostor/ulice/wolkerova").text
     assert m.count("<li data-row=") == q.ROWS                                    # only what is current, capped
-    assert f'aria-current="true">Aktuální <b>{q.ROWS}</b></a>' in m and '<a href="/verejny-prostor/ulice/wolkerova?radky=vse#aktualne">Vše <b>' in m
+    assert f'aria-current="true">Aktuální <b>{q.ROWS}</b></a>' in m and 'title="Všechno, co o ulici víme: čištění, podněty, usnesení a úřední deska">Celá historie <b>' in m
     m = get("/verejny-prostor/ulice/wolkerova?radky=vse").text
-    assert m.count("<li data-row=") > q.ROWS and 'aria-current="true">Vše <b>' in m
+    assert m.count("<li data-row=") > q.ROWS and 'aria-current="true">Celá historie <b>' in m
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
     assert "Přes Dej Tip tu zatím nikdo nic nenahlásil." in m and "Žádné usnesení od roku 2018 ulici nezmiňuje." in m
     assert "Blokově se tu letos nečistí" in m and "Ulice není v letošním harmonogramu" in m
