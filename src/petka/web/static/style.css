@@ -1349,6 +1349,7 @@ a.cl-hint { color: var(--red-ink); }
 .hv-txt { max-width: 28rem; }
 .hv h1, .hm h1 { margin: 0; font-weight: 800; font-stretch: 80%; letter-spacing: -.035em; }
 .hv h1, .hm h1 { font-size: var(--h1); line-height: 1.05; font-stretch: 85%; letter-spacing: -.02em; }
+.hv h1 span:first-child, .hm h1 span:first-child { font-size: clamp(2.75rem, 5.2vw, 4rem); line-height: 1; letter-spacing: -.03em; }   /* the portal's headline, bigger than any page's h1 */
 .hv h1 span, .hm h1 span { display: block; }
 .hv h1 span + span, .hm h1 span + span { margin-top: .35rem; font-size: var(--h2); font-stretch: 88%; line-height: 1.1; letter-spacing: -.015em; color: var(--red); text-wrap: balance; }
 .hv .lead, .hm .lead { margin: 1rem 0 0; font-size: 18px; line-height: 1.45; max-width: 30rem; }
