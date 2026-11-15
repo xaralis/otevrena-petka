@@ -1300,8 +1300,17 @@ a.cl-hint { color: var(--red-ink); }
   .pd-m { display: revert !important; }
   .band a.pd-cta { display: flex; margin-top: 1.2rem; }
   .pd-switch { --sw: 6rem; margin-top: 1.4rem; }
-  .pd-kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.2rem; }
-  .pd-kpi a { padding: .85rem .9rem 2.3rem; }
+  /* the tiles (Podněty, a street) one under another, the panel right under the open one */
+  .kpi-wrap { display: flex; flex-direction: column; gap: 2px; margin-top: 1.2rem; }
+  .kpi-wrap > .pd-kpi { display: contents; }
+  .kpi-wrap > .pd-panel { margin-top: 0; order: 9; }
+  .pd-kpi a { padding: .9rem 1rem 2.2rem; }
+  .pd-kpi a:nth-child(1) { order: 0; } .pd-kpi a:nth-child(2) { order: 2; } .pd-kpi a:nth-child(3) { order: 4; } .pd-kpi a:nth-child(4) { order: 6; }
+  .kpi-wrap:has(.pd-kpi > a:nth-child(1)[aria-expanded="true"]) > .pd-panel { order: 1; }
+  .kpi-wrap:has(.pd-kpi > a:nth-child(2)[aria-expanded="true"]) > .pd-panel { order: 3; }
+  .kpi-wrap:has(.pd-kpi > a:nth-child(3)[aria-expanded="true"]) > .pd-panel { order: 5; }
+  .kpi-wrap:has(.pd-kpi > a:nth-child(4)[aria-expanded="true"]) > .pd-panel { order: 7; }
+  .pd-kpi b { font-size: 1.75rem; }
   .pd-kpi span { font-size: .88rem; }
   .pd-kpi em { left: .9rem; bottom: .7rem; font-size: .82rem; }
   .pd-panel { padding: 20px 16px; }
@@ -1631,15 +1640,6 @@ main > :first-child > h2:first-child, main > h2:first-child, main > :first-child
 .ul-res small { display: block; margin-bottom: .1rem; font-size: .8rem; color: var(--muted); }
 .ul-res a { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 @media (max-width: 900px) {
-  /* tiles one under another, the panel right under the open one (not under all three) */
-  .ul-tiles { display: flex; flex-direction: column; gap: 2px; margin-top: 1.2rem; }
-  .ul-kpi { display: contents; }
-  .ul-kpi a { order: 0; padding: .9rem 1rem 2.2rem; }
-  .ul-kpi a:nth-child(2) { order: 2; } .ul-kpi a:nth-child(3) { order: 4; }
-  .ul-tiles .ul-panel { order: 5; margin-top: 0; }
-  .ul-tiles:has([data-pd-tile="cisteni"][aria-expanded="true"]) .ul-panel { order: 1; }
-  .ul-tiles:has([data-pd-tile="podnety"][aria-expanded="true"]) .ul-panel { order: 3; }
-  .ul-kpi b { font-size: 1.75rem; }
   .ul-panel .pd-cols > div + div { margin-top: 1.8rem; }
 }
 

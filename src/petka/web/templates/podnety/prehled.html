@@ -31,7 +31,8 @@
 <p class="pd-empty">Za toto období v obvodu žádné podněty nemáme.</p>
 {% else %}
 {% set c = s.count %}
-<div class="pd-kpi" id="kpi" data-kpi-remember="podnety">
+<div class="kpi-wrap" id="kpi">
+<div class="pd-kpi" data-kpi-remember="podnety">
   {% set tiles = [
     ('mesice', s.n, 'podnětů ' ~ per.phrase, 'podnětů ' ~ per.phrase_m, 'Po měsících'),
     ('vyreseno', c.vyreseno, 'vyřešeno (' ~ s.done_pct ~ ' %)', 'vyřešeno (' ~ s.done_pct ~ ' %)', 'Za jak dlouho'),
@@ -81,6 +82,7 @@
     {% set h, k = s.handled, s.silent_resolved_handled %}
     <p class="pd-note pd-under"><span class="pd-d">Z {{ h }} {{ plural(h, 'podnětu', 'podnětů', 'podnětů') }}, které řeší obvod (bez městské policie a zastávek MHD).{% if s.first_response != '–' %} „{{ s.first_response }}“ je medián u podnětů, na které úřad odpověděl.{% endif %}{% if k %} Bez odpovědi {{ plural(k, 'zůstal i 1 podnět, který', 'zůstaly i ' ~ k ~ ' podněty, které', 'zůstalo i ' ~ k ~ ' podnětů, které') }} úřad označil jako {{ plural(k, 'vyřešený', 'vyřešené', 'vyřešené') }}.{% endif %}</span><span class="pd-m">Z {{ h }} {{ plural(h, 'podnětu', 'podnětů', 'podnětů') }}, které řeší obvod.{% if s.first_response != '–' %} {{ s.first_response }} je medián u těch, kde úřad odpověděl.{% endif %}</span></p>
   </section>
+</div>
 </div>
 
 <div class="pd-bar" role="img" aria-label="{% for k, _, label, _ in segments %}{{ label[:1]|upper if loop.first else label[:1] }}{{ label[1:] }} {{ c[k] }}{{ ', ' if not loop.last }}{% endfor %}">

@@ -17,7 +17,7 @@
 {% block hero %}{{ band(s.name, 'Kde se v ulici čistí, co se o ní rozhodlo a co v ní lidé hlásí.' ~ (' Část ulice patří k sousednímu obvodu.' if s.share < 0.95 else '')) }}{% endblock %}
 
 {% block main %}
-<div class="ul-tiles" id="prehled">
+<div class="kpi-wrap" id="prehled">
 <div class="pd-kpi ul-kpi" data-kpi-remember="ulice">
   {% call tile('cisteni', 'Kdy přeparkovat' if next_date else 'Harmonogram') %}{% if next_date %}<b>{{ next_date|cl_wd }} <span class="ul-red">{{ panel.date }}</span></b><span>příští blokové čištění{{ ', ' ~ panel.clock if panel.clock }}</span>{% elif in_harm %}<b>letos už bez čištění</b><span>{% if last %}naposledy proběhlo {{ last }}{% else %}blokové čištění{% endif %}</span>{% else %}<b>letos bez čištění</b><span>ulice není v harmonogramu</span>{% endif %}{% endcall %}
   {% call tile('podnety', 'Po měsících') %}{% if rep.n %}{% if rep.ceka %}<b class="ul-red">{{ rep.ceka }} {{ cl_plural(rep.ceka, 'nevyřízený podnět', 'nevyřízené podněty', 'nevyřízených podnětů') }}</b>{% else %}<b>nic nečeká</b>{% endif %}<span>{{ rep.n }} {{ cl_plural(rep.n, 'podnět', 'podněty', 'podnětů') }} {{ rep.since|ul_since }}, {{ rep.vyreseno }} {{ cl_plural(rep.vyreseno, 'vyřešený', 'vyřešené', 'vyřešených') }}</span>{% else %}<b>žádné</b><span>podněty z Dej Tipu</span>{% endif %}{% endcall %}
