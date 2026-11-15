@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "ulice/_macros.html" import datalist, street_search %}{% from "_portal.html" import band, source %}
-{% block title %}{% if found %}Ulice „{{ query }}“{% else %}Ulice{% endif %}{% endblock %}
+{% block title %}{% if found %}Ulice „{{ query }}“{% else %}Co se děje v mé ulici?{% endif %}{% endblock %}
+{% block description %}Každá ulice městského obvodu Pardubice V na jedné stránce: kdy se v ní čistí, co v ní lidé hlásí přes Dej Tip, co o ní rozhodla rada a zastupitelstvo a co k ní visí na úřední desce.{% endblock %}
 {% block hero %}
 {% set title = 'Ulic odpovídajících „' ~ query ~ '“ je víc' if found else 'Co se děje v mé ulici?' %}
 {% set lead = 'Vyberte tu svou, nebo hledejte znovu.' if found else 'Pro každou ulici obvodu na jednom místě: co o ní rozhodla rada a zastupitelstvo, kdy se v ní čistí, co v ní lidé hlásí a co visí na úřední desce.' %}

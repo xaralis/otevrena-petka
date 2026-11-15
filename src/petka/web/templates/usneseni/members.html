@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_portal.html" import band, source %}
 {% block title %}Zastupitelé městského obvodu Pardubice V{% endblock %}
+{% block description %}Zastupitelé a radní městského obvodu Pardubice V: kdo za koho kandidoval, jak hlasoval a jak chodil na jednání.{% endblock %}
 {% block hero %}{{ band('Zastupitelé', 'Patnáct zastupitelů, z nich pět v radě, podle kandidátek, za které byli zvoleni.', tabs=section_tabs(request.url.path)) }}{% endblock %}
 {% block main %}
 {% for term, clubs in terms.items() %}

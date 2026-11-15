@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_portal.html" import band, source %}
-{% block title %}{{ s.title }}{% endblock %}
+{% block title %}{{ s.question or s.title }}{% endblock %}
+{% block description %}{{ s.title }} v městském obvodě Pardubice V: tuhle část Otevřené Pětky připravujeme. Mezitím odkazy na zdroje.{% endblock %}
 {% block hero %}{{ band(s.question, s.title ~ ': tahle část portálu je ve výstavbě. Do té doby najdete odpovědi v usneseních a přímo u zdroje.') }}{% endblock %}
 {% block main %}
 <div class="tape" role="note"><p><b>Ve výstavbě.</b> Tahle část portálu ještě není hotová. Níže najdete, co už jde dohledat v usneseních a kde hledat mezitím.</p></div>

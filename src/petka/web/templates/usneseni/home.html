@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% block title %}{% if q %}„{{ q }}“ v usneseních{% else %}Co se rozhodlo a kdo jak hlasoval?{% endif %}{% endblock %}
+{% block description %}Všechna usnesení rady a zastupitelstva městského obvodu Pardubice V od roku 2018 a jak kdo hlasoval: hledání podle slov, smyslu i čísla usnesení, s odkazem na původní zápis.{% endblock %}
 {% from "usneseni/_macros.html" import row, legend %}{% from "_portal.html" import band, source, search_box %}
 {% block hero %}
 {% set lead %}Všechna usnesení rady a zastupitelstva od roku {{ stats.first_date.year if stats.first_date else 2018 }} a jak kdo hlasoval. Hledá se podle slov i podle smyslu v {{ stats.resolutions }} usneseních a {{ stats.rejected }} nepřijatých návrzích.{% endset %}
