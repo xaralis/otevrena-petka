@@ -89,6 +89,42 @@ def _stem(w: str) -> str:
     return w[:max(5, len(w) - 2)]
 
 
+# a resolution's number as people write it: "154/2025 Z", "154/25", "č. 154/2025", the uid
+# "154-2025-z"; or a bare "154" (any year)
+NUMBER_RE = re.compile(r"(?<![\d/])(\d{1,4})\s*/\s*(\d{4}|\d{2})(?![\d/])(?:\s*([ZzRr])(?![a-zA-Zá-žÁ-Ž]))?")
+UID_RE = re.compile(r"(?<![\d-])(\d{1,4})-(\d{4})-([zr])\b")
+FILLER_RE = re.compile(r"\b(?:usnesen[ií]|č\.?|c\.|čísl[oa]|cislo|číslo usnesení)(?=\s|$|\d)", re.I)
+
+
+def numbers(q: str) -> tuple[list[tuple[int, int | None, str | None]], str]:
+    """The resolution numbers a query names, as (number, year or None, "Z"/"R" or None), and
+    what is left of the query without them and the words around them ("usnesení", "č.").
+    A bare number counts only when it is all the query says."""
+    found, rest = [], q
+    for rx in (UID_RE, NUMBER_RE):
+        for m in rx.finditer(rest):
+            n, y, b = m.groups()
+            y = int(y) + (2000 if len(y) == 2 else 0)
+            found.append((int(n), y, b.upper() if b else None))
+        rest = rx.sub(" ", rest)
+    rest = " ".join(FILLER_RE.sub(" ", rest).split())
+    if found and all(fold(w) in STOPWORDS for w in re.findall(r"\w+", rest)):
+        rest = ""                               # "310/2026 R a 311/2026 R"
+    if not found and re.fullmatch(r"\d{1,4}", rest) and not 1900 <= int(rest) <= 2100:
+        found, rest = [(int(rest), None, None)], ""
+    return list(dict.fromkeys(found)), rest
+
+
+def _by_number(conn, nums: list[tuple[int, int | None, str | None]]) -> list[str]:
+    """Uids of the resolutions with these numbers, newest first."""
+    out: list[str] = []
+    for n, y, b in nums:
+        pat = f"{n}/{y if y else '%'} {b if b else '%'}"
+        out += [r["uid"] for r in conn.execute(
+            "SELECT uid FROM resolutions WHERE number LIKE %s ORDER BY date DESC, seq DESC", (pat,))]
+    return list(dict.fromkeys(out))
+
+
 def tsquery(q: str, op: str = "&") -> str | None:
     words = [w for w in re.findall(r"[0-9a-z]+", fold(q)) if len(w) > 1 and w not in STOPWORDS]
     if not words:
@@ -129,6 +165,19 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
                                      ON m.id = r.meeting_id WHERE {where}""", params).fetchone()["n"]
             info.update(mode="browse", total=total)
             return [Hit(r["uid"], 0, row=r) for r in rows], info
+
+        nums, rest = numbers(q)
+        exact = _by_number(conn, nums) if nums else []
+        if exact and not rest:
+            # the query is a resolution's number: that resolution, whatever the filters say (the
+            # default "real resolutions only" would hide a rejected one the reader asked for)
+            info.update(mode="number", total=len(exact))
+            page = [Hit(uid, 1.0) for uid in exact[offset:offset + limit]]
+            rows = {r["uid"]: r for r in conn.execute(
+                f"SELECT {COLUMNS} FROM resolutions r WHERE r.uid = ANY(%s)", ([h.uid for h in page],))}
+            for h in page:
+                h.row = rows[h.uid]
+            return page, info
 
         vec = None
         if mode in ("hybrid", "semantic"):
@@ -187,6 +236,10 @@ def search(q: str, mode: str = "hybrid", filters: Filters | None = None, limit: 
             h.score += 1 / (RRF_K + rank)
             h.semantic_rank = rank
         ranked = sorted(scores.values(), key=lambda h: -h.score)
+        if exact:
+            # a number among other words ("zrušení usnesení 154/2025"): that resolution first
+            first = [scores.pop(uid, Hit(uid, 1.0)) for uid in exact]
+            ranked = first + [h for h in ranked if h.uid not in exact]
         if newest_first and info.get("loose"):
             # no resolution has every word (a question in plain language): by date, loose
             # one-word matches would come first, so these stay ordered by how well they match
