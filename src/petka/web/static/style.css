@@ -1529,7 +1529,8 @@ a.ak-mk, a.ak-cla { cursor: pointer; color: var(--ink); text-decoration: none; }
   .ak-h { font-size: var(--h3); font-weight: 700; }
   .ak-sub { font-size: .9rem; margin-top: .15rem; }
   .ak-list { gap: 0; margin-top: .5rem; }
-  .ak-list li { grid-template-columns: 5rem minmax(0, 1fr); margin: 0; padding: .65rem 0; font-size: .95rem; border-radius: 0; border-bottom: 1px solid var(--off); }
+  .ak-list { margin-left: -1.25rem; margin-right: -1.25rem; }   /* rows the full width, text on the page's gutter */
+  .ak-list li { grid-template-columns: 5rem minmax(0, 1fr); margin: 0; padding: .65rem 1.25rem; font-size: .95rem; border-radius: 0; border-bottom: 1px solid var(--off); }
   .ak-list-r li { grid-template-columns: minmax(0, 1fr) auto; }
   .ak-tip { max-width: 200px; }
   .ak-tip.ak-card { width: 280px; max-width: calc(100% - 16px); }
