@@ -94,6 +94,14 @@ class ObvodFilter:
                 "WHERE s.k = ANY(%s) AND s.v::float >= %s)"), [list(self.ids), min_share]
 
 
+    def sql_one(self, column: str) -> tuple[str, list]:
+        """A WHERE condition and its parameters for a text column holding the one obvod a
+        record lies in (its id, a point's obvod). `column` is code's, never the request's."""
+        if self.whole_town:
+            return "TRUE", []
+        return f"{column} = ANY(%s)", [list(self.ids)]
+
+
 WHOLE_TOWN = ObvodFilter()
 
 

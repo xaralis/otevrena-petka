@@ -9,7 +9,7 @@ from ..section import Command
 
 def _args(p) -> None:
     from .. import obvody
-    p.add_argument("--obvod", action="append", metavar="|".join(obvody.BY_ID),
+    p.add_argument("--obvod", action="append", metavar="|".join(obvody.TOWN_BY_ID),
                    help="only this obvod (repeatable; default: all)")
     p.add_argument("--od", type=dt.date.fromisoformat, metavar="RRRR-MM-DD",
                    help="download from this day instead of the usual window (backfill)")
@@ -18,8 +18,8 @@ def _args(p) -> None:
 def update(a) -> int:
     from .. import obvody
     from . import jobs
-    if any(o not in obvody.BY_ID for o in a.obvod or []):
-        print(f"unknown obvod, use one of: {', '.join(obvody.BY_ID)}", file=sys.stderr)
+    if any(o not in obvody.TOWN_BY_ID for o in a.obvod or []):
+        print(f"unknown obvod, use one of: {', '.join(obvody.TOWN_BY_ID)}", file=sys.stderr)
         return 2
     report = jobs.update(a.obvod, a.od)
     print(json.dumps(report, ensure_ascii=False, indent=1, default=str))
@@ -28,6 +28,6 @@ def update(a) -> int:
 
 COMMANDS = [
     Command("podnety-update",
-            "mirror the obvody's citizen reports from Dej Tip (two years on the first run, then the "
-            "last 120 days for status changes; idempotent)", update, _args),
+            "mirror the citizen reports of the town's eight obvody from Dej Tip (two years on an "
+            "obvod's first run, then the last 120 days for status changes; idempotent)", update, _args),
 ]

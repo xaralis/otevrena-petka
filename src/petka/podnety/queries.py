@@ -1,4 +1,5 @@
-"""Reading the podněty: a list with filters, the ones near a point, a summary for an obvod.
+"""Reading the podněty: a list with filters (one obvod for the portal's pages and MCP, the
+`?obvod=` filter of the whole town for the API), the ones near a point, a summary for an obvod.
 Turning rows into GeoJSON and the distance are pure functions, testable without a database.
 
 Distances are on a sphere (haversine); a bounding box in degrees narrows the rows first so the
@@ -7,12 +8,17 @@ Distances are on a sphere (haversine); a bounding box in degrees narrows the row
 import datetime as dt
 import math
 from dataclasses import dataclass
+from zoneinfo import ZoneInfo
 
 from .. import db
+from ..obvody import WHOLE_TOWN, ObvodFilter
 from . import source
 
 EARTH = 6_371_000       # metres
 LIMIT = 2000            # most features one answer carries
+TZ = ZoneInfo("Europe/Prague")      # reported_at and the notes are local time without a zone
+# When a report last moved (local time): reported, the office's last note or a status change we saw.
+CHANGED_SQL = "GREATEST(reported_at, last_note_at, status_changed_at AT TIME ZONE 'Europe/Prague')"
 
 
 def meters(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
@@ -32,16 +38,25 @@ def box(lat: float, lng: float, radius: float) -> tuple[float, float, float, flo
 
 @dataclass
 class Filters:
-    obvod: str
+    """Which reports to read. `obvod` is one obvod's id (a page, MCP) or the API's filter of
+    the town's obvody (default the whole town). `max_age` keeps reports that moved (were
+    reported, answered by the office or changed status) in the last N days before `today`."""
+    obvod: str | ObvodFilter = WHOLE_TOWN
     categories: tuple[int, ...] = ()
     statuses: tuple[int, ...] = ()
     date_from: dt.date | None = None
     date_to: dt.date | None = None          # inclusive
     near: tuple[float, float] | None = None
     radius: float = 500                     # metres, with `near`
+    max_age: int | None = None              # days, counted back from `today`
+    today: dt.date | None = None
 
     def sql(self) -> tuple[str, list]:
-        w, p = ["obvod = %s"], [self.obvod]
+        if isinstance(self.obvod, str):
+            w, p = ["obvod = %s"], [self.obvod]
+        else:
+            cond, p = self.obvod.sql_one("obvod")
+            w = [] if self.obvod.whole_town else [cond]
         if self.categories:
             w.append("category_id = ANY(%s::int[])"); p.append(list(self.categories))
         if self.statuses:
@@ -53,7 +68,11 @@ class Filters:
         if self.near:
             la0, la1, ln0, ln1 = box(*self.near, self.radius)
             w.append("lat BETWEEN %s AND %s AND lng BETWEEN %s AND %s"); p += [la0, la1, ln0, ln1]
-        return " AND ".join(w), p
+        if self.max_age is not None:
+            since = dt.datetime.combine((self.today or dt.date.today()) - dt.timedelta(days=self.max_age), dt.time())
+            w.append(f"{CHANGED_SQL} >= %s")
+            p.append(since)
+        return " AND ".join(w) or "TRUE", p
 
 
 def search(f: Filters, limit: int = 500) -> list[dict]:
@@ -122,6 +141,14 @@ def years(obvod: str) -> list[int]:
             (obvod,))]
 
 
+def version() -> dt.datetime | None:
+    """When any obvod was last downloaded successfully: the data's version for the API's ETag
+    (the job is the only writer, and every run of an obvod moves it)."""
+    with db.pool().connection() as conn:
+        r = conn.execute("SELECT max(checked_at) AS t FROM citizen_report_obvody").fetchone()
+    return r["t"] if r else None
+
+
 def checked(obvod: str) -> dt.datetime | None:
     """When the job last downloaded the obvod successfully ("Stav k"): every run touches
     last_seen of every report it got."""
@@ -132,12 +159,24 @@ def checked(obvod: str) -> dt.datetime | None:
 
 # --- GeoJSON --------------------------------------------------------------------------------
 
+def changed_at(r: dict) -> dt.datetime:
+    """When a report last moved, local time without a zone: reported, the office's last note
+    or a status change the job saw (what the API's `stari` counts, as CHANGED_SQL does)."""
+    seen = r.get("status_changed_at")
+    if seen is not None and seen.tzinfo is not None:
+        seen = seen.astimezone(TZ).replace(tzinfo=None)
+    return max(t for t in (r["reported_at"], r.get("last_note_at"), seen) if t is not None)
+
+
 def feature(r: dict) -> dict:
+    """One report as a GeoJSON Feature. A report lies in one obvod (Dej Tip's CS_MUNICODE):
+    `obvod` is its id, `obvody` the same as a list, as every source of the whole town has it."""
     props = {"id": r["id"], "category_id": r["category_id"], "category": r["category"],
              "status_id": r["status"], "status": source.STATUSES.get(r["status"], str(r["status"])),
              "reported_at": r["reported_at"].isoformat(timespec="minutes"), "street": r["street"],
-             "obvod": r["obvod"],
+             "obvod": r["obvod"], "obvody": [r["obvod"]],
              "status_changed_at": r["status_changed_at"].isoformat() if r.get("status_changed_at") else None,
+             "changed_at": changed_at(r).isoformat(timespec="minutes"),
              "description": r.get("description"), "photo": r.get("photo_url"),
              "detail": source.detail(r["id"])}
     if "distance" in r:

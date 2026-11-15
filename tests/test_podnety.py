@@ -11,7 +11,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from petka import db, obvody
-from petka.podnety import jobs, queries, source
+from petka.podnety import jobs, queries, source, web
 from petka.web.app import app
 
 MO5 = obvody.MO5.momc
@@ -155,6 +155,7 @@ def test_api_shape(monkeypatch):
         return [{**_stored(), "distance": 42}]
 
     monkeypatch.setattr(queries, "search", search)
+    monkeypatch.setattr(queries, "version", lambda: VERSION)
     r = TestClient(app).get("/api/v1/podnety", params={"near": "50.03,15.76", "r": 9999, "stav": "1,3",
                                                        "od": "2026-01-01"}, headers={"host": "otevrenapetka.cz"})
     assert r.status_code == 200 and r.headers["content-type"].startswith("application/geo+json")
@@ -164,15 +165,118 @@ def test_api_shape(monkeypatch):
     assert feat["geometry"] == {"type": "Point", "coordinates": [15.7602, 50.0301]}
     assert feat["properties"] == {"id": 10000000001, "category_id": 19, "category": "Chodník", "status_id": 1,
                                   "status": "Evidováno", "reported_at": "2026-11-01T12:57", "street": "Na Záboří",
-                                  "obvod": "mo5", "status_changed_at": None,
+                                  "obvod": "mo5", "obvody": ["mo5"], "status_changed_at": None,
+                                  "changed_at": "2026-11-12T10:00",
                                   "description": "Nemám rád souseda, volejte [telefon] nebo [e-mail]",
                                   "photo": "https://www.dejtip.eu/_fotoobce/0000-abc.jpeg",
                                   "detail": "https://amg.dejtip.eu/pardubice/?id=10000000001", "distance": 42}
     f = seen["f"]
-    assert (f.obvod, f.statuses, f.near, f.radius, f.date_from) == ("mo5", (1, 3), (50.03, 15.76), 5000,
-                                                                    dt.date(2026, 1, 1))
-    for bad in ({"near": "x"}, {"od": "1. 1. 2026"}, {"kategorie": "chodník"}):
+    assert (f.obvod, f.statuses, f.near, f.radius, f.date_from) == (obvody.WHOLE_TOWN, (1, 3), (50.03, 15.76),
+                                                                    5000, dt.date(2026, 1, 1))
+    assert f.max_age is None                                          # the whole town, any age, by default
+    for bad in ({"near": "x"}, {"od": "1. 1. 2026"}, {"kategorie": "chodník"}, {"obvod": "mo9"},
+                {"stari": "0"}, {"stari": "tri"}):
         assert TestClient(app).get("/api/v1/podnety", params=bad).status_code == 422
+
+
+VERSION = dt.datetime(2026, 11, 15, 8, 0, tzinfo=dt.timezone.utc)
+NOW = dt.datetime(2026, 11, 15, 12, 0)
+
+
+@pytest.fixture
+def api(monkeypatch):
+    """The API over one stored report; `state` changes the data's version, the time and what
+    the last search was asked."""
+    state = {"version": VERSION, "now": NOW}
+
+    def search(f, limit):
+        state.update(f=f, limit=limit)
+        return [_stored()]
+
+    monkeypatch.setattr(queries, "search", search)
+    monkeypatch.setattr(queries, "version", lambda: state["version"])
+    monkeypatch.setattr(web, "_now", lambda: state["now"])
+    return state
+
+
+def ask(params=None, tag=None):
+    return TestClient(app).get("/api/v1/podnety", params=params or {},
+                               headers={"host": "otevrenapetka.cz", **({"if-none-match": tag} if tag else {})})
+
+
+def test_api_obvod_filter_and_age(api):
+    ask({"obvod": "MO1, mo5"})
+    assert api["f"].obvod == obvody.ObvodFilter(("mo1", "mo5"))
+    ask({"stari": "90", "stav": "1,2,8,9"})
+    f = api["f"]
+    assert (f.max_age, f.today, f.statuses, f.obvod) == (90, NOW.date(), (1, 2, 8, 9), obvody.WHOLE_TOWN)
+
+
+def test_api_etag_and_304(api):
+    r = ask()
+    tag = r.headers["etag"]
+    assert r.status_code == 200 and tag.startswith('W/"') and r.headers["cache-control"] == "public, max-age=600"
+    r = ask(tag=tag)
+    assert r.status_code == 304 and r.headers["etag"] == tag and not r.content
+    assert ask(tag=tag.removeprefix("W/")).status_code == 304
+    assert ask({"obvod": "mo5"}, tag).status_code == 200
+    assert ask({"obvod": "mo5"}).headers["etag"] == ask({"obvod": " MO5"}).headers["etag"]
+    assert ask({"stav": "3"}, tag).status_code == 200
+    assert ask({"near": "50.03,15.76"}, tag).status_code == 200
+    aged = ask({"stari": "90"}).headers["etag"]
+    api["now"] = NOW + dt.timedelta(hours=1)                         # the same day: the same answer
+    assert ask(tag=tag).status_code == 304 and ask({"stari": "90"}, aged).status_code == 304
+    api["now"] = NOW + dt.timedelta(days=1)                          # stari counts from today
+    assert ask(tag=tag).status_code == 304 and ask({"stari": "90"}, aged).status_code == 200
+    api["version"] = VERSION + dt.timedelta(hours=4)                 # the job ran again
+    assert ask(tag=tag).status_code == 200
+
+
+def test_filters_sql():
+    where, params = queries.Filters().sql()
+    assert where == "TRUE" and params == []                          # the whole town
+    where, params = queries.Filters(obvody.ObvodFilter(("mo1", "mo5")), statuses=(3,)).sql()
+    assert where == "obvod = ANY(%s) AND status = ANY(%s::int[])" and params == [["mo1", "mo5"], [3]]
+    where, params = queries.Filters("mo5").sql()                    # a page's own obvod
+    assert where == "obvod = %s" and params == ["mo5"]
+    where, params = queries.Filters(max_age=90, today=dt.date(2026, 11, 15)).sql()
+    assert "GREATEST(reported_at, last_note_at" in where and params == [dt.datetime(2026, 8, 17)]
+
+
+def test_changed_at_is_the_last_move_in_local_time():
+    r = _stored(last_note_at=None)
+    assert queries.changed_at(r) == dt.datetime(2026, 11, 1, 12, 57)                   # reported
+    r = _stored(last_note_at=dt.datetime(2026, 11, 12, 10),
+                status_changed_at=dt.datetime(2026, 11, 13, 5, 0, tzinfo=dt.timezone.utc))
+    assert queries.changed_at(r) == dt.datetime(2026, 11, 13, 6, 0)                     # seen, in Prague
+
+
+def test_job_takes_every_obvod_of_the_town_with_one_download_per_window(monkeypatch):
+    rows = [row(1), row(2, momc=555126), row(3, momc=575020), row(4, momc=999999), row(5, momc=555126, status=7)]
+    fetched, stored, marked = [], {}, {}
+
+    def fetch(start, end, client):
+        fetched.append((start, end))
+        return rows
+
+    def run(job, name, units, **kw):
+        return {u.key[0]: u.run("conn", "client") for u in units("conn", "client")}
+
+    monkeypatch.setattr(jobs.runner, "run", run)
+    monkeypatch.setattr(jobs.source, "fetch", fetch)
+    monkeypatch.setattr(jobs, "synced", lambda conn, obvod: obvod == "mo5")
+    monkeypatch.setattr(jobs, "store", lambda conn, obvod, keep, drop: stored.update(
+        {obvod: ([r["id"] for r in keep], drop)}) or {})
+    monkeypatch.setattr(jobs, "mark", lambda conn, obvod, start: marked.update({obvod: start}))
+    report = jobs.update(today=dt.date(2026, 11, 15))
+    assert list(report) == [o.id for o in obvody.TOWN]
+    assert fetched == [(dt.date(2024, 11, 15), dt.date(2026, 11, 16)),      # mo1 first, two years
+                       (dt.date(2026, 7, 18), dt.date(2026, 11, 16))]       # mo5, known: 120 days
+    assert stored["mo5"] == ([1], []) and stored["mo2"] == ([2], [5]) and stored["mo8"] == ([3], [])
+    assert all(stored[o] == ([], []) for o in ("mo1", "mo3", "mo4", "mo6", "mo7"))      # 4 is in no obvod
+    assert marked["mo5"] == dt.date(2026, 7, 18) and marked["mo8"] == dt.date(2024, 11, 15)
+    jobs.update(["mo3"], since=dt.date(2020, 1, 1), today=dt.date(2026, 11, 15))
+    assert fetched[-1] == (dt.date(2020, 1, 1), dt.date(2026, 11, 16)) and marked["mo3"] == dt.date(2020, 1, 1)
 
 
 # --- with a database ------------------------------------------------------------------------
@@ -225,3 +329,21 @@ def test_store_tracks_status_changes_and_drops(conn):
     assert [h["id"] for h in hits] == [-901] and 200 < hits[0]["distance"] < 240
     assert [h["id"] for h in queries.near("mo5", lat, lng, radius=2000)] == [-901, -902]
     assert queries.near("mo4", lat, lng, radius=2000) == []
+    around = dict(near=(lat, lng), radius=2000)
+    assert [h["id"] for h in queries.search(queries.Filters(**around))] == [-901, -902]          # the town
+    assert [h["id"] for h in queries.search(queries.Filters(obvody.ObvodFilter(("mo4", "mo5")), **around))] \
+        == [-901, -902]
+    assert queries.search(queries.Filters(obvody.ObvodFilter(("mo1",)), **around)) == []
+    # stari: -901 changed status just now, -902 last moved on 12. 11. 2026 (its office note)
+    young = queries.search(queries.Filters(**around, max_age=1, today=dt.date.today()))
+    assert [h["id"] for h in young] == [-901]
+
+
+def test_synced_and_mark(conn):
+    assert not jobs.synced(conn, "test")
+    jobs.mark(conn, "test", dt.date(2026, 7, 1))
+    jobs.mark(conn, "test", dt.date(2024, 11, 15))
+    jobs.mark(conn, "test", dt.date(2026, 7, 18))
+    assert jobs.synced(conn, "test")
+    assert conn.execute("SELECT since FROM citizen_report_obvody WHERE obvod = 'test'").fetchone()["since"] \
+        == dt.date(2024, 11, 15)                                      # the earliest download stays

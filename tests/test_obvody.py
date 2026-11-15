@@ -68,6 +68,11 @@ def test_sql():
     assert "jsonb_each_text(p.obvody)" in cond and cond.count("%s") == 2 and params == [["mo1", "mo5"], 0.05]
 
 
+def test_sql_of_a_column_with_one_obvod():
+    assert obvody.ObvodFilter().sql_one("obvod") == ("TRUE", [])
+    assert obvody.ObvodFilter(("mo1", "mo5")).sql_one("obvod") == ("obvod = ANY(%s)", [["mo1", "mo5"]])
+
+
 def test_share_ids():
     assert obvody.share_ids({"mo5": 0.9, "mo4": 0.07, "mo6": 0.03}, 0.05) == ["mo4", "mo5"]
     assert obvody.share_ids(None, 0.05) == [] and obvody.share_ids({}, 0.05) == []

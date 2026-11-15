@@ -1,9 +1,13 @@
-"""`petka podnety-update`: mirror the Dej Tip reports of each obvod. Idempotent; the cluster
-runs it every four hours, which is what the page promises ("aktualizace každé 4 hodiny").
+"""`petka podnety-update`: mirror the Dej Tip reports of each of the town's eight obvody
+(obvody.TOWN, by CS_MUNICODE). Idempotent; the cluster runs it every four hours, which is what
+the page promises ("aktualizace každé 4 hodiny").
 
 The first run of an obvod takes two years back; later runs take the last 120 days, which is
 where reports still change status (an older report that changes is caught on a backfill with
---od). A report that turned chybné, spam or smazané is deleted here too.
+--od). Which obvody were mirrored is kept in citizen_report_obvody, so an obvod without any
+report doesn't take two years again on every run. Obvody that want the same window share one
+download of the city. A report that turned chybné, spam or smazané is deleted here too; a
+report whose CS_MUNICODE is no obvod of the town is not kept.
 """
 
 import datetime as dt
@@ -62,23 +66,36 @@ def store(conn, obvod: str, keep: list[dict], drop: list[int]) -> dict:
     return {"reports": len(keep), "new": new, "changed": changed, "removed": removed}
 
 
+def synced(conn, obvod: str) -> bool:
+    """Whether the obvod was mirrored before (its first, long run is done)."""
+    return conn.execute("SELECT 1 FROM citizen_report_obvody WHERE obvod = %s", (obvod,)).fetchone() is not None
+
+
+def mark(conn, obvod: str, start: dt.date) -> None:
+    """Note a successful download of the obvod from `start`: the API's version moves."""
+    conn.execute("""INSERT INTO citizen_report_obvody (obvod, since) VALUES (%s, %s)
+                    ON CONFLICT (obvod) DO UPDATE SET since = LEAST(citizen_report_obvody.since, EXCLUDED.since),
+                                                      checked_at = now()""", (obvod, start))
+
+
 def update(ids: list[str] | None = None, since: dt.date | None = None,
            today: dt.date | None = None) -> dict:
-    """Download and store the reports of the given obvody (default: all). One download of
-    the city serves every obvod that wants the same range."""
+    """Download and store the reports of the given obvody (ids of obvody.TOWN; default: all
+    eight). One download of the city serves every obvod that wants the same range."""
     today = today or dt.date.today()
-    todo_obvody = [obvody.BY_ID[i] for i in ids] if ids else obvody.OBVODY
+    todo_obvody = [obvody.TOWN_BY_ID[i] for i in ids] if ids else obvody.TOWN
     downloads: dict[tuple, list] = {}
 
-    def unit(o: obvody.Obvod) -> Unit:
+    def unit(o: obvody.TownObvod) -> Unit:
         def run(conn, client) -> dict:
-            known = conn.execute("SELECT 1 FROM citizen_reports WHERE obvod = %s LIMIT 1", (o.id,)).fetchone()
-            start, end = window(today, bool(known))
+            start, end = window(today, synced(conn, o.id))
             start = since or start
             if (start, end) not in downloads:
                 downloads[(start, end)] = source.fetch(start, end, client)
             keep, drop = source.reports(downloads[(start, end)], o.momc)
-            return {"from": start.isoformat(), **store(conn, o.id, keep, drop)}
+            summary = store(conn, o.id, keep, drop)
+            mark(conn, o.id, start)
+            return {"from": start.isoformat(), **summary}
         return Unit((o.id,), o.id, run)
 
     return runner.run("podnety-update", "podněty", lambda conn, client: [unit(o) for o in todo_obvody],

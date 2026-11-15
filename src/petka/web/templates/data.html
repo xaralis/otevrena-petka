@@ -54,11 +54,11 @@
 </section>
 <section class="data-tab" id="podnety" data-panel="podnety">
 <h2>Podněty z Dej Tipu</h2>
-<p>Podněty, které lidé v obvodu poslali přes aplikaci Dej Tip: {{ pd_cat.total }} od {{ pd_cat.first|d if pd_cat.first }}{% if pd_cat.checked %}, naposledy staženo {{ pd_cat.checked|d }}{% endif %}. Kategorie, stav podle Dej Tipu, data a poloha; místo jen jako ulice bez čísla domu. Popis od občana má skryté telefony a e-maily, fotka je jen tam, kde ji autor zveřejnil. Poznámky úřadu neukládáme.</p>
+<p>Podněty, které lidé poslali přes aplikaci Dej Tip, za celé město; v obvodu {{ obvod.abbr }} {{ pd_cat.total }} od {{ pd_cat.first|d if pd_cat.first }}{% if pd_cat.checked %}, naposledy staženo {{ pd_cat.checked|d }}{% endif %}. Jen některé obvody vrátí parametr <a href="#obvod"><code>?obvod=</code></a>. Kategorie, stav podle Dej Tipu, data a poloha; místo jen jako ulice bez čísla domu. Popis od občana má skryté telefony a e-maily, fotka je jen tam, kde ji autor zveřejnil. Poznámky úřadu neukládáme.</p>
 <table class="ledger catalog">
   <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
   <tbody>
-    <tr><td><b>Podněty</b></td><td>Jeden podnět s kategorií, stavem, daty nahlášení a odpovědi úřadu, polohou, popisem a odkazem na Dej Tip (GeoJSON, nejnovější první); filtry <code>?kategorie=</code>, <code>?stav=</code>, <code>?od=</code>, <code>?do=</code>, <code>?near=lat,lng&amp;r=500</code>.</td>
+    <tr><td><b>Podněty</b></td><td>Jeden podnět s kategorií, stavem, daty nahlášení a poslední změny (<code>changed_at</code>), obvodem (<code>obvody</code>), polohou, popisem a odkazem na Dej Tip (GeoJSON, nejnovější první); filtry <code>?obvod=mo5</code>, <code>?kategorie=</code>, <code>?stav=</code>, <code>?od=</code>, <code>?do=</code>, <code>?near=lat,lng&amp;r=500</code> a stáří <code>?stari=90</code>: jen podněty nahlášené, zodpovězené nebo změněné za posledních 90 dní (otevřené s <code>?stav=1,2,8,9</code>, nedávno vyřešené s <code>?stav=3</code>).</td>
         <td class="nowrap"><a href="/api/v1/podnety">GeoJSON</a></td></tr>
   </tbody>
 </table>
@@ -83,13 +83,15 @@
 
 <h2 id="api">REST API</h2>
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>
-<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění a místa.</p>
+<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění, podněty a místa.</p>
+<p id="etag"><b>Jen při změně.</b> Blokové čištění, podněty a místa posílají hlavičku <code>ETag</code>; kdo ji pošle zpátky v <code>If-None-Match</code>, dostane odpověď 304 bez dat, dokud se data nezmění.</p>
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
 curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'
 curl '{{ base }}/api/v1/uredni-deska/notices?q=rozpočet&amp;active=false'
 curl '{{ base }}/api/v1/cisteni?obvod=mo5&amp;ulice=wolkerova'
 curl '{{ base }}/api/v1/podnety?stav=1,2&amp;near=50.0254,15.7553&amp;r=300'
+curl '{{ base }}/api/v1/podnety?obvod=mo2&amp;stav=1,2,8,9&amp;stari=90'
 curl --compressed '{{ base }}/api/v1/mista?obvod=mo5&amp;druh=stojan,kontejner'</pre>
 
 <h2 id="mcp">AI asistenti (MCP)</h2>

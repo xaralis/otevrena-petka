@@ -3,8 +3,8 @@
     https://amg.dejtip.eu/pardubice/
 
 The map asks one endpoint for every report of the city in a date range; there is no filter by
-obvod, so we take the whole city and keep the obvod's reports by CS_MUNICODE (the RÚIAN code
-of the městský obvod, obvody.Obvod.momc). Rows are positional arrays. The map's own config
+obvod, so we take the whole city and split it into obvody by CS_MUNICODE (the RÚIAN code of
+the městský obvod, obvody.TownObvod.momc). Rows are positional arrays. The map's own config
 (model.db.conversionArray) names 21 columns, but the answer has 23 and NOTE_DATE has no
 column of its own: NOTE carries "date¦official's e-mail¦text". Positions below were checked on
 the real answer on 12. 11. 2026 (3 602 rows from 2025 on), see docs/dejtip.md.
