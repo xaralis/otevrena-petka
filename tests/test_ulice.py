@@ -362,7 +362,7 @@ def test_street_page(fixture):
               'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"', f'<b>čt <span class="ul-red">26.{NB}11.</span></b>',
               'data-pd-tile="podnety" aria-controls="ul-panel" aria-expanded="false"', "<b>nic nečeká</b>",
               "<span>1 podnět od května 2026, 1 vyřešený</span>", '<section data-pd-detail="podnety" aria-label="Podněty po měsících" hidden>',
-              'Podněty ve Wolkerově na mapě</h3>', '<li><a href="/verejny-prostor/podnety?ulice=wolkerova#kde">Čekající</a><b>0</b></li>',
+              '<h3 class="side-h ul-panel-h">Na mapě</h3>', '<li><a href="/verejny-prostor/podnety?ulice=wolkerova#kde">Čekající</a><b>0</b></li>',
               '<li><a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vyreseno#kde">Vyřešené</a><b>1</b></li>',
               '<li><a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Všechny</a><b>1</b></li>',
               "<b>19 usnesení</b><span>rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
