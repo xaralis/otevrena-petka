@@ -639,9 +639,22 @@ def test_store_keeps_past_dates_and_geocodes_only_new_places(conn):
 
 
 def test_overrides_file_is_valid():
-    assert jobs.load_overrides() == {}
+    from petka.cisteni.ruian import TOWN_BBOX
     fc = json.loads(jobs.OVERRIDES.read_text())
-    assert fc["type"] == "FeatureCollection"
+    assert fc["type"] == "FeatureCollection" and fc["features"]
+    keys = [f["properties"]["key"] for f in fc["features"]]
+    assert all(keys) and len(set(keys)) == len(keys)
+    assert all(k == places.place_key(k) for k in keys)                # keys as /api/v1/cisteni gives them
+
+    def coords(c):
+        return [c] if isinstance(c[0], (int, float)) else [x for y in c for x in coords(y)]
+    x0, y0, x1, y1 = TOWN_BBOX
+    for f in fc["features"]:
+        g = f["geometry"]
+        assert g["type"] in ("LineString", "MultiLineString", "Polygon", "MultiPolygon"), f["properties"]["key"]
+        assert all(x0 < x < x1 and y0 < y < y1 for x, y in coords(g["coordinates"])), f["properties"]["key"]
+        assert f["properties"].get("note")
+    assert len(jobs.load_overrides()) == len(keys)
 
 
 def test_export_of_the_whole_town(monkeypatch):

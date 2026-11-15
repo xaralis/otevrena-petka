@@ -93,10 +93,13 @@ pro celé město. `usneseni cisteni-update` (denně) ho stáhne, a když se obsa
   místa se počítá z jeho geometrie, nikdy předem. Odpovědi ČÚZK se ukládají do tabulky `ruian_cache`;
 - budoucí termíny nahradí podle nového souboru, proběhlé ponechá.
 
-Co text neumístí (zhruba pětina míst), lze zakreslit ručně do `data/cisteni/overrides.geojson`:
-FeatureCollection, u každého prvku `properties.key` = klíč místa z `/api/v1/cisteni`
-a volitelně `properties.note`. Ruční geometrie má přednost před automatickou (stav `manual`).
-`--znovu` přepočítá geometrii všech míst (po změně algoritmu).
+Co text neumístí, je zakreslené ručně v `data/cisteni/overrides.geojson`: FeatureCollection,
+u každého prvku `properties.key` = klíč místa z `/api/v1/cisteni` a `properties.note` = odkud
+poloha je (parkoviště jako polygon cesty OpenStreetMap, úsek jako čára ulice z RÚIAN vyříznutá
+mezi dvěma body, vnitroblok jako blok uliční sítě OSM). Jen to, co text místa jednoznačně
+určuje; zbytek zůstává bez polohy. Ruční geometrie má přednost před automatickou (stav `manual`)
+a projeví se při příštím uložení: když se tabulka změní, nebo s `--force`. `--znovu` přepočítá
+geometrii všech míst (po změně algoritmu) a ruční přidá také.
 
 ## Otevřená data, API a MCP
 
@@ -184,4 +187,7 @@ a `deska` (každou hodinu). Chyby hlásí GlitchTip.
 Kód: MIT. Data (`data/`, otevřená data na webu): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.cs).
 Uveďte „Otevřená Pětka (otevrenapetka.cz), zdroj: Statutární město Pardubice“.
 Zdrojové dokumenty jsou úřední dokumenty zveřejněné městem. Mapové podklady
-© přispěvatelé OpenStreetMap (ODbL), polohy míst © ČÚZK (CC BY 4.0).
+© přispěvatelé OpenStreetMap (ODbL), polohy míst © ČÚZK (CC BY 4.0). Ručně zakreslené polohy
+blokového čištění (`data/cisteni/overrides.geojson`) jsou z RÚIAN © ČÚZK (CC BY 4.0)
+a z OpenStreetMap © přispěvatelé OpenStreetMap
+([ODbL](https://opendatacommons.org/licenses/odbl/)); které z nich, říká `note` u každého prvku.
