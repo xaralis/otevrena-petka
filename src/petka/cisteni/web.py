@@ -12,7 +12,9 @@ obvod is the request's (petka.obvody).
     /api/v1/cisteni               the places as GeoJSON with their dates
 """
 
+import csv
 import datetime as dt
+import io
 import os
 from urllib.parse import quote
 
@@ -143,6 +145,35 @@ def features(its: list[dict], geoms: dict[str, dict], today: dt.date) -> dict:
             p["next"] = i["date"].isoformat()
     return {"type": "FeatureCollection", "features": list(by.values()),
             "attribution": "Služby města Pardubic (" + source.PAGE + "), polohy © ČÚZK RÚIAN, odvozené"}
+
+
+TOWN_OBVODY = {f"mo{i}" for i in range(1, 9)}    # Pardubice I–VIII
+
+
+def _export(obvod: str | None) -> list[dict]:
+    if obvod is not None and obvod not in TOWN_OBVODY:      # the whole town's, not only the portal's
+        raise HTTPException(404, "Neznámý obvod")
+    return q.export_rows(q.year_start(_today()), obvod)
+
+
+@pages.get("/data/terminy.json")
+def data_json(obvod: str | None = Query(None, description="jen místa obvodu, např. mo5")):
+    """This year's cleanings of the town (or `?obvod=`), one row a place and date."""
+    rows = [{**r, "date": r["date"].isoformat()} for r in _export(obvod)]
+    return JSONResponse(rows, headers={"Content-Disposition": 'inline; filename="terminy.json"'})
+
+
+@pages.get("/data/terminy.csv")
+def data_csv(obvod: str | None = Query(None, description="jen místa obvodu, např. mo5")):
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=q.EXPORT_FIELDS)
+    w.writeheader()
+    for r in _export(obvod):
+        w.writerow({**r, "date": r["date"].isoformat(), "time": r["time"] or "", "side": r["side"] or "",
+                    "street": r["street"] or "", "before": "true" if r["before"] else "false",
+                    "obvody": ";".join(r["obvody"])})
+    return Response(buf.getvalue(), media_type="text/csv; charset=utf-8",
+                    headers={"Content-Disposition": 'inline; filename="terminy.csv"'})
 
 
 @api.get("")

@@ -37,6 +37,26 @@ def items(obvod: str, since: dt.date, slugs: list[str] | None = None) -> list[di
     return [i for i in out if i["slug"] in slugs] if slugs is not None else out
 
 
+EXPORT_FIELDS = ["date", "time", "before", "street", "place", "side", "obvody", "location", "place_key"]
+
+
+def export_rows(since: dt.date, obvod: str | None = None) -> list[dict]:
+    """This year's cleanings of the whole town (or of one obvod), one row a place and date, by
+    date: the harmonogram's own wording of the place, the street it is listed under, the obvody
+    it lies in (share ≥ MIN_SHARE) and how its map location was found."""
+    with db.pool().connection() as conn:
+        rows = conn.execute(
+            """SELECT p.key, p.texts, p.main_street, p.side, p.status, p.obvody, d.date, d.time, d.before
+               FROM cleaning_places p JOIN cleaning_dates d ON d.place_key = p.key
+               WHERE d.date >= %s AND (%s::text IS NULL OR (p.obvody->>%s)::float >= %s)
+               ORDER BY d.date, d.time NULLS LAST, p.main_street NULLS LAST, p.key""",
+            (since, obvod, obvod, MIN_SHARE)).fetchall()
+    return [{"date": r["date"], "time": r["time"].strftime("%H:%M") if r["time"] else None,
+             "before": r["before"], "street": r["main_street"], "place": r["texts"][0], "side": r["side"],
+             "obvody": sorted(k for k, v in (r["obvody"] or {}).items() if v >= MIN_SHARE),
+             "location": r["status"], "place_key": r["key"]} for r in rows]
+
+
 def shape(r: dict) -> dict:
     """A row of `items` with what pages and the API need: the street it is listed under, its
     slug and the short wording."""

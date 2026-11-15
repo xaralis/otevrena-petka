@@ -557,3 +557,19 @@ def test_overrides_file_is_valid():
     assert jobs.load_overrides() == {}
     fc = json.loads(jobs.OVERRIDES.read_text())
     assert fc["type"] == "FeatureCollection"
+
+
+def test_export_of_the_whole_town(monkeypatch):
+    seen = []
+    row = {"date": dt.date(2026, 11, 26), "time": "07:00", "before": False, "street": "Wolkerova",
+           "place": "Wolkerova v celé délce - obě strany komunikace", "side": "obe", "obvody": ["mo5"],
+           "location": "auto", "place_key": "wolkerova v cele delce"}
+    monkeypatch.setattr(web.q, "export_rows", lambda since, obvod=None: seen.append(obvod) or [row])
+    r = get("/verejny-prostor/blokove-cisteni/data/terminy.csv")
+    assert r.status_code == 200 and r.headers["content-type"].startswith("text/csv")
+    lines = r.text.splitlines()
+    assert lines[0] == ",".join(queries.EXPORT_FIELDS)
+    assert lines[1].startswith("2026-11-26,07:00,false,Wolkerova,") and lines[1].endswith(",obe,mo5,auto,wolkerova v cele delce")
+    j = get("/verejny-prostor/blokove-cisteni/data/terminy.json", params={"obvod": "mo4"}).json()
+    assert j[0]["date"] == "2026-11-26" and seen == [None, "mo4"]          # the town, then one obvod
+    assert get("/verejny-prostor/blokove-cisteni/data/terminy.csv", params={"obvod": "mo9"}).status_code == 404
