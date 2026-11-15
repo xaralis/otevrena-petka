@@ -165,6 +165,15 @@ def geo():
     return geocode.Geo(FakeRuian())
 
 
+def test_stretch_between_two_streets(geo):
+    r = geo.place(places.place_key("Hlavní - jednosměrka mezi ul. Boční a Zadní"))
+    assert (r["method"], r["status"], r["main_street"]) == ("segment", "auto", "Hlavní")      # as "od Boční k Zadní"
+    xs = [c[0] for c in geocode.to_m(r["geometry"]).coords]
+    assert min(xs) == pytest.approx(200, abs=1) and max(xs) == pytest.approx(700, abs=1)
+    p = geo.place(places.place_key("Hlavní - parkoviště mezi ul. Boční a Zadní"))
+    assert (p["method"], p["status"]) == ("segment", "approx")                                 # a parkoviště along it: approximate
+
+
 def test_names_in_case_forms(geo):
     assert [f[0] for f in geo.names.find("hlavni od ul. bocni k ul. zadni")] == ["Hlavní", "Boční", "Zadní"]
     assert [f[0] for f in geo.names.find("parkoviste u kratke")] == ["Krátká"]

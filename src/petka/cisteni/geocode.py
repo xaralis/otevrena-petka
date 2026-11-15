@@ -414,6 +414,22 @@ class Geo:
                            note=f"čp {len(nums) - len(miss)}/{len(nums)}" + (f", missing {miss}" if miss else ""))
             elif not rec["note"]:
                 rec["note"] = f"čp not found {nums}"
+        # "náměstí Dukelských hrdinů - jednosměrka mezi ul. Jilemnického a Gorkého": the main
+        # street between its crossings with the two, as "od A k B"
+        btw = re.search(r"\bmezi (?P<a>.+?)\s+a\s+(?P<b>.+?)(?:,|\bvc\.|\s-\s|\(|$)", core)
+        if geom is None and main_line is not None and pat == "mezi ulicemi" and btw and "vnitroblo" not in core:
+            p1, why1, q1 = self.endpoint(btw["a"], main_line, main)
+            p2, why2, q2 = self.endpoint(btw["b"], main_line, main)
+            if p1 is not None and p2 is not None:
+                g = cut(main_line, p1, p2)
+                if g is not None and g.length > 5:
+                    geom = reach(reach(g, p1, q1), p2, q2)
+                    # a parkoviště "mezi" two streets runs along the stretch, its shape is ours
+                    rec.update(method="segment", status="approx" if "parkovist" in core else "auto", note=f"mezi: {why1} → {why2}")
+                else:
+                    rec["note"] = f"cut failed ({why1} → {why2})"
+            else:
+                rec["note"] = f"endpoint: {why1 if p1 is None else why2}"
         if geom is None and pat in ("vnitroblok", "mezi ulicemi") and len(streets) >= 2:
             blk = self.block(streets)
             if blk is not None:
