@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" modelBaseVersion="2"
+xsi:schemaLocation="http://datex2.eu/schema/2/2_0 ../schema/schema.xsd">
+  <exchange>
+    <supplierIdentification>
+      <country>cz</country>
+      <nationalIdentifier>NDIC</nationalIdentifier>
+    </supplierIdentification>
+  </exchange>
+  <payloadPublication xsi:type="SituationPublication" lang="cz">
+    <feedType>x-format:cz-ndic_d2-common-v1.1</feedType>
+    <publicationTime>2017-07-24T13:42:12+02:00</publicationTime>
+    <publicationCreator>
+      <country>cz</country>
+      <nationalIdentifier>NDIC</nationalIdentifier>
+    </publicationCreator>
+    <situation id="ff808181-49aa-aeea-0149-e1d266c74728" version="2">
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+        <urgency>urgent</urgency>
+      </headerInformation>
+      <situationRecord xsi:type="VehicleObstruction"
+      id="2143f305-3090-4e03-8078-50e721605614"
+      version="1">
+        <situationRecordCreationTime>2017-07-24T13:40:00+02:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2017-07-24T13:42:12+02:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceIdentification>PCR</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="cs">Policie České republiky</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2017-07-24T13:40:00+02:00</overallStartTime>
+            <overallEndTime>2017-07-24T15:45:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <trafficConstrictionType>roadBlocked</trafficConstrictionType>
+        </impact>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="cs">2 havarovaná nákladní vozidla</value>
+            </values>
+          </comment>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="Linear">
+          <supplementaryPositionalDescription>
+            <affectedCarriagewayAndLanes>
+              <carriageway>mainCarriageway</carriageway>
+              <lane>hardShoulder</lane>
+            </affectedCarriagewayAndLanes>
+          </supplementaryPositionalDescription>
+          <alertCLinear xsi:type="AlertCMethod2Linear">
+            <alertCLocationCountryCode>CZ</alertCLocationCountryCode>
+            <alertCLocationTableNumber>25</alertCLocationTableNumber>
+            <alertCLocationTableVersion>6.0</alertCLocationTableVersion>
+            <alertCDirection>
+              <alertCDirectionCoded>negative</alertCDirectionCoded>
+            </alertCDirection>
+            <alertCMethod2PrimaryPointLocation>
+              <alertCLocation>
+                <specificLocation>1347</specificLocation>
+              </alertCLocation>
+            </alertCMethod2PrimaryPointLocation>
+            <alertCMethod2SecondaryPointLocation>
+              <alertCLocation>
+                <specificLocation>1347</specificLocation>
+              </alertCLocation>
+            </alertCMethod2SecondaryPointLocation>
+          </alertCLinear>
+          <linearWithinLinearElement>
+            <directionRelativeOnLinearSection>opposite</directionRelativeOnLinearSection>
+            <linearElement>
+              <roadNumber>D11</roadNumber>
+            </linearElement>
+            <fromPoint xsi:type="DistanceFromLinearElementStart">
+              <distanceAlong>8016</distanceAlong>
+            </fromPoint>
+            <toPoint xsi:type="DistanceFromLinearElementStart">
+              <distanceAlong>7942</distanceAlong>
+            </toPoint>
+          </linearWithinLinearElement>
+          <globalNetworkLinear>
+            <networkVersion>
+              <values>
+                <value lang="cs">15.06</value>
+              </values>
+            </networkVersion>
+            <linearGeometryType>continuous</linearGeometryType>
+            <startPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-722190</sjtskX>
+                <sjtskY>-1041872</sjtskY>
+              </sjtskPointCoordinates>
+            </startPoint>
+            <endPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-722190</sjtskX>
+                <sjtskY>-1041872</sjtskY>
+              </sjtskPointCoordinates>
+            </endPoint>
+            <linearWithinLinearGNElement>
+              <sectionId>1397666</sectionId>
+              <directionRelativeOnLinearSection>opposite</directionRelativeOnLinearSection>
+              <orderOfSection>1</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>0</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+          </globalNetworkLinear>
+        </groupOfLocations>
+        <numberOfObstructions>2</numberOfObstructions>
+        <vehicleObstructionType>brokenDownVehicle</vehicleObstructionType>
+        <obstructingVehicle>
+          <vehicleCharacteristics>
+            <vehicleType>lorry</vehicleType>
+          </vehicleCharacteristics>
+        </obstructingVehicle>
+      </situationRecord>
+    </situation>
+  </payloadPublication>
+</d2LogicalModel>

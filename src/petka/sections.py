@@ -10,6 +10,7 @@ from .rozpocet.section import SECTION as ROZPOCET
 from .section import Section
 from .ulice.section import SECTION as ULICE
 from .uredni_deska.section import SECTION as UREDNI_DESKA
+from .uzavirky.section import SECTION as UZAVIRKY
 from .usneseni.section import SECTION as USNESENI
 
 SMLOUVY = Section(
@@ -22,12 +23,6 @@ SMLOUVY = Section(
              ("výběrová řízení a jejich výsledky", "/radnice/usneseni?tema=zakazky")],
     sources=[("Registr smluv", "https://smlouvy.gov.cz/"),
              ("Hlídač státu", "https://www.hlidacstatu.cz/")],
-)
-
-UZAVIRKY = Section(
-    "uzavirky", "Uzavírky", "Uzavírky",
-    "Kde se teď nedá projet?", "planned",
-    sources=[("Dopravní informace NDIC", "https://www.dopravniinfo.cz/")],
 )
 
 REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI, ULICE]

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<d2LogicalModel modelBaseVersion="2" xmlns="http://datex2.eu/schema/2/2_0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://datex2.eu/schema/2/2_0 ../schema/schema.xsd">
+  <exchange>
+    <supplierIdentification>
+      <country>cz</country>
+      <nationalIdentifier>NDIC</nationalIdentifier>
+    </supplierIdentification>
+  </exchange>
+  <payloadPublication lang="cs" xsi:type="SituationPublication">
+    <feedType>x-format:cz-ndic_d2-common-v1.1</feedType>
+    <publicationTime>2017-07-21T10:47:04+02:00</publicationTime>
+    <publicationCreator>
+      <country>cz</country>
+      <nationalIdentifier>PČR</nationalIdentifier>
+    </publicationCreator>
+    <situation id="ff808181-53b7-4de8-0154-d27e38fb58ea" version="1">
+      <situationVersionTime>2017-07-21T10:46:18+02:00</situationVersionTime>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+        <urgency>urgent</urgency>
+      </headerInformation>
+      <situationRecord id="82998aae-7bde-419a-89a0-0aba6d79015d"
+      version="1" xsi:type="Accident">
+        <situationRecordCreationTime>2017-07-21T10:47:04+02:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2017-07-21T10:46:18+02:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2017-07-21T10:45:00+02:00</overallStartTime>
+            <overallEndTime>2017-07-21T12:45:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="cs">Od 21.7.2017 10:45 do 12:45; na trase
+              Štěrboholy - Troja v ulici Jižní spojka v obci Praha; nehoda
+              nákladního vozidla; 2 havarovaná vozidla; probíhá vyšetřování
+              nehody, nebezpečí; OA x NA, bez zranění osob.</value>
+            </values>
+          </comment>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="Linear">
+          <alertCLinear xsi:type="AlertCMethod2Linear">
+            <alertCLocationCountryCode>CZ</alertCLocationCountryCode>
+            <alertCLocationTableNumber>25</alertCLocationTableNumber>
+            <alertCLocationTableVersion>6.0</alertCLocationTableVersion>
+            <alertCDirection>
+              <alertCDirectionCoded>negative</alertCDirectionCoded>
+            </alertCDirection>
+            <alertCMethod2PrimaryPointLocation>
+              <alertCLocation>
+                <specificLocation>1377</specificLocation>
+              </alertCLocation>
+            </alertCMethod2PrimaryPointLocation>
+            <alertCMethod2SecondaryPointLocation>
+              <alertCLocation>
+                <specificLocation>4110</specificLocation>
+              </alertCLocation>
+            </alertCMethod2SecondaryPointLocation>
+          </alertCLinear>
+          <globalNetworkLinear>
+            <networkVersion>
+              <values>
+                <value lang="cs">15.06</value>
+              </values>
+            </networkVersion>
+            <linearGeometryType>continuous</linearGeometryType>
+            <startPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-741263</sjtskX>
+                <sjtskY>-1048786</sjtskY>
+              </sjtskPointCoordinates>
+            </startPoint>
+            <endPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-741263</sjtskX>
+                <sjtskY>-1048786</sjtskY>
+              </sjtskPointCoordinates>
+            </endPoint>
+            <linearWithinLinearGNElement>
+              <sectionId>2376306</sectionId>
+              <directionRelativeOnLinearSection>aligned</directionRelativeOnLinearSection>
+              <orderOfSection>1</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>0</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+          </globalNetworkLinear>
+        </groupOfLocations>
+        <accidentType>accidentInvolvingHeavyLorries</accidentType>
+        <groupOfVehiclesInvolved>
+          <numberOfVehicles>1</numberOfVehicles>
+          <vehicleCharacteristics>
+            <vehicleType>lorry</vehicleType>
+          </vehicleCharacteristics>
+        </groupOfVehiclesInvolved>
+      </situationRecord>
+      <situationRecord id="a16f6186-57f6-45a5-a294-472e8b45c8d5"
+      version="1" xsi:type="VehicleObstruction">
+        <situationRecordCreationTime>2017-07-21T10:47:04+02:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2017-07-21T10:46:18+02:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceIdentification>PCR</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="cs">Policie České republiky</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2017-07-21T10:45:00+02:00</overallStartTime>
+            <overallEndTime>2017-07-21T12:45:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <groupOfLocations xsi:type="Linear">
+          <alertCLinear xsi:type="AlertCMethod2Linear">
+            <alertCLocationCountryCode>CZ</alertCLocationCountryCode>
+            <alertCLocationTableNumber>25</alertCLocationTableNumber>
+            <alertCLocationTableVersion>6.0</alertCLocationTableVersion>
+            <alertCDirection>
+              <alertCDirectionCoded>negative</alertCDirectionCoded>
+            </alertCDirection>
+            <alertCMethod2PrimaryPointLocation>
+              <alertCLocation>
+                <specificLocation>1377</specificLocation>
+              </alertCLocation>
+            </alertCMethod2PrimaryPointLocation>
+            <alertCMethod2SecondaryPointLocation>
+              <alertCLocation>
+                <specificLocation>4110</specificLocation>
+              </alertCLocation>
+            </alertCMethod2SecondaryPointLocation>
+          </alertCLinear>
+          <globalNetworkLinear>
+            <networkVersion>
+              <values>
+                <value lang="cs">15.06</value>
+              </values>
+            </networkVersion>
+            <linearGeometryType>continuous</linearGeometryType>
+            <startPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-741263</sjtskX>
+                <sjtskY>-1048786</sjtskY>
+              </sjtskPointCoordinates>
+            </startPoint>
+            <endPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-741263</sjtskX>
+                <sjtskY>-1048786</sjtskY>
+              </sjtskPointCoordinates>
+            </endPoint>
+            <linearWithinLinearGNElement>
+              <sectionId>2376306</sectionId>
+              <directionRelativeOnLinearSection>aligned</directionRelativeOnLinearSection>
+              <orderOfSection>1</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>0</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+          </globalNetworkLinear>
+        </groupOfLocations>
+        <vehicleObstructionType>brokenDownVehicle</vehicleObstructionType>
+      </situationRecord>
+      <situationRecord id="d491c9bb-b156-457d-907d-b47b8fd06ceb"
+      version="1" xsi:type="AuthorityOperation">
+        <situationRecordCreationTime>2017-07-21T10:47:04+02:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2017-07-21T10:46:18+02:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceIdentification>PCR</sourceIdentification>
+          <sourceName>
+            <values>
+              <value lang="cs">Policie České republiky</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2017-07-21T10:45:00+02:00</overallStartTime>
+            <overallEndTime>2017-07-21T12:45:00+02:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <groupOfLocations xsi:type="Linear">
+          <alertCLinear xsi:type="AlertCMethod2Linear">
+            <alertCLocationCountryCode>CZ</alertCLocationCountryCode>
+            <alertCLocationTableNumber>25</alertCLocationTableNumber>
+            <alertCLocationTableVersion>6.0</alertCLocationTableVersion>
+            <alertCDirection>
+              <alertCDirectionCoded>negative</alertCDirectionCoded>
+            </alertCDirection>
+            <alertCMethod2PrimaryPointLocation>
+              <alertCLocation>
+                <specificLocation>1377</specificLocation>
+              </alertCLocation>
+            </alertCMethod2PrimaryPointLocation>
+            <alertCMethod2SecondaryPointLocation>
+              <alertCLocation>
+                <specificLocation>4110</specificLocation>
+              </alertCLocation>
+            </alertCMethod2SecondaryPointLocation>
+          </alertCLinear>
+          <globalNetworkLinear>
+            <networkVersion>
+              <values>
+                <value lang="cs">15.06</value>
+              </values>
+            </networkVersion>
+            <linearGeometryType>continuous</linearGeometryType>
+            <startPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-741263</sjtskX>
+                <sjtskY>-1048786</sjtskY>
+              </sjtskPointCoordinates>
+            </startPoint>
+            <endPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-741263</sjtskX>
+                <sjtskY>-1048786</sjtskY>
+              </sjtskPointCoordinates>
+            </endPoint>
+            <linearWithinLinearGNElement>
+              <sectionId>2376306</sectionId>
+              <directionRelativeOnLinearSection>aligned</directionRelativeOnLinearSection>
+              <orderOfSection>1</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>0</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+          </globalNetworkLinear>
+        </groupOfLocations>
+        <authorityOperationType>accidentInvestigationWork</authorityOperationType>
+      </situationRecord>
+    </situation>
+  </payloadPublication>
+</d2LogicalModel>

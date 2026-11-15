@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<d2LogicalModel modelBaseVersion="2" xmlns="http://datex2.eu/schema/2/2_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datex2.eu/schema/2/2_0 ../schema/schema.xsd">
+  <exchange>
+    <supplierIdentification>
+      <country>cz</country>
+      <nationalIdentifier>DICBRNO</nationalIdentifier>
+    </supplierIdentification>
+  </exchange>
+  <payloadPublication lang="cz" xsi:type="SituationPublication">
+    <feedType>x-format:cz-ndic_d2-common-v1.1</feedType>
+    <publicationTime>2018-03-12T07:45:41+01:00</publicationTime>
+    <publicationCreator>
+      <country>cz</country>
+      <nationalIdentifier>DICBRNO</nationalIdentifier>
+    </publicationCreator>
+    <situation id="9fed647f-6f43-4214-9112-2a4b64dc3520" version="2">
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+        <urgency>urgent</urgency>
+      </headerInformation>
+      <situationRecord id="e868061b-50cf-4496-b533-990b2a86f1e2" version="2" xsi:type="RoadOrCarriagewayOrLaneManagement">
+        <situationRecordCreationTime>2018-02-27T11:10:56+01:00</situationRecordCreationTime>
+        <situationRecordVersionTime>2018-03-12T07:45:41+01:00</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2018-03-12T07:45:41+01:00</overallStartTime>
+            <overallEndTime>2018-03-12T07:55:41+01:00</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <capacityRemaining>0</capacityRemaining>
+        </impact>
+        <generalPublicComment>
+          <comment>
+            <values>
+              <value lang="cs">silnice I/41 (ulice Dornych), Brno-jih - Brno-střed, Brno, od 12.3.2018 07:45 do 12.3.2018 07:55, Uzavírka ulice Dornych od ulice Svatopetrská až po křižovatku s ulicí Zvonařka.</value>
+            </values>
+          </comment>
+        </generalPublicComment>
+        <groupOfLocations xsi:type="Linear">
+          <globalNetworkLinear>
+            <networkVersion>
+              <values>
+                <value lang="cs">16.06</value>
+              </values>
+            </networkVersion>
+            <linearGeometryType>continuous</linearGeometryType>
+            <startPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-597353</sjtskX>
+                <sjtskY>-1162456</sjtskY>
+              </sjtskPointCoordinates>
+            </startPoint>
+            <endPoint>
+              <sjtskPointCoordinates>
+                <sjtskX>-597408</sjtskX>
+                <sjtskY>-1161757</sjtskY>
+              </sjtskPointCoordinates>
+            </endPoint>
+            <linearWithinLinearGNElement>
+              <sectionId>3233878</sectionId>
+              <directionRelativeOnLinearSection>opposite</directionRelativeOnLinearSection>
+              <orderOfSection>0</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>
+                0.19471157719080745</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+            <linearWithinLinearGNElement>
+              <sectionId>637507</sectionId>
+              <directionRelativeOnLinearSection>opposite</directionRelativeOnLinearSection>
+              <orderOfSection>1</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>0</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+            <linearWithinLinearGNElement>
+              <sectionId>637508</sectionId>
+              <directionRelativeOnLinearSection>aligned</directionRelativeOnLinearSection>
+              <orderOfSection>2</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>0</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+            <!-- shortened by sections 3 to 13 -->
+            <linearWithinLinearGNElement>
+              <sectionId>1294398</sectionId>
+              <directionRelativeOnLinearSection>aligned</directionRelativeOnLinearSection>
+              <orderOfSection>14</orderOfSection>
+              <fromPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>1</percentageDistanceAlong>
+              </fromPoint>
+              <toPoint xsi:type="PercentageDistanceAlongLinearElement">
+                <percentageDistanceAlong>
+                0.6479414825570271</percentageDistanceAlong>
+              </toPoint>
+            </linearWithinLinearGNElement>
+          </globalNetworkLinear>
+        </groupOfLocations>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>roadClosed</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+    </situation>
+  </payloadPublication>
+</d2LogicalModel>
