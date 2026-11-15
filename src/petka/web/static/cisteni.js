@@ -1,5 +1,5 @@
 // Čištění ulic: the maps (petkamap.js) and the calendar picker.
-// <div data-cl-map="all" data-src="/api/v1/cisteni" data-today="YYYY-MM-DD" data-anchors="id">
+// <div data-cl-map="all" data-src="/api/v1/cisteni?obvod=mo5" data-today="YYYY-MM-DD" data-anchors="id">
 // colours the obvod's places by their next cleaning (≤ 7 days red, ≤ 14 ink, later grey,
 // approximate dashed) and behaves like the front page's map (aktualne.js): pointing at a stretch
 // inks it and shows its tooltip on a focusable zero-size anchor, a click opens its street (on

@@ -1,5 +1,6 @@
-"""Reading the harmonogram for an obvod: its cleanings (one item per place and date), the places
-as GeoJSON, the streets and the state of the data. Shaping (streets, slugs, the next cleaning,
+"""Reading the harmonogram for obvody (a page's own, or a data source's `ObvodFilter`, ADR 0002):
+the cleanings (one item per place and date), the places as GeoJSON, the streets and the state
+of the data. Shaping (streets, slugs, the next cleaning,
 the nearest streets) is pure and testable without a database.
 
 A place belongs to an obvod when at least MIN_SHARE of it lies there (geocode.MIN_SHARE), so a
@@ -12,7 +13,7 @@ import math
 import re
 from collections import defaultdict
 
-from .. import db
+from .. import db, obvody
 from ..usneseni.text import slug
 from . import places
 
@@ -23,16 +24,22 @@ def year_start(today: dt.date) -> dt.date:
     return dt.date(today.year, 1, 1)
 
 
-def items(obvod: str, since: dt.date, slugs: list[str] | None = None) -> list[dict]:
-    """The obvod's cleanings from `since`, by date and time; with `slugs` only those streets."""
+def _where(obvod: str | obvody.ObvodFilter) -> obvody.ObvodFilter:
+    return obvody.ObvodFilter.only(obvod) if isinstance(obvod, str) else obvod
+
+
+def items(obvod: str | obvody.ObvodFilter, since: dt.date, slugs: list[str] | None = None) -> list[dict]:
+    """The cleanings from `since` of one obvod (an id) or of a filter's obvody, by date and
+    time; with `slugs` only those streets."""
+    cond, params = _where(obvod).sql("p.obvody", MIN_SHARE)
     with db.pool().connection() as conn:
         rows = conn.execute(
-            """SELECT p.key, p.texts, p.main_street, p.streets, p.side, p.status, p.method,
+            f"""SELECT p.key, p.texts, p.main_street, p.streets, p.side, p.status, p.method, p.obvody,
                       p.geometry IS NOT NULL AS located, d.date, d.time, d.before
                FROM cleaning_places p JOIN cleaning_dates d ON d.place_key = p.key
-               WHERE (p.obvody->>%s)::float >= %s AND d.date >= %s
+               WHERE {cond} AND d.date >= %s
                ORDER BY d.date, d.time NULLS LAST, p.main_street NULLS LAST, p.key""",
-            (obvod, MIN_SHARE, since)).fetchall()
+            (*params, since)).fetchall()
     out = [shape(r) for r in rows]
     return [i for i in out if i["slug"] in slugs] if slugs is not None else out
 
@@ -40,38 +47,39 @@ def items(obvod: str, since: dt.date, slugs: list[str] | None = None) -> list[di
 EXPORT_FIELDS = ["date", "time", "before", "street", "place", "side", "obvody", "location", "place_key"]
 
 
-def export_rows(since: dt.date, obvod: str | None = None) -> list[dict]:
-    """This year's cleanings of the whole town (or of one obvod), one row a place and date, by
-    date: the harmonogram's own wording of the place, the street it is listed under, the obvody
-    it lies in (share ≥ MIN_SHARE) and how its map location was found."""
+def export_rows(since: dt.date, where: obvody.ObvodFilter = obvody.WHOLE_TOWN) -> list[dict]:
+    """The cleanings from `since` of the whole town (or of the filter's obvody), one row a place
+    and date, by date: the harmonogram's own wording of the place, the street it is listed
+    under, the obvody it lies in (share ≥ MIN_SHARE) and how its map location was found."""
+    cond, params = where.sql("p.obvody", MIN_SHARE)
     with db.pool().connection() as conn:
         rows = conn.execute(
-            """SELECT p.key, p.texts, p.main_street, p.side, p.status, p.obvody, d.date, d.time, d.before
+            f"""SELECT p.key, p.texts, p.main_street, p.side, p.status, p.obvody, d.date, d.time, d.before
                FROM cleaning_places p JOIN cleaning_dates d ON d.place_key = p.key
-               WHERE d.date >= %s AND (%s::text IS NULL OR (p.obvody->>%s)::float >= %s)
+               WHERE d.date >= %s AND {cond}
                ORDER BY d.date, d.time NULLS LAST, p.main_street NULLS LAST, p.key""",
-            (since, obvod, obvod, MIN_SHARE)).fetchall()
+            (since, *params)).fetchall()
     return [{"date": r["date"], "time": r["time"].strftime("%H:%M") if r["time"] else None,
              "before": r["before"], "street": r["main_street"], "place": r["texts"][0], "side": r["side"],
-             "obvody": sorted(k for k, v in (r["obvody"] or {}).items() if v >= MIN_SHARE),
+             "obvody": obvody.share_ids(r["obvody"], MIN_SHARE),
              "location": r["status"], "place_key": r["key"]} for r in rows]
 
 
 def shape(r: dict) -> dict:
     """A row of `items` with what pages and the API need: the street it is listed under, its
-    slug and the short wording."""
+    slug, the short wording and the obvody it lies in (ids, share ≥ MIN_SHARE)."""
     text = r["texts"][0]
     street = r["main_street"]
-    return {**r, "text": text, "street": street or text, "slug": slug(street) if street else None,
+    return {**r, "obvody": obvody.share_ids(r.get("obvody"), MIN_SHARE), "text": text, "street": street or text, "slug": slug(street) if street else None,
             "short": places.short(text, street) if street else ""}
 
 
-def geometries(obvod: str) -> dict[str, dict]:
-    """{place key: GeoJSON geometry} of the obvod's located places."""
+def geometries(obvod: str | obvody.ObvodFilter) -> dict[str, dict]:
+    """{place key: GeoJSON geometry} of the located places of one obvod or a filter's obvody."""
+    cond, params = _where(obvod).sql("obvody", MIN_SHARE)
     with db.pool().connection() as conn:
         return {r["key"]: r["geometry"] for r in conn.execute(
-            """SELECT key, geometry FROM cleaning_places
-               WHERE (obvody->>%s)::float >= %s AND geometry IS NOT NULL""", (obvod, MIN_SHARE))}
+            f"SELECT key, geometry FROM cleaning_places WHERE {cond} AND geometry IS NOT NULL", params)}
 
 
 def checked() -> dt.datetime | None:

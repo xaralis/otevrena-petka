@@ -11,7 +11,7 @@ import pytest
 from fastapi.testclient import TestClient
 from icalendar import Calendar
 
-from petka import db
+from petka import db, obvody
 from petka.cisteni import geocode, ics, jobs, places, queries, source, web, words
 from petka.web.app import app
 
@@ -253,11 +253,12 @@ def test_genitive(name, want):
 
 
 def item(d, street="Wolkerova", key=None, time=dt.time(7), before=False, side="obe", status="auto", located=True,
-         text=None, method="whole"):
+         text=None, method="whole", shares=None):
     text = text or f"{street} v celé délce - obě strany komunikace"
     return queries.shape({"key": key or places.place_key(text), "texts": [text], "main_street": street,
                           "streets": [street], "side": side, "status": status, "method": method,
-                          "located": located, "date": d, "time": time, "before": before})
+                          "located": located, "date": d, "time": time, "before": before,
+                          "obvody": {"mo5": 1.0} if shares is None else shares})
 
 
 def test_weeks_and_merged():
@@ -324,12 +325,14 @@ def fixture(monkeypatch):
                 status="approx"),
            item(D(2026, 11, 26)),
            item(D(2026, 12, 9), "Sokolovská", text="Sokolovská od ul. kpt. Nálepky k ul. Wolkerova - obě strany komunikace"),
-           item(D(2026, 12, 10), "Lexova", text="Lexova - parkoviště před č. p. 1", located=False, status="manual")]
+           item(D(2026, 12, 10), "Lexova", text="Lexova - parkoviště před č. p. 1", located=False, status="manual",
+                shares={"mo4": 0.6, "mo5": 0.4})]
     seen = {}
 
     def items(obvod, since, slugs=None):
         seen.update(obvod=obvod, since=since, slugs=slugs)
-        out = [i for i in its if i["date"] >= since]
+        where = obvody.ObvodFilter.only(obvod) if isinstance(obvod, str) else obvod
+        out = [i for i in its if i["date"] >= since and where.matches(i["obvody"])]
         return [i for i in out if i["slug"] in slugs] if slugs is not None else out
 
     geoms = {i["key"]: GEOM for i in its if i["located"]}
@@ -355,7 +358,7 @@ def test_overview(fixture):
               'aria-current="true">7 dní <b>', '<a href="/verejny-prostor/blokove-cisteni?obdobi=rok">Letos <b>4</b></a>',
               "Harmonogram do konce roku", "Příští týden", "Stav k 12. 11. 2026", "letos 5 termínů na 5 místech",
               "Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.", 'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"',
-              "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni?od=2026-11-12"'):
+              "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni?obvod=mo5&amp;od=2026-11-12"'):
         assert s in h, s
     assert "aplikac" not in h.lower() and "letos už ne" not in h
     assert 'href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor' in h.split("</header>")[0]
@@ -491,18 +494,31 @@ def test_feeds(fixture):
 def test_api_shape(fixture):
     r = get("/api/v1/cisteni", params={"ulice": "wolkerova,lexova", "od": "2026-01-01"})
     assert r.status_code == 200 and r.headers["content-type"].startswith("application/geo+json")
+    assert fixture["obvod"] == obvody.ObvodFilter()                  # the whole town by default
     fc = r.json()
     by = {f["properties"]["street"]: f for f in fc["features"]}
     assert set(by) == {"Wolkerova", "Lexova"} and len(fc["features"]) == 3
     lex = by["Lexova"]
     assert lex["geometry"] is None and lex["properties"]["status"] == "manual"
+    assert lex["properties"]["obvody"] == ["mo4", "mo5"]
     w = [f for f in fc["features"] if f["properties"]["next"] == "2026-11-26"][0]
     assert w["geometry"] == GEOM
     assert w["properties"] == {"key": w["id"], "street": "Wolkerova", "slug": "wolkerova",
                                "texts": ["Wolkerova v celé délce - obě strany komunikace"], "status": "auto",
-                               "side": "obe", "dates": [{"date": "2026-11-26", "time": "07:00", "before": False}],
+                               "side": "obe", "obvody": ["mo5"],
+                               "dates": [{"date": "2026-11-26", "time": "07:00", "before": False}],
                                "next": "2026-11-26"}
     assert get("/api/v1/cisteni", params={"od": "1. 1."}).status_code == 422
+
+
+def test_api_obvod_filter(fixture):
+    r = get("/api/v1/cisteni", params={"obvod": " MO4 "})
+    assert fixture["obvod"] == obvody.ObvodFilter(("mo4",))
+    assert [f["properties"]["street"] for f in r.json()["features"]] == ["Lexova"]     # 0.6 of it in MO IV
+    assert len(get("/api/v1/cisteni", params={"obvod": "mo5,mo4"}).json()["features"]) == 5
+    assert fixture["obvod"].ids == ("mo4", "mo5")
+    r = get("/api/v1/cisteni", params={"obvod": "mo9"})
+    assert r.status_code == 422 and "mo1, mo2" in r.json()["detail"]
 
 
 def test_mcp_tool(fixture, monkeypatch):
@@ -576,12 +592,13 @@ def test_export_of_the_whole_town(monkeypatch):
     row = {"date": dt.date(2026, 11, 26), "time": "07:00", "before": False, "street": "Wolkerova",
            "place": "Wolkerova v celé délce - obě strany komunikace", "side": "obe", "obvody": ["mo5"],
            "location": "auto", "place_key": "wolkerova v cele delce"}
-    monkeypatch.setattr(web.q, "export_rows", lambda since, obvod=None: seen.append(obvod) or [row])
+    monkeypatch.setattr(web.q, "export_rows", lambda since, where=obvody.WHOLE_TOWN: seen.append(where) or [row])
     r = get("/verejny-prostor/blokove-cisteni/data/terminy.csv")
     assert r.status_code == 200 and r.headers["content-type"].startswith("text/csv")
     lines = r.text.splitlines()
     assert lines[0] == ",".join(queries.EXPORT_FIELDS)
     assert lines[1].startswith("2026-11-26,07:00,false,Wolkerova,") and lines[1].endswith(",obe,mo5,auto,wolkerova v cele delce")
-    j = get("/verejny-prostor/blokove-cisteni/data/terminy.json", params={"obvod": "mo4"}).json()
-    assert j[0]["date"] == "2026-11-26" and seen == [None, "mo4"]          # the town, then one obvod
-    assert get("/verejny-prostor/blokove-cisteni/data/terminy.csv", params={"obvod": "mo9"}).status_code == 404
+    j = get("/verejny-prostor/blokove-cisteni/data/terminy.json", params={"obvod": "mo4,mo1"}).json()
+    assert j[0]["date"] == "2026-11-26"
+    assert seen == [obvody.ObvodFilter(), obvody.ObvodFilter(("mo1", "mo4"))]      # the town, then two obvody
+    assert get("/verejny-prostor/blokove-cisteni/data/terminy.csv", params={"obvod": "mo9"}).status_code == 422

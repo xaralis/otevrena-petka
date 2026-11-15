@@ -38,13 +38,13 @@
 </section>
 <section class="data-tab" id="blokove-cisteni" data-panel="blokove-cisteni">
 <h2>Blokové čištění ulic</h2>
-<p>Harmonogram blokového čištění Služeb města Pardubic pro obvod: {{ cl_cat.dates }} termínů letos na {{ cl_cat.places }} místech{% if cl_cat.checked %}, naposledy staženo {{ cl_cat.checked|d }}{% endif %}. Každé místo s termíny a polohou na mapě. Poloha je odvozená z textu harmonogramu, závazný je vždy text.</p>
+<p>Harmonogram blokového čištění Služeb města Pardubic za celé město, v obvodu {{ obvod.abbr }} letos {{ cl_cat.dates }} termínů na {{ cl_cat.places }} místech{% if cl_cat.checked %}, naposledy staženo {{ cl_cat.checked|d }}{% endif %}. Každé místo s termíny, polohou na mapě a obvody, kterými vede; jen některé obvody vrátí parametr <a href="#obvod"><code>?obvod=</code></a>. Poloha je odvozená z textu harmonogramu, závazný je vždy text.</p>
 <table class="ledger catalog">
   <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
   <tbody>
-    <tr><td><b>Termíny</b></td><td>Jeden termín jednoho místa: datum, čas, ulice, místo v původním znění harmonogramu, strana, obvody, kterých se týká, a jak jsme místo našli na mapě; letošní rok za celé město, jen obvod s <code>?obvod=mo5</code>.</td>
+    <tr><td><b>Termíny</b></td><td>Jeden termín jednoho místa: datum, čas, ulice, místo v původním znění harmonogramu, strana, obvody, kterých se týká, a jak jsme místo našli na mapě; letošní rok, filtr <code>?obvod=mo5</code>.</td>
         <td class="nowrap"><a href="/verejny-prostor/blokove-cisteni/data/terminy.csv">CSV</a>, <a href="/verejny-prostor/blokove-cisteni/data/terminy.json">JSON</a></td></tr>
-    <tr><td><b>Místa a termíny</b></td><td>Jedno místo harmonogramu s ulicí, textem, termíny a polohou (GeoJSON), letošní rok; filtr podle ulic <code>?ulice=wolkerova,lexova</code> a od data <code>?od=RRRR-MM-DD</code>.</td>
+    <tr><td><b>Místa a termíny</b></td><td>Jedno místo harmonogramu s ulicí, textem, termíny, obvody a polohou (GeoJSON; místo, které jsme na mapě neurčili, má <code>geometry: null</code>), letošní rok; filtry <code>?obvod=mo5</code>, podle ulic <code>?ulice=wolkerova,lexova</code> a od data <code>?od=RRRR-MM-DD</code>.</td>
         <td class="nowrap"><a href="/api/v1/cisteni">GeoJSON</a></td></tr>
     <tr><td><b>Kalendář</b></td><td>Termíny vybraných ulic do kalendáře v telefonu; odběr se sám aktualizuje, když Služby města termín změní.</td>
         <td class="nowrap"><a href="/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova">ICS</a></td></tr>
@@ -70,11 +70,12 @@
 
 <h2 id="api">REST API</h2>
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>
+<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění.</p>
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
 curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'
 curl '{{ base }}/api/v1/uredni-deska/notices?q=rozpočet&amp;active=false'
-curl '{{ base }}/api/v1/cisteni?ulice=wolkerova'
+curl '{{ base }}/api/v1/cisteni?obvod=mo5&amp;ulice=wolkerova'
 curl '{{ base }}/api/v1/podnety?stav=1,2&amp;near=50.0254,15.7553&amp;r=300'</pre>
 
 <h2 id="mcp">AI asistenti (MCP)</h2>

@@ -1,5 +1,6 @@
-"""Čištění ulic: pages under /cisteni, calendar feeds and the API under /api/v1/cisteni. The
-obvod is the request's (petka.obvody).
+"""Čištění ulic: pages under /cisteni, calendar feeds, the exports and the API under
+/api/v1/cisteni. Pages and feeds show the request's obvod (petka.obvody); the exports and the
+API cover the whole town and take `?obvod=` (ADR 0002).
 
     /verejny-prostor/blokove-cisteni                      overview: the next 7 days, a calendar for your streets, the map
                                   and the harmonogram by week (?probehle=1 lists this year's past
@@ -9,7 +10,8 @@ obvod is the request's (petka.obvody).
     /verejny-prostor/blokove-cisteni/kalendar             the subscription link for chosen streets (the form without JS)
     /verejny-prostor/blokove-cisteni/kalendar.ics         feed of chosen streets (?ulice=slug,slug)
     /verejny-prostor/blokove-cisteni/ulice/<slug>.ics     feed of one street
-    /api/v1/cisteni               the places as GeoJSON with their dates
+    /verejny-prostor/blokove-cisteni/data/terminy.{json,csv}  one row a place and date
+    /api/v1/cisteni               the places as GeoJSON with their dates and obvody
 """
 
 import csv
@@ -21,6 +23,7 @@ from urllib.parse import quote
 from fastapi import APIRouter, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 
+from ..obvody import ObvodParam
 from ..web.render import tpl
 from . import ics, queries as q, source
 from .words import merged, weeks
@@ -145,7 +148,8 @@ def features(its: list[dict], geoms: dict[str, dict], today: dt.date) -> dict:
         if not f:
             f = by[i["key"]] = {"type": "Feature", "id": i["key"], "geometry": geoms.get(i["key"]), "properties": {
                 "key": i["key"], "street": i["street"] if i["slug"] else None, "slug": i["slug"],
-                "texts": i["texts"], "status": i["status"], "side": i["side"], "dates": [], "next": None}}
+                "texts": i["texts"], "status": i["status"], "side": i["side"], "obvody": i["obvody"],
+                "dates": [], "next": None}}
         p = f["properties"]
         p["dates"].append({"date": i["date"].isoformat(), "time": i["time"].strftime("%H:%M") if i["time"] else None,
                            "before": i["before"]})
@@ -155,28 +159,19 @@ def features(its: list[dict], geoms: dict[str, dict], today: dt.date) -> dict:
             "attribution": "Služby města Pardubic (" + source.PAGE + "), polohy © ČÚZK RÚIAN, odvozené"}
 
 
-TOWN_OBVODY = {f"mo{i}" for i in range(1, 9)}    # Pardubice I–VIII
-
-
-def _export(obvod: str | None) -> list[dict]:
-    if obvod is not None and obvod not in TOWN_OBVODY:      # the whole town's, not only the portal's
-        raise HTTPException(404, "Neznámý obvod")
-    return q.export_rows(q.year_start(_today()), obvod)
-
-
 @pages.get("/data/terminy.json")
-def data_json(obvod: str | None = Query(None, description="jen místa obvodu, např. mo5")):
+def data_json(obvod: ObvodParam):
     """This year's cleanings of the town (or `?obvod=`), one row a place and date."""
-    rows = [{**r, "date": r["date"].isoformat()} for r in _export(obvod)]
+    rows = [{**r, "date": r["date"].isoformat()} for r in q.export_rows(q.year_start(_today()), obvod)]
     return JSONResponse(rows, headers={"Content-Disposition": 'inline; filename="terminy.json"'})
 
 
 @pages.get("/data/terminy.csv")
-def data_csv(obvod: str | None = Query(None, description="jen místa obvodu, např. mo5")):
+def data_csv(obvod: ObvodParam):
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=q.EXPORT_FIELDS)
     w.writeheader()
-    for r in _export(obvod):
+    for r in q.export_rows(q.year_start(_today()), obvod):
         w.writerow({**r, "date": r["date"].isoformat(), "time": r["time"] or "", "side": r["side"] or "",
                     "street": r["street"] or "", "before": "true" if r["before"] else "false",
                     "obvody": ";".join(r["obvody"])})
@@ -185,19 +180,21 @@ def data_csv(obvod: str | None = Query(None, description="jen místa obvodu, nap
 
 
 @api.get("")
-def cleanings(request: Request, ulice: str = "", od: str = ""):
-    """Blokové čištění v obvodu jako GeoJSON: jedno místo z harmonogramu = jeden feature s termíny.
+def cleanings(obvod: ObvodParam, ulice: str = "", od: str = ""):
+    """Blokové čištění v Pardubicích jako GeoJSON: jedno místo z harmonogramu = jeden feature
+    s termíny. Celé město, jen některé obvody s `?obvod=mo5` (víc oddělte čárkou).
 
     ulice: slugy ulic oddělené čárkou (např. `wolkerova,lexova`). od: jen termíny od toho dne
-    RRRR-MM-DD (výchozí 1. ledna letošního roku). `status`: auto = poloha z textu harmonogramu,
-    approx/partial = přibližně, manual = ručně zakreslené nebo (bez geometrie) neurčené.
+    RRRR-MM-DD (výchozí 1. ledna letošního roku). `obvody`: obvody, kterými místo vede (aspoň
+    5 % jeho délky nebo plochy); místo bez polohy má `geometry: null`. `status`: auto = poloha
+    z textu harmonogramu, approx/partial = přibližně, manual = ručně zakreslené nebo (bez
+    geometrie) neurčené.
     `next` = nejbližší termín od dneška. Platí text harmonogramu (`texts`), poloha je odvozená."""
     today = _today()
     try:
         since = dt.date.fromisoformat(od) if od.strip() else q.year_start(today)
     except ValueError:
         raise HTTPException(422, "od: datum RRRR-MM-DD")
-    slugs = [s for s in ulice.split(",") if s.strip()] or None
-    obvod = request.state.obvod.id
+    slugs = [s.strip() for s in ulice.split(",") if s.strip()] or None
     return JSONResponse(features(q.items(obvod, since, slugs), q.geometries(obvod), today),
                         media_type="application/geo+json", headers={"Cache-Control": "public, max-age=600"})

@@ -16,7 +16,7 @@
   </div>
   <div class="mbox">
     <div class="mbox-map">
-      <div class="map cl-map" data-cl-map="all" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-src="/api/v1/cisteni?od={{ today.isoformat() }}" data-today="{{ today.isoformat() }}" data-anchors="cl-anchors" role="region" aria-label="Mapa obvodu s úseky blokového čištění obarvenými podle nejbližšího termínu; stejné údaje jsou níže jako seznam"></div>
+      <div class="map cl-map" data-cl-map="all" data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-src="/api/v1/cisteni?obvod={{ obvod.id }}&amp;od={{ today.isoformat() }}" data-today="{{ today.isoformat() }}" data-anchors="cl-anchors" role="region" aria-label="Mapa obvodu s úseky blokového čištění obarvenými podle nejbližšího termínu; stejné údaje jsou níže jako seznam"></div>
       <script type="application/json" id="cl-anchors">{{ anchors|tojson }}</script>
     </div>
     <aside class="mbox-col" aria-labelledby="cl-week-h">
@@ -69,6 +69,6 @@
     {% if n_past %}<p class="cl-pastlink"><a class="more" href="/verejny-prostor/blokove-cisteni?probehle=1#cl-harm-h">Letošní proběhlé termíny ({{ n_past }})</a></p>{% endif %}
   {% endif %}
   </section>
-{% call source(checked) %}Harmonogram vydávají <a href="{{ source }}">Služby města Pardubic</a> jako tabulku pro celé město; každý den ji stahujeme a vybíráme úseky v obvodu, letos {{ n_dates }} {{ cl_plural(n_dates, 'termín', 'termíny', 'termínů') }} na {{ n_places }} {{ cl_plural(n_places, 'místě', 'místech', 'místech') }}. Úseky jako data: <a href="/api/v1/cisteni">GeoJSON</a> a <a href="/data#blokove-cisteni">API</a>.{% endcall %}
+{% call source(checked) %}Harmonogram vydávají <a href="{{ source }}">Služby města Pardubic</a> jako tabulku pro celé město; každý den ji stahujeme a vybíráme úseky v obvodu, letos {{ n_dates }} {{ cl_plural(n_dates, 'termín', 'termíny', 'termínů') }} na {{ n_places }} {{ cl_plural(n_places, 'místě', 'místech', 'místech') }}. Úseky obvodu jako data: <a href="/api/v1/cisteni?obvod={{ obvod.id }}">GeoJSON</a> a <a href="/data#blokove-cisteni">API</a>.{% endcall %}
 {% endblock %}
 {% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('cisteni.js') }}" defer></script>{% endblock %}
