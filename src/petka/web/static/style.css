@@ -1247,7 +1247,11 @@ a.cl-hint { color: var(--red-ink); }
 .pd-seg { margin: 0; }
 .pd-seg a { display: inline-flex; gap: .3em; padding: .35rem .8rem; font-weight: 650; font-size: .92rem; }
 .pd-seg a + a { border-left: 2px solid var(--ink); }
-.pd-seg b { font-weight: 650; }
+.pd-seg a { align-items: center; gap: .45em; }
+/* a switch's count: a small pill, so it reads apart from the label (light on the dark current one) */
+.pd-seg b { display: inline-block; min-width: 1.5em; padding: .1em .45em; border-radius: 999px; background: var(--grey);
+  color: var(--ink-2); font-size: .78em; font-weight: 650; line-height: 1.35; text-align: center; font-variant-numeric: tabular-nums; }
+.pd-seg a[aria-current] b { background: rgba(255, 255, 255, .2); color: #fff; }
 .pd-sel { display: inline-flex; align-items: center; gap: .5rem; max-width: 100%; font-weight: 650; font-size: .92rem; }
 .pd-sel select { min-width: 0; max-width: 100%; font: inherit; font-weight: 600; color: var(--ink); padding: .35rem .6rem; border: 2px solid var(--ink); border-radius: 3px; background: #fff; }
 .pd-street { margin: 0; font-size: .92rem; font-weight: 650; }
@@ -1269,7 +1273,7 @@ a.cl-hint { color: var(--red-ink); }
 .pd-rt span { display: block; color: var(--muted); font-size: .8rem; }
 .pd-rows .st { white-space: nowrap; }
 .pd-rows-more { display: inline-block; margin-top: .8rem; }
-@media (max-width: 600px) { .pd-seg a + a { border-left: 0; } }   /* the phone .switch draws its own lines */
+@media (max-width: 600px) { .pd-seg a + a { border-left: 0; } .pd-seg a { padding-left: .3rem; padding-right: .3rem; gap: .3em; } }   /* the phone .switch draws its own lines; tight, so a label and its count fit a third of the width */
 .pd-lg .pd-k-pt { width: 14px; height: 14px; box-sizing: border-box; border: 2px solid var(--ink); border-radius: 50%; }
 .pd-lg .pd-k-pt:not(.pending-alert) { background: #fff; }
 .pd-lg .pd-k-cl { display: inline-grid; place-items: center; width: 24px; height: 24px; box-sizing: border-box; border: 2px solid var(--ink);

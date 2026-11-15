@@ -81,7 +81,10 @@
 </div>
 
 <section class="ul-akt mbox-sec" id="aktualne" aria-labelledby="ul-akt-h">
-  <h2 id="ul-akt-h">Aktuálně</h2>
+  <div class="sec-head">
+    <h2 id="ul-akt-h">Aktuálně</h2>
+    {% if rows or views[1].n %}<nav class="switch pd-seg" aria-label="Které události">{% for x in views %}<a href="{{ x.href }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>{% endif %}
+  </div>
   <div class="mbox">
   <div class="mbox-map ul-akt-map">
     <div class="ul-mapw">
@@ -98,7 +101,6 @@
       <li data-row="{{ r.key }}" class="{{ 'ul-past' if r.past }}{{ ' ul-mapped' if r.on_map }}"><{{ tag }}{% if r.href %} href="{{ r.href }}"{% if r.ext %} target="_blank" rel="noopener"{% endif %}{% else %} tabindex="0"{% endif %}><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></{{ tag }}>{% if r.on_map %}<button type="button" class="ul-pin" data-ul-pin="{{ r.key }}" aria-label="Ukázat na mapě: {{ r.title }}" title="Ukázat na mapě"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg></button>{% endif %}</li>
       {% endfor %}
     </ol>
-    {% if more %}<a class="pd-rows-more more mbox-more" href="?radky=vse#aktualne">Starší události {{ loc }}</a>{% endif %}
     {% else %}
     <p class="cl-muted">Zatím o ulici nic nevíme.</p>
     {% endif %}
