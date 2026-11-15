@@ -5,6 +5,7 @@ without code is only metadata here. The header navigation groups them itself (pe
 
 from .ankety.section import SECTION as ANKETY
 from .cisteni.section import SECTION as CISTENI
+from .mista.section import SECTION as MISTA
 from .podnety.section import SECTION as PODNETY
 from .rozpocet.section import SECTION as ROZPOCET
 from .section import Section
@@ -25,7 +26,7 @@ SMLOUVY = Section(
              ("Hlídač státu", "https://www.hlidacstatu.cz/")],
 )
 
-REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI, ULICE]
+REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI, ULICE, MISTA]
 
 SECTIONS = [s for s in REGISTRY if s.listed]    # what the portal's pages show
 BY_SLUG = {s.slug: s for s in REGISTRY}

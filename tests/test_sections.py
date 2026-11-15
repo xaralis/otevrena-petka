@@ -20,7 +20,9 @@ def test_registry():
     assert "podnety" in BY_SLUG and not BY_SLUG["podnety"].listed
     assert BY_SLUG["blokove-cisteni"].status == "live" and not BY_SLUG["blokove-cisteni"].listed    # in the header only (petka.nav)
     assert BY_SLUG["ulice"].front and not BY_SLUG["ulice"].listed
-    assert {s.slug for s in WITH_CODE} == {"uredni-deska", "usneseni", "rozpocet", "ankety", "podnety", "blokove-cisteni", "ulice", "uzavirky"}
+    assert BY_SLUG["mista"].status == "live" and not BY_SLUG["mista"].listed       # data only, in Data a API
+    assert {s.slug for s in WITH_CODE} == {"uredni-deska", "usneseni", "rozpocet", "ankety", "podnety", "blokove-cisteni",
+                                           "ulice", "uzavirky", "mista"}
 
 
 @pytest.mark.parametrize("s", WITH_CODE, ids=lambda s: s.slug)
