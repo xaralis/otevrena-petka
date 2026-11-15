@@ -41,7 +41,7 @@ html { font-size: 17px; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: #fff; color: var(--ink);
   font: 400 1rem/1.55 "Bricolage Grotesque", system-ui, sans-serif; font-optical-sizing: auto;
   font-variant-numeric: tabular-nums; }
-a { color: var(--red-ink); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a, summary { color: var(--red-ink); text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-skip-ink: none; }   /* one unbroken line: Bricolage's deep descenders (j, p, y) would cut it into pieces */
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 h1, h2, h3 { font-weight: 700; line-height: 1.12; letter-spacing: -.015em; }
@@ -54,7 +54,7 @@ h3, .h3 { font-size: var(--h3); font-weight: 700; font-stretch: 100%; letter-spa
 /* floating card: only over maps and on the front page's hero */
 .float { background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 3px; box-shadow: 0 2px 10px rgba(25, 28, 31, .18); }
 /* links: „Další …“, „Všech N …“ – the way on to more of the same */
-a.more, .more a { color: var(--red-ink); font-weight: 650; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a.more, .more a { color: var(--red-ink); font-weight: 650; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 a.more:hover, .more a:hover { text-decoration-thickness: 2px; }
 /* something we are still building: a dashed underline */
 a.soon, .soon > a { text-decoration-style: dashed; }
@@ -1201,7 +1201,7 @@ a.cl-hint { color: var(--red-ink); }
 .pd-kpi a[aria-expanded="true"]::after { content: ""; position: absolute; left: 1.6rem; bottom: -10px; border: 10px solid transparent; border-width: 10px 10px 0; border-top-color: var(--ink); z-index: 1; }
 .pd-kpi b { display: block; font-size: var(--big); font-weight: 800; font-stretch: 85%; letter-spacing: -.02em; line-height: 1.05; }
 .pd-kpi span { color: var(--ink-2); font-size: .95rem; }
-.pd-kpi em { position: absolute; left: 1.1rem; bottom: .8rem; font-style: normal; font-size: .85rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.pd-kpi em { position: absolute; left: 1.1rem; bottom: .8rem; font-style: normal; font-size: .85rem; font-weight: 650; text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-skip-ink: none; }
 .pd-kpi a[aria-expanded="true"] em { text-decoration: none; }
 .pd-kpi a[aria-expanded="true"] em::after { content: " ▴"; }
 .pd-kpi a[aria-expanded="false"] em::after { content: " ▾"; }
@@ -1705,7 +1705,7 @@ main > .sec-head:first-child, main > :first-child > .sec-head:first-child { marg
 .ul-w li:not(.ul-w-rich) .ul-w-t b { font-size: 1rem; }
 .ul-w li:not(.ul-w-rich) .ul-w-a { flex-direction: row; gap: 1rem; }
 .ul-w-more { margin-top: .6rem; }
-.ul-w-more summary { cursor: pointer; font-weight: 650; color: var(--red-ink); text-decoration: underline; text-underline-offset: 3px; padding: .3rem 0; }
+.ul-w-more summary { cursor: pointer; font-weight: 650; text-decoration: underline; padding: .3rem 0; }
 .ul-w-more[open] summary { margin-bottom: .5rem; }
 @media (max-width: 600px) {
   .ul-w li { grid-template-columns: minmax(0, 1fr); padding: .7rem .8rem; }
