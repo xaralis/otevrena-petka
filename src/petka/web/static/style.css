@@ -1741,3 +1741,4 @@ main > .sec-head:first-child, main > :first-child > .sec-head:first-child { marg
   .mbox-map .ak-card-q, .mbox-map .ak-card-more, .mbox-map .ak-card dl div:has(.ak-f-date) { display: none; }
   .mbox-map .ak-card dl { margin: .3rem 0 .35rem; }
 }
+main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block of the page: main's padding is the gap */
