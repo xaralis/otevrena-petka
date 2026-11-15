@@ -367,7 +367,7 @@ def test_street_page(fixture):
               
               "<b>19 usnesení</b><span>rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
               'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení', "kpi.js",
-              '<h2 id="ul-akt-h">Aktuálně</h2>',
+              '<h2 id="ul-akt-h">Na mapě</h2>',
               # the street's cleaning, a page of its own until 13. 11. 2026
               '<section class="ul-cl" id="cisteni"', "Lokalita podle harmonogramu Služeb", "cl-past",
               "Termíny Wolkerovy do kalendáře", "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova",

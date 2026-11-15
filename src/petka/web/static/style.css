@@ -1689,7 +1689,7 @@ main > .sec-head:first-child, main > :first-child > .sec-head:first-child { marg
    the citizen's words and photo from Dej Tip, the rest short behind a toggle */
 .ul-wait { margin: 0 0 2rem; }
 .ul-wait h2 { margin: 0 0 .7rem; }
-.ul-wait h2 span { display: inline-block; margin-left: .3rem; padding: .05em .45em; border-radius: 3px; background: var(--red); color: #fff; font-size: .7em; vertical-align: .15em; }
+.ul-wait h2 span { display: inline-block; margin-left: .3rem; padding: .05em .45em; border-radius: 3px; background: var(--red-ink); color: #fff; font-size: .7em; vertical-align: .15em; }
 .ul-w { list-style: none; margin: 0; padding: 0; background: #fff; border-radius: 3px; }
 .ul-w li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem 1.2rem; align-items: start; padding: .75rem 1rem; border-bottom: 1px solid var(--off); }
 .ul-w li:last-child { border-bottom: 0; }

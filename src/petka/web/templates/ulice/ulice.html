@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {#- One street: three tiles over one panel as on the Podněty page (the next cleaning, the
-    reports by month, the resolutions by year; kpi.js), „Aktuálně“ (the street's map | what is
+    reports by month, the resolutions by year; kpi.js), „Na mapě“ (the street's map | what is
     current on it; rows and map point at each other, ulice.js), the street's cleaning
     (#cisteni) and links to the rest. Phone: one column, the list under the map. -#}
 {% from "cisteni/_macros.html" import next_sign, area_icon, street_cleaning %}
@@ -99,7 +99,7 @@
 
 <section class="ul-akt mbox-sec" id="aktualne" aria-labelledby="ul-akt-h">
   <div class="sec-head">
-    <h2 id="ul-akt-h">Aktuálně</h2>
+    <h2 id="ul-akt-h">Na mapě</h2>
     {% if rows or views[1].n %}<nav class="switch pd-seg" aria-label="Které události">{% for x in views %}<a href="{{ x.href }}" title="{{ x.hint }}"{% if x.on %} aria-current="true"{% endif %}>{{ x.label }} <b>{{ x.n }}</b></a>{% endfor %}</nav>{% endif %}
   </div>
   <div class="mbox">
