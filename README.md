@@ -105,6 +105,7 @@ a volitelně `properties.note`. Ruční geometrie má přednost před automatick
   místa i jako GeoJSON, úřední deska jako CSV + JSON. Formát popisuje
   [docs/otevrena-data.md](docs/otevrena-data.md), včetně doporučení pro úřad.
 - **REST API**: `/api/v1/usneseni/…` a `/api/v1/uredni-deska/…`, OpenAPI na `/api/docs`.
+  Zdroje za celé město (blokové čištění) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md)).
 - **MCP** (bez přihlášení, jen čtení):
 
   ```bash

@@ -5,6 +5,8 @@ Doménové pojmy portálu. Kód, testy a návrhy používají tyhle názvy.
 - **Obvod** – městský obvod Pardubic (MO I–VIII), pro který portál ukazuje data. Dnes jen
   MO Pardubice V (`mo5`), portál se má rozšířit na další (ADR 0001). V kódu `obvod`; v datech
   rozpočtu sloupec `unit` (`mo5`, `mmp` = magistrát).
+  Datové zdroje za celé město vracejí všech osm obvodů (`mo1`–`mo8`), každý záznam s polem
+  `obvody`; parametr `?obvod=` je zúží (ADR 0002). Stránky ukazují obvod podle domény.
 - **Iniciativa Otevřené Pardubice** – zastřešující projekt: portál otevřených dat obvodů
   (tento repozitář, značka obvodu např. „Otevřená Pětka“) a městská aplikace
   (repozitář otevrene-pardubice).
