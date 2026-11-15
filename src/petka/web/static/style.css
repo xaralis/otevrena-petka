@@ -1685,8 +1685,32 @@ main > :first-child > h2:first-child, main > h2:first-child, main > :first-child
 .cl-mapsec .cl-cap { margin: .4rem 0 0; }
 main > .sec-head:first-child, main > :first-child > .sec-head:first-child { margin-top: 0; }
 
-/* a street's reports panel: what still waits first, as rows like the map's column, on white */
+/* a street's reports panel: what still waits, longest first, rows on white; the first few with
+   the citizen's words and photo from Dej Tip, the rest short behind a toggle */
 .ul-wait { margin: 0 0 2rem; }
 .ul-wait h2 { margin: 0 0 .7rem; }
-.ul-wait-rows { background: #fff; border: 2px solid var(--ink); border-radius: 3px; max-width: 44rem; }
-.ul-wait-rows li:last-child { border-bottom: 0; }
+.ul-wait h2 span { display: inline-block; margin-left: .3rem; padding: .05em .45em; border-radius: 3px; background: var(--red); color: #fff; font-size: .7em; vertical-align: .15em; }
+.ul-w { list-style: none; margin: 0; padding: 0; background: #fff; border-radius: 3px; }
+.ul-w li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem 1.2rem; align-items: start; padding: .75rem 1rem; border-bottom: 1px solid var(--off); }
+.ul-w li:last-child { border-bottom: 0; }
+.ul-w li.ul-w-rich:has(> img) { grid-template-columns: 112px minmax(0, 1fr) auto; }
+.ul-w img { width: 112px; height: 84px; object-fit: cover; border-radius: 3px; background: var(--grey); }
+.ul-w-t b { display: block; font-size: var(--h3); line-height: 1.25; }
+.ul-w-m { display: block; margin-top: .1rem; font-size: .92rem; color: var(--ink-2); }
+.ul-w-m strong { color: var(--red-ink); }
+.ul-w-t q { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: .35rem; font-size: .92rem; color: var(--ink-2); quotes: "„" "“"; }
+.ul-w-a { display: flex; flex-direction: column; align-items: flex-end; gap: .25rem; font-size: .92rem; font-weight: 650; white-space: nowrap; }
+.ul-w li:not(.ul-w-rich) { padding-top: .5rem; padding-bottom: .5rem; }
+.ul-w li:not(.ul-w-rich) .ul-w-t { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .6rem; }
+.ul-w li:not(.ul-w-rich) .ul-w-t b { font-size: 1rem; }
+.ul-w li:not(.ul-w-rich) .ul-w-a { flex-direction: row; gap: 1rem; }
+.ul-w-more { margin-top: .6rem; }
+.ul-w-more summary { cursor: pointer; font-weight: 650; color: var(--red-ink); text-decoration: underline; text-underline-offset: 3px; padding: .3rem 0; }
+.ul-w-more[open] summary { margin-bottom: .5rem; }
+@media (max-width: 600px) {
+  .ul-w li { grid-template-columns: minmax(0, 1fr); padding: .7rem .8rem; }
+  .ul-w li.ul-w-rich:has(> img) { grid-template-columns: 76px minmax(0, 1fr); gap: .2rem .8rem; }
+  .ul-w img { width: 76px; height: 76px; }
+  .ul-w li.ul-w-rich:has(> img) .ul-w-a { grid-column: 2; }
+  .ul-w-a { flex-direction: row; justify-content: flex-start; gap: 1rem; }
+}

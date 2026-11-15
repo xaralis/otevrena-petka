@@ -17,7 +17,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from .. import nav
 from ..cisteni import queries as cq, source as csource, words as cw
 from ..cisteni.web import subscribe
-from ..podnety import queries as pq, stats as ps
+from ..podnety import queries as pq, source as psource, stats as ps
 from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
 from ..web.render import tpl
@@ -194,7 +194,11 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
         "pd_url": pd_url, "pd_kind": f"/verejny-prostor/podnety?ulice={slug}&stav=vse&druh=",
         "n_res": n_res, "res_years": q.resolution_years(res, today), "res_last": [q.resolution_row(r, today) for r in res[:3]],
         "detail": detail if detail in DETAILS else "cisteni",
-        "waiting": sorted((r for r in rep_rows if r.get("open")), key=lambda r: r["date"]),   # the panel's top: longest waiting first
+        "waiting": [{"key": f"r{r['id']}", "category": r["category"], "since": r["reported_at"].date(),
+                     "days": (today - r["reported_at"].date()).days, "status": ps.status_word(r),
+                     "text": (r.get("description") or "").strip(), "photo": r.get("photo_url"),
+                     "href": psource.detail(r["id"])}
+                    for r in sorted(reps, key=lambda r: r["reported_at"]) if ps.outcome(r) == "ceka"],   # longest waiting first
         "next_date": cl.on_next[0]["date"] if cl.on_next else None,
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
         "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "n_notices": _safe(q.notices_posted, s.name),

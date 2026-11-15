@@ -30,11 +30,21 @@
 
   <section data-pd-detail="podnety" aria-label="Podněty po měsících"{% if detail != 'podnety' %} hidden{% endif %}>
     {% if waiting %}
+    {#- what still waits, longest first: the first RICH with the citizen's words and photo from
+        Dej Tip, the rest (a street may have dozens) as short rows behind a toggle -#}
+    {% set RICH = 5 %}
+    {% macro wrow(w, rich) %}<li class="{{ 'ul-w-rich' if rich }}">
+        {% if rich and w.photo %}<img src="{{ w.photo }}" alt="" loading="lazy" width="112" height="84">{% endif %}
+        <div class="ul-w-t"><b>{{ w.category }}</b><span class="ul-w-m">čeká <strong>{{ w.days }} {{ cl_plural(w.days, 'den', 'dny', 'dní') }}</strong>, od {{ w.since|ul_dmy }}, <span class="{{ w.status[1] }}">{{ w.status[0] }}</span></span>{% if rich and w.text %}<q>{{ w.text }}</q>{% endif %}</div>
+        <div class="ul-w-a"><a href="#aktualne" data-ul-focus="{{ w.key }}">Na mapě</a><a href="{{ w.href }}" target="_blank" rel="noopener">Dej Tip</a></div>
+      </li>{% endmacro %}
     <div class="ul-wait">
-      <h2>Čeká na vyřízení</h2>
-      <ol class="pd-rows mbox-rows ul-wait-rows">
-        {% for r in waiting %}<li><a href="#aktualne" data-ul-focus="{{ r.key }}"><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></a></li>{% endfor %}
-      </ol>
+      <h2>Čeká na vyřízení <span>{{ waiting|length }}</span></h2>
+      <ol class="ul-w">{% for w in waiting[:RICH] %}{{ wrow(w, True) }}{% endfor %}</ol>
+      {% if waiting|length > RICH %}{% set rest = waiting|length - RICH %}
+      <details class="ul-w-more"><summary>{{ 'Další' if rest == 1 else 'Dalších' }} {{ rest }} {{ cl_plural(rest, 'čekající podnět', 'čekající podněty', 'čekajících podnětů') }}</summary>
+        <ol class="ul-w">{% for w in waiting[RICH:] %}{{ wrow(w, False) }}{% endfor %}</ol>
+      </details>{% endif %}
     </div>
     {% endif %}
     <h2>Podněty za posledních 12 měsíců</h2>
