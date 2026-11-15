@@ -19,7 +19,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 | [Úřední deska](https://otevrenapetka.cz/radnice/uredni-deska) | běží | deska obvodu a magistrátu každou hodinu z oficiálního JSON, hledání, archiv sejmutých |
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
-| Podněty | ve výstavbě | zatím jen API a MCP: podněty z aplikace Dej Tip v obvodu a jejich stav ([docs/dejtip.md](docs/dejtip.md)) |
+| Podněty | ve výstavbě | podněty z aplikace Dej Tip a jejich stav: stránka a MCP pro obvod, API za celé město ([docs/dejtip.md](docs/dejtip.md)) |
 | Čištění ulic | připraveno, zatím mimo navigaci | blokové čištění podle harmonogramu Služeb města Pardubic: termíny, mapa úseků, kalendář k odběru (ICS), API a MCP |
 
 ### Usnesení
@@ -123,7 +123,8 @@ Server Overpassu jde změnit proměnnou `OVERPASS_URL`.
   [docs/otevrena-data.md](docs/otevrena-data.md), včetně doporučení pro úřad.
 - **REST API**: `/api/v1/usneseni/…` a `/api/v1/uredni-deska/…`, OpenAPI na `/api/docs`.
   Místa: `/api/v1/mista` a `/api/v1/mista.geojson` ([docs/mista.md](docs/mista.md)).
-  Zdroje za celé město (blokové čištění, místa) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md)).
+  Zdroje za celé město (blokové čištění, podněty, místa) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md))
+  a posílají ETag: s `If-None-Match` odpoví 304, dokud se data nezmění.
 - **MCP** (bez přihlášení, jen čtení):
 
   ```bash
@@ -176,7 +177,7 @@ uv run usneseni load                            # databáze z data/
 EMBED_URL=http://localhost:8080 uv run usneseni embed   # volitelně: llama.cpp server s bge-m3
 uv run usneseni export
 uv run usneseni deska-update                    # úřední deska
-uv run usneseni podnety-update                  # podněty z Dej Tipu
+uv run usneseni podnety-update                  # podněty z Dej Tipu, všech osm obvodů (každé 4 hodiny)
 uv run usneseni cisteni-update                  # harmonogram blokového čištění (denně)
 uv run usneseni mista-update                    # místa z OpenStreetMap (denně)
 uv run usneseni serve --port 8099

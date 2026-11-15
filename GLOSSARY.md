@@ -22,6 +22,9 @@ Doménové pojmy portálu. Kód, testy a návrhy používají tyhle názvy.
 - **Oznámení** – položka úřední desky (deska obvodu nebo magistrátu).
 - **Podnět** – hlášení občana z městské aplikace Dej Tip (závada, černá skládka, poděkování…)
   s kategorií, místem a stavem, který nastavuje úřad (Evidováno, V řešení, Vyřešeno…).
+  Leží v jednom obvodu (podle Dej Tipu); portál zrcadlí všech osm, API je za celé město.
+  **Stáří** podnětu (`stari`, `changed_at`) se počítá od jeho poslední změny: nahlášení,
+  poznámky úřadu nebo změny stavu.
   Stránka /verejny-prostor/zavady z něj počítá jeden ze čtyř výsledků: vyřešeno (3), čeká (1, 2, 9),
   předáno jinam (6, 8 a všechny podněty kategorií Městská policie a Zastávky MHD, které obvod
   neřeší a v Dej Tipu zůstávají „Evidováno“) a nelze vyřídit (4).

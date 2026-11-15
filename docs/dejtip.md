@@ -1,8 +1,9 @@
 # Dej Tip – podněty občanů (13. 11. 2026)
 
 Dej Tip je městská aplikace na hlášení závad a podnětů (mobilní aplikace a formulář na webu).
-Veřejná mapa: https://amg.dejtip.eu/pardubice/. Sekce `podnety` z ní přebírá podněty obvodu
-(`petka podnety-update`, API `/api/v1/podnety`, MCP nástroj `podnety`).
+Veřejná mapa: https://amg.dejtip.eu/pardubice/. Sekce `podnety` z ní přebírá podněty všech osmi
+obvodů města (`petka podnety-update`). Stránka a MCP nástroj `podnety` ukazují obvod portálu,
+API `/api/v1/podnety` je za celé město (viz „API“ níže).
 
 ## Odkud data bereme
 
@@ -99,10 +100,37 @@ Proč ne zbytek:
 
 ## Okno stahování
 
-První běh obvodu bere dva roky zpět, další běhy posledních 120 dní: v tom okně podněty ještě
-mění stav. Starší změnu i starší historii (zdroj má podněty od roku 2020) zachytí ruční
+Job bere všech osm obvodů (`obvody.TOWN`, MO I–VIII). První běh obvodu bere dva roky zpět,
+další běhy posledních 120 dní: v tom okně podněty ještě mění stav. Které obvody už jsou
+stažené, drží tabulka `citizen_report_obvody` (obvod, nejstarší stažený den, poslední úspěšné
+stažení), takže obvod bez jediného podnětu (MO VIII za poslední dva roky žádný nemá) dva roky
+znovu nestahuje. Obvody se stejným oknem sdílí jedno stažení celého města, běh je tedy nejvýš
+dva dotazy na Dej Tip (dva roky pro nové obvody, 120 dní pro známé). Podnět s kódem, který
+není obvodem města, neukládáme (15. 11. 2026 takový nebyl žádný). Starší změnu i starší historii (zdroj má podněty od roku 2020) zachytí ruční
 `petka podnety-update --od RRRR-MM-DD`. Podnět, který ze zdroje úplně zmizí, u nás zůstane
 (poznat podle `last_seen`).
+
+Počty z reálné odpovědi 15. 11. 2026 (dva roky, 3 730 řádků celého města, 1,3 MB), co job
+uloží a co smaže (chybné, spam, smazané): MO I 1 061 (1), MO II 802 (2), MO III 537, MO IV
+118 (1), MO V 791, MO VI 138 (2), MO VII 277, MO VIII 0.
+
+## API
+
+`/api/v1/podnety` vrací GeoJSON za celé město, nejnovější první. Parametry:
+
+- `obvod=mo1,mo5`: jen podněty z těchto obvodů (ADR 0002); každý feature má `obvody`
+  (jeden obvod, ve kterém podnět je) a kvůli zpětné kompatibilitě i `obvod`.
+- `kategorie`, `stav`: id z číselníků Dej Tipu, víc oddělených čárkou.
+- `od`, `do`: den nahlášení RRRR-MM-DD.
+- `stari=N` (1–3650 dní): jen podněty, které se za posledních N dní pohnuly. Poslední pohyb
+  je pole `changed_at`: nejpozdější z nahlášení, poslední poznámky úřadu a změny stavu, kterou
+  job viděl. Otevřené za 90 dní: `stav=1,2,8,9&stari=90`; nedávno vyřešené: `stav=3&stari=90`
+  (i podnět nahlášený dřív, který úřad v posledních 90 dnech uzavřel).
+- `near=lat,lng`, `r` (metry, nejvýš 5000), `limit`.
+
+Odpověď má slabý ETag z posledního úspěšného stažení (`citizen_report_obvody.checked_at`),
+parametrů a se `stari` i dnešního dne; `If-None-Match` s ním vrátí 304. `Cache-Control:
+public, max-age=600`.
 
 ## Odkaz na jeden podnět
 
