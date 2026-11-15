@@ -223,9 +223,9 @@ def test_vnitroblok_is_the_block_the_streets_close(geo):
 class NamesRuian(FakeRuian):
     """FakeRuian plus Dlouhá třída crossing Hlavní at x = 300, Příčná in two numbered parts (I far
     north, II crossing Hlavní at x = 800), K Hlavní joining Hlavní and Horní at x = 0, and
-    Spojovací and Staročernská somewhere."""
+    Spojovací, Staročernská and nábřeží Závodu míru somewhere."""
     STREETS = FakeRuian.STREETS + [[6, "Dlouhá třída"], [7, "Příčná I"], [8, "Příčná II"], [9, "K Hlavní"],
-                                   [10, "Spojovací"], [11, "Staročernská"]]
+                                   [10, "Spojovací"], [11, "Staročernská"], [12, "nábřeží Závodu míru"]]
     LINES = {**FakeRuian.LINES, 6: line((300, -200), (300, 400)), 7: line((900, 2000), (900, 3000)),
              8: line((800, -200), (800, 400)), 9: line((0, 0), (0, 300))}
 
@@ -244,6 +244,7 @@ def test_names_without_trida_and_numbered_parts(geo2):
     assert geo2.names.find("spojovaci komunikace k hale") == []   # a connecting road, not Spojovací
     assert [f[0] for f in geo2.names.find("od ul. spojovaci")] == ["Spojovací"]
     assert [f[0] for f in geo2.names.find("po ul. starocenska")] == ["Staročernská"]   # the sheet's misspelling
+    assert [f[0] for f in geo2.names.find("zavodu miru - parkoviste")] == ["nábřeží Závodu míru"]
 
 
 def test_od_a_street_named_k(geo2):
@@ -262,6 +263,18 @@ def test_street_with_its_parking_is_the_street(geo2):
         assert (r["method"], r["status"]) == ("whole", "auto"), text
     r = geo2.place(places.place_key("Boční po ul. Hlavní vč. parkovišť"))     # a stretch without its start
     assert r["geometry"] is None
+
+
+def test_addresses_are_looked_up_in_the_whole_town():
+    from petka.cisteni import ruian
+
+    class Offline(dict):
+        offline = True
+    r = object.__new__(ruian.Ruian)
+    lany = {"kod": 1, "adresa": "Lány na Důlku 31, 53002 Pardubice", "cp": 31, "co": None, "ulice": None,
+            "point": [15.66, 50.03]}
+    r.cache = Offline({"cp:31": [], "cp:31@" + ",".join(map(str, ruian.TOWN_BBOX)): [lany]})
+    assert r.addresses(31) == [lany]        # Lány na Důlku lies west of the minutes' box
 
 
 def test_obvod_ids_and_numbers():

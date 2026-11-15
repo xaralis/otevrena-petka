@@ -127,7 +127,8 @@ def _cases(k: str) -> set[str]:
 
 class Streets:
     """Street names of the town inside a place's key: exact, abbreviated ('nam.', 'a. krause'),
-    by the last word ('palacha'), without a trailing 'třída' ('palackeho'), in case forms; a
+    by the last word ('palacha'), without a trailing 'třída' ('palackeho') or a leading
+    'nábřeží' of two more words ('zavodu miru'), in case forms; a
     variant shared by two streets is dropped. A street in numbered parts ('Wintrova I',
     'Wintrova II') is also found by its bare name; `siblings` lists the parts."""
 
@@ -147,6 +148,8 @@ class Streets:
                     variants[ws[-1]].add(n)
             if len(ws) >= 2 and ws[-1] == "trida":
                 variants[" ".join(ws[:-1])].add(n)
+            if len(ws) >= 3 and ws[0] == "nabrezi":     # "Závodu míru" for nábřeží Závodu míru
+                variants[" ".join(ws[1:])].add(n)
             if len(ws) >= 2 and ws[-1].upper() in ROMAN:
                 bases[" ".join(ws[:-1])].add(n)
             for v in _cases(k):

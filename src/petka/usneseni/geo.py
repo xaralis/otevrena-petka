@@ -124,8 +124,8 @@ def _cached(cache: Cache, key: str, fetch):
     return cache[key]
 
 
-def _bbox_params() -> dict:
-    return {"geometry": ",".join(map(str, BBOX)), "geometryType": "esriGeometryEnvelope",
+def _bbox_params(bbox: tuple = BBOX) -> dict:
+    return {"geometry": ",".join(map(str, bbox)), "geometryType": "esriGeometryEnvelope",
             "inSR": 4326, "spatialRel": "esriSpatialRelIntersects"}
 
 
@@ -162,20 +162,20 @@ def street_geometry(cache: Cache, kod: int) -> dict | None:
         [f["geometry"] for f in _query(L_STREET, f"kod={kod}", "kod", maxAllowableOffset=0.00001)]))
 
 
-def addresses(cache: Cache, field: str, n: int) -> list[dict]:
-    """Address points around Pardubice with čp. (`cp`) or č. o. (`co`) = n."""
+def addresses(cache: Cache, field: str, n: int, bbox: tuple = BBOX) -> list[dict]:
+    """Address points around Pardubice (inside `bbox`) with čp. (`cp`) or č. o. (`co`) = n."""
     col = {"cp": "cislodomovni", "co": "cisloorientacni"}[field]
 
     def fetch():
         out = []
         for f in _query(L_ADDRESS, f"{col}={n}", "kod,adresa,cislodomovni,cisloorientacni,ulice",
-                        **_bbox_params()):
+                        **_bbox_params(bbox)):
             p = f["properties"]
             out.append({"kod": p["kod"], "adresa": p["adresa"], "cp": p["cislodomovni"],
                         "co": p["cisloorientacni"], "ulice": p["ulice"],
                         "point": f["geometry"]["coordinates"]})
         return sorted(out, key=lambda a: a["kod"])
-    return _cached(cache, f"{field}:{n}", fetch)
+    return _cached(cache, f"{field}:{n}" if bbox == BBOX else f"{field}:{n}@{','.join(map(str, bbox))}", fetch)
 
 
 def _parcel_key(ku: int, druh: int, kmen: int, pod: int | None) -> str:

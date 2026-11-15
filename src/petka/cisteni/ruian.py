@@ -12,6 +12,9 @@ from ..usneseni.geo import L_MOMC, L_STREET, OBEC, _merge, _query
 from .geocode import obvod_id
 
 BATCH = 40      # streets per query when prefetching
+# the whole town with its outer parts (Staré Čívice, Opočínek, Lány na Důlku, Hostovice), wider
+# than the box usneseni.geo looks for addresses in
+TOWN_BBOX = (15.62, 49.99, 15.90, 50.08)
 
 
 class Cache(dict):
@@ -49,7 +52,7 @@ class Ruian:
         return geo.street_geometry(self.cache, kod)
 
     def addresses(self, cp: int) -> list[dict]:
-        return geo.addresses(self.cache, "cp", cp)
+        return geo.addresses(self.cache, "cp", cp, TOWN_BBOX)
 
     def obvody(self) -> dict[str, dict]:
         """{obvod id: polygon} of every městský obvod of the town."""
