@@ -17,6 +17,16 @@ BATCH = 40      # streets per query when prefetching
 TOWN_BBOX = (15.62, 49.99, 15.90, 50.08)
 
 
+def fetch_obvody() -> dict[str, dict]:
+    """{obvod id: GeoJSON polygon, WGS84} of every městský obvod of the town, asked from ČÚZK."""
+    out = {}
+    for f in _query(L_MOMC, f"obec={OBEC}", "kod,nazev", maxAllowableOffset=0.00002):
+        k = obvod_id(f["properties"]["nazev"])
+        if k:
+            out[k] = _merge([out.get(k), f["geometry"]])
+    return out
+
+
 class Cache(dict):
     """The ruian_cache table as the dict usneseni.geo's helpers expect (put / offline)."""
 
@@ -56,14 +66,7 @@ class Ruian:
 
     def obvody(self) -> dict[str, dict]:
         """{obvod id: polygon} of every městský obvod of the town."""
-        def fetch():
-            out = {}
-            for f in _query(L_MOMC, f"obec={OBEC}", "kod,nazev", maxAllowableOffset=0.00002):
-                k = obvod_id(f["properties"]["nazev"])
-                if k:
-                    out[k] = _merge([out.get(k), f["geometry"]])
-            return out
-        return geo._cached(self.cache, f"momc_all:{OBEC}", fetch)
+        return geo._cached(self.cache, f"momc_all:{OBEC}", fetch_obvody)
 
     def prefetch(self, kods) -> None:
         """Street geometries in batches (one query per street is slow for a whole town)."""
