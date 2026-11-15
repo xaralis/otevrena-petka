@@ -364,7 +364,7 @@ def test_street_page(fixture):
               "<span>1 podnět od května 2026, 1 vyřešený</span>", '<section data-pd-detail="podnety" aria-label="Podněty po měsících" hidden>',
               '<h3 class="side-h ul-panel-h">Na mapě</h3>',
               '<li><a href="/verejny-prostor/ulice/wolkerova?radky=vyreseno#aktualne">Vyřešené</a><b>1</b></li>',
-              '<li><a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Na stránce Podněty</a><b>1</b></li>',
+              
               "<b>19 usnesení</b><span>rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
               'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení', "kpi.js",
               '<h2 id="ul-akt-h">Aktuálně</h2>',

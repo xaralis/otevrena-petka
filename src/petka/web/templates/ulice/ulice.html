@@ -55,7 +55,6 @@
           {% set base = '/verejny-prostor/ulice/' ~ s.slug %}
           {% if rep.ceka %}<li><a href="{{ base }}?radky=ceka#aktualne">Čekající</a><b>{{ rep.ceka }}</b></li>{% endif %}
           {% if rep.vyreseno %}<li><a href="{{ base }}?radky=vyreseno#aktualne">Vyřešené</a><b>{{ rep.vyreseno }}</b></li>{% endif %}
-          <li><a href="{{ pd_url }}">Na stránce Podněty</a><b>{{ rep.n }}</b></li>
         </ul>
       </div>
     </div>
