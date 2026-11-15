@@ -159,7 +159,8 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
     marks = q.board_marks(q.place_notices(), {slug: s}, today, ahead)
     rep_rows = q.report_rows(reps, now, slug)
     rows = q.rows(rep_rows, cl_rows, [q.resolution_row(r, today) for r in res], [q.notice_row(m, today) for m in marks])
-    shown = rows if radky == "vse" else q.current(rows, today)[:q.ROWS]
+    radky = radky if radky in dict(q.VIEWS) else ""
+    shown = q.view(rows, radky, today)
     # the map shows what the rows show, nothing more
     keys = {r["key"] for r in shown}
     row_of = {i: r["key"] for r in rep_rows for i in r["ids"]}
@@ -193,12 +194,14 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
         "pd_url": pd_url, "pd_kind": f"/verejny-prostor/podnety?ulice={slug}&stav=vse&druh=",
         "n_res": n_res, "res_years": q.resolution_years(res, today), "res_last": [q.resolution_row(r, today) for r in res[:3]],
         "detail": detail if detail in DETAILS else "cisteni",
+        "waiting": sorted((r for r in rep_rows if r.get("open")), key=lambda r: r["date"]),   # the panel's top: longest waiting first
         "next_date": cl.on_next[0]["date"] if cl.on_next else None,
         "q_url": "/radnice/usneseni?q=" + quote_plus(s.name) + "&rezim=fulltext",
         "deska_url": "/radnice/uredni-deska?q=" + quote_plus(s.name), "n_notices": _safe(q.notices_posted, s.name),
         "rows": shown, "data": data,
-        "views": [{"label": "Aktuální", "n": len(q.current(rows, today)[:q.ROWS]), "href": f"/verejny-prostor/ulice/{slug}#aktualne", "on": radky != "vse"},
-                  {"label": "Vše", "n": len(rows), "href": f"/verejny-prostor/ulice/{slug}?radky=vse#aktualne", "on": radky == "vse"}],
+        "views": [{"label": label, "n": len(q.view(rows, k, today)), "on": k == radky,
+                   "href": f"/verejny-prostor/ulice/{slug}" + (f"?radky={k}" if k else "") + "#aktualne"}
+                  for k, label in q.VIEWS if k in ("", "vse") or q.view(rows, k, today)],
         "has": {"next": any(not f["properties"]["past"] and not f["properties"]["area"] for f in cleaning),
                 "area": any(not f["properties"]["past"] and f["properties"]["area"] for f in cleaning),
                 "reports": bool(points), "waiting": bool(rep["ceka"]), "cluster": len(points) > 1,

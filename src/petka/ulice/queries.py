@@ -123,7 +123,7 @@ def report_rows(rows: list[dict], now: dt.datetime, slug: str) -> list[dict]:
         d = r["reported_at"].date()
         return {"key": f"r{r['id']}", "kind": "rep", "date": d, **_label(d, today), "title": r["category"],
                 "sub": report_sub(r, now), "status": ps.status_word(r), "href": source.detail(r["id"]),
-                "ext": True, "ids": [r["id"]], "open": ps.outcome(r) == "ceka"}
+                "ext": True, "ids": [r["id"]], "open": ps.outcome(r) == "ceka", "outcome": ps.outcome(r)}
 
     for r in rows:
         if r["reported_at"] >= cut or ps.outcome(r) != "vyreseno":
@@ -139,7 +139,7 @@ def report_rows(rows: list[dict], now: dt.datetime, slug: str) -> list[dict]:
                     "label": pw.MONTH_ABBR[m - 1], "year": y if y != today.year else None,   # short: the date column is narrow
                     "title": pw.podnetu(len(rs)).replace(" ", NB),
                     "sub": ", ".join(f"{k}{NB}{v}" for k, v in sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))),
-                    "status": ("vyřešeno", "st"), "href": f"/verejny-prostor/podnety?ulice={slug}&stav=vyreseno#kde",
+                    "status": ("vyřešeno", "st"), "outcome": "vyreseno", "href": f"/verejny-prostor/podnety?ulice={slug}&stav=vyreseno#kde",
                     "ids": [r["id"] for r in rs]})
     return out
 
@@ -180,6 +180,19 @@ def notice_row(m: dict, today: dt.date) -> dict:
             "sub": "úřední deska" + (f", {m['when']}" if m["when"] and m["traffic"] else ""),
             "status": (m["box"], "st") if m["traffic"] else ("visí", "st"),
             "href": f"/radnice/uredni-deska/{m['nid']}" if m["nid"] else None, "mark": m["id"]}
+
+
+VIEWS = (("", "Aktuální"), ("ceka", "Čekající podněty"), ("vyreseno", "Vyřešené podněty"), ("vse", "Vše"))   # ?radky=
+
+
+def view(rows: list[dict], key: str, today: dt.date) -> list[dict]:
+    """The rows of „Aktuálně“ for one view: what is current (at most ROWS), the street's waiting
+    or resolved reports (every one, a month of older resolved ones as one row), or everything."""
+    if key == "vse":
+        return rows
+    if key in ("ceka", "vyreseno"):
+        return [r for r in rows if r.get("outcome") == key]
+    return current(rows, today)[:ROWS]
 
 
 def current(rows: list[dict], today: dt.date) -> list[dict]:

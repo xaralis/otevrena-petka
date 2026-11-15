@@ -29,6 +29,14 @@
   </section>
 
   <section data-pd-detail="podnety" aria-label="Podněty po měsících"{% if detail != 'podnety' %} hidden{% endif %}>
+    {% if waiting %}
+    <div class="ul-wait">
+      <h2>Čeká na vyřízení</h2>
+      <ol class="pd-rows mbox-rows ul-wait-rows">
+        {% for r in waiting %}<li><a href="#aktualne" data-ul-focus="{{ r.key }}"><span class="pd-rd">{{ r.label }}{% if r.year %}<small>{{ r.year }}</small>{% endif %}</span><span class="pd-rt"><b>{{ r.title }}</b><span>{{ r.sub }}</span></span><span class="{{ r.status[1] }}">{{ r.status[0] }}</span></a></li>{% endfor %}
+      </ol>
+    </div>
+    {% endif %}
     <h2>Podněty za posledních 12 měsíců</h2>
     {% if rep_months %}
     <div class="pd-cols">
@@ -44,10 +52,10 @@
         </ul>
         <h3 class="side-h ul-panel-h">Na mapě</h3>
         <ul class="link-list">
-          {% set base = '/verejny-prostor/podnety?ulice=' ~ s.slug %}
-          <li><a href="{{ base }}#kde">Čekající</a><b>{{ rep.ceka }}</b></li>
-          <li><a href="{{ base }}&amp;stav=vyreseno#kde">Vyřešené</a><b>{{ rep.vyreseno }}</b></li>
-          <li><a href="{{ base }}&amp;stav=vse#kde">Všechny</a><b>{{ rep.n }}</b></li>
+          {% set base = '/verejny-prostor/ulice/' ~ s.slug %}
+          {% if rep.ceka %}<li><a href="{{ base }}?radky=ceka#aktualne">Čekající</a><b>{{ rep.ceka }}</b></li>{% endif %}
+          {% if rep.vyreseno %}<li><a href="{{ base }}?radky=vyreseno#aktualne">Vyřešené</a><b>{{ rep.vyreseno }}</b></li>{% endif %}
+          <li><a href="{{ pd_url }}">Na stránce Podněty</a><b>{{ rep.n }}</b></li>
         </ul>
       </div>
     </div>

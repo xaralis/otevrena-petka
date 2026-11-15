@@ -1684,3 +1684,9 @@ main > :first-child > h2:first-child, main > h2:first-child, main > :first-child
 .cl-cal .cl-o2 > h3 { margin-top: 0; }
 .cl-mapsec .cl-cap { margin: .4rem 0 0; }
 main > .sec-head:first-child, main > :first-child > .sec-head:first-child { margin-top: 0; }
+
+/* a street's reports panel: what still waits first, as rows like the map's column, on white */
+.ul-wait { margin: 0 0 2rem; }
+.ul-wait h2 { margin: 0 0 .7rem; }
+.ul-wait-rows { background: #fff; border: 2px solid var(--ink); border-radius: 3px; max-width: 44rem; }
+.ul-wait-rows li:last-child { border-bottom: 0; }

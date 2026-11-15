@@ -362,9 +362,9 @@ def test_street_page(fixture):
               'data-pd-tile="cisteni" aria-controls="ul-panel" aria-expanded="true"', f'<b>čt <span class="ul-red">26.{NB}11.</span></b>',
               'data-pd-tile="podnety" aria-controls="ul-panel" aria-expanded="false"', "<b>nic nečeká</b>",
               "<span>1 podnět od května 2026, 1 vyřešený</span>", '<section data-pd-detail="podnety" aria-label="Podněty po měsících" hidden>',
-              '<h3 class="side-h ul-panel-h">Na mapě</h3>', '<li><a href="/verejny-prostor/podnety?ulice=wolkerova#kde">Čekající</a><b>0</b></li>',
-              '<li><a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vyreseno#kde">Vyřešené</a><b>1</b></li>',
-              '<li><a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Všechny</a><b>1</b></li>',
+              '<h3 class="side-h ul-panel-h">Na mapě</h3>',
+              '<li><a href="/verejny-prostor/ulice/wolkerova?radky=vyreseno#aktualne">Vyřešené</a><b>1</b></li>',
+              '<li><a href="/verejny-prostor/podnety?ulice=wolkerova&amp;stav=vse#kde">Na stránce Podněty</a><b>1</b></li>',
               "<b>19 usnesení</b><span>rady a zastupitelstva od roku 2018</span>", '<h3 class="side-h">Naposledy</h3>',
               'href="/radnice/usneseni?q=Wolkerova&amp;rezim=fulltext">Všech 19 usnesení', "kpi.js",
               '<h2 id="ul-akt-h">Aktuálně</h2>',
@@ -402,7 +402,7 @@ def test_street_page_rows_beyond_the_first(fixture, monkeypatch):
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: many if name == "Wolkerova" else [])
     m = get("/verejny-prostor/ulice/wolkerova").text
     assert m.count("<li data-row=") == q.ROWS                                    # only what is current, capped
-    assert f'aria-current="true">Aktuální <b>{q.ROWS}</b></a><a href="/verejny-prostor/ulice/wolkerova?radky=vse#aktualne">Vše <b>' in m
+    assert f'aria-current="true">Aktuální <b>{q.ROWS}</b></a>' in m and '<a href="/verejny-prostor/ulice/wolkerova?radky=vse#aktualne">Vše <b>' in m
     m = get("/verejny-prostor/ulice/wolkerova?radky=vse").text
     assert m.count("<li data-row=") > q.ROWS and 'aria-current="true">Vše <b>' in m
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
@@ -461,3 +461,13 @@ def test_street_tiles_open_by_detail(fixture, monkeypatch):
     monkeypatch.setattr(q, "street_reports", lambda obvod, name: [])
     m = get("/verejny-prostor/ulice/lexova").text                               # nothing reported or decided
     assert "<b>letos bez čištění</b><span>ulice není v harmonogramu</span>" in m and "<b>žádné</b><span>podněty z Dej Tipu</span>" in m and "<b>žádné usnesení</b><span>rady a zastupitelstva od roku 2018</span>" in m
+
+
+def test_street_report_views(fixture, monkeypatch):
+    rs = [rep(1, 1, NOW - dt.timedelta(days=200)), rep(2, 3, NOW - dt.timedelta(days=3)), rep(3, 3, NOW - dt.timedelta(days=400))]
+    monkeypatch.setattr(q, "street_reports", lambda obvod, name: rs if name == "Wolkerova" else [])
+    m = get("/verejny-prostor/ulice/wolkerova", params={"radky": "ceka"}).text
+    rows = __import__("re").findall(r'<li data-row="([^"]+)"', m)
+    assert 'aria-current="true">Čekající podněty <b>' in m and rows and all(k.startswith("r") for k in rows)
+    assert '<a href="/verejny-prostor/ulice/wolkerova?radky=ceka#aktualne">Čekající</a>' in m      # the panel filters this map
+    assert get("/verejny-prostor/ulice/wolkerova", params={"radky": "nesmysl"}).status_code == 200

@@ -109,6 +109,13 @@
     }));
     // a row with a place on the map: a click shows it there (its card links on, to Dej Tip or the
     // notice); a row without one (a resolution) stays a link
+    // the reports panel's waiting rows: down to the map, the report shown there
+    document.querySelectorAll("[data-ul-focus]").forEach((a) => a.addEventListener("click", (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      focus(a.dataset.ulFocus);
+    }));
     if (list) list.querySelectorAll("li.ul-mapped[data-row] > a").forEach((a) => a.addEventListener("click", (e) => {
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;      // a new tab when asked for
       e.preventDefault();
