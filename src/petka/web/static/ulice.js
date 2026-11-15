@@ -26,7 +26,6 @@
   const data = JSON.parse(document.getElementById(el.dataset.inline).textContent);
   const stage = el.closest(".ul-akt");
   const wrap = el.parentElement;
-  const sheet = stage.querySelector("[data-ul-sheet]");
   const reports = data.reports.features;
   const byId = new Map(reports.map((f) => [f.properties.id, f]));
   const idsOf = {};
@@ -46,7 +45,7 @@
                                  show: ["==", ["get", "past"], false] });
     P.belowLabels(map, sl);
     sl.forEach((id) => map.moveLayer(id, cl.layers[0]));      // the street under the cleanings
-    const rep = P.reports(map, { id: "ur", data: data.reports, wrap, sheet, owners: true });
+    const rep = P.reports(map, { id: "ur", data: data.reports, wrap, owners: true });   // the card in the map, as on Podněty
     const anchor = P.anchors(map, data.anchors.map((a) => ({ ...a, what: a.text })), { key: "row", hidden: true });
     const mark = P.marks(map, data.marks.map((m) => ({ ...m, title: m.what, what: "Úřední deska" })), { icons: el.dataset.icons, key: "row" });
 
@@ -71,7 +70,7 @@
       rep.ring((st ? st.ids : []).map((id) => rep.owner(id)));
       if (st && st.card != null) rep.card.show(st.card, { enter: () => link.keep(), leave: () => link.leave() });
       else rep.card.hide();
-    }, { delay: 250, within: () => [wrap, sheet, list] });
+    }, { delay: 250, within: () => [wrap, list] });
     rep.onCount(link.redraw);
 
     map.on("mousemove", rep.pt, (e) => { map.getCanvas().style.cursor = "pointer"; link.hover(fromReport(e.features[0].properties.id)); });
@@ -95,7 +94,7 @@
       link.pin(fromReport(f.properties.id));    // the card has a toggle and a link: a click (a tap) pins it
     });
     // pointing at a row shows its place – only where the card floats over the map; under the map
-    // (a narrow window, the card in the sheet) it would push the list away from the pointer, so
+    // (a narrow window) the map is above the list, out of sight, so
     // there a row shows its place on a click (below)
     const floats = window.matchMedia("(min-width: 901px) and (hover: hover)");
     if (list) list.querySelectorAll("li[data-row]").forEach((li) => {
@@ -114,7 +113,8 @@
       ...data.anchors.filter((a) => a.row === k),
     ];
     const focus = (k) => {
-      P.fit(map, featuresOf(k), { duration: 500, maxZoom: 17, padding: 70 });   // as a row of Blokové čištění
+      P.fit(map, featuresOf(k), { duration: 500, maxZoom: 17,
+            padding: window.matchMedia("(max-width: 600px)").matches ? { top: 50, left: 40, right: 40, bottom: 200 } : 70 });   // above the card on a phone   // as a row of Blokové čištění
       if (window.matchMedia("(max-width: 900px)").matches) el.scrollIntoView({ behavior: "smooth", block: "center" });
       map.once("moveend", () => link.pin(fromRow(k)));
     };

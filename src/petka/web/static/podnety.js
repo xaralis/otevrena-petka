@@ -187,7 +187,8 @@
       a.addEventListener("click", (e) => {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
         e.preventDefault();
-        map.easeTo({ center: f.geometry.coordinates, zoom: Math.max(map.getZoom(), 17), duration: 500 });
+        map.easeTo({ center: f.geometry.coordinates, zoom: Math.max(map.getZoom(), 17), duration: 500,
+                     padding: window.matchMedia("(max-width: 600px)").matches ? { bottom: 200 } : 0 });   // above the card on a phone
         if (window.matchMedia("(max-width: 900px)").matches) el.scrollIntoView({ behavior: "smooth", block: "center" });
         map.once("moveend", () => link.pin(p.id));
       });

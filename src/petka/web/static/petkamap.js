@@ -234,8 +234,8 @@ window.petkaMap = (function () {
   // the card: Dej Tip's own status word (red while it waits), how long it waits a fact of its own.
   // p = a stats.points feature's properties: id, o, w, c, s, t, a, d, p, wd
   function reportCard(p, onresize) {
-    const facts = [["nahlášeno", when(p.t)]];
-    if (p.a) facts.push(["odpověď úřadu", when(p.a)]);
+    const facts = [["nahlášeno", when(p.t), "ak-f-date"]];
+    if (p.a) facts.push(["odpověď úřadu", when(p.a), "ak-f-date"]);
     facts.push(["stav", p.w, p.o === "ceka" ? "st-no" : ""]);
     if (p.o === "ceka") { const n = p.wd || 0; facts.push(["čeká", n < 1 ? "od dneška" : `${n} ${plural(n, "den", "dny", "dní")}`]); }
     return window.mapTip.card({
