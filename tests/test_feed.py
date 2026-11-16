@@ -89,7 +89,7 @@ def test_page_without_js_adds_and_drops(page):
 
 def test_preview_json(page):
     out = get("/muj-prehled/nahled.json", params={"ulice": "wolkerova", "co": "podnety,deska"}).json()
-    assert out["counts"] == {"podnety": 3, "deska": 1, "uzavirky": 0, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
+    assert out["counts"] == {"podnety": 3, "deska": 1, "uzavirky": 0, "kontejnery": 0, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
     assert [r["head"] for r in out["rows"]] == ["Autovrak", "Úřední deska", "Lavičky, zábradlí", "Lavičky, zábradlí"]   # as many as counted
     assert out["feed"].endswith("rss.xml?ulice=wolkerova&co=podnety,deska")
     assert out["webcal"].startswith("webcal://")
@@ -213,3 +213,16 @@ def test_closures_in_the_feed():
 def test_rss_escapes_ids_from_sources():
     e = feed.Event("uzavirka-<x>&", "uzavirka", NOW, "Wolkerova", "t", "x", "/p")
     ET.fromstring(feed.rss([e], ["Wolkerova"], "https://p.cz", "https://p.cz/rss.xml"))      # still well-formed
+
+
+def test_containers_a_week_ahead():
+    from petka.odpady.data import Drop
+    soon = Drop("ceskova-po", "Češkova – Kašparova u školy", "mo5", (NOW + dt.timedelta(days=3)).date(), "14.00–15.30", "",
+                [15.77, 50.02], False)
+    later = Drop("ceskova-po", "Češkova – Kašparova u školy", "mo5", (NOW + dt.timedelta(days=20)).date(), "", "", [15.77, 50.02], False)
+    base = sources()
+    src = feed.Sources(base.reports, base.notices, base.resolutions, base.cleanings,
+                       containers=lambda name: [soon, later] if name == "Wolkerova" else [])
+    evs = feed.events([("Wolkerova", "wolkerova")], src, NOW, {"kontejnery"})
+    assert len(evs) == 1 and evs[0].head == "Kontejner na objemný odpad"       # the later one: not yet
+    assert "dovezen 14.00–15.30" in evs[0].text and evs[0].sub.startswith("Češkova – Kašparova u školy, ")

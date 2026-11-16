@@ -47,6 +47,7 @@ class Sources:
     resolutions: Callable[[str], list[dict]]        # resolutions mentioning a street
     cleanings: Callable[[str], list[dict]]          # the street's cleanings this year (cisteni items)
     closures: Callable[[str], list] = lambda name: []   # closures naming the street (petka.uzavirky.queries.Closure)
+    containers: Callable[[str], list] = lambda name: []  # přistavení of a kontejner near the street (petka.odpady.data.Drop)
 
 
 def sources(obvod: str) -> Sources:
@@ -62,7 +63,30 @@ def sources(obvod: str) -> Sources:
     return Sources(reports=lambda name: street_rows(obvod, st.fold(name)), notices=q.street_notices,
                    resolutions=lambda name: q.resolutions(name)[0],
                    cleanings=lambda name: [i for i in its if i["street"] == name],
-                   closures=lambda name: [c for c in cls if uq.names(c, name)])
+                   closures=lambda name: [c for c in cls if uq.names(c, name)],
+                   containers=_near_containers(obvod))
+
+
+NEAR = 300              # m: a kontejner stanoviště this close to a street is news for it
+
+
+def _near_containers(obvod: str) -> Callable[[str], list]:
+    """name -> the year's přistavení (this and next) whose stanoviště lies within NEAR m of the
+    street or whose text names it."""
+    from shapely.geometry import shape
+    from ..cisteni.geocode import to_m
+    from ..odpady import data as od
+    from . import streets as st
+    year = dt.date.today().year
+    drops = od.drops(year) + od.drops(year + 1)
+    lines = {s.name: to_m(s.geometry) for s in st.streets(obvod).values() if s.geometry}
+    pts = {d.key: to_m({"type": "Point", "coordinates": d.point}) for d in drops if d.point}
+
+    def near(name: str) -> list:
+        line = lines.get(name)
+        return [d for d in drops if (line is not None and d.key in pts and line.distance(pts[d.key]) <= NEAR)
+                or name in d.place]
+    return near
 
 
 def _local(d: dt.datetime | dt.date, hour: int = 8) -> dt.datetime:
@@ -112,6 +136,17 @@ def street_events(name: str, slug: str, src: Sources, now: dt.datetime) -> list[
                              "Uzavírka", f"{name}, {c.what}", (f"do {q.dm(c.ends.astimezone(TZ).date())}" if c.ends else "",
                                                               "st-no" if c.closed and c.now(now) else ""),
                              brief=f"{c.what}{ends}. Podrobnosti na Otevřené Pětce."))
+    for d in src.containers(name):
+        shows = _local(d.date - dt.timedelta(days=AHEAD), 18)
+        if since <= shows <= now:
+            wd, when = cw.WD[d.date.weekday()], q.dm(d.date)
+            time = f", dovezen {d.time}" if d.time and "–" in d.time else (f", {d.time}" if d.time else "")
+            out.append(Event(f"kontejner-{d.key}-{d.date:%Y%m%d}", "kontejner", shows, name,
+                             f"{name}: kontejner na objemný odpad {wd} {when}",
+                             f"Kontejner na objemný odpad bude přistaven {wd} {when}{time} na stanovišti {d.place}. "
+                             "Stojí, dokud se nenaplní; patří do něj nábytek, koberce, matrace a další objemný odpad z domácnosti.",
+                             "/verejny-prostor/odpady#od-map-h", "Kontejner na objemný odpad", f"{d.place}, {wd} {when}",
+                             ("proběhlo", "ul-done") if d.date < now.date() else (cw.until(d.date, now.date()), "")))
     for d in sorted({i["date"] for i in src.cleanings(name)}):
         shows = _local(d - dt.timedelta(days=AHEAD), 18)
         if since <= shows <= now:
@@ -132,10 +167,13 @@ KINDS = (("podnety", "Podněty z Dej Tipu", "Dej Tip je městská aplikace, kde 
              "a další oznámení, která se týkají vybraných ulic."),
          ("uzavirky", "Uzavírky", "Kdy a kde se v ulici nedá projet: uzavírky a omezení dopravy z Národního "
              "dopravního informačního centra ŘSD."),
+         ("kontejnery", "Kontejnery na objemný odpad", "Týden předem: kdy a kde nablízku přistaví kontejner na nábytek, "
+             "koberce a další objemný odpad."),
          ("usneseni", "Usnesení", "Co o ulici rozhodla rada nebo zastupitelstvo, třeba oprava chodníku nebo nová zakázka."),
          ("cisteni", "Blokové čištění", "Týden předem: kdy se v ulici čistí a do kdy musíte přeparkovat."))
 PREVIEW = 60            # days the page's preview shows, and its counts by kind cover
-GROUP = {"podnet": "podnety", "vyreseno": "podnety", "deska": "deska", "uzavirka": "uzavirky", "usneseni": "usneseni",
+GROUP = {"podnet": "podnety", "vyreseno": "podnety", "deska": "deska", "uzavirka": "uzavirky", "kontejner": "kontejnery",
+         "usneseni": "usneseni",
          "cisteni": "cisteni"}
 ATTRIBUTION = "Zdrojem digitalizovaných informací o silničním provozu je NDIC."
 
