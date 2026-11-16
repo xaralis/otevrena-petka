@@ -160,3 +160,43 @@ def yards(obvod: ObvodParam):
            for y in yd["yards"]]
     return JSONResponse({"source": YARDS_SOURCE, "file": yd["file"], "checked": yd["checked"], "items": out},
                         headers={"Cache-Control": "public, max-age=3600"})
+
+
+def _street_obvody() -> dict[str, list[str]]:
+    """{street name: [obvod ids]} for the town (a street on a border belongs to both)."""
+    from ..obvody import TOWN_BY_ID
+    from ..ulice import streets as st
+    out: dict[str, list[str]] = {}
+    for o in TOWN_BY_ID:
+        try:
+            for s in st.streets(o).values():
+                out.setdefault(s.name, []).append(o)
+        except Exception:
+            pass
+    return out
+
+
+@api.get("/svoz")
+def collection(obvod: ObvodParam, ulice: str = ""):
+    """Svoz směsného komunálního odpadu podle ulic: tabulka Služeb města Pardubic „Harmonogram
+    svozu TKO ulice“ (2022, SmP ji stále odkazuje). Jeden řádek = ulice (nebo část obce bez ulic)
+    a dny svozu (`days`: po–ne). Některé ulice tabulka dělí na `popelnice` (nádoby u domů) a
+    `kontejnery` (1100 l na sídlištích, `who`) nebo na části (`part`). `text` je znění tabulky.
+
+    ulice: názvy ulic oddělené čárkou (přesně podle RÚIAN, např. `Češkova,Wolkerova`). `obvody`
+    podle RÚIAN; řádek části obce bez ulic (`town_part`, např. Žižín) obvody nemá, vrací se jen bez `?obvod=`. Nádoby
+    přistavte ve svozový den od 5.30."""
+    by = _street_obvody()
+    want = {x.strip() for x in ulice.split(",") if x.strip()}
+    out = []
+    for r in data.svoz_rows():
+        obv = sorted(by.get(r.get("street") or "", []))
+        if want and r.get("street") not in want:
+            continue
+        if not obvod.matches(obv) and not (obvod.whole_town and r.get("town_part")):
+            continue
+        out.append({"street": r.get("street"), "town_part": r["name"] if r.get("town_part") else None,
+                    "who": r["bins"] or None, "part": r["part"] or None, "days": r["days"], "text": r["text"],
+                    "obvody": obv})
+    return JSONResponse({"source": "https://smp-pce.cz/odpady/svoz-komunalniho-odpadu", "file": "harmonogram-svozu-tko-ulice-1665467792.xls",
+                         "date": "2022-10-11", "items": out}, headers={"Cache-Control": "public, max-age=86400"})

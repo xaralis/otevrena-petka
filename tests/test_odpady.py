@@ -94,3 +94,11 @@ def test_sorted_waste_map(now, monkeypatch):
     assert fc["features"][0]["properties"]["what"] == "Plast, Papír" and fc["features"][1]["properties"]["place"] == "Kontejnery"
     monkeypatch.setattr(web, "_bins", lambda obvod: [])
     assert "Kontejnery na tříděný odpad" not in TestClient(app).get("/verejny-prostor/odpady").text
+
+
+def test_api_svoz():
+    c = TestClient(app)
+    d = c.get("/api/v1/odpady/svoz", params={"ulice": "Češkova"}).json()
+    assert d["date"] == "2022-10-11"
+    assert {(x["who"], tuple(x["days"])) for x in d["items"]} == {("popelnice", ("čt",)), ("kontejnery", ("po", "čt"))}
+    assert len(c.get("/api/v1/odpady/svoz").json()["items"]) == 479

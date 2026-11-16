@@ -80,12 +80,16 @@
 </section>
 <section class="data-tab" id="odpady" data-panel="odpady">
 <h2>Odpady</h2>
-<p>Přistavování velkoobjemových kontejnerů na objemný odpad a sběrné dvory s otevírací dobou za celé město, podle <a href="https://smp-pce.cz/odpady">Služeb města Pardubic</a>. Harmonogram kontejnerů SmP zveřejňuje jen jako sken, přepsali jsme ho ručně; seznam dvorů čteme každý den. Jen některé obvody vrátí parametr <a href="#obvod"><code>?obvod=</code></a>.</p>
+<p>Přistavování velkoobjemových kontejnerů na objemný odpad, svoz směsného odpadu podle ulic a sběrné dvory s otevírací dobou za celé město, podle <a href="https://smp-pce.cz/odpady">Služeb města Pardubic</a>. Harmonogram kontejnerů SmP zveřejňuje jen jako sken, přepsali jsme ho ručně; seznam dvorů čteme každý den. Jen některé obvody vrátí parametr <a href="#obvod"><code>?obvod=</code></a>.</p>
 <table class="ledger catalog">
   <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
   <tbody>
     <tr><td><b>Kontejnery</b></td><td>Jedno přistavení od dneška: stanoviště slovy (<code>place</code>), den (<code>date</code>), kdy bude kontejner dovezen (<code>time</code>), obvod a poloha <code>[lon, lat]</code> odvozená z popisu (<code>approx</code>: jen přibližně, u neznámého místa chybí).</td>
         <td class="nowrap"><a href="/api/v1/odpady/kontejnery">JSON</a></td></tr>
+    <tr><td><b>Svoz směsného odpadu</b></td><td>Dny svozu podle ulic (<code>days</code>), u některých ulic zvlášť pro popelnice a kontejnery (<code>who</code>) nebo pro část ulice (<code>part</code>), s původním zněním řádku (<code>text</code>). Z tabulky SmP z roku 2022, kterou SmP stále odkazuje. Filtr <code>?ulice=Češkova,Wolkerova</code>.</td>
+        <td class="nowrap"><a href="/api/v1/odpady/svoz">JSON</a></td></tr>
+    <tr><td><b>Kontejnery na tříděný odpad</b></td><td>Stanoviště kontejnerů (plast, papír, sklo, kov, bio, textil, elektro, olej) z OpenStreetMap, součást datové sady <a href="#mista">Místa</a>: <code>?druh=kontejner</code>, druhy odpadu v poli <code>odpad</code>. Licence ODbL, úplnost neověřená.</td>
+        <td class="nowrap"><a href="/api/v1/mista?druh=kontejner">JSON</a></td></tr>
     <tr><td><b>Sběrné dvory</b></td><td>Jeden dvůr: název, adresa, otevírací doba (<code>hours</code>: dny, od, do), co nebere (<code>takes_not</code>) a co bere jen on (<code>only_here</code>), poloha.</td>
         <td class="nowrap"><a href="/api/v1/odpady/dvory">JSON</a></td></tr>
   </tbody>
