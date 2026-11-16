@@ -122,6 +122,12 @@ def test_closures_one_per_situation():
     assert (b.place, b.what, b.obvody) == ("Silnice II/355 (ulice Dašická)", "Uzavřený jízdní pruh", ["mo3"])
 
 
+def test_place_from_other_wordings():
+    assert uq.place("Od 16.11.2026 13:00 do 15:05; v ulici Češkova v obci Pardubice , délka 62m; nehoda") == "Češkova"
+    assert uq.place("místní komunikace, Ležánka, okr. Pardubice, uzavřeno") == "Místní komunikace, Ležánka"
+    assert uq.place("Od 1.1.2027 do 2.1.2027; " + "x" * 80) == "Místní komunikace"
+
+
 @pytest.fixture
 def fake(monkeypatch):
     from petka.uzavirky import web

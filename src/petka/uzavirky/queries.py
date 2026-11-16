@@ -11,6 +11,7 @@ must not name NDIC as its source, and ŘSD is not answerable for any of it (poin
 """
 
 import datetime as dt
+import re
 from dataclasses import dataclass, field
 
 from .. import db, obvody
@@ -55,10 +56,17 @@ class Closure:
 
 
 def place(text: str) -> str:
-    """Where, from NDIC's text: what comes before the obvod („ulice Wolkerova, Pardubice V, …“)."""
+    """Where, from NDIC's text: what comes before the obvod („ulice Wolkerova, Pardubice V, …“),
+    or the street a sentence names („Od … ; v ulici Češkova v obci Pardubice, délka 62m; nehoda“)."""
+    if not text.startswith(("ulice ", "silnice ", "místní komunikace")):
+        m = re.search(r"\bv ulici ([^,;]+?)(?= v obci| v Pardubic|\s*[,;]|$)", text)
+        if m:
+            return m.group(1).strip()
     head = text.split(", Pardubice")[0].split(", okr. ")[0].strip(" ,")
     head = head.removeprefix("ulice ").strip()
-    return head[:1].upper() + head[1:] if head else "Místní komunikace"
+    if not head or len(head) > 60:
+        return "Místní komunikace"
+    return head[:1].upper() + head[1:]
 
 
 def closures(rows: list[dict], at: dt.datetime) -> list[Closure]:
