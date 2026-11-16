@@ -99,6 +99,9 @@ max-age=3600`; celé město ~215 kB, gzip ~40 kB. Před prvním stažením 503.
 - `changed_at` – kdy Pětka naposledy viděla změnu `free` nebo `total` parkoviště (při prvním
   stažení čas stažení). Zdroj čas měření nemá; parkoviště, jehož čísla se dlouho nemění, může
   mít zamrzlé čidlo, nebo se tam jen nic neděje (v noci).
+- **Stáří posuzujte podle `fetched_at`**: je-li starší než pár minut, Pětka ze zdroje nic nového
+  nemá a čísla mohou být zastaralá. `changed_at` je jen nápověda: v noci nebo na klidném
+  parkovišti se čísla hodiny nemění a jsou přesto platná.
 - Parkoviště, které zdroj den neuvedl, v odpovědi chybí.
 - ETag se mění s každým úspěšným stažením (`fetched_at` je v těle); 304 přijde, když od minula
   stažení neproběhlo. `Cache-Control: public, max-age=30`. Před prvním stažením 503.
@@ -106,7 +109,7 @@ max-age=3600`; celé město ~215 kB, gzip ~40 kB. Před prvním stažením 503.
 ### `GET /api/v1/parkovani/statistiky`
 
 Z historie: vzorek každého parkoviště po 5 minutách (první úspěšné stažení v každém
-pětiminutovém okně). Parametry `?dni=` (1–366, výchozí 28) a `?profily=true`.
+pětiminutovém okně). Parametry `?dni=` (7, 28 nebo 91, výchozí 28; jiná hodnota = 422) a `?profily=true`.
 
 ```json
 { "v": 1, "days": 28, "from": "…", "to": "…", "history_from": "…",

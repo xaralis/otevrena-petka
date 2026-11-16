@@ -31,6 +31,8 @@ LIVE_CACHE = "public, max-age=30"
 STATS_CACHE = "public, max-age=600"
 STATS_TTL = 600             # s: the statistics are worked out again at most this often
 DAYS = 28                   # the statistics' default window
+DAYS_ALLOWED = (7, 28, 91)  # the windows the API offers: a few, so that the cache of answers stays small
+STATS_MAX = 64              # answers kept at most (expired ones go first, then the oldest)
 SOURCE_URL = "https://pardubice.chytrejsiparking.cz/"
 NOTE = ("Obsazenost je z neoficiálního rozhraní aplikace správce parkovišť (ChytřejšíParking, DPMP), čas měření "
         "zdroj neuvádí. `changed_at` je, kdy Otevřená Pětka naposledy viděla změnu čísel parkoviště, "
@@ -94,6 +96,17 @@ def obsazenost(request: Request, obvod: ObvodParam):
 _stats: dict = {}
 
 
+def _remember(key, value) -> None:
+    """Keep one answer in the bounded cache: expired entries are dropped, and while it is still
+    full, the oldest one."""
+    now = time.monotonic()
+    for k in [k for k, (t, _) in _stats.items() if now - t >= STATS_TTL]:
+        del _stats[k]
+    while len(_stats) >= STATS_MAX:
+        del _stats[min(_stats, key=lambda k: _stats[k][0])]
+    _stats[key] = (now, value)
+
+
 def statistics(obvod: ObvodFilter, days: int, profiles: bool) -> dict:
     """The statistics of the obvody over the last `days` days, worked out at most every STATS_TTL s."""
     key = (obvod.ids, days, profiles)
@@ -112,18 +125,20 @@ def statistics(obvod: ObvodFilter, days: int, profiles: bool) -> dict:
            "note": ("Podíl obsazených míst (0–1) podle vzorků po 5 minutách; `full` = podíl vzorků, kdy byla volná "
                     "nejvýš desetina míst. Mřížky jsou 7 dní (pondělí první) × 24 hodin pražského času, null = bez dat."),
            "profile": stats.grid(rows), "lots": stats.lots(rows, names, lot_obvody, profiles)}
-    _stats[key] = (time.monotonic(), out)
+    _remember(key, out)
     return out
 
 
 @api.get("/statistiky")
 def statistiky(request: Request, obvod: ObvodParam,
-               dni: int = Query(DAYS, ge=1, le=366, description="Za kolik posledních dní (1–366)."),
+               dni: int = Query(DAYS, description="Za kolik posledních dní: 7, 28 nebo 91."),
                profily: bool = Query(False, description="Přidat ke každému parkovišti jeho typický týden.")):
     """Statistiky obsazenosti z historie (vzorek každých 5 minut): typický týden (průměrná obsazenost
     podle dne v týdnu a hodiny, `profile`) a parkoviště od nejvytíženějšího (`lots`: průměrná
     obsazenost, podíl času, kdy bylo plno). S `?profily=true` i typický týden každého parkoviště,
     např. pro „v tuhle dobu tu bývá plno“. Přepočítává se nejvýš každých 10 minut."""
+    if dni not in DAYS_ALLOWED:
+        raise HTTPException(422, f"Neplatné dni: {dni}. Platné jsou {', '.join(map(str, DAYS_ALLOWED))}.")
     out = statistics(obvod, dni, profily)
     tag = etag.weak(out["to"], out["from"], dni, profily, ",".join(obvod.ids))
     headers = {"ETag": tag, "Cache-Control": STATS_CACHE}

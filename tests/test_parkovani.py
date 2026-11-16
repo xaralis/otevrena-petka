@@ -310,6 +310,8 @@ def test_statistiky_api(filled):
     assert [x["id"] for x in d["lots"]] == ["A", "B"] and d["lots"][0]["occupancy"] >= 0.9 and "profile" in d["lots"][0]
     assert [x["id"] for x in get("/api/v1/parkovani/statistiky?obvod=mo5").json()["lots"]] == ["B"]
     assert get("/api/v1/parkovani/statistiky?dni=0").status_code == 422
+    assert get("/api/v1/parkovani/statistiky?dni=30").status_code == 422
+    assert get("/api/v1/parkovani/statistiky?dni=91").status_code == 200
     assert get("/api/v1/parkovani/statistiky", headers={"if-none-match": r.headers["etag"]}).status_code == 200  # other params
     r2 = get("/api/v1/parkovani/statistiky")
     assert get("/api/v1/parkovani/statistiky", headers={"if-none-match": r2.headers["etag"]}).status_code == 304
@@ -326,3 +328,16 @@ def test_page(filled):
 def test_data_page_lists_parkovani(filled):
     r = get("/data")
     assert 'id="parkovani"' in r.text and "/api/v1/parkovani/obsazenost" in r.text
+
+
+def test_stats_cache_is_bounded(monkeypatch):
+    web._stats.clear()
+    clock = {"t": 1000.0}
+    monkeypatch.setattr(web.time, "monotonic", lambda: clock["t"])
+    for i in range(web.STATS_MAX + 20):
+        web._remember(("k", i), i)
+    assert len(web._stats) == web.STATS_MAX and ("k", 0) not in web._stats
+    clock["t"] += web.STATS_TTL
+    web._remember("fresh", 1)
+    assert list(web._stats) == ["fresh"]          # every expired answer dropped on insert
+    web._stats.clear()
