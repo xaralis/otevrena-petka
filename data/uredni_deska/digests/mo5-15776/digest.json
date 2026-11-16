@@ -1,0 +1,331 @@
+{
+ "notice_id": "mo5-15776",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-16T17:30:59+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Rokycanova",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15776",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 21. 11. do 23. 12. 2026 platí v Rokycanově u č. p. 2654 přechodná úprava provozu kvůli stavbě",
+ "summary": "Magistrát města Pardubic stanovil přechodné dopravní značení v ulici Rokycanova. Firma Hozijiv s.r.o. tam označí pracovní místo na chodníku a vozovce u domu č. p. 2654, kde se rekonstruuje sousední objekt. Značení platí od 21. 11. 2026 do 23. 12. 2026. Parkující vozidla se z dotčeného místa budou vymisťovat.",
+ "where": "Rokycanova, u domu č. p. 2654",
+ "period": {
+  "from": "2026-11-21",
+  "to": "2026-12-23",
+  "text": "21. 11. 2026 – 23. 12. 2026"
+ },
+ "action": null,
+ "affects": "Řidiči parkující v Rokycanově u domu č. p. 2654 a chodci na dotčeném chodníku",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "stavební práce – rekonstrukce přilehlého objektu"
+  },
+  {
+   "label": "Platnost",
+   "value": "21. 11. 2026 – 23. 12. 2026"
+  },
+  {
+   "label": "Odpovídá za provedení",
+   "value": "Hozijiv s.r.o."
+  },
+  {
+   "label": "Provedení značení",
+   "value": "přenosné svislé značky a dopravní zařízení"
+  },
+  {
+   "label": "Vymístění vozidel",
+   "value": "podle zákona o pozemních komunikacích; firma musí pořídit fotodokumentaci značení"
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "nejsou přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "B28",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": "s uvedením termínu platnosti",
+   "change": "nova"
+  },
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Rokycanova",
+  "Rokycanova 2654"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapka s vyznačením Rokycanovy u č. p. 2654 a časová osa 21. 11.–23. 12. 2026. Situační plán v PDF chybí, výkres tedy není k dispozici.",
+ "reviewer_notes": "PDF má 3 strany a situační plán, uvedený jako příloha, v něm není, proto drawing a parking jsou null. Rozsah záboru ani počet vymístěných stání z dokumentu nejde zjistit. Přechodná úprava se vydává bez návrhu, lhůta pro připomínky není, proto action je null. Datum vyvěšení na desce magistrátu v dokumentu chybí; dokument nese datum 16. 11. 2026. Význam kódu Z2 dokument nevysvětluje, uvedl jsem jen kód. Z E13 je text jen „s uvedením termínu platnosti“.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Rokycanova",
+    "source_text": "Rokycanova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.775277,
+        50.030883
+       ],
+       [
+        15.775311,
+        50.03115
+       ],
+       [
+        15.775332,
+        50.031167
+       ]
+      ],
+      [
+       [
+        15.77512,
+        50.027018
+       ],
+       [
+        15.775107,
+        50.027078
+       ]
+      ],
+      [
+       [
+        15.775107,
+        50.027078
+       ],
+       [
+        15.775097,
+        50.027176
+       ]
+      ],
+      [
+       [
+        15.775171,
+        50.029144
+       ],
+       [
+        15.77519,
+        50.029262
+       ],
+       [
+        15.775215,
+        50.029829
+       ]
+      ],
+      [
+       [
+        15.775246,
+        50.030457
+       ],
+       [
+        15.775277,
+        50.030883
+       ]
+      ],
+      [
+       [
+        15.77512,
+        50.027018
+       ],
+       [
+        15.775087,
+        50.02658
+       ]
+      ],
+      [
+       [
+        15.775097,
+        50.027176
+       ],
+       [
+        15.775092,
+        50.027313
+       ],
+       [
+        15.775129,
+        50.027988
+       ]
+      ],
+      [
+       [
+        15.775129,
+        50.027988
+       ],
+       [
+        15.775171,
+        50.029144
+       ]
+      ],
+      [
+       [
+        15.775087,
+        50.02658
+       ],
+       [
+        15.775066,
+        50.026364
+       ]
+      ],
+      [
+       [
+        15.775215,
+        50.029829
+       ],
+       [
+        15.775229,
+        50.030129
+       ]
+      ],
+      [
+       [
+        15.775229,
+        50.030129
+       ],
+       [
+        15.775246,
+        50.030457
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "Rokycanova 2654",
+    "source_text": "Rokycanova 2654",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.774942,
+      50.0268
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.772702497667185,
+    50.0259,
+    15.777181502332814,
+    50.0277
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "B28",
+    "name": "Zákaz zastavení",
+    "image": "B28.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "s uvedením termínu platnosti",
+    "change": "nova"
+   },
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, firma, důvod, značky, platnost od 21. 11. do 23. 12. 2026 i to, že se nelze odvolat, odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Hlavní údaje karta má, ale čtenáři neřekne, že značka B28 znamená zákaz zastavení, a tedy že se u domu nebude smět stát ani parkovat."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je převážně srozumitelný, jen kódy značek B28, E13 a Z2 zůstaly bez vysvětlení a místy zbyly úřední obraty jako „přechodná úprava provozu“ nebo „opravné prostředky“."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Náhled s bodem a letecký snímek ukazují okolí ulice Rokycanova, ale situační plán značení v originálu chybí, takže obrázky neukazují, kde přesně bude zábor ani značky."
+   }
+  },
+  "summary": "Přepis s originálem souhlasí: místo, termín 21. 11. až 23. 12. 2026 i firma sedí, čtenáři ale chybí vysvětlení, že značka B28 znamená zákaz zastavení.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-21",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 21. 11. 2026 – 23. 12. 2026“."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-23",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 21. 11. 2026 – 23. 12. 2026“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-16T17:31:40+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 10,
+   "cache_read": 34597,
+   "cache_write": 23165,
+   "output": 4951,
+   "usd": 0.2107
+  }
+ },
+ "published_at": "2026-11-16T17:31:40+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
