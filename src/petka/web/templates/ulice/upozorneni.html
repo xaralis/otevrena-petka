@@ -6,6 +6,7 @@
 {% block main %}
 {#- Without JS the two steps are one GET form back here: each street a hidden field, × submits
     odebrat=, the field below submits pridat=. The script takes the same form over in place. -#}
+<div class="toast" role="status" aria-live="polite" data-up-saved hidden></div>
 <div class="up-grid" data-up>
 <div>
   <form class="up-form" method="get" action="/muj-prehled" data-up-form>
@@ -30,7 +31,6 @@
         {%- endfor %}
       </ul>
       <button class="btn btn-o up-apply" type="submit" data-up-apply>Upravit výběr</button>
-      <p class="up-saved" role="status" data-up-saved hidden></p>
     </section>
   </form>
 

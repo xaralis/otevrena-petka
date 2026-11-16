@@ -1779,8 +1779,13 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .up-form .chip-add { width: 100%; }
 .up-apply { margin-top: 1rem; }
 .up-apply[hidden] { display: none; }
-.up-saved { margin: .8rem 0 0; padding: .55rem .8rem; border-radius: 3px; background: var(--grey); font-weight: 650; font-size: .92rem; }
-.up-saved[hidden] { display: none; }
+/* Toast: a short message at the top of the window, whatever is scrolled (a change that took) */
+.toast { position: fixed; z-index: 50; top: 1rem; left: 50%; transform: translateX(-50%); width: max-content; max-width: min(36rem, calc(100vw - 2rem));
+  box-sizing: border-box; padding: .75rem 1rem; border-radius: 3px; background: var(--ink); color: #fff; font-weight: 650; font-size: .95rem;
+  line-height: 1.4; box-shadow: 0 4px 16px rgba(25, 28, 31, .25); animation: toast-in .2s ease-out; }
+.toast[hidden] { display: none; }
+@keyframes toast-in { from { opacity: 0; transform: translate(-50%, -.5rem); } }
+@media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
 .up-miss { margin: 0 0 .6rem; color: var(--red-ink); font-weight: 600; }
 .up-none, .up-empty { color: var(--muted); }
 .up-box { position: sticky; top: 1.25rem; border: 2px solid var(--ink); border-radius: 3px; overflow: hidden; background: #fff; }

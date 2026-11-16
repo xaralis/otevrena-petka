@@ -88,7 +88,7 @@
   }
 
   // a change of the choice says it took: the notifications' subscription saved, or the links new
-  const savedEl = root.querySelector("[data-up-saved]");
+  const savedEl = document.querySelector("[data-up-saved]");
   let savedTimer;
   function saved(text) {
     if (!savedEl) return;
