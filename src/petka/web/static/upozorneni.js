@@ -83,7 +83,7 @@
                                 : "Změnu se nepodařilo uložit. Zkuste to prosím znovu."))
         .catch(() => saved("Změnu se nepodařilo uložit. Zkuste to prosím znovu."));
     } else {
-      saved("Výběr je uložený v tomto prohlížeči. Odebíráte už RSS nebo kalendář? Přidejte si nový odkaz níže, původní odběr zůstane po staru.");
+      saved("Výběr je uložený v tomto prohlížeči. Pokud odebíráte informace pomocí RSS nebo kalendáře, aktualizujte si odkaz.");
     }
   }
 
