@@ -1797,10 +1797,9 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 }
 
 /* Uzavírky: below the map each closure as the street page's waiting reports (.ul-w), with NDIC's
-   own text whole (unchanged, its source under the list) */
+   own text whole (unchanged; its source in „Odkud to víme“) */
 .uz-all { margin-top: 3rem; max-width: 72ch; }
 .uz-w { border-top: 1px solid var(--off); border-radius: 0; }
 .uz-w li { padding-left: 0; padding-right: 0; scroll-margin-top: 1rem; }
 .uz-w li:last-child { border-bottom: 1px solid var(--off); }
 .uz-w .ul-w-t q { display: block; -webkit-line-clamp: unset; overflow: visible; }
-.uz-src { margin: .6rem 0 0; font-size: .8rem; color: var(--muted); }
