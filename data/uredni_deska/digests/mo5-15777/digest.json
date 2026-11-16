@@ -1,0 +1,162 @@
+{
+ "notice_id": "mo5-15777",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-16T17:30:11+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - okolí parku Červeňák",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15777",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 21. 11. 2026 do 31. 12. 2027 platí u staveniště v parku Červeňák dočasné značky zákazu vstupu.",
+ "summary": "U vstupů na staveniště v parku Červeňák budou od 21. 11. 2026 do 31. 12. 2027 dočasné dopravní značky B30, tedy zákaz vstupu chodců. Důvodem je bezpečnost: na stavbě chodci opakovaně vstupovali na neoznačené staveniště a překračovali oplocení. Značky mohou mít dodatkovou tabulku „MIMO PRACOVNÍKŮ STAVBY“. Přesná místa značek jsou zakreslená v situačním plánu, který je přílohou opatření a s oznámením zveřejněn nebyl. Proti tomuto opatření se nelze odvolat.",
+ "where": "Park Červeňák, Pardubice – vstupy na staveniště",
+ "period": {
+  "from": "2026-11-21",
+  "to": "2027-12-31",
+  "text": "21. 11. 2026 – 31. 12. 2027"
+ },
+ "action": null,
+ "affects": "Chodci v parku Červeňák; na staveniště smějí jen pracovníci stavby.",
+ "facts": [
+  {
+   "label": "Značka B30",
+   "value": "zákaz vstupu chodců"
+  },
+  {
+   "label": "Dodatková tabulka E13",
+   "value": "„MIMO PRACOVNÍKŮ STAVBY“ (vstup smějí pracovníci stavby)"
+  },
+  {
+   "label": "Platnost",
+   "value": "21. 11. 2026 – 31. 12. 2027"
+  },
+  {
+   "label": "Důvod",
+   "value": "zajištění bezpečnosti na stavbě"
+  },
+  {
+   "label": "Provedení",
+   "value": "přenosné svislé značky, základní velikost, odrazové, na červeno-bílých sloupcích"
+  },
+  {
+   "label": "Odpovědnost za značení",
+   "value": "Gardenline s.r.o."
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy, 16. 11. 2026"
+  },
+  {
+   "label": "Odvolání",
+   "value": "Proti tomuto opatření se nelze odvolat."
+  }
+ ],
+ "signs": [
+  {
+   "code": "B30",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": "MIMO PRACOVNÍKŮ STAVBY",
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "park Červeňák"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s vyznačeným parkem Červeňák (je v places), protože přesné polohy značek v oznámení nejsou. Vedle ní ikona značky B30 s vysvětlením „zákaz vstupu chodců“.",
+ "reviewer_notes": "Situační plán je uvedený jako příloha (1×), ale v souboru mo5-15777-1.pdf (3 strany) není, proto drawing je null. Pokud půjde plán získat na úřední desce Magistrátu, přidat jako obrázek. Návrh opatření byl vydán bez návrhu, tedy bez lhůty na připomínky, action je null. Datum vyvěšení na desce magistrátu v dokumentu není (vyvěšeno vyplněno není), nepoužito.",
+ "visual": {
+  "map": [],
+  "ortho": null,
+  "drawing": null,
+  "signs": [
+   {
+    "code": "B30",
+    "name": "Zákaz vstupu chodců",
+    "image": "B30.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "MIMO PRACOVNÍKŮ STAVBY",
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Termíny, místo, značky i důvod sedí, jen text na dodatkové tabulce je v jiném tvaru než v originálu a staveniště je v důvodu navíc nazvané „neoznačené“, což originál neříká."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co se mění, kde, od kdy do kdy, koho se to týká i že se proti opatření nelze odvolat; připomínky originál neumožňuje."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný a kódy značek jsou vysvětlené, jen několik výrazů zůstalo úředních, třeba „opatření“ nebo „situační plán“."
+   },
+   "obrazky": {
+    "score": 2,
+    "reason": "Karta nemá obrázek ani mapu, přitom jde o konkrétní park a mapa s vyznačeným parkem by čtenáři pomohla, i když plánek s přesnými místy značek nebyl zveřejněn."
+   }
+  },
+  "summary": "Karta správně popisuje dočasný zákaz vstupu chodců na staveniště v parku Červeňák od 21. 11. 2026 do 31. 12. 2027. Má jen drobné nepřesnosti v textu dodatkové tabulky a v popisu důvodu a chybí mapa.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-21",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 21. 11. 2026 – 31. 12. 2027 (strana 2)."
+   },
+   {
+    "field": "do",
+    "value": "2027-12-31",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 21. 11. 2026 – 31. 12. 2027 (strana 2)."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-16T17:30:34+00:00",
+  "attempts": 3,
+  "usage": {
+   "calls": 6,
+   "input": 28,
+   "cache_read": 87668,
+   "cache_write": 55565,
+   "output": 13816,
+   "usd": 0.5519
+  },
+  "approved_by_person": true
+ },
+ "published_at": "2026-11-16T18:24:48+00:00",
+ "review_note": null,
+ "reviewed_by": "clovek"
+}

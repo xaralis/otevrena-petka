@@ -1,0 +1,263 @@
+{
+ "notice_id": "mo5-15778",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-16T17:27:35+00:00",
+ "source": {
+  "title": "Rozhodnutí - prodloužení povolení - Bytový dům K Višňovce",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15778",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "stavby",
+ "headline": "Stavební úřad o rok prodloužil platnost povolení bytového domu K Višňovce",
+ "summary": "Magistrát prodloužil o 1 rok platnost povolení stavby bytového domu K Višňovce na pozemcích č. 2506/17 a 2506/1 v katastrálním území Pardubice. Stavebník nestihl stavbu zahájit včas, protože se zdrželo zřízení elektrické přípojky. Odvolat se lze do 1. 12. 2026.",
+ "where": "Bytový dům K Višňovce, pozemky č. 2506/17 a 2506/1 v katastrálním území Pardubice",
+ "period": {
+  "from": null,
+  "to": null,
+  "text": "Platnost povolení se prodlužuje o 1 rok ode dne, kdy se rozhodnutí stane konečným (nikdo se neodvolá nebo se o odvolání rozhodne)."
+ },
+ "action": {
+  "what": "Odvolat se proti prodloužení povolení mohou účastníci řízení, tedy i sousedé.",
+  "deadline": "2026-12-01",
+  "how": "Odvolání se podává písemně u Magistrátu města Pardubic, stavebního úřadu (rozhoduje o něm Krajský úřad Pardubického kraje). Podává se v tolika kopiích, aby jednu dostal úřad a jednu každý účastník řízení (jinak je úřad vyrobí na náklady odvolatele). Lhůta je 15 dnů od vyvěšení rozhodnutí 16. 11. 2026, tedy do 1. 12. 2026."
+ },
+ "affects": "Sousedé pozemků a staveb v okolí (Zelené Předměstí), kterým se rozhodnutí oznamuje veřejnou vyhláškou, a další účastníci řízení.",
+ "facts": [
+  {
+   "label": "Stavba",
+   "value": "SO 01 Bytový dům K Višňovce s komerčními jednotkami v přízemí"
+  },
+  {
+   "label": "Pozemky",
+   "value": "pozemky č. 2506/17 a 2506/1 v katastrálním území Pardubice"
+  },
+  {
+   "label": "Co se mění",
+   "value": "platnost stavebního povolení z 16. 10. 2024 se prodlužuje o 1 rok"
+  },
+  {
+   "label": "Důvod",
+   "value": "zdržení při zřízení elektrické přípojky, ta je nyní hotová"
+  },
+  {
+   "label": "Žadatel",
+   "value": "Cornales s.r.o., žádost podána 10. 11. 2026"
+  },
+  {
+   "label": "Rozhodnutí vydal",
+   "value": "Magistrát města Pardubic, stavební úřad, 16. 11. 2026"
+  },
+  {
+   "label": "Lhůta pro odvolání",
+   "value": "do 1. 12. 2026 (15 dnů od vyvěšení 16. 11. 2026)"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "K Višňovce"
+ ],
+ "parcels": [
+  "p. p. č. 2506/17, k. ú. Pardubice",
+  "p. p. č. 2506/1, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s vyznačenými pozemky č. 2506/17 a 2506/1 (katastrální mapa nebo letecký snímek), aby bylo vidět, kde dům bude stát. Příloha žádný snímek ani výkres neobsahuje, podklad je nutné doplnit zvenčí.",
+ "reviewer_notes": "Příloha (3 strany) neobsahuje letecký snímek ani výkres, proto je drawing null; vyznačení pozemků 2506/17 a 2506/1 je třeba udělat v mapě z katastrálních dat. Datum vyvěšení na desce magistrátu v dokumentu není a nešlo ho ověřit; vzato datum vyhotovení 16. 11. 2026 (shodné s vyvěšením na desce obvodu). Výpočet: 16. 11. + 15 dnů = 1. 12. 2026 (oznámení), + 15 dnů = 16. 12. 2026. Pokud bylo vyvěšeno jindy, termín a datum oznámení přepočítat. Lhůta platí pro sousedy s veřejnou vyhláškou; ostatním účastníkům běží od doručení. Prodloužení je o 1 rok od konečnosti rozhodnutí, konkrétní datum konce není v dokumentu. Opraveno podle uživatele: lhůta pro odvolání je 15 dnů od vyvěšení, tedy do 1. 12. 2026.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2506/17, k. ú. Pardubice",
+    "source_text": "p. p. č. 2506/17, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771201,
+        50.026298
+       ],
+       [
+        15.770981,
+        50.026289
+       ],
+       [
+        15.770995,
+        50.026106
+       ],
+       [
+        15.771215,
+        50.026116
+       ],
+       [
+        15.771201,
+        50.026298
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2506/1, k. ú. Pardubice",
+    "source_text": "p. p. č. 2506/1, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771265,
+        50.026301
+       ],
+       [
+        15.771201,
+        50.026298
+       ],
+       [
+        15.771215,
+        50.026116
+       ],
+       [
+        15.771279,
+        50.026119
+       ],
+       [
+        15.771265,
+        50.026301
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "K Višňovce",
+    "source_text": "K Višňovce",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.770839,
+        50.026333
+       ],
+       [
+        15.771506,
+        50.026366
+       ],
+       [
+        15.771554,
+        50.026383
+       ],
+       [
+        15.773089,
+        50.026426
+       ]
+      ],
+      [
+       [
+        15.773089,
+        50.026426
+       ],
+       [
+        15.7733,
+        50.026432
+       ],
+       [
+        15.775066,
+        50.026364
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.768890497667185,
+    50.02530349999999,
+    15.773369502332814,
+    50.027103499999996
+   ],
+   "shapes": [
+    {
+     "kind": "area",
+     "d": "M619.0,335.6 L560.1,339.4 L563.8,415.6 L622.8,411.5 L619.0,335.6 Z"
+    },
+    {
+     "kind": "area",
+     "d": "M636.2,334.4 L619.0,335.6 L622.8,411.5 L639.9,410.2 L636.2,334.4 Z"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [
+  "datum lhůta 2026-12-16 v dokumentu není doslova"
+ ],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": false,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Stavba, pozemky, původní povolení, důvod i délka prodloužení odpovídají originálu, ale konec lhůty pro odvolání stojí na předpokládaném dni vyvěšení, který se nepodařilo ověřit."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta říká co, kde, koho se to týká a jak se odvolat, ale konec lhůty je jen podmíněný a nadpis ani text neříkají, že platnost skončí rok po nabytí právní moci, tedy bez konkrétního data."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen popis lhůty je zbytečně dlouhý, opakuje se v něm „od oznámení“ a poznámka, že se den vyvěšení teprve ověřuje, čtenáře mate."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek ukazuje zástavbu, ve které stavba nejspíš leží, ale pozemky na něm nejsou vyznačené a čtenář nepozná, o které místo jde; přesné vyznačení musí zajistit mapa."
+   }
+  },
+  "summary": "Údaje o prodloužení povolení bytového domu K Višňovce sedí s originálem, ale konec lhůty pro odvolání (16. 12. 2026) vychází z neověřeného dne vyvěšení na desce magistrátu.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "lhuta",
+    "value": "2026-12-16",
+    "verdict": "nelze_overit",
+    "evidence": "Originál uvádí odvolání do 15 dnů od oznámení a vyvěšení na desce magistrátu na 15 dnů, den vyvěšení ale neuvádí. Výpočet 16. 11. + 15 dnů = 1. 12. (oznámení), + 15 dnů = 16. 12. 2026 je správný jen tehdy, když bylo rozhodnutí na desce magistrátu vyvěšeno 16. 11. 2026. Toto datum je jen datum vyhotovení rozhodnutí a jinde ověřené není."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-16T17:28:05+00:00",
+  "attempts": 3,
+  "usage": {
+   "calls": 6,
+   "input": 30,
+   "cache_read": 91734,
+   "cache_write": 75484,
+   "output": 19001,
+   "usd": 0.7537
+  },
+  "approved_by_person": true
+ },
+ "published_at": "2026-11-16T18:24:48+00:00",
+ "review_note": null,
+ "reviewed_by": "clovek"
+}
