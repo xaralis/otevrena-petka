@@ -48,7 +48,7 @@
     <script type="application/json" id="od-sorts">{{ sorts|tojson }}</script>
   </div>
   <p class="cl-lg od-lg" aria-label="Legenda mapy">{% for s in sorts %}<span><i class="od-dot" style="--c: {{ s.color }}"></i>{{ s.label|lower }}</span>{% endfor %}<span><i class="od-dot" style="--c: #fff; --r: var(--ink)"></i>víc druhů</span></p>
-  <p class="cl-cap">Stanoviště jsou z <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, úplnost nikdo neověřil. Chybějící kontejner můžete do OpenStreetMap doplnit sami, sem se dostane do druhého dne.</p>
+  <p class="cl-cap">Stanoviště jsou z <a href="https://www.openstreetmap.org/">OpenStreetMap</a>.</p>
 </section>
 {% endif %}
 
