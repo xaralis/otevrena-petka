@@ -13,7 +13,12 @@ A photo Dej Tip answers with 4xx or that isn't an image is noted as failed and t
 RETRY; a network error or 5xx is tried on the next run, and a batch with nothing but such errors
 ends the run (Dej Tip is down, don't wait out every timeout).
 
-The URL carries the image's version (a hash of its bytes), so it can be cached forever.
+Only https://www.dejtip.eu/… is ever requested (`allowed`), without following redirects: the URL
+comes from Dej Tip's data, and the job must not be pointed anywhere else. An image declaring more
+than MAX_PIXELS is refused before it is decoded.
+
+The URL carries the image's version (a hash of its bytes); it is served only while the report
+still has that public photo, so a photo the reporter hides disappears at the next run.
 """
 
 import datetime as dt
@@ -21,6 +26,7 @@ import hashlib
 import io
 import logging
 import os
+import warnings
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from typing import Iterator
@@ -40,9 +46,16 @@ WORKERS = 4                 # downloads at a time
 MAX_BYTES = 20_000_000      # a phone's photo is a few MB; anything larger isn't one
 RETRY = dt.timedelta(days=7)   # a failed photo (404, not an image) is tried again after this
 TIMEOUT = httpx.Timeout(30, connect=10)
+HOST = "www.dejtip.eu"      # every photo URL in the data (1 715 of 1 715, 16. 11. 2026)
+MAX_PIXELS = 40_000_000     # a phone takes 12–48 MP; more is refused before decoding
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 VERSION_SQL = """(SELECT p.version FROM citizen_report_photos p
-                  WHERE p.id = citizen_reports.id AND p.image IS NOT NULL) AS photo_version"""
+                  WHERE p.id = citizen_reports.id AND p.image IS NOT NULL
+                    AND p.source_url = citizen_reports.photo_url) AS photo_version"""
+
+# Pillow only warns between its own limit and twice that; a warning must stop a photo too.
+# Process-wide on purpose: the filter list isn't thread-safe to change per call (WORKERS).
+warnings.filterwarnings("error", category=Image.DecompressionBombWarning)
 
 
 # --- the image --------------------------------------------------------------------------------
@@ -50,8 +63,11 @@ VERSION_SQL = """(SELECT p.version FROM citizen_report_photos p
 def shrink(data: bytes) -> bytes:
     """A downloaded photo as WebP, longer side at most MAX_SIDE px (never enlarged), turned the way
     its EXIF says and without any metadata except the colour profile. Raises OSError (Pillow's
-    UnidentifiedImageError) or Image.DecompressionBombError for what isn't a sane image."""
-    with Image.open(io.BytesIO(data)) as im:
+    UnidentifiedImageError), ValueError (more than MAX_PIXELS) or Pillow's DecompressionBomb
+    error/warning for what isn't a sane image."""
+    with Image.open(io.BytesIO(data)) as im:      # reads the header only
+        if im.size[0] * im.size[1] > MAX_PIXELS:
+            raise ValueError(f"{im.size[0]}×{im.size[1]} px, more than MAX_PIXELS")
         im.draft("RGB", (MAX_SIDE * 2, MAX_SIDE * 2))      # JPEG: decode at a fraction of the size
         icc = im.info.get("icc_profile")
         im = ImageOps.exif_transpose(im)
@@ -108,11 +124,13 @@ def save(conn, report_id: int, source_url: str, image: bytes | None, error: str 
 
 
 def get(report_id: int) -> dict | None:
-    """The stored photo of a report ({version, image}), None when there is none."""
+    """The stored photo of a report ({version, image}); None when there is none, or when the report
+    no longer has the public photo it was made from (hidden or replaced since the last run)."""
     from .. import db
     with db.pool().connection() as conn:
-        return conn.execute("""SELECT version, image FROM citizen_report_photos
-                               WHERE id = %s AND image IS NOT NULL""", (report_id,)).fetchone()
+        return conn.execute("""SELECT p.version, p.image FROM citizen_report_photos p
+                               JOIN citizen_reports r ON r.id = p.id AND r.photo_url = p.source_url
+                               WHERE p.id = %s AND p.image IS NOT NULL""", (report_id,)).fetchone()
 
 
 # --- the download ------------------------------------------------------------------------------
@@ -121,11 +139,26 @@ class Later(Exception):
     """A download to try again on the next run (network error, Dej Tip's 5xx)."""
 
 
-def download(client: httpx.Client, url: str) -> bytes:
-    """The photo's bytes. Raises Later for what may pass, ValueError for what won't (4xx, not
-    an image, too large)."""
+def allowed(url: str) -> httpx.URL | None:
+    """The URL to request when it is https://www.dejtip.eu/… (no other host, port or user part),
+    else None. Parsed by httpx, so what is checked is what would be requested."""
     try:
-        with client.stream("GET", url, timeout=TIMEOUT) as r:
+        u = httpx.URL(url)
+    except (httpx.InvalidURL, TypeError):
+        return None
+    ok = (u.scheme == "https" and u.host == HOST and u.port in (None, 443) and not u.userinfo
+          and u.path.startswith("/"))
+    return u if ok else None
+
+
+def download(client: httpx.Client, url: str) -> bytes:
+    """The photo's bytes. Raises Later for what may pass, ValueError for what won't (a URL off
+    Dej Tip, 4xx, a redirect, not an image, too large)."""
+    target = allowed(url)
+    if target is None:
+        raise ValueError(f"not a Dej Tip photo URL: {url[:200]!r}")
+    try:
+        with client.stream("GET", target, timeout=TIMEOUT, follow_redirects=False) as r:
             if r.status_code >= 500:
                 raise Later(f"HTTP {r.status_code}")
             if r.status_code != 200:
@@ -148,7 +181,7 @@ def _one(client: httpx.Client, url: str) -> tuple[bytes | None, str | None, bool
         return shrink(download(client, url)), None, False
     except Later as e:
         return None, str(e), True
-    except (ValueError, OSError, Image.DecompressionBombError) as e:
+    except (ValueError, OSError, Image.DecompressionBombError, Image.DecompressionBombWarning) as e:
         return None, f"{type(e).__name__}: {e}", False
 
 

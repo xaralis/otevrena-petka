@@ -114,6 +114,9 @@ Job (`podnety/photos.py`) po obvodech srovná fotky s podněty:
   má za dva roky 1 680 veřejných fotek z 3 723 podnětů (16. 11. 2026; MO I 143, MO II 382,
   MO III 276, MO IV 89, MO V 620, MO VI 85, MO VII 85), první naplnění tedy trvá šest běhů
   (jeden den, z Dej Tipu kolem 0,6–1 GB); pak běh stahuje jen nové fotky, pár za den.
+- Stahuje jen z `https://www.dejtip.eu/` (tak vypadají všechny adresy v datech, 1 715 z 1 715
+  16. 11. 2026) a nesleduje přesměrování: adresa přichází z dat Dej Tipu a job se jinam ptát
+  nesmí. Jinou adresu, přesměrování i obrázek s víc než 40 Mpx (před dekódováním) odmítne.
 - Fotku, na kterou Dej Tip odpoví 4xx nebo která není obrázek, si poznamená a zkusí znovu za
   týden. Chybu sítě nebo 5xx zkusí v dalším běhu; dávka, ve které Dej Tip neodpověděl ani
   jednou, běh ukončí.
@@ -122,9 +125,12 @@ Job (`podnety/photos.py`) po obvodech srovná fotky s podněty:
 
 Kopie leží v Postgresu (`citizen_report_photos`, bytea; 1 680 fotek je kolem 130–160 MB), stejně jako
 exporty rozpočtu: job podnětů nemá datový svazek a kopii lze kdykoli stáhnout znovu. Vydává je
-`/api/v1/podnety/<id>/foto/<verze>.webp`, kde verze je začátek SHA-256 obrázku: adresa se
-s fotkou mění, takže odpověď má `Cache-Control: public, max-age=31536000, immutable` a silný
-ETag (WebP se negzipuje). Stará verze nebo skrytá fotka vrátí 404.
+`/api/v1/podnety/<id>/foto/<verze>.webp`, kde verze je začátek SHA-256 obrázku (adresa se
+s fotkou mění), jen dokud podnět tu veřejnou fotku pořád má. Odpověď má `Cache-Control: public,
+max-age=3600` a silný ETag (WebP se negzipuje): po hodině se cache zeptá znovu a dostane 304,
+nebo 404, když autor fotku mezitím skryl nebo vyměnil. Napořád (`immutable`) ji cachovat nejde,
+skrytá fotka by v cache zůstala. Stará verze nebo skrytá fotka vrátí 404 hned po běhu jobu, který
+změnu viděl.
 
 ## Okno stahování
 

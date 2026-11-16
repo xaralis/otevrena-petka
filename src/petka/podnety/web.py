@@ -142,15 +142,16 @@ def reports(request: Request, obvod: ObvodParam, kategorie: str = "", stav: str 
     return JSONResponse(queries.geojson(rows), media_type="application/geo+json", headers=headers)
 
 
-PHOTO_CACHE = "public, max-age=31536000, immutable"     # the URL changes with the image
+# An hour, then revalidated by the ETag: a photo the reporter hides must leave caches soon.
+PHOTO_CACHE = "public, max-age=3600"
 
 
 @api.get("/{report_id}/foto/{ver}.webp", response_class=Response,
          responses={200: {"content": {"image/webp": {}}}})
 def photo(request: Request, report_id: int, ver: str):
     """Fotka podnětu zmenšená Pětkou (WebP, delší strana nejvýš 800 px, bez EXIF a GPS), jen když
-    ji autor na Dej Tipu zveřejnil. Adresu dává pole `photo`; mění se s fotkou, takže se smí
-    cachovat napořád. Fotka, kterou autor skryl nebo která zmizela z Dej Tipu, vrátí 404."""
+    ji autor na Dej Tipu zveřejnil. Adresu dává pole `photo`; mění se s fotkou. Cache hodinu, pak
+    ověření ETagem. Fotka, kterou autor skryl nebo vyměnil, vrátí 404."""
     p = photos.get(report_id)
     if not p or p["version"] != ver:
         raise HTTPException(404)

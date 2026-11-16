@@ -1,10 +1,13 @@
-"""Photos of the reports: shrunk to WebP without EXIF/GPS, served by the portal with a versioned
-URL and long caching, downloaded once and removed when the report loses its public photo or is
+"""Photos of the reports: shrunk to WebP without EXIF/GPS, refused when an image declares too many
+pixels, downloaded only from www.dejtip.eu, served by the portal with a versioned URL, an hour's
+caching and only while the report still has that public photo, downloaded once and removed when the report loses its public photo or is
 deleted. Images are drawn here; Dej Tip is a fake transport. Tests touching the database skip
 without one."""
 
 import datetime as dt
 import io
+import struct
+import zlib
 
 import httpx
 import pytest
@@ -60,6 +63,63 @@ def test_shrink_refuses_what_isnt_an_image():
         photos.shrink(b"<html>not found</html>")
 
 
+def png_header(width: int, height: int) -> bytes:
+    """A tiny PNG that declares a huge size: signature, IHDR and IEND, no pixels."""
+    def chunk(kind: bytes, data: bytes) -> bytes:
+        return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", zlib.crc32(kind + data))
+    return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0))
+            + chunk(b"IEND", b""))
+
+
+@pytest.mark.parametrize("w, h", [(10_000, 5_000),        # 50 MP: over MAX_PIXELS, under Pillow's limit
+                                  (12_000, 9_000),        # 108 MP: Pillow only warns
+                                  (60_000, 60_000)])      # 3.6 GP: Pillow's own error
+def test_shrink_refuses_an_image_declaring_too_many_pixels(w, h):
+    data = png_header(w, h)
+    assert len(data) < 100
+    with pytest.raises((ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning)):
+        photos.shrink(data)
+    image, error, later = photos._one(_fixed(data), "https://www.dejtip.eu/_fotoobce/bomb.png")
+    assert image is None and error and not later
+
+
+def _fixed(body: bytes, ctype: str = "image/png") -> httpx.Client:
+    return httpx.Client(transport=httpx.MockTransport(
+        lambda request: httpx.Response(200, headers={"content-type": ctype}, content=body)))
+
+
+@pytest.mark.parametrize("url", [
+    "http://www.dejtip.eu/_fotoobce/a.jpeg",                 # not https
+    "https://dejtip.eu/_fotoobce/a.jpeg",                     # another host
+    "https://amg.dejtip.eu/_fotoobce/a.jpeg",
+    "https://www.dejtip.eu.evil.example/a.jpeg",
+    "https://127.0.0.1/a.jpeg", "https://localhost/a.jpeg", "https://[::1]/a.jpeg",
+    "https://db:5432/", "https://www.dejtip.eu:8443/a.jpeg",  # another port
+    "https://user@www.dejtip.eu/a.jpeg",                      # a user part
+    "https://evil.example\\@www.dejtip.eu/a.jpeg",
+    "file:///etc/passwd", "ftp://www.dejtip.eu/a.jpeg", "", "not a url"])
+def test_only_dejtip_is_ever_asked(url):
+    asked = []
+    client = httpx.Client(transport=httpx.MockTransport(lambda r: asked.append(r) or httpx.Response(200)))
+    assert photos.allowed(url) is None
+    image, error, later = photos._one(client, url)
+    assert image is None and "not a Dej Tip photo URL" in error and not later    # permanent, waits RETRY
+    assert asked == []                                                          # no request made
+    assert photos.allowed("https://www.dejtip.eu/_fotoobce/a.jpeg") is not None
+
+
+def test_redirects_are_not_followed():
+    asked = []
+
+    def handle(request):
+        asked.append(str(request.url))
+        return httpx.Response(302, headers={"location": "http://127.0.0.1/secret"})
+    client = httpx.Client(transport=httpx.MockTransport(handle), follow_redirects=True)
+    image, error, later = photos._one(client, "https://www.dejtip.eu/_fotoobce/a.jpeg")
+    assert image is None and "302" in error and not later
+    assert asked == ["https://www.dejtip.eu/_fotoobce/a.jpeg"]
+
+
 def test_version_and_url():
     assert photos.version(b"abc") == "ba7816bf8f01cfea"
     assert photos.href(42, "ba7816bf8f01cfea") == "/api/v1/podnety/42/foto/ba7816bf8f01cfea.webp"
@@ -83,7 +143,7 @@ def test_endpoint_serves_the_webp_cached_for_good(stored):
     r = c.get(f"/api/v1/podnety/7/foto/{ver}.webp", headers={"accept-encoding": "gzip"})
     assert r.status_code == 200 and r.content == image
     assert r.headers["content-type"] == "image/webp"
-    assert r.headers["cache-control"] == "public, max-age=31536000, immutable"
+    assert r.headers["cache-control"] == "public, max-age=3600"
     assert r.headers["etag"] == f'"{ver}"' and "content-encoding" not in r.headers
     r = c.get(f"/api/v1/podnety/7/foto/{ver}.webp", headers={"if-none-match": f'"{ver}"'})
     assert r.status_code == 304 and not r.content and r.headers["etag"] == f'"{ver}"'
@@ -109,23 +169,23 @@ def dejtip(answers: dict):
 
 
 def test_one_photo_ok_gone_broken_and_later():
-    client, _ = dejtip({"https://x/ok.jpeg": (200, "image/jpeg", jpeg()),
-                        "https://x/gone.jpeg": (404, "text/html", b"no"),
-                        "https://x/page.jpeg": (200, "text/html", b"<html>"),
-                        "https://x/broken.jpeg": (200, "image/jpeg", b"\xff\xd8 broken"),
-                        "https://x/down.jpeg": (503, "text/html", b""),
-                        "https://x/slow.jpeg": httpx.ReadTimeout("slow")})
-    image, error, later = photos._one(client, "https://x/ok.jpeg")
+    client, _ = dejtip({"https://www.dejtip.eu/_fotoobce/ok.jpeg": (200, "image/jpeg", jpeg()),
+                        "https://www.dejtip.eu/_fotoobce/gone.jpeg": (404, "text/html", b"no"),
+                        "https://www.dejtip.eu/_fotoobce/page.jpeg": (200, "text/html", b"<html>"),
+                        "https://www.dejtip.eu/_fotoobce/broken.jpeg": (200, "image/jpeg", b"\xff\xd8 broken"),
+                        "https://www.dejtip.eu/_fotoobce/down.jpeg": (503, "text/html", b""),
+                        "https://www.dejtip.eu/_fotoobce/slow.jpeg": httpx.ReadTimeout("slow")})
+    image, error, later = photos._one(client, "https://www.dejtip.eu/_fotoobce/ok.jpeg")
     assert Image.open(io.BytesIO(image)).format == "WEBP" and not error and not later
     for url in ("gone", "page", "broken"):
-        image, error, later = photos._one(client, f"https://x/{url}.jpeg")
+        image, error, later = photos._one(client, f"https://www.dejtip.eu/_fotoobce/{url}.jpeg")
         assert image is None and error and not later, url
     for url in ("down", "slow"):
-        assert photos._one(client, f"https://x/{url}.jpeg")[2], url
+        assert photos._one(client, f"https://www.dejtip.eu/_fotoobce/{url}.jpeg")[2], url
 
 
 def test_units_stop_when_dejtip_doesnt_answer(monkeypatch):
-    wanted = [(i, f"https://x/{i}.jpeg") for i in range(60)]
+    wanted = [(i, f"https://www.dejtip.eu/_fotoobce/{i}.jpeg") for i in range(60)]
     monkeypatch.setattr(photos, "prune", lambda conn: 0)
     monkeypatch.setattr(photos, "todo", lambda conn, limit: wanted[:limit])
     monkeypatch.setattr(photos, "_one", lambda client, url: (None, "ConnectError", True))
@@ -183,9 +243,16 @@ def test_photos_follow_the_reports(conn, monkeypatch):
     street = {r["id"]: r for r in queries.street_rows("mo5", "testovaci")}
     assert street[-911]["photo_version"] == ver and street[-912]["photo_version"] is None
     assert photos.get(-911)["version"] == ver
+    assert photos.get(-912) is None                                       # failed: nothing to serve
 
-    # the reporter hides the photo: it goes at the next run; a deleted report takes its photo along
+    # the reporter replaces, then hides the photo: not served any more even before the next run
+    jobs.store(conn, "mo5", [report(-911, urls[-911] + "?new", 3)], [])
+    assert photos.get(-911) is None
+    rows = {r["id"]: r for r in queries.search(queries.Filters(near=FAR, radius=50))}
+    assert rows[-911]["photo_version"] is None
     jobs.store(conn, "mo5", [report(-911, None, 3)], [-912])
+    assert photos.get(-911) is None
+    # the next run removes it; a deleted report takes its photo along
     assert photos.prune(conn) == 1
     conn.commit()
     assert conn.execute("SELECT count(*) AS n FROM citizen_report_photos WHERE id = ANY(%s::bigint[])",
