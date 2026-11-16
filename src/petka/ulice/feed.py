@@ -115,8 +115,7 @@ KINDS = (("podnety", "Podněty z Dej Tipu", "Dej Tip je městská aplikace, kde 
              "a další oznámení, která se týkají vybraných ulic."),
          ("usneseni", "Usnesení", "Co o ulici rozhodla rada nebo zastupitelstvo, třeba oprava chodníku nebo nová zakázka."),
          ("cisteni", "Blokové čištění", "Týden předem: kdy se v ulici čistí a do kdy musíte přeparkovat."))
-PREVIEW = 30            # days the page's preview shows
-COUNT = 60              # days the counts by kind cover
+PREVIEW = 60            # days the page's preview shows, and its counts by kind cover
 GROUP = {"podnet": "podnety", "vyreseno": "podnety", "deska": "deska", "usneseni": "usneseni", "cisteni": "cisteni"}
 
 

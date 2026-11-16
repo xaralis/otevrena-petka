@@ -82,7 +82,7 @@ def test_page_without_js_adds_and_drops(page):
     assert 'aria-label="Odebrat Wolkerova"' in r.text
     assert "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova,josefa-ressla" in r.text
     assert 'data-copy="https://otevrenapetka.cz/muj-prehled/rss.xml?ulice=wolkerova,josefa-ressla"' in r.text
-    assert "Uzavírka chodníku" in r.text and "Oprava asfaltu" not in r.text    # 50 days back: counted, not previewed
+    assert "Uzavírka chodníku" in r.text and "Oprava asfaltu" in r.text        # 50 days back: in the 60 the counts cover
     r = get("/muj-prehled", params={"pridat": "Neexistující"})
     assert "Ulici „Neexistující“ v obvodu nemáme" in r.text
 
@@ -90,7 +90,7 @@ def test_page_without_js_adds_and_drops(page):
 def test_preview_json(page):
     out = get("/muj-prehled/nahled.json", params={"ulice": "wolkerova", "co": "podnety,deska"}).json()
     assert out["counts"] == {"podnety": 3, "deska": 1, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
-    assert [r["head"] for r in out["rows"]] == ["Autovrak", "Úřední deska", "Lavičky, zábradlí"]
+    assert [r["head"] for r in out["rows"]] == ["Autovrak", "Úřední deska", "Lavičky, zábradlí", "Lavičky, zábradlí"]   # as many as counted
     assert out["feed"].endswith("rss.xml?ulice=wolkerova&co=podnety,deska")
     assert out["webcal"].startswith("webcal://")
 

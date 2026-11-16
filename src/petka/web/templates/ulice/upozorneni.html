@@ -48,13 +48,13 @@
 </div>
 
 <aside class="up-box" aria-labelledby="up-prev">
-  <div class="mbox-h"><h3 id="up-prev">Náhled vašeho informačního kanálu</h3><p>informace odpovídající vašemu výběru za posledních 30 dní</p></div>
+  <div class="mbox-h"><h3 id="up-prev">Náhled vašeho informačního kanálu</h3><p>informace odpovídající vašemu výběru za posledních 60 dní</p></div>
   <ol class="mbox-rows ul-rows" data-up-rows aria-live="polite">
     {%- for r in preview.rows %}
     <li><a href="{{ r.href }}"><span class="pd-rd">{{ r.date }}</span><span class="pd-rt"><b>{{ r.head }}</b><span>{{ r.sub }}</span></span><span class="{{ r.cls }}">{{ r.status }}</span></a></li>
     {%- endfor %}
   </ol>
-  <p class="up-empty" data-up-empty{% if preview.rows %} hidden{% endif %}>{% if streets %}Za posledních 30 dní se ve vybraných ulicích nic takového nestalo.{% else %}Až vyberete ulice, ukážeme tu, co by vám přišlo.{% endif %}</p>
+  <p class="up-empty" data-up-empty{% if preview.rows %} hidden{% endif %}>{% if streets %}Za posledních 60 dní se ve vybraných ulicích nic takového nestalo.{% else %}Až vyberete ulice, ukážeme tu, co by vám přišlo.{% endif %}</p>
 </aside>
 </div>
 {% endblock %}

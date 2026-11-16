@@ -70,7 +70,7 @@
     try { out = await (await fetch("/muj-prehled/nahled.json?" + q)).json(); } catch { return; }
     if (n !== seq) return;      // a newer change is on its way
     rows.replaceChildren(...out.rows.map(row));
-    empty.textContent = "Za posledních 30 dní se ve vybraných ulicích nic takového nestalo.";
+    empty.textContent = "Za posledních 60 dní se ve vybraných ulicích nic takového nestalo.";
     empty.hidden = out.rows.length > 0;
     root.querySelectorAll("[data-up-count]").forEach((c) => { c.textContent = out.counts[c.dataset.upCount] ?? 0; c.hidden = false; });
     const cal = root.querySelector("[data-up-cal]");

@@ -250,17 +250,17 @@ def _origin() -> str:
 
 
 def _preview(obvod: str, streets: list[tuple[str, str]], kinds: list[str]) -> dict:
-    """The page's preview (the chosen kinds' events of the last PREVIEW days) and how many events
-    of each kind the streets had in the last COUNT days."""
+    """The page's preview (the chosen kinds' events of the last PREVIEW days, all of them: the box
+    scrolls) and how many events of each kind the streets had in the same days."""
     if not streets:
         return {"rows": [], "counts": {}}
     now = dt.datetime.now(feed.TZ)
     every = feed.events(streets, _sources(obvod), now)
-    counts = {k: sum(1 for e in every if feed.GROUP[e.kind] == k and e.at >= now - dt.timedelta(days=feed.COUNT))
+    counts = {k: sum(1 for e in every if feed.GROUP[e.kind] == k and e.at >= now - dt.timedelta(days=feed.PREVIEW))
               for k, _, _ in feed.KINDS}
     since = now - dt.timedelta(days=feed.PREVIEW)
     rows = [{"date": q.dm(e.at.date()), "head": e.head, "sub": e.sub, "status": e.status[0], "cls": e.status[1],
-             "href": e.path} for e in every if feed.GROUP[e.kind] in kinds and e.at >= since][:8]
+             "href": e.path} for e in every if feed.GROUP[e.kind] in kinds and e.at >= since]
     return {"rows": rows, "counts": counts}
 
 
