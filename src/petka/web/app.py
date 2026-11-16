@@ -216,10 +216,17 @@ def apple_touch_icon():
 def manifest(request: Request):
     return JSONResponse({
         "name": request.state.obvod.brand, "short_name": "Pětka", "lang": "cs", "start_url": "/",
-        "display": "browser", "background_color": "#ffffff", "theme_color": "#de091c",
+        "display": "standalone",       # added to the home screen it opens as an app: iPhones send notifications only then "background_color": "#ffffff", "theme_color": "#de091c",
         "icons": [{"src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
                   {"src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png"}],
     }, media_type="application/manifest+json")
+
+
+@app.get("/sw.js", include_in_schema=False)
+def service_worker():
+    # at the root, so its scope is the whole portal (Můj přehled's notifications open any page)
+    return FileResponse(HERE / "static" / "sw.js", media_type="text/javascript",
+                        headers={"Cache-Control": "no-cache", "Service-Worker-Allowed": "/"})
 
 
 @app.get("/robots.txt", include_in_schema=False)

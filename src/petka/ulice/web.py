@@ -11,17 +11,17 @@ import datetime as dt
 from urllib.parse import quote_plus
 from zoneinfo import ZoneInfo
 
-from fastapi import APIRouter, HTTPException, Query, Request
+from fastapi import APIRouter, Body, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 
-from .. import nav
+from .. import db, nav
 from ..cisteni import queries as cq, source as csource, words as cw
 from ..cisteni.web import subscribe
 from ..podnety import photos as pphotos, queries as pq, source as psource, stats as ps
 from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
 from ..web.render import tpl
-from . import feed, queries as q, streets as st
+from . import feed, push, queries as q, streets as st
 
 pages = APIRouter(include_in_schema=False)
 TZ = ZoneInfo("Europe/Prague")
@@ -227,14 +227,7 @@ def _safe(f, *args):
 # --- Upozornění: what is new in the streets one follows (RSS now, web push later) --------------
 
 def _sources(obvod: str) -> "feed.Sources":
-    from ..podnety.queries import street_rows
-    since_year = cq.year_start(dt.date.today())
-    its = cq.items(obvod, since_year)
-    return feed.Sources(
-        reports=lambda name: street_rows(obvod, st.fold(name)),
-        notices=q.street_notices,
-        resolutions=lambda name: q.resolutions(name)[0],
-        cleanings=lambda name: [i for i in its if i["street"] == name])
+    return feed.sources(obvod)
 
 
 def _picked(request: Request, ulice: list[str], co: list[str]) -> tuple[list[tuple[str, str]], list[str]]:
@@ -291,7 +284,7 @@ def follow(request: Request, ulice: list[str] = Query(default=[]), co: list[str]
     slugs = [s for _, s in streets]
     return tpl.TemplateResponse(request, "ulice/upozorneni.html", {
         "names": names, "streets": streets, "kinds": kinds, "KINDS": feed.KINDS, "missing": missing,
-        "preview": _preview(obvod, streets, kinds),
+        "preview": _preview(obvod, streets, kinds), "vapid": (k.public if (k := push.keys()) else None),
         "feed_url": _feed_url(streets, kinds) if streets else None,
         **(subscribe(slugs) if slugs else {})})
 
@@ -304,6 +297,46 @@ def follow_preview(request: Request, ulice: list[str] = Query(default=[]), co: l
     slugs = [s for _, s in streets]
     return JSONResponse({**out, "feed": _feed_url(streets, kinds) if streets else None,
                          **(subscribe(slugs) if slugs else {})})
+
+
+def _subscription(body: dict) -> dict:
+    sub = body.get("subscription") or {}
+    keys = sub.get("keys") or {}
+    ok = (isinstance(sub.get("endpoint"), str) and sub["endpoint"].startswith("https://") and len(sub["endpoint"]) < 1000
+          and all(isinstance(keys.get(k), str) and 0 < len(keys[k]) < 200 for k in ("p256dh", "auth")))
+    if not ok:
+        raise HTTPException(400, "Neplatný odběr.")
+    return sub
+
+
+@pages.post("/muj-prehled/odber", include_in_schema=False)
+def follow_push(request: Request, body: dict = Body(...)):
+    """Turn the browser's notifications on, or change what it follows: {subscription, ulice, co}."""
+    sub = _subscription(body)
+    streets, kinds = _picked(request, [",".join(body.get("ulice") or [])], [",".join(body.get("co") or [])])
+    if not streets:
+        raise HTTPException(400, "Vyberte aspoň jednu ulici.")
+    obvod = request.state.obvod.id
+    with db.pool().connection() as conn:
+        push.save(conn, sub, obvod, streets, kinds, _sources(obvod), dt.datetime.now(feed.TZ))
+    return {"ok": True}
+
+
+@pages.post("/muj-prehled/odber/obnovit", include_in_schema=False)
+def renew_push(body: dict = Body(...)):
+    """The service worker's renewed subscription: {old, subscription}."""
+    sub = _subscription(body)
+    with db.pool().connection() as conn:
+        push.renew(conn, str(body.get("old") or ""), sub)
+    return {"ok": True}
+
+
+@pages.post("/muj-prehled/odber/zrusit", include_in_schema=False)
+def unfollow_push(body: dict = Body(...)):
+    """Turn them off: {endpoint}."""
+    with db.pool().connection() as conn:
+        push.drop(conn, str(body.get("endpoint") or ""))
+    return {"ok": True}
 
 
 @pages.get("/muj-prehled/rss.xml")

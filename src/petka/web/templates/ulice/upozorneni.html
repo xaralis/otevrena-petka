@@ -38,7 +38,9 @@
     <p class="step-sub">Vyberte jednu cestu, nebo klidně všechny.</p>
     <p class="up-none" data-up-none{% if streets %} hidden{% endif %}>Nejdřív vyberte aspoň jednu ulici.</p>
     <ul class="ways" data-up-ways{% if not streets %} hidden{% endif %}>
-      <li data-up-push hidden><span><b>Upozornění na mobil a počítač <span class="rec">doporučujeme</span></b><span>Zpráva vám přijde jako upozornění, i když Pětku zrovna nemáte otevřenou. Nic se neinstaluje. Na iPhonu si nejdřív přidejte Pětku na plochu.</span></span><button class="btn" type="button" data-up-push-btn>Zapnout</button></li>
+      {%- if vapid %}
+      <li data-up-push data-vapid="{{ vapid }}" hidden><span><b>Upozornění na mobil a počítač <span class="rec">doporučujeme</span></b><span>Zpráva vám přijde jako upozornění, i když Pětku zrovna nemáte otevřenou. Nic se neinstaluje. Na iPhonu si nejdřív přidejte Pětku na plochu.</span></span><button class="btn" type="button" data-up-push-btn>Zapnout</button><p class="up-push-st" data-up-push-st role="status" hidden></p></li>
+      {%- endif %}
       <li><span><b>Čištění do kalendáře</b><span>Termíny čištění uvidíte v kalendáři v telefonu, s připomínkou večer předem. Ostatní zprávy sem nechodí.</span></span><a class="btn btn-o" href="{{ webcal or '#' }}" data-up-cal data-https="{{ https or '' }}">Přidat do kalendáře</a></li>
       <li><span><b>Čtečka RSS</b><span>Pro ty, kdo čtou zprávy ve čtečce (Feedly, Inoreader). Pokud nevíte, co to je, tuhle možnost přeskočte.</span></span><button class="btn btn-o" type="button" data-copy="{{ feed_url or '' }}" data-up-rss>Kopírovat odkaz</button></li>
     </ul>

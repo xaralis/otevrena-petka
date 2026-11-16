@@ -100,3 +100,67 @@ def test_my_overview_is_a_top_level_item(page):
     assert '<a href="/muj-prehled" aria-current="true">Můj přehled</a>' in h
     r = get("/zapojte-se/upozorneni", params={"ulice": "wolkerova"})     # where it was for a day
     assert r.status_code == 301 and r.headers["location"] == "/muj-prehled?ulice=wolkerova"
+
+
+# --- notifications (petka.ulice.push) --------------------------------------------------------
+
+def test_messages_one_each_or_a_summary():
+    from petka.ulice import push
+    evs = feed.events([("Wolkerova", "wolkerova")], sources(), NOW)
+    one = push.messages(evs[:2], ["Wolkerova"], "https://p.cz", "/muj-prehled?ulice=wolkerova")
+    assert [m["tag"] for m in one] == [evs[1].key, evs[0].key]           # older first: the newest ends on top
+    assert one[1]["url"] == evs[0].path and evs[0].path.startswith("https://")     # a report: its Dej Tip page
+    many = push.messages(evs[:5], ["Wolkerova"], "https://p.cz", "/muj-prehled?ulice=wolkerova")
+    assert len(many) == 1 and many[0]["title"] == "5 novinek v ulici Wolkerova"
+    assert push.messages(evs[:4], ["Wolkerova", "Lexova"], "https://p.cz", "/")[0]["title"] == "4 novinky ve vašich ulicích"
+
+
+def test_push_subscribe_and_deliver():
+    import uuid
+
+    from petka import db
+    from petka.ulice import push
+    try:
+        db.migrate()
+    except Exception:
+        pytest.skip("no local database")
+    extra = []
+    base = sources()
+    src = feed.Sources(reports=lambda name: base.reports(name) + [r for r in extra if r["street"] == name],
+                       notices=base.notices, resolutions=base.resolutions, cleanings=base.cleanings)
+    sent, gone = [], set()
+
+    def send(info, msg):
+        if info["endpoint"] in gone:
+            raise push.Gone
+        sent.append((info["endpoint"], msg))
+    ep = f"https://push.example/{uuid.uuid4()}"
+    sub = {"endpoint": ep, "keys": {"p256dh": "k", "auth": "a"}}
+    names = lambda obvod: {s.slug: s.name for s in STREETS}
+    with db.connect() as conn, conn.transaction(force_rollback=True):
+        deliver = lambda: push.deliver(conn, send, lambda o: src, names, "https://p.cz", NOW)
+        if True:
+            conn.execute("DELETE FROM push_subscriptions")        # rolled back: the test sees only its own
+            push.save(conn, sub, "mo5", [("Wolkerova", "wolkerova")], ["podnety", "deska"], src, NOW)
+            assert deliver()["messages"] == 0                    # what was there before: never sent
+            extra.append(rep(90, 1, ago(0), "Autovrak"))
+            assert deliver()["messages"] == 1 and sent[-1][1]["title"] == "Wolkerova: nový podnět – Autovrak"
+            assert deliver()["messages"] == 0                    # once only
+            extra.extend(rep(91 + i, 1, ago(0), "Zeleň") for i in range(4))
+            deliver()
+            assert sent[-1][1]["title"] == "4 novinky v ulici Wolkerova"
+            push.save(conn, sub, "mo5", [("Wolkerova", "wolkerova"), ("Lexova", "lexova")], ["podnety"], src, NOW)
+            assert deliver()["messages"] == 0                    # a new street's past: not sent either
+            new = {"endpoint": ep + "-2", "keys": {"p256dh": "k2", "auth": "a2"}}
+            assert push.renew(conn, ep, new)
+            gone.add(new["endpoint"])
+            extra.append(rep(99, 1, ago(0), "Chodník"))
+            assert deliver()["gone"] == 1
+            assert not conn.execute("SELECT 1 FROM push_subscriptions WHERE endpoint LIKE %s", (ep + "%",)).fetchall()
+
+
+def test_subscribe_route_checks_input(page):
+    c = TestClient(app)
+    assert c.post("/muj-prehled/odber", json={"subscription": {"endpoint": "http://x", "keys": {}}, "ulice": ["wolkerova"]}).status_code == 400
+    ok = {"endpoint": "https://push.example/1", "keys": {"p256dh": "k", "auth": "a"}}
+    assert c.post("/muj-prehled/odber", json={"subscription": ok, "ulice": ["neni"]}).status_code == 400

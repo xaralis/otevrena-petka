@@ -1768,6 +1768,9 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .ways li { display: grid; grid-template-columns: minmax(0, 1fr) 13rem; gap: .4rem 1.25rem; align-items: center; padding: .9rem 0; }
 .ways li[hidden] { display: none; }
 .ways .btn { width: 100%; }
+.ways .btn[hidden] { display: none; }
+.up-push-st { grid-column: 1 / -1; margin: 0; font-size: .9rem; font-weight: 600; }
+.up-push-st[hidden] { display: none; }
 .rec { display: inline-block; margin-left: .35rem; padding: 1px 6px; border-radius: 3px; background: var(--ink); color: #fff; font-size: .75rem; font-weight: 700; vertical-align: 2px; }
 
 /* Můj přehled: the steps on the left, the preview of the feed beside them */

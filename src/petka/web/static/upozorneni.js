@@ -76,6 +76,61 @@
     const cal = root.querySelector("[data-up-cal]");
     cal.href = out.webcal; cal.dataset.https = out.https;
     root.querySelector("[data-up-rss]").dataset.copy = out.feed;
+    if (pushSub) post("/muj-prehled/odber", { subscription: pushSub.toJSON(), ulice: streets(), co: kinds() });
+  }
+
+  // --- notifications (Web Push): the row shows only where the browser can do it ----------------
+  const pushRow = root.querySelector("[data-up-push]");
+  let pushSub = null;
+  const post = (url, body) => fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const b64 = (s) => Uint8Array.from(atob((s + "===".slice((s.length + 3) % 4)).replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0));
+  async function setupPush() {
+    if (!pushRow) return;
+    const btn = pushRow.querySelector("[data-up-push-btn]"), st = pushRow.querySelector("[data-up-push-st]");
+    const say = (t) => { st.textContent = t; st.hidden = !t; };
+    const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const can = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+    if (!can) {
+      if (!ios) return;            // a browser without notifications: the row stays hidden
+      pushRow.hidden = false; btn.hidden = true;
+      say("Na iPhonu klepněte na Sdílet a zvolte Přidat na plochu. Pak Pětku otevřete z plochy a upozornění zapněte tam.");
+      return;
+    }
+    pushRow.hidden = false;
+    const reg = await navigator.serviceWorker.register("/sw.js");
+    pushSub = await reg.pushManager.getSubscription();
+    const show = () => {
+      btn.textContent = pushSub ? "Vypnout" : "Zapnout";
+      btn.classList.toggle("btn-o", !!pushSub);
+      if (Notification.permission === "denied") say("Upozornění máte pro Pětku v prohlížeči zakázaná. Povolte je v nastavení stránky (ikona vedle adresy).");
+      else say(pushSub ? "Upozornění jsou v tomto prohlížeči zapnutá. Když změníte výběr, upraví se samy." : "");
+    };
+    show();
+    if (pushSub) post("/muj-prehled/odber", { subscription: pushSub.toJSON(), ulice: streets(), co: kinds() });
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      try {
+        if (pushSub) {
+          await post("/muj-prehled/odber/zrusit", { endpoint: pushSub.endpoint });
+          await pushSub.unsubscribe();
+          pushSub = null;
+        } else if (await Notification.requestPermission() === "granted") {
+          // a browser that cannot reach its push service may never answer: give up after 20 s
+          const sub = await Promise.race([
+            reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64(pushRow.dataset.vapid) }),
+            new Promise((_, no) => setTimeout(() => no(new Error("timeout")), 20000))]);
+          const r = await post("/muj-prehled/odber", { subscription: sub.toJSON(), ulice: streets(), co: kinds() });
+          if (!r.ok) { await sub.unsubscribe(); throw new Error(r.status); }
+          pushSub = sub;
+        }
+      } catch {
+        say("Upozornění se nepodařilo zapnout. Zkuste to prosím znovu.");
+        btn.disabled = false;
+        return;
+      }
+      btn.disabled = false;
+      show();
+    });
   }
 
   function pick() {
@@ -98,6 +153,8 @@
   });
   form.addEventListener("change", (e) => { if (e.target.name === "co") refresh(); });
   form.addEventListener("submit", (e) => e.preventDefault());
+
+  setupPush();
 
   // A first visit without streets in the URL: the remembered choice, or the cleaning page's streets
   if (!location.search) {

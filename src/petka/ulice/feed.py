@@ -46,6 +46,18 @@ class Sources:
     cleanings: Callable[[str], list[dict]]          # the street's cleanings this year (cisteni items)
 
 
+def sources(obvod: str) -> Sources:
+    """The sources from the database: the obvod's reports, notices, resolutions and this year's
+    cleanings (read once)."""
+    from ..cisteni import queries as cq
+    from ..podnety.queries import street_rows
+    from . import streets as st
+    its = cq.items(obvod, cq.year_start(dt.date.today()))
+    return Sources(reports=lambda name: street_rows(obvod, st.fold(name)), notices=q.street_notices,
+                   resolutions=lambda name: q.resolutions(name)[0],
+                   cleanings=lambda name: [i for i in its if i["street"] == name])
+
+
 def _local(d: dt.datetime | dt.date, hour: int = 8) -> dt.datetime:
     if isinstance(d, dt.datetime):
         return d if d.tzinfo else d.replace(tzinfo=TZ)
