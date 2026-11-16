@@ -13,6 +13,7 @@ from dataclasses import dataclass
 from typing import Callable
 from zoneinfo import ZoneInfo
 
+from .. import obvody
 from ..cisteni import words as cw
 from ..podnety import source as psource, stats as ps
 from . import queries as q
@@ -36,6 +37,7 @@ class Event:
     head: str = ""      # a row of the page's preview: its bold line,
     sub: str = ""       # its grey line,
     status: tuple = ("", "")   # and its status word with its class (st-no: waiting, ul-done: past)
+    brief: str = ""     # a notification's body when `text` may not be shortened (NDIC's, petka.uzavirky)
 
 
 @dataclass
@@ -44,6 +46,7 @@ class Sources:
     notices: Callable[[str, dt.date], list[dict]]   # notices naming a street, posted since
     resolutions: Callable[[str], list[dict]]        # resolutions mentioning a street
     cleanings: Callable[[str], list[dict]]          # the street's cleanings this year (cisteni items)
+    closures: Callable[[str], list] = lambda name: []   # closures naming the street (petka.uzavirky.queries.Closure)
 
 
 def sources(obvod: str) -> Sources:
@@ -52,10 +55,14 @@ def sources(obvod: str) -> Sources:
     from ..cisteni import queries as cq
     from ..podnety.queries import street_rows
     from . import streets as st
+    from ..uzavirky import queries as uq
     its = cq.items(obvod, cq.year_start(dt.date.today()))
+    now = dt.datetime.now(TZ)
+    cls = uq.closures(uq.seen_since(obvody.ObvodFilter.only(obvod), now - dt.timedelta(days=WINDOW)), now)
     return Sources(reports=lambda name: street_rows(obvod, st.fold(name)), notices=q.street_notices,
                    resolutions=lambda name: q.resolutions(name)[0],
-                   cleanings=lambda name: [i for i in its if i["street"] == name])
+                   cleanings=lambda name: [i for i in its if i["street"] == name],
+                   closures=lambda name: [c for c in cls if uq.names(c, name)])
 
 
 def _local(d: dt.datetime | dt.date, hour: int = 8) -> dt.datetime:
@@ -95,6 +102,16 @@ def street_events(name: str, slug: str, src: Sources, now: dt.datetime) -> list[
                              f"Usnesení {r['number']} ze dne {q.dmy(r['date'])} zmiňuje ulici {name}.",
                              f"/radnice/usneseni/{r['uid']}", f"Usnesení {r['number']}",
                              f"{name}, {r['title'] or r.get('agenda_title') or body}"))
+    for c in src.closures(name):
+        at = c.seen or c.starts
+        if at and at >= since:
+            ends = f" do {q.dm(c.ends.astimezone(TZ).date())}" if c.ends else ""
+            out.append(Event(f"uzavirka-{c.id}", "uzavirka", at.astimezone(TZ), name,
+                             f"{name}: {c.what.lower() if c.what[:1].isupper() else c.what}{ends}",
+                             f"{c.what}{ends}. {c.text} ({ATTRIBUTION})", f"/verejny-prostor/uzavirky#uz-{c.id}",
+                             "Uzavírka", f"{name}, {c.what}", (f"do {q.dm(c.ends.astimezone(TZ).date())}" if c.ends else "",
+                                                              "st-no" if c.closed and c.now(now) else ""),
+                             brief=f"{c.what}{ends}. Podrobnosti na Otevřené Pětce."))
     for d in sorted({i["date"] for i in src.cleanings(name)}):
         shows = _local(d - dt.timedelta(days=AHEAD), 18)
         if since <= shows <= now:
@@ -113,10 +130,14 @@ KINDS = (("podnety", "Podněty z Dej Tipu", "Dej Tip je městská aplikace, kde 
              "třeba černou skládku, rozbité dětské hřiště nebo díru v chodníku. Dáme vám vědět o novém hlášení i o tom, kdy se vyřeší."),
          ("deska", "Úřední deska", "Oficiální zprávy z úřadu městského obvodu: uzavírky, stavby, prodeje pozemků "
              "a další oznámení, která se týkají vybraných ulic."),
+         ("uzavirky", "Uzavírky", "Kdy a kde se v ulici nedá projet: uzavírky a omezení dopravy z Národního "
+             "dopravního informačního centra ŘSD."),
          ("usneseni", "Usnesení", "Co o ulici rozhodla rada nebo zastupitelstvo, třeba oprava chodníku nebo nová zakázka."),
          ("cisteni", "Blokové čištění", "Týden předem: kdy se v ulici čistí a do kdy musíte přeparkovat."))
 PREVIEW = 60            # days the page's preview shows, and its counts by kind cover
-GROUP = {"podnet": "podnety", "vyreseno": "podnety", "deska": "deska", "usneseni": "usneseni", "cisteni": "cisteni"}
+GROUP = {"podnet": "podnety", "vyreseno": "podnety", "deska": "deska", "uzavirka": "uzavirky", "usneseni": "usneseni",
+         "cisteni": "cisteni"}
+ATTRIBUTION = "Zdrojem digitalizovaných informací o silničním provozu je NDIC."
 
 
 def events(streets: list[tuple[str, str]], src: Sources, now: dt.datetime, kinds: set[str] | None = None) -> list[Event]:

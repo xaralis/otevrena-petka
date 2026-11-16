@@ -108,7 +108,7 @@ def messages(new: list[feed.Event], names: list[str], base: str, page: str) -> l
                           + (f"v ulici {names[0]}" if len(names) == 1 else "ve vašich ulicích"),
                  "body": "; ".join(e.title for e in new[:3]) + ("…" if len(new) > 3 else ""),
                  "url": base + page, "tag": "petka-souhrn"}]
-    return [{"title": e.title, "body": e.text if len(e.text) <= 180 else e.text[:179].rsplit(" ", 1)[0] + "…",
+    return [{"title": e.title, "body": e.brief or (e.text if len(e.text) <= 180 else e.text[:179].rsplit(" ", 1)[0] + "…"),
              "url": e.path if e.path.startswith("http") else base + e.path, "tag": e.key} for e in reversed(new)]
 
 

@@ -50,6 +50,7 @@ class Closure:
     method: str                     # street | straight | point | none: how we placed it
     obvody: list[str] = field(default_factory=list)
     records: list[str] = field(default_factory=list)
+    seen: dt.datetime | None = None     # when we first had it (Můj přehled: when it is news)
 
     def now(self, at: dt.datetime) -> bool:
         return self.starts is None or self.starts <= at
@@ -88,7 +89,8 @@ def closures(rows: list[dict], at: dt.datetime) -> list[Closure]:
         ends = max((r["ends_at"] for r in rs if r["ends_at"]), default=None)
         out.append(Closure(sid, place(text), what, "roadClosed" in details or "carriagewayClosures" in details,
                            starts, ends, text, best["geometry"], best["method"],
-                           obvody.share_ids(best["obvody"], MIN_SHARE), sorted(r["id"] for r in rs)))
+                           obvody.share_ids(best["obvody"], MIN_SHARE), sorted(r["id"] for r in rs),
+                           min((r["first_seen"] for r in rs if r.get("first_seen")), default=None)))
     far = dt.datetime.max.replace(tzinfo=dt.timezone.utc)
     return sorted(out, key=lambda c: (not c.now(at), c.ends or far, c.starts or far) if c.now(at)
                   else (True, c.starts or far, c.ends or far))
@@ -102,6 +104,20 @@ def rows(where: obvody.ObvodFilter, now: dt.datetime) -> list[dict]:
                                 FROM traffic_records
                                 WHERE gone_at IS NULL AND (ends_at IS NULL OR ends_at > %s) AND {cond}""",
                             [now, *params]).fetchall()
+
+
+def seen_since(where: obvody.ObvodFilter, since: dt.datetime) -> list[dict]:
+    """The records of the obvody we first had since a moment, over or not (Můj přehled's news)."""
+    cond, params = where.sql("obvody", MIN_SHARE)
+    with db.pool().connection() as conn:
+        return conn.execute(f"""SELECT id, situation, kind, details, starts_at, ends_at, comment, geometry, method, obvody,
+                                       first_seen FROM traffic_records WHERE first_seen >= %s AND {cond}""",
+                            [since, *params]).fetchall()
+
+
+def names(c: Closure, street: str) -> bool:
+    """Whether a closure is in a street: its place, or its text naming it as a whole word."""
+    return c.place == street or re.search(rf"(?<![\w-]){re.escape(street)}(?![\w-])", c.text) is not None
 
 
 def checked() -> dt.datetime | None:

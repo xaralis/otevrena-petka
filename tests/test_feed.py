@@ -89,7 +89,7 @@ def test_page_without_js_adds_and_drops(page):
 
 def test_preview_json(page):
     out = get("/muj-prehled/nahled.json", params={"ulice": "wolkerova", "co": "podnety,deska"}).json()
-    assert out["counts"] == {"podnety": 3, "deska": 1, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
+    assert out["counts"] == {"podnety": 3, "deska": 1, "uzavirky": 0, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
     assert [r["head"] for r in out["rows"]] == ["Autovrak", "Úřední deska", "Lavičky, zábradlí", "Lavičky, zábradlí"]   # as many as counted
     assert out["feed"].endswith("rss.xml?ulice=wolkerova&co=podnety,deska")
     assert out["webcal"].startswith("webcal://")
@@ -190,3 +190,21 @@ def test_only_push_services_are_endpoints():
 
 def test_share_title_names_the_portal(page):
     assert '<meta property="og:title" content="Můj přehled – Otevřená Pětka">' in get("/muj-prehled").text
+
+
+def test_closures_in_the_feed():
+    from petka.uzavirky import queries as uq
+    c = uq.Closure("S1", "Wolkerova", "Uzavřeno, oprava povrchu", True, NOW - dt.timedelta(days=40),
+                   NOW + dt.timedelta(days=14), "ulice Wolkerova, Pardubice V, uzavřeno, oprava povrchu vozovky",
+                   None, "street", seen=NOW - dt.timedelta(days=2))
+    base = sources()
+    src = feed.Sources(base.reports, base.notices, base.resolutions, base.cleanings,
+                       closures=lambda name: [c] if uq.names(c, name) else [])
+    evs = feed.events([("Wolkerova", "wolkerova"), ("Lexova", "lexova")], src, NOW, {"uzavirky"})
+    assert [e.key for e in evs] == ["uzavirka-S1"]                 # news when we first had it, once
+    e = evs[0]
+    assert e.head == "Uzavírka" and e.status[1] == "st-no" and e.path == "/verejny-prostor/uzavirky#uz-S1"
+    assert c.text in e.text and feed.ATTRIBUTION in e.text      # NDIC's text whole, with its source
+    from petka.ulice import push
+    assert push.messages([e], ["Wolkerova"], "https://p.cz", "/")[0]["body"] == e.brief   # never NDIC's text cut
+    assert uq.names(c, "Wolkerova") and not uq.names(c, "Lexova")
