@@ -11,8 +11,8 @@ import datetime as dt
 from urllib.parse import quote_plus
 from zoneinfo import ZoneInfo
 
-from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import APIRouter, HTTPException, Query, Request
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 
 from .. import nav
 from ..cisteni import queries as cq, source as csource, words as cw
@@ -21,7 +21,7 @@ from ..podnety import photos as pphotos, queries as pq, source as psource, stats
 from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
 from ..web.render import tpl
-from . import queries as q, streets as st
+from . import feed, queries as q, streets as st
 
 pages = APIRouter(include_in_schema=False)
 TZ = ZoneInfo("Europe/Prague")
@@ -222,3 +222,98 @@ def _safe(f, *args):
         return f(*args)
     except Exception:
         return None
+
+
+# --- Upozornění: what is new in the streets one follows (RSS now, web push later) --------------
+
+def _sources(obvod: str) -> "feed.Sources":
+    from ..podnety.queries import street_rows
+    since_year = cq.year_start(dt.date.today())
+    its = cq.items(obvod, since_year)
+    return feed.Sources(
+        reports=lambda name: street_rows(obvod, st.fold(name)),
+        notices=q.street_notices,
+        resolutions=lambda name: q.resolutions(name)[0],
+        cleanings=lambda name: [i for i in its if i["street"] == name])
+
+
+def _picked(request: Request, ulice: list[str], co: list[str]) -> tuple[list[tuple[str, str]], list[str]]:
+    names = _names(request.state.obvod.id)
+    slugs = [s for s in dict.fromkeys(x for v in ulice for x in v.split(",")) if s in names]
+    valid = [k for k, _, _ in feed.KINDS]
+    kinds = [k for k in dict.fromkeys(x for v in co for x in v.split(",")) if k in valid] or valid
+    return [(names[s], s) for s in slugs], kinds
+
+
+def _feed_url(streets: list[tuple[str, str]], kinds: list[str]) -> str:
+    every = len(kinds) == len(feed.KINDS)
+    return (_origin() + "/zapojte-se/upozorneni/rss.xml?ulice=" + ",".join(s for _, s in streets)
+            + ("" if every else "&co=" + ",".join(kinds)))
+
+
+def _origin() -> str:
+    import os
+    return os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
+
+
+def _preview(obvod: str, streets: list[tuple[str, str]], kinds: list[str]) -> dict:
+    """The page's preview (the chosen kinds' events of the last PREVIEW days) and how many events
+    of each kind the streets had in the last COUNT days."""
+    if not streets:
+        return {"rows": [], "counts": {}}
+    now = dt.datetime.now(feed.TZ)
+    every = feed.events(streets, _sources(obvod), now)
+    counts = {k: sum(1 for e in every if feed.GROUP[e.kind] == k and e.at >= now - dt.timedelta(days=feed.COUNT))
+              for k, _, _ in feed.KINDS}
+    since = now - dt.timedelta(days=feed.PREVIEW)
+    rows = [{"date": q.dm(e.at.date()), "head": e.head, "sub": e.sub, "status": e.status[0], "cls": e.status[1],
+             "href": e.path} for e in every if feed.GROUP[e.kind] in kinds and e.at >= since][:8]
+    return {"rows": rows, "counts": counts}
+
+
+@pages.get("/zapojte-se/upozorneni", response_class=HTMLResponse)
+def follow(request: Request, ulice: list[str] = Query(default=[]), co: list[str] = Query(default=[]),
+           pridat: str = "", odebrat: str = ""):
+    """Upozornění: pick streets and what to hear about; the preview of the feed, and three ways
+    to get it (browser notifications with JS, the calendar of cleanings, the RSS address). Without
+    JS the form comes back here (pridat= adds a street, odebrat= drops one)."""
+    obvod = request.state.obvod.id
+    names = _names(obvod)
+    streets, kinds = _picked(request, ulice, co)
+    streets = [x for x in streets if x[1] != odebrat]
+    missing = None
+    if pridat.strip():
+        hits = st.find(pridat, names)
+        if len(hits) == 1 and hits[0] not in {s for _, s in streets}:
+            streets.append((names[hits[0]], hits[0]))
+        elif not hits:
+            missing = pridat.strip()
+    slugs = [s for _, s in streets]
+    return tpl.TemplateResponse(request, "ulice/upozorneni.html", {
+        "names": names, "streets": streets, "kinds": kinds, "KINDS": feed.KINDS, "missing": missing,
+        "preview": _preview(obvod, streets, kinds),
+        "feed_url": _feed_url(streets, kinds) if streets else None,
+        **(subscribe(slugs) if slugs else {})})
+
+
+@pages.get("/zapojte-se/upozorneni/nahled.json", include_in_schema=False)
+def follow_preview(request: Request, ulice: list[str] = Query(default=[]), co: list[str] = Query(default=[])):
+    """The preview and the counts for the page's script, when the choice changes."""
+    streets, kinds = _picked(request, ulice, co)
+    out = _preview(request.state.obvod.id, streets, kinds)
+    slugs = [s for _, s in streets]
+    return JSONResponse({**out, "feed": _feed_url(streets, kinds) if streets else None,
+                         **(subscribe(slugs) if slugs else {})})
+
+
+@pages.get("/zapojte-se/upozorneni/rss.xml")
+def follow_rss(request: Request, ulice: list[str] = Query(default=[]), co: list[str] = Query(default=[])):
+    """RSS of the chosen streets (?ulice=wolkerova,lexova) and kinds (?co=podnety,deska; all by default)."""
+    streets, kinds = _picked(request, ulice, co)
+    if not streets:
+        raise HTTPException(404, "Vyberte aspoň jednu ulici: ?ulice=wolkerova")
+    now = dt.datetime.now(feed.TZ)
+    evs = feed.events(streets, _sources(request.state.obvod.id), now, set(kinds))
+    xml = feed.rss(evs, [n for n, _ in streets], _origin(), _feed_url(streets, kinds))
+    return Response(xml, media_type="application/rss+xml; charset=utf-8", headers={"Cache-Control": "public, max-age=900"})
+

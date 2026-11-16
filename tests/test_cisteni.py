@@ -414,7 +414,7 @@ def test_overview(fixture):
     for s in ("Kdy proběhne čištění mojí ulice?", "Kdy se kde čistí", 'class="pd-rows mbox-rows"', "Kalendář jen pro vaše ulice",
               'aria-current="true">7 dní <b>', '<a href="/verejny-prostor/blokove-cisteni?obdobi=rok">Letos <b>4</b></a>',
               "Harmonogram do konce roku", "Příští týden", "Stav k 12. 11. 2026", "letos 5 termínů na 5 místech",
-              "Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.", 'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"',
+              'href="/zapojte-se/upozorneni?co=cisteni"', 'href="/verejny-prostor/blokove-cisteni/ulice/wolkerova.ics"',
               "poloha přibližná", "není na mapě", "Letošní proběhlé termíny (1)", 'data-src="/api/v1/cisteni?obvod=mo5&amp;od=2026-11-12"'):
         assert s in h, s
     assert "aplikac" not in h.lower() and "letos už ne" not in h
@@ -524,17 +524,10 @@ def test_next_panel_without_time_and_where():
     assert words.where([item(D(2026, 12, 9), side="leva")]) == "v celé ulici, po levé straně"
 
 
-def test_calendar_page_without_js(fixture):
-    r = get("/verejny-prostor/blokove-cisteni/kalendar", params=[("ulice", "wolkerova"), ("pridat", "lexova")])
-    assert r.status_code == 200
-    assert "Přidat 2 ulice do kalendáře" in r.text
-    assert "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text
-    assert "https://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova,lexova" in r.text.replace("http://", "https://")
-
-
-def test_absolute_links_ignore_the_host_header(fixture):
-    r = TestClient(app).get("/verejny-prostor/blokove-cisteni/kalendar", params={"ulice": "wolkerova"}, headers={"host": "localhost:8000"})
-    assert r.status_code == 200 and "localhost" not in r.text
+def test_old_calendar_page_moved_to_my_overview(fixture):
+    r = get("/verejny-prostor/blokove-cisteni/kalendar", params=[("ulice", "wolkerova"), ("ulice", "lexova")])
+    assert r.status_code == 301
+    assert r.headers["location"] == "/zapojte-se/upozorneni?ulice=wolkerova,lexova&co=cisteni"
 
 
 def test_feeds(fixture):

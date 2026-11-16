@@ -46,7 +46,7 @@ def test_header_rows_and_phone_menu(monkeypatch):
     monkeypatch.setattr(cweb.q, "items", lambda obvod, since, slugs=None: [])    # no database needed
     monkeypatch.setattr(cweb.q, "checked", lambda: None)
     c = TestClient(app)
-    html = c.get("/verejny-prostor/blokove-cisteni/kalendar").text
+    html = c.get("/verejny-prostor/blokove-cisteni").text
     assert '<a href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor</a>' in html
     assert 'aria-label="Sekce v oblasti Veřejný prostor"' in html
     assert '<a href="/verejny-prostor/uzavirky" class="soon"><span>Uzavírky</span><span class="sr"> (připravujeme)</span></a>' in html

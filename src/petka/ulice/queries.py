@@ -283,6 +283,23 @@ def resolutions(name: str, limit: int = 300) -> tuple[list[dict], int]:
     return [h.row for h in hits], info.get("total", 0)
 
 
+def street_notices(name: str, since: dt.date) -> list[dict]:
+    """Notices of the obvod posted since a day that name the street (every word), with our
+    plain-language headline where there is one (a digest's, its group's, or what a traffic order
+    does: „Zábrany na chodníku“)."""
+    tq = deska_tsquery(name, "&")
+    if not tq:
+        return []
+    with db.pool().connection() as conn:
+        return conn.execute("""SELECT n.id, n.title, n.published,
+                                      COALESCE(d.data->>'headline', o.data->>'headline', m.what) AS card FROM notices n
+                               LEFT JOIN notice_measures m ON m.notice_id = n.id
+                               LEFT JOIN notice_digests d ON d.notice_id = n.id AND d.status = 'published'
+                               LEFT JOIN notice_digests o ON o.status = 'published' AND n.id = ANY(o.members)
+                               WHERE n.is_mo5 AND n.published >= %s AND n.tsv @@ to_tsquery('simple', %s)""",
+                            (since, tq)).fetchall()
+
+
 def notices_posted(name: str) -> int:
     """Notices of the obvod on the board now that name the street (every word)."""
     tq = deska_tsquery(name, "&")

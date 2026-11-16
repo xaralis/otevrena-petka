@@ -1082,7 +1082,7 @@ a.btn-o:hover, .ledger td a.btn-o:hover, .band a.btn-on-red:hover { color: #fff;
 
 /* combobox (našeptávač): combo.js turns <input list> + <datalist> into this listbox */
 .combo { position: relative; flex: 1 1 auto; min-width: 0; display: flex; }
-.chips .combo, .cl-pick .combo { flex: 1 1 100%; }
+.chips .combo, .up-form .combo { flex: 1 1 100%; }
 .combo > input { flex: 1; min-width: 0; }
 .combo-list { position: absolute; z-index: 20; top: 100%; left: 0; right: 0; margin: 4px 0 0; padding: 0; list-style: none;
   max-height: 18rem; overflow-y: auto; background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 3px;
@@ -1119,11 +1119,6 @@ a.btn-o:hover, .ledger td a.btn-o:hover, .band a.btn-on-red:hover { color: #fff;
 .cl-s { font-size: .88rem; color: var(--ink-2); }
 .cl-soon .cl-d { color: var(--red-ink); }
 .cl-o2 > h3 { margin-top: 2.4rem; }
-.cl-pick { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
-.cl-pick .chips { margin: 0; flex: 1 1 100%; }
-.cl-pick .chips:empty { display: none; }
-.cl-pick .btn { margin-top: .4rem; }
-.cl-pick .btn[aria-disabled=true] { opacity: .55; cursor: default; }
 .cl-hint { font-size: .85rem; color: var(--muted); }
 a.cl-hint { color: var(--red-ink); }
 .cl-found { margin-top: 1rem; }
@@ -1742,3 +1737,57 @@ main > .sec-head:first-child, main > :first-child > .sec-head:first-child { marg
   .mbox-map .ak-card dl { margin: .3rem 0 .35rem; }
 }
 main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block of the page: main's padding is the gap */
+
+/* Step: a numbered heading, the number in the portal's ink square (3 px like buttons and count
+   pills); its explanation under the heading, aligned with its text */
+.step { display: flex; align-items: center; gap: .75rem; margin: 0 0 .25rem; }
+.step-n { display: inline-grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 3px; background: var(--ink); color: #fff;
+  font-size: 1.05rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.step > h2 { margin: 0; }
+.step-sub { margin: 0 0 .8rem 42px; color: var(--ink-2); max-width: 60ch; }
+
+/* Token: a chosen value that can go again (its × says „Odebrat X“) */
+.toks { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 .5rem; padding: 0; list-style: none; }
+.toks:empty { display: none; }
+.tok { display: inline-flex; align-items: center; gap: .25rem; min-height: 2.75rem; padding: 3px 4px 3px .9rem; box-sizing: border-box;
+  background: var(--grey); border-radius: 3px; font-weight: 600; }
+.tok button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 3px; background: transparent; color: var(--ink-2); cursor: pointer; }
+.tok button:hover, .tok button:focus-visible { background: var(--ink); color: #fff; }
+
+/* Choice rows: a checkbox, its name and what it means, a count pill on the right */
+.kinds, .ways { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--off); }
+.kinds li, .ways li { border-bottom: 1px solid var(--off); }
+.kinds label { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: .1rem .9rem; align-items: start; padding: .75rem 0; cursor: pointer; }
+.kinds input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--ink); }
+.kinds b, .ways b { display: block; font-size: 1.06rem; font-weight: 750; }
+.kinds label > span > span, .ways li > span > span { display: block; margin-top: .1rem; font-size: .9rem; color: var(--ink-2); line-height: 1.4; }
+.kinds em { margin-top: 3px; padding: 1px 7px; border-radius: 3px; background: var(--grey); color: var(--ink-2); font-style: normal; font-size: .8rem;
+  font-weight: 650; font-variant-numeric: tabular-nums; }
+/* Ways rows: what it does on the left, its one button in a column of its own on the right */
+.ways li { display: grid; grid-template-columns: minmax(0, 1fr) 13rem; gap: .4rem 1.25rem; align-items: center; padding: .9rem 0; }
+.ways li[hidden] { display: none; }
+.ways .btn { width: 100%; }
+.rec { display: inline-block; margin-left: .35rem; padding: 1px 6px; border-radius: 3px; background: var(--ink); color: #fff; font-size: .75rem; font-weight: 700; vertical-align: 2px; }
+
+/* Můj přehled: the steps on the left, the preview of the feed beside them */
+.up-grid { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 3rem; align-items: start; }
+.up-sec + .up-sec, .up-form + .up-sec { margin-top: 3.5rem; }
+.up-form .chip-add { width: 100%; }
+.up-apply { margin-top: 1rem; }
+.up-apply[hidden] { display: none; }
+.up-miss { margin: 0 0 .6rem; color: var(--red-ink); font-weight: 600; }
+.up-none, .up-empty { color: var(--muted); }
+.up-box { position: sticky; top: 1.25rem; border: 2px solid var(--ink); border-radius: 3px; overflow: hidden; background: #fff; }
+.up-box .mbox-rows { max-height: 70vh; }
+.up-box .mbox-rows:empty { display: none; }
+.up-empty { margin: 0; padding: 1rem; }
+@media (max-width: 900px) {
+  .up-grid { grid-template-columns: minmax(0, 1fr); }
+  .up-box { position: static; margin: 0 -1.25rem; border-width: 2px 0; border-radius: 0; }
+  .up-box .mbox-h { margin: 0; padding: .8rem 1.25rem .7rem; }
+  .up-box .mbox-rows { margin: 0; }
+  .up-box .mbox-rows li > a { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .up-box .mbox-rows { max-height: none; }
+  .ways li { grid-template-columns: minmax(0, 1fr); }
+  .step-sub { margin-left: 0; }
+}

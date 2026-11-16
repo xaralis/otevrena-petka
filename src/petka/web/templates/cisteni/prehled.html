@@ -32,16 +32,8 @@
 <div class="cl-cal">
   <section class="cl-o2" aria-labelledby="cl-cal-h">
       <h3 id="cl-cal-h">Kalendář jen pro vaše ulice</h3>
-      <p class="cl-muted"><span class="cl-only-d">Vyberte ulice, kde parkujete. Termíny se vám v kalendáři samy aktualizují, když je Služby města změní.</span><span class="cl-only-m">Vyberte ulice, kde parkujete. Termíny se v kalendáři samy aktualizují.</span></p>
-      <form class="cl-pick" method="get" action="/verejny-prostor/blokove-cisteni/kalendar" aria-label="Ulice do kalendáře" data-cl-pick>
-        <div class="chips" data-cl-chips></div>
-        <label class="sr" for="addst">Přidat ulici</label>
-        <input id="addst" class="chip-add" name="pridat" type="search" list="cl-streets" data-combo autocomplete="off" placeholder="+ přidat ulici">
-        <button class="btn btn-block" type="submit" data-cl-go>Přidat ulice do kalendáře</button>
-        <a class="cl-hint" href="#" data-cl-https hidden>Adresa kalendáře pro ruční přidání</a>
-        <span class="cl-hint">Funguje v Google Kalendáři, Apple Kalendáři i Outlooku.</span>
-      </form>
-      <script type="application/json" id="cl-names">{{ names|tojson }}</script>
+      <p class="cl-muted">Vyberte ulice, kde parkujete. Termíny se vám v kalendáři samy aktualizují, když je Služby města změní. Na stejném místě si můžete zapnout i upozornění.</p>
+      <p><a class="btn" href="/zapojte-se/upozorneni?co=cisteni">Vybrat ulice</a></p>
   </section>
 </div>
 

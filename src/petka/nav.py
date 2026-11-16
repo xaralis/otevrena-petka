@@ -64,6 +64,7 @@ GROUPS = [
         Item("Podněty", "/verejny-prostor/podnety", "Co lidé hlásí a jak se to řeší?", "podnety", was="/podnety"),
     ]),
     Group("Zapojte se", "/zapojte-se", [
+        Item("Můj přehled", "/zapojte-se/upozorneni", "Upozornění, kalendář a RSS pro vaše ulice"),
         Item("Ankety", "/zapojte-se/ankety", "Co si myslíte?", "ankety", planned=True, was="/ankety"),
     ]),
 ]

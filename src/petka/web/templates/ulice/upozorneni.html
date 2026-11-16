@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Můj přehled{% endblock %}
+{% block description %}Vyberte ulice v Pardubicích V a co vás v nich zajímá: podněty z Dej Tipu, úřední deska, usnesení a blokové čištění. Upozornění, kalendář i RSS bez registrace.{% endblock %}
+{% from "_portal.html" import band %}
+{% block hero %}{{ band('Můj přehled', 'Vyberte ulice a rozhodněte, co vás zajímá. Dáme vám vědět, když k něčemu dojde.') }}{% endblock %}
+{% block main %}
+{#- Without JS the two steps are one GET form back here: each street a hidden field, × submits
+    odebrat=, the field below submits pridat=. The script takes the same form over in place. -#}
+<div class="up-grid" data-up>
+<div>
+  <form class="up-form" method="get" action="/zapojte-se/upozorneni" data-up-form>
+    <section class="up-sec" aria-labelledby="up-1">
+      <div class="step"><span class="step-n" aria-hidden="true">1</span><h2 id="up-1">Ulice</h2></div>
+      <p class="step-sub">Kde bydlíte, parkujete nebo chodíte s dětmi na hřiště.</p>
+      {% if missing %}<p class="up-miss" role="status">Ulici „{{ missing }}“ v obvodu nemáme, nebo jich odpovídá víc. Zkuste přesný název.</p>{% endif %}
+      <ul class="toks" data-up-toks>
+        {%- for n, s in streets %}<li class="tok"><input type="hidden" name="ulice" value="{{ s }}">{{ n }}<button type="submit" name="odebrat" value="{{ s }}" aria-label="Odebrat {{ n }}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></li>{% endfor -%}
+      </ul>
+      <label class="sr" for="up-add">Přidat ulici</label>
+      <input id="up-add" class="chip-add" name="pridat" type="search" list="up-streets" data-combo autocomplete="off" placeholder="+ přidat ulici">
+      <datalist id="up-streets">{% for s, n in names.items() %}<option value="{{ n }}" data-slug="{{ s }}"></option>{% endfor %}</datalist>
+    </section>
+
+    <section class="up-sec" aria-labelledby="up-2">
+      <div class="step"><span class="step-n" aria-hidden="true">2</span><h2 id="up-2">Co vás zajímá</h2></div>
+      <p class="step-sub">Vyberte, jaké informace vás zajímají. Číslo vpravo ukazuje, kolik takových zpráv z vašich ulic přišlo za poslední dva měsíce.</p>
+      <ul class="kinds">
+        {%- for k, label, about in KINDS %}
+        <li><label><input type="checkbox" name="co" value="{{ k }}"{% if k in kinds %} checked{% endif %}><span><b>{{ label }}</b><span>{{ about }}</span></span><em data-up-count="{{ k }}"{% if not streets %} hidden{% endif %}>{{ preview.counts.get(k, 0) }}</em></label></li>
+        {%- endfor %}
+      </ul>
+      <button class="btn btn-o up-apply" type="submit" data-up-apply>Upravit výběr</button>
+    </section>
+  </form>
+
+  <section class="up-sec" aria-labelledby="up-3">
+    <div class="step"><span class="step-n" aria-hidden="true">3</span><h2 id="up-3">Jak vám máme dát vědět</h2></div>
+    <p class="step-sub">Vyberte jednu cestu, nebo klidně všechny.</p>
+    <p class="up-none" data-up-none{% if streets %} hidden{% endif %}>Nejdřív vyberte aspoň jednu ulici.</p>
+    <ul class="ways" data-up-ways{% if not streets %} hidden{% endif %}>
+      <li data-up-push hidden><span><b>Upozornění na mobil a počítač <span class="rec">doporučujeme</span></b><span>Zpráva vám přijde jako upozornění, i když Pětku zrovna nemáte otevřenou. Nic se neinstaluje. Na iPhonu si nejdřív přidejte Pětku na plochu.</span></span><button class="btn" type="button" data-up-push-btn>Zapnout</button></li>
+      <li><span><b>Čištění do kalendáře</b><span>Termíny čištění uvidíte v kalendáři v telefonu, s připomínkou večer předem. Ostatní zprávy sem nechodí.</span></span><a class="btn btn-o" href="{{ webcal or '#' }}" data-up-cal data-https="{{ https or '' }}">Přidat do kalendáře</a></li>
+      <li><span><b>Čtečka RSS</b><span>Pro ty, kdo čtou zprávy ve čtečce (Feedly, Inoreader). Pokud nevíte, co to je, tuhle možnost přeskočte.</span></span><button class="btn btn-o" type="button" data-copy="{{ feed_url or '' }}" data-up-rss>Kopírovat odkaz</button></li>
+    </ul>
+  </section>
+</div>
+
+<aside class="up-box" aria-labelledby="up-prev">
+  <div class="mbox-h"><h3 id="up-prev">Náhled vašeho informačního kanálu</h3><p>informace odpovídající vašemu výběru za posledních 30 dní</p></div>
+  <ol class="mbox-rows ul-rows" data-up-rows aria-live="polite">
+    {%- for r in preview.rows %}
+    <li><a href="{{ r.href }}"><span class="pd-rd">{{ r.date }}</span><span class="pd-rt"><b>{{ r.head }}</b><span>{{ r.sub }}</span></span><span class="{{ r.cls }}">{{ r.status }}</span></a></li>
+    {%- endfor %}
+  </ol>
+  <p class="up-empty" data-up-empty{% if preview.rows %} hidden{% endif %}>{% if streets %}Za posledních 30 dní se ve vybraných ulicích nic takového nestalo.{% else %}Až vyberete ulice, ukážeme tu, co by vám přišlo.{% endif %}</p>
+</aside>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('copy.js') }}" defer></script><script src="{{ asset('upozorneni.js') }}" defer></script>{% endblock %}

@@ -91,22 +91,12 @@ def overview(request: Request, ulice: str = "", probehle: str = "", obdobi: str 
     })
 
 
-@pages.get("/kalendar", response_class=HTMLResponse)
-def subscribe_page(request: Request, ulice: list[str] = Query(default=[]), pridat: str = ""):
-    """The calendar form without JavaScript lands here: the chosen streets and their link."""
-    today = _today()
-    names = q.streets(q.items(request.state.obvod.id, q.year_start(today)))
-    chosen = [s for s in dict.fromkeys(x for v in ulice for x in v.split(",")) if s in names]
-    missing = None
-    if pridat.strip():
-        hits = q.find(pridat, names)
-        if len(hits) == 1:
-            chosen = list(dict.fromkeys(chosen + hits))
-        else:
-            missing = pridat.strip()
-    return tpl.TemplateResponse(request, "cisteni/kalendar.html", {
-        **_state(today), "chosen": [(s, names[s]) for s in chosen], "missing": missing, "names": names,
-        **(subscribe(chosen) if chosen else {})})
+@pages.get("/kalendar")
+def subscribe_page(ulice: list[str] = Query(default=[])):
+    """The old calendar builder: Můj přehled does it now (with the cleanings chosen)."""
+    slugs = [s for s in dict.fromkeys(x for v in ulice for x in v.split(",")) if s]
+    return RedirectResponse("/zapojte-se/upozorneni?" + ("ulice=" + ",".join(quote(s) for s in slugs) + "&" if slugs else "")
+                            + "co=cisteni", status_code=301)
 
 
 def _feed(request: Request, its: list[dict], name: str) -> Response:
