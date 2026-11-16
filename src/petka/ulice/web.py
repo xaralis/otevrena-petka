@@ -65,7 +65,7 @@ def _closures(obvod: str, today: dt.date) -> list[dict]:
         when = q.period(a, b) if a or b else ""
         out.append({"id": f"uz{len(out)}", "nid": None, "href": f"/verejny-prostor/uzavirky#uz-{c.id}", "kind": "doprava",
                     "traffic": True, "street": c.place, "what": c.what, "when": when,
-                    "label": f"Uzavírka: {c.place}, {c.what}" + (f", {when}" if when else ""),
+                    "label": f"{'Uzavírka' if c.closed else 'Dopravní omezení'}: {c.place}, {c.what}" + (f", {when}" if when else ""),
                     "box": q.short_until(a, b, today) if b else "", "lng": round(p.x, 6), "lat": round(p.y, 6), "date": a,
                     "order": (bool(a and a > today), a if a and a > today else (b or dt.date.max))})
     return out
