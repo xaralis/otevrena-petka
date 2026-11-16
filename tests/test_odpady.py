@@ -82,3 +82,15 @@ def test_api(now):
     assert len(c.get("/api/v1/odpady/kontejnery").json()["items"]) == 34
     d = c.get("/api/v1/odpady/dvory").json()
     assert len(d["items"]) == 9 and d["items"][0]["hours"][0]["days"] == ["po", "út", "čt", "pá"]
+
+
+def test_sorted_waste_map(now, monkeypatch):
+    bins = [{"id": "n1", "name": None, "address": "Češkova 12", "lon": 15.77, "lat": 50.02, "odpad": ["papir", "plast"], "obvody": ["mo5"]},
+            {"id": "n2", "name": None, "address": None, "lon": 15.78, "lat": 50.03, "odpad": ["sklo"], "obvody": ["mo5"]}]
+    monkeypatch.setattr(web, "_bins", lambda obvod: bins)
+    h = TestClient(app).get("/verejny-prostor/odpady").text
+    assert "Kontejnery na tříděný odpad" in h and 'data-sort="plast">Plast <b>1</b>' in h and "Vše <b>2</b>" in h
+    fc = web._bins_fc(bins)
+    assert fc["features"][0]["properties"]["what"] == "Plast, Papír" and fc["features"][1]["properties"]["place"] == "Kontejnery"
+    monkeypatch.setattr(web, "_bins", lambda obvod: [])
+    assert "Kontejnery na tříděný odpad" not in TestClient(app).get("/verejny-prostor/odpady").text

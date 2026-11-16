@@ -1841,3 +1841,9 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 }
 .mbox-rows.od-rows li > a, .mbox-rows.od-rows li > span { grid-template-columns: 5.6rem minmax(0, 1fr) auto; }
 .mbox-rows.od-rows li > span:hover { background: none; }   /* not on the map: nothing to point at */
+/* Odpady: the map of the kontejnery na tříděný odpad (a framed map, no column), its legend's dots */
+.od-bins { margin-top: 3rem; }
+.od-binmap .map { height: 480px; border: 2px solid var(--ink); border-radius: 3px; }
+.cl-lg i.od-dot { display: inline-block; width: 12px; height: 12px; border: 1.5px solid var(--r, var(--ink)); border-top: 1.5px solid var(--r, var(--ink)); border-radius: 50%; background: var(--c); box-sizing: border-box; }
+.od-tip .ak-tip { white-space: normal; }
+@media (max-width: 900px) { .od-binmap { margin: 0 -1.25rem; } .od-binmap .map { height: 420px; border-width: 1px 0; border-radius: 0; } }

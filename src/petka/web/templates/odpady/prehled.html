@@ -34,6 +34,24 @@
   <p class="cl-cap">Kontejner zůstane přistaven, dokud se nenaplní. Patří do něj nábytek, koberce, matrace a další objemný odpad z domácnosti, ne zeleň, suť, elektro ani nebezpečný odpad. Ty patří na sběrný dvůr.</p>
 </section>
 
+{% if n_bins %}
+<section class="od-bins" aria-labelledby="od-bins-h">
+  <div class="sec-head">
+    <h2 id="od-bins-h">Kontejnery na tříděný odpad</h2>
+    <nav class="switch pd-seg od-sorts" aria-label="Druh odpadu" data-od-sorts>
+      <a href="#od-bins-h" data-sort="" aria-current="true">Vše <b>{{ n_bins }}</b></a>{% for s in sorts if s.key in ('plast', 'papir', 'sklo', 'bio', 'textil') %}<a href="#od-bins-h" data-sort="{{ s.key }}">{{ s.label }} <b>{{ s.n }}</b></a>{% endfor %}
+    </nav>
+  </div>
+  <div class="od-binmap">
+    <div class="map od-map" data-od-bins data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="od-bins-fc" role="region" aria-label="Mapa kontejnerů na tříděný odpad v {{ 'celém městě' if town else 'obvodu' }}"></div>
+    <script type="application/json" id="od-bins-fc">{{ bins|tojson }}</script>
+    <script type="application/json" id="od-sorts">{{ sorts|tojson }}</script>
+  </div>
+  <p class="cl-lg od-lg" aria-label="Legenda mapy">{% for s in sorts %}<span><i class="od-dot" style="--c: {{ s.color }}"></i>{{ s.label|lower }}</span>{% endfor %}<span><i class="od-dot" style="--c: #fff; --r: var(--ink)"></i>víc druhů</span></p>
+  <p class="cl-cap">Stanoviště jsou z <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, úplnost nikdo neověřil. Chybějící kontejner můžete do OpenStreetMap doplnit sami, sem se dostane do druhého dne.</p>
+</section>
+{% endif %}
+
 <section class="od-yards" aria-labelledby="od-yards-h">
   <h2 id="od-yards-h">Sběrné dvory</h2>
   <p class="od-lead">Pro občany Pardubic zdarma, pro ostatní s dokladem o zaplacení poplatku. Do 200 kg za týden, suti 300 kg za měsíc.</p>

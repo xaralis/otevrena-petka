@@ -51,3 +51,50 @@
     });
   });
 })();
+
+// Kontejnery na tříděný odpad: a dot per stanoviště, in its kind's colour when a kind is chosen
+// (the switch above the map, no reload), white with an ink ring when it takes several; a click
+// shows its card (address, what it takes) in the map.
+(function () {
+  const P = window.petkaMap;
+  const el = document.querySelector("[data-od-bins]");
+  if (!el || !P || !P.ok() || !window.mapTip) return;
+  const fc = JSON.parse(document.getElementById(el.dataset.inline).textContent);
+  const sorts = JSON.parse(document.getElementById("od-sorts").textContent);
+  const colour = Object.fromEntries(sorts.map((s) => [s.key, s.color]));
+  const nav = document.querySelector("[data-od-sorts]");
+  P.create(el, { cooperative: true }).then((map) => {
+    fc.features.forEach((f) => { const o = f.properties.odpad; f.properties.c = o.length === 1 ? colour[o[0]] || "#191c1f" : "#ffffff"; });
+    map.addSource("od-b", { type: "geojson", data: fc });
+    map.addLayer({ id: "od-b", source: "od-b", type: "circle", paint: {
+      "circle-radius": ["interpolate", ["linear"], ["zoom"], 12, 3.5, 15, 6, 17, 8],
+      "circle-color": ["get", "c"], "circle-stroke-color": "#191c1f",
+      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 15, 1.6] } });
+    P.fit(map, fc.features, { padding: 30, maxZoom: 15 });
+    // the card: one zero-size marker moved to the stanoviště clicked
+    const tip = document.createElement("span");
+    tip.className = "ak-mk ak-cla od-tip";
+    const marker = new maplibregl.Marker({ element: tip });
+    const show = (f) => {
+      tip.replaceChildren(window.mapTip.make(f.properties.place, f.properties.what, ""));
+      marker.setLngLat(f.geometry.coordinates).addTo(map);
+      P.light([tip], el.getBoundingClientRect().right);
+    };
+    map.on("click", (e) => {
+      const f = map.queryRenderedFeatures(e.point, { layers: ["od-b"] })[0];
+      if (f) show(f); else marker.remove();
+    });
+    map.on("mousemove", "od-b", () => (map.getCanvas().style.cursor = "pointer"));
+    map.on("mouseleave", "od-b", () => (map.getCanvas().style.cursor = ""));
+    nav && nav.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-sort]");
+      if (!a) return;
+      e.preventDefault();
+      nav.querySelectorAll("a").forEach((x) => (x === a ? x.setAttribute("aria-current", "true") : x.removeAttribute("aria-current")));
+      const k = a.dataset.sort;
+      marker.remove();
+      map.setFilter("od-b", k ? ["in", k, ["get", "odpad"]] : null);
+      map.setPaintProperty("od-b", "circle-color", k ? colour[k] : ["get", "c"]);
+    });
+  });
+})();

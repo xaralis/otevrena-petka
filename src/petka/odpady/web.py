@@ -83,6 +83,35 @@ def _features(drops: list[data.Drop], ys: list[dict], today: dt.date, at: dt.dat
     return {"type": "FeatureCollection", "features": feats}
 
 
+# Kontejnery na tříděný odpad: OpenStreetMap through the Místa export (petka.mista), the kinds in
+# the order and colours people know them by
+SORTS = (("plast", "Plast", "#e8b400"), ("papir", "Papír", "#1f5fbf"), ("sklo", "Sklo", "#2e8b46"),
+         ("kov", "Kov", "#7d838b"), ("bio", "Bio", "#8a5a2b"), ("textil", "Textil", "#8e3f8f"),
+         ("elektro", "Elektro", "#b00716"), ("olej", "Olej", "#191c1f"))
+
+
+def _bins(obvod_id: str | None) -> list[dict]:
+    """The kontejner stanoviště of the obvod (None: the whole town) from the Místa export; [] when
+    it is not there (a database without it)."""
+    from .. import db
+    try:
+        with db.pool().connection() as conn:
+            return conn.execute("""SELECT id, name, address, lon, lat, odpad, obvody FROM mista_places
+                                   WHERE kind = 'kontejner' AND (%s::text IS NULL OR %s = ANY(obvody))""",
+                                (obvod_id, obvod_id)).fetchall()
+    except Exception:
+        return []
+
+
+def _bins_fc(bins: list[dict]) -> dict:
+    names = dict((k, label) for k, label, _ in SORTS)
+    return {"type": "FeatureCollection", "features": [
+        {"type": "Feature", "geometry": {"type": "Point", "coordinates": [b["lon"], b["lat"]]},
+         "properties": {"id": b["id"], "odpad": [o for o, _, _ in SORTS if o in (b["odpad"] or [])],
+                        "what": ", ".join(names[o] for o, _, _ in SORTS if o in (b["odpad"] or [])),
+                        "place": b["address"] or b["name"] or "Kontejnery"}} for b in bins]}
+
+
 @pages.get("", response_class=HTMLResponse)
 def overview(request: Request, kde: str = ""):
     at = _now()
@@ -96,7 +125,10 @@ def overview(request: Request, kde: str = ""):
     yd = data.yards()
     ys = yd["yards"]
     nxt = next((d for d in every if d.obvod == obvod.id), None) if not mine and not town else None
+    bins = _bins(None if town else obvod.id)
+    sorts = [{"key": k, "label": label, "color": c, "n": sum(1 for b in bins if k in (b["odpad"] or []))} for k, label, c in SORTS]
     return tpl.TemplateResponse(request, "odpady/prehled.html", {
+        "bins": _bins_fc(bins), "sorts": [x for x in sorts if x["n"]], "n_bins": len(bins),
         "obvod": obvod, "town": town, "n_mine": len(mine), "n_town": len(year),
         "rows": [_row(d, today) for d in shown], "next": _row(nxt, today) if nxt else None,
         "yards": [_yard(y, at) for y in ys], "fc": _features(shown, ys, today, at),
