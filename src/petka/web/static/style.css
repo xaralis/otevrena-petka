@@ -1796,13 +1796,11 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
   .step-sub { margin-left: 0; }
 }
 
-/* Uzavírky: below the map, each closure with NDIC's own text (unchanged, with its source) */
+/* Uzavírky: below the map each closure as the street page's waiting reports (.ul-w), with NDIC's
+   own text whole (unchanged, its source under the list) */
 .uz-all { margin-top: 3rem; max-width: 72ch; }
-.uz-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--off); }
-.uz-list li { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--off); scroll-margin-top: 1rem; }
-.uz-list li:target { background: var(--grey); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
-.uz-list h3 { margin: 0; }
-.uz-what { margin: .15rem 0 .5rem; font-weight: 650; }
-.uz-what span { display: block; font-weight: 400; color: var(--ink-2); font-size: .92rem; }
-.uz-list blockquote { margin: 0; font-size: .95rem; }
-.uz-src { margin: .4rem 0 0; font-size: .8rem; color: var(--muted); }
+.uz-w { border-top: 1px solid var(--off); border-radius: 0; }
+.uz-w li { padding-left: 0; padding-right: 0; scroll-margin-top: 1rem; }
+.uz-w li:last-child { border-bottom: 1px solid var(--off); }
+.uz-w .ul-w-t q { display: block; -webkit-line-clamp: unset; overflow: visible; }
+.uz-src { margin: .6rem 0 0; font-size: .8rem; color: var(--muted); }

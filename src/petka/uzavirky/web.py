@@ -39,7 +39,7 @@ def _dmt(d: dt.datetime | None) -> str:
     if d is None:
         return ""
     t = d.astimezone(TZ)
-    return _dm(d) + ("" if (t.hour, t.minute) in ((0, 0), (23, 59)) else f" {t.hour}:{t.minute:02d}")
+    return _dm(d) + ("" if (t.hour, t.minute) in ((0, 0), (23, 59)) else f"{NB}{t.hour}:{t.minute:02d}")
 
 
 def view(c: q.Closure, at: dt.datetime) -> dict:

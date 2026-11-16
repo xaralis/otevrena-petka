@@ -35,18 +35,15 @@
 </section>
 
 {% if rows %}
-<section class="uz-all" aria-labelledby="uz-all-h">
+<section class="ul-wait uz-all" aria-labelledby="uz-all-h">
   <h2 id="uz-all-h">Podrobnosti</h2>
-  <ol class="uz-list">
-    {% for r in rows %}
-    <li id="uz-{{ r.id }}">
-      <h3>{{ r.place }}</h3>
-      <p class="uz-what">{{ r.what }}<span>{{ r.range }}</span></p>
-      <blockquote>{{ r.text }}</blockquote>
-      <p class="uz-src">{{ attribution }}</p>
-    </li>
-    {% endfor %}
+  <ol class="ul-w uz-w">
+    {% for r in rows %}<li class="ul-w-rich" id="uz-{{ r.id }}">
+      <div class="ul-w-t"><b>{{ r.place }}</b><span class="ul-w-m"><span class="{{ 'st-no' if r.closed and r.now }}">{{ r.what }}</span>, {{ r.range }}</span><q>{{ r.text }}</q></div>
+      {% if r.mapped %}<div class="ul-w-a"><a href="#uz-map-h" data-uz-focus="{{ r.id }}">Na mapě</a></div>{% endif %}
+    </li>{% endfor %}
   </ol>
+  <p class="uz-src">Texty uzavírek jsou převzaté beze změny. {{ attribution }}</p>
 </section>
 {% endif %}
 

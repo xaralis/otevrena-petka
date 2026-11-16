@@ -45,6 +45,14 @@
         const r = rows[k];
         if (r && link.pinned) r.scrollIntoView({ block: "nearest", behavior: "smooth" });
       });
+      // „Na mapě“ under the map: the same as a click on the closure's row beside it
+      document.querySelectorAll("[data-uz-focus]").forEach((a) => a.addEventListener("click", (e) => {
+        const r = rows[a.dataset.uzFocus];
+        if (!r) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        r.querySelector("a").click();
+      }));
       Object.entries(rows).forEach(([k, r]) => {
         link.wire(r, () => k, { within: true });
         const feats = placed.filter((f) => f.properties.key === k);
