@@ -41,15 +41,12 @@ def test_planned_pages_and_where_an_area_links():
     assert nav.SOON == {"/finance/rozpocet", "/finance/smlouvy", "/verejny-prostor/uzavirky", "/zapojte-se/ankety"}
 
 
-def test_header_rows_and_phone_menu(monkeypatch):
-    from petka.cisteni import web as cweb
-    monkeypatch.setattr(cweb.q, "items", lambda obvod, since, slugs=None: [])    # no database needed
-    monkeypatch.setattr(cweb.q, "checked", lambda: None)
+def test_header_rows_and_phone_menu():
     c = TestClient(app)
-    html = c.get("/verejny-prostor/blokove-cisteni").text
+    html = c.get("/verejny-prostor/uzavirky").text      # a page of the area without a database (planned)
     assert '<a href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor</a>' in html
     assert 'aria-label="Sekce v oblasti Veřejný prostor"' in html
-    assert '<a href="/verejny-prostor/uzavirky" class="soon"><span>Uzavírky</span><span class="sr"> (připravujeme)</span></a>' in html
+    assert '<a href="/verejny-prostor/uzavirky" class="soon" aria-current="page"><span>Uzavírky</span><span class="sr"> (připravujeme)</span></a>' in html
     assert 'id="menu"' in html and 'href="#menu" role="button" aria-expanded="false"' in html
     assert "<b>Rozpočet<small>připravujeme</small></b>" in html
     head = html.split("</header>")[0]
