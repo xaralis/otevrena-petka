@@ -77,7 +77,25 @@
     const cal = root.querySelector("[data-up-cal]");
     cal.href = out.webcal; cal.dataset.https = out.https;
     root.querySelector("[data-up-rss]").dataset.copy = out.feed;
-    if (pushSub) post("/muj-prehled/odber", { subscription: pushSub.toJSON(), ulice: streets(), co: kinds() });
+    if (pushSub) {
+      post("/muj-prehled/odber", { subscription: pushSub.toJSON(), ulice: streets(), co: kinds() })
+        .then((r) => saved(r.ok ? "Uloženo. Upozornění vám teď budou chodit podle nového výběru."
+                                : "Změnu se nepodařilo uložit. Zkuste to prosím znovu."))
+        .catch(() => saved("Změnu se nepodařilo uložit. Zkuste to prosím znovu."));
+    } else {
+      saved("Náhled i odkazy pro kalendář a RSS odpovídají novému výběru.");
+    }
+  }
+
+  // a change of the choice says it took: the notifications' subscription saved, or the links new
+  const savedEl = root.querySelector("[data-up-saved]");
+  let savedTimer;
+  function saved(text) {
+    if (!savedEl) return;
+    savedEl.textContent = text;
+    savedEl.hidden = false;
+    clearTimeout(savedTimer);
+    savedTimer = setTimeout(() => (savedEl.hidden = true), 5000);
   }
 
   // --- notifications (Web Push): the row shows only where the browser can do it ----------------
