@@ -59,7 +59,7 @@ def test_drops_from_the_harmonogram():
 
 def test_the_files_yards_have_places():
     ys = data.yards()["yards"]
-    assert len(ys) == 9 and sum(1 for y in ys if y["point"]) >= 8
+    assert len(ys) == 9 and all(y["point"] for y in ys)
 
 
 @pytest.fixture

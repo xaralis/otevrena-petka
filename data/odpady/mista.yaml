@@ -53,7 +53,7 @@ places:
   "Doubravice proti čp. 53": {point: [15.746762, 50.067344], how: "čp. 53: Doubravice 53, 53353 Pardubice", approx: false}
   "Rosice – Kréta (ul. Legionářská)": {point: [15.748772, 50.046954], how: "střed ulice Legionářská", approx: true}
   "Trnová – garáže u T-STRINGU": {point: null, how: "nenalezeno", approx: true}
-  "Dražkovice, areál překladiště odpadu": {point: null, how: "nenalezeno", approx: true}
+  "Dražkovice, areál překladiště odpadu": {point: [15.76453, 50.00655], how: "OpenStreetMap: Kompostárna a překladiště odpadů Dražkovice (střed areálu)", approx: false}
   "Hůrka, areál SmP a.s., Hůrka 1803": {point: [15.80939, 50.04825], how: "OpenStreetMap (Místa)", approx: false}
   "Nemošice, ul. Ostřešanská": {point: [15.79617, 50.00885], how: "OpenStreetMap (Místa)", approx: false}
   "Pardubičky, ul. Průmyslová": {point: [15.80029, 50.02613], how: "OpenStreetMap (Místa)", approx: false}
