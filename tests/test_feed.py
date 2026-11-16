@@ -46,7 +46,7 @@ def test_events_of_chosen_kinds_and_dedup():
 
 def test_rss_is_valid_xml():
     evs = feed.events([("Wolkerova", "wolkerova")], sources(), NOW)
-    xml = feed.rss(evs, ["Wolkerova"], "https://otevrenapetka.cz", "https://otevrenapetka.cz/zapojte-se/upozorneni/rss.xml?ulice=wolkerova")
+    xml = feed.rss(evs, ["Wolkerova"], "https://otevrenapetka.cz", "https://otevrenapetka.cz/muj-prehled/rss.xml?ulice=wolkerova")
     ch = ET.fromstring(xml).find("channel")
     assert ch.findtext("title") == "Otevřená Pětka – Wolkerova"
     assert len(ch.findall("item")) == len(evs)
@@ -64,24 +64,24 @@ def get(path, **kw):
 
 
 def test_page_empty(page):
-    r = get("/zapojte-se/upozorneni")
+    r = get("/muj-prehled")
     assert r.status_code == 200 and "<h1>Můj přehled</h1>" in r.text
     assert "Nejdřív vyberte aspoň jednu ulici." in r.text and 'data-up-ways hidden' in r.text
 
 
 def test_page_without_js_adds_and_drops(page):
-    r = get("/zapojte-se/upozorneni", params=[("ulice", "wolkerova"), ("ulice", "lexova"), ("pridat", "Josefa Ressla"), ("odebrat", "lexova")])
+    r = get("/muj-prehled", params=[("ulice", "wolkerova"), ("ulice", "lexova"), ("pridat", "Josefa Ressla"), ("odebrat", "lexova")])
     assert 'value="wolkerova"' in r.text and 'value="josefa-ressla"' in r.text and 'name="ulice" value="lexova"' not in r.text
     assert 'aria-label="Odebrat Wolkerova"' in r.text
     assert "webcal://otevrenapetka.cz/verejny-prostor/blokove-cisteni/kalendar.ics?ulice=wolkerova,josefa-ressla" in r.text
-    assert 'data-copy="https://otevrenapetka.cz/zapojte-se/upozorneni/rss.xml?ulice=wolkerova,josefa-ressla"' in r.text
+    assert 'data-copy="https://otevrenapetka.cz/muj-prehled/rss.xml?ulice=wolkerova,josefa-ressla"' in r.text
     assert "Uzavírka chodníku" in r.text and "Oprava asfaltu" not in r.text    # 50 days back: counted, not previewed
-    r = get("/zapojte-se/upozorneni", params={"pridat": "Neexistující"})
+    r = get("/muj-prehled", params={"pridat": "Neexistující"})
     assert "Ulici „Neexistující“ v obvodu nemáme" in r.text
 
 
 def test_preview_json(page):
-    out = get("/zapojte-se/upozorneni/nahled.json", params={"ulice": "wolkerova", "co": "podnety,deska"}).json()
+    out = get("/muj-prehled/nahled.json", params={"ulice": "wolkerova", "co": "podnety,deska"}).json()
     assert out["counts"] == {"podnety": 3, "deska": 1, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
     assert [r["head"] for r in out["rows"]] == ["Autovrak", "Úřední deska", "Lavičky, zábradlí"]
     assert out["feed"].endswith("rss.xml?ulice=wolkerova&co=podnety,deska")
@@ -89,7 +89,14 @@ def test_preview_json(page):
 
 
 def test_rss_route(page):
-    assert get("/zapojte-se/upozorneni/rss.xml").status_code == 404
-    r = get("/zapojte-se/upozorneni/rss.xml", params={"ulice": "wolkerova", "co": "deska"})
+    assert get("/muj-prehled/rss.xml").status_code == 404
+    r = get("/muj-prehled/rss.xml", params={"ulice": "wolkerova", "co": "deska"})
     assert r.headers["content-type"].startswith("application/rss+xml")
     assert [i.findtext("category") for i in ET.fromstring(r.text).iter("item")] == ["deska"]
+
+
+def test_my_overview_is_a_top_level_item(page):
+    h = get("/muj-prehled").text.split("</header>")[0]
+    assert '<a href="/muj-prehled" aria-current="true">Můj přehled</a>' in h
+    r = get("/zapojte-se/upozorneni", params={"ulice": "wolkerova"})     # where it was for a day
+    assert r.status_code == 301 and r.headers["location"] == "/muj-prehled?ulice=wolkerova"

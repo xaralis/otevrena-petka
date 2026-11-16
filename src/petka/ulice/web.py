@@ -247,7 +247,7 @@ def _picked(request: Request, ulice: list[str], co: list[str]) -> tuple[list[tup
 
 def _feed_url(streets: list[tuple[str, str]], kinds: list[str]) -> str:
     every = len(kinds) == len(feed.KINDS)
-    return (_origin() + "/zapojte-se/upozorneni/rss.xml?ulice=" + ",".join(s for _, s in streets)
+    return (_origin() + "/muj-prehled/rss.xml?ulice=" + ",".join(s for _, s in streets)
             + ("" if every else "&co=" + ",".join(kinds)))
 
 
@@ -271,7 +271,7 @@ def _preview(obvod: str, streets: list[tuple[str, str]], kinds: list[str]) -> di
     return {"rows": rows, "counts": counts}
 
 
-@pages.get("/zapojte-se/upozorneni", response_class=HTMLResponse)
+@pages.get("/muj-prehled", response_class=HTMLResponse)
 def follow(request: Request, ulice: list[str] = Query(default=[]), co: list[str] = Query(default=[]),
            pridat: str = "", odebrat: str = ""):
     """Upozornění: pick streets and what to hear about; the preview of the feed, and three ways
@@ -296,7 +296,7 @@ def follow(request: Request, ulice: list[str] = Query(default=[]), co: list[str]
         **(subscribe(slugs) if slugs else {})})
 
 
-@pages.get("/zapojte-se/upozorneni/nahled.json", include_in_schema=False)
+@pages.get("/muj-prehled/nahled.json", include_in_schema=False)
 def follow_preview(request: Request, ulice: list[str] = Query(default=[]), co: list[str] = Query(default=[])):
     """The preview and the counts for the page's script, when the choice changes."""
     streets, kinds = _picked(request, ulice, co)
@@ -306,7 +306,7 @@ def follow_preview(request: Request, ulice: list[str] = Query(default=[]), co: l
                          **(subscribe(slugs) if slugs else {})})
 
 
-@pages.get("/zapojte-se/upozorneni/rss.xml")
+@pages.get("/muj-prehled/rss.xml")
 def follow_rss(request: Request, ulice: list[str] = Query(default=[]), co: list[str] = Query(default=[])):
     """RSS of the chosen streets (?ulice=wolkerova,lexova) and kinds (?co=podnety,deska; all by default)."""
     streets, kinds = _picked(request, ulice, co)

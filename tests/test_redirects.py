@@ -77,7 +77,7 @@ def test_what_stays(path):
     ("/radnice/", "/radnice/uredni-deska"),
     ("/finance", "/finance/rozpocet"),
     ("/verejny-prostor", "/verejny-prostor/ulice"),
-    ("/zapojte-se", "/zapojte-se/upozorneni"),
+    ("/zapojte-se", "/zapojte-se/ankety"),
 ])
 def test_area_goes_to_its_first_page(area, first):
     r = c.get(area)

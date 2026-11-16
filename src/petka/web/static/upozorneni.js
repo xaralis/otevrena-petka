@@ -67,7 +67,7 @@
       return;
     }
     let out;
-    try { out = await (await fetch("/zapojte-se/upozorneni/nahled.json?" + q)).json(); } catch { return; }
+    try { out = await (await fetch("/muj-prehled/nahled.json?" + q)).json(); } catch { return; }
     if (n !== seq) return;      // a newer change is on its way
     rows.replaceChildren(...out.rows.map(row));
     empty.textContent = "Za posledních 30 dní se ve vybraných ulicích nic takového nestalo.";

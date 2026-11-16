@@ -95,7 +95,7 @@ def overview(request: Request, ulice: str = "", probehle: str = "", obdobi: str 
 def subscribe_page(ulice: list[str] = Query(default=[])):
     """The old calendar builder: Můj přehled does it now (with the cleanings chosen)."""
     slugs = [s for s in dict.fromkeys(x for v in ulice for x in v.split(",")) if s]
-    return RedirectResponse("/zapojte-se/upozorneni?" + ("ulice=" + ",".join(quote(s) for s in slugs) + "&" if slugs else "")
+    return RedirectResponse("/muj-prehled?" + ("ulice=" + ",".join(quote(s) for s in slugs) + "&" if slugs else "")
                             + "co=cisteni", status_code=301)
 
 

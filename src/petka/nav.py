@@ -64,7 +64,6 @@ GROUPS = [
         Item("Podněty", "/verejny-prostor/podnety", "Co lidé hlásí a jak se to řeší?", "podnety", was="/podnety"),
     ]),
     Group("Zapojte se", "/zapojte-se", [
-        Item("Můj přehled", "/zapojte-se/upozorneni", "Upozornění, kalendář a RSS pro vaše ulice"),
         Item("Ankety", "/zapojte-se/ankety", "Co si myslíte?", "ankety", planned=True, was="/ankety"),
     ]),
 ]
@@ -73,13 +72,16 @@ GROUPS = [
 for _g in GROUPS:
     _g.items.sort(key=lambda i: i.soon)
 
+# a page of its own in the top row, beside the areas: the reader's own streets
+MINE = Item("Můj přehled", "/muj-prehled", "Co je nového ve vašich ulicích? Upozornění, kalendář, RSS",
+            was="/zapojte-se/upozorneni")
 UTIL = Item("Data a API", "/data", "Stáhnout data, API a MCP pro AI asistenty")
 SOON = {i.href for g in GROUPS for i in g.items if i.soon}   # served by the planned-section page
 PATHS = {i.slug: i.href for g in GROUPS for i in g.items if i.slug}   # section slug -> its page
 
 # old prefix -> new prefix, longest first: /usneseni/clenove goes to /radnice/zastupitele, not
 # to /radnice/usneseni/clenove
-MOVED = sorted([(i.was, i.href) for g in GROUPS for i in g.items if i.was]
+MOVED = sorted([(i.was, i.href) for g in GROUPS for i in g.items + [MINE] if i.was]
                + [("/verejny-prostor/zavady", "/verejny-prostor/podnety")],    # „Závady“ until 13. 11. 2026
                key=lambda m: -len(m[0]))
 
@@ -128,4 +130,4 @@ def section_tabs(path: str) -> list[tuple[str, str, bool]]:
     return []
 
 
-TEMPLATE_GLOBALS = {"NAV": GROUPS, "NAV_UTIL": UTIL, "nav_current": current, "section_tabs": section_tabs}
+TEMPLATE_GLOBALS = {"NAV": GROUPS, "NAV_MINE": MINE, "NAV_UTIL": UTIL, "nav_current": current, "section_tabs": section_tabs}
