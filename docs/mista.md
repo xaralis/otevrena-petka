@@ -53,13 +53,13 @@ curl --compressed 'https://otevrenapetka.cz/api/v1/mista?obvod=mo5&druh=stojan,k
 | `licence`, `source` | licence a odkud data jsou |
 | `id` | typ objektu OSM (`n` uzel, `w` cesta, `r` relace) + jeho id; stálé mezi dny |
 | `kind` | druh, viz níže |
-| `name` | název; `null` jen u `stojan`, `kontejner` a `dvur`. U „Co je v okolí“ vlastní název, jinak značka (u bankomatu i provozovatel), jinak co to je („Veřejné WC“) |
+| `name` | název; `null` jen u `stojan`, `kontejner`, `dvur` a `vykupna`. U „Co je v okolí“ vlastní název, jinak značka (u bankomatu i provozovatel), jinak co to je („Veřejné WC“) |
 | `what` | co to je, česky |
 | `address` | ulice (nebo místo) a číslo z OSM `addr:*`, nebo `null` |
 | `at` | `[lon, lat]` na 5 desetinných míst; u cesty a relace její střed |
 | `hours` | OSM `opening_hours` beze změny, nebo `null` |
 | `obvody` | obvod, ve kterém bod leží (polygony obvodů z RÚIAN; do 20 m za hranicí nejbližší), `[]` mimo všechny |
-| `odpad` | jen `kontejner` a `dvur`: druhy odpadu, které bere; jinde pole chybí |
+| `odpad` | jen `kontejner`, `dvur` a `vykupna`: druhy odpadu, které bere; jinde pole chybí |
 | `capacity` | jen `stojan`: OSM `capacity` jako celé číslo, nebo `null`; jinde pole chybí |
 
 Místa jsou seřazená podle druhu a `id`. Čtenář neznámá pole a neznámé druhy ignoruje.
@@ -79,7 +79,8 @@ Místa jsou seřazená podle druhu a `id`. Čtenář neznámá pole a neznámé 
 | `posta` | `amenity=post_office` | Balíkovna; Pobočka České pošty; Pošta |
 | `stojan` | `amenity=bicycle_parking`, ne `access` = private, no | Stojan na kola; Kryté stání pro kola (`covered=yes` nebo `bicycle_parking` = shed, building, shelter); Boxy na kola (`bicycle_parking=lockers`) |
 | `kontejner` | `amenity=recycling`, ne `recycling_type=centre`; kontejner, který nebere žádný z druhů odpadu níže, vynecháme | Kontejnery na tříděný odpad |
-| `dvur` | `amenity=recycling` + `recycling_type=centre`, i bez druhů odpadu | Sběrný dvůr |
+| `dvur` | `amenity=recycling` + `recycling_type=centre` do 200 m od městského separačního dvora podle seznamu Služeb města Pardubic; dvůr, který v OSM chybí, doplněný z toho seznamu (`id` = `dvur-…`). Název a otevírací doba podle SmP | Sběrný dvůr |
+| `vykupna` | ostatní `amenity=recycling` + `recycling_type=centre`: soukromé výkupny a recyklační centra (Kovošrot, JARÝ…) | Výkupna, recyklační centrum |
 
 Prvních sedm druhů vybírá a pojmenovává stejně jako `data-tools/build_places.mjs` aplikace
 (verze 1 souboru).

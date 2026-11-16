@@ -17,7 +17,7 @@ Doménové pojmy portálu. Kód, testy a návrhy používají tyhle názvy.
 - **Místo** – bod z OpenStreetMap v exportu Místa (`/api/v1/mista`): obchod s potravinami,
   bankomat, lékárna, kde se najíst, památka, veřejné WC, pošta („Co je v okolí“ aplikace
   Pardubice do kapsy), stojan na kola, kontejner na tříděný odpad nebo sběrný dvůr. V kódu
-  `kind` (`potraviny` … `dvur`), u kontejneru a dvora `odpad` (`papir`, `plast`, …). Licence
+  `kind` (`potraviny` … `dvur`, `vykupna`), u kontejneru a dvora `odpad` (`papir`, `plast`, …). Licence
   ODbL, ne CC BY.
 - **Oznámení** – položka úřední desky (deska obvodu nebo magistrátu).
 - **Podnět** – hlášení občana z městské aplikace Dej Tip (závada, černá skládka, poděkování…)

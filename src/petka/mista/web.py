@@ -21,7 +21,8 @@ api = APIRouter(prefix="/api/v1", tags=["místa"])
 
 CACHE = "public, max-age=3600"
 DRUH_DOC = ("Jen tyto druhy, oddělené čárkou: potraviny, bankomat, lekarna, jidlo, pamatky, wc, posta, "
-            "stojan, kontejner, dvur. Bez parametru všechny.")
+            "stojan, kontejner, dvur (městské sběrné dvory), vykupna (soukromá recyklační centra, výkup kovů). "
+            "Bez parametru všechny.")
 
 
 def _kinds(druh: str | None = Query(None, description=DRUH_DOC, examples=["stojan", "kontejner,dvur"])):

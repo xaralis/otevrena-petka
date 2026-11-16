@@ -304,3 +304,20 @@ def test_data_page_lists_mista(monkeypatch):
     i = html.index('id="mista"')
     assert "/api/v1/mista.geojson" in html[i:] and "ODbL" in html[i:] and "2 345 míst" in html[i:]
     assert '<a href="#mista" data-tab="mista">Místa</a>' in html
+
+
+def test_city_yards_apart_from_private_centres():
+    city = [{"key": "dvur-hurka", "name": "Hůrka", "address": "areál SmP a.s., Hůrka 1803", "point": [15.80939, 50.04825],
+             "hours": [{"days": ["út", "st", "čt"], "from": "13:00", "to": "17:00"}, {"days": ["so"], "from": "8:00", "to": "12:00"}]},
+            {"key": "dvur-drazkovice", "name": "Dražkovice", "address": "areál překladiště odpadu", "point": [15.76453, 50.00655],
+             "hours": [{"days": ["po"], "from": "6:30", "to": "15:00"}]}]
+    places = [{"id": "w1", "kind": "dvur", "name": "Sběrný dvůr - Hůrka", "what": "Sběrný dvůr", "address": "Hůrka 1803",
+               "at": [15.80941, 50.04826], "hours": None, "odpad": []},
+              {"id": "w2", "kind": "dvur", "name": "KOVOŠROT Hůrka s.r.o.", "what": "Sběrný dvůr", "address": "Hůrka 1786",
+               "at": [15.81209, 50.05041], "hours": None, "odpad": ["kov"]},
+              {"id": "n3", "kind": "kontejner", "name": None, "what": "x", "address": None, "at": [15.8, 50.0], "hours": None, "odpad": ["sklo"]}]
+    out = {p["id"]: p for p in osm.split_yards(places, city)}
+    assert out["w1"]["kind"] == "dvur" and out["w1"]["name"] == "Sběrný dvůr Hůrka" and out["w1"]["hours"] == "Tu,We,Th 13:00-17:00; Sa 08:00-12:00"
+    assert out["w2"]["kind"] == "vykupna" and out["w2"]["name"] == "KOVOŠROT Hůrka s.r.o."
+    assert out["dvur-drazkovice"]["kind"] == "dvur" and out["dvur-drazkovice"]["at"] == [15.76453, 50.00655]   # not in OSM
+    assert out["n3"]["kind"] == "kontejner"

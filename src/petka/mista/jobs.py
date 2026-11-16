@@ -84,12 +84,18 @@ def _obvody() -> where.Obvody:
         return where.town_obvody(conn)
 
 
+def _city_yards() -> list[dict]:
+    """The town's separační dvory (SmP's list, petka.odpady), to tell them from private centres."""
+    from ..odpady import data as od
+    return od.yards()["yards"]
+
+
 def update(path: Path | None = None, force: bool = False) -> dict:
     """Ask Overpass (or read its saved answer at `path`) and store the build. `force` stores it
     even when the guard would refuse it (after a real drop in OSM)."""
     def run(conn, client) -> dict:
         data = json.loads(path.read_text()) if path else osm.fetch(client)
-        places = where.place_all(osm.places_of(data.get("elements") or []), _obvody())
+        places = where.place_all(osm.split_yards(osm.places_of(data.get("elements") or []), _city_yards()), _obvody())
         return store(conn, places, force)
 
     return runner.run("mista-update", "místa", lambda conn, client: [Unit(("pardubice",), "pardubice", run)],

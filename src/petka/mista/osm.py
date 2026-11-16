@@ -15,7 +15,7 @@ import os
 import re
 import time
 
-KINDS = ("potraviny", "bankomat", "lekarna", "jidlo", "pamatky", "wc", "posta", "stojan", "kontejner", "dvur")
+KINDS = ("potraviny", "bankomat", "lekarna", "jidlo", "pamatky", "wc", "posta", "stojan", "kontejner", "dvur", "vykupna")
 WASTE = ("papir", "plast", "sklo", "kov", "textil", "elektro", "baterie", "olej", "bio")
 
 OVERPASS = os.environ.get("OVERPASS_URL", "https://overpass-api.de/api/interpreter")
@@ -142,7 +142,7 @@ def classify(t: dict) -> tuple[str, str] | None:
 def name_of(t: dict, kind: str, what: str) -> str | None:
     """The name a person sees. „Co je v okolí“: its own, else brand (an ATM also its operator),
     else what it is („Veřejné WC“). A rack, container or dvůr: its own name or None."""
-    if kind in ("stojan", "kontejner", "dvur"):
+    if kind in ("stojan", "kontejner", "dvur", "vykupna"):
         return (t.get("name") or "").strip() or None
     own = t.get("name") or t.get("brand") or (t.get("operator") if kind == "bankomat" else None)
     if own:
@@ -188,6 +188,48 @@ def places_of(elements: list[dict]) -> list[dict]:
         if kind == "stojan":
             p["capacity"] = capacity_of(t)
         out.append(p)
+    return sorted(out, key=lambda p: (p["kind"], p["id"]))
+
+
+NEAR_YARD = 200     # m: an OSM recycling centre this close to a city yard is that yard
+OSM_DAYS = {"po": "Mo", "út": "Tu", "st": "We", "čt": "Th", "pá": "Fr", "so": "Sa", "ne": "Su"}
+
+
+def _m(a: list, b: list) -> float:
+    from math import cos, hypot, radians
+    return hypot((a[0] - b[0]) * 111320 * cos(radians(b[1])), (a[1] - b[1]) * 110540)
+
+
+def opening_hours(hours: list[dict]) -> str:
+    """SmP's hours ([{days, from, to}]) in OSM's opening_hours syntax: „Mo,Tu 06:30-15:00; We …“."""
+    t = lambda s: s.zfill(5)
+    return "; ".join(f"{','.join(OSM_DAYS[d] for d in h['days'])} {t(h['from'])}-{t(h['to'])}" for h in hours)
+
+
+def split_yards(places: list[dict], city: list[dict]) -> list[dict]:
+    """OSM tags every recycling centre alike, the town's separační dvory and private buyers of
+    scrap (Kovošrot, JARÝ) too. A centre within NEAR_YARD m of a city yard (SmP's list,
+    petka.odpady: {key, name, address, point, hours}) stays `dvur`, named and timed as SmP has
+    it; any other becomes `vykupna`. A city yard OSM lacks (Dražkovice is mapped as a transfer
+    station) is added from SmP's list, so `dvur` is always the town's yards."""
+    used, out = set(), []
+    for p in places:
+        if p["kind"] != "dvur":
+            out.append(p)
+            continue
+        near = [c for c in city if c.get("point") and c["key"] not in used and _m(p["at"], c["point"]) <= NEAR_YARD]
+        if near:
+            c = min(near, key=lambda c: _m(p["at"], c["point"]))
+            used.add(c["key"])
+            out.append({**p, "name": f"Sběrný dvůr {c['name']}", "what": "Sběrný dvůr",
+                        "address": p["address"] or c["address"] or None, "hours": opening_hours(c["hours"])})
+        else:
+            out.append({**p, "kind": "vykupna", "what": "Výkupna, recyklační centrum"})
+    for c in city:
+        if c["key"] not in used and c.get("point"):
+            out.append({"id": c["key"], "kind": "dvur", "name": f"Sběrný dvůr {c['name']}", "what": "Sběrný dvůr",
+                        "address": c["address"] or None, "at": [round(c["point"][0], 5), round(c["point"][1], 5)],
+                        "hours": opening_hours(c["hours"]), "odpad": []})
     return sorted(out, key=lambda p: (p["kind"], p["id"]))
 
 

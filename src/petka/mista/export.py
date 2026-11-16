@@ -30,7 +30,7 @@ def place(row: dict) -> dict:
     p = {"id": row["id"], "kind": row["kind"], "name": row["name"], "what": row["what"],
          "address": row["address"], "at": [row["lon"], row["lat"]], "hours": row["hours"],
          "obvody": list(row["obvody"] or [])}
-    if row["kind"] in ("kontejner", "dvur"):
+    if row["kind"] in ("kontejner", "dvur", "vykupna"):
         p["odpad"] = list(row["odpad"] or [])
     if row["kind"] == "stojan":
         p["capacity"] = row["capacity"]
