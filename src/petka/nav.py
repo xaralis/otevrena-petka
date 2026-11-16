@@ -36,6 +36,7 @@ class Group:
     label: str
     path: str                   # the area's own URL, a redirect to `href`
     items: list[Item] = field(default_factory=list)
+    hidden: bool = False        # not in the header nor the menu yet (its pages and redirects still work)
 
     @property
     def href(self) -> str:
@@ -65,7 +66,7 @@ GROUPS = [
     ]),
     Group("Zapojte se", "/zapojte-se", [
         Item("Ankety", "/zapojte-se/ankety", "Co si myslíte?", "ankety", planned=True, was="/ankety"),
-    ]),
+    ], hidden=True),            # nothing in it but „připravujeme“ (16. 11. 2026)
 ]
 # pages that exist come first in every area, the "připravujeme" ones at its end (they move up
 # by themselves once their section goes live)
@@ -130,4 +131,5 @@ def section_tabs(path: str) -> list[tuple[str, str, bool]]:
     return []
 
 
-TEMPLATE_GLOBALS = {"NAV": GROUPS, "NAV_MINE": MINE, "NAV_UTIL": UTIL, "nav_current": current, "section_tabs": section_tabs}
+SHOWN = [g for g in GROUPS if not g.hidden]   # the areas in the header and the phone menu
+TEMPLATE_GLOBALS = {"NAV": SHOWN, "NAV_MINE": MINE, "NAV_UTIL": UTIL, "nav_current": current, "section_tabs": section_tabs}

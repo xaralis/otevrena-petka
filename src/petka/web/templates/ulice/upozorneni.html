@@ -10,7 +10,7 @@
 <div>
   <form class="up-form" method="get" action="/muj-prehled" data-up-form>
     <section class="up-sec" aria-labelledby="up-1">
-      <div class="step"><span class="step-n" aria-hidden="true">1</span><h2 id="up-1">Ulice</h2></div>
+      <div class="step"><span class="step-n" aria-hidden="true">1</span><h2 id="up-1">Vyberte ulice</h2></div>
       <p class="step-sub">Kde bydlíte, parkujete nebo chodíte s dětmi na hřiště.</p>
       {% if missing %}<p class="up-miss" role="status">Ulici „{{ missing }}“ v obvodu nemáme, nebo jich odpovídá víc. Zkuste přesný název.</p>{% endif %}
       <ul class="toks" data-up-toks>
@@ -22,7 +22,7 @@
     </section>
 
     <section class="up-sec" aria-labelledby="up-2">
-      <div class="step"><span class="step-n" aria-hidden="true">2</span><h2 id="up-2">Co vás zajímá</h2></div>
+      <div class="step"><span class="step-n" aria-hidden="true">2</span><h2 id="up-2">Co vás zajímá?</h2></div>
       <p class="step-sub">Vyberte, jaké informace vás zajímají. Číslo vpravo ukazuje, kolik takových zpráv z vašich ulic přišlo za poslední dva měsíce.</p>
       <ul class="kinds">
         {%- for k, label, about in KINDS %}
@@ -34,7 +34,7 @@
   </form>
 
   <section class="up-sec" aria-labelledby="up-3">
-    <div class="step"><span class="step-n" aria-hidden="true">3</span><h2 id="up-3">Jak vám máme dát vědět</h2></div>
+    <div class="step"><span class="step-n" aria-hidden="true">3</span><h2 id="up-3">Jak vám máme dát vědět?</h2></div>
     <p class="step-sub">Vyberte jednu cestu, nebo klidně všechny.</p>
     <p class="up-none" data-up-none{% if streets %} hidden{% endif %}>Nejdřív vyberte aspoň jednu ulici.</p>
     <ul class="ways" data-up-ways{% if not streets %} hidden{% endif %}>

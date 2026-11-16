@@ -35,8 +35,8 @@
   <div class="wrap top-inner">
     <a class="brand" href="/" aria-label="{{ SITE_NAME }} – úvod"><img src="{{ asset('icons/brand-inv.svg') }}" alt="" width="30" height="30"><span>Otevřená <b>Pětka</b></span></a>
     <nav class="l1" aria-label="Oblasti portálu">
-      {% for g in NAV %}<a href="{{ g.href }}"{% if g is sameas cur_g %} aria-current="true"{% endif %}>{{ g.label }}</a>{% endfor %}
       <a href="{{ NAV_MINE.href }}"{% if p.startswith(NAV_MINE.href) %} aria-current="true"{% endif %}>{{ NAV_MINE.label }}</a>
+      {% for g in NAV %}<a href="{{ g.href }}"{% if g is sameas cur_g %} aria-current="true"{% endif %}>{{ g.label }}</a>{% endfor %}
       <a class="u" href="{{ NAV_UTIL.href }}"{% if p == NAV_UTIL.href %} aria-current="page"{% endif %}>{{ NAV_UTIL.label }}</a>
     </nav>
     <a class="mb" href="#menu" role="button" aria-expanded="false" aria-controls="menu" data-menu-open>Menu<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2"/></svg></a>

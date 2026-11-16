@@ -51,7 +51,10 @@ def test_header_rows_and_phone_menu(monkeypatch):
     assert 'aria-label="Sekce v oblasti Veřejný prostor"' in html
     assert '<a href="/verejny-prostor/uzavirky" class="soon"><span>Uzavírky</span><span class="sr"> (připravujeme)</span></a>' in html
     assert 'id="menu"' in html and 'href="#menu" role="button" aria-expanded="false"' in html
-    assert "<b>Ankety<small>připravujeme</small></b>" in html
+    assert "<b>Rozpočet<small>připravujeme</small></b>" in html
+    head = html.split("</header>")[0]
+    assert "Zapojte se" not in head and "Ankety" not in html      # hidden for now
+    assert head.index(">Můj přehled<") < head.index(">Radnice<")      # first in the top row
 
 
 @pytest.mark.parametrize("path", ["/verejny-prostor/uzavirky", "/zapojte-se/ankety", "/finance/smlouvy",
