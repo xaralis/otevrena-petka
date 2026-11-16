@@ -90,6 +90,27 @@ SORTS = (("plast", "Plast", "#e8b400"), ("papir", "Papír", "#1f5fbf"), ("sklo",
          ("elektro", "Elektro", "#b00716"), ("olej", "Olej", "#191c1f"))
 
 
+def _svoz_rows(obvod_id: str | None) -> list[dict]:
+    """The page's svoz list: a street (or a whole part of the town) and its days in words, by name;
+    the obvod's streets, or the town's."""
+    from ..ulice import streets as st
+    names = None
+    if obvod_id:
+        try:
+            names = {s.name: s.slug for s in st.streets(obvod_id).values()}
+        except Exception:
+            names = {}
+    out: dict[str, dict] = {}
+    for r in data.svoz_rows():
+        name = r.get("street") or (r["name"].title() if r.get("town_part") else None)
+        if not name or (names is not None and r.get("street") not in names):
+            continue
+        out.setdefault(name, {"name": name, "slug": (names or {}).get(name), "text": data.svoz_text(r["street"]) if r.get("street")
+                              else data._days_text(r["days"])})
+    from ..ulice.streets import fold
+    return sorted(out.values(), key=lambda x: fold(x["name"]))
+
+
 def _bins(obvod_id: str | None) -> list[dict]:
     """The kontejner stanoviště of the obvod (None: the whole town) from the Místa export; [] when
     it is not there (a database without it)."""
@@ -126,9 +147,10 @@ def overview(request: Request, kde: str = ""):
     ys = yd["yards"]
     nxt = next((d for d in every if d.obvod == obvod.id), None) if not mine and not town else None
     bins = _bins(None if town else obvod.id)
+    svoz = _svoz_rows(None if town else obvod.id)
     sorts = [{"key": k, "label": label, "color": c, "n": sum(1 for b in bins if k in (b["odpad"] or []))} for k, label, c in SORTS]
     return tpl.TemplateResponse(request, "odpady/prehled.html", {
-        "bins": _bins_fc(bins), "sorts": [x for x in sorts if x["n"]], "n_bins": len(bins),
+        "bins": _bins_fc(bins), "sorts": [x for x in sorts if x["n"]], "n_bins": len(bins), "svoz": svoz,
         "obvod": obvod, "town": town, "n_mine": len(mine), "n_town": len(year),
         "rows": [_row(d, today) for d in shown], "next": _row(nxt, today) if nxt else None,
         "yards": [_yard(y, at) for y in ys], "fc": _features(shown, ys, today, at),

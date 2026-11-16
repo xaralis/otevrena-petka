@@ -102,3 +102,11 @@ def test_api_svoz():
     assert d["date"] == "2022-10-11"
     assert {(x["who"], tuple(x["days"])) for x in d["items"]} == {("popelnice", ("čt",)), ("kontejnery", ("po", "čt"))}
     assert len(c.get("/api/v1/odpady/svoz").json()["items"]) == 479
+
+
+def test_svoz_section(now, monkeypatch):
+    monkeypatch.setattr(web, "_svoz_rows", lambda obvod: [{"name": "Češkova", "slug": "ceskova", "text": "popelnice čtvrtek"}])
+    h = TestClient(app).get("/verejny-prostor/odpady").text
+    assert "Svoz směsného odpadu" in h and '<a href="/verejny-prostor/ulice/ceskova">Češkova</a><span>popelnice čtvrtek</span>' in h
+    from petka.odpady import data
+    assert data.svoz_text("Pražská") == "čtvrtek"                  # two parts, the same day

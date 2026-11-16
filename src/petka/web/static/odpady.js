@@ -98,3 +98,18 @@
     });
   });
 })();
+
+// Svoz směsného odpadu: the field filters the street list as you type (accents and case ignored).
+(function () {
+  const q = document.querySelector("[data-od-svoz-q]"), list = document.querySelector("[data-od-svoz]");
+  if (!q || !list) return;
+  const none = document.querySelector("[data-od-svoz-none]");
+  const fold = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+  const rows = [...list.children].map((li) => [li, fold(li.dataset.n)]);
+  q.addEventListener("input", () => {
+    const t = fold(q.value);
+    let n = 0;
+    rows.forEach(([li, k]) => { const on = !t || k.includes(t); li.hidden = !on; n += on; });
+    none.hidden = n > 0;
+  });
+})();

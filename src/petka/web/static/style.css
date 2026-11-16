@@ -1847,3 +1847,12 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .cl-lg i.od-dot { display: inline-block; width: 12px; height: 12px; border: 1.5px solid var(--r, var(--ink)); border-top: 1.5px solid var(--r, var(--ink)); border-radius: 50%; background: var(--c); box-sizing: border-box; }
 .od-tip .ak-tip { white-space: normal; }
 @media (max-width: 900px) { .od-binmap { margin: 0 -1.25rem; } .od-binmap .map { height: 420px; border-width: 1px 0; border-radius: 0; } }
+/* Odpady: svoz směsného odpadu, the streets in two columns with their days, a field over them */
+.od-svoz { margin-top: 3rem; }
+.od-svoz h2 { margin: 0 0 .3rem; }
+.od-svoz-q { display: block; width: 100%; max-width: 24rem; margin: 0 0 .8rem; }
+.od-svoz-list { columns: 2 22rem; column-gap: 3rem; }
+.od-svoz-list li { break-inside: avoid; }
+.od-svoz-list li[hidden] { display: none; }
+.od-svoz-list li > span { white-space: normal; text-align: right; font-size: .92rem; }
+.od-svoz-none { color: var(--muted); }

@@ -125,8 +125,10 @@ def svoz(street: str) -> list[dict]:
 def svoz_text(street: str) -> str:
     """One line: „popelnice čtvrtek, kontejnery pondělí a čtvrtek“, „středa“, „" when unknown."""
     rows = svoz(street)
+    if len({tuple(r["days"]) for r in rows}) == 1:          # the same days everywhere in the street
+        return rows[0]["words"]
     parts = []
     for r in rows:
-        who = r["who"] + (f" ({r['part']})" if r["part"] else "") if r["who"] or r["part"] else ""
+        who = " ".join(x for x in (r["who"], f"({r['part']})" if r["part"] and r["who"] else r["part"]) if x)
         parts.append(f"{who} {r['words']}".strip())
     return ", ".join(dict.fromkeys(parts))

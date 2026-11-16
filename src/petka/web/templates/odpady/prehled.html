@@ -52,6 +52,20 @@
 </section>
 {% endif %}
 
+{% if svoz %}
+<section class="od-svoz" aria-labelledby="od-svoz-h">
+  <h2 id="od-svoz-h">Svoz směsného odpadu</h2>
+  <p class="od-lead">Ve který den se v ulici vyváží popelnice a kontejnery na směsný odpad. Nádoby přistavte ve svozový den od 5.30. Svozy probíhají i ve státní svátky, kromě Nového roku. Připomínku večer předem si můžete zapnout v <a href="/muj-prehled">Mém přehledu</a>.</p>
+  <label class="sr" for="od-svoz-q">Najít ulici</label>
+  <input id="od-svoz-q" class="chip-add od-svoz-q" type="search" placeholder="Najít ulici" autocomplete="off" data-od-svoz-q>
+  <ul class="link-list od-svoz-list" data-od-svoz>
+    {% for r in svoz %}<li data-n="{{ r.name|lower }}">{% if r.slug %}<a href="/verejny-prostor/ulice/{{ r.slug }}">{{ r.name }}</a>{% else %}<span class="od-svoz-n">{{ r.name }}</span>{% endif %}<span>{{ r.text }}</span></li>{% endfor %}
+  </ul>
+  <p class="od-svoz-none" data-od-svoz-none hidden>Takovou ulici v seznamu nemáme.</p>
+  <p class="cl-cap">Podle <a href="https://smp-pce.cz/odpady/svoz-komunalniho-odpadu">harmonogramu svozu Služeb města Pardubic</a> z roku 2022. U ulic, které tabulka dělí, jsou dny zvlášť pro popelnice u domů a kontejnery na sídlištích.</p>
+</section>
+{% endif %}
+
 <section class="od-yards" aria-labelledby="od-yards-h">
   <h2 id="od-yards-h">Sběrné dvory</h2>
   <p class="od-lead">Pro občany Pardubic zdarma, pro ostatní s dokladem o zaplacení poplatku. Do 200 kg za týden, suti 300 kg za měsíc.</p>
