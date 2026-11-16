@@ -63,6 +63,13 @@ def get(path, **kw):
     return TestClient(app).get(path, headers={"host": "otevrenapetka.cz"}, follow_redirects=False, **kw)
 
 
+def test_page_offers_notifications_with_the_public_key_only(page, monkeypatch):
+    monkeypatch.delenv("VAPID_PRIVATE_KEY", raising=False)
+    assert "data-vapid" not in get("/muj-prehled", params={"ulice": "wolkerova"}).text
+    monkeypatch.setenv("VAPID_PUBLIC_KEY", "BPub")          # the web app: no private key
+    assert 'data-vapid="BPub"' in get("/muj-prehled", params={"ulice": "wolkerova"}).text
+
+
 def test_page_empty(page):
     r = get("/muj-prehled")
     assert r.status_code == 200 and "<h1>Můj přehled</h1>" in r.text

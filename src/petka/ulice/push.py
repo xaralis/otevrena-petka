@@ -52,6 +52,11 @@ class Keys:
     subject: str
 
 
+def public_key() -> str | None:
+    """The key the page gives the browser (the web app has only this one, not the private)."""
+    return os.environ.get("VAPID_PUBLIC_KEY") or None
+
+
 def keys() -> Keys | None:
     pub, priv = os.environ.get("VAPID_PUBLIC_KEY"), os.environ.get("VAPID_PRIVATE_KEY")
     if not pub or not priv:

@@ -284,7 +284,7 @@ def follow(request: Request, ulice: list[str] = Query(default=[]), co: list[str]
     slugs = [s for _, s in streets]
     return tpl.TemplateResponse(request, "ulice/upozorneni.html", {
         "names": names, "streets": streets, "kinds": kinds, "KINDS": feed.KINDS, "missing": missing,
-        "preview": _preview(obvod, streets, kinds), "vapid": (k.public if (k := push.keys()) else None),
+        "preview": _preview(obvod, streets, kinds), "vapid": push.public_key(),
         "feed_url": _feed_url(streets, kinds) if streets else None,
         **(subscribe(slugs) if slugs else {})})
 
