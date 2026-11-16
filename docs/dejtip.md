@@ -51,7 +51,7 @@ a na konci jsou tři sloupce navíc. Pozice jsme určili z reálné odpovědi (3
 | 7 | COMMENT01 | popis od občana | ano, telefony a e-maily skryté („[telefon]“, „[e-mail]“) |
 | 8 | LAT | zeměpisná šířka | ano |
 | 9 | LNG | zeměpisná délka | ano |
-| 10 | CS_IMAGEURL | fotka (`http://www.dejtip.eu/_fotoobce/…`) | jen adresu, a jen když `PHOTOISPUBLIC` = 1; ukládáme jako https |
+| 10 | CS_IMAGEURL | fotka (`http://www.dejtip.eu/_fotoobce/…`) | jen když `PHOTOISPUBLIC` = 1: adresu (jako https) a zmenšenou kopii |
 | 11 | CS_ADMINURL | fotka v administraci | **nikdy** |
 | 12 | NOTE | „datum¦e-mail úředníka¦text“ – poznámky úřadu | jen datum první a poslední poznámky |
 | 13 | CATEGORYID | id kategorie | ano |
@@ -73,7 +73,8 @@ spadne, místo aby do ulice zapsal třeba popis od občana.
 Tabulka `citizen_reports`: id, kategorie (id a název), stav, datum nahlášení, souřadnice,
 ulice bez čísla domu, obvod (náš id a `CS_MUNICODE`), data první a poslední poznámky úřadu,
 popis od občana se skrytými kontakty (`description`), adresa veřejné fotky (`photo_url`) a kdy
-jsme podnět poprvé a naposledy viděli a kdy se mu změnil stav. `citizen_report_statuses` drží každý stav s datem, kdy jsme ho
+jsme podnět poprvé a naposledy viděli a kdy se mu změnil stav. Zmenšená kopie veřejné fotky je
+v `citizen_report_photos` (viz „Fotky“). `citizen_report_statuses` drží každý stav s datem, kdy jsme ho
 uviděli (první řádek je `initial`: podnět ho už měl, datum je jen horní mez); z toho půjde
 spočítat dobu vyřízení.
 
@@ -86,8 +87,9 @@ Popis a fotka (rozhodnutí starosty 13. 11. 2026):
   původní text neukládáme. Data („12. 11. 2026“) a čísla popisná („2517-2521“) zůstávají.
   Jméno v textu takhle skrýt nejde; kdo ho napíše do veřejné aplikace, zveřejní ho i tam.
 - **Fotka** (`CS_IMAGEURL`) jen tam, kde ji autor na Dej Tipu označil jako veřejnou
-  (`PHOTOISPUBLIC` = 1); jinak adresu vůbec neuložíme. Fotku nekopírujeme, stránka ji načítá
-  přímo z Dej Tipu (https://www.dejtip.eu/_fotoobce/…, https funguje, ověřeno 13. 11. 2026).
+  (`PHOTOISPUBLIC` = 1); jinak adresu vůbec neuložíme a fotku nestahujeme. Veřejnou fotku
+  Pětka stáhne, zmenší a vydává sama (viz „Fotky“), takže telefon ani prohlížeč se na Dej Tip
+  neptá a Dej Tip se nedozví, kdo si který podnět prohlíží.
 
 Proč ne zbytek:
 
@@ -97,6 +99,32 @@ Proč ne zbytek:
   a hledání stačí. Adresa, která není ulice (jen číslo popisné), zůstane bez ulice.
 - **Odkaz do administrace** (`CS_ADMINURL`), **neveřejné fotky**, **zařízení a přesnost GPS**:
   nic z toho portál nepotřebuje.
+
+## Fotky
+
+Job (`podnety/photos.py`) po obvodech srovná fotky s podněty:
+
+- Každou veřejnou fotku stáhne jednou (https://www.dejtip.eu/_fotoobce/…, User-Agent
+  `otevrena-petka (+https://otevrenapetka.cz)`, čtyři najednou, timeout 30 s, nejvýš 20 MB),
+  otočí podle EXIF a uloží zmenšenou: WebP, delší strana nejvýš 800 px, kvalita 75. EXIF, GPS,
+  XMP ani komentář se do kopie nedostanou, zůstane jen barevný profil. Kopie má 25–140 kB
+  (originál 0,4–1,6 MB; vzorek 47 fotek 16. 11. 2026, průměr 75–95 kB).
+- Za běh nejvýš 300 fotek (`--fotek N` jinak), nejnovější podněty první, po 25 v jedné
+  transakci: běh, který skončí v půlce, si to, co stáhl, nechá, a další pokračuje. Celé město
+  má za dva roky 1 680 veřejných fotek z 3 723 podnětů (16. 11. 2026; MO I 143, MO II 382,
+  MO III 276, MO IV 89, MO V 620, MO VI 85, MO VII 85), první naplnění tedy trvá šest běhů
+  (jeden den, z Dej Tipu kolem 0,6–1 GB); pak běh stahuje jen nové fotky, pár za den.
+- Fotku, na kterou Dej Tip odpoví 4xx nebo která není obrázek, si poznamená a zkusí znovu za
+  týden. Chybu sítě nebo 5xx zkusí v dalším běhu; dávka, ve které Dej Tip neodpověděl ani
+  jednou, běh ukončí.
+- Fotku smaže, když ji autor skryje nebo vymění (`photo_url` je jiná nebo žádná), a s podnětem,
+  který job maže (chybné, spam, smazané).
+
+Kopie leží v Postgresu (`citizen_report_photos`, bytea; 1 680 fotek je kolem 130–160 MB), stejně jako
+exporty rozpočtu: job podnětů nemá datový svazek a kopii lze kdykoli stáhnout znovu. Vydává je
+`/api/v1/podnety/<id>/foto/<verze>.webp`, kde verze je začátek SHA-256 obrázku: adresa se
+s fotkou mění, takže odpověď má `Cache-Control: public, max-age=31536000, immutable` a silný
+ETag (WebP se negzipuje). Stará verze nebo skrytá fotka vrátí 404.
 
 ## Okno stahování
 
@@ -128,8 +156,11 @@ uloží a co smaže (chybné, spam, smazané): MO I 1 061 (1), MO II 802 (2), MO
   (i podnět nahlášený dřív, který úřad v posledních 90 dnech uzavřel).
 - `near=lat,lng`, `r` (metry, nejvýš 5000), `limit`.
 
+`photo` je absolutní adresa zmenšené fotky na Pětce (viz „Fotky“), dokud ji job nestáhl
+`null`; adresu na Dej Tipu API nevydává.
+
 Odpověď má slabý ETag z posledního úspěšného stažení (`citizen_report_obvody.checked_at`),
-parametrů a se `stari` i dnešního dne; `If-None-Match` s ním vrátí 304. `Cache-Control:
+stavu fotek, parametrů a se `stari` i dnešního dne; `If-None-Match` s ním vrátí 304. `Cache-Control:
 public, max-age=600`.
 
 ## Odkaz na jeden podnět

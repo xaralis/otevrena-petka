@@ -177,7 +177,7 @@ uv run usneseni load                            # databáze z data/
 EMBED_URL=http://localhost:8080 uv run usneseni embed   # volitelně: llama.cpp server s bge-m3
 uv run usneseni export
 uv run usneseni deska-update                    # úřední deska
-uv run usneseni podnety-update                  # podněty z Dej Tipu, všech osm obvodů (každé 4 hodiny)
+uv run usneseni podnety-update                  # podněty z Dej Tipu, všech osm obvodů, a jejich veřejné fotky (každé 4 hodiny)
 uv run usneseni cisteni-update                  # harmonogram blokového čištění (denně)
 uv run usneseni mista-update                    # místa z OpenStreetMap (denně)
 uv run usneseni serve --port 8099
