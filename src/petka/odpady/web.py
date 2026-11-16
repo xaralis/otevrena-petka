@@ -44,7 +44,8 @@ def upcoming(today: dt.date) -> list[data.Drop]:
 
 def _row(d: data.Drop, today: dt.date) -> dict:
     wd = data.DAYS[d.date.weekday()]
-    sub = ", ".join(x for x in (f"dovezen {d.time}" if d.time and "–" in d.time else d.time, d.note) if x)
+    sub = ", ".join(x for x in (f"dovezen {d.time}" if d.time and "–" in d.time else d.time, d.note,
+                                "na mapě není" if d.point is None else "") if x)
     return {"key": d.key, "date": f"{wd} {d.date.day}.{NB}{d.date.month}.", "place": d.place, "sub": sub,
             "until": _until(d.date, today), "mapped": d.point is not None}
 
@@ -60,16 +61,24 @@ def _yard(y: dict, at: dt.datetime) -> dict:
             "open": is_open, "status": word, "extra": " ".join(extra), "mapped": y["point"] is not None}
 
 
-def _features(drops: list[data.Drop], ys: list[dict], today: dt.date) -> dict:
+def _features(drops: list[data.Drop], ys: list[dict], today: dt.date, at: dt.datetime) -> dict:
+    """The map's markers and what their cards say: a stanoviště its dates (the next three), a yard
+    whether it is open now and its hours."""
     by = {}
     for d in drops:
         by.setdefault(d.key, []).append(d)
+    def when(ds):
+        first = _row(ds[0], today)
+        rest = [_row(d, today)["date"] for d in ds[1:3]]
+        return first["date"] + (f", {first['sub']}" if first["sub"] else "") + (f"; pak {', '.join(rest)}" if rest else "")
     feats = [{"type": "Feature", "geometry": {"type": "Point", "coordinates": ds[0].point},
               "properties": {"key": k, "kind": "kontejner", "place": ds[0].place, "approx": ds[0].approx,
-                             "next": ds[0].date.isoformat(), "when": _row(ds[0], today)["date"]}}
+                             "what": "Kontejner na objemný odpad" + (", poloha přibližná" if ds[0].approx else ""),
+                             "when": when(ds)}}
              for k, ds in by.items() if ds[0].point]
     feats += [{"type": "Feature", "geometry": {"type": "Point", "coordinates": y["point"]},
-               "properties": {"key": y["key"], "kind": "dvur", "place": y["name"], "approx": y["approx"]}}
+               "properties": {"key": y["key"], "kind": "dvur", "place": f"Sběrný dvůr {y['name']}", "approx": y["approx"],
+                              "what": data.status(y, at)[1], "when": data.hours_text(y)}}
               for y in ys if y["point"]]
     return {"type": "FeatureCollection", "features": feats}
 
@@ -90,7 +99,7 @@ def overview(request: Request, kde: str = ""):
     return tpl.TemplateResponse(request, "odpady/prehled.html", {
         "obvod": obvod, "town": town, "n_mine": len(mine), "n_town": len(year),
         "rows": [_row(d, today) for d in shown], "next": _row(nxt, today) if nxt else None,
-        "yards": [_yard(y, at) for y in ys], "fc": _features(shown, ys, today),
+        "yards": [_yard(y, at) for y in ys], "fc": _features(shown, ys, today, at),
         "source": SOURCE, "yards_source": YARDS_SOURCE, "checked": dt.date.fromisoformat(yd["checked"])})
 
 

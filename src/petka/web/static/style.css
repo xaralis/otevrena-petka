@@ -1810,8 +1810,12 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .od-mk-v { background: var(--ink); box-shadow: 0 0 0 2px #fff; }
 .od-mk-d { background: #fff; border: 2.5px solid var(--ink); color: var(--ink); }
 .od-mk-a { background: #5f6368; outline: 2px dashed var(--ink); outline-offset: 1px; box-shadow: none; }
-.od-mk.on, .od-mk:hover, .od-mk:focus-visible { transform: scale(1.25); z-index: 2; }
-.od-mk-d.on, .od-mk-d:hover { background: var(--ink); color: #fff; }
+.ak-mk.od-at { width: 24px; height: 24px; cursor: pointer; }
+.ak-mk > i.od-mk { width: 24px; height: 24px; }      /* the marker's own box over .ak-mk > i */
+.ak-mk > i.od-mk-v { background: var(--ink); border: 0; box-shadow: 0 0 0 2px #fff; }
+.ak-mk > i.od-mk-d { background: #fff; border: 2.5px solid var(--ink); }
+.ak-mk > i.od-mk-a { background: #5f6368; outline: 2px dashed var(--ink); outline-offset: 1px; }
+.ak-mk.on > i.od-mk-a { outline: 3px solid var(--ink); outline-offset: 3px; }
 .cl-lg i.od-mk { display: inline-grid; place-items: center; width: 18px; height: 18px; border-top: 0; cursor: default; }   /* not a line of the legend (.cl-lg i) */
 .cl-lg i.od-mk-v { border-top: 0; box-shadow: none; }
 .cl-lg i.od-mk-d { border: 2px solid var(--ink); }
@@ -1835,4 +1839,5 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
   .od-h { grid-column: 1 / -1; order: 3; }
   .od-x { order: 4; }
 }
-.mbox-rows.od-rows li > a { grid-template-columns: 5.6rem minmax(0, 1fr) auto; }   /* „po 14. 12.“ */
+.mbox-rows.od-rows li > a, .mbox-rows.od-rows li > span { grid-template-columns: 5.6rem minmax(0, 1fr) auto; }
+.mbox-rows.od-rows li > span:hover { background: none; }   /* not on the map: nothing to point at */
