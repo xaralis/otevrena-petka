@@ -1,0 +1,389 @@
+{
+ "notice_id": "mo5-15775",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-16T13:24:16+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - V Ráji a Na Staré poště",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15775",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "23.–28. 11. 2026 platí ve V Ráji a Na Staré poště přechodná úprava provozu kvůli vymístění vozidel",
+ "summary": "Magistrát vydal přechodnou úpravu provozu v ulicích V Ráji a Na Staré poště. Od 23. do 28. 11. 2026 tam budou přenosné dopravní značky, aby mohla projet těžká a rozměrná vozidla na stavbu v separačním dvoře. Řidiči by tam v tu dobu neměli nechávat stát auta. Žadatelem je firma Chládek a Tintěra, Pardubice a.s.",
+ "where": "Ulice V Ráji a Na Staré poště, Pardubice",
+ "period": {
+  "from": "2026-11-23",
+  "to": "2026-11-28",
+  "text": "23. 11. 2026 – 28. 11. 2026"
+ },
+ "action": {
+  "what": "Před 23. 11. 2026 odstavte vozidla z dotčených úseků ulic V Ráji a Na Staré poště a po dobu úpravy tam nestůjte.",
+  "deadline": "2026-11-23",
+  "how": "Řiďte se přenosnými značkami v ulici. Proti opatření nejsou přípustné opravné prostředky. Dotazy: odbor dopravy Magistrátu města Pardubic, tel. 466 859 366."
+ },
+ "affects": "Řidiči a majitelé vozidel parkujících v ulicích V Ráji a Na Staré poště a lidé, kteří tudy jezdí.",
+ "facts": [
+  {
+   "label": "Platnost",
+   "value": "23. 11. 2026 – 28. 11. 2026"
+  },
+  {
+   "label": "Důvod",
+   "value": "Umožnit bezpečný průjezd těžkých a rozměrných vozidel pro stavbu v separačním dvoře"
+  },
+  {
+   "label": "Žadatel a odpovědná firma",
+   "value": "Chládek a Tintěra, Pardubice a.s."
+  },
+  {
+   "label": "Provedení",
+   "value": "Přenosné svislé dopravní značky"
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy (13. 11. 2026)"
+  }
+ ],
+ "signs": [
+  {
+   "code": "B29",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8c",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8b",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "V Ráji",
+  "Na Staré poště"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa obou ulic s vyznačeným obdobím platnosti 23.–28. 11. 2026; výkres v příloze chybí.",
+ "reviewer_notes": "PDF má jen 3 strany, situační plán (příloha) v souboru není, proto drawing i parking jsou null. Text tabulky E13 dokument neuvádí. Dokument neříká výslovně, co značky znamenají (B29 je zákaz stání) ani který úsek ulic se týká; ověřit. Jde o přechodnou úpravu bez lhůty na připomínky. Vyvěšeno na desce magistrátu 13. 11. 2026.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "V Ráji",
+    "source_text": "V Ráji",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.768,
+        50.023145
+       ],
+       [
+        15.767844,
+        50.023985
+       ]
+      ],
+      [
+       [
+        15.766866,
+        50.03075
+       ],
+       [
+        15.766852,
+        50.029432
+       ],
+       [
+        15.766868,
+        50.029094
+       ]
+      ],
+      [
+       [
+        15.76759,
+        50.025333
+       ],
+       [
+        15.767409,
+        50.026234
+       ]
+      ],
+      [
+       [
+        15.768226,
+        50.022015
+       ],
+       [
+        15.768438,
+        50.02091
+       ]
+      ],
+      [
+       [
+        15.766868,
+        50.029094
+       ],
+       [
+        15.767058,
+        50.028097
+       ]
+      ],
+      [
+       [
+        15.768438,
+        50.02091
+       ],
+       [
+        15.768472,
+        50.020729
+       ],
+       [
+        15.768492,
+        50.020477
+       ],
+       [
+        15.76845,
+        50.02019
+       ]
+      ],
+      [
+       [
+        15.76759,
+        50.025333
+       ],
+       [
+        15.767844,
+        50.023985
+       ]
+      ],
+      [
+       [
+        15.768281,
+        50.019214
+       ],
+       [
+        15.768327,
+        50.019354
+       ],
+       [
+        15.76845,
+        50.02019
+       ]
+      ],
+      [
+       [
+        15.768,
+        50.023145
+       ],
+       [
+        15.768076,
+        50.022817
+       ],
+       [
+        15.768226,
+        50.022015
+       ]
+      ],
+      [
+       [
+        15.767231,
+        50.027124
+       ],
+       [
+        15.767409,
+        50.026234
+       ]
+      ],
+      [
+       [
+        15.767058,
+        50.028097
+       ],
+       [
+        15.767231,
+        50.027124
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Na Staré poště",
+    "source_text": "Na Staré poště",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.770254,
+        50.030779
+       ],
+       [
+        15.76999,
+        50.030779
+       ]
+      ],
+      [
+       [
+        15.76999,
+        50.030779
+       ],
+       [
+        15.769464,
+        50.030781
+       ],
+       [
+        15.769251,
+        50.030741
+       ],
+       [
+        15.769058,
+        50.030726
+       ],
+       [
+        15.768274,
+        50.030734
+       ]
+      ],
+      [
+       [
+        15.768274,
+        50.030734
+       ],
+       [
+        15.766866,
+        50.03075
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": null,
+  "signs": [
+   {
+    "code": "B29",
+    "name": "Zákaz stání",
+    "image": "B29.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8a",
+    "name": "Začátek úseku",
+    "image": "E8a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8c",
+    "name": "Konec úseku",
+    "image": "E8c.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8b",
+    "name": "Průběh úseku",
+    "image": "E8b.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Ulice, termín, důvod, firma, značky i datum vydání odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Co, kde, kdy a co dělat na kartě je, ale chybí jasné upozornění, že auta, která tam zůstanou stát, může nechat firma odtáhnout; přesný úsek ulic neuvádí ani originál."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je převážně srozumitelný, jen nadpis používá úřední obrat „vymístění vozidel“ a v textu je věta o „opravných prostředcích“."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Mapa vyznačuje správné dvě ulice; situační plán s přesným úsekem v originálu chybí, takže víc ukázat nejde."
+   }
+  },
+  "summary": "Karta věrně přepisuje dočasný zákaz stání v ulicích V Ráji a Na Staré poště od 23. do 28. 11. 2026, jen by měla srozumitelněji říct, že nechaná auta může nechat firma odtáhnout.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-23",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 23.11.2026 – 28.11.2026 (strana 2)."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-28",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 23.11.2026 – 28.11.2026 (strana 2)."
+   },
+   {
+    "field": "lhuta",
+    "value": "2026-11-23",
+    "verdict": "v_dokumentu",
+    "evidence": "Jde o první den platnosti úpravy (23.11.2026); auta je potřeba přeparkovat před ním. Opatření začne platit pátý den po vyvěšení 13. 11., tedy 18. 11., což je dřív."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-16T13:24:39+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 10,
+   "cache_read": 25758,
+   "cache_write": 30135,
+   "output": 6030,
+   "usd": 0.2593
+  }
+ },
+ "published_at": "2026-11-16T13:24:39+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

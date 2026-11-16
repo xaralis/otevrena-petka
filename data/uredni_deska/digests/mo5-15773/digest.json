@@ -1,0 +1,403 @@
+{
+ "notice_id": "mo5-15773",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-16T13:25:37+00:00",
+ "source": {
+  "title": "VV - OOP stanovení místní úpravy provozu na pozemních komunikacích v Pardubicích - Chrudimská",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15773",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "V Chrudimské u přechodu u Široké a Holcovy vznikne ochranný ostrůvek, parkovat tam nepůjde",
+ "summary": "Magistrát města Pardubic vydal opatření, kterým se v ulici Chrudimská (silnice II/324) u přechodu pro chodce poblíž křižovatky s ulicemi Širokou a Holcovou zřídí nový ochranný ostrůvek. Má zvýšit bezpečnost chodců a zabránit parkování v tom místě. Opatření nabývá účinnosti 28. 11. 2026 a platí trvale. Opravné prostředky proti němu nejsou přípustné.",
+ "where": "Chrudimská, u přechodu pro chodce poblíž křižovatky s ulicemi Širokou a Holcovou",
+ "period": {
+  "from": "2026-11-28",
+  "to": null,
+  "text": "trvale od 28. 11. 2026"
+ },
+ "action": null,
+ "affects": "Chodci přecházející Chrudimskou a řidiči, kteří tam dosud parkovali nebo projížděli.",
+ "facts": [
+  {
+   "label": "Silnice",
+   "value": "II/324, ulice Chrudimská"
+  },
+  {
+   "label": "Důvod",
+   "value": "zamezení parkování, bezpečnost chodců"
+  },
+  {
+   "label": "Provedení",
+   "value": "obrubník z plastu výšky 15,8 cm, bílý; výplň beton nebo kámen"
+  },
+  {
+   "label": "Platnost",
+   "value": "trvale od nabytí účinnosti (28. 11. 2026)"
+  },
+  {
+   "label": "Žadatel",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Provede",
+   "value": "Služby města Pardubic a.s."
+  }
+ ],
+ "signs": [
+  {
+   "code": "C4a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "V2a",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Chrudimská",
+  "Široká",
+  "Holcova"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s bodem na Chrudimské u křižovatky se Širokou a Holcovou; situační plán v PDF nebyl, takže výkres nelze použít.",
+ "reviewer_notes": "Datum účinnosti dopočteno: vyhláška vyvěšena na desce magistrátu 13. 11. 2026, 15denní lhůta začíná 14. 11. a končí 28. 11. 2026, to je den doručení a nabytí účinnosti. Skutečné sejmutí ověřit. Situační plán a vyjádření SÚSPK jsou přílohy, v PDF nejsou (3 strany). Přesná poloha ostrůvku vůči křižovatce je jen slovní. Značka C4a je uvedena u ostrůvku spolu s V2a podle textu.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Chrudimská",
+    "source_text": "Chrudimská",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.771612,
+        50.01795
+       ],
+       [
+        15.771514,
+        50.018878
+       ]
+      ],
+      [
+       [
+        15.77146,
+        50.019484
+       ],
+       [
+        15.771514,
+        50.018878
+       ]
+      ],
+      [
+       [
+        15.771762,
+        50.016259
+       ],
+       [
+        15.771612,
+        50.01795
+       ]
+      ],
+      [
+       [
+        15.772006,
+        50.013555
+       ],
+       [
+        15.771965,
+        50.014005
+       ]
+      ],
+      [
+       [
+        15.771851,
+        50.015154
+       ],
+       [
+        15.771762,
+        50.016259
+       ]
+      ],
+      [
+       [
+        15.771882,
+        50.014832
+       ],
+       [
+        15.771851,
+        50.015154
+       ]
+      ],
+      [
+       [
+        15.771316,
+        50.02102
+       ],
+       [
+        15.77146,
+        50.019484
+       ]
+      ],
+      [
+       [
+        15.771965,
+        50.014005
+       ],
+       [
+        15.771882,
+        50.014832
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Široká",
+    "source_text": "Široká",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.769498,
+        50.01959
+       ],
+       [
+        15.769029,
+        50.019612
+       ],
+       [
+        15.768938,
+        50.019591
+       ],
+       [
+        15.768911,
+        50.019562
+       ],
+       [
+        15.768824,
+        50.019127
+       ]
+      ],
+      [
+       [
+        15.77146,
+        50.019484
+       ],
+       [
+        15.769498,
+        50.01959
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Holcova",
+    "source_text": "Holcova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.774564,
+        50.019321
+       ],
+       [
+        15.773032,
+        50.019394
+       ]
+      ],
+      [
+       [
+        15.775495,
+        50.019254
+       ],
+       [
+        15.776323,
+        50.01921
+       ]
+      ],
+      [
+       [
+        15.77146,
+        50.019484
+       ],
+       [
+        15.773032,
+        50.019394
+       ]
+      ],
+      [
+       [
+        15.774564,
+        50.019321
+       ],
+       [
+        15.775495,
+        50.019254
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.757713157853804,
+    50.011315499999995,
+    15.787433842146196,
+    50.023259499999995
+   ],
+   "shapes": [
+    {
+     "kind": "line",
+     "d": "M561.2,333.4 L557.2,275.1"
+    },
+    {
+     "kind": "line",
+     "d": "M555.0,237.1 L557.2,275.1"
+    },
+    {
+     "kind": "line",
+     "d": "M567.2,439.6 L561.2,333.4"
+    },
+    {
+     "kind": "line",
+     "d": "M577.1,609.4 L575.4,581.1"
+    },
+    {
+     "kind": "line",
+     "d": "M570.8,509.0 L567.2,439.6"
+    },
+    {
+     "kind": "line",
+     "d": "M572.1,529.2 L570.8,509.0"
+    },
+    {
+     "kind": "line",
+     "d": "M549.2,140.6 L555.0,237.1"
+    },
+    {
+     "kind": "line",
+     "d": "M575.4,581.1 L572.1,529.2"
+    },
+    {
+     "kind": "line",
+     "d": "M475.8,230.4 L456.9,229.0 L453.2,230.4 L452.1,232.2 L448.6,259.5"
+    },
+    {
+     "kind": "line",
+     "d": "M555.0,237.1 L475.8,230.4"
+    },
+    {
+     "kind": "line",
+     "d": "M680.4,247.3 L618.5,242.7"
+    },
+    {
+     "kind": "line",
+     "d": "M718.0,251.5 L751.4,254.3"
+    },
+    {
+     "kind": "line",
+     "d": "M555.0,237.1 L618.5,242.7"
+    },
+    {
+     "kind": "line",
+     "d": "M680.4,247.3 L718.0,251.5"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "C4a",
+    "name": "Přikázaný směr objíždění vpravo",
+    "image": "C4a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "V2a",
+    "name": "Podélná čára přerušovaná",
+    "image": "V2a.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [
+  "datum od 2026-11-28 v dokumentu není doslova"
+ ],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, silnice, důvod, provedení ostrůvku, značky, kdo ho provede i datum účinnosti odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta obsahuje všechno podstatné, chybí jen zmínka o další zmenšené značce „přechod přes ostrůvek“, kterou originál uvádí v odůvodnění."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je převážně srozumitelný, jen věta o opravných prostředcích je úřední a kódy značek nejsou vysvětlené."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek ukazuje správnou čtvrť, ale místo ostrůvku na něm není vyznačené, takže čtenáři moc nepomůže. Mapa vyznačuje správné ulice."
+   }
+  },
+  "summary": "Karta správně a srozumitelně popisuje nový ochranný ostrůvek u přechodu v Chrudimské a správně dopočítává začátek platnosti. Obrázek ale místo ostrůvku nevyznačuje.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-28",
+    "verdict": "spocitano_spravne",
+    "evidence": "Podle originálu byla vyhláška vyvěšena na desce magistrátu 13. 11. 2026. Lhůta 15 dnů začíná následující den, tedy 14. 11., a končí 28. 11. 2026. Podle originálu je poslední den lhůty dnem doručení a nabytí účinnosti."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-16T13:25:58+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 8,
+   "cache_read": 20508,
+   "cache_write": 17052,
+   "output": 3867,
+   "usd": 0.1769
+  }
+ },
+ "published_at": "2026-11-16T13:25:58+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

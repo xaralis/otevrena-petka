@@ -1,0 +1,327 @@
+{
+ "notice_id": "mo5-15774",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-16T13:24:59+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - náměstí Dukelských hrdinů",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15774",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 27. do 30. 11. 2026 bude kvůli rozsvícení vánočního stromu uzavřené náměstí Dukelských hrdinů",
+ "summary": "Magistrát stanovil přechodnou úpravu provozu na náměstí Dukelských hrdinů včetně obslužných komunikací. Platí od 27. 11. 2026 od 12:00 do 30. 11. 2026 do 10:00 kvůli akci „Rozsvícení vánočního stromu“. Součástí uzavírky je vymístění parkujících vozidel, auta tam proto nesmí stát. Proti opatření se nelze odvolat.",
+ "where": "náměstí Dukelských hrdinů, Pardubice",
+ "period": {
+  "from": "2026-11-27",
+  "to": "2026-11-30",
+  "text": "od 27. 11. 2026 12:00 do 30. 11. 2026 10:00"
+ },
+ "action": null,
+ "affects": "Řidiči a lidé parkující na náměstí Dukelských hrdinů a v přilehlých obslužných komunikacích; vozidla se budou vymisťovat.",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "kulturní akce „Rozsvícení vánočního stromu“"
+  },
+  {
+   "label": "Platnost",
+   "value": "27. 11. 2026 12:00 – 30. 11. 2026 10:00"
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Žadatel",
+   "value": "Městský obvod Pardubice V"
+  },
+  {
+   "label": "Parkování",
+   "value": "součástí uzavírky je vymístění parkujících vozidel"
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "nejsou přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "IZ8a-b",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "B24a-b",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "B1",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "náměstí Dukelských hrdinů"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s vyznačeným náměstím Dukelských hrdinů a časová osa uzavírky 27.–30. 11. Situační plán v PDF chybí.",
+ "reviewer_notes": "PDF má jen 3 strany bez situačního plánu (příloha č. 1), proto není výkres ani schéma parkování. Texty tabulek E13 a přesné obslužné ulice dokument neuvádí. Značky jsou přechodné, vedené jako nové. Opatření vydáno bez návrhu, lhůta pro připomínky neexistuje, proto action null. Datum vyhotovení 13. 11. 2026.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "náměstí Dukelských hrdinů",
+    "source_text": "náměstí Dukelských hrdinů",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.75929,
+        50.022959
+       ],
+       [
+        15.759255,
+        50.023201
+       ]
+      ],
+      [
+       [
+        15.759255,
+        50.023201
+       ],
+       [
+        15.759215,
+        50.023519
+       ]
+      ],
+      [
+       [
+        15.758498,
+        50.024436
+       ],
+       [
+        15.759117,
+        50.024466
+       ]
+      ],
+      [
+       [
+        15.759117,
+        50.024466
+       ],
+       [
+        15.759089,
+        50.024764
+       ]
+      ],
+      [
+       [
+        15.759215,
+        50.023519
+       ],
+       [
+        15.759117,
+        50.024466
+       ]
+      ],
+      [
+       [
+        15.758603,
+        50.02346
+       ],
+       [
+        15.758704,
+        50.023492
+       ],
+       [
+        15.759215,
+        50.023519
+       ]
+      ],
+      [
+       [
+        15.759089,
+        50.024764
+       ],
+       [
+        15.759064,
+        50.025001
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.754829054432342,
+    50.022346399999996,
+    15.762958945567657,
+    50.02561360000001
+   ],
+   "shapes": [
+    {
+     "kind": "line",
+     "d": "M658.5,609.4 L653.3,553.8"
+    },
+    {
+     "kind": "line",
+     "d": "M653.3,553.8 L647.4,480.8"
+    },
+    {
+     "kind": "line",
+     "d": "M541.5,270.3 L632.9,263.4"
+    },
+    {
+     "kind": "line",
+     "d": "M632.9,263.4 L628.8,195.0"
+    },
+    {
+     "kind": "line",
+     "d": "M647.4,480.8 L632.9,263.4"
+    },
+    {
+     "kind": "line",
+     "d": "M557.0,494.4 L572.0,487.0 L647.4,480.8"
+    },
+    {
+     "kind": "line",
+     "d": "M628.8,195.0 L625.1,140.6"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "IZ8a–b",
+    "name": "Zóna s dopravním omezením / Konec zóny s dopravním omezením",
+    "image": "IZ8a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "B24a–b",
+    "name": "Zákaz odbočování",
+    "image": "B24a.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "B1",
+    "name": "Zákaz vjezdu všech vozidel (v obou směrech)",
+    "image": "B1.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, termín včetně hodin, důvod, žadatel, značky i nemožnost odvolání odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se děje, kde, kdy, koho se to týká i že auta budou z náměstí vymístěna; originál žádnou lhůtu pro připomínky nedává."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný, jen místy zůstávají úřední obraty jako přechodná úprava provozu, obslužné komunikace nebo vymístění vozidel."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Letecký snímek i mapa ukazují správné náměstí s parkovištěm, uzavřený úsek ale na obrázku vyznačený není, protože originál neobsahuje plánek."
+   }
+  },
+  "summary": "Karta věrně popisuje uzavírku náměstí Dukelských hrdinů kvůli rozsvícení vánočního stromu, termín i hodiny sedí s originálem a jen pár úředních obratů by šlo říct jednodušeji.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-27",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí platnost úpravy od 27. 11. 2026 od 12:00."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-30",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál uvádí platnost úpravy do 30. 11. 2026 do 10:00."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-16T13:25:16+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 10,
+   "cache_read": 34783,
+   "cache_write": 23069,
+   "output": 4527,
+   "usd": 0.2049
+  }
+ },
+ "published_at": "2026-11-16T13:25:16+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
