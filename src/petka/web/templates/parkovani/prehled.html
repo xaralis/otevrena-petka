@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% from "_portal.html" import band, source %}
+{% block title %}Parkování{% endblock %}
+{% block description %}Kolik je teď volno na parkovištích v Pardubicích, kdy během týdne bývá plno a která parkoviště jsou nejvytíženější. Podle čidel správce parkovišť.{% endblock %}
+{% block hero %}{{ band('Parkování', 'Kolik je teď volno na parkovištích, kdy během týdne bývá plno a která parkoviště jsou nejvytíženější. Podle čidel správce parkovišť.') }}{% endblock %}
+{% block main %}
+<section class="pk-now" aria-labelledby="pk-now-h">
+  <div class="sec-head">
+    <h2 id="pk-now-h">Volno teď</h2>
+    <nav class="switch pd-seg" aria-label="Kde">
+      <a href="/verejny-prostor/parkovani"{% if not town or fallback %} aria-current="true"{% endif %}>{{ obvod.abbr|replace('MO ', '') }} <b>{{ n_mine }}</b></a><a href="/verejny-prostor/parkovani?kde=mesto"{% if town and not fallback %} aria-current="true"{% endif %}>Celé město <b>{{ n_town }}</b></a>
+    </nav>
+  </div>
+  {% if fallback %}<p class="note">{% if n_mine %}V obvodu {{ 'je' if n_mine == 1 else 'jsou' }} jen {{ n_mine }} {{ cl_plural(n_mine, 'parkoviště', 'parkoviště', 'parkovišť') }} s čidly{% else %}V obvodu žádné parkoviště s čidly není{% endif %}, ukazujeme celé město.</p>{% endif %}
+  {% if rows %}
+  <p class="pk-sum"><span class="big">{{ free }}</span> {{ cl_plural(free, 'volné místo', 'volná místa', 'volných míst') }} z {{ total }} na {{ rows|length }} {{ cl_plural(rows|length, 'parkovišti', 'parkovištích', 'parkovištích') }}{% if fetched %}, staženo {{ fetched }}{% endif %}.</p>
+  {% if stale %}<p class="note pk-stale">Zdroj teď neodpovídá, čísla jsou z posledního úspěšného stažení.</p>{% endif %}
+  <table class="ledger pk-lots">
+    <caption class="sr">Volná místa na parkovištích, nejvíc volných nahoře</caption>
+    <thead><tr><th scope="col">Parkoviště</th><th scope="col" class="num-cell">Volno</th><th scope="col" class="rank-bar-h"><span class="sr">Podíl volných míst</span></th><th scope="col">Změna</th></tr></thead>
+    <tbody>
+    {% for r in rows %}<tr>
+      <td><b>{{ r.name }}</b>{% if r.area and r.area != r.name %}<br><small class="muted">{{ r.area }}</small>{% endif %}</td>
+      <td class="num-cell"><b>{{ r.free }}</b> <small class="muted">z {{ r.total }}</small></td>
+      <td class="rank-bar-c" aria-hidden="true"><span class="rank-bar"><i style="width: {{ (100 * r.share)|round(1) }}%"></i></span></td>
+      <td class="nowrap muted">{{ r.changed }}</td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+  <p class="note">Změna: kdy se počet volných míst naposledy změnil. Zdroj čas měření neuvádí.</p>
+  {% else %}
+  <p class="note">Obsazenost zatím nemáme stažená.</p>
+  {% endif %}
+</section>
+
+<section class="pk-week" aria-labelledby="pk-week-h">
+  <h2 id="pk-week-h">Kdy bývá plno</h2>
+  {% if heat %}
+  <p>Průměrná obsazenost {{ 'parkovišť celého města' if town else 'parkovišť obvodu' }} podle dne v týdnu a hodiny za posledních {{ days }} dní{% if history_from %} (data sbíráme od {{ history_from|d }}){% endif %}.{% if peaks %} Nejplněji bývá {% for p in peaks %}{{ p.day }} {{ p.hour }}–{{ p.hour + 1 }} h ({{ (100 * p.occupancy)|round|int }} %){{ ', ' if not loop.last }}{% endfor %}.{% endif %}</p>
+  <div class="pk-heat-wrap">
+    <table class="pk-heat">
+      <caption class="sr">Obsazenost parkovišť podle dne v týdnu (řádky) a hodiny (sloupce)</caption>
+      <thead><tr><th scope="col"><span class="sr">Den</span></th>{% for h in range(24) %}<th scope="col">{% if h % 3 == 0 %}{{ h }}{% else %}<span class="sr">{{ h }}</span>{% endif %}</th>{% endfor %}</tr></thead>
+      <tbody>
+      {% for d in heat %}<tr><th scope="row"><abbr title="{{ d.day }}">{{ d.short }}</abbr></th>{% for c in d.cells %}<td class="rz-tip pk-b{{ c.bin if c.bin is not none else 'x' }}" data-tip="{{ c.tip }}"><span class="sr">{{ c.sr }}</span></td>{% endfor %}</tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="pk-lg" aria-label="Legenda"><span class="muted">obsazeno</span>{% for label in ['do 20 %', '20–40 %', '40–60 %', '60–80 %', 'nad 80 %'] %}<span><i class="pk-b{{ loop.index0 }}"></i>{{ label }}</span>{% endfor %}<span><i class="pk-bx"></i>bez dat</span></p>
+  {% else %}
+  <p class="note">Historii obsazenosti teprve sbíráme (vzorek každých 5 minut). Typický týden tu bude, až bude z čeho počítat.</p>
+  {% endif %}
+</section>
+
+{% if busiest %}
+<section class="pk-rank" aria-labelledby="pk-rank-h">
+  <h2 id="pk-rank-h">Nejvytíženější parkoviště</h2>
+  <table class="ledger rank">
+    <caption class="sr">Parkoviště podle průměrné obsazenosti za posledních {{ days }} dní</caption>
+    <thead><tr><th scope="col">Parkoviště</th><th scope="col" class="num-cell">Obsazeno</th><th scope="col" class="rank-bar-h"><span class="sr">Graf</span></th><th scope="col">Plno</th></tr></thead>
+    <tbody>
+    {% for r in busiest %}<tr>
+      <td>{{ r.name }}<br><small class="muted">{{ r.capacity }} {{ cl_plural(r.capacity, 'místo', 'místa', 'míst') }}</small></td>
+      <td class="num-cell"><b>{{ r.occ }}</b></td>
+      <td class="rank-bar-c" aria-hidden="true"><span class="rank-bar"><i style="width: {{ r.w }}%"></i></span></td>
+      <td class="nowrap">{{ r.full_pct }} času</td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+  <p class="note">Jen parkoviště s aspoň 5 místy. Obsazeno: průměrný podíl obsazených míst za celý den. Plno: jak často byla volná nejvýš desetina míst.</p>
+</section>
+{% endif %}
+
+{% call source(checked) %}Volná místa přebíráme každou minutu z aplikace správce parkovišť <a href="{{ source_url }}">ChytřejšíParking</a> (DPMP), která nemá dokumentované rozhraní ani licenci; každých 5 minut si je ukládáme do historie. Parkoviště, ceník podle nařízení města, SMS kódy DPMP, zóny a lokality pro aplikaci jsou v části <a href="/data#parkovani">Data a API</a>.{% endcall %}
+{% endblock %}

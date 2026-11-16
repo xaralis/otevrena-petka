@@ -6,7 +6,7 @@
 {% block main %}
 <div class="prose wide">
 <h2>Datové sady</h2>
-<nav class="switch" aria-label="Datová sada" data-tabs><a href="#usneseni" data-tab="usneseni" aria-current="true">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a><a href="#uzavirky" data-tab="uzavirky">Uzavírky</a><a href="#odpady" data-tab="odpady">Odpady</a><a href="#mista" data-tab="mista">Místa</a></nav>
+<nav class="switch" aria-label="Datová sada" data-tabs><a href="#usneseni" data-tab="usneseni" aria-current="true">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a><a href="#uzavirky" data-tab="uzavirky">Uzavírky</a><a href="#odpady" data-tab="odpady">Odpady</a><a href="#mista" data-tab="mista">Místa</a><a href="#parkovani" data-tab="parkovani">Parkování</a></nav>
 <section class="data-tab" id="usneseni" data-panel="usneseni">
 <h2>Usnesení a hlasování</h2>
 <p>{{ stats.meetings }} jednání rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}, poslední {{ stats.last_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Doplňuje se po zveřejnění každého zápisu. Jak data vznikají a co z nich je odvozené, popisuje <a href="/radnice/usneseni/metodika">metodika</a>.</p>
@@ -109,13 +109,30 @@
 <p>Licence <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>, © <a href="https://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a>, ne CC BY jako zbytek portálu: kdo data použije, uvede OpenStreetMap a odvozenou databázi sdílí pod stejnou licencí. Chybějící nebo špatné místo opravte přímo v OpenStreetMap, sem se dostane do druhého dne.</p>
 
 </section>
+<section class="data-tab" id="parkovani" data-panel="parkovani">
+<h2>Parkování</h2>
+<p>Parkoviště celého města s čidly správce (<a href="https://pardubice.chytrejsiparking.cz/">ChytřejšíParking</a>, DPMP){% if pk_cat.lots %}, dnes {{ pk_cat.lots }}{% endif %}, s cenou podle <a href="https://pardubice.eu/parkovani">nařízení města</a> a SMS kódem DPMP; automaty, hranice zón, lokalit a placených úseků ulic. Parkoviště stahujeme jednou denně, volná místa každou minutu a každých 5 minut je ukládáme do historie. Ceník, SMS kódy, automaty, zóny, lokality a úseky udržujeme ručně: každý soubor nese zdroj a datum, kdy jsme ho naposledy ověřili{% if pk_cat.checked %} (ceník {{ pk_cat.checked.tariffs }}, SMS kódy {{ pk_cat.checked.smsCodes }}){% endif %}. Jen některé obvody vrátí parametr <a href="#obvod"><code>?obvod=</code></a>; zóny, lokality, ceník a SMS kódy jsou pravidla celého města a přijdou vždy celé.</p>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
+  <tbody>
+    <tr><td><b>Parkování</b></td><td>Jeden soubor pro aplikaci: <code>parking.lots</code> (parkoviště: <code>id</code> správce, název, část města, poloha <code>[lon, lat]</code>, kapacita, druh <code>mixed</code>/<code>visitor</code>/<code>resident</code>, zóna, lokalita, SMS kód, ceník <code>tariff</code>, obvody), <code>parking.machines</code> (automaty), <code>zones</code>, <code>adjacent</code> (přilehlá oblast zóny B), <code>localities</code> (lokality, návštěvnická místa L.1–L.8 a ceník podle lokality), <code>sections</code> (placené úseky ulic jako pásy se skupinou stání, ke které patří), <code>smsCodes</code> a <code>sources</code> (zdroj a datum ověření každé části). Denně.</td>
+        <td class="nowrap"><a href="/api/v1/parkovani">JSON</a></td></tr>
+    <tr><td><b>Obsazenost</b></td><td>Volná (<code>free</code>) a celková (<code>total</code>) místa na každém parkovišti, kdy jsme naposledy viděli změnu (<code>changed_at</code>; zdroj čas měření neuvádí) a kdy jsme naposledy úspěšně stahovali (<code>fetched_at</code>). Při výpadku zdroje zůstanou poslední čísla a <code>fetched_at</code> stárne. Každou minutu.</td>
+        <td class="nowrap"><a href="/api/v1/parkovani/obsazenost">JSON</a></td></tr>
+    <tr><td><b>Statistiky</b></td><td>Typický týden (průměrná obsazenost podle dne v týdnu a hodiny) a parkoviště od nejvytíženějšího, z historie po 5 minutách; <code>?dni=28</code> za kolik dní, <code>?profily=true</code> i typický týden každého parkoviště. Stránka: <a href="/verejny-prostor/parkovani">Parkování</a>.</td>
+        <td class="nowrap"><a href="/api/v1/parkovani/statistiky">JSON</a></td></tr>
+  </tbody>
+</table>
+<p>Rozhraní ChytřejšíParkingu je neoficiální, bez dokumentace a licence; obsazenost ani parkoviště nejsou úřední údaje. Platí ceník na automatu a značení na místě. Popis formátu: <a href="https://github.com/xaralis/otevrena-petka/blob/main/docs/parkovani.md">docs/parkovani.md</a>.</p>
+
+</section>
 <h2>Ve výstavbě</h2>
 <p>{% for s in SECTIONS if s.status == 'planned' %}<a class="soon" href="{{ s.path }}">{{ s.title|lower if not loop.first else s.title }}</a>{{ ', ' if not loop.last }}{% endfor %}. Data k nim přibudou sem.</p>
 
 <h2 id="api">REST API</h2>
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>
-<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění, podněty, uzavírky, odpady a místa.</p>
-<p id="etag"><b>Jen při změně.</b> Blokové čištění, podněty a místa posílají hlavičku <code>ETag</code>; kdo ji pošle zpátky v <code>If-None-Match</code>, dostane odpověď 304 bez dat, dokud se data nezmění.</p>
+<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění, podněty, uzavírky, odpady, místa a parkování.</p>
+<p id="etag"><b>Jen při změně.</b> Blokové čištění, podněty, uzavírky, místa a parkování posílají hlavičku <code>ETag</code>; kdo ji pošle zpátky v <code>If-None-Match</code>, dostane odpověď 304 bez dat, dokud se data nezmění.</p>
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'
 curl '{{ base }}/api/v1/usneseni/meetings?body=zmo&amp;year=2025'
@@ -123,7 +140,8 @@ curl '{{ base }}/api/v1/uredni-deska/notices?q=rozpočet&amp;active=false'
 curl '{{ base }}/api/v1/cisteni?obvod=mo5&amp;ulice=wolkerova'
 curl '{{ base }}/api/v1/podnety?stav=1,2&amp;near=50.0254,15.7553&amp;r=300'
 curl '{{ base }}/api/v1/podnety?obvod=mo2&amp;stav=1,2,8,9&amp;stari=90'
-curl --compressed '{{ base }}/api/v1/mista?obvod=mo5&amp;druh=stojan,kontejner'</pre>
+curl --compressed '{{ base }}/api/v1/mista?obvod=mo5&amp;druh=stojan,kontejner'
+curl --compressed '{{ base }}/api/v1/parkovani/obsazenost?obvod=mo1'</pre>
 
 <h2 id="mcp">AI asistenti (MCP)</h2>
 <p>Jeden MCP server pro celý portál, bez přihlášení a jen pro čtení. V Claude.ai ho přidáte v Nastavení mezi konektory jako vlastní konektor s adresou:</p>

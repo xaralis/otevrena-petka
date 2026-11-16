@@ -64,6 +64,7 @@ GROUPS = [
         Item("Uzavírky", "/verejny-prostor/uzavirky", "Kde se teď nedá projet?", "uzavirky", was="/uzavirky"),
         Item("Podněty", "/verejny-prostor/podnety", "Co lidé hlásí a jak se to řeší?", "podnety", was="/podnety"),
         Item("Odpady", "/verejny-prostor/odpady", "Kdy přistaví kontejner a kdy má otevřeno sběrný dvůr?", "odpady"),
+        Item("Parkování", "/verejny-prostor/parkovani", "Kde je volno a kdy bývá plno?", "parkovani"),
     ]),
     Group("Zapojte se", "/zapojte-se", [
         Item("Ankety", "/zapojte-se/ankety", "Co si myslíte?", "ankety", planned=True, was="/ankety"),

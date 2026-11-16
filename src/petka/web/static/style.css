@@ -1864,3 +1864,28 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .ul-od .ul-od-k { color: var(--ink); font-weight: 650; white-space: nowrap; }
 .ul-od li > span:last-child { text-align: right; white-space: normal; }
 @media (max-width: 600px) { .ul-od li { flex-direction: column; gap: .1rem; } .ul-od li > span:last-child { text-align: left; } }
+
+/* Parkování: free places now, the typical week as a heat map (one hue, light = free, dark = full;
+   every cell says its value to screen readers and on hover), the busiest lots */
+.pk-sum { margin: 0 0 1rem; }
+.pk-sum .big { margin-right: .2rem; }
+.pk-lots .rank-bar i { background: var(--pro); }
+.pk-heat-wrap { overflow-x: auto; padding-top: 2.2rem; margin-top: -1.4rem; }
+table.pk-heat { border-collapse: separate; border-spacing: 2px; font-size: .8rem; min-width: 36rem; width: 100%; table-layout: fixed; }
+.pk-heat thead th:first-child { width: 2rem; }
+.pk-heat th { font-weight: 600; color: var(--muted); text-align: left; padding: 0 .2rem; }
+.pk-heat thead th { font-weight: 500; }
+.pk-heat tbody th { width: 2rem; color: var(--ink-2); }
+.pk-heat abbr { text-decoration: none; }
+.pk-heat td { height: 1.7rem; border-radius: 2px; }
+.pk-heat td.rz-tip:hover { box-shadow: inset 0 0 0 2px var(--ink); }
+.pk-heat td:nth-last-child(-n+5).rz-tip:hover::after { left: auto; right: 0; transform: none; }
+.pk-heat td:nth-child(-n+5).rz-tip:hover::after { left: 0; transform: none; }
+.pk-b0 { background: #e3ecf8; }
+.pk-b1 { background: #b4cbec; }
+.pk-b2 { background: #7aa1d8; }
+.pk-b3 { background: #3c6fb8; }
+.pk-b4 { background: #173f7c; }
+.pk-bx { background: repeating-linear-gradient(45deg, #fff 0 3px, var(--grey) 3px 6px); box-shadow: inset 0 0 0 1px var(--off); }
+.pk-lg { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center; font-size: .85rem; color: var(--ink-2); margin: .8rem 0 0; }
+.pk-lg i { display: inline-block; width: 1rem; height: .8rem; border-radius: 2px; vertical-align: -.1rem; margin-right: .35rem; }
