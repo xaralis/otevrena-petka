@@ -150,7 +150,7 @@ def overview(request: Request, kde: str = ""):
     svoz = _svoz_rows(None if town else obvod.id)
     sorts = [{"key": k, "label": label, "color": c, "n": sum(1 for b in bins if k in (b["odpad"] or []))} for k, label, c in SORTS]
     return tpl.TemplateResponse(request, "odpady/prehled.html", {
-        "bins": _bins_fc(bins), "sorts": [x for x in sorts if x["n"]], "n_bins": len(bins), "svoz": svoz,
+        "bins": _bins_fc(bins), "sorts": [x for x in sorts if x["n"]], "n_bins": len(bins), "street_names": [r["name"] for r in svoz if r.get("slug")],
         "obvod": obvod, "town": town, "n_mine": len(mine), "n_town": len(year),
         "rows": [_row(d, today) for d in shown], "next": _row(nxt, today) if nxt else None,
         "yards": [_yard(y, at) for y in ys], "fc": _features(shown, ys, today, at),

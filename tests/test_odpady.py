@@ -107,6 +107,6 @@ def test_api_svoz():
 def test_svoz_section(now, monkeypatch):
     monkeypatch.setattr(web, "_svoz_rows", lambda obvod: [{"name": "Češkova", "slug": "ceskova", "text": "popelnice čtvrtek"}])
     h = TestClient(app).get("/verejny-prostor/odpady").text
-    assert "Svoz směsného odpadu" in h and '<a href="/verejny-prostor/ulice/ceskova">Češkova</a><span>popelnice čtvrtek</span>' in h
+    assert "Svoz směsného odpadu" in h and 'action="/verejny-prostor/ulice"' in h and '<option value="Češkova">' in h
     from petka.odpady import data
     assert data.svoz_text("Pražská") == "čtvrtek"                  # two parts, the same day

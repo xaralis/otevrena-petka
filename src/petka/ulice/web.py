@@ -53,8 +53,8 @@ def every_name(request: Request, slug: str) -> str:
 
 
 def _waste_and_closures(obvod: str, name: str, now) -> dict:
-    """The street page's rows for odpady (the svoz days, the nearest kontejner on objemný odpad)
-    and for uzavírky (closures naming the street now)."""
+    """The street page's Odpady block (the svoz days, the nearest kontejner on objemný odpad, the
+    nearest sběrný dvůr, the tříděný odpad around) and its Uzavírky row (closures naming it now)."""
     from ..odpady import data as od
     from ..ulice.feed import _near_containers
     today = now.date() if hasattr(now, "date") else now
@@ -62,6 +62,23 @@ def _waste_and_closures(obvod: str, name: str, now) -> dict:
         near = [d for d in _near_containers(obvod)(name) if d.date >= today]
     except Exception:
         near = []
+    yard, sorts = None, None
+    try:
+        from ..cisteni.geocode import to_m
+        from ..odpady import web as ow
+        line = next((to_m(s.geometry) for s in st.streets(obvod).values() if s.name == name and s.geometry), None)
+        if line is not None:
+            ys = [(line.distance(to_m({"type": "Point", "coordinates": y["point"]})), y) for y in od.yards()["yards"] if y["point"]]
+            if ys:
+                dist, y = min(ys, key=lambda x: x[0])
+                yard = {"name": y["name"], "key": y["key"], "km": f"{dist / 1000:.1f}".replace(".", ","),
+                        "status": od.status(y, dt.datetime.now(TZ))[1]}
+            around = [b for b in ow._bins(obvod) if line.distance(to_m({"type": "Point", "coordinates": [b["lon"], b["lat"]]})) <= 300]
+            if around:
+                kinds = [label.lower() for k, label, _ in ow.SORTS if any(k in (b["odpad"] or []) for b in around)]
+                sorts = {"n": len(around), "kinds": kinds}
+    except Exception:
+        pass
     try:
         from ..obvody import ObvodFilter
         from ..uzavirky import queries as uzq
@@ -69,7 +86,8 @@ def _waste_and_closures(obvod: str, name: str, now) -> dict:
         closures = [c for c in uzq.closures(uzq.rows(ObvodFilter.only(obvod), at), at) if c.now(at) and uzq.names(c, name)]
     except Exception:
         closures = []
-    return {"svoz": od.svoz_text(name), "vok": near[0] if near else None, "n_closures": len(closures)}
+    return {"svoz": od.svoz_text(name), "vok": near[0] if near else None, "yard": yard, "sorts": sorts,
+            "n_closures": len(closures)}
 
 
 def _closures(obvod: str, today: dt.date) -> list[dict]:

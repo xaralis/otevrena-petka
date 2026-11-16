@@ -138,6 +138,17 @@
 
 {{ street_cleaning(cl_rows, gen, today, webcal, ics) }}
 
+<section class="ul-odpady" id="odpady" aria-labelledby="odpady-h">
+  <h2 id="odpady-h">Odpady</h2>
+  <ul class="link-list ul-od">
+    <li><span class="ul-od-k">Svoz směsného odpadu</span><span>{% if svoz %}<b>{{ svoz }}</b>, nádoby přistavte od 5.30{% else %}den svozu v harmonogramu SmP není{% endif %}</span></li>
+    <li><span class="ul-od-k">Kontejner na objemný odpad</span><span>{% if vok %}<b>{{ vok.date|cl_wd }} {{ vok.date|ul_dm }}</b>, {{ vok.place }}{% if vok.time %}, {{ vok.time }}{% endif %}{% else %}v okolí letos už nebude{% endif %}</span></li>
+    {% if yard %}<li><span class="ul-od-k">Nejbližší sběrný dvůr</span><span><a href="/verejny-prostor/odpady#{{ yard.key }}">{{ yard.name }}</a>, {{ yard.km }} km, {{ yard.status }}</span></li>{% endif %}
+    {% if sorts %}<li><span class="ul-od-k">Tříděný odpad do 300 m</span><span><b>{{ sorts.n }}</b> {{ cl_plural(sorts.n, 'stanoviště', 'stanoviště', 'stanovišť') }}: {{ sorts.kinds|join(', ') }}</span></li>{% endif %}
+  </ul>
+  <p class="cl-cap">Připomínku svozu nebo přistavení kontejneru si můžete zapnout v <a href="/muj-prehled?ulice={{ s.slug }}">Mém přehledu</a>. Všechno o odpadech v obvodu je na stránce <a href="/verejny-prostor/odpady">Odpady</a>.</p>
+</section>
+
 <div class="ul-all">
   <div>
     <h3>Všechno k ulici {{ s.name }}</h3>
@@ -147,8 +158,7 @@
       <li><a href="{{ pd_url }}">Podněty</a><span class="ak-n">{% if rep.ceka %}<b>{{ rep.ceka }}</b> {{ 'čeká' if rep.ceka == 1 or rep.ceka > 4 else 'čekají' }}, {% endif %}<b>{{ rep.n }}</b> celkem</span></li>
       <li><a href="{{ deska_url }}">Úřední deska</a><span class="ak-n">{% if n_notices %}<b>{{ n_notices }}</b> visí{% else %}teď nic nevisí{% endif %}</span></li>
       <li><a href="/verejny-prostor/uzavirky">Uzavírky</a><span class="ak-n">{% if n_closures %}<b>{{ n_closures }}</b> {{ 'platí' }} teď{% else %}teď žádná{% endif %}</span></li>
-      <li><a href="https://smp-pce.cz/odpady/svoz-komunalniho-odpadu">Svoz směsného odpadu</a><span class="ak-n">{% if svoz %}{{ svoz }}{% else %}den neznáme{% endif %}</span></li>
-      <li><a href="/verejny-prostor/odpady">Kontejner na objemný odpad</a><span class="ak-n">{% if vok %}<b>{{ vok.date|cl_wd }} {{ vok.date|ul_dm }}</b> {{ vok.place }}{% else %}v okolí letos ne{% endif %}</span></li>
+      <li><a href="/verejny-prostor/odpady">Odpady</a><span class="ak-n">svoz, kontejnery, sběrné dvory</span></li>
     </ul>
   </div>
   {% if around %}

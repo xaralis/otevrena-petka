@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_portal.html" import band, source %}
+{% from "_portal.html" import band, source, search_box %}
 {% block title %}Odpady{% endblock %}
 {% block description %}Kdy a kde budou přistaveny kontejnery na objemný odpad a kdy mají otevřeno sběrné dvory v Pardubicích. Data Služeb města Pardubic.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
@@ -52,19 +52,12 @@
 </section>
 {% endif %}
 
-{% if svoz %}
 <section class="od-svoz" aria-labelledby="od-svoz-h">
   <h2 id="od-svoz-h">Svoz směsného odpadu</h2>
-  <p class="od-lead">Ve který den se v ulici vyváží popelnice a kontejnery na směsný odpad. Nádoby přistavte ve svozový den od 5.30. Svozy probíhají i ve státní svátky, kromě Nového roku. Připomínku večer předem si můžete zapnout v <a href="/muj-prehled">Mém přehledu</a>.</p>
-  <label class="sr" for="od-svoz-q">Najít ulici</label>
-  <input id="od-svoz-q" class="chip-add od-svoz-q" type="search" placeholder="Najít ulici" autocomplete="off" data-od-svoz-q>
-  <ul class="link-list od-svoz-list" data-od-svoz>
-    {% for r in svoz %}<li data-n="{{ r.name|lower }}">{% if r.slug %}<a href="/verejny-prostor/ulice/{{ r.slug }}">{{ r.name }}</a>{% else %}<span class="od-svoz-n">{{ r.name }}</span>{% endif %}<span>{{ r.text }}</span></li>{% endfor %}
-  </ul>
-  <p class="od-svoz-none" data-od-svoz-none hidden>Takovou ulici v seznamu nemáme.</p>
-  <p class="cl-cap">Podle <a href="https://smp-pce.cz/odpady/svoz-komunalniho-odpadu">harmonogramu svozu Služeb města Pardubic</a> z roku 2022. U ulic, které tabulka dělí, jsou dny zvlášť pro popelnice u domů a kontejnery na sídlištích.</p>
+  <p class="od-lead">Ve který den se vyváží popelnice a kontejnery na směsný odpad, najdete na stránce své ulice. Připomínku večer předem si můžete zapnout v <a href="/muj-prehled">Mém přehledu</a>.</p>
+  {{ search_box('od-svoz-q', '/verejny-prostor/ulice', 'Najít ulici', 'Název ulice', attrs='list="od-streets" data-combo') }}
+  <datalist id="od-streets">{% for n in street_names %}<option value="{{ n }}"></option>{% endfor %}</datalist>
 </section>
-{% endif %}
 
 <section class="od-yards" aria-labelledby="od-yards-h">
   <h2 id="od-yards-h">Sběrné dvory</h2>
@@ -81,4 +74,4 @@
 
 {% call source(checked) %}Harmonogram <a href="{{ source }}">přistavování velkoobjemových kontejnerů</a> a <a href="{{ yards_source }}">seznam sběrných dvorů</a> zveřejňují Služby města Pardubic. Harmonogram je jen jako sken, přepsali jsme ho ručně; seznam dvorů čteme každý den. Stanoviště jsme na mapu umístili podle popisu sami, platí vždy text. Jako data: <a href="/api/v1/odpady/kontejnery">kontejnery</a> a <a href="/api/v1/odpady/dvory">sběrné dvory</a> (JSON).{% endcall %}
 {% endblock %}
-{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('odpady.js') }}" defer></script>{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('combo.js') }}" defer></script><script src="{{ asset('maptip.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('odpady.js') }}" defer></script>{% endblock %}
