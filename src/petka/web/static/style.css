@@ -1803,3 +1803,33 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .uz-w li { padding-left: 0; padding-right: 0; scroll-margin-top: 1rem; }
 .uz-w li:first-child { padding-top: 0; }
 .uz-w .ul-w-t q { display: block; -webkit-line-clamp: unset; overflow: visible; }
+
+/* Odpady: the kontejner (ink) and the sběrný dvůr (white) markers, in the map and its legend;
+   the yards under the map as rows: name and address, hours, open now, how it differs */
+.od-mk { display: inline-grid; place-items: center; width: 24px; height: 24px; box-sizing: border-box; border-radius: 3px; cursor: pointer; }
+.od-mk-v { background: var(--ink); box-shadow: 0 0 0 2px #fff; }
+.od-mk-d { background: #fff; border: 2.5px solid var(--ink); color: var(--ink); }
+.od-mk-a { background: #5f6368; outline: 2px dashed var(--ink); outline-offset: 1px; box-shadow: none; }
+.od-mk.on, .od-mk:hover, .od-mk:focus-visible { transform: scale(1.25); z-index: 2; }
+.od-mk-d.on, .od-mk-d:hover { background: var(--ink); color: #fff; }
+.od-lg .od-mk { width: 18px; height: 18px; cursor: default; }
+.od-lg .od-mk svg { width: 10px; height: 10px; }
+.od-yards { margin-top: 3rem; }
+.od-yards h2 { margin: 0 0 .3rem; }
+.od-lead { margin: 0 0 1rem; max-width: 72ch; color: var(--ink-2); }
+.od-list { list-style: none; margin: 0; padding: 0; }
+.od-list li { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) auto; gap: .2rem 1.5rem; align-items: baseline;
+  padding: .75rem 0; border-bottom: 1px solid var(--off); scroll-margin-top: 1rem; }
+.od-list li:last-child { border-bottom: 0; }
+.od-list li:target { background: var(--grey); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+.od-n b { display: block; font-size: var(--h3); }
+.od-n span, .od-h { font-size: .92rem; color: var(--ink-2); }
+.od-s { font-weight: 700; font-size: .92rem; white-space: nowrap; }
+.od-s.od-c { color: var(--muted); font-weight: 600; }
+.od-x { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); }
+@media (max-width: 600px) {
+  .od-list li { grid-template-columns: minmax(0, 1fr) auto; }
+  .od-h { grid-column: 1 / -1; order: 3; }
+  .od-x { order: 4; }
+}
+.mbox-rows.od-rows li > a { grid-template-columns: 5.6rem minmax(0, 1fr) auto; }   /* „po 14. 12.“ */

@@ -6,7 +6,7 @@
 {% block main %}
 <div class="prose wide">
 <h2>Datové sady</h2>
-<nav class="switch" aria-label="Datová sada" data-tabs><a href="#usneseni" data-tab="usneseni" aria-current="true">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a><a href="#uzavirky" data-tab="uzavirky">Uzavírky</a><a href="#mista" data-tab="mista">Místa</a></nav>
+<nav class="switch" aria-label="Datová sada" data-tabs><a href="#usneseni" data-tab="usneseni" aria-current="true">Usnesení</a><a href="#uredni-deska" data-tab="uredni-deska">Úřední deska</a><a href="#blokove-cisteni" data-tab="blokove-cisteni">Blokové čištění ulic</a><a href="#podnety" data-tab="podnety">Podněty</a><a href="#uzavirky" data-tab="uzavirky">Uzavírky</a><a href="#odpady" data-tab="odpady">Odpady</a><a href="#mista" data-tab="mista">Místa</a></nav>
 <section class="data-tab" id="usneseni" data-panel="usneseni">
 <h2>Usnesení a hlasování</h2>
 <p>{{ stats.meetings }} jednání rady a zastupitelstva MO Pardubice V od {{ stats.first_date|d }}, poslední {{ stats.last_date|d }}{% if updated %}, export ze dne {{ updated|d }}{% endif %}. Doplňuje se po zveřejnění každého zápisu. Jak data vznikají a co z nich je odvozené, popisuje <a href="/radnice/usneseni/metodika">metodika</a>.</p>
@@ -78,6 +78,20 @@
 <p>Neplatí pro ně CC BY jako pro zbytek portálu, ale <a href="https://dopravniinfo.gov.cz">podmínky použití digitalizovaných informací o silničním provozu</a> ŘSD: kdo data použije dál, smí je nabízet jen jako součást vlastní služby, u textu beze změny uvede „Zdrojem digitalizovaných informací o silničním provozu je NDIC.“ a ŘSD neodpovídá za jejich úplnost, přesnost ani za škody z jejich použití.</p>
 
 </section>
+<section class="data-tab" id="odpady" data-panel="odpady">
+<h2>Odpady</h2>
+<p>Přistavování velkoobjemových kontejnerů na objemný odpad a sběrné dvory s otevírací dobou za celé město, podle <a href="https://smp-pce.cz/odpady">Služeb města Pardubic</a>. Harmonogram kontejnerů SmP zveřejňuje jen jako sken, přepsali jsme ho ručně; seznam dvorů čteme každý den. Jen některé obvody vrátí parametr <a href="#obvod"><code>?obvod=</code></a>.</p>
+<table class="ledger catalog">
+  <thead><tr><th scope="col">Data</th><th scope="col">Co obsahuje</th><th scope="col">Stáhnout</th></tr></thead>
+  <tbody>
+    <tr><td><b>Kontejnery</b></td><td>Jedno přistavení od dneška: stanoviště slovy (<code>place</code>), den (<code>date</code>), kdy bude kontejner dovezen (<code>time</code>), obvod a poloha <code>[lon, lat]</code> odvozená z popisu (<code>approx</code>: jen přibližně, u neznámého místa chybí).</td>
+        <td class="nowrap"><a href="/api/v1/odpady/kontejnery">JSON</a></td></tr>
+    <tr><td><b>Sběrné dvory</b></td><td>Jeden dvůr: název, adresa, otevírací doba (<code>hours</code>: dny, od, do), co nebere (<code>takes_not</code>) a co bere jen on (<code>only_here</code>), poloha.</td>
+        <td class="nowrap"><a href="/api/v1/odpady/dvory">JSON</a></td></tr>
+  </tbody>
+</table>
+
+</section>
 <section class="data-tab" id="mista" data-panel="mista">
 <h2>Místa</h2>
 <p>Místa z <a href="https://www.openstreetmap.org/">OpenStreetMap</a> za celé město: obchody s potravinami, bankomaty, lékárny, kde se najíst a napít, památky, veřejná WC, pošty, stojany na kola, kontejnery na tříděný odpad a sběrné dvory{% if mi_cat.total %}, dnes {{ '{:,}'.format(mi_cat.total).replace(',', ' ') }} míst{% endif %}{% if mi_cat.built_at %}, sestaveno {{ mi_cat.built_at|d }}{% endif %}. Obnovuje se jednou denně. Každé místo má název, co to je, adresu, polohu, otevírací dobu tak, jak ji píše OpenStreetMap, a obvod, ve kterém leží; kontejner a sběrný dvůr i druhy odpadu, stojan počet míst. Soubor stahuje celý aplikace Pardubice do kapsy, takže se nikam neposílá, kde zrovna jste.</p>
@@ -96,7 +110,7 @@
 
 <h2 id="api">REST API</h2>
 <p>Dokumentace OpenAPI je na <a href="/api/docs">/api/docs</a>. Každá sekce má vlastní prefix, usnesení třeba <code>/api/v1/usneseni/</code>.</p>
-<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění, podněty, uzavírky a místa.</p>
+<p id="obvod"><b>Obvody.</b> Datové sady, které jsou za celé město, vracejí celé město a každý záznam v nich má pole <code>obvody</code>: id městských obvodů, kterých se týká (<code>mo1</code>–<code>mo8</code> = Pardubice I–VIII). Parametr <code>?obvod=</code> vrátí jen záznamy z vybraných obvodů, víc jich oddělte čárkou: <code>?obvod=mo5</code>, <code>?obvod=mo4,mo5</code>. Neznámý obvod vrátí chybu 422 se seznamem platných. Zatím ho umí blokové čištění, podněty, uzavírky, odpady a místa.</p>
 <p id="etag"><b>Jen při změně.</b> Blokové čištění, podněty a místa posílají hlavičku <code>ETag</code>; kdo ji pošle zpátky v <code>If-None-Match</code>, dostane odpověď 304 bez dat, dokud se data nezmění.</p>
 <pre>curl '{{ base }}/api/v1/usneseni/resolutions?q=parkování&amp;status=usneseni'
 curl '{{ base }}/api/v1/usneseni/resolutions/154-2025-z'

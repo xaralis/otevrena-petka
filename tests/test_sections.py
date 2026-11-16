@@ -23,7 +23,7 @@ def test_registry():
     assert BY_SLUG["ulice"].front and not BY_SLUG["ulice"].listed
     assert BY_SLUG["mista"].status == "live" and not BY_SLUG["mista"].listed       # data only, in Data a API
     assert {s.slug for s in WITH_CODE} == {"uredni-deska", "usneseni", "rozpocet", "ankety", "podnety", "blokove-cisteni",
-                                           "ulice", "uzavirky", "mista"}
+                                           "ulice", "uzavirky", "mista", "odpady"}
 
 
 @pytest.mark.parametrize("s", WITH_CODE, ids=lambda s: s.slug)

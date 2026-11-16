@@ -1,0 +1,248 @@
+{
+ "file": "seznam-separacnich-dvoru-a-oteviraci-doby-1792486829.doc",
+ "checked": "2026-11-16",
+ "yards": [
+  {
+   "key": "dvur-drazkovice",
+   "name": "Dražkovice",
+   "address": "areál překladiště odpadu",
+   "place": "Dražkovice, areál překladiště odpadu",
+   "hours": [
+    {
+     "days": [
+      "po",
+      "út",
+      "čt",
+      "pá"
+     ],
+     "from": "6:30",
+     "to": "15:00"
+    },
+    {
+     "days": [
+      "st"
+     ],
+     "from": "6:30",
+     "to": "17:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": [
+    "eternit, lepenka, škvára, Ytong, porobeton, baterie z elektrokol, koloběžek a powerbanky"
+   ]
+  },
+  {
+   "key": "dvur-hurka",
+   "name": "Hůrka",
+   "address": "areál SmP a.s., Hůrka 1803",
+   "place": "Hůrka, areál SmP a.s., Hůrka 1803",
+   "hours": [
+    {
+     "days": [
+      "út",
+      "st",
+      "čt"
+     ],
+     "from": "13:00",
+     "to": "17:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": []
+  },
+  {
+   "key": "dvur-nemosice",
+   "name": "Nemošice",
+   "address": "ul. Ostřešanská",
+   "place": "Nemošice, ul. Ostřešanská",
+   "hours": [
+    {
+     "days": [
+      "út",
+      "st",
+      "čt"
+     ],
+     "from": "13:00",
+     "to": "17:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": []
+  },
+  {
+   "key": "dvur-pardubicky",
+   "name": "Pardubičky",
+   "address": "ul. Průmyslová",
+   "place": "Pardubičky, ul. Průmyslová",
+   "hours": [
+    {
+     "days": [
+      "út",
+      "čt"
+     ],
+     "from": "12:00",
+     "to": "17:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [
+    "pneumatiky"
+   ],
+   "only_here": []
+  },
+  {
+   "key": "dvur-rosice-nad-labem",
+   "name": "Rosice nad Labem",
+   "address": "ul. J.K.Tyla",
+   "place": "Rosice nad Labem, ul. J.K.Tyla",
+   "hours": [
+    {
+     "days": [
+      "po",
+      "st",
+      "pá"
+     ],
+     "from": "13:00",
+     "to": "17:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": []
+  },
+  {
+   "key": "dvur-ohrazenice",
+   "name": "Ohrazenice",
+   "address": "ul. Pohránovská",
+   "place": "Ohrazenice, ul. Pohránovská",
+   "hours": [
+    {
+     "days": [
+      "po",
+      "st",
+      "pá"
+     ],
+     "from": "13:00",
+     "to": "17:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": []
+  },
+  {
+   "key": "dvur-svitkov",
+   "name": "Svítkov",
+   "address": "za areálem Plynostavu",
+   "place": "Svítkov, za areálem Plynostavu",
+   "hours": [
+    {
+     "days": [
+      "po",
+      "st",
+      "pá"
+     ],
+     "from": "13:00",
+     "to": "17:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": []
+  },
+  {
+   "key": "dvur-na-stare-poste",
+   "name": "Na Staré poště",
+   "address": "č.p. 2903",
+   "place": "Na Staré poště, č.p. 2903",
+   "hours": [
+    {
+     "days": [
+      "po",
+      "st",
+      "pá"
+     ],
+     "from": "14:00",
+     "to": "18:00"
+    },
+    {
+     "days": [
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    }
+   ],
+   "takes_not": [],
+   "only_here": []
+  },
+  {
+   "key": "dvur-polabiny",
+   "name": "Polabiny",
+   "address": "Lonkova ul. – mezi výměníky",
+   "place": "Polabiny, Lonkova ul. – mezi výměníky",
+   "hours": [
+    {
+     "days": [
+      "po",
+      "so"
+     ],
+     "from": "8:00",
+     "to": "12:00"
+    },
+    {
+     "days": [
+      "út",
+      "čt"
+     ],
+     "from": "14:00",
+     "to": "18:00"
+    }
+   ],
+   "takes_not": [
+    "pneumatiky",
+    "zeleň, větve",
+    "nebezpečné odpady"
+   ],
+   "only_here": []
+  }
+ ]
+}

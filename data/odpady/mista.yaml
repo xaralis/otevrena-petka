@@ -1,0 +1,64 @@
+# Kde jsou stanoviště velkoobjemových kontejnerů (vok-2026.yaml) a separační dvory.
+# Bod [lon, lat] WGS84. how: jak vznikl (čp. z RÚIAN, křížení ulic z RÚIAN, střed ulice, OpenStreetMap,
+# ručně). approx: true = jen přibližně (na mapě čárkovaně, platí text). Bez bodu = místo neznáme, na mapě
+# není. Návrh vygenerován 16. 11. 2026, ruční opravy sem.
+places:
+  "Bubeníkovy sady – Bulharská x Ke Tvrzi": {point: [15.785013, 50.03552], how: "křížení Bubeníkovy sady x Bulharská", approx: false}
+  "Macanova x U Marka": {point: [15.762985, 50.032694], how: "křížení Macanova x U Marka", approx: false}
+  "Závodu míru – parkoviště u školy": {point: [15.801744, 50.037854], how: "střed ulice U Školy", approx: true}
+  "Židov – ulice Na Haldě, zpevněná plocha za mostkem přes Haldu": {point: [15.7917, 50.046613], how: "střed ulice Na Haldě", approx: true}
+  "Sezemická – nám. Pospíšilovo": {point: [15.790761, 50.038652], how: "střed ulice Sezemická", approx: true}
+  "Bratr. Veverkových – proti parkovišti (u čp. 2337)": {point: [15.772465, 50.032794], how: "čp. 2337: Bratranců Veverkových 2337, Zelené Předměstí, 53002 Pardubice", approx: false}
+  "Mezi Mosty – u parkoviště naproti automatickým mlýnům": {point: [15.781229, 50.040576], how: "střed ulice Mezi Mosty", approx: true}
+  "Karlovina – Arnošta z Pardubic vedle čp. 2616": {point: [15.775786, 50.032625], how: "čp. 2616: Arnošta z Pardubic 2616, Zelené Předměstí, 53002 Pardubice", approx: false}
+  "Spořilov x Studánecká ul.": {point: [15.793049, 50.037571], how: "křížení Studánecká x Spořilov", approx: false}
+  "Bulharská – u rychlodráhy": {point: [15.78735, 50.032706], how: "střed ulice Bulharská", approx: true}
+  "Bulharská (Škroupova x Benedettiho)": {point: [15.78706, 50.033434], how: "křížení Benedettiho x Bulharská", approx: false}
+  "Havlíčkova u věžáku u čp. 445": {point: [15.767182, 50.03521], how: "čp. 445: Havlíčkova 445, Zelené Předměstí, 53002 Pardubice", approx: false}
+  "Cihelna Kunětická, slepá ulice, parkoviště u točny MHD": {point: [15.771198, 50.053388], how: "střed ulice Kunětická", approx: true}
+  "Polabiny 1 Družstevní, u ZŠ": {point: [15.762637, 50.051323], how: "střed ulice Družstevní", approx: true}
+  "Polabiny 1 Ohrazenická": {point: [15.762842, 50.049356], how: "střed ulice Ohrazenická", approx: true}
+  "Polabiny 2 Prodloužená u policie": {point: [15.75716, 50.048793], how: "střed ulice Prodloužená", approx: true}
+  "Polabiny 3 Družby, parkoviště": {point: [15.757901, 50.046839], how: "střed ulice Družby", approx: true}
+  "Polabiny 4 Brožíkova, u čp. 437": {point: [15.751149, 50.041971], how: "čp. 437: Brožíkova 437, Polabiny, 53009 Pardubice", approx: false}
+  "Polabiny 4 Mozartova, parkoviště": {point: [15.750051, 50.044232], how: "střed ulice Mozartova", approx: true}
+  "Na Drážce – parkoviště; křižovatka ulic Na Drážce a Věry Junkové": {point: [15.800774, 50.040143], how: "křížení Věry Junkové x Na Drážce", approx: false}
+  "Dubina – U lesa; u kontejnerového stanoviště": {point: null, how: "nenalezeno", approx: true}
+  "Dubina – Erno Košťála; z boku čp. 973": {point: [15.811912, 50.044511], how: "čp. 973: Erno Košťála 973, Studánka, 53012 Pardubice", approx: false}
+  "Luční – hřiště; u zahradnictví": {point: [15.796398, 50.03281], how: "střed ulice Luční", approx: true}
+  "Luční – stadion": {point: [15.796398, 50.03281], how: "střed ulice Luční", approx: true}
+  "Skrbkova – Lesní; křižovatka ulic": {point: [15.813275, 50.033843], how: "křížení Skrbkova x Lesní", approx: false}
+  "Raabova x Spojilská – parkoviště": {point: [15.805074, 50.033528], how: "křížení Spojilská x Raabova", approx: false}
+  "Luďka Matury 856": {point: [15.806005, 50.042693], how: "čp. 856: Luďka Matury 856, Studánka, 53012 Pardubice", approx: false}
+  "Na Drážce u čp. 1564": {point: [15.797419, 50.034182], how: "čp. 1564: Na Drážce 1564, Bílé Předměstí, 53003 Pardubice", approx: false}
+  "L. Malé x Bartoňova za točnou MHD": {point: [15.80775, 50.040342], how: "křížení Lidmily Malé x Bartoňova", approx: false}
+  "Černá za Bory – Na Rybníčkách": {point: [15.831284, 50.023609], how: "střed ulice Na Rybníčkách", approx: true}
+  "Mnětice – u Obecního domu, ul. Černoborská": {point: [15.833179, 50.01285], how: "střed ulice Černoborská", approx: true}
+  "Drozdice před čp. 41": {point: [15.818821, 50.016002], how: "čp. 41: Drozdice 41, 53002 Pardubice", approx: false}
+  "Drozdice – u rybníčku proti čp. 17": {point: [15.820074, 50.013691], how: "čp. 17: Drozdice 17, 53002 Pardubice", approx: false}
+  "Staročernsko – Borská x Podhumenská proti čp. 17": {point: [15.837517, 50.034221], how: "čp. 17: Borská 17, Staročernsko, 53002 Pardubice", approx: false}
+  "Staročernsko – Dubská 71": {point: [15.838647, 50.035954], how: "čp. 71: Dubská 71, Staročernsko, 53002 Pardubice", approx: false}
+  "Žižín před čp. 6": {point: [15.845844, 50.018222], how: "čp. 6: Žižín 6, 53002 Pardubice", approx: false}
+  "Češkova – Kašparova u školy": {point: [15.769399, 50.022059], how: "křížení Kašparova x Češkova", approx: false}
+  "Dražkovice – u pošty": {point: null, how: "nenalezeno", approx: true}
+  "Pod Břízkami – Dražkovická": {point: [15.773144, 50.020857], how: "křížení Pod Břízkami x Dražkovická", approx: false}
+  "Višňovka – K Blahobytu": {point: [15.766193, 50.023917], how: "střed ulice K Blahobytu", approx: true}
+  "Lány na Důlku KD": {point: null, how: "nenalezeno", approx: true}
+  "Lány na Důlku u čp. 80": {point: [15.678433, 50.037813], how: "čp. 80: Lány na Důlku 80, 53002 Pardubice", approx: false}
+  "Opočínek – Finské domky": {point: null, how: "nenalezeno", approx: true}
+  "Opočínek – pod čp. 23": {point: [15.654401, 50.03958], how: "čp. 23: Opočínek 23, 53002 Pardubice", approx: false}
+  "Chotkova – parkoviště bývalý Mountfield": {point: [15.702029, 50.018965], how: "střed ulice Chotkova", approx: true}
+  "Staré Čívice točna MHD": {point: null, how: "nenalezeno", approx: true}
+  "U Svaté Trojice": {point: null, how: "nenalezeno", approx: true}
+  "Doubravice proti čp. 53": {point: [15.746762, 50.067344], how: "čp. 53: Doubravice 53, 53353 Pardubice", approx: false}
+  "Rosice – Kréta (ul. Legionářská)": {point: [15.748772, 50.046954], how: "střed ulice Legionářská", approx: true}
+  "Trnová – garáže u T-STRINGU": {point: null, how: "nenalezeno", approx: true}
+  "Dražkovice, areál překladiště odpadu": {point: null, how: "nenalezeno", approx: true}
+  "Hůrka, areál SmP a.s., Hůrka 1803": {point: [15.80939, 50.04825], how: "OpenStreetMap (Místa)", approx: false}
+  "Nemošice, ul. Ostřešanská": {point: [15.79617, 50.00885], how: "OpenStreetMap (Místa)", approx: false}
+  "Pardubičky, ul. Průmyslová": {point: [15.80029, 50.02613], how: "OpenStreetMap (Místa)", approx: false}
+  "Rosice nad Labem, ul. J.K.Tyla": {point: [15.73742, 50.04516], how: "OpenStreetMap (Místa)", approx: false}
+  "Ohrazenice, ul. Pohránovská": {point: [15.7575, 50.06746], how: "OpenStreetMap (Místa)", approx: false}
+  "Svítkov, za areálem Plynostavu": {point: [15.71307, 50.02438], how: "OpenStreetMap (Místa)", approx: false}
+  "Na Staré poště, č.p. 2903": {point: [15.7686, 50.03035], how: "OpenStreetMap (Místa)", approx: false}
+  "Polabiny, Lonkova ul. – mezi výměníky": {point: [15.76082, 50.04514], how: "OpenStreetMap (Místa)", approx: false}

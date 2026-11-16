@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from "_portal.html" import band, source %}
+{% block title %}Odpady{% endblock %}
+{% block description %}Kdy a kde budou přistaveny kontejnery na objemný odpad a kdy mají otevřeno sběrné dvory v Pardubicích. Data Služeb města Pardubic.{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
+{% block hero %}{{ band('Odpady', 'Kdy a kde budou přistaveny kontejnery na objemný odpad a kdy mají otevřeno sběrné dvory. Data Služeb města Pardubic.') }}{% endblock %}
+{% set CONT %}<svg width="11" height="10" viewBox="0 0 14 12" aria-hidden="true"><path d="M1 3h12l-1.6 8H2.6z" fill="#fff"/><rect y="1" width="14" height="2" fill="#fff"/></svg>{% endset %}
+{% set YARD %}<svg width="11" height="11" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 6.5 7 2.5l5 4V12H2z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>{% endset %}
+{% block main %}
+<section class="mbox-sec od-mapsec" aria-labelledby="od-map-h">
+  <div class="sec-head">
+    <h2 id="od-map-h">Kontejnery na objemný odpad</h2>
+    <nav class="switch pd-seg" aria-label="Kde">
+      <a href="/verejny-prostor/odpady"{% if not town %} aria-current="true"{% endif %}>{{ obvod.abbr|replace('MO ', '') }} <b>{{ n_mine }}</b></a><a href="/verejny-prostor/odpady?kde=mesto"{% if town %} aria-current="true"{% endif %}>Celé město <b>{{ n_town }}</b></a>
+    </nav>
+  </div>
+  <div class="mbox">
+    <div class="mbox-map">
+      <div class="map od-map" data-od-map data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="od-fc" role="region" aria-label="Mapa stanovišť kontejnerů a sběrných dvorů; stejné údaje jsou v seznamu a níže"></div>
+      <script type="application/json" id="od-fc">{{ fc|tojson }}</script>
+    </div>
+    <aside class="mbox-col" aria-labelledby="od-list-h">
+      <div class="mbox-h"><h3 id="od-list-h">Kdy a kde</h3><p>{% if rows %}do konce roku, nejbližší nahoře{% else %}letos už v {{ 'celém městě' if town else 'obvodu' }} žádné přistavení není{% endif %}</p></div>
+      {% if rows %}
+      <ol class="pd-rows ul-rows mbox-rows od-rows">
+        {% for r in rows %}<li data-od-key="{{ r.key }}"><a href="#od-map-h"><span class="pd-rd">{{ r.date }}</span><span class="pd-rt"><b>{{ r.place }}</b>{% if r.sub %}<span>{{ r.sub }}</span>{% endif %}</span><span>{{ r.until }}</span></a></li>
+        {% endfor %}
+      </ol>
+      {% elif next %}<p class="cl-muted">Další přistavení v obvodu: {{ next.date }} {{ next.place }}.</p>{% endif %}
+      <a class="more mbox-more" href="{{ source }}">Harmonogram SmP na celý rok</a>
+    </aside>
+  </div>
+  <p class="cl-lg od-lg" aria-label="Legenda mapy"><span><i class="od-mk od-mk-v">{{ CONT }}</i>kontejner na objemný odpad</span><span><i class="od-mk od-mk-d">{{ YARD }}</i>sběrný dvůr</span><span><i class="od-mk od-mk-v od-mk-a">{{ CONT }}</i>poloha přibližná</span></p>
+  <p class="cl-cap">Kontejner stojí, dokud se nenaplní. Patří do něj nábytek, koberce, matrace a další objemný odpad z domácnosti, ne zeleň, suť, elektro ani nebezpečný odpad. Ty berou sběrné dvory. Stanoviště jsme na mapu umístili podle popisu sami, platí vždy text.</p>
+</section>
+
+<section class="od-yards" aria-labelledby="od-yards-h">
+  <h2 id="od-yards-h">Sběrné dvory</h2>
+  <p class="od-lead">Odpad z domácnosti tu odložíte zdarma, s dokladem o zaplacení poplatku za odpad nebo s občankou s trvalým bydlištěm v Pardubicích. Do 200 kg za týden, suti 300 kg za měsíc.</p>
+  <ul class="od-list">
+    {% for y in yards %}<li id="{{ y.key }}">
+      <span class="od-n"><b>{{ y.name }}</b><span>{{ y.address }}</span></span>
+      <span class="od-h">{{ y.hours }}</span>
+      <span class="od-s{{ '' if y.open else ' od-c' }}">{{ y.status }}</span>
+      {% if y.extra %}<span class="od-x">{{ y.extra }}</span>{% endif %}
+    </li>{% endfor %}
+  </ul>
+</section>
+
+{% call source(checked) %}Harmonogram <a href="{{ source }}">přistavování velkoobjemových kontejnerů</a> a <a href="{{ yards_source }}">seznam sběrných dvorů</a> zveřejňují Služby města Pardubic. Harmonogram je jen jako sken, přepsali jsme ho ručně; seznam dvorů čteme každý den. Jako data: <a href="/api/v1/odpady/kontejnery">kontejnery</a> a <a href="/api/v1/odpady/dvory">sběrné dvory</a> (JSON).{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('odpady.js') }}" defer></script>{% endblock %}

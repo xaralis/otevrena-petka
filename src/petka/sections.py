@@ -12,6 +12,7 @@ from .section import Section
 from .ulice.section import SECTION as ULICE
 from .uredni_deska.section import SECTION as UREDNI_DESKA
 from .uzavirky.section import SECTION as UZAVIRKY
+from .odpady.section import SECTION as ODPADY
 from .usneseni.section import SECTION as USNESENI
 
 SMLOUVY = Section(
@@ -26,7 +27,7 @@ SMLOUVY = Section(
              ("Hlídač státu", "https://www.hlidacstatu.cz/")],
 )
 
-REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI, ULICE, MISTA]
+REGISTRY: list[Section] = [UREDNI_DESKA, USNESENI, ROZPOCET, SMLOUVY, UZAVIRKY, ANKETY, PODNETY, CISTENI, ULICE, MISTA, ODPADY]
 
 SECTIONS = [s for s in REGISTRY if s.listed]    # what the portal's pages show
 BY_SLUG = {s.slug: s for s in REGISTRY}

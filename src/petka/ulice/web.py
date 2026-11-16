@@ -42,6 +42,12 @@ def _names(obvod: str) -> dict[str, str]:
 
 # --- the front page ---------------------------------------------------------------------------
 
+def _drops(today: dt.date) -> list:
+    """This year's přistavení of the velkoobjemové kontejnery still to come (petka.odpady)."""
+    from ..odpady import data as od
+    return [d for d in od.drops(today.year) if d.date >= today]
+
+
 def _closures(obvod: str, today: dt.date) -> list[dict]:
     """The obvod's closures from NDIC (petka.uzavirky) as the front page's traffic marks: those
     going on and those starting within a week, each on the middle of its stretch, linked to its
@@ -94,6 +100,7 @@ def home(request: Request):
         "/radnice/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
         "/verejny-prostor/blokove-cisteni": (q.thousands(len(its)), "termínů letos"),
         "/verejny-prostor/podnety": (q.thousands(s["n"]), "hlášení za rok"),
+        "/verejny-prostor/odpady": (str(sum(1 for d in _drops(today) if d.obvod == obvod)), "přistavení letos"),
         "/verejny-prostor/uzavirky": (str(n := sum(1 for m in closures if not m["order"][0])),
                                       cw.plural(n, "uzavírka platí", "uzavírky platí", "uzavírek platí")),
     }
