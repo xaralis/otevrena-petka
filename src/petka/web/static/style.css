@@ -1812,7 +1812,10 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
 .od-mk-a { background: #5f6368; outline: 2px dashed var(--ink); outline-offset: 1px; box-shadow: none; }
 .od-mk.on, .od-mk:hover, .od-mk:focus-visible { transform: scale(1.25); z-index: 2; }
 .od-mk-d.on, .od-mk-d:hover { background: var(--ink); color: #fff; }
-.od-lg .od-mk { width: 18px; height: 18px; cursor: default; }
+.cl-lg i.od-mk { display: inline-grid; place-items: center; width: 18px; height: 18px; border-top: 0; cursor: default; }   /* not a line of the legend (.cl-lg i) */
+.cl-lg i.od-mk-v { border-top: 0; box-shadow: none; }
+.cl-lg i.od-mk-d { border: 2px solid var(--ink); }
+.cl-lg i.od-mk-a { outline-offset: 0; margin: 0 2px; }
 .od-lg .od-mk svg { width: 10px; height: 10px; }
 .od-yards { margin-top: 3rem; }
 .od-yards h2 { margin: 0 0 .3rem; }
