@@ -167,14 +167,17 @@ def test_points_carry_the_card_and_forwarded_never_wait():
     rows = [rep(1, 1, at=NOW - 3 * D, first=NOW - 3 * D + 2 * H, street="Wolkerova"),
             rep(2, 3, at=NOW - D, street=None),
             rep(3, 1, "Městská policie", 25, at=NOW - 2 * D)]
-    rows[0].update(description="Rozbitá dlažba", photo_url="https://www.dejtip.eu/_fotoobce/x.jpeg")
+    rows[0].update(description="Rozbitá dlažba", photo_url="https://www.dejtip.eu/_fotoobce/x.jpeg",
+                   photo_version="0123abcd")
+    rows[2].update(photo_url="https://www.dejtip.eu/_fotoobce/y.jpeg")          # public, not downloaded yet
     g = stats.points(rows, NOW)
     assert [f["id"] for f in g["features"]] == [2, 3, 1]                         # newest first
     p = {f["id"]: f["properties"] for f in g["features"]}
     assert p[1] == {"id": 1, "o": "ceka", "w": "evidováno", "k": 19, "c": "Chodník", "s": "Wolkerova",
                     "t": "2026-11-09T14:00", "a": "2026-11-09T16:00", "d": "Rozbitá dlažba",
-                    "p": "https://www.dejtip.eu/_fotoobce/x.jpeg", "wd": 3}
+                    "p": "/api/v1/podnety/1/foto/0123abcd.webp", "wd": 3}
     assert "s" not in p[2] and "d" not in p[2] and "p" not in p[2] and "wd" not in p[2]
+    assert "p" not in p[3]                                  # never Dej Tip's own URL
     assert (p[3]["o"], p[3]["w"]) == ("predano", "předáno")                        # status 1, yet forwarded
     assert g["features"][0]["geometry"]["coordinates"] == [15.76, 50.03]
     assert stats.points([], NOW) == {"type": "FeatureCollection", "features": [], "bounds": None}

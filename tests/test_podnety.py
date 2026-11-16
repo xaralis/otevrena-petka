@@ -152,7 +152,7 @@ def test_api_shape(monkeypatch):
 
     def search(f, limit):
         seen.update(f=f, limit=limit)
-        return [{**_stored(), "distance": 42}]
+        return [{**_stored(), "photo_version": "0123abcd", "distance": 42}]
 
     monkeypatch.setattr(queries, "search", search)
     monkeypatch.setattr(queries, "version", lambda: VERSION)
@@ -168,7 +168,7 @@ def test_api_shape(monkeypatch):
                                   "obvod": "mo5", "obvody": ["mo5"], "status_changed_at": None,
                                   "changed_at": "2026-11-12T10:00",
                                   "description": "Nemám rád souseda, volejte [telefon] nebo [e-mail]",
-                                  "photo": "https://www.dejtip.eu/_fotoobce/0000-abc.jpeg",
+                                  "photo": "https://otevrenapetka.cz/api/v1/podnety/10000000001/foto/0123abcd.webp",
                                   "detail": "https://amg.dejtip.eu/pardubice/?id=10000000001", "distance": 42}
     f = seen["f"]
     assert (f.obvod, f.statuses, f.near, f.radius, f.date_from) == (obvody.WHOLE_TOWN, (1, 3), (50.03, 15.76),
@@ -264,6 +264,7 @@ def test_job_takes_every_obvod_of_the_town_with_one_download_per_window(monkeypa
 
     monkeypatch.setattr(jobs.runner, "run", run)
     monkeypatch.setattr(jobs.source, "fetch", fetch)
+    monkeypatch.setattr(jobs.photos, "units", lambda conn, client, limit: iter(()))      # tests/test_podnety_fotky.py
     monkeypatch.setattr(jobs, "synced", lambda conn, obvod: obvod == "mo5")
     monkeypatch.setattr(jobs, "store", lambda conn, obvod, keep, drop: stored.update(
         {obvod: ([r["id"] for r in keep], drop)}) or {})

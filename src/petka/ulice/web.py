@@ -17,7 +17,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from .. import nav
 from ..cisteni import queries as cq, source as csource, words as cw
 from ..cisteni.web import subscribe
-from ..podnety import queries as pq, source as psource, stats as ps
+from ..podnety import photos as pphotos, queries as pq, source as psource, stats as ps
 from ..usneseni import queries as uq
 from ..uredni_deska import queries as dq
 from ..web.render import tpl
@@ -196,7 +196,7 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
         "detail": detail if detail in DETAILS else "cisteni",
         "waiting": [{"key": f"r{r['id']}", "category": r["category"], "since": r["reported_at"].date(),
                      "days": (today - r["reported_at"].date()).days, "status": ps.status_word(r),
-                     "text": (r.get("description") or "").strip(), "photo": r.get("photo_url"),
+                     "text": (r.get("description") or "").strip(), "photo": pphotos.href(r["id"], r.get("photo_version")),
                      "href": psource.detail(r["id"])}
                     for r in sorted(reps, key=lambda r: r["reported_at"]) if ps.outcome(r) == "ceka"],   # longest waiting first
         "next_date": cl.on_next[0]["date"] if cl.on_next else None,

@@ -21,7 +21,7 @@ import math
 import statistics
 from dataclasses import dataclass
 
-from . import words as w
+from . import photos, words as w
 
 RESOLVED = 3
 UNRESOLVABLE = 4
@@ -291,7 +291,7 @@ def points(rows: list[dict], now: dt.datetime) -> dict:
         o = outcome(r)
         props = {"id": r["id"], "o": o, "w": status_word(r)[0], "k": r["category_id"], "c": r["category"],
                  "s": r["street"], "t": iso(r["reported_at"]), "a": iso(r.get("first_note_at")),
-                 "d": r.get("description"), "p": r.get("photo_url")}
+                 "d": r.get("description"), "p": photos.href(r["id"], r.get("photo_version"))}
         if o == "ceka":
             props["wd"] = max(0, (now - r["reported_at"]).days)
         feats.append({"type": "Feature", "id": r["id"],

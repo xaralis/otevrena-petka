@@ -3,7 +3,7 @@
 import datetime as dt
 
 from .. import obvody
-from . import queries, source
+from . import photos, queries, source
 
 INSTRUCTIONS = f"""\
 Sekce Podněty: hlášení občanů z městské aplikace Dej Tip ({source.HOME}) v obvodu – co lidé
@@ -57,7 +57,7 @@ def podnety(lat: float | None = None, lng: float | None = None, okruh: int = 500
         "vysledky": [{
             "id": r["id"], "kategorie": r["category"], "stav": source.STATUSES.get(r["status"]),
             "nahlaseno": r["reported_at"].isoformat(timespec="minutes"), "ulice": r["street"],
-            "lat": r["lat"], "lng": r["lng"], "popis": r.get("description"), "foto": r.get("photo_url"),
+            "lat": r["lat"], "lng": r["lng"], "popis": r.get("description"), "foto": photos.href(r["id"], r.get("photo_version"), photos.PUBLIC_URL),
             "odkaz": source.detail(r["id"]),
             "zmena_stavu": str(r["status_changed_at"]) if r["status_changed_at"] else None,
             **({"vzdalenost_m": r["distance"]} if "distance" in r else {}),

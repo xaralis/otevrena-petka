@@ -3,6 +3,7 @@ shows the request's obvod (petka.obvody); the API covers the whole town and take
 (ADR 0002), with a weak ETag of the data's version and the parameters (304 on If-None-Match).
 Everything else comes as query parameters.
 
+    /api/v1/podnety/<id>/foto/<version>.webp   a report's public photo, shrunk (podnety/photos.py)
     /verejny-prostor/podnety            the period's reports in numbers, on the map and by category
                         ?obdobi=12m|<year>  ?detail=mesice|vyreseno|ceka|odpoved (the open tile,
                         for a browser without JS)  ?stav=vyreseno|vse (waiting by default) and ?druh=<category id>
@@ -16,12 +17,12 @@ import json
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 
 from ..obvody import ObvodParam
 from ..web import etag
 from ..web.render import tpl
-from . import queries, source, stats, words
+from . import photos, queries, source, stats, words
 
 pages = APIRouter(prefix="/verejny-prostor/podnety", include_in_schema=False)
 api = APIRouter(prefix="/api/v1/podnety", tags=["podněty"])
@@ -122,8 +123,8 @@ def reports(request: Request, obvod: ObvodParam, kategorie: str = "", stav: str 
     `stav=3&stari=90` nedávno vyřešené. near=lat,lng a r (metry, nejvýš 5000): jen podněty
     v tom okruhu, s `distance`. `obvody`: obvod, ve kterém podnět je (podle Dej Tipu). Místo
     jen jako ulice bez čísla domu. `description` je popis od občana se skrytými telefony
-    a e-maily, `photo` fotka jen tam, kde ji autor na Dej Tipu zveřejnil (načítá se z Dej
-    Tipu), `detail` odkaz na podnět v Dej Tipu. Poznámky úřadu ne. Odpověď má ETag;
+    a e-maily, `photo` zmenšená fotka (WebP, nejvýš 800 px, bez EXIF)
+    jen tam, kde ji autor na Dej Tipu zveřejnil; leží na Pětce, ne na Dej Tipu. `detail` odkaz na podnět v Dej Tipu. Poznámky úřadu ne. Odpověď má ETag;
     s `If-None-Match` vrátí 304, dokud se podněty znovu nestáhnou (každé 4 hodiny)."""
     today = _now().date()
     f = queries.Filters(obvod, _ints(kategorie, "kategorie"), _ints(stav, "stav"),
@@ -131,7 +132,7 @@ def reports(request: Request, obvod: ObvodParam, kategorie: str = "", stav: str 
                         stari, today if stari else None)
     limit = max(1, limit)
     version = queries.version()
-    tag = etag.weak(version.isoformat() if version else "", ",".join(f.obvod.ids),
+    tag = etag.weak(version or "", ",".join(f.obvod.ids),
                     ",".join(map(str, f.categories)), ",".join(map(str, f.statuses)), f.date_from, f.date_to,
                     f.near, f.radius, stari, f.today, limit)
     headers = {"ETag": tag, "Cache-Control": API_CACHE}
@@ -139,3 +140,22 @@ def reports(request: Request, obvod: ObvodParam, kategorie: str = "", stav: str 
         return etag.not_modified(headers)
     rows = queries.search(f, limit)
     return JSONResponse(queries.geojson(rows), media_type="application/geo+json", headers=headers)
+
+
+PHOTO_CACHE = "public, max-age=31536000, immutable"     # the URL changes with the image
+
+
+@api.get("/{report_id}/foto/{ver}.webp", response_class=Response,
+         responses={200: {"content": {"image/webp": {}}}})
+def photo(request: Request, report_id: int, ver: str):
+    """Fotka podnětu zmenšená Pětkou (WebP, delší strana nejvýš 800 px, bez EXIF a GPS), jen když
+    ji autor na Dej Tipu zveřejnil. Adresu dává pole `photo`; mění se s fotkou, takže se smí
+    cachovat napořád. Fotka, kterou autor skryl nebo která zmizela z Dej Tipu, vrátí 404."""
+    p = photos.get(report_id)
+    if not p or p["version"] != ver:
+        raise HTTPException(404)
+    tag = f'"{ver}"'        # strong: WebP isn't gzipped, the bytes are the version's
+    headers = {"ETag": tag, "Cache-Control": PHOTO_CACHE}
+    if etag.fresh(request, tag):
+        return etag.not_modified(headers)
+    return Response(bytes(p["image"]), media_type="image/webp", headers=headers)

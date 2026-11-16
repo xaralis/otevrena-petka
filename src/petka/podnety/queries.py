@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 from .. import db
 from ..obvody import WHOLE_TOWN, ObvodFilter
-from . import source
+from . import photos, source
 
 EARTH = 6_371_000       # metres
 LIMIT = 2000            # most features one answer carries
@@ -80,7 +80,8 @@ def search(f: Filters, limit: int = 500) -> list[dict]:
     nearest first, each with `distance` in metres."""
     where, params = f.sql()
     with db.pool().connection() as conn:
-        rows = conn.execute(f"SELECT * FROM citizen_reports WHERE {where} ORDER BY reported_at DESC, id DESC"
+        rows = conn.execute(f"SELECT *, {photos.VERSION_SQL} FROM citizen_reports WHERE {where}"
+                            " ORDER BY reported_at DESC, id DESC"
                             + ("" if f.near else " LIMIT %s"), params + ([] if f.near else [min(limit, LIMIT)])
                             ).fetchall()
     if f.near:
@@ -112,7 +113,7 @@ def summary(obvod: str, date_from: dt.date | None = None) -> dict:
 
 
 ROW = """id, category_id, category, status, reported_at, lat, lng, street,
-         first_note_at, last_note_at, description, photo_url,
+         first_note_at, last_note_at, description, photo_url, """ + photos.VERSION_SQL + """,
          (SELECT min(s.seen_at) AT TIME ZONE 'Europe/Prague' FROM citizen_report_statuses s
            WHERE s.id = citizen_reports.id AND s.status = 3 AND NOT s.initial) AS resolved_seen_at"""
 # lower case without the Czech accents, as petka.usneseni.text.fold writes a name
@@ -141,12 +142,15 @@ def years(obvod: str) -> list[int]:
             (obvod,))]
 
 
-def version() -> dt.datetime | None:
-    """When any obvod was last downloaded successfully: the data's version for the API's ETag
-    (the job is the only writer, and every run of an obvod moves it)."""
+def version() -> str:
+    """The data's version for the API's ETag: when any obvod was last downloaded successfully
+    and the state of the photos (the job is the only writer; every run of an obvod moves the
+    first, a stored or removed photo the second)."""
     with db.pool().connection() as conn:
-        r = conn.execute("SELECT max(checked_at) AS t FROM citizen_report_obvody").fetchone()
-    return r["t"] if r else None
+        r = conn.execute("""SELECT (SELECT max(checked_at) FROM citizen_report_obvody) AS t,
+                                   (SELECT max(fetched_at) FROM citizen_report_photos) AS p,
+                                   (SELECT count(*) FROM citizen_report_photos) AS n""").fetchone()
+    return "|".join("" if v is None else str(v) for v in (r["t"], r["p"], r["n"]))
 
 
 def checked(obvod: str) -> dt.datetime | None:
@@ -170,14 +174,16 @@ def changed_at(r: dict) -> dt.datetime:
 
 def feature(r: dict) -> dict:
     """One report as a GeoJSON Feature. A report lies in one obvod (Dej Tip's CS_MUNICODE):
-    `obvod` is its id, `obvody` the same as a list, as every source of the whole town has it."""
+    `obvod` is its id, `obvody` the same as a list, as every source of the whole town has it.
+    `photo` is the portal's copy of a public photo (absolute URL), never Dej Tip's."""
     props = {"id": r["id"], "category_id": r["category_id"], "category": r["category"],
              "status_id": r["status"], "status": source.STATUSES.get(r["status"], str(r["status"])),
              "reported_at": r["reported_at"].isoformat(timespec="minutes"), "street": r["street"],
              "obvod": r["obvod"], "obvody": [r["obvod"]],
              "status_changed_at": r["status_changed_at"].isoformat() if r.get("status_changed_at") else None,
              "changed_at": changed_at(r).isoformat(timespec="minutes"),
-             "description": r.get("description"), "photo": r.get("photo_url"),
+             "description": r.get("description"),
+             "photo": photos.href(r["id"], r.get("photo_version"), photos.PUBLIC_URL),
              "detail": source.detail(r["id"])}
     if "distance" in r:
         props["distance"] = r["distance"]

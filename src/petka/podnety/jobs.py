@@ -8,6 +8,9 @@ where reports still change status (an older report that changes is caught on a b
 report doesn't take two years again on every run. Obvody that want the same window share one
 download of the city. A report that turned chybné, spam or smazané is deleted here too; a
 report whose CS_MUNICODE is no obvod of the town is not kept.
+
+After the obvody the public photos are brought in line (photos.units): the ones no longer
+public go, up to photos.PER_RUN new ones are downloaded and shrunk.
 """
 
 import datetime as dt
@@ -15,7 +18,7 @@ import logging
 
 from .. import jobs as runner, obvody
 from ..jobs import Unit
-from . import source
+from . import photos, source
 
 log = logging.getLogger(__name__)
 
@@ -79,9 +82,10 @@ def mark(conn, obvod: str, start: dt.date) -> None:
 
 
 def update(ids: list[str] | None = None, since: dt.date | None = None,
-           today: dt.date | None = None) -> dict:
+           today: dt.date | None = None, photo_limit: int = photos.PER_RUN) -> dict:
     """Download and store the reports of the given obvody (ids of obvody.TOWN; default: all
-    eight). One download of the city serves every obvod that wants the same range."""
+    eight), then their public photos (at most `photo_limit` downloads). One download of the
+    city serves every obvod that wants the same range."""
     today = today or dt.date.today()
     todo_obvody = [obvody.TOWN_BY_ID[i] for i in ids] if ids else obvody.TOWN
     downloads: dict[tuple, list] = {}
@@ -98,5 +102,9 @@ def update(ids: list[str] | None = None, since: dt.date | None = None,
             return {"from": start.isoformat(), **summary}
         return Unit((o.id,), o.id, run)
 
-    return runner.run("podnety-update", "podněty", lambda conn, client: [unit(o) for o in todo_obvody],
-                      logger=log, client={"timeout": source.TIMEOUT, "headers": source.HEADERS})
+    def units(conn, client):
+        yield from (unit(o) for o in todo_obvody)
+        yield from photos.units(conn, client, photo_limit)
+
+    return runner.run("podnety-update", "podněty", units, logger=log,
+                      client={"timeout": source.TIMEOUT, "headers": {"User-Agent": source.HEADERS["User-Agent"]}})

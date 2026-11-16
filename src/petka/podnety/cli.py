@@ -13,6 +13,8 @@ def _args(p) -> None:
                    help="only this obvod (repeatable; default: all)")
     p.add_argument("--od", type=dt.date.fromisoformat, metavar="RRRR-MM-DD",
                    help="download from this day instead of the usual window (backfill)")
+    p.add_argument("--fotek", type=int, metavar="N", default=None,
+                   help="download at most N public photos this run (default: photos.PER_RUN)")
 
 
 def update(a) -> int:
@@ -21,7 +23,8 @@ def update(a) -> int:
     if any(o not in obvody.TOWN_BY_ID for o in a.obvod or []):
         print(f"unknown obvod, use one of: {', '.join(obvody.TOWN_BY_ID)}", file=sys.stderr)
         return 2
-    report = jobs.update(a.obvod, a.od)
+    from . import photos
+    report = jobs.update(a.obvod, a.od, photo_limit=photos.PER_RUN if a.fotek is None else max(0, a.fotek))
     print(json.dumps(report, ensure_ascii=False, indent=1, default=str))
     return 1 if report["failures"] else 0
 
