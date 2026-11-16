@@ -1,0 +1,71 @@
+# Přistavování velkoobjemových kontejnerů 2026 (Služby města Pardubic), přepsáno ze skenu
+# https://smp-pce.cz/data/files/harmonogram-pristavovani-vok-2026-1769090278.pdf (16. 11. 2026,
+# dvakrát přečteno proti obrázku). Sken nemá textovou vrstvu, viz DATA-SOURCES aplikace.
+#
+# Den a týdny jsou podle tabulky: týden = číslo týdne roku 2026 (ISO), den = den přistavení v tom
+# týdnu. Čas, je-li uveden, je doba, kdy bude kontejner na stanoviště dovezen, ne jak dlouho tam
+# stojí; kontejnery se odvážejí ihned po naplnění. `obvod` je blok tabulky, ve kterém stanoviště je.
+source: https://smp-pce.cz/odpady/velkoobjemove-kontejnery
+file: harmonogram-pristavovani-vok-2026-1769090278.pdf
+year: 2026
+sites:
+  # --- obvod 1
+  - {obvod: mo1, place: "Bubeníkovy sady – Bulharská x Ke Tvrzi", day: po, weeks: [15, 45]}
+  - {obvod: mo1, place: "Macanova x U Marka", day: út, weeks: [16, 46]}
+  - {obvod: mo1, place: "Závodu míru – parkoviště u školy", day: čt, weeks: [20, 45]}
+  - {obvod: mo1, place: "Židov – ulice Na Haldě, zpevněná plocha za mostkem přes Haldu", day: po, weeks: [15, 46]}
+  - {obvod: mo1, place: "Sezemická – nám. Pospíšilovo", day: st, weeks: [15, 45]}
+  - {obvod: mo1, place: "Bratr. Veverkových – proti parkovišti (u čp. 2337)", day: st, weeks: [17, 43]}
+  - {obvod: mo1, place: "Mezi Mosty – u parkoviště naproti automatickým mlýnům", day: st, weeks: [21, 43]}
+  - {obvod: mo1, place: "Karlovina – Arnošta z Pardubic vedle čp. 2616", day: st, weeks: [15, 41]}
+  - {obvod: mo1, place: "Spořilov x Studánecká ul.", day: út, weeks: [15, 46]}
+  - {obvod: mo1, place: "Bulharská – u rychlodráhy", day: čt, weeks: [21, 45]}
+  - {obvod: mo1, place: "Bulharská (Škroupova x Benedettiho)", day: pá, weeks: [37, 48]}
+  - {obvod: mo1, place: "Havlíčkova u věžáku u čp. 445", day: čt, weeks: [23, 36]}
+  # --- obvod 2
+  - {obvod: mo2, place: "Cihelna Kunětická, slepá ulice, parkoviště u točny MHD", day: út, weeks: [9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48]}
+  - {obvod: mo2, place: "Polabiny 1 Družstevní, u ZŠ", day: po, weeks: [11, 17, 23, 29, 35, 41, 47]}
+  - {obvod: mo2, place: "Polabiny 1 Ohrazenická", day: út, weeks: [14, 20, 26, 32, 38, 44, 50]}
+  - {obvod: mo2, place: "Polabiny 2 Prodloužená u policie", day: út, weeks: [9, 15, 21, 27, 33, 39, 45]}
+  - {obvod: mo2, place: "Polabiny 3 Družby, parkoviště", day: po, weeks: [12, 18, 24, 30, 36, 42, 48]}
+  - {obvod: mo2, place: "Polabiny 4 Brožíkova, u čp. 437", day: st, weeks: [13, 19, 25, 31, 37, 43, 49]}
+  - {obvod: mo2, place: "Polabiny 4 Mozartova, parkoviště", day: st, weeks: [10, 16, 22, 28, 34, 40, 46]}
+  # --- obvod 3
+  - {obvod: mo3, place: "Na Drážce – parkoviště; křižovatka ulic Na Drážce a Věry Junkové", day: po, weeks: [15, 21, 27, 33, 39, 45, 51]}
+  - {obvod: mo3, place: "Dubina – U lesa; u kontejnerového stanoviště", day: út, weeks: [13, 17, 21, 25, 29, 33, 37, 41, 45, 49],
+     note: "V týdnech 13, 21, 29, 37 a 45 přivezen nejpozději do 10 hodin, v ostatních nejdříve ve 13 hodin."}
+  - {obvod: mo3, place: "Dubina – Erno Košťála; z boku čp. 973", day: út, weeks: [17, 23, 29, 35, 41, 47]}
+  - {obvod: mo3, place: "Luční – hřiště; u zahradnictví", day: st, weeks: [17, 21, 25, 29, 33, 37, 41, 45, 49]}
+  - {obvod: mo3, place: "Luční – stadion", day: po, weeks: [14, 18, 22, 26, 30, 34, 38, 42, 46, 50]}
+  - {obvod: mo3, place: "Skrbkova – Lesní; křižovatka ulic", day: út, weeks: [12, 16, 20, 24, 28, 32, 36, 40, 44, 48]}
+  - {obvod: mo3, place: "Raabova x Spojilská – parkoviště", day: čt, weeks: [26, 38, 47]}
+  - {obvod: mo3, place: "Luďka Matury 856", day: st, weeks: [18, 23, 41]}
+  - {obvod: mo3, place: "Na Drážce u čp. 1564", day: čt, weeks: [15, 37, 51]}
+  - {obvod: mo3, place: "L. Malé x Bartoňova za točnou MHD", day: st, weeks: [15, 25, 35, 50]}
+  # --- obvod 4
+  - {obvod: mo4, place: "Černá za Bory – Na Rybníčkách", day: čt, weeks: [10, 14, 15, 19, 21, 24, 27, 30, 33, 36, 39, 41, 43, 45, 46, 50]}
+  - {obvod: mo4, place: "Mnětice – u Obecního domu, ul. Černoborská", day: pá, weeks: [10, 13, 15, 17, 18, 19, 21, 24, 27, 30, 33, 36, 37, 39, 41, 44, 45, 46, 47, 50]}
+  - {obvod: mo4, place: "Drozdice před čp. 41", day: st, weeks: [12, 14, 20, 23, 29, 32, 38, 40, 44]}
+  - {obvod: mo4, place: "Drozdice – u rybníčku proti čp. 17", day: st, weeks: [26, 35, 42, 50]}
+  - {obvod: mo4, place: "Staročernsko – Borská x Podhumenská proti čp. 17", day: st, weeks: [12, 23, 30]}
+  - {obvod: mo4, place: "Staročernsko – Dubská 71", day: st, weeks: [16, 37]}
+  - {obvod: mo4, place: "Žižín před čp. 6", day: st, weeks: [12, 16, 37, 48]}
+  # --- obvod 5
+  - {obvod: mo5, place: "Češkova – Kašparova u školy", day: po, time: "14.00–15.30", weeks: [15, 26, 40, 51]}
+  - {obvod: mo5, place: "Dražkovice – u pošty", day: st, time: "14.00–15.30", weeks: [14, 36, 51]}
+  - {obvod: mo5, place: "Pod Břízkami – Dražkovická", day: po, time: "14.00–15.30", weeks: [15, 28, 41, 51]}
+  - {obvod: mo5, place: "Višňovka – K Blahobytu", day: út, time: "14.00–15.30", weeks: [15, 37]}
+  # --- obvod 6
+  - {obvod: mo6, place: "Lány na Důlku KD", day: po, weeks: [18, 36, 51]}
+  - {obvod: mo6, place: "Lány na Důlku u čp. 80", day: po, weeks: [20, 38, 47]}
+  - {obvod: mo6, place: "Opočínek – Finské domky", day: pá, weeks: [18, 37, 48]}
+  - {obvod: mo6, place: "Opočínek – pod čp. 23", day: pá, weeks: [21, 39, 49]}
+  - {obvod: mo6, place: "Chotkova – parkoviště bývalý Mountfield", day: út, weeks: [17, 36, 50]}
+  - {obvod: mo6, place: "Staré Čívice točna MHD", day: út, weeks: [18, 37, 47]}
+  - {obvod: mo6, place: "U Svaté Trojice", day: st, weeks: [19, 39, 50]}
+  # --- obvod 7
+  - {obvod: mo7, place: "Doubravice proti čp. 53", day: st, time: "od 13.00", weeks: [13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47]}
+  - {obvod: mo7, place: "Rosice – Kréta (ul. Legionářská)", day: st, time: "od 8.30", weeks: [12, 16, 20, 24, 28, 32, 36, 40, 44, 48]}
+  - {obvod: mo7, place: "Rosice – Kréta (ul. Legionářská)", day: st, time: "od 13.00", weeks: [14, 18, 22, 26, 30, 34, 38, 42, 46]}
+  - {obvod: mo7, place: "Trnová – garáže u T-STRINGU", day: st, time: "od 13.00", weeks: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
+     note: "Od 13. do 48. týdne pravidelně každý týden."}
