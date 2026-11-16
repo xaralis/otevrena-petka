@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% from "_portal.html" import band, source %}
-{% block title %}Kde se teď nedá projet?{% endblock %}
+{% block title %}Uzavírky{% endblock %}
 {% block description %}Uzavírky a omezení dopravy v obvodu: kde a do kdy, na mapě, podle Národního dopravního informačního centra.{% endblock %}
 {% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
-{% block hero %}{{ band('Kde se teď nedá projet?', 'Uzavírky a omezení dopravy v obvodu, které hlásí Národní dopravní informační centrum. Platné teď i ohlášené dopředu.') }}{% endblock %}
+{% block hero %}{{ band('Uzavírky', 'Uzavírky a omezení dopravy z Národního dopravního informačního centra ŘSD.') }}{% endblock %}
 {% block main %}
 <section class="mbox-sec uz-mapsec" aria-labelledby="uz-map-h">
   <div class="sec-head">

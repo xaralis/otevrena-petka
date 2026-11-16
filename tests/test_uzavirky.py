@@ -132,7 +132,7 @@ def fake(monkeypatch):
 
 def test_page(fake):
     h = TestClient(app).get("/verejny-prostor/uzavirky").text
-    assert "Kde se teď nedá projet?" in h and "<b>Wolkerova</b>" in h and "do 30. 11." in h
+    assert "<h1>Uzavírky</h1>" in h and "<b>Wolkerova</b>" in h and "do 30. 11." in h
     assert WOLK in h and uq.ATTRIBUTION in h                     # NDIC's text unchanged, with its source
     assert "Dašická" not in h                                    # MO III's
     assert "Chystá se <b>0</b>" in h
