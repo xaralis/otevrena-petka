@@ -208,3 +208,8 @@ def test_closures_in_the_feed():
     from petka.ulice import push
     assert push.messages([e], ["Wolkerova"], "https://p.cz", "/")[0]["body"] == e.brief   # never NDIC's text cut
     assert uq.names(c, "Wolkerova") and not uq.names(c, "Lexova")
+
+
+def test_rss_escapes_ids_from_sources():
+    e = feed.Event("uzavirka-<x>&", "uzavirka", NOW, "Wolkerova", "t", "x", "/p")
+    ET.fromstring(feed.rss([e], ["Wolkerova"], "https://p.cz", "https://p.cz/rss.xml"))      # still well-formed

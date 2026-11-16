@@ -162,8 +162,8 @@ def rss(evs: list[Event], names: list[str], base: str, self_url: str) -> str:
     items = []
     for e in evs:
         link = e.path if e.path.startswith("http") else base + e.path
-        items.append(f"""<item><title>{escape(e.title)}</title><link>{escape(link)}</link><guid isPermaLink="false">{base}/feed/{e.key}</guid>
-<description>{escape(e.text)}</description><category>{e.kind}</category><pubDate>{format_datetime(e.at)}</pubDate></item>""")
+        items.append(f"""<item><title>{escape(e.title)}</title><link>{escape(link)}</link><guid isPermaLink="false">{escape(base + "/feed/" + e.key)}</guid>
+<description>{escape(e.text)}</description><category>{escape(e.kind)}</category><pubDate>{format_datetime(e.at)}</pubDate></item>""")
     return f"""<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>{escape(title)}</title><link>{base}/verejny-prostor/ulice</link>
