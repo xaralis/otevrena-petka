@@ -89,7 +89,7 @@ def test_page_without_js_adds_and_drops(page):
 
 def test_preview_json(page):
     out = get("/muj-prehled/nahled.json", params={"ulice": "wolkerova", "co": "podnety,deska"}).json()
-    assert out["counts"] == {"podnety": 3, "deska": 1, "uzavirky": 0, "kontejnery": 0, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
+    assert out["counts"] == {"podnety": 3, "deska": 1, "uzavirky": 0, "kontejnery": 0, "svoz": 0, "usneseni": 1, "cisteni": 1}   # filed 40 days back and resolved 10: two
     assert [r["head"] for r in out["rows"]] == ["Autovrak", "Úřední deska", "Lavičky, zábradlí", "Lavičky, zábradlí"]   # as many as counted
     assert out["feed"].endswith("rss.xml?ulice=wolkerova&co=podnety,deska")
     assert out["webcal"].startswith("webcal://")
@@ -226,3 +226,21 @@ def test_containers_a_week_ahead():
     evs = feed.events([("Wolkerova", "wolkerova")], src, NOW, {"kontejnery"})
     assert len(evs) == 1 and evs[0].head == "Kontejner na objemný odpad"       # the later one: not yet
     assert "dovezen 14.00–15.30" in evs[0].text and evs[0].sub.startswith("Češkova – Kašparova u školy, ")
+
+
+def test_svoz_reminder_the_evening_before_and_opt_in(page):
+    base = sources()
+    rows = [{"who": "popelnice", "part": "", "days": ["po", "út", "st", "čt", "pá"], "words": ""}]
+    src = feed.Sources(base.reports, base.notices, base.resolutions, base.cleanings, svoz=lambda name: rows)
+    evs = feed.events([("Wolkerova", "wolkerova")], src, NOW, {"svoz"})
+    assert 1 <= len(evs) <= 6 and all(e.at <= NOW for e in evs)           # a week back at most, nothing ahead of time
+    assert evs[0].title.startswith("Wolkerova: svoz směsného odpadu") and "Nádoby přistavte od 5.30." in evs[0].text
+    h = get("/muj-prehled", params={"ulice": "wolkerova"}).text
+    assert 'value="svoz" data-optin' in h and 'value="svoz" checked' not in h    # not chosen unless asked for
+    assert 'value="podnety" checked' in h
+
+
+def test_svoz_text():
+    from petka.odpady import data
+    assert data.svoz_text("Češkova") == "popelnice čtvrtek, kontejnery pondělí a čtvrtek"
+    assert data.svoz_text("Wolkerova") == "úterý a pátek" and data.svoz_text("Neexistující") == ""

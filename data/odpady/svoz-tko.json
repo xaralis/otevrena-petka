@@ -1,0 +1,5424 @@
+{
+"file": "harmonogram-svozu-tko-ulice-1665467792.xls",
+"date": "2022-10-11",
+"rows": [
+{
+"name": "17. listopadu",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "17. listopadu",
+"street": "17. listopadu",
+"town_part": false
+},
+{
+"name": "22. července",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "22. července",
+"street": "22. července",
+"town_part": false
+},
+{
+"name": "28. října",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "28. října",
+"street": "28. října",
+"town_part": false
+},
+{
+"name": "5. května",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "5. května",
+"street": "5. května",
+"town_part": false
+},
+{
+"name": "8. května",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "8. května",
+"street": "8. května",
+"town_part": false
+},
+{
+"name": "Akátová",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Akátová",
+"street": "Akátová",
+"town_part": false
+},
+{
+"name": "Alešova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Alešova",
+"street": "Alešova",
+"town_part": false
+},
+{
+"name": "Anenská",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Anenská",
+"street": "Anenská",
+"town_part": false
+},
+{
+"name": "Arbesova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Arbesova",
+"street": "Arbesova",
+"town_part": false
+},
+{
+"name": "Areál vodních sportů",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Areál vodních sportů",
+"street": "Areál vodních sportů",
+"town_part": false
+},
+{
+"name": "Arnošta z Pardubic",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Arnošta z Pardubic",
+"street": "Arnošta z Pardubic",
+"town_part": false
+},
+{
+"name": "Artura Krause",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Artura Krause",
+"street": "Artura Krause",
+"town_part": false
+},
+{
+"name": "Bacháčkova",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Bacháčkova",
+"street": "Bacháčkova",
+"town_part": false
+},
+{
+"name": "Bartolomějská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Bartolomějská",
+"street": "Bartolomějská",
+"town_part": false
+},
+{
+"name": "Bartoňova",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "Bartoňova popelnice",
+"street": "Bartoňova",
+"town_part": false
+},
+{
+"name": "Bartoňova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Bartoňova kontejnery",
+"street": "Bartoňova",
+"town_part": false
+},
+{
+"name": "Bělehradská Polabiny I.",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Bělehradská Polabiny I.",
+"street": "Bělehradská",
+"town_part": false
+},
+{
+"name": "Bělehradská Polabiny II.,IV.",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Bělehradská Polabiny II.,IV.",
+"street": "Bělehradská",
+"town_part": false
+},
+{
+"name": "Bělobranská dubina",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Bělobranská dubina",
+"street": "Bělobranská dubina",
+"town_part": false
+},
+{
+"name": "Bělobranské náměstí",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Bělobranské náměstí",
+"street": "Bělobranské náměstí",
+"town_part": false
+},
+{
+"name": "Benedettiho",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Benedettiho",
+"street": "Benedettiho",
+"town_part": false
+},
+{
+"name": "Benešovo nám.",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Benešovo nám. popelnice",
+"street": "Benešovo náměstí",
+"town_part": false
+},
+{
+"name": "Benešovo nám.",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Benešovo nám. kontejnery",
+"street": "Benešovo náměstí",
+"town_part": false
+},
+{
+"name": "Bezdíčkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Bezdíčkova",
+"street": "Bezdíčkova",
+"town_part": false
+},
+{
+"name": "Blahoutova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Blahoutova",
+"street": "Blahoutova",
+"town_part": false
+},
+{
+"name": "Boční",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Boční",
+"street": "Boční",
+"town_part": false
+},
+{
+"name": "Boháčova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Boháčova",
+"street": "Boháčova",
+"town_part": false
+},
+{
+"name": "Bohdanečská",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Bohdanečská",
+"street": "Bohdanečská",
+"town_part": false
+},
+{
+"name": "Bokova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Bokova",
+"street": "Bokova",
+"town_part": false
+},
+{
+"name": "Borová",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Borová",
+"street": "Borová",
+"town_part": false
+},
+{
+"name": "Bož. Němcové",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Bož. Němcové popelnice",
+"street": "Boženy Němcové",
+"town_part": false
+},
+{
+"name": "Bož. Němcové",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Bož. Němcové kontejnery",
+"street": "Boženy Němcové",
+"town_part": false
+},
+{
+"name": "Boženy Vikové-Kunětické",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Boženy Vikové-Kunětické",
+"street": "Boženy Vikové-Kunětické",
+"town_part": false
+},
+{
+"name": "Branecká",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Branecká",
+"street": "Branecká",
+"town_part": false
+},
+{
+"name": "Bratranců Veverkových",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Bratranců Veverkových",
+"street": "Bratranců Veverkových",
+"town_part": false
+},
+{
+"name": "Brigádníků",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Brigádníků popelnice",
+"street": "Brigádníků",
+"town_part": false
+},
+{
+"name": "Brigádníků",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Brigádníků kontejnery",
+"street": "Brigádníků",
+"town_part": false
+},
+{
+"name": "Brozanská",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Brozanská",
+"street": "Brozanská",
+"town_part": false
+},
+{
+"name": "Brožíkova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Brožíkova",
+"street": "Brožíkova",
+"town_part": false
+},
+{
+"name": "Bubeníkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Bubeníkova",
+"street": "Bubeníkova",
+"town_part": false
+},
+{
+"name": "Bubeníkovy sady",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Bubeníkovy sady",
+"street": "Bubeníkovy sady",
+"town_part": false
+},
+{
+"name": "Bulharská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Bulharská",
+"street": "Bulharská",
+"town_part": false
+},
+{
+"name": "Čacké",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Čacké",
+"street": "Čacké",
+"town_part": false
+},
+{
+"name": "Čapkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Čapkova",
+"street": "Čapkova",
+"town_part": false
+},
+{
+"name": "Čechova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Čechova",
+"street": "Čechova",
+"town_part": false
+},
+{
+"name": "Čechovo nábřeží",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Čechovo nábřeží",
+"street": "Čechovo nábřeží",
+"town_part": false
+},
+{
+"name": "Černoborská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Černoborská",
+"street": "Černoborská",
+"town_part": false
+},
+{
+"name": "Češkova",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Češkova popelnice",
+"street": "Češkova",
+"town_part": false
+},
+{
+"name": "Češkova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Češkova kontejnery",
+"street": "Češkova",
+"town_part": false
+},
+{
+"name": "Čihákova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Čihákova",
+"street": "Čihákova",
+"town_part": false
+},
+{
+"name": "Čs. armády",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Čs. armády",
+"street": "Čs. armády",
+"town_part": false
+},
+{
+"name": "Danihelkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Danihelkova",
+"street": "Danihelkova",
+"town_part": false
+},
+{
+"name": "Dašická sídliště Tesla",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Dašická sídliště Tesla",
+"street": "Dašická",
+"town_part": false
+},
+{
+"name": "Dašická",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Dašická popelnice",
+"street": "Dašická",
+"town_part": false
+},
+{
+"name": "Dašická",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Dašická kontejnery",
+"street": "Dašická",
+"town_part": false
+},
+{
+"name": "Dašická",
+"bins": "",
+"part": "od semaforů směr na Dašice až po kousek ul. za přejezdem směr na Černou za Bory",
+"days": [
+"st"
+],
+"text": "Dašická (od semaforů směr na Dašice až po kousek ul. za přejezdem směr na Černou za Bory)",
+"street": "Dašická",
+"town_part": false
+},
+{
+"name": "Dělnická",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Dělnická",
+"street": "Dělnická",
+"town_part": false
+},
+{
+"name": "Dem. mládeže",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Dem. mládeže popelnice",
+"street": "Demokratické mládeže",
+"town_part": false
+},
+{
+"name": "Dem. mládeže",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Dem. mládeže kontejnery",
+"street": "Demokratické mládeže",
+"town_part": false
+},
+{
+"name": "Devotyho",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Devotyho",
+"street": "Devotyho",
+"town_part": false
+},
+{
+"name": "Divišova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Divišova",
+"street": "Divišova",
+"town_part": false
+},
+{
+"name": "Dlouhá",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Dlouhá",
+"street": "Dlouhá",
+"town_part": false
+},
+{
+"name": "Do Nového",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Do Nového",
+"street": "Do Nového",
+"town_part": false
+},
+{
+"name": "Do Polí",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Do Polí",
+"street": "Do Polí",
+"town_part": false
+},
+{
+"name": "Do Zahrádek",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Do Zahrádek",
+"street": "Do Zahrádek",
+"town_part": false
+},
+{
+"name": "Dostihová",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Dostihová",
+"street": "Dostihová",
+"town_part": false
+},
+{
+"name": "DOUBRAVICE",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "DOUBRAVICE",
+"street": null,
+"town_part": true
+},
+{
+"name": "DRAŽKOVICE",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "DRAŽKOVICE",
+"street": null,
+"town_part": true
+},
+{
+"name": "Dražkovická",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Dražkovická",
+"street": "Dražkovická",
+"town_part": false
+},
+{
+"name": "DROZDICE",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "DROZDICE",
+"street": null,
+"town_part": true
+},
+{
+"name": "Drozdická",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Drozdická",
+"street": "Drozdická",
+"town_part": false
+},
+{
+"name": "Družby",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Družby",
+"street": "Družby",
+"town_part": false
+},
+{
+"name": "Družstevní",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Družstevní",
+"street": "Družstevní",
+"town_part": false
+},
+{
+"name": "Dr. Matouška",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Dr. Matouška",
+"street": "Dr. Matouška",
+"town_part": false
+},
+{
+"name": "Dubové návrší",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Dubové návrší",
+"street": "Dubové návrší",
+"town_part": false
+},
+{
+"name": "Dubánkova",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Dubánkova",
+"street": "Dubánkova",
+"town_part": false
+},
+{
+"name": "Dubinská",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Dubinská",
+"street": "Dubinská",
+"town_part": false
+},
+{
+"name": "Dukelská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Dukelská",
+"street": "Dukelská",
+"town_part": false
+},
+{
+"name": "Duškova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Duškova",
+"street": "Duškova",
+"town_part": false
+},
+{
+"name": "Dvořákova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Dvořákova",
+"street": "Dvořákova",
+"town_part": false
+},
+{
+"name": "Erno Košťála",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Erno Košťála",
+"street": "Erno Košťála",
+"town_part": false
+},
+{
+"name": "Fáblovka",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Fáblovka",
+"street": "Fáblovka",
+"town_part": false
+},
+{
+"name": "Fibichova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Fibichova",
+"street": "Fibichova",
+"town_part": false
+},
+{
+"name": "Fidrova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Fidrova",
+"street": "Fidrova",
+"town_part": false
+},
+{
+"name": "Foersterova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Foersterova",
+"street": "Foersterova",
+"town_part": false
+},
+{
+"name": "Františka Ventury",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Františka Ventury",
+"street": "Františka Ventury",
+"town_part": false
+},
+{
+"name": "Fričova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Fričova",
+"street": "Fričova",
+"town_part": false
+},
+{
+"name": "Fučíkova",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Fučíkova",
+"street": "Fučíkova",
+"town_part": false
+},
+{
+"name": "Fugnerova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Fugnerova",
+"street": "Fügnerova",
+"town_part": false
+},
+{
+"name": "Gagarinova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Gagarinova",
+"street": "Gagarinova",
+"town_part": false
+},
+{
+"name": "Gebauerova",
+"bins": "",
+"part": "část ul. se jezdí v úterý od Sezemické ve směru k \"tesláckému\" sídlišti",
+"days": [
+"st"
+],
+"text": "Gebauerova - část ul. se jezdí v úterý ( od Sezemické ve směru k \"tesláckému\" sídlišti)",
+"street": "Gebauerova",
+"town_part": false
+},
+{
+"name": "generála Svobody",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "generála Svobody",
+"street": "generála Svobody",
+"town_part": false
+},
+{
+"name": "Gorkého",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Gorkého",
+"street": "Gorkého",
+"town_part": false
+},
+{
+"name": "Grusova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Grusova",
+"street": "Grusova",
+"town_part": false
+},
+{
+"name": "Havlíčkova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Havlíčkova",
+"street": "Havlíčkova",
+"town_part": false
+},
+{
+"name": "Habřinská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Habřinská",
+"street": "Habřinská",
+"town_part": false
+},
+{
+"name": "Heyrovského",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Heyrovského",
+"street": "Heyrovského",
+"town_part": false
+},
+{
+"name": "Hlaváčova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Hlaváčova",
+"street": "Hlaváčova",
+"town_part": false
+},
+{
+"name": "Holandská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Holandská",
+"street": "Holandská",
+"town_part": false
+},
+{
+"name": "Holcova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Holcova",
+"street": "Holcova",
+"town_part": false
+},
+{
+"name": "Holubova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Holubova",
+"street": "Holubova",
+"town_part": false
+},
+{
+"name": "Hostovická",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Hostovická",
+"street": "Hostovická",
+"town_part": false
+},
+{
+"name": "Hostovice",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Hostovice",
+"street": null,
+"town_part": true
+},
+{
+"name": "Hrabalova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Hrabalova",
+"street": "Hrabalova",
+"town_part": false
+},
+{
+"name": "Hradčanská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Hradčanská",
+"street": "Hradčanská",
+"town_part": false
+},
+{
+"name": "Hradecká",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Hradecká",
+"street": "Hradecká",
+"town_part": false
+},
+{
+"name": "Hradišťská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Hradišťská",
+"street": "Hradišťská",
+"town_part": false
+},
+{
+"name": "Hraniční",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Hraniční",
+"street": "Hraniční",
+"town_part": false
+},
+{
+"name": "Hromádkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Hromádkova",
+"street": "Hromádkova",
+"town_part": false
+},
+{
+"name": "Hronovická",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Hronovická",
+"street": "Hronovická",
+"town_part": false
+},
+{
+"name": "Hůrka",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Hůrka",
+"street": "Hůrka",
+"town_part": false
+},
+{
+"name": "Husitská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Husitská",
+"street": "Husitská",
+"town_part": false
+},
+{
+"name": "Husova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Husova",
+"street": "Husova",
+"town_part": false
+},
+{
+"name": "Chelčického",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Chelčického",
+"street": "Chelčického",
+"town_part": false
+},
+{
+"name": "Chemiků",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Chemiků",
+"street": "Chemiků",
+"town_part": false
+},
+{
+"name": "Chotkova",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Chotkova",
+"street": "Chotkova",
+"town_part": false
+},
+{
+"name": "Chrudimská",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Chrudimská",
+"street": "Chrudimská",
+"town_part": false
+},
+{
+"name": "Jabloňová",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Jabloňová",
+"street": "Jabloňová",
+"town_part": false
+},
+{
+"name": "Jahnova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Jahnova",
+"street": "Jahnova",
+"town_part": false
+},
+{
+"name": "Jana Palacha",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Jana Palacha",
+"street": "Jana Palacha",
+"town_part": false
+},
+{
+"name": "Jana Zajíce",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Jana Zajíce",
+"street": "Jana Zajíce",
+"town_part": false
+},
+{
+"name": "Jilemnického",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Jilemnického",
+"street": "Jilemnického",
+"town_part": false
+},
+{
+"name": "JIndřišská",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "JIndřišská",
+"street": "Jindřišská",
+"town_part": false
+},
+{
+"name": "Jiránkova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Jiránkova",
+"street": "Jiránkova",
+"town_part": false
+},
+{
+"name": "Jiráskova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Jiráskova",
+"street": "Jiráskova",
+"town_part": false
+},
+{
+"name": "Jiřího Potůčka",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "Jiřího Potůčka popelnice",
+"street": "Jiřího Potůčka",
+"town_part": false
+},
+{
+"name": "Jiřího Potůčka",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Jiřího Potůčka kontejnery",
+"street": "Jiřího Potůčka",
+"town_part": false
+},
+{
+"name": "Jiřího Tomana",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Jiřího Tomana",
+"street": "Jiřího Tomana",
+"town_part": false
+},
+{
+"name": "Jiřího z Poděbrad",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Jiřího z Poděbrad",
+"street": "Jiřího z Poděbrad",
+"town_part": false
+},
+{
+"name": "J.K.Tyla",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "J.K.Tyla",
+"street": "J. K. Tyla",
+"town_part": false
+},
+{
+"name": "Josefa Janáčka",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Josefa Janáčka",
+"street": "Josefa Janáčka",
+"town_part": false
+},
+{
+"name": "Josefa Poppera",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Josefa Poppera",
+"street": "Josefa Poppera",
+"town_part": false
+},
+{
+"name": "Josefa Ressla",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Josefa Ressla",
+"street": "Josefa Ressla",
+"town_part": false
+},
+{
+"name": "Jozefa Gabčíka",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Jozefa Gabčíka",
+"street": "Jozefa Gabčíka",
+"town_part": false
+},
+{
+"name": "Jožky Jabůrkové",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "Jožky Jabůrkové popelnice",
+"street": "Jožky Jabůrkové",
+"town_part": false
+},
+{
+"name": "Jožky Jabůrkové",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Jožky Jabůrkové kontejnery",
+"street": "Jožky Jabůrkové",
+"town_part": false
+},
+{
+"name": "JUDr. Krpaty",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "JUDr. Krpaty",
+"street": "JUDr. Krpaty",
+"town_part": false
+},
+{
+"name": "Jungmannova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Jungmannova",
+"street": "Jungmannova",
+"town_part": false
+},
+{
+"name": "K Barvírně",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "K Barvírně",
+"street": "K Barvírně",
+"town_part": false
+},
+{
+"name": "K Besedě",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "K Besedě",
+"street": "K Besedě",
+"town_part": false
+},
+{
+"name": "K Blahobytu",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K Blahobytu popelnice",
+"street": "K Blahobytu",
+"town_part": false
+},
+{
+"name": "K Blahobytu",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "K Blahobytu kontejnery",
+"street": "K Blahobytu",
+"town_part": false
+},
+{
+"name": "K Cihelně",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K Cihelně",
+"street": "K Cihelně",
+"town_part": false
+},
+{
+"name": "K Dolíčku",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "K Dolíčku",
+"street": "K Dolíčku",
+"town_part": false
+},
+{
+"name": "K Dubině",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "K Dubině",
+"street": "K Dubině",
+"town_part": false
+},
+{
+"name": "K Hladíkovu",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "K Hladíkovu",
+"street": "K Hladíkovu",
+"town_part": false
+},
+{
+"name": "K hřebčinci",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K hřebčinci",
+"street": "K Hřebčinci",
+"town_part": false
+},
+{
+"name": "K Lesu",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "K Lesu",
+"street": "K Lesu",
+"town_part": false
+},
+{
+"name": "K Olšině",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "K Olšině popelnice",
+"street": "K Olšině",
+"town_part": false
+},
+{
+"name": "K Olšině",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "K Olšině kontejnery",
+"street": "K Olšině",
+"town_part": false
+},
+{
+"name": "K Pardubičkám",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "K Pardubičkám",
+"street": "K Pardubičkám",
+"town_part": false
+},
+{
+"name": "K Paští",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "K Paští",
+"street": "K Pašti",
+"town_part": false
+},
+{
+"name": "K Pišici",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "K Pišici",
+"street": "K Pišici",
+"town_part": false
+},
+{
+"name": "K Polabinám",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "K Polabinám",
+"street": "K Polabinám",
+"town_part": false
+},
+{
+"name": "K Potoku",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "K Potoku",
+"street": "K Potoku",
+"town_part": false
+},
+{
+"name": "K Přejezdu",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "K Přejezdu",
+"street": "K Přejezdu",
+"town_part": false
+},
+{
+"name": "K Rozvodně",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K Rozvodně",
+"street": "K Rozvodně",
+"town_part": false
+},
+{
+"name": "K Rybníčku",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "K Rybníčku",
+"street": "K Rybníčku",
+"town_part": false
+},
+{
+"name": "K Silu",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "K Silu",
+"street": "K Silu",
+"town_part": false
+},
+{
+"name": "K Vápence",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K Vápence",
+"street": "K Vápence",
+"town_part": false
+},
+{
+"name": "K Vinici",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K Vinici",
+"street": "K Vinici",
+"town_part": false
+},
+{
+"name": "K Višňovce",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "K Višňovce popelnice",
+"street": "K Višňovce",
+"town_part": false
+},
+{
+"name": "K Višňovce",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "K Višňovce kontejnery",
+"street": "K Višňovce",
+"town_part": false
+},
+{
+"name": "K Zámečku",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "K Zámečku",
+"street": "K Zámečku",
+"town_part": false
+},
+{
+"name": "K Židovskému hřbitovu",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "K Židovskému hřbitovu",
+"street": "K Židovskému hřbitovu",
+"town_part": false
+},
+{
+"name": "Karla IV.",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Karla IV.",
+"street": "Karla IV.",
+"town_part": false
+},
+{
+"name": "Karla Šípka",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Karla Šípka",
+"street": "Karla Šípka",
+"town_part": false
+},
+{
+"name": "Kašparova",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Kašparova",
+"street": "Kašparova",
+"town_part": false
+},
+{
+"name": "Kavanova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Kavanova",
+"street": "Kavanova",
+"town_part": false
+},
+{
+"name": "Ke Hrázi",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Ke Hrázi",
+"street": "Ke Hrázi",
+"town_part": false
+},
+{
+"name": "Ke Hřbitovu",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Ke Hřbitovu",
+"street": "Ke Hřbitovu",
+"town_part": false
+},
+{
+"name": "Ke Hřišti",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Ke Hřišti",
+"street": "Ke Hřišti",
+"town_part": false
+},
+{
+"name": "Ke Kamenci",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Ke Kamenci",
+"street": "Ke Kamenci",
+"town_part": false
+},
+{
+"name": "Ke Kobelnici",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Ke Kobelnici",
+"street": "Ke Kobelnici",
+"town_part": false
+},
+{
+"name": "Ke Koupališti",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Ke Koupališti",
+"street": "Ke Koupališti",
+"town_part": false
+},
+{
+"name": "Ke Mlýnu",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Ke Mlýnu",
+"street": "Ke Mlýnu",
+"town_part": false
+},
+{
+"name": "Ke Splávku",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Ke Splávku",
+"street": "Ke Splávku",
+"town_part": false
+},
+{
+"name": "Ke Stájím",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Ke Stájím",
+"street": "Ke Stájím",
+"town_part": false
+},
+{
+"name": "Ke Trati",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Ke Trati",
+"street": "Ke Trati",
+"town_part": false
+},
+{
+"name": "Ke Tvrzi",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Ke Tvrzi",
+"street": "Ke Tvrzi",
+"town_part": false
+},
+{
+"name": "Klášterní",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Klášterní",
+"street": "Klášterní",
+"town_part": false
+},
+{
+"name": "Kokešova",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Kokešova",
+"street": "Kokešova",
+"town_part": false
+},
+{
+"name": "Kollárova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Kollárova",
+"street": "Kollárova",
+"town_part": false
+},
+{
+"name": "Kolonie",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Kolonie",
+"street": "Kolonie",
+"town_part": false
+},
+{
+"name": "Komenského",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Komenského",
+"street": "Komenského",
+"town_part": false
+},
+{
+"name": "Komenského náměstí",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Komenského náměstí",
+"street": "Komenského náměstí",
+"town_part": false
+},
+{
+"name": "Konečná",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Konečná",
+"street": "Konečná",
+"town_part": false
+},
+{
+"name": "Kosmonautů",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Kosmonautů",
+"street": "Kosmonautů",
+"town_part": false
+},
+{
+"name": "Kostelní",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Kostelní",
+"street": "Kostelní",
+"town_part": false
+},
+{
+"name": "Kostnická",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Kostnická",
+"street": "Kostnická",
+"town_part": false
+},
+{
+"name": "Kotkova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Kotkova",
+"street": "Kotkova",
+"town_part": false
+},
+{
+"name": "Kovárenská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Kovárenská",
+"street": "Kovárenská",
+"town_part": false
+},
+{
+"name": "kpt. Bartoše",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "kpt. Bartoše",
+"street": "kpt. Bartoše",
+"town_part": false
+},
+{
+"name": "kpt. Jaroše",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "kpt. Jaroše",
+"street": "kpt. Jaroše",
+"town_part": false
+},
+{
+"name": "kpt. Nálepky",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "kpt. Nálepky popelnice",
+"street": "kpt. Nálepky",
+"town_part": false
+},
+{
+"name": "kpt. Nálepky",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "kpt. Nálepky kontejnery",
+"street": "kpt. Nálepky",
+"town_part": false
+},
+{
+"name": "kpt. Poplera",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "kpt. Poplera",
+"street": "kpt. Poplera",
+"town_part": false
+},
+{
+"name": "Krátká",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Krátká",
+"street": "Krátká",
+"town_part": false
+},
+{
+"name": "Křemenská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Křemenská",
+"street": "Křemenská",
+"town_part": false
+},
+{
+"name": "Křičkova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Křičkova",
+"street": "Křičkova",
+"town_part": false
+},
+{
+"name": "Kunětická",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Kunětická popelnice",
+"street": "Kunětická",
+"town_part": false
+},
+{
+"name": "Kunětická",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Kunětická kontejnery",
+"street": "Kunětická",
+"town_part": false
+},
+{
+"name": "Kyjevská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Kyjevská",
+"street": "Kyjevská",
+"town_part": false
+},
+{
+"name": "Labská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Labská",
+"street": "Labská",
+"town_part": false
+},
+{
+"name": "Lánská",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Lánská",
+"street": "Lánská",
+"town_part": false
+},
+{
+"name": "LÁNY NA DULKU",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "LÁNY NA DULKU",
+"street": null,
+"town_part": true
+},
+{
+"name": "Laty Brandisové",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Laty Brandisové",
+"street": "Laty Brandisové",
+"town_part": false
+},
+{
+"name": "Legionářská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Legionářská",
+"street": "Legionářská",
+"town_part": false
+},
+{
+"name": "Lesní",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Lesní",
+"street": "Lesní",
+"town_part": false
+},
+{
+"name": "Letecká",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Letecká",
+"street": "Letecká",
+"town_part": false
+},
+{
+"name": "Lexova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Lexova",
+"street": "Lexova",
+"town_part": false
+},
+{
+"name": "Ležáků",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Ležáků",
+"street": "Ležáků",
+"town_part": false
+},
+{
+"name": "Lidická",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Lidická",
+"street": "Lidická",
+"town_part": false
+},
+{
+"name": "Lidimily Malé",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Lidimily Malé",
+"street": "Lidmily Malé",
+"town_part": false
+},
+{
+"name": "Lonkova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Lonkova",
+"street": "Lonkova",
+"town_part": false
+},
+{
+"name": "Luční",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Luční",
+"street": "Luční",
+"town_part": false
+},
+{
+"name": "Luďka Matury",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Luďka Matury",
+"street": "Luďka Matury",
+"town_part": false
+},
+{
+"name": "Macanova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Macanova",
+"street": "Macanova",
+"town_part": false
+},
+{
+"name": "Máchova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Máchova",
+"street": "Máchova",
+"town_part": false
+},
+{
+"name": "Malá",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Malá",
+"street": "Malá",
+"town_part": false
+},
+{
+"name": "Mandysova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Mandysova",
+"street": "Mandysova",
+"town_part": false
+},
+{
+"name": "Mánesova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Mánesova",
+"street": "Mánesova",
+"town_part": false
+},
+{
+"name": "Marie Majerové",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Marie Majerové",
+"street": "Marie Majerové",
+"town_part": false
+},
+{
+"name": "Marie Pujmanové",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Marie Pujmanové",
+"street": "Marie Pujmanové",
+"town_part": false
+},
+{
+"name": "Marty Exnarové",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Marty Exnarové",
+"street": "Marty Exnarové",
+"town_part": false
+},
+{
+"name": "Masarykovo náměstí",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Masarykovo náměstí",
+"street": "Masarykovo náměstí",
+"town_part": false
+},
+{
+"name": "Mezi Mosty",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Mezi Mosty",
+"street": "Mezi Mosty",
+"town_part": false
+},
+{
+"name": "Mezi Zahradami",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Mezi Zahradami",
+"street": "Mezi Zahradami",
+"town_part": false
+},
+{
+"name": "Mikulovická",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Mikulovická",
+"street": "Mikulovická",
+"town_part": false
+},
+{
+"name": "Milheimova",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Milheimova popelnice",
+"street": "Milheimova",
+"town_part": false
+},
+{
+"name": "Milheimova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Milheimova kontejnery",
+"street": "Milheimova",
+"town_part": false
+},
+{
+"name": "Mírová",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Mírová",
+"street": "Mírová",
+"town_part": false
+},
+{
+"name": "Mladých",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Mladých",
+"street": "Mladých",
+"town_part": false
+},
+{
+"name": "Mnětická",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Mnětická",
+"street": "Mnětická",
+"town_part": false
+},
+{
+"name": "Motoristů",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Motoristů",
+"street": "Motoristů",
+"town_part": false
+},
+{
+"name": "Mozartova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Mozartova",
+"street": "Mozartova",
+"town_part": false
+},
+{
+"name": "Mrštíků",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Mrštíků",
+"street": "Mrštíků",
+"town_part": false
+},
+{
+"name": "MUDr.Ducháčkové",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "MUDr.Ducháčkové",
+"street": "MUDr. Ducháčkové",
+"town_part": false
+},
+{
+"name": "Musílkova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Musílkova",
+"street": "Musílkova",
+"town_part": false
+},
+{
+"name": "Na Babce",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "Na Babce popelnice",
+"street": "Na Babce",
+"town_part": false
+},
+{
+"name": "Na Babce",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Na Babce kontejnery",
+"street": "Na Babce",
+"town_part": false
+},
+{
+"name": "Na Benátkách",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Benátkách",
+"street": "Na Benátkách",
+"town_part": false
+},
+{
+"name": "Na Bukovině",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Na Bukovině",
+"street": "Na Bukovině",
+"town_part": false
+},
+{
+"name": "Na Drážce",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Na Drážce popelnice",
+"street": "Na Drážce",
+"town_part": false
+},
+{
+"name": "Na Drážce",
+"bins": "popelnice",
+"part": "od hlavních semaforů po ulici Na Okrouhlíku",
+"days": [
+"st"
+],
+"text": "Na Drážce (od hlavních semaforů po ulici Na Okrouhlíku) - popelnice",
+"street": "Na Drážce",
+"town_part": false
+},
+{
+"name": "Na Drážce",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Na Drážce kontejnery",
+"street": "Na Drážce",
+"town_part": false
+},
+{
+"name": "Na Haldě",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Na Haldě",
+"street": "Na Haldě",
+"town_part": false
+},
+{
+"name": "Na Hrádku",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Na Hrádku",
+"street": "Na Hrádku",
+"town_part": false
+},
+{
+"name": "Na Hrázi",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Na Hrázi - popelnice",
+"street": "Na Hrázi",
+"town_part": false
+},
+{
+"name": "Na Hrázi",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Hrázi - kontejnery",
+"street": "Na Hrázi",
+"town_part": false
+},
+{
+"name": "Na Humenském",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Humenském",
+"street": "Na Humenském",
+"town_part": false
+},
+{
+"name": "Na Klárce",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Na Klárce",
+"street": "Na Klárce",
+"town_part": false
+},
+{
+"name": "Na Klínku",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Klínku",
+"street": "Na Klínku",
+"town_part": false
+},
+{
+"name": "Na Kopci",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Na Kopci",
+"street": "Na Kopci",
+"town_part": false
+},
+{
+"name": "Na Labišti",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Na Labišti",
+"street": "Na Labišti",
+"town_part": false
+},
+{
+"name": "Na Ležánkách",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Na Ležánkách",
+"street": "Na Ležánkách",
+"town_part": false
+},
+{
+"name": "Na Návsi",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Na Návsi",
+"street": "Na Návsi",
+"town_part": false
+},
+{
+"name": "Na Okrouhlíku",
+"bins": "popelnice",
+"part": "od Dašické směr K Haldě",
+"days": [
+"út"
+],
+"text": "Na Okrouhlíku (od Dašické směr K Haldě) popelnice",
+"street": "Na Okrouhlíku",
+"town_part": false
+},
+{
+"name": "Na Okrouhlíku",
+"bins": "popelnice",
+"part": "od Dašické směr K Bulharské",
+"days": [
+"st"
+],
+"text": "Na Okrouhlíku (od Dašické směr K Bulharské) popelnice",
+"street": "Na Okrouhlíku",
+"town_part": false
+},
+{
+"name": "Na Okrouhlíku",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Na Okrouhlíku kontejnery",
+"street": "Na Okrouhlíku",
+"town_part": false
+},
+{
+"name": "Na Parohách",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Parohách",
+"street": "Na Parohách",
+"town_part": false
+},
+{
+"name": "Na Rybníčkách",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Rybníčkách",
+"street": "Na Rybníčkách",
+"town_part": false
+},
+{
+"name": "Na Rybníku",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Na Rybníku",
+"street": "Na Rybníku",
+"town_part": false
+},
+{
+"name": "Na Spravedlnosti",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Na Spravedlnosti popelnice",
+"street": "Na Spravedlnosti",
+"town_part": false
+},
+{
+"name": "Na Spravedlnosti",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Na Spravedlnosti kontejnery",
+"street": "Na Spravedlnosti",
+"town_part": false
+},
+{
+"name": "Na staré poště",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Na staré poště",
+"street": "Na Staré poště",
+"town_part": false
+},
+{
+"name": "Na Štěpnici",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Na Štěpnici",
+"street": "Na Štěpnici",
+"town_part": false
+},
+{
+"name": "Na Třísle",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Na Třísle",
+"street": "Na Třísle",
+"town_part": false
+},
+{
+"name": "Na Vrškách",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "Na Vrškách popelnice",
+"street": "Na Vrškách",
+"town_part": false
+},
+{
+"name": "Na Vrškách",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Na Vrškách kontejnery",
+"street": "Na Vrškách",
+"town_part": false
+},
+{
+"name": "Na Vrtálně",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Na Vrtálně",
+"street": "Na Vrtálně",
+"town_part": false
+},
+{
+"name": "Na Vsi",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Na Vsi",
+"street": "Na Vsi",
+"town_part": false
+},
+{
+"name": "Na Záboří",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Na Záboří",
+"street": "Na Záboří",
+"town_part": false
+},
+{
+"name": "nábřeží Závodu míru",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "nábřeží Závodu míru",
+"street": "nábřeží Závodu míru",
+"town_part": false
+},
+{
+"name": "Nábřežní",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Nábřežní",
+"street": "Nábřežní",
+"town_part": false
+},
+{
+"name": "Nad Metelkou",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Nad Metelkou",
+"street": "Nad Metelkou",
+"town_part": false
+},
+{
+"name": "Nádražní",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Nádražní",
+"street": "Nádražní",
+"town_part": false
+},
+{
+"name": "náměstí Čs. legií",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "náměstí Čs. legií",
+"street": "náměstí Čs. legií",
+"town_part": false
+},
+{
+"name": "náměstí Dukelských hrdinů",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "náměstí Dukelských hrdinů",
+"street": "náměstí Dukelských hrdinů",
+"town_part": false
+},
+{
+"name": "náměstí Jana Pernera",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "náměstí Jana Pernera",
+"street": "náměstí Jana Pernera",
+"town_part": false
+},
+{
+"name": "náměstí Republiky",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "náměstí Republiky",
+"street": "náměstí Republiky",
+"town_part": false
+},
+{
+"name": "náměstí 9. května",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "náměstí 9. května",
+"street": "náměstí 9. května",
+"town_part": false
+},
+{
+"name": "Národních hrdinů",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Národních hrdinů",
+"street": "Národních hrdinů",
+"town_part": false
+},
+{
+"name": "Nemošická",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Nemošická",
+"street": "Nemošická",
+"town_part": false
+},
+{
+"name": "Nerudova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Nerudova",
+"street": "Nerudova",
+"town_part": false
+},
+{
+"name": "Nová",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Nová",
+"street": "Nová",
+"town_part": false
+},
+{
+"name": "npor.Eliáše",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "npor.Eliáše",
+"street": "npor. Eliáše",
+"town_part": false
+},
+{
+"name": "Obětí 24. srpna",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Obětí 24. srpna",
+"street": "Obětí 24. srpna",
+"town_part": false
+},
+{
+"name": "Odbojářů",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Odbojářů",
+"street": "Odbojářů",
+"town_part": false
+},
+{
+"name": "Odborářů",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Odborářů",
+"street": "Odborářů",
+"town_part": false
+},
+{
+"name": "Ohrazenická",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Ohrazenická",
+"street": "Ohrazenická",
+"town_part": false
+},
+{
+"name": "Okrajová",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Okrajová",
+"street": "Okrajová",
+"town_part": false
+},
+{
+"name": "Okružní",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Okružní",
+"street": "Okružní",
+"town_part": false
+},
+{
+"name": "OPOČíNEK",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "OPOČíNEK",
+"street": null,
+"town_part": true
+},
+{
+"name": "Orebská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Orebská",
+"street": "Orebská",
+"town_part": false
+},
+{
+"name": "Ortenova",
+"bins": "",
+"part": "Ohrazenice",
+"days": [
+"st"
+],
+"text": "Ortenova (Ohrazenice)",
+"street": "Ortenova",
+"town_part": false
+},
+{
+"name": "Ostřešanská",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Ostřešanská",
+"street": "Ostřešanská",
+"town_part": false
+},
+{
+"name": "Palackého",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Palackého",
+"street": "Palackého třída",
+"town_part": false
+},
+{
+"name": "Partyzánů",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Partyzánů",
+"street": "Partyzánů",
+"town_part": false
+},
+{
+"name": "Pavlova",
+"bins": "popelnice",
+"part": "",
+"days": [
+"po"
+],
+"text": "Pavlova popelnice",
+"street": "Pavlova",
+"town_part": false
+},
+{
+"name": "Pavlova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Pavlova kontejnery",
+"street": "Pavlova",
+"town_part": false
+},
+{
+"name": "Pejchlova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Pejchlova",
+"street": "Pejchlova",
+"town_part": false
+},
+{
+"name": "Pernerova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Pernerova",
+"street": "Pernerova",
+"town_part": false
+},
+{
+"name": "Pernštýnská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Pernštýnská",
+"street": "Pernštýnská",
+"town_part": false
+},
+{
+"name": "Pernštýnské náměstí",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Pernštýnské náměstí",
+"street": "Pernštýnské náměstí",
+"town_part": false
+},
+{
+"name": "Pichlova",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Pichlova popelnice",
+"street": "Pichlova",
+"town_part": false
+},
+{
+"name": "Pichlova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Pichlova kontejnery",
+"street": "Pichlova",
+"town_part": false
+},
+{
+"name": "Písková",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Písková",
+"street": "Písková",
+"town_part": false
+},
+{
+"name": "Pištorova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Pištorova",
+"street": "Pištorova",
+"town_part": false
+},
+{
+"name": "Plemenářský podnik",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Plemenářský podnik",
+"street": "Plemenářský podnik",
+"town_part": false
+},
+{
+"name": "Počápelská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Počápelská",
+"street": "Počápelská",
+"town_part": false
+},
+{
+"name": "Pod Břízkami",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Pod Břízkami",
+"street": "Pod Břízkami",
+"town_part": false
+},
+{
+"name": "Pod Hřbitovem",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Pod Hřbitovem",
+"street": "Pod Hřbitovem",
+"town_part": false
+},
+{
+"name": "Pod Lipami",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Pod Lipami",
+"street": "Pod Lipami",
+"town_part": false
+},
+{
+"name": "Pod Sklípky",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Pod Sklípky",
+"street": "Pod Sklípky",
+"town_part": false
+},
+{
+"name": "Pod Zahradami",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Pod Zahradami",
+"street": "Pod Zahradami",
+"town_part": false
+},
+{
+"name": "Pod Zámkem",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Pod Zámkem",
+"street": "Pod Zámkem",
+"town_part": false
+},
+{
+"name": "Poděbradská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Poděbradská",
+"street": "Poděbradská",
+"town_part": false
+},
+{
+"name": "Pohránovská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Pohránovská",
+"street": "Pohránovská",
+"town_part": false
+},
+{
+"name": "Poláčkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Poláčkova",
+"street": "Poláčkova",
+"town_part": false
+},
+{
+"name": "Polní",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Polní",
+"street": "Polní",
+"town_part": false
+},
+{
+"name": "Polská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Polská",
+"street": "Polská",
+"town_part": false
+},
+{
+"name": "Popkovická",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Popkovická",
+"street": "Popkovická",
+"town_part": false
+},
+{
+"name": "Pospíšilovo nám.",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Pospíšilovo nám.",
+"street": "Pospíšilovo náměstí",
+"town_part": false
+},
+{
+"name": "Potěšilova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Potěšilova",
+"street": "Potěšilova",
+"town_part": false
+},
+{
+"name": "Pražská",
+"bins": "",
+"part": "Zavadilka",
+"days": [
+"čt"
+],
+"text": "Pražská (Zavadilka)",
+"street": "Pražská",
+"town_part": false
+},
+{
+"name": "Pražská",
+"bins": "",
+"part": "Popkovice",
+"days": [
+"čt"
+],
+"text": "Pražská (Popkovice)",
+"street": "Pražská",
+"town_part": false
+},
+{
+"name": "Prodloužená",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Prodloužená",
+"street": "Prodloužená",
+"town_part": false
+},
+{
+"name": "Prokopa Holého",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Prokopa Holého",
+"street": "Prokopa Holého",
+"town_part": false
+},
+{
+"name": "Průmyslová k Tesle",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Průmyslová k Tesle",
+"street": "Průmyslová",
+"town_part": false
+},
+{
+"name": "Průmyslová od Tesly",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Průmyslová od Tesly",
+"street": "Průmyslová",
+"town_part": false
+},
+{
+"name": "Přeloučská",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Přeloučská",
+"street": "Přeloučská",
+"town_part": false
+},
+{
+"name": "Přerovská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Přerovská",
+"street": "Přerovská",
+"town_part": false
+},
+{
+"name": "Příčná",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Příčná",
+"street": "Příčná",
+"town_part": false
+},
+{
+"name": "Přihrádek",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Přihrádek",
+"street": "Příhrádek",
+"town_part": false
+},
+{
+"name": "Raabova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Raabova",
+"street": "Raabova",
+"town_part": false
+},
+{
+"name": "Radiomechaniků",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Radiomechaniků popelnice",
+"street": "Radiomechaniků",
+"town_part": false
+},
+{
+"name": "Radiomechaniků",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Radiomechaniků kontejnery",
+"street": "Radiomechaniků",
+"town_part": false
+},
+{
+"name": "Raisova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Raisova",
+"street": "Raisova",
+"town_part": false
+},
+{
+"name": "Revoluční",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Revoluční",
+"street": "Revoluční",
+"town_part": false
+},
+{
+"name": "Riegrova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Riegrova",
+"street": "Riegrova",
+"town_part": false
+},
+{
+"name": "Rokycanova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Rokycanova - kontejnery 2x týdně, popelnice 1x",
+"street": "Rokycanova",
+"town_part": false
+},
+{
+"name": "Rosická",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Rosická",
+"street": "Rosická",
+"town_part": false
+},
+{
+"name": "Rosůlkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Rosůlkova",
+"street": "Rosůlkova",
+"town_part": false
+},
+{
+"name": "Rožkova",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Rožkova popelnice",
+"street": "Rožkova",
+"town_part": false
+},
+{
+"name": "Rožkova",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Rožkova kontejnery",
+"street": "Rožkova",
+"town_part": false
+},
+{
+"name": "Rumunská",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Rumunská popelnice",
+"street": "Rumunská",
+"town_part": false
+},
+{
+"name": "Rumunská",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Rumunská kontejnery",
+"street": "Rumunská",
+"town_part": false
+},
+{
+"name": "Růženy Vojtěchové",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Růženy Vojtěchové",
+"street": "Růženy Vojtěchové",
+"town_part": false
+},
+{
+"name": "Růžová",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Růžová",
+"street": "Růžová",
+"town_part": false
+},
+{
+"name": "Rybitevská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Rybitevská",
+"street": "Rybitevská",
+"town_part": false
+},
+{
+"name": "Sadová",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Sadová",
+"street": "Sadová",
+"town_part": false
+},
+{
+"name": "Sakařova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Sakařova",
+"street": "Sakařova",
+"town_part": false
+},
+{
+"name": "Salavcova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Salavcova",
+"street": "Salavcova",
+"town_part": false
+},
+{
+"name": "Schulhoffova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Schulhoffova",
+"street": "Schulhoffova",
+"town_part": false
+},
+{
+"name": "Schwarzovo náměstí",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Schwarzovo náměstí",
+"street": "Schwarzovo náměstí",
+"town_part": false
+},
+{
+"name": "Sedláčkova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Sedláčkova",
+"street": "Sedláčkova",
+"town_part": false
+},
+{
+"name": "Seifertova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Seifertova",
+"street": "Seifertova",
+"town_part": false
+},
+{
+"name": "SEMTÍN",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "SEMTÍN",
+"street": null,
+"town_part": true
+},
+{
+"name": "Semtínská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Semtínská",
+"street": "Semtínská",
+"town_part": false
+},
+{
+"name": "Severní",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Severní",
+"street": "Severní",
+"town_part": false
+},
+{
+"name": "Sezemická",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Sezemická",
+"street": "Sezemická",
+"town_part": false
+},
+{
+"name": "Sjezdová",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Sjezdová",
+"street": "Sjezdová",
+"town_part": false
+},
+{
+"name": "S.K.Neumanna",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "S.K.Neumanna popelnice",
+"street": "S. K. Neumanna",
+"town_part": false
+},
+{
+"name": "S.K.Neumanna",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "S.K.Neumanna kontejnery",
+"street": "S. K. Neumanna",
+"town_part": false
+},
+{
+"name": "Skrbkova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Skrbkova",
+"street": "Skrbkova",
+"town_part": false
+},
+{
+"name": "Sladkovského",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Sladkovského",
+"street": "Sladkovského",
+"town_part": false
+},
+{
+"name": "Slepá",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Slepá",
+"street": "Slepá",
+"town_part": false
+},
+{
+"name": "Sluneční",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Sluneční",
+"street": "Sluneční",
+"town_part": false
+},
+{
+"name": "Smetanova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Smetanova",
+"street": "Smetanova",
+"town_part": false
+},
+{
+"name": "Smetanovo náměstí",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Smetanovo náměstí",
+"street": "Smetanovo náměstí",
+"town_part": false
+},
+{
+"name": "Smilova od 17. listopadu po Karla IV.",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Smilova od 17. listopadu po Karla IV.",
+"street": "Smilova",
+"town_part": false
+},
+{
+"name": "Smilova od 17. listopadu k nám.Legií",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Smilova od 17. listopadu k nám.Legií",
+"street": "Smilova",
+"town_part": false
+},
+{
+"name": "Sokolovská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Sokolovská",
+"street": "Sokolovská",
+"town_part": false
+},
+{
+"name": "Spodní",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Spodní",
+"street": "Spodní",
+"town_part": false
+},
+{
+"name": "Spojilská",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Spojilská",
+"street": "Spojilská",
+"town_part": false
+},
+{
+"name": "Spojovací",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Spojovací",
+"street": "Spojovací",
+"town_part": false
+},
+{
+"name": "Sportovců",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Sportovců",
+"street": "Sportovců",
+"town_part": false
+},
+{
+"name": "Sportovní",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Sportovní",
+"street": "Sportovní",
+"town_part": false
+},
+{
+"name": "Spořilov",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Spořilov",
+"street": "Spořilov",
+"town_part": false
+},
+{
+"name": "Srnojedská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Srnojedská",
+"street": "Srnojedská",
+"town_part": false
+},
+{
+"name": "Staňkova",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Staňkova",
+"street": "Staňkova",
+"town_part": false
+},
+{
+"name": "Staré náměstí",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Staré náměstí",
+"street": "Staré náměstí",
+"town_part": false
+},
+{
+"name": "Staročernská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Staročernská",
+"street": "Staročernská",
+"town_part": false
+},
+{
+"name": "Staročernsko",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Staročernsko",
+"street": null,
+"town_part": true
+},
+{
+"name": "Stavařov",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Stavařov",
+"street": "Stavařov",
+"town_part": false
+},
+{
+"name": "Stavbařů",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Stavbařů",
+"street": "Stavbařů",
+"town_part": false
+},
+{
+"name": "Studánecká",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Studánecká popelnice",
+"street": "Studánecká",
+"town_part": false
+},
+{
+"name": "Studánecká",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Studánecká kontejnery",
+"street": "Studánecká",
+"town_part": false
+},
+{
+"name": "Sukova třída",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Sukova třída",
+"street": "Sukova třída",
+"town_part": false
+},
+{
+"name": "Svaté Anežky České",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Svaté Anežky České",
+"street": "Svaté Anežky České",
+"town_part": false
+},
+{
+"name": "Světlá",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Světlá",
+"street": "Světlá",
+"town_part": false
+},
+{
+"name": "Svobody",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Svobody",
+"street": "Svobody",
+"town_part": false
+},
+{
+"name": "Šafaříkova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Šafaříkova",
+"street": "Šafaříkova",
+"town_part": false
+},
+{
+"name": "Široká",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Široká",
+"street": "Široká",
+"town_part": false
+},
+{
+"name": "Školní",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Školní",
+"street": "Školní",
+"town_part": false
+},
+{
+"name": "Školní náměstí",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Školní náměstí",
+"street": "Školní náměstí",
+"town_part": false
+},
+{
+"name": "Školská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Školská",
+"street": "Školská",
+"town_part": false
+},
+{
+"name": "Škroupova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Škroupova",
+"street": "Škroupova",
+"town_part": false
+},
+{
+"name": "Štefánikova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Štefánikova",
+"street": "Štefánikova",
+"town_part": false
+},
+{
+"name": "Štolbova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Štolbova",
+"street": "Štolbova",
+"town_part": false
+},
+{
+"name": "Štrossova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Štrossova",
+"street": "Štrossova",
+"town_part": false
+},
+{
+"name": "Táborská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Táborská",
+"street": "Táborská",
+"town_part": false
+},
+{
+"name": "Teplého",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Teplého",
+"street": "Teplého",
+"town_part": false
+},
+{
+"name": "Terezy Novákové",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Terezy Novákové",
+"street": "Terezy Novákové",
+"town_part": false
+},
+{
+"name": "Tichá",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Tichá",
+"street": "Tichá",
+"town_part": false
+},
+{
+"name": "Tolarova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Tolarova",
+"street": "Tolarova",
+"town_part": false
+},
+{
+"name": "Topolová",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Topolová",
+"street": "Topolová",
+"town_part": false
+},
+{
+"name": "Trnovská",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Trnovská",
+"street": "Trnovská",
+"town_part": false
+},
+{
+"name": "třída Míru",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "třída Míru",
+"street": "třída Míru",
+"town_part": false
+},
+{
+"name": "Tuněchodská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Tuněchodská",
+"street": "Tuněchodská",
+"town_part": false
+},
+{
+"name": "Tylova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Tylova",
+"street": "Tylova",
+"town_part": false
+},
+{
+"name": "Tyršovo nábřeží",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Tyršovo nábřeží",
+"street": "Tyršovo nábřeží",
+"town_part": false
+},
+{
+"name": "Tyršovy sady",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Tyršovy sady",
+"street": "Tyršovy sady",
+"town_part": false
+},
+{
+"name": "U Borku",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "U Borku",
+"street": "U Borku",
+"town_part": false
+},
+{
+"name": "U Bylanky",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "U Bylanky",
+"street": "U Bylanky",
+"town_part": false
+},
+{
+"name": "U Divadla",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "U Divadla",
+"street": "U Divadla",
+"town_part": false
+},
+{
+"name": "U Háje",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "U Háje",
+"street": "U Háje",
+"town_part": false
+},
+{
+"name": "U Husova sboru",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "U Husova sboru",
+"street": "U Husova sboru",
+"town_part": false
+},
+{
+"name": "U Josefa",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "U Josefa popelnice",
+"street": "U Josefa",
+"town_part": false
+},
+{
+"name": "U Josefa",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "U Josefa kontejnery",
+"street": "U Josefa",
+"town_part": false
+},
+{
+"name": "U Kamenné vily",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "U Kamenné vily",
+"street": "U Kamenné vily",
+"town_part": false
+},
+{
+"name": "U Kapličky",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "U Kapličky",
+"street": "U Kapličky",
+"town_part": false
+},
+{
+"name": "U Kostelíčka",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "U Kostelíčka",
+"street": "U Kostelíčka",
+"town_part": false
+},
+{
+"name": "U Krematoria",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "U Krematoria",
+"street": "U Krematoria",
+"town_part": false
+},
+{
+"name": "U Marka",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "U Marka",
+"street": "U Marka",
+"town_part": false
+},
+{
+"name": "U Moruší",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "U Moruší",
+"street": "U Moruší",
+"town_part": false
+},
+{
+"name": "U Parku",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "U Parku",
+"street": "U Parku",
+"town_part": false
+},
+{
+"name": "U Prefy",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "U Prefy",
+"street": "U Prefy",
+"town_part": false
+},
+{
+"name": "U Stadionu",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "U Stadionu",
+"street": "U Stadionu",
+"town_part": false
+},
+{
+"name": "U Suchého dubu",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "U Suchého dubu",
+"street": "U Suchého dubu",
+"town_part": false
+},
+{
+"name": "U Školy",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "U Školy",
+"street": "U Školy",
+"town_part": false
+},
+{
+"name": "U Štítu",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "U Štítu",
+"street": "U Štítu",
+"town_part": false
+},
+{
+"name": "U Trojice",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "U Trojice",
+"street": "U Trojice",
+"town_part": false
+},
+{
+"name": "U Zábran",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "U Zábran",
+"street": "U Zábran",
+"town_part": false
+},
+{
+"name": "U Zámečku",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "U Zámečku",
+"street": "U Zámečku",
+"town_part": false
+},
+{
+"name": "Úzká",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Úzká",
+"street": "Úzká",
+"town_part": false
+},
+{
+"name": "V Chaloupkách",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "V Chaloupkách",
+"street": "V Chaloupkách",
+"town_part": false
+},
+{
+"name": "V Lipinách",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "V Lipinách",
+"street": "V Lipinách",
+"town_part": false
+},
+{
+"name": "V Oklikách",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "V Oklikách",
+"street": "V Oklikách",
+"town_part": false
+},
+{
+"name": "V Ráji",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "V Ráji",
+"street": "V Ráji",
+"town_part": false
+},
+{
+"name": "V Uličce",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "V Uličce",
+"street": "V Uličce",
+"town_part": false
+},
+{
+"name": "V Zahrádkách",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "V Zahrádkách",
+"street": "V Zahrádkách",
+"town_part": false
+},
+{
+"name": "V Zákoutí",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "V Zákoutí",
+"street": "V Zákoutí",
+"town_part": false
+},
+{
+"name": "V Zátiší",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "V Zátiší",
+"street": "V Zátiší",
+"town_part": false
+},
+{
+"name": "Valčíkova",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Valčíkova",
+"street": "Valčíkova",
+"town_part": false
+},
+{
+"name": "Varšavská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Varšavská",
+"street": "Varšavská",
+"town_part": false
+},
+{
+"name": "Vašákova",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Vašákova",
+"street": "Vašákova",
+"town_part": false
+},
+{
+"name": "Ve Lhotkách",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Ve Lhotkách",
+"street": "Ve Lhotkách",
+"town_part": false
+},
+{
+"name": "Ve Stezkách",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Ve Stezkách",
+"street": "Ve Stezkách",
+"town_part": false
+},
+{
+"name": "Věry Junkové",
+"bins": "popelnice",
+"part": "",
+"days": [
+"út"
+],
+"text": "Věry Junkové popelnice",
+"street": "Věry Junkové",
+"town_part": false
+},
+{
+"name": "Věry Junkové",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Věry Junkové kontejnery",
+"street": "Věry Junkové",
+"town_part": false
+},
+{
+"name": "Vodárenská",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Vodárenská",
+"street": "Vodárenská",
+"town_part": false
+},
+{
+"name": "Vrchlického",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Vrchlického",
+"street": "Vrchlického",
+"town_part": false
+},
+{
+"name": "Východní",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Východní",
+"street": "Východní",
+"town_part": false
+},
+{
+"name": "Výzkumná",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Výzkumná",
+"street": "Výzkumná",
+"town_part": false
+},
+{
+"name": "Wernerovo nábřeží",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Wernerovo nábřeží",
+"street": "Wernerovo nábřeží",
+"town_part": false
+},
+{
+"name": "Wintrova I",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Wintrova I",
+"street": "Wintrova I",
+"town_part": false
+},
+{
+"name": "Wintrova II",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Wintrova II",
+"street": "Wintrova II",
+"town_part": false
+},
+{
+"name": "Wolkerova",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Wolkerova",
+"street": "Wolkerova",
+"town_part": false
+},
+{
+"name": "Winternitzova",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Winternitzova",
+"street": "Winternitzova",
+"town_part": false
+},
+{
+"name": "Za Hřištěm",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Za Hřištěm",
+"street": "Za Hřištěm",
+"town_part": false
+},
+{
+"name": "Za Kopečkem",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Za Kopečkem",
+"street": "Za Kopečkem",
+"town_part": false
+},
+{
+"name": "Za Oborou",
+"bins": "",
+"part": "",
+"days": [
+"po"
+],
+"text": "Za Oborou",
+"street": "Za Oborou",
+"town_part": false
+},
+{
+"name": "Za Pasáží",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Za Pasáží",
+"street": "Za Pasáží",
+"town_part": false
+},
+{
+"name": "Zahradní",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Zahradní",
+"street": "Zahradní",
+"town_part": false
+},
+{
+"name": "Zajíčkova",
+"bins": "",
+"part": "",
+"days": [
+"út"
+],
+"text": "Zajíčkova",
+"street": "Zajíčkova",
+"town_part": false
+},
+{
+"name": "Zámecká",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Zámecká",
+"street": "Zámecká",
+"town_part": false
+},
+{
+"name": "Zámek",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Zámek",
+"street": "Zámek",
+"town_part": false
+},
+{
+"name": "Zborovské Náměstí",
+"bins": "",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Zborovské Náměstí",
+"street": "Zborovské náměstí",
+"town_part": false
+},
+{
+"name": "Zelená",
+"bins": "",
+"part": "",
+"days": [
+"st"
+],
+"text": "Zelená",
+"street": "Zelená",
+"town_part": false
+},
+{
+"name": "Zelenobranská",
+"bins": "",
+"part": "",
+"days": [
+"út",
+"pá"
+],
+"text": "Zelenobranská",
+"street": "Zelenobranská",
+"town_part": false
+},
+{
+"name": "Zemědělská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Zemědělská",
+"street": "Zemědělská",
+"town_part": false
+},
+{
+"name": "Zminská",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Zminská",
+"street": "Zminská",
+"town_part": false
+},
+{
+"name": "Železničního pluku",
+"bins": "popelnice",
+"part": "",
+"days": [
+"čt"
+],
+"text": "Železničního pluku popelnice",
+"street": "Železničního pluku",
+"town_part": false
+},
+{
+"name": "Železničního pluku",
+"bins": "kontejnery",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Železničního pluku kontejnery",
+"street": "Železničního pluku",
+"town_part": false
+},
+{
+"name": "Žitná",
+"bins": "",
+"part": "",
+"days": [
+"po",
+"čt"
+],
+"text": "Žitná",
+"street": "Žitná",
+"town_part": false
+},
+{
+"name": "ŽIŽÍN",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "ŽIŽÍN",
+"street": null,
+"town_part": true
+},
+{
+"name": "Žižkova",
+"bins": "",
+"part": "",
+"days": [
+"pá"
+],
+"text": "Žižkova",
+"street": "Žižkova",
+"town_part": false
+}
+]
+}

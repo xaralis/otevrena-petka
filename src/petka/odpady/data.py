@@ -101,3 +101,32 @@ def hours_text(y: dict) -> str:
     """„po, út, čt, pá 6.30–15.00, st 6.30–17.00“."""
     fmt = lambda s: s.replace(":", ".")
     return ", ".join(f"{', '.join(h['days'])} {fmt(h['from'])}–{fmt(h['to'])}" for h in y["hours"])
+
+
+# --- svoz směsného odpadu (svoz-tko.json, petka.odpady.svoz) -----------------------------------
+
+@lru_cache
+def svoz_rows() -> list[dict]:
+    return json.loads((ROOT / "svoz-tko.json").read_text())["rows"]
+
+
+def _days_text(days: list[str]) -> str:
+    words = [DAY_WORD[d] for d in days]
+    return words[0] if len(words) == 1 else ", ".join(words[:-1]) + " a " + words[-1]
+
+
+def svoz(street: str) -> list[dict]:
+    """The street's rows: [{who: "popelnice"|"kontejnery"|"", part, days, words}], words like „čtvrtek“
+    or „pondělí a čtvrtek“."""
+    return [{"who": r["bins"], "part": r["part"], "days": r["days"], "words": _days_text(r["days"])}
+            for r in svoz_rows() if r.get("street") == street]
+
+
+def svoz_text(street: str) -> str:
+    """One line: „popelnice čtvrtek, kontejnery pondělí a čtvrtek“, „středa“, „" when unknown."""
+    rows = svoz(street)
+    parts = []
+    for r in rows:
+        who = r["who"] + (f" ({r['part']})" if r["part"] else "") if r["who"] or r["part"] else ""
+        parts.append(f"{who} {r['words']}".strip())
+    return ", ".join(dict.fromkeys(parts))

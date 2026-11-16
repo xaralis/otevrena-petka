@@ -22,8 +22,9 @@
   const query = () => {
     const p = new URLSearchParams();
     if (streets().length) p.set("ulice", streets().join(","));
-    const k = kinds(), all = form.querySelectorAll("input[name=co]").length;
-    if (k.length && k.length < all) p.set("co", k.join(","));
+    // the default (every kind but the opt-in ones) needs no co=
+    const k = kinds(), def = [...form.querySelectorAll("input[name=co]")].filter((i) => !i.dataset.optin).map((i) => i.value);
+    if (k.length && (k.length !== def.length || k.some((x) => !def.includes(x)))) p.set("co", k.join(","));
     return p.toString().replace(/%2C/g, ",");
   };
 

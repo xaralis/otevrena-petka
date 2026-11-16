@@ -48,6 +48,7 @@ class Sources:
     cleanings: Callable[[str], list[dict]]          # the street's cleanings this year (cisteni items)
     closures: Callable[[str], list] = lambda name: []   # closures naming the street (petka.uzavirky.queries.Closure)
     containers: Callable[[str], list] = lambda name: []  # přistavení of a kontejner near the street (petka.odpady.data.Drop)
+    svoz: Callable[[str], list] = lambda name: []         # the street's svoz směsného odpadu (petka.odpady.data.svoz)
 
 
 def sources(obvod: str) -> Sources:
@@ -64,7 +65,12 @@ def sources(obvod: str) -> Sources:
                    resolutions=lambda name: q.resolutions(name)[0],
                    cleanings=lambda name: [i for i in its if i["street"] == name],
                    closures=lambda name: [c for c in cls if uq.names(c, name)],
-                   containers=_near_containers(obvod))
+                   containers=_near_containers(obvod), svoz=_svoz)
+
+
+def _svoz(name: str) -> list:
+    from ..odpady import data as od
+    return od.svoz(name)
 
 
 NEAR = 300              # m: a kontejner stanoviště this close to a street is news for it
@@ -136,6 +142,23 @@ def street_events(name: str, slug: str, src: Sources, now: dt.datetime) -> list[
                              "Uzavírka", f"{name}, {c.what}", (f"do {q.dm(c.ends.astimezone(TZ).date())}" if c.ends else "",
                                                               "st-no" if c.closed and c.now(now) else ""),
                              brief=f"{c.what}{ends}. Podrobnosti na Otevřené Pětce."))
+    # svoz směsného odpadu: a reminder the evening before, only the last one and the next (weekly,
+    # so the feed holds no more than two of a street's)
+    rows = src.svoz(name)
+    if rows:
+        DAYS = ("po", "út", "st", "čt", "pá", "so", "ne")
+        for k in range(-7, 2):
+            day = now.date() + dt.timedelta(days=k)
+            who = [r for r in rows if DAYS[day.weekday()] in r["days"]]
+            shows = _local(day - dt.timedelta(days=1), 18)
+            if not who or shows > now or shows < now - dt.timedelta(days=7):
+                continue
+            whom = ", ".join(dict.fromkeys((r["who"] + (f" ({r['part']})" if r["part"] else "")).strip() or "popelnice" for r in who))
+            wd, when = cw.WD[day.weekday()], q.dm(day)
+            out.append(Event(f"svoz-{slug}-{day:%Y%m%d}", "svoz", shows, name, f"{name}: svoz směsného odpadu {wd} {when}",
+                             f"Zítra ({wd} {when}) se v ulici {name} vyváží směsný odpad: {whom}. Nádoby přistavte od 5.30.",
+                             "https://smp-pce.cz/odpady/svoz-komunalniho-odpadu", "Svoz směsného odpadu", f"{name}, {whom}",
+                             ("proběhl", "ul-done") if day < now.date() else ("zítra" if day > now.date() else "dnes", "")))
     for d in src.containers(name):
         shows = _local(d.date - dt.timedelta(days=AHEAD), 18)
         if since <= shows <= now:
@@ -169,11 +192,14 @@ KINDS = (("podnety", "Podněty z Dej Tipu", "Dej Tip je městská aplikace, kde 
              "dopravního informačního centra ŘSD."),
          ("kontejnery", "Kontejnery na objemný odpad", "Týden předem: kdy a kde nablízku přistaví kontejner na nábytek, "
              "koberce a další objemný odpad."),
+         ("svoz", "Svoz směsného odpadu", "Večer před svozem připomeneme, ať nezapomenete přistavit popelnici. "
+             "Chodí každý týden, proto jsme ho nezapnuli sami."),
          ("usneseni", "Usnesení", "Co o ulici rozhodla rada nebo zastupitelstvo, třeba oprava chodníku nebo nová zakázka."),
          ("cisteni", "Blokové čištění", "Týden předem: kdy se v ulici čistí a do kdy musíte přeparkovat."))
+OPT_IN = {"svoz"}       # kinds not chosen unless asked for (weekly: they would drown the rest)
 PREVIEW = 60            # days the page's preview shows, and its counts by kind cover
 GROUP = {"podnet": "podnety", "vyreseno": "podnety", "deska": "deska", "uzavirka": "uzavirky", "kontejner": "kontejnery",
-         "usneseni": "usneseni",
+         "svoz": "svoz", "usneseni": "usneseni",
          "cisteni": "cisteni"}
 ATTRIBUTION = "Zdrojem digitalizovaných informací o silničním provozu je NDIC."
 

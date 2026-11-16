@@ -48,6 +48,30 @@ def _drops(today: dt.date) -> list:
     return [d for d in od.drops(today.year) if d.date >= today]
 
 
+def every_name(request: Request, slug: str) -> str:
+    return _names(request.state.obvod.id).get(slug, "")
+
+
+def _waste_and_closures(obvod: str, name: str, now) -> dict:
+    """The street page's rows for odpady (the svoz days, the nearest kontejner on objemný odpad)
+    and for uzavírky (closures naming the street now)."""
+    from ..odpady import data as od
+    from ..ulice.feed import _near_containers
+    today = now.date() if hasattr(now, "date") else now
+    try:
+        near = [d for d in _near_containers(obvod)(name) if d.date >= today]
+    except Exception:
+        near = []
+    try:
+        from ..obvody import ObvodFilter
+        from ..uzavirky import queries as uzq
+        at = dt.datetime.now(TZ)
+        closures = [c for c in uzq.closures(uzq.rows(ObvodFilter.only(obvod), at), at) if c.now(at) and uzq.names(c, name)]
+    except Exception:
+        closures = []
+    return {"svoz": od.svoz_text(name), "vok": near[0] if near else None, "n_closures": len(closures)}
+
+
 def _closures(obvod: str, today: dt.date) -> list[dict]:
     """The obvod's closures from NDIC (petka.uzavirky) as the front page's traffic marks: those
     going on and those starting within a week, each on the middle of its stretch, linked to its
@@ -227,6 +251,7 @@ def street(request: Request, slug: str, radky: str = "", detail: str = "cisteni"
     pd_checked = _safe(pq.checked, obvod)
     pd_url = f"/verejny-prostor/podnety?ulice={slug}" + ("" if rep["ceka"] else "&stav=vse") + "#kde"
     return tpl.TemplateResponse(request, "ulice/ulice.html", {
+        **_waste_and_closures(request.state.obvod.id, every_name(request, slug), now),
         "today": today, "s": s, "names": names, "cl": cl, "cl_href": cl_href, "in_harm": bool(its),
         "panel": cw.next_panel(cl.on_next, today) if cl.on_next else None,
         "last": cw.nbdm(cl.past[0]["date"]) if cl.past else None,
@@ -274,12 +299,12 @@ def _picked(request: Request, ulice: list[str], co: list[str]) -> tuple[list[tup
     names = _names(request.state.obvod.id)
     slugs = [s for s in dict.fromkeys(x for v in ulice for x in v.split(",")) if s in names]
     valid = [k for k, _, _ in feed.KINDS]
-    kinds = [k for k in dict.fromkeys(x for v in co for x in v.split(",")) if k in valid] or valid
+    kinds = [k for k in dict.fromkeys(x for v in co for x in v.split(",")) if k in valid] or [k for k in valid if k not in feed.OPT_IN]
     return [(names[s], s) for s in slugs], kinds
 
 
 def _feed_url(streets: list[tuple[str, str]], kinds: list[str]) -> str:
-    every = len(kinds) == len(feed.KINDS)
+    every = set(kinds) == {k for k, _, _ in feed.KINDS} - feed.OPT_IN
     return (_origin() + "/muj-prehled/rss.xml?ulice=" + ",".join(s for _, s in streets)
             + ("" if every else "&co=" + ",".join(kinds)))
 
@@ -323,7 +348,7 @@ def follow(request: Request, ulice: list[str] = Query(default=[]), co: list[str]
             missing = pridat.strip()
     slugs = [s for _, s in streets]
     return tpl.TemplateResponse(request, "ulice/upozorneni.html", {
-        "names": names, "streets": streets, "kinds": kinds, "KINDS": feed.KINDS, "missing": missing,
+        "names": names, "streets": streets, "kinds": kinds, "KINDS": feed.KINDS, "OPT_IN": feed.OPT_IN, "missing": missing,
         "preview": _preview(obvod, streets, kinds), "vapid": push.public_key(),
         "feed_url": _feed_url(streets, kinds) if streets else None,
         **(subscribe(slugs) if slugs else {})})

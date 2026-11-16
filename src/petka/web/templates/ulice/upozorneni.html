@@ -26,7 +26,7 @@
       <p class="step-sub">Vyberte, jaké informace vás zajímají. Číslo vpravo ukazuje, kolik takových zpráv z vašich ulic přišlo za poslední dva měsíce.</p>
       <ul class="kinds">
         {%- for k, label, about in KINDS %}
-        <li><label><input type="checkbox" name="co" value="{{ k }}"{% if k in kinds %} checked{% endif %}><span><b>{{ label }}</b><span>{{ about }}</span></span><em data-up-count="{{ k }}"{% if not streets %} hidden{% endif %}>{{ preview.counts.get(k, 0) }}</em></label></li>
+        <li><label><input type="checkbox" name="co" value="{{ k }}"{% if k in kinds %} checked{% endif %}{% if k in OPT_IN %} data-optin{% endif %}><span><b>{{ label }}</b><span>{{ about }}</span></span><em data-up-count="{{ k }}"{% if not streets %} hidden{% endif %}>{{ preview.counts.get(k, 0) }}</em></label></li>
         {%- endfor %}
       </ul>
       <button class="btn btn-o up-apply" type="submit" data-up-apply>Upravit výběr</button>

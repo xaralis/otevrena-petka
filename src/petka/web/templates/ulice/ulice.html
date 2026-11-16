@@ -146,7 +146,9 @@
       <li><a href="{{ cl_href }}">Blokové čištění</a><span class="ak-n">{% set nc = (cl.upcoming|length) + (cl.past|length) %}{% if nc %}<b>{{ nc }}</b> {{ 'termín' if nc == 1 else ('termíny' if nc < 5 else 'termínů') }} letos{% else %}letos ne{% endif %}</span></li>
       <li><a href="{{ pd_url }}">Podněty</a><span class="ak-n">{% if rep.ceka %}<b>{{ rep.ceka }}</b> {{ 'čeká' if rep.ceka == 1 or rep.ceka > 4 else 'čekají' }}, {% endif %}<b>{{ rep.n }}</b> celkem</span></li>
       <li><a href="{{ deska_url }}">Úřední deska</a><span class="ak-n">{% if n_notices %}<b>{{ n_notices }}</b> visí{% else %}teď nic nevisí{% endif %}</span></li>
-      <li class="soon"><a href="/verejny-prostor/uzavirky">Uzavírky</a><span class="ak-n">připravujeme</span></li>
+      <li><a href="/verejny-prostor/uzavirky">Uzavírky</a><span class="ak-n">{% if n_closures %}<b>{{ n_closures }}</b> {{ 'platí' }} teď{% else %}teď žádná{% endif %}</span></li>
+      <li><a href="https://smp-pce.cz/odpady/svoz-komunalniho-odpadu">Svoz směsného odpadu</a><span class="ak-n">{% if svoz %}{{ svoz }}{% else %}den neznáme{% endif %}</span></li>
+      <li><a href="/verejny-prostor/odpady">Kontejner na objemný odpad</a><span class="ak-n">{% if vok %}<b>{{ vok.date|cl_wd }} {{ vok.date|ul_dm }}</b> {{ vok.place }}{% else %}v okolí letos ne{% endif %}</span></li>
     </ul>
   </div>
   {% if around %}

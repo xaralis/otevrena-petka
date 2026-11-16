@@ -25,6 +25,7 @@ dependencies = [
     "sentry-sdk>=2.20",
     "shapely>=2",
     "uvicorn[standard]>=0.34",
+    "xlrd>=2",
 ]
 
 [project.scripts]
