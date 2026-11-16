@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from "_portal.html" import band, source %}
+{% block title %}Kde se teď nedá projet?{% endblock %}
+{% block description %}Uzavírky a omezení dopravy v obvodu: kde a do kdy, na mapě, podle Národního dopravního informačního centra.{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ asset('map/maplibre-gl.css') }}">{% endblock %}
+{% block hero %}{{ band('Kde se teď nedá projet?', 'Uzavírky a omezení dopravy v obvodu, které hlásí Národní dopravní informační centrum. Platné teď i ohlášené dopředu.') }}{% endblock %}
+{% block main %}
+<section class="mbox-sec uz-mapsec" aria-labelledby="uz-map-h">
+  <div class="sec-head">
+    <h2 id="uz-map-h">Na mapě</h2>
+    <nav class="switch pd-seg" aria-label="Které uzavírky">{% for v in views %}<a href="{{ v.href }}"{% if v.on %} aria-current="true"{% endif %}>{{ v.label }} <b>{{ v.n }}</b></a>{% endfor %}</nav>
+  </div>
+  <div class="mbox">
+    <div class="mbox-map">
+      <div class="map uz-map" data-uz-map data-style="{{ asset('map/style.json') }}" data-tiles="{{ asset('map/pardubice.pmtiles') }}" data-inline="uz-fc" role="region" aria-label="Mapa obvodu s uzavírkami a omezeními dopravy; stejné údaje jsou v seznamu"></div>
+      <script type="application/json" id="uz-fc">{{ fc|tojson }}</script>
+    </div>
+    <aside class="mbox-col" aria-labelledby="uz-list-h">
+      <div class="mbox-h"><h3 id="uz-list-h">Kde a do kdy</h3><p>{% if rows %}{{ rows|length }} {{ cl_plural(rows|length, 'uzavírka', 'uzavírky', 'uzavírek') }}, {{ 'nejdřív končící nahoře' if views[0].on else 'nejbližší nahoře' }}{% else %}{{ 'teď v obvodu žádná uzavírka neplatí' if views[0].on else 'žádná další uzavírka není ohlášená' }}{% endif %}</p></div>
+      {% if rows %}
+      <ol class="pd-rows ul-rows mbox-rows uz-rows">
+        {% for r in rows %}<li data-uz-key="{{ r.id }}"><a href="#uz-{{ r.id }}"><span class="pd-rd">{{ r.date }}</span><span class="pd-rt"><b>{{ r.place }}</b><span>{{ r.what }}</span></span><span class="{{ 'st-no' if r.closed and r.now else '' }}">{{ r.status }}</span></a></li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </aside>
+  </div>
+  <p class="cl-lg" aria-label="Legenda mapy">
+    <span><i class="cl-lg-7"></i>uzavřeno</span>
+    <span><i></i>omezení</span>
+    <span><i class="cl-lg-later"></i>chystá se</span>
+    <span><i class="cl-lg-ap"></i>poloha přibližná</span>
+  </p>
+  <p class="cl-cap">Úsek na mapě jsme podle údajů NDIC umístili na ulici sami, čárkovaně jen přibližně. Platí vždy text uzavírky níže.</p>
+</section>
+
+{% if rows %}
+<section class="uz-all" aria-labelledby="uz-all-h">
+  <h2 id="uz-all-h">Podrobnosti</h2>
+  <ol class="uz-list">
+    {% for r in rows %}
+    <li id="uz-{{ r.id }}">
+      <h3>{{ r.place }}</h3>
+      <p class="uz-what">{{ r.what }}<span>{{ r.range }}</span></p>
+      <blockquote>{{ r.text }}</blockquote>
+      <p class="uz-src">{{ attribution }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+{% call source(checked) %}Dopravní informace přebíráme z <a href="https://dopravniinfo.gov.cz">Národního dopravního informačního centra</a> (ŘSD) každých 10 minut podle jeho <a href="{{ terms }}">podmínek použití</a>. Text každé uzavírky je převzatý beze změny, umístění na mapě a krátký popis jsme doplnili sami a ŘSD za ně neodpovídá. Jako data: <a href="/api/v1/uzavirky?obvod={{ obvod.id }}">GeoJSON</a>.{% endcall %}
+{% endblock %}
+{% block scripts %}<script src="{{ asset('map/maplibre-gl.js') }}" defer></script><script src="{{ asset('map/pmtiles.js') }}" defer></script><script src="{{ asset('petkamap.js') }}" defer></script><script src="{{ asset('uzavirky.js') }}" defer></script>{% endblock %}

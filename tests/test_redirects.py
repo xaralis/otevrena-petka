@@ -85,7 +85,7 @@ def test_area_goes_to_its_first_page(area, first):
     assert first == {g.path: g for g in nav.GROUPS}[area.rstrip("/")].href
 
 
-@pytest.mark.parametrize("old", ["/smlouvy", "/uzavirky", "/ankety", "/rozpocet"])
+@pytest.mark.parametrize("old", ["/smlouvy", "/ankety", "/rozpocet"])
 def test_planned_pages_follow(old):
     r = c.get(old, follow_redirects=True)
     assert r.status_code == 200 and "ve výstavbě" in r.text and str(r.url).endswith(nav.moved(old))

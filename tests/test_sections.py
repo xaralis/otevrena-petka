@@ -14,7 +14,8 @@ WITH_CODE = [s for s in REGISTRY if s.routers or s.mcp or s.commands]
 
 
 def test_registry():
-    assert [s.slug for s in SECTIONS] == ["uredni-deska", "usneseni", "rozpocet", "smlouvy", "uzavirky"]
+    assert [s.slug for s in SECTIONS] == ["uredni-deska", "usneseni", "rozpocet", "smlouvy"]
+    assert BY_SLUG["uzavirky"].status == "live" and not BY_SLUG["uzavirky"].listed      # in the header only (petka.nav)
     assert "ankety" in BY_SLUG and not BY_SLUG["ankety"].listed
     assert BY_SLUG["rozpocet"].status == "planned" and BY_SLUG["rozpocet"].routers   # preview mounted
     assert "podnety" in BY_SLUG and not BY_SLUG["podnety"].listed

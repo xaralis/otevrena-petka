@@ -33,20 +33,23 @@ def test_outside_the_areas(path):
 
 def test_planned_pages_and_where_an_area_links():
     soon = {i.label for g in nav.GROUPS for i in g.items if i.soon}
-    assert soon == {"Rozpočet", "Smlouvy", "Uzavírky", "Ankety"}
+    assert soon == {"Rozpočet", "Smlouvy", "Ankety"}
     by = {g.label: g for g in nav.GROUPS}
     assert by["Radnice"].href == "/radnice/uredni-deska"
     assert by["Finance"].href == "/finance/rozpocet"            # nothing live yet: the first page
     assert by["Veřejný prostor"].href == "/verejny-prostor/ulice"
-    assert nav.SOON == {"/finance/rozpocet", "/finance/smlouvy", "/verejny-prostor/uzavirky", "/zapojte-se/ankety"}
+    assert nav.SOON == {"/finance/rozpocet", "/finance/smlouvy", "/zapojte-se/ankety"}
 
 
-def test_header_rows_and_phone_menu():
+def test_header_rows_and_phone_menu(monkeypatch):
+    from petka.uzavirky import queries as uq
+    monkeypatch.setattr(uq, "rows", lambda where, now: [])          # no database needed
+    monkeypatch.setattr(uq, "checked", lambda: None)
     c = TestClient(app)
-    html = c.get("/verejny-prostor/uzavirky").text      # a page of the area without a database (planned)
+    html = c.get("/verejny-prostor/uzavirky").text
     assert '<a href="/verejny-prostor/ulice" aria-current="true">Veřejný prostor</a>' in html
     assert 'aria-label="Sekce v oblasti Veřejný prostor"' in html
-    assert '<a href="/verejny-prostor/uzavirky" class="soon" aria-current="page"><span>Uzavírky</span><span class="sr"> (připravujeme)</span></a>' in html
+    assert '<a href="/verejny-prostor/uzavirky" class="" aria-current="page"><span>Uzavírky</span></a>' in html
     assert 'id="menu"' in html and 'href="#menu" role="button" aria-expanded="false"' in html
     assert "<b>Rozpočet<small>připravujeme</small></b>" in html
     head = html.split("</header>")[0]
@@ -54,7 +57,7 @@ def test_header_rows_and_phone_menu():
     assert head.index(">Můj přehled<") < head.index(">Radnice<")      # first in the top row
 
 
-@pytest.mark.parametrize("path", ["/verejny-prostor/uzavirky", "/zapojte-se/ankety", "/finance/smlouvy",
+@pytest.mark.parametrize("path", ["/zapojte-se/ankety", "/finance/smlouvy",
                                   "/finance/rozpocet"])
 def test_planned_items_have_a_page(path):
     r = TestClient(app).get(path)
@@ -66,7 +69,7 @@ def test_planned_pages_last_in_each_area():
         soon = [i.soon for i in g.items]
         assert soon == sorted(soon), g.label
     vp = next(g for g in nav.GROUPS if g.label == "Veřejný prostor")
-    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Podněty", "Uzavírky"]
+    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Uzavírky", "Podněty"]
 
 
 # --- the one page template: band, tabs, „Odkud to víme“ ----------------------------------------

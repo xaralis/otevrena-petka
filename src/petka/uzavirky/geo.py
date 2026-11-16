@@ -3,8 +3,8 @@ share in each obvod. Pure functions over the town's streets and obvody (`Town`),
 without a database; `town` reads them from the ruian_cache table the ulice job fills.
 
 NDIC gives only the stretch's two ends (S-JTSK points on the Global Network, which we don't
-have). Both ends lying on one street of the town (within SNAP m), the stretch is that street
-between them; otherwise a straight line between them, or the point itself.
+have). Both ends lying on one street of the town (one within SNAP m, the other within SNAP_END),
+the stretch is that street between them; otherwise a straight line between them, or the point itself.
 """
 
 from dataclasses import dataclass
@@ -16,6 +16,8 @@ from shapely.ops import linemerge, substring, unary_union
 from ..cisteni.geocode import to_m, to_wgs
 
 SNAP = 25           # m: an end this close to a street lies on it
+SNAP_END = 40       # m: the other end may be this far: a stretch ending at a crossing has its point
+                    # in the crossing's middle, and RÚIAN's line stops short of it (Wolkerova at Sokolovská: 28 m)
 MIN_STRETCH = 5     # m: shorter than this on the street is a point, not a stretch
 NEAR_TOWN = 50      # m: a record this close to the town's border is still the town's
 
@@ -54,7 +56,7 @@ def place(points: list[tuple[float, float]], town: Town) -> tuple[dict | None, s
     for name, geom in town.streets:
         for line in _lines(geom):
             da, db = line.distance(a), line.distance(b)
-            if da <= SNAP and db <= SNAP and (best is None or da + db < best[0]):
+            if max(da, db) <= SNAP_END and min(da, db) <= SNAP and (best is None or da + db < best[0]):
                 best = (da + db, name, line)
     if best:
         _, name, line = best
