@@ -186,3 +186,7 @@ def test_only_push_services_are_endpoints():
                "https://a@fcm.googleapis.com/x", "https://fcm.googleapis.com.evil.cz/x", "https://evilfcm.googleapis.com/x",
                "https://[::1]/x", "https://fcm.googleapis.com:99999/x"):
         assert not push.allowed(ep), ep
+
+
+def test_share_title_names_the_portal(page):
+    assert '<meta property="og:title" content="Můj přehled – Otevřená Pětka">' in get("/muj-prehled").text

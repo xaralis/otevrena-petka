@@ -15,7 +15,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ SITE_NAME }}">
 <meta property="og:locale" content="cs_CZ">
-<meta property="og:title" content="{{ self.title()|trim }}">
+{%- set page_title = self.title()|trim %}
+<meta property="og:title" content="{{ page_title if page_title == SITE_NAME else page_title ~ ' – ' ~ SITE_NAME }}">
 <meta property="og:description" content="{{ desc|trim }}">
 <meta property="og:url" content="{{ PUBLIC_URL }}{{ request.url.path }}">
 <meta property="og:image" content="{{ PUBLIC_URL }}{{ '/static/icons/og.png' if error_page else '/og' ~ (request.url.path if request.url.path != '/' else '/index') ~ '.png' }}">
