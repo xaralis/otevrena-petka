@@ -133,6 +133,7 @@ def fake(monkeypatch):
     from petka.uzavirky import web
     monkeypatch.setattr(uq, "rows", lambda where, now: [r for r in ROWS if where.matches(uq.obvody.share_ids(r["obvody"], uq.MIN_SHARE))])
     monkeypatch.setattr(uq, "checked", lambda: AT)
+    monkeypatch.setattr(uq, "version", lambda now: AT.isoformat())
     monkeypatch.setattr(web, "_now", lambda: AT)
 
 
@@ -152,3 +153,24 @@ def test_api(fake):
     assert [f["properties"]["place"] for f in d["features"]] == ["Silnice II/355 (ulice Dašická)"]
     assert d["features"][0]["properties"]["now"] is False
     assert len(TestClient(app).get("/api/v1/uzavirky").json()["features"]) == 2
+
+
+def test_api_etag_and_304(fake, monkeypatch):
+    """A weak ETag of the data's version and the obvody; If-None-Match with it gives 304 until
+    a changed snapshot is stored or a closure starts or ends."""
+    state = {"version": "v1"}
+    monkeypatch.setattr(uq, "version", lambda now: state["version"])
+
+    def ask(tag=None, **params):
+        return TestClient(app).get("/api/v1/uzavirky", params=params, headers={"if-none-match": tag} if tag else {})
+
+    r = ask()
+    tag = r.headers["etag"]
+    assert r.status_code == 200 and tag.startswith('W/"') and r.headers["cache-control"] == "public, max-age=300"
+    r = ask(tag)
+    assert r.status_code == 304 and r.headers["etag"] == tag and not r.content
+    assert ask(tag.removeprefix("W/")).status_code == 304
+    assert ask(tag, obvod="mo5").status_code == 200                 # another obvod, another answer
+    assert ask(obvod="mo5").headers["etag"] == ask(obvod=" MO5 ").headers["etag"] != tag
+    state["version"] = "v2"                                          # new data or a boundary passed
+    assert ask(tag).status_code == 200

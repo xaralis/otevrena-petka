@@ -2,7 +2,8 @@
 list, then each with NDIC's own text) and the API /api/v1/uzavirky (the town's, `?obvod=`).
 
 Both carry what ŘSD's terms ask (petka.uzavirky.queries): NDIC's text unchanged with the
-attribution sentence, our placing said to be ours, and the terms' link.
+attribution sentence, our placing said to be ours, and the terms' link. The API sends a weak ETag of the data's version (queries.version) and
+the obvody (petka.web.etag); If-None-Match with it gives 304.
 """
 
 import datetime as dt
@@ -12,6 +13,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 
 from ..obvody import ObvodFilter, ObvodParam
+from ..web import etag
 from ..web.render import tpl
 from . import queries as q
 
@@ -86,8 +88,11 @@ def overview(request: Request, kdy: str = "aktualni"):
         "checked": (c.astimezone(TZ).date() if (c := q.checked()) else None)})
 
 
+API_CACHE = "public, max-age=300"
+
+
 @api.get("")
-def closures(obvod: ObvodParam):
+def closures(request: Request, obvod: ObvodParam):
     """Uzavírky a dopravní omezení v Pardubicích (Národní dopravní informační centrum, ŘSD) jako
     GeoJSON: jedna uzavírka = jeden feature, platné teď i ohlášené dopředu. Celé město, jen některé
     obvody s `?obvod=mo5` (víc oddělte čárkou).
@@ -95,7 +100,13 @@ def closures(obvod: ObvodParam):
     `text` je text NDIC beze změny; `place`, `what` a poloha jsou odvozené (`placed`: street =
     úsek podle ulice, straight = spojnice konců, point = bod). `now`: platí už teď. `obvody`:
     obvody, kterými uzavírka vede (aspoň 10 % délky). Kolekce nese `attribution` a `terms`:
-    kdo data použije dál, řídí se podmínkami ŘSD. Aktualizace každých 10 minut."""
+    kdo data použije dál, řídí se podmínkami ŘSD. Aktualizace každých 10 minut.
+    Odpověď má ETag; s `If-None-Match` vrátí 304, dokud se uzavírky nezmění nebo nějaká
+    nezačne či neskončí."""
     at = _now()
+    tag = etag.weak(q.version(at), ",".join(obvod.ids))
+    headers = {"ETag": tag, "Cache-Control": API_CACHE}
+    if etag.fresh(request, tag):
+        return etag.not_modified(headers)
     return JSONResponse(features(q.closures(q.rows(obvod, at), at), at), media_type="application/geo+json",
-                        headers={"Cache-Control": "public, max-age=300"})
+                        headers=headers)

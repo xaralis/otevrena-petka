@@ -125,3 +125,15 @@ def checked() -> dt.datetime | None:
     with db.pool().connection() as conn:
         r = conn.execute("SELECT max(checked_at) AS at FROM traffic_snapshots").fetchone()
     return r["at"] if r else None
+
+
+def version(now: dt.datetime) -> str:
+    """The API's answer's version for its ETag: when the job last stored a changed snapshot
+    (a run that found the same snapshot changes nothing) and the last start or end of a live
+    record already passed at `now` (`now` of a closure and which records are still valid move
+    with those moments, not with the clock)."""
+    with db.pool().connection() as conn:
+        r = conn.execute("""SELECT (SELECT max(checked_at) FROM traffic_snapshots WHERE changed) AS stored,
+                                   (SELECT max(t) FROM traffic_records, LATERAL (VALUES (starts_at), (ends_at)) b(t)
+                                    WHERE gone_at IS NULL AND t <= %s) AS passed""", [now]).fetchone()
+    return "|".join("" if v is None else v.isoformat() for v in (r["stored"], r["passed"]))
