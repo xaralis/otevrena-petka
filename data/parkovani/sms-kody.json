@@ -1,0 +1,621 @@
+{
+ "source": "DPMP: SMS kódy oblastí v jednotlivých lokalitách, platné od 1. 10. 2025 (PDF), přepsané ručně",
+ "url": "https://www.dpmp.cz/galerie/tinymce/parkovani/sms_kody_oblasti_v_jednotlivych_lokalitach_2510_02.pdf",
+ "valid_from": "2025-10-01",
+ "checked": "2026-11-06",
+ "note": "number = číslo oblasti, jak ho ChytřejšíParking uvádí v configParking.zoneNumber; sms = kód do SMS (PU <kód> <SPZ> <minuty> na 90206). Ověřeno proti PDF 6. 11. 2026; zda kódy platí i po změně nařízení 2/2026 a 3/2026, DPMP nepotvrdil.",
+ "codes": [
+  {
+   "number": "1",
+   "zone": "A",
+   "name": "Pernštýnske náměstí",
+   "sms": "1"
+  },
+  {
+   "number": "2",
+   "zone": "A",
+   "name": "nám. Republiky",
+   "sms": "2"
+  },
+  {
+   "number": "3",
+   "zone": "A",
+   "name": "Nábřeží Václava Havla I.",
+   "sms": "3"
+  },
+  {
+   "number": "4",
+   "zone": "A",
+   "name": "Nábřeží Václava Havla II.",
+   "sms": "3"
+  },
+  {
+   "number": "5",
+   "zone": "A",
+   "name": "U Stadionu I.",
+   "sms": "47"
+  },
+  {
+   "number": "6",
+   "zone": "A",
+   "name": "U Stadionu II.",
+   "sms": "47"
+  },
+  {
+   "number": "10",
+   "zone": "A",
+   "name": "Tyršovo nábřeží I.",
+   "sms": "8"
+  },
+  {
+   "number": "11",
+   "zone": "A",
+   "name": "Tyršovo nábřeží II.",
+   "sms": "8"
+  },
+  {
+   "number": "12",
+   "zone": "A",
+   "name": "Sladkovského VI.",
+   "sms": "21"
+  },
+  {
+   "number": "34",
+   "zone": "A",
+   "name": "Pernerova I.",
+   "sms": "18"
+  },
+  {
+   "number": "35",
+   "zone": "A",
+   "name": "Pernerova II.",
+   "sms": "18"
+  },
+  {
+   "number": "36",
+   "zone": "A",
+   "name": "Sukova třída I.",
+   "sms": "19"
+  },
+  {
+   "number": "37",
+   "zone": "A",
+   "name": "Sukova třída II.",
+   "sms": "19"
+  },
+  {
+   "number": "38",
+   "zone": "A",
+   "name": "Na Hrádku",
+   "sms": "20"
+  },
+  {
+   "number": "39",
+   "zone": "A",
+   "name": "Sladkovského I.",
+   "sms": "21"
+  },
+  {
+   "number": "40",
+   "zone": "A",
+   "name": "Sladkovského II.",
+   "sms": "22"
+  },
+  {
+   "number": "41",
+   "zone": "A",
+   "name": "Sladkovského III.",
+   "sms": "22"
+  },
+  {
+   "number": "42",
+   "zone": "A",
+   "name": "Sladkovského IV.",
+   "sms": "23"
+  },
+  {
+   "number": "43",
+   "zone": "A",
+   "name": "Sladkovského V.",
+   "sms": "35"
+  },
+  {
+   "number": "44",
+   "zone": "A",
+   "name": "Smilova II.",
+   "sms": "24"
+  },
+  {
+   "number": "45",
+   "zone": "A",
+   "name": "Smilova III.",
+   "sms": "24"
+  },
+  {
+   "number": "46",
+   "zone": "A",
+   "name": "Smilova IV.",
+   "sms": "25"
+  },
+  {
+   "number": "47",
+   "zone": "A",
+   "name": "Smilova V.",
+   "sms": "25"
+  },
+  {
+   "number": "48",
+   "zone": "A",
+   "name": "Bratranců Veverkových I.",
+   "sms": "26"
+  },
+  {
+   "number": "49",
+   "zone": "A",
+   "name": "Bratranců Veverkových II.",
+   "sms": "26"
+  },
+  {
+   "number": "50",
+   "zone": "A",
+   "name": "Bratranců Veverkových III.",
+   "sms": "26"
+  },
+  {
+   "number": "51",
+   "zone": "A",
+   "name": "Hronovická I.",
+   "sms": "27"
+  },
+  {
+   "number": "52",
+   "zone": "A",
+   "name": "Hronovická II.",
+   "sms": "27"
+  },
+  {
+   "number": "53",
+   "zone": "A",
+   "name": "Za Pasáží",
+   "sms": "28"
+  },
+  {
+   "number": "54",
+   "zone": "A",
+   "name": "Jindřišská I.",
+   "sms": "28"
+  },
+  {
+   "number": "55",
+   "zone": "A",
+   "name": "Smetanovo náměstí",
+   "sms": "28"
+  },
+  {
+   "number": "56",
+   "zone": "A",
+   "name": "Svatého Bartoloměje",
+   "sms": "29"
+  },
+  {
+   "number": "57",
+   "zone": "A",
+   "name": "Wernerovo nábřeží",
+   "sms": "30"
+  },
+  {
+   "number": "58",
+   "zone": "A",
+   "name": "U soudu",
+   "sms": "31"
+  },
+  {
+   "number": "59",
+   "zone": "A",
+   "name": "Vrchlického nábřeží",
+   "sms": "31"
+  },
+  {
+   "number": "60",
+   "zone": "A",
+   "name": "Na Třísle",
+   "sms": "32"
+  },
+  {
+   "number": "61",
+   "zone": "A",
+   "name": "Bělobranské náměstí",
+   "sms": "33"
+  },
+  {
+   "number": "62",
+   "zone": "A",
+   "name": "Labská",
+   "sms": "34"
+  },
+  {
+   "number": "63",
+   "zone": "A",
+   "name": "Arnošta z Pardubic IV.",
+   "sms": "35"
+  },
+  {
+   "number": "64",
+   "zone": "A",
+   "name": "Arnošta z Pardubic III.",
+   "sms": "35"
+  },
+  {
+   "number": "65",
+   "zone": "A",
+   "name": "Arnošta z Pardubic II.",
+   "sms": "35"
+  },
+  {
+   "number": "66",
+   "zone": "A",
+   "name": "Arnošta z Pardubic I.",
+   "sms": "36"
+  },
+  {
+   "number": "67",
+   "zone": "A",
+   "name": "Jindřišská II.",
+   "sms": "37"
+  },
+  {
+   "number": "68",
+   "zone": "A",
+   "name": "Štolbova I.",
+   "sms": "38"
+  },
+  {
+   "number": "69",
+   "zone": "A",
+   "name": "Štolbova II.",
+   "sms": "38"
+  },
+  {
+   "number": "70",
+   "zone": "A",
+   "name": "Jiráskova III.",
+   "sms": "39"
+  },
+  {
+   "number": "71",
+   "zone": "A",
+   "name": "Jiráskova II.",
+   "sms": "40"
+  },
+  {
+   "number": "72",
+   "zone": "A",
+   "name": "Jiráskova I.",
+   "sms": "38"
+  },
+  {
+   "number": "73",
+   "zone": "A",
+   "name": "Sokolovna",
+   "sms": "41"
+  },
+  {
+   "number": "74",
+   "zone": "A",
+   "name": "U Husova sboru",
+   "sms": "41"
+  },
+  {
+   "number": "9",
+   "zone": "B",
+   "name": "U Mlýnů",
+   "sms": "7"
+  },
+  {
+   "number": "75",
+   "zone": "B",
+   "name": "Polská I.",
+   "sms": "42"
+  },
+  {
+   "number": "76",
+   "zone": "B",
+   "name": "Polská II.",
+   "sms": "43"
+  },
+  {
+   "number": "77",
+   "zone": "B",
+   "name": "U Kostelíčka",
+   "sms": "43"
+  },
+  {
+   "number": "78",
+   "zone": "B",
+   "name": "Bulharská I.",
+   "sms": "43"
+  },
+  {
+   "number": "79",
+   "zone": "B",
+   "name": "Bulharská II.",
+   "sms": "43"
+  },
+  {
+   "number": "80",
+   "zone": "B",
+   "name": "Bulharská III.",
+   "sms": "44"
+  },
+  {
+   "number": "81",
+   "zone": "B",
+   "name": "Štrossova",
+   "sms": "45"
+  },
+  {
+   "number": "82",
+   "zone": "B",
+   "name": "Čechovo nábřeží",
+   "sms": "42"
+  },
+  {
+   "number": "83",
+   "zone": "B",
+   "name": "Na Vrtálně",
+   "sms": "46"
+  },
+  {
+   "number": "84",
+   "zone": "B",
+   "name": "Mezi Mosty",
+   "sms": "46"
+  },
+  {
+   "number": "100",
+   "zone": "B",
+   "name": "Dašická",
+   "sms": "63"
+  },
+  {
+   "number": "101",
+   "zone": "B",
+   "name": "Na Okrouhlíku I",
+   "sms": "51"
+  },
+  {
+   "number": "102",
+   "zone": "B",
+   "name": "Ke Kamenci",
+   "sms": "52"
+  },
+  {
+   "number": "103",
+   "zone": "B",
+   "name": "Kotkova",
+   "sms": "53"
+  },
+  {
+   "number": "104",
+   "zone": "B",
+   "name": "Spořilov",
+   "sms": "54"
+  },
+  {
+   "number": "105",
+   "zone": "B",
+   "name": "Sakařova I",
+   "sms": "66"
+  },
+  {
+   "number": "106",
+   "zone": "B",
+   "name": "Wintrova I",
+   "sms": "55"
+  },
+  {
+   "number": "107",
+   "zone": "B",
+   "name": "Wintrova II",
+   "sms": "56"
+  },
+  {
+   "number": "108",
+   "zone": "B",
+   "name": "Holubova",
+   "sms": "57"
+  },
+  {
+   "number": "109",
+   "zone": "B",
+   "name": "JUDr. Krpaty",
+   "sms": "58"
+  },
+  {
+   "number": "110",
+   "zone": "B",
+   "name": "Husova",
+   "sms": "59"
+  },
+  {
+   "number": "111",
+   "zone": "B",
+   "name": "Bezdíčkova",
+   "sms": "60"
+  },
+  {
+   "number": "112",
+   "zone": "B",
+   "name": "Na Drážce I",
+   "sms": "61"
+  },
+  {
+   "number": "113",
+   "zone": "B",
+   "name": "Sakařova II",
+   "sms": "62"
+  },
+  {
+   "number": "114",
+   "zone": "B",
+   "name": "Na Okrouhlíku II",
+   "sms": "51"
+  },
+  {
+   "number": "115",
+   "zone": "B",
+   "name": "Na Drážce II",
+   "sms": "64"
+  },
+  {
+   "number": "116",
+   "zone": "B",
+   "name": "Na Drážce III",
+   "sms": "65"
+  },
+  {
+   "number": "7",
+   "zone": "C",
+   "name": "nám. Jana Pernera",
+   "sms": "5"
+  },
+  {
+   "number": "13",
+   "zone": "C",
+   "name": "U pivovaru I.",
+   "sms": "11"
+  },
+  {
+   "number": "14",
+   "zone": "C",
+   "name": "Palackého",
+   "sms": "12"
+  },
+  {
+   "number": "15",
+   "zone": "C",
+   "name": "U Marka I.",
+   "sms": "13"
+  },
+  {
+   "number": "16",
+   "zone": "C",
+   "name": "Macanova",
+   "sms": "14"
+  },
+  {
+   "number": "17",
+   "zone": "C",
+   "name": "U Marka II.",
+   "sms": "14"
+  },
+  {
+   "number": "18",
+   "zone": "C",
+   "name": "Nerudova",
+   "sms": "14"
+  },
+  {
+   "number": "19",
+   "zone": "C",
+   "name": "Havlíčkova I.",
+   "sms": "15"
+  },
+  {
+   "number": "20",
+   "zone": "C",
+   "name": "Havlíčkova II.",
+   "sms": "15"
+  },
+  {
+   "number": "21",
+   "zone": "C",
+   "name": "Havlíčkova III.",
+   "sms": "15"
+  },
+  {
+   "number": "22",
+   "zone": "C",
+   "name": "Univerzita",
+   "sms": "15"
+  },
+  {
+   "number": "23",
+   "zone": "C",
+   "name": "Štefánikova I.",
+   "sms": "15"
+  },
+  {
+   "number": "24",
+   "zone": "C",
+   "name": "Štefánikova II.",
+   "sms": "15"
+  },
+  {
+   "number": "25",
+   "zone": "C",
+   "name": "Smilova I.",
+   "sms": "15"
+  },
+  {
+   "number": "26",
+   "zone": "C",
+   "name": "K Polabinám I.",
+   "sms": "16"
+  },
+  {
+   "number": "27",
+   "zone": "C",
+   "name": "K Polabinám II.",
+   "sms": "16"
+  },
+  {
+   "number": "28",
+   "zone": "C",
+   "name": "Nábřeží Závodu míru I.",
+   "sms": "16"
+  },
+  {
+   "number": "29",
+   "zone": "C",
+   "name": "Nábřeží Závodu míru II.",
+   "sms": "17"
+  },
+  {
+   "number": "30",
+   "zone": "C",
+   "name": "Nábřeží Závodu míru III.",
+   "sms": "17"
+  },
+  {
+   "number": "31",
+   "zone": "C",
+   "name": "Nábřeží Závodu míru IV.",
+   "sms": "17"
+  },
+  {
+   "number": "32",
+   "zone": "C",
+   "name": "Nábřeží Závodu míru V.",
+   "sms": "17"
+  },
+  {
+   "number": "33",
+   "zone": "C",
+   "name": "Nábřeží Závodu míru VI.",
+   "sms": "17"
+  },
+  {
+   "number": "85",
+   "zone": "C",
+   "name": "Hlaváčova",
+   "sms": "48"
+  },
+  {
+   "number": "8",
+   "zone": "",
+   "name": "Zborovské náměstí",
+   "sms": "6"
+  }
+ ]
+}

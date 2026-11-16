@@ -1,0 +1,207 @@
+{
+ "source": "Nařízení statutárního města Pardubice 3/2026, článek 2 (ceník krátkodobého parkování po lokalitách)",
+ "url": "https://pardubice.eu/parkovani",
+ "valid_from": "2026-06-01",
+ "checked": "2026-11-07",
+ "note": "Klíč je lokalita (A-1 … C-3) nebo návštěvnické místo (L.1 … L.8). Ceny v Kč: halfHour, firstHour, nextHour, dayCap (strop za den), nebo wholeDay (za celý den). hours = kdy se platí.",
+ "tariffs": {
+  "L.1": {
+   "hours": [
+    {
+     "day": "pondělí–neděle",
+     "time": "7:00–20:00"
+    }
+   ],
+   "halfHour": 25,
+   "firstHour": 50,
+   "nextHour": 50
+  },
+  "L.2": {
+   "hours": [
+    {
+     "day": "pondělí–neděle",
+     "time": "7:00–22:00"
+    }
+   ],
+   "halfHour": 20,
+   "firstHour": 40,
+   "nextHour": 40
+  },
+  "L.3": {
+   "hours": [
+    {
+     "day": "pondělí–neděle",
+     "time": "6:00–22:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 20
+  },
+  "L.4": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "7:00–18:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 20
+  },
+  "L.5": {
+   "hours": [
+    {
+     "day": "pondělí–neděle",
+     "time": "7:00–22:00"
+    }
+   ],
+   "halfHour": 40,
+   "firstHour": 80,
+   "nextHour": 80
+  },
+  "L.6": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "7:00–18:00"
+    }
+   ],
+   "wholeDay": 5
+  },
+  "L.7": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "7:00–18:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 20,
+   "dayCap": 100
+  },
+  "L.8": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "7:00–18:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 20,
+   "dayCap": 100
+  },
+  "A-1": {
+   "hours": [
+    {
+     "day": "pondělí–neděle",
+     "time": "6:00–22:00"
+    }
+   ],
+   "halfHour": 20,
+   "firstHour": 40,
+   "nextHour": 40
+  },
+  "A-2": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "6:00–22:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 20,
+   "firstHour": 40,
+   "nextHour": 40
+  },
+  "B-1": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "6:00–22:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 40
+  },
+  "B-2": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "6:00–22:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 20,
+   "dayCap": 80
+  },
+  "C-1": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "6:00–22:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 40
+  },
+  "C-2": {
+   "hours": [
+    {
+     "day": "pondělí–neděle",
+     "time": "6:00–22:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 40
+  },
+  "C-3": {
+   "hours": [
+    {
+     "day": "pondělí–pátek",
+     "time": "6:00–22:00"
+    },
+    {
+     "day": "sobota",
+     "time": "7:00–12:00"
+    }
+   ],
+   "halfHour": 10,
+   "firstHour": 20,
+   "nextHour": 40
+  }
+ }
+}
