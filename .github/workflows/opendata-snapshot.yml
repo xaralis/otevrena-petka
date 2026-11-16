@@ -17,16 +17,22 @@ jobs:
       - name: Download extracted results and texts
         run: |
           set -euo pipefail
-          for f in $(curl -fsS "$BASE/usneseni/data/extracted.txt"); do
-            curl -fsS -o "data/usneseni/extracted/$f" "$BASE/usneseni/data/extracted/$f"
+          for f in $(curl -fsSL "$BASE/radnice/usneseni/data/extracted.txt"); do
+            curl -fsSL -o "data/usneseni/extracted/$f" "$BASE/radnice/usneseni/data/extracted/$f"
           done
-          for f in $(curl -fsS "$BASE/usneseni/data/texts.txt"); do
-            curl -fsS -o "data/usneseni/text/$f" "$BASE/usneseni/data/text/$f"
+          for f in $(curl -fsSL "$BASE/radnice/usneseni/data/texts.txt"); do
+            curl -fsSL -o "data/usneseni/text/$f" "$BASE/radnice/usneseni/data/text/$f"
           done
-          curl -fsS -o data/usneseni/sources.json "$BASE/usneseni/data/sources.json"
-          curl -fsS -o data/usneseni/embeddings.jsonl "$BASE/usneseni/data/embeddings.jsonl"
-          curl -fsS -o data/usneseni/geo.json "$BASE/usneseni/data/geo.json"
-          curl -fsS -o data/usneseni/geo_cache.json "$BASE/usneseni/data/geo_cache.json"
+          curl -fsSL -o data/usneseni/sources.json "$BASE/radnice/usneseni/data/sources.json"
+          curl -fsSL -o data/usneseni/embeddings.jsonl "$BASE/radnice/usneseni/data/embeddings.jsonl"
+          curl -fsSL -o data/usneseni/geo.json "$BASE/radnice/usneseni/data/geo.json"
+          curl -fsSL -o data/usneseni/geo_cache.json "$BASE/radnice/usneseni/data/geo_cache.json"
+      - name: Refuse empty files
+        run: |
+          # a moved URL once answered with an empty redirect and the snapshot emptied the data
+          for f in sources.json embeddings.jsonl geo.json geo_cache.json; do
+            [ -s "data/usneseni/$f" ] || { echo "data/usneseni/$f is empty"; exit 1; }
+          done
       - name: Commit
         run: |
           git config user.name "otevrena-petka bot"
