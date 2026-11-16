@@ -42,6 +42,35 @@ def _names(obvod: str) -> dict[str, str]:
 
 # --- the front page ---------------------------------------------------------------------------
 
+def _closures(obvod: str, today: dt.date) -> list[dict]:
+    """The obvod's closures from NDIC (petka.uzavirky) as the front page's traffic marks: those
+    going on and those starting within a week, each on the middle of its stretch, linked to its
+    place on the Uzavírky page. A database without them (a test, a new obvod) is no closures."""
+    from shapely.geometry import shape
+    from ..obvody import ObvodFilter
+    from ..uzavirky import queries as uzq
+    try:
+        now = dt.datetime.now(TZ)
+        cs = uzq.closures(uzq.rows(ObvodFilter.only(obvod), now), now)
+    except Exception:
+        return []
+    out = []
+    for c in cs:
+        if not c.geometry or (c.starts and c.starts.astimezone(TZ).date() > today + dt.timedelta(days=q.WEEK)):
+            continue
+        g = shape(c.geometry)
+        p = g.interpolate(0.5, normalized=True) if g.geom_type in ("LineString", "MultiLineString") else g.representative_point()
+        a = c.starts.astimezone(TZ).date() if c.starts else None
+        b = c.ends.astimezone(TZ).date() if c.ends else None
+        when = q.period(a, b) if a or b else ""
+        out.append({"id": f"uz{len(out)}", "nid": None, "href": f"/verejny-prostor/uzavirky#uz-{c.id}", "kind": "doprava",
+                    "traffic": True, "street": c.place, "what": c.what, "when": when,
+                    "label": f"Uzavírka: {c.place}, {c.what}" + (f", {when}" if when else ""),
+                    "box": q.short_until(a, b, today) if b else "", "lng": round(p.x, 6), "lat": round(p.y, 6), "date": a,
+                    "order": (bool(a and a > today), a if a and a > today else (b or dt.date.max))})
+    return out
+
+
 def home(request: Request):
     today = _today()
     obvod = request.state.obvod.id
@@ -50,6 +79,8 @@ def home(request: Request):
     its = cq.items(obvod, cq.year_start(today))
     week = q.week_cleanings(its, cq.geometries(obvod), today)
     marks = q.board_marks(q.place_notices(), every, today, [f["geometry"] for f in week["lines"]["features"]])
+    closures = _closures(obvod, today)
+    marks += closures
     traffic = sorted((m for m in marks if m["traffic"]), key=lambda m: m["order"])
 
     per = ps.period("12m", today)
@@ -63,13 +94,15 @@ def home(request: Request):
         "/radnice/uredni-deska": (q.thousands(dstats["posted_mo5"]), "oznámení visí"),
         "/verejny-prostor/blokove-cisteni": (q.thousands(len(its)), "termínů letos"),
         "/verejny-prostor/podnety": (q.thousands(s["n"]), "hlášení za rok"),
+        "/verejny-prostor/uzavirky": (str(n := sum(1 for m in closures if not m["order"][0])),
+                                      cw.plural(n, "uzavírka platí", "uzavírky platí", "uzavírek platí")),
     }
     g = {x.label: x for x in nav.GROUPS}
     areas = [("Radnice", g["Radnice"].items), ("Veřejný prostor", g["Veřejný prostor"].items),
              ("Finance a ankety", g["Finance"].items + g["Zapojte se"].items)]
     data = {"lines": week["lines"], "anchors": week["anchors"],
             "days": [{"keys": d["keys"], "sids": d["sids"]} for d in week["rows"]],
-            "marks": [{k: m[k] for k in ("id", "nid", "kind", "traffic", "street", "what", "when", "label", "lng", "lat")}
+            "marks": [{k: m.get(k) for k in ("id", "nid", "href", "kind", "traffic", "street", "what", "when", "label", "lng", "lat")}
                       for m in marks]}
     return tpl.TemplateResponse(request, "ulice/home.html", {
         "today": today, "names": names, "miss": request.query_params.get("ulice", "").strip()[:80],

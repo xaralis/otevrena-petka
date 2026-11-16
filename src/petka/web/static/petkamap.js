@@ -350,8 +350,9 @@ window.petkaMap = (function () {
   function marks(map, list, opts = {}) {
     const out = {}, NS = "http://www.w3.org/2000/svg";
     list.forEach((m, i) => {
-      const e = document.createElement(m.nid ? "a" : "span");
-      if (m.nid) e.href = "/radnice/uredni-deska/" + encodeURIComponent(m.nid);
+      const e = document.createElement(m.href || m.nid ? "a" : "span");
+      if (m.href) e.href = m.href;                  // a closure from NDIC: its place on the Uzavírky page
+      else if (m.nid) e.href = "/radnice/uredni-deska/" + encodeURIComponent(m.nid);
       e.className = "ak-mk" + (m.traffic ? " ak-mk-t" : "");
       e.tabIndex = 0;
       e.setAttribute("aria-label", m.label);

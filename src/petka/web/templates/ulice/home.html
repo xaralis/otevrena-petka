@@ -95,7 +95,7 @@
     <p class="cl-lg ak-lg" aria-label="Legenda mapy">
       {% if days %}<span><i class="ak-lg-cl"></i>blokové čištění tento týden</span>{% endif %}
       {% if akt.anchors|selectattr('area')|list %}<span><i class="cl-lg-area">{{ area_icon(11) }}</i>parkoviště nebo vnitroblok, čistí se celé</span>{% endif %}
-      {% if traffic %}<span><i class="ak-lg-mk ak-mk-t"></i>dopravní omezení, místo podle názvu ulice</span>{% endif %}
+      {% if traffic %}<span><i class="ak-lg-mk ak-mk-t"></i>dopravní omezení</span>{% endif %}
       {% if has_other %}<span><i class="ak-lg-mk"><svg width="13" height="13" aria-hidden="true"><use href="{{ asset('deska-ikony.svg') }}#stavby"/></svg></i>další oznámení z úřední desky, ikona podle druhu</span>{% endif %}
     </p>
     <div class="co ak-box ak-box-l">
@@ -107,7 +107,7 @@
     </div>
     <div class="co ak-box ak-box-r">
       <p class="ak-h">Dopravní omezení</p>
-      <p class="ak-sub">podle oznámení na úřední desce</p>
+      <p class="ak-sub">z NDIC a z úřední desky</p>
       {% if traffic %}<ol class="ak-list ak-list-r">
         {% for m in traffic %}<li tabindex="0" data-mark="{{ m.id }}" aria-label="{{ m.label }}"><span>{{ m.street }}</span><span class="ak-d">{{ m.box }}</span></li>
         {% endfor %}</ol>

@@ -308,6 +308,7 @@ def fixture(monkeypatch):
     monkeypatch.setattr(uq, "stats", lambda: {"resolutions": 1026, "meetings": 184, "first_date": D(2018, 1, 10)})
     monkeypatch.setattr(dq, "stats", lambda: {"posted_mo5": 75, "posted": 303})
     monkeypatch.setattr(web, "_now", lambda: NOW)
+    monkeypatch.setattr(web, "_closures", lambda obvod, today: [])      # NDIC's: tests/test_uzavirky.py
 
 
 def get(path, **kw):
@@ -321,8 +322,8 @@ def test_front_page(fixture):
     for s in ("Co se děje na&nbsp;Pětce?", "Příklad: Wolkerova, sídliště Dukla", "Podívejte se na svou ulici",
               'action="/verejny-prostor/ulice"', '<option value="Wolkerova">', '<h2 id="dash-h" class="dash-h">Aktuálně</h2>',
               "Blokové čištění tento týden", '<span class="ak-d">st 18.\u00a011.</span><span>Josefa Ressla, pravá strana</span>',
-              "Dopravní omezení", "podle oznámení na úřední desce", '<span>Lexova</span><span class="ak-d">do 20.\u00a011.</span>',
-              "dopravní omezení, místo podle názvu ulice", "další oznámení z úřední desky, ikona podle druhu",
+              "Dopravní omezení", "z NDIC a z úřední desky", '<span>Lexova</span><span class="ak-d">do 20.\u00a011.</span>',
+              "<i class=\"ak-lg-mk ak-mk-t\"></i>dopravní omezení</span>", "další oznámení z úřední desky, ikona podle druhu",
               "<b>1\u00a0026</b> usnesení", "<b>75</b> oznámení visí",
               "<b>3</b> termínů letos", "Kdo za tím stojí a proč", "Připraveno pro agenty", "hv-tag", "aktualne.js"):
         assert s in h, s
