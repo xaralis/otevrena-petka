@@ -134,7 +134,7 @@ def test_push_subscribe_and_deliver():
         if info["endpoint"] in gone:
             raise push.Gone
         sent.append((info["endpoint"], msg))
-    ep = f"https://push.example/{uuid.uuid4()}"
+    ep = f"https://fcm.googleapis.com/fcm/send/{uuid.uuid4()}"
     sub = {"endpoint": ep, "keys": {"p256dh": "k", "auth": "a"}}
     names = lambda obvod: {s.slug: s.name for s in STREETS}
     with db.connect() as conn, conn.transaction(force_rollback=True):
@@ -151,8 +151,12 @@ def test_push_subscribe_and_deliver():
             assert sent[-1][1]["title"] == "4 novinky v ulici Wolkerova"
             push.save(conn, sub, "mo5", [("Wolkerova", "wolkerova"), ("Lexova", "lexova")], ["podnety"], src, NOW)
             assert deliver()["messages"] == 0                    # a new street's past: not sent either
+            thief = {"endpoint": ep, "keys": {"p256dh": "x", "auth": "x"}}
+            assert not push.save(conn, thief, "mo5", [("Lexova", "lexova")], ["deska"], src, NOW)   # knows the endpoint only
+            assert conn.execute("SELECT streets FROM push_subscriptions WHERE endpoint = %s", (ep,)).fetchone()["streets"] == ["wolkerova", "lexova"]
+            assert not push.drop(conn, ep, "x") and not push.renew(conn, ep, "x", thief)
             new = {"endpoint": ep + "-2", "keys": {"p256dh": "k2", "auth": "a2"}}
-            assert push.renew(conn, ep, new)
+            assert push.renew(conn, ep, "a", new)
             gone.add(new["endpoint"])
             extra.append(rep(99, 1, ago(0), "Chodník"))
             assert deliver()["gone"] == 1
@@ -162,5 +166,16 @@ def test_push_subscribe_and_deliver():
 def test_subscribe_route_checks_input(page):
     c = TestClient(app)
     assert c.post("/muj-prehled/odber", json={"subscription": {"endpoint": "http://x", "keys": {}}, "ulice": ["wolkerova"]}).status_code == 400
-    ok = {"endpoint": "https://push.example/1", "keys": {"p256dh": "k", "auth": "a"}}
+    ok = {"endpoint": "https://fcm.googleapis.com/fcm/send/1", "keys": {"p256dh": "k", "auth": "a"}}
     assert c.post("/muj-prehled/odber", json={"subscription": ok, "ulice": ["neni"]}).status_code == 400
+
+
+def test_only_push_services_are_endpoints():
+    from petka.ulice import push
+    for ep in ("https://fcm.googleapis.com/fcm/send/abc", "https://updates.push.services.mozilla.com/wpush/v2/x",
+               "https://web.push.apple.com/QK", "https://wns2-par02p.notify.windows.com/w/?token=x"):
+        assert push.allowed(ep), ep
+    for ep in ("http://fcm.googleapis.com/x", "https://db.otevrena-petka.svc/x", "https://fcm.googleapis.com:8443/x",
+               "https://a@fcm.googleapis.com/x", "https://fcm.googleapis.com.evil.cz/x", "https://evilfcm.googleapis.com/x",
+               "https://[::1]/x", "https://fcm.googleapis.com:99999/x"):
+        assert not push.allowed(ep), ep

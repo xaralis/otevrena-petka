@@ -24,6 +24,6 @@ self.addEventListener("pushsubscriptionchange", (e) => {
     const old = e.oldSubscription, sub = e.newSubscription;
     if (!old || !sub) return;
     await fetch("/muj-prehled/odber/obnovit", { method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ old: old.endpoint, subscription: sub.toJSON() }) });
+      body: JSON.stringify({ old: old.endpoint, old_auth: old.toJSON().keys.auth, subscription: sub.toJSON() }) });
   })());
 });

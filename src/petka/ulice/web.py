@@ -302,7 +302,7 @@ def follow_preview(request: Request, ulice: list[str] = Query(default=[]), co: l
 def _subscription(body: dict) -> dict:
     sub = body.get("subscription") or {}
     keys = sub.get("keys") or {}
-    ok = (isinstance(sub.get("endpoint"), str) and sub["endpoint"].startswith("https://") and len(sub["endpoint"]) < 1000
+    ok = (isinstance(sub.get("endpoint"), str) and push.allowed(sub["endpoint"])
           and all(isinstance(keys.get(k), str) and 0 < len(keys[k]) < 200 for k in ("p256dh", "auth")))
     if not ok:
         raise HTTPException(400, "Neplatný odběr.")
@@ -324,18 +324,18 @@ def follow_push(request: Request, body: dict = Body(...)):
 
 @pages.post("/muj-prehled/odber/obnovit", include_in_schema=False)
 def renew_push(body: dict = Body(...)):
-    """The service worker's renewed subscription: {old, subscription}."""
+    """The service worker's renewed subscription: {old, old_auth, subscription}."""
     sub = _subscription(body)
     with db.pool().connection() as conn:
-        push.renew(conn, str(body.get("old") or ""), sub)
+        push.renew(conn, str(body.get("old") or ""), str(body.get("old_auth") or ""), sub)
     return {"ok": True}
 
 
 @pages.post("/muj-prehled/odber/zrusit", include_in_schema=False)
 def unfollow_push(body: dict = Body(...)):
-    """Turn them off: {endpoint}."""
+    """Turn them off: {endpoint, auth}."""
     with db.pool().connection() as conn:
-        push.drop(conn, str(body.get("endpoint") or ""))
+        push.drop(conn, str(body.get("endpoint") or ""), str(body.get("auth") or ""))
     return {"ok": True}
 
 

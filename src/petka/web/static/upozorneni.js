@@ -111,7 +111,7 @@
       btn.disabled = true;
       try {
         if (pushSub) {
-          await post("/muj-prehled/odber/zrusit", { endpoint: pushSub.endpoint });
+          await post("/muj-prehled/odber/zrusit", { endpoint: pushSub.endpoint, auth: pushSub.toJSON().keys.auth });
           await pushSub.unsubscribe();
           pushSub = null;
         } else if (await Notification.requestPermission() === "granted") {

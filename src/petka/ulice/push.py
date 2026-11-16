@@ -26,6 +26,25 @@ BURST = 3               # more new events than this at once: one message that su
 TTL = 24 * 3600         # a push service keeps an undelivered message this long (seconds)
 
 
+# The browsers' push services: a subscription's endpoint must be on one of them, so the job never
+# posts anywhere else (an endpoint is whatever a visitor sent us).
+SERVICES = ("fcm.googleapis.com", "updates.push.services.mozilla.com", "push.services.mozilla.com",
+            "web.push.apple.com", "push.apple.com", "notify.windows.com")
+
+
+def allowed(endpoint: str) -> bool:
+    """An https URL of a known push service: no user, no port, its host one of SERVICES or under one."""
+    from urllib.parse import urlsplit
+    try:
+        u = urlsplit(endpoint)
+        port = u.port
+    except ValueError:
+        return False
+    host = (u.hostname or "").rstrip(".").lower()
+    return (u.scheme == "https" and not u.username and not u.password and port is None and len(endpoint) < 1000
+            and any(host == s or host.endswith("." + s) for s in SERVICES))
+
+
 @dataclass(frozen=True)
 class Keys:
     public: str
@@ -41,25 +60,33 @@ def keys() -> Keys | None:
 
 
 def save(conn, sub: dict, obvod: str, streets: list[tuple[str, str]], kinds: list[str], src: feed.Sources,
-         now: dt.datetime) -> None:
+         now: dt.datetime) -> bool:
     """Store a subscription with its choice (a new one, or the same browser's new choice) and mark
-    what it could be sent now as sent."""
-    conn.execute("""INSERT INTO push_subscriptions (endpoint, p256dh, auth, obvod, streets, kinds)
+    what it could be sent now as sent. An existing one changes only for its own auth secret (which
+    only that browser knows): whoever learnt an endpoint cannot redirect or rewrite it."""
+    stored = conn.execute("""INSERT INTO push_subscriptions (endpoint, p256dh, auth, obvod, streets, kinds)
                     VALUES (%s, %s, %s, %s, %s, %s)
-                    ON CONFLICT (endpoint) DO UPDATE SET p256dh = EXCLUDED.p256dh, auth = EXCLUDED.auth,
-                      obvod = EXCLUDED.obvod, streets = EXCLUDED.streets, kinds = EXCLUDED.kinds, updated_at = now()""",
-                 (sub["endpoint"], sub["keys"]["p256dh"], sub["keys"]["auth"], obvod, [s for _, s in streets], kinds))
-    _mark(conn, sub["endpoint"], [e.key for e in feed.events(streets, src, now, set(kinds))])
+                    ON CONFLICT (endpoint) DO UPDATE SET p256dh = EXCLUDED.p256dh,
+                      obvod = EXCLUDED.obvod, streets = EXCLUDED.streets, kinds = EXCLUDED.kinds, updated_at = now()
+                    WHERE push_subscriptions.auth = EXCLUDED.auth""",
+                 (sub["endpoint"], sub["keys"]["p256dh"], sub["keys"]["auth"], obvod, [s for _, s in streets], kinds)).rowcount
+    if stored:
+        _mark(conn, sub["endpoint"], [e.key for e in feed.events(streets, src, now, set(kinds))])
+    return stored > 0
 
 
-def renew(conn, old: str, sub: dict) -> bool:
+def renew(conn, old: str, old_auth: str, sub: dict) -> bool:
     """The browser renewed its subscription (pushsubscriptionchange): the same choice, a new address."""
     return conn.execute("""UPDATE push_subscriptions SET endpoint = %s, p256dh = %s, auth = %s, updated_at = now()
-                           WHERE endpoint = %s""", (sub["endpoint"], sub["keys"]["p256dh"], sub["keys"]["auth"], old)).rowcount > 0
+                           WHERE endpoint = %s AND auth = %s""",
+                        (sub["endpoint"], sub["keys"]["p256dh"], sub["keys"]["auth"], old, old_auth)).rowcount > 0
 
 
-def drop(conn, endpoint: str) -> bool:
-    return conn.execute("DELETE FROM push_subscriptions WHERE endpoint = %s", (endpoint,)).rowcount > 0
+def drop(conn, endpoint: str, auth: str | None = None) -> bool:
+    """Delete a subscription: the visitor's (with its auth secret), or one its push service no longer knows."""
+    if auth is None:
+        return conn.execute("DELETE FROM push_subscriptions WHERE endpoint = %s", (endpoint,)).rowcount > 0
+    return conn.execute("DELETE FROM push_subscriptions WHERE endpoint = %s AND auth = %s", (endpoint, auth)).rowcount > 0
 
 
 def _mark(conn, endpoint: str, keys_: list[str]) -> None:
@@ -86,12 +113,17 @@ class Gone(Exception):
 
 def webpush_sender(k: Keys) -> Callable[[dict, dict], None]:
     """send(subscription_info, message) through pywebpush; raises Gone on 404/410."""
+    import requests
     from pywebpush import WebPushException, webpush
+    session = requests.Session()
+    session.max_redirects = 0           # a push service answers, it does not send us elsewhere
 
     def send(info: dict, msg: dict) -> None:
+        if not allowed(info["endpoint"]):
+            raise Gone
         try:
             webpush(info, json.dumps(msg, ensure_ascii=False), vapid_private_key=k.private,
-                    vapid_claims={"sub": k.subject}, ttl=TTL, timeout=10)
+                    vapid_claims={"sub": k.subject}, ttl=TTL, timeout=10, requests_session=session)
         except WebPushException as e:
             if e.response is not None and e.response.status_code in (404, 410):
                 raise Gone from e
@@ -126,7 +158,10 @@ def deliver(conn, send: Callable[[dict, dict], None], sources: Callable[[str], f
             out["gone"] += 1
             continue
         except Exception as e:      # one browser's push service failing is not the others' business
-            log.warning("push to %s failed: %s", s["endpoint"][:60], e)
+            # the endpoint is the browser's secret address and an error may quote it: the host only
+            from urllib.parse import urlsplit
+            log.warning("push via %s failed: %s %s", urlsplit(s["endpoint"]).hostname, type(e).__name__,
+                        getattr(getattr(e, "response", None), "status_code", ""))
             out["failed"] += 1
             continue
         _mark(conn, s["endpoint"], [e.key for e in new])
