@@ -20,7 +20,7 @@ api = APIRouter(prefix="/api/v1/uzavirky", tags=["uzavírky"])
 TZ = ZoneInfo("Europe/Prague")
 NB = "\u00a0"
 RED, INK, GREY = "#de091c", "#191c1f", "#8a9097"
-VIEWS = (("ted", "Teď"), ("chysta-se", "Chystá se"), ("vse", "Vše"))
+VIEWS = (("aktualni", "Aktuální"), ("planovane", "Plánované"), ("vse", "Všechny"))
 
 
 def _now() -> dt.datetime:
@@ -72,13 +72,13 @@ def features(cs: list[q.Closure], at: dt.datetime) -> dict:
 
 
 @pages.get("", response_class=HTMLResponse)
-def overview(request: Request, kdy: str = "ted"):
+def overview(request: Request, kdy: str = "aktualni"):
     at = _now()
     every = q.closures(q.rows(ObvodFilter.only(request.state.obvod.id), at), at)
-    kdy = kdy if kdy in dict(VIEWS) else "ted"
-    pick = {"ted": lambda c: c.now(at), "chysta-se": lambda c: not c.now(at), "vse": lambda c: True}
+    kdy = kdy if kdy in dict(VIEWS) else "aktualni"
+    pick = {"aktualni": lambda c: c.now(at), "planovane": lambda c: not c.now(at), "vse": lambda c: True}
     views = [{"key": k, "label": label, "n": sum(map(pick[k], every)), "on": k == kdy,
-              "href": "/verejny-prostor/uzavirky" + ("" if k == "ted" else f"?kdy={k}")} for k, label in VIEWS]
+              "href": "/verejny-prostor/uzavirky" + ("" if k == "aktualni" else f"?kdy={k}")} for k, label in VIEWS]
     shown = [c for c in every if pick[kdy](c)]
     return tpl.TemplateResponse(request, "uzavirky/prehled.html", {
         "views": views, "rows": [view(c, at) for c in shown], "fc": features(shown, at),
