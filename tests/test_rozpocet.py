@@ -200,3 +200,13 @@ def test_group_share_of_whole_budget():
     groups, _ = queries.group({"6171": (300, 100, ""), "2219": (700, 0, "")}, {}, "plan")
     assert [(g["name"], g["share"], g["pct"]) for g in groups] == [("Silnice a chodníky", 70, 0),
                                                                   ("Chod úřadu a zastupitelstvo", 30, 33)]
+
+
+def test_columns_fill_missing_years_and_round_the_axis():
+    series, ticks = queries.columns([{"year": 2019, "r": 100.0, "a": 40.0}, {"year": 2021, "r": 920.0, "a": 900.0}],
+                                    [2019, 2020, 2021], 120, queries.tis)
+    assert [(s["year"], s["r"], s["a"]) for s in series] == [(2019, 100.0, 40.0), (2020, 0.0, 0.0), (2021, 920.0, 900.0)]
+    assert [t["label"] for t in ticks] == ["0", "500", "1\xa0000"]          # step 500, top 1 000
+    assert series[2]["r_h"] == 110 and series[1]["r_h"] == 0 and ticks[-1]["pos"] == 120
+    _, ticks = queries.columns([{"year": 2024, "r": 14800.0, "a": 10400.0}], [2024], 220)
+    assert [t["label"] for t in ticks] == ["0", "5,0", "10,0", "15,0"]    # the oblast chart, mil. Kč

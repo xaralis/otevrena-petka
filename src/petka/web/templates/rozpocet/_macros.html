@@ -4,3 +4,17 @@
 {% macro status(year) -%}
 {% if year == years[-1] and as_of[year] and as_of[year].year == year %}Stav ke dni {{ as_of[year]|d }}. Rok ještě běží, čísla budou růst.{% else %}Rok {{ year }} je uzavřený, čísla jsou konečná.{% endif %}
 {%- endmacro %}
+{# Plan (outline) and spent (dark) per year, from queries.columns. fmt labels the amounts in `unit`;
+   size 'small' is the compact chart in a row that opens under a položka. #}
+{% macro columns(series, ticks, h, unit='mil. Kč', fmt=mil, size='') -%}
+<div class="rz-chart{{ ' rz-chart-' ~ size if size }}">
+  <div class="rz-axis" style="height:{{ h }}px"><b class="rz-axis-u">{{ unit }}</b>{% for k in ticks %}<span style="bottom:{{ k.pos }}px">{{ k.label }}</span>{% endfor %}</div>
+  <div class="rz-plot" style="height:{{ h }}px;gap:0 10px">
+    {% for k in ticks %}<i style="bottom:{{ k.pos }}px"></i>{% endfor %}
+    {% for m in (marks if size != 'small' else []) %}<div class="rz-mark" aria-hidden="true" style="left:calc((100% + 10px) * {{ m.a }} / {{ m.n }} - 10px * {{ m.fa }});width:calc((100% + 10px) * {{ m.b - m.a }} / {{ m.n }} - 10px * {{ m.fb - m.fa }})"><b>{{ m.label }}</b></div>{% endfor %}
+    {% for s in series %}<div class="rz-col rz-tip" style="height:{{ s.r_h }}px" data-tip="{{ s.year }}: plán {{ fmt(s.r) }}, utraceno {{ fmt(s.a) }} {{ unit }}"><div class="{{ 'now' if s.year == years[-1] and as_of[s.year] and as_of[s.year].year == s.year else '' }}" style="height:{{ s.a_h }}px">{% if s.a %}<b{% if s.a_h < 24 %} class="low"{% endif %}>{{ s.label }}</b>{% endif %}</div>{% if s.r %}<span>{{ fmt(s.r) }}</span>{% endif %}</div>{% endfor %}
+  </div>
+  <div></div>
+  <div class="rz-years" style="gap:0 10px">{% for s in series %}<span>{{ s.year }}</span>{% endfor %}</div>
+</div>
+{%- endmacro %}

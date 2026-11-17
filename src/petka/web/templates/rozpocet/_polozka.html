@@ -1,0 +1,4 @@
+{# A položka year by year (web._item: d.series, d.ticks), under its row on the oblast page: in the
+   page itself without JS (?polozka=), or fetched by rozbal.js. #}
+{% from "rozpocet/_macros.html" import columns with context %}
+{{ columns(d.series, d.ticks, 120, d.unit, d.fmt, 'small') }}

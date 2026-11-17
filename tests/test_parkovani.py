@@ -361,10 +361,10 @@ def test_area_and_lot_details_open_under_their_rows(filled, monkeypatch):
                         if key == "areas" else _p(key))
     web._stats.clear()
     r = get("/verejny-prostor/parkovani")
-    assert "Podle oblastí" in r.text and 'data-pk-part="/verejny-prostor/parkovani/oblast/test"' in r.text
-    assert 'data-pk-part="/verejny-prostor/parkovani/parkoviste/A"' in r.text and "parkovani.js" in r.text
-    assert "pk-open" not in r.text
-    # the part parkovani.js fetches: no page around it
+    assert "Podle oblastí" in r.text and 'data-part="/verejny-prostor/parkovani/oblast/test"' in r.text
+    assert 'data-part="/verejny-prostor/parkovani/parkoviste/A"' in r.text and "rozbal.js" in r.text
+    assert "part-open" not in r.text
+    # the part rozbal.js fetches: no page around it
     r = get("/verejny-prostor/parkovani/oblast/test")
     assert r.status_code == 200 and "<html" not in r.text and 'id="pk-oblast-test"' in r.text and "pk-heat-compact" in r.text and "pk-list" in r.text
     r = get("/verejny-prostor/parkovani/parkoviste/A")
@@ -373,7 +373,7 @@ def test_area_and_lot_details_open_under_their_rows(filled, monkeypatch):
     assert get("/verejny-prostor/parkovani/parkoviste/nic").status_code == 404
     # without JS the link opens the same detail on the page, under its row
     r = get("/verejny-prostor/parkovani?oblast=test")
-    assert r.text.count('class="pk-open"') == 1 and 'id="pk-oblast-test"' in r.text and 'aria-expanded="true"' in r.text
+    assert r.text.count('class="part-open"') == 1 and 'id="pk-oblast-test"' in r.text and 'aria-expanded="true"' in r.text
     r = get("/verejny-prostor/parkovani?parkoviste=B")
     assert 'id="pk-parkoviste-B"' in r.text
     d = get("/api/v1/parkovani/statistiky?profily=true").json()

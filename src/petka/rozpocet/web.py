@@ -123,22 +123,28 @@ def areas(request: Request, token: str, rok: str = "", pohled: str = ""):
                                                   groups=groups, axis=axis, total=total, trends=trends))
 
 
+def _item(par: str, item: int, ys: list[int]) -> dict | None:
+    """A položka of a paragraf over all years, for the row that opens under it."""
+    rows = q.item_series(par, item)
+    if not rows:
+        return None
+    # millions once the položka reaches them (labels stay short), else thousands like its table
+    unit, fmt = ("mil. Kč", q.mil) if max(max(x["r"], x["a"]) for x in rows) >= 2000 else ("tis. Kč", q.tis)
+    series, ticks = q.columns(rows, ys, 120, fmt)
+    return {"item": item, "series": series, "ticks": ticks, "unit": unit, "fmt": fmt}
+
+
 @pages.get("/oblasti/{par}", response_class=HTMLResponse)
-def area(request: Request, token: str, par: str, rok: str = ""):
+def area(request: Request, token: str, par: str, rok: str = "", polozka: str = ""):
     base = _check(token)
     if not par.isdigit():
         raise HTTPException(404)
     ys = [y["year"] for y in q.years()]
     year = _year(rok, ys)
-    series = q.paragraph_series(par)
-    if not series:
+    rows = q.paragraph_series(par)
+    if not rows:
         raise HTTPException(404)
-    top = max(max(s["r"], s["a"]) for s in series)
-    step = 10000 if top > 20000 else 5000 if top > 8000 else 2000 if top > 3000 else 500
-    top = -(-top // step) * step
-    for s in series:
-        s.update(r_h=round(s["r"] / top * 220), a_h=round(s["a"] / top * 220), label=q.mil(s["a"]))
-    ticks = [{"pos": round(v / top * 220), "label": q.mil(v) if v else "0"} for v in range(0, int(top) + 1, step)]
+    series, ticks = q.columns(rows, [y for y in ys if y >= rows[0]["year"]], 220)
     items = q.paragraph_items(par, year)
     shown, rest = items[:7], items[7:]
     inv, n, s = q.invoices(year, par=par, limit=12)
@@ -151,7 +157,22 @@ def area(request: Request, token: str, par: str, rok: str = ""):
         official=official, oddil=names.oddil(k), oddil_code=k, series=series, ticks=ticks,
         items=shown, rest_n=len(rest), rest_sum=sum(i["r"] for i in rest), invoices=inv, inv_n=n, inv_sum=s,
         now=cur.get(par, (0, 0, "")), share=q.pct(cur.get(par, (0,))[0], total), describe=q.describe,
-        kinds=names.ITEM_KIND, about=names.ABOUT.get(par)))
+        kinds=names.ITEM_KIND, about=names.ABOUT.get(par),
+        # without JS a položka's link opens its years here (?polozka=); with JS rozbal.js fetches item_part
+        open_item=_item(par, int(polozka), ys) if polozka.isdigit() else None))
+
+
+@pages.get("/oblasti/{par}/polozka/{item}", response_class=HTMLResponse)
+def item_part(request: Request, token: str, par: str, item: str):
+    """A položka of the paragraf year by year as a part of the page, for rozbal.js."""
+    base = _check(token)
+    if not (par.isdigit() and item.isdigit()):
+        raise HTTPException(404)
+    ys = [y["year"] for y in q.years()]
+    d = _item(par, int(item), ys)
+    if not d:
+        raise HTTPException(404)
+    return _render(request, "_polozka.html", _ctx(request, base, "oblasti", year=ys[-1], d=d))
 
 
 @pages.get("/faktury", response_class=HTMLResponse)

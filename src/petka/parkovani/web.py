@@ -289,7 +289,7 @@ def overview(request: Request, oblast: str = "", parkoviste: str = ""):
                      "st": state(1 - x["occupancy"] if x["occupancy"] is not None else None)} for x in s["lots"] if (x["capacity"] or 0) >= RANK_MIN][:10],
         "history_from": _history_date(s), "days": DAYS, "source_url": SOURCE_URL,
         "checked": _checked(st),
-        # without JS a row's link opens its detail here (?oblast= / ?parkoviste=); with JS parkovani.js
+        # without JS a row's link opens its detail here (?oblast= / ?parkoviste=); with JS rozbal.js
         # fetches the same detail from /oblast/{id} or /parkoviste/{id} and puts it under the row
         "open_area": area_detail(oblast) if oblast else None, "open_lot": lot_detail(parkoviste) if parkoviste else None})
 
@@ -343,7 +343,7 @@ def lot_detail(lot_id: str) -> dict | None:
 
 @pages.get("/oblast/{area_id}", response_class=HTMLResponse)
 def area_part(request: Request, area_id: str):
-    """The detail of an area as a part of the page, for parkovani.js."""
+    """The detail of an area as a part of the page, for rozbal.js."""
     d = area_detail(area_id)
     if d is None:
         raise HTTPException(404, "Takovou oblast neznáme.")
@@ -352,7 +352,7 @@ def area_part(request: Request, area_id: str):
 
 @pages.get("/parkoviste/{lot_id}", response_class=HTMLResponse)
 def lot_part(request: Request, lot_id: str):
-    """The detail of a lot as a part of the page, for parkovani.js."""
+    """The detail of a lot as a part of the page, for rozbal.js."""
     d = lot_detail(lot_id)
     if d is None:
         raise HTTPException(404, "Takové parkoviště neznáme.")

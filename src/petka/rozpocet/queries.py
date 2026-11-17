@@ -46,6 +46,21 @@ def _change(now: float, before: float, top: float) -> dict:
             "line_left": pos(min(now, before)), "line_w": pos(abs(d)), "before": before}
 
 
+def columns(rows: list[dict], years: list[int], height: int, fmt=mil) -> tuple[list[dict], list[dict]]:
+    """Plan and spent of each year in `years` as column heights in px (a year without lines is 0),
+    and the axis ticks on a round step, 2–4 of them. rows: [{year, r, a}] in tis. Kč; fmt labels
+    the ticks and the spent (mil for oblasti, tis for položky)."""
+    by = {x["year"]: x for x in rows}
+    series = [{"year": y, "r": by.get(y, {}).get("r", 0.0), "a": by.get(y, {}).get("a", 0.0)} for y in years]
+    top = max([max(s["r"], s["a"]) for s in series] + [1])
+    step = next(m * 10 ** e for e in range(9) for m in (1, 2, 5) if top / (m * 10 ** e) <= 4)
+    top = -(-top // step) * step
+    for s in series:
+        s.update(r_h=round(s["r"] / top * height), a_h=round(s["a"] / top * height), label=fmt(s["a"]))
+    ticks = [{"pos": round(v / top * height), "label": fmt(v) if v else "0"} for v in range(0, int(top) + 1, step)]
+    return series, ticks
+
+
 def group(cur: dict, prev: dict, view: str = "plan") -> tuple[list[dict], dict]:
     """Oblasti for one year. cur/prev: {paragraf: (plán, utraceno, úřední název)} in tis. Kč.
     view "plan" sorts by plan, "zmena" by the change against prev and also lists paragrafy that
@@ -159,6 +174,15 @@ def paragraph_series(par: str, unit: str = UNIT) -> list[dict]:
         return conn.execute(
             """SELECT year, sum(revised)::float AS r, sum(actual)::float AS a FROM budget_lines
                WHERE unit = %s AND paragraph = %s GROUP BY year ORDER BY year""", (unit, int(par))).fetchall()
+
+
+def item_series(par: str, item: int, unit: str = UNIT) -> list[dict]:
+    """One položka of a paragraf year by year (only the years it has lines in)."""
+    with db.pool().connection() as conn:
+        return conn.execute(
+            """SELECT year, sum(revised)::float AS r, sum(actual)::float AS a FROM budget_lines
+               WHERE unit = %s AND paragraph = %s AND item = %s GROUP BY year ORDER BY year""",
+            (unit, int(par), item)).fetchall()
 
 
 def paragraph_items(par: str, year: int, unit: str = UNIT) -> list[dict]:
