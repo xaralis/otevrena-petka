@@ -1,0 +1,722 @@
+{
+ "source": "Seznam parkovacích automatů DPMP (názvy); souřadnice z podkladů aplikace Otevřené Pardubice",
+ "url": "https://www.dpmp.cz/dalsi-sluzby/parkovani-v-pardubicich/",
+ "checked": "2026-11-06",
+ "note": "Počet sedí na seznam DPMP (92 názvů přesně, 10 v jiném zápisu). Seznam DPMP souřadnice nemá a původ souřadnic není doložený; nezávisle je ověřila příloha 1 nařízení 2/2026 (74 automatů do RMS 4 m) a OpenStreetMap (89 ze 101 do 8 m).",
+ "machines": [
+  {
+   "name": "Sladkovského I.",
+   "at": [
+    15.77229,
+    50.038225
+   ]
+  },
+  {
+   "name": "nám. Republiky",
+   "at": [
+    15.776759,
+    50.038149
+   ]
+  },
+  {
+   "name": "Sakařova I",
+   "at": [
+    15.789167,
+    50.039583
+   ]
+  },
+  {
+   "name": "U Mlýnů",
+   "at": [
+    15.781013,
+    50.042844
+   ]
+  },
+  {
+   "name": "Havlíčkova III.",
+   "at": [
+    15.76662,
+    50.032914
+   ]
+  },
+  {
+   "name": "Štefánikova II.",
+   "at": [
+    15.768583,
+    50.033002
+   ]
+  },
+  {
+   "name": "Wintrova II",
+   "at": [
+    15.786556,
+    50.040361
+   ]
+  },
+  {
+   "name": "Bulharská I.",
+   "at": [
+    15.785216,
+    50.037249
+   ]
+  },
+  {
+   "name": "U Stadionu I.",
+   "at": [
+    15.772545,
+    50.042112
+   ]
+  },
+  {
+   "name": "Nábřeží Závodu míru II.",
+   "at": [
+    15.762323,
+    50.038181
+   ]
+  },
+  {
+   "name": "Arnošta I.",
+   "at": [
+    15.778805,
+    50.033877
+   ]
+  },
+  {
+   "name": "nám. Jana Pernera",
+   "at": [
+    15.754971,
+    50.032731
+   ]
+  },
+  {
+   "name": "Žitná",
+   "at": [
+    15.775959,
+    50.032724
+   ]
+  },
+  {
+   "name": "Bratranců Veverkových I.",
+   "at": [
+    15.771845,
+    50.034692
+   ]
+  },
+  {
+   "name": "U pivovaru I.",
+   "at": [
+    15.76246,
+    50.034919
+   ]
+  },
+  {
+   "name": "Husova",
+   "at": [
+    15.800667,
+    50.044083
+   ]
+  },
+  {
+   "name": "Hronovická I.",
+   "at": [
+    15.773484,
+    50.033565
+   ]
+  },
+  {
+   "name": "K Polabinám I.",
+   "at": [
+    15.766478,
+    50.037926
+   ]
+  },
+  {
+   "name": "Sladkovského II.",
+   "at": [
+    15.773436,
+    50.036091
+   ]
+  },
+  {
+   "name": "Jiráskova II.",
+   "at": [
+    15.781249,
+    50.034361
+   ]
+  },
+  {
+   "name": "Smilova II.",
+   "at": [
+    15.770909,
+    50.034116
+   ]
+  },
+  {
+   "name": "Na okrouhlíku I",
+   "at": [
+    15.789515,
+    50.032693
+   ]
+  },
+  {
+   "name": "Wernerovo nábřeží",
+   "at": [
+    15.777993,
+    50.03904
+   ]
+  },
+  {
+   "name": "Smilova III.",
+   "at": [
+    15.772907,
+    50.034558
+   ]
+  },
+  {
+   "name": "Hlaváčova",
+   "at": [
+    15.766667,
+    50.032028
+   ]
+  },
+  {
+   "name": "Arnošta III.",
+   "at": [
+    15.776501,
+    50.03256
+   ]
+  },
+  {
+   "name": "Havlíčkova II.",
+   "at": [
+    15.766706,
+    50.033956
+   ]
+  },
+  {
+   "name": "Sakařova II",
+   "at": [
+    15.792944,
+    50.040639
+   ]
+  },
+  {
+   "name": "U Marka II.",
+   "at": [
+    15.764592,
+    50.032697
+   ]
+  },
+  {
+   "name": "Sladkovského III.",
+   "at": [
+    15.773811,
+    50.035195
+   ]
+  },
+  {
+   "name": "Štolbova II.",
+   "at": [
+    15.784628,
+    50.032445
+   ]
+  },
+  {
+   "name": "U Marka I.",
+   "at": [
+    15.7618,
+    50.033219
+   ]
+  },
+  {
+   "name": "Nábřeží Závodu míru IV.",
+   "at": [
+    15.760446,
+    50.037786
+   ]
+  },
+  {
+   "name": "Polská I.",
+   "at": [
+    15.783513,
+    50.038
+   ]
+  },
+  {
+   "name": "Nábřeží Závodu míru III.",
+   "at": [
+    15.761218,
+    50.037271
+   ]
+  },
+  {
+   "name": "Nábřeží Závodu míru V.",
+   "at": [
+    15.758222,
+    50.037288
+   ]
+  },
+  {
+   "name": "Arnošta II.",
+   "at": [
+    15.77762,
+    50.033228
+   ]
+  },
+  {
+   "name": "Bulharská II.",
+   "at": [
+    15.784929,
+    50.035604
+   ]
+  },
+  {
+   "name": "Palackého",
+   "at": [
+    15.764,
+    50.034728
+   ]
+  },
+  {
+   "name": "Mezi Mosty",
+   "at": [
+    15.782397,
+    50.040701
+   ]
+  },
+  {
+   "name": "Pernštýnské náměstí",
+   "at": [
+    15.779602,
+    50.038873
+   ]
+  },
+  {
+   "name": "Wintrova I",
+   "at": [
+    15.788384,
+    50.037918
+   ]
+  },
+  {
+   "name": "K Polabinám II.",
+   "at": [
+    15.766019,
+    50.037131
+   ]
+  },
+  {
+   "name": "Macanova",
+   "at": [
+    15.763077,
+    50.033272
+   ]
+  },
+  {
+   "name": "Jindřišská I.",
+   "at": [
+    15.776885,
+    50.036201
+   ]
+  },
+  {
+   "name": "Bělobranské náměstí",
+   "at": [
+    15.780737,
+    50.040527
+   ]
+  },
+  {
+   "name": "Pernerova I.",
+   "at": [
+    15.771244,
+    50.038596
+   ]
+  },
+  {
+   "name": "Ke kamenci",
+   "at": [
+    15.7912,
+    50.034699
+   ]
+  },
+  {
+   "name": "Havlíčkova I.",
+   "at": [
+    15.766523,
+    50.034749
+   ]
+  },
+  {
+   "name": "Smilova V.",
+   "at": [
+    15.776928,
+    50.035335
+   ]
+  },
+  {
+   "name": "JUDr. Krpaty",
+   "at": [
+    15.793759,
+    50.042366
+   ]
+  },
+  {
+   "name": "U Stadionu II.",
+   "at": [
+    15.77229,
+    50.041037
+   ]
+  },
+  {
+   "name": "Pernerova II.",
+   "at": [
+    15.771504,
+    50.037676
+   ]
+  },
+  {
+   "name": "Sladkovského VI.",
+   "at": [
+    15.772934,
+    50.036897
+   ]
+  },
+  {
+   "name": "Smetanovo náměstí",
+   "at": [
+    15.778304,
+    50.036754
+   ]
+  },
+  {
+   "name": "Jindřišská II.",
+   "at": [
+    15.778253,
+    50.034635
+   ]
+  },
+  {
+   "name": "U Husova sboru",
+   "at": [
+    15.780412,
+    50.03434
+   ]
+  },
+  {
+   "name": "U Soudu",
+   "at": [
+    15.781911,
+    50.038663
+   ]
+  },
+  {
+   "name": "Štolbova I.",
+   "at": [
+    15.782831,
+    50.032865
+   ]
+  },
+  {
+   "name": "Na Třísle",
+   "at": [
+    15.780812,
+    50.039404
+   ]
+  },
+  {
+   "name": "Bulharská III.",
+   "at": [
+    15.786721,
+    50.033861
+   ]
+  },
+  {
+   "name": "Dašická",
+   "at": [
+    15.788989,
+    50.036977
+   ]
+  },
+  {
+   "name": "Na okrouhlíku II",
+   "at": [
+    15.793444,
+    50.033806
+   ]
+  },
+  {
+   "name": "Nábřeží Václava Havla I.",
+   "at": [
+    15.769345,
+    50.041261
+   ]
+  },
+  {
+   "name": "Tyršovo nábřeží I.",
+   "at": [
+    15.782579,
+    50.037548
+   ]
+  },
+  {
+   "name": "Čechovo nábřeží",
+   "at": [
+    15.783153,
+    50.039266
+   ]
+  },
+  {
+   "name": "Bratranců Veverkových II.",
+   "at": [
+    15.772258,
+    50.033625
+   ]
+  },
+  {
+   "name": "Hronovická II.",
+   "at": [
+    15.775369,
+    50.034049
+   ]
+  },
+  {
+   "name": "Sladkovského IV.",
+   "at": [
+    15.774071,
+    50.034299
+   ]
+  },
+  {
+   "name": "Na Drážce III",
+   "at": [
+    15.79975,
+    50.038889
+   ]
+  },
+  {
+   "name": "Kotkova",
+   "at": [
+    15.79072,
+    50.037547
+   ]
+  },
+  {
+   "name": "Labská",
+   "at": [
+    15.780318,
+    50.041953
+   ]
+  },
+  {
+   "name": "Polská II.",
+   "at": [
+    15.78487,
+    50.037731
+   ]
+  },
+  {
+   "name": "Na Vrtálně",
+   "at": [
+    15.784065,
+    50.040749
+   ]
+  },
+  {
+   "name": "U Kostelíčka",
+   "at": [
+    15.786935,
+    50.037214
+   ]
+  },
+  {
+   "name": "Na Drážce II",
+   "at": [
+    15.798,
+    50.035722
+   ]
+  },
+  {
+   "name": "Za Pasáží",
+   "at": [
+    15.77538,
+    50.036015
+   ]
+  },
+  {
+   "name": "Nerudova",
+   "at": [
+    15.764903,
+    50.033896
+   ]
+  },
+  {
+   "name": "Bezdíčkova",
+   "at": [
+    15.797232,
+    50.040398
+   ]
+  },
+  {
+   "name": "Zborovské náměstí",
+   "at": [
+    15.773024,
+    50.022549
+   ]
+  },
+  {
+   "name": "Smilova IV.",
+   "at": [
+    15.774911,
+    50.034893
+   ]
+  },
+  {
+   "name": "Sladkovského V.",
+   "at": [
+    15.774852,
+    50.033038
+   ]
+  },
+  {
+   "name": "nábřeží Václava Havla II.",
+   "at": [
+    15.770574,
+    50.042088
+   ]
+  },
+  {
+   "name": "Nábřeží Závodu míru VI.",
+   "at": [
+    15.756122,
+    50.037148
+   ]
+  },
+  {
+   "name": "Bratranců Veverkových III.",
+   "at": [
+    15.772926,
+    50.0326
+   ]
+  },
+  {
+   "name": "Sukova třída I.",
+   "at": [
+    15.772363,
+    50.039125
+   ]
+  },
+  {
+   "name": "Štefánikova I.",
+   "at": [
+    15.768417,
+    50.034406
+   ]
+  },
+  {
+   "name": "Holubova",
+   "at": [
+    15.790191,
+    50.041329
+   ]
+  },
+  {
+   "name": "Spořilov",
+   "at": [
+    15.792957,
+    50.03761
+   ]
+  },
+  {
+   "name": "Nábřeží Závodu míru I.",
+   "at": [
+    15.765169,
+    50.038379
+   ]
+  },
+  {
+   "name": "Tyršovo nábřeží II.",
+   "at": [
+    15.782552,
+    50.036109
+   ]
+  },
+  {
+   "name": "Univerzita",
+   "at": [
+    15.767502,
+    50.03362
+   ]
+  },
+  {
+   "name": "Smilova I.",
+   "at": [
+    15.76942,
+    50.033858
+   ]
+  },
+  {
+   "name": "Sokolovna",
+   "at": [
+    15.781665,
+    50.035386
+   ]
+  },
+  {
+   "name": "Svatého Bartoloměje",
+   "at": [
+    15.777239,
+    50.038465
+   ]
+  },
+  {
+   "name": "Jiráskova III.",
+   "at": [
+    15.781096,
+    50.035932
+   ]
+  },
+  {
+   "name": "Na Hrádku",
+   "at": [
+    15.773564,
+    50.038388
+   ]
+  },
+  {
+   "name": "Vrchlického nábřeží",
+   "at": [
+    15.782155,
+    50.038885
+   ]
+  },
+  {
+   "name": "Na Drážce I",
+   "at": [
+    15.797771,
+    50.036491
+   ]
+  },
+  {
+   "name": "Jiráskova I.",
+   "at": [
+    15.781506,
+    50.032555
+   ]
+  },
+  {
+   "name": "Sukova třída II.",
+   "at": [
+    15.774406,
+    50.038913
+   ]
+  },
+  {
+   "name": "Štrossova",
+   "at": [
+    15.785122,
+    50.038883
+   ]
+  }
+ ]
+}

@@ -69,7 +69,7 @@ def test_planned_pages_last_in_each_area():
         soon = [i.soon for i in g.items]
         assert soon == sorted(soon), g.label
     vp = next(g for g in nav.GROUPS if g.label == "Veřejný prostor")
-    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Uzavírky", "Podněty", "Odpady"]
+    assert [i.label for i in vp.items] == ["Ulice", "Blokové čištění ulic", "Uzavírky", "Podněty", "Odpady", "Parkování"]
 
 
 # --- the one page template: band, tabs, „Odkud to víme“ ----------------------------------------

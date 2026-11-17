@@ -1,0 +1,20 @@
+{#- The typical week as a heat map: `heat` from petka.parkovani.web.heat. `size` '' is the page's
+    own (with the legend), 'compact' an area's under its row, 'tiny' a lot's: smaller cells, hours
+    every 6, no legend (the page has it once). -#}
+{% macro heatmap(heat, size='') %}
+  <div class="pk-heat-wrap{% if size %} pk-heat-{{ size }}{% endif %}">
+    <table class="pk-heat">
+      <caption class="sr">Obsazenost parkovišť podle dne v týdnu (řádky) a hodiny (sloupce)</caption>
+      <thead><tr><th scope="col"><span class="sr">Den</span></th>{% for h in range(24) %}<th scope="col">{% if h % (6 if size else 3) == 0 %}{{ h }}{% else %}<span class="sr">{{ h }}</span>{% endif %}</th>{% endfor %}</tr></thead>
+      <tbody>
+      {% for d in heat %}<tr><th scope="row"><abbr title="{{ d.day }}">{{ d.short }}</abbr></th>{% for c in d.cells %}<td class="rz-tip pk-b{{ c.bin if c.bin is not none else 'x' }}" data-tip="{{ c.tip }}"><span class="sr">{{ c.sr }}</span></td>{% endfor %}</tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if not size %}<p class="pk-lg" aria-label="Legenda"><span class="muted">obsazeno</span>{% for label in ['do 20 %', '20–40 %', '40–60 %', '60–80 %', 'nad 80 %'] %}<span><i class="pk-b{{ loop.index0 }}"></i>{{ label }}</span>{% endfor %}<span><i class="pk-bx"></i>bez dat</span></p>{% endif %}
+{% endmacro %}
+
+{% macro peaks_short(peaks) %}{% if peaks %}, nejplněji {{ peaks[0].day[:2] }} {{ peaks[0].hour }}–{{ peaks[0].hour + 1 }} h{% endif %}{% endmacro %}
+
+{% macro peaks_sentence(peaks) %}{% if peaks %} Nejplněji bývá {% for p in peaks %}{{ p.day }} {{ p.hour }}–{{ p.hour + 1 }} h ({{ (100 * p.occupancy)|round|int }} %){{ ', ' if not loop.last }}{% endfor %}.{% endif %}{% endmacro %}

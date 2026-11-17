@@ -1,0 +1,214 @@
+{
+ "source": "Otevřená Pětka: oblasti, jak o nich mluví lidé v Pardubicích; ručně přiřazená parkoviště správce",
+ "checked": "2026-11-17",
+ "note": "Návrh k ověření. Oblast je seznam parkovišť (id z /api/v1/parkovani), ne hranice na mapě; parkoviště patří nejvýš do jedné oblasti.",
+ "areas": [
+  {
+   "id": "masarykovo-namesti",
+   "name": "Masarykovo náměstí",
+   "lots": [
+    "PRD.PRK.LOK-OUT-A",
+    "PRD.PRK.LOK-LII-34",
+    "PRD.PRK.LOK-LII-35",
+    "PRD.PRK.LOK-LII-39",
+    "PRD.PRK.LOK-LII-36",
+    "PRD.PRK.LOK-LII-88"
+   ]
+  },
+  {
+   "id": "namesti-republiky",
+   "name": "Náměstí Republiky",
+   "lots": [
+    "PRD.PRK.LOK-OUT-G",
+    "PRD.PRK.LOK-LI-3-2",
+    "PRD.PRK.LOK-LII-56",
+    "PRD.PRK.LOK-LII-37",
+    "PRD.PRK.LOK-LII-38",
+    "PRD.PRK.LOK-LII-57"
+   ]
+  },
+  {
+   "id": "pernstynske-namesti",
+   "name": "Pernštýnské náměstí a zámek",
+   "lots": [
+    "PRD.PRK.LOK-LI-1-1",
+    "PRD.PRK.LOK-LII-61",
+    "PRD.PRK.LOK-LII-60",
+    "PRD.PRK.LOK-LII-92",
+    "PRD.PRK.LOK-LII-58",
+    "PRD.PRK.LOK-LII-59"
+   ]
+  },
+  {
+   "id": "u-mlynu",
+   "name": "U Mlýnů",
+   "lots": [
+    "PRD.PRK.LOK-LI-7-9",
+    "PRD.PRK.LOK-LII-62",
+    "PRD.PRK.LOK-LIII-84",
+    "PRD.PRK.LOK-LIII-83"
+   ]
+  },
+  {
+   "id": "arena",
+   "name": "U Enteria arény",
+   "lots": [
+    "PRD.PRK.LOK-OUT-H",
+    "PRD.PRK.LOK-LI-5-5",
+    "PRD.PRK.LOK-LI-5-6",
+    "PRD.PRK.LOK-LI-4-3",
+    "PRD.PRK.LOK-LI-4-4"
+   ]
+  },
+  {
+   "id": "smetanovo-namesti",
+   "name": "Smetanovo náměstí a Karlovina",
+   "lots": [
+    "PRD.PRK.LOK-OUT-K",
+    "PRD.PRK.LOK-LIII-89",
+    "PRD.PRK.LOK-LII-53",
+    "PRD.PRK.LOK-LII-54",
+    "PRD.PRK.LOK-LII-55",
+    "PRD.PRK.LOK-LII-40",
+    "PRD.PRK.LOK-LII-41"
+   ]
+  },
+  {
+   "id": "smilova",
+   "name": "Smilova a Hronovická",
+   "lots": [
+    "PRD.PRK.LOK-LII-42",
+    "PRD.PRK.LOK-LII-43",
+    "PRD.PRK.LOK-LII-44",
+    "PRD.PRK.LOK-LII-45",
+    "PRD.PRK.LOK-LII-46",
+    "PRD.PRK.LOK-LII-47",
+    "PRD.PRK.LOK-LII-48",
+    "PRD.PRK.LOK-LII-49",
+    "PRD.PRK.LOK-LII-50",
+    "PRD.PRK.LOK-LII-51",
+    "PRD.PRK.LOK-LII-52"
+   ]
+  },
+  {
+   "id": "jiraskova",
+   "name": "Jiráskova a Ideon",
+   "lots": [
+    "PRD.PRK.LOK-LIII-63",
+    "PRD.PRK.LOK-LIII-64",
+    "PRD.PRK.LOK-LIII-65",
+    "PRD.PRK.LOK-LIII-66",
+    "PRD.PRK.LOK-LIII-67",
+    "PRD.PRK.LOK-LIII-68",
+    "PRD.PRK.LOK-LIII-69",
+    "PRD.PRK.LOK-LIII-70",
+    "PRD.PRK.LOK-LIII-71",
+    "PRD.PRK.LOK-LIII-72",
+    "PRD.PRK.LOK-LIII-73",
+    "PRD.PRK.LOK-LIII-74",
+    "PRD.PRK.LOK-LIII-90"
+   ]
+  },
+  {
+   "id": "tyrsovo-nabrezi",
+   "name": "Tyršovo nábřeží a Bubeníkovy sady",
+   "lots": [
+    "PRD.PRK.LOK-LI-6-10",
+    "PRD.PRK.LOK-LI-6-11",
+    "PRD.PRK.LOK-LIII-75",
+    "PRD.PRK.LOK-LIII-76",
+    "PRD.PRK.LOK-LIII-77",
+    "PRD.PRK.LOK-LIII-78",
+    "PRD.PRK.LOK-LIII-79",
+    "PRD.PRK.LOK-LIII-81",
+    "PRD.PRK.LOK-LIII-82"
+   ]
+  },
+  {
+   "id": "nemocnice",
+   "name": "U nemocnice",
+   "lots": [
+    "PRD.PRK.LOK-LIII-80",
+    "PRD.PRK.LOK-LIII-100",
+    "PRD.PRK.LOK-LIII-101",
+    "PRD.PRK.LOK-LIII-114",
+    "PRD.PRK.LOK-LIII-102",
+    "PRD.PRK.LOK-LIII-103",
+    "PRD.PRK.LOK-LIII-104"
+   ]
+  },
+  {
+   "id": "bile-predmesti",
+   "name": "Bílé Předměstí",
+   "lots": [
+    "PRD.PRK.LOK-LIII-105",
+    "PRD.PRK.LOK-LIII-106",
+    "PRD.PRK.LOK-LIII-107",
+    "PRD.PRK.LOK-LIII-108",
+    "PRD.PRK.LOK-LIII-109",
+    "PRD.PRK.LOK-LIII-110",
+    "PRD.PRK.LOK-LIII-111",
+    "PRD.PRK.LOK-LIII-112",
+    "PRD.PRK.LOK-LIII-113",
+    "PRD.PRK.LOK-LIII-115",
+    "PRD.PRK.LOK-LIII-116"
+   ]
+  },
+  {
+   "id": "palackeho",
+   "name": "Palackého třída a U Marka",
+   "lots": [
+    "PRD.PRK.LOK-LIV-13",
+    "PRD.PRK.LOK-LIV-85",
+    "PRD.PRK.LOK-LIV-14",
+    "PRD.PRK.LOK-LIV-15",
+    "PRD.PRK.LOK-LIV-16",
+    "PRD.PRK.LOK-LIV-17",
+    "PRD.PRK.LOK-LIV-18"
+   ]
+  },
+  {
+   "id": "namesti-cs-legii",
+   "name": "Náměstí Čs. legií a univerzita",
+   "lots": [
+    "PRD.PRK.LOK-LIV-19",
+    "PRD.PRK.LOK-LIV-20",
+    "PRD.PRK.LOK-LIV-21",
+    "PRD.PRK.LOK-LIV-48",
+    "PRD.PRK.LOK-LIV-22",
+    "PRD.PRK.LOK-LIV-23",
+    "PRD.PRK.LOK-LIV-24",
+    "PRD.PRK.LOK-LIV-25",
+    "PRD.PRK.LOK-LIV-86"
+   ]
+  },
+  {
+   "id": "poliklinika",
+   "name": "Poliklinika a nábřeží Závodu míru",
+   "lots": [
+    "PRD.PRK.LOK-LIV-26",
+    "PRD.PRK.LOK-LIV-27",
+    "PRD.PRK.LOK-LIV-32",
+    "PRD.PRK.LOK-LIV-87",
+    "PRD.PRK.LOK-LIV-33",
+    "PRD.PRK.LOK-LIV-34",
+    "PRD.PRK.LOK-LIV-35",
+    "PRD.PRK.LOK-LIV-31"
+   ]
+  },
+  {
+   "id": "nadrazi",
+   "name": "Nádraží",
+   "lots": [
+    "PRD.PRK.LOK-LI-2-7"
+   ]
+  },
+  {
+   "id": "zborovske-namesti",
+   "name": "Zborovské náměstí",
+   "lots": [
+    "PRD.PRK.LOK-LI-6"
+   ]
+  }
+ ]
+}

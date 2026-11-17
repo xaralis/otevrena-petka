@@ -19,6 +19,11 @@ Doménové pojmy portálu. Kód, testy a návrhy používají tyhle názvy.
   Pardubice do kapsy), stojan na kola, kontejner na tříděný odpad nebo sběrný dvůr. V kódu
   `kind` (`potraviny` … `dvur`, `vykupna`), u kontejneru a dvora `odpad` (`papir`, `plast`, …). Licence
   ODbL, ne CC BY.
+- **Parkoviště** – skupina stání správce parkovišť (DPMP) v aplikaci ChytřejšíParking s čidly a vlastním
+  `id` (`PRD.PRK.LOK-…`); ne nutně plocha, často úsek ulice. Patří do **lokality** nařízení
+  (A-1 … C-3, návštěvnická místa L.1 … L.8), která určuje ceník, a do **zóny** A, B nebo C.
+  **Obsazenost** jsou jeho volná a celková místa teď; `changed_at` je, kdy Pětka naposledy
+  viděla jejich změnu (zdroj čas měření neuvádí). **Plno** = volná nejvýš desetina míst.
 - **Oznámení** – položka úřední desky (deska obvodu nebo magistrátu).
 - **Podnět** – hlášení občana z městské aplikace Dej Tip (závada, černá skládka, poděkování…)
   s kategorií, místem a stavem, který nastavuje úřad (Evidováno, V řešení, Vyřešeno…).

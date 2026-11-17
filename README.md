@@ -20,6 +20,7 @@ Pardubice. Nejde o oficiální web města, závazné jsou vždy původní dokume
 | Rozpočet a hospodaření | ve výstavbě | |
 | Smlouvy a zakázky | ve výstavbě | |
 | Podněty | ve výstavbě | podněty z aplikace Dej Tip a jejich stav: stránka a MCP pro obvod, API za celé město ([docs/dejtip.md](docs/dejtip.md)) |
+| [Parkování](https://otevrenapetka.cz/verejny-prostor/parkovani) | běží | parkoviště města s ceníkem, SMS kódy, zónami a lokalitami jako export pro aplikaci, obsazenost každou minutu, historie po 5 minutách a statistiky ([docs/parkovani.md](docs/parkovani.md)) |
 | Čištění ulic | připraveno, zatím mimo navigaci | blokové čištění podle harmonogramu Služeb města Pardubic: termíny, mapa úseků, kalendář k odběru (ICS), API a MCP |
 
 ### Usnesení
@@ -115,6 +116,18 @@ skončí chybou a dál se servíruje poslední přijaté; po skutečném úbytku
 `--soubor odpoved.json` načte uloženou odpověď Overpassu. Formát: [docs/mista.md](docs/mista.md).
 Server Overpassu jde změnit proměnnou `OVERPASS_URL`.
 
+### Parkování
+
+Parkoviště správce (ChytřejšíParking, DPMP) z jeho neoficiálního rozhraní aplikace, spojená
+s ručně udržovanými daty v `data/parkovani/` (ceník podle nařízení 3/2026, SMS kódy DPMP,
+automaty, zóny, lokality a placené úseky z příloh nařízení 2/2026; každý soubor se zdrojem a datem
+ověření). `usneseni parkovani-update` (denně) stáhne parkoviště a uloží sestavení, pokud jich
+neubylo pod 70 %. `usneseni parkovani-obsazenost --smycka` (stále běžící worker) se každých 60 s
+ptá na volná místa, při výpadku nechá poslední dobrá, a každých 5 minut je zapíše do historie
+(`parkovani_history`). Z ní stránka Parkování a `/api/v1/parkovani/statistiky` počítají typický
+týden a nejvytíženější parkoviště. Export pro aplikaci: `/api/v1/parkovani` a
+`/api/v1/parkovani/obsazenost`, formát v [docs/parkovani.md](docs/parkovani.md).
+
 ## Otevřená data, API a MCP
 
 - **Data**: `/data` na webu. Usnesení jako CSV + JSON s
@@ -123,7 +136,8 @@ Server Overpassu jde změnit proměnnou `OVERPASS_URL`.
   [docs/otevrena-data.md](docs/otevrena-data.md), včetně doporučení pro úřad.
 - **REST API**: `/api/v1/usneseni/…` a `/api/v1/uredni-deska/…`, OpenAPI na `/api/docs`.
   Místa: `/api/v1/mista` a `/api/v1/mista.geojson` ([docs/mista.md](docs/mista.md)).
-  Zdroje za celé město (blokové čištění, podněty, místa) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md))
+  Parkování: `/api/v1/parkovani`, `/api/v1/parkovani/obsazenost`, `/api/v1/parkovani/statistiky` ([docs/parkovani.md](docs/parkovani.md)).
+  Zdroje za celé město (blokové čištění, podněty, místa, parkování) berou `?obvod=mo4,mo5` ([ADR 0002](docs/adr/0002-data-za-cele-mesto-filtr-obvod.md))
   a posílají ETag: s `If-None-Match` odpoví 304, dokud se data nezmění.
 - **MCP** (bez přihlášení, jen čtení):
 
@@ -154,6 +168,8 @@ mapové podklady i vyhledávání podle smyslu běží na vlastním serveru). Po
 | `src/petka/podnety/` | sekce Podněty: zrcadlo podnětů z Dej Tipu, API (GeoJSON), MCP |
 | `src/petka/cisteni/` | sekce Čištění ulic: harmonogram SmP, geokódování úseků z RÚIAN, stránky, ICS, API, MCP |
 | `src/petka/mista/` | sekce Místa: místa z OpenStreetMap (Overpass), obvod podle RÚIAN, API (JSON, GeoJSON) |
+| `src/petka/parkovani/` | sekce Parkování: parkoviště a obsazenost z ChytřejšíParkingu, historie, statistiky, export pro aplikaci |
+| `data/parkovani/` | ručně udržovaná data parkování: ceník, SMS kódy, automaty, zóny, lokality, úseky (se zdrojem a datem ověření) |
 | `migrations/` | schéma Postgresu (spouští se samo při startu) |
 | `data/usneseni/sources.json` | index zveřejněných PDF (URL, sha256) |
 | `data/usneseni/text/` | text každého zápisu |
@@ -180,6 +196,8 @@ uv run usneseni deska-update                    # úřední deska
 uv run usneseni podnety-update                  # podněty z Dej Tipu, všech osm obvodů, a jejich veřejné fotky (každé 4 hodiny)
 uv run usneseni cisteni-update                  # harmonogram blokového čištění (denně)
 uv run usneseni mista-update                    # místa z OpenStreetMap (denně)
+uv run usneseni parkovani-update                # parkoviště z ChytřejšíParkingu (denně)
+uv run usneseni parkovani-obsazenost --smycka   # volná místa každých 60 s a historie po 5 minutách (stále)
 uv run usneseni serve --port 8099
 uv run pytest
 ```
@@ -197,8 +215,9 @@ z buildu [Protomaps](https://protomaps.com) (OpenStreetMap). Vykresluje ho
 ## Provoz
 
 Běží v k3s (homelab, Flux) jako jeden image z GHCR (`sha-<short>`): web s API a MCP, Postgres
-s pgvectorem, llama.cpp server s bge-m3 a dvě úlohy: `update` (pozastavená, spouští se ručně)
-a `deska` (každou hodinu). Chyby hlásí GlitchTip.
+s pgvectorem, llama.cpp server s bge-m3 a úlohy: `update` (pozastavená, spouští se ručně),
+`deska` (každou hodinu) a další podle sekcí; parkování potřebuje denní `parkovani-update` a stále
+běžící worker `parkovani-obsazenost --smycka` ([docs/parkovani.md](docs/parkovani.md#úlohy)). Chyby hlásí GlitchTip.
 
 ## Licence
 
@@ -209,5 +228,6 @@ Zdrojové dokumenty jsou úřední dokumenty zveřejněné městem. Mapové podk
 blokového čištění (`data/cisteni/overrides.geojson`) jsou z RÚIAN © ČÚZK (CC BY 4.0)
 a z OpenStreetMap © přispěvatelé OpenStreetMap
 ([ODbL](https://opendatacommons.org/licenses/odbl/)); které z nich, říká `note` u každého prvku.
-Místa (`/api/v1/mista`) jsou databáze odvozená z OpenStreetMap, proto pod
+Parkoviště a obsazenost (`/api/v1/parkovani…`) jsou z neoficiálního rozhraní ChytřejšíParkingu (DPMP),
+které licenci neuvádí; nejsou to úřední údaje. Místa (`/api/v1/mista`) jsou databáze odvozená z OpenStreetMap, proto pod
 [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/), © přispěvatelé OpenStreetMap.
