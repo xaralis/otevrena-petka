@@ -51,6 +51,27 @@ def lots(rows: list[dict], names: dict[str, str], obvody: dict[str, list[str]], 
     return sorted(out, key=lambda x: (-(x["occupancy"] or 0), -(x["full"] or 0), x["name"]))
 
 
+def areas(rows: list[dict], defs: list[dict], profiles: bool = False) -> list[dict]:
+    """Every area (data/parkovani/oblasti.json) with history, in the file's order: its lots'
+    samples summed, so a big lot weighs more; capacity is the sum of its lots' capacities;
+    `profiles` adds the area's grid."""
+    per_lot = by_lot(rows)
+    out = []
+    for a in defs:
+        rs = [r for i in a["lots"] for r in per_lot.get(i, [])]
+        if not rs:
+            continue
+        n = sum(r["n"] for r in rs)
+        caps = [sum(r["total"] for r in per_lot[i]) / sum(r["n"] for r in per_lot[i]) for i in a["lots"] if i in per_lot]
+        item = {"id": a["id"], "name": a["name"], "lots": [i for i in a["lots"] if i in per_lot],
+                "occupancy": _share(sum(r["occupied"] for r in rs), sum(r["total"] for r in rs)),
+                "full": _share(sum(r["full"] for r in rs), n), "samples": n, "capacity": round(sum(caps))}
+        if profiles:
+            item["profile"] = grid(rs)
+        out.append(item)
+    return out
+
+
 def busiest_hours(g: dict, top: int = 3) -> list[dict]:
     """The hours of the week that are fullest on average: [{day, hour, occupancy}]."""
     cells = [(v, d, h) for d, day in enumerate(g["occupancy"]) for h, v in enumerate(day) if v is not None]

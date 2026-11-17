@@ -1,5 +1,6 @@
-"""Parkování: the page /verejny-prostor/parkovani (free places now, the typical week and the
-busiest lots, of the obvod or with ?kde=mesto the whole town) and the API for the app and
+"""Parkování: the page /verejny-prostor/parkovani (free places now by area and by lot, the typical
+week and the busiest lots, always of the whole town; an area's or a lot's row
+opens its own typical week under it: /oblast/{id} and /parkoviste/{id} are those parts), and the API for the app and
 anyone else (docs/parkovani.md), all over the whole town with `?obvod=` (ADR 0002):
 
     /api/v1/parkovani               lots, machines, zones, localities, sections, prices, SMS codes (daily)
@@ -124,7 +125,8 @@ def statistics(obvod: ObvodFilter, days: int, profiles: bool) -> dict:
            "history_from": build.iso(first), "source": build.SOURCE,
            "note": ("Podíl obsazených míst (0–1) podle vzorků po 5 minutách; `full` = podíl vzorků, kdy byla volná "
                     "nejvýš desetina míst. Mřížky jsou 7 dní (pondělí první) × 24 hodin pražského času, null = bez dat."),
-           "profile": stats.grid(rows), "lots": stats.lots(rows, names, lot_obvody, profiles)}
+           "profile": stats.grid(rows), "lots": stats.lots(rows, names, lot_obvody, profiles),
+           "areas": stats.areas(rows, data.payload("areas"), profiles)}
     _remember(key, out)
     return out
 
@@ -134,9 +136,10 @@ def statistiky(request: Request, obvod: ObvodParam,
                dni: int = Query(DAYS, description="Za kolik posledních dní: 7, 28 nebo 91."),
                profily: bool = Query(False, description="Přidat ke každému parkovišti jeho typický týden.")):
     """Statistiky obsazenosti z historie (vzorek každých 5 minut): typický týden (průměrná obsazenost
-    podle dne v týdnu a hodiny, `profile`) a parkoviště od nejvytíženějšího (`lots`: průměrná
-    obsazenost, podíl času, kdy bylo plno). S `?profily=true` i typický týden každého parkoviště,
-    např. pro „v tuhle dobu tu bývá plno“. Přepočítává se nejvýš každých 10 minut."""
+    podle dne v týdnu a hodiny, `profile`), parkoviště od nejvytíženějšího (`lots`: průměrná
+    obsazenost, podíl času, kdy bylo plno) a oblasti, jak o nich mluví lidé (`areas`: centrum,
+    U Mlýnů…, součet jejich parkovišť). S `?profily=true` i typický týden každého parkoviště
+    a oblasti, např. pro „v tuhle dobu tu bývá plno“. Přepočítává se nejvýš každých 10 minut."""
     if dni not in DAYS_ALLOWED:
         raise HTTPException(422, f"Neplatné dni: {dni}. Platné jsou {', '.join(map(str, DAYS_ALLOWED))}.")
     out = statistics(obvod, dni, profily)
@@ -150,8 +153,10 @@ def statistiky(request: Request, obvod: ObvodParam,
 # --- the page -----------------------------------------------------------------------------------
 
 BINS = (0.2, 0.4, 0.6, 0.8)     # the heat map's steps of occupancy
-MIN_LOTS = 3                    # an obvod with fewer lots with sensors shows the whole town
 RANK_MIN = 5                    # places: a smaller lot (often one sensor) is full or empty, not busy; left out of the page's ranking
+FREE_OK = 0.3                   # a share of places free from which a bar is green; under it orange
+FREE_LOW = 0.1                  # at most this free is red: „plno“, as in the statistics and the app
+PEAKS_MIN_DAYS = 7              # the busiest hours are named only after a week of history: before, one evening would be „the fullest“
 
 
 def _bin(v: float | None) -> int | None:
@@ -188,18 +193,66 @@ def heat(g: dict) -> list[dict]:
     return out
 
 
+def peaks(g: dict, history_from: str | None, at: dt.datetime) -> list[dict]:
+    """The busiest hours of a grid, or none while the history is shorter than PEAKS_MIN_DAYS."""
+    if not history_from or at - dt.datetime.fromisoformat(history_from.replace("Z", "+00:00")) < dt.timedelta(days=PEAKS_MIN_DAYS):
+        return []
+    return stats.busiest_hours(g)
+
+
+def _history_date(s: dict) -> dt.date | None:
+    return s["history_from"] and dt.datetime.fromisoformat(s["history_from"].replace("Z", "+00:00")).astimezone(TZ).date()
+
+
+def _has(g: dict) -> bool:
+    return any(v is not None for day in g["occupancy"] for v in day)
+
+
+def state(free_share: float | None) -> str:
+    """'ok', 'low' or 'full' for a share of places free: the bars' green, orange and red."""
+    if free_share is None:
+        return ""
+    return "ok" if free_share >= FREE_OK else "low" if free_share > FREE_LOW else "full"
+
+
+def _n(x: int) -> str:
+    return f"{x:,}".replace(",", NB)
+
+
+def gauge(free: int, total: int, g: dict, at: dt.datetime) -> dict | None:
+    """The town's occupancy now for the page's meter, with the usual occupancy at this weekday and
+    hour from the typical week (None while there is none)."""
+    if not total:
+        return None
+    local = at.astimezone(TZ)
+    usual = g["occupancy"][local.weekday()][local.hour]
+    occ = (total - free) / total
+    return {"occ": round(100 * occ), "free": 100 - round(100 * occ), "free_n": _n(free), "total_n": _n(total),
+            "st": state(free / total), "usual": round(100 * usual) if usual is not None else None}
+
+
+def areas_now(now: dict[str, dict], defs: list[dict]) -> list[dict]:
+    """Each area with lots seen now: free and total places summed, and its share free."""
+    out = []
+    for a in defs:
+        rs = [now[i] for i in a["lots"] if i in now]
+        if not rs:
+            continue
+        free, total = sum(r["free"] for r in rs), sum(r["total"] for r in rs)
+        share = free / total if total else 0
+        out.append({"id": a["id"], "name": a["name"], "free": free, "total": total, "lots": len(rs),
+                    "share": share, "st": state(share)})
+    return out
+
+
 @pages.get("", response_class=HTMLResponse)
-def overview(request: Request, kde: str = ""):
+def overview(request: Request, oblast: str = "", parkoviste: str = ""):
+    """Always the whole town: people park where they go, not in their obvod (most lots with
+    sensors are in the centre)."""
     at = _now()
-    obvod = request.state.obvod
-    town = kde == "mesto"
     lot_obvody = q.lot_obvody()
     names = q.lot_names()
-    mine = ObvodFilter.only(obvod.id)
-    n_mine = sum(1 for o in lot_obvody.values() if mine.matches(o))
-    # most lots with sensors are in the centre (mo1): an obvod with hardly any shows the town
-    fallback = bool(not town and lot_obvody and n_mine < MIN_LOTS)
-    where = ObvodFilter() if town or fallback else mine
+    where = ObvodFilter()
     st = q.state()
     rows = []
     if st and st["fetched_at"]:
@@ -212,20 +265,95 @@ def overview(request: Request, kde: str = ""):
             if not where.matches(lot_obvody.get(r["id"], [])):
                 continue
             lt = doc_lots.get(r["id"], {})
-            rows.append({"name": names.get(r["id"], r["id"]), "area": lt.get("area", ""), "free": r["free"],
+            rows.append({"id": r["id"], "name": names.get(r["id"], r["id"]), "area": lt.get("area", ""), "free": r["free"],
                          "total": r["total"], "share": r["free"] / r["total"] if r["total"] else 0,
+                         "st": state(r["free"] / r["total"] if r["total"] else None),
                          "changed": _ago(r["changed_at"], at), "paid": lt.get("paid")})
         rows.sort(key=lambda x: (-x["free"], x["name"]))
     s = statistics(where, DAYS, False)
-    has_history = any(v is not None for day in s["profile"]["occupancy"] for v in day)
+    has_history = _has(s["profile"])
+    lot_occ = {x["id"]: x["occupancy"] for x in s["lots"]}
+    now = {r["id"]: r for r in q.now_rows()} if st and st["fetched_at"] else {}
+    defs = [a for a in data.payload("areas") if any(where.matches(lot_obvody.get(i, [])) for i in a["lots"])]
     return tpl.TemplateResponse(request, "parkovani/prehled.html", {
-        "obvod": obvod, "town": town or fallback, "fallback": fallback, "n_mine": n_mine, "n_town": len(lot_obvody),
-        "rows": rows, "free": sum(r["free"] for r in rows), "total": sum(r["total"] for r in rows),
+        "free": sum(r["free"] for r in rows), "total": sum(r["total"] for r in rows),
+        "gauge": gauge(sum(r["free"] for r in rows), sum(r["total"] for r in rows), s["profile"], at),
         "fetched": _ago(st["fetched_at"], at) if st and st["fetched_at"] else None,
         "stale": bool(st and st["fetched_at"] and at - st["fetched_at"] > dt.timedelta(minutes=15)),
-        "heat": heat(s["profile"]) if has_history else None, "peaks": stats.busiest_hours(s["profile"]),
+        "heat": heat(s["profile"]) if has_history else None, "peaks": peaks(s["profile"], s["history_from"], at),
+        "rows": [{**r, "occ": _pct(lot_occ.get(r["id"]))} for r in rows],
+        "areas": [{**a, "occ": _pct(next((x["occupancy"] for x in s["areas"] if x["id"] == a["id"]), None))}
+                  for a in areas_now(now, defs)],
         "busiest": [{**x, "occ": _pct(x["occupancy"]), "full_pct": _pct(x["full"]),
-                     "w": round(100 * (x["occupancy"] or 0), 1)} for x in s["lots"] if (x["capacity"] or 0) >= RANK_MIN][:10],
-        "history_from": s["history_from"] and dt.datetime.fromisoformat(s["history_from"].replace("Z", "+00:00")).astimezone(TZ).date(),
-        "days": DAYS, "source_url": SOURCE_URL,
-        "checked": (st["fetched_at"].astimezone(TZ).date() if st and st["fetched_at"] else None)})
+                     "w": round(100 * (x["occupancy"] or 0), 1),
+                     "st": state(1 - x["occupancy"] if x["occupancy"] is not None else None)} for x in s["lots"] if (x["capacity"] or 0) >= RANK_MIN][:10],
+        "history_from": _history_date(s), "days": DAYS, "source_url": SOURCE_URL,
+        "checked": _checked(st),
+        # without JS a row's link opens its detail here (?oblast= / ?parkoviste=); with JS parkovani.js
+        # fetches the same detail from /oblast/{id} or /parkoviste/{id} and puts it under the row
+        "open_area": area_detail(oblast) if oblast else None, "open_lot": lot_detail(parkoviste) if parkoviste else None})
+
+
+def _checked(st: dict | None) -> dt.date | None:
+    return st["fetched_at"].astimezone(TZ).date() if st and st["fetched_at"] else None
+
+
+def _now_map(st: dict | None) -> dict[str, dict]:
+    return {r["id"]: r for r in q.now_rows()} if st and st["fetched_at"] else {}
+
+
+def area_detail(area_id: str) -> dict | None:
+    """What opens under an area's row: its lots now and its typical week; None for an unknown id."""
+    a = next((x for x in data.payload("areas") if x["id"] == area_id), None)
+    if a is None:
+        return None
+    at, st, names = _now(), q.state(), q.lot_names()
+    now = _now_map(st)
+    s = statistics(ObvodFilter(), DAYS, True)
+    stat = next((x for x in s["areas"] if x["id"] == area_id), None)
+    lots = [{"id": i, "name": names.get(i, i), "free": now[i]["free"] if i in now else None,
+             "total": now[i]["total"] if i in now else None,
+             "share": now[i]["free"] / now[i]["total"] if i in now and now[i]["total"] else 0,
+             "st": state(now[i]["free"] / now[i]["total"] if i in now and now[i]["total"] else None)} for i in a["lots"] if i in names]
+    g = stat["profile"] if stat else None
+    return {"kind": "oblast", "id": area_id, "title": a["name"], "lots": lots,
+            "heat": heat(g) if g and _has(g) else None, "peaks": peaks(g, s["history_from"], at) if g else [],
+            "occ": _pct(stat["occupancy"]) if stat else "",
+            "full_pct": "",  # an area is never all full: its lots fill one by one
+            "days": DAYS}
+
+
+def lot_detail(lot_id: str) -> dict | None:
+    """What opens under a lot's row: its typical week; None for an unknown id."""
+    names = q.lot_names()
+    if lot_id not in names:
+        return None
+    at, st = _now(), q.state()
+    r = _now_map(st).get(lot_id)
+    s = statistics(ObvodFilter(), DAYS, True)
+    stat = next((x for x in s["lots"] if x["id"] == lot_id), None)
+    a = next((x for x in data.payload("areas") if lot_id in x["lots"]), None)
+    g = stat["profile"] if stat else None
+    return {"kind": "parkoviste", "id": lot_id, "title": names[lot_id], "lots": [], "area": a,
+            "changed": _ago(r["changed_at"], at) if r else None,
+            "heat": heat(g) if g and _has(g) else None, "peaks": peaks(g, s["history_from"], at) if g else [],
+            "occ": _pct(stat["occupancy"]) if stat else "", "full_pct": _pct(stat["full"]) if stat else "",
+            "days": DAYS}
+
+
+@pages.get("/oblast/{area_id}", response_class=HTMLResponse)
+def area_part(request: Request, area_id: str):
+    """The detail of an area as a part of the page, for parkovani.js."""
+    d = area_detail(area_id)
+    if d is None:
+        raise HTTPException(404, "Takovou oblast neznáme.")
+    return tpl.TemplateResponse(request, "parkovani/_detail.html", {"d": d})
+
+
+@pages.get("/parkoviste/{lot_id}", response_class=HTMLResponse)
+def lot_part(request: Request, lot_id: str):
+    """The detail of a lot as a part of the page, for parkovani.js."""
+    d = lot_detail(lot_id)
+    if d is None:
+        raise HTTPException(404, "Takové parkoviště neznáme.")
+    return tpl.TemplateResponse(request, "parkovani/_detail.html", {"d": d})

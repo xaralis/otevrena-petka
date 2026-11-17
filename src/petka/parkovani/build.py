@@ -137,11 +137,13 @@ def document(built: dt.datetime, srcs: list[dict], placer: Placer) -> tuple[dict
         "tariffs": data.payload("tariffs"),
     }
     sections = [{**s, "obvody": placer.rings(s["rings"])} for s in data.payload("sections")]
+    lot_obvody = {lt["id"]: lt["obvody"] for lt in ls}
+    areas = [{**a, "obvody": sorted({o for i in a["lots"] for o in lot_obvody.get(i, [])})} for a in data.payload("areas")]
     sources = {"lots": {**LOTS_SOURCE, "fetched": iso(built)}}
     sources.update({k: data.meta(k) for k in data.FILES})
     return {"v": VERSION, "built": iso(built), "source": SOURCE, "sources": sources,
             "parking": {"lots": ls, "machines": machines}, "zones": zones, "adjacent": adjacent,
-            "localities": localities, "sections": sections, "smsCodes": data.payload("smsCodes")}, notes
+            "localities": localities, "sections": sections, "areas": areas, "smsCodes": data.payload("smsCodes")}, notes
 
 
 def narrowed(doc: dict, obvod: ObvodFilter) -> dict:

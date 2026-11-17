@@ -137,7 +137,8 @@ BUILT = dt.datetime(2026, 11, 16, 4, 0, tzinfo=UTC)
 
 def test_document_keeps_the_apps_files_and_narrows_places_only():
     doc, _ = build.document(BUILT, SRCS, build.Placer(POLYS))
-    assert set(doc) == {"v", "built", "source", "sources", "parking", "zones", "adjacent", "localities", "sections", "smsCodes"}
+    assert set(doc) == {"v", "built", "source", "sources", "parking", "zones", "adjacent", "localities", "sections", "areas", "smsCodes"}
+    assert all("obvody" in a and a["lots"] for a in doc["areas"])
     assert doc["built"] == "2026-11-16T04:00:00Z" and doc["sources"]["lots"]["fetched"] == doc["built"]
     assert doc["sources"]["tariffs"]["checked"] and doc["sources"]["smsCodes"]["url"].startswith("https://www.dpmp.cz/")
     assert set(doc["localities"]) == {"localities", "visitor", "tariffs"}
@@ -174,6 +175,36 @@ def test_grid_and_lots():
     assert [x["id"] for x in ls] == ["A", "B"] and ls[0]["name"] == "Atrium" and ls[1]["name"] == "B"
     assert ls[0]["occupancy"] == 0.875 and ls[0]["capacity"] == 10 and ls[0]["profile"]["occupancy"][6][23] == 1.0
     assert stats.busiest_hours(g, 1) == [{"day": "neděle", "hour": 23, "occupancy": 1.0}]
+    ar = stats.areas(rows, [{"id": "x", "name": "Iks", "lots": ["A", "B", "C"]}, {"id": "y", "name": "Ypsilon", "lots": ["C"]}], profiles=True)
+    assert [a["id"] for a in ar] == ["x"] and ar[0]["lots"] == ["A", "B"]      # an area without history is left out
+    assert ar[0]["occupancy"] == round(240 / 360, 3) and ar[0]["capacity"] == 20 and ar[0]["profile"]["occupancy"][0][8] == 0.5
+
+
+def test_peaks_wait_for_a_week_of_history():
+    g = {"occupancy": [[None] * 24 for _ in range(7)], "full": [[None] * 24 for _ in range(7)]}
+    g["occupancy"][0][21] = 0.58
+    at = dt.datetime(2026, 11, 30, tzinfo=UTC)
+    assert web.peaks(g, "2026-11-25T20:30:00Z", at) == []
+    assert web.peaks(g, None, at) == []
+    assert web.peaks(g, "2026-11-16T20:30:00Z", at) == [{"day": "pondělí", "hour": 21, "occupancy": 0.58}]
+
+
+def test_areas_are_known_lots_at_most_once():
+    areas = data.payload("areas")
+    ids = [i for a in areas for i in a["lots"]]
+    assert len(ids) == len(set(ids)) and len({a["id"] for a in areas}) == len(areas)
+    assert all(i.startswith("PRD.PRK.LOK-") for i in ids)
+    assert {"masarykovo-namesti", "namesti-republiky", "u-mlynu", "nemocnice", "palackeho"} <= {a["id"] for a in areas}
+
+
+def test_areas_now():
+    now = {"A": {"free": 2, "total": 20}, "B": {"free": 10, "total": 20}}
+    assert web.areas_now(now, [{"id": "x", "name": "Iks", "lots": ["A", "B", "C"]}, {"id": "y", "name": "Y", "lots": ["C"]}]) == [
+        {"id": "x", "name": "Iks", "free": 12, "total": 40, "lots": 2, "share": 0.3, "st": "ok"}]
+
+
+def test_state_of_a_bar():
+    assert [web.state(x) for x in (0.5, 0.3, 0.29, 0.11, 0.1, 0.0, None)] == ["ok", "ok", "low", "low", "full", "full", ""]
 
 
 # --- database ---------------------------------------------------------------------------------
@@ -318,11 +349,36 @@ def test_statistiky_api(filled):
 
 
 def test_page(filled):
-    r = get("/verejny-prostor/parkovani?kde=mesto")
+    r = get("/verejny-prostor/parkovani")
     assert r.status_code == 200
     assert "Volno teď" in r.text and "Kdy bývá plno" in r.text and "pk-heat" in r.text and "Sladkovského I." in r.text
-    r = get("/verejny-prostor/parkovani")             # MO V has one lot here: the town, said so
-    assert "ukazujeme celé město" in r.text
+    r = get("/verejny-prostor/parkovani")             # always the whole town: lot B is in mo5, A in mo1
+    assert "Sladkovského I." in r.text and "Celé město" not in r.text
+
+
+def test_area_and_lot_details_open_under_their_rows(filled, monkeypatch):
+    monkeypatch.setattr(data, "payload", lambda key, _p=data.payload: [{"id": "test", "name": "Testovací oblast", "lots": ["A", "B"]}]
+                        if key == "areas" else _p(key))
+    web._stats.clear()
+    r = get("/verejny-prostor/parkovani")
+    assert "Podle oblastí" in r.text and 'data-pk-part="/verejny-prostor/parkovani/oblast/test"' in r.text
+    assert 'data-pk-part="/verejny-prostor/parkovani/parkoviste/A"' in r.text and "parkovani.js" in r.text
+    assert "pk-open" not in r.text
+    # the part parkovani.js fetches: no page around it
+    r = get("/verejny-prostor/parkovani/oblast/test")
+    assert r.status_code == 200 and "<html" not in r.text and 'id="pk-oblast-test"' in r.text and "pk-heat-compact" in r.text and "pk-list" in r.text
+    r = get("/verejny-prostor/parkovani/parkoviste/A")
+    assert r.status_code == 200 and "<html" not in r.text and "pk-heat-tiny" in r.text
+    assert get("/verejny-prostor/parkovani/oblast/nic").status_code == 404
+    assert get("/verejny-prostor/parkovani/parkoviste/nic").status_code == 404
+    # without JS the link opens the same detail on the page, under its row
+    r = get("/verejny-prostor/parkovani?oblast=test")
+    assert r.text.count('class="pk-open"') == 1 and 'id="pk-oblast-test"' in r.text and 'aria-expanded="true"' in r.text
+    r = get("/verejny-prostor/parkovani?parkoviste=B")
+    assert 'id="pk-parkoviste-B"' in r.text
+    d = get("/api/v1/parkovani/statistiky?profily=true").json()
+    assert d["areas"][0]["id"] == "test" and "profile" in d["areas"][0]
+    web._stats.clear()
 
 
 def test_data_page_lists_parkovani(filled):

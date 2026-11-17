@@ -18,6 +18,7 @@ Kód: `src/petka/parkovani/`, data: `data/parkovani/`.
 | přilehlá oblast zóny B | příloha 6 nařízení 2/2026 (`prilehla-oblast.json`) | ručně |
 | lokality, návštěvnická místa | přílohy 2–4 nařízení 2/2026 (`lokality.json`) | ručně |
 | placené úseky | přílohy 2–4, spárované se skupinami stání podle čidel (`useky.json`) | ručně |
+| oblasti | Otevřená Pětka: části města, jak o nich mluví lidé, a jejich parkoviště (`oblasti.json`) | ručně |
 
 Rozhraní ChytřejšíParkingu je **neoficiální**: bez dokumentace, bez licence a bez času měření.
 Pětka se ptá s obecným `User-Agent` bez osobních údajů. Ručně udržovaná data přešla z repa
@@ -67,6 +68,7 @@ Jeden soubor, ze kterého aplikace nahradí své přibalené soubory jeden k jed
     "tariffs": { "L.1": {…}, "A-1": {…} } },
   "sections": [ { "locality": "A-1", "kind": "mixed", "street": "Na Třísle", "rings": [[[…]]],
                   "lots": ["PRD.PRK.LOK-LII-59", null], "obvody": ["mo1"] } ],             // = sections.json
+  "areas": [ { "id": "u-mlynu", "name": "U Mlýnů", "lots": ["PRD.PRK.LOK-LI-7-9", …], "obvody": ["mo1"] } ],
   "smsCodes": [ { "number": "1", "zone": "A", "name": "Pernštýnske náměstí", "sms": "1" } ] }
 ```
 
@@ -79,6 +81,7 @@ Jeden soubor, ze kterého aplikace nahradí své přibalené soubory jeden k jed
 | `zones[]`, `adjacent` | hranice zón A, B, C a přilehlé oblasti zóny B (uzavřený kruh [lon, lat]); chyba převodu ~4 m, do 20 m od hranice nelze říct jednu zónu |
 | `localities` | lokality s hranicí a ulicemi, návštěvnická místa L.1–L.8 se středy zelených úseků, ceník podle kódu |
 | `sections[]` | placené úseky jedné ulice v lokalitě jako pásy: `kind` `mixed` / `resident` / `visitor`, `rings`, ke každému pásu `lots` = id parkoviště, jehož čidla na něm leží, nebo `null` |
+| `areas[]` | oblasti, jak o nich mluví lidé (Masarykovo náměstí, U Mlýnů, u nemocnice…): `id`, `name`, `lots` = id parkovišť (každé nejvýš v jedné oblasti), `obvody` = obvody jejích parkovišť. Je to náš seznam, ne hranice na mapě; volno oblasti = součet volna jejích parkovišť v obsazenosti |
 | `obvody` | obvody podle polygonů RÚIAN: bod, u ploch obvody s aspoň 1 % plochy, u úseků podle středů pásů |
 
 `?obvod=` zúží `parking.lots`, `parking.machines` a `sections`. Zóny, přilehlá oblast, lokality,
@@ -115,7 +118,9 @@ pětiminutovém okně). Parametry `?dni=` (7, 28 nebo 91, výchozí 28; jiná ho
 { "v": 1, "days": 28, "from": "…", "to": "…", "history_from": "…",
   "profile": { "occupancy": [[0.21, …24 hodin], …7 dní], "full": [[…]] },
   "lots": [ { "id": "…", "name": "…", "obvody": ["mo1"], "occupancy": 0.83, "full": 0.41,
-              "samples": 8064, "capacity": 45, "profile": {…jen s ?profily=true} } ] }
+              "samples": 8064, "capacity": 45, "profile": {…jen s ?profily=true} } ],
+  "areas": [ { "id": "u-mlynu", "name": "U Mlýnů", "lots": ["…"], "occupancy": 0.61, "full": 0.2,
+               "samples": 32256, "capacity": 146, "profile": {…jen s ?profily=true} } ] }
 ```
 
 - Mřížky 7 × 24: pondělí první, hodiny 0–23 pražského času; `null` = bez dat.
@@ -123,6 +128,12 @@ pětiminutovém okně). Parametry `?dni=` (7, 28 nebo 91, výchozí 28; jiná ho
   parkoviště váží víc). `full` – podíl vzorků s nejvýš desetinou volných míst („plno“).
 - `lots` od nejvytíženějšího. Stránka /verejny-prostor/parkovani v žebříčku vynechá parkoviště
   s méně než 5 místy (často jedno čidlo).
+- `areas` v pořadí souboru, jen oblasti s historií: vzorky jejich parkovišť sečtené, `capacity`
+  = součet kapacit parkovišť.
+- Na stránce /verejny-prostor/parkovani se řádek oblasti nebo parkoviště rozbalí: pod ním se
+  ukáže typický týden (a u oblasti její parkoviště). Část stránky dodá /verejny-prostor/parkovani/oblast/{id}
+  nebo /parkoviste/{id}, bez JS totéž otevře `?oblast=` / `?parkoviste=`. Větu „Nejplněji bývá…“
+  stránka ukáže až po týdnu historie.
 - Přepočítává se nejvýš každých 10 minut; `Cache-Control: public, max-age=600`.
 
 ## Úlohy
@@ -141,3 +152,9 @@ idempotentní a spouštějí migrace samy.
 `parkovani_history` (lot smallint, at, free, total): ~32 000 řádků denně pro 111 parkovišť,
 zhruba 0,8 GB ročně i s indexy. Uchovává se celá; zhuštění starších dat na hodiny je možné
 později, statistiky čtou jen posledních `dni`.
+
+**Při prvním nasazení** se historie nasbíraná lokálně přenese do produkce, aby statistiky
+nezačínaly od nuly: po migraci a **před** spuštěním smyčky obsazenosti (jinak by produkce
+přidělila čísla parkovišť `n` jinak) nahrát `parkovani_lots` a `parkovani_history`
+se stejnými `n`, např. `pg_dump --data-only -t parkovani_lots -t parkovani_history`
+a `psql` v podu databáze; pak `SELECT setval('parkovani_lots_n_seq', max(n)) FROM parkovani_lots`.

@@ -1869,8 +1869,8 @@ main > .kpi-wrap:first-child > .pd-kpi { margin-top: 0; }   /* the first block o
    every cell says its value to screen readers and on hover), the busiest lots */
 .pk-sum { margin: 0 0 1rem; }
 .pk-sum .big { margin-right: .2rem; }
-.pk-lots .rank-bar i { background: var(--pro); }
-.pk-heat-wrap { overflow-x: auto; padding-top: 2.2rem; margin-top: -1.4rem; }
+.pk-lots .rank-bar i, .pk-areas .rank-bar i { background: var(--pro); }
+.pk-heat-wrap { position: relative; overflow-x: auto; padding-top: 2.2rem; margin-top: -1.4rem; }  /* relative: the hours' .sr labels stay inside the scroll */
 table.pk-heat { border-collapse: separate; border-spacing: 2px; font-size: .8rem; min-width: 36rem; width: 100%; table-layout: fixed; }
 .pk-heat thead th:first-child { width: 2rem; }
 .pk-heat th { font-weight: 600; color: var(--muted); text-align: left; padding: 0 .2rem; }
@@ -1889,3 +1889,64 @@ table.pk-heat { border-collapse: separate; border-spacing: 2px; font-size: .8rem
 .pk-bx { background: repeating-linear-gradient(45deg, #fff 0 3px, var(--grey) 3px 6px); box-shadow: inset 0 0 0 1px var(--off); }
 .pk-lg { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center; font-size: .85rem; color: var(--ink-2); margin: .8rem 0 0; }
 .pk-lg i { display: inline-block; width: 1rem; height: .8rem; border-radius: 2px; vertical-align: -.1rem; margin-right: .35rem; }
+.pk-open > td { padding: 8px 12px 24px; background: #fff; border-bottom: 1px solid var(--rule); }
+a[data-pk-part]::after { content: " ▾"; font-size: .8em; color: var(--muted); }
+a[data-pk-part][aria-expanded="true"]::after { content: " ▴"; }
+/* a heat map in an open row of a ledger: the ledger's row rules (stripes, its mobile grid) are not its own */
+.ledger .pk-heat thead { display: table-header-group; }
+.ledger .pk-heat tbody { display: table-row-group; }
+.ledger .pk-heat tr, .ledger .pk-heat tr:nth-child(odd) { display: table-row; padding: 0; background: none; }
+.ledger .pk-heat th { padding: 0 .2rem; border-bottom: 0; font-weight: 600; background: none; }
+.ledger .pk-heat thead th { font-weight: 500; }
+.ledger .pk-heat td { padding: 0; grid-column: auto; }
+.ledger tr.pk-open { display: table-row; background: #fff; }
+@media (max-width: 600px) {
+  .ledger tr.pk-open { display: block; padding: 0; }
+  .ledger tr.pk-open > td { display: block; min-width: 0; padding: .5rem 1.25rem 1.25rem; }
+  .pk-open table.ledger { width: 100%; margin: 0; }
+  .pk-open .ledger tr { padding: .55rem 0; }
+}
+.pk-open .pk-heat-wrap { max-width: 100%; }
+/* an area's lots under its row: rows without a table's head and stripes */
+.pk-list { list-style: none; margin: 0 0 .8rem; padding: 0; }
+.pk-list > li { display: grid; grid-template-columns: minmax(0, 1.4fr) 5.5rem minmax(4rem, 1fr); gap: .8rem; align-items: center; padding: .35rem 0; border-bottom: 1px solid var(--off); }
+.pk-list .pk-n { text-align: right; color: var(--muted); font-size: .85rem; white-space: nowrap; }
+.pk-list .pk-n b { color: var(--ink); font-size: .95rem; }
+.pk-list .rank-bar i { background: var(--pro); }
+.pk-meta { color: var(--muted); font-size: .85rem; margin: .4rem 0 .2rem; }
+@media (max-width: 600px) {
+  .pk-list > li { grid-template-columns: minmax(0, 1fr) auto; gap: .1rem .8rem; }
+  .pk-list .rank-bar { grid-column: 1 / -1; }
+}
+/* smaller heat maps under a row: an area's compact, a lot's tiny */
+.pk-heat-compact, .pk-heat-tiny { padding-top: 1.6rem; margin-top: -1rem; }
+.pk-heat-compact table.pk-heat, .pk-heat-tiny table.pk-heat { min-width: 22rem; font-size: .7rem; border-spacing: 1px; }
+.pk-heat-compact .pk-heat td { height: .95rem; }
+.pk-heat-tiny .pk-heat td { height: .7rem; }
+.pk-heat-compact .pk-heat thead th:first-child, .pk-heat-compact .pk-heat tbody th,
+.pk-heat-tiny .pk-heat thead th:first-child, .pk-heat-tiny .pk-heat tbody th { width: 1.4rem; padding: 0; }
+.pk-heat-compact .pk-bx, .pk-heat-tiny .pk-bx { background: #f4f6f8; box-shadow: none; }
+/* fixed columns: a row opening under another must not move the columns */
+table.pk-lots, table.pk-areas { table-layout: fixed; }
+.pk-lots > thead > tr > th:nth-child(1), .pk-areas > thead > tr > th:nth-child(1) { width: 32%; }
+.pk-lots > thead > tr > th:nth-child(2), .pk-areas > thead > tr > th:nth-child(2) { width: 7.5rem; }
+.pk-lots > thead > tr > th:nth-child(4), .pk-areas > thead > tr > th:nth-child(4) { width: 10.5rem; }
+.pk-lots > thead > tr > th:nth-child(5) { width: 7.5rem; }
+/* the town's occupancy now: one wide bar, occupied in the heat map's blue, the usual level at this hour as a mark */
+.pk-gauge { margin: 0 0 1.6rem; }
+.pk-gauge .pk-sum { margin-bottom: .6rem; }
+.pk-meter { position: relative; height: 2.6rem; background: var(--grey); border-radius: 3px; overflow: hidden; }
+.pk-meter i { font-style: normal; display: flex; align-items: center; justify-content: flex-end; height: 100%; background: #3c6fb8; min-width: 3.5rem; }
+.pk-meter i b { color: #fff; font-size: 1.25rem; font-weight: 800; padding-right: .7rem; white-space: nowrap; }
+.pk-meter s { position: absolute; top: -2px; bottom: -2px; width: 3px; margin-left: -1.5px; background: var(--ink); text-decoration: none; }
+.pk-meter-lg { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; margin: .45rem 0 0; font-size: .85rem; color: var(--ink-2); }
+.pk-meter-lg i { display: inline-block; vertical-align: -.1rem; margin-right: .35rem; }
+.pk-meter-occ { width: 1rem; height: .8rem; background: #3c6fb8; border-radius: 2px; }
+.pk-meter-usual { width: 3px; height: .9rem; background: var(--ink); }
+/* state of a bar by the share free: green from 30 %, orange, red at most 10 % („plno“) */
+.rank-bar.pk-ok i, .pk-meter.pk-ok i, .pk-meter-occ.pk-ok { background: var(--pro); }
+.rank-bar.pk-low i, .pk-meter.pk-low i, .pk-meter-occ.pk-low { background: var(--abst-tile); }
+.rank-bar.pk-full i, .pk-meter.pk-full i, .pk-meter-occ.pk-full { background: var(--red); }
+/* a full lot has hardly any bar to colour: its track says it */
+.rank-bar.pk-full { background: #fbe1e3; box-shadow: inset 0 0 0 1px var(--red); }
+.pk-meter.pk-full { background: #fbe1e3; }

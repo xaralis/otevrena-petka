@@ -9,6 +9,7 @@ Pardubice on 16. 11. 2026). Each file names its source, the date it was last che
     prilehla-oblast.json   the area adjacent to zone B (annex 6)
     lokality.json          the localities and visitor places (annexes 2–4)
     useky.json             the paid street sections as bands, paired with the operator's lots
+    oblasti.json           areas as people name them (centre, U Mlýnů…): our own lists of lots
 
 They change when the regulation or DPMP's table does; then they are edited by hand (see
 docs/parkovani.md). The lots themselves come from the live source every day.
@@ -23,10 +24,12 @@ ROOT = Path(__file__).resolve().parents[3] / "data" / "parkovani"
 FILES = {
     "smsCodes": "sms-kody.json", "tariffs": "cenik.json", "machines": "automaty.json", "zones": "zony.json",
     "adjacent": "prilehla-oblast.json", "localities": "lokality.json", "sections": "useky.json",
+    "areas": "oblasti.json",
 }
 # what each file's payload is under
 PAYLOAD = {"smsCodes": "codes", "tariffs": "tariffs", "machines": "machines", "zones": "zones",
-           "adjacent": "area", "localities": ("localities", "visitor"), "sections": "sections"}
+           "adjacent": "area", "localities": ("localities", "visitor"), "sections": "sections",
+           "areas": "areas"}
 META = ("source", "url", "valid_from", "checked", "note")
 
 
