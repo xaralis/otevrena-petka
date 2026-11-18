@@ -1,0 +1,234 @@
+{
+ "notice_id": "mo5-15784",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-18T13:25:16+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Josefa Ressla",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15784",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "U domu č. p. 2263 v Josefa Ressla vznikne vyhrazené parkovací místo pro osobu se zdravotním postižením",
+ "summary": "Magistrát města Pardubic stanovil dopravní značení pro jedno vyhrazené parkovací místo na stávajícím parkovišti u domu č. p. 2263 v ulici Josefa Ressla. Místo je určené pro osobu se zdravotním postižením. Značení bude platit od 23. 11. 2026 do 22. 11. 2031. Proti opatření nejsou přípustné opravné prostředky.",
+ "where": "Parkoviště u domu č. p. 2263, ulice Josefa Ressla, Pardubice",
+ "period": {
+  "from": "2026-11-23",
+  "to": "2031-11-22",
+  "text": "23. 11. 2026 – 22. 11. 2031"
+ },
+ "action": null,
+ "affects": "Řidiči parkující na parkovišti u domu č. p. 2263; osoba se zdravotním postižením, pro kterou je místo vyhrazeno.",
+ "facts": [
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Platnost",
+   "value": "23. 11. 2026 – 22. 11. 2031"
+  },
+  {
+   "label": "Důvod",
+   "value": "vyhrazené parkování"
+  },
+  {
+   "label": "Provedení",
+   "value": "stálé svislé a vodorovné značení, retroreflexní"
+  },
+  {
+   "label": "Souhlas policie",
+   "value": "Policie ČR vyjádření ze dne 12. 11. 2026"
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "nejsou přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "IP12",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "V10f",
+   "text": "kolmé stání",
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Josefa Ressla 2263"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15784-1.pdf",
+  "page": 4,
+  "box": [
+   0.22,
+   0.085,
+   0.91,
+   0.72
+  ],
+  "caption": "Fotografie stávajícího parkoviště s označeným místem pro značku IP12"
+ },
+ "parking": null,
+ "visual_plan": "Mapa s bodem u Josefa Ressla 2263 a fotka parkoviště z přílohy. Ukáže, kde přesně místo vznikne.",
+ "reviewer_notes": "Text na značce IP12 obsahuje SPZ, proto je vynechán. Jména žadatelky a adresy neuvedeny. Fotka v příloze je otočená o 90°. Datum vyvěšení na desce magistrátu není uvedeno, vzato datum vyhotovení 18. 11. 2026; nejde o návrh, takže se lhůta pro připomínky neuplatňuje. Počet stání z fotky nelze spočítat, proto parking = null.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Jiránkova 2263",
+    "source_text": "Josefa Ressla 2263",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.756529,
+      50.024752
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.754289497667186,
+    50.023852,
+    15.758768502332815,
+    50.025652
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Fotografie stávajícího parkoviště s označeným místem pro značku IP12",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.73,
+     "y": 0.38,
+     "text": "Značka: parkovací místo jen pro osoby se zdravotním postižením",
+     "kind": "nove"
+    },
+    {
+     "x": 0.34,
+     "y": 0.42,
+     "text": "Přeškrtnuté místo na parkcusti: tady bude vyhrazené stání",
+     "kind": "nove"
+    },
+    {
+     "x": 0.66,
+     "y": 0.87,
+     "text": "Stávající zákaz zastavení, jen pro orientaci",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.82,
+     "y": 0.65,
+     "text": "Dům u parkoviště (č. p. 2263)",
+     "kind": "misto"
+    }
+   ],
+   "legend": [
+    {
+     "color": "červená",
+     "meaning": "přeškrtnuté místo, kde vznikne vyhrazené stání"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "IP12",
+    "name": "Vyhrazené parkoviště",
+    "image": "IP12.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "V10f",
+    "name": "Vyhrazené parkoviště pro vozidlo přepravující osobu těžce postiženou nebo osobu těžce pohybově postiženou",
+    "image": "V10f.jpg",
+    "text": "kolmé stání",
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Místo, značky, platnost i úřad sedí s originálem, jen interaktivní mapa uvádí jinou ulici (Jiránkova) než text karty a originál (Josefa Ressla) a jeden popisek na obrázku nejspíš značku označuje nepřesně."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Místo, značky, platnost i úřad sedí s originálem, jen interaktivní mapa uvádí jinou ulici (Jiránkova) než text karty a originál (Josefa Ressla) a jeden popisek na obrázku nejspíš značku označuje nepřesně."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta říká, co se mění, kde, od kdy do kdy, koho se to týká i že se proti tomu nelze bránit; připomínky se k tomuto opatření nepodávají."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný, jen obrat „opravné prostředky“ je úřední a v popisku obrázku je překlep."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Fotografie ukazuje správné parkoviště a vyhrazené místo, ale je otočená o 90°, letecký snímek nemá vyznačené místo a jeden popisek obsahuje překlep."
+   }
+  },
+  "summary": "Karta věrně popisuje vyhrazené parkovací místo pro osobu se zdravotním postižením u domu č. p. 2263 v ulici Josefa Ressla včetně doby platnosti, osobní údaje vynechává a drobné nedostatky má jen v mapě a obrázcích.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-23",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 23. 11. 2026 – 22. 11. 2031“."
+   },
+   {
+    "field": "do",
+    "value": "2031-11-22",
+    "verdict": "v_dokumentu",
+    "evidence": "Originál, strana 2: „Platnost úpravy: 23. 11. 2026 – 22. 11. 2031“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-18T13:25:45+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 12,
+   "cache_read": 25218,
+   "cache_write": 23218,
+   "output": 5647,
+   "usd": 0.2409
+  }
+ },
+ "published_at": "2026-11-18T13:25:45+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

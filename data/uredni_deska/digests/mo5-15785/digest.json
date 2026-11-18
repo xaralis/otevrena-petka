@@ -1,0 +1,224 @@
+{
+ "notice_id": "mo5-15785",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-18T13:24:24+00:00",
+ "source": {
+  "title": "VV - OOP stanovení místní úpravy provozu na pozemních komunikacích v Pardubicích - okružní křižovatka Dražkovice",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15785",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Na okružní křižovatce v Dražkovicích přibydou balisety a posune se značka IS3c",
+ "summary": "Magistrát města Pardubic stanovil trvalou změnu dopravního značení na okružní křižovatce silnic II/324, III/34030 a III/32226 v Dražkovicích. Před značkami C4a přibudou dvě balisety (směr Mikulovice a Staré Jesenčany), jedna stávající baliseta se přesune od středového ostrůvku a značka IS3c se přesune dál od silnice. Důvodem je větší bezpečnost, hlavně bezpečný průjezd autobusů. Proti stanovení se nelze odvolat.",
+ "where": "Okružní křižovatka silnic II/324, III/34030 a III/32226, Dražkovice",
+ "period": {
+  "from": "2026-11-18",
+  "to": null,
+  "text": "Platí trvale, stanovení vydáno 18. 11. 2026"
+ },
+ "action": null,
+ "affects": "Řidiči a cestující autobusů projíždějící okružní křižovatkou v Dražkovicích (směr Mikulovice, Staré Jesenčany, Ostřešany)",
+ "facts": [
+  {
+   "label": "Žadatel",
+   "value": "Správa a údržba silnic Pardubického kraje"
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Platnost",
+   "value": "trvale"
+  },
+  {
+   "label": "Provedení",
+   "value": "svislé značení, retroreflexní, základní rozměrová řada"
+  },
+  {
+   "label": "Důvod",
+   "value": "zvýšení bezpečnosti, zejména průjezdu autobusů"
+  },
+  {
+   "label": "Odvolání",
+   "value": "není přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "C4a",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "balisety před C4a",
+   "text": "2 ks, směr Mikulovice a směr Staré Jesenčany",
+   "change": "nova"
+  },
+  {
+   "code": "baliseta u středového ostrůvku",
+   "text": "přemístění stávající balisety (směr Mikulovice)",
+   "change": "zustava"
+  },
+  {
+   "code": "IS3c",
+   "text": "přemístění dále od silnice",
+   "change": "zustava"
+  }
+ ],
+ "places": [
+  "Dražkovice"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15785-1.pdf",
+  "page": 4,
+  "box": [
+   0.18,
+   0.1,
+   0.81,
+   0.37
+  ],
+  "caption": "Návrh úpravy značení na okružní křižovatce v Dražkovicích"
+ },
+ "parking": null,
+ "visual_plan": "Ukázat výřez letecké mapky s navrženým značením (strana 4) a bod na mapě v Dražkovicích; krátký seznam změn.",
+ "reviewer_notes": "Jde o stanovení místní úpravy (ne návrh), bez lhůty pro připomínky, odvolání není možné. Datum platnosti od 18. 11. 2026 je datum vydání; účinnost dokument výslovně neuvádí. Balisety nemají v textu kód; C4a a IS3c jsou uvedeny podle dokumentu, u C4a se mění jen balisety před ní, u balisety a IS3c jde o přemístění (zařazeno jako 'zustava'). Pozemkové parcely nejsou uvedeny.",
+ "visual": {
+  "map": [],
+  "ortho": null,
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Návrh úpravy značení na okružní křižovatce v Dražkovicích",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.32,
+     "y": 0.42,
+     "text": "nová baliseta před značkou C4a, směr Staré Jesenčany",
+     "kind": "nove"
+    },
+    {
+     "x": 0.52,
+     "y": 0.7,
+     "text": "nová baliseta před značkou C4a, směr Mikulovice",
+     "kind": "nove"
+    },
+    {
+     "x": 0.45,
+     "y": 0.45,
+     "text": "Baliseta",
+     "kind": "misto"
+    },
+    {
+     "x": 0.43,
+     "y": 0.57,
+     "text": "značka C4a (kruhový objezd) zůstává",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.33,
+     "y": 0.67,
+     "text": "značka IS3c se posune dál od silnice",
+     "kind": "nove"
+    },
+    {
+     "x": 0.46,
+     "y": 0.43,
+     "text": "okružní křižovatka v Dražkovicích",
+     "kind": "misto"
+    }
+   ],
+   "legend": []
+  },
+  "signs": [
+   {
+    "code": "C4a",
+    "name": "Přikázaný směr objíždění vpravo",
+    "image": "C4a.png",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "BALISETYPŘEDC4a",
+    "name": null,
+    "image": null,
+    "text": "2 ks, směr Mikulovice a směr Staré Jesenčany",
+    "change": "nova"
+   },
+   {
+    "code": "BALISETAUSTŘEDOVÉHOOSTRŮVKU",
+    "name": null,
+    "image": null,
+    "text": "přemístění stávající balisety (směr Mikulovice)",
+    "change": "zustava"
+   },
+   {
+    "code": "IS3c",
+    "name": "Směrová tabule (s jedním cílem)",
+    "image": "IS3c.png",
+    "text": "přemístění dále od silnice",
+    "change": "zustava"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, rozsah změn (dvě nové balisety, přesun jedné balisety a přesun směrové tabule), žadatel, důvod, trvalá platnost i to, že se nelze odvolat, odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, od kdy platí, koho se to týká, a správně říká, že se proti rozhodnutí nelze odvolat ani podat připomínky."
+   },
+   "srozumitelnost": {
+    "score": 3,
+    "reason": "Text je celkem čitelný, ale nadpis i text pracují s neobjasněnými pojmy „baliseta“, „C4a“ a „IS3c“, kterým běžný čtenář nerozumí."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Výkres ukazuje správnou křižovatku a čísla stojí u správných míst, jen značka přemístěné balisety se překrývá se značkou křižovatky a má příliš obecný popisek."
+   }
+  },
+  "summary": "Karta věrně popisuje trvalou úpravu značení na kruhovém objezdu v Dražkovicích, jen by měla vysvětlit odborné pojmy a na obrázku se překrývají dvě čísla.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-18",
+    "verdict": "v_dokumentu",
+    "evidence": "V hlavičce originálu je uvedeno „Datum: 18.11.2026“. Jde o datum vydání, platnost je „trvale“ a samostatné datum účinnosti originál neuvádí."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-18T13:24:50+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 12,
+   "cache_read": 14719,
+   "cache_write": 30439,
+   "output": 5151,
+   "usd": 0.2638
+  }
+ },
+ "published_at": "2026-11-18T13:24:50+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
