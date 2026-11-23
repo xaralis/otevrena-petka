@@ -1,0 +1,222 @@
+{
+ "notice_id": "mo5-15817",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-23T13:24:38+00:00",
+ "source": {
+  "title": "VV - OOP stanovení místní úpravy provozu na pozemních komunikacích v Pardubicích - Jana Palacha",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15817",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 30. 11. do 14. 12. 2026 bude kvůli práci na střeše zabraný chodník v ulici Jana Palacha",
+ "summary": "Kvůli práci na střeše domu č. p. 363 v ulici Jana Palacha bude od 30. 11. do 14. 12. 2026 část chodníku označená jako pracovní místo. Chodci projdou po zbývající části chodníku, která má šířku 1,5 m. Magistrát opatření vydal bez návrhu a nejsou proti němu přípustné opravné prostředky.",
+ "where": "Jana Palacha, chodník u domu č. p. 363",
+ "period": {
+  "from": "2026-11-30",
+  "to": "2026-12-14",
+  "text": "30. 11. 2026 – 14. 12. 2026"
+ },
+ "action": null,
+ "affects": "Chodci na chodníku v ulici Jana Palacha u domu č. p. 363.",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "stavební práce (práce na střeše přilehlého objektu)"
+  },
+  {
+   "label": "Platnost",
+   "value": "30. 11. 2026 – 14. 12. 2026"
+  },
+  {
+   "label": "Šířka zbývajícího chodníku",
+   "value": "1,5 m"
+  },
+  {
+   "label": "Žadatel",
+   "value": "Callipso Pardubice s.r.o."
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  }
+ ],
+ "signs": [
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Jana Palacha 363"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15817-1.pdf",
+  "page": 4,
+  "box": [
+   0.09,
+   0.05,
+   0.88,
+   0.85
+  ],
+  "caption": "Letecký snímek s vyznačeným zábor chodníku (Z2) u domu č. p. 363 v ulici Jana Palacha"
+ },
+ "parking": null,
+ "visual_plan": "Ukázat mapu s bodem u Jana Palacha 363 a přiložený letecký snímek se zakresleným záborem chodníku.",
+ "reviewer_notes": "Jde o přechodnou úpravu vydanou bez návrhu, takže není lhůta pro připomínky a action je null. Číslo domu č. p. 363 je z odůvodnění. Parkování nebylo vyplněno, protože změna se netýká parkovacích stání.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Jana Palacha 363",
+    "source_text": "Jana Palacha 363",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.770184,
+      50.030464
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.767944497667186,
+    50.029564,
+    15.772423502332815,
+    50.031364
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Letecký snímek s vyznačeným zábor chodníku (Z2) u domu č. p. 363 v ulici Jana Palacha",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.45,
+     "y": 0.395,
+     "text": "zabraná část chodníku: pracovní místo (zábor) kvůli práci na střeše",
+     "kind": "nove"
+    },
+    {
+     "x": 0.7,
+     "y": 0.368,
+     "text": "tady zůstává pro chodce 1,5 m chodníku",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.22,
+     "y": 0.368,
+     "text": "průchod pro chodce 1,5 m široký",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.4,
+     "y": 0.49,
+     "text": "dům č. p. 363, na jehož střeše se pracuje",
+     "kind": "misto"
+    },
+    {
+     "x": 0.28,
+     "y": 0.275,
+     "text": "ulice Jana Palacha",
+     "kind": "misto"
+    }
+   ],
+   "legend": [
+    {
+     "color": "červená",
+     "meaning": "zabraný chodník – pracovní místo (zábor Z2)"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Termín, místo, důvod, šířka zbývajícího chodníku, značka i úřad sedí s originálem."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se děje, kde, kdy a koho se to týká; jde o přechodnou úpravu, ke které se nedají podat připomínky, takže chybějící lhůta je v pořádku."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je většinou jasný, jen poslední věta o vydání bez návrhu a o opravných prostředcích a obrat „pracovní místo“ znějí úředně."
+   },
+   "obrazky": {
+    "score": 5,
+    "reason": "Obrázek přebírá situační plánek úřadu se zabranou částí chodníku před domem a zbývajícím průchodem 1,5 m, letecký snímek i náhled ukazují správné místo a mapa vyznačuje správnou adresu."
+   }
+  },
+  "summary": "Karta přesně a úplně popisuje dočasný zábor chodníku v ulici Jana Palacha kvůli práci na střeše, jen poslední věta zní zbytečně úředně.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-30",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 30. 11. 2026 – 14. 12. 2026 (strana 2)."
+   },
+   {
+    "field": "do",
+    "value": "2026-12-14",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 30. 11. 2026 – 14. 12. 2026 (strana 2)."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-23T13:24:54+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 12,
+   "cache_read": 14357,
+   "cache_write": 37925,
+   "output": 3805,
+   "usd": 0.2937
+  }
+ },
+ "published_at": "2026-11-23T13:24:54+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
