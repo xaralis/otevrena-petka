@@ -1,0 +1,520 @@
+{
+ "notice_id": "mo5-15837",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-24T17:27:12+00:00",
+ "source": {
+  "title": "Vyrozumění o zahájení řízení - BD K Blahobytu",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15837",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "stavby",
+ "headline": "Stavební úřad zahájil řízení o zateplení bytového domu K Blahobytu 2438 a 2439",
+ "summary": "Společenství vlastníků domu čp. 2438–2439 požádalo o povolení zateplení fasády. Řízení běží od podání žádosti 25. 10. 2026, stavební úřad o tom vyrozuměl účastníky 24. 11. 2026. Účastníci řízení mohou do 15 dnů od doručení oznámení podat námitky a nahlédnout do podkladů. Později podané námitky se nezohlední.",
+ "where": "Bytový dům čp. 2438–2439, ulice K Blahobytu a Jana Palacha, Pardubice",
+ "period": {
+  "from": "2026-10-25",
+  "to": null,
+  "text": "Řízení zahájeno 25. 10. 2026; oznámení vyvěšeno od 24. 11. 2026 do 11. 12. 2026."
+ },
+ "action": {
+  "what": "Podat námitky nebo se vyjádřit k podkladům rozhodnutí, pokud jste účastníkem řízení (např. soused dotčený na právech).",
+  "deadline": null,
+  "how": "Písemně u Magistrátu města Pardubic, stavebního úřadu, Štrossova 44, s uvedením důvodů. Nahlédnutí do podkladů: pondělí a středa 8–11 a 12–17 hod., v jiné dny po telefonické domluvě (466 859 157). Lhůta je 15 dnů od doručení oznámení."
+ },
+ "affects": "Účastníci řízení: vlastníci domu, sousedé (např. dům čp. 1718), správci sítí a dotčené úřady.",
+ "facts": [
+  {
+   "label": "Stavebník",
+   "value": "Společenství vlastníků jednotek domu 2438, 2439, K Blahobytu"
+  },
+  {
+   "label": "Záměr",
+   "value": "Snížení energetické náročnosti bytového domu K Blahobytu 2438 a 2439 – zateplení obvodových stěn"
+  },
+  {
+   "label": "Rozsah prací",
+   "value": "Zateplení fasády systémem ETICS včetně soklu, nová hydroizolace soklu, výměna klempířských prvků a bleskosvodu, nové protidešťové mřížky"
+  },
+  {
+   "label": "Zateplení se netýká",
+   "value": "Štítové stěny sousedního domu čp. 1718"
+  },
+  {
+   "label": "Dopad na byty",
+   "value": "Počet bytů ani dispozice se nemění"
+  },
+  {
+   "label": "Podání žádosti",
+   "value": "25. 10. 2026"
+  },
+  {
+   "label": "Stavební úřad",
+   "value": "Magistrát města Pardubic, sp. zn. SÚ 210939/2026/Pet"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "K Blahobytu 2438",
+  "K Blahobytu 2439",
+  "Jana Palacha",
+  "K Blahobytu 1718"
+ ],
+ "parcels": [
+  "st. p. 5102, k. ú. Pardubice",
+  "p. p. č. 2404/19, k. ú. Pardubice",
+  "p. p. č. 2583/28, k. ú. Pardubice",
+  "p. p. č. 2583/29, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa s vyznačeným domem a pozemky; doplnit jednoduchý přehled prací a lhůty.",
+ "reviewer_notes": "Datum doručení oznámení v dokumentu není, proto konec 15denní lhůty nelze přesně určit (deadline null). Oznámení se doručuje i veřejnou vyhláškou/deskou; ověřit, kdy se považuje za doručené. Jména zástupce stavebníka a souseda jsou záměrně vynechána. Dům čp. 1718 uveden jako dotčený soused z textu oznámení.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "st. p. č. 5102, k. ú. Pardubice",
+    "source_text": "st. p. 5102, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771169,
+        50.024227
+       ],
+       [
+        15.771584,
+        50.024242
+       ],
+       [
+        15.771567,
+        50.024438
+       ],
+       [
+        15.77147,
+        50.024433
+       ],
+       [
+        15.771475,
+        50.024381
+       ],
+       [
+        15.771434,
+        50.024379
+       ],
+       [
+        15.771436,
+        50.024357
+       ],
+       [
+        15.771156,
+        50.024343
+       ],
+       [
+        15.771169,
+        50.024227
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2404/19, k. ú. Pardubice",
+    "source_text": "p. p. č. 2404/19, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771601,
+        50.024137
+       ],
+       [
+        15.773092,
+        50.024196
+       ],
+       [
+        15.77316,
+        50.024195
+       ],
+       [
+        15.773179,
+        50.024185
+       ],
+       [
+        15.773192,
+        50.024167
+       ],
+       [
+        15.773172,
+        50.024358
+       ],
+       [
+        15.773036,
+        50.024352
+       ],
+       [
+        15.773041,
+        50.024302
+       ],
+       [
+        15.771169,
+        50.024227
+       ],
+       [
+        15.77118,
+        50.024122
+       ],
+       [
+        15.771601,
+        50.024137
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2583/28, k. ú. Pardubice",
+    "source_text": "p. p. č. 2583/28, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771007,
+        50.025374
+       ],
+       [
+        15.771113,
+        50.024236
+       ],
+       [
+        15.771125,
+        50.024217
+       ],
+       [
+        15.77117,
+        50.024203
+       ],
+       [
+        15.771169,
+        50.024227
+       ],
+       [
+        15.771122,
+        50.024226
+       ],
+       [
+        15.771111,
+        50.024342
+       ],
+       [
+        15.771156,
+        50.024343
+       ],
+       [
+        15.77109,
+        50.025059
+       ],
+       [
+        15.771051,
+        50.025058
+       ],
+       [
+        15.771009,
+        50.02538
+       ],
+       [
+        15.771059,
+        50.025383
+       ],
+       [
+        15.771057,
+        50.025415
+       ],
+       [
+        15.771017,
+        50.0254
+       ],
+       [
+        15.771008,
+        50.025387
+       ],
+       [
+        15.771007,
+        50.025374
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2583/29, k. ú. Pardubice",
+    "source_text": "p. p. č. 2583/29, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771169,
+        50.024227
+       ],
+       [
+        15.771156,
+        50.024343
+       ],
+       [
+        15.771111,
+        50.024342
+       ],
+       [
+        15.771122,
+        50.024226
+       ],
+       [
+        15.771169,
+        50.024227
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "K Blahobytu 2438",
+    "source_text": "K Blahobytu 2438",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.771466,
+      50.024278
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "K Blahobytu 2439",
+    "source_text": "K Blahobytu 2439",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.771257,
+      50.024287
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Jana Palacha",
+    "source_text": "Jana Palacha",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.771048,
+        50.024178
+       ],
+       [
+        15.771135,
+        50.023194
+       ]
+      ],
+      [
+       [
+        15.770839,
+        50.026333
+       ],
+       [
+        15.770904,
+        50.025456
+       ]
+      ],
+      [
+       [
+        15.770752,
+        50.027267
+       ],
+       [
+        15.770839,
+        50.026333
+       ]
+      ],
+      [
+       [
+        15.770562,
+        50.029244
+       ],
+       [
+        15.770752,
+        50.027267
+       ]
+      ],
+      [
+       [
+        15.770334,
+        50.031738
+       ],
+       [
+        15.770562,
+        50.029244
+       ]
+      ],
+      [
+       [
+        15.770904,
+        50.025456
+       ],
+       [
+        15.771048,
+        50.024178
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "address",
+    "label": "K Blahobytu 1718",
+    "source_text": "K Blahobytu 1718",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.771653,
+      50.024316
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.76952556531881,
+    50.0237341,
+    15.774673434681189,
+    50.0258029
+   ],
+   "shapes": [
+    {
+     "kind": "area",
+     "d": "M383.1,571.3 L479.8,565.9 L475.9,494.8 L453.3,496.6 L454.4,515.5 L444.9,516.2 L445.3,524.2 L380.1,529.3 L383.1,571.3 Z"
+    },
+    {
+     "kind": "area",
+     "d": "M483.8,603.9 L831.4,582.5 L847.2,582.9 L851.6,586.5 L854.7,593.1 L850.0,523.8 L818.3,526.0 L819.5,544.1 L383.1,571.3 L385.7,609.4 L483.8,603.9 Z"
+    },
+    {
+     "kind": "area",
+     "d": "M345.3,155.5 L370.0,568.0 L372.8,574.9 L383.3,580.0 L383.1,571.3 L372.1,571.7 L369.6,529.6 L380.1,529.3 L364.7,269.7 L355.6,270.0 L345.8,153.3 L357.5,152.2 L357.0,140.6 L347.7,146.1 L345.6,150.8 L345.3,155.5 Z"
+    },
+    {
+     "kind": "area",
+     "d": "M383.1,571.3 L380.1,529.3 L369.6,529.6 L372.1,571.7 L383.1,571.3 Z"
+    },
+    {
+     "kind": "point",
+     "xy": [
+      452.3,
+      552.8
+     ]
+    },
+    {
+     "kind": "point",
+     "xy": [
+      403.6,
+      549.6
+     ]
+    },
+    {
+     "kind": "point",
+     "xy": [
+      495.9,
+      539.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Stavebník, záměr, rozsah prací, pozemky, datum podání žádosti i patnáctidenní lhůta odpovídají originálu, ale datum vyvěšení od 24. 11. do 11. 12. 2026 v originálu není a nedá se ověřit."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Stavebník, záměr, rozsah prací, pozemky, datum podání žádosti i patnáctidenní lhůta odpovídají originálu, ale datum vyvěšení od 24. 11. do 11. 12. 2026 v originálu není a nedá se ověřit."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se staví, kde, koho se řízení týká, jak a kde podat námitky, kdy nahlížet do podkladů i lhůtu 15 dnů od doručení."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je většinou srozumitelný, jen místy zůstaly odborné výrazy a zkratky (systém ETICS, st. p., p. p. č., sp. zn.)."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Náhled i letecký snímek ukazují okolí křižovatky ulic Jana Palacha a K Blahobytu, kde dům stojí, na leteckém snímku ale chybí vyznačení domu, takže čtenáři moc nepomůže; mapa vyznačuje správné pozemky a adresy."
+   }
+  },
+  "summary": "Karta věrně a srozumitelně popisuje zahájení řízení o zateplení bytového domu na rohu ulic K Blahobytu a Jana Palacha, jen dny vyvěšení oznámení nemají v originálu oporu a letecký snímek dům nevyznačuje.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-10-25",
+    "verdict": "v_dokumentu",
+    "evidence": "V originálu stojí, že stavebník „dne 25.10.2026 podal žádost“ a že řízení bylo zahájeno dnem podání žádosti."
+   },
+   {
+    "field": "do",
+    "value": "null",
+    "verdict": "nelze_overit",
+    "evidence": "Konec řízení originál neuvádí. Údaj, že oznámení visí od 24. 11. do 11. 12. 2026, v originálu není. Originál nese jen datum vyhotovení 24. 11. 2026."
+   },
+   {
+    "field": "lhuta",
+    "value": "null (15 dnů od doručení)",
+    "verdict": "v_dokumentu",
+    "evidence": "V originálu stojí, že účastníci mohou podat námitky „do 15 dnů od doručení tohoto oznámení“. Datum doručení originál neuvádí, takže přesné datum konce lhůty spočítat nejde."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-24T17:27:36+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 8,
+   "cache_read": 20941,
+   "cache_write": 17622,
+   "output": 4791,
+   "usd": 0.1871
+  }
+ },
+ "published_at": "2026-11-24T17:27:36+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

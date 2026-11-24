@@ -1,0 +1,476 @@
+{
+ "notice_id": "mo5-15838",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-24T17:26:06+00:00",
+ "source": {
+  "title": "VV - OOP návrh stanovení místní úpravy provozu na pozemních komunikacích v Pardubicích - Čs. armády",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15838",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Čs. armády: pod zákaz vjezdu (B1) ke škole Staňkova přibude tabulka s výjimkou pro povolení a zásobování",
+ "summary": "Magistrát navrhuje změnu značení na vjezdu k základní škole Staňkova z ulice Čs. armády. Pod značku B1 (zákaz vjezdu všech vozidel) přijde dodatková tabulka E13 s textem „MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA“ (ÚMO V je Úřad městského obvodu Pardubice V). Vjet tak smějí jen držitelé povolení od úřadu obvodu Pardubice V a zásobování školy; původní tabulka se snímá. Návrh byl vyhotoven 24. 11. 2026; připomínky nejdříve do 8. 1. 2027, přesná lhůta závisí na dni vyvěšení na desce magistrátu. Připomínky mohou podat všechny dotčené osoby, vlastníci nemovitostí podávají písemné odůvodněné námitky.",
+ "where": "Vjezd k základní škole Staňkova v ulici Čs. armády",
+ "period": {
+  "from": null,
+  "to": "2027-01-08",
+  "text": "Návrh vyhotoven 24. 11. 2026; připomínky nejdříve do 8. 1. 2027, přesná lhůta závisí na dni vyvěšení na desce magistrátu"
+ },
+ "action": {
+  "what": "Podat připomínky nebo námitky k návrhu úpravy provozu v ulici Čs. armády",
+  "deadline": "2027-01-08",
+  "how": "Písemně Magistrátu města Pardubic, odboru dopravy (referent Luděk Fiedler, Ludek.Fiedler@mmp.cz, nám. Republiky 12, Pardubice), spis. zn. SZ_MMP 222515/2026. Připomínky mohou podat všechny dotčené osoby; vlastníci nemovitostí podávají písemné odůvodněné námitky. Později podané se nezohlední."
+ },
+ "affects": "Řidiči vjíždějící ke škole Staňkova z Čs. armády; škola a její zásobování; držitelé povolení od ÚMO V",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "zajištění obslužnosti (plynulé zásobování školy)"
+  },
+  {
+   "label": "Navrhovatel",
+   "value": "Magistrát města Pardubic, odbor dopravy, oddělení koncepce dopravy"
+  },
+  {
+   "label": "Stanovisko policie",
+   "value": "Policie ČR souhlasné stanovisko vydala 23. 11. 2026"
+  },
+  {
+   "label": "Provedení",
+   "value": "stálé svislé značky, základní rozměr, retroreflexní"
+  },
+  {
+   "label": "Provádí",
+   "value": "Služby města Pardubic a.s."
+  },
+  {
+   "label": "Značky",
+   "value": "E13 = dodatková tabulka s textem pod značkou; B1 = zákaz vjezdu všech vozidel"
+  }
+ ],
+ "signs": [
+  {
+   "code": "E13",
+   "text": "MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA",
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": null,
+   "change": "odstranit"
+  },
+  {
+   "code": "B1",
+   "text": null,
+   "change": "zustava"
+  }
+ ],
+ "places": [
+  "Čs. armády",
+  "Staňkova"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Jednoduchý piktogram: značka B1 s tabulkou E13 a jejím textem, případně mapa ulice Čs. armády s vjezdem ke škole. Situační výkres v příloze chybí.",
+ "reviewer_notes": "Den vyvěšení na desce magistrátu nelze z dokumentu ověřit (kolonky „vyvěšeno dne“ jsou prázdné) a k úřední desce magistrátu nemám přístup. Použito datum vyhotovení 24. 11. 2026: +15 dní = zveřejnění 9. 12. 2026, +30 dní = 8. 1. 2027. Pokud bylo vyvěšeno později, lhůta se posune (den vyvěšení + 15 + 30). Je potřeba ověřit. Příloha č. 1 (situace umístění značení) v PDF není, výkres proto není a vjezd ke škole nelze na mapě přesně vyznačit; vyžádat u odboru dopravy. Dokument v odůvodnění mluví i o „přechodné úpravě“, ale navrhuje stálé značky. B1 uvedeno jako stávající značka z textu „pod B1“. Text staré E13 není znám.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Čs. armády",
+    "source_text": "Čs. armády",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.763406,
+        50.022119
+       ],
+       [
+        15.763395,
+        50.022309
+       ]
+      ],
+      [
+       [
+        15.763268,
+        50.02345
+       ],
+       [
+        15.763217,
+        50.023983
+       ]
+      ],
+      [
+       [
+        15.763436,
+        50.021903
+       ],
+       [
+        15.763482,
+        50.021521
+       ]
+      ],
+      [
+       [
+        15.763171,
+        50.024324
+       ],
+       [
+        15.763147,
+        50.024627
+       ]
+      ],
+      [
+       [
+        15.762981,
+        50.026167
+       ],
+       [
+        15.763007,
+        50.025915
+       ]
+      ],
+      [
+       [
+        15.763207,
+        50.024064
+       ],
+       [
+        15.763171,
+        50.024324
+       ]
+      ],
+      [
+       [
+        15.763395,
+        50.022309
+       ],
+       [
+        15.763344,
+        50.022848
+       ],
+       [
+        15.763301,
+        50.023128
+       ]
+      ],
+      [
+       [
+        15.763301,
+        50.023128
+       ],
+       [
+        15.763268,
+        50.02345
+       ]
+      ],
+      [
+       [
+        15.763406,
+        50.022119
+       ],
+       [
+        15.763436,
+        50.021903
+       ]
+      ],
+      [
+       [
+        15.763482,
+        50.021521
+       ],
+       [
+        15.763552,
+        50.020743
+       ]
+      ],
+      [
+       [
+        15.763007,
+        50.025915
+       ],
+       [
+        15.76308,
+        50.025233
+       ]
+      ],
+      [
+       [
+        15.763217,
+        50.023983
+       ],
+       [
+        15.763207,
+        50.024064
+       ]
+      ],
+      [
+       [
+        15.763099,
+        50.025107
+       ],
+       [
+        15.763147,
+        50.024627
+       ]
+      ],
+      [
+       [
+        15.762981,
+        50.026167
+       ],
+       [
+        15.762897,
+        50.02693
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Staňkova",
+    "source_text": "Staňkova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.769293,
+        50.023139
+       ],
+       [
+        15.768,
+        50.023145
+       ]
+      ],
+      [
+       [
+        15.769293,
+        50.023139
+       ],
+       [
+        15.770789,
+        50.023196
+       ],
+       [
+        15.771135,
+        50.023194
+       ]
+      ],
+      [
+       [
+        15.765417,
+        50.023134
+       ],
+       [
+        15.766125,
+        50.023137
+       ]
+      ],
+      [
+       [
+        15.766125,
+        50.023137
+       ],
+       [
+        15.768,
+        50.023145
+       ]
+      ],
+      [
+       [
+        15.763301,
+        50.023128
+       ],
+       [
+        15.765417,
+        50.023134
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.754699732503894,
+    50.018886900000005,
+    15.779332267496105,
+    50.0287861
+   ],
+   "shapes": [
+    {
+     "kind": "line",
+     "d": "M424.1,505.1 L423.6,490.7"
+    },
+    {
+     "kind": "line",
+     "d": "M417.4,404.3 L414.9,363.9"
+    },
+    {
+     "kind": "line",
+     "d": "M425.6,521.5 L427.8,550.4"
+    },
+    {
+     "kind": "line",
+     "d": "M412.7,338.1 L411.5,315.1"
+    },
+    {
+     "kind": "line",
+     "d": "M403.4,198.4 L404.7,217.5"
+    },
+    {
+     "kind": "line",
+     "d": "M414.4,357.8 L412.7,338.1"
+    },
+    {
+     "kind": "line",
+     "d": "M423.6,490.7 L421.1,449.9 L419.0,428.7"
+    },
+    {
+     "kind": "line",
+     "d": "M419.0,428.7 L417.4,404.3"
+    },
+    {
+     "kind": "line",
+     "d": "M424.1,505.1 L425.6,521.5"
+    },
+    {
+     "kind": "line",
+     "d": "M427.8,550.4 L431.2,609.4"
+    },
+    {
+     "kind": "line",
+     "d": "M404.7,217.5 L408.3,269.2"
+    },
+    {
+     "kind": "line",
+     "d": "M414.9,363.9 L414.4,357.8"
+    },
+    {
+     "kind": "line",
+     "d": "M409.2,278.7 L411.5,315.1"
+    },
+    {
+     "kind": "line",
+     "d": "M403.4,198.4 L399.3,140.6"
+    },
+    {
+     "kind": "line",
+     "d": "M710.9,427.8 L647.9,427.4"
+    },
+    {
+     "kind": "line",
+     "d": "M710.9,427.8 L783.8,423.5 L800.7,423.7"
+    },
+    {
+     "kind": "line",
+     "d": "M522.1,428.2 L556.6,428.0"
+    },
+    {
+     "kind": "line",
+     "d": "M556.6,428.0 L647.9,427.4"
+    },
+    {
+     "kind": "line",
+     "d": "M419.0,428.7 L522.1,428.2"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA",
+    "change": "vymena"
+   },
+   {
+    "code": "B1",
+    "name": "Zákaz vjezdu všech vozidel (v obou směrech)",
+    "image": "B1.png",
+    "text": null,
+    "change": "zustava"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [
+  "datum do 2027-01-08 v dokumentu není doslova",
+  "datum lhůta 2027-01-08 v dokumentu není doslova"
+ ],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [
+   "Značky, místo, důvod, úřad i lhůta odpovídají originálu, jen vyjádření policie karta označuje jako souhlasné, ačkoli originál uvádí pouze, že policie stanovisko vydala."
+  ],
+  "marks": {
+   "presnost": {
+    "score": 4,
+    "reason": "Značky, místo, důvod, úřad i lhůta odpovídají originálu, jen vyjádření policie karta označuje jako souhlasné, ačkoli originál uvádí pouze, že policie stanovisko vydala."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, koho se to týká, kdo může podat připomínky, jak a do kdy, a poctivě upozorňuje, že přesná lhůta závisí na dni vyvěšení."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný a zkratky značek i úřadu vysvětluje, místy ale zůstávají úřední obraty jako „spis. zn.“ nebo „dodatková tabulka E13“."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek a mapa ukazují správnou čtvrť a ulice, ale samotný vjezd ke škole nevyznačují; plánek umístění značek v originálu chybí, takže přesnější obrázek nebylo z čeho udělat."
+   }
+  },
+  "summary": "Karta věrně popisuje návrh doplnit pod zákaz vjezdu ke škole Staňkova tabulku s výjimkou pro držitele povolení a zásobování a správně počítá nejdřívější konec lhůty; nepřesné je jen označení vyjádření policie jako souhlasného.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "do",
+    "value": "2027-01-08",
+    "verdict": "spocitano_spravne",
+    "evidence": "Originál je ze dne 24. 11. 2026 a kolonka s datem vyvěšení je prázdná. Při vyvěšení nejdříve 24. 11. 2026 je dnem zveřejnění 9. 12. 2026 (24. 11. + 15 dní) a 30. den od něj připadá na 8. 1. 2027. Jde tedy o nejdřívější možný konec lhůty a karta ho tak také popisuje."
+   },
+   {
+    "field": "lhuta",
+    "value": "2027-01-08",
+    "verdict": "spocitano_spravne",
+    "evidence": "Výpočet je stejný: datum originálu 24. 11. 2026 + 15 dní vyvěšení = 9. 12. 2026, k tomu 30 dní = 8. 1. 2027. Při pozdějším vyvěšení se lhůta posune, na což karta upozorňuje."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-24T17:26:54+00:00",
+  "attempts": 2,
+  "usage": {
+   "calls": 5,
+   "input": 26,
+   "cache_read": 101042,
+   "cache_write": 38957,
+   "output": 15441,
+   "usd": 0.4785
+  }
+ },
+ "published_at": "2026-11-24T17:26:54+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

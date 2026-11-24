@@ -1,0 +1,659 @@
+{
+ "notice_id": "mo5-15836",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-24T17:28:09+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - S. K. Neumanna",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15836",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 3. do 8. 12. 2026 bude u Kauflandu v ulici S. K. Neumanna uzavřený chodník kvůli výkopům",
+ "summary": "Kvůli výkopovým pracím pro kabelové vedení k dobíjecí stanici bude od 3. do 8. 12. 2026 uzavřena stezka pro chodce a cyklisty u OC Kaufland v ulici S. K. Neumanna. Chodci půjdou po označené obchůzné trase od přechodu u křižovatky s Pichlovou k přechodu u č. p. 2506. Pokud se bude pracovat na ploše parkoviště, bude i ta oplocena. Proti opatření nejsou přípustné žádné opravné prostředky.",
+ "where": "Ulice S. K. Neumanna, stezka pro chodce a cyklisty u OC Kaufland",
+ "period": {
+  "from": "2026-12-03",
+  "to": "2026-12-08",
+  "text": "3. 12. 2026 – 8. 12. 2026"
+ },
+ "action": null,
+ "affects": "Chodci a cyklisté na stezce u OC Kaufland v ulici S. K. Neumanna a lidé parkující na přilehlém parkolder",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "výkopové práce pro elektrickou přípojku, projekt „Kabelové vedení pro dobíjecí stanici“"
+  },
+  {
+   "label": "Provádí",
+   "value": "ELRO Czech, s.r.o."
+  },
+  {
+   "label": "Obchůzná trasa",
+   "value": "od přechodu u křižovatky S. K. Neumanna × Pichlova k přechodu u č. p. 2506"
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "nejsou přípustné"
+  }
+ ],
+ "signs": [
+  {
+   "code": "A15",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "Z4d",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": "CHODNÍK ZA xx M UZAVŘEN",
+   "change": "nova"
+  },
+  {
+   "code": "IS11c",
+   "text": "se symbolem chodce, označení obchůzné trasy",
+   "change": "nova"
+  },
+  {
+   "code": "Z2",
+   "text": "uzavření stezky v celé šířce a ohrazení plochy parkoviště, pokud se tam bude pracovat",
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "S. K. Neumanna",
+  "Pichlova"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mo5-15836-1.pdf",
+  "page": 4,
+  "box": [
+   0.13,
+   0.17,
+   0.86,
+   0.69
+  ],
+  "caption": "Situace umístění dopravního značení u OC Kaufland v ulici S. K. Neumanna"
+ },
+ "parking": null,
+ "visual_plan": "Mapa ulice S. K. Neumanna u Kauflandu s vyznačenou obchůznou trasou a přiložený situační výkres ze 4. strany.",
+ "reviewer_notes": "Datum platnosti 3.–8. 12. 2026 je přímo v dokumentu. Délka uzavřeného úseku v E13 je v textu „xx M“. Dokument je z 23. 11. 2026, opatření platí před zahájením prací. Žádná lhůta pro připomínky se neuvádí. Oprav v poli affects překlep, pokud zůstal: má být „parkovišti“. Výřez výkresu ověřit.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "S. K. Neumanna",
+    "source_text": "S. K. Neumanna",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.778457,
+        50.023569
+       ],
+       [
+        15.778363,
+        50.023523
+       ],
+       [
+        15.778339,
+        50.023487
+       ],
+       [
+        15.778335,
+        50.023449
+       ]
+      ],
+      [
+       [
+        15.778602,
+        50.023555
+       ],
+       [
+        15.778517,
+        50.023573
+       ],
+       [
+        15.778457,
+        50.023569
+       ]
+      ],
+      [
+       [
+        15.778335,
+        50.023449
+       ],
+       [
+        15.778353,
+        50.023412
+       ],
+       [
+        15.778413,
+        50.023369
+       ]
+      ],
+      [
+       [
+        15.778413,
+        50.023369
+       ],
+       [
+        15.778498,
+        50.023351
+       ],
+       [
+        15.778585,
+        50.023362
+       ]
+      ],
+      [
+       [
+        15.778585,
+        50.023362
+       ],
+       [
+        15.778652,
+        50.023401
+       ],
+       [
+        15.77868,
+        50.023456
+       ]
+      ],
+      [
+       [
+        15.778855,
+        50.027104
+       ],
+       [
+        15.778838,
+        50.026924
+       ]
+      ],
+      [
+       [
+        15.779121,
+        50.029076
+       ],
+       [
+        15.779072,
+        50.028998
+       ],
+       [
+        15.779025,
+        50.028635
+       ]
+      ],
+      [
+       [
+        15.778747,
+        50.024669
+       ],
+       [
+        15.778599,
+        50.023702
+       ],
+       [
+        15.778602,
+        50.023555
+       ]
+      ],
+      [
+       [
+        15.778245,
+        50.021115
+       ],
+       [
+        15.778201,
+        50.021231
+       ],
+       [
+        15.778199,
+        50.021308
+       ],
+       [
+        15.778374,
+        50.022978
+       ],
+       [
+        15.778416,
+        50.023157
+       ],
+       [
+        15.778428,
+        50.023296
+       ],
+       [
+        15.778413,
+        50.023369
+       ]
+      ],
+      [
+       [
+        15.77868,
+        50.023456
+       ],
+       [
+        15.778662,
+        50.023512
+       ],
+       [
+        15.778602,
+        50.023555
+       ]
+      ],
+      [
+       [
+        15.779229,
+        50.029868
+       ],
+       [
+        15.779121,
+        50.029076
+       ]
+      ],
+      [
+       [
+        15.778987,
+        50.027096
+       ],
+       [
+        15.779195,
+        50.028976
+       ],
+       [
+        15.779121,
+        50.029076
+       ]
+      ],
+      [
+       [
+        15.779413,
+        50.031493
+       ],
+       [
+        15.779229,
+        50.029868
+       ]
+      ],
+      [
+       [
+        15.77855,
+        50.024423
+       ],
+       [
+        15.778748,
+        50.026176
+       ]
+      ],
+      [
+       [
+        15.778585,
+        50.023362
+       ],
+       [
+        15.778537,
+        50.023165
+       ],
+       [
+        15.778524,
+        50.022867
+       ],
+       [
+        15.778343,
+        50.0213
+       ],
+       [
+        15.778245,
+        50.021115
+       ]
+      ],
+      [
+       [
+        15.778457,
+        50.023569
+       ],
+       [
+        15.778489,
+        50.023683
+       ],
+       [
+        15.77855,
+        50.024423
+       ]
+      ],
+      [
+       [
+        15.778987,
+        50.027096
+       ],
+       [
+        15.778885,
+        50.02616
+       ]
+      ],
+      [
+       [
+        15.778885,
+        50.02616
+       ],
+       [
+        15.778747,
+        50.024669
+       ]
+      ],
+      [
+       [
+        15.778748,
+        50.026176
+       ],
+       [
+        15.778838,
+        50.026924
+       ]
+      ],
+      [
+       [
+        15.779025,
+        50.028635
+       ],
+       [
+        15.778852,
+        50.027173
+       ],
+       [
+        15.778855,
+        50.027104
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Pichlova",
+    "source_text": "Pichlova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.770752,
+        50.027267
+       ],
+       [
+        15.771164,
+        50.027254
+       ]
+      ],
+      [
+       [
+        15.776977,
+        50.027136
+       ],
+       [
+        15.778855,
+        50.027104
+       ]
+      ],
+      [
+       [
+        15.775097,
+        50.027176
+       ],
+       [
+        15.776977,
+        50.027136
+       ]
+      ],
+      [
+       [
+        15.778838,
+        50.026924
+       ],
+       [
+        15.778439,
+        50.026954
+       ]
+      ],
+      [
+       [
+        15.776977,
+        50.027136
+       ],
+       [
+        15.776982,
+        50.026982
+       ]
+      ],
+      [
+       [
+        15.775097,
+        50.027176
+       ],
+       [
+        15.773001,
+        50.027218
+       ]
+      ],
+      [
+       [
+        15.773032,
+        50.027103
+       ],
+       [
+        15.775107,
+        50.027078
+       ]
+      ],
+      [
+       [
+        15.776982,
+        50.026982
+       ],
+       [
+        15.77512,
+        50.027018
+       ]
+      ],
+      [
+       [
+        15.771164,
+        50.027254
+       ],
+       [
+        15.773001,
+        50.027218
+       ]
+      ],
+      [
+       [
+        15.778439,
+        50.026954
+       ],
+       [
+        15.777162,
+        50.02698
+       ]
+      ],
+      [
+       [
+        15.777162,
+        50.02698
+       ],
+       [
+        15.776982,
+        50.026982
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Situace umístění dopravního značení u OC Kaufland v ulici S. K. Neumanna",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.27,
+     "y": 0.575,
+     "text": "Tady je výkop: chodník a stezka bude uzavřená",
+     "kind": "nove"
+    },
+    {
+     "x": 0.65,
+     "y": 0.28,
+     "text": "Detail: oplocená plocha výkopu (kabel k dobíjecí stanici)",
+     "kind": "nove"
+    },
+    {
+     "x": 0.2,
+     "y": 0.135,
+     "text": "Přechod u Pichlovy: tady chodci obchůzku začnou",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.27,
+     "y": 0.76,
+     "text": "Přechod u č. p. 2506: tady obchůzka končí",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.255,
+     "y": 0.76,
+     "text": "Značky: chodník uzavřen, objízdná trasa pro chodce",
+     "kind": "nove"
+    },
+    {
+     "x": 0.07,
+     "y": 0.145,
+     "text": "ulice Pichlova",
+     "kind": "misto"
+    }
+   ],
+   "legend": [
+    {
+     "color": "červená",
+     "meaning": "místo výkopu a uzavřeného chodníku"
+    },
+    {
+     "color": "hnědý obrys (detail)",
+     "meaning": "oplocená plocha výkopu"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "A15",
+    "name": "Práce na silnici",
+    "image": "A15.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "Z4d",
+    "name": "Směrovací deska se šipkou doleva",
+    "image": "Z4d.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "CHODNÍK ZA xx M UZAVŘEN",
+    "change": "nova"
+   },
+   {
+    "code": "IS11c",
+    "name": "Směrová tabule pro vyznačení objížďky",
+    "image": "IS11c.jpg",
+    "text": "se symbolem chodce, označení obchůzné trasy",
+    "change": "nova"
+   },
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": "uzavření stezky v celé šířce a ohrazení plochy parkoviště, pokud se tam bude pracovat",
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Termín, místo, důvod, provádějící firma, obchůzka i značky odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí co, kde, kdy, koho se to týká i kudy vede obchůzka; lhůta k připomínkám v originálu není."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je srozumitelný, jen v údaji o dotčených lidech je překlep a věta o opravných prostředcích zní úředně."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Výřez výkresu ukazuje správné místo výkopu i začátek obchůzky, ale dvě čísla u konce obchůzky se překrývají, takže číslo 4 není vidět."
+   }
+  },
+  "summary": "Karta věrně popisuje uzavření stezky u Kauflandu od 3. do 8. 12. 2026 a obchůzku pro chodce, jen v textu je překlep a na obrázku se překrývají dvě čísla.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-12-03",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 3. 12. 2026 – 8. 12. 2026 (strana 2)"
+   },
+   {
+    "field": "do",
+    "value": "2026-12-08",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 3. 12. 2026 – 8. 12. 2026 (strana 2)"
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-24T17:28:25+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 14,
+   "cache_read": 39608,
+   "cache_write": 31705,
+   "output": 6086,
+   "usd": 0.2661
+  }
+ },
+ "published_at": "2026-11-24T17:28:25+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

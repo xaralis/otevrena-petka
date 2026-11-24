@@ -1,0 +1,376 @@
+{
+ "notice_id": "mo5-15839",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v6",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-24T17:24:21+00:00",
+ "source": {
+  "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Čs. armády",
+  "url": "https://pardubice.eu/uredni-deska/obvody?id=15839",
+  "board": "mo5",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Na ulici Čs. armády bude od 29. 11. 2026 u vjezdu k ZŠ Staňkova nová tabulka E13",
+ "summary": "V ulici Čs. armády v Pardubicích se od 29. 11. 2026 osadí pod značku B1 dodatková tabulka „MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA“. Původní tabulka E13 se sundá. Jde o přechodnou úpravu, aby škola mohla být plynule zásobována. Platí, dokud nenabude účinnosti trvalá změna místní úpravy provozu.",
+ "where": "ulice Čs. armády, Pardubice (vjezd k základní škole Staňkova)",
+ "period": {
+  "from": "2026-11-29",
+  "to": null,
+  "text": "od 29. 11. 2026 do nabytí účinnosti trvalé místní úpravy provozu"
+ },
+ "action": null,
+ "affects": "Řidiči jezdící do ulice Čs. armády k ZŠ Staňkova; vjezd mají mít držitelé povolení nebo zásobování školy.",
+ "facts": [
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  },
+  {
+   "label": "Důvod",
+   "value": "zajištění obslužnosti (zásobování základní školy)"
+  },
+  {
+   "label": "Provedení",
+   "value": "stálé svislé dopravní značky, retroreflexní"
+  },
+  {
+   "label": "Provádí",
+   "value": "Služby města Pardubic a.s."
+  },
+  {
+   "label": "Opravné prostředky",
+   "value": "Proti opatření nejsou přípustné žádné opravné prostředky"
+  },
+  {
+   "label": "Účinnost",
+   "value": "5. den po vyvěšení; úprava platí od 29. 11. 2026"
+  }
+ ],
+ "signs": [
+  {
+   "code": "E13",
+   "text": "MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA",
+   "change": "nova"
+  },
+  {
+   "code": "B1",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "E13",
+   "text": null,
+   "change": "odstranit"
+  }
+ ],
+ "places": [
+  "Čs. armády"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Mapa ulice Čs. armády s vyznačeným vjezdem k ZŠ Staňkova a seznam změn značek. Situační plán v příloze nebyl k dispozici.",
+ "reviewer_notes": "Situační plán zmíněn jako příloha, ale v PDF není (3 strany textu), proto drawing null. Přesné umístění značky B1 není uvedeno; B1 je uvedena jen jako nosná značka, pravděpodobně zůstává. Zkratka ÚMO V = Úřad městského obvodu Pardubice V (odhad, v textu nerozepsáno). Přechodná úprava platí od 29. 11. 2026 do nabytí účinnosti trvalé úpravy (č. j. MmP 230098/2026 ze 24. 11. 2026). Jde o přechodnou úpravu bez návrhu, bez lhůty na připomínky.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Čs. armády",
+    "source_text": "Čs. armády",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.763406,
+        50.022119
+       ],
+       [
+        15.763395,
+        50.022309
+       ]
+      ],
+      [
+       [
+        15.763268,
+        50.02345
+       ],
+       [
+        15.763217,
+        50.023983
+       ]
+      ],
+      [
+       [
+        15.763436,
+        50.021903
+       ],
+       [
+        15.763482,
+        50.021521
+       ]
+      ],
+      [
+       [
+        15.763171,
+        50.024324
+       ],
+       [
+        15.763147,
+        50.024627
+       ]
+      ],
+      [
+       [
+        15.762981,
+        50.026167
+       ],
+       [
+        15.763007,
+        50.025915
+       ]
+      ],
+      [
+       [
+        15.763207,
+        50.024064
+       ],
+       [
+        15.763171,
+        50.024324
+       ]
+      ],
+      [
+       [
+        15.763395,
+        50.022309
+       ],
+       [
+        15.763344,
+        50.022848
+       ],
+       [
+        15.763301,
+        50.023128
+       ]
+      ],
+      [
+       [
+        15.763301,
+        50.023128
+       ],
+       [
+        15.763268,
+        50.02345
+       ]
+      ],
+      [
+       [
+        15.763406,
+        50.022119
+       ],
+       [
+        15.763436,
+        50.021903
+       ]
+      ],
+      [
+       [
+        15.763482,
+        50.021521
+       ],
+       [
+        15.763552,
+        50.020743
+       ]
+      ],
+      [
+       [
+        15.763007,
+        50.025915
+       ],
+       [
+        15.76308,
+        50.025233
+       ]
+      ],
+      [
+       [
+        15.763217,
+        50.023983
+       ],
+       [
+        15.763207,
+        50.024064
+       ]
+      ],
+      [
+       [
+        15.763099,
+        50.025107
+       ],
+       [
+        15.763147,
+        50.024627
+       ]
+      ],
+      [
+       [
+        15.762981,
+        50.026167
+       ],
+       [
+        15.762897,
+        50.02693
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.750908232503894,
+    50.018886900000005,
+    15.775540767496105,
+    50.0287861
+   ],
+   "shapes": [
+    {
+     "kind": "line",
+     "d": "M608.8,505.1 L608.3,490.7"
+    },
+    {
+     "kind": "line",
+     "d": "M602.1,404.3 L599.6,363.9"
+    },
+    {
+     "kind": "line",
+     "d": "M610.3,521.5 L612.5,550.4"
+    },
+    {
+     "kind": "line",
+     "d": "M597.4,338.1 L596.2,315.1"
+    },
+    {
+     "kind": "line",
+     "d": "M588.1,198.4 L589.4,217.5"
+    },
+    {
+     "kind": "line",
+     "d": "M599.1,357.8 L597.4,338.1"
+    },
+    {
+     "kind": "line",
+     "d": "M608.3,490.7 L605.8,449.9 L603.7,428.7"
+    },
+    {
+     "kind": "line",
+     "d": "M603.7,428.7 L602.1,404.3"
+    },
+    {
+     "kind": "line",
+     "d": "M608.8,505.1 L610.3,521.5"
+    },
+    {
+     "kind": "line",
+     "d": "M612.5,550.4 L616.0,609.4"
+    },
+    {
+     "kind": "line",
+     "d": "M589.4,217.5 L593.0,269.2"
+    },
+    {
+     "kind": "line",
+     "d": "M599.6,363.9 L599.1,357.8"
+    },
+    {
+     "kind": "line",
+     "d": "M593.9,278.7 L596.2,315.1"
+    },
+    {
+     "kind": "line",
+     "d": "M588.1,198.4 L584.0,140.6"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA",
+    "change": "vymena"
+   },
+   {
+    "code": "B1",
+    "name": "Zákaz vjezdu všech vozidel (v obou směrech)",
+    "image": "B1.png",
+    "text": null,
+    "change": "zustava"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, datum začátku platnosti, text nové tabulky, odstranění původní tabulky, důvod i provádějící firma odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, od kdy a do kdy úprava platí i koho se týká; připomínky se k této přechodné úpravě podat nedají, takže úkon pro čtenáře chybí oprávněně."
+   },
+   "srozumitelnost": {
+    "score": 3,
+    "reason": "Text je pochopitelný, ale nevysvětluje kódy značek B1 a E13 ani zkratku ÚMO V a konec platnosti je popsaný úředním obratem."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek i mapa ukazují správnou čtvrť a ulici Čs. armády, ale vjezd ke škole ani místo značky na nich vyznačené nejsou; výkres v originálu chybí."
+   }
+  },
+  "summary": "Karta přesně popisuje přechodnou změnu značení u vjezdu ke ZŠ Staňkova v ulici Čs. armády. Kódy značek a zkratku úřadu ale nevysvětluje a obrázek místo značky nevyznačuje.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-29",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: od 29. 11. 2026 do nabytí účinností místní úpravy provozu (strana 2)."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-24T17:24:43+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 10,
+   "cache_read": 21669,
+   "cache_write": 26223,
+   "output": 4184,
+   "usd": 0.2324
+  }
+ },
+ "published_at": "2026-11-24T17:24:43+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
