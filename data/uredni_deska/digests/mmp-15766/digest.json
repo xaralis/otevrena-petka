@@ -1,0 +1,266 @@
+{
+ "notice_id": "mmp-15766",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v7",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-26T11:10:33+00:00",
+ "source": {
+  "title": "Bytový dům K Višňovce, Pardubice, prodloužení platnosti povolení",
+  "url": "https://pardubice.eu/uredni-deska?id=15766",
+  "board": "mmp",
+  "mo5": true
+ },
+ "cluster": "stavby",
+ "headline": "Bytový dům K Višňovce: povolení stavby se prodlužuje o rok, odvolat se lze do 16. 12. 2026",
+ "summary": "Stavební úřad magistrátu prodloužil o 1 rok povolení pro bytový dům v ulici K Višňovce, v jehož přízemí mají být i prostory pro podnikání. Stavba zatím nezačala, podle stavebníka (firmy Cornales s.r.o.) ji zdržela elektrická přípojka. Ta je už hotová a připravuje se výběr hlavního dodavatele stavby. Rok navíc se počítá ode dne, kdy toto rozhodnutí nabude právní moci.",
+ "where": "ulice K Višňovce, Pardubice",
+ "period": {
+  "from": null,
+  "to": null,
+  "text": "Povolení se prodlužuje o 1 rok ode dne, kdy toto rozhodnutí nabude právní moci."
+ },
+ "action": {
+  "what": "Účastníci řízení, například vlastníci sousedních pozemků a staveb, se mohou proti prodloužení odvolat.",
+  "deadline": "2026-12-16",
+  "how": "Odvolání pro Krajský úřad Pardubického kraje (odbor majetkový, stavebního řádu a územního plánování) se podává u stavebního úřadu Magistrátu města Pardubic, Štrossova 44. Uveďte číslo jednací MmP 222387/2026 a přineste tolik stejnopisů, aby jeden zůstal úřadu a každý účastník dostal jeden. Termín 16. 12. 2026 platí pro ty, kterým se rozhodnutí doručuje vyhláškou na úřední desce. Komu přišlo přímo, tomu běží 15 dnů od jeho doručení."
+ },
+ "affects": "Vlastníci pozemků a domů v sousedství plánované stavby a ti, kdo k nim mají jiná věcná práva.",
+ "facts": [
+  {
+   "label": "Stavba",
+   "value": "Bytový dům K Višňovce s prostory pro podnikání v přízemí"
+  },
+  {
+   "label": "Pozemky stavby",
+   "value": "parc. č. 2506/17 a 2506/1, katastrální území Pardubice"
+  },
+  {
+   "label": "Původní povolení",
+   "value": "Vydáno 16. 10. 2024, platit začalo 16. 11. 2024 s platností na 2 roky"
+  },
+  {
+   "label": "Žádost o prodloužení",
+   "value": "Podána 10. 11. 2026, o 1 rok"
+  },
+  {
+   "label": "Územní plán",
+   "value": "Stavba je v souladu i s územním plánem účinným od 1. 8. 2026"
+  },
+  {
+   "label": "Výška domu",
+   "value": "20,6 m od podlahy přízemí (území dovoluje nejvýš 24 m)"
+  },
+  {
+   "label": "Sousední pozemky",
+   "value": "stavební parcely 1054, 1155, 1289, 1290, 1902/1, 1989/1, 2434/1, 3226, 5395/3, 10535/1, 10535/3, katastrální území Pardubice"
+  },
+  {
+   "label": "Sousední stavby",
+   "value": "Zelené Předměstí, čísla popisná 557, 588, 688, 689, 1029, 1095, 1485, 1751, 2436, 2437, 2783, 2784"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "K Višňovce"
+ ],
+ "parcels": [
+  "parc. č. 2506/17, k. ú. Pardubice",
+  "parc. č. 2506/1, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Letecký snímek nebo katastrální mapa se zvýrazněnými pozemky parc. č. 2506/17 a 2506/1 u ulice K Višňovce, aby sousedé hned viděli, kde dům vznikne. Příloha žádný výkres ani mapku neobsahuje, zvýraznění tedy musí vzniknout z čísel parcel.",
+ "reviewer_notes": "1) Datum vyvěšení: údaje o oznámení uvádějí desku magistrátu, vyvěšeno 16. 11. 2026, visí do 2. 12. 2026. Lhůta proto zůstává. Samotnou webovou desku jsem neotevíral, PDF datum vyvěšení neuvádí (jen datum vyhotovení 16. 11. 2026).\n2) Výpočet lhůty: 15. den po vyvěšení 16. 11. je 1. 12. 2026 (den doručení veřejnou vyhláškou), k tomu 15 dnů na odvolání, tedy 16. 12. 2026 (středa). Datum 16. 12. v dokumentu nestojí. Účastníkům s doručením do datové schránky nebo na dodejku běží lhůta od jejich vlastního doručení.\n3) Pozemky stavby jsou nově zapsány jako „parc. č.“, jak je v originálu. Druh parcely jsem v katastru neověřoval. V poli parcel zůstala zkratka „k. ú.“ v obvyklém formátu, v přehledu údajů je rozepsaná.\n4) Letecký snímek: v tomto podkladu ho vyznačit nelze, příloha mapu nemá. Pozemky jsou uvedené v poli parcel; ověřte, že je mapa na kartě skutečně zvýraznila.\n5) „st. p.“ je rozepsáno jako „stavební parcely“. V seznamu sousedních staveb dokument čísla popisná 2783 a 2784 uvádí dvakrát, na kartě jsou jen jednou.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2506/17, k. ú. Pardubice",
+    "source_text": "parc. č. 2506/17, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771201,
+        50.026298
+       ],
+       [
+        15.770981,
+        50.026289
+       ],
+       [
+        15.770995,
+        50.026106
+       ],
+       [
+        15.771215,
+        50.026116
+       ],
+       [
+        15.771201,
+        50.026298
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2506/1, k. ú. Pardubice",
+    "source_text": "parc. č. 2506/1, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.771265,
+        50.026301
+       ],
+       [
+        15.771201,
+        50.026298
+       ],
+       [
+        15.771215,
+        50.026116
+       ],
+       [
+        15.771279,
+        50.026119
+       ],
+       [
+        15.771265,
+        50.026301
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "K Višňovce",
+    "source_text": "K Višňovce",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.770839,
+        50.026333
+       ],
+       [
+        15.771506,
+        50.026366
+       ],
+       [
+        15.771554,
+        50.026383
+       ],
+       [
+        15.773089,
+        50.026426
+       ]
+      ],
+      [
+       [
+        15.773089,
+        50.026426
+       ],
+       [
+        15.7733,
+        50.026432
+       ],
+       [
+        15.775066,
+        50.026364
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.768890497667185,
+    50.02530349999999,
+    15.773369502332814,
+    50.027103499999996
+   ],
+   "shapes": [
+    {
+     "kind": "area",
+     "d": "M619.0,335.6 L560.1,339.4 L563.8,415.6 L622.8,411.5 L619.0,335.6 Z"
+    },
+    {
+     "kind": "area",
+     "d": "M636.2,334.4 L619.0,335.6 L622.8,411.5 L639.9,410.2 L636.2,334.4 Z"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [
+  "datum lhůta 2026-12-16 v dokumentu není doslova"
+ ],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Stavba, pozemky, data původního povolení i žádosti, výška domu, sousední pozemky a stavby i postup při odvolání odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, koho se to týká, jak se odvolat a do kdy, a vysvětluje i jinou lhůtu pro ty, kterým rozhodnutí přišlo přímo."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je většinou srozumitelný, jen několik úředních výrazů jako „nabytí právní moci“, „stejnopisy“ nebo „věcná práva“ zůstalo bez vysvětlení."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek ukazuje okolí bez vyznačení pozemků stavby, takže čtenáři moc nepomůže; místo stavby ukazuje až interaktivní mapa podle čísel pozemků."
+   }
+  },
+  "summary": "Karta věrně popisuje prodloužení povolení bytového domu v ulici K Višňovce o jeden rok a lhůta k odvolání je spočítaná správně; letecký snímek ale stavební pozemky nevyznačuje.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "lhuta",
+    "value": "2026-12-16",
+    "verdict": "spocitano_spravne",
+    "evidence": "Originál dává na odvolání 15 dnů od oznámení a ukládá vyvěsit rozhodnutí na 15 dnů na desce magistrátu. Podle údajů desky bylo vyvěšeno 16. 11. 2026. Patnáctý den, kdy se rozhodnutí považuje za doručené, je 1. 12. 2026 a 15 dnů od něj vychází na 16. 12. 2026. Samotné datum vyvěšení v PDF nestojí, je jen v údajích desky."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-26T11:11:16+00:00",
+  "attempts": 2,
+  "usage": {
+   "calls": 5,
+   "input": 20,
+   "cache_read": 58773,
+   "cache_write": 55357,
+   "output": 13430,
+   "usd": 0.5519
+  }
+ },
+ "published_at": "2026-11-26T11:11:16+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

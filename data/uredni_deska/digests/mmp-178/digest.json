@@ -1,0 +1,774 @@
+{
+ "notice_id": "mmp-178",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v7",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-26T11:15:06+00:00",
+ "source": {
+  "title": "Dotaz k rekonstrukci garáží na Dukle, Průmyslové zóně, výstavbě plotu v Teplého ulici ....",
+  "url": "https://pardubice.eu/uredni-deska?id=178",
+  "board": "mmp",
+  "mo5": true
+ },
+ "cluster": "informace",
+ "headline": "Odpověď z roku 2017: do garáží na konečné linky 5 na Dukle obvod investovat neplánoval",
+ "summary": "Primátor v roce 2017 písemně odpověděl na žádost o informace o garážích, plotu v Teplého ulici, parkování na Dukle a dalších tématech. Podle odpovědi městský obvod neměl platit projekt ani stavbu odkanalizování, nových cest a osvětlení v areálu garáží, protože s jejich majiteli nikdy nedošlo k dohodě a pro soukromé vlastníky nesmí odvádět dešťovou vodu ze střech. Gabionový plot (z drátěných košů s kamením) v Teplého ulici stál 1,9 milionu Kč. Odpověď popisuje stav z roku 2017.",
+ "where": "Dukla, hlavně areál garáží na konečné linky č. 5 a ulice Teplého",
+ "period": {
+  "from": null,
+  "to": null,
+  "text": "Odpověď z roku 2017, na úřední desce od 2. 3. 2017"
+ },
+ "action": null,
+ "affects": "Majitele garáží na konečné linky č. 5 a obyvatele Dukly",
+ "facts": [
+  {
+   "label": "Plot v Teplého ulici",
+   "value": "1,9 milionu Kč včetně DPH; postaven na základě rozhodnutí zastupitelstva obvodu Pardubice V"
+  },
+  {
+   "label": "Garáže na Dukle",
+   "value": "Obvod nechtěl platit projekt (řádově statisíce Kč) ani stavbu (řádově miliony Kč). Návrhy města zástupci majitelů dříve odmítli."
+  },
+  {
+   "label": "Garáže v ul. Věry Junkové",
+   "value": "Plochy u garáží opraveny od 12. 3. do 15. 7. 2016; platil obvod Pardubice III s příspěvkem města"
+  },
+  {
+   "label": "Parkování na Dukle",
+   "value": "Primátor se obával, že kromě velkého placeného parkovacího domu parkování na sídlišti nic nevyřeší"
+  },
+  {
+   "label": "Zóna Vápenka",
+   "value": "Investorem komunikací a osvětlení nebylo město ani žádný obvod, proto ceny a náklady úřad nesdělil"
+  },
+  {
+   "label": "Spojení Dukly s nádražím",
+   "value": "Podle primátora byla v roce 2017 lávka nebo podchod blíž realizaci než dřív; termín neuvedl"
+  },
+  {
+   "label": "Prostor před nádražím",
+   "value": "Primátor rekonstrukci hájil jako potřebnou, převážně placenou z dotace"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Teplého",
+  "Věry Junkové",
+  "Josefa Ressla",
+  "Sokolovská",
+  "Arthura Krause"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Přehled otázek a odpovědí v krátkých blocích (garáže, plot, parkování, nádraží), případně s jednoduchou mapkou Dukly s ulicí Teplého. Přílohy neobsahují výkres ani fotku.",
+ "reviewer_notes": "Jde o odpověď z roku 2017 (žádost došla podle razítka 15. 2. 2017, vyvěšeno 2. 3. 2017); na desce visí do 2027, údaje nemusí být aktuální. Odpověď nemá v příloze datum a horní část první strany je vybílená. Skeny obsahují v oslovení začerněné jméno žadatele a žádost popisuje i jeho osobní okolnosti; před zveřejněním příloh to zkontrolovat. Věta o tom, že obvod nebude investovat, se zřejmě týká obvodu Pardubice V, odpověď ho v tomto bodě výslovně nejmenuje. Ulice Věry Junkové patří do obvodu Pardubice III. Ulice Josefa Ressla, Sokolovská a Arthura Krause pocházejí z otázky žadatele o parkování.",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "Teplého",
+    "source_text": "Teplého",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.754794,
+        50.027065
+       ],
+       [
+        15.754101,
+        50.027041
+       ]
+      ],
+      [
+       [
+        15.76893,
+        50.027193
+       ],
+       [
+        15.767231,
+        50.027124
+       ]
+      ],
+      [
+       [
+        15.762053,
+        50.026887
+       ],
+       [
+        15.76059,
+        50.026835
+       ]
+      ],
+      [
+       [
+        15.767231,
+        50.027124
+       ],
+       [
+        15.765768,
+        50.027044
+       ]
+      ],
+      [
+       [
+        15.770752,
+        50.027267
+       ],
+       [
+        15.76893,
+        50.027193
+       ]
+      ],
+      [
+       [
+        15.754794,
+        50.027065
+       ],
+       [
+        15.755138,
+        50.027063
+       ]
+      ],
+      [
+       [
+        15.75707,
+        50.026931
+       ],
+       [
+        15.756918,
+        50.026943
+       ]
+      ],
+      [
+       [
+        15.756918,
+        50.026943
+       ],
+       [
+        15.755833,
+        50.027027
+       ],
+       [
+        15.755138,
+        50.027063
+       ]
+      ],
+      [
+       [
+        15.76059,
+        50.026835
+       ],
+       [
+        15.759576,
+        50.026793
+       ],
+       [
+        15.758686,
+        50.026802
+       ]
+      ],
+      [
+       [
+        15.762897,
+        50.02693
+       ],
+       [
+        15.763236,
+        50.026945
+       ]
+      ],
+      [
+       [
+        15.757554,
+        50.026895
+       ],
+       [
+        15.75707,
+        50.026931
+       ]
+      ],
+      [
+       [
+        15.762897,
+        50.02693
+       ],
+       [
+        15.762053,
+        50.026887
+       ]
+      ],
+      [
+       [
+        15.765768,
+        50.027044
+       ],
+       [
+        15.765116,
+        50.027021
+       ]
+      ],
+      [
+       [
+        15.763236,
+        50.026945
+       ],
+       [
+        15.763727,
+        50.026961
+       ]
+      ],
+      [
+       [
+        15.757554,
+        50.026895
+       ],
+       [
+        15.758686,
+        50.026802
+       ]
+      ],
+      [
+       [
+        15.765116,
+        50.027021
+       ],
+       [
+        15.763727,
+        50.026961
+       ]
+      ],
+      [
+       [
+        15.754101,
+        50.027041
+       ],
+       [
+        15.753147,
+        50.026936
+       ],
+       [
+        15.751815,
+        50.026744
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Věry Junkové",
+    "source_text": "Věry Junkové",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.799425,
+        50.041088
+       ],
+       [
+        15.798347,
+        50.042087
+       ]
+      ],
+      [
+       [
+        15.803685,
+        50.038141
+       ],
+       [
+        15.802108,
+        50.039225
+       ]
+      ],
+      [
+       [
+        15.799569,
+        50.040988
+       ],
+       [
+        15.799996,
+        50.040697
+       ]
+      ],
+      [
+       [
+        15.798347,
+        50.042087
+       ],
+       [
+        15.79818,
+        50.04226
+       ],
+       [
+        15.797653,
+        50.042749
+       ]
+      ],
+      [
+       [
+        15.802828,
+        50.040656
+       ],
+       [
+        15.80138,
+        50.040047
+       ],
+       [
+        15.801226,
+        50.039977
+       ],
+       [
+        15.801124,
+        50.039911
+       ]
+      ],
+      [
+       [
+        15.800977,
+        50.040003
+       ],
+       [
+        15.801124,
+        50.039911
+       ]
+      ],
+      [
+       [
+        15.801124,
+        50.039911
+       ],
+       [
+        15.801297,
+        50.039784
+       ]
+      ],
+      [
+       [
+        15.800774,
+        50.040143
+       ],
+       [
+        15.800977,
+        50.040003
+       ]
+      ],
+      [
+       [
+        15.801297,
+        50.039784
+       ],
+       [
+        15.802108,
+        50.039225
+       ]
+      ],
+      [
+       [
+        15.800269,
+        50.040496
+       ],
+       [
+        15.800147,
+        50.040584
+       ]
+      ],
+      [
+       [
+        15.799996,
+        50.040697
+       ],
+       [
+        15.800147,
+        50.040584
+       ]
+      ],
+      [
+       [
+        15.799425,
+        50.041088
+       ],
+       [
+        15.799569,
+        50.040988
+       ]
+      ],
+      [
+       [
+        15.796998,
+        50.044064
+       ],
+       [
+        15.796981,
+        50.04384
+       ],
+       [
+        15.796986,
+        50.0436
+       ],
+       [
+        15.79702,
+        50.043433
+       ],
+       [
+        15.797096,
+        50.043286
+       ],
+       [
+        15.797653,
+        50.042749
+       ]
+      ],
+      [
+       [
+        15.805254,
+        50.037036
+       ],
+       [
+        15.805216,
+        50.03709
+       ],
+       [
+        15.803685,
+        50.038141
+       ]
+      ],
+      [
+       [
+        15.800774,
+        50.040143
+       ],
+       [
+        15.800269,
+        50.040496
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Josefa Ressla",
+    "source_text": "Josefa Ressla",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.757751,
+        50.024375
+       ],
+       [
+        15.758062,
+        50.024399
+       ]
+      ],
+      [
+       [
+        15.758062,
+        50.024399
+       ],
+       [
+        15.758498,
+        50.024436
+       ]
+      ],
+      [
+       [
+        15.755155,
+        50.024079
+       ],
+       [
+        15.756367,
+        50.024222
+       ]
+      ],
+      [
+       [
+        15.757435,
+        50.024346
+       ],
+       [
+        15.757751,
+        50.024375
+       ]
+      ],
+      [
+       [
+        15.755155,
+        50.024079
+       ],
+       [
+        15.754488,
+        50.023997
+       ]
+      ],
+      [
+       [
+        15.756367,
+        50.024222
+       ],
+       [
+        15.757435,
+        50.024346
+       ]
+      ],
+      [
+       [
+        15.754488,
+        50.023997
+       ],
+       [
+        15.753994,
+        50.023933
+       ]
+      ],
+      [
+       [
+        15.753994,
+        50.023933
+       ],
+       [
+        15.753623,
+        50.023885
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Sokolovská",
+    "source_text": "Sokolovská",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.75601,
+        50.020999
+       ],
+       [
+        15.756167,
+        50.020391
+       ]
+      ],
+      [
+       [
+        15.75601,
+        50.020999
+       ],
+       [
+        15.755871,
+        50.021574
+       ]
+      ],
+      [
+       [
+        15.755155,
+        50.024079
+       ],
+       [
+        15.755038,
+        50.024526
+       ]
+      ],
+      [
+       [
+        15.754962,
+        50.025073
+       ],
+       [
+        15.75495,
+        50.025608
+       ]
+      ],
+      [
+       [
+        15.755781,
+        50.021906
+       ],
+       [
+        15.755871,
+        50.021574
+       ]
+      ],
+      [
+       [
+        15.755546,
+        50.022735
+       ],
+       [
+        15.755437,
+        50.023117
+       ]
+      ],
+      [
+       [
+        15.75532,
+        50.023504
+       ],
+       [
+        15.755155,
+        50.024079
+       ]
+      ],
+      [
+       [
+        15.755045,
+        50.026293
+       ],
+       [
+        15.755029,
+        50.026158
+       ]
+      ],
+      [
+       [
+        15.755437,
+        50.023117
+       ],
+       [
+        15.75532,
+        50.023504
+       ]
+      ],
+      [
+       [
+        15.755671,
+        50.022303
+       ],
+       [
+        15.755546,
+        50.022735
+       ]
+      ],
+      [
+       [
+        15.755671,
+        50.022303
+       ],
+       [
+        15.755781,
+        50.021906
+       ]
+      ],
+      [
+       [
+        15.755038,
+        50.024526
+       ],
+       [
+        15.754975,
+        50.024878
+       ],
+       [
+        15.754962,
+        50.025073
+       ]
+      ],
+      [
+       [
+        15.755045,
+        50.026293
+       ],
+       [
+        15.754518,
+        50.026345
+       ]
+      ],
+      [
+       [
+        15.755029,
+        50.026158
+       ],
+       [
+        15.754989,
+        50.025953
+       ],
+       [
+        15.75495,
+        50.025608
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Částka za plot, termín oprav u garáží ve Věry Junkové, důvody, proč obvod do garáží neinvestuje, i postoje k parkování a k nádraží odpovídají odpovědi."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta shrnuje všechny body odpovědi a upozorňuje, že jde o stav z roku 2017; čtenář nemá co podávat ani v žádné lhůtě."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je psaný běžnou češtinou, gabionový plot je vysvětlený a nejsou v něm paragrafy ani úřední zkratky."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Mapa ukazuje ulice zmíněné v odpovědi, ale nevyznačuje hlavní téma, tedy areál garáží u konečné linky 5, a navíc ukazuje ulici Věry Junkové na Dubině, která leží mimo Pardubice V."
+   }
+  },
+  "summary": "Karta věrně a srozumitelně shrnuje odpověď primátora z roku 2017. Mapa ale nevyznačuje hlavní téma, tedy areál garáží u konečné linky 5.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "12. 3. 2016",
+    "verdict": "v_dokumentu",
+    "evidence": "Odpověď k bodu 3: stavba byla realizována po etapách od 12. 3. 2016 do 15. 7. 2016."
+   },
+   {
+    "field": "do",
+    "value": "15. 7. 2016",
+    "verdict": "v_dokumentu",
+    "evidence": "Odpověď k bodu 3: stavba byla realizována po etapách od 12. 3. 2016 do 15. 7. 2016."
+   },
+   {
+    "field": "od",
+    "value": "2. 3. 2017 (vyvěšení na úřední desce)",
+    "verdict": "nelze_overit",
+    "evidence": "Žádný z originálů datum vyvěšení neobsahuje. Rok 2017 sedí s razítkem o doručení žádosti 15. 2. 2017, samotná odpověď datum nemá."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-26T11:15:27+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 8,
+   "cache_read": 21561,
+   "cache_write": 16433,
+   "output": 4896,
+   "usd": 0.1757
+  }
+ },
+ "published_at": "2026-11-26T11:15:27+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

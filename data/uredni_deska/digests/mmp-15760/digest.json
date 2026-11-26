@@ -1,0 +1,436 @@
+{
+ "notice_id": "mmp-15760",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v7",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-26T11:11:44+00:00",
+ "source": {
+  "title": "Stanovení přechodné úpravy v ulici V Ráji a Na Staré poště v Pardubicích.",
+  "url": "https://pardubice.eu/uredni-deska?id=15760",
+  "board": "mmp",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Do 28. 11. přechodně: zákaz stání v ulicích V Ráji a Na Staré poště kvůli autům na stavbu",
+ "summary": "Od 23. 11. 2026 od 7 h do 28. 11. 2026 do 18 h se v části ulic V Ráji a Na Staré poště v Pardubicích nesmí stát. Důvodem je, aby mohla bezpečně projet těžká a rozměrná vozidla na stavbu v separačním dvoře. Podle mapky úsek začíná v ulici V Ráji poblíž Milheimovy a končí v ulici Na Staré poště.",
+ "where": "ulice V Ráji a Na Staré poště, Pardubice",
+ "period": {
+  "from": "2026-11-23",
+  "to": "2026-11-28",
+  "text": "od 23. 11. 2026 od 7 h do 28. 11. 2026 do 18 h"
+ },
+ "action": {
+  "what": "Neparkujte v označeném úseku ulic V Ráji a Na Staré poště až do 28. 11. 2026 do 18 h.",
+  "deadline": null,
+  "how": "Řiďte se přenosnými značkami zákazu stání na místě."
+ },
+ "affects": "Řidiče, kteří parkují v ulicích V Ráji a Na Staré poště.",
+ "facts": [
+  {
+   "label": "Co platí",
+   "value": "přechodný zákaz stání na přenosných značkách"
+  },
+  {
+   "label": "Kdy",
+   "value": "23. 11. 2026 7 h – 28. 11. 2026 18 h"
+  },
+  {
+   "label": "Proč",
+   "value": "bezpečný průjezd těžkých a rozměrných vozidel na stavbu v separačním dvoře"
+  },
+  {
+   "label": "Kdo značky zajišťuje",
+   "value": "Chládek a Tintěra, Pardubice a.s."
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  }
+ ],
+ "signs": [
+  {
+   "code": "B29",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E13",
+   "text": "od 23.11.2026 od 7 h do 28.11.2026 do 18 h",
+   "change": "nova"
+  },
+  {
+   "code": "E8a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8b",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "E8c",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "V Ráji",
+  "Na Staré poště"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mmp-15760-2.pdf",
+  "page": 1,
+  "box": [
+   0.04,
+   0.15,
+   0.77,
+   0.95
+  ],
+  "caption": "Mapka se značkami: začátek zákazu stání v ulici V Ráji a konec v ulici Na Staré poště."
+ },
+ "parking": null,
+ "visual_plan": "Ukázat výřez situační mapky se začátkem a koncem zákazu stání, doplněný výrazným časem platnosti (do 28. 11. v 18 h).",
+ "reviewer_notes": "Zákaz končí 28. 11. 2026, tedy dva dny po dnešku, takže karta rychle zastará. Hodiny platnosti (7 h a 18 h) jsou jen v mapce, text vyhlášky uvádí pouze data 23.–28. 11. 2026. Text tabulky E13 je převzatý z popisků v mapce; přiřazení k E13 je odvozené. Značku E8b (průběh zákazu) požaduje text za směrovým obloukem, ale mapka ji nezakresluje a v seznamu stanovených značek chybí. Mapka neukazuje stranu ulice ani přesné hranice úseku. Podle vyhlášky nabývá účinnosti pátý den po vyvěšení (vyvěšeno 13. 11. 2026).",
+ "visual": {
+  "map": [
+   {
+    "kind": "street",
+    "label": "V Ráji",
+    "source_text": "V Ráji",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.768,
+        50.023145
+       ],
+       [
+        15.767844,
+        50.023985
+       ]
+      ],
+      [
+       [
+        15.766866,
+        50.03075
+       ],
+       [
+        15.766852,
+        50.029432
+       ],
+       [
+        15.766868,
+        50.029094
+       ]
+      ],
+      [
+       [
+        15.76759,
+        50.025333
+       ],
+       [
+        15.767409,
+        50.026234
+       ]
+      ],
+      [
+       [
+        15.768226,
+        50.022015
+       ],
+       [
+        15.768438,
+        50.02091
+       ]
+      ],
+      [
+       [
+        15.766868,
+        50.029094
+       ],
+       [
+        15.767058,
+        50.028097
+       ]
+      ],
+      [
+       [
+        15.768438,
+        50.02091
+       ],
+       [
+        15.768472,
+        50.020729
+       ],
+       [
+        15.768492,
+        50.020477
+       ],
+       [
+        15.76845,
+        50.02019
+       ]
+      ],
+      [
+       [
+        15.76759,
+        50.025333
+       ],
+       [
+        15.767844,
+        50.023985
+       ]
+      ],
+      [
+       [
+        15.768281,
+        50.019214
+       ],
+       [
+        15.768327,
+        50.019354
+       ],
+       [
+        15.76845,
+        50.02019
+       ]
+      ],
+      [
+       [
+        15.768,
+        50.023145
+       ],
+       [
+        15.768076,
+        50.022817
+       ],
+       [
+        15.768226,
+        50.022015
+       ]
+      ],
+      [
+       [
+        15.767231,
+        50.027124
+       ],
+       [
+        15.767409,
+        50.026234
+       ]
+      ],
+      [
+       [
+        15.767058,
+        50.028097
+       ],
+       [
+        15.767231,
+        50.027124
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Na Staré poště",
+    "source_text": "Na Staré poště",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.770254,
+        50.030779
+       ],
+       [
+        15.76999,
+        50.030779
+       ]
+      ],
+      [
+       [
+        15.76999,
+        50.030779
+       ],
+       [
+        15.769464,
+        50.030781
+       ],
+       [
+        15.769251,
+        50.030741
+       ],
+       [
+        15.769058,
+        50.030726
+       ],
+       [
+        15.768274,
+        50.030734
+       ]
+      ],
+      [
+       [
+        15.768274,
+        50.030734
+       ],
+       [
+        15.766866,
+        50.03075
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Mapka se značkami: začátek zákazu stání v ulici V Ráji a konec v ulici Na Staré poště.",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.319,
+     "y": 0.756,
+     "text": "začátek dočasného zákazu stání (23. 11. 7 h – 28. 11. 18 h)",
+     "kind": "nove"
+    },
+    {
+     "x": 0.635,
+     "y": 0.02,
+     "text": "konec úseku s dočasným zákazem stání",
+     "kind": "nove"
+    },
+    {
+     "x": 0.264,
+     "y": 0.41,
+     "text": "ulice V Ráji",
+     "kind": "misto"
+    },
+    {
+     "x": 0.766,
+     "y": 0.154,
+     "text": "ulice Na Staré poště",
+     "kind": "misto"
+    },
+    {
+     "x": 0.814,
+     "y": 0.333,
+     "text": "separační dvůr, kam míří stavební vozidla",
+     "kind": "misto"
+    },
+    {
+     "x": 0.655,
+     "y": 0.899,
+     "text": "Milheimova ulice",
+     "kind": "misto"
+    }
+   ],
+   "legend": []
+  },
+  "signs": [
+   {
+    "code": "B29",
+    "name": "Zákaz stání",
+    "image": "B29.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "od 23.11.2026 od 7 h do 28.11.2026 do 18 h",
+    "change": "nova"
+   },
+   {
+    "code": "E8a",
+    "name": "Začátek úseku",
+    "image": "E8a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8b",
+    "name": "Průběh úseku",
+    "image": "E8b.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "E8c",
+    "name": "Konec úseku",
+    "image": "E8c.png",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Data, hodiny, ulice, důvod, firma, která značky zajišťuje, i úřad, který zákaz vydal, odpovídají vyhlášce a mapce v originálu."
+   },
+   "uplnost": {
+    "score": 4,
+    "reason": "Karta uvádí co, kde, kdy a proč, ale neříká, že vyhláška slouží k odtahu vozidel, takže auto ponechané v úseku může být odtaženo."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je napsaný běžnou češtinou bez paragrafů a úředních obratů."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Výřez mapky správně ukazuje začátek zákazu ve V Ráji a konec u Na Staré poště, jen horní značka a její popisek jsou oříznuté a číslo 4 zakrývá část názvu ulice."
+   }
+  },
+  "summary": "Karta věrně a srozumitelně popisuje dočasný zákaz stání ve V Ráji a Na Staré poště od 23. 11. 7 h do 28. 11. 18 h, chybí jen upozornění, že auta v úseku mohou být odtažena.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-23",
+    "verdict": "v_dokumentu",
+    "evidence": "Vyhláška: „Platnost úpravy: 23.11.2026 – 28.11.2026“; mapka: „od 23.11.2026 od 7 h“."
+   },
+   {
+    "field": "do",
+    "value": "2026-11-28",
+    "verdict": "v_dokumentu",
+    "evidence": "Vyhláška: „Platnost úpravy: 23.11.2026 – 28.11.2026“; mapka: „do 28.11.2026 do 18 h“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-26T11:12:03+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 12,
+   "cache_read": 24525,
+   "cache_write": 28695,
+   "output": 4865,
+   "usd": 0.2425
+  }
+ },
+ "published_at": "2026-11-26T11:12:03+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}

@@ -1,0 +1,320 @@
+{
+ "notice_id": "mmp-312",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v7",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-26T11:15:40+00:00",
+ "source": {
+  "title": "Rozšíření jízdních pruhů a rekonstrukce ul. Staňkova",
+  "url": "https://pardubice.eu/uredni-deska?id=312",
+  "board": "mmp",
+  "mo5": true
+ },
+ "cluster": "informace",
+ "headline": "Dotaz z roku 2012: kde najít smlouvu na rozšíření a rekonstrukci Staňkovy ulice",
+ "summary": "V prosinci 2012 někdo požádal město o kopii smlouvy se zhotovitelem stavby „Rozšíření jízdních pruhů a rekonstrukce ul. Staňkova“. Magistrát 14. 12. 2012 odpověděl, že smlouva o dílo je volně dostupná v PDF na městském webu mezi výsledky veřejných zakázek za rok 2012. Samotná smlouva k odpovědi na desce přiložená není a odpověď neuvádí zhotovitele ani cenu.",
+ "where": "Staňkova ulice, Pardubice",
+ "period": {
+  "from": null,
+  "to": null,
+  "text": "Žádost z 5. 12. 2012, odpověď magistrátu 14. 12. 2012"
+ },
+ "action": null,
+ "affects": "Zájemce o informace o stavbě ve Staňkově ulici",
+ "facts": [
+  {
+   "label": "Co se žádalo",
+   "value": "Kopie smlouvy o dílo mezi městem a zhotovitelem stavby"
+  },
+  {
+   "label": "Stavba",
+   "value": "Rozšíření jízdních pruhů a rekonstrukce ul. Staňkova"
+  },
+  {
+   "label": "Povolení stavby",
+   "value": "Rozhodnutí odboru dopravy magistrátu ze dne 3. 8. 2012"
+  },
+  {
+   "label": "Odpověď",
+   "value": "Smlouva je veřejně dostupná na webu města (14. 12. 2012)"
+  },
+  {
+   "label": "Adresa uvedená v odpovědi",
+   "value": "http://www.pardubice.eu/urad/radnice/magistrat/verejne-zakazky/vysledky-vz/2012.html"
+  }
+ ],
+ "signs": [],
+ "places": [
+  "Staňkova"
+ ],
+ "parcels": [
+  "p. č. 2315/39, k. ú. Pardubice",
+  "p. č. 2316/20, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": null,
+ "parking": null,
+ "visual_plan": "Stačí jednoduchá textová karta, případně s malou mapou Staňkovy ulice. Výkres ani fotka v příloze nejsou.",
+ "reviewer_notes": "Jde o archivní odpověď na žádost o informace z roku 2012, na desce visí do roku 2222. Nemá se prezentovat jako novinka. Webová adresa z odpovědi je z roku 2012 a pravděpodobně už nefunguje, je potřeba ji ověřit; opsána je ze skenu. Dokument neříká, zda a kdy se stavba uskutečnila. Čísla pozemků jsou opsána ze skenu. Č. j. žádosti je MmP 73278/2012 a odpovědi MmP 73246/2012.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2315/39, k. ú. Pardubice",
+    "source_text": "p. č. 2315/39, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.76841,
+        50.023193
+       ],
+       [
+        15.768099,
+        50.023192
+       ],
+       [
+        15.76812,
+        50.023084
+       ],
+       [
+        15.769198,
+        50.023086
+       ],
+       [
+        15.769185,
+        50.023193
+       ],
+       [
+        15.76841,
+        50.023193
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2316/20, k. ú. Pardubice",
+    "source_text": "p. č. 2316/20, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.769403,
+        50.023095
+       ],
+       [
+        15.770819,
+        50.023148
+       ],
+       [
+        15.770855,
+        50.023174
+       ],
+       [
+        15.77083,
+        50.023176
+       ],
+       [
+        15.770886,
+        50.023177
+       ],
+       [
+        15.770957,
+        50.023169
+       ],
+       [
+        15.770997,
+        50.023152
+       ],
+       [
+        15.771028,
+        50.023126
+       ],
+       [
+        15.771053,
+        50.023078
+       ],
+       [
+        15.771029,
+        50.023261
+       ],
+       [
+        15.771008,
+        50.023245
+       ],
+       [
+        15.770983,
+        50.023237
+       ],
+       [
+        15.770981,
+        50.023263
+       ],
+       [
+        15.769391,
+        50.023201
+       ],
+       [
+        15.769403,
+        50.023095
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Staňkova",
+    "source_text": "Staňkova",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.769293,
+        50.023139
+       ],
+       [
+        15.768,
+        50.023145
+       ]
+      ],
+      [
+       [
+        15.769293,
+        50.023139
+       ],
+       [
+        15.770789,
+        50.023196
+       ],
+       [
+        15.771135,
+        50.023194
+       ]
+      ],
+      [
+       [
+        15.765417,
+        50.023134
+       ],
+       [
+        15.766125,
+        50.023137
+       ]
+      ],
+      [
+       [
+        15.766125,
+        50.023137
+       ],
+       [
+        15.768,
+        50.023145
+       ]
+      ],
+      [
+       [
+        15.763301,
+        50.023128
+       ],
+       [
+        15.765417,
+        50.023134
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.7672128,
+    50.022220789,
+    15.771939200000002,
+    50.024120210999996
+   ],
+   "shapes": [
+    {
+     "kind": "area",
+     "d": "M304.0,366.1 L225.0,366.5 L230.3,409.2 L504.0,408.4 L500.7,366.1 L304.0,366.1 Z"
+    },
+    {
+     "kind": "area",
+     "d": "M556.1,404.8 L915.6,383.9 L924.7,373.6 L918.4,372.8 L932.6,372.4 L950.6,375.6 L960.8,382.3 L968.7,392.6 L975.0,411.5 L968.9,339.3 L963.6,345.6 L957.2,348.7 L956.7,338.5 L553.0,363.0 L556.1,404.8 Z"
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": null,
+  "signs": [],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Data žádosti a odpovědi, název stavby, datum povolení, čísla pozemků i webová adresa odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se žádalo, o jakou stavbu jde, kde stavba je, jak a kdy magistrát odpověděl, a výslovně upozorňuje, co v odpovědi chybí."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je napsaný běžnou češtinou, jen u pozemků zůstaly úřední zkratky „p. č.“ a „k. ú.“."
+   },
+   "obrazky": {
+    "score": 3,
+    "reason": "Letecký snímek a mapa ukazují okolí pozemků z žádosti, ale stavba ani dotčené pozemky na snímku nejsou vyznačené, takže čtenáři moc nepomůže."
+   }
+  },
+  "summary": "Karta přesně a srozumitelně shrnuje archivní odpověď magistrátu z roku 2012 na žádost o smlouvu ke stavbě ve Staňkově ulici. Nemá vážné nedostatky, jen obrázek je málo užitečný.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "5. 12. 2012",
+    "verdict": "v_dokumentu",
+    "evidence": "V originálu stojí „Dopis ze dne 5.12.2012“ a odpověď se odvolává na „žádosti ze dne 5.12.2012“."
+   },
+   {
+    "field": "do",
+    "value": "14. 12. 2012",
+    "verdict": "v_dokumentu",
+    "evidence": "V originálu stojí „Odpověď ze dne 14.12.2012“."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-26T11:16:00+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 2,
+   "input": 8,
+   "cache_read": 21186,
+   "cache_write": 7665,
+   "output": 3592,
+   "usd": 0.1093
+  }
+ },
+ "published_at": "2026-11-26T11:16:00+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
