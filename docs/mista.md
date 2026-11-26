@@ -49,7 +49,7 @@ curl --compressed 'https://otevrenapetka.cz/api/v1/mista?obvod=mo5&druh=stojan,k
 | pole | co |
 |---|---|
 | `v` | verze formátu; nekompatibilní změna tvaru ji zvýší |
-| `built` | kdy úloha soubor sestavila z Overpassu (UTC) |
+| `built` | kdy se místa naposledy změnila (UTC): sestavení z Overpassu, nebo pozdější týdenní doplnění otevíracích dob |
 | `licence`, `source` | licence a odkud data jsou |
 | `id` | typ objektu OSM (`n` uzel, `w` cesta, `r` relace) + jeho id; stálé mezi dny |
 | `kind` | druh, viz níže |

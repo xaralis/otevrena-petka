@@ -1,5 +1,6 @@
-"""Reading Místa from the database: when the served build was made and its places. The places
-change once a day, so a process keeps them in memory per build."""
+"""Reading Místa from the database: when the served places last changed and the places. They
+change once a day (and once a week their supplements), so a process keeps them in memory per
+change."""
 
 import datetime as dt
 
@@ -10,10 +11,15 @@ _cache: dict = {}
 
 
 def built() -> dt.datetime | None:
-    """When the last accepted build was made; None before the first."""
+    """When the served places last changed: the last accepted build, or the last write of the
+    supplements (petka.mista.doplnky) after it, so that the weekly supplements are served – and
+    the ETag changes – without waiting for the next day's build. None before the first build."""
     with db.pool().connection() as conn:
-        r = conn.execute("SELECT max(built_at) AS at FROM mista_builds WHERE accepted").fetchone()
-    return r["at"] if r else None
+        r = conn.execute("""SELECT (SELECT max(built_at) FROM mista_builds WHERE accepted) AS at,
+                                   (SELECT max(checked_at) FROM mista_doplnky) AS sup""").fetchone()
+    if not r or not r["at"]:
+        return None
+    return max(r["at"], r["sup"]) if r["sup"] else r["at"]
 
 
 def places(at: dt.datetime) -> list[dict]:
