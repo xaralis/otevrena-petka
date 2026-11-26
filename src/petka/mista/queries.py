@@ -20,9 +20,16 @@ def places(at: dt.datetime) -> list[dict]:
     """The places of the build made `at`, as the file has them, sorted by kind and id."""
     if _cache.get("at") != at:
         with db.pool().connection() as conn:
-            rows = conn.execute("""SELECT id, kind, name, what, address, lon, lat, hours, obvody, odpad, capacity,
-                                          phone, web, email
-                                   FROM mista_places ORDER BY kind, id""").fetchall()
+            # The first supplement of a place by SOURCES' order (mesto, alltheplaces, web).
+            rows = conn.execute("""SELECT p.id, p.kind, p.name, p.what, p.address, p.lon, p.lat, p.hours, p.obvody,
+                                          p.odpad, p.capacity, p.phone, p.web, p.email,
+                                          d.source AS d_source, d.hours AS d_hours, d.phone AS d_phone,
+                                          d.web AS d_web, d.url AS d_url
+                                   FROM mista_places p
+                                   LEFT JOIN LATERAL (SELECT * FROM mista_doplnky x WHERE x.id = p.id
+                                                      ORDER BY array_position(ARRAY['mesto','alltheplaces','web'], x.source)
+                                                      LIMIT 1) d ON true
+                                   ORDER BY p.kind, p.id""").fetchall()
         _cache.update(at=at, places=[export.place(r) for r in rows])
     return _cache["places"]
 

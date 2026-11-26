@@ -27,13 +27,20 @@ def parse_kinds(value: str | None) -> tuple[str, ...]:
 
 def place(row: dict) -> dict:
     """A place of the file from a row of mista_places: odpad only for kontejner and dvur,
-    capacity only for stojan, phone, web and email only where OSM has them."""
+    capacity only for stojan, phone, web and email only where OSM has them. Where OSM has no hours
+    (or phone, web) the place's supplement (petka.mista.doplnky) gives them, and `hours_from`
+    says which source, `hours_url` the page they are from."""
     p = {"id": row["id"], "kind": row["kind"], "name": row["name"], "what": row["what"],
          "address": row["address"], "at": [row["lon"], row["lat"]], "hours": row["hours"],
          "obvody": list(row["obvody"] or [])}
+    if not p["hours"] and row.get("d_hours"):
+        p["hours"] = row["d_hours"]
+        p["hours_from"] = row["d_source"]
+        if row.get("d_url"):
+            p["hours_url"] = row["d_url"]
     for k in CONTACT:
-        if row.get(k):
-            p[k] = row[k]
+        if v := row.get(k) or row.get(f"d_{k}"):
+            p[k] = v
     if row["kind"] in ("kontejner", "dvur", "vykupna"):
         p["odpad"] = list(row["odpad"] or [])
     if row["kind"] == "stojan":

@@ -1,0 +1,4 @@
+{
+ "about": "Otevírací (úřední) doby úřadů a institucí města, které v OpenStreetMap chybí. Klíč je id místa v exportu Míst (typ OSM n|w|r + id). Každá doba má stránku, odkud je, a den ověření. Viz docs/mista.md, Doplněné otevírací doby.",
+ "places": []
+}
