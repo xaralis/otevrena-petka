@@ -11,6 +11,7 @@ from .osm import KINDS
 VERSION = 2
 LICENCE = "© přispěvatelé OpenStreetMap, ODbL 1.0"
 SOURCE = "https://otevrenapetka.cz/data#mista"
+CONTACT = ("phone", "web", "email")
 
 
 def parse_kinds(value: str | None) -> tuple[str, ...]:
@@ -26,10 +27,13 @@ def parse_kinds(value: str | None) -> tuple[str, ...]:
 
 def place(row: dict) -> dict:
     """A place of the file from a row of mista_places: odpad only for kontejner and dvur,
-    capacity only for stojan."""
+    capacity only for stojan, phone, web and email only where OSM has them."""
     p = {"id": row["id"], "kind": row["kind"], "name": row["name"], "what": row["what"],
          "address": row["address"], "at": [row["lon"], row["lat"]], "hours": row["hours"],
          "obvody": list(row["obvody"] or [])}
+    for k in CONTACT:
+        if row.get(k):
+            p[k] = row[k]
     if row["kind"] in ("kontejner", "dvur", "vykupna"):
         p["odpad"] = list(row["odpad"] or [])
     if row["kind"] == "stojan":

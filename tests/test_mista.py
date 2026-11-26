@@ -87,6 +87,26 @@ def test_place_fields():
     assert one(amenity="pharmacy", **{"addr:housenumber": "5"})["address"] is None
 
 
+@pytest.mark.parametrize("tags, contact", [
+    ({}, {}),
+    ({"phone": "466 535 200"}, {"phone": "+420 466 535 200"}),
+    ({"contact:phone": "+420466535200; +420 777 111 222"}, {"phone": "+420 466 535 200"}),
+    ({"phone": "00420 777 111 222"}, {"phone": "+420 777 111 222"}),
+    ({"phone": "+49 30 1234567"}, {"phone": "+49301234567"}),
+    ({"phone": "neuvedeno"}, {}),
+    ({"website": "www.medila.cz"}, {"web": "https://www.medila.cz"}),
+    ({"contact:website": "https://a.cz/x", "website": "https://b.cz"}, {"web": "https://b.cz"}),
+    ({"contact:facebook": "medila.pardubice"}, {"web": "https://www.facebook.com/medila.pardubice"}),
+    ({"contact:instagram": "@kavarna"}, {"web": "https://www.instagram.com/kavarna"}),
+    ({"website": "https://a.cz", "contact:facebook": "a"}, {"web": "https://a.cz"}),
+    ({"email": "mailto:info@a.cz"}, {"email": "info@a.cz"}),
+    ({"email": "není"}, {}),
+])
+def test_contact(tags, contact):
+    p = one(amenity="pharmacy", **tags)
+    assert {k: p[k] for k in ("phone", "web", "email") if k in p} == contact
+
+
 def test_racks_containers_and_dvur():
     rack = one(amenity="bicycle_parking", capacity="10")
     assert rack["name"] is None and rack["capacity"] == 10 and "odpad" not in rack
@@ -209,6 +229,9 @@ ROWS = [
      "lon": 15.78, "lat": 50.04, "hours": None, "obvody": ["mo1"], "odpad": None, "capacity": 10},
     {"id": "n4", "kind": "wc", "name": "Veřejné WC", "what": "Toaleta", "address": None,
      "lon": 15.9, "lat": 50.1, "hours": None, "obvody": [], "odpad": None, "capacity": None},
+    {"id": "n5", "kind": "misto", "name": "Medila", "what": "Poliklinika", "address": "Pernerova 444",
+     "lon": 15.77, "lat": 50.04, "hours": None, "obvody": ["mo1"], "odpad": None, "capacity": None,
+     "phone": "+420 466 535 200", "web": "https://www.medila.cz", "email": None},
 ]
 
 
@@ -239,6 +262,8 @@ def test_file_v2(api):
     assert by["w3"]["capacity"] == 10 and "odpad" not in by["w3"]
     assert "odpad" not in by["n2"] and "capacity" not in by["n2"]
     assert by["n4"]["obvody"] == []                                   # the whole town takes it
+    assert by["n5"]["phone"] == "+420 466 535 200" and by["n5"]["web"] == "https://www.medila.cz"
+    assert "email" not in by["n5"] and "phone" not in by["n2"]        # only what OSM has
 
 
 def test_filters(api):

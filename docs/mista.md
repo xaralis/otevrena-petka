@@ -5,7 +5,7 @@ OpenStreetMap: místa „Co je v okolí“ aplikace Pardubice do kapsy, stojany 
 na tříděný odpad a sběrné dvory. Aplikace soubor stahuje celý jednou denně a neposílá s ním
 žádnou polohu.
 
-Verze souboru 2 (16. 11. 2026). Kód: `src/petka/mista/`.
+Verze souboru 2 (16. 11. 2026; 26. 11. 2026 přibyla pole `phone`, `web` a `email`). Kód: `src/petka/mista/`.
 
 ## Adresy
 
@@ -61,6 +61,9 @@ curl --compressed 'https://otevrenapetka.cz/api/v1/mista?obvod=mo5&druh=stojan,k
 | `obvody` | obvod, ve kterém bod leží (polygony obvodů z RÚIAN; do 20 m za hranicí nejbližší), `[]` mimo všechny |
 | `odpad` | jen `kontejner`, `dvur` a `vykupna`: druhy odpadu, které bere; jinde pole chybí |
 | `capacity` | jen `stojan`: OSM `capacity` jako celé číslo, nebo `null`; jinde pole chybí |
+| `phone` | telefon z OSM `phone`, `contact:phone`, `contact:mobile` nebo `mobile` (první z nich, z více čísel oddělených `;` první); české číslo jako `+420 466 123 456`, jiné jako `+` a číslice. Pole chybí, když OSM číslo nemá |
+| `web` | web z OSM `website`, `contact:website` nebo `url`, jinak stránka na Facebooku nebo Instagramu (`contact:facebook`, `facebook`, `contact:instagram`), vždy jako odkaz s `https://`. Pole chybí, když OSM žádný nemá |
+| `email` | e-mail z OSM `email` nebo `contact:email`. Pole chybí, když OSM žádný nemá |
 
 Místa jsou seřazená podle druhu a `id`. Čtenář neznámá pole a neznámé druhy ignoruje.
 
