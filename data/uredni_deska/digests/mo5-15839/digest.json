@@ -1,6 +1,8 @@
 {
  "notice_id": "mo5-15839",
- "members": [],
+ "members": [
+  "mmp-15834"
+ ],
  "status": "published",
  "prompt_version": "deska-v6",
  "model": "cli:claude-sonnet-5-5",
@@ -12,8 +14,8 @@
   "mo5": true
  },
  "cluster": "doprava",
- "headline": "Na ulici Čs. armády bude od 29. 11. 2026 u vjezdu k ZŠ Staňkova nová tabulka E13",
- "summary": "V ulici Čs. armády v Pardubicích se od 29. 11. 2026 osadí pod značku B1 dodatková tabulka „MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA“. Původní tabulka E13 se sundá. Jde o přechodnou úpravu, aby škola mohla být plynule zásobována. Platí, dokud nenabude účinnosti trvalá změna místní úpravy provozu.",
+ "headline": "Od 29. 11. přechodně: tabulka pod zákazem vjezdu ke ZŠ Staňkova dostane nový text",
+ "summary": "U vjezdu k ZŠ Staňkova z ulice Čs. armády dostane od 29. 11. 2026 dodatková tabulka pod značkou B1 (zákaz vjezdu) nový text „MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA“. Je to přechodná úprava, aby škola mohla být plynule zásobována. Platí, dokud nezačne platit trvalá úprava, o které magistrát teď rozhoduje (návrh č. j. MmP 230098/2026).",
  "where": "ulice Čs. armády, Pardubice (vjezd k základní škole Staňkova)",
  "period": {
   "from": "2026-11-29",
@@ -52,17 +54,12 @@
   {
    "code": "E13",
    "text": "MIMO DRŽITELE POVOLENÍ ÚMO V A ZÁSOBOVÁNÍ ZŠ STAŇKOVA",
-   "change": "nova"
+   "change": "vymena"
   },
   {
    "code": "B1",
    "text": null,
    "change": "zustava"
-  },
-  {
-   "code": "E13",
-   "text": null,
-   "change": "odstranit"
   }
  ],
  "places": [
@@ -371,6 +368,6 @@
   }
  },
  "published_at": "2026-11-24T17:24:43+00:00",
- "review_note": null,
+ "review_note": "Upraveno ručně 26. 11. 2026 na Filipův podnět: výměna tabulky E13 místo „nová + sundat“, titulek rozlišuje přechodnou úpravu a návrh trvalé.",
  "reviewed_by": "model"
 }

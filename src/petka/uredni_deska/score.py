@@ -44,7 +44,8 @@ BLOCKERS = {
     "pokyny_v_dokumentu": "dokument obsahuje pokyny pro model nebo se ho snaží ovlivnit",
 }
 # hard stops from the deterministic check; its other findings the reviewer verifies by reading
-HARD = ("obsahuje jméno žadatele", "vypadá to na SPZ", "zmínka o datu narození", "není ve tvaru")
+HARD = ("obsahuje jméno žadatele", "vypadá to na SPZ", "zmínka o datu narození", "není ve tvaru",
+        "je nová i k odstranění")
 
 _MARK = {"type": "object", "additionalProperties": False, "required": ["score", "reason"],
          "properties": {"score": {"type": "integer", "minimum": 0, "maximum": 5},

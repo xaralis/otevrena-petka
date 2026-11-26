@@ -62,6 +62,7 @@
         <p class="row-meta"><span class="human">Polidštěno</span>{{ quality_light(d) }} {{ CLUSTERS.get(d.cluster, n.kind_label)|lower }}{% if d.where %}, {{ d.where }}{% endif %}</p>
         <p class="row-text">{{ d.summary }}</p>
         {% if d.action and d.action.deadline %}<p class="deadline">{{ d.action.what.split('(')[0]|trim }}: <b>do {{ d.action.deadline|d }}</b></p>{% endif %}
+        {% if n.related and not preview %}<p class="related">Souvisí: {% for r in n.related %}<a href="/radnice/uredni-deska/{{ r.id }}">{{ r.title }}</a> <span class="related-ref">(č. j. {{ r.reference }})</span>{% if not loop.last %}; {% endif %}{% endfor %}</p>{% endif %}
         {% if d.cluster != 'doruceni' %}<p class="official-title">Úředně: {{ n.title }}</p>
         {% elif not n.redacted %}<p class="official-title" data-nosnippet>Úředně: {{ n.title }}</p>{% endif %}{# a delivery names the addressee as the office does, only while it hangs: once taken down the title is redacted #}
       </div>

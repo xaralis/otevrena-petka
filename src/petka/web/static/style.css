@@ -618,6 +618,8 @@ body > footer { flex-shrink: 0; }
 .official-title { margin: .55rem 0 0; font-size: .85rem; color: var(--muted); max-width: 68ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .deadline { margin: .5rem 0 0; font-size: .95rem; color: var(--ink); }
 .deadline b { color: var(--red-ink); }
+.related { margin: .5rem 0 0; font-size: .95rem; color: var(--ink); }
+.related-ref { color: var(--muted); }
 .digest .lead-text { font-size: 1.15rem; line-height: 1.55; max-width: 62ch; margin: 0 0 1.4rem; }
 .act { background: var(--grey); border-radius: 3px; padding: 24px; max-width: 62ch; margin: 0 0 1.6rem; }
 .act-h { margin: 0 0 .3rem; }

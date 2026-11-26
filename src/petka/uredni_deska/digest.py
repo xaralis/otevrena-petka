@@ -34,7 +34,7 @@ from .jobs import REDACTED_TITLE
 
 log = logging.getLogger(__name__)
 
-PROMPT_VERSION = "deska-v6"
+PROMPT_VERSION = "deska-v7"
 PUBLIC_URL = os.environ.get("PUBLIC_URL", "https://otevrenapetka.cz").rstrip("/")
 SIGNS = yaml.safe_load((ROOT / "config" / "uredni_deska" / "znacky.yaml").read_text()) \
     if (ROOT / "config" / "uredni_deska" / "znacky.yaml").exists() else {}
@@ -87,9 +87,15 @@ def group_key(n: dict) -> str:
     return f"{key}|{ref}" if ref and not _ATTACHMENT.search(t) else key
 
 
+def _ref(n: dict) -> str:
+    return " ".join((n.get("reference") or "").split()).lower()
+
+
 def groups(items: list[dict]) -> list[list[dict]]:
-    """Grouped notices, the main one first (not an annex; then the oldest id). Annexes known only
-    by their title join the one notice of that title, if there is exactly one."""
+    """Grouped notices, the main one first (not an annex; the obvod's copy; then the oldest id).
+    Annexes known only by their title join the one notice of that title, if there is exactly one.
+    One document posted on both boards (the magistrát's traffic orders hang on the obvod's board
+    too, under the same file number) is one group: one card, not two."""
     by: dict[str, list[dict]] = {}
     for n in items:
         by.setdefault(group_key(n), []).append(n)
@@ -97,9 +103,20 @@ def groups(items: list[dict]) -> list[list[dict]]:
         mains = [k for k in by if k.startswith(key + "|")]
         if len(mains) == 1:
             by[mains[0]] += by.pop(key)
+    keys_by_ref: dict[str, list[str]] = {}
+    for k, g in by.items():
+        for r in {_ref(n) for n in g if _ref(n)}:
+            keys_by_ref.setdefault(r, []).append(k)
+    for ks in keys_by_ref.values():
+        ks = [k for k in dict.fromkeys(ks) if k in by]
+        if len({n["board"] for k in ks for n in by[k]}) > 1:
+            into = next((k for k in ks if any(n["board"] == "mo5" for n in by[k])), ks[0])
+            for k in ks:
+                if k != into:
+                    by[into] += by.pop(k)
     out = []
     for g in by.values():
-        g.sort(key=lambda n: (bool(re.search(r"příloha", n["title"], re.I)), n["id"]))
+        g.sort(key=lambda n: (bool(re.search(r"příloha", n["title"], re.I)), n["board"] != "mo5", n["id"]))
         out.append(g)
     return sorted(out, key=lambda g: g[0]["published"] or "", reverse=True)
 
@@ -168,7 +185,14 @@ Pravidla:
 - U úprav provozu vypiš každou dopravní značku (kód přesně podle dokumentu, např. IP12, E13,
   V10e) a zda je nová, k odstranění, zůstává, nebo se jen mění její text (`vymena` – třeba nová SPZ
   na tabulce; neuváděj ji pak dvakrát jako odstranit + nová). Text dodatkové tabulky (E13) opiš,
-  pokud neobsahuje osobní údaje; jinak text null.
+  pokud neobsahuje osobní údaje; jinak text null. Titulek i shrnutí pak mluví o výměně („tabulka
+  pod zákazem vjezdu dostane nový text“), ne o nové značce, která se zároveň sundává.
+- Přechodná úprava provozu a návrh trvalé (místní) úpravy často visí na desce vedle sebe ke stejné
+  ulici a stejným značkám: přechodná platí hned, návrh teprve sbírá připomínky. Titulek je musí
+  rozlišit – u přechodné „přechodně“ a od kdy („Od 29. 11. přechodně: …“), u návrhu slovo „návrh“
+  a lhůtu („Návrh: … připomínky do 8. 1.“). Když dokument jmenuje to druhé oznámení (číslo
+  jednací), napiš ve shrnutí jednou větou, jak spolu souvisí („platí, dokud nezačne platit trvalá
+  úprava, o které se teď rozhoduje“).
 - `places`: místa v Pardubicích tak, jak je dokument píše (ulice, ulice + číslo popisné, část
   obce + č. p.); `parcels`: pozemky („p. p. č. 2515/14, k. ú. Pardubice“). Obecná místa (sídliště
   Dukla) do `places` nedávej. Když dokument vyjmenovává domy (výpadek elektřiny, uzavírka), dej
@@ -509,7 +533,20 @@ def check(d: dict, text: str) -> list[str]:
                 problems.append(f"datum {label} '{iso}' není ve tvaru RRRR-MM-DD")
     if len(d["headline"]) > 140:
         problems.append("titulek je dlouhý")
+    problems += swapped_signs(d.get("signs") or [])
     return problems
+
+
+SWAPPED = "je nová i k odstranění"
+
+
+def swapped_signs(items: list[dict]) -> list[str]:
+    """The same sign both added and removed is one whose text changes (`vymena`): written as two,
+    the card says „a new sign“ and „the old one comes down“ about the same plate."""
+    norm = lambda i: re.sub(r"[\s-]", "", i["code"]).upper()
+    both = sorted({norm(i) for i in items if i["change"] == "nova"} & {norm(i) for i in items if i["change"] == "odstranit"})
+    return [f"značka {c} {SWAPPED}: je to výměna (vymena) – zapiš ji jednou a titulek i shrnutí ať mluví o výměně "
+            f"textu, ne o nové značce" for c in both]
 
 
 def annotated_drawing(d: dict, out: Path, llm: llms.LLM, work: Path) -> dict:
@@ -670,6 +707,8 @@ def assess(group: list[dict], d: dict, store: CardStore, reviewer) -> dict:
                 shutil.copy2(p, work / f"karta-{p.name}")
                 images.append(work / f"karta-{p.name}")
         q = reviewer(d, files + images, [p.name for p in images])
+        # what the code check finds the writer has to fix too, whatever the reviewer thought
+        q["fixes"] = [*q.get("fixes", []), *[p for p in d.get("problems", []) if SWAPPED in p and p not in q.get("fixes", [])]]
         public = json.dumps({k: q[k] for k in ("summary", "marks", "issues", "fixes", "blockers", "dates")},
                             ensure_ascii=False)
         leak = private_data(public, pdf_text(files))    # these sentences go on the page and into git
@@ -740,6 +779,16 @@ def _settle(group: list[dict], fixes: list[str] | None = None, *, store: CardSto
     return {**row, "state": "ceka", "why": q["issues"]}
 
 
+def _join_copies(posted: list[list[dict]], have: set[str], store: CardStore) -> None:
+    """A copy posted after its card was written (the magistrát's or the obvod's, a day apart) joins
+    that card instead of getting a second one."""
+    for g in posted:
+        ids = {n["id"] for n in g}
+        if ids & have and ids - have:
+            store.add_members(ids & have, sorted(ids - have))
+            have |= ids
+
+
 def auto(ids: list[str] | None = None, store: CardStore | None = None, writer=None, reviewer=None) -> list[dict]:
     """Every posted MO V notice without a card (or the given ids): write, check, publish or hold.
     A failure leaves the rest running; an unscored draft is picked up by the next run."""
@@ -747,6 +796,8 @@ def auto(ids: list[str] | None = None, store: CardStore | None = None, writer=No
     have = set() if ids else store.ids()
     waiting = {} if ids else _waiting(store)
     posted = groups(notices(mo5=not ids))
+    if not ids:
+        _join_copies(posted, have, store)
     todo = [g for g in posted if (g[0]["id"] in ids if ids else not ({n["id"] for n in g} & have))]
     for nid, d in waiting.items():
         try:

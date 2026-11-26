@@ -22,9 +22,19 @@ log = logging.getLogger(__name__)
 REDACTED_TITLE = "Oznámení o doručení písemnosti (adresáta po sejmutí neuvádíme)"
 
 
-def sync(conn, board: source.Board, rows: list[dict]) -> dict:
+def mo5_streets() -> list[str]:
+    """Names of the streets in MO V (RÚIAN; empty until it has been fetched)."""
+    from ..ulice.streets import streets     # late: ulice reads the deska's queries
+    return [s.name for s in streets("mo5").values()]
+
+
+def sync(conn, board: source.Board, rows: list[dict], streets: list[str] | None = None) -> dict:
     """Upsert one board's current notices and mark the missing ones removed. Same transaction,
-    one `now()` for the whole board."""
+    one `now()` for the whole board. A magistrát notice that names a street in MO V concerns the
+    obvod too (`streets`, by default from RÚIAN)."""
+    if not board.mo5:
+        streets = mo5_streets() if streets is None else streets
+        rows = [r if r["is_mo5"] else {**r, "is_mo5": source.names_street(r["title"], streets)} for r in rows]
     active = conn.execute("SELECT count(*) AS n FROM notices WHERE board = %s AND removed_at IS NULL",
                           (board.id,)).fetchone()["n"]
     if not rows and active:

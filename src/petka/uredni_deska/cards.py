@@ -93,6 +93,17 @@ class CardStore:
             ids |= {d["notice_id"], *d.get("members", [])}
         return ids
 
+    def add_members(self, known: set[str], new: list[str]) -> str | None:
+        """Put notices `new` on the card that already holds one of `known` (a draft or published);
+        returns that card's id."""
+        for published in (False, True):
+            for d in self.cards(published):
+                if {d["notice_id"], *d.get("members", [])} & known:
+                    d["members"] = [*d.get("members", []), *[m for m in new if m not in d.get("members", [])]]
+                    self.write(d)
+                    return d["notice_id"]
+        return None
+
     # --- moves -------------------------------------------------------------------------------
 
     def publish(self, nid: str, note: str | None = None, reviewed_by: str = "clovek") -> bool:

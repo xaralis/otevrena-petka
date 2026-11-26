@@ -138,6 +138,14 @@ def mentions_mo5(*texts: str | None) -> bool:
     return bool(MO5.search(fold(" ".join(t for t in texts if t))))
 
 
+def names_street(title: str, streets: list[str]) -> bool:
+    """Does a magistrát title name one of these streets („… v ulici Čs. armády v Pardubicích“)?
+    The magistrát never writes „MO V“ on its traffic orders, only the street; a whole name, accents
+    and case ignored, so „Palacha“ alone or „Jana Palachova“ do not count."""
+    t = fold(title)
+    return any(re.search(rf"(?<![a-z0-9]){re.escape(fold(s))}(?![a-z0-9])", t) for s in streets if s)
+
+
 # What kind of notice it is, from its title (our label, not the city's). First match wins,
 # so the specific kinds go before the broad ones ("Veřejná vyhláška – oznámení o uložení
 # písemnosti" is a delivery, not a regulation).

@@ -176,3 +176,24 @@ def test_draft_runs_end_to_end_with_a_fake_writer(tmp_path):
     assert d["problems"] == []                          # the date is in the document
     assert [s["code"] for s in d["visual"]["signs"]] == ["B1"] and d["visual"]["photo"] is None
     assert d["source"]["url"] == "https://deska/7"
+
+
+def test_check_finds_a_sign_both_added_and_removed():
+    signs = [{"code": "E13", "text": "MIMO DRŽITELE POVOLENÍ", "change": "nova"},
+             {"code": "E 13", "text": None, "change": "odstranit"}, {"code": "B1", "text": None, "change": "zustava"}]
+    probs = digest.check(_draft(signs=signs), TEXT)
+    assert any("E13" in p and digest.SWAPPED in p for p in probs)
+    from petka.uredni_deska import score
+    assert score.hard_problems(probs)
+    signs[0]["change"], signs[1]["change"] = "vymena", "zustava"
+    assert not digest.swapped_signs(signs)
+
+
+def test_a_copy_posted_later_joins_the_card(tmp_path):
+    store = cards.CardStore(tmp_path)
+    store.write({"notice_id": "mo5-15838", "members": [], "status": "published", "cluster": "doprava"})
+    have = store.ids()
+    posted = [[n("mo5-15838", "VV - OOP návrh - Čs. armády"), n("mmp-15833", "Návrh - Čs. armády", board="mmp")]]
+    digest._join_copies(posted, have, store)
+    assert store.read("mo5-15838", published=True)["members"] == ["mmp-15833"]
+    assert "mmp-15833" in store.ids()

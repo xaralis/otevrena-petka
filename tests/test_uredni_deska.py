@@ -135,3 +135,40 @@ def test_same_title_different_reference_are_separate_groups():
              {"id": "mo5-9002", "board": "mo5", "title": "Výroční zpráva - příloha č. 1", "reference": "", "published": "2026-09-01"}]
     groups = sorted([n["id"] for n in g] for g in digest.groups(items))
     assert groups == [["mo5-14303", "mo5-14305"], ["mo5-15510"], ["mo5-15626"], ["mo5-15628"], ["mo5-9001", "mo5-9002"]]
+
+
+def test_magistrat_notice_naming_an_mo5_street_concerns_mo5():
+    streets = ["Čs. armády", "Jana Palacha", "Benešovo náměstí"]
+    yes = ["Návrh stanovení místní úpravy provozu v ulici Čs. armády v Pardubicích",
+           "Stanovení přechodné úpravy provozu v ulici JANA PALACHA v Pardubicích"]
+    no = ["Návrh stanovení místní úpravy provozu v obci Choteč", "Úprava provozu v ulici Palacha",
+          "Návrh stanovení místní úpravy provozu v ulici Kyjevská v Pardubicích"]
+    assert all(source.names_street(t, streets) for t in yes)
+    assert not any(source.names_street(t, streets) for t in no)
+
+
+def test_one_document_on_both_boards_is_one_group_led_by_the_obvod():
+    from petka.uredni_deska import digest
+    items = [{"id": "mmp-15833", "board": "mmp", "reference": "MmP 230098/2026", "published": "2026-11-24",
+              "title": "Návrh stanovení místní úpravy provozu v ulici Čs. armády v Pardubicích"},
+             {"id": "mo5-15838", "board": "mo5", "reference": "MmP 230098/2026", "published": "2026-11-24",
+              "title": "VV - OOP návrh stanovení místní úpravy provozu na pozemních komunikacích v Pardubicích - Čs. armády"},
+             {"id": "mo5-15839", "board": "mo5", "reference": "MmP 230124/2026", "published": "2026-11-24",
+              "title": "VV - OOP stanovení přechodné úpravy provozu na pozemních komunikacích v Pardubicích - Čs. armády"}]
+    groups = sorted([n["id"] for n in g] for g in digest.groups(items))
+    assert groups == [["mo5-15838", "mmp-15833"], ["mo5-15839"]]
+
+
+def test_related_notices_by_file_number_both_ways():
+    from petka.uredni_deska import queries
+    temp = {"id": "mo5-15839", "reference": "MmP 230124/2026",
+            "digest": {"summary": "Platí do účinnosti trvalé úpravy (č. j. MmP 230098/2026)."}}
+    prop = {"id": "mo5-15838", "reference": "MmP 230098/2026", "digest": {"summary": "Návrh trvalé úpravy."}}
+    posted = [{"id": "mo5-15839", "board": "mo5", "reference": "MmP 230124/2026", "title": "VV - přechodná",
+               "headline": "Od 29. 11. přechodně", "text": "platí do účinnosti trvalé úpravy (č. j. mmp 230098/2026)."},
+              {"id": "mmp-15833", "board": "mmp", "reference": "MmP 230098/2026", "title": "Návrh", "headline": None, "text": None},
+              {"id": "mo5-15838", "board": "mo5", "reference": "MmP 230098/2026", "title": "VV - návrh",
+               "headline": "Návrh: připomínky do 8. 1.", "text": "návrh trvalé úpravy."}]
+    rows = queries.related([temp, prop], posted)
+    assert rows[0]["related"] == [{"id": "mo5-15838", "reference": "MmP 230098/2026", "title": "Návrh: připomínky do 8. 1."}]
+    assert rows[1]["related"] == [{"id": "mo5-15839", "reference": "MmP 230124/2026", "title": "Od 29. 11. přechodně"}]

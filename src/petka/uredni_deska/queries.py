@@ -1,5 +1,6 @@
 """Reading notices: list and full-text search (pages, API, MCP), counts, export rows."""
 
+import json
 import re
 
 from .. import db
@@ -66,13 +67,49 @@ def search(q: str = "", mo5: bool = True, active: bool = True, kind: str | None 
                 break
         rows = conn.execute(f"SELECT {COLUMNS} FROM notices n WHERE {where} ORDER BY {order} LIMIT %s OFFSET %s",
                             pp + [limit, offset]).fetchall()
-    return [_row(r) for r in rows], total
+        return with_related([_row(r) for r in rows], conn), total
 
 
 def notice(nid: str) -> dict | None:
     with db.pool().connection() as conn:
         r = conn.execute(f"SELECT {COLUMNS} FROM notices n WHERE n.id = %s", (nid,)).fetchone()
-    return _row(r) if r else None
+        return with_related([_row(r)], conn)[0] if r else None
+
+
+REF = re.compile(r"\b[A-Za-zÚú]{2,5}\s*\d{3,}/\d{4}\b")       # „MmP 230098/2026“
+
+
+def _norm(ref: str | None) -> str:
+    return " ".join((ref or "").split()).lower()
+
+
+def related(rows: list[dict], posted: list[dict]) -> list[dict]:
+    """Each row with `related`: posted notices that its card names by file number, or whose card
+    names it (a temporary traffic order and the proposal of the lasting one, posted side by side,
+    read as the same thing twice otherwise). `posted`: id, board, reference, title, headline, text
+    of every posted notice."""
+    by_ref: dict[str, dict] = {}
+    for p in sorted(posted, key=lambda p: (p["board"] != "mo5", p["id"])):   # the obvod's copy first
+        by_ref.setdefault(_norm(p["reference"]), p)
+    for r in rows:
+        own = _norm(r.get("reference"))
+        text = json.dumps(r.get("digest") or {}, ensure_ascii=False)
+        refs = {_norm(m) for m in REF.findall(text)}
+        refs |= {_norm(p["reference"]) for p in posted if own and own in (p.get("text") or "").lower()}
+        refs -= {own, ""}
+        r["related"] = [{"id": p["id"], "reference": p["reference"], "title": p["headline"] or p["title"]}
+                        for ref in sorted(refs) if (p := by_ref.get(ref))]
+    return rows
+
+
+def with_related(rows: list[dict], conn) -> list[dict]:
+    if not rows:
+        return rows
+    posted = conn.execute(
+        f"""SELECT n.id, n.board, n.reference, n.title, d.data->>'headline' AS headline, lower(d.data::text) AS text
+            FROM notices n LEFT JOIN notice_digests d ON d.notice_id = n.id AND d.status = 'published'
+            WHERE n.removed_at IS NULL AND n.reference IS NOT NULL AND {NOT_MEMBER}""").fetchall()
+    return related(rows, [dict(p) for p in posted])
 
 
 def _row(r: dict) -> dict:
