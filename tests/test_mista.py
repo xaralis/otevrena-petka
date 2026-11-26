@@ -346,3 +346,62 @@ def test_city_yards_apart_from_private_centres():
     assert out["w2"]["kind"] == "vykupna" and out["w2"]["name"] == "KOVOŠROT Hůrka s.r.o."
     assert out["dvur-drazkovice"]["kind"] == "dvur" and out["dvur-drazkovice"]["at"] == [15.76453, 50.00655]   # not in OSM
     assert out["n3"]["kind"] == "kontejner"
+
+
+# --- misto: every other named place -----------------------------------------------------------
+
+@pytest.mark.parametrize("tags, what", [
+    ({"office": "company", "name": "Medila"}, "Firma"),
+    ({"building": "industrial", "name": "Medila"}, "Průmyslová budova"),
+    ({"shop": "clothes", "name": "Pepco"}, "Oblečení"),
+    ({"shop": "clothes", "brand": "Pepco"}, "Oblečení"),
+    ({"amenity": "dentist", "name": "MUDr. Nováková"}, "Zubař"),
+    ({"healthcare": "doctor", "amenity": "doctors", "name": "Praktik"}, "Lékař"),
+    ({"amenity": "school", "name": "ZŠ Studánka"}, "Škola"),
+    ({"leisure": "pitch", "name": "Hřiště Dukla"}, "Hřiště"),
+    ({"landuse": "industrial", "name": "Synthesia"}, "Průmyslový areál"),
+    ({"craft": "unknown_craft", "name": "Dílna"}, "Řemeslo"),
+    ({"healthcare": "laboratory", "name": "MEDILA - Odběrové centrum Polabiny"}, "Laboratoř"),
+    ({"amenity": "clinic", "healthcare": "clinic", "name": "MEDILA poliklinika"}, "Poliklinika"),
+    ({"place": "neighbourhood", "name": "Dukla"}, "Čtvrť"),
+    ({"tourism": "artwork", "name": "Socha Jana Pernera"}, "Umělecké dílo"),
+    ({"shop": "supermarket", "name": "Billa", "building": "retail"}, "Supermarket"),
+])
+def test_other_named_places(tags, what):
+    p = one(**tags)
+    if tags.get("shop") == "supermarket":
+        assert p["kind"] == "potraviny"
+        return
+    assert (p["kind"], p["what"]) == ("misto", what)
+    assert p["name"] == (tags.get("name") or tags.get("brand"))
+
+
+@pytest.mark.parametrize("tags", [
+    {"amenity": "bench", "name": "Lavička"},
+    {"building": "garage", "name": "Garáž"},
+    {"building": "house", "name": "Vila"},
+    {"landuse": "residential", "name": "Sídliště"},
+    {"shop": "vacant", "name": "Bývalý obchod"},
+    {"shop": "clothes"},
+    {"man_made": "mast", "name": "Stožár"},
+    {"tourism": "information", "name": "Rozcestník"},
+    {"place": "city", "name": "Pardubice"},
+])
+def test_other_left_out(tags):
+    assert one(**tags) is None
+
+
+def test_a_place_mapped_twice_is_listed_once():
+    """A firm as its building and as a point in it is one place; a pharmacy in a building of its
+    name, and a firm of another name in the same building, stay."""
+    places = osm.places_of([
+        way(1, building="industrial", name="Medila"),
+        node(2, lon=15.7701, office="company", name="Medila"),
+        node(3, lon=15.7702, amenity="pharmacy", name="Lékárna Medila"),
+        way(4, lon=15.7702, building="commercial", name="Lékárna Medila"),
+        node(5, lon=15.7703, office="lawyer", name="AK Novák"),
+        node(6, lon=15.80, office="company", name="Medila"),
+    ])
+    got = sorted((p["id"], p["kind"], p["what"]) for p in places)
+    assert got == [("n2", "misto", "Firma"), ("n3", "lekarna", "Lékárna"), ("n5", "misto", "Advokát"), ("n6", "misto", "Firma"),
+                   ("w4", "misto", "Komerční budova")]
