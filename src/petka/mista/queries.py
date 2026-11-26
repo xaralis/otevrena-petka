@@ -28,7 +28,7 @@ def places(at: dt.datetime) -> list[dict]:
         with db.pool().connection() as conn:
             # The first supplement of a place by SOURCES' order (mesto, alltheplaces, web).
             rows = conn.execute("""SELECT p.id, p.kind, p.name, p.what, p.address, p.lon, p.lat, p.hours, p.obvody,
-                                          p.odpad, p.capacity, p.phone, p.web, p.email,
+                                          p.odpad, p.capacity, p.phone, p.web, p.email, p.pruvodce,
                                           d.source AS d_source, d.hours AS d_hours, d.phone AS d_phone,
                                           d.web AS d_web, d.url AS d_url
                                    FROM mista_places p

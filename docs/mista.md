@@ -5,7 +5,7 @@ OpenStreetMap: místa „Co je v okolí“ aplikace Pardubice do kapsy, stojany 
 na tříděný odpad, sběrné dvory a všechna další pojmenovaná místa (firmy, úřady, lékaři, školy…). Aplikace soubor stahuje celý jednou denně a neposílá s ním
 žádnou polohu.
 
-Verze souboru 2 (16. 11. 2026; 26. 11. 2026 přibyla pole `phone`, `web` a `email`). Kód: `src/petka/mista/`.
+Verze souboru 2 (16. 11. 2026; 26. 11. 2026 přibyla pole `phone`, `web`, `email` a `pruvodce`). Kód: `src/petka/mista/`.
 
 ## Adresy
 
@@ -58,6 +58,7 @@ curl --compressed 'https://otevrenapetka.cz/api/v1/mista?obvod=mo5&druh=stojan,k
 | `address` | ulice (nebo místo) a číslo z OSM `addr:*`, nebo `null` |
 | `at` | `[lon, lat]` na 5 desetinných míst; u cesty a relace její střed |
 | `hours` | OSM `opening_hours` beze změny; když ho OSM nemá, doplněná doba (`hours_from`); jinak `null` |
+| `pruvodce` | jen u míst Průvodce městem v aplikaci: `pamatky` (památky jako u „Co je v okolí“, vyhlídky a umělecká díla), `kultura` (divadlo, kino, kulturní centrum, galerie, knihovna, koncertní sál), `priroda` (park, zahrada, přírodní rezervace, sportoviště, koupaliště, zimní stadion, zoo), `jidlo` (restaurace, kavárna, hospoda, bar, zahrádka, zmrzlina; ne rychlé občerstvení) a `ubytovani` (hotel, penzion, hostel, motel, apartmány, kemp). Jen pojmenovaná a ne soukromá; u ostatních pole chybí |
 | `obvody` | obvod, ve kterém bod leží (polygony obvodů z RÚIAN; do 20 m za hranicí nejbližší), `[]` mimo všechny |
 | `odpad` | jen `kontejner`, `dvur` a `vykupna`: druhy odpadu, které bere; jinde pole chybí |
 | `capacity` | jen `stojan`: OSM `capacity` jako celé číslo, nebo `null`; jinde pole chybí |

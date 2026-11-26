@@ -162,6 +162,41 @@ def classify(t: dict) -> tuple[str, str] | None:
     return None
 
 
+# --- Průvodce městem: places worth a visit, by the guide's five kinds ---------------------------
+
+GUIDE = ("pamatky", "kultura", "priroda", "jidlo", "ubytovani")
+GUIDE_SIGHTS = {"viewpoint", "artwork"}   # tourism=*: a sight besides museums and attractions
+GUIDE_CULTURE = {"amenity": {"theatre", "cinema", "arts_centre", "music_venue", "planetarium", "library",
+                             "exhibition_centre", "concert_hall"},
+                 "tourism": {"gallery"}}
+GUIDE_NATURE = {"leisure": {"park", "garden", "nature_reserve", "sports_centre", "stadium", "swimming_pool",
+                            "water_park", "ice_rink", "golf_course", "horse_riding", "miniature_golf", "fitness_centre",
+                            "climbing", "beach_resort"},
+                "tourism": {"zoo", "picnic_site"}}
+GUIDE_FOOD = {"restaurant", "cafe", "pub", "bar", "biergarten", "ice_cream"}   # no fast food: no outing
+GUIDE_STAY = {"hotel", "guest_house", "hostel", "motel", "apartment", "chalet", "camp_site"}
+
+
+def guide_of(t: dict, kind: str) -> str | None:
+    """The kind of Průvodce městem a named place is (GUIDE), or None when it is no place to visit:
+    sights as „Co je v okolí“ has them, plus viewpoints and artworks; culture; parks, gardens and
+    sports grounds open to the public; restaurants, cafés and pubs, not fast food; where to stay."""
+    if not t.get("name") or t.get("access") in NOT_PUBLIC:
+        return None
+    amenity, tourism, leisure = t.get("amenity"), t.get("tourism"), t.get("leisure")
+    if tourism in GUIDE_STAY:
+        return "ubytovani"
+    if kind == "pamatky" or tourism in GUIDE_SIGHTS:
+        return "pamatky"
+    if amenity in GUIDE_CULTURE["amenity"] or tourism in GUIDE_CULTURE["tourism"]:
+        return "kultura"
+    if leisure in GUIDE_NATURE["leisure"] or tourism in GUIDE_NATURE["tourism"]:
+        return "priroda"
+    if kind == "jidlo" and amenity in GUIDE_FOOD:
+        return "jidlo"
+    return None
+
+
 def name_of(t: dict, kind: str, what: str) -> str | None:
     """The name a person sees. „Co je v okolí“: its own, else brand (an ATM also its operator),
     else what it is („Veřejné WC“). A rack, container or dvůr: its own name or None."""
@@ -275,6 +310,8 @@ def places_of(elements: list[dict]) -> list[dict]:
             p["capacity"] = capacity_of(t)
         if kind == "misto" and not p["name"]:
             continue
+        if guide := guide_of(t, kind):
+            p["pruvodce"] = guide
         out.append(p)
     return other.once(out)
 

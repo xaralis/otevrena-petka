@@ -27,7 +27,7 @@ def parse_kinds(value: str | None) -> tuple[str, ...]:
 
 def place(row: dict) -> dict:
     """A place of the file from a row of mista_places: odpad only for kontejner and dvur,
-    capacity only for stojan, phone, web and email only where OSM has them. Where OSM has no hours
+    capacity only for stojan, pruvodce only for a place of Průvodce městem, phone, web and email only where OSM has them. Where OSM has no hours
     (or phone, web) the place's supplement (petka.mista.doplnky) gives them, and `hours_from`
     says which source, `hours_url` the page they are from."""
     p = {"id": row["id"], "kind": row["kind"], "name": row["name"], "what": row["what"],
@@ -45,6 +45,8 @@ def place(row: dict) -> dict:
         p["odpad"] = list(row["odpad"] or [])
     if row["kind"] == "stojan":
         p["capacity"] = row["capacity"]
+    if row.get("pruvodce"):
+        p["pruvodce"] = row["pruvodce"]
     return p
 
 
