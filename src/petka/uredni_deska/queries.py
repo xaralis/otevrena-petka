@@ -108,7 +108,8 @@ def with_related(rows: list[dict], conn) -> list[dict]:
     posted = conn.execute(
         f"""SELECT n.id, n.board, n.reference, n.title, d.data->>'headline' AS headline, lower(d.data::text) AS text
             FROM notices n LEFT JOIN notice_digests d ON d.notice_id = n.id AND d.status = 'published'
-            WHERE n.removed_at IS NULL AND n.reference IS NOT NULL AND {NOT_MEMBER}""").fetchall()
+            WHERE n.removed_at IS NULL AND n.reference IS NOT NULL AND {NOT_MEMBER}
+              AND n.kind <> 'doruceni' AND NOT n.redacted""").fetchall()   # a delivery's title names a person
     return related(rows, [dict(p) for p in posted])
 
 
