@@ -268,7 +268,7 @@ def test_file_v2(api):
 
 def test_filters(api):
     ids = lambda **params: [p["id"] for p in get("/api/v1/mista", params=params).json()["places"]]  # noqa: E731
-    assert ids() == ["n1", "n2", "w3", "n4"]
+    assert ids() == ["n1", "n2", "w3", "n4", "n5"]
     assert ids(obvod="mo5") == ["n1", "n2"]
     assert ids(obvod="mo1,mo5", druh="stojan, KONTEJNER") == ["n1", "w3"]
     assert ids(druh="dvur") == []
