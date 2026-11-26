@@ -1,0 +1,166 @@
+{
+ "about": "Otevírací (úřední) doby úřadů a institucí města, které v OpenStreetMap chybí. Klíč je id místa v exportu Míst (typ OSM n|w|r + id). Každá doba má stránku, odkud je, a den ověření. Viz docs/mista.md, Doplněné otevírací doby.",
+ "places": [
+  {
+   "id": "r21826509",
+   "name": "Magistrát města Pardubic",
+   "hours": "Mo,We 08:00-11:00,12:00-17:00; Tu,Th 08:00-11:00,12:00-15:30; Fr 08:00-11:00,12:00-14:30",
+   "url": "https://pardubice.eu/magistrat-mesta",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12660558958",
+   "name": "Magistrát města Pardubic – Stavební úřad",
+   "hours": "Mo,We 08:00-11:00,12:00-17:00",
+   "url": "https://pardubice.eu/stavebni-urad",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12660558959",
+   "name": "Magistrát města Pardubic – Odbor životního prostředí",
+   "hours": "Mo,We 08:00-11:00,12:00-17:00; Tu,Th 08:00-11:00,12:00-15:30",
+   "url": "https://pardubice.eu/odbor-zivotniho-prostredi",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12928124739",
+   "name": "Živnostenský úřad",
+   "hours": "Mo,We 08:00-11:00,12:00-17:00; Tu,Th 08:00-11:00,12:00-15:30",
+   "url": "https://pardubice.eu/obecni-zivnostensky-urad",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12194316284",
+   "name": "Úřad městského obvodu Pardubice I",
+   "hours": "Mo,We 08:00-17:00; Tu,Th 08:00-15:30; Fr 08:00-14:30",
+   "url": "https://pardubice.eu/obvod1",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12847628053",
+   "name": "Úřad městského obvodu Pardubice II",
+   "hours": "Mo,We 08:00-11:30,12:30-17:00; Tu,Th 08:00-11:30,12:30-15:00; Fr 08:00-11:30,12:30-14:30",
+   "web": "https://pardubice.eu/obvod2",
+   "url": "https://pardubice.eu/obvod2",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12566665974",
+   "name": "Úřad městského obvodu Pardubice III",
+   "hours": "Mo,We 08:00-17:00; Tu,Th 08:00-15:30; Fr 08:00-14:00",
+   "web": "https://pardubice.eu/obvod3",
+   "url": "https://pardubice.eu/obvod3",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12801645566",
+   "name": "Úřad městského obvodu Pardubice IV",
+   "hours": "Mo,We 08:00-11:30,12:30-17:00; Tu,Th 08:00-11:30,12:30-14:30",
+   "url": "https://pardubice.eu/radnice-mo4",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n296733527",
+   "name": "Úřad městského obvodu Pardubice V",
+   "hours": "Mo,We 08:00-11:30,12:30-17:00; Tu,Th 08:00-11:30,12:30-15:00; Fr 08:00-11:30,12:30-14:00",
+   "web": "https://pardubice.eu/obvod5",
+   "url": "https://pardubice.eu/obvod5",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "w265017145",
+   "name": "Úřad městského obvodu Pardubice VI",
+   "hours": "Mo,We 08:00-11:30,12:30-17:00; Tu,Th 08:00-11:30,12:30-15:00; Fr 08:00-11:30,12:30-14:30",
+   "web": "https://pardubice.eu/obvod6",
+   "url": "https://pardubice.eu/obvod6",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12548999873",
+   "name": "Finanční úřad pro Pardubický kraj – Územní pracoviště v Pardubicích",
+   "hours": "Mo,We 08:00-17:00",
+   "url": "https://financnisprava.gov.cz/cs/financni-sprava/financni-sprava-cr/organizacni-struktura/organy-financni-spravy/uzemni-pracoviste/2801-uzemni-pracoviste-v-pardubicich",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12522532262",
+   "name": "Okresní správa sociálního zabezpečení Pardubice",
+   "hours": "Mo,We 08:00-17:00",
+   "url": "https://www.cssz.gov.cz/web/cz/kontakty/region/ossz/pardubicky-kraj/pardubice",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12250892437",
+   "name": "Úřad práce ČR – kontaktní pracoviště Pardubice (nepojistné sociální dávky)",
+   "hours": "Mo,We 08:00-12:00,13:00-17:00; Tu 08:00-11:00",
+   "url": "https://up.gov.cz/pardubice",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n14225216321",
+   "name": "Katastrální úřad pro Pardubický kraj – Katastrální pracoviště Pardubice",
+   "hours": "Mo,We 08:00-17:00; Tu,Th 08:00-14:00; Fr 08:00-12:00",
+   "web": "https://cuzk.gov.cz/kp/pardubice",
+   "url": "https://cuzk.gov.cz/kp/pardubice",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12582251443",
+   "name": "Státní okresní archiv Pardubice (badatelna)",
+   "hours": "Mo,We 08:00-17:00",
+   "url": "https://soahradec.gov.cz/kontakty/statni-okresni-archiv-pardubice/",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n4908357055",
+   "name": "Východočeské muzeum v Pardubicích",
+   "hours": "Tu-Su 10:00-18:00",
+   "web": "https://www.vcm.cz/",
+   "url": "https://www.vcm.cz/navstivte-nas/oteviraci-doba-a-vstupne/",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12112771302",
+   "name": "Gočárova galerie",
+   "hours": "Tu-Su 10:00-18:00",
+   "url": "https://www.gocarovagalerie.cz/navstivte-nas/oteviraci-doba-a-vstupne",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12591358900",
+   "name": "Památník Zámeček (prosinec–únor)",
+   "hours": "Sa,Su 10:00-18:00",
+   "url": "https://www.zamecek-memorial.cz/",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "w45847403",
+   "name": "Východočeské divadlo – předprodej vstupenek",
+   "hours": "Mo,Tu 10:00-18:00; We,Th 10:00-17:00",
+   "url": "https://www.vcd.cz/vstupenky",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n12566665973",
+   "name": "Knihovna Dubina (Knihovna MO Pardubice III)",
+   "hours": "Mo 13:00-18:00; We 09:00-12:00,13:00-17:00; Th 09:00-12:00,13:00-16:00; Fr 09:00-12:00,13:00-15:00",
+   "url": "https://knihovna-dubina.cz/",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "n1260801271",
+   "name": "Knihovna městského obvodu Pardubice II (Polabiny)",
+   "hours": "Mo 10:00-18:00; We 09:00-17:00; Th 09:00-16:00; Fr 09:00-12:00",
+   "web": "https://www.knihovna-polabiny.cz/",
+   "url": "https://www.knihovna-polabiny.cz/",
+   "checked": "2026-11-26"
+  },
+  {
+   "id": "r19675726",
+   "name": "Poliklinika Vektor",
+   "hours": "Mo-Fr 06:15-19:00",
+   "url": "https://www.poliklinikavektor.cz/oteviraci-doba-polikliniky-vektor",
+   "checked": "2026-11-26"
+  }
+ ]
+}

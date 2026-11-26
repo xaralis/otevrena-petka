@@ -60,10 +60,12 @@ def store(conn, places: list[dict], force: bool = False) -> dict:
     conn.execute("DELETE FROM mista_places")
     with conn.cursor() as cur:
         cur.executemany(
-            """INSERT INTO mista_places (id, kind, name, what, address, lon, lat, hours, obvody, odpad, capacity)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
+            """INSERT INTO mista_places (id, kind, name, what, address, lon, lat, hours, obvody, odpad, capacity,
+                                       phone, web, email)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
             [(p["id"], p["kind"], p["name"], p["what"], p["address"], p["at"][0], p["at"][1], p["hours"],
-              p["obvody"], p.get("odpad"), p.get("capacity")) for p in places])
+              p["obvody"], p.get("odpad"), p.get("capacity"), p.get("phone"), p.get("web"), p.get("email"))
+             for p in places])
     conn.execute("INSERT INTO mista_builds (counts, total, accepted) VALUES (%s, %s, true)",
                  (json.dumps(counts), sum(counts.values())))
     by_obvod: dict[str, int] = {}

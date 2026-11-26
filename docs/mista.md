@@ -5,7 +5,7 @@ OpenStreetMap: místa „Co je v okolí“ aplikace Pardubice do kapsy, stojany 
 na tříděný odpad, sběrné dvory a všechna další pojmenovaná místa (firmy, úřady, lékaři, školy…). Aplikace soubor stahuje celý jednou denně a neposílá s ním
 žádnou polohu.
 
-Verze souboru 2 (16. 11. 2026). Kód: `src/petka/mista/`.
+Verze souboru 2 (16. 11. 2026; 26. 11. 2026 přibyla pole `phone`, `web` a `email`). Kód: `src/petka/mista/`.
 
 ## Adresy
 
@@ -57,10 +57,15 @@ curl --compressed 'https://otevrenapetka.cz/api/v1/mista?obvod=mo5&druh=stojan,k
 | `what` | co to je, česky |
 | `address` | ulice (nebo místo) a číslo z OSM `addr:*`, nebo `null` |
 | `at` | `[lon, lat]` na 5 desetinných míst; u cesty a relace její střed |
-| `hours` | OSM `opening_hours` beze změny, nebo `null` |
+| `hours` | OSM `opening_hours` beze změny; když ho OSM nemá, doplněná doba (`hours_from`); jinak `null` |
 | `obvody` | obvod, ve kterém bod leží (polygony obvodů z RÚIAN; do 20 m za hranicí nejbližší), `[]` mimo všechny |
 | `odpad` | jen `kontejner`, `dvur` a `vykupna`: druhy odpadu, které bere; jinde pole chybí |
 | `capacity` | jen `stojan`: OSM `capacity` jako celé číslo, nebo `null`; jinde pole chybí |
+| `phone` | telefon z OSM `phone`, `contact:phone`, `contact:mobile` nebo `mobile` (první z nich, z více čísel oddělených `;` první); české číslo jako `+420 466 123 456`, jiné jako `+` a číslice. Pole chybí, když OSM číslo nemá |
+| `web` | web z OSM `website`, `contact:website` nebo `url`, jinak stránka na Facebooku nebo Instagramu (`contact:facebook`, `facebook`, `contact:instagram`), vždy jako odkaz s `https://`. Pole chybí, když OSM žádný nemá |
+| `email` | e-mail z OSM `email` nebo `contact:email`. Pole chybí, když OSM žádný nemá |
+| `hours_from` | jen když otevírací doba není z OSM: odkud je (`mesto`, `alltheplaces`, `web`), viz Doplněné otevírací doby. Pole chybí, když je `hours` z OSM nebo `null` |
+| `hours_url` | jen u `hours_from` `mesto` a `web`: stránka, ze které doba je |
 
 Místa jsou seřazená podle druhu a `id`. Čtenář neznámá pole a neznámé druhy ignoruje.
 
@@ -114,6 +119,21 @@ jen část území. Pak dál platí poslední přijatý export a úloha nahlás�
 
 Chybějící nebo špatné místo se opravuje přímo v OpenStreetMap; do exportu se dostane při
 další obnově.
+
+## Doplněné otevírací doby
+
+Otevírací dobu má v OSM jen asi třetina služeb ve městě. Úloha `usneseni mista-doplnky` (jednou
+týdně) proto doplní dobu, případně telefon a web, místům, jejichž objekt v OSM ji nemá, ze tří
+otevřených zdrojů (`src/petka/mista/doplnky.py`):
+
+| `hours_from` | zdroj | jak se páruje |
+|---|---|---|
+| `mesto` | ruční seznam úřadů a institucí města v `data/mista/hodiny.json`: úřední hodiny magistrátu a obvodů, knihovny, bazény…, každá doba se stránkou, odkud je, a dnem ověření | podle `id` místa |
+| `alltheplaces` | [All The Places](https://www.alltheplaces.xyz/) (CC0): oficiální vyhledávače poboček řetězců (Albert, Lidl, Dr.Max, Česká pošta, banky…), jednou týdně | nejbližší místo do 100 m, jehož název obsahuje značku řetězce; u pošty nejbližší pošta |
+| `web` | vlastní web místa (jeho `web` z OSM, ne Facebook ani Instagram), jen když stránka dobu uvádí jako strukturovaná data schema.org (`openingHoursSpecification`, `openingHours`) | podle `web` místa |
+
+Doba z webu se vezme, jen když vypadá věrohodně (každý úsek aspoň 30 minut, nic neotevírá mezi půlnocí a pátou, přes půlnoc nejdéle do šesti). Úloha chodí jen na veřejné adresy http(s), i po přesměrování. OSM má vždy přednost; ze zdrojů `mesto` před `alltheplaces` před `web`. Zdroj, který se ten
+týden nepodaří načíst, nechá doplňky z minula. Chybějící dobu je nejlepší doplnit přímo do OSM.
 
 ## Licence
 

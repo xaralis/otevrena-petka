@@ -184,6 +184,64 @@ def address_of(t: dict) -> str | None:
     return f"{street} {number}" if number else street
 
 
+PHONE_KEYS = ("phone", "contact:phone", "contact:mobile", "mobile")
+WEB_KEYS = ("website", "contact:website", "url")
+SOCIAL_KEYS = ("contact:facebook", "facebook", "contact:instagram")
+EMAIL_KEYS = ("email", "contact:email")
+EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def _first(t: dict, keys: tuple[str, ...]) -> str | None:
+    """The first of a value's alternatives (OSM separates them by „;“) under the first key that has one."""
+    for k in keys:
+        for v in (t.get(k) or "").split(";"):
+            if v.strip():
+                return v.strip()
+    return None
+
+
+def phone_of(t: dict) -> str | None:
+    """The first phone number as „+420 466 123 456“ (a Czech one of nine digits gets +420), any
+    other international number as OSM has it, None when there is none or it is no number."""
+    raw = _first(t, PHONE_KEYS)
+    if not raw:
+        return None
+    digits = re.sub(r"\D", "", raw.split(",")[0])
+    if raw.lstrip().startswith("00"):
+        digits = digits[2:]
+    elif not raw.lstrip().startswith("+") and len(digits) == 9:
+        digits = "420" + digits
+    if digits.startswith("420") and len(digits) == 12:
+        return f"+420 {digits[3:6]} {digits[6:9]} {digits[9:]}"
+    return f"+{digits}" if 8 <= len(digits) <= 15 else None
+
+
+def web_of(t: dict) -> str | None:
+    """The place's own web, else its Facebook or Instagram page, as a link with a scheme."""
+    raw = _first(t, WEB_KEYS)
+    if not raw:
+        social = next(((k, v) for k in SOCIAL_KEYS if (v := _first(t, (k,)))), None)
+        if not social:
+            return None
+        k, raw = social
+        if not re.match(r"(?i)^(https?://|www\.|[a-z0-9-]+\.[a-z]{2,}/)", raw):
+            raw = ("https://www.instagram.com/" if "instagram" in k else "https://www.facebook.com/") + raw.lstrip("@")
+    if " " in raw or "." not in raw:
+        return None
+    return raw if re.match(r"(?i)^https?://", raw) else "https://" + raw.removeprefix("//")
+
+
+def email_of(t: dict) -> str | None:
+    e = _first(t, EMAIL_KEYS)
+    return e.removeprefix("mailto:") if e and EMAIL.match(e.removeprefix("mailto:")) else None
+
+
+def contact_of(t: dict) -> dict:
+    """{phone, web, email} of the ones OSM has (docs/mista.md: a missing one is no field)."""
+    c = {"phone": phone_of(t), "web": web_of(t), "email": email_of(t)}
+    return {k: v for k, v in c.items() if v}
+
+
 def capacity_of(t: dict) -> int | None:
     """OSM capacity as a whole number, None when absent or not a plain number („cca 10“)."""
     c = (t.get("capacity") or "").strip()
@@ -208,7 +266,7 @@ def places_of(elements: list[dict]) -> list[dict]:
         kind, what = c
         p = {"id": f"{e['type'][0]}{e['id']}", "kind": kind, "name": name_of(t, kind, what), "what": what,
              "address": address_of(t), "at": [round(lon, 5), round(lat, 5)],
-             "hours": (t.get("opening_hours") or "").strip() or None}
+             "hours": (t.get("opening_hours") or "").strip() or None, **contact_of(t)}
         if kind in ("kontejner", "dvur"):
             p["odpad"] = waste(t)
             if kind == "kontejner" and not p["odpad"]:
