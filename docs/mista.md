@@ -2,7 +2,7 @@
 
 Jeden denní export bodů celého statutárního města Pardubice (všech osm obvodů) z
 OpenStreetMap: místa „Co je v okolí“ aplikace Pardubice do kapsy, stojany na kola, kontejnery
-na tříděný odpad a sběrné dvory. Aplikace soubor stahuje celý jednou denně a neposílá s ním
+na tříděný odpad, sběrné dvory a všechna další pojmenovaná místa (firmy, úřady, lékaři, školy…). Aplikace soubor stahuje celý jednou denně a neposílá s ním
 žádnou polohu.
 
 Verze souboru 2 (16. 11. 2026). Kód: `src/petka/mista/`.
@@ -21,7 +21,7 @@ Obě berou:
 
 Odpověď má slabý `ETag` (sestavení + filtr) a `Cache-Control: public, max-age=3600`; dotaz s
 `If-None-Match` se stejným ETagem dostane 304 bez těla. S `Accept-Encoding: gzip` přijde
-zkomprimovaná (celé město ~310 kB, gzip ~40 kB). Dokud žádné sestavení neproběhlo, 503.
+zkomprimovaná (celé město ~750 kB, gzip ~110 kB). Dokud žádné sestavení neproběhlo, 503.
 
 ```bash
 curl --compressed 'https://otevrenapetka.cz/api/v1/mista?obvod=mo5&druh=stojan,kontejner'
@@ -81,9 +81,11 @@ Místa jsou seřazená podle druhu a `id`. Čtenář neznámá pole a neznámé 
 | `kontejner` | `amenity=recycling`, ne `recycling_type=centre`; kontejner, který nebere žádný z druhů odpadu níže, vynecháme | Kontejnery na tříděný odpad |
 | `dvur` | `amenity=recycling` + `recycling_type=centre` do 200 m od městského separačního dvora podle seznamu Služeb města Pardubic; dvůr, který v OSM chybí, doplněný z toho seznamu (`id` = `dvur-…`). Název a otevírací doba podle SmP | Sběrný dvůr |
 | `vykupna` | ostatní `amenity=recycling` + `recycling_type=centre`: soukromé výkupny a recyklační centra (Kovošrot, JARÝ…) | Výkupna, recyklační centrum |
+| `misto` | každý další objekt s názvem (u obchodu a `amenity` stačí značka `brand`), který nepatří do druhů výše a má některý z klíčů `healthcare`, `amenity`, `shop`, `craft`, `office`, `tourism`, `leisure`, `club`, `emergency`, `government`, `company`, `man_made` (závody, ČOV, vodárny, mlýny…), `landuse` (průmyslové, komerční, obchodní areály, hřbitovy, zahrádky, lesy…), `natural` (lesy, vodní plochy, památné stromy…), `building` nebo `place` (městské obvody, části města, čtvrti, místní názvy). Bez mobiliáře (lavičky, koše, parkovací místa…), garáží, kůlen a rodinných domů. Firma zakreslená jako budova i jako bod v ní se stejným názvem do 150 m je jedno místo | podle prvního klíče v tom pořadí, česky (Firma, Zubař, Poliklinika, Škola, Kadeřnictví, Hřiště, Průmyslová budova, Čtvrť…); hodnota mimo slovník dostane obecné slovo klíče (Obchod, Firma, Řemeslo, Budova…). Slovník je v `src/petka/mista/other.py` |
 
 Prvních sedm druhů vybírá a pojmenovává stejně jako `data-tools/build_places.mjs` aplikace
-(verze 1 souboru).
+(verze 1 souboru). Druh `misto` aplikace jen prohledává (najde firmu nebo ordinaci podle
+názvu), na mapě „Co je v okolí“ ho nekreslí.
 
 ### Druhy odpadu (`odpad`)
 
