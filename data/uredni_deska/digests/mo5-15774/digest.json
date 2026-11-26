@@ -1,6 +1,8 @@
 {
  "notice_id": "mo5-15774",
- "members": [],
+ "members": [
+  "mmp-15759"
+ ],
  "status": "published",
  "prompt_version": "deska-v6",
  "model": "cli:claude-sonnet-5-5",
