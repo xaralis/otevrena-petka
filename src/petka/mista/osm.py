@@ -4,7 +4,9 @@ how its answer becomes places (docs/mista.md is the format).
 Kinds: the places of „Co je v okolí“ of the app Pardubice do kapsy (potraviny, bankomat,
 lekarna, jidlo, pamatky, wc, posta; selection and Czech wording carried over unchanged from the
 app's data-tools/build_places.mjs), bike racks (stojan), sorted-waste containers (kontejner)
-and recycling centres (dvur). Pure functions over Overpass elements; `fetch` is the only one
+and recycling centres (dvur), and every other named place a person may search for by its name
+(misto, petka.mista.other: firms, offices, doctors, schools, shops, sports grounds, named
+buildings and works). Pure functions over Overpass elements; `fetch` is the only one
 that goes to the network.
 
 Overpass etiquette: a descriptive User-Agent without personal data, one query a day, a
@@ -15,7 +17,9 @@ import os
 import re
 import time
 
-KINDS = ("potraviny", "bankomat", "lekarna", "jidlo", "pamatky", "wc", "posta", "stojan", "kontejner", "dvur", "vykupna")
+from . import other
+
+KINDS = ("potraviny", "bankomat", "lekarna", "jidlo", "pamatky", "wc", "posta", "stojan", "kontejner", "dvur", "vykupna", "misto")
 WASTE = ("papir", "plast", "sklo", "kov", "textil", "elektro", "baterie", "olej", "bio")
 
 OVERPASS = os.environ.get("OVERPASS_URL", "https://overpass-api.de/api/interpreter")
@@ -42,6 +46,25 @@ QUERY = f"""[out:json][timeout:180];
   nwr["amenity"="post_office"](area.city);
   nwr["amenity"="bicycle_parking"](area.city);
   nwr["amenity"="recycling"](area.city);
+  // misto: every other named place (petka.mista.other)
+  nwr["name"]["shop"](area.city);
+  nwr["brand"]["shop"](area.city);
+  nwr["name"]["amenity"](area.city);
+  nwr["brand"]["amenity"](area.city);
+  nwr["name"]["office"](area.city);
+  nwr["name"]["craft"](area.city);
+  nwr["name"]["healthcare"](area.city);
+  nwr["name"]["tourism"](area.city);
+  nwr["name"]["leisure"](area.city);
+  nwr["name"]["club"](area.city);
+  nwr["name"]["emergency"](area.city);
+  nwr["name"]["government"](area.city);
+  nwr["name"]["company"](area.city);
+  nwr["name"]["man_made"~"^(works|wastewater_plant|water_works|observatory|windmill|watermill|silo|water_tower|gasometer)$"](area.city);
+  wr["name"]["landuse"~"^({"|".join(sorted(other.LANDUSE_PLACES))})$"](area.city);
+  wr["name"]["building"](area.city);
+  nwr["name"]["natural"~"^({"|".join(sorted(other.NATURAL_PLACES))})$"](area.city);
+  nwr["name"]["place"~"^({"|".join(sorted(other.PLACE_PLACES))})$"](area.city);
 );
 out center tags;"""
 
@@ -142,6 +165,8 @@ def classify(t: dict) -> tuple[str, str] | None:
 def name_of(t: dict, kind: str, what: str) -> str | None:
     """The name a person sees. „Co je v okolí“: its own, else brand (an ATM also its operator),
     else what it is („Veřejné WC“). A rack, container or dvůr: its own name or None."""
+    if kind == "misto":
+        return (t.get("name") or t.get("brand") or "").strip() or None
     if kind in ("stojan", "kontejner", "dvur", "vykupna"):
         return (t.get("name") or "").strip() or None
     own = t.get("name") or t.get("brand") or (t.get("operator") if kind == "bankomat" else None)
@@ -168,11 +193,14 @@ def capacity_of(t: dict) -> int | None:
 def places_of(elements: list[dict]) -> list[dict]:
     """The places of an Overpass answer, one per OSM object, sorted by kind and id so that a
     day's file diffs. Fields as the export's, without `obvody` (petka.mista.where adds them).
-    A container that takes none of the waste kinds is left out; a dvůr is kept."""
+    A container that takes none of the waste kinds is left out; a dvůr is kept. A `misto` that
+    is another place of the same name nearby is left out (`other.once`)."""
     out = []
     for e in elements:
         t = e.get("tags") or {}
         c = classify(t)
+        if not c and (what := other.classify(t)):
+            c = ("misto", what)
         lat = e.get("lat", (e.get("center") or {}).get("lat"))
         lon = e.get("lon", (e.get("center") or {}).get("lon"))
         if not c or lat is None or lon is None:
@@ -187,8 +215,10 @@ def places_of(elements: list[dict]) -> list[dict]:
                 continue
         if kind == "stojan":
             p["capacity"] = capacity_of(t)
+        if kind == "misto" and not p["name"]:
+            continue
         out.append(p)
-    return sorted(out, key=lambda p: (p["kind"], p["id"]))
+    return other.once(out)
 
 
 NEAR_YARD = 200     # m: an OSM recycling centre this close to a city yard is that yard
