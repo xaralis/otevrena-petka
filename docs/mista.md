@@ -132,7 +132,7 @@ otevřených zdrojů (`src/petka/mista/doplnky.py`):
 | `alltheplaces` | [All The Places](https://www.alltheplaces.xyz/) (CC0): oficiální vyhledávače poboček řetězců (Albert, Lidl, Dr.Max, Česká pošta, banky…), jednou týdně | nejbližší místo do 100 m, jehož název obsahuje značku řetězce; u pošty nejbližší pošta |
 | `web` | vlastní web místa (jeho `web` z OSM, ne Facebook ani Instagram), jen když stránka dobu uvádí jako strukturovaná data schema.org (`openingHoursSpecification`, `openingHours`) | podle `web` místa |
 
-OSM má vždy přednost; ze zdrojů `mesto` před `alltheplaces` před `web`. Zdroj, který se ten
+Doba z webu se vezme, jen když vypadá věrohodně (každý úsek aspoň 30 minut, nic neotevírá mezi půlnocí a pátou, přes půlnoc nejdéle do šesti). Úloha chodí jen na veřejné adresy http(s), i po přesměrování. OSM má vždy přednost; ze zdrojů `mesto` před `alltheplaces` před `web`. Zdroj, který se ten
 týden nepodaří načíst, nechá doplňky z minula. Chybějící dobu je nejlepší doplnit přímo do OSM.
 
 ## Licence

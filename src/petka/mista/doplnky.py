@@ -196,15 +196,54 @@ def hours_from_html(html: str) -> str | None:
     return None
 
 
-def web_hours(client, url: str) -> str | None:
+WEB_REDIRECTS = 3
+
+
+def public_url(url: str) -> bool:
+    """Whether `url` is http(s) to a host whose every address is public: a web from OSM is
+    anyone's to write, and the job must not be sent to the cluster's own or a private network."""
+    import ipaddress
+    import socket
+    from urllib.parse import urlsplit
+    u = urlsplit(url)
+    if u.scheme not in ("http", "https") or not u.hostname:
+        return False
+    try:
+        infos = socket.getaddrinfo(u.hostname, u.port or (443 if u.scheme == "https" else 80), proto=socket.IPPROTO_TCP)
+    except (OSError, UnicodeError):
+        return False
+    return bool(infos) and all(ipaddress.ip_address(i[4][0].split("%")[0]).is_global for i in infos)
+
+
+def web_hours(client, url: str, public=public_url) -> str | None:
     """The hours on the page at `url` (hours_from_html); None for a social network or another
-    site that is not the place's own, a page that does not answer 200 with HTML, or too big."""
-    if NOT_OWN_WEB.match(url):
-        return None
-    r = client.get(url, headers={"User-Agent": osm.USER_AGENT}, timeout=WEB_TIMEOUT, follow_redirects=True)
-    if r.status_code != 200 or "html" not in r.headers.get("content-type", "") or len(r.content) > WEB_MAX_BYTES:
-        return None
-    return hours_from_html(r.text)
+    site that is not the place's own, a host that is not public (`public_url`, checked again at
+    every redirect, at most WEB_REDIRECTS), a page that does not answer 200 with HTML, or one
+    too big. The hours must be plausible (`plausible`): a page's markup is often wrong."""
+    for _ in range(WEB_REDIRECTS + 1):
+        if NOT_OWN_WEB.match(url) or not public(url):
+            return None
+        r = client.get(url, headers={"User-Agent": osm.USER_AGENT}, timeout=WEB_TIMEOUT, follow_redirects=False)
+        if r.status_code in (301, 302, 303, 307, 308) and r.headers.get("location"):
+            from urllib.parse import urljoin
+            url = urljoin(url, r.headers["location"])
+            continue
+        if r.status_code != 200 or "html" not in r.headers.get("content-type", "") or len(r.content) > WEB_MAX_BYTES:
+            return None
+        hours = hours_from_html(r.text)
+        return hours if hours and plausible(hours) else None
+    return None
+
+
+def plausible(hours: str) -> bool:
+    """Whether hours read as a place's: every span at least 30 minutes, none opening between
+    midnight and five in the morning, and one that ends before it starts only running past
+    midnight to six at the latest („18:00-02:00“, not „10:30-10:00“)."""
+    for h1, m1, h2, m2 in re.findall(r"(\d{2}):(\d{2})-(\d{2}):(\d{2})", hours):
+        a, b = int(h1) * 60 + int(m1), int(h2) * 60 + int(m2)
+        if a < 5 * 60 or (b <= a and b > 6 * 60) or (b - a) % (24 * 60) < 30:
+            return False
+    return True
 
 
 # --- the town's list ------------------------------------------------------------------------

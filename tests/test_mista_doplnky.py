@@ -54,11 +54,53 @@ def test_web_hours_reads_only_own_html_pages():
             self.urls.append(url)
             return self.r
 
+    public = lambda url: "intranet" not in url    # noqa: E731
     c = C(R())
-    assert d.web_hours(c, "https://zubar.cz") == "Mo-Fr 08:00-16:00"
-    assert d.web_hours(c, "https://www.facebook.com/zubar") is None and c.urls == ["https://zubar.cz"]
-    assert d.web_hours(C(R(status=404)), "https://zubar.cz") is None
-    assert d.web_hours(C(R(ctype="application/pdf")), "https://zubar.cz/x.pdf") is None
+    assert d.web_hours(c, "https://zubar.cz", public) == "Mo-Fr 08:00-16:00"
+    assert d.web_hours(c, "https://www.facebook.com/zubar", public) is None and c.urls == ["https://zubar.cz"]
+    assert d.web_hours(c, "http://intranet:8080/", public) is None and len(c.urls) == 1
+    assert d.web_hours(C(R(status=404)), "https://zubar.cz", public) is None
+    assert d.web_hours(C(R(ctype="application/pdf")), "https://zubar.cz/x.pdf", public) is None
+    assert d.web_hours(C(R(text=ld({"openingHours": "Tu-Sa 10:30-10:00"}))), "https://zubar.cz", public) is None
+
+
+def test_redirects_are_followed_only_to_public_hosts():
+    class R:
+        def __init__(self, status, location=None):
+            self.status_code, self.headers = status, {"location": location} if location else {"content-type": "text/html"}
+            self.text = ld({"openingHours": "Mo-Fr 08:00-16:00"})
+            self.content = self.text.encode()
+
+    class C:
+        def __init__(self, answers):
+            self.answers, self.urls = answers, []
+
+        def get(self, url, **kw):
+            assert kw["follow_redirects"] is False
+            self.urls.append(url)
+            return self.answers[url]
+
+    public = lambda url: "intranet" not in url    # noqa: E731
+    ok = C({"http://zubar.cz": R(301, "/novy"), "http://zubar.cz/novy": R(200)})
+    assert d.web_hours(ok, "http://zubar.cz", public) == "Mo-Fr 08:00-16:00"
+    bad = C({"http://zubar.cz": R(302, "http://intranet/admin")})
+    assert d.web_hours(bad, "http://zubar.cz", public) is None and bad.urls == ["http://zubar.cz"]
+    loop = C({"http://a.cz": R(302, "http://a.cz")})
+    assert d.web_hours(loop, "http://a.cz", public) is None and len(loop.urls) == d.WEB_REDIRECTS + 1
+
+
+@pytest.mark.parametrize("hours, ok", [
+    ("Mo-Fr 08:00-17:00", True), ("We-Th 18:00-01:00", True), ("Mo 10:30-23:59", True),
+    ("Tu-Sa 10:30-10:00", False), ("Su 04:00-10:00", False), ("Mo 10:00-10:15", False),
+])
+def test_plausible(hours, ok):
+    assert d.plausible(hours) is ok
+
+
+def test_public_url():
+    assert not d.public_url("http://127.0.0.1/") and not d.public_url("http://10.0.0.5/")
+    assert not d.public_url("http://localhost:8000/") and not d.public_url("ftp://zubar.cz/")
+    assert not d.public_url("http://[::1]/") and not d.public_url("http://169.254.169.254/latest")
 
 
 PLACES = [
