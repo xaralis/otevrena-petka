@@ -1,0 +1,572 @@
+{
+ "notice_id": "mmp-15756",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v7",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-26T11:12:40+00:00",
+ "source": {
+  "title": "Stanovení místní úpravy v ulici Chrudimská v Pardubicích.",
+  "url": "https://pardubice.eu/uredni-deska?id=15756",
+  "board": "mmp",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Chrudimská: u přechodu poblíž ulic Široká a Holcova je schválený ostrůvek pro chodce",
+ "summary": "Magistrát schválil trvalou změnu na Chrudimské: u přechodu pro chodce poblíž křižovatky s ulicemi Široká a Holcova vznikne ostrůvek, který má chodcům zvýšit bezpečnost. Bude mít bílý plastový obrubník, nové značky přikazující objíždění vpravo a nové čáry na vozovce, jízdní pruhy se u něj místně zúží. Úprava nabývá účinnosti 28. 11. 2026, termín stavby dokumenty neuvádějí. Proti návrhu nikdo nepodal námitky a proti vydanému opatření se už nelze odvolat.",
+ "where": "Chrudimská (silnice II/324), u přechodu pro chodce poblíž křižovatky s ulicemi Široká a Holcova",
+ "period": {
+  "from": "2026-11-28",
+  "to": null,
+  "text": "Trvale, s účinností od 28. 11. 2026. Termín stavby není uvedený."
+ },
+ "action": null,
+ "affects": "Chodce, kteří tu přecházejí, a řidiče projíždějící po Chrudimské",
+ "facts": [
+  {
+   "label": "Co vznikne",
+   "value": "Ostrůvek u přechodu, ohraničený bílým plastovým obrubníkem vysokým 15,8 cm"
+  },
+  {
+   "label": "Délka ostrůvku",
+   "value": "Přibližně 23 m"
+  },
+  {
+   "label": "Jízdní pruhy",
+   "value": "U ostrůvku se místně zúží na 3,5 m, což má zpomalit auta"
+  },
+  {
+   "label": "Šířka přechodu",
+   "value": "3 m"
+  },
+  {
+   "label": "Kdy se může stavět",
+   "value": "Podle podmínek správce silnice mimo zimní období od 1. 11. do 31. 3."
+  },
+  {
+   "label": "Námitky",
+   "value": "K návrhu žádné písemné námitky nepřišly"
+  },
+  {
+   "label": "Kdo vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  }
+ ],
+ "signs": [
+  {
+   "code": "C4a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "V2a",
+   "text": null,
+   "change": "nova"
+  },
+  {
+   "code": "IP6",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "IP19",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "IS3b",
+   "text": "NEMOŠICE",
+   "change": "zustava"
+  },
+  {
+   "code": "P2",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "B4",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "E8d",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "E13",
+   "text": "MIMO DOPRAVNÍ OBSLUHU",
+   "change": "zustava"
+  },
+  {
+   "code": "B29",
+   "text": null,
+   "change": "zustava"
+  },
+  {
+   "code": "IJ4a",
+   "text": null,
+   "change": "zustava"
+  }
+ ],
+ "places": [
+  "Chrudimská"
+ ],
+ "parcels": [
+  "p. p. č. 2583/1, k. ú. Pardubice"
+ ],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mmp-15756-2.pdf",
+  "page": 1,
+  "box": [
+   0.472,
+   0.016,
+   0.981,
+   0.7
+  ],
+  "caption": "Situace: modře navržený ostrůvek u přechodu v Chrudimské a nové značky, zeleně stávající značení"
+ },
+ "parking": null,
+ "visual_plan": "Ukázat výřez situačního výkresu s ostrůvkem a doplnit mapu s bodem na Chrudimské u křižovatky s ulicemi Široká a Holcova. Z výkresu je poloha i tvar ostrůvku vidět nejlépe.",
+ "reviewer_notes": "1) Datum účinnosti 28. 11. 2026 je dopočtené: vyvěšeno na desce magistrátu 13. 11., 15. den je 28. 11. (sobota). Ověřit, zda se kvůli víkendu neposouvá na 30. 11.\n2) Rozpor ve výplni ostrůvku: opatření uvádí „beton nebo kámen“, správce silnice požaduje betonovou dlažbu nebo monolitický beton, ale výkres a popis záměru počítají se štěrkem, substrátem a suchomilnými rostlinami. Karta proto výplň neuvádí.\n3) Opatření uvádí jako důvod „zamezení parkování“, odůvodnění mluví o bezpečnosti chodců. Karta se drží odůvodnění.\n4) Vyjádření správce silnice mluví o „novém přechodu“, opatření i výkres o ostrůvku u přechodu (na výkresu vedeného jako stávající značení).\n5) Stávající značky (zůstávají) jsou opsané z výkresu, ne z textu opatření; IJ4a je na výkresu špatně čitelná. Výkres v legendě zná i odstraňované vodorovné značení, jeho rozsah nelze spolehlivě určit.\n6) Značka je v textu uvedena jako C4a, v jedné větě odůvodnění jako „C4 ve zmenšené velikosti“ (na výkresu C4a, 500 mm).\n7) Zákaz stavebních prací v zimě je podmínka správce silnice, nikoli harmonogram stavby.",
+ "visual": {
+  "map": [
+   {
+    "kind": "parcel",
+    "label": "p. p. č. 2583/1, k. ú. Pardubice",
+    "source_text": "p. p. č. 2583/1, k. ú. Pardubice",
+    "geometry": {
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        15.770574,
+        50.028243
+       ],
+       [
+        15.770654,
+        50.027375
+       ],
+       [
+        15.77065,
+        50.027343
+       ],
+       [
+        15.770683,
+        50.027142
+       ],
+       [
+        15.770824,
+        50.025543
+       ],
+       [
+        15.771035,
+        50.023283
+       ],
+       [
+        15.771029,
+        50.023261
+       ],
+       [
+        15.771059,
+        50.023016
+       ],
+       [
+        15.771169,
+        50.02183
+       ],
+       [
+        15.771149,
+        50.021513
+       ],
+       [
+        15.77118,
+        50.021177
+       ],
+       [
+        15.771246,
+        50.020839
+       ],
+       [
+        15.771271,
+        50.020567
+       ],
+       [
+        15.771308,
+        50.020326
+       ],
+       [
+        15.77177,
+        50.01524
+       ],
+       [
+        15.771764,
+        50.015214
+       ],
+       [
+        15.771776,
+        50.015076
+       ],
+       [
+        15.771787,
+        50.01507
+       ],
+       [
+        15.771814,
+        50.014791
+       ],
+       [
+        15.771805,
+        50.014791
+       ],
+       [
+        15.77188,
+        50.014004
+       ],
+       [
+        15.771891,
+        50.013999
+       ],
+       [
+        15.772045,
+        50.014012
+       ],
+       [
+        15.771999,
+        50.014454
+       ],
+       [
+        15.771951,
+        50.015089
+       ],
+       [
+        15.771475,
+        50.020327
+       ],
+       [
+        15.771433,
+        50.020852
+       ],
+       [
+        15.771387,
+        50.021279
+       ],
+       [
+        15.770523,
+        50.030605
+       ],
+       [
+        15.770487,
+        50.03078
+       ],
+       [
+        15.770438,
+        50.031329
+       ],
+       [
+        15.770308,
+        50.031306
+       ],
+       [
+        15.770359,
+        50.030777
+       ],
+       [
+        15.770356,
+        50.030599
+       ],
+       [
+        15.770574,
+        50.028243
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "kind": "street",
+    "label": "Chrudimská",
+    "source_text": "Chrudimská",
+    "geometry": {
+     "type": "MultiLineString",
+     "coordinates": [
+      [
+       [
+        15.771612,
+        50.01795
+       ],
+       [
+        15.771514,
+        50.018878
+       ]
+      ],
+      [
+       [
+        15.77146,
+        50.019484
+       ],
+       [
+        15.771514,
+        50.018878
+       ]
+      ],
+      [
+       [
+        15.771762,
+        50.016259
+       ],
+       [
+        15.771612,
+        50.01795
+       ]
+      ],
+      [
+       [
+        15.772006,
+        50.013555
+       ],
+       [
+        15.771965,
+        50.014005
+       ]
+      ],
+      [
+       [
+        15.771851,
+        50.015154
+       ],
+       [
+        15.771762,
+        50.016259
+       ]
+      ],
+      [
+       [
+        15.771882,
+        50.014832
+       ],
+       [
+        15.771851,
+        50.015154
+       ]
+      ],
+      [
+       [
+        15.771316,
+        50.02102
+       ],
+       [
+        15.77146,
+        50.019484
+       ]
+      ],
+      [
+       [
+        15.771965,
+        50.014005
+       ],
+       [
+        15.771882,
+        50.014832
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "ortho": null,
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Situace: modře navržený ostrůvek u přechodu v Chrudimské a nové značky, zeleně stávající značení",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.494,
+     "y": 0.36,
+     "text": "nový ostrůvek pro chodce s bílým plastovým obrubníkem",
+     "kind": "nove"
+    },
+    {
+     "x": 0.326,
+     "y": 0.321,
+     "text": "nová značka: ostrůvek se objíždí vpravo",
+     "kind": "nove"
+    },
+    {
+     "x": 0.718,
+     "y": 0.659,
+     "text": "nová značka: objíždění vpravo i z druhé strany",
+     "kind": "nove"
+    },
+    {
+     "x": 0.501,
+     "y": 0.194,
+     "text": "nová čára na vozovce, pruh se u ostrůvku posouvá",
+     "kind": "nove"
+    },
+    {
+     "x": 0.485,
+     "y": 0.465,
+     "text": "červeně: šipka na vozovce v místě ostrůvku se ruší",
+     "kind": "zrusene"
+    },
+    {
+     "x": 0.564,
+     "y": 0.417,
+     "text": "stávající přechod pro chodce, ostrůvek ho rozdělí",
+     "kind": "stavajici"
+    }
+   ],
+   "legend": [
+    {
+     "color": "modrá",
+     "meaning": "nově navržené prvky (ostrůvek, značky, čáry)"
+    },
+    {
+     "color": "zelená",
+     "meaning": "stávající značení, které je na místě už teď"
+    },
+    {
+     "color": "červená",
+     "meaning": "rušené značení"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "C4a",
+    "name": "Přikázaný směr objíždění vpravo",
+    "image": "C4a.png",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "V2a",
+    "name": "Podélná čára přerušovaná",
+    "image": "V2a.jpg",
+    "text": null,
+    "change": "nova"
+   },
+   {
+    "code": "IP6",
+    "name": "Přechod pro chodce",
+    "image": "IP6.png",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "IP19",
+    "name": "Řadicí pruhy",
+    "image": "IP19.jpg",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "IS3b",
+    "name": "Směrová tabule (s dvěma cíli)",
+    "image": "IS3b.png",
+    "text": "NEMOŠICE",
+    "change": "zustava"
+   },
+   {
+    "code": "P2",
+    "name": "Hlavní pozemní komunikace",
+    "image": "P2.png",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "B4",
+    "name": "Zákaz vjezdu nákladních automobilů",
+    "image": "B4.png",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "E8d",
+    "name": "Úsek platnosti",
+    "image": "E8d.jpg",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "E13",
+    "name": "Text nebo symbol",
+    "image": "E13.jpg",
+    "text": "MIMO DOPRAVNÍ OBSLUHU",
+    "change": "zustava"
+   },
+   {
+    "code": "B29",
+    "name": "Zákaz stání",
+    "image": "B29.png",
+    "text": null,
+    "change": "zustava"
+   },
+   {
+    "code": "IJ4a",
+    "name": "Označník zastávky",
+    "image": "IJ4a.png",
+    "text": null,
+    "change": "zustava"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": null
+ },
+ "problems": [
+  "datum od 2026-11-28 v dokumentu není doslova"
+ ],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Místo, rozměry ostrůvku, nové značky, datum účinnosti, chybějící námitky i nemožnost odvolání odpovídají originálu."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se mění, kde, od kdy a koho se to týká, a správně neuvádí výplň ostrůvku, protože se v ní dokumenty rozcházejí."
+   },
+   "srozumitelnost": {
+    "score": 4,
+    "reason": "Text je psaný běžnou češtinou, jen údaj o zimním období lze číst opačně, jako by se stavělo právě od listopadu do března."
+   },
+   "obrazky": {
+    "score": 5,
+    "reason": "Výřez výkresu s očíslovanými popisky ukazuje správné místo, nový ostrůvek, nové značky i rušené značení a mapa vyznačuje správnou silnici a pozemek."
+   }
+  },
+  "summary": "Karta věrně popisuje schválený ostrůvek u přechodu na Chrudimské včetně rozměrů, nových značek a data účinnosti, nejasná je jen věta o tom, kdy se smí stavět.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-11-28",
+    "verdict": "spocitano_spravne",
+    "evidence": "Vyhláška byla podle originálu vyvěšena na desce magistrátu 13. 11. 2026. Vývěsní lhůta začíná následující den (14. 11.) a trvá 15 dní, takže jejím posledním dnem je 28. 11. 2026. Podle originálu je poslední den lhůty zároveň dnem nabytí účinnosti. Originál k víkendu nic dalšího neuvádí, proto datum 28. 11. odpovídá jeho vlastnímu pravidlu."
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-26T11:13:07+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 12,
+   "cache_read": 27140,
+   "cache_write": 50554,
+   "output": 7276,
+   "usd": 0.4117
+  }
+ },
+ "published_at": "2026-11-26T11:13:07+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
