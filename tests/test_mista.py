@@ -405,3 +405,43 @@ def test_a_place_mapped_twice_is_listed_once():
     got = sorted((p["id"], p["kind"], p["what"]) for p in places)
     assert got == [("n2", "misto", "Firma"), ("n3", "lekarna", "Lékárna"), ("n5", "misto", "Advokát"), ("n6", "misto", "Firma"),
                    ("w4", "misto", "Komerční budova")]
+
+
+# --- Průvodce městem -------------------------------------------------------------------------
+
+@pytest.mark.parametrize("tags, guide", [
+    ({"historic": "castle", "name": "Zámek Pardubice"}, "pamatky"),
+    ({"amenity": "place_of_worship", "name": "Sv. Bartoloměj"}, "pamatky"),
+    ({"tourism": "viewpoint", "name": "Vyhlídka na Zelené bráně"}, "pamatky"),
+    ({"amenity": "theatre", "name": "Východočeské divadlo"}, "kultura"),
+    ({"tourism": "gallery", "name": "Galerie města Pardubic"}, "kultura"),
+    ({"amenity": "library", "name": "Krajská knihovna"}, "kultura"),
+    ({"leisure": "park", "name": "Tyršovy sady"}, "priroda"),
+    ({"leisure": "ice_rink", "name": "enteria arena"}, "priroda"),
+    ({"tourism": "zoo", "name": "Zoopark"}, "priroda"),
+    ({"amenity": "restaurant", "name": "U Kostelíčka"}, "jidlo"),
+    ({"amenity": "cafe", "name": "Kafárna"}, "jidlo"),
+    ({"tourism": "hotel", "name": "Hotel Euro"}, "ubytovani"),
+    ({"tourism": "guest_house", "name": "Penzion Sport"}, "ubytovani"),
+])
+def test_guide(tags, guide):
+    assert one(**tags)["pruvodce"] == guide
+
+
+@pytest.mark.parametrize("tags", [
+    {"amenity": "fast_food", "name": "Bageterie"},
+    {"leisure": "park", "name": "Zahrada domova", "access": "private"},
+    {"shop": "supermarket", "name": "Albert"},
+    {"amenity": "pharmacy", "name": "Lékárna Grand"},
+    {"leisure": "playground", "name": "Hřiště"},
+])
+def test_no_guide(tags):
+    p = one(**tags)
+    assert p is None or "pruvodce" not in p
+
+
+def test_guide_in_the_file():
+    row = {"id": "n1", "kind": "misto", "name": "Tyršovy sady", "what": "Park", "address": None, "lon": 15.77,
+           "lat": 50.03, "hours": None, "obvody": ["mo1"], "odpad": None, "capacity": None, "pruvodce": "priroda"}
+    assert export.place(row)["pruvodce"] == "priroda"
+    assert "pruvodce" not in export.place({**row, "pruvodce": None})

@@ -61,10 +61,11 @@ def store(conn, places: list[dict], force: bool = False) -> dict:
     with conn.cursor() as cur:
         cur.executemany(
             """INSERT INTO mista_places (id, kind, name, what, address, lon, lat, hours, obvody, odpad, capacity,
-                                       phone, web, email)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
+                                       phone, web, email, pruvodce)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
             [(p["id"], p["kind"], p["name"], p["what"], p["address"], p["at"][0], p["at"][1], p["hours"],
-              p["obvody"], p.get("odpad"), p.get("capacity"), p.get("phone"), p.get("web"), p.get("email"))
+              p["obvody"], p.get("odpad"), p.get("capacity"), p.get("phone"), p.get("web"), p.get("email"),
+              p.get("pruvodce"))
              for p in places])
     conn.execute("INSERT INTO mista_builds (counts, total, accepted) VALUES (%s, %s, true)",
                  (json.dumps(counts), sum(counts.values())))
