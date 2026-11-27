@@ -1,0 +1,218 @@
+{
+ "notice_id": "mmp-15873",
+ "members": [],
+ "status": "published",
+ "prompt_version": "deska-v7",
+ "model": "cli:claude-sonnet-5-5",
+ "created_at": "2026-11-27T13:24:40+00:00",
+ "source": {
+  "title": "Stanovení přechodné úpravy provozu v ulici Češkova v Pardubicích",
+  "url": "https://pardubice.eu/uredni-deska?id=15873",
+  "board": "mmp",
+  "mo5": true
+ },
+ "cluster": "doprava",
+ "headline": "Od 6. do 16. 12. 2026 přechodně: lešení na chodníku v Češkově ulici před domem č. p. 1758",
+ "summary": "Na chodníku před domem č. p. 1758 v Češkově ulici bude stát stavební lešení kvůli opravě střechy a okapového žlabu. Místo se přechodně označí zábranou. Podle plánku je lešení široké 60 cm a dlouhé 12 m, chodník má šířku 270 cm.",
+ "where": "Češkova ulice, chodník před domem č. p. 1758",
+ "period": {
+  "from": "2026-12-06",
+  "to": "2026-12-16",
+  "text": "6. 12. 2026 – 16. 12. 2026"
+ },
+ "action": null,
+ "affects": "Chodce a obyvatele v okolí domu č. p. 1758 v Češkově ulici",
+ "facts": [
+  {
+   "label": "Důvod",
+   "value": "oprava střešní konstrukce a okapového žlabu"
+  },
+  {
+   "label": "Platnost úpravy",
+   "value": "6. 12. 2026 – 16. 12. 2026"
+  },
+  {
+   "label": "Lešení",
+   "value": "šířka 60 cm, délka 12 m"
+  },
+  {
+   "label": "Šířka chodníku",
+   "value": "270 cm"
+  },
+  {
+   "label": "Za značení odpovídá",
+   "value": "Standpro s.r.o."
+  },
+  {
+   "label": "Vydal",
+   "value": "Magistrát města Pardubic, odbor dopravy"
+  }
+ ],
+ "signs": [
+  {
+   "code": "Z2",
+   "text": null,
+   "change": "nova"
+  }
+ ],
+ "places": [
+  "Češkova 1758"
+ ],
+ "parcels": [],
+ "spending": [],
+ "budget": [],
+ "drawing": {
+  "file": "mmp-15873-1.pdf",
+  "page": 4,
+  "box": [
+   0.27,
+   0.1,
+   0.7,
+   0.86
+  ],
+  "caption": "Plánek: lešení (červeně) na chodníku (modře) před domem č. p. 1758. Výkres je otočený na bok."
+ },
+ "parking": null,
+ "visual_plan": "Mapa s bodem u domu Češkova č. p. 1758 a výřez plánku ze strany 4, nejlépe otočený o 90°, aby byly popisky čitelné. Plánek ukazuje, jakou část chodníku lešení zabere.",
+ "reviewer_notes": "Dokument neuvádí, zda a jak bude chodník během prací průchozí, ani žádné omezení pro auta. Šířky lešení a chodníku jsou z plánku v příloze. Značka Z2 (zábrana) je v textu uvedena jen kódem; ručně psaná poznámka v plánku říká, že slouží k označení lešení. Číslo 2967 v plánku je zřejmě parcela domu, ale bez katastrálního území, proto není v pozemcích. Proti úpravě nelze podat opravný prostředek, proto není vyplněná akce.",
+ "visual": {
+  "map": [
+   {
+    "kind": "address",
+    "label": "Češkova 1758",
+    "source_text": "Češkova 1758",
+    "geometry": {
+     "type": "Point",
+     "coordinates": [
+      15.769349,
+      50.024494
+     ]
+    }
+   }
+  ],
+  "ortho": {
+   "file": "ortofoto.jpg",
+   "width": 1200,
+   "height": 750,
+   "bbox": [
+    15.767109497667185,
+    50.023593999999996,
+    15.771588502332815,
+    50.025394
+   ],
+   "shapes": [
+    {
+     "kind": "point",
+     "xy": [
+      600.0,
+      375.0
+     ]
+    }
+   ],
+   "credit": "Ortofoto © ČÚZK, CC BY 4.0, upraveno (vyznačeno místo)"
+  },
+  "drawing": {
+   "file": "vykres.png",
+   "caption": "Plánek: lešení (červeně) na chodníku (modře) před domem č. p. 1758. Výkres je otočený na bok.",
+   "annotated": "vykres-popis.png",
+   "marks": [
+    {
+     "x": 0.46,
+     "y": 0.711,
+     "text": "přechodné lešení na chodníku: šířka 60 cm, délka 12 m",
+     "kind": "nove"
+    },
+    {
+     "x": 0.47,
+     "y": 0.757,
+     "text": "chodník před domem, široký 270 cm",
+     "kind": "stavajici"
+    },
+    {
+     "x": 0.33,
+     "y": 0.51,
+     "text": "dům č. p. 1758, kvůli jehož opravě bude lešení stát",
+     "kind": "misto"
+    }
+   ],
+   "legend": [
+    {
+     "color": "červený úzký obdélník u domu",
+     "meaning": "lešení"
+    },
+    {
+     "color": "modrý obdélník",
+     "meaning": "chodník"
+    }
+   ]
+  },
+  "signs": [
+   {
+    "code": "Z2",
+    "name": "Zábrana pro označení uzavírky",
+    "image": "Z2.jpg",
+    "text": null,
+    "change": "nova"
+   }
+  ],
+  "parking": null,
+  "photo": null,
+  "thumb": "nahled.jpg"
+ },
+ "problems": [],
+ "quality": {
+  "method": "druhy-model",
+  "level": "spolehlive",
+  "passed": true,
+  "issues": [],
+  "marks": {
+   "presnost": {
+    "score": 5,
+    "reason": "Termín, místo, důvod, rozměry lešení a chodníku, značka i odpovědná firma odpovídají originálu i plánku."
+   },
+   "uplnost": {
+    "score": 5,
+    "reason": "Karta uvádí, co se děje, kde, kdy a koho se to týká, a správně neuvádí žádnou možnost se bránit, protože originál opravné prostředky vylučuje."
+   },
+   "srozumitelnost": {
+    "score": 5,
+    "reason": "Text je napsaný běžnou češtinou bez paragrafů a úředních obratů a kód značky je vysvětlený slovem zábrana."
+   },
+   "obrazky": {
+    "score": 4,
+    "reason": "Plánek z originálu s popisky jasně ukazuje lešení na chodníku před domem, letecký snímek bez vyznačeného místa ale čtenáři pomůže méně."
+   }
+  },
+  "summary": "Karta věrně a srozumitelně popisuje lešení na chodníku v Češkově ulici od 6. do 16. 12. 2026. Všechny údaje sedí s originálem a plánkem.",
+  "blockers": [],
+  "dates": [
+   {
+    "field": "od",
+    "value": "2026-12-06",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 6. 12. 2026 – 16. 12. 2026 (strana 2 originálu)"
+   },
+   {
+    "field": "do",
+    "value": "2026-12-16",
+    "verdict": "v_dokumentu",
+    "evidence": "Platnost úpravy: 6. 12. 2026 – 16. 12. 2026 (strana 2 originálu)"
+   }
+  ],
+  "prompt_version": "kvalita-v1",
+  "model": "claude-opus-5-5",
+  "scored_at": "2026-11-27T13:24:57+00:00",
+  "attempts": 1,
+  "usage": {
+   "calls": 3,
+   "input": 12,
+   "cache_read": 14759,
+   "cache_write": 37614,
+   "output": 4005,
+   "usd": 0.2794
+  }
+ },
+ "published_at": "2026-11-27T13:24:57+00:00",
+ "review_note": null,
+ "reviewed_by": "model"
+}
